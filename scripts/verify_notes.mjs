@@ -11,21 +11,27 @@ import { fileURLToPath, pathToFileURL } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
+
+const subjectOf = (chapter) => {
+  for (const s of COURSE.subjects) if (s.chapters.some((c) => c.id === chapter.id)) return s.id;
+  return 'de';
+};
+
 let errors = 0;
 const fail = (m) => { console.error('FAIL:', m); errors++; };
 
 const { COURSE, findChapter, liveChapterSequence } = await import(pathToFileURL(path.join(ROOT, 'src/data/courses.js')).href);
-const { NOTES_INDEX } = await import(pathToFileURL(path.join(ROOT, 'src/data/notes/de/index.js')).href);
+const { NOTES_INDEX } = await import(pathToFileURL(path.join(ROOT, 'src/data/notes/index.js')).href);
 
 // 1. registry consistency
 const live = liveChapterSequence(COURSE.id);
 if (COURSE.id !== 'gate-2027-ece') fail(`unexpected course id ${COURSE.id}`);
-if (live.length !== 5) fail(`expected 5 live chapters, found ${live.length}`);
+if (live.length !== 6) fail(`expected 6 live chapters, found ${live.length}`);
 for (const { chapter } of live) {
   const idx = NOTES_INDEX[chapter.id];
   if (!idx) { fail(`${chapter.id}: missing from NOTES_INDEX`); continue; }
   if (idx.title !== chapter.title) fail(`${chapter.id}: registry title mismatch`);
-  const mod = (await import(pathToFileURL(path.join(ROOT, 'src/data/notes/de', `${chapter.file}.js`)).href)).default;
+  const mod = (await import(pathToFileURL(path.join(ROOT, 'src/data/notes', subjectOf(chapter), `${chapter.file}.js`)).href)).default;
   if (mod.sections.length !== idx.sections.length) fail(`${chapter.id}: module sections ${mod.sections.length} != index ${idx.sections.length}`);
   for (let i = 0; i < idx.sections.length; i++) {
     if (mod.sections[i].id !== idx.sections[i].id || mod.sections[i].title !== idx.sections[i].title) {
@@ -38,7 +44,7 @@ for (const { chapter } of live) {
 }
 
 // 2+3. block safety
-const VALID = new Set(['p', 'h3', 'h4', 'ul', 'ol', 'table', 'code', 'alert', 'details', 'img', 'math']);
+const VALID = new Set(['p', 'h2', 'h3', 'h4', 'ul', 'ol', 'table', 'code', 'alert', 'details', 'img', 'math']);
 const balancedDelims = (s) =>
   (s.match(/\$\$/g) || []).length % 2 === 0 &&
   (s.match(/\$/g) || []).length % 2 === 0 &&
@@ -46,7 +52,7 @@ const balancedDelims = (s) =>
 
 let blocksChecked = 0;
 for (const { chapter } of live) {
-  const mod = (await import(pathToFileURL(path.join(ROOT, 'src/data/notes/de', `${chapter.file}.js`)).href)).default;
+  const mod = (await import(pathToFileURL(path.join(ROOT, 'src/data/notes', subjectOf(chapter), `${chapter.file}.js`)).href)).default;
   const walk = (blocks, ctx) => {
     for (const b of blocks) {
       blocksChecked++;

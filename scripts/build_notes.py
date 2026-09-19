@@ -6,17 +6,18 @@
 import json, os, re, shutil, datetime
 
 BASE = r"D:\UVM\PROJECTS\qp to test\gate-prep"
-SRC_DIR = r"D:\GATE 2027\Digital electronics"
+SRC_ROOT = r"D:\GATE 2027"
 
 CHAPTERS = [
     {
         "id": "de-ch1",
         "file": "ch1",
+        "notes_sub": "de",
         "num": 1,
         "title": "Logic Gates & Boolean Algebra",
         "subject": "Digital Electronics",
-        "md": os.path.join(SRC_DIR, "Chapter_01_Logic_Gates_and_Boolean_Algebra_Master_Guide.md"),
-        "figures_src": os.path.join(SRC_DIR, "figures"),
+        "md": os.path.join(SRC_ROOT, "Digital electronics", "Chapter_01_Logic_Gates_and_Boolean_Algebra_Master_Guide.md"),
+        "figures_src": os.path.join(SRC_ROOT, "Digital electronics", "figures"),
         "figures_dst": "notes/de/figures",
         "fig_prefix": "figures/",
         "web_prefix": "/notes/de/figures/",
@@ -24,35 +25,38 @@ CHAPTERS = [
     {
         "id": "de-ch2",
         "file": "ch2",
+        "notes_sub": "de",
         "num": 2,
         "title": "Representation of Boolean Expressions & K-Maps",
         "subject": "Digital Electronics",
-        "md": os.path.join(SRC_DIR, "Chapter_02_Representation_of_Boolean_Expressions_and_K_Maps_Master_Guide.md"),
-        "figures_src": os.path.join(SRC_DIR, "figures_ch2"),
+        "md": os.path.join(SRC_ROOT, "Digital electronics", "Chapter_02_Representation_of_Boolean_Expressions_and_K_Maps_Master_Guide.md"),
+        "figures_src": os.path.join(SRC_ROOT, "Digital electronics", "figures_ch2"),
         "figures_dst": "notes/de/figures_ch2",
         "fig_prefix": "figures_ch2/",
         "web_prefix": "/notes/de/figures_ch2/",
     },
     {
         "id": "de-ch3",
+        "notes_sub": "de",
         "file": "ch3",
         "num": 3,
         "title": "Number Systems & Digital Representation",
         "subject": "Digital Electronics",
-        "md": os.path.join(SRC_DIR, "Chapter_03_Number_Systems_Master_Guide.md"),
-        "figures_src": os.path.join(SRC_DIR, "figures_ch3"),
+        "md": os.path.join(SRC_ROOT, "Digital electronics", "Chapter_03_Number_Systems_Master_Guide.md"),
+        "figures_src": os.path.join(SRC_ROOT, "Digital electronics", "figures_ch3"),
         "figures_dst": "notes/de/figures_ch3",
         "fig_prefix": "figures_ch3/",
         "web_prefix": "/notes/de/figures_ch3/",
     },
     {
         "id": "de-ch4-p1",
+        "notes_sub": "de",
         "file": "ch4p1",
         "num": 4,
         "part": 1,
         "title": "Combinational Circuits — Arithmetic Logic",
         "subject": "Digital Electronics",
-        "md": os.path.join(SRC_DIR, "chapters", "Chapter_04_Part1_Combinational_Circuits.md"),
+        "md": os.path.join(SRC_ROOT, "Digital electronics", "chapters", "Chapter_04_Part1_Combinational_Circuits.md"),
         "figures_src": None,
         "figures_dst": None,
         "fig_prefix": "",
@@ -60,16 +64,31 @@ CHAPTERS = [
     },
     {
         "id": "de-ch4-p2",
+        "notes_sub": "de",
         "file": "ch4p2",
         "num": 4,
         "part": 2,
         "title": "Combinational Circuits — Advanced Architectures",
         "subject": "Digital Electronics",
-        "md": os.path.join(SRC_DIR, "chapters", "Chapter_04_Part2_Combinational_Circuits.md"),
+        "md": os.path.join(SRC_ROOT, "Digital electronics", "chapters", "Chapter_04_Part2_Combinational_Circuits.md"),
         "figures_src": None,
         "figures_dst": None,
         "fig_prefix": "",
         "web_prefix": "/notes/de/figures_ch4/",
+    },
+    {
+        "id": "ss-ch1",
+        "file": "ssch1",
+        "notes_sub": "ss",
+        "num": 1,
+        "title": "Basics of Signals",
+        "subject": "Signals & Systems",
+        "section_split": "module",
+        "md": os.path.join(SRC_ROOT, "Signals and Systems", "Chapter_01_Basics_of_Signals_Master_Guide.md"),
+        "figures_src": os.path.join(SRC_ROOT, "Signals and Systems", "figures_ch1"),
+        "figures_dst": "notes/ss/figures_ch1",
+        "fig_prefix": "figures_ch1/",
+        "web_prefix": "/notes/ss/figures_ch1/",
     },
 ]
 
@@ -161,11 +180,15 @@ def parse_blocks(lines, ch):
             blocks.append({"t": "code", "text": "\n".join(code).rstrip()})
             continue
 
-        # <details> collapsible (worked solutions)
+        # <details> collapsible (worked solutions) — the opener line may carry
+        # an inline <summary> (single-line form) or it may be a standalone line
         if stripped.startswith("<details>"):
             flush_para()
-            i += 1
             summary = "Solution"
+            m0 = re.search(r"<summary>(.*?)</summary>", stripped)
+            if m0:
+                summary = re.sub(r"[^A-Za-z0-9 &'/-]+", " ", m0.group(1)).strip() or "Solution"
+            i += 1
             inner = []
             depth = 1
             while i < n:
@@ -179,7 +202,7 @@ def parse_blocks(lines, ch):
                         break
                 m = re.match(r"<summary>(.*?)</summary>\s*$", s2)
                 if m:
-                    summary = re.sub(r"[^A-Za-z0-9 &']+", " ", m.group(1)).strip() or "Solution"
+                    summary = re.sub(r"[^A-Za-z0-9 &'/-]+", " ", m.group(1)).strip() or "Solution"
                 elif not s2.startswith("<summary>"):
                     inner.append(lines[i])
                 i += 1
@@ -189,8 +212,28 @@ def parse_blocks(lines, ch):
             i += 1
             continue
 
-        # GitHub alert callout
-        m = re.match(r">\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*$", stripped, re.IGNORECASE)
+        # section-divider headings (module-split mode keeps interior ## / # lines)
+        if stripped.startswith("## "):
+            text = stripped[3:].strip()
+            if re.match(r"(master )?table of contents$", text, re.IGNORECASE):
+                i += 1
+                continue
+            flush_para()
+            blocks.append({"t": "h2", "text": text})
+            i += 1
+            continue
+        if stripped.startswith("# "):
+            text = stripped[2:].strip()
+            if re.match(r"table of contents$", text, re.IGNORECASE):
+                i += 1
+                continue
+            flush_para()
+            blocks.append({"t": "h2", "text": text})
+            i += 1
+            continue
+
+        # GitHub alert callout (optional inline title: > [!NOTE] My title)
+        m = re.match(r">\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(.*)$", stripped, re.IGNORECASE)
         if m:
             flush_para()
             i += 1
@@ -198,7 +241,12 @@ def parse_blocks(lines, ch):
             while i < n and lines[i].lstrip().startswith(">"):
                 body.append(re.sub(r"^\s*>\s?", "", lines[i]))
                 i += 1
-            blocks.append({"t": "alert", "type": m.group(1).upper(), "text": inline_clean("\n".join(body).strip(), ch)})
+            blocks.append({
+                "t": "alert",
+                "type": m.group(1).upper(),
+                "title": m.group(2).strip() or None,
+                "text": inline_clean("\n".join(body).strip(), ch),
+            })
             continue
 
         # plain blockquote (none expected, be safe)
@@ -273,7 +321,8 @@ def parse_blocks(lines, ch):
                 m2 = re.match(r"^[-*]\s+(.*)$", lines[i].strip())
                 if not m2:
                     break
-                items.append(inline_clean(m2.group(1).strip(), ch))
+                item = re.sub(r"^\[( |x)\]\s*", lambda mm: "✓ " if mm.group(1) == "x" else "◻ ", m2.group(1).strip())
+                items.append(inline_clean(item, ch))
                 i += 1
             blocks.append({"t": "ul", "items": items})
             continue
@@ -313,9 +362,12 @@ def build_chapter(ch):
     raw = re.sub(r"^## Table of Contents\s*$.*?(?=^## )", "", raw, flags=re.MULTILINE | re.DOTALL)
     raw = re.sub(r"(?m)^\s*\d*[.)]?\s*\[[^\]]*\]\(#[^)]+\)\s*$", "", raw)
 
-    # split at h2 headings; keep the pre-heading preamble (h1 + metadata lines)
-    # as a lead "About this chapter" section so nothing from the MD is lost
-    parts = re.split(r"^## +", raw, flags=re.MULTILINE)
+    # section splitting: generic chapters split at every `## `; module-split
+    # chapters (audit-concatenated Masters) split only at `## Module ` headers
+    # and keep interior ## / # lines as divider blocks via parse_blocks.
+    module_mode = ch.get("section_split") == "module"
+    split_re = r"^## (?=Module )" if module_mode else r"^## +"
+    parts = re.split(split_re, raw, flags=re.MULTILINE)
     sections = []
     if parts[0].strip():
         pre_lines = parts[0].strip().split("\n")
@@ -360,7 +412,7 @@ def main():
     for ch in CHAPTERS:
         module = build_chapter(ch)
         nblocks = sum(len(s["blocks"]) for s in module["sections"])
-        out = os.path.join(BASE, "src", "data", "notes", "de", f"{ch['file']}.js")
+        out = os.path.join(BASE, "src", "data", "notes", ch["notes_sub"], f"{ch['file']}.js")
         write_module(module, out)
         index[module["id"]] = {
             "num": module["num"],
@@ -380,7 +432,7 @@ def main():
             print(f"  figures: copied {copied} images -> public/{ch['figures_dst']}")
         print(f"{module['id']}: {len(module['sections'])} sections, {nblocks} blocks -> {os.path.relpath(out, BASE)}")
 
-    idx_path = os.path.join(BASE, "src", "data", "notes", "de", "index.js")
+    idx_path = os.path.join(BASE, "src", "data", "notes", "index.js")
     with open(idx_path, "w", encoding="utf-8", newline="\n") as fp:
         fp.write("// GENERATED by scripts/build_notes.py — do not hand-edit.\n")
         fp.write("// Lightweight per-chapter section index (course page accordion + search).\n")

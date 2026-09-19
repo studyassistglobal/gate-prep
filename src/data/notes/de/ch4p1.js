@@ -453,6 +453,7 @@ export default {
     {
      "t": "alert",
      "type": "WARNING",
+     "title": null,
      "text": "**GATE Trap**: Parity checks detect **only odd numbers of bit errors**. An even number of bit inversions (e.g., 2-bit or 4-bit errors) preserves the parity and will go completely undetected ($E = 0$)."
     }
    ]
@@ -730,6 +731,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "**De Morgan Decoder Rule**: To realize an SOP expression using an **active-low output decoder**, use a **NAND gate**. Using an OR gate will incorrectly generate the complement of the desired function."
     },
     {
@@ -1182,6 +1184,7 @@ export default {
     {
      "t": "alert",
      "type": "TIP",
+     "title": null,
      "text": "**GATE Trade-off**: The CLA achieves $O(1)$ delay at the expense of **hardware complexity and fan-in**. For $C_4$, the OR gate requires a fan-in of 5, and the largest AND gate requires a fan-in of 5. For bit lengths $n > 4$, modular block hierarchical CLAs are used to avoid fan-in degradation."
     }
    ]
@@ -1364,21 +1367,25 @@ export default {
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "**Trap 1: Subtractor Borrow Permutations**  \nRemember the minuend and subtrahend positions!  \nFor $A - B - C$: $B_{out} = \\bar{A}B + C\\overline{(A \\oplus B)}$.  \nFor $B - A - C$: $B_{out} = A\\bar{B} + C\\overline{(A \\oplus B)}$.  \nIf an exam question asks for $B - A$, putting $\\bar{A}B$ guarantees a negative score."
     },
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "**Trap 2: Ripple Carry Delay Calculation**  \nDo NOT blindly calculate delay as $n \\times T_C$. The true maximum delay is:  \n$$T_{max} = \\max\\Big(n T_C, \\; (n-1)T_C + T_S\\Big)$$  \nIf $T_S > 2 T_C$, the sum bit of the final stage stabilizes *after* the final carry bit! Always compare both paths."
     },
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "**Trap 3: Active-Low Decoders with Logic Gates**  \nAn active-low decoder produces complemented minterms ($\\bar{m}_i$). To realize $f = \\sum m(1, 4, 7)$, you MUST feed outputs 1, 4, 7 into a **NAND gate**, not an OR gate ($\\overline{\\bar{m}_1 \\cdot \\bar{m}_4 \\cdot \\bar{m}_7} = m_1 + m_4 + m_7$)."
     },
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "**Trap 4: Multiplier Bit Width**  \nThe multiplication of an $m$-bit unsigned number by an $n$-bit unsigned number requires an **$(m + n)$-bit** wide product register. For signed 2's complement numbers, sign extension must be preserved prior to partial product summation."
     }
    ]

@@ -20,7 +20,7 @@ export default function Chapter() {
     setLoading(true);
     setModule(null);
     if (!found) { setLoading(false); return; }
-    import(`../data/notes/de/${found.chapter.file}.js`)
+    import(`../data/notes/${subjectId}/${found.chapter.file}.js`)
       .then((m) => { if (alive) setModule(m.default); })
       .catch(() => { if (alive) setModule(null); })
       .finally(() => { if (alive) setLoading(false); });

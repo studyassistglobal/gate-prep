@@ -14,6 +14,9 @@ Public, login-free **GATE 2027 (ECE) notes site**. React 18 + Vite 5, HashRouter
 4. **Never hand-edit `src/data/notes/**`** — regenerate. Adding a chapter = drop its MD path into `CHAPTERS` in `build_notes.py` (with a unique `file` stem) + add the chapter to `src/data/courses.js`.
 5. Table cells split on `|` only OUTSIDE `$math$` (`split_table_row`) — ch3 magnitude cells contain literal pipes inside math; keep that rule.
 6. Part-split chapters carry `part` in the registry + module; labels use `chapterLabel()` ("Ch 4.2").
+7. Audit-concatenated Masters (ss-ch1) use `section_split: 'module'` — sections split at `## Module N:` only; interior `## `/`# ` lines become h2 divider blocks; TOC-named H2s dropped; alerts may carry inline `title`.
+8. Notes output/index: `src/data/notes/<subject>/<file>.js` + ONE combined `src/data/notes/index.js` (Course/Home import it; Chapter lazy-imports via `notes/<subjectId>/<file>`).
+9. ss-ch1 is a ~1 MB lazy chunk (12.7k words) — expected; per-section pagination keeps rendering comfortable. One mermaid fence renders as literal code.
 
 ## Site structure
 

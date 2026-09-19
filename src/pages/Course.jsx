@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getCourse, chapterLabel } from '../data/courses.js';
-import { NOTES_INDEX } from '../data/notes/de/index.js';
+import { NOTES_INDEX } from '../data/notes/index.js';
 import { chapterProgress } from '../lib/progress.js';
 import Icon from '../components/Icon.jsx';
 import NotFound from './NotFound.jsx';

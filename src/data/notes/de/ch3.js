@@ -73,6 +73,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "**Permissible Digit Alphabet Constraint:**\nIn any valid positional number system of radix $r$ ($r \\in \\mathbb{Z}^+, r \\ge 2$), every individual digit $d_i$ must belong to the strictly bounded digit alphabet $\\Sigma_r$:\n$$\\Sigma_r = \\{0, 1, 2, \\dots, r - 1\\} \\iff 0 \\le d_i \\le r - 1$$\nConsequently:\n1. No individual digit can equal or exceed the base $r$.\n2. For an unknown base $r$ problem involving digits $\\{d_0, d_1, \\dots\\}$, the strict physical lower bound on the base is:\n   $$r > \\max(d_i) \\iff r \\ge \\max(d_i) + 1$$\n\n*Example:* For $(548)_r$, the digits present are $5, 4, 8$. Hence, $r \\ge 8 + 1 = 9$. The base cannot be $2, 8,$ etc."
     },
     {
@@ -228,6 +229,7 @@ export default {
     {
      "t": "alert",
      "type": "NOTE",
+     "title": null,
      "text": "**Slide 248 Instructor Division Slip & Verification:**\nIn Slide 248, the classroom chalkboard illustrates converting $737_{10}$ to octal:\n- $737 \\div 8 = 92$, Remainder $= 1$ (LSD)\n- $92 \\div 8 = 11$, Remainder $= 4$\n- $11 \\div 8 = 1$, Remainder $= 3$\n- $1 \\div 8 = 0$, Remainder $= 1$ (MSD)\nReading remainders bottom-up yields $(1341)_8$.  \n*Faculty Note:* A minor handwriting transcription slip originally read $739 \\div 8$, but the remainder sequence $(1, 4, 3, 1)$ belongs uniquely to $737_{10} = (1341)_8$."
     },
     {
@@ -298,6 +300,7 @@ export default {
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "**The Radix-Point Centering Rule (Never Violate):**\nWhen grouping bits into clusters of $k$:\n- **Integer Part:** Group from **Right to Left** (radix point toward MSD $\\leftarrow$). Pad leading zeros to the leftmost group if incomplete.\n- **Fractional Part:** Group from **Left to Right** (radix point toward LSD $\\rightarrow$). Pad trailing zeros to the rightmost group if incomplete.\n*Fatal Trap:* Padding zeros on the wrong end alters the numerical magnitude!"
     },
     {
@@ -901,6 +904,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "**Mathematical Theorem for Self-Complementing Codes:**\nA 4-bit weighted code with weights $(w_3, w_2, w_1, w_0)$ is **self-complementing** if and only if:\n$$\\sum_{i=0}^3 w_i = w_3 + w_2 + w_1 + w_0 = 9$$\nWhen a code is self-complementing, taking the bitwise 1's complement of a codeword (inverting $0 \\leftrightarrow 1$) directly produces the code word for the decimal digit's **9's complement** ($9 - D$).\n\n*Verification:*\n- **BCD 8421:** $\\sum w_i = 8 + 4 + 2 + 1 = 15 \\neq 9 \\implies$ **NOT self-complementing**.\n- **2421:** $\\sum w_i = 2 + 4 + 2 + 1 = 9 \\implies$ **Self-complementing**.\n- **5211:** $\\sum w_i = 5 + 2 + 1 + 1 = 9 \\implies$ **Self-complementing**.\n- **8 4 -2 -1:** $\\sum w_i = 8 + 4 - 2 - 1 = 9 \\implies$ **Self-complementing**.\n- **Excess-3:** Unweighted, but satisfies self-complementation: $\\text{XS-3}(9 - D) = (9 - D) + 3 = 12 - D = 15 - (D + 3) = \\overline{\\text{XS-3}(D)}$."
     },
     {
@@ -959,6 +963,7 @@ export default {
     {
      "t": "alert",
      "type": "WARNING",
+     "title": null,
      "text": "**BCD Addition Correction Condition:**\nWhen two BCD digits are added using a 4-bit binary adder, add $+6$ ($0110_2$) to the result if and only if:\n1. $\\text{Raw Binary Sum} > 9$ ($1001_2$), OR\n2. Carry out from Stage 1 ($K_1$) equals $1$.\n\n**Hardware Boolean Detector Formulation:**\n$$K = C_{out} = K_1 + S_3 S_2 + S_3 S_1$$\nWhere:\n- $K_1$: Carry out from Stage 1 adder.\n- $S_3 S_2$: Detects sums $12, 13, 14, 15$.\n- $S_3 S_1$: Detects sums $10, 11, 14, 15$."
     },
     {
@@ -1095,6 +1100,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "**The Positive Number Equivalence Axiom:**\nFor any positive number $+N$, its binary representation is **IDENTICAL** across Signed-Magnitude, 1's Complement, and 2's Complement:\n$$\\text{SMR}(+N) = \\text{1's C}(+N) = \\text{2's C}(+N) = 0 \\,\\|\\, \\text{binary}(N)$$"
     },
     {
@@ -1243,6 +1249,7 @@ export default {
     {
      "t": "alert",
      "type": "TIP",
+     "title": null,
      "text": "**Sign Extension Principle:**\nTo expand an $n$-bit signed 2's complement number into an $m$-bit number ($m > n$), replicate the **Sign Bit (MSB)** into all $(m - n)$ higher-order positions.\n- Positive number ($MSB = 0$): Pad leading `0`s ($0101_2 \\to 00000101_2 = +5$).\n- Negative number ($MSB = 1$): Pad leading `1`s ($1011_2 \\to 11111011_2 = -5$).\n\n*Proof for Negative Number:*\nIn $4$ bits: $1011_2 = -2^3 + 2^1 + 2^0 = -8 + 3 = -5$.\nIn $8$ bits: $11111011_2 = -2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^1 + 2^0 = -128 + 64 + 32 + 16 + 8 + 3 = -128 + 123 = -5$. Value is invariant!"
     }
    ]
@@ -1306,11 +1313,13 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "**Dual Universal Overflow Formulations:**\n1. **Carry-Based XOR Formulation:**\n   $$V = C_{in} \\oplus C_{out}$$\n2. **Operand and Sum Bit Formulation:**\n   $$V = \\overline{A_{n-1}}\\,\\overline{B_{n-1}} S_{n-1} + A_{n-1} B_{n-1} \\overline{S_{n-1}}$$\n\n*Diagnostic Truth Matrix:*\n- Positive $+$ Positive Overflow: $C_{in} = 1, C_{out} = 0 \\implies V = 1 \\oplus 0 = 1$.\n- Negative $+$ Negative Overflow: $C_{in} = 0, C_{out} = 1 \\implies V = 0 \\oplus 1 = 1$.\n- No Overflow: $C_{in} = C_{out} \\implies V = C_{in} \\oplus C_{in} = 0$."
     },
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "**GATE Trap Alert: Carry Flag vs. Overflow Flag**\n- **Carry Flag ($C_{out} = 1$):** Indicates an unsigned arithmetic wrap-around past $2^n - 1$.\n- **Overflow Flag ($V = 1$):** Indicates a signed arithmetic boundary violation past range $[-2^{n-1}, +(2^{n-1}-1)]$.\n*A carry out of 1 does NOT mean an overflow occurred!* For example, in $(+5) + (-2) = +3$: $C_{out} = 1$ and $C_{in} = 1 \\implies V = 1 \\oplus 1 = 0$ (NO OVERFLOW)."
     }
    ]
@@ -1716,6 +1725,7 @@ export default {
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "1. **The Padding Trap:** Never pad fractional bits on the left! Integer pads leading zeros on MSB; fraction pads trailing zeros on LSB.\n2. **The Base Identity Trap:** When solving base equations where $r$ cancels out (e.g., $5r+5 = 5r+5$), $r$ is not \"any real number\" \u2014 it is strictly constrained by physical digit symbols: $r > \\max(d_i)$.\n3. **The Carry vs. Overflow Trap:** $C_{out} = 1$ is for unsigned numbers; $V = 1$ is for signed numbers. $C_{out} = 1$ DOES NOT imply overflow.\n4. **The BCD vs. Binary Trap:** $(15)_{10} \\neq 1111_{\\text{BCD}}$. $(15)_{10} = 0001\\ 0101_{\\text{BCD}}$.\n5. **The Asymmetric Negation Trap:** In $n$-bit 2's complement, you CANNOT negate $-2^{n-1}$ into $+2^{n-1}$ within $n$ bits. Attempting to do so causes an arithmetic overflow!"
     }
    ]

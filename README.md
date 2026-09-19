@@ -7,7 +7,8 @@ Live: **https://gate-prep.pages.dev** (project `gate-prep` on Cloudflare Pages)
 ## What's inside
 
 - **Digital Electronics** — Ch 1: Logic Gates & Boolean Algebra · Ch 2: Boolean Expressions & K-Maps · Ch 3: Number Systems & Digital Representation · Ch 4 Parts 1–2: Combinational Circuits
-- 73 sections / 2,400+ content blocks rendered from the Master Guide markdown sources, with KaTeX math, figures, alert callouts and collapsible worked solutions
+- **Signals & Systems** — Ch 1: Basics of Signals (17 modules, 509 slides audited)
+- 90 sections / 10,000+ content blocks rendered from the Master Guide markdown sources, with KaTeX math, figures, alert callouts and collapsible worked solutions
 - Reading progress per section (localStorage, no account), course/section search, light & dark theme
 
 ## Architecture
@@ -18,9 +19,9 @@ React 18 + Vite 5 (HashRouter), forked from the ExamPrep Hub codebase with all a
 D:/GATE 2027/Digital electronics/*_Master_Guide.md
         │  scripts/build_notes.py
         ▼
-src/data/notes/de/ch1.js, ch2.js   (typed block AST: p/h3/h4/ul/ol/table/code/alert/details/img/math)
+src/data/notes/<subject>/<file>.js (typed block AST: p/h2/h3/h4/ul/ol/table/code/alert/details/img/math)
 src/data/notes/de/index.js         (lightweight section index for accordion + search)
-public/notes/de/figures*/          (chapter figures — PNG for ch1/ch2, JPG for ch3)
+public/notes/<subject>/figures*/    (chapter figures — PNG/JPG per chapter)
 ```
 
 `src/data/courses.js` is the registry — new chapters/subjects are a registry entry + a generated module.

@@ -327,5 +327,80 @@ export const NOTES_INDEX = {
     "title": "Module 11: High-Yield Formula Sheet & Revision Cheat Sheet for GATE 2027"
    }
   ]
+ },
+ "ss-ch1": {
+  "num": 1,
+  "title": "Basics of Signals",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-01-signals-foundations-samplers-quantizers-taxonomy-slides-1-35",
+    "title": "Module 01: Signals Foundations, Samplers, Quantizers & Taxonomy (Slides 1\u201335)"
+   },
+   {
+    "id": "module-02-continuous-time-signal-operations-waveform-synthesis-slides-36-70",
+    "title": "Module 02: Continuous-Time Signal Operations & Waveform Synthesis (Slides 36\u201370)"
+   },
+   {
+    "id": "module-03-standard-elementary-continuous-time-signals-slope-break-tracking-slides-71-105",
+    "title": "Module 03: Standard Elementary Continuous-Time Signals & Slope-Break Tracking (Slides 71\u2013105)"
+   },
+   {
+    "id": "module-04-running-integrals-differentiation-elementary-signals-slides-106-140",
+    "title": "Module 04: Running Integrals, Differentiation & Elementary Signals (Slides 106\u2013140)"
+   },
+   {
+    "id": "module-05-the-dirac-delta-unit-impulse-function-sifting-algebra-slides-141-175",
+    "title": "Module 05: The Dirac Delta (Unit Impulse) Function & Sifting Algebra (Slides 141\u2013175)"
+   },
+   {
+    "id": "module-06-unit-doublet-sinc-sampling-functions-discrete-sequences-slides-176-210",
+    "title": "Module 06: Unit Doublet, Sinc, Sampling Functions & Discrete Sequences (Slides 176\u2013210)"
+   },
+   {
+    "id": "module-07-complex-exponentials-phasors-continuous-periodicity-slides-211-245",
+    "title": "Module 07: Complex Exponentials, Phasors & Continuous Periodicity (Slides 211\u2013245)"
+   },
+   {
+    "id": "module-08-periodicity-calculus-modulus-traps-signal-orthogonality-slides-246-280",
+    "title": "Module 08: Periodicity Calculus, Modulus Traps & Signal Orthogonality (Slides 246\u2013280)"
+   },
+   {
+    "id": "module-09-signal-symmetries-even-odd-conjugate-decompositions-slides-281-315",
+    "title": "Module 09: Signal Symmetries, Even/Odd & Conjugate Decompositions (Slides 281\u2013315)"
+   },
+   {
+    "id": "module-10a-energy-power-signal-physics-slides-316-350",
+    "title": "Module 10A: Energy & Power Signal Physics (Slides 316\u2013350)"
+   },
+   {
+    "id": "module-10b-master-transformation-invariance-table-symmetry-bounds-slides-351-385",
+    "title": "Module 10B: Master Transformation Invariance Table & Symmetry Bounds (Slides 351\u2013385)"
+   },
+   {
+    "id": "module-10c-discrete-sequence-transformations-impulse-identities-slides-386-420",
+    "title": "Module 10C: Discrete Sequence Transformations & Impulse Identities (Slides 386\u2013420)"
+   },
+   {
+    "id": "module-10d-discrete-time-periodicity-analysis-decimation-laws-slides-421-455",
+    "title": "Module 10D: Discrete-Time Periodicity Analysis & Decimation Laws (Slides 421\u2013455)"
+   },
+   {
+    "id": "module-10e-discrete-energy-orthogonality-parseval-s-power-theorem-slides-456-485",
+    "title": "Module 10E: Discrete Energy, Orthogonality & Parseval's Power Theorem (Slides 456\u2013485)"
+   },
+   {
+    "id": "module-10f-discrete-average-power-traps-final-gate-master-problem-bank-slides-486-509",
+    "title": "Module 10F: Discrete Average, Power Traps & Final GATE Master Problem Bank (Slides 486\u2013509)"
+   },
+   {
+    "id": "module-11-high-yield-formula-sheet-revision-traps-for-gate-2027",
+    "title": "Module 11: High-Yield Formula Sheet & Revision Traps for GATE 2027"
+   }
+  ]
  }
 };

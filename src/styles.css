@@ -2106,3 +2106,14 @@ details.alt-solution > summary .ic-xs { margin-right: 4px; }
   font-weight: 600;
 }
 .gp-toc-link.active.read { color: var(--emerald); }
+
+/* Signals & Systems subject + h2 dividers inside notes */
+.gp-subject-card.accent-math { border-left-color: #ef4444; }
+.gp-h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 26px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--outline-variant);
+}

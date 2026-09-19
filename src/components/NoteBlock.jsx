@@ -15,7 +15,7 @@ function Alert({ block }) {
   return (
     <div className={`gp-alert ${meta.cls}`}>
       <div className="gp-alert-title">
-        <Icon name={meta.icon} className="ic-sm" /> {meta.label}
+        <Icon name={meta.icon} className="ic-sm" /> {meta.label}{block.title ? ` — ${block.title}` : ''}
       </div>
       <div className="gp-alert-body">
         <MathText text={block.text} />
@@ -65,6 +65,8 @@ export default function NoteBlock({ block }) {
   switch (block.t) {
     case 'p':
       return <p className="gp-p"><MathText text={block.text} /></p>;
+    case 'h2':
+      return <h2 className="gp-h2"><MathText text={block.text} /></h2>;
     case 'h3':
       return <h3 className="gp-h3"><MathText text={block.text} /></h3>;
     case 'h4':

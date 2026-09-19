@@ -117,6 +117,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "**Bus Contention vs Bus Float:**\n- If two tri-state outputs tied to the same bus line are simultaneously enabled with opposite logic levels ($0$ and $1$), **bus contention** occurs, leading to high shoot-through currents, supply dips, and component burnout.\n- If all outputs tied to the bus are in high-$Z$, the bus is **floating** (indeterminate logic level, susceptible to capacitive noise coupling unless a pull-up/pull-down resistor is attached)."
     },
     {
@@ -1065,6 +1066,7 @@ export default {
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "**GATE Trap on Carry OR Gate:**  \nCan the final OR gate be replaced by an XOR gate?  \n**Yes!** Because $C_1 = AB$ and $C_2 = (A \\oplus B)C_{in}$ are **mutually exclusive** ($C_1 \\cdot C_2 = AB(A\\oplus B)C_{in} = 0$).  \nTherefore, $C_1 + C_2 \\equiv C_1 \\oplus C_2$.  \nHowever, an OR gate has a lower propagation delay and smaller transistor count than an XOR gate, so practical hardware implementations strictly use an OR gate."
     },
     {
@@ -1603,6 +1605,7 @@ export default {
     {
      "t": "alert",
      "type": "WARNING",
+     "title": null,
      "text": "**High-Yield GATE Trap:**  \nNever attach an OR gate to an active-low decoder expecting an SOP sum! Active-low decoder outputs feeding an OR gate generate $\\overline{m_1} + \\overline{m_3} = \\overline{m_1 \\cdot m_3} = 1$ almost everywhere! To get SOP from active-low decoder, you MUST use a **NAND gate**."
     }
    ]

@@ -23,6 +23,15 @@ export const COURSE = {
       ],
     },
     {
+      id: 'ss',
+      name: 'Signals & Systems',
+      icon: 'graphic_eq',
+      accent: 'math',
+      chapters: [
+        { id: 'ss-ch1', num: 1, title: 'Basics of Signals', status: 'live', file: 'ssch1' },
+      ],
+    },
+    {
       id: 'nt',
       name: 'Network Theory',
       icon: 'bolt',

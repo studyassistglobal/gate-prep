@@ -86,6 +86,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "**Faculty Golden Rule**:  \nA signal is classified as **Analog** if its amplitude is *continuous* (can take uncountably infinite values within its dynamic range).  \nA signal is classified as **Digital** if and only if its amplitude is *quantized / discrete* (restricted to a finite set of allowable voltage bands).  \nTime discretization alone does NOT make a signal digital!"
     },
     {
@@ -375,6 +376,7 @@ export default {
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "**Faculty Alert \u2014 The Alternating Sequence Trap (Slide 14)**:  \nWhen given an alternating pulse train that spends $2\\,\\mu\\text{s}$ HIGH and $2\\,\\mu\\text{s}$ LOW:\n- If specified as a **Clock**, Period $T = 2\\,\\mu\\text{s} + 2\\,\\mu\\text{s} = 4\\,\\mu\\text{s} \\implies f = 1/4\\,\\mu\\text{s} = 0.25\\text{ MHz}$.\n- If specified as a **Data Line**, each HIGH duration is one bit (`1`), and each LOW duration is one bit (`0`).  \n  Bit duration $T_b = 2\\,\\mu\\text{s}$!  \n  $$\\text{Data Rate} = \\frac{1}{T_b} = \\frac{1}{2 \\times 10^{-6}\\text{ s}} = 0.5\\text{ Mbps}$$  \nConfusing a data bit interval with a 2-level clock cycle is one of the most frequent point-loss traps in GATE!"
     }
    ]
@@ -789,11 +791,13 @@ export default {
     {
      "t": "alert",
      "type": "WARNING",
+     "title": null,
      "text": "**Faculty Golden Rule: Even Inverter Loops (The Latch Rule)**:  \nIf a closed loop contains an **even number of inverters** ($N = 2, 4, 6 \\dots$), the net feedback is **positive** ($0 \\to 0$, $1 \\to 1$).  \nThe circuit possesses two stable states and acts as a **Bistable Latch (Memory Cell)**.  \n**Oscillation Frequency $f = 0\\text{ Hz}$**!"
     },
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "**External Gate Independence Theorem**:  \nGates connected **outside** the closed feedback loop (whether upstream at the input or downstream at the output) introduce signal propagation latency and phase delay, but have **ABSOLUTELY ZERO EFFECT** on the fundamental oscillation frequency $f$ of the ring oscillator!"
     }
    ]
@@ -947,6 +951,7 @@ export default {
     {
      "t": "alert",
      "type": "TIP",
+     "title": null,
      "text": "**Faculty Mnemonic for XOR / XNOR Counts**:  \nNotice the perfect cross-symmetry:\n- **NAND to XOR = 4**, NAND to XNOR = 5.\n- **NOR to XNOR = 4**, NOR to XOR = 5.  \nThe gate matching its natural parity requires 4; the opposite requires 5!"
     },
     {
@@ -1494,6 +1499,7 @@ export default {
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "**Faculty Trap Alert (The Bubble Fallacy)**:  \nFor $n = 3$ inputs:\n$$A \\odot B \\odot C \\equiv A \\oplus B \\oplus C$$\nInverting the output of a 3-input XOR gate gives $\\overline{A \\oplus B \\oplus C}$, which is **NOT** equal to $A \\odot B \\odot C$!  \nAdding an output bubble to an odd-input XOR gate changes its function entirely!"
     },
     {
@@ -1568,6 +1574,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "**Faculty Golden Rule (Slide 85)**:  \nWhen asked in GATE for the **minimum propagation delay** to implement XNOR using NAND (or XOR using NOR), the answer is **$3 t_{pd}$**, NOT $4 t_{pd}$!  \nBoth XOR and XNOR can be synthesized with a critical path of exactly **3 gate delays** using 2-input universal gates!"
     }
    ]
@@ -2001,6 +2008,7 @@ export default {
     {
      "t": "alert",
      "type": "WARNING",
+     "title": null,
      "text": "**Faculty Warning \u2014 When Two Variables Change State (Slide 105)**:  \nIn the expression $\\bar{A}\\bar{B} + \\bar{B}\\bar{C} + CA$:  \n- Looking at terms $\\bar{A}\\bar{B}$ and $CA$, variable $A$ is complemented ($A$ vs. $\\bar{A}$). The consensus candidate would be $\\bar{B}C$. But the middle term is $\\bar{B}\\bar{C}$, NOT $\\bar{B}C$!  \n- Here, **two variables change state** ($A$ and $C$). Therefore, the Consensus Theorem is strictly **NOT APPLICABLE**!  \n- To simplify, factor out $\\bar{B}$ and apply De Morgan / Absorption:\n  $$\\bar{B}(\\bar{A} + \\bar{C}) + CA = \\bar{B}\\overline{AC} + CA = \\mathbf{\\bar{B} + CA}$$"
     },
     {
@@ -2560,6 +2568,7 @@ export default {
       {
        "t": "alert",
        "type": "CAUTION",
+       "title": null,
        "text": "**The Classic Student Fallacy**:  \nMany students assume the waveform is a clock signal with period:\n$$T = 2\\,\\mu\\text{s} + 2\\,\\mu\\text{s} = 4\\,\\mu\\text{s}$$\nand calculate:\n$$\\text{Rate} = \\frac{1}{4\\,\\mu\\text{s}} = 0.25\\text{ Mbps} \\quad \\text{\\bf [WRONG!]}$$"
       },
       {
@@ -3872,6 +3881,7 @@ export default {
       {
        "t": "alert",
        "type": "CAUTION",
+       "title": null,
        "text": "**Student Trap Alert**:  \nA student incorrectly distributes XOR over OR:\n$$A \\oplus [\\bar{A} + B] \\stackrel{\\text{WRONG}}{=} (A \\oplus \\bar{A}) + (A \\oplus B) = 1 + (A \\oplus B) = 1$$\nThis is completely false because **XOR DOES NOT DISTRIBUTE OVER OR**!"
       },
       {

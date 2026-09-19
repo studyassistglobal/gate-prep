@@ -20,6 +20,7 @@ export default {
     {
      "t": "alert",
      "type": "NOTE",
+     "title": null,
      "text": "### Master Pedagogical Design Principles\n1. **Zero Prior Knowledge Assumed:** You can study directly from this document without watching the video lectures. Every step, theorem, gate-level truth table, and topological derivation is explained with first-principles rigor.\n2. **Clean Practice Questions (No Spoilers):** Every example, classroom exercise, and GATE PYQ presents the clean problem statement and unmarked diagrams first. Complete step-by-step faculty derivations, alternative solving methods, and exam traps are encapsulated within collapsible `<details>` containers.\n3. **High-Contrast Dark Mode Publication Quality:** Full KaTeX mathematical typesetting, standardized Markdown tables, and crisp high-resolution architectural figures."
     }
    ]
@@ -445,6 +446,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "### The Fundamental Minterm Axiom\nA minterm evaluates to logic **$1$** for **exactly ONE** input combination and evaluates to **$0$** for all remaining $(2^n - 1)$ input combinations."
     },
     {
@@ -906,6 +908,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "### The Fundamental Maxterm Axiom\nA maxterm evaluates to logic **$0$** for **exactly ONE** input combination and evaluates to **$1$** for all remaining $(2^n - 1)$ input combinations."
     },
     {
@@ -1288,6 +1291,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "### Form Conversion Theorem\n$$f = \\sum m(S) = \\prod M(S^c) \\quad \\text{where } S \\cup S^c = \\{0, 1, \\dots, 2^n - 1\\} \\text{ and } S \\cap S^c = \\emptyset$$\n**Complement of Function:**\n$$\\overline{f} = \\sum m(S^c) = \\prod M(S)$$"
     },
     {
@@ -1573,6 +1577,7 @@ export default {
       {
        "t": "alert",
        "type": "CAUTION",
+       "title": null,
        "text": "### The Missing-Variable Expansion Trap!\nWhen a 3-variable product term has output $1$ in a 4-variable system, it is **NOT** a single minterm! It is missing variable $D$, which means it splits into two 4-variable minterms: $(D + \\overline{D})$."
       },
       {
@@ -1900,6 +1905,7 @@ export default {
       {
        "t": "alert",
        "type": "WARNING",
+       "title": null,
        "text": "### Crucial GATE Exam Trap!\nIf you read the table blindly in visual column order $(A, B, C)$, you will assign wrong decimal indices. The problem statement explicitly declares:\n$$\\text{MSB } = C \\quad (\\text{Weight } 4), \\qquad B \\quad (\\text{Weight } 2), \\qquad \\text{LSB } = A \\quad (\\text{Weight } 1)$$\nTherefore, the true decimal index $D$ for each row is:\n$$D = 4C + 2B + A$$"
       },
       {
@@ -2504,6 +2510,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "### The Gray Code Column Inversion\nNotice that Column 3 is labeled **$11$** and Column 4 is labeled **$10$**. Consequently, the cell indices in Row 0 run as **$0, 1, 3, 2$** (NOT $0, 1, 2, 3$). In Row 1, they run as **$4, 5, 7, 6$**. Forgetting this sequence is the most common student error in competitive exams!"
     },
     {
@@ -2526,6 +2533,7 @@ export default {
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "### The 4-Variable Double Reflection Jump!\n- **Row Jump:** Row 3 corresponds to $AB = 11$ (decimal indices $12, 13, 15, 14$), while Row 4 corresponds to $AB = 10$ (decimal indices $8, 9, 11, 10$).\n- **Column Jump:** Column 3 corresponds to $CD = 11$, while Column 4 corresponds to $CD = 10$.\n- Both rows and columns reflect at index 3!"
     },
     {
@@ -2723,6 +2731,7 @@ export default {
     {
      "t": "alert",
      "type": "CAUTION",
+     "title": null,
      "text": "### Strict Prohibition of Non-Power-of-Two Groups\nGroups of $3, 5, 6, 7, 9, \\dots$ cells are strictly **ILLEGAL**. A group of 3 cells cannot eliminate a variable cleanly."
     },
     {
@@ -3489,6 +3498,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "### The 3D Superposition Rule\nAny cell in the $A=0$ map is **directly adjacent** to the cell in the **exact same row and column** in the $A=1$ map!  \nTheir binary coordinates differ exclusively in the MSB $A$ ($d_H = 1$).\n$$\\text{Cell } 9 \\; (01001_2) \\quad \\longleftrightarrow \\quad \\text{Cell } 25 \\; (11001_2)$$"
     },
     {
@@ -3590,6 +3600,7 @@ export default {
       {
        "t": "alert",
        "type": "CAUTION",
+       "title": null,
        "text": "### The Cross-Map Non-Adjacency Trap!\nStudents frequently try to combine cells $(3, 11)$ and cells $(17, 25)$ into a quad. However, cells $(3, 11)$ reside in column $DE = 11$, while cells $(17, 25)$ reside in column $DE = 01$. Because their column coordinates differ, they are **NOT superimposed** ($d_H = 2$) and cannot form a quad!"
       },
       {
@@ -3717,6 +3728,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "### Master Multi-Variable Parity Theorems\n1. **Odd $n$ Theorem ($n \\in \\{3, 5, 7, \\dots\\}$):**  \n   $$\\mathbf{A_1 \\oplus A_2 \\oplus \\dots \\oplus A_n = A_1 \\odot A_2 \\odot \\dots \\odot A_n}$$\n   *(For any odd number of inputs, an all-XOR gate is mathematically IDENTICAL to an all-XNOR gate!)*\n\n2. **Even $n$ Theorem ($n \\in \\{2, 4, 6, \\dots\\}$):**  \n   $$\\mathbf{A_1 \\odot A_2 \\odot \\dots \\odot A_n = \\overline{A_1 \\oplus A_2 \\oplus \\dots \\oplus A_n}}$$\n   *(For any even number of inputs, an all-XNOR gate is the COMPLEMENT of an all-XOR gate!)*\n\n3. **The Inversion Parity Rule:**  \n   In any associative chain of $n$ variables containing both $\\oplus$ and $\\odot$ operators:\n   $$\\text{Function} = \\begin{cases} A_1 \\oplus A_2 \\oplus \\dots \\oplus A_n, & \\text{if count of } \\odot \\text{ operators is EVEN} \\\\ \\overline{A_1 \\oplus A_2 \\oplus \\dots \\oplus A_n}, & \\text{if count of } \\odot \\text{ operators is ODD} \\end{cases}$$"
     },
     {
@@ -3957,6 +3969,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "### The Faculty \"Bigger Club\" Rule\n*\"Inside the bigger club, no further small clubs are allowed.\"*  \nIf a cell is part of a valid 4-cell Quad, any 2-cell Pair entirely contained inside that Quad is **NOT** a Prime Implicant!"
     },
     {
@@ -4140,6 +4153,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "### Maximum EPI Theorem\n$$\\mathbf{\\text{Maximum Number of EPIs for an } n\\text{-variable function} = 2^{n-1}}$$"
     },
     {
@@ -4199,6 +4213,7 @@ export default {
     {
      "t": "alert",
      "type": "WARNING",
+     "title": null,
      "text": "### Golden Exam Protocol\nAlways inspect the column and row Gray code sequence before circling groups! If column $10$ precedes $11$, immediately swap the two columns back to standard Gray code ($00, 01, 11, 10$) before grouping."
     },
     {
@@ -4247,6 +4262,7 @@ export default {
       {
        "t": "alert",
        "type": "CAUTION",
+       "title": null,
        "text": "### The GATE Exam Trap of the Decade!\nMost students solve this using SOP, get a literal count of 7, see Option (a), mark it, and lose marks!  \nWhen don't-cares are present, **NEVER stop at SOP! Always compute the minimal POS form!**"
       },
       {
@@ -4340,6 +4356,7 @@ export default {
     {
      "t": "alert",
      "type": "IMPORTANT",
+     "title": null,
      "text": "### The Static Hazard Diagnostic Axiom\nA Static-1 Hazard exists in a two-level AND-OR circuit if and only if **two adjacent 1-cells on the Karnaugh map are covered by DIFFERENT Prime Implicants, with NO single Prime Implicant covering both cells simultaneously**."
     },
     {
