@@ -58,6 +58,12 @@ export default function Chapter() {
     setReadSet(getReadSections(module.id));
   };
 
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const truncate = (t) => (t.length > 34 ? `${t.slice(0, 34)}…` : t);
+
   return (
     <div className="gp-page gp-chapter-page">
       <nav className="gp-crumbs" aria-label="Breadcrumb">
@@ -106,39 +112,54 @@ export default function Chapter() {
               </p>
             </header>
 
-            {module.sections.map((s, i) => (
-              <section key={s.id} id={s.id} className={`gp-section${readSet.has(s.id) ? ' is-read' : ''}`}>
-                <div className="gp-section-head">
-                  <h2>
-                    <span className="gp-sec-num">{i + 1}</span>
-                    {s.title}
-                  </h2>
-                  <button
-                    type="button"
-                    className={`btn btn-sm ${readSet.has(s.id) ? 'btn-ghost' : 'btn-surf'}`}
-                    onClick={() => handleToggle(s.id)}
-                    title={readSet.has(s.id) ? 'Mark as unread' : 'Mark this section as read'}
-                  >
-                    <Icon name={readSet.has(s.id) ? 'check_circle' : 'radio_button_unchecked'} className="ic-sm" />
-                    {readSet.has(s.id) ? 'Read' : 'Mark read'}
-                  </button>
-                </div>
-                {s.blocks.map((b, bi) => <NoteBlock key={bi} block={b} />)}
-              </section>
-            ))}
-
-            <div className="gp-chapter-nav">
-              {prev ? (
-                <Link className="btn btn-surf" to={`/course/${courseId}/${prev.subject.id}/${prev.chapter.id}`}>
-                  <Icon name="arrow_back" className="ic-sm" /> Ch {prev.chapter.num}: {prev.chapter.title.slice(0, 34)}{prev.chapter.title.length > 34 ? '…' : ''}
-                </Link>
-              ) : <span />}
-              {next ? (
-                <Link className="btn btn-primary" to={`/course/${courseId}/${next.subject.id}/${next.chapter.id}`}>
-                  Ch {next.chapter.num}: {next.chapter.title.slice(0, 34)}{next.chapter.title.length > 34 ? '…' : ''} <Icon name="arrow_forward" className="ic-sm" />
-                </Link>
-              ) : <span />}
-            </div>
+            {module.sections.map((s, i) => {
+              const prevSec = i > 0 ? module.sections[i - 1] : null;
+              const nextSec = i < module.sections.length - 1 ? module.sections[i + 1] : null;
+              return (
+                <section key={s.id} id={s.id} className={`gp-section${readSet.has(s.id) ? ' is-read' : ''}`}>
+                  <div className="gp-section-head">
+                    <h2>
+                      <span className="gp-sec-num">{i + 1}</span>
+                      {s.title}
+                    </h2>
+                    <button
+                      type="button"
+                      className={`btn btn-sm ${readSet.has(s.id) ? 'btn-ghost' : 'btn-surf'}`}
+                      onClick={() => handleToggle(s.id)}
+                      title={readSet.has(s.id) ? 'Mark as unread' : 'Mark this section as read'}
+                    >
+                      <Icon name={readSet.has(s.id) ? 'check_circle' : 'radio_button_unchecked'} className="ic-sm" />
+                      {readSet.has(s.id) ? 'Read' : 'Mark read'}
+                    </button>
+                  </div>
+                  {s.blocks.map((b, bi) => <NoteBlock key={bi} block={b} />)}
+                  <div className="gp-section-nav">
+                    {prevSec ? (
+                      <button type="button" className="btn btn-surf" onClick={() => scrollToSection(prevSec.id)} title={prevSec.title}>
+                        <Icon name="arrow_back" className="ic-sm" /> {truncate(prevSec.title)}
+                      </button>
+                    ) : prev ? (
+                      <Link className="btn btn-surf" to={`/course/${courseId}/${prev.subject.id}/${prev.chapter.id}`} title={`Chapter ${prev.chapter.num}: ${prev.chapter.title}`}>
+                        <Icon name="arrow_back" className="ic-sm" /> Ch {prev.chapter.num}: {truncate(prev.chapter.title)}
+                      </Link>
+                    ) : <span />}
+                    {nextSec ? (
+                      <button type="button" className="btn btn-primary" onClick={() => scrollToSection(nextSec.id)} title={nextSec.title}>
+                        {truncate(nextSec.title)} <Icon name="arrow_forward" className="ic-sm" />
+                      </button>
+                    ) : next ? (
+                      <Link className="btn btn-primary" to={`/course/${courseId}/${next.subject.id}/${next.chapter.id}`} title={`Chapter ${next.chapter.num}: ${next.chapter.title}`}>
+                        Ch {next.chapter.num}: {truncate(next.chapter.title)} <Icon name="arrow_forward" className="ic-sm" />
+                      </Link>
+                    ) : (
+                      <Link className="btn btn-primary" to={`/course/${courseId}`}>
+                        Back to course <Icon name="arrow_forward" className="ic-sm" />
+                      </Link>
+                    )}
+                  </div>
+                </section>
+              );
+            })}
           </article>
         </div>
       )}

@@ -2077,3 +2077,16 @@ details.alt-solution > summary .ic-xs { margin-right: 4px; }
 .gp-details-body { padding: 6px 16px 12px; border-top: 1px solid var(--outline-variant); }
 
 .gp-chapter-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--outline-variant); flex-wrap: wrap; }
+
+/* Per-module prev/next navigation */
+.gp-section-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--outline-variant);
+  flex-wrap: wrap;
+}
+.gp-section-nav .btn { max-width: 48%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
