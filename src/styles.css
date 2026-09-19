@@ -2090,3 +2090,19 @@ details.alt-solution > summary .ic-xs { margin-right: 4px; }
   flex-wrap: wrap;
 }
 .gp-section-nav .btn { max-width: 48%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* TOC links are buttons in the paginated reader */
+.gp-toc-link {
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+.gp-toc-link.active {
+  background: var(--primary-soft, rgba(124, 58, 237, 0.15));
+  color: var(--primary);
+  font-weight: 600;
+}
+.gp-toc-link.active.read { color: var(--emerald); }
