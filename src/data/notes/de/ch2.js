@@ -3,6 +3,7 @@
 export default {
  "id": "de-ch2",
  "num": 2,
+ "part": null,
  "title": "Representation of Boolean Expressions & K-Maps",
  "subject": "Digital Electronics",
  "source": "Chapter_02_Representation_of_Boolean_Expressions_and_K_Maps_Master_Guide.md",

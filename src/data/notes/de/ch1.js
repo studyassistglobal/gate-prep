@@ -3,6 +3,7 @@
 export default {
  "id": "de-ch1",
  "num": 1,
+ "part": null,
  "title": "Logic Gates & Boolean Algebra",
  "subject": "Digital Electronics",
  "source": "Chapter_01_Logic_Gates_and_Boolean_Algebra_Master_Guide.md",

@@ -20,7 +20,7 @@ const { NOTES_INDEX } = await import(pathToFileURL(path.join(ROOT, 'src/data/not
 // 1. registry consistency
 const live = liveChapterSequence(COURSE.id);
 if (COURSE.id !== 'gate-2027-ece') fail(`unexpected course id ${COURSE.id}`);
-if (live.length !== 2) fail(`expected 2 live chapters, found ${live.length}`);
+if (live.length !== 5) fail(`expected 5 live chapters, found ${live.length}`);
 for (const { chapter } of live) {
   const idx = NOTES_INDEX[chapter.id];
   if (!idx) { fail(`${chapter.id}: missing from NOTES_INDEX`); continue; }

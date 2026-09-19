@@ -10,8 +10,10 @@ Public, login-free **GATE 2027 (ECE) notes site**. React 18 + Vite 5, HashRouter
 
 1. Source of truth: `D:/GATE 2027/Digital electronics/*_Master_Guide.md` (outside this repo).
 2. `npm run build:notes` (`scripts/build_notes.py`) parses each MD into typed blocks (`p / h3 / h4 / ul / ol / table / code / alert / details / img / math`), splits at `## ` headings, drops the MD's own TOC (both `## Table of Contents` sections and bare internal-anchor link lines), captures the pre-heading preamble as an "About this chapter" section, and rewrites figure paths to `/notes/de/...`.
-3. Outputs `src/data/notes/de/chN.js` + `index.js` + copies figure PNGs to `public/notes/de/`.
-4. **Never hand-edit `src/data/notes/**`** — regenerate. Adding a chapter = drop its Master_Guide.md path into `CHAPTERS` in `build_notes.py` + add the chapter to `src/data/courses.js`.
+3. Outputs `src/data/notes/de/<file>.js` (per-chapter `file` stem — ch4 parts are `ch4p1.js`/`ch4p2.js`) + `index.js` + copies figures (PNG **and JPG**) to `public/notes/de/`.
+4. **Never hand-edit `src/data/notes/**`** — regenerate. Adding a chapter = drop its MD path into `CHAPTERS` in `build_notes.py` (with a unique `file` stem) + add the chapter to `src/data/courses.js`.
+5. Table cells split on `|` only OUTSIDE `$math$` (`split_table_row`) — ch3 magnitude cells contain literal pipes inside math; keep that rule.
+6. Part-split chapters carry `part` in the registry + module; labels use `chapterLabel()` ("Ch 4.2").
 
 ## Site structure
 

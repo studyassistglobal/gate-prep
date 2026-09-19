@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { getCourse } from '../data/courses.js';
+import { getCourse, chapterLabel } from '../data/courses.js';
 import { NOTES_INDEX } from '../data/notes/de/index.js';
 import { chapterProgress } from '../lib/progress.js';
 import Icon from '../components/Icon.jsx';
@@ -106,7 +106,7 @@ export default function Course() {
                   className="card gp-search-hit"
                   to={`/course/${course.id}/${r.subject.id}/${r.chapter.id}${r.section ? `#${r.section.id}` : ''}`}
                 >
-                  <span className="pill pill-mut">{r.subject.name} · Ch {r.chapter.num}</span>
+                  <span className="pill pill-mut">{r.subject.name} · {chapterLabel(r.chapter)}</span>
                   <span className="gp-search-hit-text">{r.text}</span>
                   <Icon name="arrow_outward" className="ic-sm" />
                 </Link>
@@ -144,7 +144,7 @@ export default function Course() {
                           return (
                             <div key={c.id} className={`card gp-chapter-row${c.status !== 'live' ? ' soon' : ''}`}>
                               <div className="gp-chapter-main">
-                                <span className="gp-ch-num">{c.num}</span>
+                                <span className="gp-ch-num">{chapterLabel(c).replace('Ch ', '')}</span>
                                 <div style={{ flex: 1 }}>
                                   <h3>{c.title}</h3>
                                   {c.status === 'live' && idx ? (

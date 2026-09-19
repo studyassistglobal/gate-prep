@@ -162,5 +162,170 @@ export const NOTES_INDEX = {
     "title": "17.2 Chapter 2 Master Formula Summary & Exam Day Checklist"
    }
   ]
+ },
+ "de-ch3": {
+  "num": 3,
+  "title": "Number Systems & Digital Representation",
+  "subject": "Digital Electronics",
+  "sections": [
+   {
+    "id": "positional-systems-complement-arithmetic-overflow-mechanics-binary-codes-gate-master-analysis",
+    "title": "Positional Systems, Complement Arithmetic, Overflow Mechanics, Binary Codes & GATE Master Analysis"
+   },
+   {
+    "id": "module-1-positional-number-systems-base-radix-foundations",
+    "title": "Module 1: Positional Number Systems & Base/Radix Foundations"
+   },
+   {
+    "id": "module-2-radix-conversions-power-of-2-shortcut-methods",
+    "title": "Module 2: Radix Conversions & Power-of-2 Shortcut Methods"
+   },
+   {
+    "id": "module-3-unknown-radix-equations-non-standard-base-systems",
+    "title": "Module 3: Unknown Radix Equations & Non-Standard Base Systems"
+   },
+   {
+    "id": "module-4-base-arithmetic-operations-binary-octal-hexadecimal",
+    "title": "Module 4: Base Arithmetic Operations (Binary, Octal, Hexadecimal)"
+   },
+   {
+    "id": "module-5-binary-codes-code-arithmetic-bcd-excess-3-gray",
+    "title": "Module 5: Binary Codes & Code Arithmetic (BCD, Excess-3, Gray)"
+   },
+   {
+    "id": "module-6-signed-number-representations-complement-systems",
+    "title": "Module 6: Signed Number Representations & Complement Systems"
+   },
+   {
+    "id": "module-7-2-s-complement-arithmetic-subtraction-by-addition-sign-extension",
+    "title": "Module 7: 2's Complement Arithmetic, Subtraction by Addition & Sign Extension"
+   },
+   {
+    "id": "module-8-overflow-detection-theory-hardware-logic-implementation",
+    "title": "Module 8: Overflow Detection Theory & Hardware Logic Implementation"
+   },
+   {
+    "id": "module-9-bit-capacity-word-length-digit-scaling-laws",
+    "title": "Module 9: Bit-Capacity, Word Length & Digit Scaling Laws"
+   },
+   {
+    "id": "module-10-fully-worked-gate-master-problem-capsules",
+    "title": "Module 10: Fully Worked GATE Master Problem Capsules"
+   },
+   {
+    "id": "module-11-high-yield-formula-sheet-revision-traps-for-gate-2027",
+    "title": "Module 11: High-Yield Formula Sheet & Revision Traps for GATE 2027"
+   }
+  ]
+ },
+ "de-ch4-p1": {
+  "num": 4,
+  "title": "Combinational Circuits \u2014 Arithmetic Logic",
+  "subject": "Digital Electronics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "1-executive-chapter-overview-architectural-foundations",
+    "title": "1. Executive Chapter Overview & Architectural Foundations"
+   },
+   {
+    "id": "2-master-topic-index-visual-slide-mapping-pp-353-618",
+    "title": "2. Master Topic Index & Visual Slide Mapping (pp. 353\u2013618)"
+   },
+   {
+    "id": "3-detailed-technical-analysis-combinational-design-case-studies",
+    "title": "3. Detailed Technical Analysis: Combinational Design & Case Studies"
+   },
+   {
+    "id": "4-code-converters-parity-networks",
+    "title": "4. Code Converters & Parity Networks"
+   },
+   {
+    "id": "5-magnitude-comparators",
+    "title": "5. Magnitude Comparators"
+   },
+   {
+    "id": "6-decoders-logic-function-realization",
+    "title": "6. Decoders & Logic Function Realization"
+   },
+   {
+    "id": "7-tri-state-logic-encoders-priority-encoders",
+    "title": "7. Tri-State Logic, Encoders & Priority Encoders"
+   },
+   {
+    "id": "8-binary-adders-subtractors",
+    "title": "8. Binary Adders & Subtractors"
+   },
+   {
+    "id": "9-ripple-carry-adders-vs-carry-look-ahead-adders",
+    "title": "9. Ripple Carry Adders vs Carry Look-Ahead Adders"
+   },
+   {
+    "id": "10-composite-arithmetic-circuits-multipliers",
+    "title": "10. Composite Arithmetic Circuits & Multipliers"
+   },
+   {
+    "id": "11-high-yield-gate-formula-cheat-sheet-pitfalls",
+    "title": "11. High-Yield GATE Formula Cheat Sheet & Pitfalls"
+   }
+  ]
+ },
+ "de-ch4-p2": {
+  "num": 4,
+  "title": "Combinational Circuits \u2014 Advanced Architectures",
+  "subject": "Digital Electronics",
+  "sections": [
+   {
+    "id": "advanced-architectures-arithmetic-data-paths-timing-delays-gate-master-analysis",
+    "title": "Advanced Architectures, Arithmetic Data-Paths, Timing Delays & GATE Master Analysis"
+   },
+   {
+    "id": "module-1-tri-state-logic-bus-interfacing-decoder-expansion-trees",
+    "title": "Module 1: Tri-State Logic, Bus Interfacing & Decoder Expansion Trees"
+   },
+   {
+    "id": "module-2-encoders-priority-encoders-deep-dive",
+    "title": "Module 2: Encoders & Priority Encoders Deep Dive"
+   },
+   {
+    "id": "module-3-multiplexers-mux-universal-logic-synthesis",
+    "title": "Module 3: Multiplexers (MUX) & Universal Logic Synthesis"
+   },
+   {
+    "id": "module-4-demultiplexers-demux-code-converters",
+    "title": "Module 4: Demultiplexers (DEMUX) & Code Converters"
+   },
+   {
+    "id": "module-5-binary-adders-subtractors-gate-level-realizations",
+    "title": "Module 5: Binary Adders & Subtractors (Gate-Level Realizations)"
+   },
+   {
+    "id": "module-6-timing-propagation-delay-analysis-in-adders",
+    "title": "Module 6: Timing & Propagation Delay Analysis in Adders"
+   },
+   {
+    "id": "module-7-ripple-carry-adder-rca-vs-carry-look-ahead-adder-cla",
+    "title": "Module 7: Ripple Carry Adder (RCA) vs Carry Look-Ahead Adder (CLA)"
+   },
+   {
+    "id": "module-8-bcd-arithmetic-bcd-adder-bcd-subtractor",
+    "title": "Module 8: BCD Arithmetic (BCD Adder & BCD Subtractor)"
+   },
+   {
+    "id": "module-9-binary-multipliers-array-architectures",
+    "title": "Module 9: Binary Multipliers & Array Architectures"
+   },
+   {
+    "id": "module-10-solved-gate-master-problems-msq-traps",
+    "title": "Module 10: Solved GATE Master Problems & MSQ Traps"
+   },
+   {
+    "id": "module-11-high-yield-formula-sheet-revision-cheat-sheet-for-gate-2027",
+    "title": "Module 11: High-Yield Formula Sheet & Revision Cheat Sheet for GATE 2027"
+   }
+  ]
  }
 };

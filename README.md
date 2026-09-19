@@ -6,8 +6,8 @@ Live: **https://gate-prep.pages.dev** (project `gate-prep` on Cloudflare Pages)
 
 ## What's inside
 
-- **Digital Electronics** — Ch 1: Logic Gates & Boolean Algebra · Ch 2: Boolean Expressions & K-Maps (Ch 3–4 coming soon)
-- 36 sections / 1,700+ content blocks rendered from the Master Guide markdown sources, with KaTeX math, figures, alert callouts and collapsible worked solutions
+- **Digital Electronics** — Ch 1: Logic Gates & Boolean Algebra · Ch 2: Boolean Expressions & K-Maps · Ch 3: Number Systems & Digital Representation · Ch 4 Parts 1–2: Combinational Circuits
+- 73 sections / 2,400+ content blocks rendered from the Master Guide markdown sources, with KaTeX math, figures, alert callouts and collapsible worked solutions
 - Reading progress per section (localStorage, no account), course/section search, light & dark theme
 
 ## Architecture
@@ -20,7 +20,7 @@ D:/GATE 2027/Digital electronics/*_Master_Guide.md
         ▼
 src/data/notes/de/ch1.js, ch2.js   (typed block AST: p/h3/h4/ul/ol/table/code/alert/details/img/math)
 src/data/notes/de/index.js         (lightweight section index for accordion + search)
-public/notes/de/figures*/          (chapter figure PNGs)
+public/notes/de/figures*/          (chapter figures — PNG for ch1/ch2, JPG for ch3)
 ```
 
 `src/data/courses.js` is the registry — new chapters/subjects are a registry entry + a generated module.

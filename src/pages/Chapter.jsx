@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useLocation } from 'react-router-dom';
-import { findChapter, liveChapterSequence } from '../data/courses.js';
+import { findChapter, liveChapterSequence, chapterLabel } from '../data/courses.js';
 import { getReadSections, toggleSectionRead } from '../lib/progress.js';
 import Icon from '../components/Icon.jsx';
 import NoteBlock from '../components/NoteBlock.jsx';
@@ -76,6 +76,9 @@ export default function Chapter() {
   const goNextChapter = () => {
     if (next) navigate(`/course/${courseId}/${next.subject.id}/${next.chapter.id}`);
   };
+  const chapterHead = module
+    ? `Chapter ${module.num}${module.part ? ` · Part ${module.part}` : ''}: ${module.title}`
+    : '';
 
   const loadingView = loading || !module;
   const section = !loadingView ? module.sections[activeIdx] : null;
@@ -88,7 +91,7 @@ export default function Chapter() {
         <Link to="/">Home</Link> <span>/</span>
         <Link to={`/course/${courseId}`}>Courses</Link> <span>/</span>
         <Link to={`/course/${courseId}`}>{subject.name}</Link> <span>/</span>
-        <strong>Chapter {chapter.num}: {chapter.title}</strong>
+        <strong>{chapterHead}</strong>
       </nav>
 
       {loading && <div className="page-loading">Loading chapter notes…</div>}
@@ -121,7 +124,7 @@ export default function Chapter() {
           <article className="gp-chapter-content">
             <header className="gp-chapter-head">
               <span className="pill pill-mut">{subject.name}</span>
-              <h1>Chapter {module.num}: {module.title}</h1>
+              <h1>{chapterHead}</h1>
               <p className="page-sub">
                 Module {activeIdx + 1} of {module.sections.length} · {readSet.size} of {module.sections.length} marked read · progress saved on this device
               </p>
@@ -151,18 +154,18 @@ export default function Chapter() {
                     <button type="button" className="btn btn-surf" onClick={() => goToSection(prevSec.id)} title={prevSec.title}>
                       <Icon name="arrow_back" className="ic-sm" /> {truncate(prevSec.title)}
                     </button>
-                  ) : prev ? (
-                    <button type="button" className="btn btn-surf" onClick={goPrevChapter} title={`Chapter ${prev.chapter.num}: ${prev.chapter.title}`}>
-                      <Icon name="arrow_back" className="ic-sm" /> Ch {prev.chapter.num}: {truncate(prev.chapter.title)}
-                    </button>
-                  ) : <span />}
+                    ) : prev ? (
+                      <button type="button" className="btn btn-surf" onClick={goPrevChapter} title={`Chapter ${prev.chapter.num}: ${prev.chapter.title}`}>
+                        <Icon name="arrow_back" className="ic-sm" /> {chapterLabel(prev.chapter)}: {truncate(prev.chapter.title)}
+                      </button>
+                    ) : <span />}
                   {nextSec ? (
                     <button type="button" className="btn btn-primary" onClick={() => goToSection(nextSec.id)} title={nextSec.title}>
                       {truncate(nextSec.title)} <Icon name="arrow_forward" className="ic-sm" />
                     </button>
                   ) : next ? (
                     <button type="button" className="btn btn-primary" onClick={goNextChapter} title={`Chapter ${next.chapter.num}: ${next.chapter.title}`}>
-                      Ch {next.chapter.num}: {truncate(next.chapter.title)} <Icon name="arrow_forward" className="ic-sm" />
+                      {chapterLabel(next.chapter)}: {truncate(next.chapter.title)} <Icon name="arrow_forward" className="ic-sm" />
                     </button>
                   ) : (
                     <Link className="btn btn-primary" to={`/course/${courseId}`}>

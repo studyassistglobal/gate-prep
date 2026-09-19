@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { COURSE } from '../data/courses.js';
+import { COURSE, chapterLabel } from '../data/courses.js';
 import { NOTES_INDEX } from '../data/notes/de/index.js';
 import { chapterProgress } from '../lib/progress.js';
 import Icon from '../components/Icon.jsx';
@@ -46,7 +46,7 @@ export default function Home() {
                 </div>
                 <p>
                   {live.length > 0
-                    ? `${live.length} chapter${live.length > 1 ? 's' : ''} live · ${live.map((c) => `Ch ${c.num}`).join(', ')}`
+                    ? `${live.length} chapters live · ${live.map((c) => chapterLabel(c)).join(', ')}`
                     : 'Notes in preparation'}
                 </p>
                 {live.length > 0 && (
@@ -54,8 +54,8 @@ export default function Home() {
                     {live.map((c) => {
                       const p = chapterProgress(c.id, NOTES_INDEX[c.id]?.sections.length || 0);
                       return (
-                        <div key={c.id} className="gp-mini-progress" title={`Your progress in Ch ${c.num}: ${p.pct}%`}>
-                          <span>Ch {c.num}</span>
+                        <div key={c.id} className="gp-mini-progress" title={`Your progress in ${chapterLabel(c)}: ${p.pct}%`}>
+                          <span>{chapterLabel(c)}</span>
                           <div className="progress"><div className="pbar" style={{ width: `${p.pct}%` }} /></div>
                           <span className="code-sm">{p.pct}%</span>
                         </div>

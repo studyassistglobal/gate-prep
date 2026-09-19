@@ -11,6 +11,7 @@ SRC_DIR = r"D:\GATE 2027\Digital electronics"
 CHAPTERS = [
     {
         "id": "de-ch1",
+        "file": "ch1",
         "num": 1,
         "title": "Logic Gates & Boolean Algebra",
         "subject": "Digital Electronics",
@@ -22,6 +23,7 @@ CHAPTERS = [
     },
     {
         "id": "de-ch2",
+        "file": "ch2",
         "num": 2,
         "title": "Representation of Boolean Expressions & K-Maps",
         "subject": "Digital Electronics",
@@ -30,6 +32,44 @@ CHAPTERS = [
         "figures_dst": "notes/de/figures_ch2",
         "fig_prefix": "figures_ch2/",
         "web_prefix": "/notes/de/figures_ch2/",
+    },
+    {
+        "id": "de-ch3",
+        "file": "ch3",
+        "num": 3,
+        "title": "Number Systems & Digital Representation",
+        "subject": "Digital Electronics",
+        "md": os.path.join(SRC_DIR, "Chapter_03_Number_Systems_Master_Guide.md"),
+        "figures_src": os.path.join(SRC_DIR, "figures_ch3"),
+        "figures_dst": "notes/de/figures_ch3",
+        "fig_prefix": "figures_ch3/",
+        "web_prefix": "/notes/de/figures_ch3/",
+    },
+    {
+        "id": "de-ch4-p1",
+        "file": "ch4p1",
+        "num": 4,
+        "part": 1,
+        "title": "Combinational Circuits — Arithmetic Logic",
+        "subject": "Digital Electronics",
+        "md": os.path.join(SRC_DIR, "chapters", "Chapter_04_Part1_Combinational_Circuits.md"),
+        "figures_src": None,
+        "figures_dst": None,
+        "fig_prefix": "",
+        "web_prefix": "/notes/de/figures_ch4/",
+    },
+    {
+        "id": "de-ch4-p2",
+        "file": "ch4p2",
+        "num": 4,
+        "part": 2,
+        "title": "Combinational Circuits — Advanced Architectures",
+        "subject": "Digital Electronics",
+        "md": os.path.join(SRC_DIR, "chapters", "Chapter_04_Part2_Combinational_Circuits.md"),
+        "figures_src": None,
+        "figures_dst": None,
+        "fig_prefix": "",
+        "web_prefix": "/notes/de/figures_ch4/",
     },
 ]
 
@@ -51,6 +91,33 @@ def rewrite_img_src(src, ch):
 
 
 IMG_RE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)\s*$")
+
+def split_table_row(line):
+    """Split a pipe-table row into cells, ignoring `|` inside $math$ or escaped \\|."""
+    s = line.strip().strip("|")
+    cells, cur, in_math = [], [], False
+    i = 0
+    while i < len(s):
+        ch = s[i]
+        if ch == "\\" and i + 1 < len(s):
+            cur.append(ch)
+            cur.append(s[i + 1])
+            i += 2
+            continue
+        if ch == "$":
+            in_math = not in_math
+            cur.append(ch)
+            i += 1
+            continue
+        if ch == "|" and not in_math:
+            cells.append("".join(cur).strip())
+            cur = []
+            i += 1
+            continue
+        cur.append(ch)
+        i += 1
+    cells.append("".join(cur).strip())
+    return cells
 
 def inline_clean(text, ch):
     """Rewrite image links inside inline text (kept for p/ul/table cells)."""
@@ -149,7 +216,7 @@ def parse_blocks(lines, ch):
             flush_para()
             rows = []
             while i < n and lines[i].strip().startswith("|"):
-                cells = [c.strip() for c in lines[i].strip().strip("|").split("|")]
+                cells = split_table_row(lines[i])
                 rows.append(cells)
                 i += 1
             header, align, data = rows[0], rows[1], rows[2:]
@@ -270,6 +337,7 @@ def build_chapter(ch):
     module = {
         "id": ch["id"],
         "num": ch["num"],
+        "part": ch.get("part"),
         "title": ch["title"],
         "subject": ch["subject"],
         "source": os.path.basename(ch["md"]),
@@ -292,7 +360,7 @@ def main():
     for ch in CHAPTERS:
         module = build_chapter(ch)
         nblocks = sum(len(s["blocks"]) for s in module["sections"])
-        out = os.path.join(BASE, "src", "data", "notes", "de", f"ch{ch['num']}.js")
+        out = os.path.join(BASE, "src", "data", "notes", "de", f"{ch['file']}.js")
         write_module(module, out)
         index[module["id"]] = {
             "num": module["num"],
@@ -300,16 +368,16 @@ def main():
             "subject": module["subject"],
             "sections": [{"id": s["id"], "title": s["title"]} for s in module["sections"]],
         }
-        # figures
-        if os.path.isdir(ch["figures_src"]):
+        # figures (png/jpg/jpeg)
+        if ch["figures_src"] and os.path.isdir(ch["figures_src"]):
             dst = os.path.join(BASE, "public", *ch["figures_dst"].split("/"))
             os.makedirs(dst, exist_ok=True)
             copied = 0
             for f in os.listdir(ch["figures_src"]):
-                if f.lower().endswith(".png"):
+                if f.lower().endswith((".png", ".jpg", ".jpeg")):
                     shutil.copy2(os.path.join(ch["figures_src"], f), os.path.join(dst, f))
                     copied += 1
-            print(f"  figures: copied {copied} PNGs -> public/{ch['figures_dst']}")
+            print(f"  figures: copied {copied} images -> public/{ch['figures_dst']}")
         print(f"{module['id']}: {len(module['sections'])} sections, {nblocks} blocks -> {os.path.relpath(out, BASE)}")
 
     idx_path = os.path.join(BASE, "src", "data", "notes", "de", "index.js")
