@@ -74,3 +74,20 @@ Then commit/push to `studyassistglobal/gate-prep` (gh account: switch to `studya
 - Rendering notes: the sheets lean on `$$\begin{array}` matrix tables and `$$…$$` inside GitHub alerts — MathText already handles both (block-math regex in `renderInlineContent`); KaTeX renders arrays via `.mtable`. Fenced mermaid renders as literal code (same as ss-ch1).
 - verify_notes.mjs live-chapter gate is now **10**. Audit after adding sheets: 18,666 blocks / 31,715 leaves across 10 chapters — HIGH 0 · MED 0 · LOW 5 (same benign `**` literals).
 - Lesson (recurring): Git-Bash heredocs mangle `\` even when quoted — inspection scripts with backslash needles must use chr(92)/Write tool, or they silently report false negatives.
+
+## 18. Full source sweep — 16 new chapters, site now 26 live (2026-09-30)
+
+- Integrated everything new in `D:\GATE 2027\`: **S&S Masters Ch3–Ch7** (CTFS, FT & Sampling, Laplace, Z-Transform, DTFT/DFT/FFT — module-split, figures_ch4..7 copied), **S&S Sheets Ch4–Ch7** (ch4/ch5 section-split; ch6 generic split with figures_ch6; ch7 generic), **Network Theory now live**: `nt-ch1..3` (01_Basics_of_Network / 02_Network_Theorems / 03_Transient_Analysis — generic `## ` split) + new `ntf` "NT Revision Guides" group (`ntf-ch1..3` revision guides + `ntf-ch4` Revision Capsule). Deliberately skipped: `04_GATE_Formula_CheatSheet` (fully contained in the Capsule), `*_Short.md`, parts/ + audit_*/mined_* intermediates.
+- **`notes_sub` must equal the registry subject id** (modules lazy-import via `notes/<subjectId>/<file>`): ssf → `notes/ssf/`, ntf → `notes/ntf/`.
+- Parser work this pass (all in `scripts/build_notes.py` unless noted):
+  1. **`unwrap_lines`** (per-chapter `"unwrap": True` flag — the Ch4-7 Masters + NT sources hard-wrap headings/bold/math mid-token): joins a continuation line ONLY when its parent is actually broken (odd `**`, odd single-`$` excluding `$$`, a heading with broken math, or a `|`-row continued on a plain line). Never joins healthy headings — module headers carry indented scope lines. Fenced code untouched.
+  2. **`\vert` as a table cell separator** outside math (OCR of `|`), plus stray trailing `\vert` stripped — killed 64 ragged-table findings in ss-ch6.
+  3. **Ragged-row normalization**: rows are padded/merged to the header width (overflow cells join the last cell with ` | `).
+  4. **`$$…$$ trailing-text` fix**: single-line math with content after the closing `$$` (e.g. `$\checkmark$`) now emits math + a following p, instead of swallowing the tail into the tex (also fixed the multi-line closing-line tail).
+  5. **`clean_title`**: section/module titles render as plain text (sidebar/search), so `$math$` is replaced by its inner text when plain-readable (`$R$` → R), else dropped, then punctuation tidied — no dollar signs leak into the TOC.
+  6. **TOC drop**: `## (?:Master )?Table of Contents` drops to the next H1 **or** H2 (ss-ch1 has three mid-document TOCs followed by H1 content that the old regex silently swallowed — 631 blocks of Module 11 restored); anchor dropper now also catches bullet-prefixed link lines.
+  7. **`REPAIRS`** dict: exact-match typo repairs applied to the read-only sources (nt-ch1 missing `$` after `$2\text{ mA}`; ss-ch5's source truncates module 09 mid-sentence — dangling "5. **The" dropped).
+  8. Alert bodies containing fenced ASCII diagrams emit alert + code + alert fragments (nt-ch2 T-network).
+  9. Balance checks in verify_notes.mjs + audit_content.mjs ignore `\$` escaped dollars; audit exempts code blocks from math-delimiter checks (literal by design).
+- Regression guard: the 10 previously-live chapters are byte-identical modulo `generatedAt` (checked by JSON-semantic diff) — EXCEPT two intentional improvements: ss-ch1 Module 11 restored (+631 swallowed blocks) and de-ch2 section titles cleaned (`$m_i$` → `m_i` in the sidebar).
+- Audit final: 47,323 blocks / 75,898 leaves / 26 chapters — HIGH 0 · MED 0 · LOW 7 (all benign `**`-in-ASCII/notation false positives). verify_notes.mjs live-chapter gate is now **26**.

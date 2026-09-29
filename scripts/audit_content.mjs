@@ -16,17 +16,21 @@ const warn = (sev, m) => issues.push({ sev, m });
 
 const MOJIBAKE = /[\u0900-\u097F\u0100-\u024F\u0370-\u0383]/;
 const CTRL = /[\u0000-\u0008\u000B\u000C\u000E-\u001F]/;
-const DOLLARS = (s) => (s.match(/\$/g) || []).length;
-const DD = (s) => (s.match(/\$\$/g) || []).length;
+const stripEscapedDollars = (s) => s.replace(/\\\$/g, '');
+const DOLLARS = (s) => (stripEscapedDollars(s).match(/\$/g) || []).length;
+const DD = (s) => (stripEscapedDollars(s).match(/\$\$/g) || []).length;
 
 function leafIssues(ctx, blockType, s) {
   if (CTRL.test(s)) warn('high', `${ctx}: control char in ${blockType}: ${JSON.stringify(s.slice(0, 70))}`);
   if (MOJIBAKE.test(s)) warn('high', `${ctx}: mojibake/Devanagari leakage in ${blockType}: ${JSON.stringify(s.slice(0, 70))}`);
-  if (DD(s) % 2 === 1 && DOLLARS(s) % 2 === 1) warn('med', `${ctx}: odd $$ count in ${blockType}: ${JSON.stringify(s.slice(0, 70))}`);
-  else if (DOLLARS(s) % 2 === 1) warn('med', `${ctx}: odd $ count in ${blockType}: ${JSON.stringify(s.slice(0, 70))}`);
-  // unbalanced \( \)
-  if ((s.match(/\\\(/g) || []).length !== (s.match(/\\\)/g) || []).length)
-    warn('med', `${ctx}: unbalanced \\( \\) in ${blockType}: ${JSON.stringify(s.slice(0, 70))}`);
+  // code fences are literal by design — no math-delimiter expectations
+  if (blockType !== 'code') {
+    if (DD(s) % 2 === 1 && DOLLARS(s) % 2 === 1) warn('med', `${ctx}: odd $$ count in ${blockType}: ${JSON.stringify(s.slice(0, 70))}`);
+    else if (DOLLARS(s) % 2 === 1) warn('med', `${ctx}: odd $ count in ${blockType}: ${JSON.stringify(s.slice(0, 70))}`);
+    // unbalanced \( \)
+    if ((s.match(/\\\(/g) || []).length !== (s.match(/\\\)/g) || []).length)
+      warn('med', `${ctx}: unbalanced \\( \\) in ${blockType}: ${JSON.stringify(s.slice(0, 70))}`);
+  }
   // stray markdown that will render literally
   if (/^#{1,6}\s/.test(s) && blockType === 'p') warn('low', `${ctx}: paragraph starts with # heading marker`);
   if (s.includes('**') && (s.match(/\*\*/g) || []).length % 2 === 1)

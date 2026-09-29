@@ -8,7 +8,10 @@ Live: **https://gate-prep.pages.dev** (project `gate-prep` on Cloudflare Pages)
 
 - **Digital Electronics** — Ch 1: Logic Gates & Boolean Algebra · Ch 2: Boolean Expressions & K-Maps · Ch 3: Number Systems & Digital Representation · Ch 4 Parts 1–2: Combinational Circuits
 - **Signals & Systems** — Ch 1: Basics of Signals (17 modules, 509 slides audited) · Ch 2: Basics of Systems (12 modules, convolution → BIBO/stability → synthesis)
-- **S&S Formula Sheets** — Ch 1: Basics of Signals · Ch 2: Basics of Systems · Ch 3: Fourier Series (CTFS) — master formula & revision sheets with shortcut engines, trap tables and rapid-fire diagnostics
+- **Signals & Systems** — Ch 1–7: Signals · Systems · CTFS · Fourier Transform & Sampling · Laplace · Z-Transform · DTFT/DFT/FFT
+- **S&S Formula Sheets** — Ch 1–7 companion formula & revision sheets: shortcut engines, 25-trap diagnostic tables, rapid-fire decision trees
+- **Network Theory** — Ch 1: Basics of Network Analysis · Ch 2: Network Theorems & Circuit Equivalence · Ch 3: Transient Analysis
+- **NT Revision Guides** — per-chapter revision guides + the all-chapters high-yield Revision Capsule
 - 90 sections / 10,000+ content blocks rendered from the Master Guide markdown sources, with KaTeX math, figures, alert callouts and collapsible worked solutions
 - Reading progress per section (localStorage, no account), course/section search, light & dark theme
 

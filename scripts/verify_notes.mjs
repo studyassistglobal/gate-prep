@@ -26,7 +26,7 @@ const { NOTES_INDEX } = await import(pathToFileURL(path.join(ROOT, 'src/data/not
 // 1. registry consistency
 const live = liveChapterSequence(COURSE.id);
 if (COURSE.id !== 'gate-2027-ece') fail(`unexpected course id ${COURSE.id}`);
-if (live.length !== 10) fail(`expected 10 live chapters, found ${live.length}`);
+if (live.length !== 26) fail(`expected 26 live chapters, found ${live.length}`);
 for (const { chapter } of live) {
   const idx = NOTES_INDEX[chapter.id];
   if (!idx) { fail(`${chapter.id}: missing from NOTES_INDEX`); continue; }
@@ -45,10 +45,14 @@ for (const { chapter } of live) {
 
 // 2+3. block safety
 const VALID = new Set(['p', 'h2', 'h3', 'h4', 'ul', 'ol', 'table', 'code', 'alert', 'details', 'img', 'math']);
-const balancedDelims = (s) =>
-  (s.match(/\$\$/g) || []).length % 2 === 0 &&
-  (s.match(/\$/g) || []).length % 2 === 0 &&
-  (s.match(/\\\(/g) || []).length === (s.match(/\\\)/g) || []).length;
+const balancedDelims = (s) => {
+  const t = s.replace(/\\\$/g, ''); // escaped literal dollars are not delimiters
+  return (
+    (t.match(/\$\$/g) || []).length % 2 === 0 &&
+    (t.match(/\$/g) || []).length % 2 === 0 &&
+    (t.match(/\\\(/g) || []).length === (t.match(/\\\)/g) || []).length
+  );
+};
 
 let blocksChecked = 0;
 for (const { chapter } of live) {

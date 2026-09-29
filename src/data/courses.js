@@ -30,6 +30,11 @@ export const COURSE = {
       chapters: [
         { id: 'ss-ch1', num: 1, title: 'Basics of Signals', status: 'live', file: 'ssch1' },
         { id: 'ss-ch2', num: 2, title: 'Basics of Systems', status: 'live', file: 'ssch2' },
+        { id: 'ss-ch3', num: 3, title: 'Continuous-Time Fourier Series (CTFS)', status: 'live', file: 'ssch3' },
+        { id: 'ss-ch4', num: 4, title: 'Fourier Transform & Sampling Theorem', status: 'live', file: 'ssch4' },
+        { id: 'ss-ch5', num: 5, title: 'Continuous-Time Laplace Transform', status: 'live', file: 'ssch5' },
+        { id: 'ss-ch6', num: 6, title: 'Discrete-Time Z-Transform', status: 'live', file: 'ssch6' },
+        { id: 'ss-ch7', num: 7, title: 'DTFT, DTFS, DFT & FFT', status: 'live', file: 'ssch7' },
       ],
     },
     {
@@ -41,6 +46,10 @@ export const COURSE = {
         { id: 'ssf-ch1', num: 1, title: 'Basics of Signals — Formula & Revision Sheet', status: 'live', file: 'ssfch1' },
         { id: 'ssf-ch2', num: 2, title: 'Basics of Systems — Formula & Revision Sheet', status: 'live', file: 'ssfch2' },
         { id: 'ssf-ch3', num: 3, title: 'Fourier Series (CTFS) — Formula & Revision Sheet', status: 'live', file: 'ssfch3' },
+        { id: 'ssf-ch4', num: 4, title: 'Fourier Transform & Sampling — Formula & Revision Sheet', status: 'live', file: 'ssfch4' },
+        { id: 'ssf-ch5', num: 5, title: 'Laplace Transform — Formula & Revision Sheet', status: 'live', file: 'ssfch5' },
+        { id: 'ssf-ch6', num: 6, title: 'Z-Transform — Formula & Revision Sheet', status: 'live', file: 'ssfch6' },
+        { id: 'ssf-ch7', num: 7, title: 'DTFT, DTFS, DFT & FFT — Formula & Revision Sheet', status: 'live', file: 'ssfch7' },
       ],
     },
     {
@@ -48,8 +57,23 @@ export const COURSE = {
       name: 'Network Theory',
       icon: 'bolt',
       accent: 'chem',
-      chapters: [],
-      status: 'soon',
+      chapters: [
+        { id: 'nt-ch1', num: 1, title: 'Basics of Network Analysis', status: 'live', file: 'nt1' },
+        { id: 'nt-ch2', num: 2, title: 'Network Theorems & Circuit Equivalence', status: 'live', file: 'nt2' },
+        { id: 'nt-ch3', num: 3, title: 'Transient Analysis', status: 'live', file: 'nt3' },
+      ],
+    },
+    {
+      id: 'ntf',
+      name: 'NT Revision Guides',
+      icon: 'bolt',
+      accent: 'chem',
+      chapters: [
+        { id: 'ntf-ch1', num: 1, title: 'Basics of Network — Revision Guide', status: 'live', file: 'ntf1' },
+        { id: 'ntf-ch2', num: 2, title: 'Network Theorems — Revision Guide', status: 'live', file: 'ntf2' },
+        { id: 'ntf-ch3', num: 3, title: 'Transient Analysis — Revision Guide', status: 'live', file: 'ntf3' },
+        { id: 'ntf-ch4', num: 4, title: 'Revision Capsule — All Chapters', status: 'live', file: 'ntf4' },
+      ],
     },
   ],
 };

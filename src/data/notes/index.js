@@ -95,15 +95,15 @@ export const NOTES_INDEX = {
    },
    {
     "id": "module-2-canonical-forms-minterms-canonical-sop-expansion-slides-142-146",
-    "title": "Module 2: Canonical Forms: Minterms ($m_i$) & Canonical SOP Expansion (Slides 142\u2013146)"
+    "title": "Module 2: Canonical Forms: Minterms (m_i) & Canonical SOP Expansion (Slides 142\u2013146)"
    },
    {
     "id": "module-3-canonical-forms-maxterms-canonical-pos-expansion-slides-147-151",
-    "title": "Module 3: Canonical Forms: Maxterms ($M_i$) & Canonical POS Expansion (Slides 147\u2013151)"
+    "title": "Module 3: Canonical Forms: Maxterms (M_i) & Canonical POS Expansion (Slides 147\u2013151)"
    },
    {
     "id": "module-4-sop-pos-conversions-duality-orthogonality-laws-slides-152-154-157-158",
-    "title": "Module 4: SOP $\\leftrightarrow$ POS Conversions, Duality, & Orthogonality Laws (Slides 152\u2013154, 157\u2013158)"
+    "title": "Module 4: SOP POS Conversions, Duality, & Orthogonality Laws (Slides 152\u2013154, 157\u2013158)"
    },
    {
     "id": "module-5-variable-entered-maps-non-standard-variable-orderings-slides-148-150-155-157",
@@ -123,7 +123,7 @@ export const NOTES_INDEX = {
    },
    {
     "id": "module-9-systematic-grouping-rules-variable-elimination-theorem-slides-177-181-191",
-    "title": "Module 9: Systematic Grouping Rules & Variable Elimination Theorem ($2^k \\to n-k$) (Slides 177\u2013181, 191)"
+    "title": "Module 9: Systematic Grouping Rules & Variable Elimination Theorem (Slides 177\u2013181, 191)"
    },
    {
     "id": "module-10-solved-minimization-workflows-multi-variable-adjacency-in-2-3-4-variables-slides-182-192",
@@ -592,6 +592,1178 @@ export const NOTES_INDEX = {
    {
     "id": "section-9-dedicated-last-minute-revision-quick-reference-compendium",
     "title": "Section 9: Dedicated Last-Minute Revision & Quick-Reference Compendium"
+   }
+  ]
+ },
+ "ss-ch3": {
+  "num": 3,
+  "title": "Continuous-Time Fourier Series (CTFS)",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-01-orthogonal-signal-space-exponential-fourier-series-foundations",
+    "title": "Module 01: Orthogonal Signal Space & Exponential Fourier Series Foundations"
+   },
+   {
+    "id": "module-02-trigonometric-compact-polar-fourier-series-representations",
+    "title": "Module 02: Trigonometric & Compact Polar Fourier Series Representations"
+   },
+   {
+    "id": "module-03-fourier-series-transform-properties-linearity-shifting-modulation",
+    "title": "Module 03: Fourier Series Transform Properties: Linearity, Shifting & Modulation"
+   },
+   {
+    "id": "module-04-scaling-conjugation-parseval-s-harmonic-power-theorem",
+    "title": "Module 04: Scaling, Conjugation & Parseval's Harmonic Power Theorem"
+   },
+   {
+    "id": "module-05-differentiation-in-time-double-derivative-impulse-synthesis-shortcut",
+    "title": "Module 05: Differentiation in Time & Double-Derivative Impulse Synthesis Shortcut"
+   },
+   {
+    "id": "module-06-integration-in-time-dc-offset-constraints-piecewise-algebra",
+    "title": "Module 06: Integration in Time, DC Offset Constraints & Piecewise Algebra"
+   },
+   {
+    "id": "module-07-waveform-symmetry-taxonomy-even-odd-hws-quarter-wave-systems",
+    "title": "Module 07: Waveform Symmetry Taxonomy: Even, Odd, HWS & Quarter-Wave Systems"
+   },
+   {
+    "id": "module-08-lti-system-frequency-response-ideal-filtering-distortionless-transmission",
+    "title": "Module 08: LTI System Frequency Response, Ideal Filtering & Distortionless Transmission"
+   },
+   {
+    "id": "module-09-convolution-of-periodic-signals-dual-multiplication-titan-drills",
+    "title": "Module 09: Convolution of Periodic Signals, Dual Multiplication & Titan Drills"
+   },
+   {
+    "id": "module-10-dirichlet-convergence-criteria-the-gibbs-ringing-phenomenon",
+    "title": "Module 10: Dirichlet Convergence Criteria & The Gibbs Ringing Phenomenon"
+   },
+   {
+    "id": "module-11-high-yield-formula-sheet-25-trap-diagnostic-matrix-revision-engine-for-fourier-series",
+    "title": "Module 11: High-Yield Formula Sheet, 25-Trap Diagnostic Matrix & Revision Engine for Fourier Series"
+   }
+  ]
+ },
+ "ss-ch4": {
+  "num": 4,
+  "title": "Fourier Transform & Sampling Theorem",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-01-continuous-limiting-foundations-dirichlet-convergence-engine",
+    "title": "Module 01: Continuous Limiting Foundations & Dirichlet Convergence Engine"
+   },
+   {
+    "id": "module-02-elementary-singular-exponential-signals-encyclopedia",
+    "title": "Module 02: Elementary Singular & Exponential Signals Encyclopedia"
+   },
+   {
+    "id": "module-03-canonical-pulse-transforms-asymptotic-decay-duality",
+    "title": "Module 03: Canonical Pulse Transforms, Asymptotic Decay & Duality"
+   },
+   {
+    "id": "module-04-operational-precedence-scaling-sinusoidal-modulation",
+    "title": "Module 04: Operational Precedence, Scaling & Sinusoidal Modulation"
+   },
+   {
+    "id": "module-05-parity-hermitean-symmetry-phase-constraints",
+    "title": "Module 05: Parity, Hermitean Symmetry & Phase Constraints"
+   },
+   {
+    "id": "module-06-differentiation-integration-moment-generating-theorems",
+    "title": "Module 06: Differentiation, Integration & Moment-Generating Theorems"
+   },
+   {
+    "id": "module-07-convolution-multiplication-rayleigh-parseval-energy-theorems",
+    "title": "Module 07: Convolution, Multiplication & Rayleigh-Parseval Energy Theorems"
+   },
+   {
+    "id": "module-08-analog-lti-filter-architecture-distortionless-transmission",
+    "title": "Module 08: Analog LTI Filter Architecture & Distortionless Transmission"
+   },
+   {
+    "id": "module-07-analog-filters-distortionless-transmission-the-hilbert-transform-foundations-of-sampling",
+    "title": "Module 07: Analog Filters, Distortionless Transmission, The Hilbert Transform & Foundations of Sampling"
+   },
+   {
+    "id": "module-09-sampling-theorem-spectral-replication-mechanics",
+    "title": "Module 09: Sampling Theorem & Spectral Replication Mechanics"
+   },
+   {
+    "id": "module-10-signal-reconstruction-flat-top-aperture-effect-bandpass-sampling",
+    "title": "Module 10: Signal Reconstruction, Flat-Top Aperture Effect & Bandpass Sampling"
+   },
+   {
+    "id": "module-11-dedicated-last-minute-revision-quick-reference-compendium",
+    "title": "Module 11: Dedicated Last-Minute Revision & Quick-Reference Compendium"
+   }
+  ]
+ },
+ "ss-ch5": {
+  "num": 5,
+  "title": "Continuous-Time Laplace Transform",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-01-foundations-the-fourier-to-laplace-convergence-bridge-slides-001-032",
+    "title": "Module 01: Foundations & The Fourier-to-Laplace Convergence Bridge (Slides 001\u2013032)"
+   },
+   {
+    "id": "module-02-region-of-convergence-roc-anatomy-8-geometric-axioms-slides-033-064",
+    "title": "Module 02: Region of Convergence (ROC) Anatomy & 8 Geometric Axioms (Slides 033\u2013064)"
+   },
+   {
+    "id": "module-03-canonical-bilateral-transform-pairs-encyclopedia-slides-065-096",
+    "title": "Module 03: Canonical Bilateral Transform Pairs Encyclopedia (Slides 065\u2013096)"
+   },
+   {
+    "id": "module-04-bilateral-laplace-transform-operational-properties-roc-algebra-slides-097-128",
+    "title": "Module 04: Bilateral Laplace Transform Operational Properties & ROC Algebra (Slides 097\u2013128)"
+   },
+   {
+    "id": "module-03-part-2-module-04-part-1-comprehensive-roc-taxonomy-rational-vs-irrational-signals-and-lti-system-foundations",
+    "title": "Module 03 (Part 2) & Module 04 (Part 1): Comprehensive ROC Taxonomy, Rational vs. Irrational Signals, and LTI System Foundations"
+   },
+   {
+    "id": "module-05-convolution-calculus-cascaded-lti-systems-in-the-s-domain-slides-129-160",
+    "title": "Module 05: Convolution Calculus & Cascaded LTI Systems in the s-Domain (Slides 129\u2013160)"
+   },
+   {
+    "id": "module-04-part-2-module-05-transform-operational-properties-convolution-calculus-cascaded-lti-systems-and-partial-fraction-inversion",
+    "title": "Module 04 (Part 2) & Module 05: Transform Operational Properties, Convolution Calculus, Cascaded LTI Systems, and Partial Fraction Inversion"
+   },
+   {
+    "id": "module-06-inverse-laplace-transform-mechanics-partial-fraction-expansion-slides-161-192",
+    "title": "Module 06: Inverse Laplace Transform Mechanics & Partial Fraction Expansion (Slides 161\u2013192)"
+   },
+   {
+    "id": "module-07-lti-system-characterization-causality-bibo-stability-invertibility-slides-193-224",
+    "title": "Module 07: LTI System Characterization \u2014 Causality, BIBO Stability & Invertibility (Slides 193\u2013224)"
+   },
+   {
+    "id": "module-08-differential-equations-analysis-via-bilateral-laplace-transform",
+    "title": "Module 08: Differential Equations Analysis via Bilateral Laplace Transform"
+   },
+   {
+    "id": "module-09-unilateral-laplace-transform-ult-initial-value-problem-calculus-slides-225-244",
+    "title": "Module 09: Unilateral Laplace Transform (ULT) & Initial Value Problem Calculus (Slides 225\u2013244)"
+   },
+   {
+    "id": "module-10-boundary-value-theorems-initial-value-ivt-final-value-fvt-theorems-with-diagnostic-safeguards-slides-245-260",
+    "title": "Module 10: Boundary Value Theorems \u2014 Initial Value (IVT) & Final Value (FVT) Theorems with Diagnostic Safeguards (Slides 245\u2013260)"
+   },
+   {
+    "id": "module-11-the-master-gate-diagnostic-toolkit-25-deadliest-traps-diagnostic-safeguards-60-second-rapid-fire-decision-tree",
+    "title": "Module 11: The Master GATE Diagnostic Toolkit: 25 Deadliest Traps, Diagnostic Safeguards & 60-Second Rapid-Fire Decision Tree"
+   }
+  ]
+ },
+ "ss-ch6": {
+  "num": 6,
+  "title": "Discrete-Time Z-Transform",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-01-foundational-bridge-continuous-to-discrete-frequency-dtfs-periodicity-the-complex-z-plane-slides-001-032",
+    "title": "Module 01: Foundational Bridge: Continuous to Discrete Frequency, DTFS Periodicity & The Complex z-Plane (Slides 001\u2013032)"
+   },
+   {
+    "id": "module-02-discrete-convergence-multiplier-r-z-transform-formulation-canonical-pairs-slides-033-064",
+    "title": "Module 02: Discrete Convergence Multiplier (r\u207b\u207f), Z-Transform Formulation & Canonical Pairs (Slides 033\u2013064)"
+   },
+   {
+    "id": "module-03-conformal-mapping-s-plane-to-z-plane-z-e-periodic-frequency-aliasing-slides-065-096",
+    "title": "Module 03: Conformal Mapping s-Plane to z-Plane (z = e\u02e2\u1d40\u02e2) & Periodic Frequency Aliasing (Slides 065\u2013096)"
+   },
+   {
+    "id": "module-04-operational-properties-exact-roc-transformation-algebra-matrix-slides-097-128",
+    "title": "Module 04: Operational Properties & Exact ROC Transformation Algebra Matrix (Slides 097\u2013128)"
+   },
+   {
+    "id": "module-05-canonical-pairs-encyclopedia-sided-sequences-pfe-taxonomy-slides-129-160",
+    "title": "Module 05: Canonical Pairs Encyclopedia, Sided Sequences & PFE Taxonomy (Slides 129\u2013160)"
+   },
+   {
+    "id": "module-06-discrete-time-lti-systems-causality-bibo-stability-the-4-quadrant-matrix-slides-161-192",
+    "title": "Module 06: Discrete-Time LTI Systems: Causality, BIBO Stability & The 4-Quadrant Matrix (Slides 161\u2013192)"
+   },
+   {
+    "id": "module-07-inverse-z-transform-arsenal-unilateral-difference-equations-slides-193-224",
+    "title": "Module 07: Inverse Z-Transform Arsenal & Unilateral Difference Equations (Slides 193\u2013224)"
+   },
+   {
+    "id": "module-08-initial-final-value-theorems-diagnostic-traps-comprehensive-review-slides-225-256",
+    "title": "Module 08: Initial & Final Value Theorems, Diagnostic Traps & Comprehensive Review (Slides 225\u2013256)"
+   }
+  ]
+ },
+ "ss-ch7": {
+  "num": 7,
+  "title": "DTFT, DTFS, DFT & FFT",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-01-discrete-time-fourier-transform-dtft-foundations-convergence-unit-circle-evaluation-slides-001-032",
+    "title": "Module 01: Discrete-Time Fourier Transform (DTFT) Foundations, Convergence & Unit Circle Evaluation (Slides 001\u2013032)"
+   },
+   {
+    "id": "module-overview-scope",
+    "title": "Module Overview & Scope"
+   },
+   {
+    "id": "module-02-dtft-operational-properties-real-complex-symmetry-architecture-parseval-s-energy-theorem-slides-033-064",
+    "title": "Module 02: DTFT Operational Properties, Real/Complex Symmetry Architecture & Parseval's Energy Theorem (Slides 033\u2013064)"
+   },
+   {
+    "id": "module-03-canonical-dtft-pairs-encyclopedia-discrete-lti-frequency-response-filter-design-slides-065-096",
+    "title": "Module 03: Canonical DTFT Pairs Encyclopedia, Discrete LTI Frequency Response & Filter Design (Slides 065\u2013096)"
+   },
+   {
+    "id": "module-04-discrete-time-fourier-series-dtfs-periodic-harmonics-orthogonality-power-relations-slides-097-128",
+    "title": "Module 04: Discrete-Time Fourier Series (DTFS): Periodic Harmonics, Orthogonality & Power Relations (Slides 097\u2013128)"
+   },
+   {
+    "id": "module-05-discrete-fourier-transform-dft-engine-frequency-sampling-twiddle-factor-matrix-formulation-slides-129-160",
+    "title": "Module 05: Discrete Fourier Transform (DFT) Engine: Frequency Sampling, Twiddle Factor & Matrix Formulation (Slides 129\u2013160)"
+   },
+   {
+    "id": "module-06-circular-convolution-circulant-matrix-algebra-the-golden-zero-padding-criterion-slides-161-192",
+    "title": "Module 06: Circular Convolution, Circulant Matrix Algebra & The Golden Zero-Padding Criterion (Slides 161\u2013192)"
+   },
+   {
+    "id": "module-07-fast-fourier-transform-fft-algorithms-radix-2-dit-vs-dif-butterflies-bit-reversal-slides-193-224",
+    "title": "Module 07: Fast Fourier Transform (FFT) Algorithms: Radix-2 DIT vs DIF Butterflies & Bit Reversal (Slides 193\u2013224)"
+   },
+   {
+    "id": "module-08-real-time-block-filtering-ola-vs-ols-discrete-hilbert-transform-spectral-windows-advanced-gate-pyqs-slides-225-252",
+    "title": "Module 08: Real-Time Block Filtering (OLA vs OLS), Discrete Hilbert Transform, Spectral Windows & Advanced GATE PYQs (Slides 225\u2013252)"
+   }
+  ]
+ },
+ "ssf-ch4": {
+  "num": 4,
+  "title": "Fourier Transform & Sampling \u2014 Formula & Revision Sheet",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "section-1-continuous-limiting-process-dirichlet-convergence-conditions",
+    "title": "Section 1: Continuous Limiting Process & Dirichlet Convergence Conditions"
+   },
+   {
+    "id": "section-2-elementary-singular-signal-transform-encyclopedia",
+    "title": "Section 2: Elementary & Singular Signal Transform Encyclopedia"
+   },
+   {
+    "id": "section-3-canonical-pulse-transforms-asymptotic-spectral-decay",
+    "title": "Section 3: Canonical Pulse Transforms & Asymptotic Spectral Decay"
+   },
+   {
+    "id": "section-4-the-duality-symmetry-property-transform-catalog",
+    "title": "Section 4: The Duality (Symmetry) Property & Transform Catalog"
+   },
+   {
+    "id": "section-5-transform-properties-operational-precedence",
+    "title": "Section 5: Transform Properties & Operational Precedence"
+   },
+   {
+    "id": "section-6-parity-hermitean-symmetry-phase-angle-constraints",
+    "title": "Section 6: Parity, Hermitean Symmetry & Phase Angle Constraints"
+   },
+   {
+    "id": "section-7-differentiation-integration-moment-generating-calculus",
+    "title": "Section 7: Differentiation, Integration & Moment-Generating Calculus"
+   },
+   {
+    "id": "section-8-convolution-multiplication-energy-spectral-density-esd",
+    "title": "Section 8: Convolution, Multiplication & Energy Spectral Density (ESD)"
+   },
+   {
+    "id": "section-9-analog-lti-filter-architecture-distortionless-transmission",
+    "title": "Section 9: Analog LTI Filter Architecture & Distortionless Transmission"
+   },
+   {
+    "id": "section-10-the-sampling-theorem-for-baseband-bandpass-signals",
+    "title": "Section 10: The Sampling Theorem for Baseband & Bandpass Signals"
+   },
+   {
+    "id": "section-11-dedicated-last-minute-revision-quick-reference-compendium",
+    "title": "Section 11: Dedicated Last-Minute Revision & Quick-Reference Compendium"
+   }
+  ]
+ },
+ "ssf-ch5": {
+  "num": 5,
+  "title": "Laplace Transform \u2014 Formula & Revision Sheet",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "section-01-continuous-limiting-foundations-transform-definitions",
+    "title": "Section 01: Continuous Limiting Foundations & Transform Definitions"
+   },
+   {
+    "id": "section-02-region-of-convergence-roc-geometry-8-fundamental-properties-matrix",
+    "title": "Section 02: Region of Convergence (ROC) Geometry & 8 Fundamental Properties Matrix"
+   },
+   {
+    "id": "section-03-master-canonical-bilateral-transform-pairs-encyclopedia",
+    "title": "Section 03: Master Canonical Bilateral Transform Pairs Encyclopedia"
+   },
+   {
+    "id": "section-04-bilateral-laplace-transform-operational-properties-matrix",
+    "title": "Section 04: Bilateral Laplace Transform Operational Properties Matrix"
+   },
+   {
+    "id": "section-05-the-grand-taxonomy-rational-vs-irrational-directional-rules",
+    "title": "Section 05: The Grand Taxonomy \u2014 Rational vs. Irrational Directional Rules"
+   },
+   {
+    "id": "section-06-convolution-calculus-cascaded-lti-systems-diagnostic-rules",
+    "title": "Section 06: Convolution Calculus & Cascaded LTI Systems Diagnostic Rules"
+   },
+   {
+    "id": "section-07-inverse-laplace-mechanics-partial-fraction-algorithms",
+    "title": "Section 07: Inverse Laplace Mechanics & Partial Fraction Algorithms"
+   },
+   {
+    "id": "section-08-lti-system-causality-bibo-stability-invertibility-decision-engine",
+    "title": "Section 08: LTI System Causality, BIBO Stability & Invertibility Decision Engine"
+   },
+   {
+    "id": "section-09-unilateral-laplace-transform-initial-value-problem-decomposition-zir-zsr",
+    "title": "Section 09: Unilateral Laplace Transform & Initial Value Problem Decomposition (ZIR + ZSR)"
+   },
+   {
+    "id": "section-10-boundary-value-theorems-ivt-fvt-diagnostic-safeguards-engine",
+    "title": "Section 10: Boundary Value Theorems \u2014 IVT & FVT Diagnostic Safeguards Engine"
+   },
+   {
+    "id": "section-11-the-25-most-dangerous-gate-exam-traps-diagnostic-safeguards-table",
+    "title": "Section 11: The 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards Table"
+   },
+   {
+    "id": "section-12-high-speed-60-second-rapid-fire-diagnostic-decision-tree",
+    "title": "Section 12: High-Speed 60-Second Rapid-Fire Diagnostic Decision Tree"
+   },
+   {
+    "id": "section-13-last-minute-high-yield-flash-cards-formulas",
+    "title": "Section 13: Last-Minute High-Yield Flash Cards & Formulas"
+   }
+  ]
+ },
+ "ssf-ch6": {
+  "num": 6,
+  "title": "Z-Transform \u2014 Formula & Revision Sheet",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "1-foundational-axioms-dtft-convergence-barrier-the-complex-plane",
+    "title": "1. Foundational Axioms: DTFT Convergence Barrier & The Complex z-Plane"
+   },
+   {
+    "id": "2-conformal-mapping-engine-plane-to-plane",
+    "title": "2. Conformal Mapping Engine: s-Plane to z-Plane"
+   },
+   {
+    "id": "3-topological-anatomy-of-roc-the-8-invariant-laws",
+    "title": "3. Topological Anatomy of ROC: The 8 Invariant Laws"
+   },
+   {
+    "id": "4-master-canonical-z-transform-pairs-encyclopedia",
+    "title": "4. Master Canonical Z-Transform Pairs Encyclopedia"
+   },
+   {
+    "id": "5-operational-properties-exact-roc-transformation-algebra",
+    "title": "5. Operational Properties & Exact ROC Transformation Algebra"
+   },
+   {
+    "id": "6-discrete-time-lti-systems-causality-bibo-stability-minimum-phase-systems",
+    "title": "6. Discrete-Time LTI Systems: Causality, BIBO Stability & Minimum-Phase Systems"
+   },
+   {
+    "id": "7-inverse-z-transform-izt-methodology-arsenal",
+    "title": "7. Inverse Z-Transform (IZT) Methodology Arsenal"
+   },
+   {
+    "id": "8-unilateral-z-transform-difference-equation-solution-architecture",
+    "title": "8. Unilateral Z-Transform & Difference Equation Solution Architecture"
+   },
+   {
+    "id": "9-initial-value-theorem-ivt-final-value-theorem-fvt-gatekeeper-diagnostics",
+    "title": "9. Initial Value Theorem (IVT) & Final Value Theorem (FVT) Gatekeeper Diagnostics"
+   },
+   {
+    "id": "10-the-25-most-dangerous-gate-exam-traps-diagnostic-safeguards-table",
+    "title": "10. The 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards Table"
+   },
+   {
+    "id": "11-the-60-second-rapid-fire-diagnostic-decision-tree-3-track-ascii-architecture",
+    "title": "11. The 60-Second Rapid-Fire Diagnostic Decision Tree (3-Track ASCII Architecture)"
+   },
+   {
+    "id": "12-last-minute-high-yield-flash-formulas-shortcuts-arsenal",
+    "title": "12. Last-Minute High-Yield Flash Formulas & Shortcuts Arsenal"
+   }
+  ]
+ },
+ "ssf-ch7": {
+  "num": 7,
+  "title": "DTFT, DTFS, DFT & FFT \u2014 Formula & Revision Sheet",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "comprehensive-formula-diagnostic-rapid-revision-master-sheet",
+    "title": "Comprehensive Formula, Diagnostic & Rapid-Revision Master Sheet"
+   },
+   {
+    "id": "1-executive-architectural-framework-domain-mappings",
+    "title": "1. Executive Architectural Framework & Domain Mappings"
+   },
+   {
+    "id": "2-discrete-time-fourier-transform-dtft-mathematical-foundations",
+    "title": "2. Discrete-Time Fourier Transform (DTFT) Mathematical Foundations"
+   },
+   {
+    "id": "3-canonical-discrete-time-transform-pairs-encyclopedia",
+    "title": "3. Canonical Discrete-Time Transform Pairs Encyclopedia"
+   },
+   {
+    "id": "4-dtft-master-operational-properties-matrix",
+    "title": "4. DTFT Master Operational Properties Matrix"
+   },
+   {
+    "id": "5-real-complex-sequence-symmetry-architecture",
+    "title": "5. Real & Complex Sequence Symmetry Architecture"
+   },
+   {
+    "id": "6-discrete-time-lti-frequency-response-filter-design",
+    "title": "6. Discrete-Time LTI Frequency Response & Filter Design"
+   },
+   {
+    "id": "7-discrete-time-fourier-series-dtfs-engine",
+    "title": "7. Discrete-Time Fourier Series (DTFS) Engine"
+   },
+   {
+    "id": "8-discrete-fourier-transform-dft-engine-twiddle-factor-geometry",
+    "title": "8. Discrete Fourier Transform (DFT) Engine & Twiddle Factor Geometry"
+   },
+   {
+    "id": "9-circular-convolution-circular-shifting-linear-equivalence",
+    "title": "9. Circular Convolution, Circular Shifting & Linear Equivalence"
+   },
+   {
+    "id": "10-fast-fourier-transform-fft-algorithms-butterfly-engine",
+    "title": "10. Fast Fourier Transform (FFT) Algorithms & Butterfly Engine"
+   },
+   {
+    "id": "11-block-filtering-overlap-add-vs-overlap-save-miscellaneous-topics",
+    "title": "11. Block Filtering (Overlap-Add vs Overlap-Save) & Miscellaneous Topics"
+   },
+   {
+    "id": "12-25-most-dangerous-gate-exam-traps-diagnostic-safeguards-table",
+    "title": "12. 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards Table"
+   },
+   {
+    "id": "13-60-second-rapid-fire-diagnostic-decision-tree",
+    "title": "13. 60-Second Rapid-Fire Diagnostic Decision Tree"
+   },
+   {
+    "id": "14-last-minute-high-yield-flash-formulas-shortcut-arsenal",
+    "title": "14. Last-Minute High-Yield Flash Formulas & Shortcut Arsenal"
+   }
+  ]
+ },
+ "nt-ch1": {
+  "num": 1,
+  "title": "Basics of Network Analysis",
+  "subject": "Network Theory",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "1-introduction-why-circuit-analysis",
+    "title": "1. Introduction: Why Circuit Analysis?"
+   },
+   {
+    "id": "2-fundamental-electrical-quantities",
+    "title": "2. Fundamental Electrical Quantities"
+   },
+   {
+    "id": "3-passive-sign-convention-psc",
+    "title": "3. Passive Sign Convention (PSC)"
+   },
+   {
+    "id": "4-tellegen-s-theorem-conservation-of-power",
+    "title": "4. Tellegen's Theorem & Conservation of Power"
+   },
+   {
+    "id": "5-solved-examples-gate-practice-problems-q-1-q-10",
+    "title": "5. Solved Examples & GATE Practice Problems (Q.1 \u2013 Q.10)"
+   },
+   {
+    "id": "6-circuit-topology-graph-fundamentals",
+    "title": "6. Circuit Topology & Graph Fundamentals"
+   },
+   {
+    "id": "7-kirchhoff-s-laws",
+    "title": "7. Kirchhoff's Laws"
+   },
+   {
+    "id": "8-comprehensive-classification-of-circuit-elements",
+    "title": "8. Comprehensive Classification of Circuit Elements"
+   },
+   {
+    "id": "9-passive-elements-resistor-conductance",
+    "title": "9. Passive Elements: Resistor (R) & Conductance (G)"
+   },
+   {
+    "id": "10-energy-storage-elements-capacitor-inductor",
+    "title": "10. Energy Storage Elements: Capacitor (C) & Inductor (L)"
+   },
+   {
+    "id": "11-quick-summary-table-fundamental-equations",
+    "title": "11. Quick Summary Table: R, L, C Fundamental Equations"
+   },
+   {
+    "id": "12-gate-exam-traps-common-faculty-insights",
+    "title": "12. GATE Exam Traps & Common Faculty Insights"
+   },
+   {
+    "id": "1-energy-storage-physics-inductors-capacitors",
+    "title": "1. Energy Storage Physics: Inductors & Capacitors"
+   },
+   {
+    "id": "2-taxonomy-mathematical-modeling-of-energy-sources",
+    "title": "2. Taxonomy & Mathematical Modeling of Energy Sources"
+   },
+   {
+    "id": "3-dependent-controlled-sources",
+    "title": "3. Dependent (Controlled) Sources"
+   },
+   {
+    "id": "4-master-problem-repository-pages-59-78",
+    "title": "4. Master Problem Repository (Pages 59\u201378)"
+   },
+   {
+    "id": "5-series-parallel-combinations-impedance-equivalences-pages-79-86",
+    "title": "5. Series & Parallel Combinations & Impedance Equivalences (Pages 79\u201386)"
+   },
+   {
+    "id": "6-star-delta-equivalence-transformations-pages-87-90",
+    "title": "6. Star-Delta (-) Equivalence Transformations (Pages 87\u201390)"
+   },
+   {
+    "id": "7-strategic-gate-exam-traps-faculty-checklist",
+    "title": "7. Strategic GATE Exam Traps & Faculty Checklist"
+   },
+   {
+    "id": "document-scope-roadmap",
+    "title": "Document Scope & Roadmap"
+   },
+   {
+    "id": "1-star-delta-transformations-for-reactive-elements",
+    "title": "1. Star-Delta Transformations for Reactive Elements"
+   },
+   {
+    "id": "2-advanced-network-reduction-problems-bridge-topologies",
+    "title": "2. Advanced Network Reduction Problems & Bridge Topologies"
+   },
+   {
+    "id": "3-wheatstone-bridge-theory-advanced-symmetry-techniques",
+    "title": "3. Wheatstone Bridge Theory & Advanced Symmetry Techniques"
+   },
+   {
+    "id": "4-highly-symmetric-geometric-lattices",
+    "title": "4. Highly Symmetric Geometric Lattices"
+   },
+   {
+    "id": "5-generalized-voltage-current-division-dualities",
+    "title": "5. Generalized Voltage & Current Division Dualities (R, L, C)"
+   },
+   {
+    "id": "6-rigorous-terminal-equivalent-resistance-superposition-injection-method",
+    "title": "6. Rigorous Terminal Equivalent Resistance & Superposition Injection Method"
+   },
+   {
+    "id": "7-infinite-grids-ladders-and-tree-networks",
+    "title": "7. Infinite Grids, Ladders, and Tree Networks"
+   },
+   {
+    "id": "8-solved-gate-previous-years-questions-pyqs",
+    "title": "8. Solved GATE Previous Years Questions (PYQs)"
+   },
+   {
+    "id": "9-foundations-of-systematic-circuit-analysis-page-135",
+    "title": "9. Foundations of Systematic Circuit Analysis (Page 135)"
+   },
+   {
+    "id": "10-high-yield-summary-cheat-sheet-exam-traps",
+    "title": "10. High-Yield Summary Cheat-Sheet & Exam Traps"
+   },
+   {
+    "id": "1-systematic-nodal-analysis-node-voltage-method",
+    "title": "1. Systematic Nodal Analysis (Node Voltage Method)"
+   },
+   {
+    "id": "2-the-supernode-technique",
+    "title": "2. The Supernode Technique"
+   },
+   {
+    "id": "3-mesh-analysis-mesh-current-method-the-supermesh",
+    "title": "3. Mesh Analysis (Mesh Current Method) & The Supermesh"
+   },
+   {
+    "id": "4-electrical-measuring-instruments-voltmeter-ammeter",
+    "title": "4. Electrical Measuring Instruments: Voltmeter & Ammeter"
+   },
+   {
+    "id": "5-electric-incandescent-bulb-problems",
+    "title": "5. Electric Incandescent Bulb Problems"
+   },
+   {
+    "id": "6-conductance-in-siemens-dual-network-laws",
+    "title": "6. Conductance (G in Siemens) & Dual Network Laws"
+   },
+   {
+    "id": "7-advanced-network-reduction-techniques",
+    "title": "7. Advanced Network Reduction Techniques"
+   },
+   {
+    "id": "8-source-transformation-star-delta-transformations",
+    "title": "8. Source Transformation & Star-Delta Transformations"
+   },
+   {
+    "id": "9-comprehensive-problem-compendium-slides-136-180",
+    "title": "9. Comprehensive Problem Compendium (Slides 136\u2013180)"
+   },
+   {
+    "id": "10-exam-traps-common-mistakes-faculty-pro-tips",
+    "title": "10. Exam Traps, Common Mistakes & Faculty Pro-Tips"
+   },
+   {
+    "id": "1-overview-pedagogical-scope",
+    "title": "1. Overview & Pedagogical Scope"
+   },
+   {
+    "id": "2-advanced-nodal-mesh-analysis-with-dependent-sources",
+    "title": "2. Advanced Nodal & Mesh Analysis with Dependent Sources"
+   },
+   {
+    "id": "3-energy-dynamics-state-function-vs-path-function",
+    "title": "3. Energy Dynamics: State Function vs. Path Function"
+   },
+   {
+    "id": "4-invariance-scaling-conservation-principles",
+    "title": "4. Invariance, Scaling & Conservation Principles"
+   },
+   {
+    "id": "5-topological-conservation-laws-the-master-grounding-trilogy",
+    "title": "5. Topological Conservation Laws & The Master Grounding Trilogy"
+   },
+   {
+    "id": "6-network-symmetry-techniques-infinite-topologies",
+    "title": "6. Network Symmetry Techniques & Infinite Topologies"
+   },
+   {
+    "id": "7-component-ratings-non-linear-load-lines-miller-multipliers",
+    "title": "7. Component Ratings, Non-Linear Load Lines & Miller Multipliers"
+   },
+   {
+    "id": "8-complete-problem-gate-pyq-compendium-pages-181-229",
+    "title": "8. Complete Problem & GATE PYQ Compendium (Pages 181\u2013229)"
+   },
+   {
+    "id": "9-comprehensive-pitfall-exam-trap-checklist",
+    "title": "9. Comprehensive Pitfall & Exam Trap Checklist"
+   },
+   {
+    "id": "10-summary-transition-to-network-theorems",
+    "title": "10. Summary & Transition to Network Theorems"
+   }
+  ]
+ },
+ "nt-ch2": {
+  "num": 2,
+  "title": "Network Theorems & Circuit Equivalence",
+  "subject": "Network Theory",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-2-network-theorems-part-1-slides-01-to-45",
+    "title": "Module 2: Network Theorems (Part 1 \u2014 Slides 01 to 45)"
+   },
+   {
+    "id": "1-roadmap-of-network-theorems-slide-05",
+    "title": "1. Roadmap of Network Theorems (Slide 05)"
+   },
+   {
+    "id": "2-source-deactivation-killing-rules-slide-01",
+    "title": "2. Source Deactivation (Killing) Rules (Slide 01)"
+   },
+   {
+    "id": "3-source-transformation-its-critical-limitations-slides-02-04",
+    "title": "3. Source Transformation & Its Critical Limitations (Slides 02\u201304)"
+   },
+   {
+    "id": "4-superposition-theorem-slides-06-15",
+    "title": "4. Superposition Theorem (Slides 06\u201315)"
+   },
+   {
+    "id": "5-power-superposition-derivation-formula-traps-slides-08-16-19",
+    "title": "5. Power Superposition: Derivation, Formula & Traps (Slides 08, 16\u201319)"
+   },
+   {
+    "id": "6-thevenin-s-theorem-slides-20-40",
+    "title": "6. Thevenin's Theorem (Slides 20\u201340)"
+   },
+   {
+    "id": "7-norton-s-theorem-network-duality-slides-41-45",
+    "title": "7. Norton's Theorem & Network Duality (Slides 41\u201345)"
+   },
+   {
+    "id": "8-summary-comparison-of-network-theorems-part-1",
+    "title": "8. Summary Comparison of Network Theorems (Part 1)"
+   },
+   {
+    "id": "9-high-yield-gate-traps-checklist",
+    "title": "9. High-Yield GATE Traps & Checklist"
+   },
+   {
+    "id": "1-advanced-thevenin-s-norton-s-theorems-dependent-sources-special-topologies",
+    "title": "1. Advanced Thevenin's & Norton's Theorems: Dependent Sources & Special Topologies"
+   },
+   {
+    "id": "2-linearity-network-properties-and-two-port-definitions",
+    "title": "2. Linearity, Network Properties, and Two-Port Definitions"
+   },
+   {
+    "id": "3-reciprocity-theorem-the-t-network-synthesis-shortcut",
+    "title": "3. Reciprocity Theorem & The T-Network Synthesis Shortcut"
+   },
+   {
+    "id": "4-maximum-power-transfer-theorem-mptt-the-variable-element-trap",
+    "title": "4. Maximum Power Transfer Theorem (MPTT) & The Variable Element Trap"
+   },
+   {
+    "id": "5-comprehensive-key-takeaways-formula-sheet",
+    "title": "5. Comprehensive Key Takeaways & Formula Sheet"
+   },
+   {
+    "id": "1-advanced-mptt-between-multi-element-active-sub-circuits-pages-096-102",
+    "title": "1. Advanced MPTT Between Multi-Element Active Sub-Circuits (Pages 096\u2013102)"
+   },
+   {
+    "id": "2-fundamentals-of-ac-circuits-ac-power-definitions-pages-103-107",
+    "title": "2. Fundamentals of AC Circuits & AC Power Definitions (Pages 103\u2013107)"
+   },
+   {
+    "id": "3-ac-maximum-power-transfer-theorem-rigorous-derivations-pages-108-115",
+    "title": "3. AC Maximum Power Transfer Theorem: Rigorous Derivations (Pages 108\u2013115)"
+   },
+   {
+    "id": "4-master-7-case-summary-table-for-ac-mptt-page-116",
+    "title": "4. Master 7-Case Summary Table for AC MPTT (Page 116)"
+   },
+   {
+    "id": "5-comprehensive-solved-examples-gate-pyqs-on-ac-mptt-pages-117-124",
+    "title": "5. Comprehensive Solved Examples & GATE PYQs on AC MPTT (Pages 117\u2013124)"
+   },
+   {
+    "id": "6-millman-s-theorem-dual-millman-s-theorem-pages-125-128",
+    "title": "6. Millman's Theorem & Dual Millman's Theorem (Pages 125\u2013128)"
+   },
+   {
+    "id": "7-ladder-networks-dependent-source-analysis-pages-129-132",
+    "title": "7. Ladder Networks & Dependent Source Analysis (Pages 129\u2013132)"
+   },
+   {
+    "id": "8-black-box-two-terminal-networks-linear-extraction-pages-133-137",
+    "title": "8. Black-Box Two-Terminal Networks & Linear Extraction (Pages 133\u2013137)"
+   },
+   {
+    "id": "9-maximum-power-absorbed-by-a-constant-current-load-pages-138-139",
+    "title": "9. Maximum Power Absorbed by a Constant Current Load (Pages 138\u2013139)"
+   },
+   {
+    "id": "10-superposition-of-power-in-resistive-networks-page-140",
+    "title": "10. Superposition of Power in Resistive Networks (Page 140)"
+   },
+   {
+    "id": "11-gate-pyq-2-port-network-characteristic-extraction-pages-141-142",
+    "title": "11. GATE PYQ: 2-Port Network V-I Characteristic Extraction (Pages 141\u2013142)"
+   },
+   {
+    "id": "12-high-yield-gate-traps-faculty-exam-tips-summary",
+    "title": "12. High-Yield GATE Traps & Faculty Exam Tips Summary"
+   }
+  ]
+ },
+ "nt-ch3": {
+  "num": 3,
+  "title": "Transient Analysis",
+  "subject": "Network Theory",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "part-1-physical-foundations-first-order-networks-boundary-equivalence-laplace-transform-framework-pages-1-to-110",
+    "title": "Part 1: Physical Foundations, First-Order Networks, Boundary Equivalence & Laplace Transform Framework (Pages 1 to 110)"
+   },
+   {
+    "id": "1-physical-foundations-of-network-transients",
+    "title": "1. Physical Foundations of Network Transients"
+   },
+   {
+    "id": "2-time-constant-settling-dynamics-mathematical-signals",
+    "title": "2. Time Constant , Settling Dynamics & Mathematical Signals"
+   },
+   {
+    "id": "3-classical-differential-equation-vs-master-formula-framework",
+    "title": "3. Classical Differential Equation vs Master Formula Framework"
+   },
+   {
+    "id": "4-in-depth-analysis-of-capacitors-in-transients",
+    "title": "4. In-Depth Analysis of Capacitors in Transients"
+   },
+   {
+    "id": "5-laplace-transform-foundations-for-network-transients",
+    "title": "5. Laplace Transform Foundations for Network Transients"
+   },
+   {
+    "id": "6-comprehensive-repository-of-solved-problems-case-studies",
+    "title": "6. Comprehensive Repository of Solved Problems & Case Studies"
+   },
+   {
+    "id": "7-gate-traps-polarity-conventions-faculty-inspection-shortcuts",
+    "title": "7. GATE Traps, Polarity Conventions & Faculty Inspection Shortcuts"
+   },
+   {
+    "id": "first-order-rl-rc-dc-transients-impulsive-circuits-initial-slopes-sequential-switching-and-periodic-waveform-responses",
+    "title": "First-Order RL & RC DC Transients, Impulsive Circuits, Initial Slopes, Sequential Switching, and Periodic Waveform Responses"
+   },
+   {
+    "id": "1-periodic-pulse-excitation-on-rc-circuits-edge-dynamics-pages-226-233-247-250",
+    "title": "1. Periodic Pulse Excitation on RC Circuits & Edge Dynamics (Pages 226\u2013233, 247\u2013250)"
+   },
+   {
+    "id": "2-mathematical-foundations-of-transients-initial-final-value-theorems-pages-234-241",
+    "title": "2. Mathematical Foundations of Transients: Initial & Final Value Theorems (Pages 234\u2013241)"
+   },
+   {
+    "id": "3-advanced-rc-networks-multi-interval-time-varying-active-circuits-pages-242-246-251-257",
+    "title": "3. Advanced RC Networks: Multi-Interval, Time-Varying, & Active Circuits (Pages 242\u2013246, 251\u2013257)"
+   },
+   {
+    "id": "4-inductor-fundamentals-boundary-conditions-pages-258-266",
+    "title": "4. Inductor Fundamentals & Boundary Conditions (Pages 258\u2013266)"
+   },
+   {
+    "id": "5-first-order-rl-circuit-transient-dynamics-pages-267-278",
+    "title": "5. First-Order RL Circuit Transient Dynamics (Pages 267\u2013278)"
+   },
+   {
+    "id": "6-singularity-functions-jump-discontinuities-under-impulse-excitation-pages-279-284-296-297",
+    "title": "6. Singularity Functions & Jump Discontinuities Under Impulse Excitation (Pages 279\u2013284, 296\u2013297)"
+   },
+   {
+    "id": "7-the-canonical-inductor-switching-trio-conservation-of-flux-linkage-pages-285-295",
+    "title": "7. The Canonical Inductor Switching Trio & Conservation of Flux Linkage (Pages 285\u2013295)"
+   },
+   {
+    "id": "8-network-transfer-functions-and-circuit-order-determination-pages-298-316",
+    "title": "8. Network Transfer Functions and Circuit Order Determination (Pages 298\u2013316)"
+   },
+   {
+    "id": "9-comprehensive-problem-set-assignment-11-detailed-transcripts-solutions-pages-317-337",
+    "title": "9. Comprehensive Problem Set: Assignment 11 Detailed Transcripts & Solutions (Pages 317\u2013337)"
+   },
+   {
+    "id": "10-introduction-to-second-order-systems-damping-dynamics-pages-338-340",
+    "title": "10. Introduction to Second-Order Systems & Damping Dynamics (Pages 338\u2013340)"
+   },
+   {
+    "id": "11-quick-revision-formulas-exam-summary",
+    "title": "11. Quick Revision Formulas & Exam Summary"
+   },
+   {
+    "id": "executive-overview-pedagogical-roadmap",
+    "title": "Executive Overview & Pedagogical Roadmap"
+   },
+   {
+    "id": "1-second-order-rlc-circuits-rigorous-theoretical-foundations",
+    "title": "1. Second-Order RLC Circuits: Rigorous Theoretical Foundations"
+   },
+   {
+    "id": "2-the-four-damping-regimes",
+    "title": "2. The Four Damping Regimes"
+   },
+   {
+    "id": "3-pure-undamped-lc-circuits-and-faculty-s-intuitive-shortcuts",
+    "title": "3. Pure Undamped LC Circuits and Faculty's Intuitive Shortcuts"
+   },
+   {
+    "id": "4-resonant-diode-lc-switching-circuits",
+    "title": "4. Resonant Diode + LC Switching Circuits"
+   },
+   {
+    "id": "5-ac-transients-and-transient-free-switching",
+    "title": "5. AC Transients and Transient-Free Switching"
+   },
+   {
+    "id": "6-s-domain-laplace-analysis-and-singular-switching",
+    "title": "6. S-Domain (Laplace) Analysis and Singular Switching"
+   },
+   {
+    "id": "7-comprehensive-step-by-step-solved-questions-gate-pyqs",
+    "title": "7. Comprehensive Step-by-Step Solved Questions & GATE PYQs"
+   },
+   {
+    "id": "8-faculty-summary-traps-exam-cheat-sheet",
+    "title": "8. Faculty Summary, Traps & Exam Cheat Sheet"
+   }
+  ]
+ },
+ "ntf-ch1": {
+  "num": 1,
+  "title": "Basics of Network \u2014 Revision Guide",
+  "subject": "Network Theory",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "1-physical-foundations-of-circuit-analysis",
+    "title": "1. Physical Foundations of Circuit Analysis"
+   },
+   {
+    "id": "2-fundamental-electrical-quantities-sign-conventions",
+    "title": "2. Fundamental Electrical Quantities & Sign Conventions"
+   },
+   {
+    "id": "3-passive-elements-duality-relations",
+    "title": "3. Passive Elements (R, L, C) & Duality Relations"
+   },
+   {
+    "id": "4-electrical-sources-classification",
+    "title": "4. Electrical Sources & Classification"
+   },
+   {
+    "id": "5-systematic-circuit-analysis-nodal-vs-mesh",
+    "title": "5. Systematic Circuit Analysis: Nodal vs. Mesh"
+   },
+   {
+    "id": "6-network-reductions-bridges-geometric-symmetry",
+    "title": "6. Network Reductions, Bridges & Geometric Symmetry"
+   },
+   {
+    "id": "7-electrical-instruments-incandescent-bulbs",
+    "title": "7. Electrical Instruments & Incandescent Bulbs"
+   },
+   {
+    "id": "8-solved-benchmark-gate-problems-module-1",
+    "title": "8. Solved Benchmark GATE Problems (Module 1)"
+   }
+  ]
+ },
+ "ntf-ch2": {
+  "num": 2,
+  "title": "Network Theorems \u2014 Revision Guide",
+  "subject": "Network Theory",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "1-source-deactivation-rules-linearity-foundations",
+    "title": "1. Source Deactivation Rules & Linearity Foundations"
+   },
+   {
+    "id": "2-superposition-theorem-the-power-fallacy",
+    "title": "2. Superposition Theorem & The Power Fallacy"
+   },
+   {
+    "id": "3-thevenin-s-norton-s-theorems",
+    "title": "3. Thevenin's & Norton's Theorems"
+   },
+   {
+    "id": "4-maximum-power-transfer-theorem-mptt",
+    "title": "4. Maximum Power Transfer Theorem (MPTT)"
+   },
+   {
+    "id": "5-reciprocity-millman-s-auxiliary-theorems",
+    "title": "5. Reciprocity, Millman's & Auxiliary Theorems"
+   },
+   {
+    "id": "6-solved-benchmark-gate-problems-module-2",
+    "title": "6. Solved Benchmark GATE Problems (Module 2)"
+   }
+  ]
+ },
+ "ntf-ch3": {
+  "num": 3,
+  "title": "Transient Analysis \u2014 Revision Guide",
+  "subject": "Network Theory",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "1-physical-foundations-of-network-transients",
+    "title": "1. Physical Foundations of Network Transients"
+   },
+   {
+    "id": "2-boundary-state-equivalents-continuity-axioms",
+    "title": "2. Boundary State Equivalents & Continuity Axioms"
+   },
+   {
+    "id": "3-first-order-rl-and-rc-dc-transients",
+    "title": "3. First-Order RL and RC DC Transients"
+   },
+   {
+    "id": "4-singularity-inputs-degenerate-loops",
+    "title": "4. Singularity Inputs & Degenerate Loops"
+   },
+   {
+    "id": "5-second-order-rlc-circuits-series-vs-parallel-duality",
+    "title": "5. Second-Order RLC Circuits: Series vs. Parallel Duality"
+   },
+   {
+    "id": "6-specialized-lc-circuits-resonant-switching-ac-transients",
+    "title": "6. Specialized LC Circuits, Resonant Switching & AC Transients"
+   },
+   {
+    "id": "7-solved-benchmark-gate-problems-module-3",
+    "title": "7. Solved Benchmark GATE Problems (Module 3)"
+   }
+  ]
+ },
+ "ntf-ch4": {
+  "num": 4,
+  "title": "Revision Capsule \u2014 All Chapters",
+  "subject": "Network Theory",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "1-1-fundamental-quantities-conventions",
+    "title": "1.1 Fundamental Quantities & Conventions"
+   },
+   {
+    "id": "1-2-passive-circuit-elements-master-duality-matrix",
+    "title": "1.2 Passive Circuit Elements & Master Duality Matrix"
+   },
+   {
+    "id": "1-3-sources-dependent-sources",
+    "title": "1.3 Sources & Dependent Sources"
+   },
+   {
+    "id": "1-4-systematic-circuit-analysis-nodal-vs-mesh",
+    "title": "1.4 Systematic Circuit Analysis: Nodal vs. Mesh"
+   },
+   {
+    "id": "1-5-network-reductions-bridges-symmetry-tricks",
+    "title": "1.5 Network Reductions, Bridges & Symmetry Tricks"
+   },
+   {
+    "id": "1-6-measuring-instruments-incandescent-bulb-circuits",
+    "title": "1.6 Measuring Instruments & Incandescent Bulb Circuits"
+   },
+   {
+    "id": "1-7-key-archetype-problems-module-1",
+    "title": "1.7 Key Archetype Problems (Module 1)"
+   },
+   {
+    "id": "2-1-thevenin-s-norton-s-theorems",
+    "title": "2.1 Thevenin's & Norton's Theorems"
+   },
+   {
+    "id": "2-2-maximum-power-transfer-theorem-mptt",
+    "title": "2.2 Maximum Power Transfer Theorem (MPTT)"
+   },
+   {
+    "id": "2-3-other-foundational-theorems",
+    "title": "2.3 Other Foundational Theorems"
+   },
+   {
+    "id": "2-4-key-archetype-problems-module-2",
+    "title": "2.4 Key Archetype Problems (Module 2)"
+   },
+   {
+    "id": "3-1-physical-basis-boundary-equivalence-models",
+    "title": "3.1 Physical Basis & Boundary Equivalence Models"
+   },
+   {
+    "id": "3-2-first-order-rl-and-rc-transients",
+    "title": "3.2 First-Order RL and RC Transients"
+   },
+   {
+    "id": "3-3-singularity-functions-degenerate-loop-jump-conditions",
+    "title": "3.3 Singularity Functions & Degenerate Loop Jump Conditions"
+   },
+   {
+    "id": "3-4-second-order-rlc-circuits-series-vs-parallel-duality",
+    "title": "3.4 Second-Order RLC Circuits: Series vs. Parallel Duality"
+   },
+   {
+    "id": "3-5-specialized-lc-circuits-ac-transients",
+    "title": "3.5 Specialized LC Circuits & AC Transients"
+   },
+   {
+    "id": "3-6-key-archetype-problems-module-3",
+    "title": "3.6 Key Archetype Problems (Module 3)"
+   },
+   {
+    "id": "4-1-the-top-10-high-frequency-gate-network-theory-traps",
+    "title": "4.1 The Top 10 High-Frequency GATE Network Theory Traps"
+   },
+   {
+    "id": "4-2-quick-fire-formula-lookup-sheet",
+    "title": "4.2 Quick-Fire Formula Lookup Sheet"
    }
   ]
  }
