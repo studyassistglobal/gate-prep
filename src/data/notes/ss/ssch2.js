@@ -318,6 +318,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Operation 1: Addition**"
      ]
@@ -332,6 +333,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Operation 2: Subtraction**"
      ]
@@ -346,6 +348,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Operation 3: Multiplication**"
      ]
@@ -978,6 +981,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Impulse-Impulse:**"
      ]
@@ -988,6 +992,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Impulse-Step:**"
      ]
@@ -998,6 +1003,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Impulse-Ramp:**"
      ]
@@ -1008,6 +1014,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Step-Step:**"
      ]
@@ -1018,6 +1025,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Step-Ramp:**"
      ]
@@ -1358,6 +1366,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Commutative Property:**"
      ]
@@ -1368,6 +1377,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time-Shift Property:**"
      ]
@@ -1378,6 +1388,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Associative Property:**"
      ]
@@ -1388,6 +1399,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Distributive Property (over addition):**"
      ]
@@ -1398,6 +1410,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Impulse Identity Property:**"
      ]
@@ -1408,6 +1421,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Step Integration Property:**"
      ]
@@ -1849,6 +1863,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Shifted Input, Unshifted Impulse:**"
      ]
@@ -1859,6 +1874,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Unshifted Input, Advanced Impulse:**"
      ]
@@ -1869,6 +1885,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Shifted Input, Shifted Impulse:**"
      ]
@@ -1879,6 +1896,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Shifted Input, Scaled & Shifted Impulse:**"
      ]
@@ -1900,6 +1918,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Scaled & Shifted Input, Scaled & Shifted Impulse:**"
      ]
@@ -2605,6 +2624,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Always factor out the scaling parameter first:"
      ]
@@ -2619,6 +2639,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Define scaled signals: $x_s(t) = x(2t)$ and $h_s(t) = h(2t)$."
      ]
@@ -2633,6 +2654,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "The requested convolution is:"
      ]
@@ -2643,6 +2665,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "By the time-shift property:"
      ]
@@ -2653,6 +2676,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "Substitute the definition of $y_s(t) = \\frac{1}{2}y(2t)$:"
      ]
@@ -2724,6 +2748,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Rewrite impulse:"
      ]
@@ -2734,6 +2759,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Let $f(t) = e^{-3(t-2)} u(t-2)$.",
       "Compute $f(t) * \\frac{1}{2}\\delta\\left(t - \\frac{3}{2}\\right) = \\frac{1}{2} f\\left(t - \\frac{3}{2}\\right)$:"
@@ -2749,6 +2775,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Final expression:"
      ]
@@ -2771,6 +2798,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Total Output Duration:**"
      ]
@@ -2781,6 +2809,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Output Waveform Shape:**"
      ]
@@ -2794,6 +2823,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Trapezoid Geometry Breakdown:**"
      ]
@@ -2808,6 +2838,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Peak Amplitude:**"
      ]
@@ -2818,6 +2849,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Output Center:**"
      ]
@@ -3099,6 +3131,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Case 1: $W_1 = W_2 = W$ (Isosceles Triangle)**"
      ]
@@ -3116,6 +3149,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Case 2: $W_1 \\ne W_2$ (Symmetric Trapezoid)**"
      ]
@@ -3147,6 +3181,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Slope of Slanted Edges:**"
      ]
@@ -3161,6 +3196,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Peak Value Calculation:**"
      ]
@@ -3171,6 +3207,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Consistency Verification via Area:**"
      ]
@@ -3409,6 +3446,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Argument Simplification via Step Function Property:**"
      ]
@@ -3439,6 +3477,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Base Convolution Identification:**"
      ]
@@ -3461,6 +3500,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Time-Shifting Property of Convolution:**"
      ]
@@ -3526,6 +3566,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Convolution Time-Scaling Property:**"
      ]
@@ -3544,6 +3585,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Application to Scaled Base Signals:**"
      ]
@@ -3558,6 +3600,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Applying Independent Shifts Inside the Scaled Form:**"
      ]
@@ -3584,6 +3627,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Substitution of Base Output Function:**"
      ]
@@ -3630,6 +3674,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Folding and Shifting $h(t)$:**"
      ]
@@ -3647,6 +3692,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Interval Analysis:**"
      ]
@@ -3718,6 +3764,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Decomposition into Component Signals:**"
      ]
@@ -3736,6 +3783,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Orthogonality Check:**"
      ]
@@ -3754,6 +3802,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**General Energy Formula for Linear Combinations:**"
      ]
@@ -3764,6 +3813,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Energy of a Standard One-Sided Exponential:**"
      ]
@@ -3808,6 +3858,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Summing the Terms:**"
      ]
@@ -3826,6 +3877,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Individual Energy of Inputs (Comparison):**"
      ]
@@ -3864,6 +3916,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Integrand Assembly:**"
      ]
@@ -3874,6 +3927,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Limits:** For $t > 0$, overlap is $\\tau \\in [0, t]$:"
      ]
@@ -3969,6 +4023,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Direct Integration:**"
      ]
@@ -3979,6 +4034,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Limit via L'H\u00f4pital's Rule:**"
      ]
@@ -4036,6 +4092,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Convolution Integral:**"
      ]
@@ -4065,6 +4122,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Evaluation at Critical Time Instants:**"
      ]
@@ -4079,6 +4137,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Computation of Target Metric $\\alpha$:**"
      ]
@@ -4189,6 +4248,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Overlap Inspection:**"
      ]
@@ -4208,6 +4268,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Energy of a Single Isolated Pulse:**"
      ]
@@ -4222,6 +4283,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Average Power of the Periodic Signal:**"
      ]
@@ -4232,6 +4294,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Root Mean Square (RMS) Value:**"
      ]
@@ -4262,6 +4325,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Expressing Rectangular Pulses as Singularity Functions:**"
      ]
@@ -4276,6 +4340,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Utilizing Fundamental Convolution Identity:**"
      ]
@@ -4290,6 +4355,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Term-by-Term Polynomial Expansion:**"
      ]
@@ -4300,6 +4366,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Slope Tracking Table:**"
      ]
@@ -4420,6 +4487,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Parameter Identification:**"
      ]
@@ -4433,6 +4501,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Key Time Calculations:**"
      ]
@@ -4449,6 +4518,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Amplitude and Slope Calculations:**"
      ]
@@ -4462,6 +4532,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Area Verification:**"
      ]
@@ -4497,6 +4568,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Signal Parameters:**"
      ]
@@ -4510,6 +4582,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Product of Amplitudes:**"
      ]
@@ -4524,6 +4597,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Key Coordinates:**"
      ]
@@ -4569,6 +4643,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Signal Parameters:**"
      ]
@@ -4582,6 +4657,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Geometry Determination:**"
      ]
@@ -4599,6 +4675,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Coordinates & Slope:**"
      ]
@@ -4639,6 +4716,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Reflection & Time Shift:**"
      ]
@@ -4653,6 +4731,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Integral Assembly:**"
      ]
@@ -4771,6 +4850,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Determine the support of $h(1 - \\tau)$:**"
      ]
@@ -4781,6 +4861,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Determine the Overlap with $x(\\tau)$:**"
      ]
@@ -4794,6 +4875,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Value of $x(\\tau)$ in the Overlap Region:**"
      ]
@@ -4809,6 +4891,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Product $p(\\tau) = x(\\tau) \\cdot h(1 - \\tau) = 2 \\cdot x(\\tau)$:**"
      ]
@@ -4845,6 +4928,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Summing the Geometric Areas:**"
      ]
@@ -4952,6 +5036,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Periodic Identity on Windowed Sinusoid:**"
      ]
@@ -4974,6 +5059,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Unit Step Scaling:**"
      ]
@@ -4988,6 +5074,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Base Output Function:**"
      ]
@@ -5002,6 +5089,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Net Shift Evaluation:**"
      ]
@@ -5058,6 +5146,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Folding and Shifting $h(t)$:**"
      ]
@@ -5072,6 +5161,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Analysis of Limits:**"
      ]
@@ -5089,6 +5179,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Region 1: $t - 1 < 1 \\iff t < 2$:**"
      ]
@@ -5103,6 +5194,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Region 2: $t - 1 \\ge 1 \\iff t \\ge 2$:**"
      ]
@@ -5233,6 +5325,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Condition:** When $t > 2$, $t - 2 > 0$.",
       "**Lower Integration Limit:**"
@@ -5248,6 +5341,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Evaluating the Integral:**"
      ]
@@ -5387,6 +5481,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Closing of CT Convolution**: Evaluation of mixed causal/anti-causal bilateral exponential convolutions requiring piecewise boundary segmentation.",
       "**Discrete Elementary Signals & Identities**: Rigorous index-level definitions of $r[n]$, $u[n]$, and the unique discrete identity $r[n] = n u[n] = n u[n-1]$ and $r[n+1] = (n+1)u[n]$.",
@@ -5404,6 +5499,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Continuous vs Discrete Asymmetries**:"
      ]
@@ -5417,6 +5513,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Geometric Sequence Convolutions**: Closed-form derivations for distinct bases ($\\alpha \\ne \\beta$), repeated bases ($\\alpha = \\beta$), and convolution with unit step sequences.",
       "**Computational Matrix Methods**: The Toeplitz matrix/tabular method for fast anti-diagonal summation, alongside the 15-second index-matching shortcut for isolated single-point output evaluation $y[n_0]$."
@@ -5496,6 +5593,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Step 1:** Express $x(t)$ and $h(t)$ in terms of their slope changes. The second derivative of any continuous, piecewise linear signal is a train of Dirac impulses located at the \"corners\" (slope discontinuities):"
      ]
@@ -5510,6 +5608,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Step 2:** Convolve $x''(t)$ with $h(t)$ (or convolve $x'(t)$ with $h'(t)$):"
      ]
@@ -5520,6 +5619,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Step 3:** Reconstruct $y(t)$ by integrating twice:"
      ]
@@ -5605,6 +5705,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Regime 1 ($t - 2 > 0 \\implies t > 2$):** The lower bound lies entirely in the positive half-plane ($\\tau > 0$). Thus, only the $e^{-\\tau}$ branch of $x(\\tau)$ is active over the entire integration domain $[t-2, \\infty)$.",
       "**Regime 2 ($t - 2 \\le 0 \\implies t \\le 2$):** The lower bound lies in the negative half-plane. The integration must be split into two sub-integrals at $\\tau = 0$:"
@@ -5919,6 +6020,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Construct a grid where the columns correspond to $x[n]$ and the rows correspond to $h[n]$ (or vice versa).",
       "Compute the product $x[k] h[m]$ at each cell $(k, m)$.",
@@ -5944,6 +6046,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Find the support of $x[k]$: $k \\in [k_{1}, k_{2}]$.",
       "Find the support of $h[m]$: $m \\in [m_{1}, m_{2}]$.",
@@ -5956,6 +6059,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Intersect the two active $k$ ranges:"
      ]
@@ -5966,6 +6070,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "Only evaluate and sum the products $x[k] h[n_0 - k]$ for those few intersecting indices. This reduces a multi-minute problem to a 10-second mental arithmetic check."
      ]
@@ -6029,6 +6134,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Geometric Overlap Analysis:**"
      ]
@@ -6047,6 +6153,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Domain Partitioning:**"
      ]
@@ -6147,6 +6254,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Evaluation of the First Integral:**"
      ]
@@ -6157,6 +6265,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Evaluation of the Second Integral:**"
      ]
@@ -6167,6 +6276,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Combining for $t \\le 2$:**"
      ]
@@ -6177,6 +6287,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Assembly with Case 1 ($t > 2$):**"
      ]
@@ -6282,6 +6393,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Proof of $r[n] = n u[n] = n u[n-1]$:**"
      ]
@@ -6300,6 +6412,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Proof of $r[n+1] = (n+1) u[n+1] = (n+1) u[n]$:**"
      ]
@@ -6416,6 +6529,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Even Symmetry of Impulse:** $\\delta[-m] = \\delta[m]$. Hence $\\delta[-k+n] = \\delta[-(k-n)] = \\delta[k-n]$.",
       "**Sifting Extraction:** Since $\\delta[k-n] = 0$ for all $k \\ne n$, the product $x[k] \\delta[k-n] = x[n] \\delta[k-n]$.",
@@ -6428,6 +6542,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Physical Meaning:** $\\delta[n]$ is the identity element of the convolution algebra in the sequence space $\\ell_2$ (or $\\mathbb{C}^{\\mathbb{Z}}$)."
      ]
@@ -6496,6 +6611,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "The discrete step sequence is defined as $u[m] = 1$ for $m \\ge 0$ and $0$ for $m < 0$.",
       "Here $m = n - k = -k + n$. The non-zero condition requires:"
@@ -6507,6 +6623,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Therefore:"
      ]
@@ -6517,6 +6634,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Substituting into the convolution sum limits:"
      ]
@@ -6617,6 +6735,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Substitute $x[k] = u[k]$ into the running sum formula:"
      ]
@@ -6627,6 +6746,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Since $u[k] = 0$ for $k < 0$, the lower summation limit snaps to $k = 0$:"
      ]
@@ -6644,6 +6764,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Combining with $u[n]$:"
      ]
@@ -6654,6 +6775,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "From Slide 063, $r[n+1] = (n+1)u[n+1] = (n+1)u[n]$. Hence:"
      ]
@@ -6909,6 +7031,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Expanding the definition of convolution for delayed inputs:"
      ]
@@ -6919,6 +7042,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Let $m = k - n_1 \\implies k = m + n_1$:"
      ]
@@ -6929,6 +7053,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "By the definition of $y[n] = \\sum_m x[m] h[n - m]$, the expression equals $y[n - n_1 - n_2]$.",
       "Substituting $n_1 = 3$ and $n_2 = -2$:"
@@ -6940,6 +7065,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "Equating $y[n-1] = y[n + \\alpha]$ yields $\\alpha = -1$."
      ]
@@ -7035,6 +7161,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Decompose both sequences into delta bases:"
      ]
@@ -7049,6 +7176,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Apply the distributive and shift properties $\\delta[n-k] * \\delta[n-m] = \\delta[n - (k+m)]$:"
      ]
@@ -7066,6 +7194,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Summing and grouping common delta indices:"
      ]
@@ -7150,6 +7279,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Lower Bound:** $n_{y,\\min} = n_{x,\\min} + n_{h,\\min} = -1 + (-1) = -2$.",
       "**Upper Bound:** $n_{y,\\max} = n_{x,\\max} + n_{h,\\max} = 1 + 0 = 1$.",
@@ -7238,6 +7368,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "For an integer interval $[a, b]$, the number of integer points is $b - a + 1$.",
       "For $x[n]$: $\\alpha = n_2 - n_1 + 1$.",
@@ -7251,6 +7382,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "From (2) and (3), $n_2 - n_1 = \\alpha - 1$ and $n_4 - n_3 = \\beta - 1$.",
       "Substituting:"
@@ -7432,6 +7564,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$r[k]$ turns on at $k = 0$ and is active for $k \\ge 0$.",
       "$r[-k+n]$ turns on (looking leftward) at $k = n$ and is active for $k \\le n$.",
@@ -7514,6 +7647,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Substitute the known identities from Slide 067:"
      ]
@@ -7524,6 +7658,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Expression:"
      ]
@@ -7534,6 +7669,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Factor out the common term $\\frac{n(n+1)}{2}$:"
      ]
@@ -7544,6 +7680,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Writing with unit step:"
      ]
@@ -7726,6 +7863,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Continuous Time:**"
      ]
@@ -7751,6 +7889,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Discrete Time:**"
      ]
@@ -7765,6 +7904,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**The Only Bijection on $\\mathbb{Z}$:**"
      ]
@@ -7919,6 +8059,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Analysis of Problem (a):**"
      ]
@@ -7937,6 +8078,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Analysis of Problem (b) \u2014 Method I:**"
      ]
@@ -7955,6 +8097,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Analysis of Problem (b) \u2014 Method II:**"
      ]
@@ -8063,6 +8206,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Derivation of Problem (3):**"
      ]
@@ -8086,6 +8230,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Derivation of Problem (4):**"
      ]
@@ -8199,6 +8344,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Simplify the impulse sequence:"
      ]
@@ -8217,6 +8363,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Compute convolution:"
      ]
@@ -8227,6 +8374,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Substitute $x[n] = (2/3)^n u[n]$:"
      ]
@@ -8237,6 +8385,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Evaluate at $n = 4$:"
      ]
@@ -8308,6 +8457,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Applying the convolution sum definition:"
      ]
@@ -8318,6 +8468,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Factor $\\beta^{n-k} = \\beta^n \\beta^{-k}$. Since $\\beta^n$ has no $k$-dependence, factor it outside the summation:"
      ]
@@ -8328,6 +8479,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Overlap bounds:"
      ]
@@ -8409,6 +8561,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "The finite geometric progression has:"
      ]
@@ -8423,6 +8576,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Formula: $S_{n+1} = a \\frac{r^{n+1} - 1}{r - 1}$:"
      ]
@@ -8433,6 +8587,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Multiply by the external factor $\\beta^n$:"
      ]
@@ -8443,6 +8598,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Multiplying by $u[n]$ enforces causality for all $n \\in \\mathbb{Z}$:"
      ]
@@ -8512,6 +8668,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Product of identical geometric powers:"
      ]
@@ -8522,6 +8679,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Because $\\alpha^n$ does not depend on the dummy summation index $k$, it factors out:"
      ]
@@ -8532,6 +8690,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Continuous vs Discrete Analogy:**"
      ]
@@ -8545,6 +8704,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Consistency Check:**"
      ]
@@ -8622,6 +8782,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Overlap of $u[k]$ (active for $k \\ge 0$) and $u[-k+4]$ (active for $k \\le 4$):"
      ]
@@ -8632,6 +8793,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Direct expansion:"
      ]
@@ -8702,6 +8864,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Setting $\\beta = 1$ in the distinct geometric convolution formula from Slide 083:"
      ]
@@ -8712,6 +8875,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "For $n = 4$ and $\\alpha = 2$:"
      ]
@@ -8722,6 +8886,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "This verifies that calculating via the closed-form archetype formula yields the exact same result as sample-by-sample summation, but requires only 5 seconds."
      ]
@@ -8802,6 +8967,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Determine Support:**"
      ]
@@ -8816,6 +8982,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Form Matrix:**"
      ]
@@ -8838,6 +9005,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Sum Along Anti-Diagonals:**"
      ]
@@ -8853,6 +9021,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Identify Output Origin:**"
      ]
@@ -8934,6 +9103,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Support Limits:**"
      ]
@@ -8948,6 +9118,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Sum of Each Anti-Diagonal:**"
      ]
@@ -8968,6 +9139,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Output Sequence:**"
      ]
@@ -9148,6 +9320,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Index-Domain Analysis of $h[-k+4]$:**"
      ]
@@ -9170,6 +9343,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Index-Domain Analysis of $x[k]$:**"
      ]
@@ -9188,6 +9362,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Intersection of Non-Zero Supports:**"
      ]
@@ -9198,6 +9373,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Evaluating the Non-Zero Overlap Sum:**"
      ]
@@ -9208,6 +9384,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Substitute Values:**"
      ]
@@ -9475,6 +9652,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Closing of Convolution Sum Theory (Slides 091\u2013093):** Application of the summation/area property of discrete convolution and algebraic deconvolution/tabular computation under boundary conditions.",
       "**Fundamental Operators in Continuous vs Discrete Domains (Slides 094\u2013099):** Precise calculus bridges comparing CT Integration $\\int_{-\\infty}^t$ with DT Running Summation $\\sum_{k=-\\infty}^n$, and CT Differentiation $\\frac{d}{dt}$ with DT Backward Difference $\\Delta$. Complete derivation of higher-order difference operators ($\\Delta^2$), forward/backward singularity shifts ($r[n+1] \\leftrightarrow u[n] \\leftrightarrow \\delta[n]$), and the discrete running sum of unit steps yielding shifted ramps $u[n]*u[n] = r[n+1]$.",
@@ -9731,6 +9909,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Recall the discrete-time convolution sum area/summation property:"
      ]
@@ -9741,6 +9920,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Evaluate the sum of elements in sequence $x[n]$:"
      ]
@@ -9751,6 +9931,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Evaluate the sum of elements in sequence $h[n]$:"
      ]
@@ -9761,6 +9942,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Multiply the two individual sums:"
      ]
@@ -10121,6 +10303,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Formula: $y[n] = x[n] - x[n-1] = \\Delta x[n]$.",
       "Align sequence $x[n]$ and shifted sequence $x[n-1]$ by sample index:"
@@ -10136,6 +10319,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Perform sample-by-sample subtraction:"
      ]
@@ -10153,6 +10337,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Synthesize the resulting sequence:"
      ]
@@ -10319,6 +10504,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Continuous Time System Operators:**"
      ]
@@ -10336,6 +10522,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Discrete Time Difference Cascade:**"
      ]
@@ -10352,6 +10539,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Discrete Time Running Summation Cascade:**"
      ]
@@ -10372,6 +10560,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Delayed Step Running Summation:**"
      ]
@@ -10653,6 +10842,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Individual Input $x_1(t)$:"
      ]
@@ -10663,6 +10853,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Individual Input $x_2(t)$:"
      ]
@@ -10673,6 +10864,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Sum of Inputs $x_1(t) + x_2(t)$:"
      ]
@@ -10695,6 +10887,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Scaled Input $2x_1(t)$:"
      ]
@@ -10782,6 +10975,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Property (i): Additive:-**"
      ]
@@ -11568,6 +11762,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Additivity:**"
      ]
@@ -11578,6 +11773,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Homogeneity (Scaling):**"
      ]
@@ -11721,6 +11917,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Cascade (Series):**"
      ]
@@ -11739,6 +11936,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Parallel:**"
      ]
@@ -11757,6 +11955,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Feedback:**"
      ]
@@ -11836,6 +12035,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**The First-Order Backward Difference System:**"
      ]
@@ -11846,6 +12046,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**The Running Accumulator System:**"
      ]
@@ -11856,6 +12057,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Cascade Invertibility (Identity System):**"
      ]
@@ -12058,6 +12260,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Exhaustive Slide Coverage:** All 30 slides (`page_0091.png` through `page_0120.png`) have been visually inspected using `view_file` and transcribed without omission.",
       "**Mathematical Notation:** All equations have been transcribed using rigorous KaTeX syntax.",
@@ -12097,6 +12300,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Completion of Linearity Theory (Slides 121 \u2013 137):**"
      ]
@@ -12117,6 +12321,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Inception & Formalization of Time Invariance (Slides 138 \u2013 150):**"
      ]
@@ -12160,6 +12365,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Universal Axioms of Causality & Physical Realizability:**"
      ]
@@ -12548,6 +12754,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Let $x(t) = \\alpha x_1(t) + \\beta x_2(t)$.",
       "The response of the system is:"
@@ -12559,6 +12766,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Expanding via the distributive property of multiplication over addition:"
      ]
@@ -12569,6 +12777,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Both additivity and homogeneity hold unconditionally for any scalar in $\\mathbb{C}$. Thus, **$g(t)\\cdot x[f(t)]$ is unconditionally Linear**."
      ]
@@ -12583,6 +12792,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Linear $\\pm$ Linear $\\implies$ Linear:**"
      ]
@@ -12593,6 +12803,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Linear $\\pm$ Non-Linear $\\implies$ Non-Linear:**"
      ]
@@ -12603,6 +12814,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Non-Linear $\\pm$ Non-Linear $\\implies$ Ambiguous (Can be Linear or Non-Linear):**"
      ]
@@ -12713,6 +12925,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Step 1: Compute the Response to a Delayed Input ($y_1(t)$ or $y(t, t_0)$):**"
      ]
@@ -12731,6 +12944,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Step 2: Compute the Delayed System Output ($y_2(t)$ or $y(t - t_0)$):**"
      ]
@@ -12745,6 +12959,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Comparison:**"
      ]
@@ -12762,6 +12977,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Static Amplitude Mapping Theorem (Slide 148):**"
      ]
@@ -12776,6 +12992,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time-Varying Coefficient Theorem (Slide 148):**"
      ]
@@ -12790,6 +13007,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Additive Independent Signal Theorem (Slide 149):**"
      ]
@@ -12804,6 +13022,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Time Transformation / Warping Theorem (Slide 149):**"
      ]
@@ -12818,6 +13037,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Continuous-Time Calculus Operators (Slide 150):**"
      ]
@@ -12868,6 +13088,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**The Arrow of Time:** In the physical universe, real-time hardware systems operate along a forward, irreversible time vector. A physical system cannot produce an effect prior to its cause. Therefore:"
      ]
@@ -12878,6 +13099,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Non-Real-Time / Stored Data Processing:** Non-causal systems can be physically implemented **offline** when the data is pre-recorded (e.g., recorded audio, video filtering, image processing where spatial coordinates allow two-sided lookahead, or digital buffers with artificial latency)."
      ]
@@ -12922,6 +13144,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Time Advance $y(t) = x(t + 1)$:**"
      ]
@@ -12932,6 +13155,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time Scaling $y(t) = x(2t)$:**"
      ]
@@ -12950,6 +13174,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Time Reversal $y(t) = x(-t)$:**"
      ]
@@ -12966,6 +13191,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Trigonometric Argument $y(t) = x(\\sin t)$:**"
      ]
@@ -12986,6 +13212,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Discrete Running Sum with Absolute Upper Bound $y[n] = \\sum_{k=-\\infty}^{|n|} x[k]$:**"
      ]
@@ -13007,6 +13234,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Continuous Differentiator $y(t) = \\frac{d}{dt}x(t)$:**"
      ]
@@ -13056,6 +13284,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Base mapping:"
      ]
@@ -13066,6 +13295,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Individual responses to inputs $x_1(t)$ and $x_2(t)$:"
      ]
@@ -13080,6 +13310,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Response to the sum of inputs $x_1(t) + x_2(t)$:"
      ]
@@ -13094,6 +13325,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Response to scaled input $2x_1(t)$:"
      ]
@@ -13208,6 +13440,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Define input-output mapping:"
      ]
@@ -13218,6 +13451,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Individual responses:"
      ]
@@ -13232,6 +13466,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Additivity Test:"
      ]
@@ -13242,6 +13477,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Homogeneity Test (with scalar $\\alpha = 3$):"
      ]
@@ -13301,6 +13537,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Individual responses:"
      ]
@@ -13315,6 +13552,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Additivity Verification:"
      ]
@@ -13325,6 +13563,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Homogeneity Verification:"
      ]
@@ -13364,6 +13603,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Individual responses:"
      ]
@@ -13378,6 +13618,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Combined input response:"
      ]
@@ -13388,6 +13629,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Scaled input response:"
      ]
@@ -13486,6 +13728,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Net transformation:"
      ]
@@ -13496,6 +13739,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Individual responses:"
      ]
@@ -13510,6 +13754,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Testing Additivity:"
      ]
@@ -13520,6 +13765,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Testing Homogeneity with arbitrary scalar $A \\in \\mathbb{C}$:"
      ]
@@ -13568,6 +13814,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\text{Linear} \\pm \\text{Linear} \\longrightarrow \\mathbf{Linear}$",
       "$\\text{Linear} \\pm \\text{Non-Linear} \\longrightarrow \\mathbf{NON\\ Linear}$",
@@ -13637,6 +13884,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\text{Even Part:}$"
      ]
@@ -13647,6 +13895,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "$\\text{Odd Part:}$"
      ]
@@ -13657,6 +13906,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "$\\text{Conjugate Symmetric (CS) Part:}$"
      ]
@@ -13667,6 +13917,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "$\\text{Conjugate Anti-Symmetric (CAS) Part:}$"
      ]
@@ -13677,6 +13928,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "$\\text{Real Part:}$"
      ]
@@ -13923,6 +14175,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Graph 1:** Single straight line through the origin ($y = mx$) with constant positive slope $\\implies \\boxed{\\mathbf{Linear}}$.",
       "**Graph 2:** Saturation characteristic (linear region with clipping at $\\pm V_{\\text{sat}}$) $\\implies \\boxed{\\mathbf{N.L.}}$.",
@@ -14005,6 +14258,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Guy-1:** $y(t) = t\\sin[x(t)] \\longrightarrow \\mathbf{Non\\text{-}Linear}$"
      ]
@@ -14015,6 +14269,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Guy-2:** $y(t) = x(t)\\sin t \\longrightarrow \\mathbf{Linear}$"
      ]
@@ -14025,6 +14280,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Guy-3:** $y(t) = x(t)\\sin[x(t)] \\longrightarrow \\mathbf{Non\\text{-}Linear}$"
      ]
@@ -15021,6 +15277,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Linear or Non-Linear",
       "Time-Invariant or Time-Variant",
@@ -15035,6 +15292,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Linearity:**"
      ]
@@ -15053,6 +15311,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time Invariance:**"
      ]
@@ -15091,6 +15350,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Causality:**"
      ]
@@ -15101,6 +15361,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Memory:**"
      ]
@@ -15111,6 +15372,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**BIBO Stability:**"
      ]
@@ -15153,6 +15415,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Linearity:**"
      ]
@@ -15163,6 +15426,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time Invariance:**"
      ]
@@ -15201,6 +15465,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Causality:**"
      ]
@@ -15247,6 +15512,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Testing Statement A:**"
      ]
@@ -15257,6 +15523,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Testing Statement B & C (Homogeneity):**"
      ]
@@ -15291,6 +15558,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "If $\\alpha \\in \\mathbb{R}$, then $\\operatorname{Re}\\{\\alpha x(t)\\} = \\alpha \\operatorname{Re}\\{x(t)\\}$ holds unconditionally $\\implies \\text{Statement C is } \\mathbf{TRUE}$.",
       "**GATE Convention:** Unless explicitly specified as \"real-linear\", systems theory assumes signals and scalars belong to the complex field $\\mathbb{C}$. Hence, **$y(t) = \\operatorname{Re}\\{x(t)\\}$ is strictly Non-Linear**."
@@ -15322,6 +15590,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Graphical Analysis:**"
      ]
@@ -15340,6 +15609,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Mathematical Violation:**"
      ]
@@ -15406,6 +15676,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Sum the algebraic expressions:"
      ]
@@ -15416,6 +15687,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "The overall combined system simplifies perfectly to the **Identity System**:"
      ]
@@ -15426,6 +15698,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Classification:**"
      ]
@@ -15441,6 +15714,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Key Takeaway:** Even though both constituent subsystems $\\mathcal{T}_1$ and $\\mathcal{T}_2$ are individually **Non-Linear** and **Time-Variant**, their parallel sum forms an ideal **LTI Identity System**!"
      ]
@@ -15467,6 +15741,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "The invariance of linearity under arbitrary time manipulations ($g(t)x[f(t)]$).",
       "The sensitivity of linearity to amplitude functions ($f[x(t)]$) and complex scalars.",
@@ -15897,6 +16172,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Zero-Input Check:**"
      ]
@@ -15907,6 +16183,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Additivity Check:**"
      ]
@@ -15921,6 +16198,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Incremental Linearity Property:**"
      ]
@@ -16081,6 +16359,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Delayed Output (Shift the response):**"
      ]
@@ -16091,6 +16370,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Delayed Input (Feed delayed signal $x_d(t) = x(t - t_0)$ into the system):**"
      ]
@@ -16128,6 +16408,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Comparison:**"
      ]
@@ -16142,6 +16423,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Linearity:**"
      ]
@@ -16156,6 +16438,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Combined Classification:** Continuous-Time Ideal Integrator is an **LTI System**."
      ]
@@ -16192,6 +16475,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Linearity Check:**"
      ]
@@ -16206,6 +16490,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time Invariance Check:**"
      ]
@@ -16323,6 +16608,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Linearity Analysis:**"
      ]
@@ -16349,6 +16635,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time Invariance Analysis:**"
      ]
@@ -16446,6 +16733,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Identification as Absolute Value / Full-Wave Rectifier:**"
      ]
@@ -16460,6 +16748,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Linearity Test:**"
      ]
@@ -16492,6 +16781,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Time Invariance Test:**"
      ]
@@ -16539,6 +16829,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$y(t) = \\text{Even}[x(t)] = \\frac{x(t) + x(-t)}{2} \\longrightarrow$ `L.`, `T.V.`",
       "$y(t) = \\text{Odd}[x(t)] = \\frac{x(t) - x(-t)}{2} \\longrightarrow$ `L.`, `T.V.`",
@@ -16703,6 +16994,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Non-Linearity Proof:**"
      ]
@@ -16734,6 +17026,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time Invariance Proof:**"
      ]
@@ -16956,6 +17249,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Additivity Check:**"
      ]
@@ -16982,6 +17276,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Homogeneity Check:**"
      ]
@@ -16996,6 +17291,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Since both axioms hold: $\\boxed{\\text{System is Linear}}$."
      ]
@@ -17025,6 +17321,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Delayed Output:**"
      ]
@@ -17039,6 +17336,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Response to Delayed Input:**"
      ]
@@ -17072,6 +17370,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Comparison:**"
      ]
@@ -17122,6 +17421,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Identification:** This is an ideal half-wave rectifier, passing only positive values of $x(t)$ and clamping negative values to zero.",
       "**Linearity Test:**"
@@ -17140,6 +17440,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Time Invariance Test:**"
      ]
@@ -17203,6 +17504,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Functional Expansion:**"
      ]
@@ -17221,6 +17523,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Linearity Test:**"
      ]
@@ -17239,6 +17542,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Time Invariance Test:**"
      ]
@@ -17377,6 +17681,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Resistive Divider: Resistor $R$ in series, $2R$ in shunt to ground.",
       "RC Circuit: Resistor $R$ in series, Capacitor $C$ in shunt to ground."
@@ -17392,6 +17697,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Resistive Divider Circuit:**"
      ]
@@ -17414,6 +17720,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**RC Low-Pass Filter Circuit:**"
      ]
@@ -17570,6 +17877,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$y(t) = \\frac{2}{3} x(t)$.",
       "By definition, impulse response is the output when input is $\\delta(t)$:"
@@ -17581,6 +17889,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Response to $5 u(t)$ using convolution:"
      ]
@@ -17770,6 +18079,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Associativity of Convolution:**"
      ]
@@ -17792,6 +18102,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Commutativity of Convolution:**"
      ]
@@ -17866,6 +18177,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "For two cascaded LTI systems: $h(t) = h_1(t) * h_2(t)$.",
       "Substituting expressions:"
@@ -17877,6 +18189,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "The step functions enforce constraints on the integration range:"
      ]
@@ -17891,6 +18204,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "For $t < 0$: $h(t) = 0$.",
       "For $t \\ge 0$:"
@@ -17902,6 +18216,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "Combining using $u(t)$:"
      ]
@@ -18441,6 +18756,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**The First Backward Difference Operator $\\Delta$:**"
      ]
@@ -18451,6 +18767,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Convolution with Difference Operator:**"
      ]
@@ -18477,6 +18794,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Double Difference (Second-Order):**"
      ]
@@ -18487,6 +18805,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Action on Elementary Discrete Signals:**"
      ]
@@ -18549,6 +18868,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Find the overall impulse response $h(t)$.",
       "Find the overall step response $s(t)$."
@@ -18560,6 +18880,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Overall Impulse Response $h(t)$:**"
      ]
@@ -18578,6 +18899,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Step Response $s(t)$ via Response Ladder:**"
      ]
@@ -18608,6 +18930,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Express $x[n]$ using differences:**"
      ]
@@ -18622,6 +18945,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Step Response $s[n]$ of the system:**"
      ]
@@ -18632,6 +18956,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Output via Linearity:**"
      ]
@@ -18654,6 +18979,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Never assume $h(t)$ exists unless system is LTI.** If a system is time-variant (e.g., $y(t) = a(t)x(t)$), output to $\\delta(t)$ is NOT $h(t)$!",
       "**Integration Limit Rule:** Limits must be of the form $\\int_{-\\infty}^t$ or $\\int_{t - T}^t$ for Time Invariance. Any $t^2$, $\\alpha t$, or function of $t$ makes it Time Variant.",
@@ -18701,6 +19027,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**The Discrete LTI Response Calculus:** Derivation of the discrete first difference operator $\\Delta x[n] = x[n] - x[n-1]$ and its convolution relationship with standard responses. Crucially highlighting the **one-sample delay asymmetry** between CT and DT: while in continuous time $\\frac{d}{dt}r(t) = u(t)$, in discrete time $\\Delta r[n] = u[n-1]$.",
       "**Master System Taxonomy:** Introduction of the complete 7-class ontological framework for systems theory.",
@@ -19114,6 +19441,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Step 1 (Delayed Output $y(t - t_0)$):** Take the unshifted output expression $y(t)$ and replace every occurrence of the independent time variable $t$ with $(t - t_0)$:"
      ]
@@ -19124,6 +19452,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Step 2 (Response to Delayed Input $y(t, t_0)$):** Apply the delayed input $x_1(t) = x(t - t_0)$ to the system operator:"
      ]
@@ -19134,6 +19463,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Decision Criteria:**"
      ]
@@ -19155,6 +19485,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Explicit time coefficients:** $t$ appears explicitly outside the input signal (e.g., $y(t) = t x(t)$, $y(t) = \\sin(\\omega_0 t) x(t)$).",
       "**Time scaling of the argument:** The input argument has the form $x(at)$ with $a \\neq 1$ (e.g., $y(t) = x(2t)$, $y(t) = x(t/2)$).",
@@ -19178,6 +19509,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Ideal Differentiator:** $y(t) = \\frac{d x(t)}{dt}$"
      ]
@@ -19192,6 +19524,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Product with Derivative:** $y(t) = x(t) \\frac{d x(t)}{dt}$"
      ]
@@ -19214,6 +19547,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Linear Differential Equation:** $\\frac{dy(t)}{dt} = x(t)$"
      ]
@@ -19262,6 +19596,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**LTI Convolution Fundamental:**"
      ]
@@ -19272,6 +19607,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Condition for Step Response:**"
      ]
@@ -19286,6 +19622,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Application of Backward Difference Operator $\\Delta$:**"
      ]
@@ -19312,6 +19649,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Analogy with Continuous-Time Calculus:**"
      ]
@@ -19326,6 +19664,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Inversion to Obtain Step Response:**"
      ]
@@ -19375,6 +19714,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Given Definitions:**"
      ]
@@ -19393,6 +19733,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Formulation of Ramp Response $c[n]$:**"
      ]
@@ -19407,6 +19748,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Applying Backward Difference:**"
      ]
@@ -19441,6 +19783,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Summation Form:**"
      ]
@@ -19497,6 +19840,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Step Response from Impulse Response:**"
      ]
@@ -19507,6 +19851,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Ramp Response from Step Response:**"
      ]
@@ -19517,6 +19862,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Time-Advanced Ramp Representation:**"
      ]
@@ -19562,6 +19908,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Recall Backward Difference Definition:**"
      ]
@@ -19572,6 +19919,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Ramp Response Difference:**"
      ]
@@ -19586,6 +19934,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Advancing the Index by 1:**"
      ]
@@ -19604,6 +19953,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Explicit Difference Formula:**"
      ]
@@ -19652,6 +20002,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Given:**"
      ]
@@ -19662,6 +20013,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Applying Backward Difference:**"
      ]
@@ -19680,6 +20032,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Explicit Difference Formula (Boxed with Star):**"
      ]
@@ -19714,6 +20067,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Given Step Response:**"
      ]
@@ -19724,6 +20078,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Setup for Part (a):**"
      ]
@@ -19762,6 +20117,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Convolution Equivalence of Accumulation:**"
      ]
@@ -19772,6 +20128,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Forming $s[n-1]$:**"
      ]
@@ -19790,6 +20147,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Convolving with $u[n]$:**"
      ]
@@ -19808,6 +20166,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Setup for Part (b):**"
      ]
@@ -19834,6 +20193,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Extracting Impulse Response $h[n]$:**"
      ]
@@ -19873,6 +20233,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Computing Output $y[n]$:**"
      ]
@@ -19942,6 +20303,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Static System:** Present output depends on present input only. (Memoryless)",
       "**Dynamic System:** NOT STATIC. (Depends on past and/or future input values)."
@@ -20014,6 +20376,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Causal System:** Present output depends on present or past input. (Does NOT depend on future inputs).",
       "**Non-Causal System:** [NOT CAUSAL] (Depends on future input for at least one time instant)."
@@ -20104,6 +20467,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Evaluate at negative test point $t = -1$:"
      ]
@@ -20114,6 +20478,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Timeline comparison:"
      ]
@@ -20128,6 +20493,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Conclusions:**"
      ]
@@ -20409,6 +20775,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Right-Hand Derivative (R.H.D.):**"
      ]
@@ -20434,6 +20801,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Left-Hand Derivative (L.H.D.):**"
      ]
@@ -20459,6 +20827,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Memory Analysis:**"
      ]
@@ -20475,6 +20844,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Causality Verdict:**"
      ]
@@ -20696,6 +21066,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Even Part Extractor:**"
      ]
@@ -20713,6 +21084,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Odd Part Extractor:**"
      ]
@@ -20730,6 +21102,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Conjugate Symmetric (C.S.) Part Extractor:**"
      ]
@@ -20747,6 +21120,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Conjugate Anti-Symmetric (C.A.S.) Part Extractor:**"
      ]
@@ -20780,6 +21154,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Real Part Operator:**"
      ]
@@ -20799,6 +21174,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Imaginary Part Operator:**"
      ]
@@ -20894,6 +21270,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Step 1: Delayed Output $y(t - t_0)$:**"
      ]
@@ -20908,6 +21285,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Step 2: Response to Delayed Input $y(t, t_0)$:**"
      ]
@@ -20937,6 +21315,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Comparison:**"
      ]
@@ -20987,6 +21366,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**At $t = 1$:**"
      ]
@@ -21001,6 +21381,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**At $t = 4$:**"
      ]
@@ -21021,6 +21402,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Verdict:**"
      ]
@@ -21059,6 +21441,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Branch 1 ($t < 0$):**"
      ]
@@ -21073,6 +21456,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Branch 2 ($t \\ge 0$):**"
      ]
@@ -21102,6 +21486,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Overall Causality Verdict:**"
      ]
@@ -21171,6 +21556,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Branch 1 ($n \\ge 0$):**"
      ]
@@ -21194,6 +21580,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Branch 2 ($n < 0$):**"
      ]
@@ -21211,6 +21598,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Verdict:**"
      ]
@@ -21332,6 +21720,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Individual Input Responses:**"
      ]
@@ -21342,6 +21731,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Additivity Test:**"
      ]
@@ -21364,6 +21754,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Homogeneity (Scaling) Test:**"
      ]
@@ -21378,6 +21769,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Conclusion:**"
      ]
@@ -21416,6 +21808,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Individual Responses:**"
      ]
@@ -21426,6 +21819,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Additivity Test:**"
      ]
@@ -21456,6 +21850,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Conclusion:**"
      ]
@@ -21498,6 +21893,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Individual Responses:**"
      ]
@@ -21508,6 +21904,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Additivity Test:**"
      ]
@@ -21538,6 +21935,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Homogeneity Test:**"
      ]
@@ -21560,6 +21958,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Conclusion:**"
      ]
@@ -21965,6 +22364,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Express derivative explicitly:"
      ]
@@ -21975,6 +22375,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "For individual input $x_1(t)$, output $y_1(t)$ satisfies:"
      ]
@@ -21985,6 +22386,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "For individual input $x_2(t)$, output $y_2(t)$ satisfies:"
      ]
@@ -21995,6 +22397,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Let the composite input be $x_\\alpha(t) = x_1(t) + x_2(t)$, producing output $y_\\alpha(t)$:"
      ]
@@ -22005,6 +22408,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "Check if $y_\\alpha(t) = y_1(t) + y_2(t)$. If it were, then substituting into the differential equation gives:"
      ]
@@ -22076,6 +22480,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "For inputs $x_1(t)$ and $x_2(t)$:"
      ]
@@ -22086,6 +22491,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Test for Additivity ($x_\\alpha(t) = x_1(t) + x_2(t)$):"
      ]
@@ -22104,6 +22510,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Test for Homogeneity / Scaling ($x_\\beta(t) = 3 x_1(t)$):"
      ]
@@ -22163,6 +22570,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Define individual responses:"
      ]
@@ -22177,6 +22585,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "For $x_\\alpha(t) = x_1(t) + x_2(t)$:"
      ]
@@ -22187,6 +22596,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Expand the binomial square:"
      ]
@@ -22201,6 +22611,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Because of the cross-term $2 \\sqrt{y_1(t)} \\sqrt{y_2(t)} \\neq 0$:"
      ]
@@ -22290,6 +22701,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Shift input by $t_0$:"
      ]
@@ -22300,6 +22712,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Shift output by $t_0$:"
      ]
@@ -22310,6 +22723,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Compare:"
      ]
@@ -22561,6 +22975,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Memory / Dynamicity**:"
      ]
@@ -22575,6 +22990,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Causality Definition via Calculus First Principles**:"
      ]
@@ -22593,6 +23009,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Visual Diagram**:"
      ]
@@ -22640,6 +23057,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Solve for $y(t)$ by integrating:"
      ]
@@ -22650,6 +23068,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Test at a specific time, say $t = 1$:"
      ]
@@ -22660,6 +23079,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Visual Diagram**:"
      ]
@@ -22676,6 +23096,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "At any time $t$, $y(t)$ depends only on past and present values of $x(\\tau)$ ($\\tau \\in (-\\infty, t]$)."
      ]
@@ -22704,6 +23125,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Rule 1**: Every Differential Equation is **dynamic** in nature (possesses memory).",
       "**Rule 2**:"
@@ -22715,6 +23137,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Rule 3**:"
      ]
@@ -22773,6 +23196,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Solve for $y(t)$ by integrating:"
      ]
@@ -22783,6 +23207,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Change of dummy variable: Let $z = \\tau + 1 \\implies dz = d\\tau$."
      ]
@@ -22796,6 +23221,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Transform integral limits:"
      ]
@@ -22806,6 +23232,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Evaluate at $t = 1$:"
      ]
@@ -22816,6 +23243,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Visual Diagram**:"
      ]
@@ -22847,6 +23275,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\mathbf{\\text{sgn}(t)}$:"
      ]
@@ -22859,6 +23288,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "$\\mathbf{u(t)}$:"
      ]
@@ -22871,6 +23301,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "$\\mathbf{Sq(t)}$:"
      ]
@@ -22884,6 +23315,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "$\\mathbf{\\text{sgn}[n]}$:"
      ]
@@ -22896,6 +23328,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "$\\mathbf{u[n]}$:"
      ]
@@ -22908,6 +23341,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "$\\mathbf{Sq[n]}$:"
      ]
@@ -22932,6 +23366,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\mathbf{r(t)}$ (Unit Ramp):"
      ]
@@ -22944,6 +23379,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "$\\mathbf{M(t)}$ (Hyperbolic / Inverse function):"
      ]
@@ -22956,6 +23392,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "$\\mathbf{\\alpha(t)}$ (Singular Spike at finite $t_1$):"
      ]
@@ -22969,6 +23406,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "$\\mathbf{r[n]}$ (Discrete Ramp Sequence):"
      ]
@@ -23231,6 +23669,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Rule 1 (Static Nonlinear Systems)**:"
      ]
@@ -23241,6 +23680,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Rule 2 (Time-Varying or Dynamic Systems)**:"
      ]
@@ -23276,6 +23716,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Apply bounded test input: $x(t) = u(t)$ (Bounded i/p signal).",
       "Calculate output:"
@@ -23287,6 +23728,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Waveform Sketches**:"
      ]
@@ -23300,6 +23742,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Conclusion: Output is unbounded signal."
      ]
@@ -23338,6 +23781,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Apply bounded test input: $x(t) = u(t)$ (Bounded i/p signal).",
       "Calculate output:"
@@ -23349,6 +23793,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Waveform Sketch**:"
      ]
@@ -23362,6 +23807,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "As $t \\to \\infty$, $y(t) \\to \\infty$ (Unbounded output signal)."
      ]
@@ -23399,6 +23845,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Apply bounded test input: $x(t) = u(t)$ (Bounded i/p signal).",
       "Compute integral output:"
@@ -23410,6 +23857,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Ramp signal $r(t)$ grows indefinitely: as $t \\to \\infty$, $r(t) \\to \\infty$.",
       "Output is unbounded signal."
@@ -23493,6 +23941,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Power of Derivatives**: Every derivative term $\\frac{d^k y(t)}{dt^k}$ and $\\frac{d^m x(t)}{dt^m}$ must appear with power $1$."
      ]
@@ -23505,6 +23954,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Absence of Cross-Products**:"
      ]
@@ -23519,6 +23969,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Explicit Time Multipliers Do Not Violate Linearity**:"
      ]
@@ -23547,6 +23998,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Constant Coefficients**: All coefficients $a_k$ and $b_m$ multiplying derivative terms must be **independent of time** (pure constants)."
      ]
@@ -23559,6 +24011,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Implicit Differential Equations with No Explicit $t$**:"
      ]
@@ -23639,6 +24092,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "If $M > N$ (order of $x(t)$ exceeds order of $y(t)$):"
      ]
@@ -23652,6 +24106,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "If $M \\le N$ (order of $x(t)$ is less than or equal to order of $y(t)$):"
      ]
@@ -23665,6 +24120,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "If an explicit time advance appears in the input argument (e.g. $x(t + t_0)$ with $t_0 > 0$), the system is **Non-Causal** regardless of derivative orders! (Slide 225d, 226)."
      ]
@@ -23765,6 +24221,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Select a standard bounded input: $x(t) = u(t)$, $\\text{sgn}(t)$, or $\\cos(\\omega_0 t)$.",
       "Calculate the corresponding output $y(t)$.",
@@ -23802,6 +24259,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Continuous-Time Domain**:"
      ]
@@ -23842,6 +24300,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Discrete-Time Domain**:"
      ]
@@ -24049,6 +24508,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "By definition, input $x(t) = \\delta(t) \\implies$ output $y(t) = h(t)$:"
      ]
@@ -24059,6 +24519,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "For $t > 0$, $\\delta(t) = 0$, giving the homogeneous equation:"
      ]
@@ -24069,6 +24530,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Integrate the differential equation across the discontinuity from $t = 0^-$ to $t = 0^+$:"
      ]
@@ -24087,6 +24549,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Setting $h(0^+) = C e^0 = 1 \\implies C = 1$.",
       "Therefore:"
@@ -24174,6 +24637,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$h_1(t) = e^{-3t} u(t)$"
      ]
@@ -24184,6 +24648,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "$h_2(t) = u(t)$ (Ideal Integrator impulse response from Slide 239)"
      ]
@@ -24194,6 +24659,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "$h_3[n] = (2)^n u[n]$"
      ]
@@ -24204,6 +24670,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "$h_4[n] = (0.8)^n u[n]$"
      ]
@@ -24763,6 +25230,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$M > N \\implies \\mathbf{Non\\text{-}Causal}$ (Direct differentiator action).",
       "$M \\le N \\implies \\mathbf{Causal}$ (Pure integrator action).",
@@ -24805,6 +25273,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Advanced BIBO Stability Analysis (Slides 241\u2013246):**"
      ]
@@ -24822,6 +25291,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Theory of Invertibility and Inverse Systems (Slides 247\u2013266):**"
      ]
@@ -24852,6 +25322,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Signals Classification: Energy vs. Absolute Integrability / Summability (Slides 267\u2013270):**"
      ]
@@ -24894,6 +25365,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Discrete-time running accumulator / summer: $y[n] = \\sum_{k=-\\infty}^n x[k]$",
       "Discrete-time downsampler / decimator (time-compressor): $y[n] = x[2n]$"
@@ -25737,6 +26209,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Linear Characteristic $y(t) = c \\cdot x(t)$ ($c \\neq 0$):**"
      ]
@@ -25751,6 +26224,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Cubic Polynomial Characteristic $y(t) = x^3(t)$:**"
      ]
@@ -26059,6 +26533,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Top-Left: Symmetrical V-shaped modulus characteristic.",
       "Top-Right: Single logarithmic/exponential branch.",
@@ -26158,6 +26633,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Method 1 (Graphical Approach):**"
      ]
@@ -26175,6 +26651,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Method 2 (Counterexample Approach):**"
      ]
@@ -26730,6 +27207,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$y(t) = \\cos^{-1}\\{x(t)\\}$",
       "$y(t) = x(t) \\cdot x(t-1)$"
@@ -28464,6 +28942,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Universal Quantifier Requirement:** The condition must hold for **ALL** bounded inputs. A single adversarial bounded input that drives $|y(t)| \\to \\infty$ renders the entire system unstable.",
       "**Instantaneous Amplitude vs. Energy:** BIBO stability restricts peak signal amplitude ($\\|x\\|_\\infty = \\sup_t |x(t)|$), not signal energy ($\\|x\\|_2$)."
@@ -29186,6 +29665,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Mathematical Foundations of System Constraints (Slides 271\u2013273):**"
      ]
@@ -29200,6 +29680,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Classification of LTI Systems via Impulse Response (Slides 274\u2013282):**"
      ]
@@ -29236,6 +29717,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Composite System Interconnections (Slides 283\u2013285):**"
      ]
@@ -29246,6 +29728,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Titans Batch Advanced Examination Traps (Slides 286\u2013289):**"
      ]
@@ -29393,6 +29876,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Convolution Integral Representation:**"
      ]
@@ -29411,6 +29895,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Definition of a Causal System:**"
      ]
@@ -29429,6 +29914,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Temporal Constraint Imposed on the Integral:**"
      ]
@@ -29479,6 +29965,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Zero Weighting for Future Time:**"
      ]
@@ -29493,6 +29980,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Variable Transformation:**"
      ]
@@ -29515,6 +30003,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Substitution with Dummy Variable $\\alpha$:**"
      ]
@@ -29529,6 +30018,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Final Universal Condition:**"
      ]
@@ -29591,6 +30081,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Sub-problem 1 (Continuous-Time Trapezoidal/Ramp Pulse):**"
      ]
@@ -29605,6 +30096,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Sub-problem 2 (Continuous-Time Triangular Pulse Spanning Origin):**"
      ]
@@ -29619,6 +30111,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Sub-problem 3 (Discrete-Time Sample Sequence):**"
      ]
@@ -29633,6 +30126,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Sub-problem 4 (Discrete-Time Multi-Sample Sequence):**"
      ]
@@ -29770,6 +30264,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Shift by $+4$ (Advance by 4):**"
      ]
@@ -29784,6 +30279,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Scaling by $2$ (Compression by 2):**"
      ]
@@ -29798,6 +30294,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Equating to the Given Boundaries:**"
      ]
@@ -29871,6 +30368,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Definition of Static (Memoryless) System:**"
      ]
@@ -29897,6 +30395,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Convolution Integral Representation:**"
      ]
@@ -29919,6 +30418,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Impulse Function Equivalence:**"
      ]
@@ -29949,6 +30449,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Discrete-Time Analogue:**"
      ]
@@ -29998,6 +30499,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Definition of Bounded-Input Bounded-Output (BIBO) Stability:**"
      ]
@@ -30012,6 +30514,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Continuous-Time Derivation:**"
      ]
@@ -30046,6 +30549,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Discrete-Time Derivation:**"
      ]
@@ -30100,6 +30604,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Problem (a) [DT Sequence with Finite Samples]:**"
      ]
@@ -30123,6 +30628,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Problem (b) [DT Infinite Constant Sequence $h[n] = u[n]$]:**"
      ]
@@ -30146,6 +30652,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Problem (c) [CT Continuous Step $h(t) = u(t)$]:**"
      ]
@@ -30169,6 +30676,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Problem (d) [CT Finite Duration Piecewise Constant Pulse]:**"
      ]
@@ -30202,6 +30710,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Problem (e) [CT Semi-Infinite Piecewise Constant Pulse]:**"
      ]
@@ -30269,6 +30778,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Cascaded Input-Output Relation:**"
      ]
@@ -30291,6 +30801,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Convolution Identity Equivalence:**"
      ]
@@ -30305,6 +30816,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Frequency / Transform Domain Representation:**"
      ]
@@ -30323,6 +30835,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Discrete-Time Formulation:**"
      ]
@@ -30430,6 +30943,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Distributive Property of Convolution:**"
      ]
@@ -30440,6 +30954,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Sifting / Shifting Property ($x[n] * \\delta[n - n_0] = x[n - n_0]$):**"
      ]
@@ -30461,6 +30976,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Index Simplification:**"
      ]
@@ -30475,6 +30991,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Factoring the Common Exponential Factor:**"
      ]
@@ -30485,6 +31002,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Application of Discrete Impulse Definition:**"
      ]
@@ -30507,6 +31025,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Impulse Multiplication Property ($f[n]\\,\\delta[n] = f[0]\\,\\delta[n]$):**"
      ]
@@ -30648,6 +31167,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Time-Invariance Test:**"
      ]
@@ -30685,6 +31205,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Linearity Test:**"
      ]
@@ -30771,6 +31292,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Intermediate Signal:**"
      ]
@@ -30781,6 +31303,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Output Signal:**"
      ]
@@ -30791,6 +31314,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Associative Property of Convolution:**"
      ]
@@ -30801,6 +31325,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Equivalent Impulse Response:**"
      ]
@@ -30873,6 +31398,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Upper Branch Output:**"
      ]
@@ -30887,6 +31413,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Lower Branch Output:**"
      ]
@@ -30901,6 +31428,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Summer Output:**"
      ]
@@ -30911,6 +31439,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Distributive Property of Convolution:**"
      ]
@@ -30925,6 +31454,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Equivalent Impulse Response:**"
      ]
@@ -30935,6 +31465,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Property Inheritance:**"
      ]
@@ -30988,6 +31519,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Total Output Expression:**"
      ]
@@ -31006,6 +31538,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Evaluating Individual Responses:**"
      ]
@@ -31032,6 +31565,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Sum of Individual Responses:**"
      ]
@@ -31042,6 +31576,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Response to Combined Input $x_\\alpha(t) = x_1(t) + x_2(t)$:**"
      ]
@@ -31052,6 +31587,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Comparison:**"
      ]
@@ -31116,6 +31652,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Step 1: Delayed Output by $t_0$:**"
      ]
@@ -31130,6 +31667,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Step 2: Output Response to Delayed Input $x(t - t_0)$:**"
      ]
@@ -31160,6 +31698,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Step 3: Comparison:**"
      ]
@@ -31232,6 +31771,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Signal after first LTI stage $h_1(t)$:**"
      ]
@@ -31242,6 +31782,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Signal after intermediate summing junction:**"
      ]
@@ -31256,6 +31797,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Signal after second LTI stage $h_2(t)$:**"
      ]
@@ -31286,6 +31828,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Signal after final subtractor junction:**"
      ]
@@ -31300,6 +31843,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Consolidated Output Representation:**"
      ]
@@ -31394,6 +31938,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Step 1: Delayed Output by $t_0$:**"
      ]
@@ -31404,6 +31949,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Step 2: Output Response to Shifted Input $x(t - t_0)$:**"
      ]
@@ -31430,6 +31976,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Step 3: Comparison:**"
      ]
@@ -31507,6 +32054,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Linearity:** If all subsystems are Linear, the cascade is **strictly Linear**. If any subsystem is non-linear, the cascade is generally non-linear.",
       "**Time-Invariance:** If all subsystems are Time-Invariant, the cascade is **strictly Time-Invariant**. If a time-variant block is present, commutativity fails ($h_1 * h_2 \\neq h_2 * h_1$) and the cascade is time-variant.",
@@ -31523,6 +32071,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**BIBO Stability:** If all subsystems are stable ($\\int |h_k(t)|\\,dt < \\infty$), the cascade is **strictly Stable**."
      ]
@@ -31533,6 +32082,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Static (Memoryless):** The cascade is static if and only if **every** subsystem is static ($h_k(t) = A_k\\,\\delta(t)$). If even one subsystem is dynamic, the entire cascade is dynamic."
      ]
@@ -31569,6 +32119,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Linearity:** Preserved. Sum of linear systems is **Linear**.",
       "**Time-Invariance:** Preserved. Sum of time-invariant systems is **Time-Invariant**.",
@@ -31618,6 +32169,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Linearity and Time-Invariance:** Feedback interconnections of LTI blocks remain strictly LTI (assuming zero initial conditions).",
       "**Causality:** If $h_1(t)$ and $h_2(t)$ are causal, the closed-loop system is typically causal.",
@@ -31732,6 +32284,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Causality:**"
      ]
@@ -31746,6 +32299,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Static vs. Dynamic:**"
      ]
@@ -31760,6 +32314,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**BIBO Stability:**"
      ]
@@ -31776,6 +32331,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Invertibility:**"
      ]
@@ -31815,6 +32371,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Distribute convolution with $\\delta(t - 3)$:"
      ]
@@ -31825,6 +32382,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Evaluate the scalar convolution:"
      ]
@@ -31839,6 +32397,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Substitute back:"
      ]
@@ -31849,6 +32408,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Conclusion:**"
      ]
@@ -31883,6 +32443,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Given range for the argument of $h(\\cdot)$:"
      ]
@@ -31893,6 +32454,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Subtract 4 across all terms:"
      ]
@@ -31903,6 +32465,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Divide by $-3$ (which reverses the inequalities):"
      ]
@@ -31913,6 +32476,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Causality Evaluation:**"
      ]
@@ -31960,6 +32524,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Definition:**"
      ]
@@ -31970,6 +32535,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Algebraic Laws:**"
      ]
@@ -31984,6 +32550,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Singularity Operations:**"
      ]
@@ -32002,6 +32569,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Calculus & Invariance Theorems:**"
      ]
@@ -32021,6 +32589,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Convolving Two Rectangular Pulses $\\text{rect}(t/W_1)$ and $\\text{rect}(t/W_2)$:**"
      ]

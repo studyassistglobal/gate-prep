@@ -104,6 +104,48 @@ CHAPTERS = [
         "fig_prefix": "",
         "web_prefix": "/notes/ss/",
     },
+    {
+        "id": "ssf-ch1",
+        "file": "ssfch1",
+        "notes_sub": "ssf",
+        "num": 1,
+        "title": "Basics of Signals — Formula & Revision Sheet",
+        "subject": "Signals & Systems",
+        "section_split": "section",
+        "md": os.path.join(SRC_ROOT, "Signals and Systems", "Chapter_01_Basics_of_Signals_Formula_and_Revision_Sheet.md"),
+        "figures_src": None,
+        "figures_dst": None,
+        "fig_prefix": "",
+        "web_prefix": "/notes/ss/",
+    },
+    {
+        "id": "ssf-ch2",
+        "file": "ssfch2",
+        "notes_sub": "ssf",
+        "num": 2,
+        "title": "Basics of Systems — Formula & Revision Sheet",
+        "subject": "Signals & Systems",
+        "section_split": "section",
+        "md": os.path.join(SRC_ROOT, "Signals and Systems", "Chapter_02_Basics_of_Systems_Formula_and_Revision_Sheet.md"),
+        "figures_src": None,
+        "figures_dst": None,
+        "fig_prefix": "",
+        "web_prefix": "/notes/ss/",
+    },
+    {
+        "id": "ssf-ch3",
+        "file": "ssfch3",
+        "notes_sub": "ssf",
+        "num": 3,
+        "title": "Fourier Series (CTFS) — Formula & Revision Sheet",
+        "subject": "Signals & Systems",
+        "section_split": "section",
+        "md": os.path.join(SRC_ROOT, "Signals and Systems", "Chapter_03_Continuous_Time_Fourier_Series_Formula_and_Revision_Sheet.md"),
+        "figures_src": None,
+        "figures_dst": None,
+        "fig_prefix": "",
+        "web_prefix": "/notes/ss/",
+    },
 ]
 
 
@@ -366,6 +408,7 @@ def parse_blocks(lines, ch):
         m = re.match(r"^(\d+)[.)]\s+(.*)$", stripped)
         if m:
             flush_para()
+            start = int(m.group(1))
             items = []
             while i < n:
                 m2 = re.match(r"^(\d+)[.)]\s+(.*)$", lines[i].strip())
@@ -373,7 +416,9 @@ def parse_blocks(lines, ch):
                     break
                 items.append(inline_clean(m2.group(2).strip(), ch))
                 i += 1
-            blocks.append({"t": "ol", "items": items})
+            # display math often interleaves numbered items — each fragment
+            # becomes its own ol block, so preserve the original start number
+            blocks.append({"t": "ol", "start": start, "items": items})
             continue
 
         # horizontal rules / blanks
@@ -409,13 +454,28 @@ def build_chapter(ch):
     # section splitting: generic chapters split at every `## `; module-split
     # chapters (audit-concatenated Masters) split only at Module headers at ANY
     # heading level (Ch1 uses `## Module N:`, Ch2 uses `# Module N:`) and keep
-    # interior ## / # lines as divider blocks via parse_blocks.
-    module_mode = ch.get("section_split") == "module"
-    split_re = r"^#{1,6} (?=Module )" if module_mode else r"^## +"
+    # interior ## / # lines as divider blocks via parse_blocks; section-split
+    # chapters (Formula & Revision Sheets) split at `Section N:` headers.
+    mode = ch.get("section_split", "h2")
+    if mode == "module":
+        split_re = r"^#{1,6} (?=Module )"
+    elif mode == "section":
+        split_re = r"^#{1,6} (?=Section )"
+    else:
+        split_re = r"^## +"
     parts = re.split(split_re, raw, flags=re.MULTILINE)
     sections = []
     if parts[0].strip():
-        pre_lines = parts[0].strip().split("\n")
+        pre_text = parts[0].strip()
+        if mode == "section":
+            # formula sheets carry a huge `## Master Table of Contents` at the
+            # end of the preamble — drop it wholesale; the app renders its own
+            # TOC sidebar, and the sheet's sub-entries are plain text lines
+            # the anchor-line dropper cannot catch
+            toc_i = pre_text.find("## Master Table of Contents")
+            if toc_i != -1:
+                pre_text = pre_text[:toc_i]
+        pre_lines = pre_text.split("\n")
         # drop the h1 title itself (module metadata already carries it)
         pre_blocks = parse_blocks([l for l in pre_lines if not l.startswith("# ")], ch)
         if pre_blocks:

@@ -457,5 +457,142 @@ export const NOTES_INDEX = {
     "title": "Module 11: High-Yield Formula Sheet, 25-Trap Diagnostic Matrix & Revision Engine for Systems"
    }
   ]
+ },
+ "ssf-ch1": {
+  "num": 1,
+  "title": "Basics of Signals \u2014 Formula & Revision Sheet",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "section-1-classification-taxonomy-of-signals",
+    "title": "Section 1: Classification & Taxonomy of Signals"
+   },
+   {
+    "id": "section-2-elementary-continuous-time-discrete-time-signals-encyclopedia",
+    "title": "Section 2: Elementary Continuous-Time & Discrete-Time Signals Encyclopedia"
+   },
+   {
+    "id": "section-3-singularity-functions-the-dirac-delta-calculus",
+    "title": "Section 3: Singularity Functions & The Dirac Delta Calculus"
+   },
+   {
+    "id": "section-4-signal-transformations-operational-precedence",
+    "title": "Section 4: Signal Transformations & Operational Precedence"
+   },
+   {
+    "id": "section-5-even-odd-conjugate-symmetric-conjugate-antisymmetric-decomposition",
+    "title": "Section 5: Even & Odd / Conjugate Symmetric & Conjugate Antisymmetric Decomposition"
+   },
+   {
+    "id": "section-6-energy-power-signals-calculus",
+    "title": "Section 6: Energy & Power Signals Calculus"
+   },
+   {
+    "id": "section-7-periodicity-analysis-in-continuous-discrete-domains",
+    "title": "Section 7: Periodicity Analysis in Continuous & Discrete Domains"
+   },
+   {
+    "id": "section-8-dedicated-last-minute-revision-quick-reference-compendium",
+    "title": "Section 8: Dedicated Last-Minute Revision & Quick-Reference Compendium"
+   }
+  ]
+ },
+ "ssf-ch2": {
+  "num": 2,
+  "title": "Basics of Systems \u2014 Formula & Revision Sheet",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "section-1-system-definitions-interconnections",
+    "title": "Section 1: System Definitions & Interconnections"
+   },
+   {
+    "id": "section-2-memoryless-static-vs-with-memory-dynamic-systems",
+    "title": "Section 2: Memoryless (Static) vs With-Memory (Dynamic) Systems"
+   },
+   {
+    "id": "section-3-causality-in-continuous-discrete-domains",
+    "title": "Section 3: Causality in Continuous & Discrete Domains"
+   },
+   {
+    "id": "section-4-linearity-the-principle-of-superposition",
+    "title": "Section 4: Linearity & The Principle of Superposition"
+   },
+   {
+    "id": "section-5-time-invariance-shift-invariance-vs-time-variance",
+    "title": "Section 5: Time-Invariance (Shift-Invariance) vs Time-Variance"
+   },
+   {
+    "id": "section-6-bibo-stability-invertibility",
+    "title": "Section 6: BIBO Stability & Invertibility"
+   },
+   {
+    "id": "section-7-continuous-time-discrete-time-convolution-calculus",
+    "title": "Section 7: Continuous-Time & Discrete-Time Convolution Calculus"
+   },
+   {
+    "id": "section-8-lti-system-characterization-the-response-ladder",
+    "title": "Section 8: LTI System Characterization & The Response Ladder"
+   },
+   {
+    "id": "section-9-dedicated-last-minute-revision-quick-reference-compendium",
+    "title": "Section 9: Dedicated Last-Minute Revision & Quick-Reference Compendium"
+   }
+  ]
+ },
+ "ssf-ch3": {
+  "num": 3,
+  "title": "Fourier Series (CTFS) \u2014 Formula & Revision Sheet",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "section-1-orthogonal-signal-spaces-continuous-vector-analogy",
+    "title": "Section 1: Orthogonal Signal Spaces & Continuous Vector Analogy"
+   },
+   {
+    "id": "section-2-the-three-canonical-fourier-series-representations",
+    "title": "Section 2: The Three Canonical Fourier Series Representations"
+   },
+   {
+    "id": "section-3-comprehensive-transform-properties-of-ctfs",
+    "title": "Section 3: Comprehensive Transform Properties of CTFS"
+   },
+   {
+    "id": "section-4-parseval-s-power-relation-spectral-power-distribution",
+    "title": "Section 4: Parseval's Power Relation & Spectral Power Distribution"
+   },
+   {
+    "id": "section-5-the-double-derivative-impulse-synthesis-shortcut",
+    "title": "Section 5: The Double-Derivative Impulse Synthesis Shortcut"
+   },
+   {
+    "id": "section-6-waveform-symmetry-taxonomy-harmonic-content-matrix",
+    "title": "Section 6: Waveform Symmetry Taxonomy & Harmonic Content Matrix"
+   },
+   {
+    "id": "section-7-lti-system-response-periodic-filtering",
+    "title": "Section 7: LTI System Response & Periodic Filtering"
+   },
+   {
+    "id": "section-8-dirichlet-conditions-the-gibbs-phenomenon",
+    "title": "Section 8: Dirichlet Conditions & The Gibbs Phenomenon"
+   },
+   {
+    "id": "section-9-dedicated-last-minute-revision-quick-reference-compendium",
+    "title": "Section 9: Dedicated Last-Minute Revision & Quick-Reference Compendium"
+   }
+  ]
  }
 };

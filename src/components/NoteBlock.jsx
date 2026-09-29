@@ -79,7 +79,7 @@ export default function NoteBlock({ block }) {
       );
     case 'ol':
       return (
-        <ol className="gp-ol">
+        <ol className="gp-ol" start={block.start}>
           {block.items.map((it, i) => <li key={i}><MathText text={it} /></li>)}
         </ol>
       );

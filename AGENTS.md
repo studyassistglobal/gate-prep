@@ -63,3 +63,14 @@ Then commit/push to `studyassistglobal/gate-prep` (gh account: switch to `studya
   2. **`#####`/`######` headings** now parse as h4 blocks (previously fell through to p blocks and rendered literal hashes). ~100 per-problem sub-headings across ss-ch1/ss-ch2 were affected.
   3. **`split_table_row` tracks backtick code spans** — pipes inside `` `…` `` (e.g. `` `y(t) = |x(t)|` ``) no longer split a table row into ragged cells (Ch2 M11 trap table).
 - Verification after fixes: `npm run verify` green (registry 7 live, 102 sections); live spot-checks on deployed build — Module 09 (934 KaTeX nodes, no raw-TeX leaks, no literal hashes), Module 11 Trap-08 row intact with 0 ragged tables, ss-ch1 Module 02 `Problem (j/k)` h4 headings render with math.
+
+## 17. Formula & Revision Sheets live (2026-09-29) — ssf-ch1..ch3
+
+- New registry subject group **`ssf` "S&S Formula Sheets"** with three chapters built from the `*_Formula_and_Revision_Sheet.md` sources (Signals Ch1: 9 sections/498 blocks · Systems Ch2: 10/558 · CTFS Ch3: 10/599). Modules live in `src/data/notes/ssf/` — **the registry subject id drives the lazy-import path**, so `notes_sub` in build_notes.py must equal the subject id (`ssf`), not `ss`.
+- Parser upgrades for the sheet format (all in `scripts/build_notes.py`):
+  1. **`section_split: "section"`** — splits at `Section N:` headers at any heading level (`^#{1,6} (?=Section )`), mirroring module mode.
+  2. **Sheet TOC drop** — the sheets' `## Master Table of Contents` (plain-text sub-entries the anchor dropper can't catch) is cut from the preamble in section mode; the app renders its own TOC.
+  3. **Ordered lists carry `start`** — display math interleaves numbered items, splitting each into its own ol block; the original start number is now parsed and NoteBlock renders `<ol start>` so items don't all show "1.".
+- Rendering notes: the sheets lean on `$$\begin{array}` matrix tables and `$$…$$` inside GitHub alerts — MathText already handles both (block-math regex in `renderInlineContent`); KaTeX renders arrays via `.mtable`. Fenced mermaid renders as literal code (same as ss-ch1).
+- verify_notes.mjs live-chapter gate is now **10**. Audit after adding sheets: 18,666 blocks / 31,715 leaves across 10 chapters — HIGH 0 · MED 0 · LOW 5 (same benign `**` literals).
+- Lesson (recurring): Git-Bash heredocs mangle `\` even when quoted — inspection scripts with backslash needles must use chr(92)/Write tool, or they silently report false negatives.

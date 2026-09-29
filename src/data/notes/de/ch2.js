@@ -1254,6 +1254,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Sum of all minterms equals 1:**"
      ]
@@ -1268,6 +1269,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Product of all maxterms equals 0:**"
      ]
@@ -1586,6 +1588,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Row 0 ($A=0, B=0, C=0$, Output $1$):**"
        ]
@@ -1596,6 +1599,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Row 3 ($A=0, B=1, C=1$, Output $1$):**"
        ]
@@ -1606,6 +1610,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Row 4 ($A=1, B=0, C=0$, Output $D$):**"
        ]
@@ -1616,6 +1621,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**Row 5 ($A=1, B=0, C=1$, Output $\\overline{D}$):**"
        ]
@@ -1626,6 +1632,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "**Row 7 ($A=1, B=1, C=1$, Output $1$):**"
        ]
@@ -1745,6 +1752,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Row 1 ($A=0, B=0, C=1$, Output $0$):**"
        ]
@@ -1759,6 +1767,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Row 2 ($A=0, B=1, C=0$, Output $0$):**"
        ]
@@ -1769,6 +1778,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Row 4 ($A=1, B=0, C=0$, Output $D$):**"
        ]
@@ -1779,6 +1789,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**Row 5 ($A=1, B=0, C=1$, Output $\\overline{D}$):**"
        ]
@@ -1789,6 +1800,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "**Row 6 ($A=1, B=1, C=0$, Output $0$):**"
        ]
@@ -2079,6 +2091,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Method 1 (Distributive Law):** Add $X \\cdot \\overline{X} = 0$ to any sum term missing variable $X$, and apply the distributive rule:"
      ]
@@ -2089,6 +2102,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Method 2 (Index Set Complement):** Find all minterms of $f$, and write the remaining indices as Maxterms."
      ]
@@ -2103,6 +2117,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$f_1(A, B, C) = A + \\overline{B}C$",
       "$f_2(A, B, C) = AB + \\overline{A}C$",
@@ -2323,6 +2338,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$f_1$ and $f_2$ are connected to the inputs of an **AND gate**, producing intermediate output $T_1$.",
       "Intermediate output $T_1$ and $f_3$ are connected to the inputs of an **OR gate**, producing intermediate output $T_2$.",
@@ -2550,6 +2566,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Find its canonical minterm list $\\sum m(\\dots)$ and maxterm list $\\prod M(\\dots)$.",
       "Populate the 4-variable SOP and POS K-maps."
@@ -2565,6 +2582,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "$AB\\overline{C}D \\implies 1101_2 = \\mathbf{m_{13}}$",
         "$A\\overline{B}C \\implies A=1, B=0, C=1, D \\in \\{0, 1\\}$"
@@ -2579,6 +2597,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "$ABCD \\implies 1111_2 = \\mathbf{m_{15}}$",
         "$\\overline{A}BCD \\implies 0111_2 = \\mathbf{m_7}$"
@@ -2947,6 +2966,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Center Quad (cells 3, 2, 7, 6):**"
        ]
@@ -2957,6 +2977,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Roll-Over Edge Quad (cells 0, 4 and 2, 6):**"
        ]
@@ -3009,6 +3030,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Quad $(0, 1, 4, 5)$:**"
        ]
@@ -3019,6 +3041,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Quad $(1, 3, 5, 7)$:**"
        ]
@@ -3029,6 +3052,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Quad $(5, 7, 13, 15)$:**"
        ]
@@ -3093,6 +3117,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Combine with Maxterm 8 via vertical pair $(12, 8) \\implies (\\overline{A} + C + D)$",
         "Combine with Maxterm 14 via roll-over horizontal pair $(12, 14) \\implies (\\overline{A} + \\overline{B} + D)$"
@@ -3172,6 +3197,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$f_1(A, B, C) = \\overline{A} + BC$",
       "$f_2(A, B, C) = \\overline{A} + AC$",
@@ -3320,6 +3346,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Quad (cells 0, 1, 3, 2):** Entire row $00 \\implies \\mathbf{\\overline{A}\\,\\overline{B}}$.",
         "**Quad (cells 3, 7, 11, 15):** Column $11$ using $1$s at 3, 7 and $X$s at 11, 15 $\\implies \\mathbf{CD}$.",
@@ -3366,6 +3393,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$Y_1 = f_1 \\cdot f_2$",
       "$Y_2 = f_1 + f_2$",
@@ -3383,6 +3411,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**AND Operation ($f_1 \\cdot f_2$):**"
        ]
@@ -3397,6 +3426,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**OR Operation ($f_1 + f_2$):**"
        ]
@@ -3411,6 +3441,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**XOR Operation ($f_1 \\oplus f_2$):**"
        ]
@@ -3425,6 +3456,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**XNOR Operation ($f_1 \\odot f_2$):**"
        ]
@@ -3546,6 +3578,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**8-Cell Octet across both maps:**"
        ]
@@ -3565,6 +3598,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Roll-over Pair in Map $A=0$:**"
        ]
@@ -3582,6 +3616,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Roll-over Pair in Map $A=1$:**"
        ]
@@ -3647,6 +3682,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Quad across maps (cells 5, 13 in Map 0 and 21, 29 in Map 1):** Spans column $D+\\overline{E}$, rows $B+\\overline{C}$ and $\\overline{B}+\\overline{C} \\implies \\mathbf{(\\overline{C} + D + \\overline{E})}$.",
         "**Quad across maps (cells 9, 11 in Map 0 and 25, 27 in Map 1):** Spans row $\\overline{B}+C$, columns $D+\\overline{E}$ and $\\overline{D}+\\overline{E} \\implies \\mathbf{(\\overline{B} + C + \\overline{E})}$.",
@@ -3888,6 +3924,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$g_1 = \\sum m(1, 9, 12, 15)$",
       "$g_2 = \\sum m(0, 6, 12)$",
@@ -3900,6 +3937,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$g_1 = AC$",
       "$g_2 = \\overline{A}BD + \\overline{A}\\,\\overline{B}\\,\\overline{C}$",
@@ -3916,6 +3954,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "$g_1$: $\\{1, 9, 12, 15\\} \\subseteq f \\implies \\mathbf{\\text{Valid Implicant } \\checkmark}$",
         "$g_2$: $\\{0, 6, 12\\} \\subseteq f \\implies \\mathbf{\\text{Valid Implicant } \\checkmark}$",
@@ -3928,6 +3967,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "$g_1 = AC = ABCD + A\\overline{B}CD + ABC\\overline{D} + A\\overline{B}C\\overline{D} = \\sum m(10, 11, 14, 15)$."
        ]
@@ -3938,6 +3978,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "$g_2 = \\overline{A}BD + \\overline{A}\\,\\overline{B}\\,\\overline{C}$:"
        ]
@@ -3948,6 +3989,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "$g_3 = (A + B + \\overline{C}) = \\prod M(2, 3) = \\sum m(0, 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)$."
        ]
@@ -4019,6 +4061,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Quad 1 (Bottom Row):** $\\{m_8, m_9, m_{11}, m_{10}\\} \\implies \\mathbf{A\\overline{B}}$",
         "**Pair 1 (Vertical):** $\\{m_{11}, m_{15}\\} \\implies \\mathbf{ACD}$",
@@ -4170,6 +4213,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "The function contains exactly $2^{n-1}$ minterms (all minterms with an odd number of 1s).",
       "Any two minterms in $f$ differ by at least two bits ($d_H \\ge 2$).",
@@ -4192,6 +4236,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Never group don't-cares alone:** An isolated don't-care or a cluster composed entirely of don't-cares is **NOT a Prime Implicant**.",
       "**Greedy inclusion for group expansion:** Include a don't-care if and only if it expands a group of true minterms from $2^k$ to $2^{k+1}$ (e.g., pair $\\to$ quad), thereby eliminating a literal.",
@@ -4402,6 +4447,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Total Boolean Functions ($x$):**"
        ]
@@ -4412,6 +4458,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Total Self-Dual Functions ($y$):**"
        ]
@@ -4422,6 +4469,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Maximum Possible Prime Implicants ($z$):**"
        ]
@@ -4436,6 +4484,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**Maximum Possible Essential Prime Implicants ($w$):**"
        ]
@@ -4500,6 +4549,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Required Minterms:** All minterms in $f$ must be present in $f_2$:"
        ]
@@ -4510,6 +4560,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Forbidden Minterms:** Any minterm present in $f_1$ but NOT in $f$ must NOT be in $f_2$:"
        ]
@@ -4520,6 +4571,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Don't-Care Minterms:** Minterms absent from $f_1$ are irrelevant ($0 \\cdot f_2 = 0$):"
        ]
@@ -4576,6 +4628,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Option (a):** By De Morgan's duality: $\\overline{AB+BC+CA} = (\\overline{A}+\\overline{B})(\\overline{B}+\\overline{C})(\\overline{C}+\\overline{A}) = \\overline{A}\\,\\overline{B} + \\overline{B}\\,\\overline{C} + \\overline{C}\\,\\overline{A} \\implies \\mathbf{\\checkmark}$",
         "**Option (b):** By absorption rule $\\overline{A}[\\overline{B} + B\\overline{C}] = \\overline{A}[\\overline{B} + \\overline{C}] = \\overline{A}\\,\\overline{B} + \\overline{A}\\,\\overline{C} \\implies \\mathbf{\\checkmark}$",
@@ -4744,6 +4797,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "$P_1 = (0, 1) \\implies \\overline{A}\\,\\overline{B}\\,\\overline{C}$",
         "$P_2 = (1, 3) \\implies \\overline{A}\\,\\overline{B}D$",

@@ -33,6 +33,17 @@ export const COURSE = {
       ],
     },
     {
+      id: 'ssf',
+      name: 'S&S Formula Sheets',
+      icon: 'functions',
+      accent: 'math',
+      chapters: [
+        { id: 'ssf-ch1', num: 1, title: 'Basics of Signals — Formula & Revision Sheet', status: 'live', file: 'ssfch1' },
+        { id: 'ssf-ch2', num: 2, title: 'Basics of Systems — Formula & Revision Sheet', status: 'live', file: 'ssfch2' },
+        { id: 'ssf-ch3', num: 3, title: 'Fourier Series (CTFS) — Formula & Revision Sheet', status: 'live', file: 'ssfch3' },
+      ],
+    },
+    {
       id: 'nt',
       name: 'Network Theory',
       icon: 'bolt',

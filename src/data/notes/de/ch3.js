@@ -199,6 +199,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Integer Part $\\to$ Successive Division Method:**"
      ]
@@ -213,6 +214,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Fractional Part $\\to$ Successive Multiplication Method:**"
      ]
@@ -267,6 +269,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "*Base 5 to Decimal:*"
      ]
@@ -277,6 +280,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "*Decimal to Base 6:*"
      ]
@@ -309,6 +313,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Expand each octal digit into 3 binary bits:"
      ]
@@ -323,6 +328,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Re-group into 2-bit clusters for Base 4:"
      ]
@@ -355,6 +361,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Domain constraint: $r > \\max(2, 4, 1, 7, 4, 0) \\implies r \\ge 8$.",
         "Convert all terms to decimal:"
@@ -370,6 +377,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Verification: $11 > 7$, so $r = 11$ is valid."
        ]
@@ -390,6 +398,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Domain constraint: $r > 5$.",
         "Convert to decimal before squaring:"
@@ -405,6 +414,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "*Pitfall Warning:* Do not square in base $r$ directly without taking carries into account; always project into decimal first!"
        ]
@@ -425,6 +435,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Domain constraint: $r > 2$.",
         "Substitute $x = 3$ into the equation:"
@@ -436,6 +447,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Express base $r$ numbers in decimal:"
        ]
@@ -454,6 +466,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Check other root:"
        ]
@@ -478,6 +491,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Strict base and digit constraints:"
        ]
@@ -491,6 +505,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Convert both sides to decimal:"
        ]
@@ -501,6 +516,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Substitute constraint $x > 4$:"
        ]
@@ -511,6 +527,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Valid integer values for $y$:"
        ]
@@ -531,6 +548,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Total valid pairs: **5 pairs**."
        ]
@@ -551,6 +569,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Algebraic expansion in decimal:"
        ]
@@ -565,6 +584,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Physical digit constraint:"
        ]
@@ -579,6 +599,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Evaluating options:"
        ]
@@ -690,6 +711,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Evaluate terms in decimal:"
        ]
@@ -704,6 +726,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Equation:"
        ]
@@ -722,6 +745,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Since $W, Y, Z \\in \\{0, 1\\}$:"
        ]
@@ -755,6 +779,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Conclusion: $W = 1, Y = 1, Z = 1$."
        ]
@@ -921,6 +946,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Binary to Gray ($B \\to G$):** Parallel implementation, delay $= 1 \\cdot t_{pd}$."
      ]
@@ -935,6 +961,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Gray to Binary ($G \\to B$):** Ripple implementation, delay $= (n - 1) \\cdot t_{pd}$."
      ]
@@ -1113,6 +1140,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$+0 = 0000\\dots00_2$.",
       "1's Complement of $+0 = 1111\\dots11_2$.",
@@ -1200,6 +1228,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Case 1 ($A > B$, Result $> 0$):**"
      ]
@@ -1210,6 +1239,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Case 2 ($A < B$, Result $< 0$):**"
      ]
@@ -1224,6 +1254,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "If an **End-Around Carry** ($C_{out} = 1$) is generated:"
      ]
@@ -1234,6 +1265,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "If **No Carry** ($C_{out} = 0$) is generated:"
      ]
@@ -1277,6 +1309,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Opposite Sign Operands ($A > 0, B < 0$ or $A < 0, B > 0$):**"
      ]
@@ -1291,6 +1324,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Like Sign Operands:**"
      ]
@@ -1383,6 +1417,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Convert operands to binary:"
        ]
@@ -1396,6 +1431,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Perform binary addition:"
        ]
@@ -1406,6 +1442,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Examine MSB Full Adder stage:"
        ]
@@ -1421,6 +1458,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Flags:"
        ]
@@ -1435,6 +1473,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Answer: **$C = 1, V = 1$**."
        ]
@@ -1455,6 +1494,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Recognize powers of 8:"
        ]
@@ -1465,6 +1505,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Write directly in octal positional form:"
        ]
@@ -1475,6 +1516,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Convert octal digits directly to 3-bit binary:"
        ]
@@ -1490,6 +1532,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Total 1s $= 2 + 3 + 0 + 2 = 7$.",
         "Answer: **7**."
@@ -1511,6 +1554,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "By fundamental definition of Gray code, between any two adjacent states, the Hamming distance is strictly $1$ (exactly $1$ bit changes).",
         "The sequence from $0000$ to $1111$ comprises $15$ transitions.",
@@ -1534,6 +1578,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Align bit lengths:"
        ]
@@ -1548,6 +1593,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Compute $-Q$ in 6-bit 2's complement:"
        ]
@@ -1561,6 +1607,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Perform addition $(+P) + (-Q)$:"
        ]
@@ -1571,6 +1618,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Interpret result:"
        ]
@@ -1609,6 +1657,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "By logarithmic definition:"
        ]
@@ -1619,6 +1668,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Expand RHS in decimal:"
        ]
@@ -1633,6 +1683,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Test integer values with constraint $r > 6$:"
        ]
@@ -1659,6 +1710,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Unsigned representation",
       "Signed-Magnitude representation (SMR)",
@@ -1672,6 +1724,7 @@ export default {
      "blocks": [
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Unsigned:** $2^{16} - 1 = 65,535_{10}$.",
         "**Signed-Magnitude:** $MSB = 1$ (negative), remaining 15 bits are 1s ($2^{15} - 1 = 32,767$). Value $= -32,767_{10}$.",
@@ -1693,6 +1746,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Positional Weight:** $\\text{Value}(N)_{10} = \\sum_{i=-m}^{n-1} d_i \\cdot r^i$, with $0 \\le d_i \\le r - 1$.",
       "**Strict Base Bound:** $r \\ge \\max(d_i) + 1$.",
@@ -1713,6 +1767,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 9,
      "items": [
       "**Overflow Hardware Flag:** $V = C_{in} \\oplus C_{out} = \\overline{A_{n-1}}\\,\\overline{B_{n-1}} S_{n-1} + A_{n-1} B_{n-1} \\overline{S_{n-1}}$.",
       "**Decimal Word Length Scaling:** $d > n \\log_{10} 2$."

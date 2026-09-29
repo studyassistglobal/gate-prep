@@ -53,6 +53,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Memoryless Operation**: Contains **no storage elements** (no flip-flops, latches, or memory cells). Past inputs have zero influence on present outputs.",
       "**Acyclic Interconnection**: Contains **no feedback loops** from outputs to inputs. Every signal flows strictly in a forward feed direction (Direct Acyclic Graph - DAG).",
@@ -290,6 +291,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Self-Duality**: The dual of $Y_{maj}$ is:"
      ]
@@ -304,6 +306,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Full Adder Carry Equivalence**: The carry-out of a 1-bit Full Adder is physically identical to the 3-variable majority detector:"
      ]
@@ -350,6 +353,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Binary to Gray ($n$-bit)**:"
      ]
@@ -371,6 +375,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Gray to Binary ($n$-bit)**:"
      ]
@@ -416,6 +421,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Even Parity Generator**: Appends a parity bit $P$ such that the total number of 1s in the transmitted codeword $(X_{n-1}\\dots X_0 P)$ is even:"
      ]
@@ -426,6 +432,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Odd Parity Generator**: Appends $P$ such that the total number of 1s is odd:"
      ]
@@ -436,6 +443,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Parity Checker**: Evaluates error syndrome $E$ at the receiver:"
      ]
@@ -561,6 +569,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Equality ($A = B$)**: Both bit positions must match simultaneously:"
      ]
@@ -571,6 +580,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Greater Than ($A > B$)**:"
      ]
@@ -581,6 +591,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Less Than ($A < B$)**:"
      ]
@@ -763,6 +774,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "XOR gate fed by $y_0, y_1 \\implies \\bar{m}_1 \\oplus \\bar{m}_0 = m_1 \\oplus m_0 = \\sum m(0, 1)$ (in swapped coordinate space $\\rightarrow \\sum m(1, 3)$).",
       "4-input NAND fed by $y_1, y_2, y_3, y_4 \\implies \\overline{\\bar{m}_0 \\bar{m}_3 \\bar{m}_2 \\bar{m}_5} = m_0 + m_2 + m_3 + m_5 \\rightarrow \\sum m(1, 3, 6, 7)$.",
@@ -795,6 +807,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Logic '0'** (Low impedance to Ground)",
       "**Logic '1'** (Low impedance to $V_{DD}$)",
@@ -945,6 +958,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$G_1 = \\overline{AB}$",
       "$G_2 = \\overline{A \\cdot G_1} = \\overline{A \\cdot \\overline{AB}}$",
@@ -965,6 +979,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$G_1 = \\overline{A + A} = \\bar{A}$",
       "$G_2 = \\overline{B + B} = \\bar{B}$",
@@ -1171,6 +1186,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$P_i, G_i$ generation: $1 \\cdot t_d$ (1 XOR / 1 AND)",
       "All carries $C_1, C_2, C_3, C_4$ simultaneously generated: $2 \\cdot t_d$ (1 AND level + 1 OR level)",
@@ -1218,6 +1234,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "The binary sum exceeds 9 ($1010_2$ to $1111_2$).",
       "An output carry $C_4 = 1$ is generated ($16$ to $19$)."

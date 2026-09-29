@@ -50,6 +50,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Definitions & Systems:** A signal is defined rigorously as a physical or mathematical quantity conveying information. Systems (e.g., resistive voltage dividers) map input signals $x(t)$ to output signals $y(t)$.",
       "**Two-Dimensional Signal Taxonomy:** Signals are classified along two orthogonal axes:"
@@ -65,6 +66,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Calculus Rigor:** Detailed evaluation of left-hand limits (LHL), right-hand limits (RHL), continuity, and differentiability. Establishing that jump discontinuities and sharp corners introduce non-differentiability.",
       "**Rapid Coordinate Geometry:** Fast-tracking straight-line equations without computing the intercept $c$, utilizing the increment formula $\\Delta y = m \\cdot \\Delta x$.",
@@ -182,6 +184,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Continuous Time, Continuous Amplitude (C.T. - C.A.):** Naturally occurring physical signals (analog signals).",
       "**Continuous Time, Discrete Amplitude (C.T. - D.A.):** Quantized continuous-time waveforms (e.g., relay outputs, square waves, comparator outputs).",
@@ -553,6 +556,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**$n = 0$ ($t = 0\\text{ s}$):** $t \\in [0, 3) \\implies y[0] = x(0) = \\mathbf{0}$",
       "**$n = 1$ ($t = 2.5\\text{ s}$):** $t \\in [0, 3) \\implies y[1] = x(2.5) = \\mathbf{0}$",
@@ -601,6 +605,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Fundamental continuous frequency:"
      ]
@@ -611,6 +616,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Continuous time period:"
      ]
@@ -621,6 +627,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Sampling parameters:"
      ]
@@ -631,6 +638,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Sampling relation:"
      ]
@@ -670,6 +678,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Write the continuous-time expression:"
      ]
@@ -680,6 +689,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Express continuous time $t$ in terms of discrete index $n$ and sampling interval $T_s$:"
      ]
@@ -694,6 +704,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Substitute $t = \\frac{1}{2} n$ directly into $x(t)$:"
      ]
@@ -887,6 +898,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**At $t = 0$:**"
      ]
@@ -901,6 +913,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**At $t = 1$:**"
      ]
@@ -915,6 +928,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**At $t = 2$:**"
      ]
@@ -929,6 +943,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**At $t = 3$:**"
      ]
@@ -971,6 +986,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**At $t = 0$:**"
      ]
@@ -989,6 +1005,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**At $t = 1$:**"
      ]
@@ -1003,6 +1020,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**At $t = 2$:**"
      ]
@@ -1021,6 +1039,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**At $t = 3$:**"
      ]
@@ -1379,6 +1398,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Equation:**"
      ]
@@ -1389,6 +1409,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Net Slope:**"
      ]
@@ -1399,6 +1420,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Vertical Intercept ($t = 0$):**"
      ]
@@ -1409,6 +1431,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Horizontal Intercept ($y = 0$):**"
      ]
@@ -1597,6 +1620,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Pure Sudden Change (Discontinuity in Amplitude):**"
      ]
@@ -1611,6 +1635,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Pure Slope Change (Corner / Knee):**"
      ]
@@ -1625,6 +1650,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Slope Change to Flat:**"
      ]
@@ -1637,6 +1663,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Sudden Change on Sloped Line:**"
      ]
@@ -1649,6 +1676,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Combined Simultaneous Sudden Change + Slope Change:**"
      ]
@@ -1718,6 +1746,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Interval $t < 0$:**"
      ]
@@ -1728,6 +1757,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Interval $0 \\le t \\le 1$:**"
      ]
@@ -1745,6 +1775,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Interval $1 \\le t < 2$:**"
      ]
@@ -1762,6 +1793,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Instantaneous Jump at $t = 2$:**"
      ]
@@ -1779,6 +1811,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Interval $2 < t < 3$:**"
      ]
@@ -1796,6 +1829,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Instantaneous Jump at $t = 3$:**"
      ]
@@ -1813,6 +1847,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 7,
      "items": [
       "**Interval $t > 3$:**"
      ]
@@ -1901,6 +1936,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**For $t < 0$:**"
      ]
@@ -1917,6 +1953,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**For $0 \\le t < 1$:**"
      ]
@@ -1937,6 +1974,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**At $t = 1$ (Sudden Jump):**"
      ]
@@ -1954,6 +1992,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**For $1 < t < 2$:**"
      ]
@@ -1974,6 +2013,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**At $t = 2$ (Sudden Jump):**"
      ]
@@ -1991,6 +2031,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**For $t > 2$:**"
      ]
@@ -2117,6 +2158,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Peaks & Valleys Invert:**"
      ]
@@ -2130,6 +2172,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Slopes Invert:**"
      ]
@@ -2143,6 +2186,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Jump Directions Reverse:**"
      ]
@@ -2155,6 +2199,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Zero-Crossings Invariant:**"
      ]
@@ -2195,6 +2240,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Linear Ramp $x_1(t) = t$:**"
        ]
@@ -2208,6 +2254,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Sinusoid $x_2(t) = \\sin(\\frac{\\pi}{2} t)$:**"
        ]
@@ -2453,6 +2500,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Exponential Signal $x_1(t) = e^{-t}$:**"
      ]
@@ -2468,6 +2516,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Carrier Sinusoid $x_2(t) = \\sin(\\frac{\\pi}{2} t)$:**"
      ]
@@ -2522,6 +2571,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Zero-Crossings Invariant:**"
      ]
@@ -2535,6 +2585,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Right-Half Plane ($t > 0$ \u2014 Damped Transient):**"
      ]
@@ -2561,6 +2612,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Left-Half Plane ($t < 0$ \u2014 Exploding Oscillation):**"
      ]
@@ -2751,6 +2803,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**The Unit Step Signal $u(t)$:** Physical circuit generation (switched DC source), rise time limiting process ($\\Delta \\to 0$), mathematical piecewise definition, and discontinuity properties at $t = 0$.",
       "**Independent Variable Transformations on $u(t)$:**"
@@ -2767,6 +2820,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**General Signal Transformations on Arbitrary Waveforms:**"
      ]
@@ -2780,6 +2834,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Step Function Algebra & Waveform Synthesis:**"
      ]
@@ -2795,6 +2850,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Restoration of Missing Chalkboard Slides (Slides 48\u201352):**"
      ]
@@ -4502,6 +4558,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$u(t)$: starts at $0$, amplitude $+1$.",
       "$u(t-2)$: starts at $2$, amplitude $+1$.",
@@ -4654,6 +4711,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$u(-t+2)$: ends at $2$, height $+1$.",
       "$u(-t+4)$: ends at $4$, height $+1$.",
@@ -5047,6 +5105,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Amplitude Scaling:** $y(t) = A \\cdot x(t)$. Stretches or compresses waveform vertically. If $A < 0$, flips across horizontal axis.",
       "**Signal Addition & Subtraction:** Pointwise algebraic sum:"
@@ -5058,6 +5117,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Modulus / Full-Wave Rectification:**"
      ]
@@ -5107,6 +5167,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Scale Invariance:**"
      ]
@@ -5121,6 +5182,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Linear Argument Reduction:**"
      ]
@@ -5131,6 +5193,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Chronological Left-to-Right Scanning Algorithm (for $+t$ steps):**"
      ]
@@ -5146,6 +5209,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Reverse Right-to-Left Scanning Algorithm (for $-t$ steps):**"
      ]
@@ -5161,6 +5225,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Asymptotic Boundary Theorem:**"
      ]
@@ -5220,6 +5285,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Advanced Step Function Synthesis & Asymptotic Remedies (Slides 71\u201375):**"
      ]
@@ -5235,6 +5301,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Nonlinear & Modulated Step Function Arguments (Slides 76\u201381):**"
      ]
@@ -5250,6 +5317,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**The Rectangular / Gate Pulse Signal (Slides 82\u201384):**"
      ]
@@ -5265,6 +5333,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**The Unit Ramp Signal $r(t)$ & Transformations (Slides 85\u201395):**"
      ]
@@ -5282,6 +5351,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Continuous-Time Waveform Synthesis & Tracing (Slides 96\u2013104):**"
      ]
@@ -5298,6 +5368,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Introduction to Integration & Area Tracking (Slide 105):**"
      ]
@@ -5645,6 +5716,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Method 1 (Pure Forward Synthesis):**"
      ]
@@ -5659,6 +5731,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Method 2 (Mixed Reverse Synthesis):**"
      ]
@@ -5768,6 +5841,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "For $t > 5$: $x(t) = 0$.",
       "At $t = 5$: jumps from $0$ to $2$ moving left $\\implies +2u(-t+5)$.",
@@ -6121,6 +6195,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "When $t < 2/3$: $u\\left(-\\left(t - \\frac{2}{3}\\right)\\right) = 1$, $u\\left(t - \\frac{3}{2}\\right) = 0 \\implies x(t) = 1 + 0 + 1 = \\mathbf{2}$.",
       "When $2/3 < t < 3/2$: $u\\left(-\\left(t - \\frac{2}{3}\\right)\\right) = 0$, $u\\left(t - \\frac{3}{2}\\right) = 0 \\implies x(t) = 0 + 0 + 1 = \\mathbf{1}$.",
@@ -6287,6 +6362,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Periodicity:** $x(t + T) = x(t)$ with fundamental period $T_0 = 2\\pi$.",
       "**Duty Cycle:**"
@@ -6298,6 +6374,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Average Value (DC Component):**"
      ]
@@ -6458,6 +6535,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Value at Origin for Shifted Exponential:**"
      ]
@@ -6468,6 +6546,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**The Fundamental Step Identity:**"
      ]
@@ -6606,6 +6685,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Alternative Notations:** In literature and GATE exams, $\\text{rect}(t)$ is also written as $\\Pi(t)$ or $\\text{gate}(t)$.",
       "**Area (Energy/Weight):**"
@@ -6617,6 +6697,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Step Decomposition Duality:**"
      ]
@@ -7049,6 +7130,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$r(t)$: starts at $0$, slope $m = 1$. At $t = 1$, value is $1$.",
       "$r(t+3)$: shifted left by $3$; starts at $t = -3$. At $t = 0$, value is $3$. Slope $m = 1$.",
@@ -7223,6 +7305,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "(a) $r(2t+3) = (2t+3)u(2t+3) = 2\\left(t + \\frac{3}{2}\\right)u\\left[t + \\frac{3}{2}\\right] = \\mathbf{2r\\left(t + \\frac{3}{2}\\right)}$",
       "(b) $r(2t-3) = \\mathbf{2r\\left(t - \\frac{3}{2}\\right)} \\quad \\text{while} \\quad u(2t-3) = u\\left(t - \\frac{3}{2}\\right)$",
@@ -7319,6 +7402,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$r(t)$: starts at $0$, slope $m = 1$.",
       "$r(t-2)$: starts at $2$, slope $m = 1$.",
@@ -7485,6 +7569,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$r(-t+2)$: root at $t = 2$, active for $t < 2$, slope $m = -1$.",
       "$-r(-2t-3) = -2r(-t - 3/2)$: root at $t = -3/2$, active for $t < -3/2$, slope $m = +2$.",
@@ -7729,6 +7814,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "At $t = -2$: $\\Delta m = -1.5 - 0 = \\mathbf{-1.5} = \\mathbf{-3/2} \\implies -\\frac{3}{2}r(t+2)$.",
       "At $t = 0$: $\\Delta m = 0 - (-1.5) = \\mathbf{+1.5} = \\mathbf{+3/2} \\implies +\\frac{3}{2}r(t)$.",
@@ -8194,6 +8280,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Definite Integration & Area Accumulation (Slide 106):** Finalization of multi-interval definite integrals over composite piecewise waveforms.",
       "**The Concept of Running Integration (Slides 107 \u2013 115):**"
@@ -8220,6 +8307,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Reversal of Integration Limits & Negative Running Integrals (Slides 116 \u2013 120):**"
      ]
@@ -8234,6 +8322,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Waveform Synthesis via Running Integration (Slides 121 \u2013 125):**"
      ]
@@ -8250,6 +8339,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Continuous-Time Signal Differentiation (Slides 126 \u2013 130):**"
      ]
@@ -8265,6 +8355,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**The Standard Triangular Signal $\\text{tri}(t)$ (Slides 131 \u2013 132):**"
      ]
@@ -8289,6 +8380,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 7,
      "items": [
       "**Introduction to the Unit Impulse Function $\\delta(t)$ (Slides 133 \u2013 140):**"
      ]
@@ -8638,6 +8730,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Interval $(-\\infty, -3)$:** $x(t) = 0 \\implies \\text{Area} = 0$.",
       "**Interval $[-3, -2]$:** Rectangle of base width $\\Delta t = 1$ and height $h = 1$:"
@@ -8649,6 +8742,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Interval $[-2, -1]$:** Trapezoid decomposed into a rectangle of height 1 and a triangle of height $2 - 1 = 1$:"
      ]
@@ -8659,6 +8753,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Interval $[-1, 0]$:** Rectangle of width 1 and height 2:"
      ]
@@ -8669,6 +8764,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Interval $[0, 1]$:** Trapezoid with height decreasing from 2 to 1 (area $= \\frac{2+1}{2} \\times 1 = \\frac{3}{2}$):"
      ]
@@ -8679,6 +8775,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Interval $[1, 2]$:** Rectangle of width 1 and height 2:"
      ]
@@ -8689,6 +8786,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 7,
      "items": [
       "**Interval $[2, 3]$:** Trapezoid with height dropping from 2 to 1 (area $= \\frac{2+1}{2} \\times 1 = \\frac{3}{2}$):"
      ]
@@ -8699,6 +8797,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 8,
      "items": [
       "**Interval $[3, 4]$:** Negative triangle below the time axis with base from 3 to 4 ($\\Delta t = 1$) and vertex at $-1$:"
      ]
@@ -8709,6 +8808,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 9,
      "items": [
       "**Interval $[4, \\infty)$:** $x(t) = 0 \\implies \\text{Area} = 0$."
      ]
@@ -8775,6 +8875,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**The Meaning of \"Running\":** In standard definite integration $\\int_a^b x(t) dt$, both limits $a$ and $b$ are fixed constants, yielding a scalar number (area). In a *running integral*, the upper limit is the variable $t$. As $t$ \"runs\" from left to right along the time axis, the integrator accumulates all area enclosed under the waveform from $-\\infty$ up to the current position $t$.",
       "**Dummy Variable of Integration ($\\tau$):** The independent variable of the original signal is mapped to a dummy parameter $\\tau$ to prevent mathematical collision with the upper integration limit $t$.",
@@ -9605,6 +9706,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "For integral $B$: Lower limit is 2, upper limit is 1. The forward area from 1 to 2 is $-\\frac{1}{2}$. Reversing the limits reverses the sign:"
      ]
@@ -9615,6 +9717,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "For integral $D$: Lower limit is 2, upper limit is $-1$. The forward area from $-1$ to 2 is $\\frac{1}{2} + 1 - \\frac{1}{2} = +1$. Reversing limits gives:"
      ]
@@ -9943,6 +10046,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "At $t = -2$: Initial slope change $\\Delta m = +1 \\implies \\text{Slope becomes } 0 + 1 = +1$.",
       "At $t = 0$: Slope change $\\Delta m = -1 \\implies \\text{Slope becomes } 1 - 1 = 0$.",
@@ -10324,6 +10428,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Continuous segments with finite slope:** Produce flat constant levels equal to the slope $m$.",
       "**Sudden changes (discontinuous vertical jumps):** Produce Dirac delta impulse functions ($\\delta(t)$) weighted by the jump magnitude $\\Delta x = x(t^+) - x(t^-)$. (Because $x(t)$ in Slide 129 is everywhere continuous, no impulses are generated here)."
@@ -11072,6 +11177,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Integrating $u(t)$:**"
      ]
@@ -11082,6 +11188,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Differentiating $r(t)$:**"
      ]
@@ -11092,6 +11199,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Differentiating $u(t)$:**"
      ]
@@ -11102,6 +11210,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Integrating $\\delta(t)$:**"
      ]
@@ -11240,6 +11349,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Definition & Area Property:**"
      ]
@@ -11250,6 +11360,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Interval Specific Integrals:**"
      ]
@@ -11264,6 +11375,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Limiting Pulse Representation:**"
      ]
@@ -11274,6 +11386,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Symmetry:**"
      ]
@@ -11284,6 +11397,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Physical Realization:**"
      ]
@@ -11297,6 +11411,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Units & Dimensions:**"
      ]
@@ -11358,6 +11473,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Time Scaling & Even Symmetry of the Dirac Delta:**"
      ]
@@ -11371,6 +11487,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Combined Transformations & Factoring Law:**"
      ]
@@ -11384,6 +11501,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Multiplication (Product / Sampling) Property:**"
      ]
@@ -11397,6 +11515,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Sifting (Filtering) Integral & Boundary Edge Limits:**"
      ]
@@ -11410,6 +11529,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Differentiation of Discontinuous Signals:**"
      ]
@@ -11433,6 +11553,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Running Integration (Accumulator Operation):**"
      ]
@@ -11446,6 +11567,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 7,
      "items": [
       "**Impulses with Composite Non-Linear Arguments $\\delta[f(t)]$:**"
      ]
@@ -11468,6 +11590,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 8,
      "items": [
       "**Doublet Function $\\delta'(t)$ & Higher Derivatives:**"
      ]
@@ -11956,6 +12079,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$u(-t) \\neq u(t) \\neq -u(t)$ $\\implies$ Unit step is **NEITHER even NOR odd**.",
       "$r(-t) \\neq r(t) \\neq -r(t)$ $\\implies$ Ramp is **NEITHER even NOR odd**.",
@@ -12199,6 +12323,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$u(2t+3) = u\\left(2\\left(t + \\frac{3}{2}\\right)\\right) = u\\left(t + \\frac{3}{2}\\right)$ (scale invariance for $a > 0$)",
       "$u(-2t+3) = u\\left(2\\left(-t + \\frac{3}{2}\\right)\\right) = u\\left(-t + \\frac{3}{2}\\right)$",
@@ -12214,6 +12339,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "$r(2t+3) = r\\left(2\\left(t + \\frac{3}{2}\\right)\\right) = 2r\\left(t + \\frac{3}{2}\\right)$ (since $r(at) = a\\,r(t)$ for $a > 0$)",
       "$r(2t-3) = 2r\\left(t - \\frac{3}{2}\\right)$",
@@ -12229,6 +12355,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 9,
      "items": [
       "$\\delta(2t+3) = \\frac{1}{2}\\delta\\left(t + \\frac{3}{2}\\right)$",
       "$\\delta(-2t+3) = \\frac{1}{|-2|}\\delta\\left(t - \\frac{3}{2}\\right) = \\frac{1}{2}\\delta\\left(t - \\frac{3}{2}\\right)$ $\\leftarrow$ **CRITICAL SIGN FLIP!**",
@@ -12399,6 +12526,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$x(t)\\cdot\\delta(t-2) = x(2)\\,\\delta(t-2)$",
       "$x(t)\\cdot\\delta(t+3) = x(-3)\\,\\delta(t+3)$ (Impulse located at $t = -3$)"
@@ -12422,6 +12550,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Factor the scaling coefficient inside the delta argument:"
      ]
@@ -12432,6 +12561,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Apply the scaling identity $\\delta(at) = \\frac{1}{|a|}\\delta(t)$:"
      ]
@@ -12442,6 +12572,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Substitute into the product:"
      ]
@@ -12452,6 +12583,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Apply the shifted multiplication property at $t_0 = \\frac{3}{2}$:"
      ]
@@ -12491,6 +12623,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\int_{-\\infty}^\\infty \\delta(t)\\,dt = 1$",
       "$\\int_{-\\infty}^{-2} \\delta(t)\\,dt = 0$ (Impulse at $t=0$ lies strictly outside $(-\\infty, -2]$)",
@@ -12658,6 +12791,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Simplify the impulse:"
      ]
@@ -12668,6 +12802,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Substitute into integral:"
      ]
@@ -12678,6 +12813,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Evaluate the continuous function at $t = 2$:"
      ]
@@ -12692,6 +12828,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Evaluate for subcases:"
      ]
@@ -13615,6 +13752,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "For $t < -2$: $y(t) = 0$.",
       "At $t = -2$: impulse of $2$ causes an immediate jump to $y(-2^+) = 2$.",
@@ -13680,6 +13818,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Find root(s) where $f(t) = 0$:"
      ]
@@ -13690,6 +13829,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Compute derivative $f'(t)$ and evaluate at the root:"
      ]
@@ -13700,6 +13840,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Formula Application:"
      ]
@@ -13743,6 +13884,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Root condition:"
      ]
@@ -13753,6 +13895,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Derivative evaluation:"
      ]
@@ -13763,6 +13906,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Result:"
      ]
@@ -14407,6 +14551,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Impulse Function Integrals with Non-Standard & Inverted Limits (Slides 176\u2013184):**"
      ]
@@ -14422,6 +14567,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Step Function Integration & The Ramp Shortcut Trick (Slides 185\u2013188):**"
      ]
@@ -14438,6 +14584,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**The Unit Doublet Function $\\delta'(t)$ & Distributional Derivatives (Slides 189\u2013196):**"
      ]
@@ -14455,6 +14602,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Special Continuous-Time Functions: Signum, Sampling, & Sinc (Slides 197\u2013204, 208\u2013210):**"
      ]
@@ -14470,6 +14618,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Area Transformation Theorem under Affine Operations (Slides 205\u2013207):**"
      ]
@@ -14484,6 +14633,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Foundational Bridge to Discrete-Time Signals & Operations (Section 4):**"
      ]
@@ -15856,6 +16006,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Start from the impulse scaling identity:"
      ]
@@ -15866,6 +16017,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Differentiate both sides with respect to $t$:"
      ]
@@ -15876,6 +16028,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Apply chain rule on LHS:"
      ]
@@ -15886,6 +16039,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Evaluate RHS (since $\\frac{1}{|\\alpha|}$ is constant):"
      ]
@@ -15896,6 +16050,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "Equate LHS and RHS:"
      ]
@@ -16686,6 +16841,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Time Scaling: $\\text{Area of } x(at) \\longrightarrow \\frac{A}{|a|}$",
       "Amplitude Scaling: $\\text{Area of } \\alpha x(t) \\longrightarrow \\alpha \\cdot A$",
@@ -16771,6 +16927,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$x(t)$ defined on interval $[3, 4]$.",
       "Advance by $3 \\implies x(t+3)$ defined on $[0, 1]$.",
@@ -17223,6 +17380,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Time Delay (Right Shift):** $y[n] = x[n - k]$ where $k > 0$. Every sample shifts to the right by $k$ positions.",
       "**Time Advance (Left Shift):** $y[n] = x[n + k]$ where $k > 0$. Every sample shifts to the left by $k$ positions.",
@@ -17298,6 +17456,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Addition / Subtraction:** $y[n] = x_1[n] \\pm x_2[n]$."
      ]
@@ -17310,6 +17469,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Multiplication (Modulation):** $y[n] = x_1[n] \\cdot x_2[n]$."
      ]
@@ -17434,6 +17594,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Sinc & Sampling Function Integration Algebra (Slides 211\u2013215):**"
      ]
@@ -17450,6 +17611,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Advanced Signal Operations & The Shifting-After-Scaling Trap (Slides 216\u2013219):**"
      ]
@@ -17465,6 +17627,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Geometric & Analytic Anatomy of Complex Exponential Signals (Slides 220\u2013226):**"
      ]
@@ -17483,6 +17646,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Continuous-Time Signal Periodicity & The Rectification Trap (Slides 227\u2013245):**"
      ]
@@ -18030,6 +18194,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "To express $Sa(t)$ in terms of $\\text{sinc}$:"
      ]
@@ -18044,6 +18209,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "To express $\\text{sinc}(t)$ in terms of $Sa$:"
      ]
@@ -18234,6 +18400,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "By definition: $\\int_{-\\infty}^\\infty \\text{sinc}^2(t)\\,dt = 1$.",
       "Since $\\text{sinc}^2(t)$ is strictly even ($\\text{sinc}^2(-t) = \\text{sinc}^2(t)$):"
@@ -18245,6 +18412,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Applying scaling factor $a = \\frac{2}{\\pi}$:"
      ]
@@ -18457,6 +18625,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Define the given function as a standalone signal:"
      ]
@@ -18467,6 +18636,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "We seek an argument shift $\\Delta t$ such that $y(t + \\Delta t) = x(3t + 2)$.",
       "Evaluating $y(t + \\Delta t)$:"
@@ -18478,6 +18648,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Equating the internal arguments:"
      ]
@@ -18488,6 +18659,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "Therefore:"
      ]
@@ -18498,6 +18670,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "Since $\\Delta t = +2/3$, the entire graph of $y(t) = x(3t)$ must be **shifted to the left by $\\frac{2}{3}$ units**:"
      ]
@@ -18636,6 +18809,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "A continuous-time complex exponential signal $x(t) = A e^{j\\omega_0 t}$ has a **strictly constant magnitude** $|x(t)| = A$ for all time $t \\in (-\\infty, \\infty)$.",
       "It consists of an in-phase real cosine component and a quadrature ($90^\\circ$ phase shifted) imaginary sine component."
@@ -18931,6 +19105,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\text{Re}\\{x(t)\\}$ vs $t$: Damped cosine starting at $A$ at $t = 0$, passing through zero, reaching negative peak $-A e^{-4}$ at $t = 2$, decaying to zero.",
       "$\\text{Im}\\{x(t)\\}$ vs $t$: Damped sine starting at $0$, peaking near $t = 1$, decaying to zero.",
@@ -19015,6 +19190,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\sin(A+B) = \\sin A \\cos B + \\cos A \\sin B \\quad \\text{--- (1)}$",
       "$\\sin(A-B) = \\sin A \\cos B - \\cos A \\sin B \\quad \\text{--- (2)}$",
@@ -19089,6 +19265,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\hookrightarrow\\ \\text{signal should be repeated after every } T_0 \\text{ time for } \\mathbf{-\\infty < t < \\infty}$.",
       "$\\mathbf{T_0 \\neq 0, \\infty, -ve, f(t)}$. ($T_0$ must be a strictly positive, finite, real constant)."
@@ -19933,6 +20110,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Product-to-Single-Angle Reduction:"
      ]
@@ -19943,6 +20121,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Angular frequency of doubled sinusoid:"
      ]
@@ -19953,6 +20132,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Because the unrectified signal $\\frac{1}{2}\\sin(\\frac{2\\pi}{3}t)$ has **zero DC offset**, full-wave rectification halves the period:"
      ]
@@ -20263,6 +20443,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\text{P} + \\text{P} = \\text{?}$ (Periodic if and only if ratio of periods is rational).",
       "$\\text{NP} + \\text{NP} = \\mathbf{NP}$."
@@ -20495,6 +20676,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Calculate individual periods:"
      ]
@@ -20513,6 +20695,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Test pairwise ratios:"
      ]
@@ -20535,6 +20718,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Calculate fundamental period $T_0$:"
      ]
@@ -20545,6 +20729,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Calculate fundamental angular frequency $\\omega_0$:"
      ]
@@ -20990,6 +21175,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Internal terms:"
      ]
@@ -21008,6 +21194,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Test submultiples $\\{2\\pi, \\frac{3\\pi}{2}, \\pi, \\frac{\\pi}{2}\\}$:"
      ]
@@ -21044,6 +21231,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Conclusion:"
      ]
@@ -21258,6 +21446,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$x(t) = 3e^{j 5 t}$:"
      ]
@@ -21268,6 +21457,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "$x(t) = 3e^{j 2 t} + e^{-j\\pi t}$:"
      ]
@@ -21278,6 +21468,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "$x(t) = 3e^{j 4 t} + 4e^{j 3 t} - 7e^{j 2 t}$:"
      ]
@@ -21416,6 +21607,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Test $t + \\pi/9$:"
      ]
@@ -21426,6 +21618,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Test $t + \\pi/2$:"
      ]
@@ -21657,6 +21850,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$x(t) = a(t) + j b(t) \\implies \\mathbf{x^*(t) = a(t) - j b(t)}$",
       "$x(t) = 5e^{j\\pi t} \\implies \\mathbf{x^*(t) = 5e^{-j\\pi t}}$",
@@ -21842,6 +22036,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Determine fundamental period:"
      ]
@@ -21856,6 +22051,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Compute inner product over $T_0 = [0, 4]$:"
      ]
@@ -21874,6 +22070,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Cycle integration:"
      ]
@@ -21921,6 +22118,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Periods:"
      ]
@@ -21935,6 +22133,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Inner Product Integral over $[0, 12]$:"
      ]
@@ -21953,6 +22152,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Periodicity of components:"
      ]
@@ -22000,6 +22200,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Common period remains $T_0 = \\text{LCM}(4, 6) = 12\\text{ sec}$.",
       "Integral over $T_0$:"
@@ -22057,6 +22258,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Identical frequencies: $\\omega_1 = \\omega_2 = \\frac{\\pi}{2} \\implies T_0 = 4\\text{ sec}$.",
       "Integral over period $[0, 4]$:"
@@ -22111,6 +22313,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$T_0 = 4\\text{ sec}$.",
       "Integral over $[0, 4]$:"
@@ -22251,6 +22454,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Common period $T_0 = 4\\text{ sec}$.",
       "Inner Product Integral over $[0, 4]$:"
@@ -22273,6 +22477,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Evaluating the DC term:"
      ]
@@ -22903,6 +23108,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Signal Orthogonality & Vector-Space Analogy (Slides 281\u2013289):**"
      ]
@@ -22923,6 +23129,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Complex Signal Modulus & Inner Product Algebra (Slides 290\u2013291):**"
      ]
@@ -22936,6 +23143,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Continuous-Time Signal Energy $E$ (Slides 292\u2013306):**"
      ]
@@ -22969,6 +23177,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Energy of Composite Signals & Superposition Laws (Slides 307\u2013311):**"
      ]
@@ -22984,6 +23193,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Energy Transformation Scaling Theorems & Advanced Synthesis (Slides 312\u2013315):**"
      ]
@@ -23578,6 +23788,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Cartesian View for $n \\neq m$:**"
      ]
@@ -23596,6 +23807,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Case $n = m = k$ (Self-Inner Product / Signal Energy over $T_0$):**"
      ]
@@ -23737,6 +23949,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$A\\sin\\omega_1 t, B\\sin\\omega_2 t, C\\sin\\omega_3 t, D\\cos\\omega_4 t \\to \\text{ortho.}$ (for distinct frequencies).",
       "$A\\sin(\\omega t + \\phi_1); B\\cos(\\omega t + \\phi_2) \\text{ and } \\phi_1 - \\phi_2 = n\\pi \\to \\text{ortho.}$",
@@ -23952,6 +24165,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Testing Orthogonality:**"
      ]
@@ -23962,6 +24176,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Converting to an Orthogonal Representation:**"
      ]
@@ -24664,6 +24879,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "White rectangle of height $A$, base $\\alpha$: $E = A^2 \\alpha$.",
       "Yellow half-sinusoid lobe of peak $A$, base $\\alpha$: $E = \\frac{A^2}{2}\\alpha$.",
@@ -24858,6 +25074,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Rectangular Pulse:**"
      ]
@@ -24868,6 +25085,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Half-Sinusoidal Lobe:**"
      ]
@@ -24878,6 +25096,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Symmetric Triangular Pulse:**"
      ]
@@ -24888,6 +25107,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Right-Angled Triangular Pulse:**"
      ]
@@ -25328,6 +25548,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Parseval's Theorem for Orthogonal Signals:**"
      ]
@@ -25338,6 +25559,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**The Real Overlap Cross-Term:**"
      ]
@@ -25550,6 +25772,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Time Shift Invariance:**"
      ]
@@ -25568,6 +25791,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time Scaling Theorem:**"
      ]
@@ -25597,6 +25821,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Master Affine Law:**"
      ]
@@ -25770,6 +25995,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Energy of Block 1 ($x_1(t)$ on $[0, 2]$):**"
      ]
@@ -25798,6 +26024,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Energy of Block 2 ($x_2(t)$ on $[3, 4]$):**"
      ]
@@ -25826,6 +26053,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Total Base Signal Energy $E_0$:**"
      ]
@@ -25836,6 +26064,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Transformed Signal Energy $E_y$:**"
      ]
@@ -25862,6 +26091,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Inner Product Definition:**"
      ]
@@ -25872,6 +26102,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Harmonically Related Complex Exponentials:**"
      ]
@@ -25882,6 +26113,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Equal-Frequency Complex Exponentials Trap:**"
      ]
@@ -25892,6 +26124,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Real Sinusoids Orthogonality Criteria:**"
      ]
@@ -25918,6 +26151,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Disjoint Support (Mutually Orthogonal):**"
      ]
@@ -25928,6 +26162,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Overlapping Real Signals:**"
      ]
@@ -25938,6 +26173,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Overlapping Complex Signals:**"
      ]
@@ -26004,6 +26240,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Energy Integration of Composite Waveforms (Slide 316)**: Combining DC and sinusoidal AC components over finite intervals.",
       "**Master Sinusoidal Pulse Theorems (Slides 317\u2013318)**:"
@@ -26018,6 +26255,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Concept of Average Value [DC Component] (Slides 319\u2013334)**:"
      ]
@@ -26033,6 +26271,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Master Transformation Table (Slide 335)**: Effects of time-shift, time-reversal, amplitude scaling, and time-scaling on Average, Energy, and Area.",
       "**Signal Power & RMS Values (Slides 336\u2013347)**:"
@@ -26049,6 +26288,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Formal Signal Classification (Slides 348\u2013350)**:"
      ]
@@ -26120,6 +26360,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**DC pedestal term**:"
      ]
@@ -26130,6 +26371,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Squared sinusoidal term**:"
      ]
@@ -26152,6 +26394,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Cross-product term**:"
      ]
@@ -26264,6 +26507,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Area of a Sinusoid Half-Cycle Arch**:"
      ]
@@ -26274,6 +26518,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Energy of a Sinusoid Half-Cycle Arch (Area of $|x(t)|^2$)**:"
      ]
@@ -26776,6 +27021,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Finite Duration Pulse (width $\\alpha$, height $A$)**:"
      ]
@@ -26786,6 +27032,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Semi-Infinite Unit Step $x(t) = A u(t)$**:"
      ]
@@ -26796,6 +27043,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Full-Wave Rectified Sinusoidal Wave (period $\\alpha$, peak $A$)**:"
      ]
@@ -26818,6 +27066,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Decaying Exponential $x(t) = A e^{-\\alpha t} u(t)$ ($\\alpha > 0$)**:"
      ]
@@ -26828,6 +27077,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Growing Exponential $x(t) = e^t u(t)$ (Unbounded)**:"
      ]
@@ -26838,6 +27088,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Tangent Signal $x(t) = \\tan t$ (Unbounded)**:"
      ]
@@ -27008,6 +27259,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Term 1**: $3|\\sin(\\frac{\\pi}{2}t)|$:"
      ]
@@ -27022,6 +27274,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Term 2**: $5|\\cos(\\frac{\\pi}{2}t + \\frac{\\pi}{3})|$:"
      ]
@@ -27036,6 +27289,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Term 3**: $2\\sin(\\frac{\\pi}{6}t)$:"
      ]
@@ -27638,6 +27892,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Energy Signal**:"
      ]
@@ -27652,6 +27907,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Power Signal**:"
      ]
@@ -27666,6 +27922,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Neither Energy, Nor Power (NENP)**:"
      ]
@@ -27688,6 +27945,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Sinusoid**: $x(t) = A\\sin(\\omega t)$:"
      ]
@@ -27703,6 +27961,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Tangent**: $x(t) = \\tan t$:"
      ]
@@ -27730,6 +27989,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Semi-Infinite Step Signal $x(t) = A u(t)$**:"
      ]
@@ -27745,6 +28005,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Finite-Duration Rectangular Pulse (amplitude $A$, width $\\alpha$)**:"
      ]
@@ -27983,6 +28244,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Signal Energy and Power Taxonomy (Slides 351\u2013353)**:"
      ]
@@ -27997,6 +28259,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Power of Composite & Orthogonal Signals (Slides 354\u2013359)**:"
      ]
@@ -28011,6 +28274,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**The Master Transformation Invariance Table (Slide 360 & Slide 361)**:"
      ]
@@ -28025,6 +28289,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Symmetry Taxonomy: Even, Odd, and NENO Signals (Slides 362\u2013370)**:"
      ]
@@ -28039,6 +28304,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Definite Integrals, Orthogonality & Triangle Inequalities (Slides 371\u2013378)**:"
      ]
@@ -28054,6 +28320,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Complex Symmetries: Conjugate Symmetry (CS) and Conjugate Anti-Symmetry (CAS) (Slides 379\u2013385)**:"
      ]
@@ -28264,6 +28531,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Decaying Exponential (Top)**:"
      ]
@@ -28301,6 +28569,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Growing Exponential (Bottom)**:"
      ]
@@ -28414,6 +28683,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\hookrightarrow \\textbf{Periodic} + \\textbf{Bounded} \\implies \\textbf{Power Signal}$",
       "$\\hookrightarrow \\textbf{Aperiodic} + \\textbf{Bounded} + \\textbf{Non-vanishing} \\implies \\textbf{Power Signal}$ (e.g., $u(t)$, $\\text{sgn}(t)$)",
@@ -28538,6 +28808,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Periodic Signals** (evaluated over common period $T_0$):"
      ]
@@ -28548,6 +28819,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Aperiodic Signals** (evaluated over infinite horizon):"
      ]
@@ -28578,6 +28850,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Signal 1 ($t < 0$)**: Semi-infinite constant level $A$:"
      ]
@@ -28588,6 +28861,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Signal 2 (Transient segment)**: Decaying exponential plus finite rectangular pulse:"
      ]
@@ -28606,6 +28880,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Signal 3 ($t > t_1$)**: Semi-infinite constant level $2A$:"
      ]
@@ -28616,6 +28891,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Total Power**:"
      ]
@@ -28774,6 +29050,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "First term:"
      ]
@@ -28784,6 +29061,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Second term:"
      ]
@@ -28794,6 +29072,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Grouping orthogonal sine and cosine components of frequency $\\omega = \\pi$:"
      ]
@@ -29132,6 +29411,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Sine Wave $\\sin(t)$**:"
      ]
@@ -29145,6 +29425,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Tangent Function $\\tan(t)$**:"
      ]
@@ -29174,6 +29455,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Unit Step Signal $u(t)$**:"
      ]
@@ -29193,6 +29475,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Unit Ramp Signal $r(t)$**:"
      ]
@@ -29437,6 +29720,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**For an Even Signal**:"
      ]
@@ -29447,6 +29731,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**For an Odd Signal**:"
      ]
@@ -29658,6 +29943,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Product: $|AB| = |A| \\cdot |B|$",
       "Sum Equality Condition:"
@@ -29669,6 +29955,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "General Triangle Inequality:"
      ]
@@ -29679,6 +29966,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Strict Inequality Condition:"
      ]
@@ -29833,6 +30121,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Conjugate Symmetry (CS)**:"
      ]
@@ -29851,6 +30140,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Conjugate Anti-Symmetry (CAS)**:"
      ]
@@ -29913,6 +30203,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Real part**:"
      ]
@@ -29923,6 +30214,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Imaginary part**:"
      ]
@@ -29969,6 +30261,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Real part**:"
      ]
@@ -29979,6 +30272,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Imaginary part**:"
      ]
@@ -30021,6 +30315,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Analyze Real Part $p(t)$**:"
      ]
@@ -30035,6 +30330,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Analyze Imaginary Part $Q(t)$**:"
      ]
@@ -30049,6 +30345,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Conclusion**:"
      ]
@@ -30087,6 +30384,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Analyze Real Part $p(t)$**:"
      ]
@@ -30101,6 +30399,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Analyze Imaginary Part $Q(t)$**:"
      ]
@@ -30115,6 +30414,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Conclusion**:"
      ]
@@ -30153,6 +30453,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Analyze Real Part $p(t)$**:"
      ]
@@ -30163,6 +30464,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Analyze Imaginary Part $Q(t)$**:"
      ]
@@ -30173,6 +30475,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Evaluation against CS and CAS Rules**:"
      ]
@@ -30186,6 +30489,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Conclusion**:"
      ]
@@ -30494,6 +30798,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Individual frequencies:"
      ]
@@ -30508,6 +30813,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Rationality test:"
      ]
@@ -30518,6 +30824,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Fundamental period calculation:"
      ]
@@ -30540,6 +30847,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Frequencies and periods:"
      ]
@@ -30554,6 +30862,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Ratio test:"
      ]
@@ -30564,6 +30873,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Conclusion: **$x(t)$ is strictly Aperiodic (Non-Periodic)**, even though both constituent sinusoids are individually periodic!"
      ]
@@ -30686,6 +30996,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Causal Signal**:"
      ]
@@ -30704,6 +31015,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Anti-Causal Signal**:"
      ]
@@ -30722,6 +31034,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Non-Causal Signal**:"
      ]
@@ -30804,6 +31117,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**$x[1]$**:"
      ]
@@ -30818,6 +31132,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**$x[3/2]$**:"
      ]
@@ -30832,6 +31147,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**$x[4]$**:"
      ]
@@ -30846,6 +31162,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**$x[6]$**:"
      ]
@@ -30860,6 +31177,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**$x[-1/2]$**:"
      ]
@@ -30874,6 +31192,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**$x[-6/3]$**:"
      ]
@@ -30888,6 +31207,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 7,
      "items": [
       "**$x[-6]$**:"
      ]
@@ -30902,6 +31222,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 8,
      "items": [
       "**$x[7/2]$**:"
      ]
@@ -31305,6 +31626,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$k$ must be an index where the original sequence $x[k] \\ne 0$.",
       "$n = \\frac{2k}{3}$ must strictly evaluate to an **integer** ($n \\in \\mathbb{Z}$), which requires $k$ to be a **multiple of 3**!"
@@ -31673,6 +31995,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Left-Sided Summation**:"
      ]
@@ -31683,6 +32006,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Right-Sided Summation**:"
      ]
@@ -31693,6 +32017,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Total Infinite Summation**:"
      ]
@@ -31993,6 +32318,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Simplify the argument:"
      ]
@@ -32003,6 +32329,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "The impulse is located at $n = 2$.",
       "The summation upper limit is $n = 2$, which includes $n = 2$:"
@@ -32022,6 +32349,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Simplify the argument:"
      ]
@@ -32032,6 +32360,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "The impulse is located at $n = -3$.",
       "Check interval: $-3 \\in [-4, \\infty)$. The impulse falls squarely within the summation limits:"
@@ -32173,6 +32502,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Simplify impulse: $\\delta[-2n + 4] = \\delta[-2(n - 2)] = \\delta[n - 2]$.",
       "Apply multiplication property: $x[n]\\,\\delta[n - 2] = x[2]\\,\\delta[n - 2]$.",
@@ -32197,6 +32527,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Simplify impulse: $\\delta[-3n + 9] = \\delta[-3(n - 3)] = \\delta[n - 3]$.",
       "Impulse location is $n = 3$.",
@@ -32217,6 +32548,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Impulse is at $n = 3$, which is inside $(-\\infty, 4]$.",
       "Apply property:"
@@ -32554,6 +32886,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Symmetric Step Sum**:"
      ]
@@ -32576,6 +32909,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Complementary Partition Step Sum**:"
      ]
@@ -32786,6 +33120,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Shift by $b$: $x[n] \\to x[n + b]$",
       "Scale $n \\to an$: $x[n + b] \\to x[an + b]$"
@@ -32799,6 +33134,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Scale by $a$: $x[n] \\to x[an]$",
       "Shift $n \\to n + \\frac{b}{a}$: $x[an] \\to x[a(n + b/a)] = x[an + b]$"
@@ -33019,6 +33355,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "For $n < -1$:"
      ]
@@ -33033,6 +33370,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "At $n = -1$:"
      ]
@@ -33043,6 +33381,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "At $n = 3$:"
      ]
@@ -33172,6 +33511,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**DT Impulse Scaling Property**: In discrete-time, $\\delta[ak] = \\delta[k]$ for any non-zero integer $a$. Hence:"
      ]
@@ -33186,6 +33526,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Substitute simplified impulse:"
      ]
@@ -33196,6 +33537,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "The impulse is located at $k = 2$."
      ]
@@ -33222,6 +33564,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Piecewise definition and result:"
      ]
@@ -33240,6 +33583,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Accumulation sweeps backwards from $+\\infty$ down to $2n+4$:"
      ]
@@ -33253,6 +33597,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Piecewise definition and result:"
      ]
@@ -33391,6 +33736,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "From Slide 423, the backward summation term evaluates to:"
        ]
@@ -33401,6 +33747,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Recognize that $(1)^n = 1$ for all integer $n \\in \\mathbb{Z}$.",
         "Apply the fundamental step-complement identity:"
@@ -33420,6 +33767,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Substitute Eq. 1 into the left-hand side of the given problem:"
        ]
@@ -33430,6 +33778,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Equating LHS to RHS:"
        ]
@@ -33593,6 +33942,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Re-order chronologically by start index:"
      ]
@@ -33603,6 +33953,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Evaluate sample-by-sample:"
      ]
@@ -33619,6 +33970,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Final Sequence:"
      ]
@@ -33637,6 +33989,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Identify cutoff boundaries (signals active for $n \\le \\text{cutoff}$):"
      ]
@@ -33652,6 +34005,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Ordering terms from right to left:"
      ]
@@ -33662,6 +34016,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Evaluate values:"
      ]
@@ -33678,6 +34033,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Resulting Left-Sided Sequence:"
      ]
@@ -34215,6 +34571,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "At $n = 0$:"
      ]
@@ -34225,6 +34582,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "At $n = 1$:"
      ]
@@ -34235,6 +34593,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Therefore:"
      ]
@@ -34653,6 +35012,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\sin\\left(\\frac{\\pi}{2} n\\right) \\implies N_0 = \\frac{2\\pi}{\\pi/2} = 4 \\implies \\text{\\textbf{PERIODIC}}$",
       "$\\sin\\left(\\frac{3\\pi}{2} n\\right) \\implies N_0 = \\frac{2\\pi}{3\\pi/2} \\times 3 = \\frac{4}{3} \\times 3 = 4 \\implies \\text{\\textbf{PERIODIC}}$",
@@ -34755,6 +35115,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Identify discrete angular frequency: $\\Omega = \\frac{3\\pi}{20}$.",
       "Phase shift $\\phi = \\frac{\\pi}{3}$ introduces only a time/phase offset and **has zero impact on the fundamental period**.",
@@ -34767,6 +35128,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Coprime check: $\\gcd(40, 3) = 1$. Choose smallest integer $r = 3$:"
      ]
@@ -35098,6 +35460,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "In discrete-time, if $x_1[n], x_2[n], \\dots$ are periodic with fundamental periods $N_1, N_2, \\dots$, their sum $x[n] = x_1[n] + x_2[n] + \\dots$ is **ALWAYS PERIODIC**."
      ]
@@ -35108,6 +35471,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Overall fundamental time period:"
      ]
@@ -35118,6 +35482,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Overall fundamental angular frequency:"
      ]
@@ -35259,6 +35624,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$x_1[n] = 3 \\cdot (1)^n$: Constant sequence $\\implies N_1 = 1$ (**Periodic**).",
       "$x_2[n] = \\sin(\\sqrt{2}\\pi n)$:"
@@ -35274,6 +35640,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "$x_3[n] = \\sin(\\pi n)$: $\\sin(k\\pi) = 0$ for all $n$, or $N_3 = \\frac{2\\pi}{\\pi} = 2$ (**Periodic**)."
      ]
@@ -35319,6 +35686,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Decimated / Downsampled signal:"
      ]
@@ -35329,6 +35697,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Expanded / Upsampled signal with zero-insertion:"
      ]
@@ -35460,6 +35829,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Suppose $x[2n]$ is periodic with period $N_0 = 5$:"
      ]
@@ -35470,6 +35840,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Reconstruct $x[n]$ by inserting samples at odd indices:"
      ]
@@ -35480,6 +35851,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Because decimation $x[2n]$ completely discards all odd-indexed samples, the odd values $\\{\\alpha, \\beta, \\gamma, a, b, c, d, \\dots\\}$ can be chosen **completely arbitrarily** (e.g., non-repeating digits of $\\pi$, random noise, an unbounded sequence).",
       "Therefore, $x[n]$ can be **NON-PERIODIC**!",
@@ -35500,6 +35872,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Given $x[n]$ with period $N_0 = 4$:"
      ]
@@ -35510,6 +35883,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Form $y_2[n]$ by interleaving zeros between every sample:"
      ]
@@ -35520,6 +35894,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "The repeating pattern consists of the original $N_0$ samples plus $N_0$ interleaved zeros:"
      ]
@@ -35538,6 +35913,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "For general upsampling factor $M$:"
      ]
@@ -35548,6 +35924,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Statement (3) is TRUE** ($\\checkmark$)."
      ]
@@ -35566,6 +35943,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$n^2 \\equiv n \\pmod 2 \\implies n^2$ and $n$ share identical parity for every integer."
      ]
@@ -35576,6 +35954,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Similarly, $\\sin\\left(\\frac{\\pi}{2} n^2\\right)$:"
      ]
@@ -36310,6 +36689,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "$y_2[n]$ is generated by an interpolation (zero-insertion / upsampling by factor $L = 2$):"
        ]
@@ -36324,6 +36704,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "When the inserted zero samples are discarded (decimation by factor 2), the underlying pattern of $x[n]$ is $\\{ 1, 2, -1 \\}$, repeating indefinitely.",
         "The fundamental period of $x[n]$ is:"
@@ -36383,6 +36764,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Item (1):"
      ]
@@ -36393,6 +36775,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Item (2):"
      ]
@@ -36403,6 +36786,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Item (3):"
      ]
@@ -36413,6 +36797,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Item (4):"
      ]
@@ -36459,6 +36844,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Bullet 1:"
      ]
@@ -36469,6 +36855,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Bullet 2:"
      ]
@@ -36479,6 +36866,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Bullet 3:"
      ]
@@ -36489,6 +36877,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "Bullet 4 (General Formula):"
      ]
@@ -36529,6 +36918,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Finite G.P. Sum ($n$ terms):"
      ]
@@ -36539,6 +36929,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Infinite G.P. Sum:"
      ]
@@ -36549,6 +36940,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Worked Example:"
      ]
@@ -37425,6 +37817,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Even:**"
      ]
@@ -37435,6 +37828,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Odd:**"
      ]
@@ -37445,6 +37839,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Conjugate Symmetry (C.S.):**"
      ]
@@ -37455,6 +37850,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Conjugate Anti-Symmetry (C.A.S.):**"
      ]
@@ -37510,6 +37906,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "By definition of odd symmetry:"
        ]
@@ -37520,6 +37917,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Set $n = 0$:"
        ]
@@ -37530,6 +37928,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Since $-0 = 0$:"
        ]
@@ -37540,6 +37939,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Bringing to LHS:"
        ]
@@ -37690,6 +38090,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Recall continuous counterpart:"
      ]
@@ -37700,6 +38101,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "In discrete domain, split the infinite summation into negative indices, positive indices, and the origin:"
      ]
@@ -37710,6 +38112,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Because $x[n]$ is even, $x[-n] = x[n]$, which means $\\sum_{n=-\\infty}^{-1} x[n] = \\sum_{n=1}^{\\infty} x[n]$:"
      ]
@@ -37780,6 +38183,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "$x[0] = 0$.",
         "$\\sum_{n=-\\infty}^{-1} x[n] = -\\sum_{n=1}^{\\infty} x[n]$."
@@ -37965,6 +38369,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$x[0] = 1 \\ne 0$ (violates odd origin condition).",
       "$x[-1] = -1$, but $-x[1] = -(1) = -1$ (matches), but $x[-2] = -2$ and $-x[2] = -2$ (matches). However, because $x[0] \\ne 0$, the sequence is **NENO**."
@@ -38226,6 +38631,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Complex Conjugate:"
      ]
@@ -38236,6 +38642,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Time Reversal:"
      ]
@@ -38246,6 +38653,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Negative of Original Sequence:"
      ]
@@ -38288,6 +38696,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Complex conjugate:"
      ]
@@ -38298,6 +38707,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Time reversal:"
      ]
@@ -38746,6 +39156,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Decimation, zero-interpolation, and period scaling ($N_0' = N_0 / 2$).",
       "Core finite and infinite mathematical series ($\\sum n, \\sum n^2, \\sum n^3, \\sum \\alpha, \\sum a r^k$).",
@@ -38799,6 +39210,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Discrete-Time Average Value**:"
      ]
@@ -38814,6 +39226,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Discrete-Time Energy & Power Definitions**:"
      ]
@@ -38828,6 +39241,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**The Famous Discrete-Time Sinusoid Power Traps**:"
      ]
@@ -38843,6 +39257,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Discrete Complex Exponential Power**:"
      ]
@@ -38855,6 +39270,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Superposition of Power & Multi-Tone Discrete Interference**:"
      ]
@@ -38868,6 +39284,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Rectified Discrete Sequences & LCM Period Analysis**:"
      ]
@@ -39543,6 +39960,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Component 1: $x_1[n] = |\\sin(\\frac{\\pi}{2}n)|$"
      ]
@@ -39560,6 +39978,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Component 2: $x_2[n] = |\\cos(\\frac{\\pi}{3}n)|$"
      ]
@@ -39577,6 +39996,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Component 3: $x_3[n] = |\\cos(\\pi n)|$"
      ]
@@ -40413,6 +40833,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "If $\\Omega_0 = \\pi$: $\\cos(\\pi n) \\implies P = A^2$, while $\\sin(\\pi n) \\implies P = 0$.",
       "If $\\Omega_0 = 2\\pi$ (or any integer multiple $2\\pi k$): $\\cos(2\\pi n) = 1 \\implies P = A^2$, while $\\sin(2\\pi n) = 0 \\implies P = 0$.",
@@ -40922,6 +41343,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**If periodic** with period $N_0$:"
      ]
@@ -40932,6 +41354,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**If aperiodic** (e.g., $\\Omega_0 = 2$):"
      ]
@@ -41074,6 +41497,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Continuous-Time: Full-wave rectification **always** halves the time period:"
      ]
@@ -41084,6 +41508,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Discrete-Time: Does fundamental period always halve?"
      ]
@@ -41098,6 +41523,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Composite LCM Rule**:"
      ]
@@ -41136,6 +41562,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Evaluate at $\\Omega = \\pi$:"
        ]
@@ -41150,6 +41577,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Combine terms:"
        ]
@@ -41160,6 +41588,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Average Value:"
        ]
@@ -41170,6 +41599,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Power:"
        ]
@@ -41210,6 +41640,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Component 1: $x_1[n] = (3 + 4j) e^{j\\frac{5\\pi}{7}n}$."
        ]
@@ -41223,6 +41654,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Component 2: $x_2[n] = 2 e^{j 3 n}$."
        ]
@@ -41236,6 +41668,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Frequencies $\\Omega_1 = \\frac{5\\pi}{7}$ and $\\Omega_2 = 3$ are distinct ($\\Omega_1 \\ne \\Omega_2$)."
        ]
@@ -41248,6 +41681,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Total Power:"
        ]
@@ -41284,6 +41718,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Energy formulation:"
        ]
@@ -41302,6 +41737,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Power:"
        ]
@@ -41380,6 +41816,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "`audit_ch1_slides_211_245.md` (Chalkboard Slides 211 to 245)",
       "`audit_ch1_slides_246_280.md` (Chalkboard Slides 246 to 280)",
@@ -41492,6 +41929,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Slide 214:**"
      ]
@@ -41510,6 +41948,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Slide 215:**"
      ]
@@ -41645,6 +42084,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Projection on $(\\operatorname{Re}, t)$ Plane:** Horizontal cosine projection:"
      ]
@@ -41655,6 +42095,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Projection on $(\\operatorname{Im}, t)$ Plane:** Vertical sine projection (quadrature phase):"
      ]
@@ -41665,6 +42106,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Projection on $(\\operatorname{Re}, \\operatorname{Im})$ Transverse Plane (Argand View):**"
      ]
@@ -41766,6 +42208,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Positivity:** $T_0 > 0$ strictly ($T_0 \\neq 0$, $T_0 \\not< 0$).",
       "**Finiteness:** $T_0 < \\infty$.",
@@ -41951,6 +42394,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Slide 252:**"
      ]
@@ -41973,6 +42417,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Slide 253:**"
      ]
@@ -41999,6 +42444,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Mixture of Rational and $\\pi$-Scaled Frequencies:**"
      ]
@@ -42021,6 +42467,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Mixture of Algebraic Radicals:**"
      ]
@@ -42039,6 +42486,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Complex Exponential Mixture:**"
      ]
@@ -42097,6 +42545,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Case 1: $DC = 0$ (Zero DC):** Lobes are identical $\\implies T_0 = \\frac{\\pi}{\\omega_0}$ (Period halves).",
       "**Case 2: $0 < |DC| < |A|$ (Zero-Crossing Offset):** Alternating asymmetric lobes $\\implies T_0 = \\frac{2\\pi}{\\omega_0}$ (No halving).",
@@ -42173,6 +42622,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**$x(t) = \\sin(|t|)$:**"
      ]
@@ -42187,6 +42637,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**$x(t) = \\cos(|t|)$:**"
      ]
@@ -42419,6 +42870,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Origin Property:** Since $x_I(t)$ is odd, $x_I(0) = 0 \\implies \\mathbf{x(0) \\in \\mathbb{R}}$ (**purely real**).",
       "**Magnitude Symmetry:** $|x(-t)| = |x(t)|$ (**Even**).",
@@ -42464,6 +42916,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Origin Property:** Since $x_R(t)$ is odd, $x_R(0) = 0 \\implies \\mathbf{x(0) \\in j\\mathbb{R}}$ (**purely imaginary** or zero).",
       "**Magnitude Symmetry:** $|x(-t)| = |x(t)|$ (**Even**).",
@@ -42545,6 +42998,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**DC Component is Strictly Zero:**"
      ]
@@ -42555,6 +43009,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**ALL Even Harmonics are Strictly Zero:**"
      ]
@@ -42569,6 +43024,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**ONLY ODD Harmonics Exist:**"
      ]
@@ -42583,6 +43039,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Even Half-Wave Symmetry (Even HWS):**"
      ]
@@ -42609,6 +43066,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Odd Half-Wave Symmetry (Odd HWS):**"
      ]
@@ -42783,6 +43241,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Unit Step:** $u(t) \\implies E = \\int_0^\\infty 1^2 dt = \\infty$.",
       "**Ramp Signal:** $r(t) = t u(t) \\implies E = \\int_0^\\infty t^2 dt = \\infty$.",
@@ -43204,6 +43663,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**General / Aperiodic Signals**:"
      ]
@@ -43218,6 +43678,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Periodic Signals (Fundamental Period $T_0$)**:"
      ]
@@ -43240,6 +43701,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**General / Aperiodic Sequences**:"
      ]
@@ -43254,6 +43716,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Periodic Sequences (Fundamental Period $N_0 \\in \\mathbb{Z}^+$)**:"
      ]
@@ -43284,6 +43747,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Periodic Signal ($T_0$)**:"
      ]
@@ -43294,6 +43758,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Aperiodic Signal**:"
      ]
@@ -43304,6 +43769,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Discrete Sequence**:"
      ]
@@ -43348,6 +43814,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Energy Signal**:"
      ]
@@ -43365,6 +43832,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Power Signal**:"
      ]
@@ -43382,6 +43850,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Neither Energy Nor Power (NENP) Signal**:"
      ]
@@ -43598,6 +44067,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Single Ramp Segment (Right Triangle)**:"
      ]
@@ -43616,6 +44086,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Symmetric Triangular Pulse ($\\text{tri}(t)$)**:"
      ]
@@ -43648,6 +44119,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Area**:"
      ]
@@ -43658,6 +44130,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Energy**:"
      ]
@@ -43680,6 +44153,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Single-Sided Decaying Exponential**:"
      ]
@@ -43694,6 +44168,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Two-Sided Symmetric Decaying Exponential**:"
      ]
@@ -43780,6 +44255,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**DC Constant $x(t) = C$**:"
      ]
@@ -43790,6 +44266,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Real Sinusoid $x(t) = A\\cos(\\omega_0 t + \\theta)$ or $A\\sin(\\omega_0 t + \\theta)$**:"
      ]
@@ -43810,6 +44287,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Complex Exponential $x(t) = A e^{j(\\omega_0 t + \\theta)}$**:"
      ]
@@ -43824,6 +44302,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Unit Step Function $x(t) = A u(t)$ (Slide 338)**:"
      ]
@@ -43838,6 +44317,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Signum Function $x(t) = A\\,\\text{sgn}(t)$**:"
      ]
@@ -43852,6 +44332,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Periodic Square Wave (Unipolar, Period $T_0$, Active Duration $\\tau$, Duty Cycle $D = \\tau/T_0$)**:"
      ]
@@ -43866,6 +44347,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 7,
      "items": [
       "**Periodic Ramp / Sawtooth Pulse Train (Slide 344)**:"
      ]
@@ -44083,6 +44565,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Disjoint Time Supports (Non-Overlapping in Time)**:"
      ]
@@ -44101,6 +44584,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Disparate Angular Frequencies ($\\omega_1 \\ne \\omega_2$)**:"
      ]
@@ -44123,6 +44607,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Quadrature Phase Difference at Identical Frequencies ($\\Delta\\phi = \\pm 90^\\circ$)**:"
      ]
@@ -44177,6 +44662,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Retain independent terms: $P_{\\text{DC}} = C^2$ and $P_{\\omega_1} = \\frac{B^2}{2}$.",
       "Combine the identical frequency terms into a single equivalent sinusoid:"
@@ -44232,6 +44718,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Total Power:"
      ]
@@ -44338,6 +44825,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Unit Step $u(t)$**:"
      ]
@@ -44356,6 +44844,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Unit Ramp $r(t) = t u(t)$ (Slide 368)**:"
      ]
@@ -44370,6 +44859,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Signum Function $\\text{sgn}(t)$ (Slide 370)**:"
      ]
@@ -44445,6 +44935,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**For an Even Signal**:"
      ]
@@ -44455,6 +44946,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**For an Odd Signal**:"
      ]
@@ -44505,6 +44997,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Continuous-Time Integral Triangle Inequality**:"
      ]
@@ -44521,6 +45014,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Parity Integral Bound (GATE MSQ Validated)**:"
      ]
@@ -44535,6 +45029,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Squared Integral Equality (GATE MSQ Validated)**:"
      ]
@@ -44627,6 +45122,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Time Shift**: $y[n] = x[n - n_0]$"
      ]
@@ -44640,6 +45136,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time Reversal**: $y[n] = x[-n]$"
      ]
@@ -44652,6 +45149,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Decimation / Downsampling (Compression)**: $y[n] = x[M n], \\; M \\in \\mathbb{Z}^+$"
      ]
@@ -44665,6 +45163,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Upsampling / Expansion (Interpolation)**: $y[n] = x[n / L], \\; L \\in \\mathbb{Z}^+$"
      ]
@@ -44818,6 +45317,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Decimation (Integer Compression $M \\ge 1$)**:"
      ]
@@ -44828,6 +45328,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Upsampling (Fractional Scaling)**:"
      ]
@@ -45401,6 +45902,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Calculate the raw period ratio:"
      ]
@@ -45411,6 +45913,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Express $R$ as an irreducible fraction:"
      ]
@@ -45421,6 +45924,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "The fundamental period $N_0$ and required integer cycles $r$ are:"
      ]
@@ -45529,6 +46033,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Overall Fundamental Period $N_0$:**"
      ]
@@ -45539,6 +46044,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Overall Fundamental Frequency $\\Omega_0$:**"
      ]
@@ -45619,6 +46125,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Decimation / Downsampling by integer factor $M \\in \\mathbb{Z}^+$:**"
      ]
@@ -45629,6 +46136,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Expansion / Upsampling by integer factor $L \\in \\mathbb{Z}^+$ (with zero-insertion):**"
      ]
@@ -45990,6 +46498,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "$u[2k - 4] = 1$ for $2k - 4 \\ge 0 \\implies k \\ge 2$.",
         "For $2n + 4 < 2 \\implies n < -1$: $x[n] = 0$.",
@@ -46027,6 +46536,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Odd Symmetry:**"
      ]
@@ -46037,6 +46547,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Conjugate Symmetry (C.S.):**"
      ]
@@ -46055,6 +46566,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Conjugate Anti-Symmetry (C.A.S.):**"
      ]
@@ -46113,6 +46625,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$x^*[n] = \\{ -4 + 5j, \\underset{\\uparrow n=0}{1 - 2j}, 4 \\}$",
       "$x^*[-n] = \\{ 4, \\underset{\\uparrow n=0}{1 - 2j}, -4 + 5j \\}$",
@@ -46125,6 +46638,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "$x_{CAS}[n] = \\frac{x[n] - x^*[-n]}{2} = \\{ \\mathbf{-4 - 2.5j}, \\underset{\\uparrow n=0}{\\underline{\\mathbf{2j}}}, \\mathbf{4 - 2.5j} \\}$"
      ]
@@ -46211,6 +46725,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Periodic Sequence with Fundamental Period $N_0$:**"
      ]
@@ -46221,6 +46736,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Aperiodic / General Sequence:**"
      ]
@@ -46289,6 +46805,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Periodic Sequence with Period $N_0$:**"
      ]
@@ -46299,6 +46816,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Aperiodic Sequence:**"
      ]
@@ -46395,6 +46913,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**If Periodic ($\\frac{\\Omega_0}{2\\pi} = \\frac{m}{N_0} \\in \\mathbb{Q}$):**"
      ]
@@ -46405,6 +46924,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**If Aperiodic ($\\frac{\\Omega_0}{2\\pi} \\notin \\mathbb{Q}$, e.g., $x[n] = A e^{j 2 n}$):**"
      ]
@@ -46707,6 +47227,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Part (a):** $x_a(t) = \\cos(\\pi t^2)$."
      ]
@@ -46717,6 +47238,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Part (b):** $x_b[n] = \\cos(\\pi n^2)$."
      ]
@@ -46746,6 +47268,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Part (c):** $x_c[n] = |\\sin(\\frac{\\pi}{4} n^2)| + |\\cos(\\frac{\\pi}{2} n)|$."
      ]
@@ -46781,6 +47304,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Fundamental Periods of Rectified Components:**"
      ]
@@ -46799,6 +47323,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Sample Evaluation over $n \\in [0, 5]$:**"
      ]
@@ -46816,6 +47341,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Average Value:**"
      ]
@@ -46826,6 +47352,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Average Power:**"
      ]
@@ -46848,6 +47375,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Signal (a) [Disjoint Support]:**"
      ]
@@ -46870,6 +47398,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Signal (b) [Overlapping Origin Trap]:**"
      ]
@@ -46913,6 +47442,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Analyze Component 1:** $x_1[n] = 4\\cos(\\pi n) = 4(-1)^n$."
      ]
@@ -46926,6 +47456,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Analyze Component 2:** $x_2[n] = 2\\sin(3\\pi n)$."
      ]
@@ -46941,6 +47472,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Analyze Component 3:** $x_3[n] = 5e^{j\\frac{2\\pi}{3}n}$."
      ]
@@ -46954,6 +47486,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Composite Period:**"
      ]
@@ -46964,6 +47497,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Total Power:**"
      ]

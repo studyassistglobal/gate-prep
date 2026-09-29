@@ -170,6 +170,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Total number of output lines required**: $N_{out} = 2^N$",
       "**Output lines provided by each smaller decoder**: $n_{out} = 2^n$",
@@ -249,6 +250,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Ambiguity at $0000$**: If all inputs are 0, output is $AB = 00$, exactly identical to the case when $D_0 = 1$.",
       "**Ambiguity under Multiple Active Inputs**: If both $D_2$ and $D_1$ are 1 simultaneously, $A = 1 + 0 = 1$ and $B = 0 + 1 = 1$, producing output $11$ ($3_{10}$), which corresponds to neither input line!"
@@ -367,6 +369,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**For Output $A$**:"
      ]
@@ -391,6 +394,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**For Output $B$**:"
      ]
@@ -415,6 +419,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Valid Bit $V$**:"
      ]
@@ -441,6 +446,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Truth Table for reversed encoding:"
      ]
@@ -457,6 +463,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Grouping for $B(D_3, D_2, D_1, D_0) = \\sum m(1, 4, 5, 6, 7) + d(0)$:"
      ]
@@ -472,6 +479,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Minimal Expression for $B$:"
      ]
@@ -777,6 +785,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Common Cathode Configuration (Active-High)**:"
      ]
@@ -790,6 +799,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Common Anode Configuration (Active-Low)**:"
      ]
@@ -1128,6 +1138,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Sum Path**:"
      ]
@@ -1138,6 +1149,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Carry Path**:"
      ]
@@ -1208,6 +1220,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Time for final Carry Out ($C_n$) to settle**:"
      ]
@@ -1218,6 +1231,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Time for all Sum bits ($S_0, S_1, \\dots, S_{n-1}$) to settle**:"
      ]
@@ -1507,6 +1521,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Adjacency pairs in cyclic order: $(A, B)$, $(B, C)$, $(C, D)$, $(D, A)$.",
       "The condition \"at least two adjacent bits are 1\" implies:"
@@ -1518,6 +1533,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "Let's verify on a 4-variable K-Map:"
      ]
@@ -1538,6 +1554,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "NAND-NAND Implementation:"
      ]
@@ -1628,6 +1645,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Decoder with Enable is a DEMUX**: An $n \\times 2^n$ Decoder with Enable pin $E$ is 100% equivalent to a $1 : 2^n$ DEMUX.",
       "**MUX as Universal Module**: An $n$-variable Boolean function requires a $2^{n-1} : 1$ MUX with at most one inverter, or a $2^n : 1$ MUX with zero additional gates.",

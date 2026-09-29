@@ -33,6 +33,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Time Domain**: Continuous-Time (CT) vs. Discrete-Time (DT).",
       "**Amplitude Domain**: Continuous-Amplitude (CA) vs. Discrete-Amplitude (DA)."
@@ -168,6 +169,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Exceptional Noise Immunity**: Large allowable noise margins between logic bands prevent spurious false transitions.",
       "**Lossless Storage & Reproduction**: Digital binary patterns (`0`s and `1`s) can be stored indefinitely in magnetic, optical, or semiconductor memory without degradation.",
@@ -200,6 +202,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Rise Time ($t_r$)**:"
      ]
@@ -216,6 +219,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Fall Time ($t_f$)**:"
      ]
@@ -232,6 +236,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Pulse Width ($t_w$ or $T_{pw}$)**:"
      ]
@@ -319,6 +324,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Clock Waveform Dynamics**:"
      ]
@@ -339,6 +345,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Serial Data Line Dynamics**:"
      ]
@@ -353,6 +360,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Bus Eye-Diagram Representation**:"
      ]
@@ -395,6 +403,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Basic Gates**: AND, OR, NOT, Buffer (realize elementary boolean operations).",
       "**Universal Gates**: NAND, NOR (capable of synthesizing any arbitrary switching function without other gate types).",
@@ -540,6 +549,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Delay Insertion**: Adds calibrated propagation delay without modifying the logic function.",
       "**Fan-Out Amplification & Impedance Buffering**: Isolates high-impedance driving circuits from heavy capacitive loads, eliminating loading degradation."
@@ -564,6 +574,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Law 1 (Series Switches in Path)**:"
      ]
@@ -586,6 +597,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Law 2 (Parallel Switches in Path)**:"
      ]
@@ -608,6 +620,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Law 3 (Shunt Switch across Load)**:"
      ]
@@ -630,6 +643,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Law 4 (Series Switch in Line)**:"
      ]
@@ -660,6 +674,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Astable Multivibrator (Free-Running Oscillator)**:"
      ]
@@ -674,6 +689,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Monostable Multivibrator (One-Shot Pulse Generator)**:"
      ]
@@ -687,6 +703,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Bistable Multivibrator (Flip-Flop / Latch)**:"
      ]
@@ -717,6 +734,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Assume the output node $X$ is initially at logic `1`.",
       "The feedback connection immediately forces the input of Inverter 1 to `1`.",
@@ -729,6 +747,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "At $t = t_{\\text{loop}}$, the output node $X$ flips to logic `0`.",
       "Feedback transfers `0` back to the input, and after another delay of $t_{\\text{loop}}$, output node $X$ flips back to `1`.",
@@ -774,6 +793,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "The total number of inverting gates ($N_{\\text{inv}}$) in the closed loop **MUST BE ODD**.",
       "Buffers in the forward and feedback paths add delay but do not invert polarity.",
@@ -852,6 +872,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Bubbled-OR Gate $\\equiv$ NAND Gate**:"
      ]
@@ -862,6 +883,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Bubbled-AND Gate $\\equiv$ NOR Gate**:"
      ]
@@ -872,6 +894,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Bubbled-NAND Gate $\\equiv$ OR Gate**:"
      ]
@@ -882,6 +905,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Bubbled-NOR Gate $\\equiv$ AND Gate**:"
      ]
@@ -964,6 +988,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Express the function in simplified **Sum of Products (SOP)** form.",
       "Implement using basic gates (AND, OR, NOT).",
@@ -1087,6 +1112,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Express the function in simplified **Product of Sums (POS)** form.",
       "Implement using basic gates (OR, AND, NOT).",
@@ -1297,6 +1323,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**XOR Gate Control Modes**:"
      ]
@@ -1312,6 +1339,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**XNOR Gate Control Modes**:"
      ]
@@ -1597,6 +1625,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "The **NOT** operation (inversion).",
       "At least one of the binary operations **AND** or **OR**."
@@ -1642,6 +1671,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Inhibit Gate (Inhibition / Relative Complement Logic, Slide 89\u201390)**:"
      ]
@@ -1662,6 +1692,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**Implication Gate (Material Conditional Logic, Slide 90)**:"
      ]
@@ -1681,6 +1712,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Bubbled-AND Gate (Slide 91)**:"
      ]
@@ -1697,6 +1729,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Summary of Universality for Custom 2-Input Gates (Slide 91 MSQ)**:"
      ]
@@ -1813,6 +1846,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Closure**: For all $A, B \\in \\mathcal{B}$: $A+B \\in \\mathcal{B}$ and $A \\cdot B \\in \\mathcal{B}$.",
       "**Identity Elements**:"
@@ -1827,6 +1861,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Commutative Laws**:"
      ]
@@ -1840,6 +1875,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Distributive Laws**:"
      ]
@@ -1870,6 +1906,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Complementarity Laws**:"
      ]
@@ -1995,6 +2032,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "The expression must contain exactly **three variables** across the candidate terms.",
       "Each variable must appear in exactly **two terms**.",
@@ -2029,6 +2067,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$\\bar{A}\\bar{B} + \\bar{B}\\bar{C} + \\bar{C}A = \\bar{A}\\bar{B} + \\bar{C}A$ (consensus on $A$ vs $\\bar{A}$ is $\\bar{B}\\bar{C}$, eliminated).",
       "$AB + B\\bar{C} + CA = AC + \\bar{C}B$ (consensus on $C$ vs $\\bar{C}$ is $AB$, eliminated).",
@@ -2072,6 +2111,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**Total Input Combinations**: $2^n$ unique truth table rows.",
       "**Total Possible Boolean Switching Functions**:"
@@ -2106,6 +2146,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Replace every logical OR ($+$) with logical AND ($\\cdot$).",
       "Replace every logical AND ($\\cdot$) with logical OR ($+$).",
@@ -2151,6 +2192,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "The truth table of a self-dual function is completely antisymmetric:"
      ]
@@ -2165,6 +2207,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "In an $n$-variable truth table with $2^n$ rows, there are exactly $2^{n-1}$ mutually complementary minterm pairs $(m_k, m_{2^n-1-k})$.",
       "For each pair, choosing the output of $m_k$ automatically dictates the inverted output for its paired minterm.",
@@ -2261,6 +2304,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "If **any single** gate turns its pull-down transistor ON (driving LOW), the shared output line is pulled directly to Ground ($0\\text{ V}$).",
       "The shared output line reaches HIGH ($+5\\text{ V}$) if and only if **all** tied gates turn their pull-down transistors OFF simultaneously.",
@@ -2385,6 +2429,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "First stage charges toward $4\\text{ V}$:"
      ]
@@ -2395,6 +2440,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "Second stage discharges from $2\\text{ V}$ toward $0\\text{ V}$:"
      ]
@@ -2405,6 +2451,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**Total Switching Delay**:"
      ]
@@ -2461,6 +2508,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "Active Pulse Width ($T_{pw}$) in seconds",
       "Total Time Period ($T$) in seconds",
@@ -2478,6 +2526,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Pulse Width ($T_{pw}$)**:"
        ]
@@ -2492,6 +2541,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Total Time Period ($T$)**:"
        ]
@@ -2506,6 +2556,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Frequency ($f$)**:"
        ]
@@ -2516,6 +2567,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**Duty Cycle**:"
        ]
@@ -2577,6 +2629,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "The problem explicitly states that this is a **DATA LINE**, not a clock reference line!",
         "In digital communication, the alternating sequence represents consecutive bits: `1 0 1 0 1 0 1 0 ...`",
@@ -2589,6 +2642,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "The data rate is the reciprocal of the bit interval $T_b$:"
        ]
@@ -2634,6 +2688,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Apply the 4 Universal Laws of Switch Synthesis to Circuit 1:"
        ]
@@ -2654,6 +2709,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Since this network is wired in **shunt (parallel)** across the bulb, when $G_{\\text{shunt}} = 1$, the network shorts out the bulb, keeping it OFF ($Y_1 = 0$).",
         "The bulb illuminates ($Y_1 = 1$) only when the shunt network is non-conducting (open):"
@@ -2665,6 +2721,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "In Circuit 2, switch $X$ is directly in series with the bulb:"
        ]
@@ -2675,6 +2732,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "For identical operation ($Y_1 \\equiv Y_2$):"
        ]
@@ -2711,6 +2769,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "An even number of cascaded inverters ($N = 2$) performs double inversion:"
        ]
@@ -2725,6 +2784,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "In a series cascade, the signal must propagate sequentially through both gates. Gate delays accumulate additively:"
        ]
@@ -2761,6 +2821,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Track the state evolution over time starting at $t = 0$ with output initially at `1`:"
        ]
@@ -2774,6 +2835,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "The total time period $T$ of the generated square wave consists of one HIGH interval and one LOW interval:"
        ]
@@ -2784,6 +2846,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "The oscillation frequency is:"
        ]
@@ -2832,6 +2895,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Identify the Closed Feedback Loop**:"
        ]
@@ -2845,6 +2909,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Compute Total Loop Delay**:"
        ]
@@ -2855,6 +2920,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Compute Time Period**:"
        ]
@@ -2865,6 +2931,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**Impact of Inverter 4**:"
        ]
@@ -2875,6 +2942,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "**Frequency Calculation**:"
        ]
@@ -2911,6 +2979,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "By the **External Gate Independence Theorem**:"
        ]
@@ -2925,6 +2994,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Only gates enclosed inside the closed feedback loop dictate the frequency:"
        ]
@@ -2991,6 +3061,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Check Oscillation Feasibility**:"
        ]
@@ -3004,6 +3075,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Compute Total Propagation Delay in Closed Loop**:"
        ]
@@ -3022,6 +3094,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Compute Time Period**:"
        ]
@@ -3032,6 +3105,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**Compute Frequency**:"
        ]
@@ -3077,6 +3151,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Inspect the gates residing inside the closed loop:"
        ]
@@ -3091,6 +3166,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Count the number of inverting gates ($N_{\\text{inv}}$):"
        ]
@@ -3101,6 +3177,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "An even number of inversions provides net **positive feedback** ($0 \\to 1 \\to 0$).",
         "A loop with positive feedback has two stable resting states and acts as a **Bistable Latch (Static Memory Cell)**. Once powered, it latches permanently into either state `0` or state `1`.",
@@ -3148,6 +3225,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Trace the Boolean signals at each gate output:"
        ]
@@ -3163,6 +3241,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Express the output $F$ at the output of OR Gate 3:"
        ]
@@ -3173,6 +3252,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Apply the absorption law to the first two terms:"
        ]
@@ -3183,6 +3263,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Substitute back:"
        ]
@@ -3193,6 +3274,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Notice that Gate 2 produces the term $\\bar{A}B$, which is completely absorbed by $\\bar{A}$ from Gate 1."
        ]
@@ -3237,6 +3319,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Factor out the common product literal $PQ$ from all 7 terms:"
        ]
@@ -3247,6 +3330,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Group the four fundamental 2-variable terms of $R$ and $S$:"
        ]
@@ -3257,6 +3341,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "By complete truth table coverage of 2 variables:"
        ]
@@ -3267,6 +3352,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Substitute $1$ into the bracketed expression:"
        ]
@@ -3277,6 +3363,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "By the Boolean dominance law ($1 + \\text{anything} = 1$):"
        ]
@@ -3407,6 +3494,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Initial baseline state: Both switches are DOWN ($S_1 = 0, S_2 = 0$) $\\implies$ Bulb is OFF ($Y = 0$).",
         "A person enters the ground floor and flips $S_1$ UP ($S_1 = 1, S_2 = 0$) $\\implies$ Bulb turns ON ($Y = 1$).",
@@ -3497,6 +3585,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Output of Gate 1:"
        ]
@@ -3507,6 +3596,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Output of Gate 2:"
        ]
@@ -3517,6 +3607,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Output of Gate 3:"
        ]
@@ -3531,6 +3622,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Apply De Morgan's Theorem to the result:"
        ]
@@ -3580,6 +3672,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Analyze Top XNOR Gate:"
        ]
@@ -3598,6 +3691,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Analyze Bottom XNOR Gate:"
        ]
@@ -3616,6 +3710,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Analyze Output XNOR Gate:"
        ]
@@ -3643,6 +3738,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Let $Z = A \\oplus B$. Then the expression is:"
        ]
@@ -3653,6 +3749,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Recall the fundamental identity: $Z \\odot \\bar{Z} = 0$."
        ]
@@ -3748,6 +3845,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "When one input of a 2-input NAND gate is held at `1`:"
        ]
@@ -3762,6 +3860,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Since its output is fed back to input $A$, this configuration represents an odd ring oscillator with $N = 1$ inverter:"
        ]
@@ -3775,6 +3874,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "The circuit cannot settle at any DC stable state. It oscillates continuously with period $T = 2 t_d$ and frequency $f = 1/(2t_d)$.",
         "A circuit with zero stable states is by definition an **Astable Multivibrator**."
@@ -3808,6 +3908,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Factor out $A$ from the second and third terms:"
        ]
@@ -3818,6 +3919,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Observe the complement relationship:"
        ]
@@ -3828,6 +3930,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Let $X = \\bar{B}C$. The expression simplifies to:"
        ]
@@ -3838,6 +3941,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Apply the elimination identity $X + \\bar{X}A = X + A$:"
        ]
@@ -3848,6 +3952,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Apply the dual distributive law $A + BC = (A + B)(A + C)$ with literal $\\bar{B}$:"
        ]
@@ -3890,6 +3995,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "By the definition of XOR:"
        ]
@@ -3900,6 +4006,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Compute $\\bar{Y}$:"
        ]
@@ -3910,6 +4017,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Evaluate the first product term $X \\bar{Y}$:"
        ]
@@ -3920,6 +4028,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Evaluate the second product term $\\bar{X} Y$:"
        ]
@@ -3930,6 +4039,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Combine the terms:"
        ]
@@ -3940,6 +4050,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 6,
        "items": [
         "Apply the elimination rule $\\bar{A} + AB = \\bar{A} + B$:"
        ]
@@ -3976,6 +4087,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Express the XOR function in Product of Sums (POS) form:"
        ]
@@ -3986,6 +4098,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Apply double inversion:"
        ]
@@ -3996,6 +4109,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Synthesize using 2-input NOR gates:"
        ]
@@ -4014,6 +4128,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Exactly **3 NOR gates** are required."
        ]
@@ -4059,6 +4174,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "The cathode of the LED is connected directly to Ground ($0\\text{ V}$).",
         "For the diode to be forward-biased and emit light, its anode must be at a HIGH logic potential ($Y = 1$).",
@@ -4079,6 +4195,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Absorb $ABC$ into $AB$ ($AB(1 + C) = AB$):"
        ]
@@ -4089,6 +4206,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "The condition for the LED to be ON ($Y = 1$) is:"
        ]
@@ -4138,6 +4256,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Given $A \\oplus B = C$.",
         "XOR both sides with variable $B$:"
@@ -4149,6 +4268,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "By associativity and the identity $B \\oplus B = 0$:"
        ]
@@ -4159,6 +4279,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Now evaluate the target expression $\\bar{B} \\oplus C$:"
        ]
@@ -4173,6 +4294,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Substitute $B \\oplus C = A$:"
        ]
@@ -4209,6 +4331,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Evaluate the leftmost sub-term $\\bar{A} \\oplus B$:"
        ]
@@ -4219,6 +4342,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "The inner expression becomes:"
        ]
@@ -4229,6 +4353,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Recall that for any variable $Z$: $Z \\odot \\bar{C} = \\overline{Z \\odot C}$."
        ]
@@ -4243,6 +4368,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Now apply the outer complement:"
        ]
@@ -4253,6 +4379,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Since $A \\odot B = \\overline{A \\oplus B}$, we can write:"
        ]
@@ -4263,6 +4390,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 6,
        "items": [
         "But for $n = 3$ variables (an **ODD** count), by the Odd Inputs Parity Theorem:"
        ]
@@ -4273,6 +4401,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 7,
        "items": [
         "Both form **(C)** (when parenthesized associate) and form **(A)** are mathematically congruent representations."
        ]
@@ -4314,6 +4443,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Initial State ($t < 0$)**:"
        ]
@@ -4327,6 +4457,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**First Interval ($t_1$): Charging Stage 1**:"
        ]
@@ -4353,6 +4484,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Second Interval ($t_2$): Discharging Stage 2**:"
        ]
@@ -4375,6 +4507,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**Total Switching Delay**:"
        ]
@@ -4420,6 +4553,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "The circuit features an inverter ($180^\\circ$ phase shift at DC) with negative feedback.",
         "The presence of the RC network introduces a low-pass delay.",
@@ -4464,6 +4598,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Statement A**: The multi-input XOR gate outputs 1 if and only if the total number of 1's in the input vector is odd. This holds true for any number of variables. Hence, **Statement (A) is TRUE**.",
         "**Statement B**:"
@@ -4492,6 +4627,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Statements C and D**:"
        ]
@@ -4557,6 +4693,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Expand each XNOR term into sum-of-products:"
        ]
@@ -4575,6 +4712,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Substitute into $Y$:"
        ]
@@ -4585,6 +4723,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Regroup the terms into uncomplemented and complemented sets:"
        ]
@@ -4595,6 +4734,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Recognize the 3-variable **carry-out / majority function**:"
        ]
@@ -4605,6 +4745,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Find its complement $\\bar{f}$:"
        ]
@@ -4615,6 +4756,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 6,
        "items": [
         "Therefore:"
        ]
@@ -4625,6 +4767,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 7,
        "items": [
         "By the complementarity law $f + \\bar{f} \\equiv 1$:"
        ]
@@ -4635,6 +4778,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 8,
        "items": [
         "Since the function evaluates to constant Logic 1, the output is permanently tied to the $V_{CC}$ rail."
        ]
@@ -4684,6 +4828,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Apply the 4 fundamental switch synthesis rules:"
        ]
@@ -4698,6 +4843,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Branch 2 is in parallel with Branch 1:"
        ]
@@ -4708,6 +4854,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Contact $A$ is connected in series with this entire combination:"
        ]
@@ -4752,6 +4899,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Use the complementary elimination rule $X + \\bar{X}Y = X + Y$ on the first two terms with $X = AB$:"
        ]
@@ -4762,6 +4910,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Substitute back into $Y$:"
        ]
@@ -4772,6 +4921,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "By the absorption law ($A + AB = A$):"
        ]
@@ -4816,6 +4966,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Apply the Transposition Theorem $(X+Y)(X+Z) = X+YZ$ to the first product with $X = \\bar{A}$:"
        ]
@@ -4826,6 +4977,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Substitute into the full expression:"
        ]
@@ -4836,6 +4988,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Factor the common literal $\\bar{A}$:"
        ]
@@ -4846,6 +4999,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Since $1 + \\text{anything} = 1$:"
        ]
@@ -4890,6 +5044,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Simplify the innermost parenthesized term:"
        ]
@@ -4900,6 +5055,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Invert this term using De Morgan's Law:"
        ]
@@ -4910,6 +5066,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Multiply by $\\bar{C}$:"
        ]
@@ -4920,6 +5077,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Substitute back into the main expression:"
        ]
@@ -4930,6 +5088,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "Distribute $A$:"
        ]
@@ -4940,6 +5099,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 6,
        "items": [
         "Count the number of literals: $A$ (1 literal) and $B$ (1 literal) $\\implies$ **2 literals**."
        ]
@@ -4980,6 +5140,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Apply De Morgan's theorem to each inverted term individually:"
        ]
@@ -4995,6 +5156,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Group adjacent minterm pairs:"
        ]
@@ -5005,6 +5167,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Factor out common terms:"
        ]
@@ -5015,6 +5178,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "Factor $B$:"
        ]
@@ -5051,6 +5215,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**(A) NOR Gate**: Standard universal gate ($\\overline{A+A}=\\bar{A}$, $\\overline{\\bar{A}+\\bar{B}}=AB$). **Universal!**",
         "**(B) Bubbled-NOR Gate**: $Y = \\overline{\\bar{A} + \\bar{B}} = AB$ (AND Gate). An AND gate alone cannot produce inversion ($0 \\to 1$). **NOT Universal**.",
@@ -5067,6 +5232,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**(D) Inhibit-NAND Gate ($Y = A + \\bar{B}$)**:"
        ]
@@ -5081,6 +5247,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "**(E) Bubbled-AND Gate ($Y = \\bar{A}\\bar{B}$)**:"
        ]
@@ -5093,6 +5260,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 6,
        "items": [
         "**(F) Bubbled-AND + Inverter**: $Y = \\overline{\\bar{A}\\bar{B}} = A+B$ (OR Gate). Cannot produce inversion. **NOT Universal**."
        ]
@@ -5125,6 +5293,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "Check if gate $D$ can realize a NOT gate:"
        ]
@@ -5135,6 +5304,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "Check if gate $D$ can realize an OR gate:"
        ]
@@ -5149,6 +5319,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "Since $\\{\\text{OR}, \\text{NOT}\\}$ is a known functionally complete set, gate $D$ together with constants $0$ and $1$ is **functionally complete**.",
         "Being functionally complete, it can implement ANY arbitrary Boolean logic function, including **NAND, NOR, XOR, and XNOR**!"
@@ -5182,6 +5353,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "The difference in propagation delays between the two parallel converging signal paths is:"
        ]
@@ -5192,6 +5364,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "During this $10\\text{ ns}$ window, one gate has completed its transition while the other has not yet responded, producing an unwanted static hazard glitch of width equal to $\\Delta t$."
        ]
@@ -5247,6 +5420,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Trace Node P (AND gate, 5 ns delay)**:"
        ]
@@ -5261,6 +5435,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Trace Node Q (NOT1, 3 ns delay)**:"
        ]
@@ -5274,6 +5449,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Trace Node R (XOR1, 4 ns delay)**:"
        ]
@@ -5292,6 +5468,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**Trace Node S (NOT2, 0 ns delay)**:"
        ]
@@ -5305,6 +5482,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 5,
        "items": [
         "**Trace Final XOR2 ($S \\oplus B$, 10 ns delay)**:"
        ]
@@ -5325,6 +5503,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 6,
        "items": [
         "**Total Duration with $Y = 0$**:"
        ]
@@ -5353,6 +5532,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "$f_1 = A\\bar{B}C + \\bar{A}BC + \\bar{A}\\bar{B}C$",
       "$f_2 = \\bar{A}B + \\bar{A}B\\bar{C} + \\bar{A}BDE + \\bar{A}B\\bar{C}D\\bar{E}$",
@@ -5370,6 +5550,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 1,
        "items": [
         "**Expression 1**:"
        ]
@@ -5388,6 +5569,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 2,
        "items": [
         "**Expression 2**:"
        ]
@@ -5410,6 +5592,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 3,
        "items": [
         "**Expression 3**:"
        ]
@@ -5424,6 +5607,7 @@ export default {
       },
       {
        "t": "ol",
+       "start": 4,
        "items": [
         "**Expression 4**:"
        ]
@@ -5469,6 +5653,7 @@ export default {
    "blocks": [
     {
      "t": "ol",
+     "start": 1,
      "items": [
       "**The Distributive Law Fallacy**:"
      ]
@@ -5482,6 +5667,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 2,
      "items": [
       "**The 3-Input XOR Inversion Trap**:"
      ]
@@ -5495,6 +5681,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 3,
      "items": [
       "**The Ring Oscillator Frequency Traps**:"
      ]
@@ -5508,6 +5695,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 4,
      "items": [
       "**Consensus Application Rules**:"
      ]
@@ -5521,6 +5709,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 5,
      "items": [
       "**Duality vs. Complementation**:"
      ]
@@ -5534,6 +5723,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 6,
      "items": [
       "**Self-Dual vs. Neutral**:"
      ]
@@ -5547,6 +5737,7 @@ export default {
     },
     {
      "t": "ol",
+     "start": 7,
      "items": [
       "**Wired-AND with Active Outputs**:"
      ]
