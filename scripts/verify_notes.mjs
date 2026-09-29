@@ -26,7 +26,7 @@ const { NOTES_INDEX } = await import(pathToFileURL(path.join(ROOT, 'src/data/not
 // 1. registry consistency
 const live = liveChapterSequence(COURSE.id);
 if (COURSE.id !== 'gate-2027-ece') fail(`unexpected course id ${COURSE.id}`);
-if (live.length !== 6) fail(`expected 6 live chapters, found ${live.length}`);
+if (live.length !== 7) fail(`expected 7 live chapters, found ${live.length}`);
 for (const { chapter } of live) {
   const idx = NOTES_INDEX[chapter.id];
   if (!idx) { fail(`${chapter.id}: missing from NOTES_INDEX`); continue; }
@@ -65,8 +65,11 @@ for (const { chapter } of live) {
         if (!fs.existsSync(p)) fail(`${ctx}: missing figure ${b.src}`);
       }
       if (b.t === 'details' && !b.blocks?.length) fail(`${ctx}: empty details`);
-      for (const s of [b.text, b.tex, ...(b.items || []), ...(b.header || []), ...(b.rows || []).flat()].filter(Boolean)) {
-        if (!balancedDelims(s)) fail(`${ctx}: unbalanced math delimiters in "${String(s).slice(0, 60)}"`);
+      // code fences render literally by design (ASCII/LaTeX listings) — skip balance check
+      if (b.t !== 'code') {
+        for (const s of [b.text, b.tex, b.title, ...(b.items || []), ...(b.header || []), ...(b.rows || []).flat()].filter(Boolean)) {
+          if (!balancedDelims(s)) fail(`${ctx}: unbalanced math delimiters in "${String(s).slice(0, 60)}"`);
+        }
       }
       if (b.t === 'details') walk(b.blocks, `${ctx}/details`);
     }

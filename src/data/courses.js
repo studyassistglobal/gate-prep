@@ -29,6 +29,7 @@ export const COURSE = {
       accent: 'math',
       chapters: [
         { id: 'ss-ch1', num: 1, title: 'Basics of Signals', status: 'live', file: 'ssch1' },
+        { id: 'ss-ch2', num: 2, title: 'Basics of Systems', status: 'live', file: 'ssch2' },
       ],
     },
     {

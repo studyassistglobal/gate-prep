@@ -40,3 +40,16 @@ Then commit/push to `studyassistglobal/gate-prep` (gh account: switch to `studya
 - `verify_notes.mjs` walks `liveChapterSequence()` objects as `{subject, chapter}` — don't read `c.id` off them.
 - The fork's stale files (papers, auth, exam pages) were removed at creation; if a new file imports `supabase`/`auth.jsx`/`recharts`, the verifier's fork-hygiene gate will fail the build — intentional.
 - HashRouter + in-page anchors: use react-router's parsed `location.hash` (see Chapter.jsx) and `scroll-margin-top` on sections; never `window.location.hash.split('#')`.
+
+
+## 15. Signalling updates (2026-09-29) — SS Ch1 refresh + Ch2 live
+
+- `ss-ch1` regenerated from the Sep-28 Master Guide (947 KB → 1.19 MB; 17 sections / 8,472 blocks, 7 figures still resolve to `/notes/ss/figures_ch1/`).
+- **`ss-ch2` "Basics of Systems" is live** (717 KB, 12 sections / 5,756 blocks, no figures) — registered in `src/data/courses.js`; reader volume nav now chains Ch1 ⇄ Ch2.
+- Parser upgrades this pass (all in `scripts/build_notes.py`):
+  1. Module-split accepts H1–H6 module headers (`^#{1,6} (?=Module )`) — Ch2 authors `# Module 01:` at H1, Ch1 uses `## Module`. Interior `## N.` sub-headings become h2 divider blocks.
+  2. **Display math may be bullet-prefixed** (`* $$…`): the math branch now strips a leading list marker before testing, so display math inside list items isn't shredded by the ul branch.
+  3. **Quoted problem statements** (`"Q. … $$…\end{cases}$$"`) trail a `"` after the closing `$$` — peel quotes before the delimiter strip, else a stray `$$` survives into the tex.
+  4. **Table splitter treats `$$` as ONE paired toggle** — previously each `$` toggled math-state, so `$$…|h(t)|…$$` cells split at the absolute-value bar (broke the BIBO table in Ch2 M10).
+  5. `scripts/verify_notes.mjs`: code fences are literal by design — their content is exempt from the math-balance check; live-chapter count is 7.
+- Lesson: a 2 MB lazy chapter chunk can take ~3–5 s to render on a cold load — browser spot-checks must wait generously before judging a chapter page empty.

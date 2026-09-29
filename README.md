@@ -7,7 +7,7 @@ Live: **https://gate-prep.pages.dev** (project `gate-prep` on Cloudflare Pages)
 ## What's inside
 
 - **Digital Electronics** — Ch 1: Logic Gates & Boolean Algebra · Ch 2: Boolean Expressions & K-Maps · Ch 3: Number Systems & Digital Representation · Ch 4 Parts 1–2: Combinational Circuits
-- **Signals & Systems** — Ch 1: Basics of Signals (17 modules, 509 slides audited)
+- **Signals & Systems** — Ch 1: Basics of Signals (17 modules, 509 slides audited) · Ch 2: Basics of Systems (12 modules, convolution → BIBO/stability → synthesis)
 - 90 sections / 10,000+ content blocks rendered from the Master Guide markdown sources, with KaTeX math, figures, alert callouts and collapsible worked solutions
 - Reading progress per section (localStorage, no account), course/section search, light & dark theme
 

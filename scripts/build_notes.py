@@ -90,6 +90,20 @@ CHAPTERS = [
         "fig_prefix": "figures_ch1/",
         "web_prefix": "/notes/ss/figures_ch1/",
     },
+    {
+        "id": "ss-ch2",
+        "file": "ssch2",
+        "notes_sub": "ss",
+        "num": 2,
+        "title": "Basics of Systems",
+        "subject": "Signals & Systems",
+        "section_split": "module",
+        "md": os.path.join(SRC_ROOT, "Signals and Systems", "Chapter_02_Basics_of_Systems_Master_Guide.md"),
+        "figures_src": None,
+        "figures_dst": None,
+        "fig_prefix": "",
+        "web_prefix": "/notes/ss/",
+    },
 ]
 
 
@@ -121,6 +135,13 @@ def split_table_row(line):
         if ch == "\\" and i + 1 < len(s):
             cur.append(ch)
             cur.append(s[i + 1])
+            i += 2
+            continue
+        # $$ is a PAIRED display delimiter — treat it as one toggle so that
+        # absolute-value bars (|h(t)|) inside $$…$$ don't split the row
+        if s.startswith("$$", i):
+            in_math = not in_math
+            cur.append("$$")
             i += 2
             continue
         if ch == "$":
@@ -272,21 +293,25 @@ def parse_blocks(lines, ch):
                            "align": align, "rows": [[inline_clean(c, ch) for c in r] for r in data]})
             continue
 
-        # display math $$ ... $$ (single-line or multi-line)
-        if stripped.startswith("$$"):
-            if stripped.count("$$") >= 2 and len(stripped) > 4:
+        # display math $$ ... $$ (single-line or multi-line); the opening line may
+        # be bullet-prefixed (`* $$…`) inside list items — strip the marker first
+        math_src = re.sub(r"^[-*]\s+", "", stripped)
+        if math_src.startswith("$$"):
+            # quoted problem statements can trail a `"` right after the closing $$
+            # (`… \end{cases}$$"`), so peel quotes before the delimiter strip
+            if math_src.count("$$") >= 2 and len(math_src) > 4:
                 flush_para()
-                blocks.append({"t": "math", "tex": stripped.strip("$").strip()})
+                blocks.append({"t": "math", "tex": math_src.strip().strip('"').strip("$$").strip()})
                 i += 1
                 continue
             flush_para()
-            chunk = [stripped.lstrip("$").strip()]
+            chunk = [math_src.lstrip("$").strip()]
             i += 1
             while i < n and "$$" not in lines[i]:
                 chunk.append(lines[i])
                 i += 1
             if i < n:
-                tail = lines[i].strip()
+                tail = lines[i].strip().strip('"')
                 chunk.append(tail.rstrip("$").strip())
                 i += 1
             flush_math_chunk(chunk)
@@ -363,10 +388,11 @@ def build_chapter(ch):
     raw = re.sub(r"(?m)^\s*\d*[.)]?\s*\[[^\]]*\]\(#[^)]+\)\s*$", "", raw)
 
     # section splitting: generic chapters split at every `## `; module-split
-    # chapters (audit-concatenated Masters) split only at `## Module ` headers
-    # and keep interior ## / # lines as divider blocks via parse_blocks.
+    # chapters (audit-concatenated Masters) split only at Module headers at ANY
+    # heading level (Ch1 uses `## Module N:`, Ch2 uses `# Module N:`) and keep
+    # interior ## / # lines as divider blocks via parse_blocks.
     module_mode = ch.get("section_split") == "module"
-    split_re = r"^## (?=Module )" if module_mode else r"^## +"
+    split_re = r"^#{1,6} (?=Module )" if module_mode else r"^## +"
     parts = re.split(split_re, raw, flags=re.MULTILINE)
     sections = []
     if parts[0].strip():

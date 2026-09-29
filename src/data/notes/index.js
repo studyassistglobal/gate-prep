@@ -398,8 +398,63 @@ export const NOTES_INDEX = {
     "title": "Module 10F: Discrete Average, Power Traps & Final GATE Master Problem Bank (Slides 486\u2013509)"
    },
    {
-    "id": "module-11-high-yield-formula-sheet-revision-traps-for-gate-2027",
-    "title": "Module 11: High-Yield Formula Sheet & Revision Traps for GATE 2027"
+    "id": "module-11-master-formula-encyclopedia-high-yield-cheat-sheet-exam-trap-matrix-for-gate-2027",
+    "title": "Module 11: Master Formula Encyclopedia, High-Yield Cheat-Sheet & Exam Trap Matrix for GATE 2027"
+   }
+  ]
+ },
+ "ss-ch2": {
+  "num": 2,
+  "title": "Basics of Systems",
+  "subject": "Signals & Systems",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-01-continuous-time-convolution-foundations-analytical-operations",
+    "title": "Module 01: Continuous-Time Convolution Foundations & Analytical Operations"
+   },
+   {
+    "id": "module-02-graphical-convolution-calculus-area-duration-theorems",
+    "title": "Module 02: Graphical Convolution Calculus, Area & Duration Theorems"
+   },
+   {
+    "id": "module-03-derivative-convolution-rules-piecewise-waveform-algebra",
+    "title": "Module 03: Derivative Convolution Rules & Piecewise Waveform Algebra"
+   },
+   {
+    "id": "module-04-system-definition-mathematical-models-interconnections",
+    "title": "Module 04: System Definition, Mathematical Models & Interconnections"
+   },
+   {
+    "id": "module-05-causality-in-continuous-discrete-systems",
+    "title": "Module 05: Causality in Continuous & Discrete Systems"
+   },
+   {
+    "id": "module-06-linearity-the-principle-of-superposition",
+    "title": "Module 06: Linearity & The Principle of Superposition"
+   },
+   {
+    "id": "module-07-time-invariance-shift-invariance-vs-time-variance",
+    "title": "Module 07: Time-Invariance (Shift-Invariance) vs Time-Variance"
+   },
+   {
+    "id": "module-08-linear-time-invariant-lti-systems-impulse-step-duality",
+    "title": "Module 08: Linear Time-Invariant (LTI) Systems & Impulse/Step Duality"
+   },
+   {
+    "id": "module-09-bibo-stability-invertibility-of-systems",
+    "title": "Module 09: BIBO Stability & Invertibility of Systems"
+   },
+   {
+    "id": "module-10-composite-interconnections-titan-batch-master-system-property-drills",
+    "title": "Module 10: Composite Interconnections & Titan Batch Master System Property Drills"
+   },
+   {
+    "id": "module-11-high-yield-formula-sheet-25-trap-diagnostic-matrix-revision-engine-for-systems",
+    "title": "Module 11: High-Yield Formula Sheet, 25-Trap Diagnostic Matrix & Revision Engine for Systems"
    }
   ]
  }
