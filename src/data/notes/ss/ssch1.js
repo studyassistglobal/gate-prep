@@ -3864,8 +3864,8 @@ export default {
      "text": "Complete Mathematical Solutions Restored for Titans Batch Notes:"
     },
     {
-     "t": "p",
-     "text": "##### Problem (j): $x_9(t) = u(2t - 3)$ (Target of Slide 049)"
+     "t": "h4",
+     "text": "Problem (j): $x_9(t) = u(2t - 3)$ (Target of Slide 049)"
     },
     {
      "t": "ul",
@@ -3902,8 +3902,8 @@ export default {
      "text": "        ^ u(2t-3) = u(t-1.5)\n      1 |            +=====================\n        |            |\n      0 +------------+---------------------> t\n        0           1.5"
     },
     {
-     "t": "p",
-     "text": "##### Problem (k): $x_{10}(t) = u(-2t - 3)$ (Target of Slide 050)"
+     "t": "h4",
+     "text": "Problem (k): $x_{10}(t) = u(-2t - 3)$ (Target of Slide 050)"
     },
     {
      "t": "ul",
@@ -3940,8 +3940,8 @@ export default {
      "text": "        ^ u(-2t-3) = u(-t-1.5)\n      1 | ============+\n        |             |\n      0 +-------------+--------------------> t\n                    -1.5   0"
     },
     {
-     "t": "p",
-     "text": "##### Problem (l): $x_{11}(t) = u\\left(\\frac{t}{2} + 3\\right)$ (Target of Slide 051)"
+     "t": "h4",
+     "text": "Problem (l): $x_{11}(t) = u\\left(\\frac{t}{2} + 3\\right)$ (Target of Slide 051)"
     },
     {
      "t": "ul",
@@ -3978,8 +3978,8 @@ export default {
      "text": "        ^ u(t/2 + 3) = u(t+6)\n      1 |      +===========================\n        |      |\n      0 +------+---------------------------> t\n              -6             0"
     },
     {
-     "t": "p",
-     "text": "##### Problem (m): $x_{12}(t) = u\\left(-\\frac{t}{4} - 3\\right)$ (Target of Slide 052)"
+     "t": "h4",
+     "text": "Problem (m): $x_{12}(t) = u\\left(-\\frac{t}{4} - 3\\right)$ (Target of Slide 052)"
     },
     {
      "t": "ul",
@@ -4016,8 +4016,8 @@ export default {
      "text": "        ^ u(-t/4 - 3) = u(-t-12)\n      1 | ============+\n        |             |\n      0 +-------------+--------------------> t\n                    -12      0"
     },
     {
-     "t": "p",
-     "text": "##### Problem (n): $x_{13}(t) = u\\left(\\frac{t}{3} + 4\\right)$ (Target of Slide 052)"
+     "t": "h4",
+     "text": "Problem (n): $x_{13}(t) = u\\left(\\frac{t}{3} + 4\\right)$ (Target of Slide 052)"
     },
     {
      "t": "ul",
@@ -45660,8 +45660,12 @@ export default {
      "summary": "Click to view step-by-step solution / derivation",
      "blocks": [
       {
+       "t": "h4",
+       "text": "Proof of Statement (1): Decimation Formula"
+      },
+      {
        "t": "p",
-       "text": "##### Proof of Statement (1): Decimation Formula\nWe seek the smallest integer $N'$ such that $y_1[n + N'] = y_1[n] \\iff x[M(n + N')] = x[Mn + MN'] = x[Mn]$.\nFor $x[\\cdot]$ to repeat, the shift $M N'$ must be an integer multiple of its fundamental period $N_0$:"
+       "text": "We seek the smallest integer $N'$ such that $y_1[n + N'] = y_1[n] \\iff x[M(n + N')] = x[Mn + MN'] = x[Mn]$.\nFor $x[\\cdot]$ to repeat, the shift $M N'$ must be an integer multiple of its fundamental period $N_0$:"
       },
       {
        "t": "math",
@@ -45710,8 +45714,12 @@ export default {
      "summary": "Click to view step-by-step solution / derivation",
      "blocks": [
       {
+       "t": "h4",
+       "text": "Proof of Statement (2): Counterexample to Converse"
+      },
+      {
        "t": "p",
-       "text": "##### Proof of Statement (2): Counterexample to Converse\nSuppose $y_1[n] = x[2n]$ is periodic with period $N_0 = 3$:"
+       "text": "Suppose $y_1[n] = x[2n]$ is periodic with period $N_0 = 3$:"
       },
       {
        "t": "math",
@@ -45736,8 +45744,12 @@ export default {
      "summary": "Click to view step-by-step solution / derivation",
      "blocks": [
       {
+       "t": "h4",
+       "text": "Proof of Statement (3): Zero-Interpolation / Expansion"
+      },
+      {
        "t": "p",
-       "text": "##### Proof of Statement (3): Zero-Interpolation / Expansion\nGiven $x[n]$ has period $N_0$. In $y_2[n]$, each original sample is followed by $L - 1$ zeros.\nThe repeating block consists of:"
+       "text": "Given $x[n]$ has period $N_0$. In $y_2[n]$, each original sample is followed by $L - 1$ zeros.\nThe repeating block consists of:"
       },
       {
        "t": "math",

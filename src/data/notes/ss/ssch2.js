@@ -16552,8 +16552,8 @@ export default {
      "text": "2. Detailed Derivations & Explanations"
     },
     {
-     "t": "p",
-     "text": "##### System 1: Even Component Extractor"
+     "t": "h4",
+     "text": "System 1: Even Component Extractor"
     },
     {
      "t": "math",
@@ -16583,8 +16583,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### System 2: Odd Component Extractor"
+     "t": "h4",
+     "text": "System 2: Odd Component Extractor"
     },
     {
      "t": "math",
@@ -16598,8 +16598,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### System 3: Conjugate Symmetric (C.S.) Component Extractor"
+     "t": "h4",
+     "text": "System 3: Conjugate Symmetric (C.S.) Component Extractor"
     },
     {
      "t": "math",
@@ -16630,8 +16630,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### System 4: Conjugate Anti-Symmetric (C.A.S.) Component Extractor"
+     "t": "h4",
+     "text": "System 4: Conjugate Anti-Symmetric (C.A.S.) Component Extractor"
     },
     {
      "t": "math",
@@ -16645,8 +16645,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### System 5: Real Part Extractor"
+     "t": "h4",
+     "text": "System 5: Real Part Extractor"
     },
     {
      "t": "math",
@@ -16777,8 +16777,8 @@ export default {
      "text": "2. Detailed Mathematical Derivations"
     },
     {
-     "t": "p",
-     "text": "##### Problem (a): $y(t) = \\frac{dx(t)}{dt} + \\ln(t)$"
+     "t": "h4",
+     "text": "Problem (a): $y(t) = \\frac{dx(t)}{dt} + \\ln(t)$"
     },
     {
      "t": "ul",
@@ -16805,8 +16805,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### Problem (b): $y(t) = x(|t|)$"
+     "t": "h4",
+     "text": "Problem (b): $y(t) = x(|t|)$"
     },
     {
      "t": "ul",
@@ -16835,8 +16835,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### Problem (c): $y(t) = x(t) \\cdot r(t)$"
+     "t": "h4",
+     "text": "Problem (c): $y(t) = x(t) \\cdot r(t)$"
     },
     {
      "t": "ul",
@@ -16858,8 +16858,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### Problem (d): Discrete Accumulator $y[n] = \\sum_{k=-\\infty}^{n} x[k]$"
+     "t": "h4",
+     "text": "Problem (d): Discrete Accumulator $y[n] = \\sum_{k=-\\infty}^{n} x[k]$"
     },
     {
      "t": "ul",
@@ -24904,8 +24904,8 @@ export default {
      "text": "Complete Mathematical Transcription"
     },
     {
-     "t": "p",
-     "text": "##### Problem 1: Discrete Accumulator"
+     "t": "h4",
+     "text": "Problem 1: Discrete Accumulator"
     },
     {
      "t": "ul",
@@ -24978,8 +24978,8 @@ export default {
      "tex": "\\text{Accumulator System is } \\mathbf{Unstable}"
     },
     {
-     "t": "p",
-     "text": "##### Problem 2: Discrete Decimator / Downsampler"
+     "t": "h4",
+     "text": "Problem 2: Discrete Decimator / Downsampler"
     },
     {
      "t": "ul",
@@ -25219,7 +25219,7 @@ export default {
     },
     {
      "t": "p",
-     "text": "Initial evaluation of $y(t) = \\int_{-\\infty}^t x(\\tau) \\sin\\tau \\, d\\tau$ using a naive step input test. The teacher writes \"Stable\" and then aggressively crosses it out ($\times \\times$) to warn students of a fatal examination trap!"
+     "text": "Initial evaluation of $y(t) = \\int_{-\\infty}^t x(\\tau) \\sin\\tau \\, d\\tau$ using a naive step input test. The teacher writes \"Stable\" and then aggressively crosses it out ($\\times \\times$) to warn students of a fatal examination trap!"
     },
     {
      "t": "h4",
@@ -25839,8 +25839,8 @@ export default {
      "text": "Solved Case Studies"
     },
     {
-     "t": "p",
-     "text": "##### Case 1: Absolute Value / Full-Wave Rectifier System"
+     "t": "h4",
+     "text": "Case 1: Absolute Value / Full-Wave Rectifier System"
     },
     {
      "t": "ul",
@@ -25874,8 +25874,8 @@ export default {
      "tex": "\\implies \\mathbf{Non\\text{-}invertible}"
     },
     {
-     "t": "p",
-     "text": "##### Case 2: Square-Law System"
+     "t": "h4",
+     "text": "Case 2: Square-Law System"
     },
     {
      "t": "ul",
@@ -25938,8 +25938,8 @@ export default {
      "text": "Complete Mathematical Transcription"
     },
     {
-     "t": "p",
-     "text": "##### Graph 1 (Top-Left): Linear Characteristic"
+     "t": "h4",
+     "text": "Graph 1 (Top-Left): Linear Characteristic"
     },
     {
      "t": "ul",
@@ -25951,8 +25951,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### Graph 2 (Top-Right): Sinusoidal Characteristic"
+     "t": "h4",
+     "text": "Graph 2 (Top-Right): Sinusoidal Characteristic"
     },
     {
      "t": "ul",
@@ -25964,8 +25964,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### Graph 3 (Bottom-Left): Multi-Level Step / Quantizer Characteristic"
+     "t": "h4",
+     "text": "Graph 3 (Bottom-Left): Multi-Level Step / Quantizer Characteristic"
     },
     {
      "t": "ul",
@@ -25979,8 +25979,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### Graph 4 (Bottom-Right): Strictly Monotonic Sigmoidal / Cubic Curve"
+     "t": "h4",
+     "text": "Graph 4 (Bottom-Right): Strictly Monotonic Sigmoidal / Cubic Curve"
     },
     {
      "t": "ul",
@@ -26070,8 +26070,8 @@ export default {
      "text": "Complete Mathematical Transcription"
     },
     {
-     "t": "p",
-     "text": "##### Graph 1 (Top-Left): Symmetrical V-Shaped Characteristic"
+     "t": "h4",
+     "text": "Graph 1 (Top-Left): Symmetrical V-Shaped Characteristic"
     },
     {
      "t": "ul",
@@ -26082,8 +26082,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### Graph 2 (Top-Right): Monotonic Logarithmic / Exponential Branch"
+     "t": "h4",
+     "text": "Graph 2 (Top-Right): Monotonic Logarithmic / Exponential Branch"
     },
     {
      "t": "ul",
@@ -26094,8 +26094,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### Graph 3 (Bottom): Hard Limiter / Saturation Characteristic"
+     "t": "h4",
+     "text": "Graph 3 (Bottom): Hard Limiter / Saturation Characteristic"
     },
     {
      "t": "ul",
@@ -26153,8 +26153,8 @@ export default {
      "text": "Complete Mathematical Transcription"
     },
     {
-     "t": "p",
-     "text": "##### The Two-Step Universal Procedure"
+     "t": "h4",
+     "text": "The Two-Step Universal Procedure"
     },
     {
      "t": "ol",
@@ -26192,8 +26192,8 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "##### The Titans Batch Special Shortcut (`N.B.`):"
+     "t": "h4",
+     "text": "The Titans Batch Special Shortcut (`N.B.`):"
     },
     {
      "t": "code",
@@ -26255,8 +26255,8 @@ export default {
      "text": "Complete Mathematical Transcription"
     },
     {
-     "t": "p",
-     "text": "##### Problem 1: Square-Law Operator"
+     "t": "h4",
+     "text": "Problem 1: Square-Law Operator"
     },
     {
      "t": "ul",
@@ -26307,8 +26307,8 @@ export default {
      "tex": "\\mathbf{NON\\text{-}In.} \\quad (\\text{Non-Invertible})"
     },
     {
-     "t": "p",
-     "text": "##### Problem 2: Reciprocal / Hyperbolic Operator"
+     "t": "h4",
+     "text": "Problem 2: Reciprocal / Hyperbolic Operator"
     },
     {
      "t": "ul",
@@ -26411,8 +26411,8 @@ export default {
      "text": "Complete Mathematical Transcription"
     },
     {
-     "t": "p",
-     "text": "##### Problem 1: Exponential Operator"
+     "t": "h4",
+     "text": "Problem 1: Exponential Operator"
     },
     {
      "t": "ul",
@@ -26482,8 +26482,8 @@ export default {
      "tex": "\\mathbf{Invertible}"
     },
     {
-     "t": "p",
-     "text": "##### Problem 2: Continuous-Time Differentiator"
+     "t": "h4",
+     "text": "Problem 2: Continuous-Time Differentiator"
     },
     {
      "t": "ul",
@@ -26573,8 +26573,8 @@ export default {
      "text": "Complete Mathematical Transcription"
     },
     {
-     "t": "p",
-     "text": "##### Problem 1: Continuous-Time Running Integrator"
+     "t": "h4",
+     "text": "Problem 1: Continuous-Time Running Integrator"
     },
     {
      "t": "ul",
@@ -26635,8 +26635,8 @@ export default {
      "tex": "\\mathbf{Invertible}"
     },
     {
-     "t": "p",
-     "text": "##### Problem 2: Discrete-Time Running Accumulator"
+     "t": "h4",
+     "text": "Problem 2: Discrete-Time Running Accumulator"
     },
     {
      "t": "ul",
@@ -26740,8 +26740,8 @@ export default {
      "text": "Complete Mathematical Transcription"
     },
     {
-     "t": "p",
-     "text": "##### Problem 1: Inverse Cosine Operator"
+     "t": "h4",
+     "text": "Problem 1: Inverse Cosine Operator"
     },
     {
      "t": "ul",
@@ -26779,8 +26779,8 @@ export default {
      "tex": "\\mathbf{Invertible}"
     },
     {
-     "t": "p",
-     "text": "##### Problem 2: Non-Linear Delay Product"
+     "t": "h4",
+     "text": "Problem 2: Non-Linear Delay Product"
     },
     {
      "t": "ul",
@@ -27841,7 +27841,7 @@ export default {
      "t": "alert",
      "type": "CAUTION",
      "title": null,
-     "text": "If a student attempts to invert algebraically:\n$$x(t) = \\frac{1}{t} y(t)$$\nthis operation is undefined at $t = 0$ due to division by zero ($\frac{1}{0} \\to \\infty$). The value $x(0)$ is multiplied by zero in the forward system and completely destroyed, so no physical or mathematical operator can ever reconstruct $x(0)$ from $y(0) = 0$."
+     "text": "If a student attempts to invert algebraically:\n$$x(t) = \\frac{1}{t} y(t)$$\nthis operation is undefined at $t = 0$ due to division by zero ($\\frac{1}{0} \\to \\infty$). The value $x(0)$ is multiplied by zero in the forward system and completely destroyed, so no physical or mathematical operator can ever reconstruct $x(0)$ from $y(0) = 0$."
     },
     {
      "t": "code",
@@ -27869,16 +27869,20 @@ export default {
      "text": "Complete Mathematical Transcription"
     },
     {
-     "t": "p",
-     "text": "##### Statement to Prove:"
+     "t": "h4",
+     "text": "Statement to Prove:"
     },
     {
      "t": "math",
      "tex": "\\text{The inverse system of an invertible system need not be invertible always.}"
     },
     {
+     "t": "h4",
+     "text": "Step 1: Define an Invertible Forward System"
+    },
+    {
      "t": "p",
-     "text": "##### Step 1: Define an Invertible Forward System\nSelect the principal branch inverse cosine system:"
+     "text": "Select the principal branch inverse cosine system:"
     },
     {
      "t": "math",
@@ -27903,8 +27907,12 @@ export default {
      ]
     },
     {
+     "t": "h4",
+     "text": "Step 2: Construct the Inverse System"
+    },
+    {
      "t": "p",
-     "text": "##### Step 2: Construct the Inverse System\nFrom $y(t) = \\cos^{-1}\\{x(t)\\}$, solve for $x(t)$:"
+     "text": "From $y(t) = \\cos^{-1}\\{x(t)\\}$, solve for $x(t)$:"
     },
     {
      "t": "math",
@@ -27923,8 +27931,12 @@ export default {
      "text": "Here, the inverse system accepts input $y(t)$ and produces output $x(t) = \\cos[y(t)]$."
     },
     {
+     "t": "h4",
+     "text": "Step 3: Evaluate the Inverse System as a Standalone System"
+    },
+    {
      "t": "p",
-     "text": "##### Step 3: Evaluate the Inverse System as a Standalone System\nNow disconnect the inverse block and treat it as an independent, general system operating on an arbitrary, unconstrained input signal $\\alpha(t) \\in \\mathbb{R}$:"
+     "text": "Now disconnect the inverse block and treat it as an independent, general system operating on an arbitrary, unconstrained input signal $\\alpha(t) \\in \\mathbb{R}$:"
     },
     {
      "t": "math",
@@ -27947,8 +27959,8 @@ export default {
      "text": "The cosine function is periodic with period $2\\pi$, creating a **many-to-one mapping**.\nTherefore, the standalone inverse system is **Non-Invertible**!"
     },
     {
-     "t": "p",
-     "text": "##### Conclusion:"
+     "t": "h4",
+     "text": "Conclusion:"
     },
     {
      "t": "math",
@@ -27998,8 +28010,8 @@ export default {
      "text": "Complete Mathematical Transcription"
     },
     {
-     "t": "p",
-     "text": "##### 1. Absolutely Integrable Signal (Continuous-Time)"
+     "t": "h4",
+     "text": "1. Absolutely Integrable Signal (Continuous-Time)"
     },
     {
      "t": "ul",
@@ -28024,8 +28036,8 @@ export default {
      "tex": "x(t) \\in L_1(\\mathbb{R}) \\iff \\|x\\|_1 = \\int_{-\\infty}^{\\infty} |x(t)| \\, dt < \\infty"
     },
     {
-     "t": "p",
-     "text": "##### 2. Absolutely Summable Sequence (Discrete-Time)"
+     "t": "h4",
+     "text": "2. Absolutely Summable Sequence (Discrete-Time)"
     },
     {
      "t": "ul",
@@ -28113,8 +28125,8 @@ export default {
      "tex": "x(t) = \\frac{1}{\\sqrt{t}} [u(t) - u(t-1)] = \\begin{cases} \\frac{1}{\\sqrt{t}}, & 0 < t \\le 1 \\\\ 0, & \\text{otherwise} \\end{cases}"
     },
     {
-     "t": "p",
-     "text": "##### Part (a): Energy Evaluation"
+     "t": "h4",
+     "text": "Part (a): Energy Evaluation"
     },
     {
      "t": "ul",
@@ -28147,8 +28159,8 @@ export default {
      "tex": "E = \\infty \\implies \\mathbf{NO}, \\; x(t) \\text{ is NOT an energy signal.}"
     },
     {
-     "t": "p",
-     "text": "##### Part (b): Absolute Integrability Evaluation"
+     "t": "h4",
+     "text": "Part (b): Absolute Integrability Evaluation"
     },
     {
      "t": "ul",
@@ -28234,8 +28246,8 @@ export default {
      "tex": "x(t) = \\frac{1}{t} u(t-1) = \\begin{cases} \\frac{1}{t}, & t \\ge 1 \\\\ 0, & t < 1 \\end{cases}"
     },
     {
-     "t": "p",
-     "text": "##### Part (a): Energy Evaluation"
+     "t": "h4",
+     "text": "Part (a): Energy Evaluation"
     },
     {
      "t": "ul",
@@ -28268,8 +28280,8 @@ export default {
      "tex": "E = 1 \\text{ J} < \\infty \\implies \\mathbf{YES}, \\; x(t) \\text{ is an Energy Signal.}"
     },
     {
-     "t": "p",
-     "text": "##### Part (b): Absolute Integrability Evaluation"
+     "t": "h4",
+     "text": "Part (b): Absolute Integrability Evaluation"
     },
     {
      "t": "ul",
@@ -28355,8 +28367,8 @@ export default {
      "tex": "x(t) = e^{-t} u(t) = \\begin{cases} e^{-t}, & t \\ge 0 \\\\ 0, & t < 0 \\end{cases}"
     },
     {
-     "t": "p",
-     "text": "##### Part (a): Energy Evaluation"
+     "t": "h4",
+     "text": "Part (a): Energy Evaluation"
     },
     {
      "t": "ul",
@@ -28389,8 +28401,8 @@ export default {
      "tex": "E = \\frac{1}{2} \\text{ J} < \\infty \\implies \\mathbf{YES}, \\; x(t) \\text{ is an Energy Signal.}"
     },
     {
-     "t": "p",
-     "text": "##### Part (b): Absolute Integrability Evaluation"
+     "t": "h4",
+     "text": "Part (b): Absolute Integrability Evaluation"
     },
     {
      "t": "ul",
@@ -32175,9 +32187,7 @@ export default {
       ],
       [
        "**Trap 08**",
-       "**Full-Wave Rectifier / Modulus Linearity**<br>`y(t) =",
-       "x(t)",
-       "`",
+       "**Full-Wave Rectifier / Modulus Linearity**<br>`y(t) = |x(t)|`",
        "Student confuses piecewise linearity ($x \\ge 0$) with system linearity.",
        "**NON-LINEAR, TIME-INVARIANT, STATIC.** Fails additivity: $|1 + (-1)| = 0 \\ne |1| + |-1| = 2$. Time-invariant because shift applies to $x(t-t_0)$ directly."
       ],

@@ -53,3 +53,13 @@ Then commit/push to `studyassistglobal/gate-prep` (gh account: switch to `studya
   4. **Table splitter treats `$$` as ONE paired toggle** — previously each `$` toggled math-state, so `$$…|h(t)|…$$` cells split at the absolute-value bar (broke the BIBO table in Ch2 M10).
   5. `scripts/verify_notes.mjs`: code fences are literal by design — their content is exempt from the math-balance check; live-chapter count is 7.
 - Lesson: a 2 MB lazy chapter chunk can take ~3–5 s to render on a cold load — browser spot-checks must wait generously before judging a chapter page empty.
+
+## 16. Content audit (2026-09-29) — all chapters swept clean
+
+- `node scripts/audit_content.mjs` (new) walks every live chapter module and checks: control chars, mojibake (Devanagari/Latin-ext/Greek-archaic), `$`/`$$` parity, `\(` `\)` balance, stray `#`/`**`/fence markers, empty sections, ragged table rows, missing figure files, registry↔index coherence. Writes `scratch/audit_content.json` (scratch/ is gitignored). Severity HIGH (renders broken) / MED (structural) / LOW (cosmetic).
+- **Final result: 17,011 blocks / 28,881 text leaves / 7 chapters — HIGH 0 · MED 0 · LOW 5.** The 5 remaining LOWs are heuristic false positives: literal `**` inside code fences (ASCII diagrams) and inside `$**$` math (double-star notation) — all render correctly by design.
+- Fixes that came out of the audit (all in `scripts/build_notes.py`, then full regeneration):
+  1. **OCR control-char repair** in `build_chapter`: LaTeX escapes `\a \b \t \v \f \r` that survive MD export as literal control chars (BEL/BS/TAB/VT/FF/CR) are restored to backslash + macro letter when followed by a lowercase letter (FF+`rac` → `\frac`, CR+`ight` → `\right`). Same CTRL_MAP pattern as the examhub mock repair.
+  2. **`#####`/`######` headings** now parse as h4 blocks (previously fell through to p blocks and rendered literal hashes). ~100 per-problem sub-headings across ss-ch1/ss-ch2 were affected.
+  3. **`split_table_row` tracks backtick code spans** — pipes inside `` `…` `` (e.g. `` `y(t) = |x(t)|` ``) no longer split a table row into ragged cells (Ch2 M11 trap table).
+- Verification after fixes: `npm run verify` green (registry 7 live, 102 sections); live spot-checks on deployed build — Module 09 (934 KaTeX nodes, no raw-TeX leaks, no literal hashes), Module 11 Trap-08 row intact with 0 ragged tables, ss-ch1 Module 02 `Problem (j/k)` h4 headings render with math.

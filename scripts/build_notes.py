@@ -126,9 +126,10 @@ def rewrite_img_src(src, ch):
 IMG_RE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)\s*$")
 
 def split_table_row(line):
-    """Split a pipe-table row into cells, ignoring `|` inside $math$ or escaped \\|."""
+    """Split a pipe-table row into cells, ignoring `|` inside $math$/$$math$$,
+    escaped \\|, or `backtick code spans`."""
     s = line.strip().strip("|")
-    cells, cur, in_math = [], [], False
+    cells, cur, in_math, in_code = [], [], False, False
     i = 0
     while i < len(s):
         ch = s[i]
@@ -137,8 +138,11 @@ def split_table_row(line):
             cur.append(s[i + 1])
             i += 2
             continue
-        # $$ is a PAIRED display delimiter — treat it as one toggle so that
-        # absolute-value bars (|h(t)|) inside $$…$$ don't split the row
+        if ch == "`" and not in_math:
+            in_code = not in_code
+            cur.append(ch)
+            i += 1
+            continue
         if s.startswith("$$", i):
             in_math = not in_math
             cur.append("$$")
@@ -149,7 +153,7 @@ def split_table_row(line):
             cur.append(ch)
             i += 1
             continue
-        if ch == "|" and not in_math:
+        if ch == "|" and not in_math and not in_code:
             cells.append("".join(cur).strip())
             cur = []
             i += 1
@@ -336,6 +340,14 @@ def parse_blocks(lines, ch):
             blocks.append({"t": "h4", "text": stripped[5:].strip()})
             i += 1
             continue
+        # deeper levels (##### / ######) render as h4 — the sources use them for
+        # per-problem sub-headings and literal hashes would leak into p blocks
+        m = re.match(r"^#{5,6}\s+(.*)$", stripped)
+        if m:
+            flush_para()
+            blocks.append({"t": "h4", "text": m.group(1).strip()})
+            i += 1
+            continue
 
         # unordered / ordered lists
         m = re.match(r"^[-*]\s+(.*)$", stripped)
@@ -379,6 +391,13 @@ def parse_blocks(lines, ch):
 
 def build_chapter(ch):
     raw = open(ch["md"], encoding="utf-8").read().replace("\r\n", "\n")
+    # OCR corruption repair: LaTeX escapes \a \b \t \v \f \r sometimes survive
+    # the MD export as literal control chars (BEL, BS, TAB, VT, FF, CR).
+    # Restore each to backslash + macro letter when followed by a lowercase
+    # letter (FF+"rac" -> \frac, CR+"ight" -> \right).
+    CTRL_MAP = {"\a": "a", "\b": "b", "\t": "t", "\v": "v", "\f": "f", "\r": "r"}
+    raw = re.sub("[\x07\x08\x09\x0b\x0c\x0d](?=[a-z])",
+                 lambda m: "\\" + CTRL_MAP[m.group(0)], raw)
     # drop the MD's own TOC: both the `## Table of Contents` section and the
     # `# Table of Contents` h1. ch2's TOC has NO section heading — its entries
     # are bare internal-anchor link lines, so drop those lines directly
