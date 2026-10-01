@@ -2250,3 +2250,10 @@ body.gp-no-scroll { overflow: hidden; }
     scroll-behavior: auto !important;
   }
 }
+
+/* --- scroll smoothness on huge sections --- */
+/* The browser skips layout/paint for blocks outside the viewport (near-viewport
+   blocks render just-in-time); `auto` remembers each block's last real size so
+   the scrollbar stays stable. Blocks keep their own margins — child margins
+   collapse through the neutral wrapper. */
+.gp-b { content-visibility: auto; contain-intrinsic-size: auto 420px; }

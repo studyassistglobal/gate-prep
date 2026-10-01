@@ -120,3 +120,9 @@ Then commit/push to `studyassistglobal/gate-prep` (gh account: switch to `studya
   3. **`memo(NoteBlock)`** — mark-read/TOC state changes no longer re-render every block of a huge section.
   4. **`<details open>` support** in build_notes.py (opener regex `<details\b[^>]*>`, `open` flag → NoteBlock default-open): em-ch1 dropped 5,915 → 3,345 top blocks (204 drill cards now collapsible; ss-ch4/ch6/de-ch2 also restructured). `inline_clean` strips stray `<details>/<summary>` tags the sources mention in prose; audit gained a LOW check for literal `<details>` leakage.
 - **Measured after:** reported URL worst long-task 392 ms (was multi-second); module-11 worst 458 ms with the full 1,766-block section mounted. Verify + audit unchanged green (28 chapters, HIGH 0 · MED 0 · LOW 7).
+
+## 22. Laptop scroll-smoothness fix (2026-10-01)
+
+- Blocks render inside a neutral `.gp-b` wrapper with **`content-visibility: auto; contain-intrinsic-size: auto 420px`** — the browser skips layout/paint for off-screen blocks entirely, so a 524-block/220,000px section scrolls like a short one. `auto` remembers each block's real size (stable scrollbar); child margins collapse through the wrapper so spacing is unchanged.
+- **Scroll-aware chunk mounting**: chunk mounting yields while the user is actively scrolling (`lastScrollRef` + 250 ms debounce) unless the mount frontier is within 2.5 viewports (fast readers never hit unmounted content).
+- Measured with scripted continuous scrolling + PerformanceObserver: em-ch1 Part II **0 long tasks** in 9 s; ss-ch1 module-11 (worst, 1,764 blocks) **2 long tasks, worst 146 ms** in 12 s.

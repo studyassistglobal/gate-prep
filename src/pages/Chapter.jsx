@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useLocation } from 'react-router-dom';
 import { findChapter, liveChapterSequence, chapterLabel } from '../data/courses.js';
 import { getReadSections, toggleSectionRead } from '../lib/progress.js';
@@ -22,6 +22,15 @@ export default function Chapter() {
   const [readSet, setReadSet] = useState(() => new Set());
   const [tocOpen, setTocOpen] = useState(false);
   const [visibleCount, setVisibleCount] = useState(INITIAL_BLOCKS);
+  const sectionRef = useRef(null);
+  const lastScrollRef = useRef(0);
+
+  // scroll awareness: chunk mounting yields to active scrolling
+  useEffect(() => {
+    const onScroll = () => { lastScrollRef.current = Date.now(); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     let alive = true;
@@ -57,7 +66,9 @@ export default function Chapter() {
     setVisibleCount(INITIAL_BLOCKS);
   }, [activeIdx, chapterId]);
 
-  // mount the remaining blocks in idle-time chunks
+  // mount the remaining blocks in idle-time chunks; while the user is actively
+  // scrolling, yield — unless the mount frontier is close to the viewport
+  // (reading fast must never hit unmounted content)
   useEffect(() => {
     if (!module) return;
     const sec = module.sections[activeIdx];
@@ -67,6 +78,17 @@ export default function Chapter() {
     let timerId = 0;
     const step = () => {
       if (cancelled) return;
+      let frontierFar = true;
+      const secEl = sectionRef.current;
+      if (secEl) {
+        const rect = secEl.getBoundingClientRect();
+        frontierFar = rect.bottom > window.innerHeight * 2.5;
+      }
+      if (frontierFar && Date.now() - lastScrollRef.current < 250) {
+        if (typeof window.requestIdleCallback === 'function') ricId = window.requestIdleCallback(step, { timeout: 400 });
+        else timerId = window.setTimeout(step, 120);
+        return;
+      }
       setVisibleCount((v) => Math.min(v + BLOCK_CHUNK, sec.blocks.length));
     };
     if (typeof window.requestIdleCallback === 'function') {
@@ -195,7 +217,7 @@ export default function Chapter() {
             </header>
 
             {section && (
-              <section key={section.id} className={`gp-section${readSet.has(section.id) ? ' is-read' : ''}`}>
+              <section key={section.id} ref={sectionRef} className={`gp-section${readSet.has(section.id) ? ' is-read' : ''}`}>
                 <div className="gp-section-head">
                   <h2>
                     <span className="gp-sec-num">{activeIdx + 1}</span>
@@ -211,7 +233,9 @@ export default function Chapter() {
                     {readSet.has(section.id) ? 'Read' : 'Mark read'}
                   </button>
                 </div>
-                {section.blocks.slice(0, visibleCount).map((b, bi) => <NoteBlock key={bi} block={b} />)}
+                {section.blocks.slice(0, visibleCount).map((b, bi) => (
+                  <div className="gp-b" key={bi}><NoteBlock block={b} /></div>
+                ))}
 
                 <div className="gp-section-nav">
                   {prevSec ? (
