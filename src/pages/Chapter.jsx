@@ -14,6 +14,7 @@ export default function Chapter() {
   const [module, setModule] = useState(null);
   const [loading, setLoading] = useState(true);
   const [readSet, setReadSet] = useState(() => new Set());
+  const [tocOpen, setTocOpen] = useState(false);
 
   useEffect(() => {
     let alive = true;
@@ -45,10 +46,24 @@ export default function Chapter() {
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
+    setTocOpen(false);
   }, [activeIdx, chapterId]);
+
+  // mobile TOC drawer: Escape closes, body scroll locks while open
+  useEffect(() => {
+    if (!tocOpen) return;
+    const onKey = (e) => { if (e.key === 'Escape') setTocOpen(false); };
+    document.addEventListener('keydown', onKey);
+    document.body.classList.add('gp-no-scroll');
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.classList.remove('gp-no-scroll');
+    };
+  }, [tocOpen]);
 
   const goToSection = (sectionId) => {
     navigate(`${basePath}#${sectionId}`);
+    setTocOpen(false);
   };
 
   const readPct = useMemo(() => {
@@ -100,7 +115,24 @@ export default function Chapter() {
 
       {!loading && module && (
         <div className="gp-chapter-layout">
-          <aside className="gp-toc">
+          <button
+            type="button"
+            className="gp-toc-toggle"
+            onClick={() => setTocOpen(true)}
+            aria-label="Open chapter contents"
+            aria-expanded={tocOpen}
+          >
+            <Icon name="menu_book" className="ic-sm" />
+            <span className="gp-toc-toggle-meta">Contents · {module.sections.length} modules</span>
+            <span className="pill pill-pri">{readPct}% read</span>
+            <Icon name="chevron_right" className="ic-sm" />
+          </button>
+          <div
+            className={`gp-toc-backdrop${tocOpen ? ' show' : ''}`}
+            onClick={() => setTocOpen(false)}
+            aria-hidden="true"
+          />
+          <aside className={`gp-toc${tocOpen ? ' open' : ''}`}>
             <div className="gp-toc-head">
               <span className="pill pill-pri">{readPct}% read</span>
               <div className="progress gp-toc-progress"><div className="pbar" style={{ width: `${readPct}%` }} /></div>

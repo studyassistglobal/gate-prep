@@ -825,6 +825,9 @@ html.light .paper-foot { border-top-color: rgba(198, 203, 216, 0.8); }
 .math-inline-wrap {
   display: inline-block;
   vertical-align: middle;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .mathtext-container {
@@ -1430,7 +1433,8 @@ html.light .auth-foot { border-top-color: rgba(198, 203, 216, 0.8); }
    404
    ============================================================ */
 .nf-screen {
-  min-height: 100vh;
+  min-height: calc(100vh - 190px);
+  min-height: calc(100dvh - 190px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2005,10 +2009,11 @@ details.alt-solution > summary .ic-xs { margin-right: 4px; }
 .gp-ch-progress { max-width: 260px; height: 4px; }
 
 /* Chapter reader */
-.gp-chapter-layout { display: grid; grid-template-columns: 290px 1fr; gap: 26px; align-items: start; }
-@media (max-width: 900px) { .gp-chapter-layout { grid-template-columns: 1fr; } .gp-toc { position: static; max-height: none; } }
+.gp-chapter-layout { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 26px; align-items: start; }
+.gp-chapter-content { min-width: 0; }
+@media (max-width: 900px) { .gp-chapter-layout { grid-template-columns: minmax(0, 1fr); } }
 .gp-toc {
-  position: sticky; top: 76px; max-height: calc(100vh - 96px); overflow: auto;
+  position: sticky; top: 76px; max-height: calc(100vh - 96px); max-height: calc(100dvh - 96px); overflow: auto;
   border: 1px solid var(--outline-variant); border-radius: 14px; padding: 12px;
   background: var(--surface);
 }
@@ -2116,4 +2121,132 @@ details.alt-solution > summary .ic-xs { margin-right: 4px; }
   margin: 26px 0 10px;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--outline-variant);
+}
+
+/* ===================== Mobile perfection pass ===================== */
+
+/* --- global overflow safety net --- */
+body { overflow-x: clip; }
+.gp-p, .gp-alert-body, .gp-ul, .gp-ol, .gp-section { overflow-wrap: break-word; }
+
+/* body scroll lock while a drawer is open */
+body.gp-no-scroll { overflow: hidden; }
+
+/* --- touch targets & tabs --- */
+.gp-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* --- mobile header nav --- */
+.menu-btn { display: none; }
+.nav-backdrop { display: none; }
+.mobile-nav {
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border-bottom: 1px solid var(--outline-variant);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  padding: 6px 10px 10px;
+  animation: gpSlideDown 0.18s ease;
+}
+@keyframes gpSlideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
+}
+.mobile-nav-link {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 48px; padding: 0 12px;
+  border-radius: 10px;
+  color: var(--on-surface-variant); text-decoration: none;
+  font-family: var(--font-label); font-size: 15px; font-weight: 500;
+}
+.mobile-nav-link:hover { background: var(--surface-variant); color: var(--on-surface); }
+.mobile-nav-link.active { color: var(--primary); background: var(--primary-soft, rgba(124, 58, 237, 0.12)); }
+@media (max-width: 767.98px) {
+  .menu-btn { display: inline-flex; }
+  .nav-backdrop.show, .nav-backdrop { display: block; position: fixed; inset: 0; z-index: 40; background: rgba(0, 0, 0, 0.45); }
+}
+@media (min-width: 768px) {
+  .mobile-nav { display: none; }
+}
+
+/* --- page padding dedupe (app-main owns the gutter on phones) --- */
+@media (max-width: 767.98px) {
+  .app-main { padding: 20px 14px 48px; }
+  .gp-page { padding: 8px 0 40px; }
+  .gp-p { font-size: 15px; }
+  .gp-ul, .gp-ol { font-size: 15px; }
+  .gp-alert-body { font-size: 14.5px; }
+  .gp-section { line-height: 1.75; }
+  .gp-hero { padding: 28px 0 24px; }
+  .gp-hero-stats { gap: 20px; }
+  .gp-crumbs { font-size: 12px; gap: 6px; }
+  .gp-tests-teaser.big { padding: 22px; }
+  .gp-footer { padding: 16px 14px; }
+  .gp-footer-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .gp-footer-tag { margin-left: 0; display: block; }
+  .gp-tab, .gp-subject-row { min-height: 44px; }
+  .btn-sm { min-height: 38px; }
+}
+
+/* --- small phones --- */
+@media (max-width: 479.98px) {
+  .app-main { padding: 16px 10px 40px; }
+  .gp-hero-stats { gap: 14px; }
+  .gp-hero-stats strong { font-size: 19px; }
+  .gp-section-nav { flex-direction: column; align-items: stretch; }
+  .gp-section-nav .btn { max-width: none; min-height: 44px; }
+  .gp-chapter-row { gap: 10px; padding: 12px; }
+  .nf-blob.a { width: 460px; height: 460px; }
+}
+
+/* --- reader TOC drawer (<900px) --- */
+.gp-toc-toggle {
+  display: none;
+  width: 100%;
+  align-items: center; gap: 10px;
+  min-height: 46px; padding: 10px 14px;
+  border: 1px solid var(--outline-variant); border-radius: 12px;
+  background: var(--surface); color: var(--on-surface);
+  font: inherit; font-weight: 600; font-size: 14px;
+  cursor: pointer; margin-bottom: 12px;
+  position: sticky; top: 72px; z-index: 30;
+}
+.gp-toc-toggle .gp-toc-toggle-meta { color: var(--on-surface-variant); font-weight: 400; font-size: 12.5px; flex: 1; text-align: left; }
+@media (max-width: 899.98px) {
+  .gp-toc-toggle { display: flex; }
+  .gp-toc-backdrop {
+    position: fixed; inset: 0; z-index: 55;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+  .gp-toc-backdrop.show { opacity: 1; pointer-events: auto; }
+  .gp-toc {
+    position: fixed; top: 0; bottom: 0; left: 0;
+    width: min(320px, 86vw);
+    max-height: 100dvh;
+    border-radius: 0; border-top: 0; border-bottom: 0; border-left: 0;
+    transform: translateX(-105%);
+    transition: transform 0.22s ease;
+    z-index: 60;
+    padding-top: calc(12px + env(safe-area-inset-top, 0px));
+    overscroll-behavior: contain;
+  }
+  .gp-toc.open { transform: none; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); }
+  .gp-toc-link { min-height: 40px; font-size: 13px; padding: 6px 10px; }
+}
+@media (min-width: 900px) {
+  .gp-toc-toggle, .gp-toc-backdrop { display: none !important; }
+}
+
+/* --- 404 text (was unstyled) --- */
+.nf-title { font-size: clamp(20px, 4vw, 26px); font-weight: 700; color: var(--on-surface); margin: 0 0 6px; }
+.nf-sub { color: var(--on-surface-variant); max-width: 480px; }
+
+/* --- reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

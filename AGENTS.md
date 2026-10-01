@@ -100,3 +100,13 @@ Then commit/push to `studyassistglobal/gate-prep` (gh account: switch to `studya
 - Drill typo repaired via REPAIRS (em-ch1 missing `$` before `\vert A \vert \neq 0`).
 - `edc/` folder holds only a 72 MB slide PDF (no MD source) — nothing to integrate until an MD export appears.
 - Audit: 53,433 blocks / 84,518 leaves / 28 chapters — HIGH 0 · MED 0 · LOW 7. verify gate is now **28**.
+
+## 20. Mobile-friendliness pass (2026-10-01)
+
+- **Reader TOC = slide-in drawer below 900px**: `.gp-toc` becomes a fixed left drawer (`min(320px, 86vw)`, translateX slide, backdrop, safe-area padding, `100dvh`); a sticky `Contents · N modules | N% read` toggle bar (`.gp-toc-toggle`) sits above the article; closes on section select, backdrop click, Escape; body scroll locks via `body.gp-no-scroll`. Desktop ≥900px unchanged (toggle/backdrop `display:none !important`).
+- **Mobile nav**: hamburger (`.menu-btn`) only <768px; classed `.mobile-nav` panel (48px links, active highlight, slide-down) + `.nav-backdrop`; closes on route change (`useLocation` effect) + Escape. Replaced the old inline-styled dropdown.
+- **Padding dedupe**: <768px `.app-main` owns the gutter (`20px 14px`), `.gp-page` horizontal 0 (was 48px/side total → ~28px/side; content 365px wide on 390px screens). <480px: tighter gutters, stacked full-width prev/next buttons (44px targets), footer stacks, hero stats compress.
+- **Grid blowout fix**: `.gp-chapter-layout` uses `minmax(0, 1fr)` + `.gp-chapter-content { min-width: 0 }` — wide tables/code previously stretched the whole page horizontally on phones.
+- **Overflow nets**: `.math-inline-wrap { max-width:100%; overflow-x:auto }` (wide inline KaTeX scrolls, not the page); `overflow-wrap: break-word` on prose; `body { overflow-x: clip }`; `.gp-tabs` scrollable; 44px targets on tabs/subject rows.
+- Misc: 404 `.nf-title/.nf-sub` styled, `.nf-screen` min-height uses `calc(100dvh - 190px)` (no fold overshoot), Tests teaser padding reduced on phones, `prefers-reduced-motion` kills animations.
+- Verified at 390×844 and 360×740 (both themes) + 1280×800 desktop regression: zero horizontal overflow anywhere, drawer/nav/Escape/scroll-lock all exercised, 4/4 wide tables scroll, desktop sidebar intact.

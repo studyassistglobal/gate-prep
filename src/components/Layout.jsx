@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { NavLink, Outlet, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { NavLink, Outlet, Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../lib/theme.js';
 import Icon from './Icon.jsx';
 
@@ -12,6 +12,19 @@ const NAV = [
 export default function Layout() {
   const { isDark, toggle } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // close the mobile nav whenever the route changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e) => { if (e.key === 'Escape') setMenuOpen(false); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [menuOpen]);
 
   return (
     <div>
@@ -34,35 +47,30 @@ export default function Layout() {
             <button className="btn-icon" onClick={toggle} title={isDark ? 'Switch to light mode' : 'Switch to dark mode'} aria-label="Toggle theme">
               <Icon name={isDark ? 'light_mode' : 'dark_mode'} className="ic-sm" />
             </button>
-            <button className="btn-icon" onClick={() => setMenuOpen((o) => !o)} title="Menu" aria-label="Menu">
+            <button className="btn-icon menu-btn" onClick={() => setMenuOpen((o) => !o)} title="Menu" aria-label="Menu" aria-expanded={menuOpen}>
               <Icon name={menuOpen ? 'close' : 'menu'} className="ic-sm" />
             </button>
           </div>
         </div>
 
         {menuOpen && (
-          <div
-            style={{
-              borderTop: '1px solid var(--outline-variant)',
-              padding: '8px 24px 16px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 4,
-            }}
-          >
+          <div className="nav-backdrop" onClick={() => setMenuOpen(false)} aria-hidden="true" />
+        )}
+        {menuOpen && (
+          <nav className="mobile-nav" aria-label="Mobile navigation">
             {NAV.map((n) => (
               <NavLink
                 key={n.to}
                 to={n.to}
                 end={n.end}
-                className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+                className={({ isActive }) => `mobile-nav-link${isActive ? ' active' : ''}`}
                 onClick={() => setMenuOpen(false)}
-                style={{ padding: '10px 0', width: '100%', borderBottom: 'none' }}
               >
                 {n.label}
+                <Icon name="chevron_right" className="ic-sm" />
               </NavLink>
             ))}
-          </div>
+          </nav>
         )}
       </header>
 
