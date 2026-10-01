@@ -1766,5 +1766,119 @@ export const NOTES_INDEX = {
     "title": "4.2 Quick-Fire Formula Lookup Sheet"
    }
   ]
+ },
+ "em-ch1": {
+  "num": 1,
+  "title": "Linear Algebra",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "part-i-matrix-algebra-symmetries-structural-matrix-taxonomy-slides-001-050",
+    "title": "Part I: Matrix Algebra, Symmetries & Structural Matrix Taxonomy (Slides 001\u2013050)"
+   },
+   {
+    "id": "part-ii-determinant-calculus-minors-cofactors-operational-theorems-slides-051-100",
+    "title": "Part II: Determinant Calculus, Minors, Cofactors & Operational Theorems (Slides 051\u2013100)"
+   },
+   {
+    "id": "part-iii-adjoint-matrix-algebra-inversion-shortcuts-rank-analysis-slides-101-150",
+    "title": "Part III: Adjoint Matrix Algebra, Inversion Shortcuts & Rank Analysis (Slides 101\u2013150)"
+   },
+   {
+    "id": "part-iv-systems-of-linear-equations-the-rouch-capelli-solvability-engine-slides-151-200",
+    "title": "Part IV: Systems of Linear Equations & The Rouch\u00e9\u2013Capelli Solvability Engine (Slides 151\u2013200)"
+   },
+   {
+    "id": "part-v-spectral-foundations-characteristic-polynomials-eigenvalues-eigenvectors-slides-201-250",
+    "title": "Part V: Spectral Foundations: Characteristic Polynomials, Eigenvalues & Eigenvectors (Slides 201\u2013250)"
+   },
+   {
+    "id": "part-vi-special-matrix-spectra-eigenspace-topologies-multiplicity-inequalities-slides-251-300",
+    "title": "Part VI: Special Matrix Spectra, Eigenspace Topologies & Multiplicity Inequalities (Slides 251\u2013300)"
+   },
+   {
+    "id": "part-vii-cayley-hamilton-annihilation-matrix-polynomials-diagonalization-slides-301-350",
+    "title": "Part VII: Cayley\u2013Hamilton Annihilation, Matrix Polynomials & Diagonalization (Slides 301\u2013350)"
+   },
+   {
+    "id": "part-viii-vector-spaces-fundamental-subspaces-rank-nullity-quadratic-forms-slides-351-406",
+    "title": "Part VIII: Vector Spaces, Fundamental Subspaces, Rank-Nullity & Quadratic Forms (Slides 351\u2013406)"
+   },
+   {
+    "id": "part-ix-diagnostic-defense-systems-the-25-traps-60-second-rapid-fire-decision-tree",
+    "title": "Part IX: Diagnostic Defense Systems, The 25 Traps & 60-Second Rapid-Fire Decision Tree"
+   }
+  ]
+ },
+ "emf-ch1": {
+  "num": 1,
+  "title": "Linear Algebra \u2014 Formula & Revision Sheet",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "master-formula-theorem-rapid-revision-sheet",
+    "title": "Master Formula, Theorem & Rapid Revision Sheet"
+   },
+   {
+    "id": "1-matrix-algebra-symmetry-structural-matrix-taxonomy",
+    "title": "1. Matrix Algebra, Symmetry & Structural Matrix Taxonomy"
+   },
+   {
+    "id": "2-determinants-minor-cofactor-calculus",
+    "title": "2. Determinants & Minor/Cofactor Calculus"
+   },
+   {
+    "id": "3-adjoint-matrix-exponent-identity-laws",
+    "title": "3. Adjoint Matrix & Exponent Identity Laws"
+   },
+   {
+    "id": "4-matrix-inversion-rapid-operational-rules",
+    "title": "4. Matrix Inversion & Rapid Operational Rules"
+   },
+   {
+    "id": "5-rank-of-a-matrix-row-echelon-forms-rank-inequalities",
+    "title": "5. Rank of a Matrix, Row Echelon Forms & Rank Inequalities"
+   },
+   {
+    "id": "6-systems-of-linear-equations-rouch-capelli-solvability-engine",
+    "title": "6. Systems of Linear Equations & Rouch\u00e9\u2013Capelli Solvability Engine"
+   },
+   {
+    "id": "7-eigenvalues-eigenvectors-multiplicity-architecture",
+    "title": "7. Eigenvalues, Eigenvectors & Multiplicity Architecture"
+   },
+   {
+    "id": "8-cayley-hamilton-theorem-power-reduction-minimal-polynomial",
+    "title": "8. Cayley\u2013Hamilton Theorem, Power Reduction & Minimal Polynomial"
+   },
+   {
+    "id": "9-matrix-similarity-diagonalization-spectral-decomposition",
+    "title": "9. Matrix Similarity, Diagonalization & Spectral Decomposition"
+   },
+   {
+    "id": "10-vector-spaces-basis-dimension-rank-nullity-theorem",
+    "title": "10. Vector Spaces, Basis, Dimension & Rank-Nullity Theorem"
+   },
+   {
+    "id": "11-quadratic-forms-sylvester-s-criterion-definiteness",
+    "title": "11. Quadratic Forms, Sylvester's Criterion & Definiteness"
+   },
+   {
+    "id": "12-the-25-most-dangerous-gate-exam-traps-diagnostic-safeguards-table",
+    "title": "12. The 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards Table"
+   },
+   {
+    "id": "13-60-second-rapid-fire-diagnostic-decision-tree-3-track-ascii-art",
+    "title": "13. 60-Second Rapid-Fire Diagnostic Decision Tree (3-Track ASCII Art)"
+   },
+   {
+    "id": "14-last-minute-flash-formulas-table",
+    "title": "14. Last-Minute Flash Formulas Table"
+   }
+  ]
  }
 };

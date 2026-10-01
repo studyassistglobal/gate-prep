@@ -12,6 +12,7 @@ Live: **https://gate-prep.pages.dev** (project `gate-prep` on Cloudflare Pages)
 - **S&S Formula Sheets** — Ch 1–7 companion formula & revision sheets: shortcut engines, 25-trap diagnostic tables, rapid-fire decision trees
 - **Network Theory** — Ch 1: Basics of Network Analysis · Ch 2: Network Theorems & Circuit Equivalence · Ch 3: Transient Analysis
 - **NT Revision Guides** — per-chapter revision guides + the all-chapters high-yield Revision Capsule
+- **Engineering Mathematics** — Ch 1: Linear Algebra + its formula & revision sheet
 - 90 sections / 10,000+ content blocks rendered from the Master Guide markdown sources, with KaTeX math, figures, alert callouts and collapsible worked solutions
 - Reading progress per section (localStorage, no account), course/section search, light & dark theme
 

@@ -377,6 +377,35 @@ CHAPTERS = [
         "fig_prefix": "",
         "web_prefix": "/notes/ntf/",
     },
+    {
+        "id": "em-ch1",
+        "unwrap": True,
+        "file": "emch1",
+        "notes_sub": "em",
+        "num": 1,
+        "title": "Linear Algebra",
+        "subject": "Engineering Mathematics",
+        "section_split": "part",
+        "md": os.path.join(SRC_ROOT, "engineering mathematics", "Engineering_Mathematics_Linear_Algebra_Master_Guide.md"),
+        "figures_src": None,
+        "figures_dst": None,
+        "fig_prefix": "",
+        "web_prefix": "/notes/em/",
+    },
+    {
+        "id": "emf-ch1",
+        "unwrap": True,
+        "file": "emfch1",
+        "notes_sub": "emf",
+        "num": 1,
+        "title": "Linear Algebra — Formula & Revision Sheet",
+        "subject": "Engineering Mathematics",
+        "md": os.path.join(SRC_ROOT, "engineering mathematics", "Engineering_Mathematics_Linear_Algebra_Formula_and_Revision_Sheet.md"),
+        "figures_src": None,
+        "figures_dst": None,
+        "fig_prefix": "",
+        "web_prefix": "/notes/emf/",
+    },
 ]
 
 # Exact-match typo repairs applied to the (read-only) sources before parsing.
@@ -389,6 +418,10 @@ REPAIRS = {
     # ss-ch5's source truncates module 09 mid-sentence (dangling "5. **The")
     "ss-ch5": [
         ("5. **The \n---", "---"),
+    ],
+    # em-ch1 drill: missing opening $ before \vert A \vert
+    "em-ch1": [
+        ("Since \\vert A \\vert \\neq 0$, the", "Since $\\vert A \\vert \\neq 0$, the"),
     ],
 }
 
@@ -823,6 +856,10 @@ def build_chapter(ch):
         split_re = r"^#{1,6} (?=Module )"
     elif mode == "section":
         split_re = r"^#{1,6} (?=Section )"
+    elif mode == "part":
+        # Roman-numeral parts only — drill sub-parts (`Part (a):`, `Part 1:`)
+        # must not split
+        split_re = r"^#{1,6} (?=Part (?:X|IX|VIII|VII|VI|V|IV|III|II|I)[:\s(])"
     else:
         split_re = r"^## +"
     parts = re.split(split_re, raw, flags=re.MULTILINE)

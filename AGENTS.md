@@ -91,3 +91,12 @@ Then commit/push to `studyassistglobal/gate-prep` (gh account: switch to `studya
   9. Balance checks in verify_notes.mjs + audit_content.mjs ignore `\$` escaped dollars; audit exempts code blocks from math-delimiter checks (literal by design).
 - Regression guard: the 10 previously-live chapters are byte-identical modulo `generatedAt` (checked by JSON-semantic diff) — EXCEPT two intentional improvements: ss-ch1 Module 11 restored (+631 swallowed blocks) and de-ch2 section titles cleaned (`$m_i$` → `m_i` in the sidebar).
 - Audit final: 47,323 blocks / 75,898 leaves / 26 chapters — HIGH 0 · MED 0 · LOW 7 (all benign `**`-in-ASCII/notation false positives). verify_notes.mjs live-chapter gate is now **26**.
+
+## 19. Engineering Mathematics — Linear Algebra live (2026-10-01) — 28 chapters
+
+- New subject **`em` "Engineering Mathematics"** (`em-ch1` Linear Algebra Master, 10 sections / 5,915 blocks) + **`emf` "EM Formula Sheets"** (`emf-ch1`, 15 sections / 195 blocks) from the Oct-1 uploads in `D:\GATE 2027\engineering mathematics\`. The LA Master is **audit-concatenated at `# Part I..IX`** (Modules restart per Part, so module-split would collapse Parts V-IX into one section) → new **`section_split: "part"`** mode restricted to Roman numerals (`Part (a):` / `Part 1:` drill sub-parts must not split).
+- The MDs reference **no figures** (figures_linear_algebra/ exists only for the Dark PDFs) — figures_src None.
+- **Console-encoding lesson:** Git Bash renders clean UTF-8 as CP437 mojibake (`Rouché–Capelli` shows as `Rouch├⌐ΓÇôCapelli`). The files were verified clean via python `ord()` dumps — never trust console output for encoding diagnosis, and never "repair" it in the builder.
+- Drill typo repaired via REPAIRS (em-ch1 missing `$` before `\vert A \vert \neq 0`).
+- `edc/` folder holds only a 72 MB slide PDF (no MD source) — nothing to integrate until an MD export appears.
+- Audit: 53,433 blocks / 84,518 leaves / 28 chapters — HIGH 0 · MED 0 · LOW 7. verify gate is now **28**.

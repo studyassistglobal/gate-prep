@@ -75,6 +75,24 @@ export const COURSE = {
         { id: 'ntf-ch4', num: 4, title: 'Revision Capsule — All Chapters', status: 'live', file: 'ntf4' },
       ],
     },
+    {
+      id: 'em',
+      name: 'Engineering Mathematics',
+      icon: 'calculate',
+      accent: 'math',
+      chapters: [
+        { id: 'em-ch1', num: 1, title: 'Linear Algebra', status: 'live', file: 'emch1' },
+      ],
+    },
+    {
+      id: 'emf',
+      name: 'EM Formula Sheets',
+      icon: 'calculate',
+      accent: 'math',
+      chapters: [
+        { id: 'emf-ch1', num: 1, title: 'Linear Algebra — Formula & Revision Sheet', status: 'live', file: 'emfch1' },
+      ],
+    },
   ],
 };
 
