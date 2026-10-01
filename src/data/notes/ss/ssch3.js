@@ -25,7 +25,7 @@ export default {
      "t": "alert",
      "type": "IMPORTANT",
      "title": null,
-     "text": "**Pedagogical Standards & Completeness Guarantee:**\n1. **100% Visual Slide Coverage:** Every single slide from `page_0001.png` through `page_0222.png` (222 slides total) in `Slides_Fourier Series.pdf` was visually inspected via high-resolution image audits (`view_file`). Zero formulas, derivations, or solved examples have been omitted.\n2. **Zero Matplotlib / Code Artifacts:** All system block diagrams, discrete harmonic spectra, and symmetry flowcharts are rendered as ultra-high-definition 4K Dark Blueprint engineering figures (`#0d1117` base, glowing neon cyan `#38bdf8`, electric blue `#60a5fa`, and amber gold `#fbbf24`).\n3. **Interactive Derivation Disclosure:** Step-by-step problem solutions and mathematical proofs are encapsulated within collapsible `<details open>` cards, pre-configured to render open during Dark Mode PDF export.\n4. **Module 11 Fourier Series Formula Encyclopedia:** Includes an exhaustive formula compendium, the 25-Trap Diagnostic Matrix, and the High-Speed 60-Second Exam Verification Algorithm."
+     "text": "**Pedagogical Standards & Completeness Guarantee:**\n1. **100% Visual Slide Coverage:** Every single slide from `page_0001.png` through `page_0222.png` (222 slides total) in `Slides_Fourier Series.pdf` was visually inspected via high-resolution image audits (`view_file`). Zero formulas, derivations, or solved examples have been omitted.\n2. **Zero Matplotlib / Code Artifacts:** All system block diagrams, discrete harmonic spectra, and symmetry flowcharts are rendered as ultra-high-definition 4K Dark Blueprint engineering figures (`#0d1117` base, glowing neon cyan `#38bdf8`, electric blue `#60a5fa`, and amber gold `#fbbf24`).\n3. **Interactive Derivation Disclosure:** Step-by-step problem solutions and mathematical proofs are encapsulated within collapsible `` cards, pre-configured to render open during Dark Mode PDF export.\n4. **Module 11 Fourier Series Formula Encyclopedia:** Includes an exhaustive formula compendium, the 25-Trap Diagnostic Matrix, and the High-Speed 60-Second Exam Verification Algorithm."
     }
    ]
   },
@@ -1656,200 +1656,199 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fundamental Period and Frequency Determination"
-    },
-    {
-     "t": "p",
-     "text": "The angular frequencies of the AC components are:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_1 = 3\\pi \\text{ rad/s}, \\quad \\omega_2 = 5\\pi \\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "Their individual time periods are:"
-    },
-    {
-     "t": "math",
-     "tex": "T_1 = \\frac{2\\pi}{3\\pi} = \\frac{2}{3}\\text{ s}, \\quad T_2 = \\frac{2\\pi}{5\\pi} = \\frac{2}{5}\\text{ s}"
-    },
-    {
-     "t": "p",
-     "text": "Using the GCD method for fundamental frequency:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\gcd(3\\pi, 5\\pi) = \\pi \\cdot \\gcd(3, 5) = \\pi \\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "Using the LCM method for fundamental period:"
-    },
-    {
-     "t": "math",
-     "tex": "T_0 = \\text{LCM}\\left(\\frac{2}{3}, \\frac{2}{5}\\right) = \\frac{\\text{LCM}(2, 2)}{\\gcd(3, 5)} = \\frac{2}{1} = 2\\text{ s}"
-    },
-    {
-     "t": "p",
-     "text": "Checking consistency:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{2} = \\pi \\text{ rad/s} \\quad \\checkmark"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Trigonometric Fourier Series Coefficients"
-    },
-    {
-     "t": "p",
-     "text": "Expressing $x(t)$ in terms of harmonic multiples $n\\omega_0 = n\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + 4\\sin(3\\cdot \\pi t) + 3\\cos(5\\cdot \\pi t)"
-    },
-    {
-     "t": "p",
-     "text": "Comparing directly with the master TFS definition:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = c_0 + \\sum_{n=1}^\\infty a_n \\cos(n\\omega_0 t) + \\sum_{n=1}^\\infty b_n \\sin(n\\omega_0 t)"
-    },
-    {
-     "t": "p",
-     "text": "Matching term by term:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**DC term:** $c_0 = 2$",
-      "**Cosine terms:**",
-      "$n = 5$: $a_5 = 3$",
-      "All other $a_n = 0$ for $n \\ne 5$",
-      "**Sine terms:**",
-      "$n = 3$: $b_3 = 4$",
-      "All other $b_n = 0$ for $n \\ne 3$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Exponential Fourier Series Coefficients"
-    },
-    {
-     "t": "p",
-     "text": "Using the conversion formula $c_n = \\frac{a_n - j b_n}{2}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_3 = \\frac{a_3 - j b_3}{2} = \\frac{0 - j(4)}{2} = -2j = 2\\angle -90^\\circ"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-3} = c_3^* = +2j = 2\\angle 90^\\circ"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 5$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_5 = \\frac{a_5 - j b_5}{2} = \\frac{3 - j(0)}{2} = 1.5 = 1.5\\angle 0^\\circ"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-5} = c_5^* = 1.5 = 1.5\\angle 0^\\circ"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For all other $n$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = 0"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Power Verification via Parseval's Identity"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Time-Domain Average Power:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{1}{T_0}\\int_{T_0} |x(t)|^2 \\, dt = V_{\\text{dc}}^2 + \\frac{V_{m1}^2}{2} + \\frac{V_{m2}^2}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "P = (2)^2 + \\frac{4^2}{2} + \\frac{3^2}{2} = 4 + \\frac{16}{2} + \\frac{9}{2} = 4 + 8 + 4.5 = 16.5\\text{ W}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Frequency-Domain Power via Parseval's Theorem:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\sum_{n=-\\infty}^\\infty |c_n|^2"
-    },
-    {
-     "t": "math",
-     "tex": "P = |c_0|^2 + |c_3|^2 + |c_{-3}|^2 + |c_5|^2 + |c_{-5}|^2"
-    },
-    {
-     "t": "math",
-     "tex": "P = (2)^2 + |-2j|^2 + |2j|^2 + |1.5|^2 + |1.5|^2"
-    },
-    {
-     "t": "math",
-     "tex": "P = 4 + 4 + 4 + 2.25 + 2.25 = 16.5\\text{ W}"
-    },
-    {
-     "t": "p",
-     "text": "Both domains yield identical results."
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Trap Alert:** When extracting $c_n$ from $\\sin(3\\pi t)$, students often write $c_3 = +2j$ instead of $-2j$. Remember:\n$$\\sin(\\theta) = \\frac{e^{j\\theta} - e^{-j\\theta}}{2j} = -\\frac{j}{2} e^{j\\theta} + \\frac{j}{2} e^{-j\\theta}$$\nThe coefficient of $e^{+j\\theta}$ carries the factor $-\\frac{j}{2}$, giving $c_3 = 4\\left(-\\frac{j}{2}\\right) = -2j$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Fundamental Period and Frequency Determination"
+      },
+      {
+       "t": "p",
+       "text": "The angular frequencies of the AC components are:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_1 = 3\\pi \\text{ rad/s}, \\quad \\omega_2 = 5\\pi \\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "Their individual time periods are:"
+      },
+      {
+       "t": "math",
+       "tex": "T_1 = \\frac{2\\pi}{3\\pi} = \\frac{2}{3}\\text{ s}, \\quad T_2 = \\frac{2\\pi}{5\\pi} = \\frac{2}{5}\\text{ s}"
+      },
+      {
+       "t": "p",
+       "text": "Using the GCD method for fundamental frequency:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\gcd(3\\pi, 5\\pi) = \\pi \\cdot \\gcd(3, 5) = \\pi \\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "Using the LCM method for fundamental period:"
+      },
+      {
+       "t": "math",
+       "tex": "T_0 = \\text{LCM}\\left(\\frac{2}{3}, \\frac{2}{5}\\right) = \\frac{\\text{LCM}(2, 2)}{\\gcd(3, 5)} = \\frac{2}{1} = 2\\text{ s}"
+      },
+      {
+       "t": "p",
+       "text": "Checking consistency:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{2} = \\pi \\text{ rad/s} \\quad \\checkmark"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Trigonometric Fourier Series Coefficients"
+      },
+      {
+       "t": "p",
+       "text": "Expressing $x(t)$ in terms of harmonic multiples $n\\omega_0 = n\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + 4\\sin(3\\cdot \\pi t) + 3\\cos(5\\cdot \\pi t)"
+      },
+      {
+       "t": "p",
+       "text": "Comparing directly with the master TFS definition:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = c_0 + \\sum_{n=1}^\\infty a_n \\cos(n\\omega_0 t) + \\sum_{n=1}^\\infty b_n \\sin(n\\omega_0 t)"
+      },
+      {
+       "t": "p",
+       "text": "Matching term by term:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**DC term:** $c_0 = 2$",
+        "**Cosine terms:**",
+        "$n = 5$: $a_5 = 3$",
+        "All other $a_n = 0$ for $n \\ne 5$",
+        "**Sine terms:**",
+        "$n = 3$: $b_3 = 4$",
+        "All other $b_n = 0$ for $n \\ne 3$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Exponential Fourier Series Coefficients"
+      },
+      {
+       "t": "p",
+       "text": "Using the conversion formula $c_n = \\frac{a_n - j b_n}{2}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_3 = \\frac{a_3 - j b_3}{2} = \\frac{0 - j(4)}{2} = -2j = 2\\angle -90^\\circ"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-3} = c_3^* = +2j = 2\\angle 90^\\circ"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 5$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_5 = \\frac{a_5 - j b_5}{2} = \\frac{3 - j(0)}{2} = 1.5 = 1.5\\angle 0^\\circ"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-5} = c_5^* = 1.5 = 1.5\\angle 0^\\circ"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For all other $n$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = 0"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Power Verification via Parseval's Identity"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Time-Domain Average Power:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{1}{T_0}\\int_{T_0} |x(t)|^2 \\, dt = V_{\\text{dc}}^2 + \\frac{V_{m1}^2}{2} + \\frac{V_{m2}^2}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "P = (2)^2 + \\frac{4^2}{2} + \\frac{3^2}{2} = 4 + \\frac{16}{2} + \\frac{9}{2} = 4 + 8 + 4.5 = 16.5\\text{ W}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Frequency-Domain Power via Parseval's Theorem:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\sum_{n=-\\infty}^\\infty |c_n|^2"
+      },
+      {
+       "t": "math",
+       "tex": "P = |c_0|^2 + |c_3|^2 + |c_{-3}|^2 + |c_5|^2 + |c_{-5}|^2"
+      },
+      {
+       "t": "math",
+       "tex": "P = (2)^2 + |-2j|^2 + |2j|^2 + |1.5|^2 + |1.5|^2"
+      },
+      {
+       "t": "math",
+       "tex": "P = 4 + 4 + 4 + 2.25 + 2.25 = 16.5\\text{ W}"
+      },
+      {
+       "t": "p",
+       "text": "Both domains yield identical results."
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Trap Alert:** When extracting $c_n$ from $\\sin(3\\pi t)$, students often write $c_3 = +2j$ instead of $-2j$. Remember:\n$$\\sin(\\theta) = \\frac{e^{j\\theta} - e^{-j\\theta}}{2j} = -\\frac{j}{2} e^{j\\theta} + \\frac{j}{2} e^{-j\\theta}$$\nThe coefficient of $e^{+j\\theta}$ carries the factor $-\\frac{j}{2}$, giving $c_3 = 4\\left(-\\frac{j}{2}\\right) = -2j$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1873,158 +1872,157 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Analytical Integration for $c_n$"
-    },
-    {
-     "t": "p",
-     "text": "The fundamental frequency is $\\omega_0 = \\frac{2\\pi}{T_0}$.\nThe analysis equation is:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} \\int_{-T_0/2}^{T_0/2} x(t) e^{-j n\\omega_0 t} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Split the integration over the negative and positive half-cycles:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} \\left[ \\int_{-T_0/2}^0 (-A) e^{-j n\\omega_0 t} \\, dt + \\int_0^{T_0/2} (+A) e^{-j n\\omega_0 t} \\, dt \\right]"
-    },
-    {
-     "t": "p",
-     "text": "For $n = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{1}{T_0}\\left[ \\int_{-T_0/2}^0 (-A)\\,dt + \\int_0^{T_0/2} (+A)\\,dt \\right] = \\frac{1}{T_0}\\left[ -A\\frac{T_0}{2} + A\\frac{T_0}{2} \\right] = 0"
-    },
-    {
-     "t": "p",
-     "text": "For $n \\ne 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int e^{-j n\\omega_0 t} \\, dt = \\frac{e^{-j n\\omega_0 t}}{-j n\\omega_0}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the first integral:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-T_0/2}^0 (-A) e^{-j n\\omega_0 t} \\, dt = -A \\left[ \\frac{1 - e^{j n\\omega_0 T_0/2}}{-j n\\omega_0} \\right] = \\frac{A}{j n\\omega_0} [1 - e^{j n\\pi}]"
-    },
-    {
-     "t": "p",
-     "text": "(since $\\omega_0 \\frac{T_0}{2} = \\pi$)."
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the second integral:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^{T_0/2} A e^{-j n\\omega_0 t} \\, dt = A \\left[ \\frac{e^{-j n\\omega_0 T_0/2} - 1}{-j n\\omega_0} \\right] = \\frac{A}{j n\\omega_0} [1 - e^{-j n\\pi}]"
-    },
-    {
-     "t": "p",
-     "text": "Summing the two integrals:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{A}{j n\\omega_0 T_0} \\left[ (1 - e^{j n\\pi}) + (1 - e^{-j n\\pi}) \\right] = \\frac{A}{j n(2\\pi)} [2 - 2\\cos(n\\pi)]"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\cos(n\\pi) = (-1)^n$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{A}{j \\pi n} [1 - (-1)^n]"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating for even and odd $n$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $n$ is **even** ($n = 2k$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "1 - (-1)^{2k} = 1 - 1 = 0 \\implies c_n = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $n$ is **odd** ($n = 2k+1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "1 - (-1)^{2k+1} = 1 - (-1) = 2 \\implies c_n = \\frac{2A}{j \\pi n} = -j \\frac{2A}{n\\pi}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Rate of Spectral Decay"
-    },
-    {
-     "t": "p",
-     "text": "The magnitude of the coefficients is:"
-    },
-    {
-     "t": "math",
-     "tex": "|c_n| = \\frac{2A}{\\pi |n|} \\propto \\frac{1}{|n|}"
-    },
-    {
-     "t": "p",
-     "text": "The coefficients decay as $\\mathcal{O}(1/n)$."
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**Continuity-Decay Theorem:**  \nIf the $k$-th derivative of a periodic signal contains Dirac delta impulses (i.e., $x(t)$ itself has finite jump discontinuities, so $k=0$), the Fourier coefficients decay at the rate $\\frac{1}{|n|^{k+1}} = \\frac{1}{|n|}$.  \nFor continuous signals with discontinuous first derivative (triangular wave), $k=1 \\implies c_n \\propto \\frac{1}{n^2}$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Trigonometric Fourier Series"
-    },
-    {
-     "t": "p",
-     "text": "Using $a_n = c_n + c_{-n}$ and $b_n = j(c_n - c_{-n})$:"
-    },
-    {
-     "t": "math",
-     "tex": "a_n = \\left(-j\\frac{2A}{n\\pi}\\right) + \\left(+j\\frac{2A}{n\\pi}\\right) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "b_n = j\\left[ -j\\frac{2A}{n\\pi} - \\left(+j\\frac{2A}{n\\pi}\\right) \\right] = j\\left[ -j\\frac{4A}{n\\pi} \\right] = \\frac{4A}{n\\pi} \\quad (n \\text{ odd})"
-    },
-    {
-     "t": "p",
-     "text": "The series is:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=1, 3, 5, \\dots}^\\infty \\frac{4A}{n\\pi} \\sin(n\\omega_0 t) = \\frac{4A}{\\pi}\\sin(\\omega_0 t) + \\frac{4A}{3\\pi}\\sin(3\\omega_0 t) + \\frac{4A}{5\\pi}\\sin(5\\omega_0 t) + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "This matches the exact harmonic components shown on Slides 0003 and 0004!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Analytical Integration for $c_n$"
+      },
+      {
+       "t": "p",
+       "text": "The fundamental frequency is $\\omega_0 = \\frac{2\\pi}{T_0}$.\nThe analysis equation is:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} \\int_{-T_0/2}^{T_0/2} x(t) e^{-j n\\omega_0 t} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Split the integration over the negative and positive half-cycles:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} \\left[ \\int_{-T_0/2}^0 (-A) e^{-j n\\omega_0 t} \\, dt + \\int_0^{T_0/2} (+A) e^{-j n\\omega_0 t} \\, dt \\right]"
+      },
+      {
+       "t": "p",
+       "text": "For $n = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{1}{T_0}\\left[ \\int_{-T_0/2}^0 (-A)\\,dt + \\int_0^{T_0/2} (+A)\\,dt \\right] = \\frac{1}{T_0}\\left[ -A\\frac{T_0}{2} + A\\frac{T_0}{2} \\right] = 0"
+      },
+      {
+       "t": "p",
+       "text": "For $n \\ne 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int e^{-j n\\omega_0 t} \\, dt = \\frac{e^{-j n\\omega_0 t}}{-j n\\omega_0}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the first integral:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-T_0/2}^0 (-A) e^{-j n\\omega_0 t} \\, dt = -A \\left[ \\frac{1 - e^{j n\\omega_0 T_0/2}}{-j n\\omega_0} \\right] = \\frac{A}{j n\\omega_0} [1 - e^{j n\\pi}]"
+      },
+      {
+       "t": "p",
+       "text": "(since $\\omega_0 \\frac{T_0}{2} = \\pi$)."
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the second integral:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^{T_0/2} A e^{-j n\\omega_0 t} \\, dt = A \\left[ \\frac{e^{-j n\\omega_0 T_0/2} - 1}{-j n\\omega_0} \\right] = \\frac{A}{j n\\omega_0} [1 - e^{-j n\\pi}]"
+      },
+      {
+       "t": "p",
+       "text": "Summing the two integrals:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{A}{j n\\omega_0 T_0} \\left[ (1 - e^{j n\\pi}) + (1 - e^{-j n\\pi}) \\right] = \\frac{A}{j n(2\\pi)} [2 - 2\\cos(n\\pi)]"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\cos(n\\pi) = (-1)^n$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{A}{j \\pi n} [1 - (-1)^n]"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating for even and odd $n$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $n$ is **even** ($n = 2k$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "1 - (-1)^{2k} = 1 - 1 = 0 \\implies c_n = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $n$ is **odd** ($n = 2k+1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "1 - (-1)^{2k+1} = 1 - (-1) = 2 \\implies c_n = \\frac{2A}{j \\pi n} = -j \\frac{2A}{n\\pi}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Rate of Spectral Decay"
+      },
+      {
+       "t": "p",
+       "text": "The magnitude of the coefficients is:"
+      },
+      {
+       "t": "math",
+       "tex": "|c_n| = \\frac{2A}{\\pi |n|} \\propto \\frac{1}{|n|}"
+      },
+      {
+       "t": "p",
+       "text": "The coefficients decay as $\\mathcal{O}(1/n)$."
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**Continuity-Decay Theorem:**  \nIf the $k$-th derivative of a periodic signal contains Dirac delta impulses (i.e., $x(t)$ itself has finite jump discontinuities, so $k=0$), the Fourier coefficients decay at the rate $\\frac{1}{|n|^{k+1}} = \\frac{1}{|n|}$.  \nFor continuous signals with discontinuous first derivative (triangular wave), $k=1 \\implies c_n \\propto \\frac{1}{n^2}$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Trigonometric Fourier Series"
+      },
+      {
+       "t": "p",
+       "text": "Using $a_n = c_n + c_{-n}$ and $b_n = j(c_n - c_{-n})$:"
+      },
+      {
+       "t": "math",
+       "tex": "a_n = \\left(-j\\frac{2A}{n\\pi}\\right) + \\left(+j\\frac{2A}{n\\pi}\\right) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "b_n = j\\left[ -j\\frac{2A}{n\\pi} - \\left(+j\\frac{2A}{n\\pi}\\right) \\right] = j\\left[ -j\\frac{4A}{n\\pi} \\right] = \\frac{4A}{n\\pi} \\quad (n \\text{ odd})"
+      },
+      {
+       "t": "p",
+       "text": "The series is:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=1, 3, 5, \\dots}^\\infty \\frac{4A}{n\\pi} \\sin(n\\omega_0 t) = \\frac{4A}{\\pi}\\sin(\\omega_0 t) + \\frac{4A}{3\\pi}\\sin(3\\omega_0 t) + \\frac{4A}{5\\pi}\\sin(5\\omega_0 t) + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "This matches the exact harmonic components shown on Slides 0003 and 0004!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -2039,152 +2037,151 @@ export default {
      "tex": "x(t) = 3 + 2\\cos\\left(4t + \\frac{\\pi}{3}\\right) + 4\\sin\\left(6t - \\frac{\\pi}{4}\\right)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fundamental Frequency & Period"
-    },
-    {
-     "t": "p",
-     "text": "The constituent frequencies are:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_1 = 4 \\text{ rad/s}, \\quad \\omega_2 = 6 \\text{ rad/s}"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\gcd(4, 6) = 2 \\text{ rad/s}"
-    },
-    {
-     "t": "math",
-     "tex": "T_0 = \\frac{2\\pi}{\\omega_0} = \\frac{2\\pi}{2} = \\pi \\text{ seconds}"
-    },
-    {
-     "t": "p",
-     "text": "Harmonic indices:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\omega_1}{\\omega_0} = \\frac{4}{2} = 2 \\implies n = \\pm 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\omega_2}{\\omega_0} = \\frac{6}{2} = 3 \\implies n = \\pm 3"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Complex Exponential Expansion"
-    },
-    {
-     "t": "p",
-     "text": "Use Euler's general formulas with phase shifts:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos(\\alpha) = \\frac{e^{j\\alpha} + e^{-j\\alpha}}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\beta) = \\frac{e^{j\\beta} - e^{-j\\beta}}{2j} = -\\frac{j}{2} e^{j\\beta} + \\frac{j}{2} e^{-j\\beta}"
-    },
-    {
-     "t": "p",
-     "text": "Expanding Term 1:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\cos\\left(4t + \\frac{\\pi}{3}\\right) = 2 \\left[ \\frac{e^{j(4t + \\pi/3)} + e^{-j(4t + \\pi/3)}}{2} \\right] = e^{j\\pi/3} e^{j(2\\omega_0)t} + e^{-j\\pi/3} e^{-j(2\\omega_0)t}"
-    },
-    {
-     "t": "p",
-     "text": "Expanding Term 2:"
-    },
-    {
-     "t": "math",
-     "tex": "4\\sin\\left(6t - \\frac{\\pi}{4}\\right) = 4 \\left[ \\frac{e^{j(6t - \\pi/4)} - e^{-j(6t - \\pi/4)}}{2j} \\right] = \\frac{2}{j} e^{-j\\pi/4} e^{j(3\\omega_0)t} - \\frac{2}{j} e^{j\\pi/4} e^{-j(3\\omega_0)t}"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\frac{1}{j} = e^{-j\\pi/2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2}{j} e^{-j\\pi/4} = 2 e^{-j\\pi/2} e^{-j\\pi/4} = 2 e^{-j 3\\pi/4}"
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{2}{j} e^{j\\pi/4} = -2 e^{-j\\pi/2} e^{j\\pi/4} = 2 e^{j\\pi} e^{-j\\pi/4} = 2 e^{j 3\\pi/4}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Identification of Coefficients"
-    },
-    {
-     "t": "p",
-     "text": "Comparing directly with $x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = 3"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = 2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_2 = e^{j\\pi/3} = 1\\angle 60^\\circ"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = -2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{-2} = e^{-j\\pi/3} = 1\\angle -60^\\circ = c_2^* \\quad \\checkmark"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = 3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_3 = 2 e^{-j 3\\pi/4} = 2\\angle -135^\\circ"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = -3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{-3} = 2 e^{j 3\\pi/4} = 2\\angle 135^\\circ = c_3^* \\quad \\checkmark"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "All other $c_n = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Fundamental Frequency & Period"
+      },
+      {
+       "t": "p",
+       "text": "The constituent frequencies are:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_1 = 4 \\text{ rad/s}, \\quad \\omega_2 = 6 \\text{ rad/s}"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\gcd(4, 6) = 2 \\text{ rad/s}"
+      },
+      {
+       "t": "math",
+       "tex": "T_0 = \\frac{2\\pi}{\\omega_0} = \\frac{2\\pi}{2} = \\pi \\text{ seconds}"
+      },
+      {
+       "t": "p",
+       "text": "Harmonic indices:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\omega_1}{\\omega_0} = \\frac{4}{2} = 2 \\implies n = \\pm 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\omega_2}{\\omega_0} = \\frac{6}{2} = 3 \\implies n = \\pm 3"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Complex Exponential Expansion"
+      },
+      {
+       "t": "p",
+       "text": "Use Euler's general formulas with phase shifts:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos(\\alpha) = \\frac{e^{j\\alpha} + e^{-j\\alpha}}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\beta) = \\frac{e^{j\\beta} - e^{-j\\beta}}{2j} = -\\frac{j}{2} e^{j\\beta} + \\frac{j}{2} e^{-j\\beta}"
+      },
+      {
+       "t": "p",
+       "text": "Expanding Term 1:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\cos\\left(4t + \\frac{\\pi}{3}\\right) = 2 \\left[ \\frac{e^{j(4t + \\pi/3)} + e^{-j(4t + \\pi/3)}}{2} \\right] = e^{j\\pi/3} e^{j(2\\omega_0)t} + e^{-j\\pi/3} e^{-j(2\\omega_0)t}"
+      },
+      {
+       "t": "p",
+       "text": "Expanding Term 2:"
+      },
+      {
+       "t": "math",
+       "tex": "4\\sin\\left(6t - \\frac{\\pi}{4}\\right) = 4 \\left[ \\frac{e^{j(6t - \\pi/4)} - e^{-j(6t - \\pi/4)}}{2j} \\right] = \\frac{2}{j} e^{-j\\pi/4} e^{j(3\\omega_0)t} - \\frac{2}{j} e^{j\\pi/4} e^{-j(3\\omega_0)t}"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\frac{1}{j} = e^{-j\\pi/2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2}{j} e^{-j\\pi/4} = 2 e^{-j\\pi/2} e^{-j\\pi/4} = 2 e^{-j 3\\pi/4}"
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{2}{j} e^{j\\pi/4} = -2 e^{-j\\pi/2} e^{j\\pi/4} = 2 e^{j\\pi} e^{-j\\pi/4} = 2 e^{j 3\\pi/4}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Identification of Coefficients"
+      },
+      {
+       "t": "p",
+       "text": "Comparing directly with $x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = 3"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = 2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_2 = e^{j\\pi/3} = 1\\angle 60^\\circ"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = -2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{-2} = e^{-j\\pi/3} = 1\\angle -60^\\circ = c_2^* \\quad \\checkmark"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = 3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_3 = 2 e^{-j 3\\pi/4} = 2\\angle -135^\\circ"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = -3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{-3} = 2 e^{j 3\\pi/4} = 2\\angle 135^\\circ = c_3^* \\quad \\checkmark"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "All other $c_n = 0$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -2265,7 +2262,7 @@ export default {
       "\u2713 Exponential Fourier Series derivation, synthesis, and analysis equations transcribed.",
       "\u2713 Forward and inverse algebraic relations between TFS and EFS coefficients documented.",
       "\u2713 Fundamental frequency determination via $\\gcd/\\text{HCF}$ and period via $\\text{LCM}$ detailed.",
-      "\u2713 All solved drills from slides 1\u201325 transcribed and encapsulated in collapsible `<details open>` tags.",
+      "\u2713 All solved drills from slides 1\u201325 transcribed and encapsulated in collapsible `` tags.",
       "\u2713 Master GATE Trap Matrix included.",
       "\u2713 Written directly to designated target path: `D:\\GATE 2027\\Signals and Systems\\chapters_ch3\\audit_ch3_slides_001_025.md`."
      ]
@@ -3091,40 +3088,43 @@ export default {
      "text": "                             MIRROR IMAGE GRAPH OF c\u208b\u2099\n                                       c\u208b\u2099\n                                        \u25b2\n                                    2   \u253c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2510\n                                        \u2502     \u2502     \u2502           \u2502     \u2502\n                   \u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u25ba n\n                     -4    -3    -2    -1     0     1     2\n                      \u2502                       \u2502     \u2502\n                 -4   \u2502                  -2   \u2502     \u2502   -1\n                                                    \u2502"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Index Mapping Table:**"
-    },
-    {
-     "t": "math",
-     "tex": "c'_{n} = c_{-n}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = -4: c'_{(-4)} = c_{-(-4)} = c_4 = -4$",
-      "For $n = -3: c'_{(-3)} = c_{-(-3)} = c_3 = 0$",
-      "For $n = -2: c'_{(-2)} = c_{-(-2)} = c_2 = 2$",
-      "For $n = -1: c'_{(-1)} = c_{-(-1)} = c_1 = -2$",
-      "For $n = 0: c'_{(0)} = c_0 = 2$",
-      "For $n = 1: c'_{(1)} = c_{-1} = 2$",
-      "For $n = 2: c'_{(2)} = c_{-2} = -1$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Boxed Final Answer:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_{-n} = \\{-4\\delta[n+4] + 2\\delta[n+2] - 2\\delta[n+1] + 2\\delta[n] + 2\\delta[n-1] - \\delta[n-2]\\}}"
-    },
-    {
-     "t": "p",
-     "text": "**GATE Trap Warning:**\nNotice that the origin value $c_0 = 2$ remains entirely unaffected by index reversal ($c_{-0} = c_0$). Never reflect about any point other than $n = 0$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step-by-Step Index Mapping Table:**"
+      },
+      {
+       "t": "math",
+       "tex": "c'_{n} = c_{-n}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = -4: c'_{(-4)} = c_{-(-4)} = c_4 = -4$",
+        "For $n = -3: c'_{(-3)} = c_{-(-3)} = c_3 = 0$",
+        "For $n = -2: c'_{(-2)} = c_{-(-2)} = c_2 = 2$",
+        "For $n = -1: c'_{(-1)} = c_{-(-1)} = c_1 = -2$",
+        "For $n = 0: c'_{(0)} = c_0 = 2$",
+        "For $n = 1: c'_{(1)} = c_{-1} = 2$",
+        "For $n = 2: c'_{(2)} = c_{-2} = -1$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Boxed Final Answer:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_{-n} = \\{-4\\delta[n+4] + 2\\delta[n+2] - 2\\delta[n+1] + 2\\delta[n] + 2\\delta[n-1] - \\delta[n-2]\\}}"
+      },
+      {
+       "t": "p",
+       "text": "**GATE Trap Warning:**\nNotice that the origin value $c_0 = 2$ remains entirely unaffected by index reversal ($c_{-0} = c_0$). Never reflect about any point other than $n = 0$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3147,44 +3147,47 @@ export default {
      "text": "                             SUB-PART (d): GRAPH OF c\u2099\u208b\u2081\n                                      c\u2099\u208b\u2081\n                                        \u25b2\n                                    2   \u253c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2510\n                                        \u2502     \u2502     \u2502           \u2502     \u2502\n                   \u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u25ba n\n                     -1     0     1     2     3     4     5\n                      \u2502                       \u2502     \u2502\n                 -1   \u2502                  -2   \u2502     \u2502   -4\n                                                    \u2502"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Part (b): Left Shift / Advance by 3 Units ($c_{n+3}$):**\nTo plot $y_n = c_{n+3}$, solve for original argument $k = n + 3 \\implies n = k - 3$. Every feature of $c_k$ moves **3 units to the left**:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$k = -2 \\implies n = -2 - 3 = -5: c_{(-5)+3} = c_{-2} = -1$",
-      "$k = -1 \\implies n = -1 - 3 = -4: c_{(-4)+3} = c_{-1} = 2$",
-      "$k = 0 \\implies n = 0 - 3 = -3: c_{(-3)+3} = c_0 = 2$",
-      "$k = 1 \\implies n = 1 - 3 = -2: c_{(-2)+3} = c_1 = -2$",
-      "$k = 2 \\implies n = 2 - 3 = -1: c_{(-1)+3} = c_2 = 2$",
-      "$k = 3 \\implies n = 3 - 3 = 0: c_{0+3} = c_3 = 0$",
-      "$k = 4 \\implies n = 4 - 3 = 1: c_{1+3} = c_4 = -4$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Part (d): Right Shift / Delay by 1 Unit ($c_{n-1}$):**\nTo plot $z_n = c_{n-1}$, solve for original argument $k = n - 1 \\implies n = k + 1$. Every feature moves **1 unit to the right**:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$k = -2 \\implies n = -2 + 1 = -1: c_{(-1)-1} = c_{-2} = -1$",
-      "$k = -1 \\implies n = -1 + 1 = 0: c_{0-1} = c_{-1} = 2$",
-      "$k = 0 \\implies n = 0 + 1 = 1: c_{1-1} = c_0 = 2$",
-      "$k = 1 \\implies n = 1 + 1 = 2: c_{2-1} = c_1 = -2$",
-      "$k = 2 \\implies n = 2 + 1 = 3: c_{3-1} = c_2 = 2$",
-      "$k = 3 \\implies n = 3 + 1 = 4: c_{4-1} = c_3 = 0$",
-      "$k = 4 \\implies n = 4 + 1 = 5: c_{5-1} = c_4 = -4$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Exam Trap Warning:**\nRemember that $c_{n+3}$ shifts the discrete index $n$ to the **left** (towards negative values), while $c_{n-1}$ shifts to the **right**. Do not confuse sequence shift with frequency modulation in continuous time!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Part (b): Left Shift / Advance by 3 Units ($c_{n+3}$):**\nTo plot $y_n = c_{n+3}$, solve for original argument $k = n + 3 \\implies n = k - 3$. Every feature of $c_k$ moves **3 units to the left**:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$k = -2 \\implies n = -2 - 3 = -5: c_{(-5)+3} = c_{-2} = -1$",
+        "$k = -1 \\implies n = -1 - 3 = -4: c_{(-4)+3} = c_{-1} = 2$",
+        "$k = 0 \\implies n = 0 - 3 = -3: c_{(-3)+3} = c_0 = 2$",
+        "$k = 1 \\implies n = 1 - 3 = -2: c_{(-2)+3} = c_1 = -2$",
+        "$k = 2 \\implies n = 2 - 3 = -1: c_{(-1)+3} = c_2 = 2$",
+        "$k = 3 \\implies n = 3 - 3 = 0: c_{0+3} = c_3 = 0$",
+        "$k = 4 \\implies n = 4 - 3 = 1: c_{1+3} = c_4 = -4$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Part (d): Right Shift / Delay by 1 Unit ($c_{n-1}$):**\nTo plot $z_n = c_{n-1}$, solve for original argument $k = n - 1 \\implies n = k + 1$. Every feature moves **1 unit to the right**:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$k = -2 \\implies n = -2 + 1 = -1: c_{(-1)-1} = c_{-2} = -1$",
+        "$k = -1 \\implies n = -1 + 1 = 0: c_{0-1} = c_{-1} = 2$",
+        "$k = 0 \\implies n = 0 + 1 = 1: c_{1-1} = c_0 = 2$",
+        "$k = 1 \\implies n = 1 + 1 = 2: c_{2-1} = c_1 = -2$",
+        "$k = 2 \\implies n = 2 + 1 = 3: c_{3-1} = c_2 = 2$",
+        "$k = 3 \\implies n = 3 + 1 = 4: c_{4-1} = c_3 = 0$",
+        "$k = 4 \\implies n = 4 + 1 = 5: c_{5-1} = c_4 = -4$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Exam Trap Warning:**\nRemember that $c_{n+3}$ shifts the discrete index $n$ to the **left** (towards negative values), while $c_{n-1}$ shifts to the **right**. Do not confuse sequence shift with frequency modulation in continuous time!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3211,65 +3214,68 @@ export default {
      "text": "                            SUB-PART (c): GRAPH OF c\u208b\u2099\u208a\u2083\n                                     c\u208b\u2099\u208a\u2083\n                                       \u25b2\n                                   2   \u253c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2510\n                                       \u2502     \u2502     \u2502           \u2502     \u2502\n                  \u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u25ba n\n                    -1     0     1     2     3     4     5\n                     \u2502                       \u2502     \u2502\n                -4   \u2502                  -2   \u2502     \u2502   -1\n                                                   \u2502"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Transformation Methodology:**\nThere are two completely equivalent mathematical pathways to compute $c_{-n+3}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pathway 1 (Shift then Reverse):**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Start with $c_n$.",
-      "Shift left by $3$ units to obtain $c_{n+3}$ (computed on Slide 28).",
-      "Replace the independent variable $n$ with $-n$ (reflect the graph of $c_{n+3}$ horizontally about $n = 0$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left. c_{n+3} \\right|_{n \\to -n} = c_{-n+3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pathway 2 (Direct Point Evaluation):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set $k = -n + 3 \\implies n = 3 - k$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$k = 4 \\implies n = 3 - 4 = -1: c_{-(-1)+3} = c_4 = -4$",
-      "$k = 3 \\implies n = 3 - 3 = 0: c_{-(0)+3} = c_3 = 0$",
-      "$k = 2 \\implies n = 3 - 2 = 1: c_{-(1)+3} = c_2 = 2$",
-      "$k = 1 \\implies n = 3 - 1 = 2: c_{-(2)+3} = c_1 = -2$",
-      "$k = 0 \\implies n = 3 - 0 = 3: c_{-(3)+3} = c_0 = 2$",
-      "$k = -1 \\implies n = 3 - (-1) = 4: c_{-(4)+3} = c_{-1} = 2$",
-      "$k = -2 \\implies n = 3 - (-2) = 5: c_{-(5)+3} = c_{-2} = -1$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Boxed Final Answer:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_{-n+3} = \\{-4\\delta[n+1] + 2\\delta[n-1] - 2\\delta[n-2] + 2\\delta[n-3] + 2\\delta[n-4] - \\delta[n-5]\\}}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Trap Warning:**\nIf reversing first ($c_n \\to c_{-n}$), you must shift by $+3$ in the *reversed* domain: $c_{-(n-3)} = c_{-n+3}$. This means shifting the reversed graph $c_{-n}$ to the **right by 3**, NOT to the left!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Transformation Methodology:**\nThere are two completely equivalent mathematical pathways to compute $c_{-n+3}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pathway 1 (Shift then Reverse):**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Start with $c_n$.",
+        "Shift left by $3$ units to obtain $c_{n+3}$ (computed on Slide 28).",
+        "Replace the independent variable $n$ with $-n$ (reflect the graph of $c_{n+3}$ horizontally about $n = 0$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left. c_{n+3} \\right|_{n \\to -n} = c_{-n+3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pathway 2 (Direct Point Evaluation):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set $k = -n + 3 \\implies n = 3 - k$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$k = 4 \\implies n = 3 - 4 = -1: c_{-(-1)+3} = c_4 = -4$",
+        "$k = 3 \\implies n = 3 - 3 = 0: c_{-(0)+3} = c_3 = 0$",
+        "$k = 2 \\implies n = 3 - 2 = 1: c_{-(1)+3} = c_2 = 2$",
+        "$k = 1 \\implies n = 3 - 1 = 2: c_{-(2)+3} = c_1 = -2$",
+        "$k = 0 \\implies n = 3 - 0 = 3: c_{-(3)+3} = c_0 = 2$",
+        "$k = -1 \\implies n = 3 - (-1) = 4: c_{-(4)+3} = c_{-1} = 2$",
+        "$k = -2 \\implies n = 3 - (-2) = 5: c_{-(5)+3} = c_{-2} = -1$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Boxed Final Answer:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_{-n+3} = \\{-4\\delta[n+1] + 2\\delta[n-1] - 2\\delta[n-2] + 2\\delta[n-3] + 2\\delta[n-4] - \\delta[n-5]\\}}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Trap Warning:**\nIf reversing first ($c_n \\to c_{-n}$), you must shift by $+3$ in the *reversed* domain: $c_{-(n-3)} = c_{-n+3}$. This means shifting the reversed graph $c_{-n}$ to the **right by 3**, NOT to the left!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3294,64 +3300,63 @@ export default {
      "tex": "\\text{Find the relation between } c_n \\text{ and } d_n."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Determine Fundamental Frequency:**\nFor component 1 ($\\sin t$): $\\omega_{01} = 1 \\text{ rad/s}$.\nFor component 2 ($\\cos 2t$): $\\omega_{02} = 2 \\text{ rad/s}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0\\{x(t)\\} = \\operatorname{HCF}(1, 2) = 1 \\implies \\omega_0 = 1 \\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "For time-reversed signal $x(-t)$: fundamental frequency is identical: $\\omega_0\\{x(-t)\\} = 1 \\text{ rad/s}$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Expand $x(t)$ into Complex Exponentials:**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sin(\\omega_0 t) + \\cos(2\\omega_0 t)"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\left( \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j} \\right) + \\left( \\frac{e^{j 2\\omega_0 t} + e^{-j 2\\omega_0 t}}{2} \\right)"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = -\\frac{1}{2j} e^{-j\\omega_0 t} + \\frac{1}{2j} e^{j\\omega_0 t} + \\frac{1}{2} e^{-j 2\\omega_0 t} + \\frac{1}{2} e^{j 2\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing with standard EFS $x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n\\omega_0 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_1 = \\frac{1}{2j}, \\quad c_{-1} = -\\frac{1}{2j}, \\quad c_2 = \\frac{1}{2}, \\quad c_{-2} = \\frac{1}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "All other $c_n = 0$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Expand $x(-t)$ into Complex Exponentials:**"
-    },
-    {
-     "t": "math",
-     "tex": "x(-t) = \\sin(-t) + \\cos(-2t) = \\sin(-\\omega_0 t) + \\cos(-2\\omega_0 t)"
-    },
-    {
-     "t": "math",
-     "tex": "x(-t) = \\left( \\frac{e^{-j\\omega_0 t} - e^{j\\omega_0 t}}{2j} \\right) + \\left( \\frac{e^{-j 2\\omega_0 t} + e^{j 2\\omega_0 t}}{2} \\right)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Determine Fundamental Frequency:**\nFor component 1 ($\\sin t$): $\\omega_{01} = 1 \\text{ rad/s}$.\nFor component 2 ($\\cos 2t$): $\\omega_{02} = 2 \\text{ rad/s}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0\\{x(t)\\} = \\operatorname{HCF}(1, 2) = 1 \\implies \\omega_0 = 1 \\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "For time-reversed signal $x(-t)$: fundamental frequency is identical: $\\omega_0\\{x(-t)\\} = 1 \\text{ rad/s}$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Expand $x(t)$ into Complex Exponentials:**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sin(\\omega_0 t) + \\cos(2\\omega_0 t)"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\left( \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j} \\right) + \\left( \\frac{e^{j 2\\omega_0 t} + e^{-j 2\\omega_0 t}}{2} \\right)"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = -\\frac{1}{2j} e^{-j\\omega_0 t} + \\frac{1}{2j} e^{j\\omega_0 t} + \\frac{1}{2} e^{-j 2\\omega_0 t} + \\frac{1}{2} e^{j 2\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing with standard EFS $x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n\\omega_0 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_1 = \\frac{1}{2j}, \\quad c_{-1} = -\\frac{1}{2j}, \\quad c_2 = \\frac{1}{2}, \\quad c_{-2} = \\frac{1}{2}}"
+      },
+      {
+       "t": "p",
+       "text": "All other $c_n = 0$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Expand $x(-t)$ into Complex Exponentials:**"
+      },
+      {
+       "t": "math",
+       "tex": "x(-t) = \\sin(-t) + \\cos(-2t) = \\sin(-\\omega_0 t) + \\cos(-2\\omega_0 t)"
+      },
+      {
+       "t": "math",
+       "tex": "x(-t) = \\left( \\frac{e^{-j\\omega_0 t} - e^{j\\omega_0 t}}{2j} \\right) + \\left( \\frac{e^{-j 2\\omega_0 t} + e^{j 2\\omega_0 t}}{2} \\right)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3421,76 +3426,75 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Method 1: Synthesis Equation Proof (as structured on slide):**\nThe periodic signal $x(t)$ is expressed by its synthesis equation:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=-\\infty}^{\\infty} c_n e^{j n\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Taking the complex conjugate of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x^*(t) = \\left[ \\sum_{n=-\\infty}^{\\infty} c_n e^{j n\\omega_0 t} \\right]^* = \\sum_{n=-\\infty}^{\\infty} c_n^* \\left( e^{j n\\omega_0 t} \\right)^* = \\sum_{n=-\\infty}^{\\infty} c_n^* e^{-j n\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "To align this with standard synthesis form $\\sum d_m e^{j m\\omega_0 t}$, perform an index substitution:\nLet dummy index $m = -n \\implies n = -m$. As $n$ ranges from $-\\infty$ to $+\\infty$, $m$ ranges from $+\\infty$ to $-\\infty$:"
-    },
-    {
-     "t": "math",
-     "tex": "x^*(t) = \\sum_{m=+\\infty}^{-\\infty} c_{-m}^* e^{j m\\omega_0 t} = \\sum_{m=-\\infty}^{\\infty} c_{-m}^* e^{j m\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Renaming the dummy index $m$ to $n$:"
-    },
-    {
-     "t": "math",
-     "tex": "x^*(t) = \\sum_{n=-\\infty}^{\\infty} c_{-n}^* e^{j n\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing directly with the definition $y(t) = \\sum_{n=-\\infty}^\\infty d_n e^{j n\\omega_0 t}$, we conclude:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{d_n = c_{-n}^*}"
-    },
-    {
-     "t": "p",
-     "text": "**Method 2: Analysis Integral Proof:**"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = \\frac{1}{T_0} \\int_{T_0} x^*(t) e^{-j n\\omega_0 t} \\, dt = \\frac{1}{T_0} \\int_{T_0} \\left[ x(t) e^{j n\\omega_0 t} \\right]^* \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Because $T_0$ is real:"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = \\left[ \\frac{1}{T_0} \\int_{T_0} x(t) e^{-j(-n)\\omega_0 t} \\, dt \\right]^* = \\left[ c_{-n} \\right]^* = c_{-n}^*"
-    },
-    {
-     "t": "p",
-     "text": "**Boxed Final Property:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_n \\implies x^*(t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_{-n}^*}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Method 1: Synthesis Equation Proof (as structured on slide):**\nThe periodic signal $x(t)$ is expressed by its synthesis equation:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=-\\infty}^{\\infty} c_n e^{j n\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Taking the complex conjugate of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x^*(t) = \\left[ \\sum_{n=-\\infty}^{\\infty} c_n e^{j n\\omega_0 t} \\right]^* = \\sum_{n=-\\infty}^{\\infty} c_n^* \\left( e^{j n\\omega_0 t} \\right)^* = \\sum_{n=-\\infty}^{\\infty} c_n^* e^{-j n\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "To align this with standard synthesis form $\\sum d_m e^{j m\\omega_0 t}$, perform an index substitution:\nLet dummy index $m = -n \\implies n = -m$. As $n$ ranges from $-\\infty$ to $+\\infty$, $m$ ranges from $+\\infty$ to $-\\infty$:"
+      },
+      {
+       "t": "math",
+       "tex": "x^*(t) = \\sum_{m=+\\infty}^{-\\infty} c_{-m}^* e^{j m\\omega_0 t} = \\sum_{m=-\\infty}^{\\infty} c_{-m}^* e^{j m\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Renaming the dummy index $m$ to $n$:"
+      },
+      {
+       "t": "math",
+       "tex": "x^*(t) = \\sum_{n=-\\infty}^{\\infty} c_{-n}^* e^{j n\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing directly with the definition $y(t) = \\sum_{n=-\\infty}^\\infty d_n e^{j n\\omega_0 t}$, we conclude:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{d_n = c_{-n}^*}"
+      },
+      {
+       "t": "p",
+       "text": "**Method 2: Analysis Integral Proof:**"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = \\frac{1}{T_0} \\int_{T_0} x^*(t) e^{-j n\\omega_0 t} \\, dt = \\frac{1}{T_0} \\int_{T_0} \\left[ x(t) e^{j n\\omega_0 t} \\right]^* \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Because $T_0$ is real:"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = \\left[ \\frac{1}{T_0} \\int_{T_0} x(t) e^{-j(-n)\\omega_0 t} \\, dt \\right]^* = \\left[ c_{-n} \\right]^* = c_{-n}^*"
+      },
+      {
+       "t": "p",
+       "text": "**Boxed Final Property:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_n \\implies x^*(t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_{-n}^*}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3526,68 +3530,67 @@ export default {
      "tex": "\\text{Q. Find F.S.C. of } x^*(-t)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Dual Pathway Verification:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pathway 1 (Conjugate first, then Reverse):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_n"
-    },
-    {
-     "t": "math",
-     "tex": "x^*(t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_{-n}^*"
-    },
-    {
-     "t": "p",
-     "text": "Applying time reversal ($t \\to -t$ replaces $n$ with $-n$ in the coefficient):"
-    },
-    {
-     "t": "math",
-     "tex": "x^*(-t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} \\left. c_{-n}^* \\right|_{n \\to -n} = c_{-(-n)}^* = c_n^*"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pathway 2 (Reverse first, then Conjugate):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_n"
-    },
-    {
-     "t": "math",
-     "tex": "x(-t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_{-n}"
-    },
-    {
-     "t": "p",
-     "text": "Applying complex conjugation ($x(t) \\to x^*(t)$ conjugates the coefficient and reverses index):"
-    },
-    {
-     "t": "math",
-     "tex": "[x(-t)]^* = x^*(-t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} [c_{-(-n)}]^* = c_n^*"
-    },
-    {
-     "t": "p",
-     "text": "**Boxed Final Property:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x^*(-t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_n^*}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Dual Pathway Verification:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pathway 1 (Conjugate first, then Reverse):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_n"
+      },
+      {
+       "t": "math",
+       "tex": "x^*(t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_{-n}^*"
+      },
+      {
+       "t": "p",
+       "text": "Applying time reversal ($t \\to -t$ replaces $n$ with $-n$ in the coefficient):"
+      },
+      {
+       "t": "math",
+       "tex": "x^*(-t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} \\left. c_{-n}^* \\right|_{n \\to -n} = c_{-(-n)}^* = c_n^*"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pathway 2 (Reverse first, then Conjugate):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_n"
+      },
+      {
+       "t": "math",
+       "tex": "x(-t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_{-n}"
+      },
+      {
+       "t": "p",
+       "text": "Applying complex conjugation ($x(t) \\to x^*(t)$ conjugates the coefficient and reverses index):"
+      },
+      {
+       "t": "math",
+       "tex": "[x(-t)]^* = x^*(-t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} [c_{-(-n)}]^* = c_n^*"
+      },
+      {
+       "t": "p",
+       "text": "**Boxed Final Property:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x^*(-t) \\overset{\\text{F.S.C.}}{\\longleftrightarrow} c_n^*}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3643,116 +3646,115 @@ export default {
      "tex": "\\text{(b) If } x(t) \\text{ is Img, then comment on } c_n."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Part (a): Signal $x(t)$ is Real:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Definition of real continuous-time signal:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = x^*(t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Taking Fourier Series Coefficients (F.S.C.) on both sides:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{FSC}\\{x(t)\\} = \\operatorname{FSC}\\{x^*(t)\\}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Applying the conjugation property ($x^*(t) \\leftrightarrow c_{-n}^*$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_n = c_{-n}^*}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Matching with discrete-time definitions from Slide 35:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "A sequence satisfying $\\alpha_n = \\alpha_{-n}^*$ is **Conjugate Symmetric (C.S.)**."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) \\text{ is Real} \\implies c_n \\text{ is a Conjugate Symmetric (C.S.) sequence}}"
-    },
-    {
-     "t": "p",
-     "text": "**Part (b): Signal $x(t)$ is Purely Imaginary:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Definition of purely imaginary continuous-time signal:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = -x^*(t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Taking Fourier Series Coefficients on both sides:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{FSC}\\{x(t)\\} = \\operatorname{FSC}\\{-x^*(t)\\} = -\\operatorname{FSC}\\{x^*(t)\\}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Applying the conjugation property:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_n = -c_{-n}^*}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Matching with discrete-time definitions from Slide 35:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "A sequence satisfying $\\alpha_n = -\\alpha_{-n}^*$ is **Conjugate Anti-Symmetric (C.A.S.)**."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) \\text{ is Imaginary} \\implies c_n \\text{ is a Conjugate Anti-Symmetric (C.A.S.) sequence}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Part (a): Signal $x(t)$ is Real:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Definition of real continuous-time signal:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = x^*(t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Taking Fourier Series Coefficients (F.S.C.) on both sides:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{FSC}\\{x(t)\\} = \\operatorname{FSC}\\{x^*(t)\\}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Applying the conjugation property ($x^*(t) \\leftrightarrow c_{-n}^*$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_n = c_{-n}^*}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Matching with discrete-time definitions from Slide 35:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A sequence satisfying $\\alpha_n = \\alpha_{-n}^*$ is **Conjugate Symmetric (C.S.)**."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) \\text{ is Real} \\implies c_n \\text{ is a Conjugate Symmetric (C.S.) sequence}}"
+      },
+      {
+       "t": "p",
+       "text": "**Part (b): Signal $x(t)$ is Purely Imaginary:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Definition of purely imaginary continuous-time signal:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = -x^*(t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Taking Fourier Series Coefficients on both sides:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{FSC}\\{x(t)\\} = \\operatorname{FSC}\\{-x^*(t)\\} = -\\operatorname{FSC}\\{x^*(t)\\}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Applying the conjugation property:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_n = -c_{-n}^*}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Matching with discrete-time definitions from Slide 35:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A sequence satisfying $\\alpha_n = -\\alpha_{-n}^*$ is **Conjugate Anti-Symmetric (C.A.S.)**."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) \\text{ is Imaginary} \\implies c_n \\text{ is a Conjugate Anti-Symmetric (C.A.S.) sequence}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3823,87 +3825,90 @@ export default {
      "tex": "\\text{Find trigonometric Fourier series coefficient.}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute EFS Coefficients ($c_n$):**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sin(\\omega_0 t) = \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j} = \\frac{1}{2j}e^{j\\omega_0 t} - \\frac{1}{2j}e^{-j\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Matching with $x(t) = \\sum c_n e^{j n\\omega_0 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_1 = \\frac{1}{2j} = -j\\frac{1}{2}, \\quad c_{-1} = -\\frac{1}{2j} = j\\frac{1}{2}}"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = 0, \\quad c_2 = c_{-2} = c_3 = c_{-3} = \\dots = 0"
-    },
-    {
-     "t": "p",
-     "text": "*Check Conjugate Symmetry:*"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-1}^* = \\left( j\\frac{1}{2} \\right)^* = -j\\frac{1}{2} = c_1 \\quad \\checkmark \\text{ (Holds because } x(t) \\text{ is real)}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Compute TFS Coefficients ($a_n, b_n, a_0$):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "DC coefficient: $a_0 = c_0 = 0$.",
-      "Fundamental Cosine coefficient ($a_1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_1 = c_1 + c_{-1} = \\frac{1}{2j} + \\left( -\\frac{1}{2j} \\right) = 0 \\implies \\boxed{a_1 = 0}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental Sine coefficient ($b_1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "b_1 = j[c_1 - c_{-1}] = j\\left[ \\frac{1}{2j} - \\left( -\\frac{1}{2j} \\right) \\right] = j\\left[ \\frac{2}{2j} \\right] = j\\left(\\frac{1}{j}\\right) = 1 \\implies \\boxed{b_1 = 1}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Higher harmonics ($n \\ge 2$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_2 = a_3 = a_4 = \\dots = 0"
-    },
-    {
-     "t": "math",
-     "tex": "b_2 = b_3 = b_4 = \\dots = 0"
-    },
-    {
-     "t": "p",
-     "text": "*Direct Verification via Inspection:*"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sin 2t = \\text{DC} + a_1 \\cos(\\omega_0 t) + a_2 \\cos(2\\omega_0 t) + \\dots + b_1 \\sin(\\omega_0 t) + b_2 \\sin(2\\omega_0 t) + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Equating terms: $b_1 = 1$, and all other coefficients are $0$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Compute EFS Coefficients ($c_n$):**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sin(\\omega_0 t) = \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j} = \\frac{1}{2j}e^{j\\omega_0 t} - \\frac{1}{2j}e^{-j\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Matching with $x(t) = \\sum c_n e^{j n\\omega_0 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_1 = \\frac{1}{2j} = -j\\frac{1}{2}, \\quad c_{-1} = -\\frac{1}{2j} = j\\frac{1}{2}}"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = 0, \\quad c_2 = c_{-2} = c_3 = c_{-3} = \\dots = 0"
+      },
+      {
+       "t": "p",
+       "text": "*Check Conjugate Symmetry:*"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-1}^* = \\left( j\\frac{1}{2} \\right)^* = -j\\frac{1}{2} = c_1 \\quad \\checkmark \\text{ (Holds because } x(t) \\text{ is real)}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Compute TFS Coefficients ($a_n, b_n, a_0$):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "DC coefficient: $a_0 = c_0 = 0$.",
+        "Fundamental Cosine coefficient ($a_1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_1 = c_1 + c_{-1} = \\frac{1}{2j} + \\left( -\\frac{1}{2j} \\right) = 0 \\implies \\boxed{a_1 = 0}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental Sine coefficient ($b_1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "b_1 = j[c_1 - c_{-1}] = j\\left[ \\frac{1}{2j} - \\left( -\\frac{1}{2j} \\right) \\right] = j\\left[ \\frac{2}{2j} \\right] = j\\left(\\frac{1}{j}\\right) = 1 \\implies \\boxed{b_1 = 1}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Higher harmonics ($n \\ge 2$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_2 = a_3 = a_4 = \\dots = 0"
+      },
+      {
+       "t": "math",
+       "tex": "b_2 = b_3 = b_4 = \\dots = 0"
+      },
+      {
+       "t": "p",
+       "text": "*Direct Verification via Inspection:*"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sin 2t = \\text{DC} + a_1 \\cos(\\omega_0 t) + a_2 \\cos(2\\omega_0 t) + \\dots + b_1 \\sin(\\omega_0 t) + b_2 \\sin(2\\omega_0 t) + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Equating terms: $b_1 = 1$, and all other coefficients are $0$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3928,88 +3933,87 @@ export default {
      "tex": "\\text{Find trigonometric Fourier series coefficient.}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute EFS Coefficients ($c_n$):**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = j\\sin(\\omega_0 t) = j \\left[ \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j} \\right] = \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2} e^{j\\omega_0 t} - \\frac{1}{2} e^{-j\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Matching with $x(t) = \\sum c_n e^{j n\\omega_0 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_1 = \\frac{1}{2}, \\quad c_{-1} = -\\frac{1}{2}}"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = 0, \\quad c_k = 0 \\quad (|k| \\ge 2)"
-    },
-    {
-     "t": "p",
-     "text": "*Check Conjugate Anti-Symmetry (C.A.S.):*\nSince $x(t)$ is imaginary, $c_n = -c_{-n}^*$:"
-    },
-    {
-     "t": "math",
-     "tex": "-c_{-1}^* = -\\left( -\\frac{1}{2} \\right)^* = -\\left( -\\frac{1}{2} \\right) = \\frac{1}{2} = c_1 \\quad \\checkmark \\text{ (Holds!)}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Compute TFS Coefficients ($a_n, b_n$):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental Cosine coefficient ($a_1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_1 = c_1 + c_{-1} = \\frac{1}{2} + \\left( -\\frac{1}{2} \\right) = 0 \\implies \\boxed{a_1 = 0}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental Sine coefficient ($b_1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "b_1 = j[c_1 - c_{-1}] = j\\left[ \\frac{1}{2} - \\left( -\\frac{1}{2} \\right) \\right] = j[1] = j \\implies \\boxed{b_1 = j}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Higher harmonics ($n \\ge 2$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_1 = a_2 = a_3 = \\dots = 0"
-    },
-    {
-     "t": "math",
-     "tex": "b_2 = b_3 = b_4 = \\dots = 0"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**Major GATE Examination Trap:**\nNotice that $b_1 = j$ is **purely imaginary**, NOT real! Many students blindly assume that $a_n$ and $b_n$ must always be real numbers. That is only true when $x(t)$ is real. If $x(t)$ is complex or imaginary, $a_n$ and $b_n$ can be complex!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Compute EFS Coefficients ($c_n$):**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = j\\sin(\\omega_0 t) = j \\left[ \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j} \\right] = \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2} e^{j\\omega_0 t} - \\frac{1}{2} e^{-j\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Matching with $x(t) = \\sum c_n e^{j n\\omega_0 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_1 = \\frac{1}{2}, \\quad c_{-1} = -\\frac{1}{2}}"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = 0, \\quad c_k = 0 \\quad (|k| \\ge 2)"
+      },
+      {
+       "t": "p",
+       "text": "*Check Conjugate Anti-Symmetry (C.A.S.):*\nSince $x(t)$ is imaginary, $c_n = -c_{-n}^*$:"
+      },
+      {
+       "t": "math",
+       "tex": "-c_{-1}^* = -\\left( -\\frac{1}{2} \\right)^* = -\\left( -\\frac{1}{2} \\right) = \\frac{1}{2} = c_1 \\quad \\checkmark \\text{ (Holds!)}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Compute TFS Coefficients ($a_n, b_n$):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental Cosine coefficient ($a_1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_1 = c_1 + c_{-1} = \\frac{1}{2} + \\left( -\\frac{1}{2} \\right) = 0 \\implies \\boxed{a_1 = 0}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental Sine coefficient ($b_1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "b_1 = j[c_1 - c_{-1}] = j\\left[ \\frac{1}{2} - \\left( -\\frac{1}{2} \\right) \\right] = j[1] = j \\implies \\boxed{b_1 = j}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Higher harmonics ($n \\ge 2$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_1 = a_2 = a_3 = \\dots = 0"
+      },
+      {
+       "t": "math",
+       "tex": "b_2 = b_3 = b_4 = \\dots = 0"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**Major GATE Examination Trap:**\nNotice that $b_1 = j$ is **purely imaginary**, NOT real! Many students blindly assume that $a_n$ and $b_n$ must always be real numbers. That is only true when $x(t)$ is real. If $x(t)$ is complex or imaginary, $a_n$ and $b_n$ can be complex!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4034,56 +4038,55 @@ export default {
      "tex": "\\text{Find trigonometric Fourier series coefficient.}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute EFS Coefficients ($c_n$):**\nUsing Euler's identity directly:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\cos(2t) + j\\sin(2t) = e^{j 2t} = e^{j\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Alternatively, expanding sines and cosines:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{e^{j\\omega_0 t} + e^{-j\\omega_0 t}}{2} + j \\left( \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j} \\right)"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{e^{j\\omega_0 t}}{2} + \\frac{e^{-j\\omega_0 t}}{2} + \\frac{e^{j\\omega_0 t}}{2} - \\frac{e^{-j\\omega_0 t}}{2} = e^{j\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing with standard EFS $x(t) = \\dots + c_{-1}e^{-j\\omega_0 t} + c_0 + c_1 e^{j\\omega_0 t} + c_2 e^{j 2\\omega_0 t} + \\dots$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_1 = 1, \\quad c_{-1} = 0}"
-    },
-    {
-     "t": "p",
-     "text": "All other $c_n = 0$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Check Symmetries:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$c_1 = 1 \\neq c_{-1}^* = 0$ (Conjugate symmetry fails)",
-      "$c_1 = 1 \\neq -c_{-1}^* = 0$ (Conjugate anti-symmetry fails)",
-      "Chalkboard Annotation: $\\boxed{\\text{\\bf No relation between } c_n \\text{ and } c_{-n}}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Compute EFS Coefficients ($c_n$):**\nUsing Euler's identity directly:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\cos(2t) + j\\sin(2t) = e^{j 2t} = e^{j\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Alternatively, expanding sines and cosines:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{e^{j\\omega_0 t} + e^{-j\\omega_0 t}}{2} + j \\left( \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j} \\right)"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{e^{j\\omega_0 t}}{2} + \\frac{e^{-j\\omega_0 t}}{2} + \\frac{e^{j\\omega_0 t}}{2} - \\frac{e^{-j\\omega_0 t}}{2} = e^{j\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing with standard EFS $x(t) = \\dots + c_{-1}e^{-j\\omega_0 t} + c_0 + c_1 e^{j\\omega_0 t} + c_2 e^{j 2\\omega_0 t} + \\dots$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_1 = 1, \\quad c_{-1} = 0}"
+      },
+      {
+       "t": "p",
+       "text": "All other $c_n = 0$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Check Symmetries:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$c_1 = 1 \\neq c_{-1}^* = 0$ (Conjugate symmetry fails)",
+        "$c_1 = 1 \\neq -c_{-1}^* = 0$ (Conjugate anti-symmetry fails)",
+        "Chalkboard Annotation: $\\boxed{\\text{\\bf No relation between } c_n \\text{ and } c_{-n}}$"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4108,52 +4111,55 @@ export default {
      "tex": "b_1 = j[c_1 - c_{-1}] = j[1 - 0] = j \\implies \\boxed{b_1 = j}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Direct Inspection Verification:**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 1 \\cdot \\cos(\\omega_0 t) + j \\cdot \\sin(\\omega_0 t)"
-    },
-    {
-     "t": "p",
-     "text": "Matching with $x(t) = a_0 + \\sum [a_n \\cos(n\\omega_0 t) + b_n \\sin(n\\omega_0 t)]$:"
-    },
-    {
-     "t": "math",
-     "tex": "a_1 = 1, \\quad b_1 = j"
-    },
-    {
-     "t": "p",
-     "text": "**Reverse Consistency Verification using $c_n = \\frac{a_n - j b_n}{2}$:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{a_1 - j b_1}{2} = \\frac{1 - j(j)}{2} = \\frac{1 - (-1)}{2} = \\frac{2}{2} = 1 \\quad \\checkmark"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = -1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{-1} = \\frac{a_1 + j b_1}{2} = \\frac{1 + j(j)}{2} = \\frac{1 - 1}{2} = \\frac{0}{2} = 0 \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "This mathematically proves that the universal bridge formulas hold **without exception**, even when coefficients are complex!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Direct Inspection Verification:**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 1 \\cdot \\cos(\\omega_0 t) + j \\cdot \\sin(\\omega_0 t)"
+      },
+      {
+       "t": "p",
+       "text": "Matching with $x(t) = a_0 + \\sum [a_n \\cos(n\\omega_0 t) + b_n \\sin(n\\omega_0 t)]$:"
+      },
+      {
+       "t": "math",
+       "tex": "a_1 = 1, \\quad b_1 = j"
+      },
+      {
+       "t": "p",
+       "text": "**Reverse Consistency Verification using $c_n = \\frac{a_n - j b_n}{2}$:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{a_1 - j b_1}{2} = \\frac{1 - j(j)}{2} = \\frac{1 - (-1)}{2} = \\frac{2}{2} = 1 \\quad \\checkmark"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = -1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{-1} = \\frac{a_1 + j b_1}{2} = \\frac{1 + j(j)}{2} = \\frac{1 - 1}{2} = \\frac{0}{2} = 0 \\quad \\checkmark"
+      },
+      {
+       "t": "p",
+       "text": "This mathematically proves that the universal bridge formulas hold **without exception**, even when coefficients are complex!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4521,115 +4527,114 @@ export default {
      "tex": "\\text{Find } x(t) : \\text{ ?}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Characterize the Sequence $c_n$:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Given that $c_n$ is Even:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = c_{-n}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Given that $c_n$ is Conjugate Anti-Symmetric (C.A.S.):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = -c_{-n}^*"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Substitute the even property into the C.A.S. condition:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = -c_n^* \\implies c_n \\text{ is purely \\bf Imaginary!}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_n: \\text{Even} + \\text{C.A.S.} \\implies c_n \\text{ is Purely Imaginary}}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Delineate Time-Domain Properties of $x(t)$:**\nUsing the synthesis equation $x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n\\omega_0 t}$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Since $c_n$ is an **Even sequence** ($c_{-n} = c_n$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(-t) = \\sum_{n=-\\infty}^\\infty c_n e^{-j n\\omega_0 t} = \\sum_{m=-\\infty}^\\infty c_{-m} e^{j m\\omega_0 t} = \\sum_{m=-\\infty}^\\infty c_m e^{j m\\omega_0 t} = x(t)"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies x(t) \\text{ is \\bf Even}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Since $c_n$ is **purely Imaginary** ($c_n = -c_n^*$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x^*(t) = \\sum_{n=-\\infty}^\\infty c_n^* e^{-j n\\omega_0 t} = \\sum_{n=-\\infty}^\\infty (-c_n) e^{-j n\\omega_0 t} = -\\sum_{m=-\\infty}^\\infty c_{-m} e^{j m\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Using $c_{-m} = c_m$:"
-    },
-    {
-     "t": "math",
-     "tex": "x^*(t) = -\\sum_{m=-\\infty}^\\infty c_m e^{j m\\omega_0 t} = -x(t) \\implies x(t) = -x^*(t)"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies x(t) \\text{ is purely \\bf Imaginary}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Combining Even and Purely Imaginary:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = -x^*(t) = -x^*(-t)"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies x(t) \\text{ is \\bf Conjugate Anti-Symmetric (C.A.S.)}"
-    },
-    {
-     "t": "p",
-     "text": "**Boxed Final Answer:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) \\text{ is Even} + \\text{C.A.S.} + \\text{Imaginary}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Characterize the Sequence $c_n$:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Given that $c_n$ is Even:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = c_{-n}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Given that $c_n$ is Conjugate Anti-Symmetric (C.A.S.):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = -c_{-n}^*"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Substitute the even property into the C.A.S. condition:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = -c_n^* \\implies c_n \\text{ is purely \\bf Imaginary!}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_n: \\text{Even} + \\text{C.A.S.} \\implies c_n \\text{ is Purely Imaginary}}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Delineate Time-Domain Properties of $x(t)$:**\nUsing the synthesis equation $x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n\\omega_0 t}$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Since $c_n$ is an **Even sequence** ($c_{-n} = c_n$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(-t) = \\sum_{n=-\\infty}^\\infty c_n e^{-j n\\omega_0 t} = \\sum_{m=-\\infty}^\\infty c_{-m} e^{j m\\omega_0 t} = \\sum_{m=-\\infty}^\\infty c_m e^{j m\\omega_0 t} = x(t)"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies x(t) \\text{ is \\bf Even}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Since $c_n$ is **purely Imaginary** ($c_n = -c_n^*$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x^*(t) = \\sum_{n=-\\infty}^\\infty c_n^* e^{-j n\\omega_0 t} = \\sum_{n=-\\infty}^\\infty (-c_n) e^{-j n\\omega_0 t} = -\\sum_{m=-\\infty}^\\infty c_{-m} e^{j m\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Using $c_{-m} = c_m$:"
+      },
+      {
+       "t": "math",
+       "tex": "x^*(t) = -\\sum_{m=-\\infty}^\\infty c_m e^{j m\\omega_0 t} = -x(t) \\implies x(t) = -x^*(t)"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies x(t) \\text{ is purely \\bf Imaginary}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Combining Even and Purely Imaginary:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = -x^*(t) = -x^*(-t)"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies x(t) \\text{ is \\bf Conjugate Anti-Symmetric (C.A.S.)}"
+      },
+      {
+       "t": "p",
+       "text": "**Boxed Final Answer:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) \\text{ is Even} + \\text{C.A.S.} + \\text{Imaginary}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -4670,146 +4675,145 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Fundamental Frequency:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{4} = \\frac{\\pi}{2} \\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Rectangular TFS Coefficients ($a_n, b_n$):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$a_0 = c_0 = 3$",
-      "For harmonic $n = 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_1 = c_1 + c_{-1} = (2 - j2) + (2 + j2) = 4"
-    },
-    {
-     "t": "math",
-     "tex": "b_1 = j(c_1 - c_{-1}) = j[(2 - j2) - (2 + j2)] = j[-j4] = -j^2(4) = 4"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For harmonic $n = 3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_3 = c_3 + c_{-3} = (-j4) + (j4) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "b_3 = j(c_3 - c_{-3}) = j[(-j4) - (j4)] = j[-j8] = 8"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Compact Polar TFS Form ($C_n, \\theta_n$):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "DC component: $C_0 = a_0 = 3$.",
-      "For $n = 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "C_1 = 2|c_1| = 2\\sqrt{2^2 + (-2)^2} = 2\\sqrt{8} = 4\\sqrt{2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\theta_1 = \\angle c_1 = \\angle(2 - j2) = -\\frac{\\pi}{4} \\text{ rad } (-45^\\circ)"
-    },
-    {
-     "t": "p",
-     "text": "*Check via formula:* $\\theta_1 = \\tan^{-1}\\left(\\frac{-b_1}{a_1}\\right) = \\tan^{-1}\\left(\\frac{-4}{4}\\right) = -45^\\circ$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "C_3 = 2|c_3| = 2|-j4| = 2(4) = 8"
-    },
-    {
-     "t": "math",
-     "tex": "\\theta_3 = \\angle c_3 = \\angle(-j4) = -\\frac{\\pi}{2} \\text{ rad } (-90^\\circ)"
-    },
-    {
-     "t": "p",
-     "text": "*Check via formula:* $a_3 = 0, -b_3 = -8 < 0 \\implies \\theta_3 = -90^\\circ$."
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 3 + 4\\sqrt{2} \\cos\\left(\\frac{\\pi}{2}t - \\frac{\\pi}{4}\\right) + 8 \\cos\\left(\\frac{3\\pi}{2}t - \\frac{\\pi}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Total Average Power (Parseval's Relation):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Via EFS coefficients:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\sum_{n=-\\infty}^\\infty |c_n|^2 = |c_0|^2 + 2|c_1|^2 + 2|c_3|^2"
-    },
-    {
-     "t": "math",
-     "tex": "|c_0|^2 = 3^2 = 9"
-    },
-    {
-     "t": "math",
-     "tex": "|c_1|^2 = 2^2 + (-2)^2 = 8"
-    },
-    {
-     "t": "math",
-     "tex": "|c_3|^2 = (-4)^2 = 16"
-    },
-    {
-     "t": "math",
-     "tex": "P = 9 + 2(8) + 2(16) = 9 + 16 + 32 = 57 \\text{ W}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Via Polar TFS coefficients:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = C_0^2 + \\frac{1}{2} C_1^2 + \\frac{1}{2} C_3^2 = 3^2 + \\frac{1}{2}(4\\sqrt{2})^2 + \\frac{1}{2}(8)^2 = 9 + \\frac{32}{2} + \\frac{64}{2} = 9 + 16 + 32 = 57 \\text{ W} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "**Boxed Final Answer:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = 3 + 4\\sqrt{2}\\cos\\left(\\frac{\\pi}{2}t - \\frac{\\pi}{4}\\right) + 8\\cos\\left(\\frac{3\\pi}{2}t - \\frac{\\pi}{2}\\right), \\quad P = 57\\text{ W}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Fundamental Frequency:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{4} = \\frac{\\pi}{2} \\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Rectangular TFS Coefficients ($a_n, b_n$):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$a_0 = c_0 = 3$",
+        "For harmonic $n = 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_1 = c_1 + c_{-1} = (2 - j2) + (2 + j2) = 4"
+      },
+      {
+       "t": "math",
+       "tex": "b_1 = j(c_1 - c_{-1}) = j[(2 - j2) - (2 + j2)] = j[-j4] = -j^2(4) = 4"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For harmonic $n = 3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_3 = c_3 + c_{-3} = (-j4) + (j4) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "b_3 = j(c_3 - c_{-3}) = j[(-j4) - (j4)] = j[-j8] = 8"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Compact Polar TFS Form ($C_n, \\theta_n$):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "DC component: $C_0 = a_0 = 3$.",
+        "For $n = 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "C_1 = 2|c_1| = 2\\sqrt{2^2 + (-2)^2} = 2\\sqrt{8} = 4\\sqrt{2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\theta_1 = \\angle c_1 = \\angle(2 - j2) = -\\frac{\\pi}{4} \\text{ rad } (-45^\\circ)"
+      },
+      {
+       "t": "p",
+       "text": "*Check via formula:* $\\theta_1 = \\tan^{-1}\\left(\\frac{-b_1}{a_1}\\right) = \\tan^{-1}\\left(\\frac{-4}{4}\\right) = -45^\\circ$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "C_3 = 2|c_3| = 2|-j4| = 2(4) = 8"
+      },
+      {
+       "t": "math",
+       "tex": "\\theta_3 = \\angle c_3 = \\angle(-j4) = -\\frac{\\pi}{2} \\text{ rad } (-90^\\circ)"
+      },
+      {
+       "t": "p",
+       "text": "*Check via formula:* $a_3 = 0, -b_3 = -8 < 0 \\implies \\theta_3 = -90^\\circ$."
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 3 + 4\\sqrt{2} \\cos\\left(\\frac{\\pi}{2}t - \\frac{\\pi}{4}\\right) + 8 \\cos\\left(\\frac{3\\pi}{2}t - \\frac{\\pi}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Total Average Power (Parseval's Relation):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Via EFS coefficients:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\sum_{n=-\\infty}^\\infty |c_n|^2 = |c_0|^2 + 2|c_1|^2 + 2|c_3|^2"
+      },
+      {
+       "t": "math",
+       "tex": "|c_0|^2 = 3^2 = 9"
+      },
+      {
+       "t": "math",
+       "tex": "|c_1|^2 = 2^2 + (-2)^2 = 8"
+      },
+      {
+       "t": "math",
+       "tex": "|c_3|^2 = (-4)^2 = 16"
+      },
+      {
+       "t": "math",
+       "tex": "P = 9 + 2(8) + 2(16) = 9 + 16 + 32 = 57 \\text{ W}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Via Polar TFS coefficients:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = C_0^2 + \\frac{1}{2} C_1^2 + \\frac{1}{2} C_3^2 = 3^2 + \\frac{1}{2}(4\\sqrt{2})^2 + \\frac{1}{2}(8)^2 = 9 + \\frac{32}{2} + \\frac{64}{2} = 9 + 16 + 32 = 57 \\text{ W} \\quad \\checkmark"
+      },
+      {
+       "t": "p",
+       "text": "**Boxed Final Answer:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = 3 + 4\\sqrt{2}\\cos\\left(\\frac{\\pi}{2}t - \\frac{\\pi}{4}\\right) + 8\\cos\\left(\\frac{3\\pi}{2}t - \\frac{\\pi}{2}\\right), \\quad P = 57\\text{ W}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4833,87 +4837,86 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Check Signal Realness (Conjugate Symmetry):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $n = 2$: $c_{-2} = j3$, while $c_2^* = (-j3)^* = +j3 = c_{-2}$.",
-      "At $n = 5$: $c_{-5} = 4e^{-j\\pi/3}$, while $c_5^* = (4e^{j\\pi/3})^* = 4e^{-j\\pi/3} = c_{-5}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $c_{-n} = c_n^*$ for all $n$, the signal $x(t)$ is strictly **Real-Valued**."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Check Parity Symmetry:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$c_2 = -j3 \\neq c_{-2} = j3 \\implies c_n$ is not even $\\implies x(t)$ is not even.",
-      "For $n = 2$: $c_{-2} = -c_2$ (odd). But for $n = 5$: $c_{-5} = 4e^{-j\\pi/3} \\neq -c_5 = -4e^{j\\pi/3}$. Thus $c_n$ is not purely odd.",
-      "Conclusion: $x(t)$ possesses **neither even nor odd symmetry**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Time-Domain Synthesis:**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=1, 2, 5} 2|c_n| \\cos(n\\omega_0 t + \\angle c_n)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Harmonic $n = 2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|c_2| = 3, \\quad \\angle c_2 = \\angle(-j3) = -\\frac{\\pi}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Term } 2 = 2(3)\\cos\\left(2(10\\pi)t - \\frac{\\pi}{2}\\right) = 6\\cos\\left(20\\pi t - \\frac{\\pi}{2}\\right) = 6\\sin(20\\pi t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Harmonic $n = 5$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|c_5| = 4, \\quad \\angle c_5 = +\\frac{\\pi}{3}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Term } 5 = 2(4)\\cos\\left(5(10\\pi)t + \\frac{\\pi}{3}\\right) = 8\\cos\\left(50\\pi t + \\frac{\\pi}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Boxed Final Answer:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = 6\\sin(20\\pi t) + 8\\cos\\left(50\\pi t + \\frac{\\pi}{3}\\right)}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Signal is strictly Real with no even/odd time symmetry.}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Check Signal Realness (Conjugate Symmetry):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $n = 2$: $c_{-2} = j3$, while $c_2^* = (-j3)^* = +j3 = c_{-2}$.",
+        "At $n = 5$: $c_{-5} = 4e^{-j\\pi/3}$, while $c_5^* = (4e^{j\\pi/3})^* = 4e^{-j\\pi/3} = c_{-5}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $c_{-n} = c_n^*$ for all $n$, the signal $x(t)$ is strictly **Real-Valued**."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Check Parity Symmetry:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$c_2 = -j3 \\neq c_{-2} = j3 \\implies c_n$ is not even $\\implies x(t)$ is not even.",
+        "For $n = 2$: $c_{-2} = -c_2$ (odd). But for $n = 5$: $c_{-5} = 4e^{-j\\pi/3} \\neq -c_5 = -4e^{j\\pi/3}$. Thus $c_n$ is not purely odd.",
+        "Conclusion: $x(t)$ possesses **neither even nor odd symmetry**."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Time-Domain Synthesis:**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=1, 2, 5} 2|c_n| \\cos(n\\omega_0 t + \\angle c_n)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Harmonic $n = 2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|c_2| = 3, \\quad \\angle c_2 = \\angle(-j3) = -\\frac{\\pi}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Term } 2 = 2(3)\\cos\\left(2(10\\pi)t - \\frac{\\pi}{2}\\right) = 6\\cos\\left(20\\pi t - \\frac{\\pi}{2}\\right) = 6\\sin(20\\pi t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Harmonic $n = 5$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|c_5| = 4, \\quad \\angle c_5 = +\\frac{\\pi}{3}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Term } 5 = 2(4)\\cos\\left(5(10\\pi)t + \\frac{\\pi}{3}\\right) = 8\\cos\\left(50\\pi t + \\frac{\\pi}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Boxed Final Answer:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = 6\\sin(20\\pi t) + 8\\cos\\left(50\\pi t + \\frac{\\pi}{3}\\right)}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Signal is strictly Real with no even/odd time symmetry.}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -7222,212 +7225,211 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Analysis of Signal $x_1(t)$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The fundamental frequency is $\\omega_0 = \\frac{2\\pi}{50}\\text{ rad/s}$.",
-      "The exponential Fourier series coefficients are:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\begin{cases} (1/2)^n, & 0 \\le n \\le 100 \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Evaluate negative harmonic coefficients:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{-1} = 0, \\quad c_{-2} = 0, \\quad \\dots"
-    },
-    {
-     "t": "p",
-     "text": "while positive coefficients are:"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{2}, \\quad c_2 = \\frac{1}{4}, \\quad \\dots"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Reality Test:** For a signal to be real, its coefficients must satisfy conjugate symmetry: $c_n = c_{-n}^*$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{2} \\neq c_{-1}^* = 0 \\implies x_1(t) \\text{ is NOT real.}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Even Symmetry Test:** For a signal to be even, its coefficients must satisfy $c_n = c_{-n}$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{2} \\neq c_{-1} = 0 \\implies x_1(t) \\text{ is NOT even.}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Odd Symmetry Test:** For odd signals, $c_n = -c_{-n}$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{2} \\neq -c_{-1} = 0 \\implies x_1(t) \\text{ is NOT odd.}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion for $x_1(t)$:** $x_1(t)$ is **Complex** and **NENO** (Neither Even Nor Odd)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Analysis of Signal $x_2(t)$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The Fourier series coefficients are:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\begin{cases} \\cos(n\\pi), & -100 \\le n \\le 100 \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Even Symmetry Test:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Cosine is an even function: $\\cos(-n\\pi) = \\cos(n\\pi)$.\n  Therefore, $c_{-n} = \\cos(-n\\pi) = \\cos(n\\pi) = c_n$ for all $-100 \\le n \\le 100$.\n  For $|n| > 100$, $c_n = c_{-n} = 0$.\n  Since $c_n = c_{-n}$ for all $n \\in \\mathbb{Z}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x_2(t) \\text{ is EVEN.}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Reality Test:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Note that $\\cos(n\\pi) = (-1)^n \\in \\mathbb{R}$ is strictly real-valued.\n  Thus, $c_n^* = c_n$. Since $c_n = c_{-n}$, we have:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-n}^* = c_{-n} = c_n"
-    },
-    {
-     "t": "p",
-     "text": "Since $c_n = c_{-n}^*$ is satisfied for all $n$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x_2(t) \\text{ is REAL-VALUED.}}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Analysis of Signal $x_3(t)$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The Fourier series coefficients are:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\begin{cases} j \\sin\\left(\\frac{n\\pi}{2}\\right), & -100 \\le n \\le 100 \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Symmetry Test:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Sine is an odd function: $\\sin\\left(\\frac{-n\\pi}{2}\\right) = -\\sin\\left(\\frac{n\\pi}{2}\\right)$.\n  Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-n} = j\\sin\\left(\\frac{-n\\pi}{2}\\right) = -j\\sin\\left(\\frac{n\\pi}{2}\\right) = -c_n \\iff c_n = -c_{-n}"
-    },
-    {
-     "t": "p",
-     "text": "At $n = 0$: $c_0 = j\\sin(0) = 0 = -c_0$.\n  Since $c_n = -c_{-n}$ holds for all $n$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x_3(t) \\text{ is ODD (and therefore NOT even).}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Reality Test:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Compute the complex conjugate of $c_{-n}$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-n}^* = \\left[ -j\\sin\\left(\\frac{n\\pi}{2}\\right) \\right]^* = (-j)^* \\sin\\left(\\frac{n\\pi}{2}\\right) = +j\\sin\\left(\\frac{n\\pi}{2}\\right) = c_n"
-    },
-    {
-     "t": "p",
-     "text": "Since $c_n = c_{-n}^*$ holds for all $n$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x_3(t) \\text{ is REAL-VALUED.}}"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answers:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{(a) Real-valued signals: } x_2(t) \\text{ and } x_3(t)}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{(b) Even signals: } x_2(t) \\text{ only}}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Traps:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Trap 1:* Seeing $j$ in $x_3(t) = \\sum j\\sin(n\\pi/2)e^{j n\\omega_0 t}$ and immediately jumping to the conclusion that $x_3(t)$ is complex or imaginary! When purely imaginary coefficients are odd ($c_n = -c_{-n}$), they synthesize into pure real sines because $j e^{j n\\omega_0 t} - j e^{-j n\\omega_0 t} = j(2j\\sin n\\omega_0 t) = -2\\sin(n\\omega_0 t) \\in \\mathbb{R}$!",
-      "*Trap 2:* Forgetting to check the DC term ($n=0$) when checking odd symmetry. An odd continuous periodic signal MUST have $c_0 = 0$. Here $c_0 = j\\sin(0) = 0$, so odd symmetry holds."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Analysis of Signal $x_1(t)$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The fundamental frequency is $\\omega_0 = \\frac{2\\pi}{50}\\text{ rad/s}$.",
+        "The exponential Fourier series coefficients are:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\begin{cases} (1/2)^n, & 0 \\le n \\le 100 \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Evaluate negative harmonic coefficients:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{-1} = 0, \\quad c_{-2} = 0, \\quad \\dots"
+      },
+      {
+       "t": "p",
+       "text": "while positive coefficients are:"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{2}, \\quad c_2 = \\frac{1}{4}, \\quad \\dots"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Reality Test:** For a signal to be real, its coefficients must satisfy conjugate symmetry: $c_n = c_{-n}^*$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{2} \\neq c_{-1}^* = 0 \\implies x_1(t) \\text{ is NOT real.}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Even Symmetry Test:** For a signal to be even, its coefficients must satisfy $c_n = c_{-n}$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{2} \\neq c_{-1} = 0 \\implies x_1(t) \\text{ is NOT even.}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Odd Symmetry Test:** For odd signals, $c_n = -c_{-n}$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{2} \\neq -c_{-1} = 0 \\implies x_1(t) \\text{ is NOT odd.}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion for $x_1(t)$:** $x_1(t)$ is **Complex** and **NENO** (Neither Even Nor Odd)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Analysis of Signal $x_2(t)$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The Fourier series coefficients are:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\begin{cases} \\cos(n\\pi), & -100 \\le n \\le 100 \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Even Symmetry Test:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Cosine is an even function: $\\cos(-n\\pi) = \\cos(n\\pi)$.\n  Therefore, $c_{-n} = \\cos(-n\\pi) = \\cos(n\\pi) = c_n$ for all $-100 \\le n \\le 100$.\n  For $|n| > 100$, $c_n = c_{-n} = 0$.\n  Since $c_n = c_{-n}$ for all $n \\in \\mathbb{Z}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x_2(t) \\text{ is EVEN.}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Reality Test:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Note that $\\cos(n\\pi) = (-1)^n \\in \\mathbb{R}$ is strictly real-valued.\n  Thus, $c_n^* = c_n$. Since $c_n = c_{-n}$, we have:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-n}^* = c_{-n} = c_n"
+      },
+      {
+       "t": "p",
+       "text": "Since $c_n = c_{-n}^*$ is satisfied for all $n$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x_2(t) \\text{ is REAL-VALUED.}}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Analysis of Signal $x_3(t)$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The Fourier series coefficients are:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\begin{cases} j \\sin\\left(\\frac{n\\pi}{2}\\right), & -100 \\le n \\le 100 \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Symmetry Test:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Sine is an odd function: $\\sin\\left(\\frac{-n\\pi}{2}\\right) = -\\sin\\left(\\frac{n\\pi}{2}\\right)$.\n  Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-n} = j\\sin\\left(\\frac{-n\\pi}{2}\\right) = -j\\sin\\left(\\frac{n\\pi}{2}\\right) = -c_n \\iff c_n = -c_{-n}"
+      },
+      {
+       "t": "p",
+       "text": "At $n = 0$: $c_0 = j\\sin(0) = 0 = -c_0$.\n  Since $c_n = -c_{-n}$ holds for all $n$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x_3(t) \\text{ is ODD (and therefore NOT even).}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Reality Test:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Compute the complex conjugate of $c_{-n}$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-n}^* = \\left[ -j\\sin\\left(\\frac{n\\pi}{2}\\right) \\right]^* = (-j)^* \\sin\\left(\\frac{n\\pi}{2}\\right) = +j\\sin\\left(\\frac{n\\pi}{2}\\right) = c_n"
+      },
+      {
+       "t": "p",
+       "text": "Since $c_n = c_{-n}^*$ holds for all $n$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x_3(t) \\text{ is REAL-VALUED.}}"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answers:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{(a) Real-valued signals: } x_2(t) \\text{ and } x_3(t)}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{(b) Even signals: } x_2(t) \\text{ only}}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Traps:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Trap 1:* Seeing $j$ in $x_3(t) = \\sum j\\sin(n\\pi/2)e^{j n\\omega_0 t}$ and immediately jumping to the conclusion that $x_3(t)$ is complex or imaginary! When purely imaginary coefficients are odd ($c_n = -c_{-n}$), they synthesize into pure real sines because $j e^{j n\\omega_0 t} - j e^{-j n\\omega_0 t} = j(2j\\sin n\\omega_0 t) = -2\\sin(n\\omega_0 t) \\in \\mathbb{R}$!",
+        "*Trap 2:* Forgetting to check the DC term ($n=0$) when checking odd symmetry. An odd continuous periodic signal MUST have $c_0 = 0$. Here $c_0 = j\\sin(0) = 0$, so odd symmetry holds."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7449,117 +7451,116 @@ export default {
      "text": "Determine the mathematical nature of $x(t)$ (Real/Imaginary/Complex, Even/Odd/NENO) and reconstruct the time-domain waveform $x(t)$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Polar to Cartesian FSC Conversion**\nUsing $c_n = |c_n| e^{j \\angle c_n}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$c_0 = 2 e^{j 0} = 2$",
-      "$c_1 = 3 e^{j \\pi/2} = 3j$",
-      "$c_{-1} = 3 e^{-j \\pi/2} = -3j$",
-      "$c_2 = 1 e^{-j \\pi/2} = -j$",
-      "$c_{-2} = 1 e^{j \\pi/2} = j$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Property Verification**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conjugate Symmetry (Reality):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{-0}^* = 2^* = 2 = c_0"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-1}^* = (-3j)^* = +3j = c_1"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-2}^* = (j)^* = -j = c_2"
-    },
-    {
-     "t": "p",
-     "text": "Since $c_n = c_{-n}^*$ for all $n$, the signal is strictly **REAL-VALUED**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Parity (Even/Odd):**",
-      "Odd test: $c_1 = -c_{-1} \\implies 3j = -(-3j)$ (Passed for $n=1, 2$).",
-      "BUT at $n=0$: $c_0 = 2 \\neq -c_{-0} = -2$.",
-      "Because of the non-zero DC component, the signal is **NOT ODD**.",
-      "Even test: $c_1 = 3j \\neq c_{-1} = -3j$. Signal is **NOT EVEN**.",
-      "Thus, $x(t)$ is **NENO**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Synthesis of $x(t)$**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=-2}^2 c_n e^{j n \\omega_0 t} = c_0 + [c_1 e^{j\\omega_0 t} + c_{-1} e^{-j\\omega_0 t}] + [c_2 e^{j 2\\omega_0 t} + c_{-2} e^{-j 2\\omega_0 t}]"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the Cartesian values:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + [3j e^{j\\omega_0 t} - 3j e^{-j\\omega_0 t}] + [-j e^{j 2\\omega_0 t} + j e^{-j 2\\omega_0 t}]"
-    },
-    {
-     "t": "p",
-     "text": "Factor out $j$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + 3j(e^{j\\omega_0 t} - e^{-j\\omega_0 t}) - j(e^{j 2\\omega_0 t} - e^{-j 2\\omega_0 t})"
-    },
-    {
-     "t": "p",
-     "text": "Recall Euler's identity: $e^{j\\theta} - e^{-j\\theta} = 2j\\sin\\theta$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + 3j [2j \\sin(\\omega_0 t)] - j [2j \\sin(2\\omega_0 t)]"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + 6j^2 \\sin(\\omega_0 t) - 2j^2 \\sin(2\\omega_0 t)"
-    },
-    {
-     "t": "p",
-     "text": "Since $j^2 = -1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = 2 - 6\\sin(\\omega_0 t) + 2\\sin(2\\omega_0 t)}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Traps:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*The DC Parity Trap:* Students often look at $c_1 = -c_{-1}$ and $c_2 = -c_{-2}$ and immediately declare $x(t)$ to be an odd signal. They forget that for an odd signal, $c_0 = 0$ is strictly required! Here, $c_0 = 2 \\neq 0$, which breaks odd symmetry around the horizontal axis."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Polar to Cartesian FSC Conversion**\nUsing $c_n = |c_n| e^{j \\angle c_n}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$c_0 = 2 e^{j 0} = 2$",
+        "$c_1 = 3 e^{j \\pi/2} = 3j$",
+        "$c_{-1} = 3 e^{-j \\pi/2} = -3j$",
+        "$c_2 = 1 e^{-j \\pi/2} = -j$",
+        "$c_{-2} = 1 e^{j \\pi/2} = j$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Property Verification**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conjugate Symmetry (Reality):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{-0}^* = 2^* = 2 = c_0"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-1}^* = (-3j)^* = +3j = c_1"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-2}^* = (j)^* = -j = c_2"
+      },
+      {
+       "t": "p",
+       "text": "Since $c_n = c_{-n}^*$ for all $n$, the signal is strictly **REAL-VALUED**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Parity (Even/Odd):**",
+        "Odd test: $c_1 = -c_{-1} \\implies 3j = -(-3j)$ (Passed for $n=1, 2$).",
+        "BUT at $n=0$: $c_0 = 2 \\neq -c_{-0} = -2$.",
+        "Because of the non-zero DC component, the signal is **NOT ODD**.",
+        "Even test: $c_1 = 3j \\neq c_{-1} = -3j$. Signal is **NOT EVEN**.",
+        "Thus, $x(t)$ is **NENO**."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Synthesis of $x(t)$**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=-2}^2 c_n e^{j n \\omega_0 t} = c_0 + [c_1 e^{j\\omega_0 t} + c_{-1} e^{-j\\omega_0 t}] + [c_2 e^{j 2\\omega_0 t} + c_{-2} e^{-j 2\\omega_0 t}]"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the Cartesian values:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + [3j e^{j\\omega_0 t} - 3j e^{-j\\omega_0 t}] + [-j e^{j 2\\omega_0 t} + j e^{-j 2\\omega_0 t}]"
+      },
+      {
+       "t": "p",
+       "text": "Factor out $j$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + 3j(e^{j\\omega_0 t} - e^{-j\\omega_0 t}) - j(e^{j 2\\omega_0 t} - e^{-j 2\\omega_0 t})"
+      },
+      {
+       "t": "p",
+       "text": "Recall Euler's identity: $e^{j\\theta} - e^{-j\\theta} = 2j\\sin\\theta$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + 3j [2j \\sin(\\omega_0 t)] - j [2j \\sin(2\\omega_0 t)]"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + 6j^2 \\sin(\\omega_0 t) - 2j^2 \\sin(2\\omega_0 t)"
+      },
+      {
+       "t": "p",
+       "text": "Since $j^2 = -1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = 2 - 6\\sin(\\omega_0 t) + 2\\sin(2\\omega_0 t)}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Traps:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*The DC Parity Trap:* Students often look at $c_1 = -c_{-1}$ and $c_2 = -c_{-2}$ and immediately declare $x(t)$ to be an odd signal. They forget that for an odd signal, $c_0 = 0$ is strictly required! Here, $c_0 = 2 \\neq 0$, which breaks odd symmetry around the horizontal axis."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7578,113 +7579,112 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Part 1: Case $c_0 = 2$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice that:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-c_{-1}^* = -(-2 + 3j)^* = -(-2 - 3j) = 2 + 3j = c_1"
-    },
-    {
-     "t": "math",
-     "tex": "-c_{-2}^* = -(-1 + j)^* = -(-1 - j) = 1 + j = c_2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $n = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-c_0^* = -(2)^* = -2 \\neq c_0 = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The condition for a purely imaginary signal ($c_n = -c_{-n}^*$) fails at $n = 0$.",
-      "The condition for a real signal ($c_n = c_{-n}^*$) fails because $c_1 = 2+3j \\neq c_{-1}^* = -2-3j$.",
-      "Therefore, $x(t)$ is **COMPLEX** and **NENO**.",
-      "**Synthesis:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + (2+3j)e^{j\\omega_0 t} + (-2+3j)e^{-j\\omega_0 t} + (1+j)e^{j 2\\omega_0 t} + (-1+j)e^{-j 2\\omega_0 t}"
-    },
-    {
-     "t": "math",
-     "tex": "= 2 + 2(e^{j\\omega_0 t} - e^{-j\\omega_0 t}) + 3j(e^{j\\omega_0 t} + e^{-j\\omega_0 t}) + (e^{j 2\\omega_0 t} - e^{-j 2\\omega_0 t}) + j(e^{j 2\\omega_0 t} + e^{-j 2\\omega_0 t})"
-    },
-    {
-     "t": "math",
-     "tex": "= 2 + 2(2j\\sin\\omega_0 t) + 3j(2\\cos\\omega_0 t) + 2j\\sin(2\\omega_0 t) + j(2\\cos 2\\omega_0 t)"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = 2 + j\\left[ 4\\sin(\\omega_0 t) + 6\\cos(\\omega_0 t) + 2\\sin(2\\omega_0 t) + 2\\cos(2\\omega_0 t) \\right]}"
-    },
-    {
-     "t": "p",
-     "text": "**Part 2: Case $c_0 = 2j$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Now check $n = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-c_0^* = -(2j)^* = -(-2j) = 2j = c_0 \\quad (\\mathbf{SATISFIED!})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Because $c_n = -c_{-n}^*$ is now satisfied for all $n \\in \\{0, \\pm 1, \\pm 2\\}$, $x(t)$ satisfies:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x^*(t) = -x(t) \\iff \\mathbf{x(t) \\text{ is PURELY IMAGINARY.}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Synthesis:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Replacing the DC term $2$ with $2j$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = j\\left[ 2 + 4\\sin(\\omega_0 t) + 6\\cos(\\omega_0 t) + 2\\sin(2\\omega_0 t) + 2\\cos(2\\omega_0 t) \\right]}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Traps:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For purely imaginary signals, the DC term $c_0$ MUST be either purely imaginary or zero! If $c_0$ has any non-zero real part, the signal cannot be purely imaginary, even if all AC harmonics satisfy $c_n = -c_{-n}^*$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Part 1: Case $c_0 = 2$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Notice that:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-c_{-1}^* = -(-2 + 3j)^* = -(-2 - 3j) = 2 + 3j = c_1"
+      },
+      {
+       "t": "math",
+       "tex": "-c_{-2}^* = -(-1 + j)^* = -(-1 - j) = 1 + j = c_2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $n = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-c_0^* = -(2)^* = -2 \\neq c_0 = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The condition for a purely imaginary signal ($c_n = -c_{-n}^*$) fails at $n = 0$.",
+        "The condition for a real signal ($c_n = c_{-n}^*$) fails because $c_1 = 2+3j \\neq c_{-1}^* = -2-3j$.",
+        "Therefore, $x(t)$ is **COMPLEX** and **NENO**.",
+        "**Synthesis:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + (2+3j)e^{j\\omega_0 t} + (-2+3j)e^{-j\\omega_0 t} + (1+j)e^{j 2\\omega_0 t} + (-1+j)e^{-j 2\\omega_0 t}"
+      },
+      {
+       "t": "math",
+       "tex": "= 2 + 2(e^{j\\omega_0 t} - e^{-j\\omega_0 t}) + 3j(e^{j\\omega_0 t} + e^{-j\\omega_0 t}) + (e^{j 2\\omega_0 t} - e^{-j 2\\omega_0 t}) + j(e^{j 2\\omega_0 t} + e^{-j 2\\omega_0 t})"
+      },
+      {
+       "t": "math",
+       "tex": "= 2 + 2(2j\\sin\\omega_0 t) + 3j(2\\cos\\omega_0 t) + 2j\\sin(2\\omega_0 t) + j(2\\cos 2\\omega_0 t)"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = 2 + j\\left[ 4\\sin(\\omega_0 t) + 6\\cos(\\omega_0 t) + 2\\sin(2\\omega_0 t) + 2\\cos(2\\omega_0 t) \\right]}"
+      },
+      {
+       "t": "p",
+       "text": "**Part 2: Case $c_0 = 2j$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Now check $n = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-c_0^* = -(2j)^* = -(-2j) = 2j = c_0 \\quad (\\mathbf{SATISFIED!})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Because $c_n = -c_{-n}^*$ is now satisfied for all $n \\in \\{0, \\pm 1, \\pm 2\\}$, $x(t)$ satisfies:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x^*(t) = -x(t) \\iff \\mathbf{x(t) \\text{ is PURELY IMAGINARY.}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Synthesis:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Replacing the DC term $2$ with $2j$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = j\\left[ 2 + 4\\sin(\\omega_0 t) + 6\\cos(\\omega_0 t) + 2\\sin(2\\omega_0 t) + 2\\cos(2\\omega_0 t) \\right]}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Traps:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For purely imaginary signals, the DC term $c_0$ MUST be either purely imaginary or zero! If $c_0$ has any non-zero real part, the signal cannot be purely imaginary, even if all AC harmonics satisfy $c_n = -c_{-n}^*$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7699,111 +7699,110 @@ export default {
      "tex": "\\sum_{n=-\\infty}^\\infty c_n = 0"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Proof Method 1 (Spectral Anti-Symmetry):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "By definition, an odd signal satisfies $x(t) = -x(-t)$.",
-      "Taking the Fourier series of both sides using the time-reversal property:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = -c_{-n} \\quad \\forall n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Setting $n = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = -c_0 \\implies 2c_0 = 0 \\implies c_0 = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Now express the bi-infinite summation by pairing harmonic terms:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^\\infty c_n = c_0 + \\sum_{n=1}^\\infty c_n + \\sum_{n=-\\infty}^{-1} c_n = c_0 + \\sum_{n=1}^\\infty [c_n + c_{-n}]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Substitute $c_{-n} = -c_n$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^\\infty c_n = 0 + \\sum_{n=1}^\\infty [c_n - c_n] = 0 + \\sum_{n=1}^\\infty 0 = \\mathbf{0}"
-    },
-    {
-     "t": "p",
-     "text": "**Proof Method 2 (Synthesis Equation at $t = 0$):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The synthesis equation is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Evaluate both sides at $t = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 (0)} = \\sum_{n=-\\infty}^\\infty c_n (1) = \\sum_{n=-\\infty}^\\infty c_n"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $x(t)$ is continuous and odd:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = -x(-0) = -x(0) \\implies 2x(0) = 0 \\implies x(0) = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Equating the two results:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\sum_{n=-\\infty}^\\infty c_n = x(0) = 0}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Traps:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $x(t)$ has a discontinuity at $t = 0$, Dirichlet conditions state that the Fourier series converges to the average of the left and right limits: $\\frac{x(0^+) + x(0^-)}{2}$. For an odd discontinuous signal, $x(0^+) = -x(0^-)$, so $\\frac{x(0^+) + x(0^-)}{2} = 0$, meaning the formula still yields $0$!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Proof Method 1 (Spectral Anti-Symmetry):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "By definition, an odd signal satisfies $x(t) = -x(-t)$.",
+        "Taking the Fourier series of both sides using the time-reversal property:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = -c_{-n} \\quad \\forall n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Setting $n = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = -c_0 \\implies 2c_0 = 0 \\implies c_0 = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Now express the bi-infinite summation by pairing harmonic terms:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^\\infty c_n = c_0 + \\sum_{n=1}^\\infty c_n + \\sum_{n=-\\infty}^{-1} c_n = c_0 + \\sum_{n=1}^\\infty [c_n + c_{-n}]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Substitute $c_{-n} = -c_n$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^\\infty c_n = 0 + \\sum_{n=1}^\\infty [c_n - c_n] = 0 + \\sum_{n=1}^\\infty 0 = \\mathbf{0}"
+      },
+      {
+       "t": "p",
+       "text": "**Proof Method 2 (Synthesis Equation at $t = 0$):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The synthesis equation is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Evaluate both sides at $t = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 (0)} = \\sum_{n=-\\infty}^\\infty c_n (1) = \\sum_{n=-\\infty}^\\infty c_n"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $x(t)$ is continuous and odd:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = -x(-0) = -x(0) \\implies 2x(0) = 0 \\implies x(0) = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Equating the two results:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\sum_{n=-\\infty}^\\infty c_n = x(0) = 0}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Traps:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $x(t)$ has a discontinuity at $t = 0$, Dirichlet conditions state that the Fourier series converges to the average of the left and right limits: $\\frac{x(0^+) + x(0^-)}{2}$. For an odd discontinuous signal, $x(0^+) = -x(0^-)$, so $\\frac{x(0^+) + x(0^-)}{2} = 0$, meaning the formula still yields $0$!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7822,116 +7821,115 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Part 1: Power of $x_1(t)$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Extract the non-zero coefficients:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = 1, \\quad c_1 = \\frac{1}{2}, \\quad c_2 = \\frac{1}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = 0 \\quad \\text{for all other } n"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Using Parseval's universal power relation $P = \\sum_{n=-\\infty}^\\infty |c_n|^2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = |c_0|^2 + |c_1|^2 + |c_2|^2 = 1^2 + \\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{1}{4}\\right)^2 = 1 + \\frac{1}{4} + \\frac{1}{16} = \\frac{16 + 4 + 1}{16} = \\frac{21}{16}\\text{ W}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{P[x_1(t)] = \\frac{21}{16}\\text{ W} = 1.3125\\text{ W}}"
-    },
-    {
-     "t": "p",
-     "text": "**Part 2: Power of $x_2(t)$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Rewrite the signal by factoring the phase angle:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_2(t) = \\sum_{n=-2}^2 \\left(\\frac{1}{2}\\right)^n e^{j\\pi/2} e^{j n \\omega_0 t} = \\sum_{n=-2}^2 j\\left(\\frac{1}{2}\\right)^n e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Identify coefficients $c_n = j(1/2)^n$ for $-2 \\le n \\le 2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = j(1/2)^0 = j \\implies |c_0|^2 = |j|^2 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = j(1/2)^1 = j/2 \\implies |c_1|^2 = 1/4"
-    },
-    {
-     "t": "math",
-     "tex": "c_2 = j(1/2)^2 = j/4 \\implies |c_2|^2 = 1/16"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-1} = j(1/2)^{-1} = 2j \\implies |c_{-1}|^2 = |2j|^2 = 4"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-2} = j(1/2)^{-2} = 4j \\implies |c_{-2}|^2 = |4j|^2 = 16"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**CRITICAL TRAP AUDIT:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Can we use the formula $P = |c_0|^2 + 2\\sum_{n=1}^2 |c_n|^2$?\n  **NO!** Because $|c_1| = 1/2 \\neq |c_{-1}| = 2$, the magnitude spectrum is NOT even, meaning $x_2(t)$ is complex!\n  If a student erroneously uses the doubled formula:"
-    },
-    {
-     "t": "math",
-     "tex": "P_{\\text{wrong}} = 1 + 2\\left(\\frac{1}{4} + \\frac{1}{16}\\right) = 1 + \\frac{10}{16} = 1.625\\text{ W} \\quad (\\mathbf{COMPLETELY\\; ERRONEOUS!})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Evaluation via Universal Parseval:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P[x_2(t)] = \\sum_{n=-2}^2 |c_n|^2 = |c_{-2}|^2 + |c_{-1}|^2 + |c_0|^2 + |c_1|^2 + |c_2|^2"
-    },
-    {
-     "t": "math",
-     "tex": "P = 16 + 4 + 1 + \\frac{1}{4} + \\frac{1}{16} = 21 + \\frac{5}{16} = \\frac{336 + 5}{16} = \\frac{341}{16}\\text{ W}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{P[x_2(t)] = \\frac{341}{16}\\text{ W} = 21.3125\\text{ W}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Part 1: Power of $x_1(t)$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Extract the non-zero coefficients:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = 1, \\quad c_1 = \\frac{1}{2}, \\quad c_2 = \\frac{1}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = 0 \\quad \\text{for all other } n"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Using Parseval's universal power relation $P = \\sum_{n=-\\infty}^\\infty |c_n|^2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = |c_0|^2 + |c_1|^2 + |c_2|^2 = 1^2 + \\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{1}{4}\\right)^2 = 1 + \\frac{1}{4} + \\frac{1}{16} = \\frac{16 + 4 + 1}{16} = \\frac{21}{16}\\text{ W}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{P[x_1(t)] = \\frac{21}{16}\\text{ W} = 1.3125\\text{ W}}"
+      },
+      {
+       "t": "p",
+       "text": "**Part 2: Power of $x_2(t)$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Rewrite the signal by factoring the phase angle:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_2(t) = \\sum_{n=-2}^2 \\left(\\frac{1}{2}\\right)^n e^{j\\pi/2} e^{j n \\omega_0 t} = \\sum_{n=-2}^2 j\\left(\\frac{1}{2}\\right)^n e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Identify coefficients $c_n = j(1/2)^n$ for $-2 \\le n \\le 2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = j(1/2)^0 = j \\implies |c_0|^2 = |j|^2 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = j(1/2)^1 = j/2 \\implies |c_1|^2 = 1/4"
+      },
+      {
+       "t": "math",
+       "tex": "c_2 = j(1/2)^2 = j/4 \\implies |c_2|^2 = 1/16"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-1} = j(1/2)^{-1} = 2j \\implies |c_{-1}|^2 = |2j|^2 = 4"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-2} = j(1/2)^{-2} = 4j \\implies |c_{-2}|^2 = |4j|^2 = 16"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**CRITICAL TRAP AUDIT:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Can we use the formula $P = |c_0|^2 + 2\\sum_{n=1}^2 |c_n|^2$?\n  **NO!** Because $|c_1| = 1/2 \\neq |c_{-1}| = 2$, the magnitude spectrum is NOT even, meaning $x_2(t)$ is complex!\n  If a student erroneously uses the doubled formula:"
+      },
+      {
+       "t": "math",
+       "tex": "P_{\\text{wrong}} = 1 + 2\\left(\\frac{1}{4} + \\frac{1}{16}\\right) = 1 + \\frac{10}{16} = 1.625\\text{ W} \\quad (\\mathbf{COMPLETELY\\; ERRONEOUS!})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Evaluation via Universal Parseval:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P[x_2(t)] = \\sum_{n=-2}^2 |c_n|^2 = |c_{-2}|^2 + |c_{-1}|^2 + |c_0|^2 + |c_1|^2 + |c_2|^2"
+      },
+      {
+       "t": "math",
+       "tex": "P = 16 + 4 + 1 + \\frac{1}{4} + \\frac{1}{16} = 21 + \\frac{5}{16} = \\frac{336 + 5}{16} = \\frac{341}{16}\\text{ W}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{P[x_2(t)] = \\frac{341}{16}\\text{ W} = 21.3125\\text{ W}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7946,71 +7944,70 @@ export default {
      "tex": "x(t) = 2 + 3\\sin(\\pi t) + 4\\cos(2t)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Frequency Identification**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The DC component has frequency $\\omega_0 = 0$.",
-      "The first AC component has frequency $\\omega_{01} = \\pi\\text{ rad/s}$.",
-      "The second AC component has frequency $\\omega_{02} = 2\\text{ rad/s}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Periodicity Test**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For the sum of two periodic signals to be periodic, the ratio of their fundamental frequencies must be a rational number:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\omega_{01}}{\\omega_{02}} = \\frac{\\pi}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\pi$ is a transcendental (irrational) number, $\\frac{\\pi}{2} \\notin \\mathbb{Q}$.",
-      "Therefore, no common period $T_0$ exists such that $x(t + T_0) = x(t)$.",
-      "The signal $x(t)$ is **NON-PERIODIC**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Fourier Series Validity**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The continuous-time Fourier series is defined strictly and exclusively for periodic signals.",
-      "Since $x(t)$ is non-periodic:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\mathbf{Fourier\\; Series\\; Coefficients\\; are\\; NOT\\; DEFINED!}}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Traps:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Many students mechanically identify $\\omega_0 = 1$ or use LCM and write $a_n, b_n$ values. In GATE, an option like *\"Fourier series does not exist\"* or *\"Not defined\"* is frequently the correct answer for sums with irrational frequency ratios!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Frequency Identification**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The DC component has frequency $\\omega_0 = 0$.",
+        "The first AC component has frequency $\\omega_{01} = \\pi\\text{ rad/s}$.",
+        "The second AC component has frequency $\\omega_{02} = 2\\text{ rad/s}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Periodicity Test**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For the sum of two periodic signals to be periodic, the ratio of their fundamental frequencies must be a rational number:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\omega_{01}}{\\omega_{02}} = \\frac{\\pi}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\pi$ is a transcendental (irrational) number, $\\frac{\\pi}{2} \\notin \\mathbb{Q}$.",
+        "Therefore, no common period $T_0$ exists such that $x(t + T_0) = x(t)$.",
+        "The signal $x(t)$ is **NON-PERIODIC**."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Fourier Series Validity**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The continuous-time Fourier series is defined strictly and exclusively for periodic signals.",
+        "Since $x(t)$ is non-periodic:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\mathbf{Fourier\\; Series\\; Coefficients\\; are\\; NOT\\; DEFINED!}}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Traps:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Many students mechanically identify $\\omega_0 = 1$ or use LCM and write $a_n, b_n$ values. In GATE, an option like *\"Fourier series does not exist\"* or *\"Not defined\"* is frequently the correct answer for sums with irrational frequency ratios!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8035,119 +8032,118 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Fundamental Frequency $\\omega_0$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Frequencies: $\\omega_1 = \\frac{2\\pi}{3}$, $\\omega_2 = \\frac{5\\pi}{3}$.",
-      "Ratio: $\\frac{\\omega_1}{\\omega_2} = \\frac{2}{5} \\in \\mathbb{Q} \\implies$ Periodic!",
-      "Using the HCF/LCM rule for fractions $\\frac{a}{b}, \\frac{c}{d}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{\\operatorname{HCF}(2\\pi, 5\\pi)}{\\operatorname{LCM}(3, 3)} = \\frac{\\pi}{3}\\text{ rad/s}"
-    },
-    {
-     "t": "math",
-     "tex": "T_0 = \\frac{2\\pi}{\\omega_0} = \\frac{2\\pi}{\\pi/3} = 6\\text{ s}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Express in Terms of $\\omega_0$ & Extract Trig Coefficients**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + \\cos(2\\omega_0 t) + 5\\sin(5\\omega_0 t)"
-    },
-    {
-     "t": "p",
-     "text": "Compare directly with:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = c_0 + \\sum_{n=1}^\\infty [a_n \\cos(n\\omega_0 t) + b_n \\sin(n\\omega_0 t)]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "DC term ($n = 0$): $\\mathbf{c_0 = 2}$",
-      "Harmonic $n = 2$: $\\mathbf{a_2 = 1}, \\quad b_2 = 0$",
-      "Harmonic $n = 5$: $a_5 = 0, \\quad \\mathbf{b_5 = 5}$",
-      "All other $a_n = 0, b_n = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Exponential Fourier Coefficients ($c_n$)**\nUsing Euler expansion:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + \\frac{e^{j 2\\omega_0 t} + e^{-j 2\\omega_0 t}}{2} + 5\\frac{e^{j 5\\omega_0 t} - e^{-j 5\\omega_0 t}}{2j}"
-    },
-    {
-     "t": "math",
-     "tex": "= 2 + \\frac{1}{2}e^{j 2\\omega_0 t} + \\frac{1}{2}e^{-j 2\\omega_0 t} - j\\frac{5}{2}e^{j 5\\omega_0 t} + j\\frac{5}{2}e^{-j 5\\omega_0 t}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Coefficients:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_0 = 2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_2 = \\frac{1}{2}, \\quad c_{-2} = \\frac{1}{2}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_5 = -\\frac{5j}{2}, \\quad c_{-5} = \\frac{5j}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "All other $c_n = 0$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Power Verification**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method 1 (Trigonometric Parseval):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = |c_0|^2 + \\sum_{n=1}^\\infty \\frac{|a_n|^2 + |b_n|^2}{2} = |2|^2 + \\frac{|a_2|^2}{2} + \\frac{|b_5|^2}{2} = 4 + \\frac{1^2}{2} + \\frac{5^2}{2} = 4 + 0.5 + 12.5 = \\mathbf{17\\text{ W}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method 2 (Exponential Parseval):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\sum_{n=-\\infty}^\\infty |c_n|^2 = |c_0|^2 + 2|c_2|^2 + 2|c_5|^2 = 4 + 2\\left(\\frac{1}{2}\\right)^2 + 2\\left(\\frac{5}{2}\\right)^2 = 4 + 2\\left(\\frac{1}{4}\\right) + 2\\left(\\frac{25}{4}\\right) = 4 + 0.5 + 12.5 = \\mathbf{17\\text{ W}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Power} = 17\\text{ W}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Fundamental Frequency $\\omega_0$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Frequencies: $\\omega_1 = \\frac{2\\pi}{3}$, $\\omega_2 = \\frac{5\\pi}{3}$.",
+        "Ratio: $\\frac{\\omega_1}{\\omega_2} = \\frac{2}{5} \\in \\mathbb{Q} \\implies$ Periodic!",
+        "Using the HCF/LCM rule for fractions $\\frac{a}{b}, \\frac{c}{d}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{\\operatorname{HCF}(2\\pi, 5\\pi)}{\\operatorname{LCM}(3, 3)} = \\frac{\\pi}{3}\\text{ rad/s}"
+      },
+      {
+       "t": "math",
+       "tex": "T_0 = \\frac{2\\pi}{\\omega_0} = \\frac{2\\pi}{\\pi/3} = 6\\text{ s}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Express in Terms of $\\omega_0$ & Extract Trig Coefficients**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + \\cos(2\\omega_0 t) + 5\\sin(5\\omega_0 t)"
+      },
+      {
+       "t": "p",
+       "text": "Compare directly with:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = c_0 + \\sum_{n=1}^\\infty [a_n \\cos(n\\omega_0 t) + b_n \\sin(n\\omega_0 t)]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "DC term ($n = 0$): $\\mathbf{c_0 = 2}$",
+        "Harmonic $n = 2$: $\\mathbf{a_2 = 1}, \\quad b_2 = 0$",
+        "Harmonic $n = 5$: $a_5 = 0, \\quad \\mathbf{b_5 = 5}$",
+        "All other $a_n = 0, b_n = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Exponential Fourier Coefficients ($c_n$)**\nUsing Euler expansion:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + \\frac{e^{j 2\\omega_0 t} + e^{-j 2\\omega_0 t}}{2} + 5\\frac{e^{j 5\\omega_0 t} - e^{-j 5\\omega_0 t}}{2j}"
+      },
+      {
+       "t": "math",
+       "tex": "= 2 + \\frac{1}{2}e^{j 2\\omega_0 t} + \\frac{1}{2}e^{-j 2\\omega_0 t} - j\\frac{5}{2}e^{j 5\\omega_0 t} + j\\frac{5}{2}e^{-j 5\\omega_0 t}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Coefficients:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_0 = 2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_2 = \\frac{1}{2}, \\quad c_{-2} = \\frac{1}{2}}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_5 = -\\frac{5j}{2}, \\quad c_{-5} = \\frac{5j}{2}}"
+      },
+      {
+       "t": "p",
+       "text": "All other $c_n = 0$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Power Verification**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Method 1 (Trigonometric Parseval):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = |c_0|^2 + \\sum_{n=1}^\\infty \\frac{|a_n|^2 + |b_n|^2}{2} = |2|^2 + \\frac{|a_2|^2}{2} + \\frac{|b_5|^2}{2} = 4 + \\frac{1^2}{2} + \\frac{5^2}{2} = 4 + 0.5 + 12.5 = \\mathbf{17\\text{ W}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Method 2 (Exponential Parseval):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\sum_{n=-\\infty}^\\infty |c_n|^2 = |c_0|^2 + 2|c_2|^2 + 2|c_5|^2 = 4 + 2\\left(\\frac{1}{2}\\right)^2 + 2\\left(\\frac{5}{2}\\right)^2 = 4 + 2\\left(\\frac{1}{4}\\right) + 2\\left(\\frac{25}{4}\\right) = 4 + 0.5 + 12.5 = \\mathbf{17\\text{ W}}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Power} = 17\\text{ W}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8171,124 +8167,123 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Fundamental Frequency & Trap Warning**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Here $\\omega_0 = \\frac{\\pi}{3}\\text{ rad/s}$.",
-      "**DEADLY GATE TRAP:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "A student looks at $3\\sin(\\omega_0 t - \\pi/6)$ and writes:"
-    },
-    {
-     "t": "math",
-     "tex": "b_1 = 3, \\quad a_1 = 0 \\quad (\\mathbf{CATASTROPHICALLY\\; WRONG!})"
-    },
-    {
-     "t": "p",
-     "text": "The Fourier series basis functions are strictly unshifted: $\\cos(n\\omega_0 t)$ and $\\sin(n\\omega_0 t)$. Any phase angle $\\phi \\neq 0$ creates BOTH non-zero cosine and sine coefficients!"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Trigonometric Decomposition**\nUse $\\sin(A - B) = \\sin A \\cos B - \\cos A \\sin B$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 3\\left[ \\sin(\\omega_0 t)\\cos\\left(\\frac{\\pi}{6}\\right) - \\cos(\\omega_0 t)\\sin\\left(\\frac{\\pi}{6}\\right) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Substitute exact values $\\cos(\\pi/6) = \\frac{\\sqrt{3}}{2}$ and $\\sin(\\pi/6) = \\frac{1}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 3\\left[ \\frac{\\sqrt{3}}{2}\\sin(\\omega_0 t) - \\frac{1}{2}\\cos(\\omega_0 t) \\right] = -\\frac{3}{2}\\cos(\\omega_0 t) + \\frac{3\\sqrt{3}}{2}\\sin(\\omega_0 t)"
-    },
-    {
-     "t": "p",
-     "text": "Matching with $x(t) = c_0 + a_1\\cos(\\omega_0 t) + b_1\\sin(\\omega_0 t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_0 = 0}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{a_1 = -\\frac{3}{2}} \\quad \\text{and} \\quad \\boxed{b_1 = \\frac{3\\sqrt{3}}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Exponential FSC ($c_1, c_{-1}$)**\nUsing the conversion formula $c_n = \\frac{a_n - jb_n}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{a_1 - jb_1}{2} = \\frac{-\\frac{3}{2} - j\\frac{3\\sqrt{3}}{2}}{2} = -\\frac{3}{4} - j\\frac{3\\sqrt{3}}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-1} = c_1^* = -\\frac{3}{4} + j\\frac{3\\sqrt{3}}{4}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Triple Power Verification**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Direct Formula for Single Sinusoid:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{A^2}{2} = \\frac{3^2}{2} = \\mathbf{4.5\\text{ W}}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Trigonometric Parseval:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{a_1^2 + b_1^2}{2} = \\frac{(-3/2)^2 + (3\\sqrt{3}/2)^2}{2} = \\frac{\\frac{9}{4} + \\frac{27}{4}}{2} = \\frac{\\frac{36}{4}}{2} = \\frac{9}{2} = \\mathbf{4.5\\text{ W}}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Exponential Parseval:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|c_1|^2 = \\left(-\\frac{3}{4}\\right)^2 + \\left(-\\frac{3\\sqrt{3}}{4}\\right)^2 = \\frac{9}{16} + \\frac{27}{16} = \\frac{36}{16} = \\frac{9}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "|c_{-1}|^2 = \\frac{9}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "P = |c_1|^2 + |c_{-1}|^2 = \\frac{9}{4} + \\frac{9}{4} = \\frac{18}{4} = \\mathbf{4.5\\text{ W}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Power} = 4.5\\text{ W}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Fundamental Frequency & Trap Warning**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Here $\\omega_0 = \\frac{\\pi}{3}\\text{ rad/s}$.",
+        "**DEADLY GATE TRAP:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A student looks at $3\\sin(\\omega_0 t - \\pi/6)$ and writes:"
+      },
+      {
+       "t": "math",
+       "tex": "b_1 = 3, \\quad a_1 = 0 \\quad (\\mathbf{CATASTROPHICALLY\\; WRONG!})"
+      },
+      {
+       "t": "p",
+       "text": "The Fourier series basis functions are strictly unshifted: $\\cos(n\\omega_0 t)$ and $\\sin(n\\omega_0 t)$. Any phase angle $\\phi \\neq 0$ creates BOTH non-zero cosine and sine coefficients!"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Trigonometric Decomposition**\nUse $\\sin(A - B) = \\sin A \\cos B - \\cos A \\sin B$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 3\\left[ \\sin(\\omega_0 t)\\cos\\left(\\frac{\\pi}{6}\\right) - \\cos(\\omega_0 t)\\sin\\left(\\frac{\\pi}{6}\\right) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Substitute exact values $\\cos(\\pi/6) = \\frac{\\sqrt{3}}{2}$ and $\\sin(\\pi/6) = \\frac{1}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 3\\left[ \\frac{\\sqrt{3}}{2}\\sin(\\omega_0 t) - \\frac{1}{2}\\cos(\\omega_0 t) \\right] = -\\frac{3}{2}\\cos(\\omega_0 t) + \\frac{3\\sqrt{3}}{2}\\sin(\\omega_0 t)"
+      },
+      {
+       "t": "p",
+       "text": "Matching with $x(t) = c_0 + a_1\\cos(\\omega_0 t) + b_1\\sin(\\omega_0 t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_0 = 0}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{a_1 = -\\frac{3}{2}} \\quad \\text{and} \\quad \\boxed{b_1 = \\frac{3\\sqrt{3}}{2}}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Exponential FSC ($c_1, c_{-1}$)**\nUsing the conversion formula $c_n = \\frac{a_n - jb_n}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{a_1 - jb_1}{2} = \\frac{-\\frac{3}{2} - j\\frac{3\\sqrt{3}}{2}}{2} = -\\frac{3}{4} - j\\frac{3\\sqrt{3}}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-1} = c_1^* = -\\frac{3}{4} + j\\frac{3\\sqrt{3}}{4}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Triple Power Verification**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Direct Formula for Single Sinusoid:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{A^2}{2} = \\frac{3^2}{2} = \\mathbf{4.5\\text{ W}}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Trigonometric Parseval:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{a_1^2 + b_1^2}{2} = \\frac{(-3/2)^2 + (3\\sqrt{3}/2)^2}{2} = \\frac{\\frac{9}{4} + \\frac{27}{4}}{2} = \\frac{\\frac{36}{4}}{2} = \\frac{9}{2} = \\mathbf{4.5\\text{ W}}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Exponential Parseval:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|c_1|^2 = \\left(-\\frac{3}{4}\\right)^2 + \\left(-\\frac{3\\sqrt{3}}{4}\\right)^2 = \\frac{9}{16} + \\frac{27}{16} = \\frac{36}{16} = \\frac{9}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "|c_{-1}|^2 = \\frac{9}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "P = |c_1|^2 + |c_{-1}|^2 = \\frac{9}{4} + \\frac{9}{4} = \\frac{18}{4} = \\mathbf{4.5\\text{ W}}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Power} = 4.5\\text{ W}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -8540,165 +8535,164 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fundamental Frequency Determination"
-    },
-    {
-     "t": "p",
-     "text": "The angular frequencies of the individual AC components are:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_1 = \\frac{2\\pi}{3}\\text{ rad/s}, \\quad \\omega_2 = \\frac{5\\pi}{3}\\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "The fundamental angular frequency $\\omega_0$ of the combined signal is the Highest Common Factor (HCF) of the component frequencies:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\text{HCF}\\left(\\frac{2\\pi}{3}, \\frac{5\\pi}{3}\\right) = \\frac{\\text{HCF}(2\\pi, 5\\pi)}{\\text{LCM}(3, 3)} = \\frac{\\pi}{3}\\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "The harmonic ranks are:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Component 1: $\\omega_1 = 2 \\times \\left(\\frac{\\pi}{3}\\right) = 2\\omega_0 \\implies n = 2$ (2nd harmonic).",
-      "Component 2: $\\omega_2 = 5 \\times \\left(\\frac{\\pi}{3}\\right) = 5\\omega_0 \\implies n = 5$ (5th harmonic)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Direct Power Calculation (Superposition of Orthogonal Components)"
-    },
-    {
-     "t": "p",
-     "text": "Because distinct harmonic sinusoids and DC offsets are mutually orthogonal over any common period $T_0$, total average power equals the sum of powers of individual components:"
-    },
-    {
-     "t": "math",
-     "tex": "P = P_{\\text{DC}} + P_{\\text{harmonic 2}} + P_{\\text{harmonic 5}}"
-    },
-    {
-     "t": "math",
-     "tex": "P = (2)^2 + \\frac{1^2}{2} + \\frac{5^2}{2} = 4 + 0.5 + 12.5 = 17\\text{ W}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Trigonometric Expansion of the 5th Harmonic"
-    },
-    {
-     "t": "p",
-     "text": "Recall the angle addition identity:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(A + B) = \\sin A \\cos B + \\cos A \\sin B"
-    },
-    {
-     "t": "p",
-     "text": "Applying this to the 5th harmonic:"
-    },
-    {
-     "t": "math",
-     "tex": "5\\sin\\left(5\\omega_0 t + \\frac{\\pi}{3}\\right) = 5\\left[\\sin(5\\omega_0 t)\\cos\\left(\\frac{\\pi}{3}\\right) + \\cos(5\\omega_0 t)\\sin\\left(\\frac{\\pi}{3}\\right)\\right]"
-    },
-    {
-     "t": "math",
-     "tex": "= 5\\left[\\sin(5\\omega_0 t)\\cdot\\frac{1}{2} + \\cos(5\\omega_0 t)\\cdot\\frac{\\sqrt{3}}{2}\\right] = \\frac{5}{2}\\sin(5\\omega_0 t) + \\frac{5\\sqrt{3}}{2}\\cos(5\\omega_0 t)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Reconstituting $x(t)$ in Standard Trigonometric Form"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + \\cos(2\\omega_0 t) + \\frac{5\\sqrt{3}}{2}\\cos(5\\omega_0 t) + \\frac{5}{2}\\sin(5\\omega_0 t)"
-    },
-    {
-     "t": "p",
-     "text": "Comparing with the standard Trigonometric Fourier Series (TFS):"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = a_0 + \\sum_{n=1}^\\infty \\left[ a_n \\cos(n\\omega_0 t) + b_n \\sin(n\\omega_0 t) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "We extract the non-zero coefficients:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**DC Component ($n = 0$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_0 = c_0 = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**2nd Harmonic ($n = 2$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_2 = 1, \\quad b_2 = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**5th Harmonic ($n = 5$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_5 = \\frac{5\\sqrt{3}}{2}, \\quad b_5 = \\frac{5}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**All other coefficients:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_n = 0, \\quad b_n = 0 \\quad (\\forall n \\notin \\{0, 2, 5\\})"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Power Verification via Parseval's Trigonometric Identity"
-    },
-    {
-     "t": "math",
-     "tex": "P = a_0^2 + \\frac{1}{2}\\sum_{n=1}^\\infty (a_n^2 + b_n^2)"
-    },
-    {
-     "t": "math",
-     "tex": "P = (2)^2 + \\frac{1}{2}(1^2 + 0^2) + \\frac{1}{2}\\left[\\left(\\frac{5\\sqrt{3}}{2}\\right)^2 + \\left(\\frac{5}{2}\\right)^2\\right]"
-    },
-    {
-     "t": "math",
-     "tex": "P = 4 + \\frac{1}{2} + \\frac{1}{2}\\left[\\frac{75}{4} + \\frac{25}{4}\\right] = 4 + \\frac{1}{2} + \\frac{1}{2}\\left[\\frac{100}{4}\\right] = 4 + \\frac{1}{2} + \\frac{25}{2} = 17\\text{ W}"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Exam Shortcut:** Notice that the phase shift $\\pi/3$ in $5\\sin(5\\omega_0 t + \\pi/3)$ rotates the components between sine and cosine, but leaves the envelope power invariant: $\\frac{a_5^2 + b_5^2}{2} = \\frac{(5\\sqrt{3}/2)^2 + (5/2)^2}{2} = \\frac{25}{2}\\text{ W}$. You never need to expand the trigonometric phase when solely asked for power!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Fundamental Frequency Determination"
+      },
+      {
+       "t": "p",
+       "text": "The angular frequencies of the individual AC components are:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_1 = \\frac{2\\pi}{3}\\text{ rad/s}, \\quad \\omega_2 = \\frac{5\\pi}{3}\\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "The fundamental angular frequency $\\omega_0$ of the combined signal is the Highest Common Factor (HCF) of the component frequencies:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\text{HCF}\\left(\\frac{2\\pi}{3}, \\frac{5\\pi}{3}\\right) = \\frac{\\text{HCF}(2\\pi, 5\\pi)}{\\text{LCM}(3, 3)} = \\frac{\\pi}{3}\\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "The harmonic ranks are:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Component 1: $\\omega_1 = 2 \\times \\left(\\frac{\\pi}{3}\\right) = 2\\omega_0 \\implies n = 2$ (2nd harmonic).",
+        "Component 2: $\\omega_2 = 5 \\times \\left(\\frac{\\pi}{3}\\right) = 5\\omega_0 \\implies n = 5$ (5th harmonic)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Direct Power Calculation (Superposition of Orthogonal Components)"
+      },
+      {
+       "t": "p",
+       "text": "Because distinct harmonic sinusoids and DC offsets are mutually orthogonal over any common period $T_0$, total average power equals the sum of powers of individual components:"
+      },
+      {
+       "t": "math",
+       "tex": "P = P_{\\text{DC}} + P_{\\text{harmonic 2}} + P_{\\text{harmonic 5}}"
+      },
+      {
+       "t": "math",
+       "tex": "P = (2)^2 + \\frac{1^2}{2} + \\frac{5^2}{2} = 4 + 0.5 + 12.5 = 17\\text{ W}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Trigonometric Expansion of the 5th Harmonic"
+      },
+      {
+       "t": "p",
+       "text": "Recall the angle addition identity:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(A + B) = \\sin A \\cos B + \\cos A \\sin B"
+      },
+      {
+       "t": "p",
+       "text": "Applying this to the 5th harmonic:"
+      },
+      {
+       "t": "math",
+       "tex": "5\\sin\\left(5\\omega_0 t + \\frac{\\pi}{3}\\right) = 5\\left[\\sin(5\\omega_0 t)\\cos\\left(\\frac{\\pi}{3}\\right) + \\cos(5\\omega_0 t)\\sin\\left(\\frac{\\pi}{3}\\right)\\right]"
+      },
+      {
+       "t": "math",
+       "tex": "= 5\\left[\\sin(5\\omega_0 t)\\cdot\\frac{1}{2} + \\cos(5\\omega_0 t)\\cdot\\frac{\\sqrt{3}}{2}\\right] = \\frac{5}{2}\\sin(5\\omega_0 t) + \\frac{5\\sqrt{3}}{2}\\cos(5\\omega_0 t)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Reconstituting $x(t)$ in Standard Trigonometric Form"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + \\cos(2\\omega_0 t) + \\frac{5\\sqrt{3}}{2}\\cos(5\\omega_0 t) + \\frac{5}{2}\\sin(5\\omega_0 t)"
+      },
+      {
+       "t": "p",
+       "text": "Comparing with the standard Trigonometric Fourier Series (TFS):"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = a_0 + \\sum_{n=1}^\\infty \\left[ a_n \\cos(n\\omega_0 t) + b_n \\sin(n\\omega_0 t) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "We extract the non-zero coefficients:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**DC Component ($n = 0$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_0 = c_0 = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**2nd Harmonic ($n = 2$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_2 = 1, \\quad b_2 = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**5th Harmonic ($n = 5$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_5 = \\frac{5\\sqrt{3}}{2}, \\quad b_5 = \\frac{5}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**All other coefficients:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_n = 0, \\quad b_n = 0 \\quad (\\forall n \\notin \\{0, 2, 5\\})"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Power Verification via Parseval's Trigonometric Identity"
+      },
+      {
+       "t": "math",
+       "tex": "P = a_0^2 + \\frac{1}{2}\\sum_{n=1}^\\infty (a_n^2 + b_n^2)"
+      },
+      {
+       "t": "math",
+       "tex": "P = (2)^2 + \\frac{1}{2}(1^2 + 0^2) + \\frac{1}{2}\\left[\\left(\\frac{5\\sqrt{3}}{2}\\right)^2 + \\left(\\frac{5}{2}\\right)^2\\right]"
+      },
+      {
+       "t": "math",
+       "tex": "P = 4 + \\frac{1}{2} + \\frac{1}{2}\\left[\\frac{75}{4} + \\frac{25}{4}\\right] = 4 + \\frac{1}{2} + \\frac{1}{2}\\left[\\frac{100}{4}\\right] = 4 + \\frac{1}{2} + \\frac{25}{2} = 17\\text{ W}"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Exam Shortcut:** Notice that the phase shift $\\pi/3$ in $5\\sin(5\\omega_0 t + \\pi/3)$ rotates the components between sine and cosine, but leaves the envelope power invariant: $\\frac{a_5^2 + b_5^2}{2} = \\frac{(5\\sqrt{3}/2)^2 + (5/2)^2}{2} = \\frac{25}{2}\\text{ W}$. You never need to expand the trigonometric phase when solely asked for power!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8712,138 +8706,137 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Decomposition via Euler's Formulas"
-    },
-    {
-     "t": "p",
-     "text": "Starting from the signal:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + \\cos(2\\omega_0 t) + 5\\sin\\left(5\\omega_0 t + \\frac{\\pi}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Apply Euler's identities:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos(2\\omega_0 t) = \\frac{e^{j 2\\omega_0 t} + e^{-j 2\\omega_0 t}}{2} = \\frac{1}{2}e^{j 2\\omega_0 t} + \\frac{1}{2}e^{-j 2\\omega_0 t}"
-    },
-    {
-     "t": "math",
-     "tex": "5\\sin\\left(5\\omega_0 t + \\frac{\\pi}{3}\\right) = 5\\left[\\frac{e^{j(5\\omega_0 t + \\pi/3)} - e^{-j(5\\omega_0 t + \\pi/3)}}{2j}\\right]"
-    },
-    {
-     "t": "p",
-     "text": "Express $\\frac{1}{j}$ in polar form: $\\frac{1}{j} = -j = e^{-j\\pi/2}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{5}{2j}e^{j(5\\omega_0 t + \\pi/3)} = \\frac{5}{2}e^{-j\\pi/2}e^{j\\pi/3}e^{j 5\\omega_0 t} = \\frac{5}{2}e^{j(\\pi/3 - \\pi/2)}e^{j 5\\omega_0 t} = \\frac{5}{2}e^{-j\\pi/6}e^{j 5\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Similarly, for the negative frequency component:"
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{5}{2j}e^{-j(5\\omega_0 t + \\pi/3)} = -\\frac{5}{2}e^{-j\\pi/2}e^{-j\\pi/3}e^{-j 5\\omega_0 t} = \\frac{5}{2}e^{j\\pi}e^{-j 5\\pi/6}e^{-j 5\\omega_0 t} = \\frac{5}{2}e^{j(\\pi - 5\\pi/6)}e^{-j 5\\omega_0 t} = \\frac{5}{2}e^{j\\pi/6}e^{-j 5\\omega_0 t}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Extraction of Exponential Fourier Series Coefficients $c_n$"
-    },
-    {
-     "t": "p",
-     "text": "The signal in exponential synthesis form is:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + \\frac{1}{2}e^{j 2\\omega_0 t} + \\frac{1}{2}e^{-j 2\\omega_0 t} + \\left(\\frac{5}{2}e^{-j\\pi/6}\\right)e^{j 5\\omega_0 t} + \\left(\\frac{5}{2}e^{j\\pi/6}\\right)e^{-j 5\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing directly with $x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = 0$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = \\pm 2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_2 = \\frac{1}{2}, \\quad c_{-2} = \\frac{1}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = \\pm 5$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_5 = \\frac{5}{2}e^{-j\\pi/6}, \\quad c_{-5} = \\frac{5}{2}e^{j\\pi/6}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**All other $n$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = 0 \\quad (\\forall n \\notin \\{0, \\pm 2, \\pm 5\\})"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Conjugate Symmetry Check:** Because $x(t)$ is purely real, the coefficients satisfy $c_{-n} = c_n^*$:\n$$c_{-2} = \\left(\\frac{1}{2}\\right)^* = \\frac{1}{2} = c_2 \\quad \\checkmark$$\n$$c_{-5} = \\left(\\frac{5}{2}e^{-j\\pi/6}\\right)^* = \\frac{5}{2}e^{j\\pi/6} = c_5^* \\quad \\checkmark$$"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Parseval's Power Theorem Verification"
-    },
-    {
-     "t": "p",
-     "text": "According to Parseval's relation:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\sum_{n=-\\infty}^\\infty |c_n|^2 = |c_0|^2 + |c_2|^2 + |c_{-2}|^2 + |c_5|^2 + |c_{-5}|^2"
-    },
-    {
-     "t": "math",
-     "tex": "P = (2)^2 + \\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{1}{2}\\right)^2 + \\left|\\frac{5}{2}e^{-j\\pi/6}\\right|^2 + \\left|\\frac{5}{2}e^{j\\pi/6}\\right|^2"
-    },
-    {
-     "t": "math",
-     "tex": "P = 4 + \\frac{1}{4} + \\frac{1}{4} + \\frac{25}{4} + \\frac{25}{4} = 4 + \\frac{2}{4} + \\frac{50}{4} = 4 + \\frac{1}{2} + \\frac{25}{2} = 17\\text{ W}"
-    },
-    {
-     "t": "p",
-     "text": "Both trigonometric and exponential approaches yield identically **$17\\text{ W}$**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Decomposition via Euler's Formulas"
+      },
+      {
+       "t": "p",
+       "text": "Starting from the signal:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + \\cos(2\\omega_0 t) + 5\\sin\\left(5\\omega_0 t + \\frac{\\pi}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Apply Euler's identities:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos(2\\omega_0 t) = \\frac{e^{j 2\\omega_0 t} + e^{-j 2\\omega_0 t}}{2} = \\frac{1}{2}e^{j 2\\omega_0 t} + \\frac{1}{2}e^{-j 2\\omega_0 t}"
+      },
+      {
+       "t": "math",
+       "tex": "5\\sin\\left(5\\omega_0 t + \\frac{\\pi}{3}\\right) = 5\\left[\\frac{e^{j(5\\omega_0 t + \\pi/3)} - e^{-j(5\\omega_0 t + \\pi/3)}}{2j}\\right]"
+      },
+      {
+       "t": "p",
+       "text": "Express $\\frac{1}{j}$ in polar form: $\\frac{1}{j} = -j = e^{-j\\pi/2}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{5}{2j}e^{j(5\\omega_0 t + \\pi/3)} = \\frac{5}{2}e^{-j\\pi/2}e^{j\\pi/3}e^{j 5\\omega_0 t} = \\frac{5}{2}e^{j(\\pi/3 - \\pi/2)}e^{j 5\\omega_0 t} = \\frac{5}{2}e^{-j\\pi/6}e^{j 5\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Similarly, for the negative frequency component:"
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{5}{2j}e^{-j(5\\omega_0 t + \\pi/3)} = -\\frac{5}{2}e^{-j\\pi/2}e^{-j\\pi/3}e^{-j 5\\omega_0 t} = \\frac{5}{2}e^{j\\pi}e^{-j 5\\pi/6}e^{-j 5\\omega_0 t} = \\frac{5}{2}e^{j(\\pi - 5\\pi/6)}e^{-j 5\\omega_0 t} = \\frac{5}{2}e^{j\\pi/6}e^{-j 5\\omega_0 t}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Extraction of Exponential Fourier Series Coefficients $c_n$"
+      },
+      {
+       "t": "p",
+       "text": "The signal in exponential synthesis form is:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + \\frac{1}{2}e^{j 2\\omega_0 t} + \\frac{1}{2}e^{-j 2\\omega_0 t} + \\left(\\frac{5}{2}e^{-j\\pi/6}\\right)e^{j 5\\omega_0 t} + \\left(\\frac{5}{2}e^{j\\pi/6}\\right)e^{-j 5\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing directly with $x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = 0$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = \\pm 2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_2 = \\frac{1}{2}, \\quad c_{-2} = \\frac{1}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = \\pm 5$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_5 = \\frac{5}{2}e^{-j\\pi/6}, \\quad c_{-5} = \\frac{5}{2}e^{j\\pi/6}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**All other $n$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = 0 \\quad (\\forall n \\notin \\{0, \\pm 2, \\pm 5\\})"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Conjugate Symmetry Check:** Because $x(t)$ is purely real, the coefficients satisfy $c_{-n} = c_n^*$:\n$$c_{-2} = \\left(\\frac{1}{2}\\right)^* = \\frac{1}{2} = c_2 \\quad \\checkmark$$\n$$c_{-5} = \\left(\\frac{5}{2}e^{-j\\pi/6}\\right)^* = \\frac{5}{2}e^{j\\pi/6} = c_5^* \\quad \\checkmark$$"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Parseval's Power Theorem Verification"
+      },
+      {
+       "t": "p",
+       "text": "According to Parseval's relation:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\sum_{n=-\\infty}^\\infty |c_n|^2 = |c_0|^2 + |c_2|^2 + |c_{-2}|^2 + |c_5|^2 + |c_{-5}|^2"
+      },
+      {
+       "t": "math",
+       "tex": "P = (2)^2 + \\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{1}{2}\\right)^2 + \\left|\\frac{5}{2}e^{-j\\pi/6}\\right|^2 + \\left|\\frac{5}{2}e^{j\\pi/6}\\right|^2"
+      },
+      {
+       "t": "math",
+       "tex": "P = 4 + \\frac{1}{4} + \\frac{1}{4} + \\frac{25}{4} + \\frac{25}{4} = 4 + \\frac{2}{4} + \\frac{50}{4} = 4 + \\frac{1}{2} + \\frac{25}{2} = 17\\text{ W}"
+      },
+      {
+       "t": "p",
+       "text": "Both trigonometric and exponential approaches yield identically **$17\\text{ W}$**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8883,61 +8876,60 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Part (a): Total Average Power Evaluation"
-    },
-    {
-     "t": "p",
-     "text": "Let the signal be written as a sum of four distinct frequency terms:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = x_1(t) + x_2(t) + x_3(t) + x_4(t)"
-    },
-    {
-     "t": "p",
-     "text": "Where:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_1(t) = 10\\cos\\left(\\frac{3\\pi}{4}t - \\frac{\\pi}{6}\\right)$ with amplitude $A_1 = 10$.",
-      "$x_2(t) = -5\\cos(4\\pi t)$ with amplitude $A_2 = -5$.",
-      "$x_3(t) = 15\\sin(0.7\\pi t)$ with amplitude $A_3 = 15$.",
-      "$x_4(t) = -15\\sin(15\\pi t)$ with amplitude $A_4 = -15$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because each component operates at a distinct frequency ($\\omega_1 \\neq \\omega_2 \\neq \\omega_3 \\neq \\omega_4$), all cross-product terms over the common fundamental period integrate to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{T_0}\\int_{T_0} x_i(t) x_k(t) dt = 0 \\quad (\\forall i \\neq k)"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, total power is the direct sum of the powers of individual sinusoids:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{A_1^2}{2} + \\frac{A_2^2}{2} + \\frac{A_3^2}{2} + \\frac{A_4^2}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{10^2}{2} + \\frac{(-5)^2}{2} + \\frac{15^2}{2} + \\frac{(-15)^2}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{100 + 25 + 225 + 225}{2} = \\frac{575}{2}\\text{ W} = 287.5\\text{ W}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part (a): Total Average Power Evaluation"
+      },
+      {
+       "t": "p",
+       "text": "Let the signal be written as a sum of four distinct frequency terms:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = x_1(t) + x_2(t) + x_3(t) + x_4(t)"
+      },
+      {
+       "t": "p",
+       "text": "Where:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_1(t) = 10\\cos\\left(\\frac{3\\pi}{4}t - \\frac{\\pi}{6}\\right)$ with amplitude $A_1 = 10$.",
+        "$x_2(t) = -5\\cos(4\\pi t)$ with amplitude $A_2 = -5$.",
+        "$x_3(t) = 15\\sin(0.7\\pi t)$ with amplitude $A_3 = 15$.",
+        "$x_4(t) = -15\\sin(15\\pi t)$ with amplitude $A_4 = -15$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Because each component operates at a distinct frequency ($\\omega_1 \\neq \\omega_2 \\neq \\omega_3 \\neq \\omega_4$), all cross-product terms over the common fundamental period integrate to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{T_0}\\int_{T_0} x_i(t) x_k(t) dt = 0 \\quad (\\forall i \\neq k)"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, total power is the direct sum of the powers of individual sinusoids:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{A_1^2}{2} + \\frac{A_2^2}{2} + \\frac{A_3^2}{2} + \\frac{A_4^2}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{10^2}{2} + \\frac{(-5)^2}{2} + \\frac{15^2}{2} + \\frac{(-15)^2}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{100 + 25 + 225 + 225}{2} = \\frac{575}{2}\\text{ W} = 287.5\\text{ W}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8951,98 +8943,97 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fundamental Angular Frequency Calculation"
-    },
-    {
-     "t": "p",
-     "text": "Express each angular frequency in rational fraction form:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_1 = \\frac{3\\pi}{4}\\text{ rad/s}, \\quad \\omega_2 = \\frac{4\\pi}{1}\\text{ rad/s}, \\quad \\omega_3 = 0.7\\pi = \\frac{7\\pi}{10}\\text{ rad/s}, \\quad \\omega_4 = \\frac{15\\pi}{1}\\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "Apply the fraction HCF rule:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\text{HCF}\\left(\\frac{3\\pi}{4}, \\frac{4\\pi}{1}, \\frac{7\\pi}{10}, \\frac{15\\pi}{1}\\right) = \\frac{\\text{HCF}(3\\pi, 4\\pi, 7\\pi, 15\\pi)}{\\text{LCM}(4, 1, 10, 1)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Numerator: $\\text{HCF}(3\\pi, 4\\pi, 7\\pi, 15\\pi) = \\pi$.",
-      "Denominator: $\\text{LCM}(4, 1, 10, 1) = 20$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{\\pi}{20}\\text{ rad/s}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Mapping Individual Components to Harmonic Orders ($n$)"
-    },
-    {
-     "t": "math",
-     "tex": "n_k = \\frac{\\omega_k}{\\omega_0}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**1st term:** $n_1 = \\frac{3\\pi/4}{\\pi/20} = \\frac{3}{4} \\times 20 = 15 \\implies \\mathbf{15\\text{th Harmonic}}$",
-      "**2nd term:** $n_2 = \\frac{4\\pi/1}{\\pi/20} = 4 \\times 20 = 80 \\implies \\mathbf{80\\text{th Harmonic}}$",
-      "**3rd term:** $n_3 = \\frac{7\\pi/10}{\\pi/20} = \\frac{7}{10} \\times 20 = 14 \\implies \\mathbf{14\\text{th Harmonic}}$",
-      "**4th term:** $n_4 = \\frac{15\\pi/1}{\\pi/20} = 15 \\times 20 = 300 \\implies \\mathbf{300\\text{th Harmonic}}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Signal represented in terms of $\\omega_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 10\\cos\\left(15\\omega_0 t - \\frac{\\pi}{6}\\right) - 5\\cos(80\\omega_0 t) + 15\\sin(14\\omega_0 t) - 15\\sin(300\\omega_0 t)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Part (b) \u2014 Power Contained Up to the 20th Harmonic ($0 \\le n \\le 20$)"
-    },
-    {
-     "t": "p",
-     "text": "The harmonic orders present in $x(t)$ are $\\{14, 15, 80, 300\\}$.\nThe components satisfying $n \\le 20$ are solely the **14th** and **15th** harmonics:"
-    },
-    {
-     "t": "math",
-     "tex": "P_{\\le 20\\text{th}} = P_{14} + P_{15} = \\frac{15^2}{2} + \\frac{10^2}{2} = \\frac{225 + 100}{2} = \\frac{325}{2}\\text{ W} = 162.5\\text{ W}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Part (c) \u2014 Power Contained Up to the 500th Harmonic ($0 \\le n \\le 500$)"
-    },
-    {
-     "t": "p",
-     "text": "All active harmonics $\\{14, 15, 80, 300\\}$ fall strictly below $500$:"
-    },
-    {
-     "t": "math",
-     "tex": "P_{\\le 500\\text{th}} = P_{14} + P_{15} + P_{80} + P_{300} = P_{\\text{total}} = \\frac{575}{2}\\text{ W} = 287.5\\text{ W}"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Harmonic Power Distribution Table:**\n\n| Harmonic Rank ($n$) | Frequency Component | Frequency $\\omega$ (rad/s) | Power Contribution (W) | Cumulative Power (W) | % Total Power |\n| :---: | :---: | :---: | :---: | :---: | :---: |\n| **14** | $15\\sin(14\\omega_0 t)$ | $\\frac{7\\pi}{10}$ | $112.5$ | $112.5$ | $39.13\\%$ |\n| **15** | $10\\cos\\left(15\\omega_0 t - \\frac{\\pi}{6}\\right)$ | $\\frac{3\\pi}{4}$ | $50.0$ | $162.5$ | $56.52\\%$ |\n| **80** | $-5\\cos(80\\omega_0 t)$ | $4\\pi$ | $12.5$ | $175.0$ | $60.87\\%$ |\n| **300** | $-15\\sin(300\\omega_0 t)$ | $15\\pi$ | $112.5$ | $287.5$ | $100.0\\%$ |"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Fundamental Angular Frequency Calculation"
+      },
+      {
+       "t": "p",
+       "text": "Express each angular frequency in rational fraction form:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_1 = \\frac{3\\pi}{4}\\text{ rad/s}, \\quad \\omega_2 = \\frac{4\\pi}{1}\\text{ rad/s}, \\quad \\omega_3 = 0.7\\pi = \\frac{7\\pi}{10}\\text{ rad/s}, \\quad \\omega_4 = \\frac{15\\pi}{1}\\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "Apply the fraction HCF rule:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\text{HCF}\\left(\\frac{3\\pi}{4}, \\frac{4\\pi}{1}, \\frac{7\\pi}{10}, \\frac{15\\pi}{1}\\right) = \\frac{\\text{HCF}(3\\pi, 4\\pi, 7\\pi, 15\\pi)}{\\text{LCM}(4, 1, 10, 1)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Numerator: $\\text{HCF}(3\\pi, 4\\pi, 7\\pi, 15\\pi) = \\pi$.",
+        "Denominator: $\\text{LCM}(4, 1, 10, 1) = 20$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{\\pi}{20}\\text{ rad/s}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Mapping Individual Components to Harmonic Orders ($n$)"
+      },
+      {
+       "t": "math",
+       "tex": "n_k = \\frac{\\omega_k}{\\omega_0}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**1st term:** $n_1 = \\frac{3\\pi/4}{\\pi/20} = \\frac{3}{4} \\times 20 = 15 \\implies \\mathbf{15\\text{th Harmonic}}$",
+        "**2nd term:** $n_2 = \\frac{4\\pi/1}{\\pi/20} = 4 \\times 20 = 80 \\implies \\mathbf{80\\text{th Harmonic}}$",
+        "**3rd term:** $n_3 = \\frac{7\\pi/10}{\\pi/20} = \\frac{7}{10} \\times 20 = 14 \\implies \\mathbf{14\\text{th Harmonic}}$",
+        "**4th term:** $n_4 = \\frac{15\\pi/1}{\\pi/20} = 15 \\times 20 = 300 \\implies \\mathbf{300\\text{th Harmonic}}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Signal represented in terms of $\\omega_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 10\\cos\\left(15\\omega_0 t - \\frac{\\pi}{6}\\right) - 5\\cos(80\\omega_0 t) + 15\\sin(14\\omega_0 t) - 15\\sin(300\\omega_0 t)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Part (b) \u2014 Power Contained Up to the 20th Harmonic ($0 \\le n \\le 20$)"
+      },
+      {
+       "t": "p",
+       "text": "The harmonic orders present in $x(t)$ are $\\{14, 15, 80, 300\\}$.\nThe components satisfying $n \\le 20$ are solely the **14th** and **15th** harmonics:"
+      },
+      {
+       "t": "math",
+       "tex": "P_{\\le 20\\text{th}} = P_{14} + P_{15} = \\frac{15^2}{2} + \\frac{10^2}{2} = \\frac{225 + 100}{2} = \\frac{325}{2}\\text{ W} = 162.5\\text{ W}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Part (c) \u2014 Power Contained Up to the 500th Harmonic ($0 \\le n \\le 500$)"
+      },
+      {
+       "t": "p",
+       "text": "All active harmonics $\\{14, 15, 80, 300\\}$ fall strictly below $500$:"
+      },
+      {
+       "t": "math",
+       "tex": "P_{\\le 500\\text{th}} = P_{14} + P_{15} + P_{80} + P_{300} = P_{\\text{total}} = \\frac{575}{2}\\text{ W} = 287.5\\text{ W}"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Harmonic Power Distribution Table:**\n\n| Harmonic Rank ($n$) | Frequency Component | Frequency $\\omega$ (rad/s) | Power Contribution (W) | Cumulative Power (W) | % Total Power |\n| :---: | :---: | :---: | :---: | :---: | :---: |\n| **14** | $15\\sin(14\\omega_0 t)$ | $\\frac{7\\pi}{10}$ | $112.5$ | $112.5$ | $39.13\\%$ |\n| **15** | $10\\cos\\left(15\\omega_0 t - \\frac{\\pi}{6}\\right)$ | $\\frac{3\\pi}{4}$ | $50.0$ | $162.5$ | $56.52\\%$ |\n| **80** | $-5\\cos(80\\omega_0 t)$ | $4\\pi$ | $12.5$ | $175.0$ | $60.87\\%$ |\n| **300** | $-15\\sin(300\\omega_0 t)$ | $15\\pi$ | $112.5$ | $287.5$ | $100.0\\%$ |"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9056,136 +9047,135 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Angle Expansion of the 15th Harmonic"
-    },
-    {
-     "t": "math",
-     "tex": "10\\cos\\left(15\\omega_0 t - \\frac{\\pi}{6}\\right) = 10\\left[\\cos(15\\omega_0 t)\\cos\\left(\\frac{\\pi}{6}\\right) + \\sin(15\\omega_0 t)\\sin\\left(\\frac{\\pi}{6}\\right)\\right]"
-    },
-    {
-     "t": "math",
-     "tex": "= 10\\left[\\cos(15\\omega_0 t)\\cdot\\frac{\\sqrt{3}}{2} + \\sin(15\\omega_0 t)\\cdot\\frac{1}{2}\\right] = 5\\sqrt{3}\\cos(15\\omega_0 t) + 5\\sin(15\\omega_0 t)"
-    },
-    {
-     "t": "p",
-     "text": "Substituting back into $x(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 15\\sin(14\\omega_0 t) + 5\\sqrt{3}\\cos(15\\omega_0 t) + 5\\sin(15\\omega_0 t) - 5\\cos(80\\omega_0 t) - 15\\sin(300\\omega_0 t)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Trigonometric Fourier Series Coefficients ($a_n, b_n$)"
-    },
-    {
-     "t": "p",
-     "text": "Matching terms against $a_n\\cos(n\\omega_0 t) + b_n\\sin(n\\omega_0 t)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Harmonic $n = 14$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_{14} = 0, \\quad b_{14} = 15"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Harmonic $n = 15$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_{15} = 5\\sqrt{3}, \\quad b_{15} = 5"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Harmonic $n = 80$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_{80} = -5, \\quad b_{80} = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Harmonic $n = 300$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_{300} = 0, \\quad b_{300} = -15"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Conversion to Exponential Fourier Series Coefficients ($c_n$)"
-    },
-    {
-     "t": "p",
-     "text": "Using the standard conversion identity:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{a_n - j b_n}{2}, \\quad c_{-n} = c_n^* = \\frac{a_n + j b_n}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating for each active harmonic:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = 14$ and $n = -14$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{14} = \\frac{0 - j(15)}{2} = -\\frac{j 15}{2}, \\quad c_{-14} = \\frac{j 15}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = 15$ and $n = -15$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{15} = \\frac{5\\sqrt{3} - j 5}{2}, \\quad c_{-15} = \\frac{5\\sqrt{3} + j 5}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = 80$ and $n = -80$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{80} = \\frac{-5 - j(0)}{2} = -\\frac{5}{2}, \\quad c_{-80} = -\\frac{5}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = 300$ and $n = -300$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{300} = \\frac{0 - j(-15)}{2} = \\frac{j 15}{2}, \\quad c_{-300} = -\\frac{j 15}{2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Angle Expansion of the 15th Harmonic"
+      },
+      {
+       "t": "math",
+       "tex": "10\\cos\\left(15\\omega_0 t - \\frac{\\pi}{6}\\right) = 10\\left[\\cos(15\\omega_0 t)\\cos\\left(\\frac{\\pi}{6}\\right) + \\sin(15\\omega_0 t)\\sin\\left(\\frac{\\pi}{6}\\right)\\right]"
+      },
+      {
+       "t": "math",
+       "tex": "= 10\\left[\\cos(15\\omega_0 t)\\cdot\\frac{\\sqrt{3}}{2} + \\sin(15\\omega_0 t)\\cdot\\frac{1}{2}\\right] = 5\\sqrt{3}\\cos(15\\omega_0 t) + 5\\sin(15\\omega_0 t)"
+      },
+      {
+       "t": "p",
+       "text": "Substituting back into $x(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 15\\sin(14\\omega_0 t) + 5\\sqrt{3}\\cos(15\\omega_0 t) + 5\\sin(15\\omega_0 t) - 5\\cos(80\\omega_0 t) - 15\\sin(300\\omega_0 t)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Trigonometric Fourier Series Coefficients ($a_n, b_n$)"
+      },
+      {
+       "t": "p",
+       "text": "Matching terms against $a_n\\cos(n\\omega_0 t) + b_n\\sin(n\\omega_0 t)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Harmonic $n = 14$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_{14} = 0, \\quad b_{14} = 15"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Harmonic $n = 15$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_{15} = 5\\sqrt{3}, \\quad b_{15} = 5"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Harmonic $n = 80$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_{80} = -5, \\quad b_{80} = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Harmonic $n = 300$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_{300} = 0, \\quad b_{300} = -15"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Conversion to Exponential Fourier Series Coefficients ($c_n$)"
+      },
+      {
+       "t": "p",
+       "text": "Using the standard conversion identity:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{a_n - j b_n}{2}, \\quad c_{-n} = c_n^* = \\frac{a_n + j b_n}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating for each active harmonic:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = 14$ and $n = -14$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{14} = \\frac{0 - j(15)}{2} = -\\frac{j 15}{2}, \\quad c_{-14} = \\frac{j 15}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = 15$ and $n = -15$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{15} = \\frac{5\\sqrt{3} - j 5}{2}, \\quad c_{-15} = \\frac{5\\sqrt{3} + j 5}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = 80$ and $n = -80$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{80} = \\frac{-5 - j(0)}{2} = -\\frac{5}{2}, \\quad c_{-80} = -\\frac{5}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = 300$ and $n = -300$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{300} = \\frac{0 - j(-15)}{2} = \\frac{j 15}{2}, \\quad c_{-300} = -\\frac{j 15}{2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9225,220 +9215,219 @@ export default {
      "text": "Specify **two different signals** that satisfy all these conditions."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Exploiting Symmetries (Slide 81)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Condition 1 (Real Signal):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = x^*(t) \\implies c_n = c_{-n}^*"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Condition 1 (Odd Signal):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = -x(-t) \\implies c_n = -c_{-n}"
-    },
-    {
-     "t": "p",
-     "text": "For $n = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = -c_0 \\implies 2c_0 = 0 \\implies c_0 = 0"
-    },
-    {
-     "t": "p",
-     "text": "*(The average/DC value of any odd periodic signal is identically zero).*"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Combining real and odd properties:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = c_{-n}^* = (-c_n)^* = -c_n^*"
-    },
-    {
-     "t": "p",
-     "text": "Let $c_n = u_n + j v_n$. Then:"
-    },
-    {
-     "t": "math",
-     "tex": "u_n + j v_n = -(u_n - j v_n) = -u_n + j v_n \\implies 2u_n = 0 \\implies u_n = 0"
-    },
-    {
-     "t": "p",
-     "text": "**Deduction:** All Fourier coefficients $c_n$ are **purely imaginary**!"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Exploiting Periodicity and Bandwidth Limits (Slide 81)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Condition 2 (Period):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "T_0 = 2 \\implies \\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{2} = \\pi\\text{ rad/s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Condition 3 (Band-Limited):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$c_k = 0$ for $|k| > 1$.\n  The only permissible non-zero coefficients are for indices $k \\in \\{-1, 0, 1\\}$.\n  Since $c_0 = 0$, only $c_1$ and $c_{-1}$ can be non-zero."
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Synthesis Equation Formulation (Slide 82)"
-    },
-    {
-     "t": "p",
-     "text": "The signal synthesis equation reduces to:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = c_{-1} e^{-j\\pi t} + c_1 e^{j\\pi t}"
-    },
-    {
-     "t": "p",
-     "text": "Using the odd symmetry relation $c_{-1} = -c_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = c_1 e^{j\\pi t} - c_1 e^{-j\\pi t} = c_1 \\left( e^{j\\pi t} - e^{-j\\pi t} \\right)"
-    },
-    {
-     "t": "p",
-     "text": "Multiply and divide by $2j$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2j c_1 \\left( \\frac{e^{j\\pi t} - e^{-j\\pi t}}{2j} \\right) = 2j c_1 \\sin(\\pi t)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Applying the Real-Valued & Power Constraints (Slide 82)"
-    },
-    {
-     "t": "p",
-     "text": "Because $x(t)$ must be real-valued, the coefficient $2j c_1$ must be a **real number**:"
-    },
-    {
-     "t": "math",
-     "tex": "2j c_1 \\in \\mathbb{R} \\implies c_1 \\text{ must be purely imaginary}"
-    },
-    {
-     "t": "p",
-     "text": "Now evaluate power using Condition 4:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{1}{2}\\int_0^2 |x(t)|^2 dt = 1"
-    },
-    {
-     "t": "p",
-     "text": "For a sinusoidal signal $x(t) = A\\sin(\\pi t)$, power is:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{A^2}{2} = \\frac{|2j c_1|^2}{2} = \\frac{4|c_1|^2}{2} = 2|c_1|^2 = 1 \\implies |c_1|^2 = \\frac{1}{2} \\implies |c_1| = \\frac{1}{\\sqrt{2}}"
-    },
-    {
-     "t": "p",
-     "text": "Alternatively, by Parseval's theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "P = |c_{-1}|^2 + |c_1|^2 = |-c_1|^2 + |c_1|^2 = 2|c_1|^2 = 1 \\implies |c_1| = \\frac{1}{\\sqrt{2}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Determining Candidate Solutions for $c_1$"
-    },
-    {
-     "t": "p",
-     "text": "Since $c_1$ must be purely imaginary and $|c_1| = \\frac{1}{\\sqrt{2}}$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\pm j \\frac{1}{\\sqrt{2}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case A: Let $c_1 = -j\\frac{1}{\\sqrt{2}} = \\frac{1}{j\\sqrt{2}}$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2j c_1 = 2j \\left(-j\\frac{1}{\\sqrt{2}}\\right) = -2j^2 \\frac{1}{\\sqrt{2}} = \\frac{2}{\\sqrt{2}} = \\sqrt{2}"
-    },
-    {
-     "t": "math",
-     "tex": "x_1(t) = \\sqrt{2}\\sin(\\pi t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case B: Let $c_1 = +j\\frac{1}{\\sqrt{2}} = -\\frac{1}{j\\sqrt{2}}$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2j c_1 = 2j \\left(j\\frac{1}{\\sqrt{2}}\\right) = 2j^2 \\frac{1}{\\sqrt{2}} = -\\frac{2}{\\sqrt{2}} = -\\sqrt{2}"
-    },
-    {
-     "t": "math",
-     "tex": "x_2(t) = -\\sqrt{2}\\sin(\\pi t)"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE Trap Warning:**\nIf a student incorrectly assumes $c_1$ is real ($c_1 = \\pm \\frac{1}{\\sqrt{2}}$), then $2j c_1 = \\pm j\\sqrt{2}$, resulting in an imaginary signal $x(t) = \\pm j\\sqrt{2}\\sin(\\pi t)$, which violates Condition 1 ($x(t)$ is real). Purely imaginary Fourier coefficients are **mandatory** for a real, odd signal!"
-    },
-    {
-     "t": "h4",
-     "text": "Final Answer"
-    },
-    {
-     "t": "p",
-     "text": "The two distinct signals satisfying all four conditions are:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = \\sqrt{2}\\sin(\\pi t) \\quad \\text{and} \\quad x(t) = -\\sqrt{2}\\sin(\\pi t)}"
-    },
-    {
-     "t": "p",
-     "text": "(or compactly, $x(t) = \\pm \\sqrt{2}\\sin(\\pi t)$)."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Exploiting Symmetries (Slide 81)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Condition 1 (Real Signal):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = x^*(t) \\implies c_n = c_{-n}^*"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Condition 1 (Odd Signal):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = -x(-t) \\implies c_n = -c_{-n}"
+      },
+      {
+       "t": "p",
+       "text": "For $n = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = -c_0 \\implies 2c_0 = 0 \\implies c_0 = 0"
+      },
+      {
+       "t": "p",
+       "text": "*(The average/DC value of any odd periodic signal is identically zero).*"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Combining real and odd properties:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = c_{-n}^* = (-c_n)^* = -c_n^*"
+      },
+      {
+       "t": "p",
+       "text": "Let $c_n = u_n + j v_n$. Then:"
+      },
+      {
+       "t": "math",
+       "tex": "u_n + j v_n = -(u_n - j v_n) = -u_n + j v_n \\implies 2u_n = 0 \\implies u_n = 0"
+      },
+      {
+       "t": "p",
+       "text": "**Deduction:** All Fourier coefficients $c_n$ are **purely imaginary**!"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Exploiting Periodicity and Bandwidth Limits (Slide 81)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Condition 2 (Period):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "T_0 = 2 \\implies \\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{2} = \\pi\\text{ rad/s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Condition 3 (Band-Limited):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$c_k = 0$ for $|k| > 1$.\n  The only permissible non-zero coefficients are for indices $k \\in \\{-1, 0, 1\\}$.\n  Since $c_0 = 0$, only $c_1$ and $c_{-1}$ can be non-zero."
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Synthesis Equation Formulation (Slide 82)"
+      },
+      {
+       "t": "p",
+       "text": "The signal synthesis equation reduces to:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = c_{-1} e^{-j\\pi t} + c_1 e^{j\\pi t}"
+      },
+      {
+       "t": "p",
+       "text": "Using the odd symmetry relation $c_{-1} = -c_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = c_1 e^{j\\pi t} - c_1 e^{-j\\pi t} = c_1 \\left( e^{j\\pi t} - e^{-j\\pi t} \\right)"
+      },
+      {
+       "t": "p",
+       "text": "Multiply and divide by $2j$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2j c_1 \\left( \\frac{e^{j\\pi t} - e^{-j\\pi t}}{2j} \\right) = 2j c_1 \\sin(\\pi t)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Applying the Real-Valued & Power Constraints (Slide 82)"
+      },
+      {
+       "t": "p",
+       "text": "Because $x(t)$ must be real-valued, the coefficient $2j c_1$ must be a **real number**:"
+      },
+      {
+       "t": "math",
+       "tex": "2j c_1 \\in \\mathbb{R} \\implies c_1 \\text{ must be purely imaginary}"
+      },
+      {
+       "t": "p",
+       "text": "Now evaluate power using Condition 4:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{1}{2}\\int_0^2 |x(t)|^2 dt = 1"
+      },
+      {
+       "t": "p",
+       "text": "For a sinusoidal signal $x(t) = A\\sin(\\pi t)$, power is:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{A^2}{2} = \\frac{|2j c_1|^2}{2} = \\frac{4|c_1|^2}{2} = 2|c_1|^2 = 1 \\implies |c_1|^2 = \\frac{1}{2} \\implies |c_1| = \\frac{1}{\\sqrt{2}}"
+      },
+      {
+       "t": "p",
+       "text": "Alternatively, by Parseval's theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "P = |c_{-1}|^2 + |c_1|^2 = |-c_1|^2 + |c_1|^2 = 2|c_1|^2 = 1 \\implies |c_1| = \\frac{1}{\\sqrt{2}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Determining Candidate Solutions for $c_1$"
+      },
+      {
+       "t": "p",
+       "text": "Since $c_1$ must be purely imaginary and $|c_1| = \\frac{1}{\\sqrt{2}}$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\pm j \\frac{1}{\\sqrt{2}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case A: Let $c_1 = -j\\frac{1}{\\sqrt{2}} = \\frac{1}{j\\sqrt{2}}$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2j c_1 = 2j \\left(-j\\frac{1}{\\sqrt{2}}\\right) = -2j^2 \\frac{1}{\\sqrt{2}} = \\frac{2}{\\sqrt{2}} = \\sqrt{2}"
+      },
+      {
+       "t": "math",
+       "tex": "x_1(t) = \\sqrt{2}\\sin(\\pi t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case B: Let $c_1 = +j\\frac{1}{\\sqrt{2}} = -\\frac{1}{j\\sqrt{2}}$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2j c_1 = 2j \\left(j\\frac{1}{\\sqrt{2}}\\right) = 2j^2 \\frac{1}{\\sqrt{2}} = -\\frac{2}{\\sqrt{2}} = -\\sqrt{2}"
+      },
+      {
+       "t": "math",
+       "tex": "x_2(t) = -\\sqrt{2}\\sin(\\pi t)"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE Trap Warning:**\nIf a student incorrectly assumes $c_1$ is real ($c_1 = \\pm \\frac{1}{\\sqrt{2}}$), then $2j c_1 = \\pm j\\sqrt{2}$, resulting in an imaginary signal $x(t) = \\pm j\\sqrt{2}\\sin(\\pi t)$, which violates Condition 1 ($x(t)$ is real). Purely imaginary Fourier coefficients are **mandatory** for a real, odd signal!"
+      },
+      {
+       "t": "h4",
+       "text": "Final Answer"
+      },
+      {
+       "t": "p",
+       "text": "The two distinct signals satisfying all four conditions are:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = \\sqrt{2}\\sin(\\pi t) \\quad \\text{and} \\quad x(t) = -\\sqrt{2}\\sin(\\pi t)}"
+      },
+      {
+       "t": "p",
+       "text": "(or compactly, $x(t) = \\pm \\sqrt{2}\\sin(\\pi t)$)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9487,130 +9476,129 @@ export default {
      "text": "What is the relationship between the Fourier series coefficients $c_n$ of $x(t)$ and $d_n$ of $y(t)$?"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Analysis of the Scaled Signal $y(t) = x(2t)$ (Slide 84)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "New fundamental angular frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_2 = 2 = 2\\omega_0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "New fundamental period:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "T_2 = \\frac{2\\pi}{\\omega_2} = \\frac{2\\pi}{2} = \\pi = \\frac{T_0}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Now express $y(t)$ in terms of its new fundamental frequency $\\omega_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\sin(\\omega_2 t) = \\frac{e^{j\\omega_2 t} - e^{-j\\omega_2 t}}{2j} = \\left(\\frac{1}{2j}\\right)e^{j(1)\\omega_2 t} + \\left(-\\frac{1}{2j}\\right)e^{j(-1)\\omega_2 t}"
-    },
-    {
-     "t": "p",
-     "text": "Extract the new coefficients $d_n$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_1 = \\frac{1}{2j}, \\quad d_{-1} = -\\frac{1}{2j}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing $c_n$ and $d_n$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_1 = c_1, \\quad d_{-1} = c_{-1} \\implies \\mathbf{d_n = c_n}"
-    },
-    {
-     "t": "code",
-     "text": "Spectrum of x(t) [F.F. = w0]:\n   cn\n   ^\n   |       +1/(2j)\n   |        |\n---|--------+--------|---> n\n  -1        0        1\n   |\n   -1/(2j)\n\nSpectrum of x(2t) [F.F. = 2w0]:\n   dn\n   ^\n   |       +1/(2j)\n   |        |\n---|--------+--------|---> n\n  -1        0        1\n   |\n   -1/(2j)"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:** The discrete spectral line heights plotted against the harmonic index $n$ are **identical**!"
-    },
-    {
-     "t": "h4",
-     "text": "General Formal Proof (Slide 85)"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t)$ be an arbitrary periodic signal with period $T_0$ and fundamental frequency $\\omega_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t} \\quad \\text{--- (1)}"
-    },
-    {
-     "t": "p",
-     "text": "Let $y(t) = x(at)$ be the scaled signal. It is periodic with fundamental frequency:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{\\text{new}} = |a|\\omega_0"
-    },
-    {
-     "t": "p",
-     "text": "and period $T_{\\text{new}} = \\frac{T_0}{|a|}$."
-    },
-    {
-     "t": "p",
-     "text": "By the CTFS synthesis equation, any periodic signal with fundamental frequency $\\omega_{\\text{new}}$ can be represented as:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\sum_{n=-\\infty}^\\infty d_n e^{j n \\omega_{\\text{new}} t} = \\sum_{n=-\\infty}^\\infty d_n e^{j n (a\\omega_0) t} \\quad \\text{--- (2)}"
-    },
-    {
-     "t": "p",
-     "text": "Now, directly substitute $t \\to at$ into the original synthesis equation (1):"
-    },
-    {
-     "t": "math",
-     "tex": "x(at) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 (at)} = \\sum_{n=-\\infty}^\\infty c_n e^{j n (a\\omega_0) t} \\quad \\text{--- (3)}"
-    },
-    {
-     "t": "p",
-     "text": "Equating the series expansions in (2) and (3):"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^\\infty d_n e^{j n (a\\omega_0) t} = \\sum_{n=-\\infty}^\\infty c_n e^{j n (a\\omega_0) t}"
-    },
-    {
-     "t": "p",
-     "text": "By the uniqueness of the Fourier series representation:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{d_n = c_n}"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**CRITICAL GATE EXAM TRAP: CTFS vs CTFT Time Scaling!**\n- In **CTFT** (aperiodic signals):\n  $$x(at) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{1}{|a|} X\\left(\\frac{\\omega}{a}\\right)$$\n  Scaling affects both amplitude ($\\frac{1}{|a|}$) and the continuous frequency axis.\n- In **CTFS** (periodic signals):\n  $$x(at) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad T_{\\text{new}} = \\frac{T_0}{|a|}, \\quad \\omega_{\\text{new}} = |a|\\omega_0$$\n  **The Fourier series coefficients $c_n$ DO NOT CHANGE! There is NO $\\frac{1}{|a|}$ scaling factor!**"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Analysis of the Scaled Signal $y(t) = x(2t)$ (Slide 84)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "New fundamental angular frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_2 = 2 = 2\\omega_0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "New fundamental period:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "T_2 = \\frac{2\\pi}{\\omega_2} = \\frac{2\\pi}{2} = \\pi = \\frac{T_0}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Now express $y(t)$ in terms of its new fundamental frequency $\\omega_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\sin(\\omega_2 t) = \\frac{e^{j\\omega_2 t} - e^{-j\\omega_2 t}}{2j} = \\left(\\frac{1}{2j}\\right)e^{j(1)\\omega_2 t} + \\left(-\\frac{1}{2j}\\right)e^{j(-1)\\omega_2 t}"
+      },
+      {
+       "t": "p",
+       "text": "Extract the new coefficients $d_n$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_1 = \\frac{1}{2j}, \\quad d_{-1} = -\\frac{1}{2j}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing $c_n$ and $d_n$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_1 = c_1, \\quad d_{-1} = c_{-1} \\implies \\mathbf{d_n = c_n}"
+      },
+      {
+       "t": "code",
+       "text": "Spectrum of x(t) [F.F. = w0]:\n   cn\n   ^\n   |       +1/(2j)\n   |        |\n---|--------+--------|---> n\n  -1        0        1\n   |\n   -1/(2j)\n\nSpectrum of x(2t) [F.F. = 2w0]:\n   dn\n   ^\n   |       +1/(2j)\n   |        |\n---|--------+--------|---> n\n  -1        0        1\n   |\n   -1/(2j)"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:** The discrete spectral line heights plotted against the harmonic index $n$ are **identical**!"
+      },
+      {
+       "t": "h4",
+       "text": "General Formal Proof (Slide 85)"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t)$ be an arbitrary periodic signal with period $T_0$ and fundamental frequency $\\omega_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t} \\quad \\text{--- (1)}"
+      },
+      {
+       "t": "p",
+       "text": "Let $y(t) = x(at)$ be the scaled signal. It is periodic with fundamental frequency:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{\\text{new}} = |a|\\omega_0"
+      },
+      {
+       "t": "p",
+       "text": "and period $T_{\\text{new}} = \\frac{T_0}{|a|}$."
+      },
+      {
+       "t": "p",
+       "text": "By the CTFS synthesis equation, any periodic signal with fundamental frequency $\\omega_{\\text{new}}$ can be represented as:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\sum_{n=-\\infty}^\\infty d_n e^{j n \\omega_{\\text{new}} t} = \\sum_{n=-\\infty}^\\infty d_n e^{j n (a\\omega_0) t} \\quad \\text{--- (2)}"
+      },
+      {
+       "t": "p",
+       "text": "Now, directly substitute $t \\to at$ into the original synthesis equation (1):"
+      },
+      {
+       "t": "math",
+       "tex": "x(at) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 (at)} = \\sum_{n=-\\infty}^\\infty c_n e^{j n (a\\omega_0) t} \\quad \\text{--- (3)}"
+      },
+      {
+       "t": "p",
+       "text": "Equating the series expansions in (2) and (3):"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^\\infty d_n e^{j n (a\\omega_0) t} = \\sum_{n=-\\infty}^\\infty c_n e^{j n (a\\omega_0) t}"
+      },
+      {
+       "t": "p",
+       "text": "By the uniqueness of the Fourier series representation:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{d_n = c_n}"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**CRITICAL GATE EXAM TRAP: CTFS vs CTFT Time Scaling!**\n- In **CTFT** (aperiodic signals):\n  $$x(at) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{1}{|a|} X\\left(\\frac{\\omega}{a}\\right)$$\n  Scaling affects both amplitude ($\\frac{1}{|a|}$) and the continuous frequency axis.\n- In **CTFS** (periodic signals):\n  $$x(at) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad T_{\\text{new}} = \\frac{T_0}{|a|}, \\quad \\omega_{\\text{new}} = |a|\\omega_0$$\n  **The Fourier series coefficients $c_n$ DO NOT CHANGE! There is NO $\\frac{1}{|a|}$ scaling factor!**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9644,64 +9632,63 @@ export default {
      "tex": "x(t + t_0) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n e^{j n \\omega_0 t_0}, \\quad \\omega_0, \\quad T_0"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof:"
-    },
-    {
-     "t": "p",
-     "text": "From the synthesis equation:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $t \\to t + t_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t + t_0) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 (t + t_0)} = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t_0} e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Group the exponential term with $c_n$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t + t_0) = \\sum_{n=-\\infty}^\\infty \\left[ c_n e^{j n \\omega_0 t_0} \\right] e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "The CTFS synthesis equation for $y(t) = x(t + t_0)$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\sum_{n=-\\infty}^\\infty d_n e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing terms:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{d_n = c_n e^{j n \\omega_0 t_0}}"
-    },
-    {
-     "t": "p",
-     "text": "For a time delay ($t - t_0$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t - t_0) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n e^{-j n \\omega_0 t_0}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof:"
+      },
+      {
+       "t": "p",
+       "text": "From the synthesis equation:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $t \\to t + t_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t + t_0) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 (t + t_0)} = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t_0} e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Group the exponential term with $c_n$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t + t_0) = \\sum_{n=-\\infty}^\\infty \\left[ c_n e^{j n \\omega_0 t_0} \\right] e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "The CTFS synthesis equation for $y(t) = x(t + t_0)$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\sum_{n=-\\infty}^\\infty d_n e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing terms:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{d_n = c_n e^{j n \\omega_0 t_0}}"
+      },
+      {
+       "t": "p",
+       "text": "For a time delay ($t - t_0$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t - t_0) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n e^{-j n \\omega_0 t_0}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9715,58 +9702,57 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 1: Simple Time Delay"
-    },
-    {
-     "t": "p",
-     "text": "Given $x(t) \\longleftrightarrow c_n, \\omega_0$. Find the CTFS coefficients of $x(t - 3)$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Shift amount: $t_0 = -3$.",
-      "Applying property:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t - 3) \\longleftrightarrow c_n e^{j n \\omega_0 (-3)} = \\boxed{c_n e^{-j 3 n \\omega_0}, \\quad \\omega_0}"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 2: Simple Time Advance"
-    },
-    {
-     "t": "p",
-     "text": "Given $x(t) \\longleftrightarrow c_n, \\omega_p$. Find the CTFS coefficients of $x(t + 2)$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Shift amount: $t_0 = +2$.",
-      "Applying property:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t + 2) \\longleftrightarrow c_n e^{j n \\omega_p (2)} = \\boxed{c_n e^{j 2 n \\omega_p}, \\quad \\omega_p}"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 3: Scaling Followed by Shifting"
-    },
-    {
-     "t": "p",
-     "text": "Given $x(4t) \\longleftrightarrow c_n, \\omega_0$. Find the CTFS coefficients of $x(t + 2)$.\n*(Solved completely on Slide 88).*"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Drill 1: Simple Time Delay"
+      },
+      {
+       "t": "p",
+       "text": "Given $x(t) \\longleftrightarrow c_n, \\omega_0$. Find the CTFS coefficients of $x(t - 3)$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Shift amount: $t_0 = -3$.",
+        "Applying property:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t - 3) \\longleftrightarrow c_n e^{j n \\omega_0 (-3)} = \\boxed{c_n e^{-j 3 n \\omega_0}, \\quad \\omega_0}"
+      },
+      {
+       "t": "h4",
+       "text": "Drill 2: Simple Time Advance"
+      },
+      {
+       "t": "p",
+       "text": "Given $x(t) \\longleftrightarrow c_n, \\omega_p$. Find the CTFS coefficients of $x(t + 2)$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Shift amount: $t_0 = +2$.",
+        "Applying property:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t + 2) \\longleftrightarrow c_n e^{j n \\omega_p (2)} = \\boxed{c_n e^{j 2 n \\omega_p}, \\quad \\omega_p}"
+      },
+      {
+       "t": "h4",
+       "text": "Drill 3: Scaling Followed by Shifting"
+      },
+      {
+       "t": "p",
+       "text": "Given $x(4t) \\longleftrightarrow c_n, \\omega_0$. Find the CTFS coefficients of $x(t + 2)$.\n*(Solved completely on Slide 88).*"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9780,111 +9766,110 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 1: From $x(4t)$ to $x(t + 2)$"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "x(4t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad \\omega_0"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1:** Recover the unscaled signal $x(t)$:\nSince $x(4t)$ has fundamental frequency $\\omega_0$, the signal $x(t)$ has fundamental frequency:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{\\text{base}} = \\frac{\\omega_0}{4}"
-    },
-    {
-     "t": "p",
-     "text": "By the time-scaling invariance rule, the coefficients of $x(t)$ remain $c_n$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad \\frac{\\omega_0}{4}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2:** Apply time advance of $+2$ to $x(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t + 2) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n e^{j n \\omega_{\\text{base}} (2)} = c_n e^{j n \\left(\\frac{\\omega_0}{4}\\right) 2} = \\boxed{c_n e^{j n \\frac{\\omega_0}{2}}, \\quad \\text{with fundamental freq } \\frac{\\omega_0}{4}}"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 2: Signal Transformation $x(-4t + 3)$ via Factoring"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad \\omega_0"
-    },
-    {
-     "t": "p",
-     "text": "Find the CTFS of $x(-4t + 3)$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 1:** Factor out the coefficient of $t$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(-4t + 3) = x\\left[-4\\left(t - \\frac{3}{4}\\right)\\right]"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2:** Apply Time Reversal ($t \\to -t$):"
-    },
-    {
-     "t": "math",
-     "tex": "x(-t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_{-n}, \\quad \\omega_0"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3:** Apply Time Scaling ($t \\to 4t$):\nLet $y(t) = x(-4t)$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental frequency scales: $\\omega_{\\text{new}} = 4\\omega_0$.",
-      "Coefficients remain unchanged:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(-4t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_{-n}, \\quad 4\\omega_0"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4:** Apply Time Shift ($t \\to t - 3/4$):\nShift $y(t)$ by $t_0 = -3/4$:"
-    },
-    {
-     "t": "math",
-     "tex": "y\\left(t - \\frac{3}{4}\\right) = x\\left[-4\\left(t - \\frac{3}{4}\\right)\\right] = x(-4t + 3)"
-    },
-    {
-     "t": "p",
-     "text": "The phase factor uses the current fundamental frequency $\\omega_{\\text{new}} = 4\\omega_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = c_{-n} e^{j n (4\\omega_0)\\left(-\\frac{3}{4}\\right)} = \\boxed{c_{-n} e^{-j 3 n \\omega_0}, \\quad 4\\omega_0}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem 1: From $x(4t)$ to $x(t + 2)$"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "x(4t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad \\omega_0"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1:** Recover the unscaled signal $x(t)$:\nSince $x(4t)$ has fundamental frequency $\\omega_0$, the signal $x(t)$ has fundamental frequency:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{\\text{base}} = \\frac{\\omega_0}{4}"
+      },
+      {
+       "t": "p",
+       "text": "By the time-scaling invariance rule, the coefficients of $x(t)$ remain $c_n$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad \\frac{\\omega_0}{4}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2:** Apply time advance of $+2$ to $x(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t + 2) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n e^{j n \\omega_{\\text{base}} (2)} = c_n e^{j n \\left(\\frac{\\omega_0}{4}\\right) 2} = \\boxed{c_n e^{j n \\frac{\\omega_0}{2}}, \\quad \\text{with fundamental freq } \\frac{\\omega_0}{4}}"
+      },
+      {
+       "t": "h4",
+       "text": "Problem 2: Signal Transformation $x(-4t + 3)$ via Factoring"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad \\omega_0"
+      },
+      {
+       "t": "p",
+       "text": "Find the CTFS of $x(-4t + 3)$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 1:** Factor out the coefficient of $t$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(-4t + 3) = x\\left[-4\\left(t - \\frac{3}{4}\\right)\\right]"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2:** Apply Time Reversal ($t \\to -t$):"
+      },
+      {
+       "t": "math",
+       "tex": "x(-t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_{-n}, \\quad \\omega_0"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3:** Apply Time Scaling ($t \\to 4t$):\nLet $y(t) = x(-4t)$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental frequency scales: $\\omega_{\\text{new}} = 4\\omega_0$.",
+        "Coefficients remain unchanged:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(-4t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_{-n}, \\quad 4\\omega_0"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4:** Apply Time Shift ($t \\to t - 3/4$):\nShift $y(t)$ by $t_0 = -3/4$:"
+      },
+      {
+       "t": "math",
+       "tex": "y\\left(t - \\frac{3}{4}\\right) = x\\left[-4\\left(t - \\frac{3}{4}\\right)\\right] = x(-4t + 3)"
+      },
+      {
+       "t": "p",
+       "text": "The phase factor uses the current fundamental frequency $\\omega_{\\text{new}} = 4\\omega_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = c_{-n} e^{j n (4\\omega_0)\\left(-\\frac{3}{4}\\right)} = \\boxed{c_{-n} e^{-j 3 n \\omega_0}, \\quad 4\\omega_0}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9898,92 +9883,91 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Pipeline: Shifting $\\to$ Scaling $\\to$ Folding"
-    },
-    {
-     "t": "p",
-     "text": "We start with $x(t) \\longleftrightarrow c_n, \\omega_0$."
-    },
-    {
-     "t": "code",
-     "text": "           Shifting (t -> t+3)          Scaling (t -> 4t)          Folding (t -> -t)\n   x(t) ------------------------> x(t+3) ----------------> x(4t+3) -----------------> x(-4t+3)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Time Shift ($t \\to t + 3$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t + 3) \\longleftrightarrow c_n e^{j n \\omega_0 (3)} = c_n e^{j 3 n \\omega_0}, \\quad \\omega_0"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Time Scaling ($t \\to 4t$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Replace $t$ with $4t$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The fundamental frequency scales by 4: $\\omega_0 \\to 4\\omega_0$.",
-      "By the time-scaling theorem, the coefficients are untouched:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(4t + 3) \\longleftrightarrow c_n e^{j 3 n \\omega_0}, \\quad 4\\omega_0"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Time Folding ($t \\to -t$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Replace $t$ with $-t$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Folding replaces harmonic index $n$ with $-n$ **everywhere** in the coefficient expression:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n \\longrightarrow c_{-n}"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j 3 n \\omega_0} \\longrightarrow e^{j 3 (-n) \\omega_0} = e^{-j 3 n \\omega_0}"
-    },
-    {
-     "t": "math",
-     "tex": "x(-4t + 3) \\longleftrightarrow \\boxed{c_{-n} e^{-j 3 n \\omega_0}, \\quad 4\\omega_0}"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "Both Method I (Factoring: Reversal $\\to$ Scaling $\\to$ Shifting) and Method II (Standard Precedence: Shifting $\\to$ Scaling $\\to$ Folding) produce **identically** $c_{-n} e^{-j 3 n \\omega_0}$ with fundamental frequency $4\\omega_0$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Pipeline: Shifting $\\to$ Scaling $\\to$ Folding"
+      },
+      {
+       "t": "p",
+       "text": "We start with $x(t) \\longleftrightarrow c_n, \\omega_0$."
+      },
+      {
+       "t": "code",
+       "text": "           Shifting (t -> t+3)          Scaling (t -> 4t)          Folding (t -> -t)\n   x(t) ------------------------> x(t+3) ----------------> x(4t+3) -----------------> x(-4t+3)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Time Shift ($t \\to t + 3$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t + 3) \\longleftrightarrow c_n e^{j n \\omega_0 (3)} = c_n e^{j 3 n \\omega_0}, \\quad \\omega_0"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Time Scaling ($t \\to 4t$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Replace $t$ with $4t$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The fundamental frequency scales by 4: $\\omega_0 \\to 4\\omega_0$.",
+        "By the time-scaling theorem, the coefficients are untouched:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(4t + 3) \\longleftrightarrow c_n e^{j 3 n \\omega_0}, \\quad 4\\omega_0"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Time Folding ($t \\to -t$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Replace $t$ with $-t$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Folding replaces harmonic index $n$ with $-n$ **everywhere** in the coefficient expression:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n \\longrightarrow c_{-n}"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j 3 n \\omega_0} \\longrightarrow e^{j 3 (-n) \\omega_0} = e^{-j 3 n \\omega_0}"
+      },
+      {
+       "t": "math",
+       "tex": "x(-4t + 3) \\longleftrightarrow \\boxed{c_{-n} e^{-j 3 n \\omega_0}, \\quad 4\\omega_0}"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "Both Method I (Factoring: Reversal $\\to$ Scaling $\\to$ Shifting) and Method II (Standard Precedence: Shifting $\\to$ Scaling $\\to$ Folding) produce **identically** $c_{-n} e^{-j 3 n \\omega_0}$ with fundamental frequency $4\\omega_0$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10013,91 +9997,90 @@ export default {
      "text": "Find the CTFS coefficients and fundamental frequency of $x(-3t + 2)$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Baseline Signal Recovery:"
-    },
-    {
-     "t": "p",
-     "text": "Since $x(2t) \\longleftrightarrow c_n, \\omega_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad \\omega_{\\text{base}} = \\frac{\\omega_0}{2}"
-    },
-    {
-     "t": "h4",
-     "text": "Method I: Shift $\\to$ Scale $\\to$ Fold"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Shift ($t \\to t + 2$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t + 2) \\longleftrightarrow c_n e^{j n (\\omega_0/2)(2)} = c_n e^{j n \\omega_0}, \\quad \\frac{\\omega_0}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Scale ($t \\to 3t$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Fundamental frequency becomes $3 \\times \\left(\\frac{\\omega_0}{2}\\right) = \\frac{3\\omega_0}{2}$.\n   Coefficients remain invariant:"
-    },
-    {
-     "t": "math",
-     "tex": "x(3t + 2) \\longleftrightarrow c_n e^{j n \\omega_0}, \\quad \\frac{3\\omega_0}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Fold ($t \\to -t$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Replace $n \\to -n$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(-3t + 2) \\longleftrightarrow \\boxed{c_{-n} e^{-j n \\omega_0}, \\quad \\frac{3\\omega_0}{2}}"
-    },
-    {
-     "t": "h4",
-     "text": "Method II: Factoring Form: $x\\left[-3\\left(t - \\frac{2}{3}\\right)\\right]$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Base signal:** $x(t) \\longleftrightarrow c_n, \\frac{\\omega_0}{2}$.",
-      "**Fold ($t \\to -t$):** $x(-t) \\longleftrightarrow c_{-n}, \\frac{\\omega_0}{2}$.",
-      "**Scale ($t \\to 3t$):** $x(-3t) \\longleftrightarrow c_{-n}, \\omega_{\\text{new}} = \\frac{3\\omega_0}{2}$.",
-      "**Shift by $t_0 = -2/3$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x\\left[-3\\left(t - \\frac{2}{3}\\right)\\right] \\longleftrightarrow c_{-n} e^{j n \\omega_{\\text{new}} t_0} = c_{-n} e^{j n \\left(\\frac{3\\omega_0}{2}\\right)\\left(-\\frac{2}{3}\\right)} = \\boxed{c_{-n} e^{-j n \\omega_0}, \\quad \\frac{3\\omega_0}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "Both methods agree completely."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Baseline Signal Recovery:"
+      },
+      {
+       "t": "p",
+       "text": "Since $x(2t) \\longleftrightarrow c_n, \\omega_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad \\omega_{\\text{base}} = \\frac{\\omega_0}{2}"
+      },
+      {
+       "t": "h4",
+       "text": "Method I: Shift $\\to$ Scale $\\to$ Fold"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Shift ($t \\to t + 2$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t + 2) \\longleftrightarrow c_n e^{j n (\\omega_0/2)(2)} = c_n e^{j n \\omega_0}, \\quad \\frac{\\omega_0}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Scale ($t \\to 3t$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Fundamental frequency becomes $3 \\times \\left(\\frac{\\omega_0}{2}\\right) = \\frac{3\\omega_0}{2}$.\n   Coefficients remain invariant:"
+      },
+      {
+       "t": "math",
+       "tex": "x(3t + 2) \\longleftrightarrow c_n e^{j n \\omega_0}, \\quad \\frac{3\\omega_0}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Fold ($t \\to -t$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Replace $n \\to -n$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(-3t + 2) \\longleftrightarrow \\boxed{c_{-n} e^{-j n \\omega_0}, \\quad \\frac{3\\omega_0}{2}}"
+      },
+      {
+       "t": "h4",
+       "text": "Method II: Factoring Form: $x\\left[-3\\left(t - \\frac{2}{3}\\right)\\right]$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Base signal:** $x(t) \\longleftrightarrow c_n, \\frac{\\omega_0}{2}$.",
+        "**Fold ($t \\to -t$):** $x(-t) \\longleftrightarrow c_{-n}, \\frac{\\omega_0}{2}$.",
+        "**Scale ($t \\to 3t$):** $x(-3t) \\longleftrightarrow c_{-n}, \\omega_{\\text{new}} = \\frac{3\\omega_0}{2}$.",
+        "**Shift by $t_0 = -2/3$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x\\left[-3\\left(t - \\frac{2}{3}\\right)\\right] \\longleftrightarrow c_{-n} e^{j n \\omega_{\\text{new}} t_0} = c_{-n} e^{j n \\left(\\frac{3\\omega_0}{2}\\right)\\left(-\\frac{2}{3}\\right)} = \\boxed{c_{-n} e^{-j n \\omega_0}, \\quad \\frac{3\\omega_0}{2}}"
+      },
+      {
+       "t": "p",
+       "text": "Both methods agree completely."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10131,109 +10114,108 @@ export default {
      "text": "If $f(t) = \\alpha x(at + b)$, find $\\alpha + a + b$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Amplitude Scaling Factor $\\alpha$"
-    },
-    {
-     "t": "p",
-     "text": "By the linearity property:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha x(t) \\longleftrightarrow \\alpha c_n"
-    },
-    {
-     "t": "p",
-     "text": "Looking at the coefficient of $c_{-n}$, the overall multiplier is $\\frac{1}{3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha = \\frac{1}{3}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Time Scaling & Reversal Parameter $a$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The original fundamental frequency is $\\omega_0$.",
-      "The target fundamental frequency is $2\\omega_0$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|a| = \\frac{\\omega_{\\text{target}}}{\\omega_0} = \\frac{2\\omega_0}{\\omega_0} = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The harmonic index in the coefficient is $-n$ ($c_{-n}$), which indicates a time reversal:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a < 0 \\implies a = -2"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Time Shifting Parameter $b$"
-    },
-    {
-     "t": "p",
-     "text": "Express $x(at + b)$ using the standard pipeline:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) \\stackrel{\\text{shift } b}{\\longrightarrow} x(t + b) \\longleftrightarrow c_n e^{j n \\omega_0 b}, \\quad \\omega_0"
-    },
-    {
-     "t": "math",
-     "tex": "x(t + b) \\stackrel{\\text{scale } 2t}{\\longrightarrow} x(2t + b) \\longleftrightarrow c_n e^{j n \\omega_0 b}, \\quad 2\\omega_0"
-    },
-    {
-     "t": "math",
-     "tex": "x(2t + b) \\stackrel{\\text{fold } t \\to -t}{\\longrightarrow} x(-2t + b) \\longleftrightarrow c_{-n} e^{-j n \\omega_0 b}, \\quad 2\\omega_0"
-    },
-    {
-     "t": "p",
-     "text": "Multiply by $\\alpha = \\frac{1}{3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\frac{1}{3}x(-2t + b) \\longleftrightarrow \\frac{1}{3} c_{-n} e^{-j n \\omega_0 b}, \\quad 2\\omega_0"
-    },
-    {
-     "t": "p",
-     "text": "Compare the exponent with the given target coefficient $\\frac{1}{3} c_{-n} e^{-j \\frac{2}{3} n \\omega_0}$:"
-    },
-    {
-     "t": "math",
-     "tex": "-j n \\omega_0 b = -j \\frac{2}{3} n \\omega_0 \\implies b = \\frac{2}{3}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Compute $\\alpha + a + b$"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha + a + b = \\frac{1}{3} + (-2) + \\frac{2}{3} = \\left(\\frac{1}{3} + \\frac{2}{3}\\right) - 2 = 1 - 2 = \\mathbf{-1}"
-    },
-    {
-     "t": "h4",
-     "text": "Final Boxed Answer"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\alpha + a + b = -1}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Amplitude Scaling Factor $\\alpha$"
+      },
+      {
+       "t": "p",
+       "text": "By the linearity property:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha x(t) \\longleftrightarrow \\alpha c_n"
+      },
+      {
+       "t": "p",
+       "text": "Looking at the coefficient of $c_{-n}$, the overall multiplier is $\\frac{1}{3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha = \\frac{1}{3}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Time Scaling & Reversal Parameter $a$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The original fundamental frequency is $\\omega_0$.",
+        "The target fundamental frequency is $2\\omega_0$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|a| = \\frac{\\omega_{\\text{target}}}{\\omega_0} = \\frac{2\\omega_0}{\\omega_0} = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The harmonic index in the coefficient is $-n$ ($c_{-n}$), which indicates a time reversal:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a < 0 \\implies a = -2"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Time Shifting Parameter $b$"
+      },
+      {
+       "t": "p",
+       "text": "Express $x(at + b)$ using the standard pipeline:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) \\stackrel{\\text{shift } b}{\\longrightarrow} x(t + b) \\longleftrightarrow c_n e^{j n \\omega_0 b}, \\quad \\omega_0"
+      },
+      {
+       "t": "math",
+       "tex": "x(t + b) \\stackrel{\\text{scale } 2t}{\\longrightarrow} x(2t + b) \\longleftrightarrow c_n e^{j n \\omega_0 b}, \\quad 2\\omega_0"
+      },
+      {
+       "t": "math",
+       "tex": "x(2t + b) \\stackrel{\\text{fold } t \\to -t}{\\longrightarrow} x(-2t + b) \\longleftrightarrow c_{-n} e^{-j n \\omega_0 b}, \\quad 2\\omega_0"
+      },
+      {
+       "t": "p",
+       "text": "Multiply by $\\alpha = \\frac{1}{3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\frac{1}{3}x(-2t + b) \\longleftrightarrow \\frac{1}{3} c_{-n} e^{-j n \\omega_0 b}, \\quad 2\\omega_0"
+      },
+      {
+       "t": "p",
+       "text": "Compare the exponent with the given target coefficient $\\frac{1}{3} c_{-n} e^{-j \\frac{2}{3} n \\omega_0}$:"
+      },
+      {
+       "t": "math",
+       "tex": "-j n \\omega_0 b = -j \\frac{2}{3} n \\omega_0 \\implies b = \\frac{2}{3}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Compute $\\alpha + a + b$"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha + a + b = \\frac{1}{3} + (-2) + \\frac{2}{3} = \\left(\\frac{1}{3} + \\frac{2}{3}\\right) - 2 = 1 - 2 = \\mathbf{-1}"
+      },
+      {
+       "t": "h4",
+       "text": "Final Boxed Answer"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\alpha + a + b = -1}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10267,130 +10249,129 @@ export default {
      "text": "If $f(t) = \\alpha x(at + b)$, find $\\alpha + a + b$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Base Signal Frequency Analysis"
-    },
-    {
-     "t": "math",
-     "tex": "x(2t) \\longleftrightarrow c_n, \\omega_0 \\implies x(t) \\longleftrightarrow c_n, \\quad \\omega_{\\text{base}} = \\frac{\\omega_0}{2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Amplitude and Scaling Parameters"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Multiplier:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha = \\frac{3}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental frequency ratio:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|a| = \\frac{\\omega_{\\text{target}}}{\\omega_{\\text{base}}} = \\frac{2\\omega_0}{\\omega_0/2} = 4"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since the coefficient has index $-n$, there is time reversal:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a = -4"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Shift Parameter $b$"
-    },
-    {
-     "t": "p",
-     "text": "Using the transformation pipeline on $x(t)$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Shift by $b$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t + b) \\longleftrightarrow c_n e^{j n \\omega_{\\text{base}} b} = c_n e^{j n (\\omega_0/2) b}, \\quad \\frac{\\omega_0}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Scale by 4:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(4t + b) \\longleftrightarrow c_n e^{j n (\\omega_0/2) b}, \\quad 4\\left(\\frac{\\omega_0}{2}\\right) = 2\\omega_0"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Fold ($t \\to -t$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(-4t + b) \\longleftrightarrow c_{-n} e^{-j n (\\omega_0/2) b}, \\quad 2\\omega_0"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Multiply by $\\alpha = \\frac{3}{2}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{3}{2} x(-4t + b) \\longleftrightarrow \\frac{3}{2} c_{-n} e^{-j n \\frac{\\omega_0}{2} b}, \\quad 2\\omega_0"
-    },
-    {
-     "t": "p",
-     "text": "Compare the exponent with the given target $e^{-j \\frac{n}{2} \\omega_0}$:"
-    },
-    {
-     "t": "math",
-     "tex": "-j n \\frac{\\omega_0}{2} b = -j \\frac{n}{2}\\omega_0 \\implies b = 1"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Sum of Parameters"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha + a + b = \\frac{3}{2} + (-4) + 1 = \\frac{3}{2} - 3 = \\mathbf{-\\frac{3}{2}}"
-    },
-    {
-     "t": "h4",
-     "text": "Final Boxed Answer"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\alpha + a + b = -\\frac{3}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Base Signal Frequency Analysis"
+      },
+      {
+       "t": "math",
+       "tex": "x(2t) \\longleftrightarrow c_n, \\omega_0 \\implies x(t) \\longleftrightarrow c_n, \\quad \\omega_{\\text{base}} = \\frac{\\omega_0}{2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Amplitude and Scaling Parameters"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Multiplier:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha = \\frac{3}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental frequency ratio:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|a| = \\frac{\\omega_{\\text{target}}}{\\omega_{\\text{base}}} = \\frac{2\\omega_0}{\\omega_0/2} = 4"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since the coefficient has index $-n$, there is time reversal:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a = -4"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Shift Parameter $b$"
+      },
+      {
+       "t": "p",
+       "text": "Using the transformation pipeline on $x(t)$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Shift by $b$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t + b) \\longleftrightarrow c_n e^{j n \\omega_{\\text{base}} b} = c_n e^{j n (\\omega_0/2) b}, \\quad \\frac{\\omega_0}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Scale by 4:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(4t + b) \\longleftrightarrow c_n e^{j n (\\omega_0/2) b}, \\quad 4\\left(\\frac{\\omega_0}{2}\\right) = 2\\omega_0"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Fold ($t \\to -t$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(-4t + b) \\longleftrightarrow c_{-n} e^{-j n (\\omega_0/2) b}, \\quad 2\\omega_0"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Multiply by $\\alpha = \\frac{3}{2}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{3}{2} x(-4t + b) \\longleftrightarrow \\frac{3}{2} c_{-n} e^{-j n \\frac{\\omega_0}{2} b}, \\quad 2\\omega_0"
+      },
+      {
+       "t": "p",
+       "text": "Compare the exponent with the given target $e^{-j \\frac{n}{2} \\omega_0}$:"
+      },
+      {
+       "t": "math",
+       "tex": "-j n \\frac{\\omega_0}{2} b = -j \\frac{n}{2}\\omega_0 \\implies b = 1"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Sum of Parameters"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha + a + b = \\frac{3}{2} + (-4) + 1 = \\frac{3}{2} - 3 = \\mathbf{-\\frac{3}{2}}"
+      },
+      {
+       "t": "h4",
+       "text": "Final Boxed Answer"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\alpha + a + b = -\\frac{3}{2}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10424,66 +10405,65 @@ export default {
      "text": "If $f(t) = \\alpha x(at + b)$, find $\\alpha + a + b$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Analysis:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Amplitude:** $\\alpha = \\frac{3}{2}$.",
-      "**Scaling:** The target frequency is $\\omega_0$ (identical to base frequency), and the coefficient retains index $+n$ ($c_n$)."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a = +1"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Shift:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t + b) \\longleftrightarrow c_n e^{j n \\omega_0 b}"
-    },
-    {
-     "t": "p",
-     "text": "Compare with given phase:"
-    },
-    {
-     "t": "math",
-     "tex": "j n \\omega_0 b = -j \\frac{n}{2}\\omega_0 \\implies b = -\\frac{1}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Sum of Parameters:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha + a + b = \\frac{3}{2} + 1 + \\left(-\\frac{1}{2}\\right) = \\left(\\frac{3}{2} - \\frac{1}{2}\\right) + 1 = 1 + 1 = \\mathbf{2}"
-    },
-    {
-     "t": "h4",
-     "text": "Final Boxed Answer"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\alpha + a + b = 2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Analysis:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Amplitude:** $\\alpha = \\frac{3}{2}$.",
+        "**Scaling:** The target frequency is $\\omega_0$ (identical to base frequency), and the coefficient retains index $+n$ ($c_n$)."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a = +1"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Shift:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t + b) \\longleftrightarrow c_n e^{j n \\omega_0 b}"
+      },
+      {
+       "t": "p",
+       "text": "Compare with given phase:"
+      },
+      {
+       "t": "math",
+       "tex": "j n \\omega_0 b = -j \\frac{n}{2}\\omega_0 \\implies b = -\\frac{1}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Sum of Parameters:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha + a + b = \\frac{3}{2} + 1 + \\left(-\\frac{1}{2}\\right) = \\left(\\frac{3}{2} - \\frac{1}{2}\\right) + 1 = 1 + 1 = \\mathbf{2}"
+      },
+      {
+       "t": "h4",
+       "text": "Final Boxed Answer"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\alpha + a + b = 2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10517,54 +10497,53 @@ export default {
      "tex": "\\boxed{\\frac{dx(t)}{dt} \\stackrel{\\text{CTFS}}{\\longleftrightarrow} d_n = j n \\omega_0 c_n}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Proof:"
-    },
-    {
-     "t": "p",
-     "text": "Start with the CTFS synthesis equation:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Differentiate both sides with respect to time $t$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\frac{dx(t)}{dt} = \\frac{d}{dt}\\left[ \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t} \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Assuming the Dirichlet conditions hold, the derivative operator commutes with the summation:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} = \\sum_{n=-\\infty}^\\infty c_n \\frac{d}{dt}\\left[ e^{j n \\omega_0 t} \\right] = \\sum_{n=-\\infty}^\\infty c_n (j n \\omega_0) e^{j n \\omega_0 t} = \\sum_{n=-\\infty}^\\infty (j n \\omega_0 c_n) e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing with the standard synthesis form $y(t) = \\sum_{n=-\\infty}^\\infty d_n e^{j n \\omega_0 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = j n \\omega_0 c_n"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Physical Interpretation:**\n1. Multiplication by $j n \\omega_0$ amplifies higher harmonics linearly with frequency $n\\omega_0$. Thus, differentiation acts as an ideal **High-Pass Filter**.\n2. For $n = 0$ (the DC component):\n   $$d_0 = j(0)\\omega_0 c_0 = 0$$\n   The derivative of any periodic signal has **zero average (DC) value**, irrespective of $c_0$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Mathematical Proof:"
+      },
+      {
+       "t": "p",
+       "text": "Start with the CTFS synthesis equation:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Differentiate both sides with respect to time $t$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\frac{dx(t)}{dt} = \\frac{d}{dt}\\left[ \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t} \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Assuming the Dirichlet conditions hold, the derivative operator commutes with the summation:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} = \\sum_{n=-\\infty}^\\infty c_n \\frac{d}{dt}\\left[ e^{j n \\omega_0 t} \\right] = \\sum_{n=-\\infty}^\\infty c_n (j n \\omega_0) e^{j n \\omega_0 t} = \\sum_{n=-\\infty}^\\infty (j n \\omega_0 c_n) e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing with the standard synthesis form $y(t) = \\sum_{n=-\\infty}^\\infty d_n e^{j n \\omega_0 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = j n \\omega_0 c_n"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Physical Interpretation:**\n1. Multiplication by $j n \\omega_0$ amplifies higher harmonics linearly with frequency $n\\omega_0$. Thus, differentiation acts as an ideal **High-Pass Filter**.\n2. For $n = 0$ (the DC component):\n   $$d_0 = j(0)\\omega_0 c_0 = 0$$\n   The derivative of any periodic signal has **zero average (DC) value**, irrespective of $c_0$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10590,62 +10569,61 @@ export default {
      "tex": "\\boxed{y(t) = \\int_{-\\infty}^t x(\\tau) d\\tau \\stackrel{\\text{CTFS}}{\\longleftrightarrow} d_n = \\frac{c_n}{j n \\omega_0} \\quad (\\forall n \\neq 0)}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Proof:"
-    },
-    {
-     "t": "p",
-     "text": "Expand $x(\\tau)$ using the synthesis equation:"
-    },
-    {
-     "t": "math",
-     "tex": "x(\\tau) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 \\tau}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute into the running integral:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\int_{-\\infty}^t \\left[ \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 \\tau} \\right] d\\tau = \\sum_{n=-\\infty}^\\infty c_n \\int_{-\\infty}^t e^{j n \\omega_0 \\tau} d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "For $n \\neq 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^t e^{j n \\omega_0 \\tau} d\\tau = \\left[ \\frac{e^{j n \\omega_0 \\tau}}{j n \\omega_0} \\right]_{-\\infty}^t = \\frac{e^{j n \\omega_0 t} - e^{-j\\infty}}{j n \\omega_0}"
-    },
-    {
-     "t": "p",
-     "text": "In distribution theory and steady-state sinusoidal analysis, the boundary term at $-\\infty$ averages to zero, yielding:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\sum_{n=-\\infty, n\\neq 0}^\\infty \\left( \\frac{c_n}{j n \\omega_0} \\right) e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing with the synthesis formula $y(t) = \\sum d_n e^{j n \\omega_0 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = \\frac{c_n}{j n \\omega_0} \\quad (n \\neq 0)"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**CRITICAL GATE REQUIREMENT: The $c_0 = 0$ Condition!**\nIf $c_0 \\neq 0$, then:\n$$\\int_{-\\infty}^t c_0 d\\tau = c_0 t + \\text{constant}$$\nA ramp term $c_0 t$ is generated. Since $c_0 t$ is **strictly aperiodic**, the integrated signal $y(t)$ is **NOT periodic** unless $c_0 = 0$!\nThus, the running integral of a periodic signal is periodic **if and only if** its average value over one period is zero:\n$$\\int_{T_0} x(t) dt = 0 \\iff c_0 = 0$$"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Mathematical Proof:"
+      },
+      {
+       "t": "p",
+       "text": "Expand $x(\\tau)$ using the synthesis equation:"
+      },
+      {
+       "t": "math",
+       "tex": "x(\\tau) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 \\tau}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute into the running integral:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\int_{-\\infty}^t \\left[ \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 \\tau} \\right] d\\tau = \\sum_{n=-\\infty}^\\infty c_n \\int_{-\\infty}^t e^{j n \\omega_0 \\tau} d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "For $n \\neq 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^t e^{j n \\omega_0 \\tau} d\\tau = \\left[ \\frac{e^{j n \\omega_0 \\tau}}{j n \\omega_0} \\right]_{-\\infty}^t = \\frac{e^{j n \\omega_0 t} - e^{-j\\infty}}{j n \\omega_0}"
+      },
+      {
+       "t": "p",
+       "text": "In distribution theory and steady-state sinusoidal analysis, the boundary term at $-\\infty$ averages to zero, yielding:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\sum_{n=-\\infty, n\\neq 0}^\\infty \\left( \\frac{c_n}{j n \\omega_0} \\right) e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing with the synthesis formula $y(t) = \\sum d_n e^{j n \\omega_0 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = \\frac{c_n}{j n \\omega_0} \\quad (n \\neq 0)"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**CRITICAL GATE REQUIREMENT: The $c_0 = 0$ Condition!**\nIf $c_0 \\neq 0$, then:\n$$\\int_{-\\infty}^t c_0 d\\tau = c_0 t + \\text{constant}$$\nA ramp term $c_0 t$ is generated. Since $c_0 t$ is **strictly aperiodic**, the integrated signal $y(t)$ is **NOT periodic** unless $c_0 = 0$!\nThus, the running integral of a periodic signal is periodic **if and only if** its average value over one period is zero:\n$$\\int_{T_0} x(t) dt = 0 \\iff c_0 = 0$$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10667,86 +10645,85 @@ export default {
      "text": "Prove that: *\"Time shifting in $x(t)$ does not change the magnitude of Exponential FSC; it only changes the phase.\"*"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof:"
-    },
-    {
-     "t": "p",
-     "text": "Given the periodic signal pair:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad \\omega_0"
-    },
-    {
-     "t": "p",
-     "text": "Let $y(t) = x(t + t_0)$ be the shifted signal. From the time-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = c_n e^{j n \\omega_0 t_0}"
-    },
-    {
-     "t": "h4",
-     "text": "1. Magnitude Spectrum Evaluation:"
-    },
-    {
-     "t": "p",
-     "text": "Take the absolute magnitude of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "|d_n| = |c_n e^{j n \\omega_0 t_0}| = |c_n| \\cdot |e^{j n \\omega_0 t_0}|"
-    },
-    {
-     "t": "p",
-     "text": "Recall that for any real $\\theta$, $|e^{j\\theta}| = |\\cos\\theta + j\\sin\\theta| = \\sqrt{\\cos^2\\theta + \\sin^2\\theta} = 1$.\nTherefore:"
-    },
-    {
-     "t": "math",
-     "tex": "|e^{j n \\omega_0 t_0}| = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{|d_n| = |c_n|}"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:** The magnitude spectrum $|c_n|$ is **strictly invariant** under arbitrary time shifts $t_0$."
-    },
-    {
-     "t": "h4",
-     "text": "2. Phase Spectrum Evaluation:"
-    },
-    {
-     "t": "p",
-     "text": "Express $c_n$ in polar form: $c_n = |c_n| e^{j\\angle c_n}$."
-    },
-    {
-     "t": "math",
-     "tex": "d_n = |c_n| e^{j\\angle c_n} \\cdot e^{j n \\omega_0 t_0} = |c_n| e^{j(\\angle c_n + n \\omega_0 t_0)}"
-    },
-    {
-     "t": "p",
-     "text": "Taking the angle:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\angle d_n = \\angle c_n + n \\omega_0 t_0}"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Key Exam Takeaways:**\n1. Time shifting introduces a **linear phase shift** proportional to the harmonic index $n$: $\\Delta\\phi(n) = n\\omega_0 t_0$.\n2. The slope of the phase shift with respect to angular frequency $\\omega = n\\omega_0$ is constant:\n   $$\\frac{d(\\Delta\\phi)}{d\\omega} = t_0 \\quad (\\text{group delay})$$\n3. Because $|d_n| = |c_n|$, the **Power Spectral Density (PSD)** and total average power $P = \\sum |c_n|^2$ are completely **independent of time shifts**!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof:"
+      },
+      {
+       "t": "p",
+       "text": "Given the periodic signal pair:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n, \\quad \\omega_0"
+      },
+      {
+       "t": "p",
+       "text": "Let $y(t) = x(t + t_0)$ be the shifted signal. From the time-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = c_n e^{j n \\omega_0 t_0}"
+      },
+      {
+       "t": "h4",
+       "text": "1. Magnitude Spectrum Evaluation:"
+      },
+      {
+       "t": "p",
+       "text": "Take the absolute magnitude of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "|d_n| = |c_n e^{j n \\omega_0 t_0}| = |c_n| \\cdot |e^{j n \\omega_0 t_0}|"
+      },
+      {
+       "t": "p",
+       "text": "Recall that for any real $\\theta$, $|e^{j\\theta}| = |\\cos\\theta + j\\sin\\theta| = \\sqrt{\\cos^2\\theta + \\sin^2\\theta} = 1$.\nTherefore:"
+      },
+      {
+       "t": "math",
+       "tex": "|e^{j n \\omega_0 t_0}| = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{|d_n| = |c_n|}"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:** The magnitude spectrum $|c_n|$ is **strictly invariant** under arbitrary time shifts $t_0$."
+      },
+      {
+       "t": "h4",
+       "text": "2. Phase Spectrum Evaluation:"
+      },
+      {
+       "t": "p",
+       "text": "Express $c_n$ in polar form: $c_n = |c_n| e^{j\\angle c_n}$."
+      },
+      {
+       "t": "math",
+       "tex": "d_n = |c_n| e^{j\\angle c_n} \\cdot e^{j n \\omega_0 t_0} = |c_n| e^{j(\\angle c_n + n \\omega_0 t_0)}"
+      },
+      {
+       "t": "p",
+       "text": "Taking the angle:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\angle d_n = \\angle c_n + n \\omega_0 t_0}"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Key Exam Takeaways:**\n1. Time shifting introduces a **linear phase shift** proportional to the harmonic index $n$: $\\Delta\\phi(n) = n\\omega_0 t_0$.\n2. The slope of the phase shift with respect to angular frequency $\\omega = n\\omega_0$ is constant:\n   $$\\frac{d(\\Delta\\phi)}{d\\omega} = t_0 \\quad (\\text{group delay})$$\n3. Because $|d_n| = |c_n|$, the **Power Spectral Density (PSD)** and total average power $P = \\sum |c_n|^2$ are completely **independent of time shifts**!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10831,52 +10808,51 @@ export default {
      "text": "Find the CTFS coefficients of $y(t) = x(t) + 4$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Explicit Series Expansion (Slide 98)"
-    },
-    {
-     "t": "p",
-     "text": "Write out the exponential Fourier series of $x(t)$ term-by-term:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = c_0 + c_1 e^{j\\omega_0 t} + c_{-1} e^{-j\\omega_0 t} + c_2 e^{j 2\\omega_0 t} + c_{-2} e^{-j 2\\omega_0 t} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Add the constant $+4$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t) + 4 = (c_0 + 4) + c_1 e^{j\\omega_0 t} + c_{-1} e^{-j\\omega_0 t} + c_2 e^{j 2\\omega_0 t} + c_{-2} e^{-j 2\\omega_0 t} + \\dots"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Piecewise Coefficient Definition (Slide 99)"
-    },
-    {
-     "t": "p",
-     "text": "Notice that the scalar addition of $+4$ affects **only** the constant term (the $n = 0$ harmonic / DC average). All oscillating AC harmonic components ($n \\neq 0$) have identical amplitudes, phases, and frequencies:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y(t) = x(t) + 4 \\stackrel{\\text{CTFS}}{\\longleftrightarrow} d_n = \\begin{cases} c_0 + 4, & n = 0 \\\\ c_n, & n \\neq 0 \\end{cases}}"
-    },
-    {
-     "t": "p",
-     "text": "Using the discrete Kronecker delta $\\delta[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{d_n = c_n + 4\\delta[n]}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Explicit Series Expansion (Slide 98)"
+      },
+      {
+       "t": "p",
+       "text": "Write out the exponential Fourier series of $x(t)$ term-by-term:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = c_0 + c_1 e^{j\\omega_0 t} + c_{-1} e^{-j\\omega_0 t} + c_2 e^{j 2\\omega_0 t} + c_{-2} e^{-j 2\\omega_0 t} + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Add the constant $+4$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t) + 4 = (c_0 + 4) + c_1 e^{j\\omega_0 t} + c_{-1} e^{-j\\omega_0 t} + c_2 e^{j 2\\omega_0 t} + c_{-2} e^{-j 2\\omega_0 t} + \\dots"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Piecewise Coefficient Definition (Slide 99)"
+      },
+      {
+       "t": "p",
+       "text": "Notice that the scalar addition of $+4$ affects **only** the constant term (the $n = 0$ harmonic / DC average). All oscillating AC harmonic components ($n \\neq 0$) have identical amplitudes, phases, and frequencies:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y(t) = x(t) + 4 \\stackrel{\\text{CTFS}}{\\longleftrightarrow} d_n = \\begin{cases} c_0 + 4, & n = 0 \\\\ c_n, & n \\neq 0 \\end{cases}}"
+      },
+      {
+       "t": "p",
+       "text": "Using the discrete Kronecker delta $\\delta[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{d_n = c_n + 4\\delta[n]}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10914,129 +10890,128 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Definition of the Analysis Integral"
-    },
-    {
-     "t": "p",
-     "text": "The CTFS coefficient formula over any single period of duration $T_0$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} \\int_{T_0} x(t) e^{-j n \\omega_0 t} dt"
-    },
-    {
-     "t": "p",
-     "text": "Choose the symmetric integration interval $\\left[-\\frac{T_0}{2}, \\frac{T_0}{2}\\right]$.\nWithin this window, only the single impulse located at $t = 0$ is enclosed:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = A\\delta(t), \\quad \\text{for } t \\in \\left[-\\frac{T_0}{2}, \\frac{T_0}{2}\\right]"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} \\int_{-T_0/2}^{T_0/2} A \\delta(t) e^{-j n \\omega_0 t} dt"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Applying the Sifting Property of the Impulse Function"
-    },
-    {
-     "t": "p",
-     "text": "Recall the sifting (multiplication) property of $\\delta(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\delta(t - t_0) f(t) = f(t_0) \\delta(t - t_0)"
-    },
-    {
-     "t": "p",
-     "text": "For $t_0 = 0$ and $f(t) = e^{-j n \\omega_0 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\delta(t) e^{-j n \\omega_0 t} = \\delta(t) e^{-j n \\omega_0 (0)} = \\delta(t) \\cdot e^0 = \\delta(t) \\cdot 1 = \\delta(t)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Integral Evaluation"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the simplified product back into the integral:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{A}{T_0} \\int_{-T_0/2}^{T_0/2} \\delta(t) dt"
-    },
-    {
-     "t": "p",
-     "text": "Because the interval $\\left[-\\frac{T_0}{2}, \\frac{T_0}{2}\\right]$ encompasses $t = 0$, by definition of the Dirac delta:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-T_0/2}^{T_0/2} \\delta(t) dt = 1"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_n = \\frac{A}{T_0}}"
-    },
-    {
-     "t": "p",
-     "text": "For a **unit** impulse train ($A = 1$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\sum_{k=-\\infty}^\\infty \\delta(t - k T_0) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n = \\frac{1}{T_0}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Spectral Characteristics & Synthesis Equation"
-    },
-    {
-     "t": "p",
-     "text": "Notice that $c_n = \\frac{A}{T_0}$ is **strictly independent of the harmonic index $n$**:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n \\neq f(n)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Every harmonic from $n = -\\infty$ to $n = +\\infty$ has the exact same real, positive amplitude $\\frac{A}{T_0}$ and zero phase!",
-      "The synthesis representation is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = \\sum_{k=-\\infty}^\\infty A \\delta(t - k T_0) = \\frac{A}{T_0} \\sum_{n=-\\infty}^\\infty e^{j n \\omega_0 t}}"
-    },
-    {
-     "t": "code",
-     "text": "Spectrum of Impulse Train: Flat Discrete Spectrum\n      cn\n      ^\n      |   A/T0  A/T0  A/T0  A/T0  A/T0  A/T0  A/T0\n      |    |     |     |     |     |     |     |\n------|----+-----+-----+-----+-----+-----+-----+-----> n\n          -3    -2    -1     0     1     2     3"
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**GATE Duality Insight:**\nAn impulse train in the time domain transforms into an impulse train in the frequency domain! Because all harmonics have equal magnitude, an ideal impulse train has **infinite bandwidth**. This fundamental identity serves as the mathematical foundation for the **Sampling Theorem** and **Dirac comb modulation** in Chapter 5."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Definition of the Analysis Integral"
+      },
+      {
+       "t": "p",
+       "text": "The CTFS coefficient formula over any single period of duration $T_0$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} \\int_{T_0} x(t) e^{-j n \\omega_0 t} dt"
+      },
+      {
+       "t": "p",
+       "text": "Choose the symmetric integration interval $\\left[-\\frac{T_0}{2}, \\frac{T_0}{2}\\right]$.\nWithin this window, only the single impulse located at $t = 0$ is enclosed:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = A\\delta(t), \\quad \\text{for } t \\in \\left[-\\frac{T_0}{2}, \\frac{T_0}{2}\\right]"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} \\int_{-T_0/2}^{T_0/2} A \\delta(t) e^{-j n \\omega_0 t} dt"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Applying the Sifting Property of the Impulse Function"
+      },
+      {
+       "t": "p",
+       "text": "Recall the sifting (multiplication) property of $\\delta(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\delta(t - t_0) f(t) = f(t_0) \\delta(t - t_0)"
+      },
+      {
+       "t": "p",
+       "text": "For $t_0 = 0$ and $f(t) = e^{-j n \\omega_0 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\delta(t) e^{-j n \\omega_0 t} = \\delta(t) e^{-j n \\omega_0 (0)} = \\delta(t) \\cdot e^0 = \\delta(t) \\cdot 1 = \\delta(t)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Integral Evaluation"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the simplified product back into the integral:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{A}{T_0} \\int_{-T_0/2}^{T_0/2} \\delta(t) dt"
+      },
+      {
+       "t": "p",
+       "text": "Because the interval $\\left[-\\frac{T_0}{2}, \\frac{T_0}{2}\\right]$ encompasses $t = 0$, by definition of the Dirac delta:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-T_0/2}^{T_0/2} \\delta(t) dt = 1"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_n = \\frac{A}{T_0}}"
+      },
+      {
+       "t": "p",
+       "text": "For a **unit** impulse train ($A = 1$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\sum_{k=-\\infty}^\\infty \\delta(t - k T_0) \\stackrel{\\text{CTFS}}{\\longleftrightarrow} c_n = \\frac{1}{T_0}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Spectral Characteristics & Synthesis Equation"
+      },
+      {
+       "t": "p",
+       "text": "Notice that $c_n = \\frac{A}{T_0}$ is **strictly independent of the harmonic index $n$**:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n \\neq f(n)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Every harmonic from $n = -\\infty$ to $n = +\\infty$ has the exact same real, positive amplitude $\\frac{A}{T_0}$ and zero phase!",
+        "The synthesis representation is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = \\sum_{k=-\\infty}^\\infty A \\delta(t - k T_0) = \\frac{A}{T_0} \\sum_{n=-\\infty}^\\infty e^{j n \\omega_0 t}}"
+      },
+      {
+       "t": "code",
+       "text": "Spectrum of Impulse Train: Flat Discrete Spectrum\n      cn\n      ^\n      |   A/T0  A/T0  A/T0  A/T0  A/T0  A/T0  A/T0\n      |    |     |     |     |     |     |     |\n------|----+-----+-----+-----+-----+-----+-----+-----> n\n          -3    -2    -1     0     1     2     3"
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**GATE Duality Insight:**\nAn impulse train in the time domain transforms into an impulse train in the frequency domain! Because all harmonics have equal magnitude, an ideal impulse train has **infinite bandwidth**. This fundamental identity serves as the mathematical foundation for the **Sampling Theorem** and **Dirac comb modulation** in Chapter 5."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13112,124 +13087,123 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fundamental Parameters"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental period: $T_0 = 4$",
-      "Fundamental angular frequency: $\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{\\pi}{2} \\text{ rad/s}$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: First Derivative Evaluation"
-    },
-    {
-     "t": "p",
-     "text": "Differentiating $y(t)$ over the period $[-2, 2]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dy(t)}{dt} = A\\delta(t + 1) - A\\delta(t - 1)"
-    },
-    {
-     "t": "p",
-     "text": "Expressing this as a periodic combination of shifted prototype impulse trains of period $T_0 = 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dy(t)}{dt} = x(t + 1) - x(t - 1), \\quad \\text{where } x(t) = A\\sum_{k=-\\infty}^\\infty \\delta(t - 4k)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Application of CTFS Differentiation Property"
-    },
-    {
-     "t": "math",
-     "tex": "(j n \\omega_0) c_n = \\frac{A}{T_0} e^{j n \\omega_0 (1)} - \\frac{A}{T_0} e^{-j n \\omega_0 (1)} = \\frac{A}{4} (e^{j n \\omega_0} - e^{-j n \\omega_0}) = j \\frac{A}{2} \\sin(n \\omega_0)"
-    },
-    {
-     "t": "p",
-     "text": "For $n \\neq 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{j \\frac{A}{2} \\sin(n \\omega_0)}{j n \\omega_0} = \\frac{A}{2} \\frac{\\sin(n\\omega_0)}{n\\omega_0} = \\frac{A}{2} \\text{Sa}\\left(\\frac{n\\pi}{2}\\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: DC Component"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{1}{T_0} \\int_{-1}^1 A \\, dt = \\frac{2A}{4} = \\frac{A}{2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Spectral Nulls"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = 0 \\iff \\sin\\left(\\frac{n\\pi}{2}\\right) = 0 \\iff \\frac{n\\pi}{2} = m\\pi \\implies n = 2m \\quad (m \\neq 0)"
-    },
-    {
-     "t": "p",
-     "text": "Thus, all even harmonics vanish ($c_{\\pm 2} = c_{\\pm 4} = \\dots = 0$)."
-    },
-    {
-     "t": "h4",
-     "text": "Step 6: Power Ratio Calculation"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Total average power via Parseval's theorem:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P_{\\text{total}} = \\frac{1}{T_0} \\int_{T_0} |y(t)|^2 \\, dt = \\frac{1}{4} \\int_{-1}^{1} A^2 \\, dt = \\frac{2A^2}{4} = \\frac{A^2}{2} = 0.5 A^2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Power in DC component: $P_{\\text{DC}} = |c_0|^2 = \\left(\\frac{A}{2}\\right)^2 = \\frac{A^2}{4} = 0.25 A^2$.",
-      "Power in first harmonic ($n = \\pm 1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = c_{-1} = \\frac{A}{2} \\text{Sa}\\left(\\frac{\\pi}{2}\\right) = \\frac{A}{\\pi}"
-    },
-    {
-     "t": "math",
-     "tex": "P_1 = |c_1|^2 + |c_{-1}|^2 = 2 \\left( \\frac{A}{\\pi} \\right)^2 = \\frac{2A^2}{\\pi^2} \\approx \\frac{2}{9.8696} A^2 \\approx 0.2026 A^2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Ratio:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{P_1}{P_{\\text{total}}} = \\frac{0.2026 A^2}{0.5 A^2} \\approx 40.53\\%"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap:** Do not forget to include BOTH positive and negative harmonic contributions ($c_1$ and $c_{-1}$) when calculating harmonic power!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Fundamental Parameters"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental period: $T_0 = 4$",
+        "Fundamental angular frequency: $\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{\\pi}{2} \\text{ rad/s}$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: First Derivative Evaluation"
+      },
+      {
+       "t": "p",
+       "text": "Differentiating $y(t)$ over the period $[-2, 2]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dy(t)}{dt} = A\\delta(t + 1) - A\\delta(t - 1)"
+      },
+      {
+       "t": "p",
+       "text": "Expressing this as a periodic combination of shifted prototype impulse trains of period $T_0 = 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dy(t)}{dt} = x(t + 1) - x(t - 1), \\quad \\text{where } x(t) = A\\sum_{k=-\\infty}^\\infty \\delta(t - 4k)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Application of CTFS Differentiation Property"
+      },
+      {
+       "t": "math",
+       "tex": "(j n \\omega_0) c_n = \\frac{A}{T_0} e^{j n \\omega_0 (1)} - \\frac{A}{T_0} e^{-j n \\omega_0 (1)} = \\frac{A}{4} (e^{j n \\omega_0} - e^{-j n \\omega_0}) = j \\frac{A}{2} \\sin(n \\omega_0)"
+      },
+      {
+       "t": "p",
+       "text": "For $n \\neq 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{j \\frac{A}{2} \\sin(n \\omega_0)}{j n \\omega_0} = \\frac{A}{2} \\frac{\\sin(n\\omega_0)}{n\\omega_0} = \\frac{A}{2} \\text{Sa}\\left(\\frac{n\\pi}{2}\\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: DC Component"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{1}{T_0} \\int_{-1}^1 A \\, dt = \\frac{2A}{4} = \\frac{A}{2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Spectral Nulls"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = 0 \\iff \\sin\\left(\\frac{n\\pi}{2}\\right) = 0 \\iff \\frac{n\\pi}{2} = m\\pi \\implies n = 2m \\quad (m \\neq 0)"
+      },
+      {
+       "t": "p",
+       "text": "Thus, all even harmonics vanish ($c_{\\pm 2} = c_{\\pm 4} = \\dots = 0$)."
+      },
+      {
+       "t": "h4",
+       "text": "Step 6: Power Ratio Calculation"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Total average power via Parseval's theorem:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P_{\\text{total}} = \\frac{1}{T_0} \\int_{T_0} |y(t)|^2 \\, dt = \\frac{1}{4} \\int_{-1}^{1} A^2 \\, dt = \\frac{2A^2}{4} = \\frac{A^2}{2} = 0.5 A^2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Power in DC component: $P_{\\text{DC}} = |c_0|^2 = \\left(\\frac{A}{2}\\right)^2 = \\frac{A^2}{4} = 0.25 A^2$.",
+        "Power in first harmonic ($n = \\pm 1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = c_{-1} = \\frac{A}{2} \\text{Sa}\\left(\\frac{\\pi}{2}\\right) = \\frac{A}{\\pi}"
+      },
+      {
+       "t": "math",
+       "tex": "P_1 = |c_1|^2 + |c_{-1}|^2 = 2 \\left( \\frac{A}{\\pi} \\right)^2 = \\frac{2A^2}{\\pi^2} \\approx \\frac{2}{9.8696} A^2 \\approx 0.2026 A^2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Ratio:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{P_1}{P_{\\text{total}}} = \\frac{0.2026 A^2}{0.5 A^2} \\approx 40.53\\%"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap:** Do not forget to include BOTH positive and negative harmonic contributions ($c_1$ and $c_{-1}$) when calculating harmonic power!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13252,94 +13226,93 @@ export default {
      "tex": "S = \\sum_{k=1}^{\\infty} \\frac{1}{k^2}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Derivative Representation"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Period $T_0 = 2 \\implies \\omega_0 = \\pi$.",
-      "Derivative: $\\frac{dx(t)}{dt} = 1 - 2\\sum_{k=-\\infty}^{\\infty} \\delta(t - (2k+1))$.",
-      "For $n \\neq 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(j n \\pi) c_n = \\frac{-2}{2} e^{-j n \\pi (1)} = -(-1)^n"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{-(-1)^n}{j n \\pi} = \\frac{j (-1)^n}{n\\pi}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "DC term: $c_0 = 0$ (odd function)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Parseval's Power Theorem Application"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Time-domain average power:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{1}{T_0} \\int_{-1}^{1} |x(t)|^2 \\, dt = \\frac{1}{2} \\int_{-1}^{1} t^2 \\, dt = \\frac{1}{2} \\left[ \\frac{t^3}{3} \\right]_{-1}^{1} = \\frac{1}{2} \\left( \\frac{1}{3} - \\left(-\\frac{1}{3}\\right) \\right) = \\frac{1}{3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Frequency-domain average power via Parseval's relation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\sum_{n=-\\infty}^{+\\infty} |c_n|^2 = |c_0|^2 + \\sum_{n=1}^{\\infty} |c_n|^2 + \\sum_{n=-\\infty}^{-1} |c_n|^2"
-    },
-    {
-     "t": "p",
-     "text": "Since $|c_{-n}| = |c_n|$:"
-    },
-    {
-     "t": "math",
-     "tex": "P = 2 \\sum_{n=1}^{\\infty} |c_n|^2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Substitute $|c_n|^2 = \\left| \\frac{j(-1)^n}{n\\pi} \\right|^2 = \\frac{1}{n^2 \\pi^2}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{3} = 2 \\sum_{n=1}^{\\infty} \\frac{1}{n^2 \\pi^2} = \\frac{2}{\\pi^2} \\sum_{n=1}^{\\infty} \\frac{1}{n^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Solve for the sum $S$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{2 \\times 3} = \\boxed{\\frac{\\pi^2}{6}}"
-    },
-    {
-     "t": "p",
-     "text": "*(This proves Euler's famous Basel Problem solution via CTFS Parseval identity!)*"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Derivative Representation"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Period $T_0 = 2 \\implies \\omega_0 = \\pi$.",
+        "Derivative: $\\frac{dx(t)}{dt} = 1 - 2\\sum_{k=-\\infty}^{\\infty} \\delta(t - (2k+1))$.",
+        "For $n \\neq 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(j n \\pi) c_n = \\frac{-2}{2} e^{-j n \\pi (1)} = -(-1)^n"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{-(-1)^n}{j n \\pi} = \\frac{j (-1)^n}{n\\pi}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "DC term: $c_0 = 0$ (odd function)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Parseval's Power Theorem Application"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Time-domain average power:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{1}{T_0} \\int_{-1}^{1} |x(t)|^2 \\, dt = \\frac{1}{2} \\int_{-1}^{1} t^2 \\, dt = \\frac{1}{2} \\left[ \\frac{t^3}{3} \\right]_{-1}^{1} = \\frac{1}{2} \\left( \\frac{1}{3} - \\left(-\\frac{1}{3}\\right) \\right) = \\frac{1}{3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Frequency-domain average power via Parseval's relation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\sum_{n=-\\infty}^{+\\infty} |c_n|^2 = |c_0|^2 + \\sum_{n=1}^{\\infty} |c_n|^2 + \\sum_{n=-\\infty}^{-1} |c_n|^2"
+      },
+      {
+       "t": "p",
+       "text": "Since $|c_{-n}| = |c_n|$:"
+      },
+      {
+       "t": "math",
+       "tex": "P = 2 \\sum_{n=1}^{\\infty} |c_n|^2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Substitute $|c_n|^2 = \\left| \\frac{j(-1)^n}{n\\pi} \\right|^2 = \\frac{1}{n^2 \\pi^2}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{3} = 2 \\sum_{n=1}^{\\infty} \\frac{1}{n^2 \\pi^2} = \\frac{2}{\\pi^2} \\sum_{n=1}^{\\infty} \\frac{1}{n^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Solve for the sum $S$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{2 \\times 3} = \\boxed{\\frac{\\pi^2}{6}}"
+      },
+      {
+       "t": "p",
+       "text": "*(This proves Euler's famous Basel Problem solution via CTFS Parseval identity!)*"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13358,66 +13331,65 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: CTFS Derivation via Differential Equation"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Differentiating gives: $\\frac{dx(t)}{dt} = -x(t) + (1 - e^{-1}) \\sum_{k=-\\infty}^\\infty \\delta(t - k)$.",
-      "Transforming with $T_0 = 1, \\omega_0 = 2\\pi$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(j 2\\pi n) c_n + c_n = 1 - e^{-1}"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1 - e^{-1}}{1 + j 2\\pi n}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: 3-dB Bandwidth / Half-Power Point"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Magnitude squared of $c_n$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|c_n|^2 = \\frac{(1 - e^{-1})^2}{1 + 4\\pi^2 n^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At DC ($n = 0$): $|c_0|^2 = (1 - e^{-1})^2$.",
-      "Half-power condition:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|c_n|^2 = \\frac{1}{2} |c_0|^2 \\iff \\frac{(1 - e^{-1})^2}{1 + 4\\pi^2 n^2} = \\frac{(1 - e^{-1})^2}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "1 + 4\\pi^2 n^2 = 2 \\implies 4\\pi^2 n^2 = 1 \\implies 2\\pi n = 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Angular frequency: $\\omega = n \\omega_0 = 2\\pi n = \\boxed{1 \\text{ rad/s}}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: CTFS Derivation via Differential Equation"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Differentiating gives: $\\frac{dx(t)}{dt} = -x(t) + (1 - e^{-1}) \\sum_{k=-\\infty}^\\infty \\delta(t - k)$.",
+        "Transforming with $T_0 = 1, \\omega_0 = 2\\pi$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(j 2\\pi n) c_n + c_n = 1 - e^{-1}"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1 - e^{-1}}{1 + j 2\\pi n}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: 3-dB Bandwidth / Half-Power Point"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Magnitude squared of $c_n$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|c_n|^2 = \\frac{(1 - e^{-1})^2}{1 + 4\\pi^2 n^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At DC ($n = 0$): $|c_0|^2 = (1 - e^{-1})^2$.",
+        "Half-power condition:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|c_n|^2 = \\frac{1}{2} |c_0|^2 \\iff \\frac{(1 - e^{-1})^2}{1 + 4\\pi^2 n^2} = \\frac{(1 - e^{-1})^2}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "1 + 4\\pi^2 n^2 = 2 \\implies 4\\pi^2 n^2 = 1 \\implies 2\\pi n = 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Angular frequency: $\\omega = n \\omega_0 = 2\\pi n = \\boxed{1 \\text{ rad/s}}$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13436,79 +13408,78 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: CTFS Coefficients"
-    },
-    {
-     "t": "p",
-     "text": "From Slide 120 and 121:"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{1}{2}, \\qquad c_n = \\begin{cases} 0, & n \\text{ even} \\\\ \\frac{2}{n^2 \\pi^2}, & n \\text{ odd} \\end{cases}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Power in Components"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Total average power:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P_{\\text{total}} = \\frac{1}{T_0} \\int_{T_0} |x(t)|^2 \\, dt = \\frac{1}{2} \\times 2 \\int_{0}^{1} (1 - t)^2 \\, dt = \\left[ -\\frac{(1 - t)^3}{3} \\right]_0^1 = 0 - \\left( -\\frac{1}{3} \\right) = \\frac{1}{3} \\approx 0.3333"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "DC Power: $P_{\\text{DC}} = |c_0|^2 = \\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4} = 0.25$.",
-      "AC Power (Total harmonic power):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P_{\\text{AC}} = P_{\\text{total}} - P_{\\text{DC}} = \\frac{1}{3} - \\frac{1}{4} = \\frac{1}{12} \\approx 0.08333"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental Power ($n = \\pm 1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P_1 = 2 |c_1|^2 = 2 \\left( \\frac{2}{\\pi^2} \\right)^2 = \\frac{8}{\\pi^4} \\approx \\frac{8}{97.409} \\approx 0.08213"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fraction of AC power in fundamental:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{P_1}{P_{\\text{AC}}} = \\frac{0.08213}{0.08333} = 98.56\\%"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Remaining distortion power in all higher harmonics ($n = 3, 5, 7, \\dots$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{P_{\\text{dist}}}{P_{\\text{AC}}} = 1 - 0.9856 = 1.44\\%"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: CTFS Coefficients"
+      },
+      {
+       "t": "p",
+       "text": "From Slide 120 and 121:"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{1}{2}, \\qquad c_n = \\begin{cases} 0, & n \\text{ even} \\\\ \\frac{2}{n^2 \\pi^2}, & n \\text{ odd} \\end{cases}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Power in Components"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Total average power:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P_{\\text{total}} = \\frac{1}{T_0} \\int_{T_0} |x(t)|^2 \\, dt = \\frac{1}{2} \\times 2 \\int_{0}^{1} (1 - t)^2 \\, dt = \\left[ -\\frac{(1 - t)^3}{3} \\right]_0^1 = 0 - \\left( -\\frac{1}{3} \\right) = \\frac{1}{3} \\approx 0.3333"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "DC Power: $P_{\\text{DC}} = |c_0|^2 = \\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4} = 0.25$.",
+        "AC Power (Total harmonic power):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P_{\\text{AC}} = P_{\\text{total}} - P_{\\text{DC}} = \\frac{1}{3} - \\frac{1}{4} = \\frac{1}{12} \\approx 0.08333"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental Power ($n = \\pm 1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P_1 = 2 |c_1|^2 = 2 \\left( \\frac{2}{\\pi^2} \\right)^2 = \\frac{8}{\\pi^4} \\approx \\frac{8}{97.409} \\approx 0.08213"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fraction of AC power in fundamental:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{P_1}{P_{\\text{AC}}} = \\frac{0.08213}{0.08333} = 98.56\\%"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Remaining distortion power in all higher harmonics ($n = 3, 5, 7, \\dots$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{P_{\\text{dist}}}{P_{\\text{AC}}} = 1 - 0.9856 = 1.44\\%"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13531,76 +13502,75 @@ export default {
      "tex": "S = \\sum_{n=1}^{\\infty} \\frac{1}{4n^2 - 1}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Closed-Form CTFS Expression"
-    },
-    {
-     "t": "p",
-     "text": "From Slide 125:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{2}{\\pi(1 - 4n^2)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Time-Domain Evaluation at $t = 0$"
-    },
-    {
-     "t": "p",
-     "text": "Recall the CTFS synthesis equation:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=-\\infty}^{+\\infty} c_n \\, e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate both sides at $t = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = |\\sin(0)| = 0"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $c_n$:"
-    },
-    {
-     "t": "math",
-     "tex": "0 = \\sum_{n=-\\infty}^{+\\infty} c_n = c_0 + \\sum_{n=1}^{\\infty} c_n + \\sum_{n=-\\infty}^{-1} c_n = c_0 + 2 \\sum_{n=1}^{\\infty} c_n"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $c_0 = \\frac{2}{\\pi}$ and $c_n = \\frac{2}{\\pi(1 - 4n^2)} = -\\frac{2}{\\pi(4n^2 - 1)}$:"
-    },
-    {
-     "t": "math",
-     "tex": "0 = \\frac{2}{\\pi} - 2 \\sum_{n=1}^{\\infty} \\frac{2}{\\pi(4n^2 - 1)}"
-    },
-    {
-     "t": "p",
-     "text": "Divide both sides by $\\frac{2}{\\pi}$:"
-    },
-    {
-     "t": "math",
-     "tex": "0 = 1 - 2 \\sum_{n=1}^{\\infty} \\frac{1}{4n^2 - 1}"
-    },
-    {
-     "t": "math",
-     "tex": "2 \\sum_{n=1}^{\\infty} \\frac{1}{4n^2 - 1} = 1 \\implies \\boxed{\\sum_{n=1}^{\\infty} \\frac{1}{4n^2 - 1} = \\frac{1}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "*(Verification by telescoping partial fractions: $\\frac{1}{(2n-1)(2n+1)} = \\frac{1}{2}\\left[\\frac{1}{2n-1} - \\frac{1}{2n+1}\\right]$. Summing from $n=1$ to $\\infty$ yields $\\frac{1}{2}[1 - 0] = \\frac{1}{2}$. Perfect match!)*"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Closed-Form CTFS Expression"
+      },
+      {
+       "t": "p",
+       "text": "From Slide 125:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{2}{\\pi(1 - 4n^2)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Time-Domain Evaluation at $t = 0$"
+      },
+      {
+       "t": "p",
+       "text": "Recall the CTFS synthesis equation:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=-\\infty}^{+\\infty} c_n \\, e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate both sides at $t = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = |\\sin(0)| = 0"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $c_n$:"
+      },
+      {
+       "t": "math",
+       "tex": "0 = \\sum_{n=-\\infty}^{+\\infty} c_n = c_0 + \\sum_{n=1}^{\\infty} c_n + \\sum_{n=-\\infty}^{-1} c_n = c_0 + 2 \\sum_{n=1}^{\\infty} c_n"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $c_0 = \\frac{2}{\\pi}$ and $c_n = \\frac{2}{\\pi(1 - 4n^2)} = -\\frac{2}{\\pi(4n^2 - 1)}$:"
+      },
+      {
+       "t": "math",
+       "tex": "0 = \\frac{2}{\\pi} - 2 \\sum_{n=1}^{\\infty} \\frac{2}{\\pi(4n^2 - 1)}"
+      },
+      {
+       "t": "p",
+       "text": "Divide both sides by $\\frac{2}{\\pi}$:"
+      },
+      {
+       "t": "math",
+       "tex": "0 = 1 - 2 \\sum_{n=1}^{\\infty} \\frac{1}{4n^2 - 1}"
+      },
+      {
+       "t": "math",
+       "tex": "2 \\sum_{n=1}^{\\infty} \\frac{1}{4n^2 - 1} = 1 \\implies \\boxed{\\sum_{n=1}^{\\infty} \\frac{1}{4n^2 - 1} = \\frac{1}{2}}"
+      },
+      {
+       "t": "p",
+       "text": "*(Verification by telescoping partial fractions: $\\frac{1}{(2n-1)(2n+1)} = \\frac{1}{2}\\left[\\frac{1}{2n-1} - \\frac{1}{2n+1}\\right]$. Summing from $n=1$ to $\\infty$ yields $\\frac{1}{2}[1 - 0] = \\frac{1}{2}$. Perfect match!)*"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -14986,155 +14956,154 @@ export default {
      "text": "Using the Generalized Differentiation Method and Harmonic Singularity Direct Integration, determine the Exponential Fourier Series coefficients $c_n$ for all $n \\in \\mathbb{Z}$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fundamental Parameters & DC Component"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental period: $T_0 = 2\\pi$.",
-      "Fundamental angular frequency: $\\omega_0 = \\frac{2\\pi}{T_0} = 1\\text{ rad/s}$.",
-      "DC component:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{1}{2\\pi} \\int_0^{\\pi} \\sin t \\, dt = \\frac{1}{2\\pi} [-\\cos t]_0^\\pi = \\frac{2}{2\\pi} = \\frac{1}{\\pi}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Generalized Differentiation Formulation"
-    },
-    {
-     "t": "p",
-     "text": "Differentiating the waveform twice:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} = \\cos t \\cdot [u(t) - u(t-\\pi)] + 0 \\quad (\\text{over } [0, 2\\pi))"
-    },
-    {
-     "t": "p",
-     "text": "At the boundaries, $\\frac{dx(t)}{dt}$ exhibits step discontinuities:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $t = 0$: jumps from $0$ to $+1 \\implies \\Delta_0 = +1$.",
-      "At $t = \\pi$: jumps from $-1$ to $0 \\implies \\Delta_\\pi = +1$.",
-      "At $t = 2\\pi$: jumps from $0$ to $+1 \\implies \\Delta_{2\\pi} = +1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Differentiating again yields impulses of strength $+1$ spaced every $\\pi$ units, while the second derivative of the sinusoid yields $-\\sin t = -x(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d^2 x(t)}{dt^2} = \\sum_{k=-\\infty}^\\infty \\delta(t - k\\pi) - x(t)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Frequency-Domain Transformation & Harmonization"
-    },
-    {
-     "t": "p",
-     "text": "Partition the impulse train of period $\\pi$ into two trains of period $T_0 = 2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{k=-\\infty}^\\infty \\delta(t - k\\pi) = \\sum_{m=-\\infty}^\\infty \\delta(t - 2m\\pi) + \\sum_{m=-\\infty}^\\infty \\delta(t - (2m+1)\\pi)"
-    },
-    {
-     "t": "p",
-     "text": "Taking Fourier coefficients of both sides with $\\omega_0 = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "(j n \\omega_0)^2 c_n = \\frac{1}{2\\pi} + \\frac{1}{2\\pi} e^{-j n \\pi} - c_n"
-    },
-    {
-     "t": "math",
-     "tex": "-n^2 c_n = \\frac{1 + (-1)^n}{2\\pi} - c_n \\implies (1 - n^2) c_n = \\frac{1 + (-1)^n}{2\\pi}"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1 + (-1)^n}{2\\pi(1 - n^2)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Harmonic Partitioning"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**For even harmonics ($n = 2m$)**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "1 + (-1)^{2m} = 2 \\implies c_{2m} = \\frac{2}{2\\pi(1 - 4m^2)} = \\frac{1}{\\pi(1 - 4m^2)}"
-    },
-    {
-     "t": "p",
-     "text": "For $m = 0 \\implies c_0 = \\frac{1}{\\pi}$.\n   For $m = \\pm 1 \\implies c_{\\pm 2} = -\\frac{1}{3\\pi}$.\n   For $m = \\pm 2 \\implies c_{\\pm 4} = -\\frac{1}{15\\pi}$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**For odd harmonics ($n = 2m + 1, m \\ne 0, -1$)**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "1 + (-1)^{2m+1} = 0 \\implies c_n = 0 \\quad \\text{for } n \\in \\{\\pm 3, \\pm 5, \\pm 7, \\dots\\}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Resonance Singularity at $n = \\pm 1$**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Direct formula gives $\\frac{0}{0}$. Evaluating directly:"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{2\\pi} \\int_0^\\pi \\sin t \\, e^{-jt} dt = \\frac{1}{4j\\pi} \\int_0^\\pi (1 - e^{-j2t}) dt = \\frac{\\pi}{4j\\pi} = -\\frac{j}{4} = -j 0.25"
-    },
-    {
-     "t": "p",
-     "text": "By conjugate symmetry:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-1} = c_1^* = +j 0.25 = \\frac{j}{4}"
-    },
-    {
-     "t": "h4",
-     "text": "Final Boxed Solution:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_n = \\begin{cases}\n\\frac{1}{\\pi}, & n = 0 \\\\\n-\\frac{j}{4} = -j0.25, & n = 1 \\\\\n\\frac{j}{4} = j0.25, & n = -1 \\\\\n0, & n = \\pm 3, \\pm 5, \\pm 7, \\dots \\\\\n\\frac{1}{\\pi(1 - n^2)}, & n = \\pm 2, \\pm 4, \\pm 6, \\dots \n\\end{cases}}"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE Exam Trap**: Attempting to apply L'H\u00f4pital's rule to $c_n = \\frac{1+(-1)^n}{2\\pi(1-n^2)}$ by treating $n$ as a continuous real variable is mathematically flawed because $(-1)^n$ is only defined for integer $n$. You MUST use the analysis integral to find $c_{\\pm 1}$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Fundamental Parameters & DC Component"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental period: $T_0 = 2\\pi$.",
+        "Fundamental angular frequency: $\\omega_0 = \\frac{2\\pi}{T_0} = 1\\text{ rad/s}$.",
+        "DC component:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{1}{2\\pi} \\int_0^{\\pi} \\sin t \\, dt = \\frac{1}{2\\pi} [-\\cos t]_0^\\pi = \\frac{2}{2\\pi} = \\frac{1}{\\pi}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Generalized Differentiation Formulation"
+      },
+      {
+       "t": "p",
+       "text": "Differentiating the waveform twice:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} = \\cos t \\cdot [u(t) - u(t-\\pi)] + 0 \\quad (\\text{over } [0, 2\\pi))"
+      },
+      {
+       "t": "p",
+       "text": "At the boundaries, $\\frac{dx(t)}{dt}$ exhibits step discontinuities:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $t = 0$: jumps from $0$ to $+1 \\implies \\Delta_0 = +1$.",
+        "At $t = \\pi$: jumps from $-1$ to $0 \\implies \\Delta_\\pi = +1$.",
+        "At $t = 2\\pi$: jumps from $0$ to $+1 \\implies \\Delta_{2\\pi} = +1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Differentiating again yields impulses of strength $+1$ spaced every $\\pi$ units, while the second derivative of the sinusoid yields $-\\sin t = -x(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d^2 x(t)}{dt^2} = \\sum_{k=-\\infty}^\\infty \\delta(t - k\\pi) - x(t)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Frequency-Domain Transformation & Harmonization"
+      },
+      {
+       "t": "p",
+       "text": "Partition the impulse train of period $\\pi$ into two trains of period $T_0 = 2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{k=-\\infty}^\\infty \\delta(t - k\\pi) = \\sum_{m=-\\infty}^\\infty \\delta(t - 2m\\pi) + \\sum_{m=-\\infty}^\\infty \\delta(t - (2m+1)\\pi)"
+      },
+      {
+       "t": "p",
+       "text": "Taking Fourier coefficients of both sides with $\\omega_0 = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "(j n \\omega_0)^2 c_n = \\frac{1}{2\\pi} + \\frac{1}{2\\pi} e^{-j n \\pi} - c_n"
+      },
+      {
+       "t": "math",
+       "tex": "-n^2 c_n = \\frac{1 + (-1)^n}{2\\pi} - c_n \\implies (1 - n^2) c_n = \\frac{1 + (-1)^n}{2\\pi}"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1 + (-1)^n}{2\\pi(1 - n^2)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Harmonic Partitioning"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**For even harmonics ($n = 2m$)**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "1 + (-1)^{2m} = 2 \\implies c_{2m} = \\frac{2}{2\\pi(1 - 4m^2)} = \\frac{1}{\\pi(1 - 4m^2)}"
+      },
+      {
+       "t": "p",
+       "text": "For $m = 0 \\implies c_0 = \\frac{1}{\\pi}$.\n   For $m = \\pm 1 \\implies c_{\\pm 2} = -\\frac{1}{3\\pi}$.\n   For $m = \\pm 2 \\implies c_{\\pm 4} = -\\frac{1}{15\\pi}$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**For odd harmonics ($n = 2m + 1, m \\ne 0, -1$)**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "1 + (-1)^{2m+1} = 0 \\implies c_n = 0 \\quad \\text{for } n \\in \\{\\pm 3, \\pm 5, \\pm 7, \\dots\\}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Resonance Singularity at $n = \\pm 1$**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Direct formula gives $\\frac{0}{0}$. Evaluating directly:"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{2\\pi} \\int_0^\\pi \\sin t \\, e^{-jt} dt = \\frac{1}{4j\\pi} \\int_0^\\pi (1 - e^{-j2t}) dt = \\frac{\\pi}{4j\\pi} = -\\frac{j}{4} = -j 0.25"
+      },
+      {
+       "t": "p",
+       "text": "By conjugate symmetry:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-1} = c_1^* = +j 0.25 = \\frac{j}{4}"
+      },
+      {
+       "t": "h4",
+       "text": "Final Boxed Solution:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_n = \\begin{cases}\n\\frac{1}{\\pi}, & n = 0 \\\\\n-\\frac{j}{4} = -j0.25, & n = 1 \\\\\n\\frac{j}{4} = j0.25, & n = -1 \\\\\n0, & n = \\pm 3, \\pm 5, \\pm 7, \\dots \\\\\n\\frac{1}{\\pi(1 - n^2)}, & n = \\pm 2, \\pm 4, \\pm 6, \\dots \n\\end{cases}}"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE Exam Trap**: Attempting to apply L'H\u00f4pital's rule to $c_n = \\frac{1+(-1)^n}{2\\pi(1-n^2)}$ by treating $n$ as a continuous real variable is mathematically flawed because $(-1)^n$ is only defined for integer $n$. You MUST use the analysis integral to find $c_{\\pm 1}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15162,122 +15131,121 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fundamental Period & Frequency Determination"
-    },
-    {
-     "t": "p",
-     "text": "The signal is a sum of two periodic impulse trains:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_1(t) = \\sum_m \\delta(t - 0.5m) \\implies T_1 = 1/2$.",
-      "$x_2(t) = \\sum_m \\delta(t - 1.5m) \\implies T_2 = 3/2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The common fundamental period is:"
-    },
-    {
-     "t": "math",
-     "tex": "T_0 = \\text{LCM}\\left(\\frac{1}{2}, \\frac{3}{2}\\right) = \\frac{\\text{LCM}(1, 3)}{\\text{GCD}(2, 2)} = \\frac{3}{2}\\text{ s}"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{3/2} = \\frac{4\\pi}{3}\\text{ rad/s}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Periodic Basis Decomposition"
-    },
-    {
-     "t": "p",
-     "text": "In the interval $[0, T_0) = [0, 1.5)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_1(t)$ has impulses at $t = 0, 0.5, 1.0$.",
-      "$x_2(t)$ has an impulse at $t = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The combined signal over one fundamental period is:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2\\delta(t) + \\delta(t - 0.5) + \\delta(t - 1.0)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Analysis Integral Evaluation"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} \\int_{0^-}^{1.5^-} \\left[ 2\\delta(t) + \\delta(t - 0.5) + \\delta(t - 1.0) \\right] e^{-j n \\omega_0 t} \\, dt"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{2}{3} \\left[ 2 + e^{-j n \\left(\\frac{4\\pi}{3}\\right)(0.5)} + e^{-j n \\left(\\frac{4\\pi}{3}\\right)(1.0)} \\right] = \\frac{4}{3} + \\frac{2}{3} e^{-j \\frac{2n\\pi}{3}} + \\frac{2}{3} e^{-j \\frac{4n\\pi}{3}}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, **Option (a) is verified**."
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Complex Exponential & Trigonometric Equivalences"
-    },
-    {
-     "t": "p",
-     "text": "Notice that:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j \\frac{4n\\pi}{3}} = e^{j\\left(2n\\pi - \\frac{4n\\pi}{3}\\right)} = e^{j \\frac{2n\\pi}{3}}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting this into the expression:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{4}{3} + \\frac{2}{3}\\left[ e^{j \\frac{2n\\pi}{3}} + e^{-j \\frac{2n\\pi}{3}} \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Thus, **Option (c) is verified**."
-    },
-    {
-     "t": "p",
-     "text": "Using Euler's identity $e^{j\\theta} + e^{-j\\theta} = 2\\cos\\theta$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{4}{3} + \\frac{2}{3}\\left[ 2\\cos\\left(\\frac{2n\\pi}{3}\\right) \\right] = \\frac{4}{3} + \\frac{4}{3}\\cos\\left(\\frac{2n\\pi}{3}\\right) = \\frac{4}{3}\\left[ 1 + \\cos\\left(\\frac{2n\\pi}{3}\\right) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Thus, **Option (b) is verified**."
-    },
-    {
-     "t": "h4",
-     "text": "Final Boxed Answer:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Correct Options: (a), (b), and (c)}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Fundamental Period & Frequency Determination"
+      },
+      {
+       "t": "p",
+       "text": "The signal is a sum of two periodic impulse trains:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_1(t) = \\sum_m \\delta(t - 0.5m) \\implies T_1 = 1/2$.",
+        "$x_2(t) = \\sum_m \\delta(t - 1.5m) \\implies T_2 = 3/2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The common fundamental period is:"
+      },
+      {
+       "t": "math",
+       "tex": "T_0 = \\text{LCM}\\left(\\frac{1}{2}, \\frac{3}{2}\\right) = \\frac{\\text{LCM}(1, 3)}{\\text{GCD}(2, 2)} = \\frac{3}{2}\\text{ s}"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{3/2} = \\frac{4\\pi}{3}\\text{ rad/s}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Periodic Basis Decomposition"
+      },
+      {
+       "t": "p",
+       "text": "In the interval $[0, T_0) = [0, 1.5)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_1(t)$ has impulses at $t = 0, 0.5, 1.0$.",
+        "$x_2(t)$ has an impulse at $t = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The combined signal over one fundamental period is:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2\\delta(t) + \\delta(t - 0.5) + \\delta(t - 1.0)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Analysis Integral Evaluation"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} \\int_{0^-}^{1.5^-} \\left[ 2\\delta(t) + \\delta(t - 0.5) + \\delta(t - 1.0) \\right] e^{-j n \\omega_0 t} \\, dt"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{2}{3} \\left[ 2 + e^{-j n \\left(\\frac{4\\pi}{3}\\right)(0.5)} + e^{-j n \\left(\\frac{4\\pi}{3}\\right)(1.0)} \\right] = \\frac{4}{3} + \\frac{2}{3} e^{-j \\frac{2n\\pi}{3}} + \\frac{2}{3} e^{-j \\frac{4n\\pi}{3}}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, **Option (a) is verified**."
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Complex Exponential & Trigonometric Equivalences"
+      },
+      {
+       "t": "p",
+       "text": "Notice that:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j \\frac{4n\\pi}{3}} = e^{j\\left(2n\\pi - \\frac{4n\\pi}{3}\\right)} = e^{j \\frac{2n\\pi}{3}}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting this into the expression:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{4}{3} + \\frac{2}{3}\\left[ e^{j \\frac{2n\\pi}{3}} + e^{-j \\frac{2n\\pi}{3}} \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Thus, **Option (c) is verified**."
+      },
+      {
+       "t": "p",
+       "text": "Using Euler's identity $e^{j\\theta} + e^{-j\\theta} = 2\\cos\\theta$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{4}{3} + \\frac{2}{3}\\left[ 2\\cos\\left(\\frac{2n\\pi}{3}\\right) \\right] = \\frac{4}{3} + \\frac{4}{3}\\cos\\left(\\frac{2n\\pi}{3}\\right) = \\frac{4}{3}\\left[ 1 + \\cos\\left(\\frac{2n\\pi}{3}\\right) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Thus, **Option (b) is verified**."
+      },
+      {
+       "t": "h4",
+       "text": "Final Boxed Answer:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Correct Options: (a), (b), and (c)}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15296,130 +15264,129 @@ export default {
      "text": "Reconstruct the time-domain signal $x(t)$ and show that it can be represented both as a real trigonometric polynomial and as a closed-form ratio of sines (Dirichlet kernel)."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Explicit Identification of Complex Coefficients"
-    },
-    {
-     "t": "p",
-     "text": "From polar form $c_n = |c_n| e^{j \\angle c_n}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$c_0 = 1 \\cdot e^{j(0)} = 1$",
-      "$c_1 = 1 \\cdot e^{j\\pi/2} = j$",
-      "$c_{-1} = 1 \\cdot e^{-j\\pi/2} = -j$",
-      "$c_2 = 1 \\cdot e^{j\\pi} = -1$",
-      "$c_{-2} = 1 \\cdot e^{-j\\pi} = -1$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Synthesis into Real Trigonometric Form"
-    },
-    {
-     "t": "p",
-     "text": "Using the CTFS synthesis equation $x(t) = \\sum_{n=-2}^2 c_n e^{j n \\omega_0 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = c_0 + [c_1 e^{j\\omega_0 t} + c_{-1} e^{-j\\omega_0 t}] + [c_2 e^{j 2\\omega_0 t} + c_{-2} e^{-j 2\\omega_0 t}]"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 1 + [j e^{j\\omega_0 t} - j e^{-j\\omega_0 t}] + [-e^{j 2\\omega_0 t} - e^{-j 2\\omega_0 t}]"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 1 + j(2j) \\left( \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j} \\right) - 2 \\left( \\frac{e^{j 2\\omega_0 t} + e^{-j 2\\omega_0 t}}{2} \\right)"
-    },
-    {
-     "t": "p",
-     "text": "Since $j(2j) = 2j^2 = -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = 1 - 2\\sin(\\omega_0 t) - 2\\cos(2\\omega_0 t)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Transformation to Finite Geometric Progression"
-    },
-    {
-     "t": "p",
-     "text": "Expressing the five exponential terms with common phase variable:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{-j(\\pi + 2\\omega_0 t)} + e^{-j(\\pi/2 + \\omega_0 t)} + 1 + e^{j(\\pi/2 + \\omega_0 t)} + e^{j(\\pi + 2\\omega_0 t)}"
-    },
-    {
-     "t": "p",
-     "text": "Define the substitute angle:"
-    },
-    {
-     "t": "math",
-     "tex": "\\theta = \\pi + 2\\omega_0 t \\implies \\frac{\\theta}{2} = \\frac{\\pi}{2} + \\omega_0 t"
-    },
-    {
-     "t": "p",
-     "text": "The series becomes:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{-j\\theta} + e^{-j\\theta/2} + 1 + e^{j\\theta/2} + e^{j\\theta}"
-    },
-    {
-     "t": "p",
-     "text": "This is a finite geometric progression with $a = e^{-j\\theta}$, $r = e^{j\\theta/2}$, and $N = 5$ terms:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{-j\\theta} \\frac{r^5 - 1}{r - 1} = e^{-j\\theta} \\frac{e^{j 5\\theta/2} - 1}{e^{j\\theta/2} - 1}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Factoring Symmetrical Half-Angles"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j 5\\theta/2} - 1 = e^{j 5\\theta/4} \\left( e^{j 5\\theta/4} - e^{-j 5\\theta/4} \\right) = 2j e^{j 5\\theta/4} \\sin\\left(\\frac{5\\theta}{4}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\theta/2} - 1 = e^{j\\theta/4} \\left( e^{j\\theta/4} - e^{-j\\theta/4} \\right) = 2j e^{j\\theta/4} \\sin\\left(\\frac{\\theta}{4}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "The exponential phase factor is:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j\\theta} \\cdot \\frac{e^{j 5\\theta/4}}{e^{j\\theta/4}} = e^{-j\\theta} \\cdot e^{j\\theta} = 1"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the complex pre-factors collapse completely:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{\\sin\\left(\\frac{5\\theta}{4}\\right)}{\\sin\\left(\\frac{\\theta}{4}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $\\theta = \\pi + 2\\omega_0 t$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = \\frac{\\sin\\left[ \\frac{5}{4}(\\pi + 2\\omega_0 t) \\right]}{\\sin\\left[ \\frac{1}{4}(\\pi + 2\\omega_0 t) \\right]}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Explicit Identification of Complex Coefficients"
+      },
+      {
+       "t": "p",
+       "text": "From polar form $c_n = |c_n| e^{j \\angle c_n}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$c_0 = 1 \\cdot e^{j(0)} = 1$",
+        "$c_1 = 1 \\cdot e^{j\\pi/2} = j$",
+        "$c_{-1} = 1 \\cdot e^{-j\\pi/2} = -j$",
+        "$c_2 = 1 \\cdot e^{j\\pi} = -1$",
+        "$c_{-2} = 1 \\cdot e^{-j\\pi} = -1$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Synthesis into Real Trigonometric Form"
+      },
+      {
+       "t": "p",
+       "text": "Using the CTFS synthesis equation $x(t) = \\sum_{n=-2}^2 c_n e^{j n \\omega_0 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = c_0 + [c_1 e^{j\\omega_0 t} + c_{-1} e^{-j\\omega_0 t}] + [c_2 e^{j 2\\omega_0 t} + c_{-2} e^{-j 2\\omega_0 t}]"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 1 + [j e^{j\\omega_0 t} - j e^{-j\\omega_0 t}] + [-e^{j 2\\omega_0 t} - e^{-j 2\\omega_0 t}]"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 1 + j(2j) \\left( \\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j} \\right) - 2 \\left( \\frac{e^{j 2\\omega_0 t} + e^{-j 2\\omega_0 t}}{2} \\right)"
+      },
+      {
+       "t": "p",
+       "text": "Since $j(2j) = 2j^2 = -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = 1 - 2\\sin(\\omega_0 t) - 2\\cos(2\\omega_0 t)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Transformation to Finite Geometric Progression"
+      },
+      {
+       "t": "p",
+       "text": "Expressing the five exponential terms with common phase variable:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{-j(\\pi + 2\\omega_0 t)} + e^{-j(\\pi/2 + \\omega_0 t)} + 1 + e^{j(\\pi/2 + \\omega_0 t)} + e^{j(\\pi + 2\\omega_0 t)}"
+      },
+      {
+       "t": "p",
+       "text": "Define the substitute angle:"
+      },
+      {
+       "t": "math",
+       "tex": "\\theta = \\pi + 2\\omega_0 t \\implies \\frac{\\theta}{2} = \\frac{\\pi}{2} + \\omega_0 t"
+      },
+      {
+       "t": "p",
+       "text": "The series becomes:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{-j\\theta} + e^{-j\\theta/2} + 1 + e^{j\\theta/2} + e^{j\\theta}"
+      },
+      {
+       "t": "p",
+       "text": "This is a finite geometric progression with $a = e^{-j\\theta}$, $r = e^{j\\theta/2}$, and $N = 5$ terms:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{-j\\theta} \\frac{r^5 - 1}{r - 1} = e^{-j\\theta} \\frac{e^{j 5\\theta/2} - 1}{e^{j\\theta/2} - 1}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Factoring Symmetrical Half-Angles"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j 5\\theta/2} - 1 = e^{j 5\\theta/4} \\left( e^{j 5\\theta/4} - e^{-j 5\\theta/4} \\right) = 2j e^{j 5\\theta/4} \\sin\\left(\\frac{5\\theta}{4}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\theta/2} - 1 = e^{j\\theta/4} \\left( e^{j\\theta/4} - e^{-j\\theta/4} \\right) = 2j e^{j\\theta/4} \\sin\\left(\\frac{\\theta}{4}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "The exponential phase factor is:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j\\theta} \\cdot \\frac{e^{j 5\\theta/4}}{e^{j\\theta/4}} = e^{-j\\theta} \\cdot e^{j\\theta} = 1"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the complex pre-factors collapse completely:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{\\sin\\left(\\frac{5\\theta}{4}\\right)}{\\sin\\left(\\frac{\\theta}{4}\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $\\theta = \\pi + 2\\omega_0 t$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = \\frac{\\sin\\left[ \\frac{5}{4}(\\pi + 2\\omega_0 t) \\right]}{\\sin\\left[ \\frac{1}{4}(\\pi + 2\\omega_0 t) \\right]}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15440,73 +15407,72 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Part 1: Signal $x_a(t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boundary check at origin: $x_a(0^+) = 2$, $x_a(0^-) = 0$. Since $x_a(0^+) \\ne x_a(0^-)$ and $x_a(0^+) \\ne -x_a(0^-)$, $x_a(t)$ is **Neither Even Nor Odd (NENO)**.",
-      "Average value: $c_0 = \\frac{1}{1}(\\frac{1}{2} \\cdot 1 \\cdot 2) = 1$.",
-      "Shifting by DC: $y(t) = x_a(t) - 1$.",
-      "$y(0^+) = 2 - 1 = +1$.",
-      "$y(0^-) = 0 - 1 = -1$.",
-      "Since $y(0^+) = -y(0^-)$, $y(t)$ possesses **Pure Odd Symmetry**!",
-      "Conclusion for $x_a(t)$: Signal is **NENO**, but possess **Hidden Odd Symmetry** accessible via DC subtraction."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Part 2: Signal $x_b(t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Reflection check: $x_b(-t) = x_b(t)$ for all $t \\implies$ **Even Symmetry**.",
-      "Average value: $c_0 = \\frac{1}{4}[A(2) - A(2)] = 0$.",
-      "Half-wave test: $x_b(t + 2) = -x_b(t)$ for all $t \\implies$ **Half-Wave Symmetry (HWS)**.",
-      "Combined classification: Even + HWS $\\implies$ **Even Quarter-Wave Symmetry (EQWS)**.",
-      "Spectral consequence: $c_n$ is purely real and non-zero ONLY for odd $n$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Part 3: Signal $x_c(t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Reflection check: $x_c(t) = +A$ on $(-1, 1)$, centered at origin $\\implies$ **Even Symmetry**.",
-      "Average value: $c_0 = \\frac{1}{3}[A(2) - A(1)] = \\frac{A}{3} \\ne 0$.",
-      "Half-wave test: Since $c_0 \\ne 0$, **HWS is impossible**.",
-      "Removing DC: $y(t) = x_c(t) - A/3$ produces levels $+2A/3$ (duration 2) and $-4A/3$ (duration 1).",
-      "$y(0^+) = 2A/3$, but $y(1.5^+) = -4A/3 \\ne -2A/3$.",
-      "Thus, even after DC removal, HWS is NOT present because the duty cycle is not 50%.",
-      "Conclusion for $x_c(t)$: **Even Symmetry ONLY**; No HWS, No QWS."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Part 4: Signal $x_d(t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boundary check at origin: $x_d(0^+) = 0$, $x_d(0^-) = -A \\implies$ **NENO**.",
-      "Average value: Area on $[0, T_0/2]$ is $+AT_0/4$; area on $[T_0/2, T_0]$ is $-AT_0/4 \\implies c_0 = 0$.",
-      "Half-wave test: For any $t \\in [0, T_0/2)$, $x_d(t) = \\frac{2A}{T_0}t$. For $t + T_0/2$, $x_d(t + T_0/2) = -\\frac{2A}{T_0}t = -x_d(t)$.",
-      "Thus, $x_d(t + T_0/2) = -x_d(t)$ holds globally!",
-      "Conclusion for $x_d(t)$: **NENO with Pure Half-Wave Symmetry (HWS)**!",
-      "Spectral consequence: $c_n = 0$ for all even $n$, but $c_n$ is complex (contains both real and imaginary parts)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part 1: Signal $x_a(t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boundary check at origin: $x_a(0^+) = 2$, $x_a(0^-) = 0$. Since $x_a(0^+) \\ne x_a(0^-)$ and $x_a(0^+) \\ne -x_a(0^-)$, $x_a(t)$ is **Neither Even Nor Odd (NENO)**.",
+        "Average value: $c_0 = \\frac{1}{1}(\\frac{1}{2} \\cdot 1 \\cdot 2) = 1$.",
+        "Shifting by DC: $y(t) = x_a(t) - 1$.",
+        "$y(0^+) = 2 - 1 = +1$.",
+        "$y(0^-) = 0 - 1 = -1$.",
+        "Since $y(0^+) = -y(0^-)$, $y(t)$ possesses **Pure Odd Symmetry**!",
+        "Conclusion for $x_a(t)$: Signal is **NENO**, but possess **Hidden Odd Symmetry** accessible via DC subtraction."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Part 2: Signal $x_b(t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Reflection check: $x_b(-t) = x_b(t)$ for all $t \\implies$ **Even Symmetry**.",
+        "Average value: $c_0 = \\frac{1}{4}[A(2) - A(2)] = 0$.",
+        "Half-wave test: $x_b(t + 2) = -x_b(t)$ for all $t \\implies$ **Half-Wave Symmetry (HWS)**.",
+        "Combined classification: Even + HWS $\\implies$ **Even Quarter-Wave Symmetry (EQWS)**.",
+        "Spectral consequence: $c_n$ is purely real and non-zero ONLY for odd $n$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Part 3: Signal $x_c(t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Reflection check: $x_c(t) = +A$ on $(-1, 1)$, centered at origin $\\implies$ **Even Symmetry**.",
+        "Average value: $c_0 = \\frac{1}{3}[A(2) - A(1)] = \\frac{A}{3} \\ne 0$.",
+        "Half-wave test: Since $c_0 \\ne 0$, **HWS is impossible**.",
+        "Removing DC: $y(t) = x_c(t) - A/3$ produces levels $+2A/3$ (duration 2) and $-4A/3$ (duration 1).",
+        "$y(0^+) = 2A/3$, but $y(1.5^+) = -4A/3 \\ne -2A/3$.",
+        "Thus, even after DC removal, HWS is NOT present because the duty cycle is not 50%.",
+        "Conclusion for $x_c(t)$: **Even Symmetry ONLY**; No HWS, No QWS."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Part 4: Signal $x_d(t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boundary check at origin: $x_d(0^+) = 0$, $x_d(0^-) = -A \\implies$ **NENO**.",
+        "Average value: Area on $[0, T_0/2]$ is $+AT_0/4$; area on $[T_0/2, T_0]$ is $-AT_0/4 \\implies c_0 = 0$.",
+        "Half-wave test: For any $t \\in [0, T_0/2)$, $x_d(t) = \\frac{2A}{T_0}t$. For $t + T_0/2$, $x_d(t + T_0/2) = -\\frac{2A}{T_0}t = -x_d(t)$.",
+        "Thus, $x_d(t + T_0/2) = -x_d(t)$ holds globally!",
+        "Conclusion for $x_d(t)$: **NENO with Pure Half-Wave Symmetry (HWS)**!",
+        "Spectral consequence: $c_n = 0$ for all even $n$, but $c_n$ is complex (contains both real and imaginary parts)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -16694,88 +16660,87 @@ export default {
      "text": "All other AC coefficients of $y(t)$ are zero, and $y(t)$ is known to have **zero DC value** ($c_{0,y} = 0$).\nFind the complete Trigonometric Fourier Series expression for $x(t)$ and identify its coefficients."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Synthesize $y(t)$ from its given TFS coefficients:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given $c_{0,y} = 0$, $a_1 = 2$, $a_3 = 1$, $b_1 = 2$, and all other $a_n, b_n = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = c_{0,y} + a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + b_1 \\sin(\\omega_0 t)"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 2 \\cos(\\omega_0 t) + \\cos(3\\omega_0 t) + 2 \\sin(\\omega_0 t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Express $x(t)$ via algebraic inversion:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $y(t) = x(t) - 2 \\implies x(t) = y(t) + 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 + 2 \\cos(\\omega_0 t) + \\cos(3\\omega_0 t) + 2 \\sin(\\omega_0 t)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Extract TFS parameters of $x(t)$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "DC Component: $c_0 = 2$",
-      "Cosine Harmonics: $a_1 = 2, \\quad a_3 = 1, \\quad a_n = 0 \\ (\\forall n \\neq 1, 3)$",
-      "Sine Harmonics: $b_1 = 2, \\quad b_n = 0 \\ (\\forall n \\neq 1)$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Final Answer"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = 2 + 2\\cos(\\omega_0 t) + \\cos(3\\omega_0 t) + 2\\sin(\\omega_0 t)}"
-    },
-    {
-     "t": "p",
-     "text": "with coefficients: $\\mathbf{c_0 = 2, \\ a_1 = 2, \\ a_3 = 1, \\ b_1 = 2}$."
-    },
-    {
-     "t": "h4",
-     "text": "Common Exam Traps"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trap:** Attempting to alter $a_n$ or $b_n$ when transforming between $x(t)$ and $y(t)$.",
-      "**Rule:** A vertical DC shift affects **only** $c_0$. Harmonic amplitudes and phases are completely invariant under scalar amplitude shifts."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Synthesize $y(t)$ from its given TFS coefficients:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given $c_{0,y} = 0$, $a_1 = 2$, $a_3 = 1$, $b_1 = 2$, and all other $a_n, b_n = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = c_{0,y} + a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + b_1 \\sin(\\omega_0 t)"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 2 \\cos(\\omega_0 t) + \\cos(3\\omega_0 t) + 2 \\sin(\\omega_0 t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Express $x(t)$ via algebraic inversion:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $y(t) = x(t) - 2 \\implies x(t) = y(t) + 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 + 2 \\cos(\\omega_0 t) + \\cos(3\\omega_0 t) + 2 \\sin(\\omega_0 t)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Extract TFS parameters of $x(t)$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "DC Component: $c_0 = 2$",
+        "Cosine Harmonics: $a_1 = 2, \\quad a_3 = 1, \\quad a_n = 0 \\ (\\forall n \\neq 1, 3)$",
+        "Sine Harmonics: $b_1 = 2, \\quad b_n = 0 \\ (\\forall n \\neq 1)$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Final Answer"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = 2 + 2\\cos(\\omega_0 t) + \\cos(3\\omega_0 t) + 2\\sin(\\omega_0 t)}"
+      },
+      {
+       "t": "p",
+       "text": "with coefficients: $\\mathbf{c_0 = 2, \\ a_1 = 2, \\ a_3 = 1, \\ b_1 = 2}$."
+      },
+      {
+       "t": "h4",
+       "text": "Common Exam Traps"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Trap:** Attempting to alter $a_n$ or $b_n$ when transforming between $x(t)$ and $y(t)$.",
+        "**Rule:** A vertical DC shift affects **only** $c_0$. Harmonic amplitudes and phases are completely invariant under scalar amplitude shifts."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16809,177 +16774,176 @@ export default {
      "text": "Waveform of x(t) (Slide 166):\n          x(t)\n           ^\n       A \u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2510                 \u250c\u2500\u2500\u2500\u2500\u2500\u2510\n           \u2502     \u2502                 \u2502     \u2502\n           \u2502     \u2502                 \u2502     \u2502\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> t\n         -T/4    T/4      3T/4    5T/4\n           |<\u2500\u2500\u2500 T \u2500\u2500\u2500\u2500\u2500\u2500\u2500>|"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute the DC Component ($c_0$) (Slide 166)**"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{1}{T} \\int_{-T/2}^{T/2} x(t) \\, dt = \\frac{\\text{Area over one period}}{T}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area} = A \\times \\left(\\frac{T}{4} - \\left(-\\frac{T}{4}\\right)\\right) = A \\times \\frac{T}{2} = \\frac{AT}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{AT/2}{T} = \\frac{A}{2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Remove the DC Bias to Form $y(t)$ (Slide 167)**\nDefine $y(t) = x(t) - c_0 = x(t) - \\frac{A}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\begin{cases} A - \\frac{A}{2} = +\\frac{A}{2}, & -\\frac{T}{4} < t < \\frac{T}{4} \\\\[6pt] 0 - \\frac{A}{2} = -\\frac{A}{2}, & \\frac{T}{4} < |t| < \\frac{3T}{4} \\end{cases}"
-    },
-    {
-     "t": "code",
-     "text": "Waveform of y(t) = x(t) - A/2 (Slide 167):\n          y(t)\n           ^\n     +A/2 \u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2510                 \u250c\u2500\u2500\u2500\u2500\u2500\u2510\n           \u2502     \u2502                 \u2502     \u2502\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> t\n           \u2502    T/4       T/2     3T/4\n     -A/2 \u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Symmetry Audit of $y(t)$ (Slide 167)**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Even Symmetry:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$y(-t) = y(t)$ for all $t$. The pulse is centered on the vertical axis."
-    },
-    {
-     "t": "math",
-     "tex": "\\implies b_n = 0 \\quad \\forall n"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Half-Wave Symmetry (HWS):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluate at reference points:"
-    },
-    {
-     "t": "math",
-     "tex": "y(0^+) = +\\frac{A}{2}, \\quad y\\left(0^+ + \\frac{T}{2}\\right) = y\\left(\\frac{T}{2}^+\\right) = -\\frac{A}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "y\\left(t + \\frac{T}{2}\\right) = -y(t) \\quad \\forall t"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies c_{0,y} = 0 \\quad \\text{and} \\quad a_n = 0 \\ (\\forall n \\text{ even})"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Conclusion:** $y(t)$ exhibits **Even Quarter-Wave Symmetry (Even QWS)**!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Evaluate $a_n$ using Quarter-Period Integration (Slide 168)**\nFor Even QWS, integrate over $[0, T/4]$ with scaling factor $\\frac{8}{T}$:"
-    },
-    {
-     "t": "math",
-     "tex": "a_n = \\frac{8}{T} \\int_0^{T/4} y(t) \\cos(n\\omega_0 t) \\, dt = \\frac{8}{T} \\int_0^{T/4} \\left(\\frac{A}{2}\\right) \\cos(n\\omega_0 t) \\, dt"
-    },
-    {
-     "t": "math",
-     "tex": "a_n = \\frac{4A}{T} \\left[ \\frac{\\sin(n\\omega_0 t)}{n\\omega_0} \\right]_0^{T/4} = \\frac{4A}{n\\omega_0 T} \\left[ \\sin\\left(\\frac{n\\omega_0 T}{4}\\right) - \\sin(0) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\omega_0 T = 2\\pi$, the argument simplifies to:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{n\\omega_0 T}{4} = \\frac{n(2\\pi)}{4} = \\frac{n\\pi}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "n\\omega_0 T = 2n\\pi"
-    },
-    {
-     "t": "p",
-     "text": "Substituting these back:"
-    },
-    {
-     "t": "math",
-     "tex": "a_n = \\frac{4A}{2n\\pi} \\sin\\left(\\frac{n\\pi}{2}\\right) = \\frac{2A}{n\\pi} \\sin\\left(\\frac{n\\pi}{2}\\right) \\quad (n = 1, 3, 5, \\dots)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Tabulate Harmonic Values (Slide 168)**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 1$: $a_1 = \\frac{2A}{\\pi} \\sin(\\pi/2) = +\\frac{2A}{\\pi}$",
-      "For $n = 2$: $a_2 = 0$ (Even harmonic)",
-      "For $n = 3$: $a_3 = \\frac{2A}{3\\pi} \\sin(3\\pi/2) = -\\frac{2A}{3\\pi}$",
-      "For $n = 4$: $a_4 = 0$ (Even harmonic)",
-      "For $n = 5$: $a_5 = \\frac{2A}{5\\pi} \\sin(5\\pi/2) = +\\frac{2A}{5\\pi}$",
-      "For $n = 6$: $a_6 = 0$",
-      "For $n = 7$: $a_7 = \\frac{2A}{7\\pi} \\sin(7\\pi/2) = -\\frac{2A}{7\\pi}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Compact form for odd $n$:"
-    },
-    {
-     "t": "math",
-     "tex": "a_n = (-1)^{\\frac{n-1}{2}} \\frac{2A}{n\\pi} \\quad (n \\text{ odd})"
-    },
-    {
-     "t": "p",
-     "text": "**Step 6: Assemble Complete Series for $y(t)$ and $x(t)$ (Slide 169)**"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\frac{2A}{\\pi} \\cos(\\omega_0 t) - \\frac{2A}{3\\pi} \\cos(3\\omega_0 t) + \\frac{2A}{5\\pi} \\cos(5\\omega_0 t) - \\frac{2A}{7\\pi} \\cos(7\\omega_0 t) + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Adding back the DC bias $c_0 = A/2$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{A}{2} + \\frac{2A}{\\pi} \\cos(\\omega_0 t) - \\frac{2A}{3\\pi} \\cos(3\\omega_0 t) + \\frac{2A}{5\\pi} \\cos(5\\omega_0 t) - \\frac{2A}{7\\pi} \\cos(7\\omega_0 t) + \\dots"
-    },
-    {
-     "t": "h4",
-     "text": "Final Boxed Coefficients"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{b_n = 0 \\quad \\forall n}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{a_n = \\begin{cases} \\dfrac{2A}{n\\pi} \\sin\\left(\\dfrac{n\\pi}{2}\\right), & n \\text{ odd} \\\\[8pt] 0, & n \\text{ even} \\end{cases}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Compute the DC Component ($c_0$) (Slide 166)**"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{1}{T} \\int_{-T/2}^{T/2} x(t) \\, dt = \\frac{\\text{Area over one period}}{T}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area} = A \\times \\left(\\frac{T}{4} - \\left(-\\frac{T}{4}\\right)\\right) = A \\times \\frac{T}{2} = \\frac{AT}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{AT/2}{T} = \\frac{A}{2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Remove the DC Bias to Form $y(t)$ (Slide 167)**\nDefine $y(t) = x(t) - c_0 = x(t) - \\frac{A}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\begin{cases} A - \\frac{A}{2} = +\\frac{A}{2}, & -\\frac{T}{4} < t < \\frac{T}{4} \\\\[6pt] 0 - \\frac{A}{2} = -\\frac{A}{2}, & \\frac{T}{4} < |t| < \\frac{3T}{4} \\end{cases}"
+      },
+      {
+       "t": "code",
+       "text": "Waveform of y(t) = x(t) - A/2 (Slide 167):\n          y(t)\n           ^\n     +A/2 \u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2510                 \u250c\u2500\u2500\u2500\u2500\u2500\u2510\n           \u2502     \u2502                 \u2502     \u2502\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> t\n           \u2502    T/4       T/2     3T/4\n     -A/2 \u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Symmetry Audit of $y(t)$ (Slide 167)**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Even Symmetry:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$y(-t) = y(t)$ for all $t$. The pulse is centered on the vertical axis."
+      },
+      {
+       "t": "math",
+       "tex": "\\implies b_n = 0 \\quad \\forall n"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Half-Wave Symmetry (HWS):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluate at reference points:"
+      },
+      {
+       "t": "math",
+       "tex": "y(0^+) = +\\frac{A}{2}, \\quad y\\left(0^+ + \\frac{T}{2}\\right) = y\\left(\\frac{T}{2}^+\\right) = -\\frac{A}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "y\\left(t + \\frac{T}{2}\\right) = -y(t) \\quad \\forall t"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies c_{0,y} = 0 \\quad \\text{and} \\quad a_n = 0 \\ (\\forall n \\text{ even})"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Conclusion:** $y(t)$ exhibits **Even Quarter-Wave Symmetry (Even QWS)**!"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Evaluate $a_n$ using Quarter-Period Integration (Slide 168)**\nFor Even QWS, integrate over $[0, T/4]$ with scaling factor $\\frac{8}{T}$:"
+      },
+      {
+       "t": "math",
+       "tex": "a_n = \\frac{8}{T} \\int_0^{T/4} y(t) \\cos(n\\omega_0 t) \\, dt = \\frac{8}{T} \\int_0^{T/4} \\left(\\frac{A}{2}\\right) \\cos(n\\omega_0 t) \\, dt"
+      },
+      {
+       "t": "math",
+       "tex": "a_n = \\frac{4A}{T} \\left[ \\frac{\\sin(n\\omega_0 t)}{n\\omega_0} \\right]_0^{T/4} = \\frac{4A}{n\\omega_0 T} \\left[ \\sin\\left(\\frac{n\\omega_0 T}{4}\\right) - \\sin(0) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\omega_0 T = 2\\pi$, the argument simplifies to:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{n\\omega_0 T}{4} = \\frac{n(2\\pi)}{4} = \\frac{n\\pi}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "n\\omega_0 T = 2n\\pi"
+      },
+      {
+       "t": "p",
+       "text": "Substituting these back:"
+      },
+      {
+       "t": "math",
+       "tex": "a_n = \\frac{4A}{2n\\pi} \\sin\\left(\\frac{n\\pi}{2}\\right) = \\frac{2A}{n\\pi} \\sin\\left(\\frac{n\\pi}{2}\\right) \\quad (n = 1, 3, 5, \\dots)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Tabulate Harmonic Values (Slide 168)**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 1$: $a_1 = \\frac{2A}{\\pi} \\sin(\\pi/2) = +\\frac{2A}{\\pi}$",
+        "For $n = 2$: $a_2 = 0$ (Even harmonic)",
+        "For $n = 3$: $a_3 = \\frac{2A}{3\\pi} \\sin(3\\pi/2) = -\\frac{2A}{3\\pi}$",
+        "For $n = 4$: $a_4 = 0$ (Even harmonic)",
+        "For $n = 5$: $a_5 = \\frac{2A}{5\\pi} \\sin(5\\pi/2) = +\\frac{2A}{5\\pi}$",
+        "For $n = 6$: $a_6 = 0$",
+        "For $n = 7$: $a_7 = \\frac{2A}{7\\pi} \\sin(7\\pi/2) = -\\frac{2A}{7\\pi}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Compact form for odd $n$:"
+      },
+      {
+       "t": "math",
+       "tex": "a_n = (-1)^{\\frac{n-1}{2}} \\frac{2A}{n\\pi} \\quad (n \\text{ odd})"
+      },
+      {
+       "t": "p",
+       "text": "**Step 6: Assemble Complete Series for $y(t)$ and $x(t)$ (Slide 169)**"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\frac{2A}{\\pi} \\cos(\\omega_0 t) - \\frac{2A}{3\\pi} \\cos(3\\omega_0 t) + \\frac{2A}{5\\pi} \\cos(5\\omega_0 t) - \\frac{2A}{7\\pi} \\cos(7\\omega_0 t) + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Adding back the DC bias $c_0 = A/2$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{A}{2} + \\frac{2A}{\\pi} \\cos(\\omega_0 t) - \\frac{2A}{3\\pi} \\cos(3\\omega_0 t) + \\frac{2A}{5\\pi} \\cos(5\\omega_0 t) - \\frac{2A}{7\\pi} \\cos(7\\omega_0 t) + \\dots"
+      },
+      {
+       "t": "h4",
+       "text": "Final Boxed Coefficients"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{b_n = 0 \\quad \\forall n}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{a_n = \\begin{cases} \\dfrac{2A}{n\\pi} \\sin\\left(\\dfrac{n\\pi}{2}\\right), & n \\text{ odd} \\\\[8pt] 0, & n \\text{ even} \\end{cases}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17018,191 +16982,190 @@ export default {
      "text": "**(a)** Determine which frequency components are present in $x(t)$.  \n**(b)** If $x(t)$ is passed through an ideal Low-Pass Filter (LPF) with cutoff frequency $f_c = 100\\text{ mHz}$ (milliHertz), sketch and specify the output waveform."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute Fundamental Parameters & DC Value (Slide 170)**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental period: $T_0 = 6\\text{ s}$",
-      "Fundamental frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_0 = \\frac{1}{T_0} = \\frac{1}{6}\\text{ Hz} \\approx 0.1667\\text{ Hz} = 166.67\\text{ mHz}"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{6} = \\frac{\\pi}{3}\\text{ rad/s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "DC component $c_0$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The area of the trapezoid over one period is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area} = \\frac{1}{2} (\\text{top base} + \\text{bottom base}) \\times \\text{height} = \\frac{1}{2} (2 + 4) \\times 1 = \\frac{1}{2} \\times 6 = 3"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{\\text{Area}}{T_0} = \\frac{3}{6} = \\frac{1}{2}\\text{ V}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Unveil Hidden Symmetry via DC Subtraction (Slide 171)**\nDefine $y(t) = x(t) - c_0 = x(t) - \\frac{1}{2}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The top plateau becomes: $1 - \\frac{1}{2} = +\\frac{1}{2}\\text{ V}$ (on $[-1, 1]$).",
-      "The zero baseline becomes: $0 - \\frac{1}{2} = -\\frac{1}{2}\\text{ V}$ (on $[2, 4]$)."
-     ]
-    },
-    {
-     "t": "code",
-     "text": "Waveform of y(t) = x(t) - 1/2 (Slide 171):\n          y(t)\n           ^\n    +1/2 \u2500\u2500\u253c\u2500\u2500\u2500\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n           \u2502  /\u2502       \u2502\\\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500/\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\\\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> t\n           \u2502-2 -1  0   1  2    3   4   5\n    -1/2 \u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2514\u2500\u2500\u2500\u2518\n                   |<\u2500\u2500\u2500\u2500\u2500 T = 6 \u2500\u2500\u2500\u2500\u2500>|"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Symmetry of $y(t)$:"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Even Symmetry:** $y(-t) = y(t)$ (Symmetric about $t=0$) $\\implies b_n = 0 \\ \\forall n$.",
-      "**Half-Wave Symmetry:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(0^+) = +\\frac{1}{2}, \\quad y\\left(0^+ + \\frac{T_0}{2}\\right) = y(3^+) = -\\frac{1}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "y\\left(t + 3\\right) = -y(t) \\quad \\forall t \\implies \\text{HWS}"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies$ All even harmonics vanish ($a_2 = a_4 = a_6 = \\dots = 0$)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Quarter-Wave Classification:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$y(t)$ possesses **Even Quarter-Wave Symmetry (Even QWS)**!"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Answer to Part (a) \u2014 Frequency Components Present (Slide 171)**\nThe signal $x(t) = c_0 + y(t)$ consists of:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**DC Component ($0\\text{ Hz}$):** $c_0 = \\frac{1}{2}\\text{ V}$.",
-      "**AC Components:** Only odd harmonics of the cosine series:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2} + a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + a_5 \\cos(5\\omega_0 t) + \\dots"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Active frequencies:",
-      "$f = 0\\text{ Hz}$ (DC)",
-      "$f_1 = f_0 = \\frac{1}{6}\\text{ Hz} \\approx 0.167\\text{ Hz}$",
-      "$f_3 = 3f_0 = 3 \\times \\frac{1}{6} = 0.500\\text{ Hz}$",
-      "$f_5 = 5f_0 = 5 \\times \\frac{1}{6} \\approx 0.833\\text{ Hz}$",
-      "In general: $(2k-1)f_0$ for $k = 1, 2, 3, \\dots$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Answer to Part (b) \u2014 Low-Pass Filter Response (Slide 172)**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The LPF has cutoff frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_c = 100\\text{ mHz} = 0.1\\text{ Hz}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Passband of the filter: $[0, 0.1\\text{ Hz}]$.",
-      "Compare harmonic frequencies with cutoff:",
-      "DC ($0\\text{ Hz}$): $0\\text{ Hz} \\le 0.1\\text{ Hz} \\implies$ **Passed unattenuated**!",
-      "Fundamental ($f_0$): $0.167\\text{ Hz} > 0.1\\text{ Hz} \\implies$ **Rejected (Filtered out)**!",
-      "Third harmonic ($3f_0$): $0.5\\text{ Hz} > 0.1\\text{ Hz} \\implies$ **Rejected**!",
-      "All higher harmonics: **Rejected**!"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Output Waveform:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{out}}(t) = c_0 = \\frac{1}{2}\\text{ V}"
-    },
-    {
-     "t": "code",
-     "text": "Output Waveform after LPF (Slide 172):\n      y_out(t)\n         ^\n    1/2 \u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 (Constant DC line)\n         \u2502\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> t\n         0"
-    },
-    {
-     "t": "h4",
-     "text": "Final Answers"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(a) Present Components:** $\\boxed{\\text{DC } (0\\text{ Hz}) \\text{ and odd cosine harmonics } (f_0, 3f_0, 5f_0, \\dots) \\text{ where } f_0 = 0.167\\text{ Hz}}$",
-      "**(b) Output Waveform:** $\\boxed{y_{\\text{out}}(t) = \\dfrac{1}{2}\\text{ V (Pure DC flat line)}}$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Exam Trap Warning"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE Trap Alert on Frequency Units:**\nNotice the notation $100\\text{ mHz}$ with the teacher's note `[mili]`. Many students misread `mHz` as `MHz` (megaHertz). If it were $100\\text{ MHz}$, almost all harmonics would pass! Because it is $100\\text{ mHz} = 0.1\\text{ Hz}$, even the fundamental ($0.167\\text{ Hz}$) is eliminated!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Compute Fundamental Parameters & DC Value (Slide 170)**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental period: $T_0 = 6\\text{ s}$",
+        "Fundamental frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_0 = \\frac{1}{T_0} = \\frac{1}{6}\\text{ Hz} \\approx 0.1667\\text{ Hz} = 166.67\\text{ mHz}"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{6} = \\frac{\\pi}{3}\\text{ rad/s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "DC component $c_0$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The area of the trapezoid over one period is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area} = \\frac{1}{2} (\\text{top base} + \\text{bottom base}) \\times \\text{height} = \\frac{1}{2} (2 + 4) \\times 1 = \\frac{1}{2} \\times 6 = 3"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{\\text{Area}}{T_0} = \\frac{3}{6} = \\frac{1}{2}\\text{ V}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Unveil Hidden Symmetry via DC Subtraction (Slide 171)**\nDefine $y(t) = x(t) - c_0 = x(t) - \\frac{1}{2}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The top plateau becomes: $1 - \\frac{1}{2} = +\\frac{1}{2}\\text{ V}$ (on $[-1, 1]$).",
+        "The zero baseline becomes: $0 - \\frac{1}{2} = -\\frac{1}{2}\\text{ V}$ (on $[2, 4]$)."
+       ]
+      },
+      {
+       "t": "code",
+       "text": "Waveform of y(t) = x(t) - 1/2 (Slide 171):\n          y(t)\n           ^\n    +1/2 \u2500\u2500\u253c\u2500\u2500\u2500\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n           \u2502  /\u2502       \u2502\\\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500/\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\\\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> t\n           \u2502-2 -1  0   1  2    3   4   5\n    -1/2 \u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2514\u2500\u2500\u2500\u2518\n                   |<\u2500\u2500\u2500\u2500\u2500 T = 6 \u2500\u2500\u2500\u2500\u2500>|"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Symmetry of $y(t)$:"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Even Symmetry:** $y(-t) = y(t)$ (Symmetric about $t=0$) $\\implies b_n = 0 \\ \\forall n$.",
+        "**Half-Wave Symmetry:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(0^+) = +\\frac{1}{2}, \\quad y\\left(0^+ + \\frac{T_0}{2}\\right) = y(3^+) = -\\frac{1}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "y\\left(t + 3\\right) = -y(t) \\quad \\forall t \\implies \\text{HWS}"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies$ All even harmonics vanish ($a_2 = a_4 = a_6 = \\dots = 0$)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Quarter-Wave Classification:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$y(t)$ possesses **Even Quarter-Wave Symmetry (Even QWS)**!"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Answer to Part (a) \u2014 Frequency Components Present (Slide 171)**\nThe signal $x(t) = c_0 + y(t)$ consists of:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**DC Component ($0\\text{ Hz}$):** $c_0 = \\frac{1}{2}\\text{ V}$.",
+        "**AC Components:** Only odd harmonics of the cosine series:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2} + a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + a_5 \\cos(5\\omega_0 t) + \\dots"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Active frequencies:",
+        "$f = 0\\text{ Hz}$ (DC)",
+        "$f_1 = f_0 = \\frac{1}{6}\\text{ Hz} \\approx 0.167\\text{ Hz}$",
+        "$f_3 = 3f_0 = 3 \\times \\frac{1}{6} = 0.500\\text{ Hz}$",
+        "$f_5 = 5f_0 = 5 \\times \\frac{1}{6} \\approx 0.833\\text{ Hz}$",
+        "In general: $(2k-1)f_0$ for $k = 1, 2, 3, \\dots$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Answer to Part (b) \u2014 Low-Pass Filter Response (Slide 172)**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The LPF has cutoff frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_c = 100\\text{ mHz} = 0.1\\text{ Hz}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Passband of the filter: $[0, 0.1\\text{ Hz}]$.",
+        "Compare harmonic frequencies with cutoff:",
+        "DC ($0\\text{ Hz}$): $0\\text{ Hz} \\le 0.1\\text{ Hz} \\implies$ **Passed unattenuated**!",
+        "Fundamental ($f_0$): $0.167\\text{ Hz} > 0.1\\text{ Hz} \\implies$ **Rejected (Filtered out)**!",
+        "Third harmonic ($3f_0$): $0.5\\text{ Hz} > 0.1\\text{ Hz} \\implies$ **Rejected**!",
+        "All higher harmonics: **Rejected**!"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Output Waveform:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{out}}(t) = c_0 = \\frac{1}{2}\\text{ V}"
+      },
+      {
+       "t": "code",
+       "text": "Output Waveform after LPF (Slide 172):\n      y_out(t)\n         ^\n    1/2 \u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 (Constant DC line)\n         \u2502\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> t\n         0"
+      },
+      {
+       "t": "h4",
+       "text": "Final Answers"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(a) Present Components:** $\\boxed{\\text{DC } (0\\text{ Hz}) \\text{ and odd cosine harmonics } (f_0, 3f_0, 5f_0, \\dots) \\text{ where } f_0 = 0.167\\text{ Hz}}$",
+        "**(b) Output Waveform:** $\\boxed{y_{\\text{out}}(t) = \\dfrac{1}{2}\\text{ V (Pure DC flat line)}}$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Exam Trap Warning"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE Trap Alert on Frequency Units:**\nNotice the notation $100\\text{ mHz}$ with the teacher's note `[mili]`. Many students misread `mHz` as `MHz` (megaHertz). If it were $100\\text{ MHz}$, almost all harmonics would pass! Because it is $100\\text{ mHz} = 0.1\\text{ Hz}$, even the fundamental ($0.167\\text{ Hz}$) is eliminated!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17238,94 +17201,93 @@ export default {
      "text": "Waveform of x(t) (Slide 173):\n          x(t)\n           ^\n       A \u2500\u2500\u253c\u2500\u2500\u2500\\\n           \u2502    \\\u2502\n     A/2 \u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2518\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500> t\n           \u2502    T/4     T/2     3T/4     T\n    -A/2 \u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510       \u2502\n           \u2502             \u2502\\      \u2502\n      -A \u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\\\u2500\u2500\u2500\u2500\u2500\u2518"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Test for Even / Odd Parity:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Reflecting across the vertical axis:"
-    },
-    {
-     "t": "math",
-     "tex": "x(-t) = x(t) \\quad \\forall t"
-    },
-    {
-     "t": "p",
-     "text": "The segment for $-T/4 \\le t \\le 0$ is the exact mirror image of the segment for $0 \\le t \\le T/4$."
-    },
-    {
-     "t": "math",
-     "tex": "\\implies x(t) \\text{ is strictly EVEN} \\implies b_n = 0 \\quad \\forall n"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Test for Half-Wave Symmetry (HWS):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluate at key corresponding points separated by $T/2$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(0^+) = +A, \\quad x\\left(\\frac{T}{2}^+\\right) = -A \\implies x\\left(0^+\\right) = -x\\left(\\frac{T}{2}^+\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "x(t \\pm T/2) = -x(t) \\quad \\forall t"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies x(t) \\text{ satisfies HWS!}"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies c_0 = 0 \\quad \\text{and} \\quad a_n = 0 \\ (\\forall n \\text{ even})"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Taxonomic Classification:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The waveform possesses **Even Quarter-Wave Symmetry (Even QWS)**."
-    },
-    {
-     "t": "h4",
-     "text": "Final Answer"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = \\sum_{k=1}^\\infty a_{2k-1} \\cos((2k-1)\\omega_0 t) = a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + a_5 \\cos(5\\omega_0 t) + \\dots}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Non-zero components: **Only odd cosine harmonics ($f_0, 3f_0, 5f_0, 7f_0, \\dots$)**.",
-      "All sine terms are zero ($b_n = 0$).",
-      "All even cosine terms are zero ($a_{2k} = 0$).",
-      "DC component is zero ($c_0 = 0$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Test for Even / Odd Parity:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Reflecting across the vertical axis:"
+      },
+      {
+       "t": "math",
+       "tex": "x(-t) = x(t) \\quad \\forall t"
+      },
+      {
+       "t": "p",
+       "text": "The segment for $-T/4 \\le t \\le 0$ is the exact mirror image of the segment for $0 \\le t \\le T/4$."
+      },
+      {
+       "t": "math",
+       "tex": "\\implies x(t) \\text{ is strictly EVEN} \\implies b_n = 0 \\quad \\forall n"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Test for Half-Wave Symmetry (HWS):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluate at key corresponding points separated by $T/2$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(0^+) = +A, \\quad x\\left(\\frac{T}{2}^+\\right) = -A \\implies x\\left(0^+\\right) = -x\\left(\\frac{T}{2}^+\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "x(t \\pm T/2) = -x(t) \\quad \\forall t"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies x(t) \\text{ satisfies HWS!}"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies c_0 = 0 \\quad \\text{and} \\quad a_n = 0 \\ (\\forall n \\text{ even})"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Taxonomic Classification:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The waveform possesses **Even Quarter-Wave Symmetry (Even QWS)**."
+      },
+      {
+       "t": "h4",
+       "text": "Final Answer"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = \\sum_{k=1}^\\infty a_{2k-1} \\cos((2k-1)\\omega_0 t) = a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + a_5 \\cos(5\\omega_0 t) + \\dots}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Non-zero components: **Only odd cosine harmonics ($f_0, 3f_0, 5f_0, 7f_0, \\dots$)**.",
+        "All sine terms are zero ($b_n = 0$).",
+        "All even cosine terms are zero ($a_{2k} = 0$).",
+        "DC component is zero ($c_0 = 0$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17366,163 +17328,162 @@ export default {
      "text": "Waveform of x(t) (Slide 174):\n          x(t)\n           ^\n       A \u2500\u2500\u253c\u2500\u2500\u2500\u2500/\u2502\n           \u2502   / \u2502\n           \u2502  /  \u2502\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500/\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\\\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> t\n           \u25020   T/2         \\    \u2502 T\n      -A \u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\\\u2500\u2500\u2500\u2518"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Parity Check (Even / Odd):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Check origin neighborhood:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(0^+) = 0, \\quad x(0^-) = -A"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For an odd function, $x(-t) = -x(t) \\implies x(0^-) = -x(0^+) = -0 = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Here $x(0^-) = -A \\neq 0$. Thus, it fails odd symmetry!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For an even function, $x(-t) = x(t) \\implies x(0^-) = x(0^+)$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Here $-A \\neq 0$. Thus, it fails even symmetry!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion:** $x(t)$ is **NENO (Neither Even Nor Odd)**!"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Half-Wave Symmetry Check:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the shift by $T/2$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $0 < t < T/2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{2A}{T} t"
-    },
-    {
-     "t": "math",
-     "tex": "x\\left(t + \\frac{T}{2}\\right) = -\\frac{2A}{T} \\left(t + \\frac{T}{2} - \\frac{T}{2}\\right) = -\\frac{2A}{T} t = -x(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boundary values:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(0^+) = +0, \\quad x\\left(\\frac{T}{2}^+\\right) = -0 \\implies x(0^+) = -x\\left(\\frac{T}{2}^+\\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion:** $x(t)$ satisfies **Half-Wave Symmetry (HWS)**!"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**DC Value:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because HWS is satisfied, the positive triangular area on $[0, T/2]$ exactly cancels the negative triangular area on $[T/2, T]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area}_+ = \\frac{1}{2} \\times \\frac{T}{2} \\times A = \\frac{AT}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area}_- = \\frac{1}{2} \\times \\frac{T}{2} \\times (-A) = -\\frac{AT}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{\\text{Area}_+ + \\text{Area}_-}{T} = 0"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Harmonic Content:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Because it possesses HWS: **All even harmonics are strictly zero** ($a_{2k} = b_{2k} = 0$).",
-      "Because it is NENO (lacks even/odd parity): **Both $a_n$ and $b_n$ are non-zero** for odd harmonics!"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Final Answer"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = \\sum_{n \\text{ odd}} \\left[ a_n \\cos(n\\omega_0 t) + b_n \\sin(n\\omega_0 t) \\right]}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + \\dots + b_1 \\sin(\\omega_0 t) + b_3 \\sin(3\\omega_0 t) + \\dots}"
-    },
-    {
-     "t": "p",
-     "text": "Non-zero frequencies: **$\\omega_0, 3\\omega_0, 5\\omega_0, 7\\omega_0, \\dots$ (both cosine and sine components are present)**."
-    },
-    {
-     "t": "h4",
-     "text": "Exam Trap Alert"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Trap Alert on Visual Misclassification:**\nMany students observe the positive slope on the right and negative slope on the left and impulsively declare the signal to be \"Odd\". However, odd symmetry requires reflection across *both* axes simultaneously ($x(-t) = -x(t)$). The discontinuous vertical steps violate odd symmetry at the boundaries. Recognizing **NENO $+$ HWS** is a classic top-percentile GATE question!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Parity Check (Even / Odd):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Check origin neighborhood:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(0^+) = 0, \\quad x(0^-) = -A"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For an odd function, $x(-t) = -x(t) \\implies x(0^-) = -x(0^+) = -0 = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Here $x(0^-) = -A \\neq 0$. Thus, it fails odd symmetry!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For an even function, $x(-t) = x(t) \\implies x(0^-) = x(0^+)$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Here $-A \\neq 0$. Thus, it fails even symmetry!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion:** $x(t)$ is **NENO (Neither Even Nor Odd)**!"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Half-Wave Symmetry Check:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the shift by $T/2$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $0 < t < T/2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{2A}{T} t"
+      },
+      {
+       "t": "math",
+       "tex": "x\\left(t + \\frac{T}{2}\\right) = -\\frac{2A}{T} \\left(t + \\frac{T}{2} - \\frac{T}{2}\\right) = -\\frac{2A}{T} t = -x(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boundary values:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(0^+) = +0, \\quad x\\left(\\frac{T}{2}^+\\right) = -0 \\implies x(0^+) = -x\\left(\\frac{T}{2}^+\\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion:** $x(t)$ satisfies **Half-Wave Symmetry (HWS)**!"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**DC Value:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Because HWS is satisfied, the positive triangular area on $[0, T/2]$ exactly cancels the negative triangular area on $[T/2, T]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area}_+ = \\frac{1}{2} \\times \\frac{T}{2} \\times A = \\frac{AT}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area}_- = \\frac{1}{2} \\times \\frac{T}{2} \\times (-A) = -\\frac{AT}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{\\text{Area}_+ + \\text{Area}_-}{T} = 0"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Harmonic Content:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Because it possesses HWS: **All even harmonics are strictly zero** ($a_{2k} = b_{2k} = 0$).",
+        "Because it is NENO (lacks even/odd parity): **Both $a_n$ and $b_n$ are non-zero** for odd harmonics!"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Final Answer"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = \\sum_{n \\text{ odd}} \\left[ a_n \\cos(n\\omega_0 t) + b_n \\sin(n\\omega_0 t) \\right]}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + \\dots + b_1 \\sin(\\omega_0 t) + b_3 \\sin(3\\omega_0 t) + \\dots}"
+      },
+      {
+       "t": "p",
+       "text": "Non-zero frequencies: **$\\omega_0, 3\\omega_0, 5\\omega_0, 7\\omega_0, \\dots$ (both cosine and sine components are present)**."
+      },
+      {
+       "t": "h4",
+       "text": "Exam Trap Alert"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Trap Alert on Visual Misclassification:**\nMany students observe the positive slope on the right and negative slope on the left and impulsively declare the signal to be \"Odd\". However, odd symmetry requires reflection across *both* axes simultaneously ($x(-t) = -x(t)$). The discontinuous vertical steps violate odd symmetry at the boundaries. Recognizing **NENO $+$ HWS** is a classic top-percentile GATE question!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17554,269 +17515,268 @@ export default {
      "text": "Solve the following:\n**(a)** If the DC component is given as $c_0 = 1/2$, find the zero-crossing value $\\alpha$.  \n**(b)** Calculate the total average normalized power $P$ of the signal $x(t)$.  \n**(c)** Identify the non-zero Trigonometric Fourier Series components present in $x(t)$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation"
-    },
-    {
-     "t": "p",
-     "text": "**Part (a): Determination of $\\alpha$ from DC Value (Slide 175)**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "The fundamental period is $T_0 = 2$, spanning $[-1, 1]$.",
-      "The area over one period decomposes into geometric triangles:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Positive Triangle (above $t$-axis):**",
-      "Base: from $-\\alpha$ to $+\\alpha \\implies \\text{Base} = 2\\alpha$.",
-      "Height: $h_+ = 2$.",
-      "Area:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area}_+ = \\frac{1}{2} \\times \\text{Base} \\times \\text{Height} = \\frac{1}{2} \\times (2\\alpha) \\times 2 = 2\\alpha"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Negative Triangles (below $t$-axis):**",
-      "There are two symmetrical negative triangular regions: on $[-1, -\\alpha]$ and on $[\\alpha, 1]$.",
-      "For each: $\\text{Base} = 1 - \\alpha$, $\\text{Height} = -1$.",
-      "Combined Area:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area}_- = 2 \\times \\left[ \\frac{1}{2} \\times (1 - \\alpha) \\times (-1) \\right] = -(1 - \\alpha) = \\alpha - 1"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Total Net Area over Period:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Total Area} = \\text{Area}_+ + \\text{Area}_- = 2\\alpha + (\\alpha - 1) = 3\\alpha - 1"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Equating to Average Value $c_0$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{\\text{Total Area}}{T_0} = \\frac{3\\alpha - 1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Given $c_0 = \\frac{1}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{3\\alpha - 1}{2} = \\frac{1}{2} \\implies 3\\alpha - 1 = 1 \\implies 3\\alpha = 2 \\implies \\mathbf{\\alpha = \\frac{2}{3}}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Base of positive triangle: $2\\alpha = 2 \\times \\frac{2}{3} = \\frac{4}{3}$.",
-      "Base of each negative triangle: $1 - \\alpha = 1 - \\frac{2}{3} = \\frac{1}{3}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Part (b): Calculation of Average Signal Power $P$ (Slide 176)**\nBy definition, the average power of a periodic signal is:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{1}{T_0} \\int_{T_0} |x(t)|^2 \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "For any linear ramp (triangular pulse) starting from zero and reaching a peak $V_p$ over duration $\\tau$, the mean-square energy integral is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^\\tau \\left( \\frac{V_p}{\\tau} t \\right)^2 dt = \\frac{V_p^2}{\\tau^2} \\left[ \\frac{t^3}{3} \\right]_0^\\tau = \\frac{V_p^2 \\tau}{3}"
-    },
-    {
-     "t": "p",
-     "text": "Applying this formula to each triangular segment over the period $T_0 = 2$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Positive Triangle:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Consists of two symmetric back-to-back ramps of peak $V_p = 2$ and duration $\\tau = \\alpha = \\frac{2}{3}$ each (total base $\\frac{4}{3}$):"
-    },
-    {
-     "t": "math",
-     "tex": "E_+ = \\frac{V_p^2}{3} \\times \\text{Base} = \\frac{2^2}{3} \\times \\frac{4}{3} = \\frac{4}{3} \\times \\frac{4}{3} = \\frac{16}{9}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Left Negative Triangle:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Ramp of peak $|V_p| = 1$ and duration $\\tau = 1 - \\alpha = \\frac{1}{3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "E_{-, \\text{left}} = \\frac{(-1)^2}{3} \\times \\frac{1}{3} = \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{9}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Right Negative Triangle:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Ramp of peak $|V_p| = 1$ and duration $\\tau = 1 - \\alpha = \\frac{1}{3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "E_{-, \\text{right}} = \\frac{(-1)^2}{3} \\times \\frac{1}{3} = \\frac{1}{9}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Total Power:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{E_+ + E_{-, \\text{left}} + E_{-, \\text{right}}}{T_0} = \\frac{\\frac{16}{9} + \\frac{1}{9} + \\frac{1}{9}}{2} = \\frac{\\frac{18}{9}}{2} = \\frac{2}{2} = \\mathbf{1\\text{ Watt}}"
-    },
-    {
-     "t": "p",
-     "text": "**Part (c): TFS Components via Hidden Even QWS (Slides 176\u2013177)**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Subtract DC component $c_0 = 1/2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t) - \\frac{1}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Peak value at $t = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(0) = 2 - \\frac{1}{2} = +\\frac{3}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Trough values at $t = \\pm 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(\\pm 1) = -1 - \\frac{1}{2} = -\\frac{3}{2}"
-    },
-    {
-     "t": "code",
-     "text": "Waveform of y(t) = x(t) - 1/2 (Slide 177):\n          y(t)\n           ^\n      +3/2 \u253c\u2500\u2500\u2500\u2500\u2500\u2500/\\\u2500\u2500\u2500\u2500\u2500\u2500\n           \u2502     /  \\\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500/\u2500\u2500\u2500\u2500\\\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500> t\n          -1   /  0   \\   1\n      -3/2 \u253c\u2500\u2500\\/\u2500\u2500\u2500\u2500\u2500\u2500\u2500\\\u2500/\n           |<\u2500\u2500\u2500 T = 2 \u2500\u2500>|"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Symmetry Audit of $y(t)$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Even Symmetry:** $y(-t) = y(t)$ (Symmetric about vertical axis) $\\implies b_n = 0 \\ \\forall n$.",
-      "**Half-Wave Symmetry:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(0^+) = +\\frac{3}{2}, \\quad y\\left(0^+ + \\frac{T_0}{2}\\right) = y(1^+) = -\\frac{3}{2} = -y(0^+)"
-    },
-    {
-     "t": "math",
-     "tex": "y(t \\pm 1) = -y(t) \\implies \\text{HWS satisfied!}"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies$ All even harmonics vanish ($a_2 = a_4 = a_6 = \\dots = 0$)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Classification:** $y(t)$ possesses **Even Quarter-Wave Symmetry (Even QWS)**."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Synthesis Series for $x(t)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2} + a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + a_5 \\cos(5\\omega_0 t) + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "where $\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{2} = \\pi\\text{ rad/s}$."
-    },
-    {
-     "t": "h4",
-     "text": "Final Boxed Answers"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(a) Zero-crossing parameter:** $\\boxed{\\alpha = \\dfrac{2}{3}}$",
-      "**(b) Total Average Power:** $\\boxed{P = 1\\text{ Watt}}$",
-      "**(c) Non-zero Fourier components:** $\\boxed{\\text{DC } (c_0 = 1/2) \\text{ and odd cosine harmonics } (\\omega_0, 3\\omega_0, 5\\omega_0, \\dots)}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation"
+      },
+      {
+       "t": "p",
+       "text": "**Part (a): Determination of $\\alpha$ from DC Value (Slide 175)**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "The fundamental period is $T_0 = 2$, spanning $[-1, 1]$.",
+        "The area over one period decomposes into geometric triangles:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Positive Triangle (above $t$-axis):**",
+        "Base: from $-\\alpha$ to $+\\alpha \\implies \\text{Base} = 2\\alpha$.",
+        "Height: $h_+ = 2$.",
+        "Area:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area}_+ = \\frac{1}{2} \\times \\text{Base} \\times \\text{Height} = \\frac{1}{2} \\times (2\\alpha) \\times 2 = 2\\alpha"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Negative Triangles (below $t$-axis):**",
+        "There are two symmetrical negative triangular regions: on $[-1, -\\alpha]$ and on $[\\alpha, 1]$.",
+        "For each: $\\text{Base} = 1 - \\alpha$, $\\text{Height} = -1$.",
+        "Combined Area:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area}_- = 2 \\times \\left[ \\frac{1}{2} \\times (1 - \\alpha) \\times (-1) \\right] = -(1 - \\alpha) = \\alpha - 1"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Total Net Area over Period:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Total Area} = \\text{Area}_+ + \\text{Area}_- = 2\\alpha + (\\alpha - 1) = 3\\alpha - 1"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Equating to Average Value $c_0$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{\\text{Total Area}}{T_0} = \\frac{3\\alpha - 1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Given $c_0 = \\frac{1}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{3\\alpha - 1}{2} = \\frac{1}{2} \\implies 3\\alpha - 1 = 1 \\implies 3\\alpha = 2 \\implies \\mathbf{\\alpha = \\frac{2}{3}}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Base of positive triangle: $2\\alpha = 2 \\times \\frac{2}{3} = \\frac{4}{3}$.",
+        "Base of each negative triangle: $1 - \\alpha = 1 - \\frac{2}{3} = \\frac{1}{3}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Part (b): Calculation of Average Signal Power $P$ (Slide 176)**\nBy definition, the average power of a periodic signal is:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{1}{T_0} \\int_{T_0} |x(t)|^2 \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "For any linear ramp (triangular pulse) starting from zero and reaching a peak $V_p$ over duration $\\tau$, the mean-square energy integral is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^\\tau \\left( \\frac{V_p}{\\tau} t \\right)^2 dt = \\frac{V_p^2}{\\tau^2} \\left[ \\frac{t^3}{3} \\right]_0^\\tau = \\frac{V_p^2 \\tau}{3}"
+      },
+      {
+       "t": "p",
+       "text": "Applying this formula to each triangular segment over the period $T_0 = 2$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Positive Triangle:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Consists of two symmetric back-to-back ramps of peak $V_p = 2$ and duration $\\tau = \\alpha = \\frac{2}{3}$ each (total base $\\frac{4}{3}$):"
+      },
+      {
+       "t": "math",
+       "tex": "E_+ = \\frac{V_p^2}{3} \\times \\text{Base} = \\frac{2^2}{3} \\times \\frac{4}{3} = \\frac{4}{3} \\times \\frac{4}{3} = \\frac{16}{9}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Left Negative Triangle:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Ramp of peak $|V_p| = 1$ and duration $\\tau = 1 - \\alpha = \\frac{1}{3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "E_{-, \\text{left}} = \\frac{(-1)^2}{3} \\times \\frac{1}{3} = \\frac{1}{3} \\times \\frac{1}{3} = \\frac{1}{9}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Right Negative Triangle:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Ramp of peak $|V_p| = 1$ and duration $\\tau = 1 - \\alpha = \\frac{1}{3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "E_{-, \\text{right}} = \\frac{(-1)^2}{3} \\times \\frac{1}{3} = \\frac{1}{9}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Total Power:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{E_+ + E_{-, \\text{left}} + E_{-, \\text{right}}}{T_0} = \\frac{\\frac{16}{9} + \\frac{1}{9} + \\frac{1}{9}}{2} = \\frac{\\frac{18}{9}}{2} = \\frac{2}{2} = \\mathbf{1\\text{ Watt}}"
+      },
+      {
+       "t": "p",
+       "text": "**Part (c): TFS Components via Hidden Even QWS (Slides 176\u2013177)**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Subtract DC component $c_0 = 1/2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t) - \\frac{1}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Peak value at $t = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(0) = 2 - \\frac{1}{2} = +\\frac{3}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Trough values at $t = \\pm 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(\\pm 1) = -1 - \\frac{1}{2} = -\\frac{3}{2}"
+      },
+      {
+       "t": "code",
+       "text": "Waveform of y(t) = x(t) - 1/2 (Slide 177):\n          y(t)\n           ^\n      +3/2 \u253c\u2500\u2500\u2500\u2500\u2500\u2500/\\\u2500\u2500\u2500\u2500\u2500\u2500\n           \u2502     /  \\\n  \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500/\u2500\u2500\u2500\u2500\\\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500> t\n          -1   /  0   \\   1\n      -3/2 \u253c\u2500\u2500\\/\u2500\u2500\u2500\u2500\u2500\u2500\u2500\\\u2500/\n           |<\u2500\u2500\u2500 T = 2 \u2500\u2500>|"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Symmetry Audit of $y(t)$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Even Symmetry:** $y(-t) = y(t)$ (Symmetric about vertical axis) $\\implies b_n = 0 \\ \\forall n$.",
+        "**Half-Wave Symmetry:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(0^+) = +\\frac{3}{2}, \\quad y\\left(0^+ + \\frac{T_0}{2}\\right) = y(1^+) = -\\frac{3}{2} = -y(0^+)"
+      },
+      {
+       "t": "math",
+       "tex": "y(t \\pm 1) = -y(t) \\implies \\text{HWS satisfied!}"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies$ All even harmonics vanish ($a_2 = a_4 = a_6 = \\dots = 0$)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Classification:** $y(t)$ possesses **Even Quarter-Wave Symmetry (Even QWS)**."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Synthesis Series for $x(t)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2} + a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + a_5 \\cos(5\\omega_0 t) + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "where $\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{2} = \\pi\\text{ rad/s}$."
+      },
+      {
+       "t": "h4",
+       "text": "Final Boxed Answers"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(a) Zero-crossing parameter:** $\\boxed{\\alpha = \\dfrac{2}{3}}$",
+        "**(b) Total Average Power:** $\\boxed{P = 1\\text{ Watt}}$",
+        "**(c) Non-zero Fourier components:** $\\boxed{\\text{DC } (c_0 = 1/2) \\text{ and odd cosine harmonics } (\\omega_0, 3\\omega_0, 5\\omega_0, \\dots)}$"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18084,256 +18044,254 @@ export default {
      "text": "1.2 Drill: Average Power Computation via Pulse Energy Method (Slide 176)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "For the periodic triangular signal $x(t)$ defined above with period $T = 2$, base width $2\\alpha = 4/3$ for the positive triangle (height $2$), and base width $1/3$ for the negative triangles (depth $-1$), calculate the average signal power $P$."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "The average power of a periodic signal with fundamental period $T$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{1}{T} \\int_{\\langle T \\rangle} |x(t)|^2 \\, dt = \\frac{E_{\\text{one period}}}{T}"
-    },
-    {
-     "t": "p",
-     "text": "Instead of evaluating tedious indefinite integrals of linear ramp polynomials $(m t + c)^2$, we apply the standard **Triangular Pulse Energy Theorem**:"
-    },
-    {
-     "t": "p",
-     "text": "**Theorem:** For any triangular pulse $p(t)$ of duration $\\tau$ and peak amplitude $A$ (whether symmetric isosceles or right-angled):\n$$E_{\\text{tri}} = \\int_{\\text{pulse}} p^2(t) \\, dt = \\frac{A^2}{3} \\cdot \\tau$$"
-    },
-    {
-     "t": "p",
-     "text": "Applying this to each distinct triangular region in one fundamental period $[-1, 1]$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Central Positive Triangle:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Peak amplitude: $A_1 = 2$",
-      "Base duration: $\\tau_1 = 2\\alpha = \\frac{4}{3}$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "E_1 = \\frac{(2)^2}{3} \\times \\frac{4}{3} = \\frac{4}{3} \\times \\frac{4}{3} = \\frac{16}{9}\\text{ J}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Right Negative Triangle ($t \\in [2/3, 1]$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Peak amplitude: $|A_2| = 1$",
-      "Base duration: $\\tau_2 = 1 - \\alpha = \\frac{1}{3}$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "E_2 = \\frac{(1)^2}{3} \\times \\frac{1}{3} = \\frac{1}{9}\\text{ J}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Left Negative Triangle ($t \\in [-1, -2/3]$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Peak amplitude: $|A_3| = 1$",
-      "Base duration: $\\tau_3 = 1 - \\alpha = \\frac{1}{3}$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "E_3 = \\frac{(1)^2}{3} \\times \\frac{1}{3} = \\frac{1}{9}\\text{ J}"
-    },
-    {
-     "t": "p",
-     "text": "Total energy over one period $T = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "E_{\\text{total}} = E_1 + E_2 + E_3 = \\frac{16}{9} + \\frac{1}{9} + \\frac{1}{9} = \\frac{18}{9} = 2\\text{ J}"
-    },
-    {
-     "t": "p",
-     "text": "Average Power:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{E_{\\text{total}}}{T} = \\frac{2}{2} = 1\\text{ W}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{P = 1\\text{ W}}"
-    },
-    {
-     "t": "h4",
-     "text": "GATE Pitfall & Shortcuts:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pitfall:** Integrating $x(t) = 2 - 3t$ from $0$ to $2/3$ and $x(t) = -3(t-2/3)$ from $2/3$ to $1$ wastes valuable exam minutes and invites arithmetic errors.",
-      "**Master Rule:** Always partition piecewise-linear waveforms into standard geometric blocks:",
-      "Rectangular block of height $A$, width $\\tau$: $E = A^2 \\tau$",
-      "Triangular block of peak $A$, base $\\tau$: $E = \\frac{1}{3} A^2 \\tau$",
-      "Half-sine pulse of peak $A$, base $\\tau$: $E = \\frac{1}{2} A^2 \\tau$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "For the periodic triangular signal $x(t)$ defined above with period $T = 2$, base width $2\\alpha = 4/3$ for the positive triangle (height $2$), and base width $1/3$ for the negative triangles (depth $-1$), calculate the average signal power $P$."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "The average power of a periodic signal with fundamental period $T$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{1}{T} \\int_{\\langle T \\rangle} |x(t)|^2 \\, dt = \\frac{E_{\\text{one period}}}{T}"
+      },
+      {
+       "t": "p",
+       "text": "Instead of evaluating tedious indefinite integrals of linear ramp polynomials $(m t + c)^2$, we apply the standard **Triangular Pulse Energy Theorem**:"
+      },
+      {
+       "t": "p",
+       "text": "**Theorem:** For any triangular pulse $p(t)$ of duration $\\tau$ and peak amplitude $A$ (whether symmetric isosceles or right-angled):\n$$E_{\\text{tri}} = \\int_{\\text{pulse}} p^2(t) \\, dt = \\frac{A^2}{3} \\cdot \\tau$$"
+      },
+      {
+       "t": "p",
+       "text": "Applying this to each distinct triangular region in one fundamental period $[-1, 1]$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Central Positive Triangle:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Peak amplitude: $A_1 = 2$",
+        "Base duration: $\\tau_1 = 2\\alpha = \\frac{4}{3}$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "E_1 = \\frac{(2)^2}{3} \\times \\frac{4}{3} = \\frac{4}{3} \\times \\frac{4}{3} = \\frac{16}{9}\\text{ J}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Right Negative Triangle ($t \\in [2/3, 1]$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Peak amplitude: $|A_2| = 1$",
+        "Base duration: $\\tau_2 = 1 - \\alpha = \\frac{1}{3}$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "E_2 = \\frac{(1)^2}{3} \\times \\frac{1}{3} = \\frac{1}{9}\\text{ J}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Left Negative Triangle ($t \\in [-1, -2/3]$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Peak amplitude: $|A_3| = 1$",
+        "Base duration: $\\tau_3 = 1 - \\alpha = \\frac{1}{3}$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "E_3 = \\frac{(1)^2}{3} \\times \\frac{1}{3} = \\frac{1}{9}\\text{ J}"
+      },
+      {
+       "t": "p",
+       "text": "Total energy over one period $T = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "E_{\\text{total}} = E_1 + E_2 + E_3 = \\frac{16}{9} + \\frac{1}{9} + \\frac{1}{9} = \\frac{18}{9} = 2\\text{ J}"
+      },
+      {
+       "t": "p",
+       "text": "Average Power:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{E_{\\text{total}}}{T} = \\frac{2}{2} = 1\\text{ W}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{P = 1\\text{ W}}"
+      },
+      {
+       "t": "h4",
+       "text": "GATE Pitfall & Shortcuts:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pitfall:** Integrating $x(t) = 2 - 3t$ from $0$ to $2/3$ and $x(t) = -3(t-2/3)$ from $2/3$ to $1$ wastes valuable exam minutes and invites arithmetic errors.",
+        "**Master Rule:** Always partition piecewise-linear waveforms into standard geometric blocks:",
+        "Rectangular block of height $A$, width $\\tau$: $E = A^2 \\tau$",
+        "Triangular block of peak $A$, base $\\tau$: $E = \\frac{1}{3} A^2 \\tau$",
+        "Half-sine pulse of peak $A$, base $\\tau$: $E = \\frac{1}{2} A^2 \\tau$"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "1.3 Drill: Harmonic Component Identification via Half-Wave Symmetry (Slide 177)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Identify which Fourier series harmonics (even/odd, sine/cosine, DC) are present in the expansion of $x(t)$."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "We inspect the symmetry of the original signal $x(t)$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Even Symmetry:** $x(-t) = x(t)$. Hence, all sine coefficients vanish identically:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "b_n = 0 \\quad \\forall n \\ge 1"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**DC Component:** $c_0 = a_0/2 = 1/2 \\neq 0$.",
-      "**Half-Wave Symmetry (HWS) Test on Zero-Mean Signal:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Define the AC-coupled signal $y(t)$ by removing the DC bias:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t) - c_0 = x(t) - \\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating critical points of $y(t)$ with period $T = 2$ ($T/2 = 1$):"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $t = 0$: $y(0) = x(0) - \\frac{1}{2} = 2 - \\frac{1}{2} = +\\frac{3}{2}$",
-      "At $t = T/2 = 1$: $y(1) = x(1) - \\frac{1}{2} = -1 - \\frac{1}{2} = -\\frac{3}{2}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Notice that $y(0^+) = \\frac{3}{2}$ and $y(1^+) = -\\frac{3}{2} = -y(0^+)$.\n   Because both slopes are constant and linear between peaks:"
-    },
-    {
-     "t": "math",
-     "tex": "y\\left(t + \\frac{T}{2}\\right) = -y(t) \\quad \\forall t"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, **$y(t)$ possesses perfect Half-Wave Symmetry (HWS)!**"
-    },
-    {
-     "t": "h4",
-     "text": "Harmonic Implications:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "A signal with Half-Wave Symmetry contains **ONLY ODD HARMONICS**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_n = 0 \\quad \\text{for all even } n \\ (n = 0, \\pm 2, \\pm 4, \\dots)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $y(t)$ is both **Even** and **HWS**:",
-      "$b_n = 0$ (no sines)",
-      "$a_{2k} = 0$ (no even cosines)",
-      "Only odd cosines exist: $a_1 \\cos(\\omega_0 t), a_3 \\cos(3\\omega_0 t), a_5 \\cos(5\\omega_0 t), \\dots$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Reconstructing the original signal $x(t) = y(t) + \\frac{1}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = \\frac{1}{2} + a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + a_5 \\cos(5\\omega_0 t) + \\cdots}"
-    },
-    {
-     "t": "p",
-     "text": "where $\\omega_0 = \\pi\\text{ rad/s}$."
-    },
-    {
-     "t": "h4",
-     "text": "GATE Trap Alert:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trap:** Testing HWS on $x(t)$ directly yields $x(t + 1) \\neq -x(t)$ because $x(0) = 2 \\neq -x(1) = +1$. A student might conclude $x(t)$ has NO half-wave symmetry and therefore contains both even and odd harmonics.",
-      "**Insight:** Always subtract the DC offset ($c_0$) first! A DC offset hides Half-Wave Symmetry. If $x(t) - c_0$ satisfies HWS, the original signal contains **ONLY DC + ODD HARMONICS**. All even harmonics are strictly zero!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Identify which Fourier series harmonics (even/odd, sine/cosine, DC) are present in the expansion of $x(t)$."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "We inspect the symmetry of the original signal $x(t)$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Even Symmetry:** $x(-t) = x(t)$. Hence, all sine coefficients vanish identically:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "b_n = 0 \\quad \\forall n \\ge 1"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**DC Component:** $c_0 = a_0/2 = 1/2 \\neq 0$.",
+        "**Half-Wave Symmetry (HWS) Test on Zero-Mean Signal:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Define the AC-coupled signal $y(t)$ by removing the DC bias:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t) - c_0 = x(t) - \\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating critical points of $y(t)$ with period $T = 2$ ($T/2 = 1$):"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $t = 0$: $y(0) = x(0) - \\frac{1}{2} = 2 - \\frac{1}{2} = +\\frac{3}{2}$",
+        "At $t = T/2 = 1$: $y(1) = x(1) - \\frac{1}{2} = -1 - \\frac{1}{2} = -\\frac{3}{2}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Notice that $y(0^+) = \\frac{3}{2}$ and $y(1^+) = -\\frac{3}{2} = -y(0^+)$.\n   Because both slopes are constant and linear between peaks:"
+      },
+      {
+       "t": "math",
+       "tex": "y\\left(t + \\frac{T}{2}\\right) = -y(t) \\quad \\forall t"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, **$y(t)$ possesses perfect Half-Wave Symmetry (HWS)!**"
+      },
+      {
+       "t": "h4",
+       "text": "Harmonic Implications:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "A signal with Half-Wave Symmetry contains **ONLY ODD HARMONICS**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_n = 0 \\quad \\text{for all even } n \\ (n = 0, \\pm 2, \\pm 4, \\dots)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $y(t)$ is both **Even** and **HWS**:",
+        "$b_n = 0$ (no sines)",
+        "$a_{2k} = 0$ (no even cosines)",
+        "Only odd cosines exist: $a_1 \\cos(\\omega_0 t), a_3 \\cos(3\\omega_0 t), a_5 \\cos(5\\omega_0 t), \\dots$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Reconstructing the original signal $x(t) = y(t) + \\frac{1}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = \\frac{1}{2} + a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + a_5 \\cos(5\\omega_0 t) + \\cdots}"
+      },
+      {
+       "t": "p",
+       "text": "where $\\omega_0 = \\pi\\text{ rad/s}$."
+      },
+      {
+       "t": "h4",
+       "text": "GATE Trap Alert:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Trap:** Testing HWS on $x(t)$ directly yields $x(t + 1) \\neq -x(t)$ because $x(0) = 2 \\neq -x(1) = +1$. A student might conclude $x(t)$ has NO half-wave symmetry and therefore contains both even and odd harmonics.",
+        "**Insight:** Always subtract the DC offset ($c_0$) first! A DC offset hides Half-Wave Symmetry. If $x(t) - c_0$ satisfies HWS, the original signal contains **ONLY DC + ODD HARMONICS**. All even harmonics are strictly zero!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18499,215 +18457,213 @@ export default {
      "text": "3.2 Solved Drill 1: Positive Frequency Shift Analysis (Slides 179\u2013180)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t) = \\sin(2t)$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Determine the fundamental frequency $\\omega_0$ and exponential Fourier series coefficients $c_n$. Plot $c_n$ versus $n$.",
-      "Let $y(t) = e^{j 4t} x(t)$. Determine the Fourier series coefficients $d_n$ of $y(t)$ using both direct expansion and the modulation property. Plot $d_n$ versus $n$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Evaluation of $x(t)$:**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sin(2t) = \\frac{e^{j 2t} - e^{-j 2t}}{2j} = -\\frac{1}{2j} e^{-j 2t} + \\frac{1}{2j} e^{j 2t}"
-    },
-    {
-     "t": "p",
-     "text": "Fundamental frequency: $\\omega_0 = 2\\text{ rad/s}$.\nHarmonic expansion w.r.t $\\omega_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = c_{-1} e^{-j \\omega_0 t} + c_1 e^{j \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Matching coefficients:"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{2j} = -j\\frac{1}{2}, \\quad c_{-1} = -\\frac{1}{2j} = j\\frac{1}{2}, \\quad c_n = 0 \\ (\\forall n \\neq \\pm 1)"
-    },
-    {
-     "t": "p",
-     "text": "**Discrete Spectral Plot of $c_n$ vs $n$:**"
-    },
-    {
-     "t": "code",
-     "text": "           c_n ^\n               |        +1/(2j)\n               |          |\n               |          o (n = +1)\n       --------+----------+--------> n\n          (n = -1) o\n                   |\n                -1/(2j)|"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Direct Trigonometric Evaluation of $y(t)$:**"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = e^{j 4t} \\sin(2t) = e^{j 4t} \\left[\\frac{e^{j 2t} - e^{-j 2t}}{2j}\\right] = \\frac{e^{j 6t} - e^{j 2t}}{2j} = -\\frac{1}{2j} e^{j 2t} + \\frac{1}{2j} e^{j 6t}"
-    },
-    {
-     "t": "p",
-     "text": "Frequencies present: $\\omega = 2\\text{ rad/s}$ and $\\omega = 6\\text{ rad/s}$.\nCommon fundamental frequency: $\\omega_0 = \\text{HCF}(2, 6) = 2\\text{ rad/s}$.\nExpressing in harmonics of $\\omega_0 = 2$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Term at $2\\text{ rad/s} = 1 \\cdot \\omega_0 \\implies n = 1$",
-      "Term at $6\\text{ rad/s} = 3 \\cdot \\omega_0 \\implies n = 3$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = -\\frac{1}{2j} e^{j(1)\\omega_0 t} + \\frac{1}{2j} e^{j(3)\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Extracting coefficients $d_n$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_1 = -\\frac{1}{2j}, \\quad d_3 = \\frac{1}{2j}, \\quad d_n = 0 \\ (\\forall n \\notin \\{1, 3\\})"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Verification via Modulation Property:**\nNotice that $e^{j 4t} = e^{j(2)\\omega_0 t} \\implies m = 2$.\nBy the modulation property:"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = c_{n-2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 1$: $d_1 = c_{1-2} = c_{-1} = -\\frac{1}{2j}$ (Matches!)",
-      "For $n = 3$: $d_3 = c_{3-2} = c_1 = \\frac{1}{2j}$ (Matches!)",
-      "For all other $n$: $d_n = c_{n-2} = 0$ (Matches!)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Discrete Spectral Plot of $d_n$ vs $n$:**"
-    },
-    {
-     "t": "code",
-     "text": "           d_n ^\n               |                     +1/(2j)\n               |                       |\n               |                       o (n = +3)\n       --------+-----------+-----------+--------> n\n                   (n = +1) o\n                            |\n                         -1/(2j)|"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{d_n = c_{n-2} \\implies d_1 = -\\frac{1}{2j}, \\ d_3 = \\frac{1}{2j}}"
-    },
-    {
-     "t": "h4",
-     "text": "GATE Pitfall Alert:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice that while $x(t)$ is a real-valued signal (hence its coefficients satisfy conjugate symmetry $c_{-n} = c_n^*$), $y(t) = e^{j 4t} \\sin(2t)$ is a **complex-valued signal**!",
-      "Consequently, $d_n$ does **not** have conjugate symmetry: $d_{-1} = 0 \\neq d_1^*$. Complex signals only have one-sided or asymmetrical spectral lines."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t) = \\sin(2t)$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Determine the fundamental frequency $\\omega_0$ and exponential Fourier series coefficients $c_n$. Plot $c_n$ versus $n$.",
+        "Let $y(t) = e^{j 4t} x(t)$. Determine the Fourier series coefficients $d_n$ of $y(t)$ using both direct expansion and the modulation property. Plot $d_n$ versus $n$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Evaluation of $x(t)$:**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sin(2t) = \\frac{e^{j 2t} - e^{-j 2t}}{2j} = -\\frac{1}{2j} e^{-j 2t} + \\frac{1}{2j} e^{j 2t}"
+      },
+      {
+       "t": "p",
+       "text": "Fundamental frequency: $\\omega_0 = 2\\text{ rad/s}$.\nHarmonic expansion w.r.t $\\omega_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = c_{-1} e^{-j \\omega_0 t} + c_1 e^{j \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Matching coefficients:"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{2j} = -j\\frac{1}{2}, \\quad c_{-1} = -\\frac{1}{2j} = j\\frac{1}{2}, \\quad c_n = 0 \\ (\\forall n \\neq \\pm 1)"
+      },
+      {
+       "t": "p",
+       "text": "**Discrete Spectral Plot of $c_n$ vs $n$:**"
+      },
+      {
+       "t": "code",
+       "text": "           c_n ^\n               |        +1/(2j)\n               |          |\n               |          o (n = +1)\n       --------+----------+--------> n\n          (n = -1) o\n                   |\n                -1/(2j)|"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Direct Trigonometric Evaluation of $y(t)$:**"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = e^{j 4t} \\sin(2t) = e^{j 4t} \\left[\\frac{e^{j 2t} - e^{-j 2t}}{2j}\\right] = \\frac{e^{j 6t} - e^{j 2t}}{2j} = -\\frac{1}{2j} e^{j 2t} + \\frac{1}{2j} e^{j 6t}"
+      },
+      {
+       "t": "p",
+       "text": "Frequencies present: $\\omega = 2\\text{ rad/s}$ and $\\omega = 6\\text{ rad/s}$.\nCommon fundamental frequency: $\\omega_0 = \\text{HCF}(2, 6) = 2\\text{ rad/s}$.\nExpressing in harmonics of $\\omega_0 = 2$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Term at $2\\text{ rad/s} = 1 \\cdot \\omega_0 \\implies n = 1$",
+        "Term at $6\\text{ rad/s} = 3 \\cdot \\omega_0 \\implies n = 3$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = -\\frac{1}{2j} e^{j(1)\\omega_0 t} + \\frac{1}{2j} e^{j(3)\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Extracting coefficients $d_n$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_1 = -\\frac{1}{2j}, \\quad d_3 = \\frac{1}{2j}, \\quad d_n = 0 \\ (\\forall n \\notin \\{1, 3\\})"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Verification via Modulation Property:**\nNotice that $e^{j 4t} = e^{j(2)\\omega_0 t} \\implies m = 2$.\nBy the modulation property:"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = c_{n-2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 1$: $d_1 = c_{1-2} = c_{-1} = -\\frac{1}{2j}$ (Matches!)",
+        "For $n = 3$: $d_3 = c_{3-2} = c_1 = \\frac{1}{2j}$ (Matches!)",
+        "For all other $n$: $d_n = c_{n-2} = 0$ (Matches!)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Discrete Spectral Plot of $d_n$ vs $n$:**"
+      },
+      {
+       "t": "code",
+       "text": "           d_n ^\n               |                     +1/(2j)\n               |                       |\n               |                       o (n = +3)\n       --------+-----------+-----------+--------> n\n                   (n = +1) o\n                            |\n                         -1/(2j)|"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{d_n = c_{n-2} \\implies d_1 = -\\frac{1}{2j}, \\ d_3 = \\frac{1}{2j}}"
+      },
+      {
+       "t": "h4",
+       "text": "GATE Pitfall Alert:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Notice that while $x(t)$ is a real-valued signal (hence its coefficients satisfy conjugate symmetry $c_{-n} = c_n^*$), $y(t) = e^{j 4t} \\sin(2t)$ is a **complex-valued signal**!",
+        "Consequently, $d_n$ does **not** have conjugate symmetry: $d_{-1} = 0 \\neq d_1^*$. Complex signals only have one-sided or asymmetrical spectral lines."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "3.3 Solved Drill 2: Negative Modulation Shift (Slide 181)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "A periodic signal $x(t)$ has fundamental frequency $\\omega_0 = 3\\text{ rad/s}$ and Fourier series coefficients $c_n$. Determine the fundamental frequency and the Fourier series coefficients of $g(t) = e^{-j 9t} x(t)$."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Identify the modulating exponent in terms of $\\omega_0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j 9t} = e^{-j (3 \\times 3) t} = e^{-j (3)\\omega_0 t} = e^{j (-3)\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Here, $m = -3$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Apply the frequency shifting property:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = e^{j m \\omega_0 t} x(t) \\xrightleftharpoons{\\text{CTFS}} g_n = c_{n-m}"
-    },
-    {
-     "t": "p",
-     "text": "With $m = -3$:"
-    },
-    {
-     "t": "math",
-     "tex": "g_n = c_{n - (-3)} = c_{n+3}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "The fundamental frequency remains unaltered:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = 3\\text{ rad/s}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g(t) \\xrightleftharpoons{\\text{CTFS}} c_{n+3} \\quad \\text{with } \\omega_0 = 3\\text{ rad/s}}"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Pitfall:"
-    },
-    {
-     "t": "p",
-     "text": "Do not mistakenly subtract: writing $c_{n-3}$ instead of $c_{n+3}$ is a sign error trap caused by confusing $e^{-j m \\omega_0 t}$ with time delay $x(t - t_0)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "A periodic signal $x(t)$ has fundamental frequency $\\omega_0 = 3\\text{ rad/s}$ and Fourier series coefficients $c_n$. Determine the fundamental frequency and the Fourier series coefficients of $g(t) = e^{-j 9t} x(t)$."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Identify the modulating exponent in terms of $\\omega_0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j 9t} = e^{-j (3 \\times 3) t} = e^{-j (3)\\omega_0 t} = e^{j (-3)\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Here, $m = -3$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Apply the frequency shifting property:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = e^{j m \\omega_0 t} x(t) \\xrightleftharpoons{\\text{CTFS}} g_n = c_{n-m}"
+      },
+      {
+       "t": "p",
+       "text": "With $m = -3$:"
+      },
+      {
+       "t": "math",
+       "tex": "g_n = c_{n - (-3)} = c_{n+3}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "The fundamental frequency remains unaltered:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = 3\\text{ rad/s}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g(t) \\xrightleftharpoons{\\text{CTFS}} c_{n+3} \\quad \\text{with } \\omega_0 = 3\\text{ rad/s}}"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Pitfall:"
+      },
+      {
+       "t": "p",
+       "text": "Do not mistakenly subtract: writing $c_{n-3}$ instead of $c_{n+3}$ is a sign error trap caused by confusing $e^{-j m \\omega_0 t}$ with time delay $x(t - t_0)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18746,291 +18702,289 @@ export default {
      "text": "4.2 Drill: Linearity with Identical Fundamental Frequencies (Slides 182\u2013183)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x(t) = \\sin t \\xrightleftharpoons{\\text{CTFS}} c_n$ with $\\omega_{01} = 1\\text{ rad/s}$",
-      "$y(t) = \\cos t \\xrightleftharpoons{\\text{CTFS}} d_n$ with $\\omega_{02} = 1\\text{ rad/s}$",
-      "$z(t) = 3\\sin t - 4\\cos t \\xrightleftharpoons{\\text{CTFS}} g_n$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Determine $c_n, d_n$, and $g_n$."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Individual Coefficients:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\text{HCF}(1, 1) = 1\\text{ rad/s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $x(t) = \\sin t = \\frac{1}{2j} e^{jt} - \\frac{1}{2j} e^{-jt}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{2j}, \\quad c_{-1} = -\\frac{1}{2j}, \\quad c_n = 0 \\ (|n| \\neq 1)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $y(t) = \\cos t = \\frac{1}{2} e^{jt} + \\frac{1}{2} e^{-jt}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "d_1 = \\frac{1}{2}, \\quad d_{-1} = \\frac{1}{2}, \\quad d_n = 0 \\ (|n| \\neq 1)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Direct Trigonometric Decomposition of $z(t)$:**"
-    },
-    {
-     "t": "math",
-     "tex": "z(t) = 3\\left[\\frac{e^{jt} - e^{-jt}}{2j}\\right] - 4\\left[\\frac{e^{jt} + e^{-jt}}{2}\\right] = \\left(\\frac{3}{2j} - 2\\right) e^{jt} + \\left(-\\frac{3}{2j} - 2\\right) e^{-jt}"
-    },
-    {
-     "t": "p",
-     "text": "Extracting coefficients:"
-    },
-    {
-     "t": "math",
-     "tex": "g_1 = \\frac{3}{2j} - 2 = -2 - j\\frac{3}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "g_{-1} = -\\frac{3}{2j} - 2 = -2 + j\\frac{3}{2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Verification via Linearity Property:**\nSince $\\omega_{01} = \\omega_{02} = \\omega_0 = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "g_n = 3 c_n - 4 d_n"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 1$: $g_1 = 3\\left(\\frac{1}{2j}\\right) - 4\\left(\\frac{1}{2}\\right) = \\frac{3}{2j} - 2$ (Matches!)",
-      "For $n = -1$: $g_{-1} = 3\\left(-\\frac{1}{2j}\\right) - 4\\left(\\frac{1}{2}\\right) = -\\frac{3}{2j} - 2$ (Matches!)",
-      "For all other $n$: $g_n = 0$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g_n = 3c_n - 4d_n \\implies g_1 = -2 - j\\frac{3}{2}, \\ g_{-1} = -2 + j\\frac{3}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x(t) = \\sin t \\xrightleftharpoons{\\text{CTFS}} c_n$ with $\\omega_{01} = 1\\text{ rad/s}$",
+        "$y(t) = \\cos t \\xrightleftharpoons{\\text{CTFS}} d_n$ with $\\omega_{02} = 1\\text{ rad/s}$",
+        "$z(t) = 3\\sin t - 4\\cos t \\xrightleftharpoons{\\text{CTFS}} g_n$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Determine $c_n, d_n$, and $g_n$."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Individual Coefficients:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\text{HCF}(1, 1) = 1\\text{ rad/s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $x(t) = \\sin t = \\frac{1}{2j} e^{jt} - \\frac{1}{2j} e^{-jt}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{2j}, \\quad c_{-1} = -\\frac{1}{2j}, \\quad c_n = 0 \\ (|n| \\neq 1)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $y(t) = \\cos t = \\frac{1}{2} e^{jt} + \\frac{1}{2} e^{-jt}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "d_1 = \\frac{1}{2}, \\quad d_{-1} = \\frac{1}{2}, \\quad d_n = 0 \\ (|n| \\neq 1)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Direct Trigonometric Decomposition of $z(t)$:**"
+      },
+      {
+       "t": "math",
+       "tex": "z(t) = 3\\left[\\frac{e^{jt} - e^{-jt}}{2j}\\right] - 4\\left[\\frac{e^{jt} + e^{-jt}}{2}\\right] = \\left(\\frac{3}{2j} - 2\\right) e^{jt} + \\left(-\\frac{3}{2j} - 2\\right) e^{-jt}"
+      },
+      {
+       "t": "p",
+       "text": "Extracting coefficients:"
+      },
+      {
+       "t": "math",
+       "tex": "g_1 = \\frac{3}{2j} - 2 = -2 - j\\frac{3}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "g_{-1} = -\\frac{3}{2j} - 2 = -2 + j\\frac{3}{2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Verification via Linearity Property:**\nSince $\\omega_{01} = \\omega_{02} = \\omega_0 = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "g_n = 3 c_n - 4 d_n"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 1$: $g_1 = 3\\left(\\frac{1}{2j}\\right) - 4\\left(\\frac{1}{2}\\right) = \\frac{3}{2j} - 2$ (Matches!)",
+        "For $n = -1$: $g_{-1} = 3\\left(-\\frac{1}{2j}\\right) - 4\\left(\\frac{1}{2}\\right) = -\\frac{3}{2j} - 2$ (Matches!)",
+        "For all other $n$: $g_n = 0$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g_n = 3c_n - 4d_n \\implies g_1 = -2 - j\\frac{3}{2}, \\ g_{-1} = -2 + j\\frac{3}{2}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "4.3 Drill: Linearity with Non-Equal Fundamental Frequencies (Slides 185\u2013186)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Consider two periodic signals:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=-1}^{1} \\left(\\frac{1}{2}\\right)^n e^{j n \\left(\\frac{\\pi}{2}\\right) t} \\xrightleftharpoons{\\text{CTFS}} c_n \\quad \\text{with } \\omega_{01} = \\frac{\\pi}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\sum_{n=-1}^{1} 2^n e^{j n \\pi t} \\xrightleftharpoons{\\text{CTFS}} d_n \\quad \\text{with } \\omega_{02} = \\pi"
-    },
-    {
-     "t": "p",
-     "text": "Let $g(t) = 2x(t) + 3y(t) \\xrightleftharpoons{\\text{CTFS}} g_n$.\nDetermine all non-zero Fourier series coefficients $g_n$."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Expand $x(t)$ and $y(t)$ into explicit frequency components:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $x(t)$ ($\\omega_{01} = \\pi/2$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "n = -1 \\implies c_{-1} = (1/2)^{-1} = 2 \\quad \\text{at frequency } -\\frac{\\pi}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "n = 0 \\implies c_0 = (1/2)^0 = 1 \\quad \\text{at frequency } 0\\text{ (DC)}"
-    },
-    {
-     "t": "math",
-     "tex": "n = 1 \\implies c_1 = (1/2)^1 = \\frac{1}{2} \\quad \\text{at frequency } +\\frac{\\pi}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2e^{-j(\\pi/2)t} + 1 + \\frac{1}{2}e^{j(\\pi/2)t}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $y(t)$ ($\\omega_{02} = \\pi$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "n = -1 \\implies d_{-1} = 2^{-1} = \\frac{1}{2} \\quad \\text{at frequency } -\\pi"
-    },
-    {
-     "t": "math",
-     "tex": "n = 0 \\implies d_0 = 2^0 = 1 \\quad \\text{at frequency } 0\\text{ (DC)}"
-    },
-    {
-     "t": "math",
-     "tex": "n = 1 \\implies d_1 = 2^1 = 2 \\quad \\text{at frequency } +\\pi"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\frac{1}{2}e^{-j\\pi t} + 1 + 2e^{j\\pi t}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Determine Common Fundamental Frequency:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\text{HCF}(\\omega_{01}, \\omega_{02}) = \\text{HCF}\\left(\\frac{\\pi}{2}, \\pi\\right) = \\frac{\\pi}{2}\\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "Harmonic mapping to base frequency $\\omega_0 = \\pi/2$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Frequencies of $x(t)$:",
-      "$-\\pi/2 = -1 \\cdot \\omega_0 \\implies \\text{Harmonic } -1$",
-      "$0 = 0 \\cdot \\omega_0 \\implies \\text{Harmonic } 0$",
-      "$+\\pi/2 = +1 \\cdot \\omega_0 \\implies \\text{Harmonic } +1$",
-      "Frequencies of $y(t)$:",
-      "$-\\pi = -2 \\cdot \\omega_0 \\implies \\text{Harmonic } -2$",
-      "$0 = 0 \\cdot \\omega_0 \\implies \\text{Harmonic } 0$",
-      "$+\\pi = +2 \\cdot \\omega_0 \\implies \\text{Harmonic } +2$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Construct $g(t) = 2x(t) + 3y(t)$:**"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = 2\\left[2e^{-j\\omega_0 t} + 1 + \\frac{1}{2}e^{j\\omega_0 t}\\right] + 3\\left[\\frac{1}{2}e^{-j 2\\omega_0 t} + 1 + 2e^{j 2\\omega_0 t}\\right]"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = 4e^{-j\\omega_0 t} + 2 + e^{j\\omega_0 t} + \\frac{3}{2}e^{-j 2\\omega_0 t} + 3 + 6e^{j 2\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Grouping terms by harmonic order:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\underbrace{\\frac{3}{2}}_{g_{-2}} e^{-j 2\\omega_0 t} + \\underbrace{4}_{g_{-1}} e^{-j\\omega_0 t} + \\underbrace{(2 + 3)}_{g_0 = 5} + \\underbrace{1}_{g_1} e^{j\\omega_0 t} + \\underbrace{6}_{g_2} e^{j 2\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "**Summary of non-zero coefficients of $g(t)$:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g_{-2} = \\frac{3}{2}, \\quad g_{-1} = 4, \\quad g_0 = 5, \\quad g_1 = 1, \\quad g_2 = 6}"
-    },
-    {
-     "t": "h4",
-     "text": "Detailed Examination of the Fatal GATE Trap (Slide 186):"
-    },
-    {
-     "t": "p",
-     "text": "A student blindly applying the linearity formula writes:"
-    },
-    {
-     "t": "math",
-     "tex": "g_n = 2c_n + 3d_n \\implies g_1 = 2c_1 + 3d_1 = 2\\left(\\frac{1}{2}\\right) + 3(2) = 1 + 6 = 7 \\quad (\\mathbf{FATAL\\ ERROR!\\ \\times})"
-    },
-    {
-     "t": "p",
-     "text": "**Why is this mathematically wrong?**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$c_1$ represents the coefficient at frequency $1 \\times \\omega_{01} = \\frac{\\pi}{2}$.",
-      "$d_1$ represents the coefficient at frequency $1 \\times \\omega_{02} = \\pi = 2\\omega_0$.",
-      "You are adding a $\\frac{\\pi}{2}\\text{ rad/s}$ component to a $\\pi\\text{ rad/s}$ component! They are orthogonal sinusoids at different frequencies and cannot be algebraically added together into a single harmonic coefficient!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**The Proper Algorithmic Realignment Protocol:**\nTo use array addition, rewrite both coefficient sequences on the common fundamental frequency grid $\\omega_0 = \\pi/2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{c} = [\\dots, c_{-2}', c_{-1}', c_0', c_1', c_2', \\dots] = [0, 2, 1, 1/2, 0]"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{d} = [\\dots, d_{-2}', d_{-1}', d_0', d_1', d_2', \\dots] = [1/2, 0, 1, 0, 2]"
-    },
-    {
-     "t": "p",
-     "text": "Now compute $g_n = 2c_n' + 3d_n'$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$g_{-2} = 2(0) + 3(1/2) = 3/2$",
-      "$g_{-1} = 2(2) + 3(0) = 4$",
-      "$g_0 = 2(1) + 3(1) = 5$",
-      "$g_1 = 2(1/2) + 3(0) = 1$",
-      "$g_2 = 2(0) + 3(2) = 6$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Consider two periodic signals:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=-1}^{1} \\left(\\frac{1}{2}\\right)^n e^{j n \\left(\\frac{\\pi}{2}\\right) t} \\xrightleftharpoons{\\text{CTFS}} c_n \\quad \\text{with } \\omega_{01} = \\frac{\\pi}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\sum_{n=-1}^{1} 2^n e^{j n \\pi t} \\xrightleftharpoons{\\text{CTFS}} d_n \\quad \\text{with } \\omega_{02} = \\pi"
+      },
+      {
+       "t": "p",
+       "text": "Let $g(t) = 2x(t) + 3y(t) \\xrightleftharpoons{\\text{CTFS}} g_n$.\nDetermine all non-zero Fourier series coefficients $g_n$."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Expand $x(t)$ and $y(t)$ into explicit frequency components:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $x(t)$ ($\\omega_{01} = \\pi/2$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "n = -1 \\implies c_{-1} = (1/2)^{-1} = 2 \\quad \\text{at frequency } -\\frac{\\pi}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "n = 0 \\implies c_0 = (1/2)^0 = 1 \\quad \\text{at frequency } 0\\text{ (DC)}"
+      },
+      {
+       "t": "math",
+       "tex": "n = 1 \\implies c_1 = (1/2)^1 = \\frac{1}{2} \\quad \\text{at frequency } +\\frac{\\pi}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2e^{-j(\\pi/2)t} + 1 + \\frac{1}{2}e^{j(\\pi/2)t}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $y(t)$ ($\\omega_{02} = \\pi$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "n = -1 \\implies d_{-1} = 2^{-1} = \\frac{1}{2} \\quad \\text{at frequency } -\\pi"
+      },
+      {
+       "t": "math",
+       "tex": "n = 0 \\implies d_0 = 2^0 = 1 \\quad \\text{at frequency } 0\\text{ (DC)}"
+      },
+      {
+       "t": "math",
+       "tex": "n = 1 \\implies d_1 = 2^1 = 2 \\quad \\text{at frequency } +\\pi"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\frac{1}{2}e^{-j\\pi t} + 1 + 2e^{j\\pi t}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Determine Common Fundamental Frequency:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\text{HCF}(\\omega_{01}, \\omega_{02}) = \\text{HCF}\\left(\\frac{\\pi}{2}, \\pi\\right) = \\frac{\\pi}{2}\\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "Harmonic mapping to base frequency $\\omega_0 = \\pi/2$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Frequencies of $x(t)$:",
+        "$-\\pi/2 = -1 \\cdot \\omega_0 \\implies \\text{Harmonic } -1$",
+        "$0 = 0 \\cdot \\omega_0 \\implies \\text{Harmonic } 0$",
+        "$+\\pi/2 = +1 \\cdot \\omega_0 \\implies \\text{Harmonic } +1$",
+        "Frequencies of $y(t)$:",
+        "$-\\pi = -2 \\cdot \\omega_0 \\implies \\text{Harmonic } -2$",
+        "$0 = 0 \\cdot \\omega_0 \\implies \\text{Harmonic } 0$",
+        "$+\\pi = +2 \\cdot \\omega_0 \\implies \\text{Harmonic } +2$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Construct $g(t) = 2x(t) + 3y(t)$:**"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = 2\\left[2e^{-j\\omega_0 t} + 1 + \\frac{1}{2}e^{j\\omega_0 t}\\right] + 3\\left[\\frac{1}{2}e^{-j 2\\omega_0 t} + 1 + 2e^{j 2\\omega_0 t}\\right]"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = 4e^{-j\\omega_0 t} + 2 + e^{j\\omega_0 t} + \\frac{3}{2}e^{-j 2\\omega_0 t} + 3 + 6e^{j 2\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Grouping terms by harmonic order:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\underbrace{\\frac{3}{2}}_{g_{-2}} e^{-j 2\\omega_0 t} + \\underbrace{4}_{g_{-1}} e^{-j\\omega_0 t} + \\underbrace{(2 + 3)}_{g_0 = 5} + \\underbrace{1}_{g_1} e^{j\\omega_0 t} + \\underbrace{6}_{g_2} e^{j 2\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "**Summary of non-zero coefficients of $g(t)$:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g_{-2} = \\frac{3}{2}, \\quad g_{-1} = 4, \\quad g_0 = 5, \\quad g_1 = 1, \\quad g_2 = 6}"
+      },
+      {
+       "t": "h4",
+       "text": "Detailed Examination of the Fatal GATE Trap (Slide 186):"
+      },
+      {
+       "t": "p",
+       "text": "A student blindly applying the linearity formula writes:"
+      },
+      {
+       "t": "math",
+       "tex": "g_n = 2c_n + 3d_n \\implies g_1 = 2c_1 + 3d_1 = 2\\left(\\frac{1}{2}\\right) + 3(2) = 1 + 6 = 7 \\quad (\\mathbf{FATAL\\ ERROR!\\ \\times})"
+      },
+      {
+       "t": "p",
+       "text": "**Why is this mathematically wrong?**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$c_1$ represents the coefficient at frequency $1 \\times \\omega_{01} = \\frac{\\pi}{2}$.",
+        "$d_1$ represents the coefficient at frequency $1 \\times \\omega_{02} = \\pi = 2\\omega_0$.",
+        "You are adding a $\\frac{\\pi}{2}\\text{ rad/s}$ component to a $\\pi\\text{ rad/s}$ component! They are orthogonal sinusoids at different frequencies and cannot be algebraically added together into a single harmonic coefficient!"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**The Proper Algorithmic Realignment Protocol:**\nTo use array addition, rewrite both coefficient sequences on the common fundamental frequency grid $\\omega_0 = \\pi/2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{c} = [\\dots, c_{-2}', c_{-1}', c_0', c_1', c_2', \\dots] = [0, 2, 1, 1/2, 0]"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{d} = [\\dots, d_{-2}', d_{-1}', d_0', d_1', d_2', \\dots] = [1/2, 0, 1, 0, 2]"
+      },
+      {
+       "t": "p",
+       "text": "Now compute $g_n = 2c_n' + 3d_n'$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$g_{-2} = 2(0) + 3(1/2) = 3/2$",
+        "$g_{-1} = 2(2) + 3(0) = 4$",
+        "$g_0 = 2(1) + 3(1) = 5$",
+        "$g_1 = 2(1/2) + 3(0) = 1$",
+        "$g_2 = 2(0) + 3(2) = 6$"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -19081,475 +19035,472 @@ export default {
      "text": "5.2 Drill: Multiplication of Equal-Frequency Signals (Slides 187\u2013188)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t) = \\sin t$ ($\\omega_{01} = 1$) and $y(t) = \\cos t$ ($\\omega_{02} = 1$).\nFind the Fourier series coefficients of $g(t) = x(t) y(t)$ using:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Analytical trigonometric identity.",
-      "Discrete convolution of coefficient sequences."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Analytical Trigonometric Expansion:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\sin t \\cos t = \\frac{1}{2} \\sin(2t) = \\frac{1}{2} \\left[\\frac{e^{j 2t} - e^{-j 2t}}{2j}\\right] = -\\frac{1}{4j} e^{-j 2t} + \\frac{1}{4j} e^{j 2t}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Perspective A (Native fundamental frequency $\\omega_p = 2$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g_1 = \\frac{1}{4j}, \\quad g_{-1} = -\\frac{1}{4j}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Perspective B (Referenced to base frequency $\\omega_0 = 1$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The frequencies present are $\\pm 2\\text{ rad/s} = \\pm 2\\omega_0$.\n  Hence, these correspond to the **2nd harmonics** of $\\omega_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "g_2 = \\frac{1}{4j}, \\quad g_{-2} = -\\frac{1}{4j}, \\quad g_0 = g_{\\pm 1} = 0"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Discrete Convolution Grid:"
-    },
-    {
-     "t": "p",
-     "text": "Individual coefficient arrays referenced to $\\omega_0 = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\left\\{-\\frac{1}{2j}, \\underset{\\uparrow n=0}{0}, \\frac{1}{2j}\\right\\} \\quad \\text{for } n \\in \\{-1, 0, 1\\}"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = \\left\\{\\frac{1}{2}, \\underset{\\uparrow n=0}{0}, \\frac{1}{2}\\right\\} \\quad \\text{for } n \\in \\{-1, 0, 1\\}"
-    },
-    {
-     "t": "p",
-     "text": "Index range of convolution:"
-    },
-    {
-     "t": "math",
-     "tex": "n_{\\min} = (-1) + (-1) = -2, \\quad n_{\\max} = (+1) + (+1) = +2"
-    },
-    {
-     "t": "p",
-     "text": "Convolution length = $3 + 3 - 1 = 5$ samples."
-    },
-    {
-     "t": "p",
-     "text": "**Convolution Grid:**"
-    },
-    {
-     "t": "table",
-     "header": [
-      "$d_m \\backslash c_k$",
-      "$k = -1 \\ \\left(-\\frac{1}{2j}\\right)$",
-      "$k = 0 \\ (0)$",
-      "$k = +1 \\ \\left(\\frac{1}{2j}\\right)$"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t) = \\sin t$ ($\\omega_{01} = 1$) and $y(t) = \\cos t$ ($\\omega_{02} = 1$).\nFind the Fourier series coefficients of $g(t) = x(t) y(t)$ using:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Analytical trigonometric identity.",
+        "Discrete convolution of coefficient sequences."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Analytical Trigonometric Expansion:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\sin t \\cos t = \\frac{1}{2} \\sin(2t) = \\frac{1}{2} \\left[\\frac{e^{j 2t} - e^{-j 2t}}{2j}\\right] = -\\frac{1}{4j} e^{-j 2t} + \\frac{1}{4j} e^{j 2t}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Perspective A (Native fundamental frequency $\\omega_p = 2$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g_1 = \\frac{1}{4j}, \\quad g_{-1} = -\\frac{1}{4j}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Perspective B (Referenced to base frequency $\\omega_0 = 1$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The frequencies present are $\\pm 2\\text{ rad/s} = \\pm 2\\omega_0$.\n  Hence, these correspond to the **2nd harmonics** of $\\omega_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "g_2 = \\frac{1}{4j}, \\quad g_{-2} = -\\frac{1}{4j}, \\quad g_0 = g_{\\pm 1} = 0"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Discrete Convolution Grid:"
+      },
+      {
+       "t": "p",
+       "text": "Individual coefficient arrays referenced to $\\omega_0 = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\left\\{-\\frac{1}{2j}, \\underset{\\uparrow n=0}{0}, \\frac{1}{2j}\\right\\} \\quad \\text{for } n \\in \\{-1, 0, 1\\}"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = \\left\\{\\frac{1}{2}, \\underset{\\uparrow n=0}{0}, \\frac{1}{2}\\right\\} \\quad \\text{for } n \\in \\{-1, 0, 1\\}"
+      },
+      {
+       "t": "p",
+       "text": "Index range of convolution:"
+      },
+      {
+       "t": "math",
+       "tex": "n_{\\min} = (-1) + (-1) = -2, \\quad n_{\\max} = (+1) + (+1) = +2"
+      },
+      {
+       "t": "p",
+       "text": "Convolution length = $3 + 3 - 1 = 5$ samples."
+      },
+      {
+       "t": "p",
+       "text": "**Convolution Grid:**"
+      },
+      {
+       "t": "table",
+       "header": [
+        "$d_m \\backslash c_k$",
+        "$k = -1 \\ \\left(-\\frac{1}{2j}\\right)$",
+        "$k = 0 \\ (0)$",
+        "$k = +1 \\ \\left(\\frac{1}{2j}\\right)$"
+       ],
+       "align": [
+        ":---:",
+        ":---:",
+        ":---:",
+        ":---:"
+       ],
+       "rows": [
+        [
+         "**$m = -1 \\ (1/2)$**",
+         "$-\\frac{1}{4j}$ ($n = -2$)",
+         "$0$ ($n = -1$)",
+         "$\\frac{1}{4j}$ ($n = 0$)"
+        ],
+        [
+         "**$m = 0 \\ (0)$**",
+         "$0$ ($n = -1$)",
+         "$0$ ($n = 0$)",
+         "$0$ ($n = 1$)"
+        ],
+        [
+         "**$m = +1 \\ (1/2)$**",
+         "$-\\frac{1}{4j}$ ($n = 0$)",
+         "$0$ ($n = 1$)",
+         "$\\frac{1}{4j}$ ($n = 2$)"
+        ]
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Summing along anti-diagonals ($k + m = n$):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = -2$: $-\\frac{1}{4j}$",
+        "$n = -1$: $0 + 0 = 0$",
+        "$n = 0$: $\\frac{1}{4j} + 0 + \\left(-\\frac{1}{4j}\\right) = 0$",
+        "$n = 1$: $0 + 0 = 0$",
+        "$n = 2$: $\\frac{1}{4j}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Resulting sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\alpha_n = c_n * d_n = \\left\\{-\\frac{1}{4j}, 0, \\underset{\\uparrow n=0}{0}, 0, \\frac{1}{4j}\\right\\}_{n \\in [-2, 2]}}"
+      },
+      {
+       "t": "h4",
+       "text": "Key Pedagogical Takeaway (Slide 188\u2013189):"
+      },
+      {
+       "t": "p",
+       "text": "The discrete convolution $c_n * d_n$ **automatically** yields the Fourier series coefficients evaluated with respect to the **base fundamental frequency $\\omega_0 = 1$**, naturally inserting the zero for the missing 1st harmonic!"
+      }
      ],
-     "align": [
-      ":---:",
-      ":---:",
-      ":---:",
-      ":---:"
-     ],
-     "rows": [
-      [
-       "**$m = -1 \\ (1/2)$**",
-       "$-\\frac{1}{4j}$ ($n = -2$)",
-       "$0$ ($n = -1$)",
-       "$\\frac{1}{4j}$ ($n = 0$)"
-      ],
-      [
-       "**$m = 0 \\ (0)$**",
-       "$0$ ($n = -1$)",
-       "$0$ ($n = 0$)",
-       "$0$ ($n = 1$)"
-      ],
-      [
-       "**$m = +1 \\ (1/2)$**",
-       "$-\\frac{1}{4j}$ ($n = 0$)",
-       "$0$ ($n = 1$)",
-       "$\\frac{1}{4j}$ ($n = 2$)"
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Summing along anti-diagonals ($k + m = n$):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = -2$: $-\\frac{1}{4j}$",
-      "$n = -1$: $0 + 0 = 0$",
-      "$n = 0$: $\\frac{1}{4j} + 0 + \\left(-\\frac{1}{4j}\\right) = 0$",
-      "$n = 1$: $0 + 0 = 0$",
-      "$n = 2$: $\\frac{1}{4j}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Resulting sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\alpha_n = c_n * d_n = \\left\\{-\\frac{1}{4j}, 0, \\underset{\\uparrow n=0}{0}, 0, \\frac{1}{4j}\\right\\}_{n \\in [-2, 2]}}"
-    },
-    {
-     "t": "h4",
-     "text": "Key Pedagogical Takeaway (Slide 188\u2013189):"
-    },
-    {
-     "t": "p",
-     "text": "The discrete convolution $c_n * d_n$ **automatically** yields the Fourier series coefficients evaluated with respect to the **base fundamental frequency $\\omega_0 = 1$**, naturally inserting the zero for the missing 1st harmonic!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "open": true
     },
     {
      "t": "h3",
      "text": "5.3 Drill: Sum of Coefficients Theorem & Shortcut (Slide 190)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "A periodic signal $x(t)$ with fundamental frequency $\\omega_0$ has Fourier series coefficients:"
-    },
-    {
-     "t": "math",
-     "tex": "c_2 = \\frac{1}{2j}, \\quad c_1 = \\frac{1}{2}, \\quad c_0 = 3, \\quad c_{-1} = \\frac{1}{2}, \\quad c_{-2} = -\\frac{1}{2j}"
-    },
-    {
-     "t": "p",
-     "text": "and $c_n = 0$ for all $|n| > 2$.\nLet $g(t) = 2 x^2(t) \\xrightleftharpoons{\\text{CTFS}} g_n$.\nEvaluate the infinite series sum:"
-    },
-    {
-     "t": "math",
-     "tex": "S = \\sum_{n=-\\infty}^{\\infty} g_n"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Convolution Sum Property:"
-    },
-    {
-     "t": "p",
-     "text": "Since $g(t) = 2 x(t) \\cdot x(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "g_n = 2 [c_n * c_n]"
-    },
-    {
-     "t": "p",
-     "text": "A fundamental algebraic property of discrete convolution states that the sum of the convolved sequence equals the product of the sums of the constituent sequences:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^\\infty (a_n * b_n) = \\left(\\sum_{n=-\\infty}^\\infty a_n\\right) \\left(\\sum_{n=-\\infty}^\\infty b_n\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^\\infty g_n = 2 \\left(\\sum_{n=-\\infty}^\\infty c_n\\right)^2"
-    },
-    {
-     "t": "p",
-     "text": "Compute the sum of $c_n$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-2}^2 c_n = c_{-2} + c_{-1} + c_0 + c_1 + c_2 = \\left(-\\frac{1}{2j}\\right) + \\frac{1}{2} + 3 + \\frac{1}{2} + \\left(\\frac{1}{2j}\\right) = 0 + 1 + 3 = 4"
-    },
-    {
-     "t": "p",
-     "text": "Substitute into the sum:"
-    },
-    {
-     "t": "math",
-     "tex": "S = 2 \\times [4] \\times [4] = 2 \\times 16 = 32"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: The $t = 0$ Synthesis Identity (GATE Lightning Shortcut):"
-    },
-    {
-     "t": "p",
-     "text": "Recall the CTFS synthesis equation evaluated at $t = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t} \\implies x(0) = \\sum_{n=-\\infty}^\\infty c_n"
-    },
-    {
-     "t": "p",
-     "text": "Similarly, for $g(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(0) = \\sum_{n=-\\infty}^\\infty g_n"
-    },
-    {
-     "t": "p",
-     "text": "From the time-domain definition of $g(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = 2 x^2(t) \\implies g(0) = 2 [x(0)]^2"
-    },
-    {
-     "t": "p",
-     "text": "Since $x(0) = \\sum c_n = 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(0) = 2(4)^2 = 32"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore \\sum_{n=-\\infty}^\\infty g_n = 32"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\sum_{n=-\\infty}^\\infty g_n = 32}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "A periodic signal $x(t)$ with fundamental frequency $\\omega_0$ has Fourier series coefficients:"
+      },
+      {
+       "t": "math",
+       "tex": "c_2 = \\frac{1}{2j}, \\quad c_1 = \\frac{1}{2}, \\quad c_0 = 3, \\quad c_{-1} = \\frac{1}{2}, \\quad c_{-2} = -\\frac{1}{2j}"
+      },
+      {
+       "t": "p",
+       "text": "and $c_n = 0$ for all $|n| > 2$.\nLet $g(t) = 2 x^2(t) \\xrightleftharpoons{\\text{CTFS}} g_n$.\nEvaluate the infinite series sum:"
+      },
+      {
+       "t": "math",
+       "tex": "S = \\sum_{n=-\\infty}^{\\infty} g_n"
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Convolution Sum Property:"
+      },
+      {
+       "t": "p",
+       "text": "Since $g(t) = 2 x(t) \\cdot x(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "g_n = 2 [c_n * c_n]"
+      },
+      {
+       "t": "p",
+       "text": "A fundamental algebraic property of discrete convolution states that the sum of the convolved sequence equals the product of the sums of the constituent sequences:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^\\infty (a_n * b_n) = \\left(\\sum_{n=-\\infty}^\\infty a_n\\right) \\left(\\sum_{n=-\\infty}^\\infty b_n\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^\\infty g_n = 2 \\left(\\sum_{n=-\\infty}^\\infty c_n\\right)^2"
+      },
+      {
+       "t": "p",
+       "text": "Compute the sum of $c_n$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-2}^2 c_n = c_{-2} + c_{-1} + c_0 + c_1 + c_2 = \\left(-\\frac{1}{2j}\\right) + \\frac{1}{2} + 3 + \\frac{1}{2} + \\left(\\frac{1}{2j}\\right) = 0 + 1 + 3 = 4"
+      },
+      {
+       "t": "p",
+       "text": "Substitute into the sum:"
+      },
+      {
+       "t": "math",
+       "tex": "S = 2 \\times [4] \\times [4] = 2 \\times 16 = 32"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: The $t = 0$ Synthesis Identity (GATE Lightning Shortcut):"
+      },
+      {
+       "t": "p",
+       "text": "Recall the CTFS synthesis equation evaluated at $t = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t} \\implies x(0) = \\sum_{n=-\\infty}^\\infty c_n"
+      },
+      {
+       "t": "p",
+       "text": "Similarly, for $g(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(0) = \\sum_{n=-\\infty}^\\infty g_n"
+      },
+      {
+       "t": "p",
+       "text": "From the time-domain definition of $g(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = 2 x^2(t) \\implies g(0) = 2 [x(0)]^2"
+      },
+      {
+       "t": "p",
+       "text": "Since $x(0) = \\sum c_n = 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(0) = 2(4)^2 = 32"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore \\sum_{n=-\\infty}^\\infty g_n = 32"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\sum_{n=-\\infty}^\\infty g_n = 32}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "5.4 Drill: Multi-Frequency Multiplication & Zero-Padding Protocol (Slides 191\u2013193)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x(t) = \\sin(2t) \\xrightleftharpoons{\\text{CTFS}} c_n$ with $\\omega_{01} = 2$",
-      "$y(t) = \\cos(t) \\xrightleftharpoons{\\text{CTFS}} d_n$ with $\\omega_{02} = 1$",
-      "$g(t) = x(t) y(t) \\xrightleftharpoons{\\text{CTFS}} g_n$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Determine $g_n$ using analytical expansion and verify using discrete convolution."
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Trigonometric Product-to-Sum Decomposition (Slide 191):"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\sin(2t) \\cos(t) = \\frac{1}{2} [2\\sin(2t)\\cos(t)] = \\frac{1}{2} [\\sin(3t) + \\sin(t)]"
-    },
-    {
-     "t": "p",
-     "text": "Base fundamental frequency:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\text{HCF}(3, 1) = 1\\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "Express using complex exponentials:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2}\\left[\\frac{e^{j 3t} - e^{-j 3t}}{2j}\\right] + \\frac{1}{2}\\left[\\frac{e^{jt} - e^{-jt}}{2j}\\right]"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{4j} e^{j 3\\omega_0 t} - \\frac{1}{4j} e^{-j 3\\omega_0 t} + \\frac{1}{4j} e^{j \\omega_0 t} - \\frac{1}{4j} e^{-j \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Extracting coefficients:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g_3 = \\frac{1}{4j}, \\quad g_{-3} = -\\frac{1}{4j}, \\quad g_1 = \\frac{1}{4j}, \\quad g_{-1} = -\\frac{1}{4j}}"
-    },
-    {
-     "t": "p",
-     "text": "All other $g_n = 0$."
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Discrete Convolution with Harmonic Alignment (Slides 192\u2013193):"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Common fundamental frequency: $\\omega_0 = \\text{HCF}(2, 1) = 1\\text{ rad/s}$.",
-      "Signal $y(t) = \\cos t$: Fundamental frequency is $\\omega_0 = 1$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "d_n = \\left\\{\\frac{1}{2}, \\underset{\\uparrow n=0}{0}, \\frac{1}{2}\\right\\} \\quad \\text{for } n \\in \\{-1, 0, 1\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Signal $x(t) = \\sin 2t$: Fundamental frequency is $2\\text{ rad/s} = 2\\omega_0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The harmonics of $x(t)$ lie at $\\pm 2\\text{ rad/s}$, which corresponds to the **2nd harmonic** of $\\omega_0$!\n  The 1st harmonic ($n = \\pm 1$) of $\\omega_0$ is completely absent in $x(t)$.\n  Therefore, we must **ZERO-PAD** the absent harmonics:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\left\\{-\\frac{1}{2j}, 0, \\underset{\\uparrow n=0}{0}, 0, \\frac{1}{2j}\\right\\} \\quad \\text{for } n \\in \\{-2, -1, 0, 1, 2\\}"
-    },
-    {
-     "t": "h4",
-     "text": "The Fatal Trap (Slide 192):"
-    },
-    {
-     "t": "p",
-     "text": "If a student convolved the raw, non-zero elements:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\{-\\frac{1}{2j}, 0, \\frac{1}{2j}\\right\\} * \\left\\{\\frac{1}{2}, 0, \\frac{1}{2}\\right\\} = \\left\\{-\\frac{1}{4j}, 0, 0, 0, \\frac{1}{4j}\\right\\} \\quad (\\mathbf{WRONG!\\ \\times\\times})"
-    },
-    {
-     "t": "p",
-     "text": "This gives non-zero values only at $n = \\pm 2$, completely missing the $n = \\pm 1$ and $n = \\pm 3$ components!"
-    },
-    {
-     "t": "h4",
-     "text": "Proper Convolution Grid (Slide 193):"
-    },
-    {
-     "t": "p",
-     "text": "Convolving $c_n$ (length 5, $n \\in [-2, 2]$) with $d_n$ (length 3, $n \\in [-1, 1]$):\nResulting span: $n \\in [(-2)+(-1), 2+1] = [-3, 3]$ (Length = 7)."
-    },
-    {
-     "t": "table",
-     "header": [
-      "$d_m \\backslash c_k$",
-      "$k=-2 \\ (-1/2j)$",
-      "$k=-1 \\ (0)$",
-      "$k=0 \\ (0)$",
-      "$k=1 \\ (0)$",
-      "$k=2 \\ (1/2j)$"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x(t) = \\sin(2t) \\xrightleftharpoons{\\text{CTFS}} c_n$ with $\\omega_{01} = 2$",
+        "$y(t) = \\cos(t) \\xrightleftharpoons{\\text{CTFS}} d_n$ with $\\omega_{02} = 1$",
+        "$g(t) = x(t) y(t) \\xrightleftharpoons{\\text{CTFS}} g_n$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Determine $g_n$ using analytical expansion and verify using discrete convolution."
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Trigonometric Product-to-Sum Decomposition (Slide 191):"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\sin(2t) \\cos(t) = \\frac{1}{2} [2\\sin(2t)\\cos(t)] = \\frac{1}{2} [\\sin(3t) + \\sin(t)]"
+      },
+      {
+       "t": "p",
+       "text": "Base fundamental frequency:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\text{HCF}(3, 1) = 1\\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "Express using complex exponentials:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2}\\left[\\frac{e^{j 3t} - e^{-j 3t}}{2j}\\right] + \\frac{1}{2}\\left[\\frac{e^{jt} - e^{-jt}}{2j}\\right]"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{4j} e^{j 3\\omega_0 t} - \\frac{1}{4j} e^{-j 3\\omega_0 t} + \\frac{1}{4j} e^{j \\omega_0 t} - \\frac{1}{4j} e^{-j \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Extracting coefficients:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g_3 = \\frac{1}{4j}, \\quad g_{-3} = -\\frac{1}{4j}, \\quad g_1 = \\frac{1}{4j}, \\quad g_{-1} = -\\frac{1}{4j}}"
+      },
+      {
+       "t": "p",
+       "text": "All other $g_n = 0$."
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Discrete Convolution with Harmonic Alignment (Slides 192\u2013193):"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Common fundamental frequency: $\\omega_0 = \\text{HCF}(2, 1) = 1\\text{ rad/s}$.",
+        "Signal $y(t) = \\cos t$: Fundamental frequency is $\\omega_0 = 1$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "d_n = \\left\\{\\frac{1}{2}, \\underset{\\uparrow n=0}{0}, \\frac{1}{2}\\right\\} \\quad \\text{for } n \\in \\{-1, 0, 1\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Signal $x(t) = \\sin 2t$: Fundamental frequency is $2\\text{ rad/s} = 2\\omega_0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The harmonics of $x(t)$ lie at $\\pm 2\\text{ rad/s}$, which corresponds to the **2nd harmonic** of $\\omega_0$!\n  The 1st harmonic ($n = \\pm 1$) of $\\omega_0$ is completely absent in $x(t)$.\n  Therefore, we must **ZERO-PAD** the absent harmonics:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\left\\{-\\frac{1}{2j}, 0, \\underset{\\uparrow n=0}{0}, 0, \\frac{1}{2j}\\right\\} \\quad \\text{for } n \\in \\{-2, -1, 0, 1, 2\\}"
+      },
+      {
+       "t": "h4",
+       "text": "The Fatal Trap (Slide 192):"
+      },
+      {
+       "t": "p",
+       "text": "If a student convolved the raw, non-zero elements:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\{-\\frac{1}{2j}, 0, \\frac{1}{2j}\\right\\} * \\left\\{\\frac{1}{2}, 0, \\frac{1}{2}\\right\\} = \\left\\{-\\frac{1}{4j}, 0, 0, 0, \\frac{1}{4j}\\right\\} \\quad (\\mathbf{WRONG!\\ \\times\\times})"
+      },
+      {
+       "t": "p",
+       "text": "This gives non-zero values only at $n = \\pm 2$, completely missing the $n = \\pm 1$ and $n = \\pm 3$ components!"
+      },
+      {
+       "t": "h4",
+       "text": "Proper Convolution Grid (Slide 193):"
+      },
+      {
+       "t": "p",
+       "text": "Convolving $c_n$ (length 5, $n \\in [-2, 2]$) with $d_n$ (length 3, $n \\in [-1, 1]$):\nResulting span: $n \\in [(-2)+(-1), 2+1] = [-3, 3]$ (Length = 7)."
+      },
+      {
+       "t": "table",
+       "header": [
+        "$d_m \\backslash c_k$",
+        "$k=-2 \\ (-1/2j)$",
+        "$k=-1 \\ (0)$",
+        "$k=0 \\ (0)$",
+        "$k=1 \\ (0)$",
+        "$k=2 \\ (1/2j)$"
+       ],
+       "align": [
+        ":---:",
+        ":---:",
+        ":---:",
+        ":---:",
+        ":---:",
+        ":---:"
+       ],
+       "rows": [
+        [
+         "**$m=-1 \\ (1/2)$**",
+         "$-\\frac{1}{4j}$ ($n=-3$)",
+         "$0$ ($n=-2$)",
+         "$0$ ($n=-1$)",
+         "$0$ ($n=0$)",
+         "$\\frac{1}{4j}$ ($n=1$)"
+        ],
+        [
+         "**$m=0 \\ (0)$**",
+         "$0$ ($n=-2$)",
+         "$0$ ($n=-1$)",
+         "$0$ ($n=0$)",
+         "$0$ ($n=1$)",
+         "$0$ ($n=2$)"
+        ],
+        [
+         "**$m=1 \\ (1/2)$**",
+         "$-\\frac{1}{4j}$ ($n=-1$)",
+         "$0$ ($n=0$)",
+         "$0$ ($n=1$)",
+         "$0$ ($n=2$)",
+         "$\\frac{1}{4j}$ ($n=3$)"
+        ]
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Summing anti-diagonals:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = -3$: $-\\frac{1}{4j}$",
+        "$n = -2$: $0$",
+        "$n = -1$: $0 + 0 + \\left(-\\frac{1}{4j}\\right) = -\\frac{1}{4j}$",
+        "$n = 0$: $0 + 0 + 0 = 0$",
+        "$n = 1$: $\\frac{1}{4j} + 0 + 0 = \\frac{1}{4j}$",
+        "$n = 2$: $0$",
+        "$n = 3$: $\\frac{1}{4j}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Resulting array:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g_n = \\left\\{-\\frac{1}{4j}, 0, -\\frac{1}{4j}, \\underset{\\uparrow n=0}{0}, \\frac{1}{4j}, 0, \\frac{1}{4j}\\right\\}_{n \\in [-3, 3]}}"
+      },
+      {
+       "t": "p",
+       "text": "This matches Method 1 with complete mathematical precision!"
+      }
      ],
-     "align": [
-      ":---:",
-      ":---:",
-      ":---:",
-      ":---:",
-      ":---:",
-      ":---:"
-     ],
-     "rows": [
-      [
-       "**$m=-1 \\ (1/2)$**",
-       "$-\\frac{1}{4j}$ ($n=-3$)",
-       "$0$ ($n=-2$)",
-       "$0$ ($n=-1$)",
-       "$0$ ($n=0$)",
-       "$\\frac{1}{4j}$ ($n=1$)"
-      ],
-      [
-       "**$m=0 \\ (0)$**",
-       "$0$ ($n=-2$)",
-       "$0$ ($n=-1$)",
-       "$0$ ($n=0$)",
-       "$0$ ($n=1$)",
-       "$0$ ($n=2$)"
-      ],
-      [
-       "**$m=1 \\ (1/2)$**",
-       "$-\\frac{1}{4j}$ ($n=-1$)",
-       "$0$ ($n=0$)",
-       "$0$ ($n=1$)",
-       "$0$ ($n=2$)",
-       "$\\frac{1}{4j}$ ($n=3$)"
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Summing anti-diagonals:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = -3$: $-\\frac{1}{4j}$",
-      "$n = -2$: $0$",
-      "$n = -1$: $0 + 0 + \\left(-\\frac{1}{4j}\\right) = -\\frac{1}{4j}$",
-      "$n = 0$: $0 + 0 + 0 = 0$",
-      "$n = 1$: $\\frac{1}{4j} + 0 + 0 = \\frac{1}{4j}$",
-      "$n = 2$: $0$",
-      "$n = 3$: $\\frac{1}{4j}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Resulting array:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g_n = \\left\\{-\\frac{1}{4j}, 0, -\\frac{1}{4j}, \\underset{\\uparrow n=0}{0}, \\frac{1}{4j}, 0, \\frac{1}{4j}\\right\\}_{n \\in [-3, 3]}}"
-    },
-    {
-     "t": "p",
-     "text": "This matches Method 1 with complete mathematical precision!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "open": true
     },
     {
      "t": "h3",
@@ -19906,193 +19857,191 @@ export default {
      "text": "Drill 1: Filtering a Square Wave through an Ideal LPF"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "A zero-mean periodic square wave $x(t)$ of period $T_0 = 2\\text{ ms}$ (fundamental frequency $\\omega_0 = 1000\\pi\\text{ rad/s}$) and peak amplitude $\\pm 5\\text{ V}$ is applied to an ideal LPF with cutoff frequency $\\omega_c = 3500\\pi\\text{ rad/s}$ and gain $H(j\\omega) = 2$ in the passband."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Find the time-domain expression of the output $y(t)$.",
-      "Calculate the average output power $P_y$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: CTFS of zero-mean square wave:**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{k=1, 3, 5, \\dots}^\\infty \\frac{4A}{k\\pi} \\sin(k\\omega_0 t) = \\sum_{k=1, 3, 5, \\dots}^\\infty \\frac{20}{k\\pi} \\sin(k\\omega_0 t)"
-    },
-    {
-     "t": "p",
-     "text": "Harmonic frequencies:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental ($k=1$): $\\omega_1 = 1000\\pi\\text{ rad/s}$",
-      "3rd harmonic ($k=3$): $\\omega_3 = 3000\\pi\\text{ rad/s}$",
-      "5th harmonic ($k=5$): $\\omega_5 = 5000\\pi\\text{ rad/s}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Filter Transmission Condition:**\nCutoff frequency: $\\omega_c = 3500\\pi\\text{ rad/s}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$k = 1$: $1000\\pi < 3500\\pi \\implies$ **Passed** with gain $2$.",
-      "$k = 3$: $3000\\pi < 3500\\pi \\implies$ **Passed** with gain $2$.",
-      "$k = 5$: $5000\\pi > 3500\\pi \\implies$ **Blocked** (gain $0$).",
-      "All higher harmonics $k \\ge 5$ are eliminated."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Construct Output Signal $y(t)$:**"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 2 \\times \\left[\\frac{20}{\\pi} \\sin(1000\\pi t) + \\frac{20}{3\\pi} \\sin(3000\\pi t)\\right]"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y(t) = \\frac{40}{\\pi} \\sin(1000\\pi t) + \\frac{40}{3\\pi} \\sin(3000\\pi t)}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Output Power Calculation:**\nUsing Parseval's theorem for sinusoidal components:"
-    },
-    {
-     "t": "math",
-     "tex": "P_y = \\frac{1}{2}\\left(\\frac{40}{\\pi}\\right)^2 + \\frac{1}{2}\\left(\\frac{40}{3\\pi}\\right)^2 = \\frac{1600}{2\\pi^2} \\left[1 + \\frac{1}{9}\\right] = \\frac{800}{\\pi^2} \\left(\\frac{10}{9}\\right) = \\frac{8000}{9\\pi^2} \\approx 90.06\\text{ W}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "A zero-mean periodic square wave $x(t)$ of period $T_0 = 2\\text{ ms}$ (fundamental frequency $\\omega_0 = 1000\\pi\\text{ rad/s}$) and peak amplitude $\\pm 5\\text{ V}$ is applied to an ideal LPF with cutoff frequency $\\omega_c = 3500\\pi\\text{ rad/s}$ and gain $H(j\\omega) = 2$ in the passband."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Find the time-domain expression of the output $y(t)$.",
+        "Calculate the average output power $P_y$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: CTFS of zero-mean square wave:**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{k=1, 3, 5, \\dots}^\\infty \\frac{4A}{k\\pi} \\sin(k\\omega_0 t) = \\sum_{k=1, 3, 5, \\dots}^\\infty \\frac{20}{k\\pi} \\sin(k\\omega_0 t)"
+      },
+      {
+       "t": "p",
+       "text": "Harmonic frequencies:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental ($k=1$): $\\omega_1 = 1000\\pi\\text{ rad/s}$",
+        "3rd harmonic ($k=3$): $\\omega_3 = 3000\\pi\\text{ rad/s}$",
+        "5th harmonic ($k=5$): $\\omega_5 = 5000\\pi\\text{ rad/s}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Filter Transmission Condition:**\nCutoff frequency: $\\omega_c = 3500\\pi\\text{ rad/s}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$k = 1$: $1000\\pi < 3500\\pi \\implies$ **Passed** with gain $2$.",
+        "$k = 3$: $3000\\pi < 3500\\pi \\implies$ **Passed** with gain $2$.",
+        "$k = 5$: $5000\\pi > 3500\\pi \\implies$ **Blocked** (gain $0$).",
+        "All higher harmonics $k \\ge 5$ are eliminated."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Construct Output Signal $y(t)$:**"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 2 \\times \\left[\\frac{20}{\\pi} \\sin(1000\\pi t) + \\frac{20}{3\\pi} \\sin(3000\\pi t)\\right]"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y(t) = \\frac{40}{\\pi} \\sin(1000\\pi t) + \\frac{40}{3\\pi} \\sin(3000\\pi t)}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Output Power Calculation:**\nUsing Parseval's theorem for sinusoidal components:"
+      },
+      {
+       "t": "math",
+       "tex": "P_y = \\frac{1}{2}\\left(\\frac{40}{\\pi}\\right)^2 + \\frac{1}{2}\\left(\\frac{40}{3\\pi}\\right)^2 = \\frac{1600}{2\\pi^2} \\left[1 + \\frac{1}{9}\\right] = \\frac{800}{\\pi^2} \\left(\\frac{10}{9}\\right) = \\frac{8000}{9\\pi^2} \\approx 90.06\\text{ W}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Drill 2: LTI Distortion & Phase Shift Drill"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "An LTI system has impulse response $h(t) = e^{-2t} u(t)$.\nThe periodic input signal is $x(t) = 4 + 6\\cos(2t) + 8\\sin(4t)$.\nDetermine the steady-state output signal $y(t)$."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Transfer Function $H(j\\omega)$:**"
-    },
-    {
-     "t": "math",
-     "tex": "H(j\\omega) = \\mathcal{F}\\{e^{-2t} u(t)\\} = \\frac{1}{2 + j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Magnitude and Phase functions:"
-    },
-    {
-     "t": "math",
-     "tex": "|H(j\\omega)| = \\frac{1}{\\sqrt{4 + \\omega^2}}, \\quad \\angle H(j\\omega) = -\\arctan\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Component-by-Component Transmission:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**DC Component ($\\omega = 0$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_{\\text{dc}} = 4$",
-      "$H(j0) = \\frac{1}{2 + j0} = \\frac{1}{2} = 0.5 \\angle 0^\\circ$",
-      "$y_{\\text{dc}} = 4 \\times 0.5 = 2$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**First AC Component ($\\omega = 2\\text{ rad/s}$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_1(t) = 6\\cos(2t)$",
-      "$H(j2) = \\frac{1}{2 + j2} = \\frac{1}{2\\sqrt{2}} e^{-j 45^\\circ} = \\frac{\\sqrt{2}}{4} \\angle -45^\\circ$",
-      "$y_1(t) = 6 \\times |H(j2)| \\cos(2t + \\angle H(j2)) = \\frac{6}{2\\sqrt{2}} \\cos\\left(2t - \\frac{\\pi}{4}\\right) = \\frac{3}{\\sqrt{2}} \\cos\\left(2t - \\frac{\\pi}{4}\\right)$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Second AC Component ($\\omega = 4\\text{ rad/s}$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_2(t) = 8\\sin(4t)$",
-      "$H(j4) = \\frac{1}{2 + j4} = \\frac{1}{\\sqrt{2^2 + 4^2}} \\angle -\\arctan(2) = \\frac{1}{\\sqrt{20}} \\angle -\\arctan(2)$",
-      "$y_2(t) = \\frac{8}{2\\sqrt{5}} \\sin(4t - \\arctan(2)) = \\frac{4}{\\sqrt{5}} \\sin(4t - \\arctan(2))$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Assemble Total Steady-State Output:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y(t) = 2 + \\frac{3}{\\sqrt{2}} \\cos\\left(2t - \\frac{\\pi}{4}\\right) + \\frac{4}{\\sqrt{5}} \\sin(4t - \\arctan(2))}"
-    },
-    {
-     "t": "h4",
-     "text": "GATE Exam Trap Warning:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trap:** Forgetting that phase shifts must be **added** inside the cosine/sine argument, not multiplied.",
-      "**Trap:** Confusing radians and degrees when calculating numerical values. Always ensure phase angles match the units of $\\omega t$ ($\\text{rad}$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "An LTI system has impulse response $h(t) = e^{-2t} u(t)$.\nThe periodic input signal is $x(t) = 4 + 6\\cos(2t) + 8\\sin(4t)$.\nDetermine the steady-state output signal $y(t)$."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Transfer Function $H(j\\omega)$:**"
+      },
+      {
+       "t": "math",
+       "tex": "H(j\\omega) = \\mathcal{F}\\{e^{-2t} u(t)\\} = \\frac{1}{2 + j\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Magnitude and Phase functions:"
+      },
+      {
+       "t": "math",
+       "tex": "|H(j\\omega)| = \\frac{1}{\\sqrt{4 + \\omega^2}}, \\quad \\angle H(j\\omega) = -\\arctan\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Component-by-Component Transmission:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**DC Component ($\\omega = 0$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_{\\text{dc}} = 4$",
+        "$H(j0) = \\frac{1}{2 + j0} = \\frac{1}{2} = 0.5 \\angle 0^\\circ$",
+        "$y_{\\text{dc}} = 4 \\times 0.5 = 2$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**First AC Component ($\\omega = 2\\text{ rad/s}$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_1(t) = 6\\cos(2t)$",
+        "$H(j2) = \\frac{1}{2 + j2} = \\frac{1}{2\\sqrt{2}} e^{-j 45^\\circ} = \\frac{\\sqrt{2}}{4} \\angle -45^\\circ$",
+        "$y_1(t) = 6 \\times |H(j2)| \\cos(2t + \\angle H(j2)) = \\frac{6}{2\\sqrt{2}} \\cos\\left(2t - \\frac{\\pi}{4}\\right) = \\frac{3}{\\sqrt{2}} \\cos\\left(2t - \\frac{\\pi}{4}\\right)$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Second AC Component ($\\omega = 4\\text{ rad/s}$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_2(t) = 8\\sin(4t)$",
+        "$H(j4) = \\frac{1}{2 + j4} = \\frac{1}{\\sqrt{2^2 + 4^2}} \\angle -\\arctan(2) = \\frac{1}{\\sqrt{20}} \\angle -\\arctan(2)$",
+        "$y_2(t) = \\frac{8}{2\\sqrt{5}} \\sin(4t - \\arctan(2)) = \\frac{4}{\\sqrt{5}} \\sin(4t - \\arctan(2))$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Assemble Total Steady-State Output:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y(t) = 2 + \\frac{3}{\\sqrt{2}} \\cos\\left(2t - \\frac{\\pi}{4}\\right) + \\frac{4}{\\sqrt{5}} \\sin(4t - \\arctan(2))}"
+      },
+      {
+       "t": "h4",
+       "text": "GATE Exam Trap Warning:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Trap:** Forgetting that phase shifts must be **added** inside the cosine/sine argument, not multiplied.",
+        "**Trap:** Confusing radians and degrees when calculating numerical values. Always ensure phase angles match the units of $\\omega t$ ($\\text{rad}$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -20345,492 +20294,489 @@ export default {
      "text": "1.2 Drill: Periodic Convolution of Sine and Cosine (Slide 196)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the continuous-time periodic convolution:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\sin t * \\cos t"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Determine the Fundamental Frequencies and Common Period:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $x(t) = \\sin t$: $\\omega_{01} = 1\\text{ rad/s} \\implies T_{01} = 2\\pi$.",
-      "For $y(t) = \\cos t$: $\\omega_{02} = 1\\text{ rad/s} \\implies T_{02} = 2\\pi$.",
-      "Common fundamental frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\text{HCF}(1, 1) = 1\\text{ rad/s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Common fundamental period:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "T_0 = \\frac{2\\pi}{\\omega_0} = 2\\pi\\text{ s}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Formulate the Periodic Convolution Integral:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\int_0^{2\\pi} x(\\tau) y(t - \\tau) \\, d\\tau = \\int_0^{2\\pi} \\sin\\tau \\cos(t - \\tau) \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "Using the even symmetry of cosine, $\\cos(t - \\tau) = \\cos(-(\\tau - t)) = \\cos(\\tau - t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} 2\\sin\\tau \\cos(t - \\tau) \\, d\\tau"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Apply Product-to-Sum Trigonometric Identity:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\sin A \\cos B = \\sin(A + B) + \\sin(A - B)"
-    },
-    {
-     "t": "p",
-     "text": "Setting $A = \\tau$ and $B = t - \\tau$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$A + B = \\tau + (t - \\tau) = t$",
-      "$A - B = \\tau - (t - \\tau) = 2\\tau - t$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Substituting into the integral:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} [\\sin t + \\sin(2\\tau - t)] \\, d\\tau"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Split and Evaluate the Integrals:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} \\left[ \\int_0^{2\\pi} \\sin t \\, d\\tau + \\int_0^{2\\pi} \\sin(2\\tau - t) \\, d\\tau \\right]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**First Term:** The integrand $\\sin t$ is independent of the integration dummy variable $\\tau$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^{2\\pi} \\sin t \\, d\\tau = \\sin t \\int_0^{2\\pi} d\\tau = 2\\pi \\sin t"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Second Term:** The integrand $\\sin(2\\tau - t)$ has angular frequency $\\omega_\\tau = 2\\text{ rad/s}$ with respect to $\\tau$, so its fundamental period is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "T_p = \\frac{2\\pi}{2} = \\pi"
-    },
-    {
-     "t": "p",
-     "text": "The integration range $[0, 2\\pi]$ spans exactly:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2\\pi}{T_p} = \\frac{2\\pi}{\\pi} = 2 \\text{ full periods}"
-    },
-    {
-     "t": "p",
-     "text": "The integral of any sinusoid over an integer number of full periods is identically zero:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^{2\\pi} \\sin(2\\tau - t) \\, d\\tau = \\left[ -\\frac{\\cos(2\\tau - t)}{2} \\right]_0^{2\\pi} = -\\frac{\\cos(4\\pi - t) - \\cos(-t)}{2} = -\\frac{\\cos t - \\cos t}{2} = 0"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Final Result:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} [2\\pi \\sin t + 0] = \\pi \\sin t"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g(t) = \\sin t * \\cos t = \\pi \\sin t}"
-    },
-    {
-     "t": "h4",
-     "text": "Common Pitfalls & GATE Traps:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Phase Sign Confusion:** Do not mistake $\\cos(t - \\tau)$ for $\\cos(\\tau + t)$. Convolution strictly requires time-reversal and shifting: $y(t - \\tau)$.",
-      "**Range of Integration:** Integrating over $[-\\infty, \\infty]$ instead of $[0, T_0]$ is completely invalid for periodic signals and leads to divergent, meaningless results."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the continuous-time periodic convolution:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\sin t * \\cos t"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Determine the Fundamental Frequencies and Common Period:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $x(t) = \\sin t$: $\\omega_{01} = 1\\text{ rad/s} \\implies T_{01} = 2\\pi$.",
+        "For $y(t) = \\cos t$: $\\omega_{02} = 1\\text{ rad/s} \\implies T_{02} = 2\\pi$.",
+        "Common fundamental frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\text{HCF}(1, 1) = 1\\text{ rad/s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Common fundamental period:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "T_0 = \\frac{2\\pi}{\\omega_0} = 2\\pi\\text{ s}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Formulate the Periodic Convolution Integral:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\int_0^{2\\pi} x(\\tau) y(t - \\tau) \\, d\\tau = \\int_0^{2\\pi} \\sin\\tau \\cos(t - \\tau) \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "Using the even symmetry of cosine, $\\cos(t - \\tau) = \\cos(-(\\tau - t)) = \\cos(\\tau - t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} 2\\sin\\tau \\cos(t - \\tau) \\, d\\tau"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Apply Product-to-Sum Trigonometric Identity:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\sin A \\cos B = \\sin(A + B) + \\sin(A - B)"
+      },
+      {
+       "t": "p",
+       "text": "Setting $A = \\tau$ and $B = t - \\tau$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$A + B = \\tau + (t - \\tau) = t$",
+        "$A - B = \\tau - (t - \\tau) = 2\\tau - t$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Substituting into the integral:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} [\\sin t + \\sin(2\\tau - t)] \\, d\\tau"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Split and Evaluate the Integrals:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} \\left[ \\int_0^{2\\pi} \\sin t \\, d\\tau + \\int_0^{2\\pi} \\sin(2\\tau - t) \\, d\\tau \\right]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**First Term:** The integrand $\\sin t$ is independent of the integration dummy variable $\\tau$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^{2\\pi} \\sin t \\, d\\tau = \\sin t \\int_0^{2\\pi} d\\tau = 2\\pi \\sin t"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Second Term:** The integrand $\\sin(2\\tau - t)$ has angular frequency $\\omega_\\tau = 2\\text{ rad/s}$ with respect to $\\tau$, so its fundamental period is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "T_p = \\frac{2\\pi}{2} = \\pi"
+      },
+      {
+       "t": "p",
+       "text": "The integration range $[0, 2\\pi]$ spans exactly:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2\\pi}{T_p} = \\frac{2\\pi}{\\pi} = 2 \\text{ full periods}"
+      },
+      {
+       "t": "p",
+       "text": "The integral of any sinusoid over an integer number of full periods is identically zero:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^{2\\pi} \\sin(2\\tau - t) \\, d\\tau = \\left[ -\\frac{\\cos(2\\tau - t)}{2} \\right]_0^{2\\pi} = -\\frac{\\cos(4\\pi - t) - \\cos(-t)}{2} = -\\frac{\\cos t - \\cos t}{2} = 0"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Final Result:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} [2\\pi \\sin t + 0] = \\pi \\sin t"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g(t) = \\sin t * \\cos t = \\pi \\sin t}"
+      },
+      {
+       "t": "h4",
+       "text": "Common Pitfalls & GATE Traps:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Phase Sign Confusion:** Do not mistake $\\cos(t - \\tau)$ for $\\cos(\\tau + t)$. Convolution strictly requires time-reversal and shifting: $y(t - \\tau)$.",
+        "**Range of Integration:** Integrating over $[-\\infty, \\infty]$ instead of $[0, T_0]$ is completely invalid for periodic signals and leads to divergent, meaningless results."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "1.3 Drill: Periodic Convolution of Sine with Sine (Slide 197)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the periodic convolution of two identical sine waves:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\sin t * \\sin t"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Signal Parameters:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\text{HCF}(1, 1) = 1\\text{ rad/s}, \\qquad T_0 = 2\\pi"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Formulate the Convolution Integral:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\int_0^{2\\pi} \\sin\\tau \\sin(t - \\tau) \\, d\\tau = \\frac{1}{2} \\int_0^{2\\pi} 2\\sin\\tau \\sin(t - \\tau) \\, d\\tau"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Apply Product-to-Sum Trigonometric Identity:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\sin A \\sin B = \\cos(A - B) - \\cos(A + B)"
-    },
-    {
-     "t": "p",
-     "text": "Setting $A = \\tau$ and $B = t - \\tau$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$A - B = \\tau - (t - \\tau) = 2\\tau - t$",
-      "$A + B = \\tau + (t - \\tau) = t$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Substituting into the integrand:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} [\\cos(2\\tau - t) - \\cos t] \\, d\\tau"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Evaluate the Individual Integrals:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} \\cos(2\\tau - t) \\, d\\tau - \\frac{1}{2} \\int_0^{2\\pi} \\cos t \\, d\\tau"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The term $\\cos(2\\tau - t)$ has fundamental period $T_p = \\frac{2\\pi}{2} = \\pi$. Over the interval of length $2\\pi$ (which is $2$ complete cycles), its integral vanishes identically:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^{2\\pi} \\cos(2\\tau - t) \\, d\\tau = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The term $\\cos t$ is constant with respect to $\\tau$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^{2\\pi} \\cos t \\, d\\tau = 2\\pi \\cos t"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Combine Terms:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} [0 - 2\\pi \\cos t] = -\\pi \\cos t"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g(t) = \\sin t * \\sin t = -\\pi \\cos t}"
-    },
-    {
-     "t": "h4",
-     "text": "Crucial Conceptual Check:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice the **negative sign**: $\\sin t * \\sin t = -\\pi \\cos t$.",
-      "In terms of phase shift: $-\\cos t = \\sin(t - \\pi/2) = \\cos(t - \\pi)$. Convolving a sine wave with itself introduces an inversion (or a $-\\pi$ phase shift) along with an amplitude scaling of $\\pi$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the periodic convolution of two identical sine waves:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\sin t * \\sin t"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Signal Parameters:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\text{HCF}(1, 1) = 1\\text{ rad/s}, \\qquad T_0 = 2\\pi"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Formulate the Convolution Integral:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\int_0^{2\\pi} \\sin\\tau \\sin(t - \\tau) \\, d\\tau = \\frac{1}{2} \\int_0^{2\\pi} 2\\sin\\tau \\sin(t - \\tau) \\, d\\tau"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Apply Product-to-Sum Trigonometric Identity:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\sin A \\sin B = \\cos(A - B) - \\cos(A + B)"
+      },
+      {
+       "t": "p",
+       "text": "Setting $A = \\tau$ and $B = t - \\tau$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$A - B = \\tau - (t - \\tau) = 2\\tau - t$",
+        "$A + B = \\tau + (t - \\tau) = t$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Substituting into the integrand:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} [\\cos(2\\tau - t) - \\cos t] \\, d\\tau"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Evaluate the Individual Integrals:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} \\cos(2\\tau - t) \\, d\\tau - \\frac{1}{2} \\int_0^{2\\pi} \\cos t \\, d\\tau"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The term $\\cos(2\\tau - t)$ has fundamental period $T_p = \\frac{2\\pi}{2} = \\pi$. Over the interval of length $2\\pi$ (which is $2$ complete cycles), its integral vanishes identically:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^{2\\pi} \\cos(2\\tau - t) \\, d\\tau = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The term $\\cos t$ is constant with respect to $\\tau$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^{2\\pi} \\cos t \\, d\\tau = 2\\pi \\cos t"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Combine Terms:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} [0 - 2\\pi \\cos t] = -\\pi \\cos t"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g(t) = \\sin t * \\sin t = -\\pi \\cos t}"
+      },
+      {
+       "t": "h4",
+       "text": "Crucial Conceptual Check:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Notice the **negative sign**: $\\sin t * \\sin t = -\\pi \\cos t$.",
+        "In terms of phase shift: $-\\cos t = \\sin(t - \\pi/2) = \\cos(t - \\pi)$. Convolving a sine wave with itself introduces an inversion (or a $-\\pi$ phase shift) along with an amplitude scaling of $\\pi$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "1.4 Drill: Periodic Convolution of Cosine with Cosine & Time-Scaling Property (Slide 198)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Evaluate the periodic convolution:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\cos t * \\cos t"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "State and apply the **time-scaling property of continuous convolution**."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Periodic Convolution Integral:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\int_0^{2\\pi} \\cos\\tau \\cos(t - \\tau) \\, d\\tau = \\frac{1}{2} \\int_0^{2\\pi} 2\\cos\\tau \\cos(t - \\tau) \\, d\\tau"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Trigonometric Expansion:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\cos A \\cos B = \\cos(A + B) + \\cos(A - B)"
-    },
-    {
-     "t": "p",
-     "text": "Here $A = \\tau$ and $B = t - \\tau$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$A + B = t$",
-      "$A - B = 2\\tau - t$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} [\\cos t + \\cos(2\\tau - t)] \\, d\\tau"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} \\cos t \\, d\\tau + \\frac{1}{2} \\int_0^{2\\pi} \\cos(2\\tau - t) \\, d\\tau"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Integral Evaluation:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\frac{1}{2} \\int_0^{2\\pi} \\cos t \\, d\\tau = \\frac{1}{2} \\cos t (2\\pi) = \\pi \\cos t$",
-      "$\\frac{1}{2} \\int_0^{2\\pi} \\cos(2\\tau - t) \\, d\\tau = 0$ (periodic with $T_p = \\pi$ integrated over $2\\pi$)"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\pi \\cos t"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g(t) = \\cos t * \\cos t = \\pi \\cos t}"
-    },
-    {
-     "t": "h4",
-     "text": "The Time-Scaling Property of Convolution:"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t) * y(t) = g(t)$. When the time variable of both signals is scaled by a non-zero real scalar $a$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(at) * y(at) = \\int_{-\\infty}^\\infty x(a\\tau) y(a(t - \\tau)) \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "Let $u = a\\tau \\implies d\\tau = \\frac{du}{a}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $a > 0$: limits remain $-\\infty$ to $\\infty$.",
-      "If $a < 0$: limits invert, introducing a negative sign that cancels the negative $a$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Hence, for any non-zero real scalar $a$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(at) * y(at) = \\frac{1}{|a|} g(at)}"
-    },
-    {
-     "t": "h4",
-     "text": "Application to Arbitrary Angular Frequency $\\omega$:"
-    },
-    {
-     "t": "p",
-     "text": "Using $x(t) = \\sin t, y(t) = \\sin t \\implies g(t) = -\\pi \\cos t$:\nScaling by $a = \\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\omega t) * \\sin(\\omega t) = \\frac{1}{|\\omega|} g(\\omega t) = \\frac{1}{|\\omega|} [-\\pi \\cos(\\omega t)] = -\\frac{\\pi}{|\\omega|} \\cos(\\omega t)"
-    },
-    {
-     "t": "p",
-     "text": "Similarly for cosine:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos(\\omega t) * \\cos(\\omega t) = \\frac{1}{|\\omega|} [\\pi \\cos(\\omega t)] = \\frac{\\pi}{|\\omega|} \\cos(\\omega t)"
-    },
-    {
-     "t": "p",
-     "text": "And for sine convolved with cosine:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\omega t) * \\cos(\\omega t) = \\frac{1}{|\\omega|} [\\pi \\sin(\\omega t)] = \\frac{\\pi}{|\\omega|} \\sin(\\omega t)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Evaluate the periodic convolution:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\cos t * \\cos t"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "State and apply the **time-scaling property of continuous convolution**."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Periodic Convolution Integral:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\int_0^{2\\pi} \\cos\\tau \\cos(t - \\tau) \\, d\\tau = \\frac{1}{2} \\int_0^{2\\pi} 2\\cos\\tau \\cos(t - \\tau) \\, d\\tau"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Trigonometric Expansion:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\cos A \\cos B = \\cos(A + B) + \\cos(A - B)"
+      },
+      {
+       "t": "p",
+       "text": "Here $A = \\tau$ and $B = t - \\tau$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$A + B = t$",
+        "$A - B = 2\\tau - t$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} [\\cos t + \\cos(2\\tau - t)] \\, d\\tau"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} \\cos t \\, d\\tau + \\frac{1}{2} \\int_0^{2\\pi} \\cos(2\\tau - t) \\, d\\tau"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Integral Evaluation:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\frac{1}{2} \\int_0^{2\\pi} \\cos t \\, d\\tau = \\frac{1}{2} \\cos t (2\\pi) = \\pi \\cos t$",
+        "$\\frac{1}{2} \\int_0^{2\\pi} \\cos(2\\tau - t) \\, d\\tau = 0$ (periodic with $T_p = \\pi$ integrated over $2\\pi$)"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\pi \\cos t"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g(t) = \\cos t * \\cos t = \\pi \\cos t}"
+      },
+      {
+       "t": "h4",
+       "text": "The Time-Scaling Property of Convolution:"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t) * y(t) = g(t)$. When the time variable of both signals is scaled by a non-zero real scalar $a$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(at) * y(at) = \\int_{-\\infty}^\\infty x(a\\tau) y(a(t - \\tau)) \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "Let $u = a\\tau \\implies d\\tau = \\frac{du}{a}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $a > 0$: limits remain $-\\infty$ to $\\infty$.",
+        "If $a < 0$: limits invert, introducing a negative sign that cancels the negative $a$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Hence, for any non-zero real scalar $a$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(at) * y(at) = \\frac{1}{|a|} g(at)}"
+      },
+      {
+       "t": "h4",
+       "text": "Application to Arbitrary Angular Frequency $\\omega$:"
+      },
+      {
+       "t": "p",
+       "text": "Using $x(t) = \\sin t, y(t) = \\sin t \\implies g(t) = -\\pi \\cos t$:\nScaling by $a = \\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\omega t) * \\sin(\\omega t) = \\frac{1}{|\\omega|} g(\\omega t) = \\frac{1}{|\\omega|} [-\\pi \\cos(\\omega t)] = -\\frac{\\pi}{|\\omega|} \\cos(\\omega t)"
+      },
+      {
+       "t": "p",
+       "text": "Similarly for cosine:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos(\\omega t) * \\cos(\\omega t) = \\frac{1}{|\\omega|} [\\pi \\cos(\\omega t)] = \\frac{\\pi}{|\\omega|} \\cos(\\omega t)"
+      },
+      {
+       "t": "p",
+       "text": "And for sine convolved with cosine:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\omega t) * \\cos(\\omega t) = \\frac{1}{|\\omega|} [\\pi \\sin(\\omega t)] = \\frac{\\pi}{|\\omega|} \\sin(\\omega t)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -20841,148 +20787,147 @@ export default {
      "text": "2.1 Drill: Periodic Convolution at Non-Equal Frequencies (Slide 199)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the periodic convolution of two sinusoids at distinct frequencies:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\sin t * \\cos 2t"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Identify Fundamental Frequencies & Common Period:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\omega_{01} = 1\\text{ rad/s} \\implies T_{01} = 2\\pi$",
-      "$\\omega_{02} = 2\\text{ rad/s} \\implies T_{02} = \\pi$",
-      "Common fundamental frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\text{HCF}(1, 2) = 1\\text{ rad/s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Common fundamental period:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "T_0 = \\text{LCM}(2\\pi, \\pi) = 2\\pi\\text{ s}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Formulate Convolution Integral over $T_0 = 2\\pi$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\int_0^{2\\pi} \\cos(2\\tau) \\sin(t - \\tau) \\, d\\tau = \\frac{1}{2} \\int_0^{2\\pi} 2\\cos(2\\tau) \\sin(t - \\tau) \\, d\\tau"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Trigonometric Product-to-Sum Expansion:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\cos A \\sin B = \\sin(A + B) - \\sin(A - B) = \\sin(B + A) + \\sin(B - A)"
-    },
-    {
-     "t": "p",
-     "text": "Setting $A = 2\\tau$ and $B = t - \\tau$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$B + A = (t - \\tau) + 2\\tau = \\tau + t$",
-      "$B - A = (t - \\tau) - 2\\tau = -3\\tau + t$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} [\\sin(\\tau + t) + \\sin(-3\\tau + t)] \\, d\\tau"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} \\sin(\\tau + t) \\, d\\tau + \\frac{1}{2} \\int_0^{2\\pi} \\sin(-3\\tau + t) \\, d\\tau"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Evaluate Both Integrals over Common Period $2\\pi$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**First Term:** $\\sin(\\tau + t)$ has fundamental period $T_{p1} = 2\\pi$. The integral is over exactly one full period:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^{2\\pi} \\sin(\\tau + t) \\, d\\tau = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Second Term:** $\\sin(-3\\tau + t)$ has fundamental period $T_{p2} = \\frac{2\\pi}{3}$. The integral interval $[0, 2\\pi]$ spans exactly 3 complete periods:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^{2\\pi} \\sin(-3\\tau + t) \\, d\\tau = 0"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Conclusion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\frac{1}{2} [0 + 0] = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g(t) = \\sin t * \\cos 2t = 0}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the periodic convolution of two sinusoids at distinct frequencies:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\sin t * \\cos 2t"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Identify Fundamental Frequencies & Common Period:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\omega_{01} = 1\\text{ rad/s} \\implies T_{01} = 2\\pi$",
+        "$\\omega_{02} = 2\\text{ rad/s} \\implies T_{02} = \\pi$",
+        "Common fundamental frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\text{HCF}(1, 2) = 1\\text{ rad/s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Common fundamental period:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "T_0 = \\text{LCM}(2\\pi, \\pi) = 2\\pi\\text{ s}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Formulate Convolution Integral over $T_0 = 2\\pi$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\int_0^{2\\pi} \\cos(2\\tau) \\sin(t - \\tau) \\, d\\tau = \\frac{1}{2} \\int_0^{2\\pi} 2\\cos(2\\tau) \\sin(t - \\tau) \\, d\\tau"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Trigonometric Product-to-Sum Expansion:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\cos A \\sin B = \\sin(A + B) - \\sin(A - B) = \\sin(B + A) + \\sin(B - A)"
+      },
+      {
+       "t": "p",
+       "text": "Setting $A = 2\\tau$ and $B = t - \\tau$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$B + A = (t - \\tau) + 2\\tau = \\tau + t$",
+        "$B - A = (t - \\tau) - 2\\tau = -3\\tau + t$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} [\\sin(\\tau + t) + \\sin(-3\\tau + t)] \\, d\\tau"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} \\int_0^{2\\pi} \\sin(\\tau + t) \\, d\\tau + \\frac{1}{2} \\int_0^{2\\pi} \\sin(-3\\tau + t) \\, d\\tau"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Evaluate Both Integrals over Common Period $2\\pi$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**First Term:** $\\sin(\\tau + t)$ has fundamental period $T_{p1} = 2\\pi$. The integral is over exactly one full period:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^{2\\pi} \\sin(\\tau + t) \\, d\\tau = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Second Term:** $\\sin(-3\\tau + t)$ has fundamental period $T_{p2} = \\frac{2\\pi}{3}$. The integral interval $[0, 2\\pi]$ spans exactly 3 complete periods:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^{2\\pi} \\sin(-3\\tau + t) \\, d\\tau = 0"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Conclusion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\frac{1}{2} [0 + 0] = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g(t) = \\sin t * \\cos 2t = 0}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21007,219 +20952,218 @@ export default {
      "text": "2.3 Advanced Drill: Convolving Signals with Symmetry & Different Frequencies (Slides 201\u2013202)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 201):"
-    },
-    {
-     "t": "p",
-     "text": "A continuous-time periodic signal $x(t)$ is **Even**, has **Half-Wave Symmetry (HWS)**, and has fundamental frequency:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{01} = 1\\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "Another continuous-time periodic signal $y(t)$ is **Odd**, has **Half-Wave Symmetry (HWS)**, and has fundamental frequency:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{02} = 2\\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "Let $g(t) = x(t) * y(t)$ denote their periodic convolution. Which of the following statements is true?"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(a)** $g(t) = 0$",
-      "**(b)** $g(t)$ is periodic with $1\\text{ rad/s}$, having cosinusoid components.",
-      "**(c)** $g(t)$ is periodic with $2\\text{ rad/s}$, having sinusoid components.",
-      "**(d)** $g(t)$ is complex."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation & Spectral Decomposition (Slide 202):"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Analyze Harmonic Content of $x(t)$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x(t)$ has **Half-Wave Symmetry (HWS)**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t + T_{01}/2) = -x(t) \\implies \\text{DC value } c_0 = 0 \\text{ and ALL even harmonics are absent } (c_{2k} = 0)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x(t)$ is **Even**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(-t) = x(t) \\implies \\text{All sine coefficients } b_n = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Therefore, $x(t)$ contains **ONLY odd cosine harmonics** of its fundamental frequency $\\omega_{01} = 1\\text{ rad/s}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Frequencies present in } x(t) = \\{1\\omega_{01}, 3\\omega_{01}, 5\\omega_{01}, 7\\omega_{01}, \\dots\\} = \\{1, 3, 5, 7, 9, \\dots\\}\\text{ rad/s}"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = a_1 \\cos(1t) + a_3 \\cos(3t) + a_5 \\cos(5t) + \\dots = \\sum_{k=1}^\\infty a_{2k-1} \\cos((2k-1)t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Analyze Harmonic Content of $y(t)$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$y(t)$ has **Half-Wave Symmetry (HWS)**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t + T_{02}/2) = -y(t) \\implies \\text{DC value } d_0 = 0 \\text{ and ALL even harmonics are absent}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$y(t)$ is **Odd**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(-t) = -y(t) \\implies \\text{All cosine coefficients } a_n = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Therefore, $y(t)$ contains **ONLY odd sine harmonics** of its fundamental frequency $\\omega_{02} = 2\\text{ rad/s}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Frequencies present in } y(t) = \\{1\\omega_{02}, 3\\omega_{02}, 5\\omega_{02}, 7\\omega_{02}, \\dots\\} = \\{1(2), 3(2), 5(2), 7(2), \\dots\\} = \\{2, 6, 10, 14, \\dots\\}\\text{ rad/s}"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = b_1 \\sin(2t) + b_3 \\sin(6t) + b_5 \\sin(10t) + \\dots = \\sum_{m=1}^\\infty b_{2m-1} \\sin(2(2m-1)t)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Compare the Frequency Spectra of $x(t)$ and $y(t)$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $\\Omega_x$ be the set of angular frequencies present in $x(t)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\Omega_x = \\{1, 3, 5, 7, 9, 11, \\dots\\} = \\{2k - 1 \\mid k \\in \\mathbb{N}\\} \\quad (\\text{Strictly Odd Integers})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $\\Omega_y$ be the set of angular frequencies present in $y(t)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\Omega_y = \\{2, 6, 10, 14, 18, \\dots\\} = \\{2(2m - 1) \\mid m \\in \\mathbb{N}\\} \\quad (\\text{Strictly Even Integers})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Intersection of the two frequency spectra:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\Omega_x \\cap \\Omega_y = \\emptyset"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Evaluate Periodic Convolution $g(t) = x(t) * y(t)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "By linearity of convolution:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\left( \\sum_{k=1}^\\infty a_{2k-1} \\cos((2k-1)t) \\right) * \\left( \\sum_{m=1}^\\infty b_{2m-1} \\sin(2(2m-1)t) \\right)"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\sum_{k=1}^\\infty \\sum_{m=1}^\\infty a_{2k-1} b_{2m-1} \\left[ \\cos((2k-1)t) * \\sin(2(2m-1)t) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "From the Master Sinusoidal Convolution Rule (Slide 200), since $(2k-1) \\neq 2(2m-1)$ for any choice of integers $k, m$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos((2k-1)t) * \\sin(2(2m-1)t) = 0 \\quad \\forall k, m"
-    },
-    {
-     "t": "p",
-     "text": "Consequently, every term in the double summation vanishes:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = 0"
-    },
-    {
-     "t": "h4",
-     "text": "Correct Option:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Correct Option: (a) } g(t) = 0}"
-    },
-    {
-     "t": "h4",
-     "text": "Faculty Note & Exam Trap:"
-    },
-    {
-     "t": "p",
-     "text": "Students often assume that convolving an even signal with an odd signal yields an odd signal (which is true *only if* the convolution is non-zero). But here, because the harmonic frequencies of the two signals are completely disjoint (all odd integers vs. even multiples of odd integers), the output collapses to **identically zero**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 201):"
+      },
+      {
+       "t": "p",
+       "text": "A continuous-time periodic signal $x(t)$ is **Even**, has **Half-Wave Symmetry (HWS)**, and has fundamental frequency:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{01} = 1\\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "Another continuous-time periodic signal $y(t)$ is **Odd**, has **Half-Wave Symmetry (HWS)**, and has fundamental frequency:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{02} = 2\\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "Let $g(t) = x(t) * y(t)$ denote their periodic convolution. Which of the following statements is true?"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(a)** $g(t) = 0$",
+        "**(b)** $g(t)$ is periodic with $1\\text{ rad/s}$, having cosinusoid components.",
+        "**(c)** $g(t)$ is periodic with $2\\text{ rad/s}$, having sinusoid components.",
+        "**(d)** $g(t)$ is complex."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation & Spectral Decomposition (Slide 202):"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Analyze Harmonic Content of $x(t)$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x(t)$ has **Half-Wave Symmetry (HWS)**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t + T_{01}/2) = -x(t) \\implies \\text{DC value } c_0 = 0 \\text{ and ALL even harmonics are absent } (c_{2k} = 0)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x(t)$ is **Even**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(-t) = x(t) \\implies \\text{All sine coefficients } b_n = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Therefore, $x(t)$ contains **ONLY odd cosine harmonics** of its fundamental frequency $\\omega_{01} = 1\\text{ rad/s}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Frequencies present in } x(t) = \\{1\\omega_{01}, 3\\omega_{01}, 5\\omega_{01}, 7\\omega_{01}, \\dots\\} = \\{1, 3, 5, 7, 9, \\dots\\}\\text{ rad/s}"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = a_1 \\cos(1t) + a_3 \\cos(3t) + a_5 \\cos(5t) + \\dots = \\sum_{k=1}^\\infty a_{2k-1} \\cos((2k-1)t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Analyze Harmonic Content of $y(t)$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$y(t)$ has **Half-Wave Symmetry (HWS)**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t + T_{02}/2) = -y(t) \\implies \\text{DC value } d_0 = 0 \\text{ and ALL even harmonics are absent}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$y(t)$ is **Odd**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(-t) = -y(t) \\implies \\text{All cosine coefficients } a_n = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Therefore, $y(t)$ contains **ONLY odd sine harmonics** of its fundamental frequency $\\omega_{02} = 2\\text{ rad/s}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Frequencies present in } y(t) = \\{1\\omega_{02}, 3\\omega_{02}, 5\\omega_{02}, 7\\omega_{02}, \\dots\\} = \\{1(2), 3(2), 5(2), 7(2), \\dots\\} = \\{2, 6, 10, 14, \\dots\\}\\text{ rad/s}"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = b_1 \\sin(2t) + b_3 \\sin(6t) + b_5 \\sin(10t) + \\dots = \\sum_{m=1}^\\infty b_{2m-1} \\sin(2(2m-1)t)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Compare the Frequency Spectra of $x(t)$ and $y(t)$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $\\Omega_x$ be the set of angular frequencies present in $x(t)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\Omega_x = \\{1, 3, 5, 7, 9, 11, \\dots\\} = \\{2k - 1 \\mid k \\in \\mathbb{N}\\} \\quad (\\text{Strictly Odd Integers})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $\\Omega_y$ be the set of angular frequencies present in $y(t)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\Omega_y = \\{2, 6, 10, 14, 18, \\dots\\} = \\{2(2m - 1) \\mid m \\in \\mathbb{N}\\} \\quad (\\text{Strictly Even Integers})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Intersection of the two frequency spectra:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\Omega_x \\cap \\Omega_y = \\emptyset"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Evaluate Periodic Convolution $g(t) = x(t) * y(t)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "By linearity of convolution:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\left( \\sum_{k=1}^\\infty a_{2k-1} \\cos((2k-1)t) \\right) * \\left( \\sum_{m=1}^\\infty b_{2m-1} \\sin(2(2m-1)t) \\right)"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\sum_{k=1}^\\infty \\sum_{m=1}^\\infty a_{2k-1} b_{2m-1} \\left[ \\cos((2k-1)t) * \\sin(2(2m-1)t) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "From the Master Sinusoidal Convolution Rule (Slide 200), since $(2k-1) \\neq 2(2m-1)$ for any choice of integers $k, m$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos((2k-1)t) * \\sin(2(2m-1)t) = 0 \\quad \\forall k, m"
+      },
+      {
+       "t": "p",
+       "text": "Consequently, every term in the double summation vanishes:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = 0"
+      },
+      {
+       "t": "h4",
+       "text": "Correct Option:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Correct Option: (a) } g(t) = 0}"
+      },
+      {
+       "t": "h4",
+       "text": "Faculty Note & Exam Trap:"
+      },
+      {
+       "t": "p",
+       "text": "Students often assume that convolving an even signal with an odd signal yields an odd signal (which is true *only if* the convolution is non-zero). But here, because the harmonic frequencies of the two signals are completely disjoint (all odd integers vs. even multiples of odd integers), the output collapses to **identically zero**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -21230,186 +21174,185 @@ export default {
      "text": "3.1 MCQ Drill: Parity Rules for Periodic Convolution (Slide 203)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Which of the following statements is true about periodic convolution $[P.C.]$?\n(Consider all signals periodic with the same fundamental frequency.)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(a)** Periodic convolution of an Even and an Odd periodic signal is an Odd signal.",
-      "**(b)** Periodic convolution of an Odd and an Odd periodic signal is an Even signal.",
-      "**(c)** Periodic convolution of an Even and an Even periodic signal is an Even signal.",
-      "**(d)** All of the above."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Analytical Verification & General Proof (Slide 204):"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Canonical Sinusoidal Examples"
-    },
-    {
-     "t": "p",
-     "text": "Let $\\omega_0 = 1\\text{ rad/s}$ ($T_0 = 2\\pi$):"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Even $\\times$ Odd:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $x(t) = \\cos t$ (Even), $y(t) = \\sin t$ (Odd).",
-      "From Slide 196:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) * y(t) = \\cos t * \\sin t = \\pi \\sin t"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\sin(-t) = -\\sin t$, the result $\\pi \\sin t$ is **Odd**. $\\implies$ **Statement (a) is TRUE.**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Odd $\\times$ Odd:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $x(t) = \\sin t$ (Odd), $y(t) = \\sin t$ (Odd).",
-      "From Slide 197:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) * y(t) = \\sin t * \\sin t = -\\pi \\cos t"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $-\\pi\\cos(-t) = -\\pi\\cos t$, the result $-\\pi \\cos t$ is **Even**. $\\implies$ **Statement (b) is TRUE.**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Even $\\times$ Even:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $x(t) = \\cos t$ (Even), $y(t) = \\cos t$ (Even).",
-      "From Slide 198:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) * y(t) = \\cos t * \\cos t = \\pi \\cos t"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\pi\\cos(-t) = \\pi\\cos t$, the result $\\pi \\cos t$ is **Even**. $\\implies$ **Statement (c) is TRUE.**"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: General Integral Proof via Reflection"
-    },
-    {
-     "t": "p",
-     "text": "Let $g(t) = x(t) * y(t) = \\int_{T_0} x(\\tau) y(t - \\tau) \\, d\\tau$.\nEvaluating $g(-t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(-t) = \\int_{T_0} x(\\tau) y(-t - \\tau) \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "Substitute variable $\\tau = -u \\implies d\\tau = -du$. Over a symmetric period $[-T_0/2, T_0/2]$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(-t) = \\int_{T_0/2}^{-T_0/2} x(-u) y(-t + u) (-du) = \\int_{-T_0/2}^{T_0/2} x(-u) y(-(t - u)) \\, du"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**If $x(t)$ is Even ($x(-u) = x(u)$) and $y(t)$ is Odd ($y(-v) = -y(v)$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(-t) = \\int_{T_0} x(u) [-y(t - u)] \\, du = -\\int_{T_0} x(u) y(t - u) \\, du = -g(t)"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies g(t)$ is **Odd**."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**If $x(t)$ is Odd ($x(-u) = -x(u)$) and $y(t)$ is Odd ($y(-v) = -y(v)$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(-t) = \\int_{T_0} [-x(u)] [-y(t - u)] \\, du = (-1)(-1) \\int_{T_0} x(u) y(t - u) \\, du = g(t)"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies g(t)$ is **Even**."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**If $x(t)$ is Even ($x(-u) = x(u)$) and $y(t)$ is Even ($y(-v) = y(v)$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(-t) = \\int_{T_0} x(u) y(t - u) \\, du = g(t)"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies g(t)$ is **Even**."
-    },
-    {
-     "t": "h4",
-     "text": "Final Answer:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Correct Option: (d) All of the above}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Which of the following statements is true about periodic convolution $[P.C.]$?\n(Consider all signals periodic with the same fundamental frequency.)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(a)** Periodic convolution of an Even and an Odd periodic signal is an Odd signal.",
+        "**(b)** Periodic convolution of an Odd and an Odd periodic signal is an Even signal.",
+        "**(c)** Periodic convolution of an Even and an Even periodic signal is an Even signal.",
+        "**(d)** All of the above."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Analytical Verification & General Proof (Slide 204):"
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Canonical Sinusoidal Examples"
+      },
+      {
+       "t": "p",
+       "text": "Let $\\omega_0 = 1\\text{ rad/s}$ ($T_0 = 2\\pi$):"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Even $\\times$ Odd:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $x(t) = \\cos t$ (Even), $y(t) = \\sin t$ (Odd).",
+        "From Slide 196:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) * y(t) = \\cos t * \\sin t = \\pi \\sin t"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\sin(-t) = -\\sin t$, the result $\\pi \\sin t$ is **Odd**. $\\implies$ **Statement (a) is TRUE.**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Odd $\\times$ Odd:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $x(t) = \\sin t$ (Odd), $y(t) = \\sin t$ (Odd).",
+        "From Slide 197:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) * y(t) = \\sin t * \\sin t = -\\pi \\cos t"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $-\\pi\\cos(-t) = -\\pi\\cos t$, the result $-\\pi \\cos t$ is **Even**. $\\implies$ **Statement (b) is TRUE.**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Even $\\times$ Even:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $x(t) = \\cos t$ (Even), $y(t) = \\cos t$ (Even).",
+        "From Slide 198:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) * y(t) = \\cos t * \\cos t = \\pi \\cos t"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\pi\\cos(-t) = \\pi\\cos t$, the result $\\pi \\cos t$ is **Even**. $\\implies$ **Statement (c) is TRUE.**"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: General Integral Proof via Reflection"
+      },
+      {
+       "t": "p",
+       "text": "Let $g(t) = x(t) * y(t) = \\int_{T_0} x(\\tau) y(t - \\tau) \\, d\\tau$.\nEvaluating $g(-t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(-t) = \\int_{T_0} x(\\tau) y(-t - \\tau) \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "Substitute variable $\\tau = -u \\implies d\\tau = -du$. Over a symmetric period $[-T_0/2, T_0/2]$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(-t) = \\int_{T_0/2}^{-T_0/2} x(-u) y(-t + u) (-du) = \\int_{-T_0/2}^{T_0/2} x(-u) y(-(t - u)) \\, du"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**If $x(t)$ is Even ($x(-u) = x(u)$) and $y(t)$ is Odd ($y(-v) = -y(v)$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(-t) = \\int_{T_0} x(u) [-y(t - u)] \\, du = -\\int_{T_0} x(u) y(t - u) \\, du = -g(t)"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies g(t)$ is **Odd**."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**If $x(t)$ is Odd ($x(-u) = -x(u)$) and $y(t)$ is Odd ($y(-v) = -y(v)$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(-t) = \\int_{T_0} [-x(u)] [-y(t - u)] \\, du = (-1)(-1) \\int_{T_0} x(u) y(t - u) \\, du = g(t)"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies g(t)$ is **Even**."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**If $x(t)$ is Even ($x(-u) = x(u)$) and $y(t)$ is Even ($y(-v) = y(v)$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(-t) = \\int_{T_0} x(u) y(t - u) \\, du = g(t)"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies g(t)$ is **Even**."
+      },
+      {
+       "t": "h4",
+       "text": "Final Answer:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Correct Option: (d) All of the above}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -21432,148 +21375,146 @@ export default {
      "text": "4.2 Derivation: Periodic Convolution $\\longleftrightarrow$ Coefficient Multiplication ($g_n = T_0 c_n d_n$)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof:"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t)$ and $y(t)$ have common fundamental period $T_0$ and fundamental frequency $\\omega_0 = \\frac{2\\pi}{T_0}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{k=-\\infty}^\\infty c_k e^{j k \\omega_0 t}, \\qquad y(t) = \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "The periodic convolution is:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = x(t) * y(t) = \\int_0^{T_0} x(\\tau) y(t - \\tau) \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the Fourier series of $y(t - \\tau)$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t - \\tau) = \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 (t - \\tau)} = \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t} e^{-j m \\omega_0 \\tau}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute this into $g(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\int_0^{T_0} x(\\tau) \\left[ \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t} e^{-j m \\omega_0 \\tau} \\right] d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "Interchanging the summation and integration:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t} \\left[ \\int_0^{T_0} x(\\tau) e^{-j m \\omega_0 \\tau} \\, d\\tau \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Recall the analysis equation for the CTFS coefficients of $x(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_m = \\frac{1}{T_0} \\int_0^{T_0} x(\\tau) e^{-j m \\omega_0 \\tau} \\, d\\tau \\implies \\int_0^{T_0} x(\\tau) e^{-j m \\omega_0 \\tau} \\, d\\tau = T_0 c_m"
-    },
-    {
-     "t": "p",
-     "text": "Substitute this integral back:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t} [T_0 c_m] = \\sum_{m=-\\infty}^\\infty \\Big( T_0 [c_m d_m] \\Big) e^{j m \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing this directly with the synthesis equation for $g(t) = \\sum_{n=-\\infty}^\\infty g_n e^{j n \\omega_0 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g_n = T_0 [c_n \\cdot d_n]}"
-    },
-    {
-     "t": "h4",
-     "text": "GATE Trap Warning:"
-    },
-    {
-     "t": "p",
-     "text": "A very frequent error in GATE is omitting the scaling factor $T_0$. For continuous-time periodic convolution:"
-    },
-    {
-     "t": "math",
-     "tex": "g_n \\neq c_n d_n \\qquad (\\mathbf{WRONG!})"
-    },
-    {
-     "t": "math",
-     "tex": "g_n = T_0 c_n d_n \\qquad (\\mathbf{CORRECT!})"
-    },
-    {
-     "t": "p",
-     "text": "This factor of $T_0$ originates because the synthesis integral has duration $T_0$ (not $1$)."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof:"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t)$ and $y(t)$ have common fundamental period $T_0$ and fundamental frequency $\\omega_0 = \\frac{2\\pi}{T_0}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{k=-\\infty}^\\infty c_k e^{j k \\omega_0 t}, \\qquad y(t) = \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "The periodic convolution is:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = x(t) * y(t) = \\int_0^{T_0} x(\\tau) y(t - \\tau) \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the Fourier series of $y(t - \\tau)$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t - \\tau) = \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 (t - \\tau)} = \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t} e^{-j m \\omega_0 \\tau}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute this into $g(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\int_0^{T_0} x(\\tau) \\left[ \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t} e^{-j m \\omega_0 \\tau} \\right] d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "Interchanging the summation and integration:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t} \\left[ \\int_0^{T_0} x(\\tau) e^{-j m \\omega_0 \\tau} \\, d\\tau \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Recall the analysis equation for the CTFS coefficients of $x(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_m = \\frac{1}{T_0} \\int_0^{T_0} x(\\tau) e^{-j m \\omega_0 \\tau} \\, d\\tau \\implies \\int_0^{T_0} x(\\tau) e^{-j m \\omega_0 \\tau} \\, d\\tau = T_0 c_m"
+      },
+      {
+       "t": "p",
+       "text": "Substitute this integral back:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t} [T_0 c_m] = \\sum_{m=-\\infty}^\\infty \\Big( T_0 [c_m d_m] \\Big) e^{j m \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing this directly with the synthesis equation for $g(t) = \\sum_{n=-\\infty}^\\infty g_n e^{j n \\omega_0 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g_n = T_0 [c_n \\cdot d_n]}"
+      },
+      {
+       "t": "h4",
+       "text": "GATE Trap Warning:"
+      },
+      {
+       "t": "p",
+       "text": "A very frequent error in GATE is omitting the scaling factor $T_0$. For continuous-time periodic convolution:"
+      },
+      {
+       "t": "math",
+       "tex": "g_n \\neq c_n d_n \\qquad (\\mathbf{WRONG!})"
+      },
+      {
+       "t": "math",
+       "tex": "g_n = T_0 c_n d_n \\qquad (\\mathbf{CORRECT!})"
+      },
+      {
+       "t": "p",
+       "text": "This factor of $T_0$ originates because the synthesis integral has duration $T_0$ (not $1$)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "4.3 Derivation: Time Multiplication $\\longleftrightarrow$ Discrete Convolution ($g_n = c_n * d_n$)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof:"
-    },
-    {
-     "t": "p",
-     "text": "Let $g(t) = x(t) \\cdot y(t)$.\nSubstitute the Fourier series representations of both $x(t)$ and $y(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\left( \\sum_{k=-\\infty}^\\infty c_k e^{j k \\omega_0 t} \\right) \\cdot \\left( \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t} \\right) = \\sum_{k=-\\infty}^\\infty \\sum_{m=-\\infty}^\\infty c_k d_m e^{j (k + m) \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Let $n = k + m \\implies m = n - k$. Re-indexing the summation over $n$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\sum_{n=-\\infty}^\\infty \\left[ \\sum_{k=-\\infty}^\\infty c_k d_{n-k} \\right] e^{j n \\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing this with the synthesis equation $g(t) = \\sum_{n=-\\infty}^\\infty g_n e^{j n \\omega_0 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g_n = \\sum_{k=-\\infty}^\\infty c_k d_{n-k} = c_n * d_n}"
-    },
-    {
-     "t": "h4",
-     "text": "Key Observation:"
-    },
-    {
-     "t": "p",
-     "text": "Unlike time convolution (which acquires a factor of $T_0$), continuous-time signal multiplication corresponds **exactly** to discrete linear convolution of their CTFS coefficient sequences with **no scaling pre-factor**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof:"
+      },
+      {
+       "t": "p",
+       "text": "Let $g(t) = x(t) \\cdot y(t)$.\nSubstitute the Fourier series representations of both $x(t)$ and $y(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\left( \\sum_{k=-\\infty}^\\infty c_k e^{j k \\omega_0 t} \\right) \\cdot \\left( \\sum_{m=-\\infty}^\\infty d_m e^{j m \\omega_0 t} \\right) = \\sum_{k=-\\infty}^\\infty \\sum_{m=-\\infty}^\\infty c_k d_m e^{j (k + m) \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Let $n = k + m \\implies m = n - k$. Re-indexing the summation over $n$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\sum_{n=-\\infty}^\\infty \\left[ \\sum_{k=-\\infty}^\\infty c_k d_{n-k} \\right] e^{j n \\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing this with the synthesis equation $g(t) = \\sum_{n=-\\infty}^\\infty g_n e^{j n \\omega_0 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g_n = \\sum_{k=-\\infty}^\\infty c_k d_{n-k} = c_n * d_n}"
+      },
+      {
+       "t": "h4",
+       "text": "Key Observation:"
+      },
+      {
+       "t": "p",
+       "text": "Unlike time convolution (which acquires a factor of $T_0$), continuous-time signal multiplication corresponds **exactly** to discrete linear convolution of their CTFS coefficient sequences with **no scaling pre-factor**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -21787,89 +21728,88 @@ export default {
      "text": "6.2 Step-by-Step Proof of Equivalence"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof:"
-    },
-    {
-     "t": "p",
-     "text": "For a real periodic signal $x(t)$, the relationship between the exponential CTFS coefficients $c_n$ and the trigonometric coefficients $a_n, b_n$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{a_n - j b_n}{2}, \\qquad c_{-n} = c_n^* = \\frac{a_n + j b_n}{2} \\quad (n \\ge 1)"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = a_0"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Magnitude of $c_n$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|c_n|^2 = c_n \\cdot c_n^* = \\left( \\frac{a_n - j b_n}{2} \\right) \\left( \\frac{a_n + j b_n}{2} \\right) = \\frac{a_n^2 + b_n^2}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "|c_n| = \\frac{\\sqrt{a_n^2 + b_n^2}}{2} = \\frac{r_n}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Summing Negative and Positive Frequencies in Exponential FS:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "In Parseval's formula:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^\\infty |c_n|^2 = |c_0|^2 + \\sum_{n=1}^\\infty |c_n|^2 + \\sum_{n=-\\infty}^{-1} |c_n|^2"
-    },
-    {
-     "t": "p",
-     "text": "Since $|c_{-n}| = |c_n|$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^\\infty |c_n|^2 = |c_0|^2 + 2 \\sum_{n=1}^\\infty |c_n|^2"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Substitute $|c_n|^2 = \\frac{a_n^2 + b_n^2}{4} = \\frac{r_n^2}{4}$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2 \\sum_{n=1}^\\infty |c_n|^2 = 2 \\sum_{n=1}^\\infty \\frac{a_n^2 + b_n^2}{4} = \\sum_{n=1}^\\infty \\frac{a_n^2 + b_n^2}{2} = \\sum_{n=1}^\\infty \\frac{r_n^2}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{P = \\sum_{n=-\\infty}^\\infty |c_n|^2 = c_0^2 + 2\\sum_{n=1}^\\infty |c_n|^2 = c_0^2 + \\sum_{n=1}^\\infty \\frac{a_n^2 + b_n^2}{2} = c_0^2 + \\sum_{n=1}^\\infty \\frac{r_n^2}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "All four representations are mathematically identical."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof:"
+      },
+      {
+       "t": "p",
+       "text": "For a real periodic signal $x(t)$, the relationship between the exponential CTFS coefficients $c_n$ and the trigonometric coefficients $a_n, b_n$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{a_n - j b_n}{2}, \\qquad c_{-n} = c_n^* = \\frac{a_n + j b_n}{2} \\quad (n \\ge 1)"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = a_0"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Magnitude of $c_n$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|c_n|^2 = c_n \\cdot c_n^* = \\left( \\frac{a_n - j b_n}{2} \\right) \\left( \\frac{a_n + j b_n}{2} \\right) = \\frac{a_n^2 + b_n^2}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "|c_n| = \\frac{\\sqrt{a_n^2 + b_n^2}}{2} = \\frac{r_n}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Summing Negative and Positive Frequencies in Exponential FS:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "In Parseval's formula:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^\\infty |c_n|^2 = |c_0|^2 + \\sum_{n=1}^\\infty |c_n|^2 + \\sum_{n=-\\infty}^{-1} |c_n|^2"
+      },
+      {
+       "t": "p",
+       "text": "Since $|c_{-n}| = |c_n|$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^\\infty |c_n|^2 = |c_0|^2 + 2 \\sum_{n=1}^\\infty |c_n|^2"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Substitute $|c_n|^2 = \\frac{a_n^2 + b_n^2}{4} = \\frac{r_n^2}{4}$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2 \\sum_{n=1}^\\infty |c_n|^2 = 2 \\sum_{n=1}^\\infty \\frac{a_n^2 + b_n^2}{4} = \\sum_{n=1}^\\infty \\frac{a_n^2 + b_n^2}{2} = \\sum_{n=1}^\\infty \\frac{r_n^2}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{P = \\sum_{n=-\\infty}^\\infty |c_n|^2 = c_0^2 + 2\\sum_{n=1}^\\infty |c_n|^2 = c_0^2 + \\sum_{n=1}^\\infty \\frac{a_n^2 + b_n^2}{2} = c_0^2 + \\sum_{n=1}^\\infty \\frac{r_n^2}{2}}"
+      },
+      {
+       "t": "p",
+       "text": "All four representations are mathematically identical."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -22124,116 +22064,115 @@ export default {
      "text": "9.2 Comprehensive Multi-Concept Review Drill"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Let two continuous-time signals be given by:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 4 \\cos(3t) + 2 \\sin(5t)"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 3 \\sin(3t) + 6 \\cos(7t)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Compute their periodic convolution $g(t) = x(t) * y(t)$ over their common fundamental period.",
-      "Determine the average power $P_g$ of the resulting signal $g(t)$ using the Polar Power Theorem."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Solution:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Deconstruct by Harmonic Frequencies:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Harmonic components in $x(t)$: $\\omega \\in \\{3, 5\\}\\text{ rad/s}$.",
-      "Harmonic components in $y(t)$: $\\omega \\in \\{3, 7\\}\\text{ rad/s}$.",
-      "Common frequency: Only $\\omega = 3\\text{ rad/s}$ is shared! The cross-terms involving $\\omega = 5$ and $\\omega = 7$ have disjoint frequencies and convolve to zero:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(5t) * \\sin(3t) = 0, \\quad \\sin(5t) * \\cos(7t) = 0, \\quad \\cos(3t) * \\cos(7t) = 0"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Evaluate the Single Non-Zero Convolution Term at $\\omega = 3$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = [4 \\cos(3t)] * [3 \\sin(3t)] = 12 [\\cos(3t) * \\sin(3t)]"
-    },
-    {
-     "t": "p",
-     "text": "Using the master formula:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos(\\omega t) * \\sin(\\omega t) = \\frac{\\pi}{|\\omega|} \\sin(\\omega t)"
-    },
-    {
-     "t": "p",
-     "text": "With $\\omega = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos(3t) * \\sin(3t) = \\frac{\\pi}{3} \\sin(3t)"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = 12 \\left( \\frac{\\pi}{3} \\sin(3t) \\right) = 4\\pi \\sin(3t)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Compute Average Power $P_g$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Here $g(t) = 4\\pi \\sin(3t)$ is a pure sinusoid with peak amplitude $A = 4\\pi$.",
-      "Using the Polar Power Theorem:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P_g = \\frac{A^2}{2} = \\frac{(4\\pi)^2}{2} = \\frac{16\\pi^2}{2} = 8\\pi^2\\text{ W}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{g(t) = 4\\pi \\sin(3t), \\qquad P_g = 8\\pi^2\\text{ W}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Let two continuous-time signals be given by:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 4 \\cos(3t) + 2 \\sin(5t)"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 3 \\sin(3t) + 6 \\cos(7t)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Compute their periodic convolution $g(t) = x(t) * y(t)$ over their common fundamental period.",
+        "Determine the average power $P_g$ of the resulting signal $g(t)$ using the Polar Power Theorem."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Solution:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Deconstruct by Harmonic Frequencies:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Harmonic components in $x(t)$: $\\omega \\in \\{3, 5\\}\\text{ rad/s}$.",
+        "Harmonic components in $y(t)$: $\\omega \\in \\{3, 7\\}\\text{ rad/s}$.",
+        "Common frequency: Only $\\omega = 3\\text{ rad/s}$ is shared! The cross-terms involving $\\omega = 5$ and $\\omega = 7$ have disjoint frequencies and convolve to zero:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(5t) * \\sin(3t) = 0, \\quad \\sin(5t) * \\cos(7t) = 0, \\quad \\cos(3t) * \\cos(7t) = 0"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Evaluate the Single Non-Zero Convolution Term at $\\omega = 3$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = [4 \\cos(3t)] * [3 \\sin(3t)] = 12 [\\cos(3t) * \\sin(3t)]"
+      },
+      {
+       "t": "p",
+       "text": "Using the master formula:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos(\\omega t) * \\sin(\\omega t) = \\frac{\\pi}{|\\omega|} \\sin(\\omega t)"
+      },
+      {
+       "t": "p",
+       "text": "With $\\omega = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos(3t) * \\sin(3t) = \\frac{\\pi}{3} \\sin(3t)"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = 12 \\left( \\frac{\\pi}{3} \\sin(3t) \\right) = 4\\pi \\sin(3t)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Compute Average Power $P_g$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Here $g(t) = 4\\pi \\sin(3t)$ is a pure sinusoid with peak amplitude $A = 4\\pi$.",
+        "Using the Polar Power Theorem:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P_g = \\frac{A^2}{2} = \\frac{(4\\pi)^2}{2} = \\frac{16\\pi^2}{2} = 8\\pi^2\\text{ W}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{g(t) = 4\\pi \\sin(3t), \\qquad P_g = 8\\pi^2\\text{ W}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -22483,145 +22422,144 @@ export default {
      "text": "Solved Drill: Mathematical Proof of Divergence for $x(t) = \\tan t$ (Slides 211\u2013212)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t) = \\tan t$ be a periodic signal."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Determine its fundamental period $T_0$ and fundamental frequency $\\omega_0$.",
-      "Test whether $x(t)$ satisfies Dirichlet Condition 1 over one period.",
-      "Conclude whether its Continuous-Time Fourier Series exists."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Geometric & Analytical Waveform Representation:"
-    },
-    {
-     "t": "p",
-     "text": "The function $x(t) = \\tan t$ is periodic with period $T_0 = \\pi$.\nIt possesses vertical asymptotes wherever $\\cos t = 0$, which occurs at $t = \\pm \\frac{\\pi}{2}, \\pm \\frac{3\\pi}{2}, \\pm \\frac{5\\pi}{2}, \\dots$."
-    },
-    {
-     "t": "code",
-     "text": "           x(t) ^\n                |            :            :            :\n                |            :     /|     :     /|     :     /|\n                |            :    / |     :    / |     :    / |\n                |            :   /  |     :   /  |     :   /  |\n                |            :  /   |     :  /   |     :  /   |\n   -------------+------------+-/----+-----+-/----+-----+-/----+---------> t\n          -3pi/2:       -pi/2:/     : pi/2:/     :3pi/2:/     :\n                |    |/      :      |/    :      |/    :\n                |    |       :     /|     :     /|     :\n                |    |       :    / |     :    / |     :\n                |    v       :   v  |     :   v  |     :"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Identify Fundamental Parameters**"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Period } T_0 = \\pi \\implies \\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{\\pi} = 2\\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Partition One Period around the Origin**\nChoose the fundamental period symmetric about the origin: $t \\in \\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$.\nRecall the definition of the absolute value function:"
-    },
-    {
-     "t": "math",
-     "tex": "|x| = \\begin{cases} x, & x \\ge 0 \\\\ -x, & x < 0 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\tan t > 0$ for $t \\in \\left(0, \\frac{\\pi}{2}\\right)$ and $\\tan t < 0$ for $t \\in \\left(-\\frac{\\pi}{2}, 0\\right)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\pi/2}^{\\pi/2} |\\tan t| \\, dt = \\int_{-\\pi/2}^0 (-\\tan t) \\, dt + \\int_0^{\\pi/2} \\tan t \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Using the symmetry of $|\\tan t|$ (which is an even function):"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\pi/2}^{\\pi/2} |\\tan t| \\, dt = 2 \\int_0^{\\pi/2} \\tan t \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Evaluate the Improper Integral**"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^{\\pi/2} \\tan t \\, dt = \\lim_{\\epsilon \\to 0^+} \\int_0^{\\pi/2 - \\epsilon} \\frac{\\sin t}{\\cos t} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Using the standard antiderivative $\\int \\tan t \\, dt = \\ln |\\sec t| = -\\ln |\\cos t|$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^{\\pi/2} \\tan t \\, dt = \\lim_{\\epsilon \\to 0^+} \\left[ \\ln |\\sec t| \\right]_0^{\\pi/2 - \\epsilon}"
-    },
-    {
-     "t": "math",
-     "tex": "= \\lim_{\\epsilon \\to 0^+} \\left[ \\ln \\left| \\sec\\left(\\frac{\\pi}{2} - \\epsilon\\right) \\right| - \\ln|\\sec 0| \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\sec 0 = 1 \\implies \\ln(1) = 0$, and as $\\epsilon \\to 0^+$, $\\sec\\left(\\frac{\\pi}{2} - \\epsilon\\right) \\to +\\infty$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{\\epsilon \\to 0^+} \\ln(\\infty) - 0 = +\\infty"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\pi/2}^{\\pi/2} |\\tan t| \\, dt = 2 \\times (+\\infty) = +\\infty"
-    },
-    {
-     "t": "h4",
-     "text": "Final Conclusion:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\int_{T_0} |x(t)| \\, dt = \\infty \\implies x(t) = \\tan t \\text{ violates Dirichlet Condition 1. Its CTFS does NOT exist.}}"
-    },
-    {
-     "t": "h4",
-     "text": "GATE Trap Warning:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trap:** A student might compute the non-absolute integral:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\pi/2}^{\\pi/2} \\tan t \\, dt = 0 \\quad (\\text{since } \\tan t \\text{ is odd})"
-    },
-    {
-     "t": "p",
-     "text": "and falsely claim that because the average value $c_0 = 0$ is finite, the Fourier series exists!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Faculty Clarification:** Dirichlet Condition 1 demands **absolute integrability** ($\\int |x(t)| dt < \\infty$). Odd symmetry cancellation in Cauchy Principal Value does **NOT** satisfy absolute integrability. The coefficients $c_n$ for $n \\ne 0$ diverge because $\\int_{-\\pi/2}^{\\pi/2} \\tan t \\sin(2n t) dt = \\infty$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t) = \\tan t$ be a periodic signal."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Determine its fundamental period $T_0$ and fundamental frequency $\\omega_0$.",
+        "Test whether $x(t)$ satisfies Dirichlet Condition 1 over one period.",
+        "Conclude whether its Continuous-Time Fourier Series exists."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Geometric & Analytical Waveform Representation:"
+      },
+      {
+       "t": "p",
+       "text": "The function $x(t) = \\tan t$ is periodic with period $T_0 = \\pi$.\nIt possesses vertical asymptotes wherever $\\cos t = 0$, which occurs at $t = \\pm \\frac{\\pi}{2}, \\pm \\frac{3\\pi}{2}, \\pm \\frac{5\\pi}{2}, \\dots$."
+      },
+      {
+       "t": "code",
+       "text": "           x(t) ^\n                |            :            :            :\n                |            :     /|     :     /|     :     /|\n                |            :    / |     :    / |     :    / |\n                |            :   /  |     :   /  |     :   /  |\n                |            :  /   |     :  /   |     :  /   |\n   -------------+------------+-/----+-----+-/----+-----+-/----+---------> t\n          -3pi/2:       -pi/2:/     : pi/2:/     :3pi/2:/     :\n                |    |/      :      |/    :      |/    :\n                |    |       :     /|     :     /|     :\n                |    |       :    / |     :    / |     :\n                |    v       :   v  |     :   v  |     :"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Identify Fundamental Parameters**"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Period } T_0 = \\pi \\implies \\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{\\pi} = 2\\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Partition One Period around the Origin**\nChoose the fundamental period symmetric about the origin: $t \\in \\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$.\nRecall the definition of the absolute value function:"
+      },
+      {
+       "t": "math",
+       "tex": "|x| = \\begin{cases} x, & x \\ge 0 \\\\ -x, & x < 0 \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\tan t > 0$ for $t \\in \\left(0, \\frac{\\pi}{2}\\right)$ and $\\tan t < 0$ for $t \\in \\left(-\\frac{\\pi}{2}, 0\\right)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\pi/2}^{\\pi/2} |\\tan t| \\, dt = \\int_{-\\pi/2}^0 (-\\tan t) \\, dt + \\int_0^{\\pi/2} \\tan t \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Using the symmetry of $|\\tan t|$ (which is an even function):"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\pi/2}^{\\pi/2} |\\tan t| \\, dt = 2 \\int_0^{\\pi/2} \\tan t \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Evaluate the Improper Integral**"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^{\\pi/2} \\tan t \\, dt = \\lim_{\\epsilon \\to 0^+} \\int_0^{\\pi/2 - \\epsilon} \\frac{\\sin t}{\\cos t} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Using the standard antiderivative $\\int \\tan t \\, dt = \\ln |\\sec t| = -\\ln |\\cos t|$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^{\\pi/2} \\tan t \\, dt = \\lim_{\\epsilon \\to 0^+} \\left[ \\ln |\\sec t| \\right]_0^{\\pi/2 - \\epsilon}"
+      },
+      {
+       "t": "math",
+       "tex": "= \\lim_{\\epsilon \\to 0^+} \\left[ \\ln \\left| \\sec\\left(\\frac{\\pi}{2} - \\epsilon\\right) \\right| - \\ln|\\sec 0| \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\sec 0 = 1 \\implies \\ln(1) = 0$, and as $\\epsilon \\to 0^+$, $\\sec\\left(\\frac{\\pi}{2} - \\epsilon\\right) \\to +\\infty$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{\\epsilon \\to 0^+} \\ln(\\infty) - 0 = +\\infty"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\pi/2}^{\\pi/2} |\\tan t| \\, dt = 2 \\times (+\\infty) = +\\infty"
+      },
+      {
+       "t": "h4",
+       "text": "Final Conclusion:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\int_{T_0} |x(t)| \\, dt = \\infty \\implies x(t) = \\tan t \\text{ violates Dirichlet Condition 1. Its CTFS does NOT exist.}}"
+      },
+      {
+       "t": "h4",
+       "text": "GATE Trap Warning:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Trap:** A student might compute the non-absolute integral:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\pi/2}^{\\pi/2} \\tan t \\, dt = 0 \\quad (\\text{since } \\tan t \\text{ is odd})"
+      },
+      {
+       "t": "p",
+       "text": "and falsely claim that because the average value $c_0 = 0$ is finite, the Fourier series exists!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Faculty Clarification:** Dirichlet Condition 1 demands **absolute integrability** ($\\int |x(t)| dt < \\infty$). Odd symmetry cancellation in Cauchy Principal Value does **NOT** satisfy absolute integrability. The coefficients $c_n$ for $n \\ne 0$ diverge because $\\int_{-\\pi/2}^{\\pi/2} \\tan t \\sin(2n t) dt = \\infty$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -22640,175 +22578,174 @@ export default {
      "text": "Solved Drill: The Oppenheim Counterexample $g(t) = \\sin(2\\pi/t)$ (Slides 213\u2013216)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Consider the prototype continuous-time pulse defined on $t \\in (0, 2)$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\begin{cases} \\sin\\left(\\frac{2\\pi}{t}\\right), & 0 < t < 2 \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t)$ be the periodic continuation of $g(t)$ with period $T_0 = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{k=-\\infty}^{+\\infty} g(t - 2k)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Verify algebraically that $x(t)$ is periodic with fundamental period $T_0 = 2$.",
-      "Check whether $x(t)$ satisfies Dirichlet Condition 1 (Absolute Integrability).",
-      "Determine whether $x(t)$ satisfies Dirichlet Condition 2 (Finite Extrema).",
-      "Conclude whether the CTFS of $x(t)$ exists and converges."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Verification of Periodicity (Slide 214)**\nEvaluate $x(t + 2)$ using the piecewise periodic definition:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t+2) = \\begin{cases} \\vdots \\\\ g(t+2+4) = g(t+6), & -6 < t < -4 \\\\ g(t+2+2) = g(t+4), & -4 < t < -2 \\\\ g(t+2), & -2 < t < 0 \\\\ g(t), & 0 < t < 2 \\\\ \\vdots \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Matching each segment under the variable shift $t \\to t+2$ maps identically back to $x(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t+2) = x(t) \\quad \\forall t"
-    },
-    {
-     "t": "p",
-     "text": "Hence, $x(t)$ is strictly periodic with fundamental period $T_0 = 2\\text{ s}$ and fundamental angular frequency $\\omega_0 = \\frac{2\\pi}{2} = \\pi\\text{ rad/s}$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Test Dirichlet Condition 1 (Absolute Integrability)**\nEvaluate the absolute integral over one fundamental period $(0, 2)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^2 |x(t)| \\, dt = \\int_0^2 \\left| \\sin\\left(\\frac{2\\pi}{t}\\right) \\right| \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Since $|\\sin \\theta| \\le 1$ for all real $\\theta$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^2 \\left| \\sin\\left(\\frac{2\\pi}{t}\\right) \\right| \\, dt \\le \\int_0^2 1 \\, dt = 2 < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "**Result:** Dirichlet Condition 1 is **SATISFIED**! The signal is strictly bounded ($\\|x(t)\\| \\le 1$) and absolutely integrable."
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Test Dirichlet Condition 2 (Maxima and Minima Analysis)**\nLet us find the critical points (extrema) of $g(t) = \\sin(2\\pi/t)$ in the open interval $t \\in (0, 2)$.\nSet the first derivative to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{dt} \\left[ \\sin\\left(\\frac{2\\pi}{t}\\right) \\right] = \\cos\\left(\\frac{2\\pi}{t}\\right) \\cdot \\left( -\\frac{2\\pi}{t^2} \\right) = 0"
-    },
-    {
-     "t": "p",
-     "text": "Since $-\\frac{2\\pi}{t^2} \\ne 0$ for all $t \\in (0, 2)$, the condition requires:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos\\left(\\frac{2\\pi}{t}\\right) = 0"
-    },
-    {
-     "t": "p",
-     "text": "The roots of the cosine function occur at odd multiples of $\\pi/2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2\\pi}{t_m} = \\left(m + \\frac{1}{2}\\right)\\pi \\implies t_m = \\frac{2}{m + 1/2} = \\frac{4}{2m + 1}, \\quad m \\in \\{1, 2, 3, \\dots\\}"
-    },
-    {
-     "t": "p",
-     "text": "Let us inspect the location of extrema as the integer index $m$ advances:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $m = 1$: $t_1 = \\frac{4}{3} \\approx 1.333\\text{ s}$",
-      "For $m = 2$: $t_2 = \\frac{4}{5} = 0.800\\text{ s}$",
-      "For $m = 3$: $t_3 = \\frac{4}{7} \\approx 0.571\\text{ s}$",
-      "For $m = 4$: $t_4 = \\frac{4}{9} \\approx 0.444\\text{ s}$",
-      "For $m = 100$: $t_{100} = \\frac{4}{201} \\approx 0.0199\\text{ s}$",
-      "For $m \\to \\infty$: $t_m = \\lim_{m \\to \\infty} \\frac{4}{2m+1} = 0^+$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Harmonic Density Analysis:**\nAs $t$ approaches $0$ from the right ($t \\to 0^+$), the argument $\\theta(t) = \\frac{2\\pi}{t}$ approaches $+\\infty$.\nThe sine function completes a full $2\\pi$ oscillation every time $\\theta$ increases by $2\\pi$.\nAs $t \\to 0^+$, the time duration of each successive oscillation cycle shrinks to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta t_k = \\frac{2}{k} - \\frac{2}{k+1} = \\frac{2}{k(k+1)} \\to 0"
-    },
-    {
-     "t": "p",
-     "text": "Consequently, an **infinite number of peaks (maxima $= +1$) and troughs (minima $= -1$)** are crammed into any right neighborhood $(0, \\delta)$ of $t = 0$."
-    },
-    {
-     "t": "code",
-     "text": "           g(t) ^\n           +1.0 |      /\\    /\\   /\\  /\\ ||||||||\n                |     /  \\  /  \\ /  \\/  \\||||||||\n            0.0 +----+----+----+----+----+-------+-----> t\n                |   /      \\/   \\/   \\  /|||||||| \\\n           -1.0 |  /                      |||||||| \\\n                +--+---------------------+-------+--+\n                   0        Infinitely   t3  t2  t1 2\n                            Dense Near 0"
-    },
-    {
-     "t": "h4",
-     "text": "Final Conclusion:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) \\text{ contains an INFINITE number of local maxima and minima in } (0, 2).}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\implies \\text{Dirichlet Condition 2 is VIOLATED. The Fourier Series does NOT converge.}}"
-    },
-    {
-     "t": "h4",
-     "text": "Visual Audit from Slide 216:"
-    },
-    {
-     "t": "p",
-     "text": "The teacher's computer plot in Slide 216 displays $x(t)$ across multiple periods:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Interval $[-4, -2]\\text{ s}$: Dense yellow oscillations near $t = -4^+$",
-      "Interval $[-2, 0]\\text{ s}$: Dense orange oscillations near $t = -2^+$",
-      "Interval $[0, 2]\\text{ s}$: Dense red oscillations near $t = 0^+$",
-      "Interval $[2, 4]\\text{ s}$: Dense pink oscillations near $t = 2^+$",
-      "Interval $[4, 6]\\text{ s}$: Dense cyan oscillations near $t = 4^+$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Teacher handwritten annotation: *\"$\\infty \\to \\min \\& \\max \\implies$ fourier series doesn't exist\"*."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Consider the prototype continuous-time pulse defined on $t \\in (0, 2)$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\begin{cases} \\sin\\left(\\frac{2\\pi}{t}\\right), & 0 < t < 2 \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t)$ be the periodic continuation of $g(t)$ with period $T_0 = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{k=-\\infty}^{+\\infty} g(t - 2k)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Verify algebraically that $x(t)$ is periodic with fundamental period $T_0 = 2$.",
+        "Check whether $x(t)$ satisfies Dirichlet Condition 1 (Absolute Integrability).",
+        "Determine whether $x(t)$ satisfies Dirichlet Condition 2 (Finite Extrema).",
+        "Conclude whether the CTFS of $x(t)$ exists and converges."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Verification of Periodicity (Slide 214)**\nEvaluate $x(t + 2)$ using the piecewise periodic definition:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t+2) = \\begin{cases} \\vdots \\\\ g(t+2+4) = g(t+6), & -6 < t < -4 \\\\ g(t+2+2) = g(t+4), & -4 < t < -2 \\\\ g(t+2), & -2 < t < 0 \\\\ g(t), & 0 < t < 2 \\\\ \\vdots \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Matching each segment under the variable shift $t \\to t+2$ maps identically back to $x(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t+2) = x(t) \\quad \\forall t"
+      },
+      {
+       "t": "p",
+       "text": "Hence, $x(t)$ is strictly periodic with fundamental period $T_0 = 2\\text{ s}$ and fundamental angular frequency $\\omega_0 = \\frac{2\\pi}{2} = \\pi\\text{ rad/s}$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Test Dirichlet Condition 1 (Absolute Integrability)**\nEvaluate the absolute integral over one fundamental period $(0, 2)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^2 |x(t)| \\, dt = \\int_0^2 \\left| \\sin\\left(\\frac{2\\pi}{t}\\right) \\right| \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Since $|\\sin \\theta| \\le 1$ for all real $\\theta$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^2 \\left| \\sin\\left(\\frac{2\\pi}{t}\\right) \\right| \\, dt \\le \\int_0^2 1 \\, dt = 2 < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "**Result:** Dirichlet Condition 1 is **SATISFIED**! The signal is strictly bounded ($\\|x(t)\\| \\le 1$) and absolutely integrable."
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Test Dirichlet Condition 2 (Maxima and Minima Analysis)**\nLet us find the critical points (extrema) of $g(t) = \\sin(2\\pi/t)$ in the open interval $t \\in (0, 2)$.\nSet the first derivative to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{dt} \\left[ \\sin\\left(\\frac{2\\pi}{t}\\right) \\right] = \\cos\\left(\\frac{2\\pi}{t}\\right) \\cdot \\left( -\\frac{2\\pi}{t^2} \\right) = 0"
+      },
+      {
+       "t": "p",
+       "text": "Since $-\\frac{2\\pi}{t^2} \\ne 0$ for all $t \\in (0, 2)$, the condition requires:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos\\left(\\frac{2\\pi}{t}\\right) = 0"
+      },
+      {
+       "t": "p",
+       "text": "The roots of the cosine function occur at odd multiples of $\\pi/2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2\\pi}{t_m} = \\left(m + \\frac{1}{2}\\right)\\pi \\implies t_m = \\frac{2}{m + 1/2} = \\frac{4}{2m + 1}, \\quad m \\in \\{1, 2, 3, \\dots\\}"
+      },
+      {
+       "t": "p",
+       "text": "Let us inspect the location of extrema as the integer index $m$ advances:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $m = 1$: $t_1 = \\frac{4}{3} \\approx 1.333\\text{ s}$",
+        "For $m = 2$: $t_2 = \\frac{4}{5} = 0.800\\text{ s}$",
+        "For $m = 3$: $t_3 = \\frac{4}{7} \\approx 0.571\\text{ s}$",
+        "For $m = 4$: $t_4 = \\frac{4}{9} \\approx 0.444\\text{ s}$",
+        "For $m = 100$: $t_{100} = \\frac{4}{201} \\approx 0.0199\\text{ s}$",
+        "For $m \\to \\infty$: $t_m = \\lim_{m \\to \\infty} \\frac{4}{2m+1} = 0^+$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Harmonic Density Analysis:**\nAs $t$ approaches $0$ from the right ($t \\to 0^+$), the argument $\\theta(t) = \\frac{2\\pi}{t}$ approaches $+\\infty$.\nThe sine function completes a full $2\\pi$ oscillation every time $\\theta$ increases by $2\\pi$.\nAs $t \\to 0^+$, the time duration of each successive oscillation cycle shrinks to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta t_k = \\frac{2}{k} - \\frac{2}{k+1} = \\frac{2}{k(k+1)} \\to 0"
+      },
+      {
+       "t": "p",
+       "text": "Consequently, an **infinite number of peaks (maxima $= +1$) and troughs (minima $= -1$)** are crammed into any right neighborhood $(0, \\delta)$ of $t = 0$."
+      },
+      {
+       "t": "code",
+       "text": "           g(t) ^\n           +1.0 |      /\\    /\\   /\\  /\\ ||||||||\n                |     /  \\  /  \\ /  \\/  \\||||||||\n            0.0 +----+----+----+----+----+-------+-----> t\n                |   /      \\/   \\/   \\  /|||||||| \\\n           -1.0 |  /                      |||||||| \\\n                +--+---------------------+-------+--+\n                   0        Infinitely   t3  t2  t1 2\n                            Dense Near 0"
+      },
+      {
+       "t": "h4",
+       "text": "Final Conclusion:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) \\text{ contains an INFINITE number of local maxima and minima in } (0, 2).}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\implies \\text{Dirichlet Condition 2 is VIOLATED. The Fourier Series does NOT converge.}}"
+      },
+      {
+       "t": "h4",
+       "text": "Visual Audit from Slide 216:"
+      },
+      {
+       "t": "p",
+       "text": "The teacher's computer plot in Slide 216 displays $x(t)$ across multiple periods:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Interval $[-4, -2]\\text{ s}$: Dense yellow oscillations near $t = -4^+$",
+        "Interval $[-2, 0]\\text{ s}$: Dense orange oscillations near $t = -2^+$",
+        "Interval $[0, 2]\\text{ s}$: Dense red oscillations near $t = 0^+$",
+        "Interval $[2, 4]\\text{ s}$: Dense pink oscillations near $t = 2^+$",
+        "Interval $[4, 6]\\text{ s}$: Dense cyan oscillations near $t = 4^+$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Teacher handwritten annotation: *\"$\\infty \\to \\min \\& \\max \\implies$ fourier series doesn't exist\"*."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -22870,102 +22807,101 @@ export default {
      "text": "Case B: Counterexample \u2014 Periodic Geometric Ladder Signal (Slide 218)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Consider the periodic ladder signal $x(t)$ illustrated in Slide 218 with fundamental period $T_0 = 2$.\nWithin the fundamental interval $t \\in [0, 2)$, the interval is subdivided into infinitely many sub-intervals $[t_k, t_{k+1})$ where the amplitude steps down geometrically:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{A}{2^k} \\quad \\text{for } t \\in [t_k, t_{k+1}), \\quad k = 0, 1, 2, 3, \\dots"
-    },
-    {
-     "t": "p",
-     "text": "where $t_k = 2(1 - 2^{-k}) = 2 - 2^{1-k}$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Evaluate the number of discontinuities within one period $T_0 = 2$.",
-      "Check whether the magnitude of each individual jump discontinuity is finite.",
-      "Test Dirichlet Condition 1 (Absolute Integrability).",
-      "Conclude whether Dirichlet Condition 3 is satisfied and whether the Fourier series converges."
-     ]
-    },
-    {
-     "t": "code",
-     "text": "       Amplitude ^\n           1.0 A |-----+\n                 |     |  A/2\n           0.5   |     +----+  A/4\n                 |          +---+  A/8\n           0.25  |              +--+  ... A/2^n\n           0.0   +-----+----+---+--+--+----------> t\n                 0     1   1.5 1.75   2 (accumulating infinitely many jumps)\n                 <--------- T0 = 2 ---------->"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Check Absolute Integrability (Condition 1)**\nThe function is piecewise constant and bounded above by $A$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^2 |x(t)| \\, dt = \\sum_{k=0}^\\infty \\left( \\frac{A}{2^k} \\right) \\cdot (t_{k+1} - t_k)"
-    },
-    {
-     "t": "p",
-     "text": "Since $t_{k+1} - t_k = (2 - 2^{-k}) - (2 - 2^{1-k}) = 2^{-k}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^2 |x(t)| \\, dt = \\sum_{k=0}^\\infty \\frac{A}{2^k} \\cdot \\frac{1}{2^k} = A \\sum_{k=0}^\\infty \\frac{1}{4^k} = A \\cdot \\frac{1}{1 - 1/4} = \\frac{4A}{3} < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "**Result:** Dirichlet Condition 1 is **SATISFIED**!"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Check Extrema (Condition 2)**\nThe signal is monotonically non-increasing within the period. It does not exhibit oscillatory behavior.\n**Result:** Dirichlet Condition 2 is **SATISFIED**!"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Count the Number of Discontinuities (Condition 3)**\nAt each boundary point $t_k = 2 - 2^{1-k}$, there is a jump discontinuity:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta x_k = x(t_k^-) - x(t_k^+) = \\frac{A}{2^{k-1}} - \\frac{A}{2^k} = \\frac{A}{2^k}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The magnitude of each individual jump $\\Delta x_k = \\frac{A}{2^k}$ is strictly finite ($\\Delta x_k < \\infty$).",
-      "However, as $t \\to 2^-$, $k \\to \\infty$.",
-      "The number of jump transitions in the single period $[0, 2)$ is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Total number of discontinuities in } [0, 2) = \\sum_{k=1}^\\infty 1 = \\infty"
-    },
-    {
-     "t": "h4",
-     "text": "Final Conclusion:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Number of discontinuities per period } = \\infty \\implies \\text{Dirichlet Condition 3 is VIOLATED.}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\implies \\text{The Fourier Series does NOT converge.}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Consider the periodic ladder signal $x(t)$ illustrated in Slide 218 with fundamental period $T_0 = 2$.\nWithin the fundamental interval $t \\in [0, 2)$, the interval is subdivided into infinitely many sub-intervals $[t_k, t_{k+1})$ where the amplitude steps down geometrically:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{A}{2^k} \\quad \\text{for } t \\in [t_k, t_{k+1}), \\quad k = 0, 1, 2, 3, \\dots"
+      },
+      {
+       "t": "p",
+       "text": "where $t_k = 2(1 - 2^{-k}) = 2 - 2^{1-k}$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Evaluate the number of discontinuities within one period $T_0 = 2$.",
+        "Check whether the magnitude of each individual jump discontinuity is finite.",
+        "Test Dirichlet Condition 1 (Absolute Integrability).",
+        "Conclude whether Dirichlet Condition 3 is satisfied and whether the Fourier series converges."
+       ]
+      },
+      {
+       "t": "code",
+       "text": "       Amplitude ^\n           1.0 A |-----+\n                 |     |  A/2\n           0.5   |     +----+  A/4\n                 |          +---+  A/8\n           0.25  |              +--+  ... A/2^n\n           0.0   +-----+----+---+--+--+----------> t\n                 0     1   1.5 1.75   2 (accumulating infinitely many jumps)\n                 <--------- T0 = 2 ---------->"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Check Absolute Integrability (Condition 1)**\nThe function is piecewise constant and bounded above by $A$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^2 |x(t)| \\, dt = \\sum_{k=0}^\\infty \\left( \\frac{A}{2^k} \\right) \\cdot (t_{k+1} - t_k)"
+      },
+      {
+       "t": "p",
+       "text": "Since $t_{k+1} - t_k = (2 - 2^{-k}) - (2 - 2^{1-k}) = 2^{-k}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^2 |x(t)| \\, dt = \\sum_{k=0}^\\infty \\frac{A}{2^k} \\cdot \\frac{1}{2^k} = A \\sum_{k=0}^\\infty \\frac{1}{4^k} = A \\cdot \\frac{1}{1 - 1/4} = \\frac{4A}{3} < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "**Result:** Dirichlet Condition 1 is **SATISFIED**!"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Check Extrema (Condition 2)**\nThe signal is monotonically non-increasing within the period. It does not exhibit oscillatory behavior.\n**Result:** Dirichlet Condition 2 is **SATISFIED**!"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Count the Number of Discontinuities (Condition 3)**\nAt each boundary point $t_k = 2 - 2^{1-k}$, there is a jump discontinuity:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta x_k = x(t_k^-) - x(t_k^+) = \\frac{A}{2^{k-1}} - \\frac{A}{2^k} = \\frac{A}{2^k}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The magnitude of each individual jump $\\Delta x_k = \\frac{A}{2^k}$ is strictly finite ($\\Delta x_k < \\infty$).",
+        "However, as $t \\to 2^-$, $k \\to \\infty$.",
+        "The number of jump transitions in the single period $[0, 2)$ is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Total number of discontinuities in } [0, 2) = \\sum_{k=1}^\\infty 1 = \\infty"
+      },
+      {
+       "t": "h4",
+       "text": "Final Conclusion:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Number of discontinuities per period } = \\infty \\implies \\text{Dirichlet Condition 3 is VIOLATED.}}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\implies \\text{The Fourier Series does NOT converge.}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -23136,170 +23072,169 @@ export default {
      "text": "4.2 Solved Drill: Symmetrical Rectangular Pulse Train (Slide 221)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement:"
-    },
-    {
-     "t": "p",
-     "text": "Consider the periodic rectangular pulse train $x(t)$ with period $T$, pulse width $2T_1$ centered at the origin, and amplitude $A$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\begin{cases} A, & -T_1 < t < T_1 \\\\ 0, & T_1 < |t| \\le T/2 \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Identify all signal symmetries (Even, Odd, Half-Wave Symmetry).",
-      "Write the trigonometric Fourier series expansion showing which harmonics are present.",
-      "Determine the exact numerical value to which the Fourier series converges at $t = T_1$, $t = -T_1$, and $t = 0$."
-     ]
-    },
-    {
-     "t": "code",
-     "text": "           x(t) ^\n              A |        +---------------+               +---------------+\n                |        |               |               |               |\n                |        |               o A/2           |               o A/2\n              0 +--------+-------+-------+---------------+-------+-------+------> t\n                        -T1      0      +T1              T-T1    T      T+T1\n                         <----- 2T1 ---->\n                         <-------------- T -------------->"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Symmetry Analysis**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Even Symmetry:** $x(-t) = x(t)$. Hence, all sine coefficients vanish: $b_n = 0$ for all $n \\ge 1$.",
-      "**Hidden Half-Wave Symmetry (HWS):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If the signal is vertically shifted downward by its midpoint value $A/2$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t) - \\frac{A}{2}"
-    },
-    {
-     "t": "p",
-     "text": "If the duty cycle is $50\\%$ ($2T_1 = T/2 \\implies T_1 = T/4$), then $y(t + T/2) = -y(t)$.\n  Under this condition, $y(t)$ possesses Half-Wave Symmetry, meaning all even harmonics are zero!\n  The series contains **ONLY DC + ODD COSINE HARMONICS**:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = a_0 + a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + a_5 \\cos(5\\omega_0 t) + \\dots + a_{79} \\cos(79\\omega_0 t) + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Dirichlet Condition Verification**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\int_{-T/2}^{T/2} |x(t)| \\, dt = A(2T_1) < \\infty$ (Condition 1 satisfied).",
-      "Finite number of extrema per period (Condition 2 satisfied).",
-      "Two jump discontinuities per period at $t = \\pm T_1$, each with jump magnitude $A < \\infty$ (Condition 3 satisfied)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$\\implies$ The Fourier series converges everywhere!"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Convergence at Discontinuity Points $t = \\pm T_1$**\nEvaluate the one-sided limits at $t = T_1$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Left-hand limit: $x(T_1^-) = \\lim_{\\epsilon \\to 0^+} x(T_1 - \\epsilon) = A$",
-      "Right-hand limit: $x(T_1^+) = \\lim_{\\epsilon \\to 0^+} x(T_1 + \\epsilon) = 0$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Applying Dirichlet's Midpoint Theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "\\hat{x}(T_1) = \\frac{x(T_1^+) + x(T_1^-)}{2} = \\frac{0 + A}{2} = \\frac{A}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Similarly, at the symmetric left discontinuity $t = -T_1$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Left-hand limit: $x(-T_1^-) = 0$",
-      "Right-hand limit: $x(-T_1^+) = A$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\hat{x}(-T_1) = \\frac{0 + A}{2} = \\frac{A}{2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Convergence at Continuous Point $t = 0$**\nAt $t = 0$, $x(t)$ is continuous:"
-    },
-    {
-     "t": "math",
-     "tex": "\\hat{x}(0) = x(0) = A"
-    },
-    {
-     "t": "h4",
-     "text": "Final Boxed Answers:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\hat{x}(0) = A}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\hat{x}(T_1) = \\frac{A}{2}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\hat{x}(-T_1) = \\frac{A}{2}}"
-    },
-    {
-     "t": "h4",
-     "text": "GATE Trap Warning:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trap:** In Slide 221, open white circles are drawn at $(T_1, A/2)$ and $(-T_1, A/2)$. If a GATE question asks:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "*\"For the square wave $x(t) = 1$ for $|t| < 1$ and $0$ for $1 < |t| < 2$ with period $4$, what is the sum of the Fourier series $\\sum_{n=-\\infty}^\\infty c_n e^{j n (\\pi/2)}$?\"*"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Solution:** Notice that $t = 1$ corresponds to $e^{j n (\\pi/2) \\cdot (1)} = e^{j n \\omega_0 (1)}$. The sum of the series is simply the Fourier reconstruction at $t = 1$. Since $t = 1$ is a jump discontinuity from $1$ to $0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 (1)} = \\frac{x(1^+) + x(1^-)}{2} = \\frac{0 + 1}{2} = \\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Never attempt to compute individual coefficients $c_n$ and sum the infinite series analytically! Always invoke Dirichlet's Midpoint Theorem directly."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement:"
+      },
+      {
+       "t": "p",
+       "text": "Consider the periodic rectangular pulse train $x(t)$ with period $T$, pulse width $2T_1$ centered at the origin, and amplitude $A$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\begin{cases} A, & -T_1 < t < T_1 \\\\ 0, & T_1 < |t| \\le T/2 \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Identify all signal symmetries (Even, Odd, Half-Wave Symmetry).",
+        "Write the trigonometric Fourier series expansion showing which harmonics are present.",
+        "Determine the exact numerical value to which the Fourier series converges at $t = T_1$, $t = -T_1$, and $t = 0$."
+       ]
+      },
+      {
+       "t": "code",
+       "text": "           x(t) ^\n              A |        +---------------+               +---------------+\n                |        |               |               |               |\n                |        |               o A/2           |               o A/2\n              0 +--------+-------+-------+---------------+-------+-------+------> t\n                        -T1      0      +T1              T-T1    T      T+T1\n                         <----- 2T1 ---->\n                         <-------------- T -------------->"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Symmetry Analysis**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Even Symmetry:** $x(-t) = x(t)$. Hence, all sine coefficients vanish: $b_n = 0$ for all $n \\ge 1$.",
+        "**Hidden Half-Wave Symmetry (HWS):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If the signal is vertically shifted downward by its midpoint value $A/2$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t) - \\frac{A}{2}"
+      },
+      {
+       "t": "p",
+       "text": "If the duty cycle is $50\\%$ ($2T_1 = T/2 \\implies T_1 = T/4$), then $y(t + T/2) = -y(t)$.\n  Under this condition, $y(t)$ possesses Half-Wave Symmetry, meaning all even harmonics are zero!\n  The series contains **ONLY DC + ODD COSINE HARMONICS**:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = a_0 + a_1 \\cos(\\omega_0 t) + a_3 \\cos(3\\omega_0 t) + a_5 \\cos(5\\omega_0 t) + \\dots + a_{79} \\cos(79\\omega_0 t) + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Dirichlet Condition Verification**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\int_{-T/2}^{T/2} |x(t)| \\, dt = A(2T_1) < \\infty$ (Condition 1 satisfied).",
+        "Finite number of extrema per period (Condition 2 satisfied).",
+        "Two jump discontinuities per period at $t = \\pm T_1$, each with jump magnitude $A < \\infty$ (Condition 3 satisfied)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$\\implies$ The Fourier series converges everywhere!"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Convergence at Discontinuity Points $t = \\pm T_1$**\nEvaluate the one-sided limits at $t = T_1$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Left-hand limit: $x(T_1^-) = \\lim_{\\epsilon \\to 0^+} x(T_1 - \\epsilon) = A$",
+        "Right-hand limit: $x(T_1^+) = \\lim_{\\epsilon \\to 0^+} x(T_1 + \\epsilon) = 0$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Applying Dirichlet's Midpoint Theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "\\hat{x}(T_1) = \\frac{x(T_1^+) + x(T_1^-)}{2} = \\frac{0 + A}{2} = \\frac{A}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Similarly, at the symmetric left discontinuity $t = -T_1$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Left-hand limit: $x(-T_1^-) = 0$",
+        "Right-hand limit: $x(-T_1^+) = A$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\hat{x}(-T_1) = \\frac{0 + A}{2} = \\frac{A}{2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Convergence at Continuous Point $t = 0$**\nAt $t = 0$, $x(t)$ is continuous:"
+      },
+      {
+       "t": "math",
+       "tex": "\\hat{x}(0) = x(0) = A"
+      },
+      {
+       "t": "h4",
+       "text": "Final Boxed Answers:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\hat{x}(0) = A}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\hat{x}(T_1) = \\frac{A}{2}}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\hat{x}(-T_1) = \\frac{A}{2}}"
+      },
+      {
+       "t": "h4",
+       "text": "GATE Trap Warning:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Trap:** In Slide 221, open white circles are drawn at $(T_1, A/2)$ and $(-T_1, A/2)$. If a GATE question asks:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "*\"For the square wave $x(t) = 1$ for $|t| < 1$ and $0$ for $1 < |t| < 2$ with period $4$, what is the sum of the Fourier series $\\sum_{n=-\\infty}^\\infty c_n e^{j n (\\pi/2)}$?\"*"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Solution:** Notice that $t = 1$ corresponds to $e^{j n (\\pi/2) \\cdot (1)} = e^{j n \\omega_0 (1)}$. The sum of the series is simply the Fourier reconstruction at $t = 1$. Since $t = 1$ is a jump discontinuity from $1$ to $0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 (1)} = \\frac{x(1^+) + x(1^-)}{2} = \\frac{0 + 1}{2} = \\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Never attempt to compute individual coefficients $c_n$ and sum the infinite series analytically! Always invoke Dirichlet's Midpoint Theorem directly."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -23338,120 +23273,119 @@ export default {
      "text": "5.3 Exact Analytical Derivation of the $8.95\\%$ Overshoot (The Wilbraham-Gibbs Constant)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation of the Peak Overshoot:"
-    },
-    {
-     "t": "p",
-     "text": "Consider a normalized periodic square wave with a unit step jump of height $\\Delta x = 1$ at $t = 0$.\nThe Fourier series of an odd square wave of period $T_0$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{4}{\\pi} \\sum_{k=1}^\\infty \\frac{\\sin((2k-1)\\omega_0 t)}{2k-1}"
-    },
-    {
-     "t": "p",
-     "text": "The $N$-th partial sum containing odd harmonics up to $(2N-1)$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "x_N(t) = \\frac{4}{\\pi} \\sum_{k=1}^N \\frac{\\sin((2k-1)\\omega_0 t)}{2k-1}"
-    },
-    {
-     "t": "p",
-     "text": "Differentiating $x_N(t)$ with respect to $t$ to locate the extrema:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d x_N(t)}{dt} = \\frac{4\\omega_0}{\\pi} \\sum_{k=1}^N \\cos((2k-1)\\omega_0 t)"
-    },
-    {
-     "t": "p",
-     "text": "Using Lagrange's trigonometric identity for the sum of cosines of odd multiples:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{k=1}^N \\cos((2k-1)\\theta) = \\frac{\\sin(2N\\theta)}{2\\sin\\theta}"
-    },
-    {
-     "t": "p",
-     "text": "where $\\theta = \\omega_0 t$. Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d x_N(t)}{dt} = \\frac{2\\omega_0}{\\pi} \\frac{\\sin(2N\\omega_0 t)}{\\sin(\\omega_0 t)}"
-    },
-    {
-     "t": "p",
-     "text": "The first local maximum (the peak overshoot) occurs at the smallest positive root of the derivative:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(2N\\omega_0 t) = 0 \\implies 2N\\omega_0 t_{\\text{peak}} = \\pi \\implies t_{\\text{peak}} = \\frac{\\pi}{2N\\omega_0} = \\frac{T_0}{4N}"
-    },
-    {
-     "t": "p",
-     "text": "Notice that as $N \\to \\infty$, $t_{\\text{peak}} \\to 0$. The peak gets infinitely close to the jump!"
-    },
-    {
-     "t": "p",
-     "text": "Now, substitute $t_{\\text{peak}}$ back into $x_N(t)$ and represent the sum as a Riemann integral as $N \\to \\infty$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_N(t_{\\text{peak}}) = \\frac{2}{\\pi} \\sum_{k=1}^N \\frac{\\sin\\left((2k-1)\\frac{\\pi}{2N}\\right)}{(2k-1)\\frac{\\pi}{2N}} \\cdot \\frac{\\pi}{N}"
-    },
-    {
-     "t": "p",
-     "text": "Recognizing this sum as the Riemann sum approximation of the integral:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{N \\to \\infty} x_N(t_{\\text{peak}}) = \\frac{2}{\\pi} \\int_0^\\pi \\frac{\\sin u}{u} \\, du = \\frac{2}{\\pi} \\text{Si}(\\pi)"
-    },
-    {
-     "t": "p",
-     "text": "where $\\text{Si}(\\pi)$ is the famous **Sine Integral**:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Si}(\\pi) = \\int_0^\\pi \\frac{\\sin u}{u} \\, du = \\pi - \\frac{\\pi^3}{3 \\cdot 3!} + \\frac{\\pi^5}{5 \\cdot 5!} - \\frac{\\pi^7}{7 \\cdot 7!} + \\dots \\approx 1.85193705"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the numerical value:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{N \\to \\infty} x_N(t_{\\text{peak}}) = \\frac{2}{\\pi} \\times 1.85193705 \\approx \\frac{1.85193705}{1.57079633} \\approx 1.1789797"
-    },
-    {
-     "t": "p",
-     "text": "For an odd square wave jumping from $-1$ to $+1$, the total step height is $\\Delta x = 2$, and the ideal plateau is $+1$.\nThe peak value is $1.17898$.\nThe one-sided percentage overshoot relative to the step jump of height $1$ above zero is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Overshoot} = 1.17898 - 1.00000 = 0.17898 \\text{ (over the half-jump of } 1\\text{)}"
-    },
-    {
-     "t": "p",
-     "text": "Expressed as a percentage of the total jump height $\\Delta x = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Percentage Overshoot} = \\frac{0.17898}{2} = 0.08949 \\approx \\mathbf{8.95\\%} \\quad (\\approx \\mathbf{9\\%})"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Gibbs Overshoot} = \\frac{1}{\\pi} \\text{Si}(\\pi) - \\frac{1}{2} \\approx 0.08949 \\approx 8.95\\% \\text{ of Jump Magnitude}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation of the Peak Overshoot:"
+      },
+      {
+       "t": "p",
+       "text": "Consider a normalized periodic square wave with a unit step jump of height $\\Delta x = 1$ at $t = 0$.\nThe Fourier series of an odd square wave of period $T_0$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{4}{\\pi} \\sum_{k=1}^\\infty \\frac{\\sin((2k-1)\\omega_0 t)}{2k-1}"
+      },
+      {
+       "t": "p",
+       "text": "The $N$-th partial sum containing odd harmonics up to $(2N-1)$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "x_N(t) = \\frac{4}{\\pi} \\sum_{k=1}^N \\frac{\\sin((2k-1)\\omega_0 t)}{2k-1}"
+      },
+      {
+       "t": "p",
+       "text": "Differentiating $x_N(t)$ with respect to $t$ to locate the extrema:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d x_N(t)}{dt} = \\frac{4\\omega_0}{\\pi} \\sum_{k=1}^N \\cos((2k-1)\\omega_0 t)"
+      },
+      {
+       "t": "p",
+       "text": "Using Lagrange's trigonometric identity for the sum of cosines of odd multiples:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{k=1}^N \\cos((2k-1)\\theta) = \\frac{\\sin(2N\\theta)}{2\\sin\\theta}"
+      },
+      {
+       "t": "p",
+       "text": "where $\\theta = \\omega_0 t$. Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d x_N(t)}{dt} = \\frac{2\\omega_0}{\\pi} \\frac{\\sin(2N\\omega_0 t)}{\\sin(\\omega_0 t)}"
+      },
+      {
+       "t": "p",
+       "text": "The first local maximum (the peak overshoot) occurs at the smallest positive root of the derivative:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(2N\\omega_0 t) = 0 \\implies 2N\\omega_0 t_{\\text{peak}} = \\pi \\implies t_{\\text{peak}} = \\frac{\\pi}{2N\\omega_0} = \\frac{T_0}{4N}"
+      },
+      {
+       "t": "p",
+       "text": "Notice that as $N \\to \\infty$, $t_{\\text{peak}} \\to 0$. The peak gets infinitely close to the jump!"
+      },
+      {
+       "t": "p",
+       "text": "Now, substitute $t_{\\text{peak}}$ back into $x_N(t)$ and represent the sum as a Riemann integral as $N \\to \\infty$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_N(t_{\\text{peak}}) = \\frac{2}{\\pi} \\sum_{k=1}^N \\frac{\\sin\\left((2k-1)\\frac{\\pi}{2N}\\right)}{(2k-1)\\frac{\\pi}{2N}} \\cdot \\frac{\\pi}{N}"
+      },
+      {
+       "t": "p",
+       "text": "Recognizing this sum as the Riemann sum approximation of the integral:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{N \\to \\infty} x_N(t_{\\text{peak}}) = \\frac{2}{\\pi} \\int_0^\\pi \\frac{\\sin u}{u} \\, du = \\frac{2}{\\pi} \\text{Si}(\\pi)"
+      },
+      {
+       "t": "p",
+       "text": "where $\\text{Si}(\\pi)$ is the famous **Sine Integral**:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Si}(\\pi) = \\int_0^\\pi \\frac{\\sin u}{u} \\, du = \\pi - \\frac{\\pi^3}{3 \\cdot 3!} + \\frac{\\pi^5}{5 \\cdot 5!} - \\frac{\\pi^7}{7 \\cdot 7!} + \\dots \\approx 1.85193705"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the numerical value:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{N \\to \\infty} x_N(t_{\\text{peak}}) = \\frac{2}{\\pi} \\times 1.85193705 \\approx \\frac{1.85193705}{1.57079633} \\approx 1.1789797"
+      },
+      {
+       "t": "p",
+       "text": "For an odd square wave jumping from $-1$ to $+1$, the total step height is $\\Delta x = 2$, and the ideal plateau is $+1$.\nThe peak value is $1.17898$.\nThe one-sided percentage overshoot relative to the step jump of height $1$ above zero is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Overshoot} = 1.17898 - 1.00000 = 0.17898 \\text{ (over the half-jump of } 1\\text{)}"
+      },
+      {
+       "t": "p",
+       "text": "Expressed as a percentage of the total jump height $\\Delta x = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Percentage Overshoot} = \\frac{0.17898}{2} = 0.08949 \\approx \\mathbf{8.95\\%} \\quad (\\approx \\mathbf{9\\%})"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Gibbs Overshoot} = \\frac{1}{\\pi} \\text{Si}(\\pi) - \\frac{1}{2} \\approx 0.08949 \\approx 8.95\\% \\text{ of Jump Magnitude}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",

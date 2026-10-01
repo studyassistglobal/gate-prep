@@ -25,7 +25,7 @@ export default {
      "t": "alert",
      "type": "IMPORTANT",
      "title": null,
-     "text": "**Pedagogical Standards & Completeness Guarantee:**\n1. **100% Visual Slide Coverage:** Every single slide from `page_0001.png` through `page_0289.png` (289 slides total) in `Slides_Basics of Systems.pdf` was visually inspected via high-resolution image audits (`view_file`). Zero formulas, derivations, or solved examples have been omitted.\n2. **Zero Matplotlib / Code Artifacts:** All system block diagrams, graphical convolution engines, and decision flowcharts are rendered as ultra-high-definition Dark Blueprint engineering figures.\n3. **Interactive Derivation Disclosure:** Step-by-step problem solutions and mathematical proofs are encapsulated within collapsible `<details><summary>` cards, pre-configured to render open during Dark Mode PDF export.\n4. **Module 11 Systems Formula Encyclopedia:** Includes an exhaustive formula compendium, the 25-Trap Diagnostic Matrix, and the 60-Second Exam Verification Algorithm."
+     "text": "**Pedagogical Standards & Completeness Guarantee:**\n1. **100% Visual Slide Coverage:** Every single slide from `page_0001.png` through `page_0289.png` (289 slides total) in `Slides_Basics of Systems.pdf` was visually inspected via high-resolution image audits (`view_file`). Zero formulas, derivations, or solved examples have been omitted.\n2. **Zero Matplotlib / Code Artifacts:** All system block diagrams, graphical convolution engines, and decision flowcharts are rendered as ultra-high-definition Dark Blueprint engineering figures.\n3. **Interactive Derivation Disclosure:** Step-by-step problem solutions and mathematical proofs are encapsulated within collapsible `` cards, pre-configured to render open during Dark Mode PDF export.\n4. **Module 11 Systems Formula Encyclopedia:** Includes an exhaustive formula compendium, the 25-Trap Diagnostic Matrix, and the 60-Second Exam Verification Algorithm."
     }
    ]
   },
@@ -15406,85 +15406,84 @@ export default {
      "text": "Classify this system with respect to Linearity, Time Invariance, and Causality."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Derivation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Linearity:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{k=-\\infty}^{2n} (\\alpha x_1[k] + \\beta x_2[k]) = \\alpha \\sum_{k=-\\infty}^{2n} x_1[k] + \\beta \\sum_{k=-\\infty}^{2n} x_2[k] = \\alpha y_1[n] + \\beta y_2[n] \\implies \\mathbf{Linear}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Time Invariance:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Response to shifted input $x_d[n] = x[n - n_0]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_1[n] = \\sum_{k=-\\infty}^{2n} x[k - n_0]"
-    },
-    {
-     "t": "p",
-     "text": "Let $m = k - n_0 \\implies k = m + n_0$. As $k \\to -\\infty, m \\to -\\infty$. Upper limit $k = 2n \\implies m = 2n - n_0$."
-    },
-    {
-     "t": "math",
-     "tex": "y_1[n] = \\sum_{m=-\\infty}^{2n - n_0} x[m]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Shifted output $y[n - n_0]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_2[n] = \\left. y[n] \\right|_{n \\to n - n_0} = \\sum_{k=-\\infty}^{2(n - n_0)} x[k] = \\sum_{k=-\\infty}^{2n - 2n_0} x[k]"
-    },
-    {
-     "t": "p",
-     "text": "Comparing upper limits: $2n - n_0 \\ne 2n - 2n_0$ (unless $n_0 = 0$).\n   Therefore, $y_1[n] \\ne y_2[n] \\implies \\mathbf{Time\\text{-}Variant\\ (TV)}$."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Causality:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluate at $n = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[1] = \\sum_{k=-\\infty}^{2} x[k] = \\cdots + x[0] + x[1] + \\mathbf{x[2]}"
-    },
-    {
-     "t": "p",
-     "text": "To compute $y[1]$, the system requires future sample $x[2]$.\n   $\\implies \\mathbf{Non\\text{-}Causal}$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step-by-Step Derivation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Linearity:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{k=-\\infty}^{2n} (\\alpha x_1[k] + \\beta x_2[k]) = \\alpha \\sum_{k=-\\infty}^{2n} x_1[k] + \\beta \\sum_{k=-\\infty}^{2n} x_2[k] = \\alpha y_1[n] + \\beta y_2[n] \\implies \\mathbf{Linear}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Time Invariance:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Response to shifted input $x_d[n] = x[n - n_0]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_1[n] = \\sum_{k=-\\infty}^{2n} x[k - n_0]"
+      },
+      {
+       "t": "p",
+       "text": "Let $m = k - n_0 \\implies k = m + n_0$. As $k \\to -\\infty, m \\to -\\infty$. Upper limit $k = 2n \\implies m = 2n - n_0$."
+      },
+      {
+       "t": "math",
+       "tex": "y_1[n] = \\sum_{m=-\\infty}^{2n - n_0} x[m]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Shifted output $y[n - n_0]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_2[n] = \\left. y[n] \\right|_{n \\to n - n_0} = \\sum_{k=-\\infty}^{2(n - n_0)} x[k] = \\sum_{k=-\\infty}^{2n - 2n_0} x[k]"
+      },
+      {
+       "t": "p",
+       "text": "Comparing upper limits: $2n - n_0 \\ne 2n - 2n_0$ (unless $n_0 = 0$).\n   Therefore, $y_1[n] \\ne y_2[n] \\implies \\mathbf{Time\\text{-}Variant\\ (TV)}$."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Causality:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluate at $n = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[1] = \\sum_{k=-\\infty}^{2} x[k] = \\cdots + x[0] + x[1] + \\mathbf{x[2]}"
+      },
+      {
+       "t": "p",
+       "text": "To compute $y[1]$, the system requires future sample $x[2]$.\n   $\\implies \\mathbf{Non\\text{-}Causal}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15581,70 +15580,69 @@ export default {
      "text": "Is this system linear? If not, identify the exact reason using graphical and mathematical methods."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Solution:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Graphical Analysis:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $x > 0$: $\\operatorname{sgn}(x) = +1 \\implies y = 4x + 3$ (Straight line with slope $4$, y-intercept $+3$).",
-      "For $x < 0$: $\\operatorname{sgn}(x) = -1 \\implies y = 4x - 3$ (Straight line with slope $4$, y-intercept $-3$).",
-      "At $x = 0$: $\\operatorname{sgn}(0) = 0 \\implies y = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The graph exhibits a discontinuity (jump of $6$ units) at the origin. It is **NOT** a single straight line through $(0,0)$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Mathematical Violation:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Test Additivity: Let $x_1 = 2 \\implies y_1 = 4(2) + 3 = 11$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $x_2 = -1 \\implies y_2 = 4(-1) - 3 = -7$."
-    },
-    {
-     "t": "math",
-     "tex": "y_1 + y_2 = 11 - 7 = 4"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Now sum the inputs: $x_3 = x_1 + x_2 = 2 - 1 = 1$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_3 = 4(1) + 3\\operatorname{sgn}(1) = 4 + 3 = 7"
-    },
-    {
-     "t": "p",
-     "text": "Since $y_3 \\ne y_1 + y_2$ ($7 \\ne 4$), Additivity fails.\n   $\\implies \\boxed{\\mathbf{Non\\text{-}Linear}}$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Solution:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Graphical Analysis:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $x > 0$: $\\operatorname{sgn}(x) = +1 \\implies y = 4x + 3$ (Straight line with slope $4$, y-intercept $+3$).",
+        "For $x < 0$: $\\operatorname{sgn}(x) = -1 \\implies y = 4x - 3$ (Straight line with slope $4$, y-intercept $-3$).",
+        "At $x = 0$: $\\operatorname{sgn}(0) = 0 \\implies y = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The graph exhibits a discontinuity (jump of $6$ units) at the origin. It is **NOT** a single straight line through $(0,0)$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Mathematical Violation:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Test Additivity: Let $x_1 = 2 \\implies y_1 = 4(2) + 3 = 11$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $x_2 = -1 \\implies y_2 = 4(-1) - 3 = -7$."
+      },
+      {
+       "t": "math",
+       "tex": "y_1 + y_2 = 11 - 7 = 4"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Now sum the inputs: $x_3 = x_1 + x_2 = 2 - 1 = 1$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_3 = 4(1) + 3\\operatorname{sgn}(1) = 4 + 3 = 7"
+      },
+      {
+       "t": "p",
+       "text": "Since $y_3 \\ne y_1 + y_2$ ($7 \\ne 4$), Additivity fails.\n   $\\implies \\boxed{\\mathbf{Non\\text{-}Linear}}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15667,61 +15665,60 @@ export default {
      "text": "The outputs are summed: $y(t) = \\mathcal{T}_1\\{x(t)\\} + \\mathcal{T}_2\\{x(t)\\}$.\nDetermine the linearity and time invariance of the overall combined system."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Solution:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Sum the algebraic expressions:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\n   y(t) &= \\left[ x(t)\\cos^2(t) + \\ln(1 + e^{2t}) \\right] + \\left[ x(t)\\sin^2(t) - \\ln(1 + e^{2t}) \\right] \\\\\n   &= x(t)\\left[ \\cos^2(t) + \\sin^2(t) \\right] + \\underbrace{\\left[ \\ln(1 + e^{2t}) - \\ln(1 + e^{2t}) \\right]}_{0} \\\\\n   &= x(t)\\cdot [1] + 0 = x(t)\n\\end{aligned}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "The overall combined system simplifies perfectly to the **Identity System**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Classification:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Linearity: Superposition holds trivially $\\implies \\mathbf{Linear}$.",
-      "Time Invariance: Delaying input gives $x(t-t_0) = y(t-t_0) \\implies \\mathbf{Time\\text{-}Invariant\\ (TIV)}$.",
-      "Causality: Output depends strictly on present input $\\implies \\mathbf{Causal}$.",
-      "Memory: Output at time $t$ depends only on input at current time $t \\implies \\mathbf{Static\\ (Memoryless)}$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Key Takeaway:** Even though both constituent subsystems $\\mathcal{T}_1$ and $\\mathcal{T}_2$ are individually **Non-Linear** and **Time-Variant**, their parallel sum forms an ideal **LTI Identity System**!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Solution:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Sum the algebraic expressions:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\n   y(t) &= \\left[ x(t)\\cos^2(t) + \\ln(1 + e^{2t}) \\right] + \\left[ x(t)\\sin^2(t) - \\ln(1 + e^{2t}) \\right] \\\\\n   &= x(t)\\left[ \\cos^2(t) + \\sin^2(t) \\right] + \\underbrace{\\left[ \\ln(1 + e^{2t}) - \\ln(1 + e^{2t}) \\right]}_{0} \\\\\n   &= x(t)\\cdot [1] + 0 = x(t)\n\\end{aligned}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "The overall combined system simplifies perfectly to the **Identity System**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Classification:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Linearity: Superposition holds trivially $\\implies \\mathbf{Linear}$.",
+        "Time Invariance: Delaying input gives $x(t-t_0) = y(t-t_0) \\implies \\mathbf{Time\\text{-}Invariant\\ (TIV)}$.",
+        "Causality: Output depends strictly on present input $\\implies \\mathbf{Causal}$.",
+        "Memory: Output at time $t$ depends only on input at current time $t \\implies \\mathbf{Static\\ (Memoryless)}$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Key Takeaway:** Even though both constituent subsystems $\\mathcal{T}_1$ and $\\mathcal{T}_2$ are individually **Non-Linear** and **Time-Variant**, their parallel sum forms an ideal **LTI Identity System**!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -32275,79 +32272,78 @@ export default {
      "text": "Determine whether the system is: (i) Causal, (ii) Static/Dynamic, (iii) BIBO Stable, (iv) Invertible."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Derivation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Causality:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$u(t - 1) = 0$ for $t < 1$.",
-      "Thus, $h(t) = 0$ for all $t < 0$. (In fact, it is zero for $t < 1$).",
-      "$\\implies \\mathbf{Causal}$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Static vs. Dynamic:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "A static LTI system requires $h(t) = A\\,\\delta(t)$.",
-      "Here $h(t)$ is an exponential tail non-zero over $t \\in [1, \\infty)$.",
-      "$\\implies \\mathbf{Dynamic \\ (Memory)}$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**BIBO Stability:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^\\infty |h(t)|\\,dt = \\int_1^\\infty e^{-3t}\\,dt = \\left[ \\frac{e^{-3t}}{-3} \\right]_1^\\infty = 0 - \\left( -\\frac{e^{-3}}{3} \\right) = \\frac{e^{-3}}{3} < \\infty"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since the integral is finite, the system is $\\implies \\mathbf{BIBO \\ Stable}$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Invertibility:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$H(s) = \\mathcal{L}\\{e^{-3t}u(t-1)\\} = \\mathcal{L}\\{e^{-3} e^{-3(t-1)}u(t-1)\\} = e^{-3} \\frac{e^{-s}}{s+3}$.",
-      "Inverse transfer function: $H_{\\text{inv}}(s) = e^3\\,(s+3)\\,e^{+s}$.",
-      "System is mathematically invertible (though its inverse requires a time advance $e^{+s}$, making the inverse non-causal).",
-      "$\\implies \\mathbf{Invertible}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step-by-Step Derivation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Causality:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$u(t - 1) = 0$ for $t < 1$.",
+        "Thus, $h(t) = 0$ for all $t < 0$. (In fact, it is zero for $t < 1$).",
+        "$\\implies \\mathbf{Causal}$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Static vs. Dynamic:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "A static LTI system requires $h(t) = A\\,\\delta(t)$.",
+        "Here $h(t)$ is an exponential tail non-zero over $t \\in [1, \\infty)$.",
+        "$\\implies \\mathbf{Dynamic \\ (Memory)}$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**BIBO Stability:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^\\infty |h(t)|\\,dt = \\int_1^\\infty e^{-3t}\\,dt = \\left[ \\frac{e^{-3t}}{-3} \\right]_1^\\infty = 0 - \\left( -\\frac{e^{-3}}{3} \\right) = \\frac{e^{-3}}{3} < \\infty"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since the integral is finite, the system is $\\implies \\mathbf{BIBO \\ Stable}$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Invertibility:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$H(s) = \\mathcal{L}\\{e^{-3t}u(t-1)\\} = \\mathcal{L}\\{e^{-3} e^{-3(t-1)}u(t-1)\\} = e^{-3} \\frac{e^{-s}}{s+3}$.",
+        "Inverse transfer function: $H_{\\text{inv}}(s) = e^3\\,(s+3)\\,e^{+s}$.",
+        "System is mathematically invertible (though its inverse requires a time advance $e^{+s}$, making the inverse non-causal).",
+        "$\\implies \\mathbf{Invertible}$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",

@@ -444,382 +444,379 @@ export default {
      "text": "2.3 Solved Visual Chalkboard Drills: Absolute Integrability & Convergence Regions (Slides 001\u2013005)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 001)"
-    },
-    {
-     "t": "p",
-     "text": "Which of the following signals are absolutely integrable (A.I.)?\nCriterion: $\\int_{-\\infty}^{+\\infty} |x(t)| \\, dt < \\infty$"
-    },
-    {
-     "t": "h4",
-     "text": "Detailed Mathematical Verifications:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Signal (a): $x(t) = e^{-2t}u(t)$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_{-\\infty}^{+\\infty} |e^{-2t}u(t)| \\, dt = \\int_0^\\infty e^{-2t} \\, dt = \\left[ \\frac{e^{-2t}}{-2} \\right]_0^\\infty = 0 - \\left( -\\frac{1}{2} \\right) = \\frac{1}{2} < \\infty \\implies \\mathbf{A.I.}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Signal (b): $x(t) = e^{-t/2}u(t)$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_0^\\infty e^{-t/2} \\, dt = \\left[ \\frac{e^{-t/2}}{-1/2} \\right]_0^\\infty = 0 - (-2) = 2 < \\infty \\implies \\mathbf{A.I.}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Signal (c): $x(t) = e^{2t}u(t)$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_0^\\infty e^{2t} \\, dt = \\lim_{T \\to \\infty} \\left[ \\frac{e^{2t}}{2} \\right]_0^T = \\lim_{T \\to \\infty} \\left( \\frac{e^{2T} - 1}{2} \\right) = \\infty \\implies \\mathbf{NOT\\ A.I.}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Signal (d): $x(t) = e^{0.5t}u(-t)$**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $u(-t) = 1$ for $t \\le 0$ and $0$ for $t > 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_{-\\infty}^0 e^{0.5t} \\, dt = \\left[ \\frac{e^{0.5t}}{0.5} \\right]_{-\\infty}^0 = \\frac{1}{0.5} - 0 = 2 < \\infty \\implies \\mathbf{A.I.}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Signal (e): $x(t) = e^{-at}u(t)$ with $a > 0$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_0^\\infty e^{-at} \\, dt = \\left[ \\frac{e^{-at}}{-a} \\right]_0^\\infty = \\frac{1}{a} < \\infty \\implies \\mathbf{A.I.}"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "**Signal (f): $x(t) = e^{at}u(-t)$ with $a > 0$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_{-\\infty}^0 e^{at} \\, dt = \\left[ \\frac{e^{at}}{a} \\right]_{-\\infty}^0 = \\frac{1}{a} - 0 = \\frac{1}{a} < \\infty \\implies \\mathbf{A.I.}"
-    },
-    {
-     "t": "ol",
-     "start": 7,
-     "items": [
-      "**Signal (g): $x(t) = e^{at}u(t)$ with $a > 0$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_0^\\infty e^{at} \\, dt = \\lim_{T \\to \\infty} \\frac{e^{aT} - 1}{a} = \\infty \\implies \\mathbf{NOT\\ A.I.}"
-    },
-    {
-     "t": "ol",
-     "start": 8,
-     "items": [
-      "**Signal (h): $x(t) = e^{-at}u(-t)$ with $a > 0$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_{-\\infty}^0 e^{-at} \\, dt = \\lim_{T \\to -\\infty} \\left[ \\frac{e^{-at}}{-a} \\right]_T^0 = -\\frac{1}{a} - \\lim_{T \\to -\\infty} \\left( -\\frac{e^{-aT}}{a} \\right) = \\infty \\implies \\mathbf{NOT\\ A.I.}"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE Exam Trap on Left-Sided Exponentials:**\nStudents frequently confuse the sign of the exponent with decay! For a **right-sided signal** ($u(t)$), $e^{-at}$ decays as $t \\to +\\infty$ if $a > 0$. However, for a **left-sided signal** ($u(-t)$), the time variable $t$ runs from $-\\infty$ to $0$. Therefore, $e^{at}u(-t)$ (with $a > 0$) decays as $t \\to -\\infty$ because $e^{a(-\\infty)} = 0$, making it **absolutely integrable**! Conversely, $e^{-at}u(-t)$ grows exponentially as $t \\to -\\infty$ ($e^{-a(-\\infty)} = e^{+\\infty} = \\infty$) and is **NOT** absolutely integrable!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Slide 002: Right-Sided Growing Exponential $x(t) = e^{2t}u(t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Integrability:** $\\int_0^\\infty e^{2t}\\,dt = \\infty$ (NOT A.I., ordinary CTFT does not exist).",
-      "**Weighting:** Multiply by $e^{-\\sigma t}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t)e^{-\\sigma t} = e^{2t}e^{-\\sigma t}u(t) = e^{(2-\\sigma)t}u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Absolute Integrability of $y(t)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I(\\sigma) = \\int_{-\\infty}^{+\\infty} |y(t)| \\, dt = \\int_0^\\infty e^{(2-\\sigma)t} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "For this integral to be strictly finite, the exponent must be strictly negative:"
-    },
-    {
-     "t": "math",
-     "tex": "2 - \\sigma < 0 \\implies \\boxed{\\sigma > 2}"
-    },
-    {
-     "t": "p",
-     "text": "When $\\sigma > 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "I(\\sigma) = \\left[ \\frac{e^{(2-\\sigma)t}}{2-\\sigma} \\right]_0^\\infty = 0 - \\frac{1}{2-\\sigma} = \\frac{1}{\\sigma - 2} < \\infty"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion:** By introducing $\\sigma > 2$, the signal is stabilized, and its Laplace transform converges!"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Slide 003: Left-Sided Growing Exponential $x(t) = e^{-2t}u(-t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Integrability:** As $t \\to -\\infty$, $e^{-2t} \\to \\infty$. NOT A.I.",
-      "**Weighting:** Multiply by $e^{-\\sigma t}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t)e^{-\\sigma t} = e^{-2t}e^{-\\sigma t}u(-t) = e^{-(2+\\sigma)t}u(-t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Absolute Integrability of $y(t)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I(\\sigma) = \\int_{-\\infty}^0 e^{-(2+\\sigma)t} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Let $\\tau = -t \\implies d\\tau = -dt$. When $t = -\\infty$, $\\tau = +\\infty$; when $t = 0$, $\\tau = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "I(\\sigma) = \\int_0^\\infty e^{(2+\\sigma)\\tau} \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "For this integral to converge, the exponent coefficient must be strictly negative:"
-    },
-    {
-     "t": "math",
-     "tex": "2 + \\sigma < 0 \\implies \\boxed{\\sigma < -2}"
-    },
-    {
-     "t": "p",
-     "text": "When $\\sigma < -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "I(\\sigma) = \\left[ \\frac{e^{-(2+\\sigma)t}}{-(2+\\sigma)} \\right]_{-\\infty}^0 = -\\frac{1}{2+\\sigma} - 0 = \\frac{1}{-(2+\\sigma)} < \\infty"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion:** Left-sided signals converge in a **left-half plane** $\\sigma < \\sigma_0$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Slide 004: Right-Sided Decaying Exponential $x(t) = e^{-2t}u(t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Integrability:** Naturally A.I. since $\\int_0^\\infty e^{-2t}dt = 1/2 < \\infty$.",
-      "**Weighting:** Multiply by $e^{-\\sigma t}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t)e^{-\\sigma t} = e^{-2t}e^{-\\sigma t}u(t) = e^{-(2+\\sigma)t}u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Absolute Integrability of $y(t)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I(\\sigma) = \\int_0^\\infty e^{-(2+\\sigma)t} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Convergence requires:"
-    },
-    {
-     "t": "math",
-     "tex": "-(2+\\sigma) < 0 \\implies 2 + \\sigma > 0 \\implies \\boxed{\\sigma > -2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Key Observation:** Because $\\sigma > -2$ contains $\\sigma = 0$ in its interior, the original signal $x(t)$ was already integrable, and its CTFT can be obtained directly by setting $s = j\\omega$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 005)"
-    },
-    {
-     "t": "p",
-     "text": "Prove why the constant DC signal $x(t) = 1$ ($-\\infty < t < \\infty$) has **NO Bilateral Laplace Transform**."
-    },
-    {
-     "t": "h4",
-     "text": "Rigorous Proof:"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t) = 1$ for all $t \\in \\mathbb{R}$. We attempt to find a real parameter $\\sigma$ such that:"
-    },
-    {
-     "t": "math",
-     "tex": "I(\\sigma) = \\int_{-\\infty}^{+\\infty} |x(t) e^{-\\sigma t}| \\, dt = \\int_{-\\infty}^{+\\infty} e^{-\\sigma t} \\, dt < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "Decompose the integral into two semi-infinite intervals:"
-    },
-    {
-     "t": "math",
-     "tex": "I(\\sigma) = \\underbrace{\\int_{-\\infty}^0 e^{-\\sigma t} \\, dt}_{I_1(\\sigma)} + \\underbrace{\\int_0^{+\\infty} e^{-\\sigma t} \\, dt}_{I_2(\\sigma)}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Analysis of $I_2(\\sigma)$ (Behavior as $t \\to +\\infty$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I_2(\\sigma) = \\int_0^\\infty e^{-\\sigma t} \\, dt = \\left[ \\frac{e^{-\\sigma t}}{-\\sigma} \\right]_0^\\infty"
-    },
-    {
-     "t": "p",
-     "text": "This converges to $\\frac{1}{\\sigma}$ **if and only if** $\\sigma > 0$.\n   If $\\sigma \\le 0$, $I_2(\\sigma) = \\infty$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Analysis of $I_1(\\sigma)$ (Behavior as $t \\to -\\infty$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "I_1(\\sigma) = \\int_{-\\infty}^0 e^{-\\sigma t} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $\\tau = -t$:"
-    },
-    {
-     "t": "math",
-     "tex": "I_1(\\sigma) = \\int_0^\\infty e^{\\sigma \\tau} \\, d\\tau = \\left[ \\frac{e^{\\sigma \\tau}}{\\sigma} \\right]_0^\\infty"
-    },
-    {
-     "t": "p",
-     "text": "This converges to $-\\frac{1}{\\sigma}$ **if and only if** $\\sigma < 0$.\n   If $\\sigma \\ge 0$, $I_1(\\sigma) = \\infty$."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Simultaneous Convergence (Intersection of Conditions):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For $I(\\sigma)$ to converge, we require:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sigma \\in (\\sigma > 0) \\cap (\\sigma < 0) = \\emptyset"
-    },
-    {
-     "t": "p",
-     "text": "There is **NO real value** of $\\sigma$ that can simultaneously damp the signal at both positive and negative time infinities:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $\\sigma > 0$, the factor $e^{-\\sigma t}$ damps $t \\to +\\infty$, but exponentially explodes as $t \\to -\\infty$ ($e^{-\\sigma(-\\infty)} = e^{+\\infty}$).",
-      "If $\\sigma < 0$, the factor $e^{-\\sigma t}$ damps $t \\to -\\infty$, but exponentially explodes as $t \\to +\\infty$.",
-      "If $\\sigma = 0$, $y(t) = 1$, which integrates to $\\infty$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{The Bilateral Laplace Transform of } x(t) = 1 \\text{ DOES NOT EXIST (ROC is Empty: } \\emptyset\\text{)}}"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Distinction Between CTFT and Bilateral Laplace Transform:**\n- In CTFT: $x(t) = 1 \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi \\delta(\\omega)$ (exists in the sense of generalized functions/distributions).\n- In Bilateral Laplace Transform: $x(t) = 1$ has **NO transform** because its ROC is $\\emptyset$.\n- In **Unilateral (One-Sided) Laplace Transform** $\\mathcal{L}_+$: Since the integral starts at $0^-$, $x(t) = 1 \\cdot u(t) \\stackrel{\\mathcal{L}_+}{\\longleftrightarrow} \\frac{1}{s}$ with $\\text{Re}(s) > 0$. **Never confuse Bilateral and Unilateral transforms for constant signals!**"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 001 Absolute Integrability Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 001)"
+      },
+      {
+       "t": "p",
+       "text": "Which of the following signals are absolutely integrable (A.I.)?\nCriterion: $\\int_{-\\infty}^{+\\infty} |x(t)| \\, dt < \\infty$"
+      },
+      {
+       "t": "h4",
+       "text": "Detailed Mathematical Verifications:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Signal (a): $x(t) = e^{-2t}u(t)$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_{-\\infty}^{+\\infty} |e^{-2t}u(t)| \\, dt = \\int_0^\\infty e^{-2t} \\, dt = \\left[ \\frac{e^{-2t}}{-2} \\right]_0^\\infty = 0 - \\left( -\\frac{1}{2} \\right) = \\frac{1}{2} < \\infty \\implies \\mathbf{A.I.}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Signal (b): $x(t) = e^{-t/2}u(t)$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_0^\\infty e^{-t/2} \\, dt = \\left[ \\frac{e^{-t/2}}{-1/2} \\right]_0^\\infty = 0 - (-2) = 2 < \\infty \\implies \\mathbf{A.I.}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Signal (c): $x(t) = e^{2t}u(t)$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_0^\\infty e^{2t} \\, dt = \\lim_{T \\to \\infty} \\left[ \\frac{e^{2t}}{2} \\right]_0^T = \\lim_{T \\to \\infty} \\left( \\frac{e^{2T} - 1}{2} \\right) = \\infty \\implies \\mathbf{NOT\\ A.I.}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Signal (d): $x(t) = e^{0.5t}u(-t)$**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $u(-t) = 1$ for $t \\le 0$ and $0$ for $t > 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_{-\\infty}^0 e^{0.5t} \\, dt = \\left[ \\frac{e^{0.5t}}{0.5} \\right]_{-\\infty}^0 = \\frac{1}{0.5} - 0 = 2 < \\infty \\implies \\mathbf{A.I.}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Signal (e): $x(t) = e^{-at}u(t)$ with $a > 0$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_0^\\infty e^{-at} \\, dt = \\left[ \\frac{e^{-at}}{-a} \\right]_0^\\infty = \\frac{1}{a} < \\infty \\implies \\mathbf{A.I.}"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "**Signal (f): $x(t) = e^{at}u(-t)$ with $a > 0$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_{-\\infty}^0 e^{at} \\, dt = \\left[ \\frac{e^{at}}{a} \\right]_{-\\infty}^0 = \\frac{1}{a} - 0 = \\frac{1}{a} < \\infty \\implies \\mathbf{A.I.}"
+      },
+      {
+       "t": "ol",
+       "start": 7,
+       "items": [
+        "**Signal (g): $x(t) = e^{at}u(t)$ with $a > 0$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_0^\\infty e^{at} \\, dt = \\lim_{T \\to \\infty} \\frac{e^{aT} - 1}{a} = \\infty \\implies \\mathbf{NOT\\ A.I.}"
+      },
+      {
+       "t": "ol",
+       "start": 8,
+       "items": [
+        "**Signal (h): $x(t) = e^{-at}u(-t)$ with $a > 0$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_{-\\infty}^0 e^{-at} \\, dt = \\lim_{T \\to -\\infty} \\left[ \\frac{e^{-at}}{-a} \\right]_T^0 = -\\frac{1}{a} - \\lim_{T \\to -\\infty} \\left( -\\frac{e^{-aT}}{a} \\right) = \\infty \\implies \\mathbf{NOT\\ A.I.}"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE Exam Trap on Left-Sided Exponentials:**\nStudents frequently confuse the sign of the exponent with decay! For a **right-sided signal** ($u(t)$), $e^{-at}$ decays as $t \\to +\\infty$ if $a > 0$. However, for a **left-sided signal** ($u(-t)$), the time variable $t$ runs from $-\\infty$ to $0$. Therefore, $e^{at}u(-t)$ (with $a > 0$) decays as $t \\to -\\infty$ because $e^{a(-\\infty)} = 0$, making it **absolutely integrable**! Conversely, $e^{-at}u(-t)$ grows exponentially as $t \\to -\\infty$ ($e^{-a(-\\infty)} = e^{+\\infty} = \\infty$) and is **NOT** absolutely integrable!"
+      }
+     ],
+     "open": true
+    },
+    {
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 002 004 Convergence Factor Conditions /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Slide 002: Right-Sided Growing Exponential $x(t) = e^{2t}u(t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Integrability:** $\\int_0^\\infty e^{2t}\\,dt = \\infty$ (NOT A.I., ordinary CTFT does not exist).",
+        "**Weighting:** Multiply by $e^{-\\sigma t}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t)e^{-\\sigma t} = e^{2t}e^{-\\sigma t}u(t) = e^{(2-\\sigma)t}u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Absolute Integrability of $y(t)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I(\\sigma) = \\int_{-\\infty}^{+\\infty} |y(t)| \\, dt = \\int_0^\\infty e^{(2-\\sigma)t} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "For this integral to be strictly finite, the exponent must be strictly negative:"
+      },
+      {
+       "t": "math",
+       "tex": "2 - \\sigma < 0 \\implies \\boxed{\\sigma > 2}"
+      },
+      {
+       "t": "p",
+       "text": "When $\\sigma > 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "I(\\sigma) = \\left[ \\frac{e^{(2-\\sigma)t}}{2-\\sigma} \\right]_0^\\infty = 0 - \\frac{1}{2-\\sigma} = \\frac{1}{\\sigma - 2} < \\infty"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion:** By introducing $\\sigma > 2$, the signal is stabilized, and its Laplace transform converges!"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Slide 003: Left-Sided Growing Exponential $x(t) = e^{-2t}u(-t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Integrability:** As $t \\to -\\infty$, $e^{-2t} \\to \\infty$. NOT A.I.",
+        "**Weighting:** Multiply by $e^{-\\sigma t}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t)e^{-\\sigma t} = e^{-2t}e^{-\\sigma t}u(-t) = e^{-(2+\\sigma)t}u(-t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Absolute Integrability of $y(t)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I(\\sigma) = \\int_{-\\infty}^0 e^{-(2+\\sigma)t} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Let $\\tau = -t \\implies d\\tau = -dt$. When $t = -\\infty$, $\\tau = +\\infty$; when $t = 0$, $\\tau = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "I(\\sigma) = \\int_0^\\infty e^{(2+\\sigma)\\tau} \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "For this integral to converge, the exponent coefficient must be strictly negative:"
+      },
+      {
+       "t": "math",
+       "tex": "2 + \\sigma < 0 \\implies \\boxed{\\sigma < -2}"
+      },
+      {
+       "t": "p",
+       "text": "When $\\sigma < -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "I(\\sigma) = \\left[ \\frac{e^{-(2+\\sigma)t}}{-(2+\\sigma)} \\right]_{-\\infty}^0 = -\\frac{1}{2+\\sigma} - 0 = \\frac{1}{-(2+\\sigma)} < \\infty"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion:** Left-sided signals converge in a **left-half plane** $\\sigma < \\sigma_0$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Slide 004: Right-Sided Decaying Exponential $x(t) = e^{-2t}u(t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Integrability:** Naturally A.I. since $\\int_0^\\infty e^{-2t}dt = 1/2 < \\infty$.",
+        "**Weighting:** Multiply by $e^{-\\sigma t}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t)e^{-\\sigma t} = e^{-2t}e^{-\\sigma t}u(t) = e^{-(2+\\sigma)t}u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Absolute Integrability of $y(t)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I(\\sigma) = \\int_0^\\infty e^{-(2+\\sigma)t} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Convergence requires:"
+      },
+      {
+       "t": "math",
+       "tex": "-(2+\\sigma) < 0 \\implies 2 + \\sigma > 0 \\implies \\boxed{\\sigma > -2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Key Observation:** Because $\\sigma > -2$ contains $\\sigma = 0$ in its interior, the original signal $x(t)$ was already integrable, and its CTFT can be obtained directly by setting $s = j\\omega$."
+       ]
+      }
+     ],
+     "open": true
+    },
+    {
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 005 Impossibility Proof for  x t    1 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 005)"
+      },
+      {
+       "t": "p",
+       "text": "Prove why the constant DC signal $x(t) = 1$ ($-\\infty < t < \\infty$) has **NO Bilateral Laplace Transform**."
+      },
+      {
+       "t": "h4",
+       "text": "Rigorous Proof:"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t) = 1$ for all $t \\in \\mathbb{R}$. We attempt to find a real parameter $\\sigma$ such that:"
+      },
+      {
+       "t": "math",
+       "tex": "I(\\sigma) = \\int_{-\\infty}^{+\\infty} |x(t) e^{-\\sigma t}| \\, dt = \\int_{-\\infty}^{+\\infty} e^{-\\sigma t} \\, dt < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "Decompose the integral into two semi-infinite intervals:"
+      },
+      {
+       "t": "math",
+       "tex": "I(\\sigma) = \\underbrace{\\int_{-\\infty}^0 e^{-\\sigma t} \\, dt}_{I_1(\\sigma)} + \\underbrace{\\int_0^{+\\infty} e^{-\\sigma t} \\, dt}_{I_2(\\sigma)}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Analysis of $I_2(\\sigma)$ (Behavior as $t \\to +\\infty$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I_2(\\sigma) = \\int_0^\\infty e^{-\\sigma t} \\, dt = \\left[ \\frac{e^{-\\sigma t}}{-\\sigma} \\right]_0^\\infty"
+      },
+      {
+       "t": "p",
+       "text": "This converges to $\\frac{1}{\\sigma}$ **if and only if** $\\sigma > 0$.\n   If $\\sigma \\le 0$, $I_2(\\sigma) = \\infty$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Analysis of $I_1(\\sigma)$ (Behavior as $t \\to -\\infty$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "I_1(\\sigma) = \\int_{-\\infty}^0 e^{-\\sigma t} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $\\tau = -t$:"
+      },
+      {
+       "t": "math",
+       "tex": "I_1(\\sigma) = \\int_0^\\infty e^{\\sigma \\tau} \\, d\\tau = \\left[ \\frac{e^{\\sigma \\tau}}{\\sigma} \\right]_0^\\infty"
+      },
+      {
+       "t": "p",
+       "text": "This converges to $-\\frac{1}{\\sigma}$ **if and only if** $\\sigma < 0$.\n   If $\\sigma \\ge 0$, $I_1(\\sigma) = \\infty$."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Simultaneous Convergence (Intersection of Conditions):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For $I(\\sigma)$ to converge, we require:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sigma \\in (\\sigma > 0) \\cap (\\sigma < 0) = \\emptyset"
+      },
+      {
+       "t": "p",
+       "text": "There is **NO real value** of $\\sigma$ that can simultaneously damp the signal at both positive and negative time infinities:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $\\sigma > 0$, the factor $e^{-\\sigma t}$ damps $t \\to +\\infty$, but exponentially explodes as $t \\to -\\infty$ ($e^{-\\sigma(-\\infty)} = e^{+\\infty}$).",
+        "If $\\sigma < 0$, the factor $e^{-\\sigma t}$ damps $t \\to -\\infty$, but exponentially explodes as $t \\to +\\infty$.",
+        "If $\\sigma = 0$, $y(t) = 1$, which integrates to $\\infty$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{The Bilateral Laplace Transform of } x(t) = 1 \\text{ DOES NOT EXIST (ROC is Empty: } \\emptyset\\text{)}}"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Distinction Between CTFT and Bilateral Laplace Transform:**\n- In CTFT: $x(t) = 1 \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi \\delta(\\omega)$ (exists in the sense of generalized functions/distributions).\n- In Bilateral Laplace Transform: $x(t) = 1$ has **NO transform** because its ROC is $\\emptyset$.\n- In **Unilateral (One-Sided) Laplace Transform** $\\mathcal{L}_+$: Since the integral starts at $0^-$, $x(t) = 1 \\cdot u(t) \\stackrel{\\mathcal{L}_+}{\\longleftrightarrow} \\frac{1}{s}$ with $\\text{Re}(s) > 0$. **Never confuse Bilateral and Unilateral transforms for constant signals!**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1231,177 +1228,175 @@ export default {
      "text": "5.4 Visual Chalkboard Drills: Causality & Time-Shifting (Slides 021\u2013024)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 021 True/False Diagnostic /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Diagnostic Statements Evaluated on Chalkboard Slide 021:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Statement (a): \"All R.S.S. are causal.\" $\\implies$ FALSE $\\times$**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Counterexample:* Consider $x(t) = u(t+2)$.",
+        "*Analysis:* $x(t)$ is right-sided with $T_1 = -2$. However, $x(t) = 1$ for $-2 \\le t < 0$. Since it is non-zero for $t < 0$, it is **non-causal**!",
+        "*Rule:* Only an R.S.S. starting at or after $t = 0$ ($T_1 \\ge 0$) is causal."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Statement (b): \"All L.S.S. are anti-causal.\" $\\implies$ FALSE $\\times$**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Counterexample:* Consider $x(t) = u(-t+2)$.",
+        "*Analysis:* $x(t)$ is left-sided with $T_2 = +2$. However, $x(t) = 1$ for $0 < t \\le 2$. Since it is non-zero for $t > 0$, it is **non-causal**!",
+        "*Rule:* Only an L.S.S. terminating at or before $t = 0$ ($T_2 \\le 0$) is anti-causal."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Statement (c): \"All causal signals are R.S.S.\" $\\implies$ TRUE (with Academic Clarification)**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Mathematical Proof:* By definition, a causal signal satisfies $x(t) = 0$ for all $t < 0$. Choosing $T_1 = 0$, we have $x(t) = 0$ for all $t < T_1$. Thus, every causal signal rigorously satisfies the mathematical definition of a right-sided signal!",
+        "*Chalkboard Discussion Note:* On the chalkboard, the instructor highlights that if one defines \"R.S.S.\" as extending all the way to $+\\infty$, then a finite duration signal like $\\text{rect}(t - 1)$ (which is zero for $t < 0$ and zero for $t > 2$) is technically classified under \"FD+FA\". However, under standard Oppenheim/Haykin signal theory, compact support signals $[T_1, T_2]$ are a subset of both R.S.S. and L.S.S."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Statement (d): \"All anti-causal signals are L.S.S.\" $\\implies$ TRUE (with Academic Clarification)**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Mathematical Proof:* By definition, an anti-causal signal satisfies $x(t) = 0$ for all $t > 0$. Choosing $T_2 = 0$, we have $x(t) = 0$ for all $t > T_2$. Thus, every anti-causal signal mathematically satisfies the definition of a left-sided signal!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
-     "t": "h4",
-     "text": "Diagnostic Statements Evaluated on Chalkboard Slide 021:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Statement (a): \"All R.S.S. are causal.\" $\\implies$ FALSE $\\times$**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Counterexample:* Consider $x(t) = u(t+2)$.",
-      "*Analysis:* $x(t)$ is right-sided with $T_1 = -2$. However, $x(t) = 1$ for $-2 \\le t < 0$. Since it is non-zero for $t < 0$, it is **non-causal**!",
-      "*Rule:* Only an R.S.S. starting at or after $t = 0$ ($T_1 \\ge 0$) is causal."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Statement (b): \"All L.S.S. are anti-causal.\" $\\implies$ FALSE $\\times$**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Counterexample:* Consider $x(t) = u(-t+2)$.",
-      "*Analysis:* $x(t)$ is left-sided with $T_2 = +2$. However, $x(t) = 1$ for $0 < t \\le 2$. Since it is non-zero for $t > 0$, it is **non-causal**!",
-      "*Rule:* Only an L.S.S. terminating at or before $t = 0$ ($T_2 \\le 0$) is anti-causal."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Statement (c): \"All causal signals are R.S.S.\" $\\implies$ TRUE (with Academic Clarification)**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Mathematical Proof:* By definition, a causal signal satisfies $x(t) = 0$ for all $t < 0$. Choosing $T_1 = 0$, we have $x(t) = 0$ for all $t < T_1$. Thus, every causal signal rigorously satisfies the mathematical definition of a right-sided signal!",
-      "*Chalkboard Discussion Note:* On the chalkboard, the instructor highlights that if one defines \"R.S.S.\" as extending all the way to $+\\infty$, then a finite duration signal like $\\text{rect}(t - 1)$ (which is zero for $t < 0$ and zero for $t > 2$) is technically classified under \"FD+FA\". However, under standard Oppenheim/Haykin signal theory, compact support signals $[T_1, T_2]$ are a subset of both R.S.S. and L.S.S."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Statement (d): \"All anti-causal signals are L.S.S.\" $\\implies$ TRUE (with Academic Clarification)**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Mathematical Proof:* By definition, an anti-causal signal satisfies $x(t) = 0$ for all $t > 0$. Choosing $T_2 = 0$, we have $x(t) = 0$ for all $t > T_2$. Thus, every anti-causal signal mathematically satisfies the definition of a left-sided signal!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Slide 022 Drill: Transforming Causal to Non-Causal"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Given: $x(t) = u(t)$ (strictly Causal since $u(t) = 0$ for $t < 0$).",
-      "Operation: Introduce a time advance (left-shift by $t_0 > 0$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t + t_0) = u(t + t_0)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $t_0 = 2$: $y(t) = u(t + 2)$.",
-      "Support: $y(t) = 1$ for $t \\ge -2$.",
-      "In the interval $-2 \\le t < 0$, $y(t) = 1 \\ne 0$.",
-      "**Result:** Left-shifting a causal signal makes it **Non-Causal**."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Slide 023 Drill: Transforming Anti-Causal to Non-Causal"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Given: $x(t) = u(-t)$ (strictly Anti-Causal since $u(-t) = 0$ for $t > 0$).",
-      "Operation: Introduce a time delay (right-shift by $t_0 > 0$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t - t_0) = u(-(t - t_0)) = u(-t + t_0)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $t_0 = 2$: $y(t) = u(-t + 2)$.",
-      "Support: $y(t) = 1$ for $t \\le 2$.",
-      "In the interval $0 < t \\le 2$, $y(t) = 1 \\ne 0$.",
-      "**Result:** Right-shifting an anti-causal signal makes it **Non-Causal**."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Slide 024 Drill: The Shift Invariance of Both-Sided Signals"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Given: $x(t) = u(t) + u(-t-2)$.",
-      "$u(t) = 1$ for $t \\ge 0$.",
-      "$u(-t-2) = 1$ for $t \\le -2$.",
-      "In the gap $-2 < t < 0$, $x(t) = 0$.",
-      "Question (a): Is $x(t)$ both-sided and non-causal?",
-      "**Answer: YES.** It extends to $-\\infty$ (value 1) and to $+\\infty$ (value 1). It is non-zero on both sides of $t=0$, hence non-causal.",
-      "Question (b): Can introducing ANY time shift $t \\to t - t_0$ transform $x(t)$ into a causal or anti-causal signal?",
-      "**Answer: NO! It is mathematically IMPOSSIBLE.**",
-      "**Rigorous Proof:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $y(t) = x(t - t_0) = u(t - t_0) + u(-(t - t_0) - 2) = u(t - t_0) + u(-t + t_0 - 2)$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "To make $y(t)$ causal, we would require $y(t) = 0$ for all $t < 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "However, the second term $u(-t + t_0 - 2)$ is non-zero for all $t \\le t_0 - 2$. As $t \\to -\\infty$, $u(-t + t_0 - 2) = 1$ regardless of how large or small $t_0$ is! No finite shift $t_0$ can extinguish an infinite tail running to $-\\infty$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "To make $y(t)$ anti-causal, we would require $y(t) = 0$ for all $t > 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "However, the first term $u(t - t_0)$ is non-zero for all $t \\ge t_0$. As $t \\to +\\infty$, $u(t - t_0) = 1$ for any finite $t_0$. No finite shift can extinguish an infinite tail running to $+\\infty$."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Theorem: A Both-Sided Signal (B.S.S.) possesses infinite support at both } \\pm\\infty \\text{ and CANNOT be made Causal or Anti-Causal by time-shifting.}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 022 024 Manipulation &amp  Invariance Drills /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Slide 022 Drill: Transforming Causal to Non-Causal"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Given: $x(t) = u(t)$ (strictly Causal since $u(t) = 0$ for $t < 0$).",
+        "Operation: Introduce a time advance (left-shift by $t_0 > 0$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t + t_0) = u(t + t_0)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $t_0 = 2$: $y(t) = u(t + 2)$.",
+        "Support: $y(t) = 1$ for $t \\ge -2$.",
+        "In the interval $-2 \\le t < 0$, $y(t) = 1 \\ne 0$.",
+        "**Result:** Left-shifting a causal signal makes it **Non-Causal**."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Slide 023 Drill: Transforming Anti-Causal to Non-Causal"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Given: $x(t) = u(-t)$ (strictly Anti-Causal since $u(-t) = 0$ for $t > 0$).",
+        "Operation: Introduce a time delay (right-shift by $t_0 > 0$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t - t_0) = u(-(t - t_0)) = u(-t + t_0)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $t_0 = 2$: $y(t) = u(-t + 2)$.",
+        "Support: $y(t) = 1$ for $t \\le 2$.",
+        "In the interval $0 < t \\le 2$, $y(t) = 1 \\ne 0$.",
+        "**Result:** Right-shifting an anti-causal signal makes it **Non-Causal**."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Slide 024 Drill: The Shift Invariance of Both-Sided Signals"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Given: $x(t) = u(t) + u(-t-2)$.",
+        "$u(t) = 1$ for $t \\ge 0$.",
+        "$u(-t-2) = 1$ for $t \\le -2$.",
+        "In the gap $-2 < t < 0$, $x(t) = 0$.",
+        "Question (a): Is $x(t)$ both-sided and non-causal?",
+        "**Answer: YES.** It extends to $-\\infty$ (value 1) and to $+\\infty$ (value 1). It is non-zero on both sides of $t=0$, hence non-causal.",
+        "Question (b): Can introducing ANY time shift $t \\to t - t_0$ transform $x(t)$ into a causal or anti-causal signal?",
+        "**Answer: NO! It is mathematically IMPOSSIBLE.**",
+        "**Rigorous Proof:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $y(t) = x(t - t_0) = u(t - t_0) + u(-(t - t_0) - 2) = u(t - t_0) + u(-t + t_0 - 2)$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "To make $y(t)$ causal, we would require $y(t) = 0$ for all $t < 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "However, the second term $u(-t + t_0 - 2)$ is non-zero for all $t \\le t_0 - 2$. As $t \\to -\\infty$, $u(-t + t_0 - 2) = 1$ regardless of how large or small $t_0$ is! No finite shift $t_0$ can extinguish an infinite tail running to $-\\infty$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "To make $y(t)$ anti-causal, we would require $y(t) = 0$ for all $t > 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "However, the first term $u(t - t_0)$ is non-zero for all $t \\ge t_0$. As $t \\to +\\infty$, $u(t - t_0) = 1$ for any finite $t_0$. No finite shift can extinguish an infinite tail running to $+\\infty$."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Theorem: A Both-Sided Signal (B.S.S.) possesses infinite support at both } \\pm\\infty \\text{ and CANNOT be made Causal or Anti-Causal by time-shifting.}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1643,704 +1638,699 @@ export default {
      "text": "7.4 Solved Blackboard Problems: Step-by-Step Mathematical Derivations (Slides 027\u2013032)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 027/028)"
-    },
-    {
-     "t": "p",
-     "text": "Find all poles and zeros of:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s+2}{(s+3)(s+4)}"
-    },
-    {
-     "t": "p",
-     "text": "and sketch the pole-zero plot on the $s$-plane."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Algebraic Classification:** Rational transfer function ($N(s)$ is degree 1, $D(s)$ is degree 2).",
-      "**Finite Zeros:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "N(s) = 0 \\implies s + 2 = 0 \\implies \\boxed{s_z = -2}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Finite Poles:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "D(s) = 0 \\implies (s+3)(s+4) = 0 \\implies \\boxed{s_{p_1} = -3, \\quad s_{p_2} = -4}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Behavior at Infinity ($s \\to \\infty$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{s \\to \\infty} X(s) = \\lim_{s \\to \\infty} \\frac{s}{s^2} = \\lim_{s \\to \\infty} \\frac{1}{s} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Since the denominator degree exceeds the numerator degree by $2 - 1 = 1$, there is **1 zero at infinity ($s_z = \\infty$)**."
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Total Count:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Total Poles: 2 (at $s = -3, -4$).",
-      "Total Zeros: 2 (1 finite at $s = -2$, 1 at $s = \\infty$).",
-      "Total Poles = Total Zeros = 2."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "**$s$-Plane Plot:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Zeros are represented by open circles $\\circ$ at $s = -2$.",
-      "Poles are represented by crosses $\\times$ at $s = -3$ and $s = -4$.",
-      "All critical frequencies lie strictly on the negative real $\\sigma$-axis in the LHP."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 027/029)"
-    },
-    {
-     "t": "p",
-     "text": "Find all poles and zeros of:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s+3}{s^2+5s+6}"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Factorize Denominator:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "D(s) = s^2 + 5s + 6 = (s+3)(s+2)"
-    },
-    {
-     "t": "p",
-     "text": "Rewrite the system function:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s+3}{(s+3)(s+2)}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Inspect Apparent Candidate Points:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Setting $N(s) = 0 \\implies s = -3$ (candidate zero).",
-      "Setting $D(s) = 0 \\implies s = -3, -2$ (candidate poles)."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Critical Singularity Test at $s = -3$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Substitute $s = -3$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(-3) = \\frac{-3 + 3}{(-3+3)(-3+2)} = \\frac{0}{0} \\quad (\\text{Indeterminate Form!})"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the limit using algebraic reduction:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{s \\to -3} X(s) = \\lim_{s \\to -3} \\frac{s+3}{(s+3)(s+2)} = \\lim_{s \\to -3} \\frac{1}{s+2} = \\frac{1}{-3+2} = \\frac{1}{-1} = -1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\lim_{s \\to -3} X(s) = -1 \\ne 0$, **$s = -3$ is NOT a zero!**",
-      "Since $\\lim_{s \\to -3} X(s) = -1 \\ne \\pm\\infty$, **$s = -3$ is NOT a pole!**",
-      "$s = -3$ is a **Removable Singularity** that cancels completely."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**True Poles and Zeros:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The irreducible transfer function is:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{s+2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Poles:** $s+2 = 0 \\implies \\boxed{s_p = -2}$ (Order 1).",
-      "**Finite Zeros:** None!",
-      "**Zeros at Infinity:** Since degree of denominator ($N=1$) > degree of numerator ($M=0$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{s \\to \\infty} X(s) = \\lim_{s \\to \\infty} \\frac{1}{s+2} = 0 \\implies \\boxed{s_z = \\infty} \\quad (1\\text{ zero at } \\infty)"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**$s$-Plane Plot:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Single cross $\\times$ at $s = -2$.",
-      "**No mark** at $s = -3$! (Drawing a pole or zero at $-3$ is an automatic error in GATE!)."
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**Classic GATE Trap on Transfer Function Simplification:**\nIf a question asks: *\"The number of finite poles of $H(s) = \\frac{s+3}{s^2+5s+6}$ is:\"*\n- Option A: 2\n- Option B: 1\n- Option C: 0\n- Option D: 3\n**The correct answer is Option B (Only 1 pole at $s = -2$)!** Never count canceled factors as poles or zeros of the system transfer function!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 027/030)"
-    },
-    {
-     "t": "p",
-     "text": "Find the poles and zeros of:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{e^{-s}}{s}"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Algebraic Classification:** Irrational / Transcendental due to the delay factor $e^{-s}$.",
-      "**Poles:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set denominator to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "s = 0"
-    },
-    {
-     "t": "p",
-     "text": "Check value of $X(s)$ at $s = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = \\frac{e^{-0}}{0} = \\frac{1}{0} = \\infty"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, **$s = 0$ is a Pole of Order 1** located at the origin of the $s$-plane."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{s_p = 0}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Zeros:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set numerator to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-s} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Taking the natural logarithm of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "-s = \\ln(0) = -\\infty \\implies \\boxed{s_z = +\\infty}"
-    },
-    {
-     "t": "p",
-     "text": "Verification by limit:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{s \\to +\\infty} X(s) = \\lim_{s \\to +\\infty} \\frac{e^{-s}}{s} = \\frac{e^{-\\infty}}{\\infty} = \\frac{0}{\\infty} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Thus, $X(s)$ has no finite zeros; it has an essential zero at $s = +\\infty$."
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Behavior as $s \\to -\\infty$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{s \\to -\\infty} X(s) = \\lim_{s \\to -\\infty} \\frac{e^{-(-\\infty)}}{-\\infty} = \\frac{e^{+\\infty}}{-\\infty} = -\\infty"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**$s$-Plane Plot:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Cross $\\times$ placed directly at the origin $(0, 0)$.",
-      "No finite zeros marked."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 027/031)"
-    },
-    {
-     "t": "p",
-     "text": "Find all poles and zeros of:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{e^s - e^{-s}}{s}"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Alternative Form (Hyperbolic Connection):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall $\\sinh s = \\frac{e^s - e^{-s}}{2}$, therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{2\\sinh s}{s}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Analysis at Candidate Pole $s = 0$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluating directly at $s = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = \\frac{e^0 - e^{-0}}{0} = \\frac{1 - 1}{0} = \\frac{0}{0} \\quad (\\text{Indeterminate Form!})"
-    },
-    {
-     "t": "p",
-     "text": "Apply L'H\u00f4pital's Rule:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{s \\to 0} X(s) = \\lim_{s \\to 0} \\frac{\\frac{d}{ds}(e^s - e^{-s})}{\\frac{d}{ds}(s)} = \\lim_{s \\to 0} \\frac{e^s + e^{-s}}{1} = \\frac{e^0 + e^{-0}}{1} = \\frac{1 + 1}{1} = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\lim_{s \\to 0} X(s) = 2 \\ne \\pm\\infty$, **$s = 0$ is NOT a pole!**",
-      "Since $\\lim_{s \\to 0} X(s) = 2 \\ne 0$, **$s = 0$ is NOT a zero!**",
-      "The origin $s = 0$ is a **Removable Singularity**!"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Poles of $X(s)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $D(s) = s$ was the only denominator term, and its root $s = 0$ is removable:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{There are NO finite poles in the entire complex } s\\text{-plane!}}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Zeros of $X(s)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set numerator to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "e^s - e^{-s} = 0 \\implies e^s = e^{-s}"
-    },
-    {
-     "t": "p",
-     "text": "Multiply both sides by $e^s$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{2s} = 1"
-    },
-    {
-     "t": "p",
-     "text": "Express $1$ in complex exponential polar form:"
-    },
-    {
-     "t": "math",
-     "tex": "1 = e^{j 2\\pi n} \\quad \\text{where } n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "Equating exponents:"
-    },
-    {
-     "t": "math",
-     "tex": "2s = j 2\\pi n \\implies s = j n \\pi, \\quad n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "However, we already established that at $n = 0$ ($s = 0$), $X(0) = 2 \\ne 0$. Therefore, $n = 0$ **MUST be excluded**!"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{s_z = j n \\pi \\quad \\text{where } n \\in \\mathbb{Z} \\setminus \\{0\\} = \\{\\pm 1, \\pm 2, \\pm 3, \\dots\\}}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Verification at Zeros:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluate $X(s)$ at $s = j n \\pi$ ($n \\ne 0$):"
-    },
-    {
-     "t": "math",
-     "tex": "X(j n \\pi) = \\frac{e^{j n \\pi} - e^{-j n \\pi}}{j n \\pi} = \\frac{2j \\sin(n\\pi)}{j n \\pi} = \\frac{2(0)}{n\\pi} = 0 \\quad \\checkmark"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "**$s$-Plane Plot:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Infinitely many zeros marked as circles $\\circ$ along the imaginary $j\\omega$-axis at:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s = \\pm j\\pi, \\quad \\pm j2\\pi, \\quad \\pm j3\\pi, \\quad \\dots"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**No mark** at the origin $s = 0$ (the origin is completely clear!)."
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**Time-Domain Origin of Problem (d):**\nNote that $\\mathcal{L}\\{\\text{rect}(t/2)\\} = \\int_{-1}^1 1 \\cdot e^{-st} dt = \\left[ \\frac{e^{-st}}{-s} \\right]_{-1}^1 = \\frac{e^{-s} - e^s}{-s} = \\frac{e^s - e^{-s}}{s}$.\nA finite duration rectangular pulse has an entire transform (converges everywhere in the finite $s$-plane), hence has **zero poles** in the finite plane, and infinite zeros corresponding to the nulls of its Fourier transform sinc spectrum!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 028/032): Problem (e)"
-    },
-    {
-     "t": "p",
-     "text": "Find poles and zeros of:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{e^s}{(s+3)(s-1)}"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Finite Poles:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "D(s) = 0 \\implies (s+3)(s-1) = 0 \\implies \\boxed{s_{p_1} = -3, \\quad s_{p_2} = +1}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Zeros:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set numerator to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "e^s = 0 \\implies s = \\ln(0) \\implies \\boxed{s_z = -\\infty}"
-    },
-    {
-     "t": "p",
-     "text": "Verification:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{s \\to -\\infty} X(s) = \\lim_{s \\to -\\infty} \\frac{e^s}{(s+3)(s-1)} = \\frac{e^{-\\infty}}{(-\\infty)(-\\infty)} = \\frac{0}{+\\infty} = 0"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**$s$-Plane Plot:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Cross $\\times$ at $s = -3$ (LHP).",
-      "Cross $\\times$ at $s = +1$ (RHP).",
-      "Zero at $-\\infty$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 028/032): Problem (f)"
-    },
-    {
-     "t": "p",
-     "text": "Find poles and zeros of:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s+2}{(s+2)^2 + 3}"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Finite Zeros:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "N(s) = 0 \\implies s + 2 = 0 \\implies \\boxed{s_z = -2}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Finite Poles:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set denominator to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "(s+2)^2 + 3 = 0 \\implies (s+2)^2 = -3 = 3 j^2"
-    },
-    {
-     "t": "p",
-     "text": "Taking the square root of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "s + 2 = \\pm j \\sqrt{3} \\implies \\boxed{s_{p_{1,2}} = -2 \\pm j\\sqrt{3}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Complex conjugate pole pair located at:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sigma = -2, \\quad \\omega = +\\sqrt{3} \\approx +1.732"
-    },
-    {
-     "t": "math",
-     "tex": "\\sigma = -2, \\quad \\omega = -\\sqrt{3} \\approx -1.732"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\sigma = -2 < 0$, both poles lie strictly in the Left-Half Plane (LHP)."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Zeros at Infinity:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Denominator degree $N = 2$, numerator degree $M = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "N - M = 2 - 1 = 1 \\implies \\boxed{1 \\text{ zero at } s = \\infty}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Time-Domain Impulse Response Signature:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "By inverse Laplace transform:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}^{-1}\\left\\{ \\frac{s+2}{(s+2)^2 + (\\sqrt{3})^2} \\right\\} = e^{-2t} \\cos(\\sqrt{3} t) u(t)"
-    },
-    {
-     "t": "p",
-     "text": "The real part $\\sigma = -2$ governs exponential envelope decay $e^{-2t}$, while the imaginary part $\\omega = \\sqrt{3}$ dictates the oscillation frequency!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  a /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 027/028)"
+      },
+      {
+       "t": "p",
+       "text": "Find all poles and zeros of:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s+2}{(s+3)(s+4)}"
+      },
+      {
+       "t": "p",
+       "text": "and sketch the pole-zero plot on the $s$-plane."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Algebraic Classification:** Rational transfer function ($N(s)$ is degree 1, $D(s)$ is degree 2).",
+        "**Finite Zeros:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "N(s) = 0 \\implies s + 2 = 0 \\implies \\boxed{s_z = -2}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Finite Poles:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "D(s) = 0 \\implies (s+3)(s+4) = 0 \\implies \\boxed{s_{p_1} = -3, \\quad s_{p_2} = -4}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Behavior at Infinity ($s \\to \\infty$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{s \\to \\infty} X(s) = \\lim_{s \\to \\infty} \\frac{s}{s^2} = \\lim_{s \\to \\infty} \\frac{1}{s} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Since the denominator degree exceeds the numerator degree by $2 - 1 = 1$, there is **1 zero at infinity ($s_z = \\infty$)**."
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Total Count:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Total Poles: 2 (at $s = -3, -4$).",
+        "Total Zeros: 2 (1 finite at $s = -2$, 1 at $s = \\infty$).",
+        "Total Poles = Total Zeros = 2."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "**$s$-Plane Plot:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Zeros are represented by open circles $\\circ$ at $s = -2$.",
+        "Poles are represented by crosses $\\times$ at $s = -3$ and $s = -4$.",
+        "All critical frequencies lie strictly on the negative real $\\sigma$-axis in the LHP."
+       ]
+      }
+     ],
+     "open": true
+    },
+    {
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  b  Pole-Zero Cancellation Trap /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 027/029)"
+      },
+      {
+       "t": "p",
+       "text": "Find all poles and zeros of:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s+3}{s^2+5s+6}"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Factorize Denominator:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "D(s) = s^2 + 5s + 6 = (s+3)(s+2)"
+      },
+      {
+       "t": "p",
+       "text": "Rewrite the system function:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s+3}{(s+3)(s+2)}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Inspect Apparent Candidate Points:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Setting $N(s) = 0 \\implies s = -3$ (candidate zero).",
+        "Setting $D(s) = 0 \\implies s = -3, -2$ (candidate poles)."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Critical Singularity Test at $s = -3$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Substitute $s = -3$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(-3) = \\frac{-3 + 3}{(-3+3)(-3+2)} = \\frac{0}{0} \\quad (\\text{Indeterminate Form!})"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the limit using algebraic reduction:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{s \\to -3} X(s) = \\lim_{s \\to -3} \\frac{s+3}{(s+3)(s+2)} = \\lim_{s \\to -3} \\frac{1}{s+2} = \\frac{1}{-3+2} = \\frac{1}{-1} = -1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\lim_{s \\to -3} X(s) = -1 \\ne 0$, **$s = -3$ is NOT a zero!**",
+        "Since $\\lim_{s \\to -3} X(s) = -1 \\ne \\pm\\infty$, **$s = -3$ is NOT a pole!**",
+        "$s = -3$ is a **Removable Singularity** that cancels completely."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**True Poles and Zeros:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The irreducible transfer function is:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{s+2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Poles:** $s+2 = 0 \\implies \\boxed{s_p = -2}$ (Order 1).",
+        "**Finite Zeros:** None!",
+        "**Zeros at Infinity:** Since degree of denominator ($N=1$) > degree of numerator ($M=0$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{s \\to \\infty} X(s) = \\lim_{s \\to \\infty} \\frac{1}{s+2} = 0 \\implies \\boxed{s_z = \\infty} \\quad (1\\text{ zero at } \\infty)"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**$s$-Plane Plot:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Single cross $\\times$ at $s = -2$.",
+        "**No mark** at $s = -3$! (Drawing a pole or zero at $-3$ is an automatic error in GATE!)."
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**Classic GATE Trap on Transfer Function Simplification:**\nIf a question asks: *\"The number of finite poles of $H(s) = \\frac{s+3}{s^2+5s+6}$ is:\"*\n- Option A: 2\n- Option B: 1\n- Option C: 0\n- Option D: 3\n**The correct answer is Option B (Only 1 pole at $s = -2$)!** Never count canceled factors as poles or zeros of the system transfer function!"
+      }
+     ],
+     "open": true
+    },
+    {
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  c  Irrational Delay Function /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 027/030)"
+      },
+      {
+       "t": "p",
+       "text": "Find the poles and zeros of:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{e^{-s}}{s}"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Algebraic Classification:** Irrational / Transcendental due to the delay factor $e^{-s}$.",
+        "**Poles:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set denominator to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "s = 0"
+      },
+      {
+       "t": "p",
+       "text": "Check value of $X(s)$ at $s = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = \\frac{e^{-0}}{0} = \\frac{1}{0} = \\infty"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, **$s = 0$ is a Pole of Order 1** located at the origin of the $s$-plane."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{s_p = 0}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Zeros:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set numerator to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-s} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Taking the natural logarithm of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "-s = \\ln(0) = -\\infty \\implies \\boxed{s_z = +\\infty}"
+      },
+      {
+       "t": "p",
+       "text": "Verification by limit:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{s \\to +\\infty} X(s) = \\lim_{s \\to +\\infty} \\frac{e^{-s}}{s} = \\frac{e^{-\\infty}}{\\infty} = \\frac{0}{\\infty} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Thus, $X(s)$ has no finite zeros; it has an essential zero at $s = +\\infty$."
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Behavior as $s \\to -\\infty$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{s \\to -\\infty} X(s) = \\lim_{s \\to -\\infty} \\frac{e^{-(-\\infty)}}{-\\infty} = \\frac{e^{+\\infty}}{-\\infty} = -\\infty"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**$s$-Plane Plot:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Cross $\\times$ placed directly at the origin $(0, 0)$.",
+        "No finite zeros marked."
+       ]
+      }
+     ],
+     "open": true
+    },
+    {
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  d  Periodic Zeros &amp  L'H pital at Origin /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 027/031)"
+      },
+      {
+       "t": "p",
+       "text": "Find all poles and zeros of:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{e^s - e^{-s}}{s}"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Alternative Form (Hyperbolic Connection):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall $\\sinh s = \\frac{e^s - e^{-s}}{2}$, therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{2\\sinh s}{s}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Analysis at Candidate Pole $s = 0$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluating directly at $s = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = \\frac{e^0 - e^{-0}}{0} = \\frac{1 - 1}{0} = \\frac{0}{0} \\quad (\\text{Indeterminate Form!})"
+      },
+      {
+       "t": "p",
+       "text": "Apply L'H\u00f4pital's Rule:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{s \\to 0} X(s) = \\lim_{s \\to 0} \\frac{\\frac{d}{ds}(e^s - e^{-s})}{\\frac{d}{ds}(s)} = \\lim_{s \\to 0} \\frac{e^s + e^{-s}}{1} = \\frac{e^0 + e^{-0}}{1} = \\frac{1 + 1}{1} = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\lim_{s \\to 0} X(s) = 2 \\ne \\pm\\infty$, **$s = 0$ is NOT a pole!**",
+        "Since $\\lim_{s \\to 0} X(s) = 2 \\ne 0$, **$s = 0$ is NOT a zero!**",
+        "The origin $s = 0$ is a **Removable Singularity**!"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Poles of $X(s)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $D(s) = s$ was the only denominator term, and its root $s = 0$ is removable:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{There are NO finite poles in the entire complex } s\\text{-plane!}}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Zeros of $X(s)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set numerator to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "e^s - e^{-s} = 0 \\implies e^s = e^{-s}"
+      },
+      {
+       "t": "p",
+       "text": "Multiply both sides by $e^s$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{2s} = 1"
+      },
+      {
+       "t": "p",
+       "text": "Express $1$ in complex exponential polar form:"
+      },
+      {
+       "t": "math",
+       "tex": "1 = e^{j 2\\pi n} \\quad \\text{where } n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "Equating exponents:"
+      },
+      {
+       "t": "math",
+       "tex": "2s = j 2\\pi n \\implies s = j n \\pi, \\quad n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "However, we already established that at $n = 0$ ($s = 0$), $X(0) = 2 \\ne 0$. Therefore, $n = 0$ **MUST be excluded**!"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{s_z = j n \\pi \\quad \\text{where } n \\in \\mathbb{Z} \\setminus \\{0\\} = \\{\\pm 1, \\pm 2, \\pm 3, \\dots\\}}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Verification at Zeros:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluate $X(s)$ at $s = j n \\pi$ ($n \\ne 0$):"
+      },
+      {
+       "t": "math",
+       "tex": "X(j n \\pi) = \\frac{e^{j n \\pi} - e^{-j n \\pi}}{j n \\pi} = \\frac{2j \\sin(n\\pi)}{j n \\pi} = \\frac{2(0)}{n\\pi} = 0 \\quad \\checkmark"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "**$s$-Plane Plot:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Infinitely many zeros marked as circles $\\circ$ along the imaginary $j\\omega$-axis at:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s = \\pm j\\pi, \\quad \\pm j2\\pi, \\quad \\pm j3\\pi, \\quad \\dots"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**No mark** at the origin $s = 0$ (the origin is completely clear!)."
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**Time-Domain Origin of Problem (d):**\nNote that $\\mathcal{L}\\{\\text{rect}(t/2)\\} = \\int_{-1}^1 1 \\cdot e^{-st} dt = \\left[ \\frac{e^{-st}}{-s} \\right]_{-1}^1 = \\frac{e^{-s} - e^s}{-s} = \\frac{e^s - e^{-s}}{s}$.\nA finite duration rectangular pulse has an entire transform (converges everywhere in the finite $s$-plane), hence has **zero poles** in the finite plane, and infinite zeros corresponding to the nulls of its Fourier transform sinc spectrum!"
+      }
+     ],
+     "open": true
+    },
+    {
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  e  &amp  Problem  f /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 028/032): Problem (e)"
+      },
+      {
+       "t": "p",
+       "text": "Find poles and zeros of:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{e^s}{(s+3)(s-1)}"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Finite Poles:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "D(s) = 0 \\implies (s+3)(s-1) = 0 \\implies \\boxed{s_{p_1} = -3, \\quad s_{p_2} = +1}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Zeros:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set numerator to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "e^s = 0 \\implies s = \\ln(0) \\implies \\boxed{s_z = -\\infty}"
+      },
+      {
+       "t": "p",
+       "text": "Verification:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{s \\to -\\infty} X(s) = \\lim_{s \\to -\\infty} \\frac{e^s}{(s+3)(s-1)} = \\frac{e^{-\\infty}}{(-\\infty)(-\\infty)} = \\frac{0}{+\\infty} = 0"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**$s$-Plane Plot:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Cross $\\times$ at $s = -3$ (LHP).",
+        "Cross $\\times$ at $s = +1$ (RHP).",
+        "Zero at $-\\infty$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 028/032): Problem (f)"
+      },
+      {
+       "t": "p",
+       "text": "Find poles and zeros of:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s+2}{(s+2)^2 + 3}"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Finite Zeros:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "N(s) = 0 \\implies s + 2 = 0 \\implies \\boxed{s_z = -2}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Finite Poles:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set denominator to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "(s+2)^2 + 3 = 0 \\implies (s+2)^2 = -3 = 3 j^2"
+      },
+      {
+       "t": "p",
+       "text": "Taking the square root of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "s + 2 = \\pm j \\sqrt{3} \\implies \\boxed{s_{p_{1,2}} = -2 \\pm j\\sqrt{3}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Complex conjugate pole pair located at:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sigma = -2, \\quad \\omega = +\\sqrt{3} \\approx +1.732"
+      },
+      {
+       "t": "math",
+       "tex": "\\sigma = -2, \\quad \\omega = -\\sqrt{3} \\approx -1.732"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\sigma = -2 < 0$, both poles lie strictly in the Left-Half Plane (LHP)."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Zeros at Infinity:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Denominator degree $N = 2$, numerator degree $M = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "N - M = 2 - 1 = 1 \\implies \\boxed{1 \\text{ zero at } s = \\infty}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Time-Domain Impulse Response Signature:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "By inverse Laplace transform:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}^{-1}\\left\\{ \\frac{s+2}{(s+2)^2 + (\\sqrt{3})^2} \\right\\} = e^{-2t} \\cos(\\sqrt{3} t) u(t)"
+      },
+      {
+       "t": "p",
+       "text": "The real part $\\sigma = -2$ governs exponential envelope decay $e^{-2t}$, while the imaginary part $\\omega = \\sqrt{3}$ dictates the oscillation frequency!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -3168,310 +3158,307 @@ export default {
      "text": "Slide 033 & 034: Second-Order Pole-Zero Constellation"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nGiven the continuous-time Laplace transform:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s + 2}{(s + 2)^2 + 3}"
-    },
-    {
-     "t": "p",
-     "text": "Determine all finite poles and zeros, verify the behavior at these critical frequencies, and plot the pole-zero constellation in the complex $s$-plane."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Finding the Zeros:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set the numerator equal to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "N(s) = s + 2 = 0 \\implies s_z = -2"
-    },
-    {
-     "t": "p",
-     "text": "Check:"
-    },
-    {
-     "t": "math",
-     "tex": "X(-2) = \\frac{-2 + 2}{(-2 + 2)^2 + 3} = \\frac{0}{3} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Hence, there is a single simple zero at $s_z = -2$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Finding the Poles:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set the denominator equal to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "D(s) = (s + 2)^2 + 3 = 0 \\implies (s + 2)^2 = -3"
-    },
-    {
-     "t": "math",
-     "tex": "s + 2 = \\pm j\\sqrt{3} \\implies s_p = -2 \\pm j\\sqrt{3}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, two simple complex conjugate poles exist:"
-    },
-    {
-     "t": "math",
-     "tex": "s_{p_1} = -2 + j\\sqrt{3}, \\quad s_{p_2} = -2 - j\\sqrt{3}"
-    },
-    {
-     "t": "p",
-     "text": "Check:"
-    },
-    {
-     "t": "math",
-     "tex": "X(-2 \\pm j\\sqrt{3}) = \\frac{-2 \\pm j\\sqrt{3} + 2}{(-2 \\pm j\\sqrt{3} + 2)^2 + 3} = \\frac{\\pm j\\sqrt{3}}{0} = \\pm \\infty"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Constellation Plot Geometry (Slide 034):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Horizontal axis: Real axis $\\sigma = \\text{Re}(s)$.",
-      "Vertical axis: Imaginary axis $j\\omega = \\text{Im}(s)$.",
-      "Mark the zero $s_z = -2$ with a small circle $O$ on the negative real axis at $(-2, 0)$.",
-      "Mark pole $s_{p_1} = -2 + j\\sqrt{3}$ with a cross $\\times$ at $(-2, +\\sqrt{3})$.",
-      "Mark pole $s_{p_2} = -2 - j\\sqrt{3}$ with a cross $\\times$ at $(-2, -\\sqrt{3})$.",
-      "Collinear property: All three critical points lie along the vertical line $\\sigma = -2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Common GATE Pitfalls:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Trap:* Expanding $(s+2)^2 + 3 = s^2 + 4s + 7$ and making an arithmetic error with the quadratic formula. Keeping it in vertex form $(s+2)^2 = -3$ yields the roots instantly!",
-      "*Trap:* Forgetting that poles define vertical boundary lines. Here, if the system is known to be causal, the ROC is $\\text{Re}(s) > -2$. Because the ROC includes the $j\\omega$-axis ($\\sigma = 0 > -2$), the underlying system is BIBO stable."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nGiven the continuous-time Laplace transform:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s + 2}{(s + 2)^2 + 3}"
+      },
+      {
+       "t": "p",
+       "text": "Determine all finite poles and zeros, verify the behavior at these critical frequencies, and plot the pole-zero constellation in the complex $s$-plane."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Finding the Zeros:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set the numerator equal to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "N(s) = s + 2 = 0 \\implies s_z = -2"
+      },
+      {
+       "t": "p",
+       "text": "Check:"
+      },
+      {
+       "t": "math",
+       "tex": "X(-2) = \\frac{-2 + 2}{(-2 + 2)^2 + 3} = \\frac{0}{3} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Hence, there is a single simple zero at $s_z = -2$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Finding the Poles:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set the denominator equal to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "D(s) = (s + 2)^2 + 3 = 0 \\implies (s + 2)^2 = -3"
+      },
+      {
+       "t": "math",
+       "tex": "s + 2 = \\pm j\\sqrt{3} \\implies s_p = -2 \\pm j\\sqrt{3}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, two simple complex conjugate poles exist:"
+      },
+      {
+       "t": "math",
+       "tex": "s_{p_1} = -2 + j\\sqrt{3}, \\quad s_{p_2} = -2 - j\\sqrt{3}"
+      },
+      {
+       "t": "p",
+       "text": "Check:"
+      },
+      {
+       "t": "math",
+       "tex": "X(-2 \\pm j\\sqrt{3}) = \\frac{-2 \\pm j\\sqrt{3} + 2}{(-2 \\pm j\\sqrt{3} + 2)^2 + 3} = \\frac{\\pm j\\sqrt{3}}{0} = \\pm \\infty"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Constellation Plot Geometry (Slide 034):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Horizontal axis: Real axis $\\sigma = \\text{Re}(s)$.",
+        "Vertical axis: Imaginary axis $j\\omega = \\text{Im}(s)$.",
+        "Mark the zero $s_z = -2$ with a small circle $O$ on the negative real axis at $(-2, 0)$.",
+        "Mark pole $s_{p_1} = -2 + j\\sqrt{3}$ with a cross $\\times$ at $(-2, +\\sqrt{3})$.",
+        "Mark pole $s_{p_2} = -2 - j\\sqrt{3}$ with a cross $\\times$ at $(-2, -\\sqrt{3})$.",
+        "Collinear property: All three critical points lie along the vertical line $\\sigma = -2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Common GATE Pitfalls:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Trap:* Expanding $(s+2)^2 + 3 = s^2 + 4s + 7$ and making an arithmetic error with the quadratic formula. Keeping it in vertex form $(s+2)^2 = -3$ yields the roots instantly!",
+        "*Trap:* Forgetting that poles define vertical boundary lines. Here, if the system is known to be causal, the ROC is $\\text{Re}(s) > -2$. Because the ROC includes the $j\\omega$-axis ($\\sigma = 0 > -2$), the underlying system is BIBO stable."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 035: Causal Decaying Exponential $x(t) = e^{-2t}u(t)$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nCompute the bilateral Laplace transform and determine the Region of Convergence (ROC) for:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{-2t}u(t)"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Direct Integration from First Principles:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\int_{-\\infty}^{\\infty} x(t) e^{-st} \\, dt = \\int_{0}^{\\infty} e^{-2t} e^{-st} \\, dt = \\int_{0}^{\\infty} e^{-(s+2)t} \\, dt"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Convergence Analysis:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Substitute $s = \\sigma + j\\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-(s+2)t} = e^{-(\\sigma + 2)t} e^{-j\\omega t}"
-    },
-    {
-     "t": "p",
-     "text": "Integrability requirement:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{0}^{\\infty} |e^{-(s+2)t}| \\, dt = \\int_{0}^{\\infty} e^{-(\\sigma + 2)t} \\, dt < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "This improper integral converges if and only if the exponential rate is strictly positive:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sigma + 2 > 0 \\implies \\sigma > -2 \\iff \\text{Re}(s) > -2"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Integral Evaluation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\left[ \\frac{e^{-(s+2)t}}{-(s+2)} \\right]_{0}^{\\infty} = \\frac{e^{-(s+2)\\infty} - e^{0}}{-(s+2)} = \\frac{0 - 1}{-(s+2)} = \\frac{1}{s+2}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Pole and ROC Mapping:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Pole at $s = -2$.",
-      "ROC: $\\text{Re}(s) > -2$ (shaded half-plane to the right of $\\sigma = -2$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Common GATE Pitfalls:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Trap:* Writing $\\text{Re}(s) \\geq -2$. The ROC is **always an open set**; it never includes the boundary pole!",
-      "*Stability Check:* The ROC contains $\\sigma = 0$ (the $j\\omega$-axis), confirming that $e^{-2t}u(t)$ is absolutely integrable and BIBO stable."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nCompute the bilateral Laplace transform and determine the Region of Convergence (ROC) for:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{-2t}u(t)"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Direct Integration from First Principles:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\int_{-\\infty}^{\\infty} x(t) e^{-st} \\, dt = \\int_{0}^{\\infty} e^{-2t} e^{-st} \\, dt = \\int_{0}^{\\infty} e^{-(s+2)t} \\, dt"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Convergence Analysis:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Substitute $s = \\sigma + j\\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-(s+2)t} = e^{-(\\sigma + 2)t} e^{-j\\omega t}"
+      },
+      {
+       "t": "p",
+       "text": "Integrability requirement:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{0}^{\\infty} |e^{-(s+2)t}| \\, dt = \\int_{0}^{\\infty} e^{-(\\sigma + 2)t} \\, dt < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "This improper integral converges if and only if the exponential rate is strictly positive:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sigma + 2 > 0 \\implies \\sigma > -2 \\iff \\text{Re}(s) > -2"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Integral Evaluation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\left[ \\frac{e^{-(s+2)t}}{-(s+2)} \\right]_{0}^{\\infty} = \\frac{e^{-(s+2)\\infty} - e^{0}}{-(s+2)} = \\frac{0 - 1}{-(s+2)} = \\frac{1}{s+2}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Pole and ROC Mapping:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Pole at $s = -2$.",
+        "ROC: $\\text{Re}(s) > -2$ (shaded half-plane to the right of $\\sigma = -2$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Common GATE Pitfalls:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Trap:* Writing $\\text{Re}(s) \\geq -2$. The ROC is **always an open set**; it never includes the boundary pole!",
+        "*Stability Check:* The ROC contains $\\sigma = 0$ (the $j\\omega$-axis), confirming that $e^{-2t}u(t)$ is absolutely integrable and BIBO stable."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 036: Causal Growing Exponential $x(t) = e^{2t}u(t)$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nCompute the bilateral Laplace transform and determine the ROC for:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{2t}u(t)"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Direct Integration:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\int_{0}^{\\infty} e^{2t} e^{-st} \\, dt = \\int_{0}^{\\infty} e^{-(s-2)t} \\, dt = \\left[ \\frac{e^{-(s-2)t}}{-(s-2)} \\right]_{0}^{\\infty}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Convergence Condition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t)e^{-\\sigma t} = e^{(2-\\sigma)t} u(t)"
-    },
-    {
-     "t": "p",
-     "text": "For decay as $t \\to \\infty$:"
-    },
-    {
-     "t": "math",
-     "tex": "2 - \\sigma < 0 \\implies \\sigma > 2 \\iff \\text{Re}(s) > 2"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Evaluation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{0 - 1}{-(s-2)} = \\frac{1}{s-2}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Pole and ROC Mapping:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Pole at $s = +2$ (in the Right-Half Plane).",
-      "ROC: $\\text{Re}(s) > 2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Common GATE Pitfalls:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Trap:* Claiming that because $e^{2t}u(t)$ is an unstable growing signal, it has no Laplace transform. FALSE! It **does** possess a Laplace transform for $\\sigma > 2$. However, its ROC does **not** include the $j\\omega$-axis ($\\sigma = 0$), so its CTFT does not exist."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nCompute the bilateral Laplace transform and determine the ROC for:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{2t}u(t)"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Direct Integration:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\int_{0}^{\\infty} e^{2t} e^{-st} \\, dt = \\int_{0}^{\\infty} e^{-(s-2)t} \\, dt = \\left[ \\frac{e^{-(s-2)t}}{-(s-2)} \\right]_{0}^{\\infty}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Convergence Condition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t)e^{-\\sigma t} = e^{(2-\\sigma)t} u(t)"
+      },
+      {
+       "t": "p",
+       "text": "For decay as $t \\to \\infty$:"
+      },
+      {
+       "t": "math",
+       "tex": "2 - \\sigma < 0 \\implies \\sigma > 2 \\iff \\text{Re}(s) > 2"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Evaluation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{0 - 1}{-(s-2)} = \\frac{1}{s-2}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Pole and ROC Mapping:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Pole at $s = +2$ (in the Right-Half Plane).",
+        "ROC: $\\text{Re}(s) > 2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Common GATE Pitfalls:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Trap:* Claiming that because $e^{2t}u(t)$ is an unstable growing signal, it has no Laplace transform. FALSE! It **does** possess a Laplace transform for $\\sigma > 2$. However, its ROC does **not** include the $j\\omega$-axis ($\\sigma = 0$), so its CTFT does not exist."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3482,173 +3469,171 @@ export default {
      "text": "Slide 037: Anti-Causal Decaying Exponential $x(t) = e^{-2t}u(-t)$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nFind the Laplace transform and ROC of:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{-2t}u(-t)"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Direct Integration:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\int_{-\\infty}^{\\infty} e^{-2t} u(-t) e^{-st} \\, dt = \\int_{-\\infty}^{0} e^{-(s+2)t} \\, dt"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Convergence Analysis:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For $t \\in (-\\infty, 0]$, let $\\tau = -t \\in [0, \\infty)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{0}^{\\infty} e^{(s+2)\\tau} \\, d\\tau \\implies \\int_{0}^{\\infty} e^{(\\sigma + 2)\\tau} \\, d\\tau < \\infty \\iff \\sigma + 2 < 0 \\implies \\sigma < -2"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Integral Evaluation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\left[ \\frac{e^{-(s+2)t}}{-(s+2)} \\right]_{-\\infty}^{0} = -\\left[ \\frac{e^0 - e^{-(s+2)(-\\infty)}}{s+2} \\right] = -\\left[ \\frac{1 - 0}{s+2} \\right] = -\\frac{1}{s+2}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Result:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "e^{-2t}u(-t) \\longleftrightarrow -\\frac{1}{s+2}, \\quad \\text{ROC: } \\text{Re}(s) < -2"
-    },
-    {
-     "t": "p",
-     "text": "Equivalently, multiplying both sides by $-1$:"
-    },
-    {
-     "t": "math",
-     "tex": "-e^{-2t}u(-t) \\longleftrightarrow \\frac{1}{s+2}, \\quad \\text{ROC: } \\text{Re}(s) < -2"
-    },
-    {
-     "t": "p",
-     "text": "**Common GATE Pitfalls:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Trap:* Forgetting the negative sign that emerges from evaluating at the lower limit $-\\infty$. Anti-causal signals produce an intrinsic negative sign in the transform algebraic expression."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nFind the Laplace transform and ROC of:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{-2t}u(-t)"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Direct Integration:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\int_{-\\infty}^{\\infty} e^{-2t} u(-t) e^{-st} \\, dt = \\int_{-\\infty}^{0} e^{-(s+2)t} \\, dt"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Convergence Analysis:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For $t \\in (-\\infty, 0]$, let $\\tau = -t \\in [0, \\infty)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{0}^{\\infty} e^{(s+2)\\tau} \\, d\\tau \\implies \\int_{0}^{\\infty} e^{(\\sigma + 2)\\tau} \\, d\\tau < \\infty \\iff \\sigma + 2 < 0 \\implies \\sigma < -2"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Integral Evaluation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\left[ \\frac{e^{-(s+2)t}}{-(s+2)} \\right]_{-\\infty}^{0} = -\\left[ \\frac{e^0 - e^{-(s+2)(-\\infty)}}{s+2} \\right] = -\\left[ \\frac{1 - 0}{s+2} \\right] = -\\frac{1}{s+2}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Result:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "e^{-2t}u(-t) \\longleftrightarrow -\\frac{1}{s+2}, \\quad \\text{ROC: } \\text{Re}(s) < -2"
+      },
+      {
+       "t": "p",
+       "text": "Equivalently, multiplying both sides by $-1$:"
+      },
+      {
+       "t": "math",
+       "tex": "-e^{-2t}u(-t) \\longleftrightarrow \\frac{1}{s+2}, \\quad \\text{ROC: } \\text{Re}(s) < -2"
+      },
+      {
+       "t": "p",
+       "text": "**Common GATE Pitfalls:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Trap:* Forgetting the negative sign that emerges from evaluating at the lower limit $-\\infty$. Anti-causal signals produce an intrinsic negative sign in the transform algebraic expression."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 038: Anti-Causal Growing Exponential $x(t) = e^{2t}u(-t)$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nFind the Laplace transform and ROC of:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{2t}u(-t)"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Direct Integration:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\int_{-\\infty}^{0} e^{2t} e^{-st} \\, dt = \\int_{-\\infty}^{0} e^{-(s-2)t} \\, dt = \\left[ \\frac{e^{-(s-2)t}}{-(s-2)} \\right]_{-\\infty}^{0}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Convergence Analysis:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The integrand is $e^{(2-\\sigma)t}$ for $t < 0$. As $t \\to -\\infty$, this decays if and only if:"
-    },
-    {
-     "t": "math",
-     "tex": "2 - \\sigma > 0 \\implies \\sigma < 2 \\iff \\text{Re}(s) < 2"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Integral Evaluation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = -\\frac{e^0 - 0}{s-2} = -\\frac{1}{s-2}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying by $-1$:"
-    },
-    {
-     "t": "math",
-     "tex": "-e^{2t}u(-t) \\longleftrightarrow \\frac{1}{s-2}, \\quad \\text{ROC: } \\text{Re}(s) < 2"
-    },
-    {
-     "t": "p",
-     "text": "**Common GATE Pitfalls:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Stability Check:* Notice that for $x(t) = e^{2t}u(-t)$, the ROC is $\\text{Re}(s) < 2$. Does this ROC include the imaginary axis $\\sigma = 0$? Yes, $0 < 2$! Therefore, this anti-causal signal **is absolutely integrable** and has a valid CTFT:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(j\\omega) = -\\frac{1}{j\\omega - 2} = \\frac{1}{2 - j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nFind the Laplace transform and ROC of:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{2t}u(-t)"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Direct Integration:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\int_{-\\infty}^{0} e^{2t} e^{-st} \\, dt = \\int_{-\\infty}^{0} e^{-(s-2)t} \\, dt = \\left[ \\frac{e^{-(s-2)t}}{-(s-2)} \\right]_{-\\infty}^{0}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Convergence Analysis:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The integrand is $e^{(2-\\sigma)t}$ for $t < 0$. As $t \\to -\\infty$, this decays if and only if:"
+      },
+      {
+       "t": "math",
+       "tex": "2 - \\sigma > 0 \\implies \\sigma < 2 \\iff \\text{Re}(s) < 2"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Integral Evaluation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = -\\frac{e^0 - 0}{s-2} = -\\frac{1}{s-2}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying by $-1$:"
+      },
+      {
+       "t": "math",
+       "tex": "-e^{2t}u(-t) \\longleftrightarrow \\frac{1}{s-2}, \\quad \\text{ROC: } \\text{Re}(s) < 2"
+      },
+      {
+       "t": "p",
+       "text": "**Common GATE Pitfalls:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Stability Check:* Notice that for $x(t) = e^{2t}u(-t)$, the ROC is $\\text{Re}(s) < 2$. Does this ROC include the imaginary axis $\\sigma = 0$? Yes, $0 < 2$! Therefore, this anti-causal signal **is absolutely integrable** and has a valid CTFT:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(j\\omega) = -\\frac{1}{j\\omega - 2} = \\frac{1}{2 - j\\omega}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -3663,55 +3648,54 @@ export default {
      "text": "Slide 040: Multi-Signal Rapid Parameter Drills"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statements:**\nCompute the Laplace transform and ROC for:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "(a) $x(t) = e^{-0.5t}u(t)$",
-      "(b) $x(t) = e^{3t}u(-t)$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Solutions:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Part (a):** $x(t) = e^{-0.5t}u(t)$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Standard right-sided exponential with $a = 0.5$.",
-      "$X(s) = \\frac{1}{s + 0.5}$, ROC: $\\text{Re}(s) > -0.5$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Part (b):** $x(t) = e^{3t}u(-t)$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Standard left-sided exponential with rate $+3$.",
-      "$X(s) = -\\frac{1}{s - 3} = \\frac{1}{3 - s}$, ROC: $\\text{Re}(s) < 3$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statements:**\nCompute the Laplace transform and ROC for:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "(a) $x(t) = e^{-0.5t}u(t)$",
+        "(b) $x(t) = e^{3t}u(-t)$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Solutions:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Part (a):** $x(t) = e^{-0.5t}u(t)$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Standard right-sided exponential with $a = 0.5$.",
+        "$X(s) = \\frac{1}{s + 0.5}$, ROC: $\\text{Re}(s) > -0.5$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Part (b):** $x(t) = e^{3t}u(-t)$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Standard left-sided exponential with rate $+3$.",
+        "$X(s) = -\\frac{1}{s - 3} = \\frac{1}{3 - s}$, ROC: $\\text{Re}(s) < 3$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3722,173 +3706,171 @@ export default {
      "text": "Slide 041 & 042: Pure Imaginary and Complex Exponentials"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statements:**\nCompute the Laplace transform and ROC for:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "(c) $x(t) = e^{j2t}u(t)$",
-      "(d) $x(t) = e^{-j2t}u(t)$",
-      "(e) $x(t) = e^{-j0.5t}u(-t)$",
-      "(f) $x(t) = e^{(3-2j)t}u(t)$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Drill (c): $x(t) = e^{j2t}u(t)$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\int_{0}^{\\infty} e^{j2t} e^{-st} \\, dt = \\int_{0}^{\\infty} e^{-(s-j2)t} \\, dt = \\frac{1}{s - j2}"
-    },
-    {
-     "t": "p",
-     "text": "Pole location: $s = j2$.\n   Convergence: $e^{-(\\sigma)t}$ must decay as $t \\to \\infty \\implies \\sigma > 0$.\n   Result: $X(s) = \\frac{1}{s - j2}$, ROC: $\\text{Re}(s) > 0$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Drill (d): $x(t) = e^{-j2t}u(t)$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{s - (-j2)} = \\frac{1}{s + j2}"
-    },
-    {
-     "t": "p",
-     "text": "Pole location: $s = -j2$.\n   ROC: $\\text{Re}(s) > 0$."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Drill (e): $x(t) = e^{-j0.5t}u(-t)$**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "This is a left-sided signal:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = -\\frac{1}{s - (-j0.5)} = -\\frac{1}{s + j0.5}"
-    },
-    {
-     "t": "p",
-     "text": "Pole location: $s = -j0.5$.\n   ROC: $\\text{Re}(s) < 0$."
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Drill (f): $x(t) = e^{(3-2j)t}u(t)$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{s - (3 - 2j)} = \\frac{1}{s - 3 + 2j}"
-    },
-    {
-     "t": "p",
-     "text": "Pole location: $s_p = 3 - 2j$.\n   Real part of pole: $\\text{Re}(s_p) = 3$.\n   Since the signal is causal ($u(t)$), the ROC extends to the right of the real part of the pole:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC: } \\text{Re}(s) > 3"
-    },
-    {
-     "t": "p",
-     "text": "**Common GATE Pitfalls:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Trap:* Trying to make the ROC depend on the imaginary part ($\\text{Im}(s)$). The imaginary component $\\pm 2j$ only shifts the pole vertically along the $j\\omega$-axis; it has **zero effect on the ROC boundary**!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statements:**\nCompute the Laplace transform and ROC for:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "(c) $x(t) = e^{j2t}u(t)$",
+        "(d) $x(t) = e^{-j2t}u(t)$",
+        "(e) $x(t) = e^{-j0.5t}u(-t)$",
+        "(f) $x(t) = e^{(3-2j)t}u(t)$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Drill (c): $x(t) = e^{j2t}u(t)$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\int_{0}^{\\infty} e^{j2t} e^{-st} \\, dt = \\int_{0}^{\\infty} e^{-(s-j2)t} \\, dt = \\frac{1}{s - j2}"
+      },
+      {
+       "t": "p",
+       "text": "Pole location: $s = j2$.\n   Convergence: $e^{-(\\sigma)t}$ must decay as $t \\to \\infty \\implies \\sigma > 0$.\n   Result: $X(s) = \\frac{1}{s - j2}$, ROC: $\\text{Re}(s) > 0$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Drill (d): $x(t) = e^{-j2t}u(t)$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{s - (-j2)} = \\frac{1}{s + j2}"
+      },
+      {
+       "t": "p",
+       "text": "Pole location: $s = -j2$.\n   ROC: $\\text{Re}(s) > 0$."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Drill (e): $x(t) = e^{-j0.5t}u(-t)$**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "This is a left-sided signal:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = -\\frac{1}{s - (-j0.5)} = -\\frac{1}{s + j0.5}"
+      },
+      {
+       "t": "p",
+       "text": "Pole location: $s = -j0.5$.\n   ROC: $\\text{Re}(s) < 0$."
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Drill (f): $x(t) = e^{(3-2j)t}u(t)$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{s - (3 - 2j)} = \\frac{1}{s - 3 + 2j}"
+      },
+      {
+       "t": "p",
+       "text": "Pole location: $s_p = 3 - 2j$.\n   Real part of pole: $\\text{Re}(s_p) = 3$.\n   Since the signal is causal ($u(t)$), the ROC extends to the right of the real part of the pole:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC: } \\text{Re}(s) > 3"
+      },
+      {
+       "t": "p",
+       "text": "**Common GATE Pitfalls:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Trap:* Trying to make the ROC depend on the imaginary part ($\\text{Im}(s)$). The imaginary component $\\pm 2j$ only shifts the pole vertically along the $j\\omega$-axis; it has **zero effect on the ROC boundary**!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 043: Complex Anti-Causal Signal $x(t) = -e^{(-3+2j)t}u(-t)$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nDetermine $X(s)$ and the ROC for:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = -e^{(-3+2j)t}u(-t)"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Let $\\lambda = -3 + 2j$. The signal is $-e^{\\lambda t}u(-t)$.",
-      "We know that $-e^{\\lambda t}u(-t) \\longleftrightarrow \\frac{1}{s - \\lambda}$ with ROC: $\\text{Re}(s) < \\text{Re}(\\lambda)$.",
-      "Substitute $\\lambda = -3 + 2j$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{s - (-3 + 2j)} = \\frac{1}{s + 3 - 2j}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Pole location:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s + 3 - 2j = 0 \\implies s_p = -3 + 2j"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "ROC:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Re}(s) < \\text{Re}(s_p) = -3 \\iff \\sigma < -3"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "Constellation plot: Cross $\\times$ at $(-3, 2)$, dashed vertical line at $\\sigma = -3$, arrows shading to the left."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nDetermine $X(s)$ and the ROC for:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = -e^{(-3+2j)t}u(-t)"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Let $\\lambda = -3 + 2j$. The signal is $-e^{\\lambda t}u(-t)$.",
+        "We know that $-e^{\\lambda t}u(-t) \\longleftrightarrow \\frac{1}{s - \\lambda}$ with ROC: $\\text{Re}(s) < \\text{Re}(\\lambda)$.",
+        "Substitute $\\lambda = -3 + 2j$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{s - (-3 + 2j)} = \\frac{1}{s + 3 - 2j}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Pole location:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s + 3 - 2j = 0 \\implies s_p = -3 + 2j"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "ROC:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Re}(s) < \\text{Re}(s_p) = -3 \\iff \\sigma < -3"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "Constellation plot: Cross $\\times$ at $(-3, 2)$, dashed vertical line at $\\sigma = -3$, arrows shading to the left."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -3911,152 +3893,150 @@ export default {
      "text": "Slide 045 & 046: The Linearity Property & ROC Strip Intersection"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Formal Statement of Linearity:**\nIf:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1(t) \\longleftrightarrow X_1(s), \\quad \\text{ROC} = R_1"
-    },
-    {
-     "t": "math",
-     "tex": "x_2(t) \\longleftrightarrow X_2(s), \\quad \\text{ROC} = R_2"
-    },
-    {
-     "t": "p",
-     "text": "Then for any complex constants $\\alpha, \\beta \\in \\mathbb{C}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha x_1(t) + \\beta x_2(t) \\longleftrightarrow \\alpha X_1(s) + \\beta X_2(s)"
-    },
-    {
-     "t": "p",
-     "text": "with Region of Convergence:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC} \\supseteq R_1 \\cap R_2"
-    },
-    {
-     "t": "p",
-     "text": "**Why can the ROC be strictly larger than $R_1 \\cap R_2$?**\nIf linear combination causes a **pole-zero cancellation** at a boundary pole, the boundary ceases to be singular, and the ROC expands into adjacent territory!\n*Example:* Let $x_1(t) = e^{-2t}u(t) \\longleftrightarrow \\frac{1}{s+2}$ ($\\sigma > -2$), and $x_2(t) = e^{-t}u(t) \\longleftrightarrow \\frac{1}{s+1}$ ($\\sigma > -1$).\nIf we form a combination where the pole at $s = -1$ cancels out, the ROC broadens to $\\sigma > -2$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Formal Statement of Linearity:**\nIf:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1(t) \\longleftrightarrow X_1(s), \\quad \\text{ROC} = R_1"
+      },
+      {
+       "t": "math",
+       "tex": "x_2(t) \\longleftrightarrow X_2(s), \\quad \\text{ROC} = R_2"
+      },
+      {
+       "t": "p",
+       "text": "Then for any complex constants $\\alpha, \\beta \\in \\mathbb{C}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha x_1(t) + \\beta x_2(t) \\longleftrightarrow \\alpha X_1(s) + \\beta X_2(s)"
+      },
+      {
+       "t": "p",
+       "text": "with Region of Convergence:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC} \\supseteq R_1 \\cap R_2"
+      },
+      {
+       "t": "p",
+       "text": "**Why can the ROC be strictly larger than $R_1 \\cap R_2$?**\nIf linear combination causes a **pole-zero cancellation** at a boundary pole, the boundary ceases to be singular, and the ROC expands into adjacent territory!\n*Example:* Let $x_1(t) = e^{-2t}u(t) \\longleftrightarrow \\frac{1}{s+2}$ ($\\sigma > -2$), and $x_2(t) = e^{-t}u(t) \\longleftrightarrow \\frac{1}{s+1}$ ($\\sigma > -1$).\nIf we form a combination where the pole at $s = -1$ cancels out, the ROC broadens to $\\sigma > -2$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 047 & 048: Bilateral Decaying Exponential $x(t) = e^{-2|t|}$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nDetermine the Laplace transform, ROC, and continuous-time Fourier transform for the symmetric two-sided exponential:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{-2|t|}"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Piecewise Waveform Decomposition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|t| = \\begin{cases} t, & t \\geq 0 \\\\ -t, & t < 0 \\end{cases} \\implies x(t) = \\begin{cases} e^{-2t}, & t \\geq 0 \\\\ e^{2t}, & t < 0 \\end{cases} = e^{-2t}u(t) + e^{2t}u(-t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Transform of Each Component:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Causal component: $x_1(t) = e^{-2t}u(t) \\longleftrightarrow X_1(s) = \\frac{1}{s+2}$, $\\text{ROC}_1: \\text{Re}(s) > -2$.",
-      "Anti-causal component: $x_2(t) = e^{2t}u(-t) \\longleftrightarrow X_2(s) = -\\frac{1}{s-2}$, $\\text{ROC}_2: \\text{Re}(s) < 2$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Algebraic Summation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = X_1(s) + X_2(s) = \\frac{1}{s+2} - \\frac{1}{s-2} = \\frac{(s-2) - (s+2)}{(s+2)(s-2)} = \\frac{-4}{s^2 - 4} = \\frac{4}{4 - s^2}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**ROC Intersection:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC} = \\text{ROC}_1 \\cap \\text{ROC}_2 = \\{ \\sigma > -2 \\} \\cap \\{ \\sigma < 2 \\} = -2 < \\text{Re}(s) < 2"
-    },
-    {
-     "t": "p",
-     "text": "This is an **infinite vertical strip** of width $4$ centered on the imaginary axis!"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Continuous-Time Fourier Transform Evaluation (Slide 048):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Does the ROC $-2 < \\sigma < 2$ contain the $j\\omega$-axis ($\\sigma = 0$)?\n   Yes, $-2 < 0 < 2$.\n   Therefore, substitute $s = j\\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(j\\omega) = \\left. \\frac{-4}{s^2 - 4} \\right|_{s = j\\omega} = \\frac{-4}{(j\\omega)^2 - 4} = \\frac{-4}{-\\omega^2 - 4} = \\frac{4}{\\omega^2 + 4}"
-    },
-    {
-     "t": "p",
-     "text": "This matches the standard CTFT transform pair:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-a|t|} \\xrightarrow{\\mathcal{F}} \\frac{2a}{a^2 + \\omega^2}, \\quad \\text{for } a = 2 \\implies \\frac{4}{4 + \\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "**Common GATE Pitfalls:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Trap:* Writing $X(s) = \\frac{4}{s^2-4}$. Notice the sign: $\\frac{-4}{s^2-4} = \\frac{4}{4-s^2}$. Getting the sign wrong flips the phase by $\\pi$ radians!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nDetermine the Laplace transform, ROC, and continuous-time Fourier transform for the symmetric two-sided exponential:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{-2|t|}"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Piecewise Waveform Decomposition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|t| = \\begin{cases} t, & t \\geq 0 \\\\ -t, & t < 0 \\end{cases} \\implies x(t) = \\begin{cases} e^{-2t}, & t \\geq 0 \\\\ e^{2t}, & t < 0 \\end{cases} = e^{-2t}u(t) + e^{2t}u(-t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Transform of Each Component:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Causal component: $x_1(t) = e^{-2t}u(t) \\longleftrightarrow X_1(s) = \\frac{1}{s+2}$, $\\text{ROC}_1: \\text{Re}(s) > -2$.",
+        "Anti-causal component: $x_2(t) = e^{2t}u(-t) \\longleftrightarrow X_2(s) = -\\frac{1}{s-2}$, $\\text{ROC}_2: \\text{Re}(s) < 2$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Algebraic Summation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = X_1(s) + X_2(s) = \\frac{1}{s+2} - \\frac{1}{s-2} = \\frac{(s-2) - (s+2)}{(s+2)(s-2)} = \\frac{-4}{s^2 - 4} = \\frac{4}{4 - s^2}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**ROC Intersection:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC} = \\text{ROC}_1 \\cap \\text{ROC}_2 = \\{ \\sigma > -2 \\} \\cap \\{ \\sigma < 2 \\} = -2 < \\text{Re}(s) < 2"
+      },
+      {
+       "t": "p",
+       "text": "This is an **infinite vertical strip** of width $4$ centered on the imaginary axis!"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Continuous-Time Fourier Transform Evaluation (Slide 048):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Does the ROC $-2 < \\sigma < 2$ contain the $j\\omega$-axis ($\\sigma = 0$)?\n   Yes, $-2 < 0 < 2$.\n   Therefore, substitute $s = j\\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(j\\omega) = \\left. \\frac{-4}{s^2 - 4} \\right|_{s = j\\omega} = \\frac{-4}{(j\\omega)^2 - 4} = \\frac{-4}{-\\omega^2 - 4} = \\frac{4}{\\omega^2 + 4}"
+      },
+      {
+       "t": "p",
+       "text": "This matches the standard CTFT transform pair:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-a|t|} \\xrightarrow{\\mathcal{F}} \\frac{2a}{a^2 + \\omega^2}, \\quad \\text{for } a = 2 \\implies \\frac{4}{4 + \\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "**Common GATE Pitfalls:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Trap:* Writing $X(s) = \\frac{4}{s^2-4}$. Notice the sign: $\\frac{-4}{s^2-4} = \\frac{4}{4-s^2}$. Getting the sign wrong flips the phase by $\\pi$ radians!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4067,185 +4047,183 @@ export default {
      "text": "Slide 049 & 050: Two-Sided Growing Exponential $x(t) = e^{2|t|}$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nEvaluate the bilateral Laplace transform of:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{2|t|}"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Decomposition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{2t}u(t) + e^{-2t}u(-t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Component Transforms and Individual ROCs:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Causal part: $e^{2t}u(t) \\longleftrightarrow \\frac{1}{s-2}$ with $\\text{ROC}_1: \\text{Re}(s) > 2$.",
-      "Anti-causal part: $e^{-2t}u(-t) \\longleftrightarrow -\\frac{1}{s+2}$ with $\\text{ROC}_2: \\text{Re}(s) < -2$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Intersection of ROCs:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC} = \\text{ROC}_1 \\cap \\text{ROC}_2 = \\{ \\sigma > 2 \\} \\cap \\{ \\sigma < -2 \\} = \\emptyset \\quad (\\textbf{EMPTY SET})"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Physical / Geometric Explanation (Slide 050):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The signal $e^{2|t|}$ explodes toward $+\\infty$ as $t \\to +\\infty$ ($e^{2t}$ growth).",
-      "The signal $e^{2|t|}$ also explodes toward $+\\infty$ as $t \\to -\\infty$ ($e^{-2t}$ growth).",
-      "To tame the right tail ($t \\to +\\infty$), we need $\\sigma > 2$.",
-      "To tame the left tail ($t \\to -\\infty$), we need $\\sigma < -2$.",
-      "A single real number $\\sigma$ cannot simultaneously satisfy $\\sigma > 2$ and $\\sigma < -2$. Damping one end inevitably accelerates the explosion of the opposite end!"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Conclusion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) \\textbf{ DOES NOT CONVERGE for any value of } s"
-    },
-    {
-     "t": "p",
-     "text": "The bilateral Laplace transform **DOES NOT EXIST**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nEvaluate the bilateral Laplace transform of:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{2|t|}"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Decomposition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{2t}u(t) + e^{-2t}u(-t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Component Transforms and Individual ROCs:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Causal part: $e^{2t}u(t) \\longleftrightarrow \\frac{1}{s-2}$ with $\\text{ROC}_1: \\text{Re}(s) > 2$.",
+        "Anti-causal part: $e^{-2t}u(-t) \\longleftrightarrow -\\frac{1}{s+2}$ with $\\text{ROC}_2: \\text{Re}(s) < -2$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Intersection of ROCs:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC} = \\text{ROC}_1 \\cap \\text{ROC}_2 = \\{ \\sigma > 2 \\} \\cap \\{ \\sigma < -2 \\} = \\emptyset \\quad (\\textbf{EMPTY SET})"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Physical / Geometric Explanation (Slide 050):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The signal $e^{2|t|}$ explodes toward $+\\infty$ as $t \\to +\\infty$ ($e^{2t}$ growth).",
+        "The signal $e^{2|t|}$ also explodes toward $+\\infty$ as $t \\to -\\infty$ ($e^{-2t}$ growth).",
+        "To tame the right tail ($t \\to +\\infty$), we need $\\sigma > 2$.",
+        "To tame the left tail ($t \\to -\\infty$), we need $\\sigma < -2$.",
+        "A single real number $\\sigma$ cannot simultaneously satisfy $\\sigma > 2$ and $\\sigma < -2$. Damping one end inevitably accelerates the explosion of the opposite end!"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Conclusion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) \\textbf{ DOES NOT CONVERGE for any value of } s"
+      },
+      {
+       "t": "p",
+       "text": "The bilateral Laplace transform **DOES NOT EXIST**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 051 & 052: Unit Step Functions $u(t)$ and $u(-t)$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nDerive the Laplace transform and ROC for:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "(c) $x(t) = u(t)$",
-      "(d) $x(t) = u(-t)$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Derivations:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Causal Step $u(t)$ (Slide 051):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\int_{0}^{\\infty} 1 \\cdot e^{-st} \\, dt = \\left[ \\frac{e^{-st}}{-s} \\right]_{0}^{\\infty} = \\frac{0 - 1}{-s} = \\frac{1}{s}"
-    },
-    {
-     "t": "p",
-     "text": "Convergence requirement: $\\lim_{t \\to \\infty} e^{-\\sigma t} = 0 \\iff \\sigma > 0$."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{u(t)\\} = \\frac{1}{s}, \\quad \\text{ROC: } \\text{Re}(s) > 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Pole at the origin $s = 0$.",
-      "The ROC is the open Right-Half Plane (RHP)."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Anti-Causal Step $u(-t)$ (Slide 052):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\int_{-\\infty}^{0} 1 \\cdot e^{-st} \\, dt = \\left[ \\frac{e^{-st}}{-s} \\right]_{-\\infty}^{0} = \\frac{e^0 - 0}{-s} = -\\frac{1}{s}"
-    },
-    {
-     "t": "p",
-     "text": "Convergence requirement: $\\lim_{t \\to -\\infty} e^{-\\sigma t} = 0 \\iff \\sigma < 0$."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{u(-t)\\} = -\\frac{1}{s}, \\quad \\text{ROC: } \\text{Re}(s) < 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Pole at the origin $s = 0$.",
-      "The ROC is the open Left-Half Plane (LHP)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Common GATE Pitfalls:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Trap:* Does $X(s)\\big|_{s=j\\omega} = \\frac{1}{j\\omega}$ give the CTFT of $u(t)$?"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**NO!** Because the pole sits exactly on the imaginary axis at $s = 0$, the ROC $\\text{Re}(s) > 0$ does not strictly enclose $\\sigma = 0$. The true CTFT has a DC impulse: $\\mathcal{F}\\{u(t)\\} = \\frac{1}{j\\omega} + \\pi \\delta(\\omega)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nDerive the Laplace transform and ROC for:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "(c) $x(t) = u(t)$",
+        "(d) $x(t) = u(-t)$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Derivations:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Causal Step $u(t)$ (Slide 051):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\int_{0}^{\\infty} 1 \\cdot e^{-st} \\, dt = \\left[ \\frac{e^{-st}}{-s} \\right]_{0}^{\\infty} = \\frac{0 - 1}{-s} = \\frac{1}{s}"
+      },
+      {
+       "t": "p",
+       "text": "Convergence requirement: $\\lim_{t \\to \\infty} e^{-\\sigma t} = 0 \\iff \\sigma > 0$."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{u(t)\\} = \\frac{1}{s}, \\quad \\text{ROC: } \\text{Re}(s) > 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Pole at the origin $s = 0$.",
+        "The ROC is the open Right-Half Plane (RHP)."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Anti-Causal Step $u(-t)$ (Slide 052):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\int_{-\\infty}^{0} 1 \\cdot e^{-st} \\, dt = \\left[ \\frac{e^{-st}}{-s} \\right]_{-\\infty}^{0} = \\frac{e^0 - 0}{-s} = -\\frac{1}{s}"
+      },
+      {
+       "t": "p",
+       "text": "Convergence requirement: $\\lim_{t \\to -\\infty} e^{-\\sigma t} = 0 \\iff \\sigma < 0$."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{u(-t)\\} = -\\frac{1}{s}, \\quad \\text{ROC: } \\text{Re}(s) < 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Pole at the origin $s = 0$.",
+        "The ROC is the open Left-Half Plane (LHP)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Common GATE Pitfalls:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Trap:* Does $X(s)\\big|_{s=j\\omega} = \\frac{1}{j\\omega}$ give the CTFT of $u(t)$?"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**NO!** Because the pole sits exactly on the imaginary axis at $s = 0$, the ROC $\\text{Re}(s) > 0$ does not strictly enclose $\\sigma = 0$. The true CTFT has a DC impulse: $\\mathcal{F}\\{u(t)\\} = \\frac{1}{j\\omega} + \\pi \\delta(\\omega)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4256,182 +4234,179 @@ export default {
      "text": "Slide 053 & 054: Constant Signal $x(t) = 1$ & Master Summary"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nEvaluate the bilateral Laplace transform of the continuous DC signal:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 1, \\quad -\\infty < t < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Express as:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = u(t) + u(-t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Sum of transforms:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{u(t)\\} = \\frac{1}{s}, \\quad \\text{ROC}_1: \\sigma > 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{u(-t)\\} = -\\frac{1}{s}, \\quad \\text{ROC}_2: \\sigma < 0"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "ROC intersection:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC} = \\{ \\sigma > 0 \\} \\cap \\{ \\sigma < 0 \\} = \\emptyset"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Conclusion:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The Laplace transform of $x(t) = 1$ does not exist."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nEvaluate the bilateral Laplace transform of the continuous DC signal:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 1, \\quad -\\infty < t < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Express as:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = u(t) + u(-t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Sum of transforms:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{u(t)\\} = \\frac{1}{s}, \\quad \\text{ROC}_1: \\sigma > 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{u(-t)\\} = -\\frac{1}{s}, \\quad \\text{ROC}_2: \\sigma < 0"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "ROC intersection:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC} = \\{ \\sigma > 0 \\} \\cap \\{ \\sigma < 0 \\} = \\emptyset"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Conclusion:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The Laplace transform of $x(t) = 1$ does not exist."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 055: Time Reversal Property"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Property Statement:**\nIf $x(t) \\longleftrightarrow X(s)$ with $\\text{ROC} = R$, then:"
-    },
-    {
-     "t": "math",
-     "tex": "x(-t) \\longleftrightarrow X(-s), \\quad \\text{ROC} = -R"
-    },
-    {
-     "t": "p",
-     "text": "**Derivation:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{x(-t)\\} = \\int_{-\\infty}^{\\infty} x(-t) e^{-st} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Let $\\tau = -t \\implies dt = -d\\tau$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{\\infty}^{-\\infty} x(\\tau) e^{s\\tau} (-d\\tau) = \\int_{-\\infty}^{\\infty} x(\\tau) e^{-(-s)\\tau} \\, d\\tau = X(-s)"
-    },
-    {
-     "t": "p",
-     "text": "Convergence requires $-s \\in R \\implies -\\text{Re}(s) \\in R \\implies \\text{Re}(s) \\in -R$."
-    },
-    {
-     "t": "p",
-     "text": "**Drill Problem (Slide 055):**\nGiven $x(t) \\longleftrightarrow X(s)$ with $\\text{ROC: } \\text{Re}(s) > -4$. Let $y(t) = x(-t)$. Express $Y(s)$ in terms of $X(s)$ and determine its ROC."
-    },
-    {
-     "t": "p",
-     "text": "**Solution:**"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s) = X(-s)"
-    },
-    {
-     "t": "p",
-     "text": "New ROC:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Re}(-s) > -4 \\implies -\\text{Re}(s) > -4 \\implies \\text{Re}(s) < 4"
-    },
-    {
-     "t": "p",
-     "text": "Boxed Result: $Y(s) = X(-s)$, ROC: $\\text{Re}(s) < 4$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Property Statement:**\nIf $x(t) \\longleftrightarrow X(s)$ with $\\text{ROC} = R$, then:"
+      },
+      {
+       "t": "math",
+       "tex": "x(-t) \\longleftrightarrow X(-s), \\quad \\text{ROC} = -R"
+      },
+      {
+       "t": "p",
+       "text": "**Derivation:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{x(-t)\\} = \\int_{-\\infty}^{\\infty} x(-t) e^{-st} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Let $\\tau = -t \\implies dt = -d\\tau$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{\\infty}^{-\\infty} x(\\tau) e^{s\\tau} (-d\\tau) = \\int_{-\\infty}^{\\infty} x(\\tau) e^{-(-s)\\tau} \\, d\\tau = X(-s)"
+      },
+      {
+       "t": "p",
+       "text": "Convergence requires $-s \\in R \\implies -\\text{Re}(s) \\in R \\implies \\text{Re}(s) \\in -R$."
+      },
+      {
+       "t": "p",
+       "text": "**Drill Problem (Slide 055):**\nGiven $x(t) \\longleftrightarrow X(s)$ with $\\text{ROC: } \\text{Re}(s) > -4$. Let $y(t) = x(-t)$. Express $Y(s)$ in terms of $X(s)$ and determine its ROC."
+      },
+      {
+       "t": "p",
+       "text": "**Solution:**"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s) = X(-s)"
+      },
+      {
+       "t": "p",
+       "text": "New ROC:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Re}(-s) > -4 \\implies -\\text{Re}(s) > -4 \\implies \\text{Re}(s) < 4"
+      },
+      {
+       "t": "p",
+       "text": "Boxed Result: $Y(s) = X(-s)$, ROC: $\\text{Re}(s) < 4$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 056: Frequency Shifting Property (Shifting in $s$-Domain)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Property Statement:**\nIf $x(t) \\longleftrightarrow X(s)$ with $\\text{ROC} = R$, then for any complex $s_0 = \\sigma_0 + j\\omega_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{s_0 t} x(t) \\longleftrightarrow X(s - s_0), \\quad \\text{ROC} = R + \\text{Re}(s_0) = R + \\sigma_0"
-    },
-    {
-     "t": "p",
-     "text": "**Derivation:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{e^{s_0 t} x(t)\\} = \\int_{-\\infty}^{\\infty} \\left[ e^{s_0 t} x(t) \\right] e^{-st} \\, dt = \\int_{-\\infty}^{\\infty} x(t) e^{-(s - s_0)t} \\, dt = X(s - s_0)"
-    },
-    {
-     "t": "p",
-     "text": "Convergence requires $s - s_0 \\in R \\implies \\text{Re}(s) - \\text{Re}(s_0) \\in R \\implies \\text{Re}(s) \\in R + \\sigma_0$."
-    },
-    {
-     "t": "p",
-     "text": "**Four Verification Drills (Slide 056):**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$x(t) = u(t) \\longleftrightarrow \\frac{1}{s}$, $\\sigma > 0$.",
-      "$y(t) = e^{2t} u(t) \\longleftrightarrow \\frac{1}{s - 2}$, $\\sigma > 0 + 2 \\implies \\sigma > 2$.",
-      "$z(t) = e^{j2t} u(t) \\longleftrightarrow \\frac{1}{s - j2}$, $\\sigma > 0 + \\text{Re}(j2) \\implies \\sigma > 0$.",
-      "$p(t) = e^{(2+3j)t} u(t) \\longleftrightarrow \\frac{1}{s - (2+3j)}$, $\\sigma > 0 + \\text{Re}(2+3j) \\implies \\sigma > 2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Property Statement:**\nIf $x(t) \\longleftrightarrow X(s)$ with $\\text{ROC} = R$, then for any complex $s_0 = \\sigma_0 + j\\omega_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{s_0 t} x(t) \\longleftrightarrow X(s - s_0), \\quad \\text{ROC} = R + \\text{Re}(s_0) = R + \\sigma_0"
+      },
+      {
+       "t": "p",
+       "text": "**Derivation:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{e^{s_0 t} x(t)\\} = \\int_{-\\infty}^{\\infty} \\left[ e^{s_0 t} x(t) \\right] e^{-st} \\, dt = \\int_{-\\infty}^{\\infty} x(t) e^{-(s - s_0)t} \\, dt = X(s - s_0)"
+      },
+      {
+       "t": "p",
+       "text": "Convergence requires $s - s_0 \\in R \\implies \\text{Re}(s) - \\text{Re}(s_0) \\in R \\implies \\text{Re}(s) \\in R + \\sigma_0$."
+      },
+      {
+       "t": "p",
+       "text": "**Four Verification Drills (Slide 056):**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$x(t) = u(t) \\longleftrightarrow \\frac{1}{s}$, $\\sigma > 0$.",
+        "$y(t) = e^{2t} u(t) \\longleftrightarrow \\frac{1}{s - 2}$, $\\sigma > 0 + 2 \\implies \\sigma > 2$.",
+        "$z(t) = e^{j2t} u(t) \\longleftrightarrow \\frac{1}{s - j2}$, $\\sigma > 0 + \\text{Re}(j2) \\implies \\sigma > 0$.",
+        "$p(t) = e^{(2+3j)t} u(t) \\longleftrightarrow \\frac{1}{s - (2+3j)}$, $\\sigma > 0 + \\text{Re}(2+3j) \\implies \\sigma > 2$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4442,171 +4417,169 @@ export default {
      "text": "Slide 057 & 058: Causal Cosine $x(t) = \\cos(\\omega_0 t)u(t)$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nCompute the Laplace transform, poles, zeros, and ROC for $x(t) = \\cos(\\omega_0 t)u(t)$."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Using Euler's relation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\cos(\\omega_0 t) u(t) = \\frac{1}{2} e^{j\\omega_0 t} u(t) + \\frac{1}{2} e^{-j\\omega_0 t} u(t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Applying frequency shifting:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{e^{j\\omega_0 t} u(t)\\} = \\frac{1}{s - j\\omega_0}, \\quad \\sigma > 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{e^{-j\\omega_0 t} u(t)\\} = \\frac{1}{s + j\\omega_0}, \\quad \\sigma > 0"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Combining over a common denominator:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{2} \\left[ \\frac{1}{s - j\\omega_0} + \\frac{1}{s + j\\omega_0} \\right] = \\frac{1}{2} \\left[ \\frac{(s + j\\omega_0) + (s - j\\omega_0)}{(s - j\\omega_0)(s + j\\omega_0)} \\right] = \\frac{1}{2} \\left[ \\frac{2s}{s^2 - (j\\omega_0)^2} \\right] = \\frac{s}{s^2 + \\omega_0^2}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Poles and Zeros:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Zeros: $s = 0$.",
-      "Poles: $s^2 + \\omega_0^2 = 0 \\implies s_p = \\pm j\\omega_0$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "ROC:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC: } \\text{Re}(s) > 0"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "Dual Anti-Causal Pair:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-\\cos(\\omega_0 t) u(-t) \\longleftrightarrow \\frac{s}{s^2 + \\omega_0^2}, \\quad \\text{ROC: } \\text{Re}(s) < 0"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nCompute the Laplace transform, poles, zeros, and ROC for $x(t) = \\cos(\\omega_0 t)u(t)$."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Using Euler's relation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\cos(\\omega_0 t) u(t) = \\frac{1}{2} e^{j\\omega_0 t} u(t) + \\frac{1}{2} e^{-j\\omega_0 t} u(t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Applying frequency shifting:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{e^{j\\omega_0 t} u(t)\\} = \\frac{1}{s - j\\omega_0}, \\quad \\sigma > 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{e^{-j\\omega_0 t} u(t)\\} = \\frac{1}{s + j\\omega_0}, \\quad \\sigma > 0"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Combining over a common denominator:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{2} \\left[ \\frac{1}{s - j\\omega_0} + \\frac{1}{s + j\\omega_0} \\right] = \\frac{1}{2} \\left[ \\frac{(s + j\\omega_0) + (s - j\\omega_0)}{(s - j\\omega_0)(s + j\\omega_0)} \\right] = \\frac{1}{2} \\left[ \\frac{2s}{s^2 - (j\\omega_0)^2} \\right] = \\frac{s}{s^2 + \\omega_0^2}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Poles and Zeros:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Zeros: $s = 0$.",
+        "Poles: $s^2 + \\omega_0^2 = 0 \\implies s_p = \\pm j\\omega_0$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "ROC:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC: } \\text{Re}(s) > 0"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "Dual Anti-Causal Pair:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-\\cos(\\omega_0 t) u(-t) \\longleftrightarrow \\frac{s}{s^2 + \\omega_0^2}, \\quad \\text{ROC: } \\text{Re}(s) < 0"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 059 & 060: Causal Sine $x(t) = \\sin(\\omega_0 t)u(t)$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statement:**\nCompute the Laplace transform, poles, zeros, and ROC for $x(t) = \\sin(\\omega_0 t)u(t)$."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Euler's relation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\omega_0 t) u(t) = \\frac{1}{2j} e^{j\\omega_0 t} u(t) - \\frac{1}{2j} e^{-j\\omega_0 t} u(t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Applying frequency shifting:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{2j} \\left[ \\frac{1}{s - j\\omega_0} - \\frac{1}{s + j\\omega_0} \\right] = \\frac{1}{2j} \\left[ \\frac{(s + j\\omega_0) - (s - j\\omega_0)}{s^2 + \\omega_0^2} \\right] = \\frac{1}{2j} \\left[ \\frac{2j\\omega_0}{s^2 + \\omega_0^2} \\right] = \\frac{\\omega_0}{s^2 + \\omega_0^2}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Poles and Zeros:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Zeros: None in the finite $s$-plane.",
-      "Poles: $s_p = \\pm j\\omega_0$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "ROC:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC: } \\text{Re}(s) > 0"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Dual Anti-Causal Pair:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-\\sin(\\omega_0 t) u(-t) \\longleftrightarrow \\frac{\\omega_0}{s^2 + \\omega_0^2}, \\quad \\text{ROC: } \\text{Re}(s) < 0"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statement:**\nCompute the Laplace transform, poles, zeros, and ROC for $x(t) = \\sin(\\omega_0 t)u(t)$."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Euler's relation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\omega_0 t) u(t) = \\frac{1}{2j} e^{j\\omega_0 t} u(t) - \\frac{1}{2j} e^{-j\\omega_0 t} u(t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Applying frequency shifting:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{2j} \\left[ \\frac{1}{s - j\\omega_0} - \\frac{1}{s + j\\omega_0} \\right] = \\frac{1}{2j} \\left[ \\frac{(s + j\\omega_0) - (s - j\\omega_0)}{s^2 + \\omega_0^2} \\right] = \\frac{1}{2j} \\left[ \\frac{2j\\omega_0}{s^2 + \\omega_0^2} \\right] = \\frac{\\omega_0}{s^2 + \\omega_0^2}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Poles and Zeros:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Zeros: None in the finite $s$-plane.",
+        "Poles: $s_p = \\pm j\\omega_0$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "ROC:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC: } \\text{Re}(s) > 0"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Dual Anti-Causal Pair:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-\\sin(\\omega_0 t) u(-t) \\longleftrightarrow \\frac{\\omega_0}{s^2 + \\omega_0^2}, \\quad \\text{ROC: } \\text{Re}(s) < 0"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4625,161 +4598,160 @@ export default {
      "text": "Slide 064: Damped Sinusoid Drills"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem Statements:**\nFind the Laplace transform and ROC for:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "(a) $x(t) = e^{-2t} \\sin(3t) u(t)$",
-      "(b) $x(t) = e^{-t} \\cos(2t) u(t)$",
-      "(c) $x(t) = e^t \\sin(2t) \\cos(3t) u(t)$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Mathematical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Drill (a): $x(t) = e^{-2t} \\sin(3t) u(t)$**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let base signal $y(t) = \\sin(3t)u(t) \\longleftrightarrow Y(s) = \\frac{3}{s^2 + 9}$, $\\text{Re}(s) > 0$.",
-      "Multiply by $e^{-2t} \\implies s \\to s + 2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = Y(s+2) = \\frac{3}{(s+2)^2 + 9} = \\frac{3}{s^2 + 4s + 13}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Poles: $(s+2)^2 = -9 \\implies s+2 = \\pm j3 \\implies s_p = -2 \\pm j3$.",
-      "ROC: $\\text{Re}(s) > -2$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Drill (b): $x(t) = e^{-t} \\cos(2t) u(t)$**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Base signal $y(t) = \\cos(2t)u(t) \\longleftrightarrow Y(s) = \\frac{s}{s^2 + 4}$, $\\text{Re}(s) > 0$.",
-      "Multiply by $e^{-t} \\implies s \\to s + 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = Y(s+1) = \\frac{s+1}{(s+1)^2 + 4} = \\frac{s+1}{s^2 + 2s + 5}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Zeros: $s_z = -1$.",
-      "Poles: $(s+1)^2 = -4 \\implies s_p = -1 \\pm j2$.",
-      "ROC: $\\text{Re}(s) > -1$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Drill (c): $x(t) = e^t \\sin(2t) \\cos(3t) u(t)$**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Use the trigonometric product-to-sum identity:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(A)\\cos(B) = \\frac{1}{2}[\\sin(A+B) + \\sin(A-B)]"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(2t)\\cos(3t) = \\frac{1}{2}[\\sin(5t) + \\sin(-t)] = \\frac{1}{2}\\sin(5t) - \\frac{1}{2}\\sin(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Therefore:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2} e^t \\sin(5t) u(t) - \\frac{1}{2} e^t \\sin(t) u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Base transforms:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(5t)u(t) \\longleftrightarrow \\frac{5}{s^2 + 25}, \\quad \\sin(t)u(t) \\longleftrightarrow \\frac{1}{s^2 + 1}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Frequency shift by $s \\to s - 1$ (since factor is $e^{+1t}$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{2} \\left[ \\frac{5}{(s-1)^2 + 25} - \\frac{1}{(s-1)^2 + 1} \\right]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Expanding:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{2} \\left[ \\frac{5}{s^2 - 2s + 26} - \\frac{1}{s^2 - 2s + 2} \\right] = \\frac{1}{2} \\left[ \\frac{5(s^2 - 2s + 2) - (s^2 - 2s + 26)}{(s^2 - 2s + 26)(s^2 - 2s + 2)} \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{2} \\left[ \\frac{4s^2 - 8s - 16}{(s^2 - 2s + 26)(s^2 - 2s + 2)} \\right] = \\frac{2s^2 - 4s - 8}{(s^2 - 2s + 26)(s^2 - 2s + 2)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Poles: $s = 1 \\pm j5$ and $s = 1 \\pm j1$.",
-      "ROC: To the right of the rightmost pole real part $\\implies \\text{ROC: } \\text{Re}(s) > 1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Common GATE Pitfalls:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Trap:* Shifting in the wrong direction! Remember: multiplication by $e^{-at}$ in time corresponds to replacement of $s$ by $s+a$. Multiplication by $e^{+at}$ corresponds to replacement of $s$ by $s-a$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem Statements:**\nFind the Laplace transform and ROC for:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "(a) $x(t) = e^{-2t} \\sin(3t) u(t)$",
+        "(b) $x(t) = e^{-t} \\cos(2t) u(t)$",
+        "(c) $x(t) = e^t \\sin(2t) \\cos(3t) u(t)$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Mathematical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Drill (a): $x(t) = e^{-2t} \\sin(3t) u(t)$**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let base signal $y(t) = \\sin(3t)u(t) \\longleftrightarrow Y(s) = \\frac{3}{s^2 + 9}$, $\\text{Re}(s) > 0$.",
+        "Multiply by $e^{-2t} \\implies s \\to s + 2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = Y(s+2) = \\frac{3}{(s+2)^2 + 9} = \\frac{3}{s^2 + 4s + 13}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Poles: $(s+2)^2 = -9 \\implies s+2 = \\pm j3 \\implies s_p = -2 \\pm j3$.",
+        "ROC: $\\text{Re}(s) > -2$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Drill (b): $x(t) = e^{-t} \\cos(2t) u(t)$**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Base signal $y(t) = \\cos(2t)u(t) \\longleftrightarrow Y(s) = \\frac{s}{s^2 + 4}$, $\\text{Re}(s) > 0$.",
+        "Multiply by $e^{-t} \\implies s \\to s + 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = Y(s+1) = \\frac{s+1}{(s+1)^2 + 4} = \\frac{s+1}{s^2 + 2s + 5}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Zeros: $s_z = -1$.",
+        "Poles: $(s+1)^2 = -4 \\implies s_p = -1 \\pm j2$.",
+        "ROC: $\\text{Re}(s) > -1$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Drill (c): $x(t) = e^t \\sin(2t) \\cos(3t) u(t)$**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Use the trigonometric product-to-sum identity:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(A)\\cos(B) = \\frac{1}{2}[\\sin(A+B) + \\sin(A-B)]"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(2t)\\cos(3t) = \\frac{1}{2}[\\sin(5t) + \\sin(-t)] = \\frac{1}{2}\\sin(5t) - \\frac{1}{2}\\sin(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Therefore:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2} e^t \\sin(5t) u(t) - \\frac{1}{2} e^t \\sin(t) u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Base transforms:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(5t)u(t) \\longleftrightarrow \\frac{5}{s^2 + 25}, \\quad \\sin(t)u(t) \\longleftrightarrow \\frac{1}{s^2 + 1}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Frequency shift by $s \\to s - 1$ (since factor is $e^{+1t}$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{2} \\left[ \\frac{5}{(s-1)^2 + 25} - \\frac{1}{(s-1)^2 + 1} \\right]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Expanding:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{2} \\left[ \\frac{5}{s^2 - 2s + 26} - \\frac{1}{s^2 - 2s + 2} \\right] = \\frac{1}{2} \\left[ \\frac{5(s^2 - 2s + 2) - (s^2 - 2s + 26)}{(s^2 - 2s + 26)(s^2 - 2s + 2)} \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{2} \\left[ \\frac{4s^2 - 8s - 16}{(s^2 - 2s + 26)(s^2 - 2s + 2)} \\right] = \\frac{2s^2 - 4s - 8}{(s^2 - 2s + 26)(s^2 - 2s + 2)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Poles: $s = 1 \\pm j5$ and $s = 1 \\pm j1$.",
+        "ROC: To the right of the rightmost pole real part $\\implies \\text{ROC: } \\text{Re}(s) > 1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Common GATE Pitfalls:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Trap:* Shifting in the wrong direction! Remember: multiplication by $e^{-at}$ in time corresponds to replacement of $s$ by $s+a$. Multiplication by $e^{+at}$ corresponds to replacement of $s$ by $s-a$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -4873,159 +4845,162 @@ export default {
      "text": "Solved Chalkboard Drills (Slides 065\u2013068)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 1: Single Damped Cosine (Slide 065)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the Laplace transform and ROC of:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{-t}\\cos(t)u(t)"
-    },
-    {
-     "t": "p",
-     "text": "*Step 1: Apply Canonical Formula:*\nHere $a = 1, b = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s+1}{(s+1)^2+1^2} = \\frac{s+1}{s^2+2s+2}"
-    },
-    {
-     "t": "p",
-     "text": "*Step 2: Pole-Zero Constellation:*"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Zero: $s+1 = 0 \\implies s_z = -1$.",
-      "Poles: $(s+1)^2 + 1 = 0 \\implies (s+1)^2 = -1 \\implies s+1 = \\pm j \\implies s_p = -1 \\pm j$.",
-      "Since $x(t)$ is right-sided, the ROC is strictly to the right of the real part of the poles:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC: } \\text{Re}(s) > -1"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\text{Re}(s) > -1$ strictly encloses the imaginary axis $\\sigma = 0$, the Continuous-Time Fourier Transform exists:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\left. X(s) \\right|_{s=j\\omega} = \\frac{j\\omega+1}{(j\\omega+1)^2+1}"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 2: Product of Sinusoids with Growing Exponential (Slide 066)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate $X(s)$ and ROC for:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^t \\sin(2t)\\cos(3t)u(t)"
-    },
-    {
-     "t": "p",
-     "text": "*Step 1: Trigonometric Product-to-Sum Conversion:*"
-    },
-    {
-     "t": "math",
-     "tex": "2\\sin A \\cos B = \\sin(A+B) + \\sin(A-B)"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(2t)\\cos(3t) = \\frac{1}{2}[\\sin(5t) + \\sin(-t)] = \\frac{1}{2}\\sin(5t) - \\frac{1}{2}\\sin(t)"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2}e^t \\sin(5t)u(t) - \\frac{1}{2}e^t \\sin(t)u(t)"
-    },
-    {
-     "t": "p",
-     "text": "*Step 2: Transform Each Component:*"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Term 1: $\\frac{1}{2}e^t \\sin(5t)u(t) \\longleftrightarrow \\frac{1}{2}\\frac{5}{(s-1)^2+25} = \\frac{2.5}{(s-1)^2+25}, \\quad \\text{ROC}_1: \\text{Re}(s) > 1$",
-      "Term 2: $-\\frac{1}{2}e^t \\sin(t)u(t) \\longleftrightarrow -\\frac{1}{2}\\frac{1}{(s-1)^2+1} = -\\frac{0.5}{(s-1)^2+1}, \\quad \\text{ROC}_2: \\text{Re}(s) > 1$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "*Step 3: Overall Transform & ROC:*"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{2.5}{(s-1)^2+25} - \\frac{0.5}{(s-1)^2+1}, \\quad \\text{ROC} = \\text{ROC}_1 \\cap \\text{ROC}_2 = \\text{Re}(s) > 1"
-    },
-    {
-     "t": "p",
-     "text": "Poles: $s = 1 \\pm 5j$ and $s = 1 \\pm j$. All poles lie in the Right Half Plane (RHP).\nSince the ROC does NOT include the $j\\omega$-axis ($\\sigma=0$ is outside), **the CTFT does not exist**!"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 3: Anti-Causal Product of Cosines (Slide 067)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate $X(s)$ and ROC for:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{-t}\\cos(3t)\\cos(2t)u(-t)"
-    },
-    {
-     "t": "p",
-     "text": "*Step 1: Trigonometric Expansion:*"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos(3t)\\cos(2t) = \\frac{1}{2}[\\cos(5t) + \\cos(t)]"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2}e^{-t}\\cos(5t)u(-t) + \\frac{1}{2}e^{-t}\\cos(t)u(-t)"
-    },
-    {
-     "t": "p",
-     "text": "*Step 2: Anti-Causal Sign Rule:*\nRecall that $-e^{-at}\\cos(bt)u(-t) \\longleftrightarrow \\frac{s+a}{(s+a)^2+b^2}, \\text{Re}(s)<-a$.\nTherefore, for $+e^{-at}\\cos(bt)u(-t)$, a negative sign appears:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-at}\\cos(bt)u(-t) \\longleftrightarrow -\\frac{s+a}{(s+a)^2+b^2}, \\quad \\text{Re}(s) < -a"
-    },
-    {
-     "t": "p",
-     "text": "Here $a = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = -\\frac{1}{2}\\frac{s+1}{(s+1)^2+25} - \\frac{1}{2}\\frac{s+1}{(s+1)^2+1} = -0.5(s+1)\\left[\\frac{1}{(s+1)^2+25} + \\frac{1}{(s+1)^2+1}\\right]"
-    },
-    {
-     "t": "p",
-     "text": "Poles: $s = -1 \\pm 5j$ and $s = -1 \\pm j$."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC: } \\text{Re}(s) < -1"
-    },
-    {
-     "t": "p",
-     "text": "The signal is left-sided (anti-causal); the ROC lies strictly to the left of the leftmost pole boundary $\\sigma = -1$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Damped Sinusoid Decompositions /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Drill 1: Single Damped Cosine (Slide 065)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the Laplace transform and ROC of:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{-t}\\cos(t)u(t)"
+      },
+      {
+       "t": "p",
+       "text": "*Step 1: Apply Canonical Formula:*\nHere $a = 1, b = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s+1}{(s+1)^2+1^2} = \\frac{s+1}{s^2+2s+2}"
+      },
+      {
+       "t": "p",
+       "text": "*Step 2: Pole-Zero Constellation:*"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Zero: $s+1 = 0 \\implies s_z = -1$.",
+        "Poles: $(s+1)^2 + 1 = 0 \\implies (s+1)^2 = -1 \\implies s+1 = \\pm j \\implies s_p = -1 \\pm j$.",
+        "Since $x(t)$ is right-sided, the ROC is strictly to the right of the real part of the poles:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC: } \\text{Re}(s) > -1"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\text{Re}(s) > -1$ strictly encloses the imaginary axis $\\sigma = 0$, the Continuous-Time Fourier Transform exists:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\left. X(s) \\right|_{s=j\\omega} = \\frac{j\\omega+1}{(j\\omega+1)^2+1}"
+      },
+      {
+       "t": "h4",
+       "text": "Drill 2: Product of Sinusoids with Growing Exponential (Slide 066)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate $X(s)$ and ROC for:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^t \\sin(2t)\\cos(3t)u(t)"
+      },
+      {
+       "t": "p",
+       "text": "*Step 1: Trigonometric Product-to-Sum Conversion:*"
+      },
+      {
+       "t": "math",
+       "tex": "2\\sin A \\cos B = \\sin(A+B) + \\sin(A-B)"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(2t)\\cos(3t) = \\frac{1}{2}[\\sin(5t) + \\sin(-t)] = \\frac{1}{2}\\sin(5t) - \\frac{1}{2}\\sin(t)"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2}e^t \\sin(5t)u(t) - \\frac{1}{2}e^t \\sin(t)u(t)"
+      },
+      {
+       "t": "p",
+       "text": "*Step 2: Transform Each Component:*"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Term 1: $\\frac{1}{2}e^t \\sin(5t)u(t) \\longleftrightarrow \\frac{1}{2}\\frac{5}{(s-1)^2+25} = \\frac{2.5}{(s-1)^2+25}, \\quad \\text{ROC}_1: \\text{Re}(s) > 1$",
+        "Term 2: $-\\frac{1}{2}e^t \\sin(t)u(t) \\longleftrightarrow -\\frac{1}{2}\\frac{1}{(s-1)^2+1} = -\\frac{0.5}{(s-1)^2+1}, \\quad \\text{ROC}_2: \\text{Re}(s) > 1$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "*Step 3: Overall Transform & ROC:*"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{2.5}{(s-1)^2+25} - \\frac{0.5}{(s-1)^2+1}, \\quad \\text{ROC} = \\text{ROC}_1 \\cap \\text{ROC}_2 = \\text{Re}(s) > 1"
+      },
+      {
+       "t": "p",
+       "text": "Poles: $s = 1 \\pm 5j$ and $s = 1 \\pm j$. All poles lie in the Right Half Plane (RHP).\nSince the ROC does NOT include the $j\\omega$-axis ($\\sigma=0$ is outside), **the CTFT does not exist**!"
+      },
+      {
+       "t": "h4",
+       "text": "Drill 3: Anti-Causal Product of Cosines (Slide 067)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate $X(s)$ and ROC for:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{-t}\\cos(3t)\\cos(2t)u(-t)"
+      },
+      {
+       "t": "p",
+       "text": "*Step 1: Trigonometric Expansion:*"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos(3t)\\cos(2t) = \\frac{1}{2}[\\cos(5t) + \\cos(t)]"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2}e^{-t}\\cos(5t)u(-t) + \\frac{1}{2}e^{-t}\\cos(t)u(-t)"
+      },
+      {
+       "t": "p",
+       "text": "*Step 2: Anti-Causal Sign Rule:*\nRecall that $-e^{-at}\\cos(bt)u(-t) \\longleftrightarrow \\frac{s+a}{(s+a)^2+b^2}, \\text{Re}(s)<-a$.\nTherefore, for $+e^{-at}\\cos(bt)u(-t)$, a negative sign appears:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-at}\\cos(bt)u(-t) \\longleftrightarrow -\\frac{s+a}{(s+a)^2+b^2}, \\quad \\text{Re}(s) < -a"
+      },
+      {
+       "t": "p",
+       "text": "Here $a = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = -\\frac{1}{2}\\frac{s+1}{(s+1)^2+25} - \\frac{1}{2}\\frac{s+1}{(s+1)^2+1} = -0.5(s+1)\\left[\\frac{1}{(s+1)^2+25} + \\frac{1}{(s+1)^2+1}\\right]"
+      },
+      {
+       "t": "p",
+       "text": "Poles: $s = -1 \\pm 5j$ and $s = -1 \\pm j$."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC: } \\text{Re}(s) < -1"
+      },
+      {
+       "t": "p",
+       "text": "The signal is left-sided (anti-causal); the ROC lies strictly to the left of the leftmost pole boundary $\\sigma = -1$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -5063,167 +5038,170 @@ export default {
      "text": "Solved Chalkboard Drills (Slides 069\u2013074)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 4: Combined Scaling, Shifting & Frequency Modulation (Slide 070\u2013071)"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t) \\stackrel{\\mathcal{L}}{\\longleftrightarrow} X(s)$ with $\\text{ROC: } \\text{Re}(s) < -3$.\nFind the Laplace transform $G(s)$ and its ROC for:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = e^{3t}x(-2t+3)"
-    },
-    {
-     "t": "p",
-     "text": "*Step 1: Decompose the Time Transformations:*\nLet $y(t) = x(-2t)$.\nUsing scaling with $a = -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s) = \\frac{1}{|-2|}X\\left(\\frac{s}{-2}\\right) = \\frac{1}{2}X\\left(-\\frac{s}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "ROC transformation:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Re}\\left(-\\frac{s}{2}\\right) < -3 \\implies -\\frac{\\sigma}{2} < -3 \\implies \\sigma > 6"
-    },
-    {
-     "t": "p",
-     "text": "*Notice:* The negative scale factor reversed the inequality, turning the left-sided signal into a right-sided signal!"
-    },
-    {
-     "t": "p",
-     "text": "*Step 2: Time Shifting:*\nWrite $-2t + 3 = -2(t - 1.5)$. Thus $z(t) = y(t - 1.5) = x(-2t+3)$:"
-    },
-    {
-     "t": "math",
-     "tex": "Z(s) = e^{-1.5s}Y(s) = \\frac{e^{-1.5s}}{2}X\\left(-\\frac{s}{2}\\right), \\quad \\text{ROC remains } \\sigma > 6"
-    },
-    {
-     "t": "p",
-     "text": "*Step 3: Frequency Modulation by $e^{3t}$:*"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = e^{3t}z(t) \\longleftrightarrow Z(s - 3)"
-    },
-    {
-     "t": "math",
-     "tex": "G(s) = \\frac{e^{-1.5(s-3)}}{2}X\\left(-\\frac{s-3}{2}\\right) = \\frac{e^{-1.5s}e^{4.5}}{2}X\\left(\\frac{3-s}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "New ROC:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Re}(s - 3) > 6 \\implies \\sigma - 3 > 6 \\implies \\boxed{\\text{ROC: } \\text{Re}(s) > 9}"
-    },
-    {
-     "t": "p",
-     "text": "*First-Principles Verification:*\nLet $x(t) = -e^{-3t}u(-t) \\longleftrightarrow \\frac{1}{s+3}, \\text{Re}(s) < -3$."
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = e^{3t}[-e^{-3(-2t+3)}u(-(-2t+3))] = -e^{3t}e^{6t-9}u(2t-3) = -e^{-9}e^{9t}u(2(t - 1.5))"
-    },
-    {
-     "t": "p",
-     "text": "Since $u(2(t-1.5)) = u(t - 1.5)$, this is a right-sided exponential $e^{9t}u(t-1.5)$ starting at $t=1.5$.\nA right-sided exponential $e^{9t}$ converges **if and only if** $\\sigma > 9$! Exact match!"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 5: Inverse Transformation of Composite $F(s)$ (Slide 072\u2013074)"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "G(s) = \\frac{1}{4}F\\left(\\frac{s-2}{4}\\right)e^{-3s} + \\frac{3}{2}F\\left(\\frac{-s-1}{3}\\right)e^{s/2}"
-    },
-    {
-     "t": "p",
-     "text": "where $F(s)$ has $\\text{ROC: } \\text{Re}(s) > -1$.\nFind $g(t)$ in terms of $f(t)$ and find the ROC of $G(s)$."
-    },
-    {
-     "t": "p",
-     "text": "*Step 1: Invert Term 1:*\nLet $Y_1(s) = \\frac{1}{4}F\\left(\\frac{s-2}{4}\\right)e^{-3s}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$F(s) \\longleftrightarrow f(t)$",
-      "$\\frac{1}{4}F(s/4) \\longleftrightarrow f(4t)$",
-      "$\\frac{1}{4}F\\left(\\frac{s-2}{4}\\right) \\longleftrightarrow e^{2t}f(4t) = z_1(t)$",
-      "$Y_1(s) = Z_1(s)e^{-3s} \\longleftrightarrow z_1(t-3) = e^{2(t-3)}f(4(t-3)) = e^{2(t-3)}f(4t-12)$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "ROC of Term 1:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Re}\\left(\\frac{s-2}{4}\\right) > -1 \\implies \\frac{\\sigma-2}{4} > -1 \\implies \\sigma - 2 > -4 \\implies \\sigma > -2"
-    },
-    {
-     "t": "p",
-     "text": "*Step 2: Invert Term 2:*\nLet $Y_2(s) = \\frac{3}{2}F\\left(\\frac{-(s+1)}{3}\\right)e^{s/2}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$F(-s) \\longleftrightarrow f(-t)$",
-      "$\\frac{3}{2}\\frac{1}{3}F\\left(-\\frac{s}{3}\\right) = \\frac{1}{2}F(-s/3) \\longleftrightarrow \\frac{3}{2}f(-3t)$ (scale by $-3$, factor $\\frac{1}{|-3|} = 1/3$)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Wait, to get coefficient $\\frac{3}{2}$, we need $y_2(t) = \\frac{9}{2}f(-3t) \\longleftrightarrow \\frac{9}{2}\\frac{1}{3}F(-s/3) = \\frac{3}{2}F(-s/3)$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Frequency shift $s \\to s+1$: $z_2(t) = e^{-t}y_2(t) = \\frac{9}{2}e^{-t}f(-3t) \\longleftrightarrow \\frac{3}{2}F\\left(\\frac{-(s+1)}{3}\\right)$.",
-      "Time advance by $1/2$ ($e^{s/2}$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z_2(t + 1/2) = \\frac{9}{2}e^{-(t+1/2)}f[-3(t+1/2)] = \\frac{9}{2}e^{-(t+1/2)}f(-3t - 3/2)"
-    },
-    {
-     "t": "p",
-     "text": "ROC of Term 2:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Re}\\left(\\frac{-(s+1)}{3}\\right) > -1 \\implies -\\frac{\\sigma+1}{3} > -1 \\implies \\sigma+1 < 3 \\implies \\sigma < 2"
-    },
-    {
-     "t": "p",
-     "text": "*Step 3: Total Time Signal & ROC:*"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = e^{2(t-3)}f(4t-12) + \\frac{9}{2}e^{-(t+1/2)}f\\left(-3t - \\frac{3}{2}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Overall ROC} = \\text{ROC}_1 \\cap \\text{ROC}_2 = \\{ \\sigma > -2 \\} \\cap \\{ \\sigma < 2 \\} = \\boxed{-2 < \\text{Re}(s) < 2}"
-    },
-    {
-     "t": "p",
-     "text": "The combined signal is a two-sided waveform with a valid vertical strip ROC!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Affine Operational Calculus /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Drill 4: Combined Scaling, Shifting & Frequency Modulation (Slide 070\u2013071)"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t) \\stackrel{\\mathcal{L}}{\\longleftrightarrow} X(s)$ with $\\text{ROC: } \\text{Re}(s) < -3$.\nFind the Laplace transform $G(s)$ and its ROC for:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = e^{3t}x(-2t+3)"
+      },
+      {
+       "t": "p",
+       "text": "*Step 1: Decompose the Time Transformations:*\nLet $y(t) = x(-2t)$.\nUsing scaling with $a = -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s) = \\frac{1}{|-2|}X\\left(\\frac{s}{-2}\\right) = \\frac{1}{2}X\\left(-\\frac{s}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "ROC transformation:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Re}\\left(-\\frac{s}{2}\\right) < -3 \\implies -\\frac{\\sigma}{2} < -3 \\implies \\sigma > 6"
+      },
+      {
+       "t": "p",
+       "text": "*Notice:* The negative scale factor reversed the inequality, turning the left-sided signal into a right-sided signal!"
+      },
+      {
+       "t": "p",
+       "text": "*Step 2: Time Shifting:*\nWrite $-2t + 3 = -2(t - 1.5)$. Thus $z(t) = y(t - 1.5) = x(-2t+3)$:"
+      },
+      {
+       "t": "math",
+       "tex": "Z(s) = e^{-1.5s}Y(s) = \\frac{e^{-1.5s}}{2}X\\left(-\\frac{s}{2}\\right), \\quad \\text{ROC remains } \\sigma > 6"
+      },
+      {
+       "t": "p",
+       "text": "*Step 3: Frequency Modulation by $e^{3t}$:*"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = e^{3t}z(t) \\longleftrightarrow Z(s - 3)"
+      },
+      {
+       "t": "math",
+       "tex": "G(s) = \\frac{e^{-1.5(s-3)}}{2}X\\left(-\\frac{s-3}{2}\\right) = \\frac{e^{-1.5s}e^{4.5}}{2}X\\left(\\frac{3-s}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "New ROC:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Re}(s - 3) > 6 \\implies \\sigma - 3 > 6 \\implies \\boxed{\\text{ROC: } \\text{Re}(s) > 9}"
+      },
+      {
+       "t": "p",
+       "text": "*First-Principles Verification:*\nLet $x(t) = -e^{-3t}u(-t) \\longleftrightarrow \\frac{1}{s+3}, \\text{Re}(s) < -3$."
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = e^{3t}[-e^{-3(-2t+3)}u(-(-2t+3))] = -e^{3t}e^{6t-9}u(2t-3) = -e^{-9}e^{9t}u(2(t - 1.5))"
+      },
+      {
+       "t": "p",
+       "text": "Since $u(2(t-1.5)) = u(t - 1.5)$, this is a right-sided exponential $e^{9t}u(t-1.5)$ starting at $t=1.5$.\nA right-sided exponential $e^{9t}$ converges **if and only if** $\\sigma > 9$! Exact match!"
+      },
+      {
+       "t": "h4",
+       "text": "Drill 5: Inverse Transformation of Composite $F(s)$ (Slide 072\u2013074)"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "G(s) = \\frac{1}{4}F\\left(\\frac{s-2}{4}\\right)e^{-3s} + \\frac{3}{2}F\\left(\\frac{-s-1}{3}\\right)e^{s/2}"
+      },
+      {
+       "t": "p",
+       "text": "where $F(s)$ has $\\text{ROC: } \\text{Re}(s) > -1$.\nFind $g(t)$ in terms of $f(t)$ and find the ROC of $G(s)$."
+      },
+      {
+       "t": "p",
+       "text": "*Step 1: Invert Term 1:*\nLet $Y_1(s) = \\frac{1}{4}F\\left(\\frac{s-2}{4}\\right)e^{-3s}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$F(s) \\longleftrightarrow f(t)$",
+        "$\\frac{1}{4}F(s/4) \\longleftrightarrow f(4t)$",
+        "$\\frac{1}{4}F\\left(\\frac{s-2}{4}\\right) \\longleftrightarrow e^{2t}f(4t) = z_1(t)$",
+        "$Y_1(s) = Z_1(s)e^{-3s} \\longleftrightarrow z_1(t-3) = e^{2(t-3)}f(4(t-3)) = e^{2(t-3)}f(4t-12)$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "ROC of Term 1:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Re}\\left(\\frac{s-2}{4}\\right) > -1 \\implies \\frac{\\sigma-2}{4} > -1 \\implies \\sigma - 2 > -4 \\implies \\sigma > -2"
+      },
+      {
+       "t": "p",
+       "text": "*Step 2: Invert Term 2:*\nLet $Y_2(s) = \\frac{3}{2}F\\left(\\frac{-(s+1)}{3}\\right)e^{s/2}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$F(-s) \\longleftrightarrow f(-t)$",
+        "$\\frac{3}{2}\\frac{1}{3}F\\left(-\\frac{s}{3}\\right) = \\frac{1}{2}F(-s/3) \\longleftrightarrow \\frac{3}{2}f(-3t)$ (scale by $-3$, factor $\\frac{1}{|-3|} = 1/3$)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Wait, to get coefficient $\\frac{3}{2}$, we need $y_2(t) = \\frac{9}{2}f(-3t) \\longleftrightarrow \\frac{9}{2}\\frac{1}{3}F(-s/3) = \\frac{3}{2}F(-s/3)$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Frequency shift $s \\to s+1$: $z_2(t) = e^{-t}y_2(t) = \\frac{9}{2}e^{-t}f(-3t) \\longleftrightarrow \\frac{3}{2}F\\left(\\frac{-(s+1)}{3}\\right)$.",
+        "Time advance by $1/2$ ($e^{s/2}$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z_2(t + 1/2) = \\frac{9}{2}e^{-(t+1/2)}f[-3(t+1/2)] = \\frac{9}{2}e^{-(t+1/2)}f(-3t - 3/2)"
+      },
+      {
+       "t": "p",
+       "text": "ROC of Term 2:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Re}\\left(\\frac{-(s+1)}{3}\\right) > -1 \\implies -\\frac{\\sigma+1}{3} > -1 \\implies \\sigma+1 < 3 \\implies \\sigma < 2"
+      },
+      {
+       "t": "p",
+       "text": "*Step 3: Total Time Signal & ROC:*"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = e^{2(t-3)}f(4t-12) + \\frac{9}{2}e^{-(t+1/2)}f\\left(-3t - \\frac{3}{2}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Overall ROC} = \\text{ROC}_1 \\cap \\text{ROC}_2 = \\{ \\sigma > -2 \\} \\cap \\{ \\sigma < 2 \\} = \\boxed{-2 < \\text{Re}(s) < 2}"
+      },
+      {
+       "t": "p",
+       "text": "The combined signal is a two-sided waveform with a valid vertical strip ROC!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -5278,140 +5256,139 @@ export default {
      "text": "Solved Chalkboard Drills (Slides 075\u2013084)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 6: Evaluating $\\int_0^\\infty \\frac{e^{-2t}-e^{-t}}{t}dt$ (Slide 078\u2013080)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the definite integral:"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_0^\\infty \\frac{e^{-2t}-e^{-t}}{t} dt"
-    },
-    {
-     "t": "p",
-     "text": "*Step 1: Identify the Base Signal $x(t)$:*\nLet $x(t) = (e^{-2t} - e^{-t})u(t)$."
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{s+2} - \\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
-    },
-    {
-     "t": "p",
-     "text": "*Step 2: Check Boundary Condition at $t = 0$:*"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{t \\to 0} \\frac{e^{-2t}-e^{-t}}{t} = \\lim_{t \\to 0} \\frac{-2e^{-2t} - (-e^{-t})}{1} = -2 + 1 = -1 \\quad (\\text{Finite!})"
-    },
-    {
-     "t": "p",
-     "text": "*Step 3: Apply the Laplace Integral Shortcut:*"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_0^\\infty X(s) ds = \\int_0^\\infty \\left(\\frac{1}{s+2} - \\frac{1}{s+1}\\right) ds"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\left[ \\ln(s+2) - \\ln(s+1) \\right]_0^\\infty = \\left[ \\ln\\left(\\frac{s+2}{s+1}\\right) \\right]_0^\\infty"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\lim_{s \\to \\infty}\\ln\\left(\\frac{1 + 2/s}{1 + 1/s}\\right) - \\ln\\left(\\frac{0+2}{0+1}\\right) = \\ln(1) - \\ln(2) = 0 - \\ln(2) = \\boxed{-\\ln(2) = \\ln\\left(\\frac{1}{2}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 7: Evaluating $\\int_0^\\infty \\frac{e^{-t}(\\cos at - \\cos bt)}{t}dt$ (Slide 081\u2013082)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate:"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_0^\\infty \\frac{e^{-t}(\\cos at - \\cos bt)}{t} dt"
-    },
-    {
-     "t": "p",
-     "text": "*Step 1: Base Signal & Transform:*"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = [e^{-t}\\cos(at) - e^{-t}\\cos(bt)]u(t)"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s+1}{(s+1)^2+a^2} - \\frac{s+1}{(s+1)^2+b^2}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
-    },
-    {
-     "t": "p",
-     "text": "*Step 2: Evaluate $I = \\int_0^\\infty X(s)ds$:*"
-    },
-    {
-     "t": "math",
-     "tex": "\\int \\frac{s+1}{(s+1)^2+a^2}ds = \\frac{1}{2}\\ln[(s+1)^2+a^2]"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\frac{1}{2}\\left[ \\ln\\left(\\frac{(s+1)^2+a^2}{(s+1)^2+b^2}\\right) \\right]_0^\\infty"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\frac{1}{2}\\left[ \\lim_{s \\to \\infty}\\ln(1) - \\ln\\left(\\frac{1+a^2}{1+b^2}\\right) \\right] = -\\frac{1}{2}\\ln\\left(\\frac{1+a^2}{1+b^2}\\right) = \\boxed{\\ln\\sqrt{\\frac{1+b^2}{1+a^2}}}"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 8: Evaluating $\\int_0^\\infty \\frac{e^{-t}\\sin^2 t}{t}dt$ (Slide 083\u2013084)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate:"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_0^\\infty \\frac{e^{-t}\\sin^2 t}{t} dt"
-    },
-    {
-     "t": "p",
-     "text": "*Step 1: Trigonometric Identity:*"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin^2 t = \\frac{1 - \\cos 2t}{2} \\implies x(t) = \\frac{1}{2}e^{-t}u(t) - \\frac{1}{2}e^{-t}\\cos(2t)u(t)"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{2}\\left[\\frac{1}{s+1} - \\frac{s+1}{(s+1)^2+4}\\right], \\quad \\text{ROC: } \\text{Re}(s) > -1"
-    },
-    {
-     "t": "p",
-     "text": "*Step 2: Integrate:*"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\frac{1}{2}\\int_0^\\infty \\left[\\frac{1}{s+1} - \\frac{s+1}{(s+1)^2+4}\\right] ds"
-    },
-    {
-     "t": "math",
-     "tex": "2I = \\left[ \\ln(s+1) - \\frac{1}{2}\\ln[(s+1)^2+4] \\right]_0^\\infty = \\left[ \\ln\\left(\\frac{s+1}{\\sqrt{(s+1)^2+4}}\\right) \\right]_0^\\infty"
-    },
-    {
-     "t": "math",
-     "tex": "2I = \\ln(1) - \\ln\\left(\\frac{1}{\\sqrt{5}}\\right) = 0 - (-\\ln\\sqrt{5}) = \\ln\\sqrt{5}"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\frac{1}{2}\\ln(\\sqrt{5}) = \\boxed{\\frac{1}{4}\\ln(5)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Definite Integrals via Laplace /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Drill 6: Evaluating $\\int_0^\\infty \\frac{e^{-2t}-e^{-t}}{t}dt$ (Slide 078\u2013080)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the definite integral:"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_0^\\infty \\frac{e^{-2t}-e^{-t}}{t} dt"
+      },
+      {
+       "t": "p",
+       "text": "*Step 1: Identify the Base Signal $x(t)$:*\nLet $x(t) = (e^{-2t} - e^{-t})u(t)$."
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{s+2} - \\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
+      },
+      {
+       "t": "p",
+       "text": "*Step 2: Check Boundary Condition at $t = 0$:*"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{t \\to 0} \\frac{e^{-2t}-e^{-t}}{t} = \\lim_{t \\to 0} \\frac{-2e^{-2t} - (-e^{-t})}{1} = -2 + 1 = -1 \\quad (\\text{Finite!})"
+      },
+      {
+       "t": "p",
+       "text": "*Step 3: Apply the Laplace Integral Shortcut:*"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_0^\\infty X(s) ds = \\int_0^\\infty \\left(\\frac{1}{s+2} - \\frac{1}{s+1}\\right) ds"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\left[ \\ln(s+2) - \\ln(s+1) \\right]_0^\\infty = \\left[ \\ln\\left(\\frac{s+2}{s+1}\\right) \\right]_0^\\infty"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\lim_{s \\to \\infty}\\ln\\left(\\frac{1 + 2/s}{1 + 1/s}\\right) - \\ln\\left(\\frac{0+2}{0+1}\\right) = \\ln(1) - \\ln(2) = 0 - \\ln(2) = \\boxed{-\\ln(2) = \\ln\\left(\\frac{1}{2}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Drill 7: Evaluating $\\int_0^\\infty \\frac{e^{-t}(\\cos at - \\cos bt)}{t}dt$ (Slide 081\u2013082)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate:"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_0^\\infty \\frac{e^{-t}(\\cos at - \\cos bt)}{t} dt"
+      },
+      {
+       "t": "p",
+       "text": "*Step 1: Base Signal & Transform:*"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = [e^{-t}\\cos(at) - e^{-t}\\cos(bt)]u(t)"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s+1}{(s+1)^2+a^2} - \\frac{s+1}{(s+1)^2+b^2}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
+      },
+      {
+       "t": "p",
+       "text": "*Step 2: Evaluate $I = \\int_0^\\infty X(s)ds$:*"
+      },
+      {
+       "t": "math",
+       "tex": "\\int \\frac{s+1}{(s+1)^2+a^2}ds = \\frac{1}{2}\\ln[(s+1)^2+a^2]"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\frac{1}{2}\\left[ \\ln\\left(\\frac{(s+1)^2+a^2}{(s+1)^2+b^2}\\right) \\right]_0^\\infty"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\frac{1}{2}\\left[ \\lim_{s \\to \\infty}\\ln(1) - \\ln\\left(\\frac{1+a^2}{1+b^2}\\right) \\right] = -\\frac{1}{2}\\ln\\left(\\frac{1+a^2}{1+b^2}\\right) = \\boxed{\\ln\\sqrt{\\frac{1+b^2}{1+a^2}}}"
+      },
+      {
+       "t": "h4",
+       "text": "Drill 8: Evaluating $\\int_0^\\infty \\frac{e^{-t}\\sin^2 t}{t}dt$ (Slide 083\u2013084)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate:"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_0^\\infty \\frac{e^{-t}\\sin^2 t}{t} dt"
+      },
+      {
+       "t": "p",
+       "text": "*Step 1: Trigonometric Identity:*"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin^2 t = \\frac{1 - \\cos 2t}{2} \\implies x(t) = \\frac{1}{2}e^{-t}u(t) - \\frac{1}{2}e^{-t}\\cos(2t)u(t)"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{2}\\left[\\frac{1}{s+1} - \\frac{s+1}{(s+1)^2+4}\\right], \\quad \\text{ROC: } \\text{Re}(s) > -1"
+      },
+      {
+       "t": "p",
+       "text": "*Step 2: Integrate:*"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\frac{1}{2}\\int_0^\\infty \\left[\\frac{1}{s+1} - \\frac{s+1}{(s+1)^2+4}\\right] ds"
+      },
+      {
+       "t": "math",
+       "tex": "2I = \\left[ \\ln(s+1) - \\frac{1}{2}\\ln[(s+1)^2+4] \\right]_0^\\infty = \\left[ \\ln\\left(\\frac{s+1}{\\sqrt{(s+1)^2+4}}\\right) \\right]_0^\\infty"
+      },
+      {
+       "t": "math",
+       "tex": "2I = \\ln(1) - \\ln\\left(\\frac{1}{\\sqrt{5}}\\right) = 0 - (-\\ln\\sqrt{5}) = \\ln\\sqrt{5}"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\frac{1}{2}\\ln(\\sqrt{5}) = \\boxed{\\frac{1}{4}\\ln(5)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -5518,68 +5495,71 @@ export default {
      "text": "Solved Chalkboard Drills (Slides 085\u2013096)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 9: Right-Sided Triangular Repetitive Waveform (Slide 089\u2013091)"
-    },
-    {
-     "t": "p",
-     "text": "Consider a right-sided triangular wave repeating every $T_0 = 2$ seconds:\nSingle period: $y(t) = r(t) - 2r(t-1) + r(t-2)$.\nFind $X(s)$ and its pole locations."
-    },
-    {
-     "t": "p",
-     "text": "*Step 1: Single Period Transform:*"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s) = \\frac{1 - 2e^{-s} + e^{-2s}}{s^2} = \\frac{(1 - e^{-s})^2}{s^2}"
-    },
-    {
-     "t": "p",
-     "text": "*Step 2: Infinite Repetition Formula:*"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{Y(s)}{1 - e^{-2s}} = \\frac{(1 - e^{-s})^2}{s^2(1 - e^{-2s})} = \\frac{(1 - e^{-s})^2}{s^2(1 - e^{-s})(1 + e^{-s})} = \\frac{1 - e^{-s}}{s^2(1 + e^{-s})}"
-    },
-    {
-     "t": "p",
-     "text": "*Step 3: Analyze Pole Multiplicities:*"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Origin $s = 0$: $\\lim_{s \\to 0}\\frac{1 - e^{-s}}{s} = 1$. Thus, the numerator zero cancels one pole from $s^2$, leaving a **simple pole at $s = 0$**!",
-      "Denominator zeros: $1 + e^{-s} = 0 \\implies e^{-s} = -1 = e^{\\pm j(2n+1)\\pi} \\implies s = \\pm j(2n+1)\\pi$ for $n \\in \\mathbb{Z}$.",
-      "All poles lie precisely along the imaginary $j\\omega$-axis at $s = 0$ and $s = \\pm j\\pi, \\pm j3\\pi, \\dots$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since the signal is right-sided, the ROC is strictly to the right of all poles:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{ROC: } \\text{Re}(s) > 0}"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 10: Left-Sided Repetitive Waveform (Slide 093\u2013094)"
-    },
-    {
-     "t": "p",
-     "text": "Consider the left-sided triangular repetitive wave extending to $t = -\\infty$ and terminating at $t = 0$.\nSingle period: $y(t) = r(t+2) - 2r(t+1) + r(t) \\longleftrightarrow Y(s) = \\frac{e^{2s} - 2e^s + 1}{s^2}$."
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{Y(s)}{1 - e^{2s}} = \\frac{(e^s - 1)^2}{s^2(1 - e^{2s})}, \\quad \\boxed{\\text{ROC: } \\text{Re}(s) < 0}"
-    },
-    {
-     "t": "p",
-     "text": "All poles lie along the $j\\omega$-axis, but because the waveform is left-sided, the ROC is the open left-half plane!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Repetitive Signal Transforms /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Drill 9: Right-Sided Triangular Repetitive Waveform (Slide 089\u2013091)"
+      },
+      {
+       "t": "p",
+       "text": "Consider a right-sided triangular wave repeating every $T_0 = 2$ seconds:\nSingle period: $y(t) = r(t) - 2r(t-1) + r(t-2)$.\nFind $X(s)$ and its pole locations."
+      },
+      {
+       "t": "p",
+       "text": "*Step 1: Single Period Transform:*"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s) = \\frac{1 - 2e^{-s} + e^{-2s}}{s^2} = \\frac{(1 - e^{-s})^2}{s^2}"
+      },
+      {
+       "t": "p",
+       "text": "*Step 2: Infinite Repetition Formula:*"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{Y(s)}{1 - e^{-2s}} = \\frac{(1 - e^{-s})^2}{s^2(1 - e^{-2s})} = \\frac{(1 - e^{-s})^2}{s^2(1 - e^{-s})(1 + e^{-s})} = \\frac{1 - e^{-s}}{s^2(1 + e^{-s})}"
+      },
+      {
+       "t": "p",
+       "text": "*Step 3: Analyze Pole Multiplicities:*"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Origin $s = 0$: $\\lim_{s \\to 0}\\frac{1 - e^{-s}}{s} = 1$. Thus, the numerator zero cancels one pole from $s^2$, leaving a **simple pole at $s = 0$**!",
+        "Denominator zeros: $1 + e^{-s} = 0 \\implies e^{-s} = -1 = e^{\\pm j(2n+1)\\pi} \\implies s = \\pm j(2n+1)\\pi$ for $n \\in \\mathbb{Z}$.",
+        "All poles lie precisely along the imaginary $j\\omega$-axis at $s = 0$ and $s = \\pm j\\pi, \\pm j3\\pi, \\dots$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since the signal is right-sided, the ROC is strictly to the right of all poles:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{ROC: } \\text{Re}(s) > 0}"
+      },
+      {
+       "t": "h4",
+       "text": "Drill 10: Left-Sided Repetitive Waveform (Slide 093\u2013094)"
+      },
+      {
+       "t": "p",
+       "text": "Consider the left-sided triangular repetitive wave extending to $t = -\\infty$ and terminating at $t = 0$.\nSingle period: $y(t) = r(t+2) - 2r(t+1) + r(t) \\longleftrightarrow Y(s) = \\frac{e^{2s} - 2e^s + 1}{s^2}$."
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{Y(s)}{1 - e^{2s}} = \\frac{(e^s - 1)^2}{s^2(1 - e^{2s})}, \\quad \\boxed{\\text{ROC: } \\text{Re}(s) < 0}"
+      },
+      {
+       "t": "p",
+       "text": "All poles lie along the $j\\omega$-axis, but because the waveform is left-sided, the ROC is the open left-half plane!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -6025,71 +6005,70 @@ export default {
      "tex": "p_1 = -3, \\quad p_2 = -1, \\quad p_3 = 2"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Case (a): All Right-Sided Terms (Causal)**"
-    },
-    {
-     "t": "math",
-     "tex": "x_a(t) = e^{2t}u(t) - e^{-3t}u(t) + e^{-t}u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\frac{1}{s-2} \\implies \\sigma > 2$",
-      "$-\\frac{1}{s+3} \\implies \\sigma > -3$",
-      "$\\frac{1}{s+1} \\implies \\sigma > -1$",
-      "Overlap:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}_a: \\text{Re}(s) > 2"
-    },
-    {
-     "t": "p",
-     "text": "*(To the right of the rightmost pole $s=2$. Causal, Right-Sided Signal).*"
-    },
-    {
-     "t": "p",
-     "text": "**Case (b): All Left-Sided Terms (Anti-Causal)**"
-    },
-    {
-     "t": "math",
-     "tex": "x_b(t) = -e^{2t}u(-t) + e^{-3t}u(-t) - e^{-t}u(-t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Recall: $-e^{at}u(-t) \\leftrightarrow \\frac{1}{s-a}$ with $\\sigma < a$.",
-      "Each term gives the identical algebraic PFE components:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_b(s) = \\frac{1}{s-2} - \\frac{1}{s+3} + \\frac{1}{s+1} = \\frac{s^2+6s-1}{(s-2)(s+3)(s+1)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Individual ROCs: $\\sigma < 2$, $\\sigma < -3$, $\\sigma < -1$.",
-      "Overlap:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}_b: \\text{Re}(s) < -3"
-    },
-    {
-     "t": "p",
-     "text": "*(To the left of the leftmost pole $s=-3$. Anti-causal, Left-Sided Signal).*"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Case (a): All Right-Sided Terms (Causal)**"
+      },
+      {
+       "t": "math",
+       "tex": "x_a(t) = e^{2t}u(t) - e^{-3t}u(t) + e^{-t}u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\frac{1}{s-2} \\implies \\sigma > 2$",
+        "$-\\frac{1}{s+3} \\implies \\sigma > -3$",
+        "$\\frac{1}{s+1} \\implies \\sigma > -1$",
+        "Overlap:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}_a: \\text{Re}(s) > 2"
+      },
+      {
+       "t": "p",
+       "text": "*(To the right of the rightmost pole $s=2$. Causal, Right-Sided Signal).*"
+      },
+      {
+       "t": "p",
+       "text": "**Case (b): All Left-Sided Terms (Anti-Causal)**"
+      },
+      {
+       "t": "math",
+       "tex": "x_b(t) = -e^{2t}u(-t) + e^{-3t}u(-t) - e^{-t}u(-t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Recall: $-e^{at}u(-t) \\leftrightarrow \\frac{1}{s-a}$ with $\\sigma < a$.",
+        "Each term gives the identical algebraic PFE components:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_b(s) = \\frac{1}{s-2} - \\frac{1}{s+3} + \\frac{1}{s+1} = \\frac{s^2+6s-1}{(s-2)(s+3)(s+1)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Individual ROCs: $\\sigma < 2$, $\\sigma < -3$, $\\sigma < -1$.",
+        "Overlap:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}_b: \\text{Re}(s) < -3"
+      },
+      {
+       "t": "p",
+       "text": "*(To the left of the leftmost pole $s=-3$. Anti-causal, Left-Sided Signal).*"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6100,68 +6079,67 @@ export default {
      "text": "Mathematical Problem & Step-by-Step Derivation"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Case (c): Intermediate Strip 1 (Non-Causal, Two-Sided)**"
-    },
-    {
-     "t": "math",
-     "tex": "x_c(t) = -e^{2t}u(-t) - e^{-3t}u(t) - e^{-t}u(-t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Pole at $s=2$: Left-sided $\\implies \\sigma < 2$.",
-      "Pole at $s=-3$: Right-sided $\\implies \\sigma > -3$.",
-      "Pole at $s=-1$: Left-sided $\\implies \\sigma < -1$.",
-      "Overlap:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}_c: -3 < \\text{Re}(s) < -1"
-    },
-    {
-     "t": "p",
-     "text": "*(Strip bounded by poles $s=-3$ and $s=-1$. Two-sided, Non-Causal).*"
-    },
-    {
-     "t": "p",
-     "text": "**Case (d): Intermediate Strip 2 (Non-Causal, Two-Sided)**"
-    },
-    {
-     "t": "math",
-     "tex": "x_d(t) = -e^{2t}u(-t) - e^{-3t}u(t) + e^{-t}u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Pole at $s=2$: Left-sided $\\implies \\sigma < 2$.",
-      "Pole at $s=-3$: Right-sided $\\implies \\sigma > -3$.",
-      "Pole at $s=-1$: Right-sided $\\implies \\sigma > -1$.",
-      "Overlap:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}_d: -1 < \\text{Re}(s) < 2"
-    },
-    {
-     "t": "p",
-     "text": "*(Strip bounded by poles $s=-1$ and $s=2$. Two-sided, Non-Causal. Notice this strip contains $\\sigma=0$, so for this ROC, the CTFT exists!).*"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Can an ROC be $-3 < \\text{Re}(s) < 2$?**\n**NO! NEVER!** An ROC can **NEVER contain any pole**. Since $s=-1$ is a pole, the region cannot span across $s=-1$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Case (c): Intermediate Strip 1 (Non-Causal, Two-Sided)**"
+      },
+      {
+       "t": "math",
+       "tex": "x_c(t) = -e^{2t}u(-t) - e^{-3t}u(t) - e^{-t}u(-t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Pole at $s=2$: Left-sided $\\implies \\sigma < 2$.",
+        "Pole at $s=-3$: Right-sided $\\implies \\sigma > -3$.",
+        "Pole at $s=-1$: Left-sided $\\implies \\sigma < -1$.",
+        "Overlap:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}_c: -3 < \\text{Re}(s) < -1"
+      },
+      {
+       "t": "p",
+       "text": "*(Strip bounded by poles $s=-3$ and $s=-1$. Two-sided, Non-Causal).*"
+      },
+      {
+       "t": "p",
+       "text": "**Case (d): Intermediate Strip 2 (Non-Causal, Two-Sided)**"
+      },
+      {
+       "t": "math",
+       "tex": "x_d(t) = -e^{2t}u(-t) - e^{-3t}u(t) + e^{-t}u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Pole at $s=2$: Left-sided $\\implies \\sigma < 2$.",
+        "Pole at $s=-3$: Right-sided $\\implies \\sigma > -3$.",
+        "Pole at $s=-1$: Right-sided $\\implies \\sigma > -1$.",
+        "Overlap:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}_d: -1 < \\text{Re}(s) < 2"
+      },
+      {
+       "t": "p",
+       "text": "*(Strip bounded by poles $s=-1$ and $s=2$. Two-sided, Non-Causal. Notice this strip contains $\\sigma=0$, so for this ROC, the CTFT exists!).*"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Can an ROC be $-3 < \\text{Re}(s) < 2$?**\n**NO! NEVER!** An ROC can **NEVER contain any pole**. Since $s=-1$ is a pole, the region cannot span across $s=-1$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6482,81 +6460,80 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Frequency-Shift Property:**"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = f(t)e^{2t} \\stackrel{\\mathcal{L}}{\\longleftrightarrow} Y(s) = F(s - 2)"
-    },
-    {
-     "t": "p",
-     "text": "This shifts all poles of $F(s)$ to the right by $+2$:"
-    },
-    {
-     "t": "math",
-     "tex": "p_{Y} = p_{F} + 2"
-    },
-    {
-     "t": "p",
-     "text": "For $y(t)$ to be absolutely integrable, the ROC of $Y(s)$ **MUST include the $j\\omega$-axis ($\\text{Re}(s) = 0$)**."
-    },
-    {
-     "t": "p",
-     "text": "**Case 1: $f(t)$ is Causal**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Causal $\\implies$ ROC of $F(s)$ is $\\text{Re}(s) > \\sigma_F$, and ROC of $Y(s)$ is $\\text{Re}(s) > \\sigma_F + 2$.",
-      "For ROC to include $\\sigma = 0$, we require:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sigma_F + 2 < 0 \\iff \\sigma_F < -2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Checking configurations:",
-      "If $\\sigma_F = -1$ (Option b) $\\implies \\sigma_Y = -1 + 2 = +1 \\implies \\text{ROC: } \\sigma > 1$ (Does NOT include $0 \\implies$ unstable!).",
-      "If $\\sigma_F = -3$ (Option c) $\\implies \\sigma_Y = -3 + 2 = -1 \\implies \\text{ROC: } \\sigma > -1$ (Includes $0 \\implies$ **STABLE & ABSOLUTELY INTEGRABLE!**).",
-      "**Correct Option for Causal:** **(c)**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Case 2: $f(t)$ is Anti-Causal**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Anti-causal $\\implies$ ROC of $F(s)$ is $\\text{Re}(s) < \\sigma_F$, and ROC of $Y(s)$ is $\\text{Re}(s) < \\sigma_F + 2$.",
-      "For ROC to include $\\sigma = 0$, we require:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sigma_F + 2 > 0 \\iff \\sigma_F > -2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Checking configurations:",
-      "Option (b): $\\sigma_F = -1 \\implies \\sigma_Y = +1 \\implies \\text{ROC: } \\sigma < 1$ (Includes $0 \\implies$ Valid!).",
-      "Option (d): $\\sigma_F = +1 \\implies \\sigma_Y = +3 \\implies \\text{ROC: } \\sigma < 3$ (Includes $0 \\implies$ Valid!).",
-      "Option (e): $\\sigma_F = +3 \\implies \\sigma_Y = +5 \\implies \\text{ROC: } \\sigma < 5$ (Includes $0 \\implies$ Valid!).",
-      "**Correct Options for Anti-Causal:** **(b), (d), (e)**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Frequency-Shift Property:**"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = f(t)e^{2t} \\stackrel{\\mathcal{L}}{\\longleftrightarrow} Y(s) = F(s - 2)"
+      },
+      {
+       "t": "p",
+       "text": "This shifts all poles of $F(s)$ to the right by $+2$:"
+      },
+      {
+       "t": "math",
+       "tex": "p_{Y} = p_{F} + 2"
+      },
+      {
+       "t": "p",
+       "text": "For $y(t)$ to be absolutely integrable, the ROC of $Y(s)$ **MUST include the $j\\omega$-axis ($\\text{Re}(s) = 0$)**."
+      },
+      {
+       "t": "p",
+       "text": "**Case 1: $f(t)$ is Causal**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Causal $\\implies$ ROC of $F(s)$ is $\\text{Re}(s) > \\sigma_F$, and ROC of $Y(s)$ is $\\text{Re}(s) > \\sigma_F + 2$.",
+        "For ROC to include $\\sigma = 0$, we require:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sigma_F + 2 < 0 \\iff \\sigma_F < -2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Checking configurations:",
+        "If $\\sigma_F = -1$ (Option b) $\\implies \\sigma_Y = -1 + 2 = +1 \\implies \\text{ROC: } \\sigma > 1$ (Does NOT include $0 \\implies$ unstable!).",
+        "If $\\sigma_F = -3$ (Option c) $\\implies \\sigma_Y = -3 + 2 = -1 \\implies \\text{ROC: } \\sigma > -1$ (Includes $0 \\implies$ **STABLE & ABSOLUTELY INTEGRABLE!**).",
+        "**Correct Option for Causal:** **(c)**."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Case 2: $f(t)$ is Anti-Causal**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Anti-causal $\\implies$ ROC of $F(s)$ is $\\text{Re}(s) < \\sigma_F$, and ROC of $Y(s)$ is $\\text{Re}(s) < \\sigma_F + 2$.",
+        "For ROC to include $\\sigma = 0$, we require:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sigma_F + 2 > 0 \\iff \\sigma_F > -2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Checking configurations:",
+        "Option (b): $\\sigma_F = -1 \\implies \\sigma_Y = +1 \\implies \\text{ROC: } \\sigma < 1$ (Includes $0 \\implies$ Valid!).",
+        "Option (d): $\\sigma_F = +1 \\implies \\sigma_Y = +3 \\implies \\text{ROC: } \\sigma < 3$ (Includes $0 \\implies$ Valid!).",
+        "Option (e): $\\sigma_F = +3 \\implies \\sigma_Y = +5 \\implies \\text{ROC: } \\sigma < 5$ (Includes $0 \\implies$ Valid!).",
+        "**Correct Options for Anti-Causal:** **(b), (d), (e)**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6567,96 +6544,95 @@ export default {
      "text": "Mathematical Problem & Derivations"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem 1:** Find Laplace Transform of $x(t) = e^{-t}u(t+1)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Express in shifted variable $(t+1)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{-(t+1-1)}u(t+1) = e^1 \\cdot e^{-(t+1)}u(t+1)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $e^{-t}u(t) \\leftrightarrow \\frac{1}{s+1}$ with $\\text{Re}(s) > -1$, by time-advance ($t \\to t+1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = e \\cdot \\frac{e^{+s}}{s+1} = \\frac{e^{s+1}}{s+1}, \\quad \\text{ROC}: \\text{Re}(s) > -1"
-    },
-    {
-     "t": "p",
-     "text": "**Problem 2:** Find Laplace Transform of $x(t) = e^t u(-t+1)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Rewrite argument of step: $u(-t+1) = u(-(t-1))$.",
-      "Express in $(t-1)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{t-1+1}u(-(t-1)) = e \\cdot e^{t-1}u(-(t-1))"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Recall: $e^t u(-t) \\leftrightarrow -\\frac{1}{s-1}$ with $\\text{Re}(s) < 1$.",
-      "By time-delay ($t \\to t-1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = e \\cdot e^{-s} \\left(-\\frac{1}{s-1}\\right) = \\frac{-e^{1-s}}{s-1} = \\frac{e^{1-s}}{1-s}, \\quad \\text{ROC}: \\text{Re}(s) < 1"
-    },
-    {
-     "t": "p",
-     "text": "**Problem 3:** Find Laplace Transform of $x(t) = \\sin(\\pi t)u(t-1)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Express argument in $(t-1)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\pi t) = \\sin[\\pi(t-1) + \\pi] = -\\sin[\\pi(t-1)]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Therefore:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = -\\sin[\\pi(t-1)]u(t-1)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\sin(\\pi t)u(t) \\leftrightarrow \\frac{\\pi}{s^2 + \\pi^2}$ with $\\text{Re}(s) > 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = -\\frac{\\pi e^{-s}}{s^2 + \\pi^2}, \\quad \\text{ROC}: \\text{Re}(s) > 0"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem 1:** Find Laplace Transform of $x(t) = e^{-t}u(t+1)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Express in shifted variable $(t+1)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{-(t+1-1)}u(t+1) = e^1 \\cdot e^{-(t+1)}u(t+1)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $e^{-t}u(t) \\leftrightarrow \\frac{1}{s+1}$ with $\\text{Re}(s) > -1$, by time-advance ($t \\to t+1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = e \\cdot \\frac{e^{+s}}{s+1} = \\frac{e^{s+1}}{s+1}, \\quad \\text{ROC}: \\text{Re}(s) > -1"
+      },
+      {
+       "t": "p",
+       "text": "**Problem 2:** Find Laplace Transform of $x(t) = e^t u(-t+1)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Rewrite argument of step: $u(-t+1) = u(-(t-1))$.",
+        "Express in $(t-1)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{t-1+1}u(-(t-1)) = e \\cdot e^{t-1}u(-(t-1))"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Recall: $e^t u(-t) \\leftrightarrow -\\frac{1}{s-1}$ with $\\text{Re}(s) < 1$.",
+        "By time-delay ($t \\to t-1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = e \\cdot e^{-s} \\left(-\\frac{1}{s-1}\\right) = \\frac{-e^{1-s}}{s-1} = \\frac{e^{1-s}}{1-s}, \\quad \\text{ROC}: \\text{Re}(s) < 1"
+      },
+      {
+       "t": "p",
+       "text": "**Problem 3:** Find Laplace Transform of $x(t) = \\sin(\\pi t)u(t-1)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Express argument in $(t-1)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\pi t) = \\sin[\\pi(t-1) + \\pi] = -\\sin[\\pi(t-1)]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Therefore:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = -\\sin[\\pi(t-1)]u(t-1)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\sin(\\pi t)u(t) \\leftrightarrow \\frac{\\pi}{s^2 + \\pi^2}$ with $\\text{Re}(s) > 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = -\\frac{\\pi e^{-s}}{s^2 + \\pi^2}, \\quad \\text{ROC}: \\text{Re}(s) > 0"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6898,64 +6874,63 @@ export default {
      "text": "Verification Problem (Slides 139 & 140)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "Given $x(t) = e^{-at}u(t+1)$. Find $Y(s) = \\mathcal{L}\\{\\frac{dx}{dt}\\}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method 1: Via Laplace Transform Property**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^a e^{-a(t+1)}u(t+1) \\implies X(s) = \\frac{e^a e^s}{s+a} = \\frac{e^{s+a}}{s+a}"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s) = s X(s) = \\frac{s e^{s+a}}{s+a}, \\quad \\text{ROC}: \\text{Re}(s) > -a"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method 2: Via Direct Time-Derivative**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx}{dt} = \\frac{d}{dt}[e^{-at}u(t+1)] = e^{-at}\\delta(t+1) - a e^{-at}u(t+1)"
-    },
-    {
-     "t": "p",
-     "text": "Applying sifting property to the impulse: $e^{-at}\\delta(t+1) = e^{-a(-1)}\\delta(t+1) = e^a \\delta(t+1)$."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{e^a \\delta(t+1)\\} = e^a e^{+s} = e^{s+a}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{-a e^{-at}u(t+1)\\} = -a \\frac{e^{s+a}}{s+a}"
-    },
-    {
-     "t": "p",
-     "text": "Summing:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s) = e^{s+a}\\left[ 1 - \\frac{a}{s+a} \\right] = e^{s+a}\\left[\\frac{s+a-a}{s+a}\\right] = \\frac{s e^{s+a}}{s+a}"
-    },
-    {
-     "t": "p",
-     "text": "*Exact match verified!*"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Given $x(t) = e^{-at}u(t+1)$. Find $Y(s) = \\mathcal{L}\\{\\frac{dx}{dt}\\}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Method 1: Via Laplace Transform Property**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^a e^{-a(t+1)}u(t+1) \\implies X(s) = \\frac{e^a e^s}{s+a} = \\frac{e^{s+a}}{s+a}"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s) = s X(s) = \\frac{s e^{s+a}}{s+a}, \\quad \\text{ROC}: \\text{Re}(s) > -a"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Method 2: Via Direct Time-Derivative**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx}{dt} = \\frac{d}{dt}[e^{-at}u(t+1)] = e^{-at}\\delta(t+1) - a e^{-at}u(t+1)"
+      },
+      {
+       "t": "p",
+       "text": "Applying sifting property to the impulse: $e^{-at}\\delta(t+1) = e^{-a(-1)}\\delta(t+1) = e^a \\delta(t+1)$."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{e^a \\delta(t+1)\\} = e^a e^{+s} = e^{s+a}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{-a e^{-at}u(t+1)\\} = -a \\frac{e^{s+a}}{s+a}"
+      },
+      {
+       "t": "p",
+       "text": "Summing:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s) = e^{s+a}\\left[ 1 - \\frac{a}{s+a} \\right] = e^{s+a}\\left[\\frac{s+a-a}{s+a}\\right] = \\frac{s e^{s+a}}{s+a}"
+      },
+      {
+       "t": "p",
+       "text": "*Exact match verified!*"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6974,63 +6949,62 @@ export default {
      "text": "Worked Problems"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem 1:** Find $y(t) = e^{-2t}u(t) * e^{2t}u(-t)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$F(s) = \\frac{1}{s+2}$ with $\\sigma > -2$.",
-      "$G(s) = -\\frac{1}{s-2}$ with $\\sigma < 2$.",
-      "Overlap ROC: $-2 < \\text{Re}(s) < 2$.",
-      "$Y(s) = \\frac{-1}{(s+2)(s-2)} = \\frac{1/4}{s+2} - \\frac{1/4}{s-2}$.",
-      "Inversion according to $-2 < \\sigma < 2$:",
-      "Pole at $s=-2$: ROC to right $\\implies \\frac{1}{4}e^{-2t}u(t)$.",
-      "Pole at $s=2$: ROC to left $\\implies -\\frac{1}{4}(-e^{2t}u(-t)) = +\\frac{1}{4}e^{2t}u(-t)$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\frac{1}{4}e^{-2t}u(t) + \\frac{1}{4}e^{2t}u(-t)"
-    },
-    {
-     "t": "p",
-     "text": "**Problem 2:** Find $x(t) = e^{2t}u(t) * e^{-4t}u(t)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$X(s) = \\frac{1}{s-2} \\cdot \\frac{1}{s+4} = \\frac{1}{(s-2)(s+4)}$, ROC: $\\sigma > 2 \\cap \\sigma > -4 \\implies \\sigma > 2$.",
-      "PFE: $\\frac{1/6}{s-2} - \\frac{1/6}{s+4}$.",
-      "Since $\\sigma > 2$, both poles are right-sided:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{6}e^{2t}u(t) - \\frac{1}{6}e^{-4t}u(t)"
-    },
-    {
-     "t": "p",
-     "text": "**Problem 3:** Find $x(t) = e^{-2t}u(t) * e^{4t}u(-t)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$X(s) = \\frac{1}{s+2} \\cdot \\frac{-1}{s-4} = \\frac{-1}{(s+2)(s-4)}$, ROC: $-2 < \\sigma < 4$.",
-      "PFE: $\\frac{1/6}{s+2} - \\frac{1/6}{s-4}$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{6}e^{-2t}u(t) + \\frac{1}{6}e^{4t}u(-t)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem 1:** Find $y(t) = e^{-2t}u(t) * e^{2t}u(-t)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$F(s) = \\frac{1}{s+2}$ with $\\sigma > -2$.",
+        "$G(s) = -\\frac{1}{s-2}$ with $\\sigma < 2$.",
+        "Overlap ROC: $-2 < \\text{Re}(s) < 2$.",
+        "$Y(s) = \\frac{-1}{(s+2)(s-2)} = \\frac{1/4}{s+2} - \\frac{1/4}{s-2}$.",
+        "Inversion according to $-2 < \\sigma < 2$:",
+        "Pole at $s=-2$: ROC to right $\\implies \\frac{1}{4}e^{-2t}u(t)$.",
+        "Pole at $s=2$: ROC to left $\\implies -\\frac{1}{4}(-e^{2t}u(-t)) = +\\frac{1}{4}e^{2t}u(-t)$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\frac{1}{4}e^{-2t}u(t) + \\frac{1}{4}e^{2t}u(-t)"
+      },
+      {
+       "t": "p",
+       "text": "**Problem 2:** Find $x(t) = e^{2t}u(t) * e^{-4t}u(t)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$X(s) = \\frac{1}{s-2} \\cdot \\frac{1}{s+4} = \\frac{1}{(s-2)(s+4)}$, ROC: $\\sigma > 2 \\cap \\sigma > -4 \\implies \\sigma > 2$.",
+        "PFE: $\\frac{1/6}{s-2} - \\frac{1/6}{s+4}$.",
+        "Since $\\sigma > 2$, both poles are right-sided:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{6}e^{2t}u(t) - \\frac{1}{6}e^{-4t}u(t)"
+      },
+      {
+       "t": "p",
+       "text": "**Problem 3:** Find $x(t) = e^{-2t}u(t) * e^{4t}u(-t)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$X(s) = \\frac{1}{s+2} \\cdot \\frac{-1}{s-4} = \\frac{-1}{(s+2)(s-4)}$, ROC: $-2 < \\sigma < 4$.",
+        "PFE: $\\frac{1/6}{s+2} - \\frac{1/6}{s-4}$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{6}e^{-2t}u(t) + \\frac{1}{6}e^{4t}u(-t)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7041,78 +7015,77 @@ export default {
      "text": "Mathematical Content & Derivations"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = u(t+1) - 2u(t) + u(t-1) \\quad (\\text{bipolar pulse}, \\text{ROC: Entire } s\\text{-plane})"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = u(t) - u(t-2) \\quad (\\text{gate pulse}, \\text{ROC: Entire } s\\text{-plane})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Laplace transforms:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{e^s - 2 + e^{-s}}{s}, \\quad H(s) = \\frac{1 - e^{-2s}}{s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Convolution in $s$-domain:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(s) = X(s) H(s) = \\frac{(e^s - 2 + e^{-s})(1 - e^{-2s})}{s^2}"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s) = \\frac{e^s - 2 + e^{-s} - e^{-s} + 2e^{-2s} - e^{-3s}}{s^2} = \\frac{e^s - 2 + 2e^{-2s} - e^{-3s}}{s^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Inverse Laplace Transform using $\\frac{1}{s^2} \\leftrightarrow r(t) = t u(t)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = r(t+1) - 2r(t) + 2r(t-2) - r(t-3)"
-    },
-    {
-     "t": "p",
-     "text": "**Cross-Check via Direct Ramp Convolution:**\nSince $u(t) * u(t) = r(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "[u(t+1) - 2u(t) + u(t-1)] * [u(t) - u(t-2)]"
-    },
-    {
-     "t": "math",
-     "tex": "= r(t+1) - r(t-1) - 2r(t) + 2r(t-2) + r(t-1) - r(t-3)"
-    },
-    {
-     "t": "math",
-     "tex": "= r(t+1) - 2r(t) + 2r(t-2) - r(t-3)"
-    },
-    {
-     "t": "p",
-     "text": "*Identical result verified! Duration: $[-1, 1] + [0, 2] = [-1, 3]$, length $4$.*"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = u(t+1) - 2u(t) + u(t-1) \\quad (\\text{bipolar pulse}, \\text{ROC: Entire } s\\text{-plane})"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = u(t) - u(t-2) \\quad (\\text{gate pulse}, \\text{ROC: Entire } s\\text{-plane})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Laplace transforms:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{e^s - 2 + e^{-s}}{s}, \\quad H(s) = \\frac{1 - e^{-2s}}{s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Convolution in $s$-domain:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(s) = X(s) H(s) = \\frac{(e^s - 2 + e^{-s})(1 - e^{-2s})}{s^2}"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s) = \\frac{e^s - 2 + e^{-s} - e^{-s} + 2e^{-2s} - e^{-3s}}{s^2} = \\frac{e^s - 2 + 2e^{-2s} - e^{-3s}}{s^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Inverse Laplace Transform using $\\frac{1}{s^2} \\leftrightarrow r(t) = t u(t)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = r(t+1) - 2r(t) + 2r(t-2) - r(t-3)"
+      },
+      {
+       "t": "p",
+       "text": "**Cross-Check via Direct Ramp Convolution:**\nSince $u(t) * u(t) = r(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "[u(t+1) - 2u(t) + u(t-1)] * [u(t) - u(t-2)]"
+      },
+      {
+       "t": "math",
+       "tex": "= r(t+1) - r(t-1) - 2r(t) + 2r(t-2) + r(t-1) - r(t-3)"
+      },
+      {
+       "t": "math",
+       "tex": "= r(t+1) - 2r(t) + 2r(t-2) - r(t-3)"
+      },
+      {
+       "t": "p",
+       "text": "*Identical result verified! Duration: $[-1, 1] + [0, 2] = [-1, 3]$, length $4$.*"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7123,66 +7096,65 @@ export default {
      "text": "Two Fatal GATE Exam Traps"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Trap 1: Empty ROC Intersection in Convolution**\nEvaluate $x(t) = e^{-2t}u(t) * e^{-4t}u(-t)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$F(s) = \\frac{1}{s+2}$ with $\\sigma > -2$.",
-      "$G(s) = -\\frac{1}{s+4}$ with $\\sigma < -4$.",
-      "Intersection:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\{\\sigma > -2\\} \\cap \\{\\sigma < -4\\} = \\emptyset"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Direct integral verification:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\int_{-\\infty}^\\infty e^{-2\\tau}u(\\tau) e^{-4(t-\\tau)}u(\\tau-t) d\\tau = e^{-4t} \\int_{\\max(0, t)}^\\infty e^{2\\tau} d\\tau = \\infty"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Rule:** If the ROCs of two signals do not overlap, their convolution diverges to infinity!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Trap 2: Signals Without Bilateral Laplace Transforms**\nEvaluate $x(t) = e^{-t} * e^{-3t}u(t)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$e^{-t}$ is two-sided and does not decay as $t \\to -\\infty \\implies$ Bilateral Laplace Transform **DOES NOT EXIST**.",
-      "Therefore, Laplace convolution property **CANNOT be used directly**.",
-      "Time-domain integral:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\int_0^\\infty e^{-3\\tau} e^{-(t-\\tau)} d\\tau = e^{-t} \\int_0^\\infty e^{-2\\tau} d\\tau = \\frac{e^{-t}}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Rule:** Lack of a Laplace transform does not necessarily mean convolution diverges in time; it simply means transform calculus is inapplicable!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Trap 1: Empty ROC Intersection in Convolution**\nEvaluate $x(t) = e^{-2t}u(t) * e^{-4t}u(-t)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$F(s) = \\frac{1}{s+2}$ with $\\sigma > -2$.",
+        "$G(s) = -\\frac{1}{s+4}$ with $\\sigma < -4$.",
+        "Intersection:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\{\\sigma > -2\\} \\cap \\{\\sigma < -4\\} = \\emptyset"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Direct integral verification:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\int_{-\\infty}^\\infty e^{-2\\tau}u(\\tau) e^{-4(t-\\tau)}u(\\tau-t) d\\tau = e^{-4t} \\int_{\\max(0, t)}^\\infty e^{2\\tau} d\\tau = \\infty"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Rule:** If the ROCs of two signals do not overlap, their convolution diverges to infinity!"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Trap 2: Signals Without Bilateral Laplace Transforms**\nEvaluate $x(t) = e^{-t} * e^{-3t}u(t)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$e^{-t}$ is two-sided and does not decay as $t \\to -\\infty \\implies$ Bilateral Laplace Transform **DOES NOT EXIST**.",
+        "Therefore, Laplace convolution property **CANNOT be used directly**.",
+        "Time-domain integral:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\int_0^\\infty e^{-3\\tau} e^{-(t-\\tau)} d\\tau = e^{-t} \\int_0^\\infty e^{-2\\tau} d\\tau = \\frac{e^{-t}}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Rule:** Lack of a Laplace transform does not necessarily mean convolution diverges in time; it simply means transform calculus is inapplicable!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7288,124 +7260,123 @@ export default {
      "text": "Four Canonical PFE Structures"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Structure 1: Distinct Real Poles**"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{30}{(s-2)(s+3)(s+1)} = \\frac{A}{s-2} + \\frac{B}{s+3} + \\frac{C}{s+1}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Heaviside Cover-Up:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left.\\frac{30}{(s+3)(s+1)}\\right|_{s=2} = \\frac{30}{(5)(3)} = 2"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left.\\frac{30}{(s-2)(s+1)}\\right|_{s=-3} = \\frac{30}{(-5)(-2)} = 3"
-    },
-    {
-     "t": "math",
-     "tex": "C = \\left.\\frac{30}{(s-2)(s+3)}\\right|_{s=-1} = \\frac{30}{(-3)(2)} = -5"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{2}{s-2} + \\frac{3}{s+3} - \\frac{5}{s+1}"
-    },
-    {
-     "t": "p",
-     "text": "**Structure 2: Complex Conjugate Quadratic Term**"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s^2 + 2s + 2}{(s-2)(s^2 + 4s + 6)} = \\frac{A}{s-2} + \\frac{Bs + C}{s^2 + 4s + 6}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Cover-up for real pole $s=2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left.\\frac{s^2+2s+2}{s^2+4s+6}\\right|_{s=2} = \\frac{4+4+2}{4+8+6} = \\frac{10}{18} = \\frac{5}{9}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Equating coefficients:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s^2 + 2s + 2 = A(s^2+4s+6) + (Bs+C)(s-2) = (A+B)s^2 + (4A-2B+C)s + (6A-2C)"
-    },
-    {
-     "t": "math",
-     "tex": "A + B = 1 \\implies B = 1 - \\frac{5}{9} = \\frac{4}{9}"
-    },
-    {
-     "t": "math",
-     "tex": "6A - 2C = 2 \\implies 2C = 6\\left(\\frac{5}{9}\\right) - 2 = \\frac{10}{3} - 2 = \\frac{4}{3} \\implies C = \\frac{2}{3}"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{5/9}{s-2} + \\frac{\\frac{4}{9}s + \\frac{2}{3}}{s^2 + 4s + 6}"
-    },
-    {
-     "t": "p",
-     "text": "**Structure 3: Repeated Real Poles**"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s-2}{(s+1)^2(s-3)} = \\frac{A}{s-3} + \\frac{B}{s+1} + \\frac{C}{(s+1)^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Cover-up for distinct pole $s=3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left.\\frac{s-2}{(s+1)^2}\\right|_{s=3} = \\frac{1}{4^2} = \\frac{1}{16}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Cover-up for highest power $(s+1)^2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "C = \\left.\\frac{s-2}{s-3}\\right|_{s=-1} = \\frac{-3}{-4} = \\frac{3}{4}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Derivative cover-up for $s+1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left.\\frac{d}{ds}\\left[\\frac{s-2}{s-3}\\right]\\right|_{s=-1} = \\left.\\frac{(s-3)(1) - (s-2)(1)}{(s-3)^2}\\right|_{s=-1} = \\frac{-1}{(-4)^2} = -\\frac{1}{16}"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1/16}{s-3} - \\frac{1/16}{s+1} + \\frac{3/4}{(s+1)^2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Structure 1: Distinct Real Poles**"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{30}{(s-2)(s+3)(s+1)} = \\frac{A}{s-2} + \\frac{B}{s+3} + \\frac{C}{s+1}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Heaviside Cover-Up:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left.\\frac{30}{(s+3)(s+1)}\\right|_{s=2} = \\frac{30}{(5)(3)} = 2"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left.\\frac{30}{(s-2)(s+1)}\\right|_{s=-3} = \\frac{30}{(-5)(-2)} = 3"
+      },
+      {
+       "t": "math",
+       "tex": "C = \\left.\\frac{30}{(s-2)(s+3)}\\right|_{s=-1} = \\frac{30}{(-3)(2)} = -5"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{2}{s-2} + \\frac{3}{s+3} - \\frac{5}{s+1}"
+      },
+      {
+       "t": "p",
+       "text": "**Structure 2: Complex Conjugate Quadratic Term**"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s^2 + 2s + 2}{(s-2)(s^2 + 4s + 6)} = \\frac{A}{s-2} + \\frac{Bs + C}{s^2 + 4s + 6}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Cover-up for real pole $s=2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left.\\frac{s^2+2s+2}{s^2+4s+6}\\right|_{s=2} = \\frac{4+4+2}{4+8+6} = \\frac{10}{18} = \\frac{5}{9}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Equating coefficients:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s^2 + 2s + 2 = A(s^2+4s+6) + (Bs+C)(s-2) = (A+B)s^2 + (4A-2B+C)s + (6A-2C)"
+      },
+      {
+       "t": "math",
+       "tex": "A + B = 1 \\implies B = 1 - \\frac{5}{9} = \\frac{4}{9}"
+      },
+      {
+       "t": "math",
+       "tex": "6A - 2C = 2 \\implies 2C = 6\\left(\\frac{5}{9}\\right) - 2 = \\frac{10}{3} - 2 = \\frac{4}{3} \\implies C = \\frac{2}{3}"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{5/9}{s-2} + \\frac{\\frac{4}{9}s + \\frac{2}{3}}{s^2 + 4s + 6}"
+      },
+      {
+       "t": "p",
+       "text": "**Structure 3: Repeated Real Poles**"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s-2}{(s+1)^2(s-3)} = \\frac{A}{s-3} + \\frac{B}{s+1} + \\frac{C}{(s+1)^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Cover-up for distinct pole $s=3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left.\\frac{s-2}{(s+1)^2}\\right|_{s=3} = \\frac{1}{4^2} = \\frac{1}{16}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Cover-up for highest power $(s+1)^2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "C = \\left.\\frac{s-2}{s-3}\\right|_{s=-1} = \\frac{-3}{-4} = \\frac{3}{4}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Derivative cover-up for $s+1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left.\\frac{d}{ds}\\left[\\frac{s-2}{s-3}\\right]\\right|_{s=-1} = \\left.\\frac{(s-3)(1) - (s-2)(1)}{(s-3)^2}\\right|_{s=-1} = \\frac{-1}{(-4)^2} = -\\frac{1}{16}"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1/16}{s-3} - \\frac{1/16}{s+1} + \\frac{3/4}{(s+1)^2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8312,2345 +8283,2326 @@ export default {
      "text": "Slide 161 (Page 41, Top-Left): First-Order Rational Function Inversion & System Causality"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given the rational transfer function:"
-    },
-    {
-     "t": "math",
-     "tex": "F(s) = \\frac{1}{s+2}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Determine all possible time-domain signals $f(t)$ and identify their nature (causal, anti-causal, non-causal).",
-      "Determine whether a two-sided (non-causal) signal can be synthesized from this $F(s)$.",
-      "Interpret $F(s)$ as an LTI system impulse response $H(s)$ and determine the resulting system properties."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "p",
-     "text": "$F(s)$ has a single, simple real pole at $s = -2$.\nThe pole partitions the $s$-plane into two distinct regions along the real axis $\\sigma = \\text{Re}(s)$:"
-    },
-    {
-     "t": "code",
-     "text": "           j\u03c9\n            \u25b2\n            \u2502      ROC 1: \u03c3 > -2 (Causal)\n            \u2502      \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u25ba\n     \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n        -2  \u2502      \u03c3\n       \u2500\u2500x\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\n            \u2502\n            \u2502      ROC 2: \u03c3 < -2 (Anti-causal)\n     \u25c4\u2550\u2550\u2550\u2550\u2550\u2550\u2502\n            \u2502"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 1: ROC $\\text{Re}(s) > -2$ (Right-sided ROC)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since the ROC lies to the right of the pole $s = -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = e^{-2t} u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $f(t) = 0$ for all $t < 0$, $f(t)$ is a **Causal Signal**.",
-      "If $h(t) = e^{-2t}u(t)$, the system is a **Causal System**.",
-      "Since the ROC ($\\sigma > -2$) contains the $j\\omega$-axis ($\\sigma = 0$), the system is **BIBO Stable**."
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 2: ROC $\\text{Re}(s) < -2$ (Left-sided ROC)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since the ROC lies to the left of the pole $s = -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = -e^{-2t} u(-t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $f(t) = 0$ for all $t > 0$, $f(t)$ is an **Anti-Causal Signal**.",
-      "If $h(t) = -e^{-2t}u(-t)$, the system is a **Non-Causal System** (specifically, strictly anti-causal).",
-      "Since the ROC ($\\sigma < -2$) does NOT include the $j\\omega$-axis ($\\sigma = 0$), the system is **Unstable**."
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 3: Can a Non-Causal (Two-Sided) Signal Exist?**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "A two-sided signal requires an ROC strip bounded between two poles ($\\sigma_1 < \\sigma < \\sigma_2$). Since $F(s)$ contains only a single pole, there are no interior strips."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{Non-Causal (Two-Sided) Signal is NOT Possible!}}"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap (Signal vs. System Terminology):**\n- For a **signal**: Causal ($t \\ge 0$), Anti-causal ($t \\le 0$), Non-causal / Two-sided (extends into both $t>0$ and $t<0$).\n- For a **system**: Causal ($h(t) = 0$ for $t < 0$). Any system that is not causal is classified as a **Non-Causal System** (this includes both two-sided and strictly anti-causal impulse responses)."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given the rational transfer function:"
+      },
+      {
+       "t": "math",
+       "tex": "F(s) = \\frac{1}{s+2}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Determine all possible time-domain signals $f(t)$ and identify their nature (causal, anti-causal, non-causal).",
+        "Determine whether a two-sided (non-causal) signal can be synthesized from this $F(s)$.",
+        "Interpret $F(s)$ as an LTI system impulse response $H(s)$ and determine the resulting system properties."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "p",
+       "text": "$F(s)$ has a single, simple real pole at $s = -2$.\nThe pole partitions the $s$-plane into two distinct regions along the real axis $\\sigma = \\text{Re}(s)$:"
+      },
+      {
+       "t": "code",
+       "text": "           j\u03c9\n            \u25b2\n            \u2502      ROC 1: \u03c3 > -2 (Causal)\n            \u2502      \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u25ba\n     \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n        -2  \u2502      \u03c3\n       \u2500\u2500x\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\n            \u2502\n            \u2502      ROC 2: \u03c3 < -2 (Anti-causal)\n     \u25c4\u2550\u2550\u2550\u2550\u2550\u2550\u2502\n            \u2502"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 1: ROC $\\text{Re}(s) > -2$ (Right-sided ROC)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since the ROC lies to the right of the pole $s = -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = e^{-2t} u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $f(t) = 0$ for all $t < 0$, $f(t)$ is a **Causal Signal**.",
+        "If $h(t) = e^{-2t}u(t)$, the system is a **Causal System**.",
+        "Since the ROC ($\\sigma > -2$) contains the $j\\omega$-axis ($\\sigma = 0$), the system is **BIBO Stable**."
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 2: ROC $\\text{Re}(s) < -2$ (Left-sided ROC)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since the ROC lies to the left of the pole $s = -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = -e^{-2t} u(-t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $f(t) = 0$ for all $t > 0$, $f(t)$ is an **Anti-Causal Signal**.",
+        "If $h(t) = -e^{-2t}u(-t)$, the system is a **Non-Causal System** (specifically, strictly anti-causal).",
+        "Since the ROC ($\\sigma < -2$) does NOT include the $j\\omega$-axis ($\\sigma = 0$), the system is **Unstable**."
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 3: Can a Non-Causal (Two-Sided) Signal Exist?**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A two-sided signal requires an ROC strip bounded between two poles ($\\sigma_1 < \\sigma < \\sigma_2$). Since $F(s)$ contains only a single pole, there are no interior strips."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{Non-Causal (Two-Sided) Signal is NOT Possible!}}"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap (Signal vs. System Terminology):**\n- For a **signal**: Causal ($t \\ge 0$), Anti-causal ($t \\le 0$), Non-causal / Two-sided (extends into both $t>0$ and $t<0$).\n- For a **system**: Causal ($h(t) = 0$ for $t < 0$). Any system that is not causal is classified as a **Non-Causal System** (this includes both two-sided and strictly anti-causal impulse responses)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 162 (Page 41, Top-Right): Repeated Real Poles & Time-Shifted Irrational Functions"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$F(s) = \\frac{1}{(s-2)^2}$ (Rational with second-order pole at $s = 2$).",
-      "$F(s) = \\frac{e^s}{(s-2)^2}$ (Irrational due to numerator exponential $e^s$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Find the corresponding time-domain signals across all valid ROCs and characterize their causality."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "h4",
-     "text": "Part 1: Rational Case $F(s) = \\frac{1}{(s-2)^2}$"
-    },
-    {
-     "t": "p",
-     "text": "The pole is located at $s = 2$ with algebraic multiplicity $m = 2$.\nRecall the transform pairs:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{2t} u(t) \\longleftrightarrow \\frac{1}{s-2}, \\quad \\text{ROC: } \\sigma > 2"
-    },
-    {
-     "t": "p",
-     "text": "Using the frequency differentiation property $t x(t) \\leftrightarrow -\\frac{d}{ds}X(s)$:"
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{d}{ds}\\left[\\frac{1}{s-2}\\right] = \\frac{1}{(s-2)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For ROC $\\sigma > 2$ (Right-sided):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = t e^{2t} u(t) \\quad \\implies \\mathbf{\\text{Causal Signal}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For ROC $\\sigma < 2$ (Left-sided):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = -t e^{2t} u(-t) \\quad \\implies \\mathbf{\\text{Anti-Causal Signal}}"
-    },
-    {
-     "t": "h4",
-     "text": "Part 2: Irrational Case $F(s) = \\frac{e^s}{(s-2)^2}$"
-    },
-    {
-     "t": "p",
-     "text": "Here, the numerator contains the term $e^s = e^{s \\cdot (+1)}$, corresponding to a **time advance** of $t_0 = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^s X_0(s) \\longleftrightarrow x_0(t + 1)"
-    },
-    {
-     "t": "p",
-     "text": "where $X_0(s) = \\frac{1}{(s-2)^2}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For ROC $\\sigma > 2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = (t + 1) e^{2(t+1)} u(t + 1)"
-    },
-    {
-     "t": "p",
-     "text": "Examine the support of this signal:"
-    },
-    {
-     "t": "math",
-     "tex": "u(t + 1) = \\begin{cases} 1, & t \\ge -1 \\\\ 0, & t < -1 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "The signal is non-zero in the interval $-1 \\le t < 0$.\n  Because $f(t) \\ne 0$ for $t < 0$, **the signal is NON-CAUSAL!**\n  Even though the ROC is right-sided ($\\sigma > 2$), the time advance destroyed causality!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For ROC $\\sigma < 2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = -(t + 1) e^{2(t+1)} u(-(t + 1)) = -(t + 1) e^{2(t+1)} u(-t - 1)"
-    },
-    {
-     "t": "p",
-     "text": "The support of $u(-t - 1)$ is $t \\le -1$.\n  For all $t > -1$ (and specifically for all $t > 0$), $f(t) = 0$.\n  Therefore, this signal is strictly **ANTI-CAUSAL**."
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**GATE Takeaway:** A right-sided ROC does NOT guarantee a causal signal if $X(s)$ is irrational! An advance factor $e^{+s t_0}$ ($t_0 > 0$) shifts the signal to start at $t = -t_0 < 0$, converting a right-sided signal into a **non-causal** signal."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$F(s) = \\frac{1}{(s-2)^2}$ (Rational with second-order pole at $s = 2$).",
+        "$F(s) = \\frac{e^s}{(s-2)^2}$ (Irrational due to numerator exponential $e^s$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Find the corresponding time-domain signals across all valid ROCs and characterize their causality."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "h4",
+       "text": "Part 1: Rational Case $F(s) = \\frac{1}{(s-2)^2}$"
+      },
+      {
+       "t": "p",
+       "text": "The pole is located at $s = 2$ with algebraic multiplicity $m = 2$.\nRecall the transform pairs:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{2t} u(t) \\longleftrightarrow \\frac{1}{s-2}, \\quad \\text{ROC: } \\sigma > 2"
+      },
+      {
+       "t": "p",
+       "text": "Using the frequency differentiation property $t x(t) \\leftrightarrow -\\frac{d}{ds}X(s)$:"
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{d}{ds}\\left[\\frac{1}{s-2}\\right] = \\frac{1}{(s-2)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For ROC $\\sigma > 2$ (Right-sided):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = t e^{2t} u(t) \\quad \\implies \\mathbf{\\text{Causal Signal}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For ROC $\\sigma < 2$ (Left-sided):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = -t e^{2t} u(-t) \\quad \\implies \\mathbf{\\text{Anti-Causal Signal}}"
+      },
+      {
+       "t": "h4",
+       "text": "Part 2: Irrational Case $F(s) = \\frac{e^s}{(s-2)^2}$"
+      },
+      {
+       "t": "p",
+       "text": "Here, the numerator contains the term $e^s = e^{s \\cdot (+1)}$, corresponding to a **time advance** of $t_0 = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^s X_0(s) \\longleftrightarrow x_0(t + 1)"
+      },
+      {
+       "t": "p",
+       "text": "where $X_0(s) = \\frac{1}{(s-2)^2}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For ROC $\\sigma > 2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = (t + 1) e^{2(t+1)} u(t + 1)"
+      },
+      {
+       "t": "p",
+       "text": "Examine the support of this signal:"
+      },
+      {
+       "t": "math",
+       "tex": "u(t + 1) = \\begin{cases} 1, & t \\ge -1 \\\\ 0, & t < -1 \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "The signal is non-zero in the interval $-1 \\le t < 0$.\n  Because $f(t) \\ne 0$ for $t < 0$, **the signal is NON-CAUSAL!**\n  Even though the ROC is right-sided ($\\sigma > 2$), the time advance destroyed causality!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For ROC $\\sigma < 2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = -(t + 1) e^{2(t+1)} u(-(t + 1)) = -(t + 1) e^{2(t+1)} u(-t - 1)"
+      },
+      {
+       "t": "p",
+       "text": "The support of $u(-t - 1)$ is $t \\le -1$.\n  For all $t > -1$ (and specifically for all $t > 0$), $f(t) = 0$.\n  Therefore, this signal is strictly **ANTI-CAUSAL**."
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**GATE Takeaway:** A right-sided ROC does NOT guarantee a causal signal if $X(s)$ is irrational! An advance factor $e^{+s t_0}$ ($t_0 > 0$) shifts the signal to start at $t = -t_0 < 0$, converting a right-sided signal into a **non-causal** signal."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 163 (Page 41, Bottom-Left): Complex Conjugate Poles & Completing the Square"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Find the inverse Laplace transform of:"
-    },
-    {
-     "t": "math",
-     "tex": "F(s) = \\frac{s + 4}{s^2 + 4s + 13}"
-    },
-    {
-     "t": "p",
-     "text": "for both causal and anti-causal ROCs."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Pole Identification & Completing the Square:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set denominator to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "s^2 + 4s + 13 = 0 \\implies s^2 + 2(2)s + 2^2 + 9 = (s + 2)^2 + 3^2 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "s_p = -2 \\pm j3"
-    },
-    {
-     "t": "p",
-     "text": "The poles are complex conjugates with real part $\\sigma_p = -2$ and frequency $\\omega_d = 3 \\text{ rad/s}$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Numerator Decomposition into Damped Cosine and Sine:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Standard pairs with attenuation factor $\\alpha = 2$ and oscillation frequency $\\beta = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{s + 2}{(s+2)^2 + 3^2} \\longleftrightarrow e^{-2t} \\cos(3t) u(t)"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{3}{(s+2)^2 + 3^2} \\longleftrightarrow e^{-2t} \\sin(3t) u(t)"
-    },
-    {
-     "t": "p",
-     "text": "Decompose the numerator $s + 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "s + 4 = (s + 2) + 2 = (s + 2) + \\frac{2}{3}(3)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute back:"
-    },
-    {
-     "t": "math",
-     "tex": "F(s) = \\frac{s + 2}{(s+2)^2 + 3^2} + \\frac{2}{3} \\cdot \\frac{3}{(s+2)^2 + 3^2}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Inversion Across ROCs:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ROC 1: $\\text{Re}(s) > -2$ (Causal):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\left[ e^{-2t} \\cos(3t) + \\frac{2}{3} e^{-2t} \\sin(3t) \\right] u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ROC 2: $\\text{Re}(s) < -2$ (Anti-causal):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\left[ -e^{-2t} \\cos(3t) - \\frac{2}{3} e^{-2t} \\sin(3t) \\right] u(-t)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Find the inverse Laplace transform of:"
+      },
+      {
+       "t": "math",
+       "tex": "F(s) = \\frac{s + 4}{s^2 + 4s + 13}"
+      },
+      {
+       "t": "p",
+       "text": "for both causal and anti-causal ROCs."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Pole Identification & Completing the Square:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set denominator to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "s^2 + 4s + 13 = 0 \\implies s^2 + 2(2)s + 2^2 + 9 = (s + 2)^2 + 3^2 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "s_p = -2 \\pm j3"
+      },
+      {
+       "t": "p",
+       "text": "The poles are complex conjugates with real part $\\sigma_p = -2$ and frequency $\\omega_d = 3 \\text{ rad/s}$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Numerator Decomposition into Damped Cosine and Sine:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Standard pairs with attenuation factor $\\alpha = 2$ and oscillation frequency $\\beta = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{s + 2}{(s+2)^2 + 3^2} \\longleftrightarrow e^{-2t} \\cos(3t) u(t)"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{3}{(s+2)^2 + 3^2} \\longleftrightarrow e^{-2t} \\sin(3t) u(t)"
+      },
+      {
+       "t": "p",
+       "text": "Decompose the numerator $s + 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "s + 4 = (s + 2) + 2 = (s + 2) + \\frac{2}{3}(3)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute back:"
+      },
+      {
+       "t": "math",
+       "tex": "F(s) = \\frac{s + 2}{(s+2)^2 + 3^2} + \\frac{2}{3} \\cdot \\frac{3}{(s+2)^2 + 3^2}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Inversion Across ROCs:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ROC 1: $\\text{Re}(s) > -2$ (Causal):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\left[ e^{-2t} \\cos(3t) + \\frac{2}{3} e^{-2t} \\sin(3t) \\right] u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ROC 2: $\\text{Re}(s) < -2$ (Anti-causal):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\left[ -e^{-2t} \\cos(3t) - \\frac{2}{3} e^{-2t} \\sin(3t) \\right] u(-t)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 164 & 165 (Pages 41 & 42): Two Distinct Real Poles & Full 3-Strip Inversion"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "F(s) = \\frac{s}{s^2 - 4} = \\frac{s}{(s+2)(s-2)}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Perform Partial Fraction Expansion.",
-      "Identify all valid ROC strips and determine $f(t)$ in each strip.",
-      "Express the causal and anti-causal solutions in terms of hyperbolic functions."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Partial Fraction Expansion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "F(s) = \\frac{s}{(s+2)(s-2)} = \\frac{A}{s+2} + \\frac{B}{s-2}"
-    },
-    {
-     "t": "p",
-     "text": "Using the cover-up method:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{s}{s-2} \\right|_{s=-2} = \\frac{-2}{-4} = \\frac{1}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{s}{s+2} \\right|_{s=2} = \\frac{2}{4} = \\frac{1}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "F(s) = \\frac{1/2}{s+2} + \\frac{1/2}{s-2}"
-    },
-    {
-     "t": "p",
-     "text": "Poles are at $s = -2$ and $s = +2$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Inversion Across All 3 ROC Strips:**"
-     ]
-    },
-    {
-     "t": "code",
-     "text": "           j\u03c9\n            \u25b2\n            \u2502   Strip 2:       Strip 1:\n            \u2502 -2 < \u03c3 < 2        \u03c3 > 2\n     \u2500\u2500\u2500x\u2500\u2500\u2500\u253c\u2500\u2500\u2500x\u2500\u2500\u2500\u25ba \u03c3\n       -2   \u2502   +2\n  Strip 3:  \u2502\n   \u03c3 < -2   \u2502"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Strip 1: $\\text{Re}(s) > 2$ (Rightmost Strip $\\implies$ Causal)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Both poles lie to the left of the ROC ($\\sigma > -2$ and $\\sigma > 2$):"
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\frac{1}{2} e^{-2t} u(t) + \\frac{1}{2} e^{2t} u(t) = \\left[ \\frac{e^{2t} + e^{-2t}}{2} \\right] u(t) = \\mathbf{\\cosh(2t) u(t)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Strip 2: $-2 < \\text{Re}(s) < 2$ (Interior Strip $\\implies$ Non-Causal / Two-Sided)**",
-      "For pole $s = -2$: ROC is to the right ($\\sigma > -2$) $\\implies$ causal term $+\\frac{1}{2} e^{-2t} u(t)$.",
-      "For pole $s = +2$: ROC is to the left ($\\sigma < 2$) $\\implies$ anti-causal term $-\\frac{1}{2} e^{2t} u(-t)$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\mathbf{\\frac{1}{2} e^{-2t} u(t) - \\frac{1}{2} e^{2t} u(-t)}"
-    },
-    {
-     "t": "p",
-     "text": "*Note:* Because this strip contains $\\sigma = 0$ ($j\\omega$-axis), this signal has a valid Continuous-Time Fourier Transform!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Strip 3: $\\text{Re}(s) < -2$ (Leftmost Strip $\\implies$ Anti-Causal)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Both poles lie to the right of the ROC ($\\sigma < -2$ and $\\sigma < 2$):"
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = -\\frac{1}{2} e^{-2t} u(-t) - \\frac{1}{2} e^{2t} u(-t) = -\\left[ \\frac{e^{2t} + e^{-2t}}{2} \\right] u(-t) = \\mathbf{-\\cosh(2t) u(-t)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "F(s) = \\frac{s}{s^2 - 4} = \\frac{s}{(s+2)(s-2)}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Perform Partial Fraction Expansion.",
+        "Identify all valid ROC strips and determine $f(t)$ in each strip.",
+        "Express the causal and anti-causal solutions in terms of hyperbolic functions."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Partial Fraction Expansion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "F(s) = \\frac{s}{(s+2)(s-2)} = \\frac{A}{s+2} + \\frac{B}{s-2}"
+      },
+      {
+       "t": "p",
+       "text": "Using the cover-up method:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{s}{s-2} \\right|_{s=-2} = \\frac{-2}{-4} = \\frac{1}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{s}{s+2} \\right|_{s=2} = \\frac{2}{4} = \\frac{1}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "F(s) = \\frac{1/2}{s+2} + \\frac{1/2}{s-2}"
+      },
+      {
+       "t": "p",
+       "text": "Poles are at $s = -2$ and $s = +2$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Inversion Across All 3 ROC Strips:**"
+       ]
+      },
+      {
+       "t": "code",
+       "text": "           j\u03c9\n            \u25b2\n            \u2502   Strip 2:       Strip 1:\n            \u2502 -2 < \u03c3 < 2        \u03c3 > 2\n     \u2500\u2500\u2500x\u2500\u2500\u2500\u253c\u2500\u2500\u2500x\u2500\u2500\u2500\u25ba \u03c3\n       -2   \u2502   +2\n  Strip 3:  \u2502\n   \u03c3 < -2   \u2502"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Strip 1: $\\text{Re}(s) > 2$ (Rightmost Strip $\\implies$ Causal)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Both poles lie to the left of the ROC ($\\sigma > -2$ and $\\sigma > 2$):"
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\frac{1}{2} e^{-2t} u(t) + \\frac{1}{2} e^{2t} u(t) = \\left[ \\frac{e^{2t} + e^{-2t}}{2} \\right] u(t) = \\mathbf{\\cosh(2t) u(t)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Strip 2: $-2 < \\text{Re}(s) < 2$ (Interior Strip $\\implies$ Non-Causal / Two-Sided)**",
+        "For pole $s = -2$: ROC is to the right ($\\sigma > -2$) $\\implies$ causal term $+\\frac{1}{2} e^{-2t} u(t)$.",
+        "For pole $s = +2$: ROC is to the left ($\\sigma < 2$) $\\implies$ anti-causal term $-\\frac{1}{2} e^{2t} u(-t)$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\mathbf{\\frac{1}{2} e^{-2t} u(t) - \\frac{1}{2} e^{2t} u(-t)}"
+      },
+      {
+       "t": "p",
+       "text": "*Note:* Because this strip contains $\\sigma = 0$ ($j\\omega$-axis), this signal has a valid Continuous-Time Fourier Transform!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Strip 3: $\\text{Re}(s) < -2$ (Leftmost Strip $\\implies$ Anti-Causal)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Both poles lie to the right of the ROC ($\\sigma < -2$ and $\\sigma < 2$):"
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = -\\frac{1}{2} e^{-2t} u(-t) - \\frac{1}{2} e^{2t} u(-t) = -\\left[ \\frac{e^{2t} + e^{-2t}}{2} \\right] u(-t) = \\mathbf{-\\cosh(2t) u(-t)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 165 & 166 (Page 42, Top): 3-Pole Rational Function Inversion Across All 4 ROC Strips"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{30}{(s-2)(s+3)(s+1)}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Expand into partial fractions.",
-      "Determine all possible ROCs.",
-      "Compute the time-domain signal $f(t)$ for each ROC and classify as causal, anti-causal, or non-causal."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Partial Fraction Expansion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{A}{s-2} + \\frac{B}{s+3} + \\frac{C}{s+1}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$A = \\left. \\frac{30}{(s+3)(s+1)} \\right|_{s=2} = \\frac{30}{(5)(3)} = \\frac{30}{15} = 2$",
-      "$B = \\left. \\frac{30}{(s-2)(s+1)} \\right|_{s=-3} = \\frac{30}{(-5)(-2)} = \\frac{30}{10} = 3$",
-      "$C = \\left. \\frac{30}{(s-2)(s+3)} \\right|_{s=-1} = \\frac{30}{(-3)(2)} = \\frac{30}{-6} = -5$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{2}{s-2} + \\frac{3}{s+3} - \\frac{5}{s+1}"
-    },
-    {
-     "t": "p",
-     "text": "Poles are at $s = -3, -1, 2$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Exhaustive Evaluation Across 4 ROC Strips:**"
-     ]
-    },
-    {
-     "t": "code",
-     "text": "           j\u03c9\n            \u25b2\n    Strip 1 \u2502  Strip 2     Strip 3       Strip 4\n    \u03c3 < -3  \u2502 -3 < \u03c3 < -1 -1 < \u03c3 < 2      \u03c3 > 2\n     \u2500\u2500\u2500x\u2500\u2500\u2500\u253c\u2500\u2500\u2500x\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500x\u2500\u2500\u2500\u25ba \u03c3\n       -3   \u2502  -1          2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(i) ROC 4: $\\sigma > 2$ (Causal)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "All poles lie to the left:"
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\left[ 2e^{2t} + 3e^{-3t} - 5e^{-t} \\right] u(t) \\quad \\implies \\mathbf{\\text{Causal}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(ii) ROC 1: $\\sigma < -3$ (Anti-Causal)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "All poles lie to the right:"
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\left[ -2e^{2t} - 3e^{-3t} + 5e^{-t} \\right] u(-t) \\quad \\implies \\mathbf{\\text{Anti-Causal}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(iii) ROC 2: $-3 < \\sigma < -1$ (Non-Causal)**",
-      "Pole at $-3$ is left of ROC ($\\sigma > -3$) $\\implies +3e^{-3t} u(t)$",
-      "Pole at $-1$ is right of ROC ($\\sigma < -1$) $\\implies -(-5)e^{-t} u(-t) = +5e^{-t} u(-t)$",
-      "Pole at $+2$ is right of ROC ($\\sigma < 2$) $\\implies -2e^{2t} u(-t)$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = 3e^{-3t} u(t) + \\left[ -2e^{2t} + 5e^{-t} \\right] u(-t) \\quad \\implies \\mathbf{\\text{Non-Causal}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(iv) ROC 3: $-1 < \\sigma < 2$ (Non-Causal & BIBO Stable)**",
-      "Poles at $-3, -1$ are left of ROC ($\\sigma > -3, \\sigma > -1$) $\\implies +3e^{-3t} u(t) - 5e^{-t} u(t)$",
-      "Pole at $+2$ is right of ROC ($\\sigma < 2$) $\\implies -2e^{2t} u(-t)$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = -2e^{2t} u(-t) + \\left[ 3e^{-3t} - 5e^{-t} \\right] u(t) \\quad \\implies \\mathbf{\\text{Non-Causal}}"
-    },
-    {
-     "t": "p",
-     "text": "*Crucial Check:* This strip $-1 < \\sigma < 2$ includes $\\sigma = 0$ ($j\\omega$-axis). Thus, **this is the only version of the signal that is absolutely integrable ($L^1(\\mathbb{R})$) and possesses a valid Fourier Transform!**"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{30}{(s-2)(s+3)(s+1)}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Expand into partial fractions.",
+        "Determine all possible ROCs.",
+        "Compute the time-domain signal $f(t)$ for each ROC and classify as causal, anti-causal, or non-causal."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Partial Fraction Expansion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{A}{s-2} + \\frac{B}{s+3} + \\frac{C}{s+1}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$A = \\left. \\frac{30}{(s+3)(s+1)} \\right|_{s=2} = \\frac{30}{(5)(3)} = \\frac{30}{15} = 2$",
+        "$B = \\left. \\frac{30}{(s-2)(s+1)} \\right|_{s=-3} = \\frac{30}{(-5)(-2)} = \\frac{30}{10} = 3$",
+        "$C = \\left. \\frac{30}{(s-2)(s+3)} \\right|_{s=-1} = \\frac{30}{(-3)(2)} = \\frac{30}{-6} = -5$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{2}{s-2} + \\frac{3}{s+3} - \\frac{5}{s+1}"
+      },
+      {
+       "t": "p",
+       "text": "Poles are at $s = -3, -1, 2$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Exhaustive Evaluation Across 4 ROC Strips:**"
+       ]
+      },
+      {
+       "t": "code",
+       "text": "           j\u03c9\n            \u25b2\n    Strip 1 \u2502  Strip 2     Strip 3       Strip 4\n    \u03c3 < -3  \u2502 -3 < \u03c3 < -1 -1 < \u03c3 < 2      \u03c3 > 2\n     \u2500\u2500\u2500x\u2500\u2500\u2500\u253c\u2500\u2500\u2500x\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500x\u2500\u2500\u2500\u25ba \u03c3\n       -3   \u2502  -1          2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(i) ROC 4: $\\sigma > 2$ (Causal)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "All poles lie to the left:"
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\left[ 2e^{2t} + 3e^{-3t} - 5e^{-t} \\right] u(t) \\quad \\implies \\mathbf{\\text{Causal}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(ii) ROC 1: $\\sigma < -3$ (Anti-Causal)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "All poles lie to the right:"
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\left[ -2e^{2t} - 3e^{-3t} + 5e^{-t} \\right] u(-t) \\quad \\implies \\mathbf{\\text{Anti-Causal}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(iii) ROC 2: $-3 < \\sigma < -1$ (Non-Causal)**",
+        "Pole at $-3$ is left of ROC ($\\sigma > -3$) $\\implies +3e^{-3t} u(t)$",
+        "Pole at $-1$ is right of ROC ($\\sigma < -1$) $\\implies -(-5)e^{-t} u(-t) = +5e^{-t} u(-t)$",
+        "Pole at $+2$ is right of ROC ($\\sigma < 2$) $\\implies -2e^{2t} u(-t)$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = 3e^{-3t} u(t) + \\left[ -2e^{2t} + 5e^{-t} \\right] u(-t) \\quad \\implies \\mathbf{\\text{Non-Causal}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(iv) ROC 3: $-1 < \\sigma < 2$ (Non-Causal & BIBO Stable)**",
+        "Poles at $-3, -1$ are left of ROC ($\\sigma > -3, \\sigma > -1$) $\\implies +3e^{-3t} u(t) - 5e^{-t} u(t)$",
+        "Pole at $+2$ is right of ROC ($\\sigma < 2$) $\\implies -2e^{2t} u(-t)$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = -2e^{2t} u(-t) + \\left[ 3e^{-3t} - 5e^{-t} \\right] u(t) \\quad \\implies \\mathbf{\\text{Non-Causal}}"
+      },
+      {
+       "t": "p",
+       "text": "*Crucial Check:* This strip $-1 < \\sigma < 2$ includes $\\sigma = 0$ ($j\\omega$-axis). Thus, **this is the only version of the signal that is absolutely integrable ($L^1(\\mathbb{R})$) and possesses a valid Fourier Transform!**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 167 & 168 (Page 42, Bottom): Mixed Real & Complex Conjugate Poles Inversion"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s^2 + 2s + 2}{(s-2)(s^2 + 4s + 6)}"
-    },
-    {
-     "t": "p",
-     "text": "Decompose into standard partial fractions and determine $x(t)$ for all 3 ROC strips."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Pole Locations:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Real pole from $(s - 2)$: $s = 2$.",
-      "Complex conjugate poles from $s^2 + 4s + 6 = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(s + 2)^2 + 2 = 0 \\implies s = -2 \\pm j\\sqrt{2}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Partial Fraction Decomposition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{A}{s-2} + \\frac{Bs + C}{s^2 + 4s + 6}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Residue $A$ via cover-up:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{s^2 + 2s + 2}{s^2 + 4s + 6} \\right|_{s=2} = \\frac{2^2 + 2(2) + 2}{2^2 + 4(2) + 6} = \\frac{4 + 4 + 2}{4 + 8 + 6} = \\frac{10}{18} = \\frac{5}{9}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Clearing denominators:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s^2 + 2s + 2 = \\frac{5}{9}(s^2 + 4s + 6) + (Bs + C)(s - 2)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Equating coefficients of $s^2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "1 = \\frac{5}{9} + B \\implies B = 1 - \\frac{5}{9} = \\frac{4}{9}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Evaluating at $s = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2 = \\frac{5}{9}(6) - 2C \\implies 2 = \\frac{10}{3} - 2C \\implies 2C = \\frac{10}{3} - 2 = \\frac{4}{3} \\implies C = \\frac{2}{3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Restructuring the quadratic term:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\frac{4}{9}s + \\frac{2}{3}}{(s+2)^2 + (\\sqrt{2})^2} = \\frac{\\frac{4}{9}(s+2) + \\left(\\frac{2}{3} - \\frac{8}{9}\\right)}{(s+2)^2 + (\\sqrt{2})^2} = \\frac{\\frac{4}{9}(s+2) - \\frac{2}{9}}{(s+2)^2 + (\\sqrt{2})^2}"
-    },
-    {
-     "t": "math",
-     "tex": "= \\frac{4}{9} \\frac{s+2}{(s+2)^2 + (\\sqrt{2})^2} - \\frac{\\sqrt{2}}{9} \\frac{\\sqrt{2}}{(s+2)^2 + (\\sqrt{2})^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Final PFE:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{5}{9} \\frac{1}{s-2} + \\frac{4}{9} \\frac{s+2}{(s+2)^2 + (\\sqrt{2})^2} - \\frac{\\sqrt{2}}{9} \\frac{\\sqrt{2}}{(s+2)^2 + (\\sqrt{2})^2}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Inversion Across All 3 ROC Strips:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Real parts of poles are $\\sigma = -2$ and $\\sigma = 2$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(i) Causal Strip ($\\sigma > 2$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\left[ \\frac{5}{9} e^{2t} + \\frac{4}{9} e^{-2t} \\cos(\\sqrt{2}t) - \\frac{\\sqrt{2}}{9} e^{-2t} \\sin(\\sqrt{2}t) \\right] u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(ii) Anti-Causal Strip ($\\sigma < -2$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\left[ -\\frac{5}{9} e^{2t} - \\frac{4}{9} e^{-2t} \\cos(\\sqrt{2}t) + \\frac{\\sqrt{2}}{9} e^{-2t} \\sin(\\sqrt{2}t) \\right] u(-t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(iii) Non-Causal Strip ($-2 < \\sigma < 2$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = -\\frac{5}{9} e^{2t} u(-t) + \\left[ \\frac{4}{9} e^{-2t} \\cos(\\sqrt{2}t) - \\frac{\\sqrt{2}}{9} e^{-2t} \\sin(\\sqrt{2}t) \\right] u(t)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s^2 + 2s + 2}{(s-2)(s^2 + 4s + 6)}"
+      },
+      {
+       "t": "p",
+       "text": "Decompose into standard partial fractions and determine $x(t)$ for all 3 ROC strips."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Pole Locations:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Real pole from $(s - 2)$: $s = 2$.",
+        "Complex conjugate poles from $s^2 + 4s + 6 = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(s + 2)^2 + 2 = 0 \\implies s = -2 \\pm j\\sqrt{2}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Partial Fraction Decomposition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{A}{s-2} + \\frac{Bs + C}{s^2 + 4s + 6}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Residue $A$ via cover-up:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{s^2 + 2s + 2}{s^2 + 4s + 6} \\right|_{s=2} = \\frac{2^2 + 2(2) + 2}{2^2 + 4(2) + 6} = \\frac{4 + 4 + 2}{4 + 8 + 6} = \\frac{10}{18} = \\frac{5}{9}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Clearing denominators:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s^2 + 2s + 2 = \\frac{5}{9}(s^2 + 4s + 6) + (Bs + C)(s - 2)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Equating coefficients of $s^2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "1 = \\frac{5}{9} + B \\implies B = 1 - \\frac{5}{9} = \\frac{4}{9}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Evaluating at $s = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2 = \\frac{5}{9}(6) - 2C \\implies 2 = \\frac{10}{3} - 2C \\implies 2C = \\frac{10}{3} - 2 = \\frac{4}{3} \\implies C = \\frac{2}{3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Restructuring the quadratic term:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\frac{4}{9}s + \\frac{2}{3}}{(s+2)^2 + (\\sqrt{2})^2} = \\frac{\\frac{4}{9}(s+2) + \\left(\\frac{2}{3} - \\frac{8}{9}\\right)}{(s+2)^2 + (\\sqrt{2})^2} = \\frac{\\frac{4}{9}(s+2) - \\frac{2}{9}}{(s+2)^2 + (\\sqrt{2})^2}"
+      },
+      {
+       "t": "math",
+       "tex": "= \\frac{4}{9} \\frac{s+2}{(s+2)^2 + (\\sqrt{2})^2} - \\frac{\\sqrt{2}}{9} \\frac{\\sqrt{2}}{(s+2)^2 + (\\sqrt{2})^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Final PFE:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{5}{9} \\frac{1}{s-2} + \\frac{4}{9} \\frac{s+2}{(s+2)^2 + (\\sqrt{2})^2} - \\frac{\\sqrt{2}}{9} \\frac{\\sqrt{2}}{(s+2)^2 + (\\sqrt{2})^2}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Inversion Across All 3 ROC Strips:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Real parts of poles are $\\sigma = -2$ and $\\sigma = 2$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(i) Causal Strip ($\\sigma > 2$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\left[ \\frac{5}{9} e^{2t} + \\frac{4}{9} e^{-2t} \\cos(\\sqrt{2}t) - \\frac{\\sqrt{2}}{9} e^{-2t} \\sin(\\sqrt{2}t) \\right] u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(ii) Anti-Causal Strip ($\\sigma < -2$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\left[ -\\frac{5}{9} e^{2t} - \\frac{4}{9} e^{-2t} \\cos(\\sqrt{2}t) + \\frac{\\sqrt{2}}{9} e^{-2t} \\sin(\\sqrt{2}t) \\right] u(-t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(iii) Non-Causal Strip ($-2 < \\sigma < 2$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = -\\frac{5}{9} e^{2t} u(-t) + \\left[ \\frac{4}{9} e^{-2t} \\cos(\\sqrt{2}t) - \\frac{\\sqrt{2}}{9} e^{-2t} \\sin(\\sqrt{2}t) \\right] u(t)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 169 (Page 43, Top-Left): Repeated Poles on the Imaginary Axis"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Invert the transfer function:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s}{(s^2 + 4)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Identify pole locations and state why the Fourier transform does not exist."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Pole Analysis:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(s^2 + 4)^2 = 0 \\implies (s + j2)^2 (s - j2)^2 = 0"
-    },
-    {
-     "t": "p",
-     "text": "Double poles located precisely on the $j\\omega$-axis at $s = +j2$ and $s = -j2$.\n   Real part of poles: $\\sigma_p = 0$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Inverse via Frequency Differentiation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall the basic causal pair:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(2t) u(t) \\longleftrightarrow \\frac{2}{s^2 + 4}"
-    },
-    {
-     "t": "p",
-     "text": "Applying $t x(t) \\leftrightarrow -\\frac{d}{ds} X(s)$:"
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{d}{ds}\\left[ \\frac{2}{s^2 + 4} \\right] = -\\left[ \\frac{-2(2s)}{(s^2 + 4)^2} \\right] = \\frac{4s}{(s^2 + 4)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Dividing both sides by $4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{s}{(s^2 + 4)^2} \\longleftrightarrow \\frac{t \\sin(2t)}{4} u(t)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Inversion Across ROCs:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Causal ($\\sigma > 0$):** $x(t) = \\frac{t \\sin(2t)}{4} u(t)$",
-      "**Anti-Causal ($\\sigma < 0$):** $x(t) = -\\frac{t \\sin(2t)}{4} u(-t)$"
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE Exam Trap (Instability of Multiple $j\\omega$ Poles):**\nBecause the poles lie on $\\sigma = 0$, the ROC boundary is $\\sigma = 0$. Since an ROC **cannot contain poles**, neither ROC ($\\sigma > 0$ or $\\sigma < 0$) includes the $j\\omega$-axis.\nFurthermore, the signal grows linearly with $t$ as $t \\to \\infty$ ($t \\sin(2t)$).\n**Therefore, the Fourier Transform DOES NOT EXIST, and the system is severely UNSTABLE!**"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Invert the transfer function:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s}{(s^2 + 4)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Identify pole locations and state why the Fourier transform does not exist."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Pole Analysis:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(s^2 + 4)^2 = 0 \\implies (s + j2)^2 (s - j2)^2 = 0"
+      },
+      {
+       "t": "p",
+       "text": "Double poles located precisely on the $j\\omega$-axis at $s = +j2$ and $s = -j2$.\n   Real part of poles: $\\sigma_p = 0$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Inverse via Frequency Differentiation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall the basic causal pair:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(2t) u(t) \\longleftrightarrow \\frac{2}{s^2 + 4}"
+      },
+      {
+       "t": "p",
+       "text": "Applying $t x(t) \\leftrightarrow -\\frac{d}{ds} X(s)$:"
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{d}{ds}\\left[ \\frac{2}{s^2 + 4} \\right] = -\\left[ \\frac{-2(2s)}{(s^2 + 4)^2} \\right] = \\frac{4s}{(s^2 + 4)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Dividing both sides by $4$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{s}{(s^2 + 4)^2} \\longleftrightarrow \\frac{t \\sin(2t)}{4} u(t)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Inversion Across ROCs:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Causal ($\\sigma > 0$):** $x(t) = \\frac{t \\sin(2t)}{4} u(t)$",
+        "**Anti-Causal ($\\sigma < 0$):** $x(t) = -\\frac{t \\sin(2t)}{4} u(-t)$"
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE Exam Trap (Instability of Multiple $j\\omega$ Poles):**\nBecause the poles lie on $\\sigma = 0$, the ROC boundary is $\\sigma = 0$. Since an ROC **cannot contain poles**, neither ROC ($\\sigma > 0$ or $\\sigma < 0$) includes the $j\\omega$-axis.\nFurthermore, the signal grows linearly with $t$ as $t \\to \\infty$ ($t \\sin(2t)$).\n**Therefore, the Fourier Transform DOES NOT EXIST, and the system is severely UNSTABLE!**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 170 & 171 (Page 43): Time-Advance Causality Violation in Irrational Functions"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{(s-2)e^s}{(s+1)^2(s-3)}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Expand the rational core $X_0(s) = \\frac{s-2}{(s+1)^2(s-3)}$ into partial fractions.",
-      "Apply the time-shift theorem to evaluate $x(t)$ across all ROC strips.",
-      "Prove that **no causal signal is possible** for this transfer function."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Partial Fraction Expansion of $X_0(s)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_0(s) = \\frac{A}{s+1} + \\frac{B}{(s+1)^2} + \\frac{C}{s-3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$C = \\left. \\frac{s-2}{(s+1)^2} \\right|_{s=3} = \\frac{3-2}{(3+1)^2} = \\frac{1}{16}$",
-      "$B = \\left. \\frac{s-2}{s-3} \\right|_{s=-1} = \\frac{-1-2}{-1-3} = \\frac{-3}{-4} = \\frac{3}{4}$",
-      "$A = \\left. \\frac{d}{ds}\\left[ \\frac{s-2}{s-3} \\right] \\right|_{s=-1} = \\left. \\frac{(s-3)(1) - (s-2)(1)}{(s-3)^2} \\right|_{s=-1} = \\frac{-1}{(-4)^2} = -\\frac{1}{16}$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = -\\frac{1}{16} \\frac{e^s}{s+1} + \\frac{3}{4} \\frac{e^s}{(s+1)^2} + \\frac{1}{16} \\frac{e^s}{s-3}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Time-Advance Property:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$e^s \\longleftrightarrow \\text{advance by } 1 \\implies x(t) = x_0(t+1)$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$u(t) \\to u(t+1)$ (turns on at $t = -1$)",
-      "$u(-t) \\to u(-(t+1)) = u(-t-1)$ (turns off at $t = -1$)"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Evaluation Across All 3 ROC Strips:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(i) Right-sided Strip ($\\sigma > 3$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\left[ -\\frac{1}{16} e^{-(t+1)} + \\frac{3}{4}(t+1)e^{-(t+1)} + \\frac{1}{16} e^{3(t+1)} \\right] u(t+1)"
-    },
-    {
-     "t": "p",
-     "text": "Because $u(t+1) = 1$ for $-1 \\le t < 0$, $x(t) \\ne 0$ for $t < 0$.\n     **The signal is NON-CAUSAL!**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(ii) Left-sided Strip ($\\sigma < -1$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\left[ \\frac{1}{16} e^{-(t+1)} - \\frac{3}{4}(t+1)e^{-(t+1)} - \\frac{1}{16} e^{3(t+1)} \\right] u(-t-1)"
-    },
-    {
-     "t": "p",
-     "text": "Because $u(-t-1) = 0$ for all $t > -1$, $x(t)$ is strictly zero for $t > 0$.\n     **The signal is ANTI-CAUSAL!**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(iii) Intermediate Strip ($-1 < \\sigma < 3$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\left[ -\\frac{1}{16} e^{-(t+1)} + \\frac{3}{4}(t+1)e^{-(t+1)} \\right] u(t+1) - \\frac{1}{16} e^{3(t+1)} u(-t-1)"
-    },
-    {
-     "t": "p",
-     "text": "Contains terms in both positive and negative time.\n     **The signal is NON-CAUSAL!**"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Universal Conclusion:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Among all possible ROCs, the signals generated are: Non-causal, Anti-causal, and Non-causal."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{NO CAUSAL SIGNAL IS POSSIBLE!}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{(s-2)e^s}{(s+1)^2(s-3)}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Expand the rational core $X_0(s) = \\frac{s-2}{(s+1)^2(s-3)}$ into partial fractions.",
+        "Apply the time-shift theorem to evaluate $x(t)$ across all ROC strips.",
+        "Prove that **no causal signal is possible** for this transfer function."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Partial Fraction Expansion of $X_0(s)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_0(s) = \\frac{A}{s+1} + \\frac{B}{(s+1)^2} + \\frac{C}{s-3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$C = \\left. \\frac{s-2}{(s+1)^2} \\right|_{s=3} = \\frac{3-2}{(3+1)^2} = \\frac{1}{16}$",
+        "$B = \\left. \\frac{s-2}{s-3} \\right|_{s=-1} = \\frac{-1-2}{-1-3} = \\frac{-3}{-4} = \\frac{3}{4}$",
+        "$A = \\left. \\frac{d}{ds}\\left[ \\frac{s-2}{s-3} \\right] \\right|_{s=-1} = \\left. \\frac{(s-3)(1) - (s-2)(1)}{(s-3)^2} \\right|_{s=-1} = \\frac{-1}{(-4)^2} = -\\frac{1}{16}$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = -\\frac{1}{16} \\frac{e^s}{s+1} + \\frac{3}{4} \\frac{e^s}{(s+1)^2} + \\frac{1}{16} \\frac{e^s}{s-3}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Time-Advance Property:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$e^s \\longleftrightarrow \\text{advance by } 1 \\implies x(t) = x_0(t+1)$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$u(t) \\to u(t+1)$ (turns on at $t = -1$)",
+        "$u(-t) \\to u(-(t+1)) = u(-t-1)$ (turns off at $t = -1$)"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Evaluation Across All 3 ROC Strips:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(i) Right-sided Strip ($\\sigma > 3$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\left[ -\\frac{1}{16} e^{-(t+1)} + \\frac{3}{4}(t+1)e^{-(t+1)} + \\frac{1}{16} e^{3(t+1)} \\right] u(t+1)"
+      },
+      {
+       "t": "p",
+       "text": "Because $u(t+1) = 1$ for $-1 \\le t < 0$, $x(t) \\ne 0$ for $t < 0$.\n     **The signal is NON-CAUSAL!**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(ii) Left-sided Strip ($\\sigma < -1$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\left[ \\frac{1}{16} e^{-(t+1)} - \\frac{3}{4}(t+1)e^{-(t+1)} - \\frac{1}{16} e^{3(t+1)} \\right] u(-t-1)"
+      },
+      {
+       "t": "p",
+       "text": "Because $u(-t-1) = 0$ for all $t > -1$, $x(t)$ is strictly zero for $t > 0$.\n     **The signal is ANTI-CAUSAL!**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(iii) Intermediate Strip ($-1 < \\sigma < 3$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\left[ -\\frac{1}{16} e^{-(t+1)} + \\frac{3}{4}(t+1)e^{-(t+1)} \\right] u(t+1) - \\frac{1}{16} e^{3(t+1)} u(-t-1)"
+      },
+      {
+       "t": "p",
+       "text": "Contains terms in both positive and negative time.\n     **The signal is NON-CAUSAL!**"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Universal Conclusion:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Among all possible ROCs, the signals generated are: Non-causal, Anti-causal, and Non-causal."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{NO CAUSAL SIGNAL IS POSSIBLE!}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 172 (Page 43, Bottom-Right): Repeated Complex Conjugate Poles via Frequency Differentiation"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Invert the transfer function:"
-    },
-    {
-     "t": "math",
-     "tex": "F(s) = \\frac{2s + 4}{(s^2 + 4s + 13)^2}"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Identify Underlying First-Order Quadratic Factor:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $X(s) = \\frac{1}{s^2 + 4s + 13} = \\frac{1}{(s+2)^2 + 3^2} = \\frac{1}{3} \\cdot \\frac{3}{(s+2)^2 + 3^2}$.\n   Its causal inverse is:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{3} e^{-2t} \\sin(3t) u(t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Differentiate in the Frequency Domain:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{d}{ds} X(s) = -\\frac{d}{ds}\\left[ (s^2 + 4s + 13)^{-1} \\right] = -(-1)(s^2 + 4s + 13)^{-2} (2s + 4) = \\frac{2s + 4}{(s^2 + 4s + 13)^2} = F(s)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Apply Frequency Differentiation Property $t x(t) \\leftrightarrow -\\frac{d}{ds}X(s)$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For ROC $\\sigma > -2$ (Causal):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = t x(t) = \\mathbf{\\frac{1}{3} t e^{-2t} \\sin(3t) u(t)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For ROC $\\sigma < -2$ (Anti-causal):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = -t x(t) = \\mathbf{-\\frac{1}{3} t e^{-2t} \\sin(3t) u(-t)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Invert the transfer function:"
+      },
+      {
+       "t": "math",
+       "tex": "F(s) = \\frac{2s + 4}{(s^2 + 4s + 13)^2}"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Identify Underlying First-Order Quadratic Factor:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $X(s) = \\frac{1}{s^2 + 4s + 13} = \\frac{1}{(s+2)^2 + 3^2} = \\frac{1}{3} \\cdot \\frac{3}{(s+2)^2 + 3^2}$.\n   Its causal inverse is:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{3} e^{-2t} \\sin(3t) u(t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Differentiate in the Frequency Domain:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{d}{ds} X(s) = -\\frac{d}{ds}\\left[ (s^2 + 4s + 13)^{-1} \\right] = -(-1)(s^2 + 4s + 13)^{-2} (2s + 4) = \\frac{2s + 4}{(s^2 + 4s + 13)^2} = F(s)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Apply Frequency Differentiation Property $t x(t) \\leftrightarrow -\\frac{d}{ds}X(s)$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For ROC $\\sigma > -2$ (Causal):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = t x(t) = \\mathbf{\\frac{1}{3} t e^{-2t} \\sin(3t) u(t)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For ROC $\\sigma < -2$ (Anti-causal):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = -t x(t) = \\mathbf{-\\frac{1}{3} t e^{-2t} \\sin(3t) u(-t)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 173 & 174 (Page 44, Top): Improper Transfer Function ($M = N$) & Impulse Term Inversion"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "F(s) = \\frac{s^2 + 2s + 3}{s^2 + 4s + 13}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Decompose into an impulse plus proper partial fractions.",
-      "Invert for both $\\sigma > -2$ and $\\sigma < -2$.",
-      "Discuss the causality of the resulting LTI system."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Polynomial Long Division:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Numerator and denominator both have degree 2 ($M = N = 2$):"
-    },
-    {
-     "t": "math",
-     "tex": "F(s) = \\frac{(s^2 + 4s + 13) - (2s + 10)}{s^2 + 4s + 13} = 1 - \\frac{2s + 10}{s^2 + 4s + 13}"
-    },
-    {
-     "t": "p",
-     "text": "Rewrite the strictly proper remainder:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2s + 10}{(s+2)^2 + 3^2} = \\frac{2(s+2) + 6}{(s+2)^2 + 3^2} = 2 \\frac{s+2}{(s+2)^2 + 3^2} + 2 \\frac{3}{(s+2)^2 + 3^2}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "F(s) = 1 - 2 \\frac{s+2}{(s+2)^2 + 3^2} - 2 \\frac{3}{(s+2)^2 + 3^2}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Inversion Across ROCs:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The constant $1$ inverts to $\\delta(t)$ everywhere (ROC: entire $s$-plane)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(i) Causal Strip ($\\sigma > -2$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\delta(t) - \\left[ 2e^{-2t}\\cos(3t) + 2e^{-2t}\\sin(3t) \\right] u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\delta(t) = 0$ for $t < 0$, and the bracketed term is multiplied by $u(t)$, $f(t) = 0$ for all $t < 0$.",
-      "**Result: Causal Signal $\\implies$ Causal System!**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(ii) Anti-Causal Strip ($\\sigma < -2$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\delta(t) + \\left[ 2e^{-2t}\\cos(3t) + 2e^{-2t}\\sin(3t) \\right] u(-t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\delta(t)$ is supported at $t = 0$, $f(t) = 0$ for all $t > 0$.",
-      "**Result: Anti-Causal Signal $\\implies$ Non-Causal System!** (Because $h(t) \\ne 0$ for $t < 0$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "F(s) = \\frac{s^2 + 2s + 3}{s^2 + 4s + 13}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Decompose into an impulse plus proper partial fractions.",
+        "Invert for both $\\sigma > -2$ and $\\sigma < -2$.",
+        "Discuss the causality of the resulting LTI system."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Polynomial Long Division:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Numerator and denominator both have degree 2 ($M = N = 2$):"
+      },
+      {
+       "t": "math",
+       "tex": "F(s) = \\frac{(s^2 + 4s + 13) - (2s + 10)}{s^2 + 4s + 13} = 1 - \\frac{2s + 10}{s^2 + 4s + 13}"
+      },
+      {
+       "t": "p",
+       "text": "Rewrite the strictly proper remainder:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2s + 10}{(s+2)^2 + 3^2} = \\frac{2(s+2) + 6}{(s+2)^2 + 3^2} = 2 \\frac{s+2}{(s+2)^2 + 3^2} + 2 \\frac{3}{(s+2)^2 + 3^2}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "F(s) = 1 - 2 \\frac{s+2}{(s+2)^2 + 3^2} - 2 \\frac{3}{(s+2)^2 + 3^2}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Inversion Across ROCs:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The constant $1$ inverts to $\\delta(t)$ everywhere (ROC: entire $s$-plane)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(i) Causal Strip ($\\sigma > -2$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\delta(t) - \\left[ 2e^{-2t}\\cos(3t) + 2e^{-2t}\\sin(3t) \\right] u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\delta(t) = 0$ for $t < 0$, and the bracketed term is multiplied by $u(t)$, $f(t) = 0$ for all $t < 0$.",
+        "**Result: Causal Signal $\\implies$ Causal System!**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(ii) Anti-Causal Strip ($\\sigma < -2$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\delta(t) + \\left[ 2e^{-2t}\\cos(3t) + 2e^{-2t}\\sin(3t) \\right] u(-t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\delta(t)$ is supported at $t = 0$, $f(t) = 0$ for all $t > 0$.",
+        "**Result: Anti-Causal Signal $\\implies$ Non-Causal System!** (Because $h(t) \\ne 0$ for $t < 0$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 175, 176 & 177 (Pages 44 & 45): Strictly Improper Functions ($M > N$) & Differentiator Doublets"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$F(s) = \\frac{s^2 + 2s + 2}{s + 2}$ ($M = 2, N = 1$)",
-      "$X(s) = \\frac{s^3 + 3s^2 + 2s + 1}{s + 2}$ ($M = 3, N = 1$)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Invert both functions and explain why systems with $M > N$ are physically non-realizable."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "h4",
-     "text": "Part 1: Inversion of $F(s) = \\frac{s^2 + 2s + 2}{s + 2}$"
-    },
-    {
-     "t": "p",
-     "text": "Execute polynomial long division:"
-    },
-    {
-     "t": "math",
-     "tex": "s^2 + 2s + 2 = s(s + 2) + 2 \\implies F(s) = s + \\frac{2}{s + 2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Recall: $\\delta(t) \\leftrightarrow 1 \\implies \\delta'(t) = \\frac{d\\delta(t)}{dt} \\leftrightarrow s$ with ROC: entire $s$-plane.",
-      "Inverting for $\\sigma > -2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\delta'(t) + 2e^{-2t} u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Inverting for $\\sigma < -2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\delta'(t) - 2e^{-2t} u(-t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Note: The doublet satisfies $\\int_{-\\infty}^\\infty \\delta'(t) dt = 0$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Part 2: Inversion of $X(s) = \\frac{s^3 + 3s^2 + 2s + 1}{s + 2}$"
-    },
-    {
-     "t": "p",
-     "text": "Execute polynomial long division:"
-    },
-    {
-     "t": "math",
-     "tex": "s^3 + 3s^2 + 2s + 1 = (s + 2)(s^2 + s) + 1 \\implies X(s) = s^2 + s + \\frac{1}{s + 2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\mathcal{L}^{-1}\\{s^2\\} = \\delta''(t)$",
-      "$\\mathcal{L}^{-1}\\{s\\} = \\delta'(t)$",
-      "For ROC $\\sigma > -2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\delta''(t) + \\delta'(t) + e^{-2t} u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For ROC $\\sigma < -2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\delta''(t) + \\delta'(t) - e^{-2t} u(-t)"
-    },
-    {
-     "t": "h4",
-     "text": "Part 3: Physical Non-Realizability Theorem"
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**Why are Systems with $M > N$ Non-Causal and Non-Realizable?**\nConsider an ideal differentiator:\n$$y(t) = \\frac{dx(t)}{dt} \\implies Y(s) = s X(s) \\implies H(s) = s = \\frac{s}{1} \\quad (M = 1 > N = 0)$$\nBy the fundamental definition of the time derivative:\n$$\\frac{dx(t)}{dt} = \\lim_{\\Delta t \\to 0} \\frac{x(t + \\Delta t) - x(t)}{\\Delta t}$$\nTo compute the derivative at the present time $t$, the system requires the value of $x(t + \\Delta t)$\u2014which is an **input from the future**!\nHence, an ideal differentiator is inherently **non-causal** and **cannot be constructed with physical hardware**. Any rational transfer function with $M > N$ contains derivative terms ($\\delta'(t), \\delta''(t), \\dots$) and is therefore **strictly unrealizable**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$F(s) = \\frac{s^2 + 2s + 2}{s + 2}$ ($M = 2, N = 1$)",
+        "$X(s) = \\frac{s^3 + 3s^2 + 2s + 1}{s + 2}$ ($M = 3, N = 1$)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Invert both functions and explain why systems with $M > N$ are physically non-realizable."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "h4",
+       "text": "Part 1: Inversion of $F(s) = \\frac{s^2 + 2s + 2}{s + 2}$"
+      },
+      {
+       "t": "p",
+       "text": "Execute polynomial long division:"
+      },
+      {
+       "t": "math",
+       "tex": "s^2 + 2s + 2 = s(s + 2) + 2 \\implies F(s) = s + \\frac{2}{s + 2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Recall: $\\delta(t) \\leftrightarrow 1 \\implies \\delta'(t) = \\frac{d\\delta(t)}{dt} \\leftrightarrow s$ with ROC: entire $s$-plane.",
+        "Inverting for $\\sigma > -2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\delta'(t) + 2e^{-2t} u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Inverting for $\\sigma < -2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\delta'(t) - 2e^{-2t} u(-t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Note: The doublet satisfies $\\int_{-\\infty}^\\infty \\delta'(t) dt = 0$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Part 2: Inversion of $X(s) = \\frac{s^3 + 3s^2 + 2s + 1}{s + 2}$"
+      },
+      {
+       "t": "p",
+       "text": "Execute polynomial long division:"
+      },
+      {
+       "t": "math",
+       "tex": "s^3 + 3s^2 + 2s + 1 = (s + 2)(s^2 + s) + 1 \\implies X(s) = s^2 + s + \\frac{1}{s + 2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\mathcal{L}^{-1}\\{s^2\\} = \\delta''(t)$",
+        "$\\mathcal{L}^{-1}\\{s\\} = \\delta'(t)$",
+        "For ROC $\\sigma > -2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\delta''(t) + \\delta'(t) + e^{-2t} u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For ROC $\\sigma < -2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\delta''(t) + \\delta'(t) - e^{-2t} u(-t)"
+      },
+      {
+       "t": "h4",
+       "text": "Part 3: Physical Non-Realizability Theorem"
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**Why are Systems with $M > N$ Non-Causal and Non-Realizable?**\nConsider an ideal differentiator:\n$$y(t) = \\frac{dx(t)}{dt} \\implies Y(s) = s X(s) \\implies H(s) = s = \\frac{s}{1} \\quad (M = 1 > N = 0)$$\nBy the fundamental definition of the time derivative:\n$$\\frac{dx(t)}{dt} = \\lim_{\\Delta t \\to 0} \\frac{x(t + \\Delta t) - x(t)}{\\Delta t}$$\nTo compute the derivative at the present time $t$, the system requires the value of $x(t + \\Delta t)$\u2014which is an **input from the future**!\nHence, an ideal differentiator is inherently **non-causal** and **cannot be constructed with physical hardware**. Any rational transfer function with $M > N$ contains derivative terms ($\\delta'(t), \\delta''(t), \\dots$) and is therefore **strictly unrealizable**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 178 & 179 (Page 45): The Hyperbolic $\\sinh(s)$ Causality Proof"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (GATE Master MCQ)"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{\\sinh s}{(s+2)(s^2 + 2s + 4)(s-3)^2}"
-    },
-    {
-     "t": "p",
-     "text": "The corresponding time-domain signal $x(t)$ could be:\n(a) Causal  \n(b) Non-causal  \n(c) Anti-causal  \n(d) All of the above"
-    },
-    {
-     "t": "h4",
-     "text": "Rigorous Mathematical Proof"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Identify the Poles of the Denominator:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $D(s) = (s+2)(s^2 + 2s + 4)(s-3)^2$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Simple pole at $s = -2$ ($\\sigma = -2$)",
-      "Complex conjugate poles from $s^2 + 2s + 4 = (s+1)^2 + 3 = 0 \\implies s = -1 \\pm j\\sqrt{3}$ ($\\sigma = -1$)",
-      "Double pole at $s = 3$ ($\\sigma = 3$)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Poles partition the real axis into 4 strips:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sigma < -2, \\quad -2 < \\sigma < -1, \\quad -1 < \\sigma < 3, \\quad \\sigma > 3"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Decompose $\\sinh s$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sinh s = \\frac{e^s - e^{-s}}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{e^s}{2 D(s)} - \\frac{e^{-s}}{2 D(s)}"
-    },
-    {
-     "t": "p",
-     "text": "Define the rational core $X_0(s) = \\frac{1}{2 D(s)} \\longleftrightarrow x_0(t)$.\n   By the time-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = x_0(t + 1) - x_0(t - 1)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Examine Causality Across ALL Valid ROC Strips:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Strip 1: Rightmost ROC ($\\sigma > 3$)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$x_0(t)$ is right-sided: $x_0(t) = \\sum A_k e^{p_k t} u(t)$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_0(t + 1)$ contains $u(t + 1)$, which turns on at $t = -1$. It is non-zero in $[-1, 0)$.",
-      "$x_0(t - 1)$ contains $u(t - 1)$, which turns on at $t = +1$.",
-      "Their difference $x(t) = x_0(t+1) - x_0(t-1)$ is non-zero for $-1 \\le t < 0$.",
-      "Since $x(t) \\ne 0$ for $t < 0$, **$x(t)$ CANNOT be causal!**",
-      "Since $x(t) \\ne 0$ for $t > 0$, **$x(t)$ CANNOT be anti-causal!**",
-      "$\\implies \\mathbf{x(t) \\text{ is strictly NON-CAUSAL}}$."
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Strip 2: Leftmost ROC ($\\sigma < -2$)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$x_0(t)$ is left-sided: $x_0(t) = \\sum B_k e^{p_k t} u(-t)$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_0(t + 1)$ contains $u(-(t+1)) = u(-t-1)$, which vanishes for $t > -1$.",
-      "$x_0(t - 1)$ contains $u(-(t-1)) = u(-t+1)$, which vanishes only for $t > 1$. It is non-zero in $(0, 1]$.",
-      "Their difference $x(t) = x_0(t+1) - x_0(t-1)$ is non-zero for $0 < t \\le 1$.",
-      "Since $x(t) \\ne 0$ for $t > 0$, **$x(t)$ CANNOT be anti-causal!**",
-      "Since $x(t) \\ne 0$ for $t < 0$, **$x(t)$ CANNOT be causal!**",
-      "$\\implies \\mathbf{x(t) \\text{ is strictly NON-CAUSAL}}$."
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Strips 3 & 4: Intermediate Strips ($-2 < \\sigma < -1$ and $-1 < \\sigma < 3$)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$x_0(t)$ is already inherently two-sided. The shifts $t \\pm 1$ maintain non-zero support from $-\\infty$ to $+\\infty$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\implies \\mathbf{x(t) \\text{ is strictly NON-CAUSAL}}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Correct Answer:"
-    },
-    {
-     "t": "p",
-     "text": "**Option (b) Non-causal!** Under no circumstances or ROC selection can $x(t)$ ever be causal or anti-causal."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (GATE Master MCQ)"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{\\sinh s}{(s+2)(s^2 + 2s + 4)(s-3)^2}"
+      },
+      {
+       "t": "p",
+       "text": "The corresponding time-domain signal $x(t)$ could be:\n(a) Causal  \n(b) Non-causal  \n(c) Anti-causal  \n(d) All of the above"
+      },
+      {
+       "t": "h4",
+       "text": "Rigorous Mathematical Proof"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Identify the Poles of the Denominator:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $D(s) = (s+2)(s^2 + 2s + 4)(s-3)^2$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Simple pole at $s = -2$ ($\\sigma = -2$)",
+        "Complex conjugate poles from $s^2 + 2s + 4 = (s+1)^2 + 3 = 0 \\implies s = -1 \\pm j\\sqrt{3}$ ($\\sigma = -1$)",
+        "Double pole at $s = 3$ ($\\sigma = 3$)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Poles partition the real axis into 4 strips:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sigma < -2, \\quad -2 < \\sigma < -1, \\quad -1 < \\sigma < 3, \\quad \\sigma > 3"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Decompose $\\sinh s$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sinh s = \\frac{e^s - e^{-s}}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{e^s}{2 D(s)} - \\frac{e^{-s}}{2 D(s)}"
+      },
+      {
+       "t": "p",
+       "text": "Define the rational core $X_0(s) = \\frac{1}{2 D(s)} \\longleftrightarrow x_0(t)$.\n   By the time-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = x_0(t + 1) - x_0(t - 1)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Examine Causality Across ALL Valid ROC Strips:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Strip 1: Rightmost ROC ($\\sigma > 3$)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$x_0(t)$ is right-sided: $x_0(t) = \\sum A_k e^{p_k t} u(t)$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_0(t + 1)$ contains $u(t + 1)$, which turns on at $t = -1$. It is non-zero in $[-1, 0)$.",
+        "$x_0(t - 1)$ contains $u(t - 1)$, which turns on at $t = +1$.",
+        "Their difference $x(t) = x_0(t+1) - x_0(t-1)$ is non-zero for $-1 \\le t < 0$.",
+        "Since $x(t) \\ne 0$ for $t < 0$, **$x(t)$ CANNOT be causal!**",
+        "Since $x(t) \\ne 0$ for $t > 0$, **$x(t)$ CANNOT be anti-causal!**",
+        "$\\implies \\mathbf{x(t) \\text{ is strictly NON-CAUSAL}}$."
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Strip 2: Leftmost ROC ($\\sigma < -2$)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$x_0(t)$ is left-sided: $x_0(t) = \\sum B_k e^{p_k t} u(-t)$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_0(t + 1)$ contains $u(-(t+1)) = u(-t-1)$, which vanishes for $t > -1$.",
+        "$x_0(t - 1)$ contains $u(-(t-1)) = u(-t+1)$, which vanishes only for $t > 1$. It is non-zero in $(0, 1]$.",
+        "Their difference $x(t) = x_0(t+1) - x_0(t-1)$ is non-zero for $0 < t \\le 1$.",
+        "Since $x(t) \\ne 0$ for $t > 0$, **$x(t)$ CANNOT be anti-causal!**",
+        "Since $x(t) \\ne 0$ for $t < 0$, **$x(t)$ CANNOT be causal!**",
+        "$\\implies \\mathbf{x(t) \\text{ is strictly NON-CAUSAL}}$."
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Strips 3 & 4: Intermediate Strips ($-2 < \\sigma < -1$ and $-1 < \\sigma < 3$)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$x_0(t)$ is already inherently two-sided. The shifts $t \\pm 1$ maintain non-zero support from $-\\infty$ to $+\\infty$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\implies \\mathbf{x(t) \\text{ is strictly NON-CAUSAL}}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Correct Answer:"
+      },
+      {
+       "t": "p",
+       "text": "**Option (b) Non-causal!** Under no circumstances or ROC selection can $x(t)$ ever be causal or anti-causal."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 180 (Page 45, Bottom-Right): The Laplace-to-Fourier Bridge & Ramp-Step Pulse"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Find the Continuous-Time Fourier Transform $X(\\omega)$ of the single ramp-step pulse:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\begin{cases} A t, & 0 \\le t \\le 1 \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "using the Laplace Transform."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Synthesize $x(t)$ using Singularity Functions:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Starts at $t = 0$ with slope $+A$: $+A r(t)$",
-      "At $t = 1$, the slope changes from $+A$ to $0$: $-A r(t - 1)$",
-      "At $t = 1$, the amplitude abruptly drops from $A$ to $0$: $-A u(t - 1)$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = A r(t) - A r(t - 1) - A u(t - 1)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Compute Laplace Transform:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall: $r(t) \\leftrightarrow \\frac{1}{s^2}$ and $u(t) \\leftrightarrow \\frac{1}{s}$."
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{A}{s^2} - \\frac{A e^{-s}}{s^2} - \\frac{A e^{-s}}{s} = \\frac{A(1 - e^{-s})}{s^2} - \\frac{A e^{-s}}{s}"
-    },
-    {
-     "t": "p",
-     "text": "Because $x(t)$ is of finite duration ($[0, 1]$) and finite amplitude, the **ROC is the entire $s$-plane**."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Convert to Fourier Transform via $s = j\\omega$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since the ROC includes the $j\\omega$-axis everywhere:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\left. X(s) \\right|_{s = j\\omega} = \\frac{A(1 - e^{-j\\omega})}{(j\\omega)^2} - \\frac{A e^{-j\\omega}}{j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Since $(j\\omega)^2 = -\\omega^2$ and $\\frac{1}{j\\omega} = -\\frac{j}{\\omega}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = -\\frac{A}{\\omega^2} + \\frac{A e^{-j\\omega}}{\\omega^2} + j \\frac{A e^{-j\\omega}}{\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Find the Continuous-Time Fourier Transform $X(\\omega)$ of the single ramp-step pulse:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\begin{cases} A t, & 0 \\le t \\le 1 \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "using the Laplace Transform."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Synthesize $x(t)$ using Singularity Functions:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Starts at $t = 0$ with slope $+A$: $+A r(t)$",
+        "At $t = 1$, the slope changes from $+A$ to $0$: $-A r(t - 1)$",
+        "At $t = 1$, the amplitude abruptly drops from $A$ to $0$: $-A u(t - 1)$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = A r(t) - A r(t - 1) - A u(t - 1)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Compute Laplace Transform:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall: $r(t) \\leftrightarrow \\frac{1}{s^2}$ and $u(t) \\leftrightarrow \\frac{1}{s}$."
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{A}{s^2} - \\frac{A e^{-s}}{s^2} - \\frac{A e^{-s}}{s} = \\frac{A(1 - e^{-s})}{s^2} - \\frac{A e^{-s}}{s}"
+      },
+      {
+       "t": "p",
+       "text": "Because $x(t)$ is of finite duration ($[0, 1]$) and finite amplitude, the **ROC is the entire $s$-plane**."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Convert to Fourier Transform via $s = j\\omega$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since the ROC includes the $j\\omega$-axis everywhere:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\left. X(s) \\right|_{s = j\\omega} = \\frac{A(1 - e^{-j\\omega})}{(j\\omega)^2} - \\frac{A e^{-j\\omega}}{j\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Since $(j\\omega)^2 = -\\omega^2$ and $\\frac{1}{j\\omega} = -\\frac{j}{\\omega}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = -\\frac{A}{\\omega^2} + \\frac{A e^{-j\\omega}}{\\omega^2} + j \\frac{A e^{-j\\omega}}{\\omega}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 181 & 182 (Page 46, Top): Exponential Fourier Series of Sawtooth Waveform"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "A periodic sawtooth waveform $x(t)$ has period $T_0 = 1$ and equation $x(t) = A t$ for $0 \\le t < 1$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Compute the Exponential Fourier Series Coefficients $c_n$ using the Laplace-to-Fourier bridge.",
-      "Verify using Method 2 (Differentiation into periodic impulse trains)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Using Isolated Cycle Transform"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental frequency: $\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{1} = 2\\pi \\text{ rad/s}$.",
-      "The isolated cycle $\\tilde{x}(t)$ is identical to the ramp pulse from Slide 180:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{X}(\\omega) = -\\frac{A}{\\omega^2} + \\frac{A e^{-j\\omega}}{\\omega^2} + j \\frac{A e^{-j\\omega}}{\\omega}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Using $c_n = \\frac{1}{T_0} \\left. \\tilde{X}(\\omega) \\right|_{\\omega = n\\omega_0}$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Substitute $\\omega = 2\\pi n$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j\\omega} = e^{-j (2\\pi n)} = \\cos(2\\pi n) - j \\sin(2\\pi n) = 1 \\quad (\\forall n \\in \\mathbb{Z})"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $e^{-j\\omega} = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{1} \\left[ -\\frac{A}{(2\\pi n)^2} + \\frac{A(1)}{(2\\pi n)^2} + j \\frac{A(1)}{2\\pi n} \\right]"
-    },
-    {
-     "t": "p",
-     "text": "The first two second-order terms cancel identically:"
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{A}{4\\pi^2 n^2} + \\frac{A}{4\\pi^2 n^2} = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{c_n = \\frac{j A}{2\\pi n} = \\frac{A}{2\\pi n} e^{j \\pi/2}, \\quad n \\ne 0}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "DC Component ($n = 0$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{1}{T_0} \\int_0^{T_0} x(t) dt = \\text{Area of triangle} = \\frac{1}{2}(1)(A) = \\mathbf{\\frac{A}{2}}"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Differentiation Property Verification"
-    },
-    {
-     "t": "p",
-     "text": "Differentiate the periodic sawtooth wave:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} = A - A \\sum_{k=-\\infty}^{\\infty} \\delta(t - k)"
-    },
-    {
-     "t": "p",
-     "text": "Take the Fourier Series of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{FS}\\left\\{ \\frac{dx}{dt} \\right\\} = j n \\omega_0 c_n"
-    },
-    {
-     "t": "p",
-     "text": "For the periodic impulse train $-A \\sum \\delta(t - k)$, the FS coefficients are $-\\frac{A}{T_0} = -A$ for all $n$.\nFor $n \\ne 0$, the DC slope $A$ contributes zero to harmonic coefficients:"
-    },
-    {
-     "t": "math",
-     "tex": "j n \\omega_0 c_n = -A \\implies c_n = \\frac{-A}{j n (2\\pi)} = \\mathbf{\\frac{j A}{2\\pi n}}"
-    },
-    {
-     "t": "p",
-     "text": "Both methods yield identical results!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "A periodic sawtooth waveform $x(t)$ has period $T_0 = 1$ and equation $x(t) = A t$ for $0 \\le t < 1$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Compute the Exponential Fourier Series Coefficients $c_n$ using the Laplace-to-Fourier bridge.",
+        "Verify using Method 2 (Differentiation into periodic impulse trains)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Using Isolated Cycle Transform"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental frequency: $\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{1} = 2\\pi \\text{ rad/s}$.",
+        "The isolated cycle $\\tilde{x}(t)$ is identical to the ramp pulse from Slide 180:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{X}(\\omega) = -\\frac{A}{\\omega^2} + \\frac{A e^{-j\\omega}}{\\omega^2} + j \\frac{A e^{-j\\omega}}{\\omega}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Using $c_n = \\frac{1}{T_0} \\left. \\tilde{X}(\\omega) \\right|_{\\omega = n\\omega_0}$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Substitute $\\omega = 2\\pi n$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j\\omega} = e^{-j (2\\pi n)} = \\cos(2\\pi n) - j \\sin(2\\pi n) = 1 \\quad (\\forall n \\in \\mathbb{Z})"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $e^{-j\\omega} = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{1} \\left[ -\\frac{A}{(2\\pi n)^2} + \\frac{A(1)}{(2\\pi n)^2} + j \\frac{A(1)}{2\\pi n} \\right]"
+      },
+      {
+       "t": "p",
+       "text": "The first two second-order terms cancel identically:"
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{A}{4\\pi^2 n^2} + \\frac{A}{4\\pi^2 n^2} = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{c_n = \\frac{j A}{2\\pi n} = \\frac{A}{2\\pi n} e^{j \\pi/2}, \\quad n \\ne 0}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "DC Component ($n = 0$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{1}{T_0} \\int_0^{T_0} x(t) dt = \\text{Area of triangle} = \\frac{1}{2}(1)(A) = \\mathbf{\\frac{A}{2}}"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Differentiation Property Verification"
+      },
+      {
+       "t": "p",
+       "text": "Differentiate the periodic sawtooth wave:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} = A - A \\sum_{k=-\\infty}^{\\infty} \\delta(t - k)"
+      },
+      {
+       "t": "p",
+       "text": "Take the Fourier Series of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{FS}\\left\\{ \\frac{dx}{dt} \\right\\} = j n \\omega_0 c_n"
+      },
+      {
+       "t": "p",
+       "text": "For the periodic impulse train $-A \\sum \\delta(t - k)$, the FS coefficients are $-\\frac{A}{T_0} = -A$ for all $n$.\nFor $n \\ne 0$, the DC slope $A$ contributes zero to harmonic coefficients:"
+      },
+      {
+       "t": "math",
+       "tex": "j n \\omega_0 c_n = -A \\implies c_n = \\frac{-A}{j n (2\\pi)} = \\mathbf{\\frac{j A}{2\\pi n}}"
+      },
+      {
+       "t": "p",
+       "text": "Both methods yield identical results!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 183 (Page 46, Bottom-Left): Half-Sine Pulse Fourier Transform"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Find the Continuous-Time Fourier Transform of the single half-sine pulse:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sin(\\pi t) \\left[ u(t) - u(t - 1) \\right]"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Time-Shift Alignment:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Expand the second term:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\pi t) u(t - 1) = \\sin(\\pi(t - 1 + 1)) u(t - 1) = \\sin(\\pi(t - 1) + \\pi) u(t - 1) = -\\sin(\\pi(t - 1)) u(t - 1)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute back:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sin(\\pi t) u(t) + \\sin(\\pi(t - 1)) u(t - 1)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Laplace Transform:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\pi t) u(t) \\longleftrightarrow \\frac{\\pi}{s^2 + \\pi^2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\pi(t - 1)) u(t - 1) \\longleftrightarrow \\frac{\\pi e^{-s}}{s^2 + \\pi^2}"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{\\pi(1 + e^{-s})}{s^2 + \\pi^2}, \\quad \\text{ROC: Entire } s\\text{-plane}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Fourier Transform ($s = j\\omega$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\left. X(s) \\right|_{s = j\\omega} = \\frac{\\pi(1 + e^{-j\\omega})}{(j\\omega)^2 + \\pi^2} = \\mathbf{\\frac{\\pi(1 + e^{-j\\omega})}{\\pi^2 - \\omega^2}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Find the Continuous-Time Fourier Transform of the single half-sine pulse:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sin(\\pi t) \\left[ u(t) - u(t - 1) \\right]"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Time-Shift Alignment:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Expand the second term:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\pi t) u(t - 1) = \\sin(\\pi(t - 1 + 1)) u(t - 1) = \\sin(\\pi(t - 1) + \\pi) u(t - 1) = -\\sin(\\pi(t - 1)) u(t - 1)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute back:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sin(\\pi t) u(t) + \\sin(\\pi(t - 1)) u(t - 1)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Laplace Transform:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\pi t) u(t) \\longleftrightarrow \\frac{\\pi}{s^2 + \\pi^2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\pi(t - 1)) u(t - 1) \\longleftrightarrow \\frac{\\pi e^{-s}}{s^2 + \\pi^2}"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{\\pi(1 + e^{-s})}{s^2 + \\pi^2}, \\quad \\text{ROC: Entire } s\\text{-plane}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Fourier Transform ($s = j\\omega$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\left. X(s) \\right|_{s = j\\omega} = \\frac{\\pi(1 + e^{-j\\omega})}{(j\\omega)^2 + \\pi^2} = \\mathbf{\\frac{\\pi(1 + e^{-j\\omega})}{\\pi^2 - \\omega^2}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 184 & 185 (Pages 46 & 47): Full-Wave Rectified Sinusoid EFSC"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Find the Exponential Fourier Series Coefficients $c_n$ of the full-wave rectified sinusoid:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = |\\sin(\\pi t)|"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Using the isolated half-sine pulse transform.",
-      "Using the second-derivative impulse train method."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Via Isolated Period Transform"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Period: The absolute value halves the period: $T_0 = 1$.",
-      "Fundamental frequency: $\\omega_0 = \\frac{2\\pi}{T_0} = 2\\pi \\text{ rad/s}$.",
-      "The isolated pulse is $\\tilde{x}(t) = \\sin(\\pi t)[u(t) - u(t-1)]$.",
-      "From Slide 183: $\\tilde{X}(\\omega) = \\frac{\\pi(1 + e^{-j\\omega})}{\\pi^2 - \\omega^2}$.",
-      "Evaluating at $\\omega = n\\omega_0 = 2\\pi n$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j 2\\pi n} = 1 \\implies 1 + e^{-j 2\\pi n} = 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{X}(2\\pi n) = \\frac{\\pi(2)}{\\pi^2 - (2\\pi n)^2} = \\frac{2\\pi}{\\pi^2(1 - 4n^2)} = \\frac{2}{\\pi(1 - 4n^2)}"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} \\tilde{X}(2\\pi n) = \\mathbf{\\frac{2}{\\pi(1 - 4n^2)}, \\quad \\forall n \\in \\mathbb{Z}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "DC Component ($n = 0$): $c_0 = \\mathbf{\\frac{2}{\\pi}}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Via Second Derivative"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "In one cycle $(0, 1)$, $x(t) = \\sin(\\pi t) \\implies x'(t) = \\pi \\cos(\\pi t)$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "As $t \\to 1^-$, $x'(1^-) = -\\pi$.\n  As $t \\to 1^+$, $x'(1^+) = +\\pi$.\n  The jump in slope at each integer cusp $t = k$ is $\\Delta = x'(k^+) - x'(k^-) = \\pi - (-\\pi) = 2\\pi$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The second derivative is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d^2 x(t)}{dt^2} = 2\\pi \\sum_{k=-\\infty}^{\\infty} \\delta(t - k) - \\pi^2 x(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Taking Fourier Series of both sides:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(j n \\omega_0)^2 c_n = \\frac{2\\pi}{T_0} - \\pi^2 c_n"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\omega_0 = 2\\pi$ and $T_0 = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "-(2\\pi n)^2 c_n + \\pi^2 c_n = 2\\pi \\implies \\pi^2(1 - 4n^2) c_n = 2\\pi \\implies \\mathbf{c_n = \\frac{2}{\\pi(1 - 4n^2)}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Find the Exponential Fourier Series Coefficients $c_n$ of the full-wave rectified sinusoid:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = |\\sin(\\pi t)|"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Using the isolated half-sine pulse transform.",
+        "Using the second-derivative impulse train method."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Via Isolated Period Transform"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Period: The absolute value halves the period: $T_0 = 1$.",
+        "Fundamental frequency: $\\omega_0 = \\frac{2\\pi}{T_0} = 2\\pi \\text{ rad/s}$.",
+        "The isolated pulse is $\\tilde{x}(t) = \\sin(\\pi t)[u(t) - u(t-1)]$.",
+        "From Slide 183: $\\tilde{X}(\\omega) = \\frac{\\pi(1 + e^{-j\\omega})}{\\pi^2 - \\omega^2}$.",
+        "Evaluating at $\\omega = n\\omega_0 = 2\\pi n$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j 2\\pi n} = 1 \\implies 1 + e^{-j 2\\pi n} = 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{X}(2\\pi n) = \\frac{\\pi(2)}{\\pi^2 - (2\\pi n)^2} = \\frac{2\\pi}{\\pi^2(1 - 4n^2)} = \\frac{2}{\\pi(1 - 4n^2)}"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} \\tilde{X}(2\\pi n) = \\mathbf{\\frac{2}{\\pi(1 - 4n^2)}, \\quad \\forall n \\in \\mathbb{Z}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "DC Component ($n = 0$): $c_0 = \\mathbf{\\frac{2}{\\pi}}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Via Second Derivative"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "In one cycle $(0, 1)$, $x(t) = \\sin(\\pi t) \\implies x'(t) = \\pi \\cos(\\pi t)$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "As $t \\to 1^-$, $x'(1^-) = -\\pi$.\n  As $t \\to 1^+$, $x'(1^+) = +\\pi$.\n  The jump in slope at each integer cusp $t = k$ is $\\Delta = x'(k^+) - x'(k^-) = \\pi - (-\\pi) = 2\\pi$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The second derivative is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d^2 x(t)}{dt^2} = 2\\pi \\sum_{k=-\\infty}^{\\infty} \\delta(t - k) - \\pi^2 x(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Taking Fourier Series of both sides:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(j n \\omega_0)^2 c_n = \\frac{2\\pi}{T_0} - \\pi^2 c_n"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\omega_0 = 2\\pi$ and $T_0 = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "-(2\\pi n)^2 c_n + \\pi^2 c_n = 2\\pi \\implies \\pi^2(1 - 4n^2) c_n = 2\\pi \\implies \\mathbf{c_n = \\frac{2}{\\pi(1 - 4n^2)}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 186, 187 & 188 (Page 47): Half-Wave Rectified Sinusoid EFSC & The Resonant Indeterminate Form"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Find the Exponential Fourier Series Coefficients $c_n$ of the half-wave rectified sinusoid:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\begin{cases} \\sin(\\pi t), & 0 \\le t \\le 1 \\\\ 0, & 1 < t < 2 \\end{cases}, \\quad x(t + 2) = x(t)"
-    },
-    {
-     "t": "p",
-     "text": "Resolve the indeterminate form at the fundamental frequencies $n = \\pm 1$."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Parameters & Transform Formula:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Period: $T_0 = 2 \\implies \\omega_0 = \\frac{2\\pi}{2} = \\pi \\text{ rad/s}$.",
-      "The isolated active pulse is non-zero only on $[0, 1]$, identical to $\\tilde{x}(t)$ from Slide 183.",
-      "Using $c_n = \\frac{1}{T_0} \\left. \\tilde{X}(\\omega) \\right|_{\\omega = n\\omega_0}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{2} \\left. \\frac{\\pi(1 + e^{-j\\omega})}{\\pi^2 - \\omega^2} \\right|_{\\omega = n\\pi} = \\frac{\\pi(1 + e^{-j n\\pi})}{2(\\pi^2 - n^2 \\pi^2)} = \\frac{1 + (-1)^n}{2\\pi(1 - n^2)}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Parity Analysis:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For Even $n$ ($n = 0, \\pm 2, \\pm 4, \\dots$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(-1)^n = 1 \\implies 1 + (-1)^n = 2"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{2}{2\\pi(1 - n^2)} = \\mathbf{\\frac{1}{\\pi(1 - n^2)}}"
-    },
-    {
-     "t": "p",
-     "text": "Specifically, DC component ($n = 0$): $c_0 = \\mathbf{\\frac{1}{\\pi}}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For Odd $n$ ($n \\ne \\pm 1$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(-1)^n = -1 \\implies 1 + (-1)^n = 0 \\implies \\mathbf{c_n = 0}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For $n = \\pm 1$ (Resonance Indeterminate Form):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "When $n = 1$, the numerator is $1 + (-1)^1 = 0$, and the denominator is $2\\pi(1 - 1^2) = 0$.\n     This gives the indeterminate form $\\mathbf{\\frac{0}{0}}$!"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Direct Integral Evaluation for $n = \\pm 1$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{T_0} \\int_0^{T_0} x(t) e^{-j\\omega_0 t} dt = \\frac{1}{2} \\int_0^1 \\sin(\\pi t) e^{-j\\pi t} dt"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $\\sin(\\pi t) = \\frac{e^{j\\pi t} - e^{-j\\pi t}}{2j}$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{2} \\int_0^1 \\left( \\frac{e^{j\\pi t} - e^{-j\\pi t}}{2j} \\right) e^{-j\\pi t} dt = \\frac{1}{4j} \\int_0^1 \\left( 1 - e^{-j 2\\pi t} \\right) dt"
-    },
-    {
-     "t": "math",
-     "tex": "= \\frac{1}{4j} \\left[ t - \\frac{e^{-j 2\\pi t}}{-j 2\\pi} \\right]_0^1 = \\frac{1}{4j} [1 - 0] = \\mathbf{\\frac{1}{4j} = -j\\frac{1}{4}}"
-    },
-    {
-     "t": "p",
-     "text": "By conjugate symmetry for real signals ($c_{-n} = c_n^*$):"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-1} = c_1^* = \\mathbf{-\\frac{1}{4j} = +j\\frac{1}{4}}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Master Piecewise Formulation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\begin{cases} \\frac{1}{\\pi(1 - n^2)}, & n \\text{ is even} \\\\ -j\\frac{1}{4}, & n = 1 \\\\ +j\\frac{1}{4}, & n = -1 \\\\ 0, & n \\text{ is odd, } n \\ne \\pm 1 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Find the Exponential Fourier Series Coefficients $c_n$ of the half-wave rectified sinusoid:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\begin{cases} \\sin(\\pi t), & 0 \\le t \\le 1 \\\\ 0, & 1 < t < 2 \\end{cases}, \\quad x(t + 2) = x(t)"
+      },
+      {
+       "t": "p",
+       "text": "Resolve the indeterminate form at the fundamental frequencies $n = \\pm 1$."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Parameters & Transform Formula:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Period: $T_0 = 2 \\implies \\omega_0 = \\frac{2\\pi}{2} = \\pi \\text{ rad/s}$.",
+        "The isolated active pulse is non-zero only on $[0, 1]$, identical to $\\tilde{x}(t)$ from Slide 183.",
+        "Using $c_n = \\frac{1}{T_0} \\left. \\tilde{X}(\\omega) \\right|_{\\omega = n\\omega_0}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{2} \\left. \\frac{\\pi(1 + e^{-j\\omega})}{\\pi^2 - \\omega^2} \\right|_{\\omega = n\\pi} = \\frac{\\pi(1 + e^{-j n\\pi})}{2(\\pi^2 - n^2 \\pi^2)} = \\frac{1 + (-1)^n}{2\\pi(1 - n^2)}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Parity Analysis:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For Even $n$ ($n = 0, \\pm 2, \\pm 4, \\dots$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(-1)^n = 1 \\implies 1 + (-1)^n = 2"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{2}{2\\pi(1 - n^2)} = \\mathbf{\\frac{1}{\\pi(1 - n^2)}}"
+      },
+      {
+       "t": "p",
+       "text": "Specifically, DC component ($n = 0$): $c_0 = \\mathbf{\\frac{1}{\\pi}}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For Odd $n$ ($n \\ne \\pm 1$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(-1)^n = -1 \\implies 1 + (-1)^n = 0 \\implies \\mathbf{c_n = 0}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For $n = \\pm 1$ (Resonance Indeterminate Form):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "When $n = 1$, the numerator is $1 + (-1)^1 = 0$, and the denominator is $2\\pi(1 - 1^2) = 0$.\n     This gives the indeterminate form $\\mathbf{\\frac{0}{0}}$!"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Direct Integral Evaluation for $n = \\pm 1$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{T_0} \\int_0^{T_0} x(t) e^{-j\\omega_0 t} dt = \\frac{1}{2} \\int_0^1 \\sin(\\pi t) e^{-j\\pi t} dt"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $\\sin(\\pi t) = \\frac{e^{j\\pi t} - e^{-j\\pi t}}{2j}$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{2} \\int_0^1 \\left( \\frac{e^{j\\pi t} - e^{-j\\pi t}}{2j} \\right) e^{-j\\pi t} dt = \\frac{1}{4j} \\int_0^1 \\left( 1 - e^{-j 2\\pi t} \\right) dt"
+      },
+      {
+       "t": "math",
+       "tex": "= \\frac{1}{4j} \\left[ t - \\frac{e^{-j 2\\pi t}}{-j 2\\pi} \\right]_0^1 = \\frac{1}{4j} [1 - 0] = \\mathbf{\\frac{1}{4j} = -j\\frac{1}{4}}"
+      },
+      {
+       "t": "p",
+       "text": "By conjugate symmetry for real signals ($c_{-n} = c_n^*$):"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-1} = c_1^* = \\mathbf{-\\frac{1}{4j} = +j\\frac{1}{4}}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Master Piecewise Formulation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\begin{cases} \\frac{1}{\\pi(1 - n^2)}, & n \\text{ is even} \\\\ -j\\frac{1}{4}, & n = 1 \\\\ +j\\frac{1}{4}, & n = -1 \\\\ 0, & n \\text{ is odd, } n \\ne \\pm 1 \\end{cases}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 189 & 190 (Page 48, Top): Full-Wave Rectified Signal Through Ideal Lowpass Filter"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "The input signal $x(t) = \\sin(2t)$ is processed through a Full-Wave Rectifier, producing $z(t) = |x(t)|$. The rectified waveform is then applied to an ideal lowpass filter with impulse response:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\frac{\\sin(6t)}{\\pi t}"
-    },
-    {
-     "t": "p",
-     "text": "Find the analytical expression for the filter output $y(t)$."
-    },
-    {
-     "t": "code",
-     "text": "   x(t) = sin(2t)     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  z(t) = |sin(2t)|  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  y(t)\n \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\u2502  Full-Wave Rectifier  \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\u2502 h(t) = sin(6t)/(\u03c0t)  \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\n                      \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518                    \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Input & Rectified Signal Analysis:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Input: $x(t) = \\sin(2t) \\implies \\omega_{in} = 2 \\text{ rad/s}, T_{in} = \\pi \\text{ s}$.",
-      "Rectifier output: $z(t) = |\\sin(2t)|$.",
-      "The fundamental period halves: $T_{0z} = \\frac{\\pi}{2} \\text{ s}$.",
-      "The fundamental angular frequency of $z(t)$ is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{0z} = \\frac{2\\pi}{T_{0z}} = \\mathbf{4 \\text{ rad/s}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Because $z(t)$ is an even function of $t$, all sine coefficients vanish ($b_n = 0$).",
-      "The harmonics of $z(t)$ exist strictly at frequencies:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_k = k \\cdot \\omega_{0z} = 0, 4, 8, 12, 16, \\dots \\text{ rad/s}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Filter Frequency Response:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\frac{\\sin(6t)}{\\pi t} \\longleftrightarrow H(\\omega) = \\text{rect}\\left(\\frac{\\omega}{12}\\right) = \\begin{cases} 1, & |\\omega| \\le 6 \\text{ rad/s} \\\\ 0, & |\\omega| > 6 \\text{ rad/s} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "The filter cutoff frequency is $\\omega_c = 6 \\text{ rad/s}$."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Spectral Truncation (Harmonic Passing):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$\\omega = 0$ (DC):** $|0| \\le 6 \\implies$ **PASSES** with gain $H(0) = 1$.",
-      "**$\\omega = 4 \\text{ rad/s}$ ($k = 1$):** $|4| \\le 6 \\implies$ **PASSES** with gain $H(4) = 1$.",
-      "**$\\omega = 8 \\text{ rad/s}$ ($k = 2$):** $|8| > 6 \\implies$ **BLOCKED** ($H(8) = 0$).",
-      "**All higher harmonics ($k \\ge 2$):** $\\omega \\ge 8 > 6 \\implies$ **BLOCKED**."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Coefficient Calculation & Output Synthesis:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The output consists solely of the DC term and the fundamental cosine harmonic of $z(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = c_0 + a_1 \\cos(4t)"
-    },
-    {
-     "t": "p",
-     "text": "From Slide 184, for $|\\sin(\\omega t)|$, the DC value is:"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{2}{\\pi}"
-    },
-    {
-     "t": "p",
-     "text": "The trigonometric Fourier cosine coefficient $a_k$ is related to $c_k$ by:"
-    },
-    {
-     "t": "math",
-     "tex": "a_k = 2 c_k = 2 \\left[ \\frac{2}{\\pi(1 - 4k^2)} \\right] = \\frac{4}{\\pi(1 - 4k^2)}"
-    },
-    {
-     "t": "p",
-     "text": "For the first harmonic passing through the filter ($k = 1$):"
-    },
-    {
-     "t": "math",
-     "tex": "a_1 = \\frac{4}{\\pi(1 - 4(1)^2)} = \\frac{4}{\\pi(1 - 4)} = -\\frac{4}{3\\pi}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y(t) = \\frac{2}{\\pi} - \\frac{4}{3\\pi} \\cos(4t)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "The input signal $x(t) = \\sin(2t)$ is processed through a Full-Wave Rectifier, producing $z(t) = |x(t)|$. The rectified waveform is then applied to an ideal lowpass filter with impulse response:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\frac{\\sin(6t)}{\\pi t}"
+      },
+      {
+       "t": "p",
+       "text": "Find the analytical expression for the filter output $y(t)$."
+      },
+      {
+       "t": "code",
+       "text": "   x(t) = sin(2t)     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  z(t) = |sin(2t)|  \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  y(t)\n \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\u2502  Full-Wave Rectifier  \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\u2502 h(t) = sin(6t)/(\u03c0t)  \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\n                      \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518                    \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Input & Rectified Signal Analysis:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Input: $x(t) = \\sin(2t) \\implies \\omega_{in} = 2 \\text{ rad/s}, T_{in} = \\pi \\text{ s}$.",
+        "Rectifier output: $z(t) = |\\sin(2t)|$.",
+        "The fundamental period halves: $T_{0z} = \\frac{\\pi}{2} \\text{ s}$.",
+        "The fundamental angular frequency of $z(t)$ is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{0z} = \\frac{2\\pi}{T_{0z}} = \\mathbf{4 \\text{ rad/s}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Because $z(t)$ is an even function of $t$, all sine coefficients vanish ($b_n = 0$).",
+        "The harmonics of $z(t)$ exist strictly at frequencies:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_k = k \\cdot \\omega_{0z} = 0, 4, 8, 12, 16, \\dots \\text{ rad/s}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Filter Frequency Response:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\frac{\\sin(6t)}{\\pi t} \\longleftrightarrow H(\\omega) = \\text{rect}\\left(\\frac{\\omega}{12}\\right) = \\begin{cases} 1, & |\\omega| \\le 6 \\text{ rad/s} \\\\ 0, & |\\omega| > 6 \\text{ rad/s} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "The filter cutoff frequency is $\\omega_c = 6 \\text{ rad/s}$."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Spectral Truncation (Harmonic Passing):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$\\omega = 0$ (DC):** $|0| \\le 6 \\implies$ **PASSES** with gain $H(0) = 1$.",
+        "**$\\omega = 4 \\text{ rad/s}$ ($k = 1$):** $|4| \\le 6 \\implies$ **PASSES** with gain $H(4) = 1$.",
+        "**$\\omega = 8 \\text{ rad/s}$ ($k = 2$):** $|8| > 6 \\implies$ **BLOCKED** ($H(8) = 0$).",
+        "**All higher harmonics ($k \\ge 2$):** $\\omega \\ge 8 > 6 \\implies$ **BLOCKED**."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Coefficient Calculation & Output Synthesis:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The output consists solely of the DC term and the fundamental cosine harmonic of $z(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = c_0 + a_1 \\cos(4t)"
+      },
+      {
+       "t": "p",
+       "text": "From Slide 184, for $|\\sin(\\omega t)|$, the DC value is:"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{2}{\\pi}"
+      },
+      {
+       "t": "p",
+       "text": "The trigonometric Fourier cosine coefficient $a_k$ is related to $c_k$ by:"
+      },
+      {
+       "t": "math",
+       "tex": "a_k = 2 c_k = 2 \\left[ \\frac{2}{\\pi(1 - 4k^2)} \\right] = \\frac{4}{\\pi(1 - 4k^2)}"
+      },
+      {
+       "t": "p",
+       "text": "For the first harmonic passing through the filter ($k = 1$):"
+      },
+      {
+       "t": "math",
+       "tex": "a_1 = \\frac{4}{\\pi(1 - 4(1)^2)} = \\frac{4}{\\pi(1 - 4)} = -\\frac{4}{3\\pi}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y(t) = \\frac{2}{\\pi} - \\frac{4}{3\\pi} \\cos(4t)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Slide 191 & 192 (Page 48, Bottom): Half-Wave Rectified Signal Through Ideal Lowpass Filter"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "The input signal $x(t) = \\sin(2t)$ is processed through a Half-Wave Rectifier, producing $z(t)$. The output is then passed through an ideal lowpass filter with impulse response:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\frac{\\sin(6t)}{\\pi t}"
-    },
-    {
-     "t": "p",
-     "text": "Find the analytical expression for the filter output $y(t)$."
-    },
-    {
-     "t": "code",
-     "text": "   x(t) = sin(2t)     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  z(t) = HWR        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  y(t)\n \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\u2502  Half-Wave Rectifier  \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\u2502 h(t) = sin(6t)/(\u03c0t)  \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\n                      \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518                    \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Input & Half-Wave Rectified Signal Analysis:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Input: $x(t) = \\sin(2t) \\implies \\omega_{in} = 2 \\text{ rad/s}, T_{in} = \\pi \\text{ s}$.",
-      "Rectifier output: $z(t) = \\max(0, \\sin(2t))$.",
-      "Unlike the full-wave rectifier, the period of a half-wave rectifier does **NOT** halve:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "T_{0z} = T_{in} = \\pi \\text{ s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The fundamental angular frequency of $z(t)$ is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{0z} = \\frac{2\\pi}{T_{0z}} = \\mathbf{2 \\text{ rad/s}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Harmonics exist at integer multiples of $\\omega_{0z}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_n = n \\cdot \\omega_{0z} = 0, 2, 4, 6, 8, \\dots \\text{ rad/s}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Filter Passband Comparison ($\\omega_c = 6 \\text{ rad/s}$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = 0$ ($\\omega = 0$, DC):** $0 \\le 6 \\implies$ **PASSES**",
-      "**$n = \\pm 1$ ($\\omega = 2 \\text{ rad/s}$):** $2 \\le 6 \\implies$ **PASSES**",
-      "**$n = \\pm 2$ ($\\omega = 4 \\text{ rad/s}$):** $4 \\le 6 \\implies$ **PASSES**",
-      "**$n = \\pm 3$ ($\\omega = 6 \\text{ rad/s}$):** Lie at the exact cutoff. However, from the half-wave rectified Fourier series (Slide 188), all odd harmonics $n \\ge 3$ have **$c_n = 0$**! Thus, the $\\omega = 6$ tone has zero power anyway.",
-      "**$n \\ge 4$ ($\\omega \\ge 8 \\text{ rad/s}$):** Exceeds cutoff ($8 > 6$) $\\implies$ **BLOCKED**."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Reconstructing Output Components:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = c_0 + \\left( c_1 e^{j 2t} + c_{-1} e^{-j 2t} \\right) + \\left( c_2 e^{j 4t} + c_{-2} e^{-j 4t} \\right)"
-    },
-    {
-     "t": "p",
-     "text": "From Slide 188, the coefficients are:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**DC Component ($n = 0$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\mathbf{\\frac{1}{\\pi}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Fundamental Harmonic ($n = \\pm 1$, $\\omega = 2$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{4j}, \\quad c_{-1} = -\\frac{1}{4j}"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 e^{j 2t} + c_{-1} e^{-j 2t} = \\frac{e^{j 2t} - e^{-j 2t}}{4j} = \\frac{1}{2} \\left[ \\frac{e^{j 2t} - e^{-j 2t}}{2j} \\right] = \\mathbf{\\frac{1}{2} \\sin(2t)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Second Harmonic ($n = \\pm 2$, $\\omega = 4$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_2 = c_{-2} = \\frac{1}{\\pi(1 - 2^2)} = -\\frac{1}{3\\pi}"
-    },
-    {
-     "t": "math",
-     "tex": "c_2 e^{j 4t} + c_{-2} e^{-j 4t} = -\\frac{1}{3\\pi} \\left( e^{j 4t} + e^{-j 4t} \\right) = -\\frac{2}{3\\pi} \\left[ \\frac{e^{j 4t} + e^{-j 4t}}{2} \\right] = \\mathbf{-\\frac{2}{3\\pi} \\cos(4t)}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Final Output Expression:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y(t) = \\frac{1}{\\pi} + \\frac{1}{2} \\sin(2t) - \\frac{2}{3\\pi} \\cos(4t)}"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Quick-Check Matrix (FWR vs. HWR under LPF $\\omega_c = 6$):**\n\n| Characteristic | Full-Wave Rectifier Output | Half-Wave Rectifier Output |\n|:---|:---|:---|\n| Input Signal | $\\sin(2t)$ | $\\sin(2t)$ |\n| Rectified Fundamental $\\omega_0$ | $4 \\text{ rad/s}$ | $2 \\text{ rad/s}$ |\n| DC Level | $\\frac{2}{\\pi} \\approx 0.637$ | $\\frac{1}{\\pi} \\approx 0.318$ |\n| Fundamental Tone Present? | No ($2 \\text{ rad/s}$ absent) | Yes ($\\frac{1}{2}\\sin(2t)$ present) |\n| Second Harmonic ($\\omega = 4$) | $-\\frac{4}{3\\pi}\\cos(4t)$ | $-\\frac{2}{3\\pi}\\cos(4t)$ |\n| Total Filtered Output | $y(t) = \\frac{2}{\\pi} - \\frac{4}{3\\pi}\\cos(4t)$ | $y(t) = \\frac{1}{\\pi} + \\frac{1}{2}\\sin(2t) - \\frac{2}{3\\pi}\\cos(4t)$ |"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "The input signal $x(t) = \\sin(2t)$ is processed through a Half-Wave Rectifier, producing $z(t)$. The output is then passed through an ideal lowpass filter with impulse response:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\frac{\\sin(6t)}{\\pi t}"
+      },
+      {
+       "t": "p",
+       "text": "Find the analytical expression for the filter output $y(t)$."
+      },
+      {
+       "t": "code",
+       "text": "   x(t) = sin(2t)     \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  z(t) = HWR        \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510  y(t)\n \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\u2502  Half-Wave Rectifier  \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\u2502 h(t) = sin(6t)/(\u03c0t)  \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba\n                      \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518                    \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Input & Half-Wave Rectified Signal Analysis:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Input: $x(t) = \\sin(2t) \\implies \\omega_{in} = 2 \\text{ rad/s}, T_{in} = \\pi \\text{ s}$.",
+        "Rectifier output: $z(t) = \\max(0, \\sin(2t))$.",
+        "Unlike the full-wave rectifier, the period of a half-wave rectifier does **NOT** halve:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "T_{0z} = T_{in} = \\pi \\text{ s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The fundamental angular frequency of $z(t)$ is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{0z} = \\frac{2\\pi}{T_{0z}} = \\mathbf{2 \\text{ rad/s}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Harmonics exist at integer multiples of $\\omega_{0z}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_n = n \\cdot \\omega_{0z} = 0, 2, 4, 6, 8, \\dots \\text{ rad/s}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Filter Passband Comparison ($\\omega_c = 6 \\text{ rad/s}$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = 0$ ($\\omega = 0$, DC):** $0 \\le 6 \\implies$ **PASSES**",
+        "**$n = \\pm 1$ ($\\omega = 2 \\text{ rad/s}$):** $2 \\le 6 \\implies$ **PASSES**",
+        "**$n = \\pm 2$ ($\\omega = 4 \\text{ rad/s}$):** $4 \\le 6 \\implies$ **PASSES**",
+        "**$n = \\pm 3$ ($\\omega = 6 \\text{ rad/s}$):** Lie at the exact cutoff. However, from the half-wave rectified Fourier series (Slide 188), all odd harmonics $n \\ge 3$ have **$c_n = 0$**! Thus, the $\\omega = 6$ tone has zero power anyway.",
+        "**$n \\ge 4$ ($\\omega \\ge 8 \\text{ rad/s}$):** Exceeds cutoff ($8 > 6$) $\\implies$ **BLOCKED**."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Reconstructing Output Components:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = c_0 + \\left( c_1 e^{j 2t} + c_{-1} e^{-j 2t} \\right) + \\left( c_2 e^{j 4t} + c_{-2} e^{-j 4t} \\right)"
+      },
+      {
+       "t": "p",
+       "text": "From Slide 188, the coefficients are:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**DC Component ($n = 0$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\mathbf{\\frac{1}{\\pi}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Fundamental Harmonic ($n = \\pm 1$, $\\omega = 2$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{4j}, \\quad c_{-1} = -\\frac{1}{4j}"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 e^{j 2t} + c_{-1} e^{-j 2t} = \\frac{e^{j 2t} - e^{-j 2t}}{4j} = \\frac{1}{2} \\left[ \\frac{e^{j 2t} - e^{-j 2t}}{2j} \\right] = \\mathbf{\\frac{1}{2} \\sin(2t)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Second Harmonic ($n = \\pm 2$, $\\omega = 4$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_2 = c_{-2} = \\frac{1}{\\pi(1 - 2^2)} = -\\frac{1}{3\\pi}"
+      },
+      {
+       "t": "math",
+       "tex": "c_2 e^{j 4t} + c_{-2} e^{-j 4t} = -\\frac{1}{3\\pi} \\left( e^{j 4t} + e^{-j 4t} \\right) = -\\frac{2}{3\\pi} \\left[ \\frac{e^{j 4t} + e^{-j 4t}}{2} \\right] = \\mathbf{-\\frac{2}{3\\pi} \\cos(4t)}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Final Output Expression:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y(t) = \\frac{1}{\\pi} + \\frac{1}{2} \\sin(2t) - \\frac{2}{3\\pi} \\cos(4t)}"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Quick-Check Matrix (FWR vs. HWR under LPF $\\omega_c = 6$):**\n\n| Characteristic | Full-Wave Rectifier Output | Half-Wave Rectifier Output |\n|:---|:---|:---|\n| Input Signal | $\\sin(2t)$ | $\\sin(2t)$ |\n| Rectified Fundamental $\\omega_0$ | $4 \\text{ rad/s}$ | $2 \\text{ rad/s}$ |\n| DC Level | $\\frac{2}{\\pi} \\approx 0.637$ | $\\frac{1}{\\pi} \\approx 0.318$ |\n| Fundamental Tone Present? | No ($2 \\text{ rad/s}$ absent) | Yes ($\\frac{1}{2}\\sin(2t)$ present) |\n| Second Harmonic ($\\omega = 4$) | $-\\frac{4}{3\\pi}\\cos(4t)$ | $-\\frac{2}{3\\pi}\\cos(4t)$ |\n| Total Filtered Output | $y(t) = \\frac{2}{\\pi} - \\frac{4}{3\\pi}\\cos(4t)$ | $y(t) = \\frac{1}{\\pi} + \\frac{1}{2}\\sin(2t) - \\frac{2}{3\\pi}\\cos(4t)$ |"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -11797,72 +11749,71 @@ export default {
      "tex": "\\left. X(s) \\right|_{s = j\\omega} \\ne X(\\omega)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: The Fatal Exam Trap (Blind Substitution $s = j\\omega$)**"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) \\stackrel{?}{=} \\left. \\frac{1 - e^{-s}}{s^2} \\right|_{s=j\\omega} = \\frac{1 - e^{-j\\omega}}{(j\\omega)^2} = \\frac{1 - e^{-j\\omega}}{-\\omega^2} \\quad \\text{--- [COMPLETELY WRONG! \u2717 \u2717 \u2717]}"
-    },
-    {
-     "t": "p",
-     "text": "*Reason for failure:* The integral $\\int_{-\\infty}^\\infty x(t)e^{-j\\omega t}\\,dt$ does not converge absolutely because $x(t) \\to 1$ as $t \\to \\infty$. The signal has non-zero average energy / DC component, generating an impulse $\\pi \\delta(\\omega)$ in the frequency domain that the standard Laplace algebraic expression evaluated at $s = j\\omega$ cannot capture!"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Correct Evaluation via Time Differentiation Property**\nDifferentiate $x(t)$ with respect to $t$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} = u(t) - u(t - 1) = \\text{rect}\\left(t - \\frac{1}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "This is a standard rectangular pulse of width $T = 1$, centered at $t_0 = \\frac{1}{2}$, and height $A = 1$.\nApplying the standard Fourier transform of a shifted gate pulse:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\left\\{ \\text{rect}\\left(t - \\frac{1}{2}\\right) \\right\\} = A T \\cdot \\text{Sa}\\left( \\frac{\\omega T}{2} \\right) e^{-j\\omega t_0} = 1 \\cdot (1) \\cdot \\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j\\omega / 2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Inverting Differentiation via Fourier Integration Theorem**\nFrom the differentiation property:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} j\\omega X(\\omega)"
-    },
-    {
-     "t": "math",
-     "tex": "j\\omega X(\\omega) = \\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j\\omega / 2}"
-    },
-    {
-     "t": "p",
-     "text": "Dividing by $j\\omega$ and appending the impulse corresponding to the DC area:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{j\\omega} \\mathcal{F}\\left\\{\\frac{dx}{dt}\\right\\} + \\pi \\left[ \\left. \\mathcal{F}\\left\\{\\frac{dx}{dt}\\right\\} \\right|_{\\omega=0} \\right] \\delta(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\left. \\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j\\omega / 2} \\right|_{\\omega=0} = \\text{Sa}(0) \\cdot 1 = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{\\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j\\omega / 2}}{j\\omega} + \\pi \\delta(\\omega) \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Pitfall Summary:**\nWhenever a signal contains a step or does not decay to zero as $t \\to \\infty$, its Laplace ROC boundary lies on $\\sigma = 0$. Direct substitution $s = j\\omega$ **always drops the Dirac impulse $\\pi X(0)\\delta(\\omega)$**! Always use the differentiation property or express the signal as $x(t) = x_{\\text{decaying}}(t) + c \\cdot u(t)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: The Fatal Exam Trap (Blind Substitution $s = j\\omega$)**"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) \\stackrel{?}{=} \\left. \\frac{1 - e^{-s}}{s^2} \\right|_{s=j\\omega} = \\frac{1 - e^{-j\\omega}}{(j\\omega)^2} = \\frac{1 - e^{-j\\omega}}{-\\omega^2} \\quad \\text{--- [COMPLETELY WRONG! \u2717 \u2717 \u2717]}"
+      },
+      {
+       "t": "p",
+       "text": "*Reason for failure:* The integral $\\int_{-\\infty}^\\infty x(t)e^{-j\\omega t}\\,dt$ does not converge absolutely because $x(t) \\to 1$ as $t \\to \\infty$. The signal has non-zero average energy / DC component, generating an impulse $\\pi \\delta(\\omega)$ in the frequency domain that the standard Laplace algebraic expression evaluated at $s = j\\omega$ cannot capture!"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Correct Evaluation via Time Differentiation Property**\nDifferentiate $x(t)$ with respect to $t$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} = u(t) - u(t - 1) = \\text{rect}\\left(t - \\frac{1}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "This is a standard rectangular pulse of width $T = 1$, centered at $t_0 = \\frac{1}{2}$, and height $A = 1$.\nApplying the standard Fourier transform of a shifted gate pulse:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\left\\{ \\text{rect}\\left(t - \\frac{1}{2}\\right) \\right\\} = A T \\cdot \\text{Sa}\\left( \\frac{\\omega T}{2} \\right) e^{-j\\omega t_0} = 1 \\cdot (1) \\cdot \\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j\\omega / 2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Inverting Differentiation via Fourier Integration Theorem**\nFrom the differentiation property:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} j\\omega X(\\omega)"
+      },
+      {
+       "t": "math",
+       "tex": "j\\omega X(\\omega) = \\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j\\omega / 2}"
+      },
+      {
+       "t": "p",
+       "text": "Dividing by $j\\omega$ and appending the impulse corresponding to the DC area:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{j\\omega} \\mathcal{F}\\left\\{\\frac{dx}{dt}\\right\\} + \\pi \\left[ \\left. \\mathcal{F}\\left\\{\\frac{dx}{dt}\\right\\} \\right|_{\\omega=0} \\right] \\delta(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\left. \\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j\\omega / 2} \\right|_{\\omega=0} = \\text{Sa}(0) \\cdot 1 = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{\\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j\\omega / 2}}{j\\omega} + \\pi \\delta(\\omega) \\quad \\checkmark"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Pitfall Summary:**\nWhenever a signal contains a step or does not decay to zero as $t \\to \\infty$, its Laplace ROC boundary lies on $\\sigma = 0$. Direct substitution $s = j\\omega$ **always drops the Dirac impulse $\\pi X(0)\\delta(\\omega)$**! Always use the differentiation property or express the signal as $x(t) = x_{\\text{decaying}}(t) + c \\cdot u(t)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -11903,80 +11854,79 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Setup Convolution Integral**"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t) * h(t) = \\int_{-\\infty}^{\\infty} h(\\tau) x(t - \\tau) \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Substitute $x(t - \\tau) = e^{s_0(t - \\tau)}$**"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\int_{-\\infty}^{\\infty} h(\\tau) e^{s_0 (t - \\tau)} \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "By exponential rules:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{s_0 (t - \\tau)} = e^{s_0 t} \\cdot e^{-s_0 \\tau}"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\int_{-\\infty}^{\\infty} h(\\tau) e^{s_0 t} e^{-s_0 \\tau} \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Extract the Time Variable**\nThe integration is carried out with respect to $\\tau$. The term $e^{s_0 t}$ contains no $\\tau$ dependence and behaves as a multiplicative constant:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = e^{s_0 t} \\left[ \\int_{-\\infty}^{\\infty} h(\\tau) e^{-s_0 \\tau} \\, d\\tau \\right]"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Identify the System Transfer Function**\nRecall the definition of the Bilateral Laplace Transform of $h(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(s) = \\int_{-\\infty}^{\\infty} h(\\tau) e^{-s\\tau} \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating this integral at the specific complex frequency $s = s_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(s_0) = \\int_{-\\infty}^{\\infty} h(\\tau) e^{-s_0 \\tau} \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Final Result**"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = H(s_0) \\cdot e^{s_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing this to the operator definition $y(t) = K \\cdot x(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Eigenvalue } K = H(s_0), \\quad \\text{Eigenfunction } x(t) = e^{s_0 t} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Setup Convolution Integral**"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t) * h(t) = \\int_{-\\infty}^{\\infty} h(\\tau) x(t - \\tau) \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Substitute $x(t - \\tau) = e^{s_0(t - \\tau)}$**"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\int_{-\\infty}^{\\infty} h(\\tau) e^{s_0 (t - \\tau)} \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "By exponential rules:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{s_0 (t - \\tau)} = e^{s_0 t} \\cdot e^{-s_0 \\tau}"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\int_{-\\infty}^{\\infty} h(\\tau) e^{s_0 t} e^{-s_0 \\tau} \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Extract the Time Variable**\nThe integration is carried out with respect to $\\tau$. The term $e^{s_0 t}$ contains no $\\tau$ dependence and behaves as a multiplicative constant:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = e^{s_0 t} \\left[ \\int_{-\\infty}^{\\infty} h(\\tau) e^{-s_0 \\tau} \\, d\\tau \\right]"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Identify the System Transfer Function**\nRecall the definition of the Bilateral Laplace Transform of $h(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(s) = \\int_{-\\infty}^{\\infty} h(\\tau) e^{-s\\tau} \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating this integral at the specific complex frequency $s = s_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(s_0) = \\int_{-\\infty}^{\\infty} h(\\tau) e^{-s_0 \\tau} \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Final Result**"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = H(s_0) \\cdot e^{s_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing this to the operator definition $y(t) = K \\cdot x(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Eigenvalue } K = H(s_0), \\quad \\text{Eigenfunction } x(t) = e^{s_0 t} \\quad \\checkmark"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -12028,60 +11978,59 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: ROC Verification**\nThe pole is at $s = -2$. The ROC is the open half-plane $\\sigma > -2$.\nThe input exponent is $s_0 = 2 + j0$."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Re}(s_0) = 2 > -2 \\implies s_0 \\in \\text{ROC}_{H_1} \\quad [\\text{CONVERGES! } \\checkmark]"
-    },
-    {
-     "t": "code",
-     "text": "                   s-PLANE FOR H_1(s)\n                          j\u03c9\n                           |         ROC: Re(s) > -2\n                           |       |----->\n                           |       |----->\n                  -2       0   2   |----->\n             \u2500\u2500\u2500\u2500\u2500\u2500\u00d7\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2022\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> \u03c3\n                           |  s_0=2 (Inside ROC)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Method I \u2014 Eigenvalue Property**"
-    },
-    {
-     "t": "math",
-     "tex": "y_1(t) = H_1(s_0) e^{s_0 t} = H_1(2) e^{2t}"
-    },
-    {
-     "t": "math",
-     "tex": "H_1(2) = \\left. \\frac{1}{s + 2} \\right|_{s = 2} = \\frac{1}{2 + 2} = \\frac{1}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "y_1(t) = \\frac{1}{4} e^{2t} = \\frac{e^{2t}}{4} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Method II \u2014 Direct Convolution Integral Verification**"
-    },
-    {
-     "t": "math",
-     "tex": "y_1(t) = \\int_{-\\infty}^{\\infty} h_1(\\tau) x_1(t - \\tau) \\, d\\tau = \\int_{0}^{\\infty} e^{-2\\tau} e^{2(t - \\tau)} \\, d\\tau"
-    },
-    {
-     "t": "math",
-     "tex": "y_1(t) = e^{2t} \\int_{0}^{\\infty} e^{-2\\tau} e^{-2\\tau} \\, d\\tau = e^{2t} \\int_{0}^{\\infty} e^{-4\\tau} \\, d\\tau"
-    },
-    {
-     "t": "math",
-     "tex": "y_1(t) = e^{2t} \\left[ \\frac{e^{-4\\tau}}{-4} \\right]_{0}^{\\infty} = e^{2t} \\left[ 0 - \\left( -\\frac{1}{4} \\right) \\right] = \\frac{e^{2t}}{4} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "*Conclusion:* Both methods yield identical results because $s_0$ lies strictly in the ROC."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: ROC Verification**\nThe pole is at $s = -2$. The ROC is the open half-plane $\\sigma > -2$.\nThe input exponent is $s_0 = 2 + j0$."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Re}(s_0) = 2 > -2 \\implies s_0 \\in \\text{ROC}_{H_1} \\quad [\\text{CONVERGES! } \\checkmark]"
+      },
+      {
+       "t": "code",
+       "text": "                   s-PLANE FOR H_1(s)\n                          j\u03c9\n                           |         ROC: Re(s) > -2\n                           |       |----->\n                           |       |----->\n                  -2       0   2   |----->\n             \u2500\u2500\u2500\u2500\u2500\u2500\u00d7\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2022\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> \u03c3\n                           |  s_0=2 (Inside ROC)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Method I \u2014 Eigenvalue Property**"
+      },
+      {
+       "t": "math",
+       "tex": "y_1(t) = H_1(s_0) e^{s_0 t} = H_1(2) e^{2t}"
+      },
+      {
+       "t": "math",
+       "tex": "H_1(2) = \\left. \\frac{1}{s + 2} \\right|_{s = 2} = \\frac{1}{2 + 2} = \\frac{1}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "y_1(t) = \\frac{1}{4} e^{2t} = \\frac{e^{2t}}{4} \\quad \\checkmark"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Method II \u2014 Direct Convolution Integral Verification**"
+      },
+      {
+       "t": "math",
+       "tex": "y_1(t) = \\int_{-\\infty}^{\\infty} h_1(\\tau) x_1(t - \\tau) \\, d\\tau = \\int_{0}^{\\infty} e^{-2\\tau} e^{2(t - \\tau)} \\, d\\tau"
+      },
+      {
+       "t": "math",
+       "tex": "y_1(t) = e^{2t} \\int_{0}^{\\infty} e^{-2\\tau} e^{-2\\tau} \\, d\\tau = e^{2t} \\int_{0}^{\\infty} e^{-4\\tau} \\, d\\tau"
+      },
+      {
+       "t": "math",
+       "tex": "y_1(t) = e^{2t} \\left[ \\frac{e^{-4\\tau}}{-4} \\right]_{0}^{\\infty} = e^{2t} \\left[ 0 - \\left( -\\frac{1}{4} \\right) \\right] = \\frac{e^{2t}}{4} \\quad \\checkmark"
+      },
+      {
+       "t": "p",
+       "text": "*Conclusion:* Both methods yield identical results because $s_0$ lies strictly in the ROC."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -12095,64 +12044,63 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: ROC Verification**\nThe input exponent is $s_0 = -3$.\nIs $\\text{Re}(s_0) > -2$?"
-    },
-    {
-     "t": "math",
-     "tex": "-3 > -2 \\quad \\text{[FALSE!]} \\implies s_0 \\notin \\text{ROC}_{H_1}"
-    },
-    {
-     "t": "p",
-     "text": "$s_0 = -3$ lies to the left of the ROC boundary. The system transfer function **does not converge** at $s = -3$."
-    },
-    {
-     "t": "code",
-     "text": "                   s-PLANE FOR H_1(s)\n                          j\u03c9\n                           |         ROC: Re(s) > -2\n                           |       |----->\n                           |       |----->\n              -3      -2   0       |----->\n             \u2500\u2500\u2022\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u00d7\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> \u03c3\n            s_0=-3 (OUTSIDE ROC)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: The Exam Trap (Blind Formula Substitution)**"
-    },
-    {
-     "t": "math",
-     "tex": "y_2(t) \\stackrel{?}{=} H_1(-3) e^{-3t} = \\left. \\frac{1}{s + 2} \\right|_{s = -3} e^{-3t} = \\frac{1}{-3 + 2} e^{-3t} = -e^{-3t} \\quad \\text{--- [WRONG! \u2717 \u2717 \u2717]}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Direct Convolution Integral (Proof of Divergence)**"
-    },
-    {
-     "t": "math",
-     "tex": "y_2(t) = \\int_{-\\infty}^{\\infty} h_1(\\tau) x_2(t - \\tau) \\, d\\tau = \\int_{0}^{\\infty} e^{-2\\tau} e^{-3(t - \\tau)} \\, d\\tau"
-    },
-    {
-     "t": "math",
-     "tex": "y_2(t) = e^{-3t} \\int_{0}^{\\infty} e^{-2\\tau} e^{3\\tau} \\, d\\tau = e^{-3t} \\int_{0}^{\\infty} e^{\\tau} \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the improper integral:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{0}^{\\infty} e^{\\tau} \\, d\\tau = \\lim_{B \\to \\infty} \\left[ e^{\\tau} \\right]_{0}^{B} = \\lim_{B \\to \\infty} (e^B - 1) = \\infty"
-    },
-    {
-     "t": "math",
-     "tex": "y_2(t) = e^{-3t} \\cdot (\\infty) \\longrightarrow \\infty \\quad \\text{[DIVERGES!]}"
-    },
-    {
-     "t": "p",
-     "text": "*Conclusion:* The output does not exist (diverges to infinity). The eigenvalue property is completely invalid."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: ROC Verification**\nThe input exponent is $s_0 = -3$.\nIs $\\text{Re}(s_0) > -2$?"
+      },
+      {
+       "t": "math",
+       "tex": "-3 > -2 \\quad \\text{[FALSE!]} \\implies s_0 \\notin \\text{ROC}_{H_1}"
+      },
+      {
+       "t": "p",
+       "text": "$s_0 = -3$ lies to the left of the ROC boundary. The system transfer function **does not converge** at $s = -3$."
+      },
+      {
+       "t": "code",
+       "text": "                   s-PLANE FOR H_1(s)\n                          j\u03c9\n                           |         ROC: Re(s) > -2\n                           |       |----->\n                           |       |----->\n              -3      -2   0       |----->\n             \u2500\u2500\u2022\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u00d7\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> \u03c3\n            s_0=-3 (OUTSIDE ROC)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: The Exam Trap (Blind Formula Substitution)**"
+      },
+      {
+       "t": "math",
+       "tex": "y_2(t) \\stackrel{?}{=} H_1(-3) e^{-3t} = \\left. \\frac{1}{s + 2} \\right|_{s = -3} e^{-3t} = \\frac{1}{-3 + 2} e^{-3t} = -e^{-3t} \\quad \\text{--- [WRONG! \u2717 \u2717 \u2717]}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Direct Convolution Integral (Proof of Divergence)**"
+      },
+      {
+       "t": "math",
+       "tex": "y_2(t) = \\int_{-\\infty}^{\\infty} h_1(\\tau) x_2(t - \\tau) \\, d\\tau = \\int_{0}^{\\infty} e^{-2\\tau} e^{-3(t - \\tau)} \\, d\\tau"
+      },
+      {
+       "t": "math",
+       "tex": "y_2(t) = e^{-3t} \\int_{0}^{\\infty} e^{-2\\tau} e^{3\\tau} \\, d\\tau = e^{-3t} \\int_{0}^{\\infty} e^{\\tau} \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the improper integral:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{0}^{\\infty} e^{\\tau} \\, d\\tau = \\lim_{B \\to \\infty} \\left[ e^{\\tau} \\right]_{0}^{B} = \\lim_{B \\to \\infty} (e^B - 1) = \\infty"
+      },
+      {
+       "t": "math",
+       "tex": "y_2(t) = e^{-3t} \\cdot (\\infty) \\longrightarrow \\infty \\quad \\text{[DIVERGES!]}"
+      },
+      {
+       "t": "p",
+       "text": "*Conclusion:* The output does not exist (diverges to infinity). The eigenvalue property is completely invalid."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -12166,48 +12114,47 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: ROC Verification**\nThe pole is at $s = +2$. Right-sided signal $\\implies \\text{ROC: } \\text{Re}(s) > 2$.\nInput parameter $s_0 = 3$."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Re}(s_0) = 3 > 2 \\implies s_0 \\in \\text{ROC}_{H_2} \\quad [\\text{CONVERGES! } \\checkmark]"
-    },
-    {
-     "t": "code",
-     "text": "                   s-PLANE FOR H_2(s)\n                          j\u03c9\n                           |               ROC: Re(s) > 2\n                           |             |----->\n                           |             |----->\n                           0       2   3 |----->\n             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u00d7\u2500\u2500\u2500\u2022\u2500+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> \u03c3\n                                      s_0=3 (Inside ROC)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Method I \u2014 Eigenvalue Property**"
-    },
-    {
-     "t": "math",
-     "tex": "y_3(t) = H_2(3) e^{3t} = \\left. \\frac{1}{s - 2} \\right|_{s = 3} e^{3t} = \\frac{1}{3 - 2} e^{3t} = e^{3t} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Method II \u2014 Direct Convolution Integral**"
-    },
-    {
-     "t": "math",
-     "tex": "y_3(t) = \\int_{0}^{\\infty} e^{2\\tau} e^{3(t - \\tau)} \\, d\\tau = e^{3t} \\int_{0}^{\\infty} e^{2\\tau} e^{-3\\tau} \\, d\\tau = e^{3t} \\int_{0}^{\\infty} e^{-\\tau} \\, d\\tau"
-    },
-    {
-     "t": "math",
-     "tex": "y_3(t) = e^{3t} \\left[ -e^{-\\tau} \\right]_{0}^{\\infty} = e^{3t} [ 0 - (-1) ] = e^{3t} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "*GATE Insight:* Even though the system itself is unstable (pole at $s = 2$), an input exponential with $s_0 = 3$ converges because the input grows *faster* ($e^{3t}$) than the kernel grows in reverse time ($e^{-3\\tau}$ dominates $e^{2\\tau}$), keeping the convolution integral finite!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: ROC Verification**\nThe pole is at $s = +2$. Right-sided signal $\\implies \\text{ROC: } \\text{Re}(s) > 2$.\nInput parameter $s_0 = 3$."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Re}(s_0) = 3 > 2 \\implies s_0 \\in \\text{ROC}_{H_2} \\quad [\\text{CONVERGES! } \\checkmark]"
+      },
+      {
+       "t": "code",
+       "text": "                   s-PLANE FOR H_2(s)\n                          j\u03c9\n                           |               ROC: Re(s) > 2\n                           |             |----->\n                           |             |----->\n                           0       2   3 |----->\n             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u00d7\u2500\u2500\u2500\u2022\u2500+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> \u03c3\n                                      s_0=3 (Inside ROC)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Method I \u2014 Eigenvalue Property**"
+      },
+      {
+       "t": "math",
+       "tex": "y_3(t) = H_2(3) e^{3t} = \\left. \\frac{1}{s - 2} \\right|_{s = 3} e^{3t} = \\frac{1}{3 - 2} e^{3t} = e^{3t} \\quad \\checkmark"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Method II \u2014 Direct Convolution Integral**"
+      },
+      {
+       "t": "math",
+       "tex": "y_3(t) = \\int_{0}^{\\infty} e^{2\\tau} e^{3(t - \\tau)} \\, d\\tau = e^{3t} \\int_{0}^{\\infty} e^{2\\tau} e^{-3\\tau} \\, d\\tau = e^{3t} \\int_{0}^{\\infty} e^{-\\tau} \\, d\\tau"
+      },
+      {
+       "t": "math",
+       "tex": "y_3(t) = e^{3t} \\left[ -e^{-\\tau} \\right]_{0}^{\\infty} = e^{3t} [ 0 - (-1) ] = e^{3t} \\quad \\checkmark"
+      },
+      {
+       "t": "p",
+       "text": "*GATE Insight:* Even though the system itself is unstable (pole at $s = 2$), an input exponential with $s_0 = 3$ converges because the input grows *faster* ($e^{3t}$) than the kernel grows in reverse time ($e^{-3\\tau}$ dominates $e^{2\\tau}$), keeping the convolution integral finite!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -12225,36 +12172,35 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: ROC Verification**\nInput parameter $s_0 = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "1 > 2 \\quad \\text{[FALSE!]} \\implies s_0 \\notin \\text{ROC}_{H_2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: The Exam Trap**"
-    },
-    {
-     "t": "math",
-     "tex": "y_4(t) \\stackrel{?}{=} H_2(1) e^{t} = \\frac{1}{1 - 2} e^{t} = -e^{t} \\quad \\text{--- [WRONG! \u2717 \u2717 \u2717]}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Direct Convolution Integral**"
-    },
-    {
-     "t": "math",
-     "tex": "y_4(t) = \\int_{0}^{\\infty} e^{2\\tau} e^{1 \\cdot (t - \\tau)} \\, d\\tau = e^{t} \\int_{0}^{\\infty} e^{2\\tau} e^{-\\tau} \\, d\\tau = e^{t} \\int_{0}^{\\infty} e^{\\tau} \\, d\\tau \\longrightarrow \\infty \\quad \\text{[DIVERGES!]}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: ROC Verification**\nInput parameter $s_0 = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "1 > 2 \\quad \\text{[FALSE!]} \\implies s_0 \\notin \\text{ROC}_{H_2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: The Exam Trap**"
+      },
+      {
+       "t": "math",
+       "tex": "y_4(t) \\stackrel{?}{=} H_2(1) e^{t} = \\frac{1}{1 - 2} e^{t} = -e^{t} \\quad \\text{--- [WRONG! \u2717 \u2717 \u2717]}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Direct Convolution Integral**"
+      },
+      {
+       "t": "math",
+       "tex": "y_4(t) = \\int_{0}^{\\infty} e^{2\\tau} e^{1 \\cdot (t - \\tau)} \\, d\\tau = e^{t} \\int_{0}^{\\infty} e^{2\\tau} e^{-\\tau} \\, d\\tau = e^{t} \\int_{0}^{\\infty} e^{\\tau} \\, d\\tau \\longrightarrow \\infty \\quad \\text{[DIVERGES!]}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -12380,93 +12326,92 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Candidate Signal",
-      "Eigenfunction?",
-      "Eigenvalue $\\lambda$",
-      "Detailed Justification & Mathematical Reason"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "table",
+       "header": [
+        "Candidate Signal",
+        "Eigenfunction?",
+        "Eigenvalue $\\lambda$",
+        "Detailed Justification & Mathematical Reason"
+       ],
+       "align": [
+        ":---",
+        ":---:",
+        ":---:",
+        ":---"
+       ],
+       "rows": [
+        [
+         "(a) $e^{j2t}$",
+         "**YES**",
+         "$H(j2)$",
+         "Pure imaginary exponent $s_0 = j2$; exists for all $t \\in (-\\infty, \\infty)$."
+        ],
+        [
+         "(b) $e^{-2t}$",
+         "**YES**",
+         "$H(-2)$",
+         "Real exponent $s_0 = -2$; exists for all $t \\in (-\\infty, \\infty)$."
+        ],
+        [
+         "(c) $e^{3t}$",
+         "**YES**",
+         "$H(3)$",
+         "Real exponent $s_0 = 3$; exists for all $t \\in (-\\infty, \\infty)$."
+        ],
+        [
+         "(d) $e^{2t} u(t)$",
+         "**NO**",
+         "N/A",
+         "**Switched on at $t = 0$**. Transient response destroys scalar replication!"
+        ],
+        [
+         "(e) $e^{-2t} u(t)$",
+         "**NO**",
+         "N/A",
+         "Truncated by unit step $u(t)$; not defined for $t < 0$."
+        ],
+        [
+         "(f) $(2)^t$",
+         "**YES**",
+         "$H(\\ln 2)$",
+         "Base $a = 2 > 0 \\implies 2^t = e^{(\\ln 2)t}$, valid exponential with $s_0 = \\ln 2$."
+        ],
+        [
+         "(g) $(0.5)^t$",
+         "**YES**",
+         "$H(\\ln 0.5)$",
+         "Base $a = 0.5 > 0 \\implies s_0 = \\ln(1/2) = -\\ln 2$."
+        ],
+        [
+         "(h) $1 = e^{0t}$",
+         "**YES**",
+         "$H(0)$",
+         "DC signal is an exponential with $s_0 = 0$. Eigenvalue is the DC gain $H(0)$."
+        ],
+        [
+         "(i) $3^t u(t)$",
+         "**NO**",
+         "N/A",
+         "Truncated by $u(t)$; fails past-invariance."
+        ],
+        [
+         "(j) $(-1.5)^t$",
+         "**NO**",
+         "N/A",
+         "Base $a = -1.5 < 0$; $\\ln(-1.5)$ undefined over $\\mathbb{R}$."
+        ]
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**GATE Trap Summary:**  \nNever classify any signal multiplied by $u(t)$ as an eigenfunction. An eigenfunction must extend from $t = -\\infty$ to $t = +\\infty$ without any switching discontinuity."
+      }
      ],
-     "align": [
-      ":---",
-      ":---:",
-      ":---:",
-      ":---"
-     ],
-     "rows": [
-      [
-       "(a) $e^{j2t}$",
-       "**YES**",
-       "$H(j2)$",
-       "Pure imaginary exponent $s_0 = j2$; exists for all $t \\in (-\\infty, \\infty)$."
-      ],
-      [
-       "(b) $e^{-2t}$",
-       "**YES**",
-       "$H(-2)$",
-       "Real exponent $s_0 = -2$; exists for all $t \\in (-\\infty, \\infty)$."
-      ],
-      [
-       "(c) $e^{3t}$",
-       "**YES**",
-       "$H(3)$",
-       "Real exponent $s_0 = 3$; exists for all $t \\in (-\\infty, \\infty)$."
-      ],
-      [
-       "(d) $e^{2t} u(t)$",
-       "**NO**",
-       "N/A",
-       "**Switched on at $t = 0$**. Transient response destroys scalar replication!"
-      ],
-      [
-       "(e) $e^{-2t} u(t)$",
-       "**NO**",
-       "N/A",
-       "Truncated by unit step $u(t)$; not defined for $t < 0$."
-      ],
-      [
-       "(f) $(2)^t$",
-       "**YES**",
-       "$H(\\ln 2)$",
-       "Base $a = 2 > 0 \\implies 2^t = e^{(\\ln 2)t}$, valid exponential with $s_0 = \\ln 2$."
-      ],
-      [
-       "(g) $(0.5)^t$",
-       "**YES**",
-       "$H(\\ln 0.5)$",
-       "Base $a = 0.5 > 0 \\implies s_0 = \\ln(1/2) = -\\ln 2$."
-      ],
-      [
-       "(h) $1 = e^{0t}$",
-       "**YES**",
-       "$H(0)$",
-       "DC signal is an exponential with $s_0 = 0$. Eigenvalue is the DC gain $H(0)$."
-      ],
-      [
-       "(i) $3^t u(t)$",
-       "**NO**",
-       "N/A",
-       "Truncated by $u(t)$; fails past-invariance."
-      ],
-      [
-       "(j) $(-1.5)^t$",
-       "**NO**",
-       "N/A",
-       "Base $a = -1.5 < 0$; $\\ln(-1.5)$ undefined over $\\mathbb{R}$."
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**GATE Trap Summary:**  \nNever classify any signal multiplied by $u(t)$ as an eigenfunction. An eigenfunction must extend from $t = -\\infty$ to $t = +\\infty$ without any switching discontinuity."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "open": true
     },
     {
      "t": "h4",
@@ -12580,48 +12525,47 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Frequency Domain Method:**"
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\frac{1}{j\\omega + 2}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating at $\\omega_0 = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(3) = \\frac{1}{j3 + 2}"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = H(3) e^{j 3t} = \\frac{1}{j3 + 2} e^{j 3t} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "**Laplace Domain Method:**"
-    },
-    {
-     "t": "math",
-     "tex": "s_0 = j3 \\implies \\text{Re}(s_0) = 0 > -2 \\implies s_0 \\in \\text{ROC}"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = H(s_0) e^{s_0 t} = H(j3) e^{j 3t} = \\frac{1}{j3 + 2} e^{j 3t} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "Both methods yield identical results."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Frequency Domain Method:**"
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\frac{1}{j\\omega + 2}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating at $\\omega_0 = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(3) = \\frac{1}{j3 + 2}"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = H(3) e^{j 3t} = \\frac{1}{j3 + 2} e^{j 3t} \\quad \\checkmark"
+      },
+      {
+       "t": "p",
+       "text": "**Laplace Domain Method:**"
+      },
+      {
+       "t": "math",
+       "tex": "s_0 = j3 \\implies \\text{Re}(s_0) = 0 > -2 \\implies s_0 \\in \\text{ROC}"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = H(s_0) e^{s_0 t} = H(j3) e^{j 3t} = \\frac{1}{j3 + 2} e^{j 3t} \\quad \\checkmark"
+      },
+      {
+       "t": "p",
+       "text": "Both methods yield identical results."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -12733,66 +12677,64 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (a) is TRUE:** Stability guarantees the $j\\omega$-axis is in the ROC, so $e^{j\\omega_0 t}$ is always an eigenfunction.",
-      "**Statement (b) is FALSE:** In general, $H(\\omega_0) \\ne H(-\\omega_0)$, which causes phase shifts and prevents scalar multiplication.",
-      "**Statement (c) is TRUE:** If $h(t)$ is even, $H(\\omega) = H(-\\omega)$ for all $\\omega$, guaranteeing $H(\\omega_0) = H(-\\omega_0)$.",
-      "**Statement (d) is FALSE:** It is a sufficient condition, but not strictly necessary for an isolated frequency $\\omega_0$. $H(\\omega)$ could satisfy $H(\\omega_0) = H(-\\omega_0)$ at a specific $\\omega_0$ without $h(t)$ being globally even.",
-      "**Statement (e) is TRUE:** This is the exact, mathematically necessary and sufficient condition."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Options:** **(a), (c), (e)**"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (a) is TRUE:** Stability guarantees the $j\\omega$-axis is in the ROC, so $e^{j\\omega_0 t}$ is always an eigenfunction.",
+        "**Statement (b) is FALSE:** In general, $H(\\omega_0) \\ne H(-\\omega_0)$, which causes phase shifts and prevents scalar multiplication.",
+        "**Statement (c) is TRUE:** If $h(t)$ is even, $H(\\omega) = H(-\\omega)$ for all $\\omega$, guaranteeing $H(\\omega_0) = H(-\\omega_0)$.",
+        "**Statement (d) is FALSE:** It is a sufficient condition, but not strictly necessary for an isolated frequency $\\omega_0$. $H(\\omega)$ could satisfy $H(\\omega_0) = H(-\\omega_0)$ at a specific $\\omega_0$ without $h(t)$ being globally even.",
+        "**Statement (e) is TRUE:** This is the exact, mathematically necessary and sufficient condition."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Options:** **(a), (c), (e)**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 215 (Page 54, Bottom-Left) \u2014 Proof: Even Impulse Response Guarantees Spectral Symmetry"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "Let $h(t)$ be an even function: $h(t) = h(-t)$.  \nBy the Fourier Transform time-reversal property:"
-    },
-    {
-     "t": "math",
-     "tex": "h(-t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} H(-\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Since $h(t) = h(-t)$, their Fourier transforms must be identical:"
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = H(-\\omega) \\quad \\forall \\; \\omega \\in \\mathbb{R}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating at $\\omega = \\omega_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega_0) = H(-\\omega_0)"
-    },
-    {
-     "t": "p",
-     "text": "Thus, an even impulse response guarantees that sinusoids of **any arbitrary frequency $\\omega_0$** are eigenfunctions!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Let $h(t)$ be an even function: $h(t) = h(-t)$.  \nBy the Fourier Transform time-reversal property:"
+      },
+      {
+       "t": "math",
+       "tex": "h(-t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} H(-\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Since $h(t) = h(-t)$, their Fourier transforms must be identical:"
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = H(-\\omega) \\quad \\forall \\; \\omega \\in \\mathbb{R}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating at $\\omega = \\omega_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega_0) = H(-\\omega_0)"
+      },
+      {
+       "t": "p",
+       "text": "Thus, an even impulse response guarantees that sinusoids of **any arbitrary frequency $\\omega_0$** are eigenfunctions!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -12894,48 +12836,47 @@ export default {
      "text": "Slide 219 (Page 55, Bottom-Left) \u2014 Derivation of the Golden Sinusoidal Response Formula"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Write Output Equation for $\\cos(\\omega_0 t + \\phi)$**"
-    },
-    {
-     "t": "math",
-     "tex": "2 y(t) = H(\\omega_0) e^{j(\\omega_0 t + \\phi)} + H(-\\omega_0) e^{-j(\\omega_0 t + \\phi)}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Substitute Polar Forms**\nSubstitute $H(\\omega_0) = |H(\\omega_0)| e^{j \\angle H(\\omega_0)}$ and $H(-\\omega_0) = |H(\\omega_0)| e^{-j \\angle H(\\omega_0)}$:"
-    },
-    {
-     "t": "math",
-     "tex": "2 y(t) = |H(\\omega_0)| e^{j \\angle H(\\omega_0)} e^{j(\\omega_0 t + \\phi)} + |H(\\omega_0)| e^{-j \\angle H(\\omega_0)} e^{-j(\\omega_0 t + \\phi)}"
-    },
-    {
-     "t": "p",
-     "text": "Combine exponents:"
-    },
-    {
-     "t": "math",
-     "tex": "2 y(t) = |H(\\omega_0)| \\left[ e^{j(\\omega_0 t + \\phi + \\angle H(\\omega_0))} + e^{-j(\\omega_0 t + \\phi + \\angle H(\\omega_0))} \\right]"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Recognize Euler's Cosine Identity**\nLet $\\theta = \\omega_0 t + \\phi + \\angle H(\\omega_0)$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = |H(\\omega_0)| \\left[ \\frac{e^{j\\theta} + e^{-j\\theta}}{2} \\right] = |H(\\omega_0)| \\cos(\\theta)"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y(t) = |H(\\omega_0)| \\cos\\big(\\omega_0 t + \\phi + \\angle H(\\omega_0)\\big)} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Write Output Equation for $\\cos(\\omega_0 t + \\phi)$**"
+      },
+      {
+       "t": "math",
+       "tex": "2 y(t) = H(\\omega_0) e^{j(\\omega_0 t + \\phi)} + H(-\\omega_0) e^{-j(\\omega_0 t + \\phi)}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Substitute Polar Forms**\nSubstitute $H(\\omega_0) = |H(\\omega_0)| e^{j \\angle H(\\omega_0)}$ and $H(-\\omega_0) = |H(\\omega_0)| e^{-j \\angle H(\\omega_0)}$:"
+      },
+      {
+       "t": "math",
+       "tex": "2 y(t) = |H(\\omega_0)| e^{j \\angle H(\\omega_0)} e^{j(\\omega_0 t + \\phi)} + |H(\\omega_0)| e^{-j \\angle H(\\omega_0)} e^{-j(\\omega_0 t + \\phi)}"
+      },
+      {
+       "t": "p",
+       "text": "Combine exponents:"
+      },
+      {
+       "t": "math",
+       "tex": "2 y(t) = |H(\\omega_0)| \\left[ e^{j(\\omega_0 t + \\phi + \\angle H(\\omega_0))} + e^{-j(\\omega_0 t + \\phi + \\angle H(\\omega_0))} \\right]"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Recognize Euler's Cosine Identity**\nLet $\\theta = \\omega_0 t + \\phi + \\angle H(\\omega_0)$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = |H(\\omega_0)| \\left[ \\frac{e^{j\\theta} + e^{-j\\theta}}{2} \\right] = |H(\\omega_0)| \\cos(\\theta)"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y(t) = |H(\\omega_0)| \\cos\\big(\\omega_0 t + \\phi + \\angle H(\\omega_0)\\big)} \\quad \\checkmark"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -12971,92 +12912,90 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: System Stability & Frequency Response**\nPole is at $s = -2$ (OLHP) $\\implies$ Causal and BIBO Stable."
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\left. H(s) \\right|_{s = j\\omega} = \\frac{1}{j\\omega + 2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Evaluate at Carrier Frequency $\\omega_0 = 2$**"
-    },
-    {
-     "t": "math",
-     "tex": "H(2) = \\frac{1}{2 + j2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Magnitude:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|H(2)| = \\frac{1}{\\sqrt{2^2 + 2^2}} = \\frac{1}{\\sqrt{8}} = \\frac{1}{2\\sqrt{2}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Phase:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\angle H(2) = -\\tan^{-1}\\left(\\frac{2}{2}\\right) = -\\tan^{-1}(1) = -45^\\circ = -\\frac{\\pi}{4}\\text{ rad}"
-    },
-    {
-     "t": "p",
-     "text": "**Fatal Exam Trap:**  \nWriting $H(2) = \\frac{1}{2 + 2} = \\frac{1}{4}$ (replacing $s \\to \\omega_0$ instead of $s \\to j\\omega_0$). **This is totally wrong!**"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: System Stability & Frequency Response**\nPole is at $s = -2$ (OLHP) $\\implies$ Causal and BIBO Stable."
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\left. H(s) \\right|_{s = j\\omega} = \\frac{1}{j\\omega + 2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Evaluate at Carrier Frequency $\\omega_0 = 2$**"
+      },
+      {
+       "t": "math",
+       "tex": "H(2) = \\frac{1}{2 + j2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Magnitude:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|H(2)| = \\frac{1}{\\sqrt{2^2 + 2^2}} = \\frac{1}{\\sqrt{8}} = \\frac{1}{2\\sqrt{2}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Phase:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\angle H(2) = -\\tan^{-1}\\left(\\frac{2}{2}\\right) = -\\tan^{-1}(1) = -45^\\circ = -\\frac{\\pi}{4}\\text{ rad}"
+      },
+      {
+       "t": "p",
+       "text": "**Fatal Exam Trap:**  \nWriting $H(2) = \\frac{1}{2 + 2} = \\frac{1}{4}$ (replacing $s \\to \\omega_0$ instead of $s \\to j\\omega_0$). **This is totally wrong!**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Slide 222 (Page 56, Top-Right) \u2014 Output Phase Synthesis & Final Solution"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Apply Golden Sinusoidal Formula**"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = A |H(\\omega_0)| \\cos(\\omega_0 t + \\phi + \\angle H(\\omega_0))"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 3 \\cdot \\left(\\frac{1}{2\\sqrt{2}}\\right) \\cos\\left(2t + \\frac{\\pi}{6} - \\frac{\\pi}{4}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Compute Net Phase Shift**"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Net Phase} = \\frac{\\pi}{6} - \\frac{\\pi}{4} = \\frac{2\\pi - 3\\pi}{12} = -\\frac{\\pi}{12}\\text{ rad}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Final Output**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y(t) = \\frac{3}{2\\sqrt{2}} \\cos\\left(2t - \\frac{\\pi}{12}\\right)} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Apply Golden Sinusoidal Formula**"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = A |H(\\omega_0)| \\cos(\\omega_0 t + \\phi + \\angle H(\\omega_0))"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 3 \\cdot \\left(\\frac{1}{2\\sqrt{2}}\\right) \\cos\\left(2t + \\frac{\\pi}{6} - \\frac{\\pi}{4}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Compute Net Phase Shift**"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Net Phase} = \\frac{\\pi}{6} - \\frac{\\pi}{4} = \\frac{2\\pi - 3\\pi}{12} = -\\frac{\\pi}{12}\\text{ rad}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Final Output**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y(t) = \\frac{3}{2\\sqrt{2}} \\cos\\left(2t - \\frac{\\pi}{12}\\right)} \\quad \\checkmark"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -13110,146 +13049,145 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Part (i): Finding Output $y(t)$**\nThe input contains three distinct frequency components:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Component 1 (DC Term):** $x_0(t) = 3 \\implies \\omega = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "From the spectrum graph:"
-    },
-    {
-     "t": "math",
-     "tex": "H(0) = 0 \\implies y_0(t) = 3 \\times 0 = 0"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Component 2 (Carrier $\\omega_1 = 1.5 = \\frac{3}{2}\\text{ rad/s}$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluate $H(\\omega)$ at $\\pm 1.5$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = +1.5$: $H(1.5) = 0.5$.",
-      "At $\\omega = -1.5$: $H(-1.5) = 0.5$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Notice that $H(1.5) = H(-1.5) = 0.5$.\n   Because $H(\\omega_1) = H(-\\omega_1)$, the condition for a sinusoid to be an **eigenfunction** is strictly satisfied!"
-    },
-    {
-     "t": "math",
-     "tex": "y_1(t) = 2 \\times 0.5 \\cos\\left(\\frac{3}{2}t + \\frac{\\pi}{3}\\right) = \\cos\\left(\\frac{3}{2}t + \\frac{\\pi}{3}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Component 3 (Carrier $\\omega_2 = 3.5\\text{ rad/s}$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluate $H(\\omega)$ at $\\pm 3.5$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = +3.5$: falls in the interval $[3, 5]$, where $H(\\omega) = -1$. Thus $H(3.5) = -1$.",
-      "At $\\omega = -3.5$: falls in the interval $[-4, -3]$, where $H(\\omega) = -1$. Thus $H(-3.5) = -1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Notice that $H(3.5) = H(-3.5) = -1$.\n   Again, $H(\\omega_2) = H(-\\omega_2)$, so the sine term is also an **eigenfunction** with eigenvalue $-1$!"
-    },
-    {
-     "t": "math",
-     "tex": "y_2(t) = 3 \\times (-1) \\sin\\left(3.5t + \\frac{\\pi}{6}\\right) = -3\\sin\\left(3.5t + \\frac{\\pi}{6}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Total Output:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y(t) = \\cos\\left(\\frac{3}{2}t + \\frac{\\pi}{3}\\right) - 3\\sin\\left(3.5t + \\frac{\\pi}{6}\\right)} \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "**Part (ii): Analysis of System Properties**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Magnitude Spectrum Symmetry:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Check $|H(\\omega)|$ at $\\omega = 4.5$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = +4.5$: $|H(4.5)| = |-1| = 1$.",
-      "At $\\omega = -4.5$: falls outside $[-4, -3]$, so $|H(-4.5)| = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{|H(\\omega)| \\ne |H(-\\omega)|} \\implies \\text{Magnitude spectrum is NOT even!}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Impulse Response Nature:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "A real-valued impulse response $h(t) \\in \\mathbb{R}$ **must** have an even magnitude spectrum $|H(\\omega)| = |H(-\\omega)|$.\n   Because $|H(\\omega)|$ is not even, **$h(t)$ is strictly COMPLEX-VALUED ($h(t) \\in \\mathbb{C}$)**!"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Evenness of $H(\\omega)$ and $h(t)$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$H(\\omega)$ is NOT even (support is $[-4, 2] \\cup [3, 5]$ which is asymmetric).",
-      "$h(t)$ is NOT even."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Part (i): Finding Output $y(t)$**\nThe input contains three distinct frequency components:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Component 1 (DC Term):** $x_0(t) = 3 \\implies \\omega = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "From the spectrum graph:"
+      },
+      {
+       "t": "math",
+       "tex": "H(0) = 0 \\implies y_0(t) = 3 \\times 0 = 0"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Component 2 (Carrier $\\omega_1 = 1.5 = \\frac{3}{2}\\text{ rad/s}$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluate $H(\\omega)$ at $\\pm 1.5$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = +1.5$: $H(1.5) = 0.5$.",
+        "At $\\omega = -1.5$: $H(-1.5) = 0.5$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Notice that $H(1.5) = H(-1.5) = 0.5$.\n   Because $H(\\omega_1) = H(-\\omega_1)$, the condition for a sinusoid to be an **eigenfunction** is strictly satisfied!"
+      },
+      {
+       "t": "math",
+       "tex": "y_1(t) = 2 \\times 0.5 \\cos\\left(\\frac{3}{2}t + \\frac{\\pi}{3}\\right) = \\cos\\left(\\frac{3}{2}t + \\frac{\\pi}{3}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Component 3 (Carrier $\\omega_2 = 3.5\\text{ rad/s}$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluate $H(\\omega)$ at $\\pm 3.5$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = +3.5$: falls in the interval $[3, 5]$, where $H(\\omega) = -1$. Thus $H(3.5) = -1$.",
+        "At $\\omega = -3.5$: falls in the interval $[-4, -3]$, where $H(\\omega) = -1$. Thus $H(-3.5) = -1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Notice that $H(3.5) = H(-3.5) = -1$.\n   Again, $H(\\omega_2) = H(-\\omega_2)$, so the sine term is also an **eigenfunction** with eigenvalue $-1$!"
+      },
+      {
+       "t": "math",
+       "tex": "y_2(t) = 3 \\times (-1) \\sin\\left(3.5t + \\frac{\\pi}{6}\\right) = -3\\sin\\left(3.5t + \\frac{\\pi}{6}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Total Output:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y(t) = \\cos\\left(\\frac{3}{2}t + \\frac{\\pi}{3}\\right) - 3\\sin\\left(3.5t + \\frac{\\pi}{6}\\right)} \\quad \\checkmark"
+      },
+      {
+       "t": "p",
+       "text": "**Part (ii): Analysis of System Properties**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Magnitude Spectrum Symmetry:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Check $|H(\\omega)|$ at $\\omega = 4.5$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = +4.5$: $|H(4.5)| = |-1| = 1$.",
+        "At $\\omega = -4.5$: falls outside $[-4, -3]$, so $|H(-4.5)| = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{|H(\\omega)| \\ne |H(-\\omega)|} \\implies \\text{Magnitude spectrum is NOT even!}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Impulse Response Nature:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A real-valued impulse response $h(t) \\in \\mathbb{R}$ **must** have an even magnitude spectrum $|H(\\omega)| = |H(-\\omega)|$.\n   Because $|H(\\omega)|$ is not even, **$h(t)$ is strictly COMPLEX-VALUED ($h(t) \\in \\mathbb{C}$)**!"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Evenness of $H(\\omega)$ and $h(t)$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$H(\\omega)$ is NOT even (support is $[-4, 2] \\cup [3, 5]$ which is asymmetric).",
+        "$h(t)$ is NOT even."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13640,182 +13578,181 @@ export default {
      "text": "2.3 Visual & Mathematical Audit of Slides 227\u2013228: GATE 2025 Q.51 Controversy"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "GATE 2025 Question Statement (Slide 227)"
-    },
-    {
-     "t": "p",
-     "text": "**Question:** Choose the eigenfunction(s) of stable linear time-invariant continuous-time systems from the following options:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "(A) $e^{j\\frac{2\\pi}{3}t}$",
-      "(B) $\\cos\\left(\\frac{2\\pi}{3}t\\right)$",
-      "(C) $2^t$",
-      "(D) $\\sin\\left(\\frac{2\\pi}{3}t\\right)$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Official Key vs Rigorous Mathematical Audit"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Official GATE 2025 Key:** Given as **(A) and (C)**.",
-      "**Titans Batch Academic Audit (Slide 227\u2013228):** Option (C) is mathematically **flawed** unless the system is explicitly assumed to be **causal**!"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Rigorous Proof:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Analysis of Option (A):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_A(t) = e^{j\\frac{2\\pi}{3}t} \\implies s_0 = j\\frac{2\\pi}{3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "A continuous-time LTI system is **stable** (BIBO stable) if and only if its impulse response is absolutely integrable:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^\\infty |h(t)| dt < \\infty \\iff \\text{ROC of } H(s) \\text{ includes the imaginary axis } (j\\omega\\text{-axis})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $s_0 = j\\frac{2\\pi}{3}$ lies directly on the $j\\omega$-axis ($\\text{Re}(s_0) = 0$), and the system is given to be stable, $s_0$ is **guaranteed** to lie within the ROC of $H(s)$ for **every** stable LTI system.",
-      "Therefore, $y(t) = H\\left(j\\frac{2\\pi}{3}\\right) e^{j\\frac{2\\pi}{3}t}$. Option (A) is **unconditionally valid**."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Analysis of Option (B) and (D):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Real sinusoidal signals $\\cos(\\omega_0 t) = \\frac{1}{2}e^{j\\omega_0 t} + \\frac{1}{2}e^{-j\\omega_0 t}$ are combinations of two distinct eigenfunctions.",
-      "Under an LTI system, the output is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = |H(j\\omega_0)| \\cos(\\omega_0 t + \\angle H(j\\omega_0))"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Because of the phase shift $\\angle H(j\\omega_0)$, $y(t)$ cannot be expressed as a scalar constant $K \\in \\mathbb{C}$ times $\\cos(\\omega_0 t)$ for arbitrary stable systems. Thus, neither $\\cos$ nor $\\sin$ is an eigenfunction. Options (B) and (D) are strictly incorrect."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Analysis of Option (C) \u2014 The Counterexample (Slide 228):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_C(t) = 2^t = (e^{\\ln 2})^t = e^{(\\ln 2)t} \\implies s_0 = \\ln 2 \\approx 0.69315 > 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice that $s_0 = +0.693$ lies strictly in the **Right Half of the $s$-plane** (RHP).",
-      "Does a stable LTI system guarantee that $s = \\ln 2$ is in its ROC? **NO!**",
-      "**Counterexample Constructed on Slide 228:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Consider an anti-causal LTI system with impulse response:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = -e^{0.5 t} u(-t)"
-    },
-    {
-     "t": "p",
-     "text": "Taking the Bilateral Laplace Transform:"
-    },
-    {
-     "t": "math",
-     "tex": "H(s) = \\frac{1}{s - 0.5}, \\quad \\text{ROC: } \\text{Re}(s) < 0.5"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Check Stability:* The ROC is $\\text{Re}(s) < 0.5$. The imaginary axis is $\\text{Re}(s) = 0$. Since $0 < 0.5$, the ROC contains the $j\\omega$-axis. Hence, the system is **BIBO stable** ($\\int_{-\\infty}^0 |-e^{0.5t}| dt = \\frac{1}{0.5} = 2 < \\infty$).",
-      "*Check Convergence for $x(t) = 2^t$:*"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Here $s_0 = \\ln 2 \\approx 0.693$.\n       Does $s_0 \\in \\text{ROC}$?"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Re}(s_0) = 0.693 \\nless 0.5"
-    },
-    {
-     "t": "p",
-     "text": "$s_0$ lies **outside** the ROC!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*Direct Convolution Evaluation:*"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\int_{-\\infty}^\\infty h(\\tau) x(t - \\tau) d\\tau = \\int_{-\\infty}^0 \\left(-e^{0.5\\tau}\\right) e^{(\\ln 2)(t - \\tau)} d\\tau = -e^{(\\ln 2)t} \\int_{-\\infty}^0 e^{(0.5 - \\ln 2)\\tau} d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "Since $0.5 - \\ln 2 \\approx 0.5 - 0.693 = -0.193 < 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^0 e^{-0.193\\tau} d\\tau = \\left[ \\frac{e^{-0.193\\tau}}{-0.193} \\right]_{-\\infty}^0 = \\frac{1}{-0.193} - \\lim_{\\tau \\to -\\infty} \\frac{e^{+0.193|\\tau|}}{-0.193} = \\infty"
-    },
-    {
-     "t": "p",
-     "text": "The integral blows up to $\\infty$! The system output diverges, and $2^t$ is **not** an eigenfunction!"
-    },
-    {
-     "t": "h4",
-     "text": "The Exam Trap & Final Verdict"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "Option (C) is an eigenfunction **if and only if** the system is both **stable AND causal**.\nFor a causal and stable system, all poles lie in $\\text{Re}(s) < 0$, and the ROC is $\\text{Re}(s) > \\sigma_{\\max}$ where $\\sigma_{\\max} < 0$. Since $\\ln 2 > 0 > \\sigma_{\\max}$, $s = \\ln 2$ is guaranteed to be in the ROC.\nBecause the GATE 2025 question statement only specified **stable** (without stating causal), the question was technically ambiguous. In rigorous mathematics, **only (A)** is unconditionally correct."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "GATE 2025 Question Statement (Slide 227)"
+      },
+      {
+       "t": "p",
+       "text": "**Question:** Choose the eigenfunction(s) of stable linear time-invariant continuous-time systems from the following options:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "(A) $e^{j\\frac{2\\pi}{3}t}$",
+        "(B) $\\cos\\left(\\frac{2\\pi}{3}t\\right)$",
+        "(C) $2^t$",
+        "(D) $\\sin\\left(\\frac{2\\pi}{3}t\\right)$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Official Key vs Rigorous Mathematical Audit"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Official GATE 2025 Key:** Given as **(A) and (C)**.",
+        "**Titans Batch Academic Audit (Slide 227\u2013228):** Option (C) is mathematically **flawed** unless the system is explicitly assumed to be **causal**!"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Rigorous Proof:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Analysis of Option (A):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_A(t) = e^{j\\frac{2\\pi}{3}t} \\implies s_0 = j\\frac{2\\pi}{3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "A continuous-time LTI system is **stable** (BIBO stable) if and only if its impulse response is absolutely integrable:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^\\infty |h(t)| dt < \\infty \\iff \\text{ROC of } H(s) \\text{ includes the imaginary axis } (j\\omega\\text{-axis})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $s_0 = j\\frac{2\\pi}{3}$ lies directly on the $j\\omega$-axis ($\\text{Re}(s_0) = 0$), and the system is given to be stable, $s_0$ is **guaranteed** to lie within the ROC of $H(s)$ for **every** stable LTI system.",
+        "Therefore, $y(t) = H\\left(j\\frac{2\\pi}{3}\\right) e^{j\\frac{2\\pi}{3}t}$. Option (A) is **unconditionally valid**."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Analysis of Option (B) and (D):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Real sinusoidal signals $\\cos(\\omega_0 t) = \\frac{1}{2}e^{j\\omega_0 t} + \\frac{1}{2}e^{-j\\omega_0 t}$ are combinations of two distinct eigenfunctions.",
+        "Under an LTI system, the output is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = |H(j\\omega_0)| \\cos(\\omega_0 t + \\angle H(j\\omega_0))"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Because of the phase shift $\\angle H(j\\omega_0)$, $y(t)$ cannot be expressed as a scalar constant $K \\in \\mathbb{C}$ times $\\cos(\\omega_0 t)$ for arbitrary stable systems. Thus, neither $\\cos$ nor $\\sin$ is an eigenfunction. Options (B) and (D) are strictly incorrect."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Analysis of Option (C) \u2014 The Counterexample (Slide 228):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_C(t) = 2^t = (e^{\\ln 2})^t = e^{(\\ln 2)t} \\implies s_0 = \\ln 2 \\approx 0.69315 > 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Notice that $s_0 = +0.693$ lies strictly in the **Right Half of the $s$-plane** (RHP).",
+        "Does a stable LTI system guarantee that $s = \\ln 2$ is in its ROC? **NO!**",
+        "**Counterexample Constructed on Slide 228:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Consider an anti-causal LTI system with impulse response:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = -e^{0.5 t} u(-t)"
+      },
+      {
+       "t": "p",
+       "text": "Taking the Bilateral Laplace Transform:"
+      },
+      {
+       "t": "math",
+       "tex": "H(s) = \\frac{1}{s - 0.5}, \\quad \\text{ROC: } \\text{Re}(s) < 0.5"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Check Stability:* The ROC is $\\text{Re}(s) < 0.5$. The imaginary axis is $\\text{Re}(s) = 0$. Since $0 < 0.5$, the ROC contains the $j\\omega$-axis. Hence, the system is **BIBO stable** ($\\int_{-\\infty}^0 |-e^{0.5t}| dt = \\frac{1}{0.5} = 2 < \\infty$).",
+        "*Check Convergence for $x(t) = 2^t$:*"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Here $s_0 = \\ln 2 \\approx 0.693$.\n       Does $s_0 \\in \\text{ROC}$?"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Re}(s_0) = 0.693 \\nless 0.5"
+      },
+      {
+       "t": "p",
+       "text": "$s_0$ lies **outside** the ROC!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*Direct Convolution Evaluation:*"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\int_{-\\infty}^\\infty h(\\tau) x(t - \\tau) d\\tau = \\int_{-\\infty}^0 \\left(-e^{0.5\\tau}\\right) e^{(\\ln 2)(t - \\tau)} d\\tau = -e^{(\\ln 2)t} \\int_{-\\infty}^0 e^{(0.5 - \\ln 2)\\tau} d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "Since $0.5 - \\ln 2 \\approx 0.5 - 0.693 = -0.193 < 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^0 e^{-0.193\\tau} d\\tau = \\left[ \\frac{e^{-0.193\\tau}}{-0.193} \\right]_{-\\infty}^0 = \\frac{1}{-0.193} - \\lim_{\\tau \\to -\\infty} \\frac{e^{+0.193|\\tau|}}{-0.193} = \\infty"
+      },
+      {
+       "t": "p",
+       "text": "The integral blows up to $\\infty$! The system output diverges, and $2^t$ is **not** an eigenfunction!"
+      },
+      {
+       "t": "h4",
+       "text": "The Exam Trap & Final Verdict"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "Option (C) is an eigenfunction **if and only if** the system is both **stable AND causal**.\nFor a causal and stable system, all poles lie in $\\text{Re}(s) < 0$, and the ROC is $\\text{Re}(s) > \\sigma_{\\max}$ where $\\sigma_{\\max} < 0$. Since $\\ln 2 > 0 > \\sigma_{\\max}$, $s = \\ln 2$ is guaranteed to be in the ROC.\nBecause the GATE 2025 question statement only specified **stable** (without stating causal), the question was technically ambiguous. In rigorous mathematics, **only (A)** is unconditionally correct."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13988,193 +13925,192 @@ export default {
      "text": "3.4 Comparative Audit of the 7 Benchmark Signals (Slides 231\u2013234)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Signal (a): $x_a(t) = e^{-t}$ (Two-sided exponential, non-causal)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**BLT:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_B(s) = \\int_{-\\infty}^\\infty e^{-t} e^{-st} dt = \\int_{-\\infty}^0 e^{-(s+1)t} dt + \\int_0^\\infty e^{-(s+1)t} dt"
-    },
-    {
-     "t": "p",
-     "text": "The first integral requires $\\text{Re}(s+1) < 0 \\implies \\text{Re}(s) < -1$.\n  The second integral requires $\\text{Re}(s+1) > 0 \\implies \\text{Re}(s) > -1$.\n  The intersection of ROCs is empty ($\\emptyset$). **BLT DOES NOT EXIST.**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ULT:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_u(s) = \\mathcal{BLT}\\{e^{-t} u(t)\\} = \\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
-    },
-    {
-     "t": "h4",
-     "text": "Signal (b): $x_b(t) = e^{-t} u(t)$ (Causal)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**BLT:** $X_B(s) = \\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1$.",
-      "**ULT:** $X_u(s) = \\mathcal{BLT}\\{e^{-t} u(t) \\cdot u(t)\\} = \\mathcal{BLT}\\{e^{-t} u(t)\\} = \\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1$.",
-      "**Observation:** For causal signals, $\\mathcal{ULT}\\{x(t)\\} \\equiv \\mathcal{BLT}\\{x(t)\\}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Signal (c): $x_c(t) = e^{-t} u(t-1)$ (Delayed causal)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**BLT:** Express as $e^{-(t-1+1)} u(t-1) = e^{-1} e^{-(t-1)} u(t-1)$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using time shifting $e^{-at}u(t) \\leftrightarrow \\frac{1}{s+a} \\implies x(t-t_0) \\leftrightarrow e^{-st_0} X(s)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_B(s) = e^{-1} \\cdot \\frac{e^{-s}}{s+1} = \\frac{e^{-(s+1)}}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ULT:** Since $u(t-1) \\cdot u(t) = u(t-1)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_u(s) = \\mathcal{BLT}\\{e^{-t} u(t-1)\\} = \\frac{e^{-(s+1)}}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
-    },
-    {
-     "t": "h4",
-     "text": "Signal (d): $x_d(t) = e^{-t} u(t+1)$ (Non-causal, starts at $t = -1$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**BLT:** Express as $e^{-(t+1-1)} u(t+1) = e^1 e^{-(t+1)} u(t+1)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_B(s) = e^1 \\cdot \\frac{e^{+s}}{s+1} = \\frac{e^{s+1}}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ULT:** Since $u(t+1) \\cdot u(t) = u(t)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_d(t) \\cdot u(t) = e^{-t} u(t) \\implies X_u(s) = \\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trap Highlight:** Information over the past interval $t \\in [-1, 0)$ is completely discarded by the ULT!"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Signal (e): $x_e(t) = e^{-t} u(-t)$ (Anti-causal)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**BLT:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_B(s) = -\\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) < -1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ULT:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_e(t) \\cdot u(t) = e^{-t} u(-t) u(t) = 0 \\implies X_u(s) = 0"
-    },
-    {
-     "t": "h4",
-     "text": "Signal (f): $x_f(t) = e^{-t} u(-t-1)$ (Strictly anti-causal, non-zero for $t \\le -1$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**BLT:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_B(s) = -\\frac{e^{s+1}}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) < -1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ULT:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_f(t) \\cdot u(t) = 0 \\implies X_u(s) = 0"
-    },
-    {
-     "t": "h4",
-     "text": "Signal (g): $x_g(t) = e^{-t} u(-t+1)$ (Non-causal, non-zero for $t < 1$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**BLT:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_B(s) = -\\frac{e^{-(s+1)}}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) < -1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ULT:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_g(t) \\cdot u(t) = e^{-t} [u(-t+1) u(t)] = e^{-t} [u(t) - u(t-1)] = e^{-t} u(t) - e^{-1} e^{-(t-1)} u(t-1)"
-    },
-    {
-     "t": "math",
-     "tex": "X_u(s) = \\frac{1}{s+1} - \\frac{e^{-(s+1)}}{s+1} = \\frac{1 - e^{-(s+1)}}{s+1}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "*ROC Determination:* As $s \\to -1$, $\\lim_{s \\to -1} \\frac{1 - e^{-(s+1)}}{s+1} = \\lim_{s \\to -1} \\frac{e^{-(s+1)}}{1} = 1 \\neq \\infty$.",
-      "The pole at $s = -1$ is canceled by the numerator zero! Because $x_g(t)u(t)$ has **finite duration** ($t \\in [0, 1]$), its ROC is the **Entire $s$-plane**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Signal (a): $x_a(t) = e^{-t}$ (Two-sided exponential, non-causal)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**BLT:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_B(s) = \\int_{-\\infty}^\\infty e^{-t} e^{-st} dt = \\int_{-\\infty}^0 e^{-(s+1)t} dt + \\int_0^\\infty e^{-(s+1)t} dt"
+      },
+      {
+       "t": "p",
+       "text": "The first integral requires $\\text{Re}(s+1) < 0 \\implies \\text{Re}(s) < -1$.\n  The second integral requires $\\text{Re}(s+1) > 0 \\implies \\text{Re}(s) > -1$.\n  The intersection of ROCs is empty ($\\emptyset$). **BLT DOES NOT EXIST.**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ULT:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_u(s) = \\mathcal{BLT}\\{e^{-t} u(t)\\} = \\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
+      },
+      {
+       "t": "h4",
+       "text": "Signal (b): $x_b(t) = e^{-t} u(t)$ (Causal)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**BLT:** $X_B(s) = \\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1$.",
+        "**ULT:** $X_u(s) = \\mathcal{BLT}\\{e^{-t} u(t) \\cdot u(t)\\} = \\mathcal{BLT}\\{e^{-t} u(t)\\} = \\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1$.",
+        "**Observation:** For causal signals, $\\mathcal{ULT}\\{x(t)\\} \\equiv \\mathcal{BLT}\\{x(t)\\}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Signal (c): $x_c(t) = e^{-t} u(t-1)$ (Delayed causal)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**BLT:** Express as $e^{-(t-1+1)} u(t-1) = e^{-1} e^{-(t-1)} u(t-1)$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using time shifting $e^{-at}u(t) \\leftrightarrow \\frac{1}{s+a} \\implies x(t-t_0) \\leftrightarrow e^{-st_0} X(s)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_B(s) = e^{-1} \\cdot \\frac{e^{-s}}{s+1} = \\frac{e^{-(s+1)}}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ULT:** Since $u(t-1) \\cdot u(t) = u(t-1)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_u(s) = \\mathcal{BLT}\\{e^{-t} u(t-1)\\} = \\frac{e^{-(s+1)}}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
+      },
+      {
+       "t": "h4",
+       "text": "Signal (d): $x_d(t) = e^{-t} u(t+1)$ (Non-causal, starts at $t = -1$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**BLT:** Express as $e^{-(t+1-1)} u(t+1) = e^1 e^{-(t+1)} u(t+1)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_B(s) = e^1 \\cdot \\frac{e^{+s}}{s+1} = \\frac{e^{s+1}}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ULT:** Since $u(t+1) \\cdot u(t) = u(t)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_d(t) \\cdot u(t) = e^{-t} u(t) \\implies X_u(s) = \\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) > -1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Trap Highlight:** Information over the past interval $t \\in [-1, 0)$ is completely discarded by the ULT!"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Signal (e): $x_e(t) = e^{-t} u(-t)$ (Anti-causal)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**BLT:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_B(s) = -\\frac{1}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) < -1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ULT:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_e(t) \\cdot u(t) = e^{-t} u(-t) u(t) = 0 \\implies X_u(s) = 0"
+      },
+      {
+       "t": "h4",
+       "text": "Signal (f): $x_f(t) = e^{-t} u(-t-1)$ (Strictly anti-causal, non-zero for $t \\le -1$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**BLT:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_B(s) = -\\frac{e^{s+1}}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) < -1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ULT:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_f(t) \\cdot u(t) = 0 \\implies X_u(s) = 0"
+      },
+      {
+       "t": "h4",
+       "text": "Signal (g): $x_g(t) = e^{-t} u(-t+1)$ (Non-causal, non-zero for $t < 1$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**BLT:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_B(s) = -\\frac{e^{-(s+1)}}{s+1}, \\quad \\text{ROC: } \\text{Re}(s) < -1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ULT:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_g(t) \\cdot u(t) = e^{-t} [u(-t+1) u(t)] = e^{-t} [u(t) - u(t-1)] = e^{-t} u(t) - e^{-1} e^{-(t-1)} u(t-1)"
+      },
+      {
+       "t": "math",
+       "tex": "X_u(s) = \\frac{1}{s+1} - \\frac{e^{-(s+1)}}{s+1} = \\frac{1 - e^{-(s+1)}}{s+1}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "*ROC Determination:* As $s \\to -1$, $\\lim_{s \\to -1} \\frac{1 - e^{-(s+1)}}{s+1} = \\lim_{s \\to -1} \\frac{e^{-(s+1)}}{1} = 1 \\neq \\infty$.",
+        "The pole at $s = -1$ is canceled by the numerator zero! Because $x_g(t)u(t)$ has **finite duration** ($t \\in [0, 1]$), its ROC is the **Entire $s$-plane**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14369,477 +14305,475 @@ export default {
      "text": "5.2 Worked Problem 1: 1st-Order Differential Equation & Series RC Circuit (Slides 239\u2013246)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slides 239, 242)"
-    },
-    {
-     "t": "p",
-     "text": "An LTI system is governed by the first-order differential equation:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dy(t)}{dt} + y(t) = x(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Initial Condition: $y(0^-) = 2\\text{ V}$",
-      "Input Signal: $x(t) = 5u(t)\\text{ V}$",
-      "Equivalent Physical System: Series RC circuit with $R = 1\\ \\Omega$, $C = 1\\text{ F}$, initial capacitor voltage $v_C(0^-) = 2\\text{ V}$, connected to a step source $5u(t)$ at $t = 0$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Taking the Unilateral Laplace Transform"
-    },
-    {
-     "t": "p",
-     "text": "Applying the differentiation property:"
-    },
-    {
-     "t": "math",
-     "tex": "[s Y(s) - y(0^-)] + Y(s) = X(s)"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s)(s + 1) = y(0^-) + X(s)"
-    },
-    {
-     "t": "p",
-     "text": "Dividing by $(s + 1)$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s) = \\underbrace{\\frac{y(0^-)}{s + 1}}_{Y_{\\text{ZIR}}(s)} + \\underbrace{\\frac{X(s)}{s + 1}}_{Y_{\\text{ZSR}}(s)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Substituting Numerical Values"
-    },
-    {
-     "t": "p",
-     "text": "Given $y(0^-) = 2$ and $x(t) = 5u(t) \\implies X(s) = \\frac{5}{s}$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZIR}}(s) = \\frac{2}{s + 1}"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZSR}}(s) = \\frac{5}{s(s + 1)} = \\frac{5}{s} - \\frac{5}{s + 1}"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s) = \\frac{2}{s + 1} + \\frac{5}{s} - \\frac{5}{s + 1} = \\frac{5}{s} - \\frac{3}{s + 1}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Inverse Transform and the Fatal $u(t)$ Notation Trap (Slide 241)"
-    },
-    {
-     "t": "p",
-     "text": "How should the time-domain solution $y(t)$ be expressed?"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Mistake 1 (Naive Multiplication by $u(t)$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = [2e^{-t} + 5 - 5e^{-t}] u(t) = [5 - 3e^{-t}] u(t)"
-    },
-    {
-     "t": "p",
-     "text": "*Audit of Mistake 1:* Test at $t = 0^-$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(0^-) = [5 - 3e^{-0^-}] u(0^-) = [5 - 3](0) = 0 \\neq 2\\text{ V}!"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying the entire expression by $u(t)$ completely obliterates the initial condition at $t = 0^-$!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Mistake 2 (Omitting the step function entirely):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 5 - 3e^{-t} \\quad \\forall t"
-    },
-    {
-     "t": "p",
-     "text": "*Audit of Mistake 2:* As $t \\to -\\infty$, $y(t) \\to -\\infty$. But the input was only applied at $t = 0$, so this expression is physically invalid for $t < 0$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**The Mathematically Correct Formulation (Slide 241, 243):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\underbrace{2e^{-t}}_{\\text{Valid for } t > 0^-} + \\underbrace{5[1 - e^{-t}] u(t)}_{\\text{ZSR starts at } t = 0}, \\quad t > 0^-"
-    },
-    {
-     "t": "p",
-     "text": "Let us verify:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $t = 0^-$: $y(0^-) = 2e^{-0} + 5[1 - 1](0) = 2\\text{ V}$ $\\checkmark$ (Matches initial condition!)",
-      "At $t = 0^+$: $y(0^+) = 2e^{-0} + 5[1 - e^{-0}](1) = 2 + 0 = 2\\text{ V}$ $\\checkmark$ (Capacitor voltage is continuous!)",
-      "At $t \\to \\infty$: $y(\\infty) = 0 + 5[1 - 0] = 5\\text{ V}$ $\\checkmark$ (Final steady-state capacitor voltage!)"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Comparison with Network Theory Transient Formula (Slide 243)"
-    },
-    {
-     "t": "p",
-     "text": "In electrical circuit theory, the standard formula is:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = y(\\infty) + [y(0^+) - y(\\infty)] e^{-t/\\tau} = 5 + [2 - 5] e^{-t} = 5 - 3e^{-t}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Network theory formulas implicitly assume $t \\ge 0^+$.",
-      "Evaluating at $t = 1\\text{ s}$:",
-      "Network formula: $y(1) = 5 - 3e^{-1} \\approx 3.8964\\text{ V}$.",
-      "Laplace formula: $y(1) = 2e^{-1} + 5[1 - e^{-1}] = 5 - 3e^{-1} \\approx 3.8964\\text{ V}$.",
-      "Both formulas yield **identical results for all $t > 0$**! Laplace transform is superior because it explicitly maintains validity across the switching boundary $t = 0^- \\to 0^+$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Identification of All Four Response Components (Slide 245)"
-    },
-    {
-     "t": "p",
-     "text": "From $Y(s) = \\underbrace{\\frac{2}{s+1}}_{\\text{ZIR}} + \\underbrace{\\left(\\frac{5}{s} - \\frac{5}{s+1}\\right)}_{\\text{ZSR}}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Zero-Input Response:** $y_{\\text{ZIR}}(t) = 2e^{-t}, \\quad t > 0^-$",
-      "**Zero-State Response:** $y_{\\text{ZSR}}(t) = 5[1 - e^{-t}] u(t)$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Now re-group terms according to pole origin:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "System pole is at $s = -1$ (from $H(s) = \\frac{1}{s+1}$).",
-      "Input pole is at $s = 0$ (from $X(s) = \\frac{5}{s}$)."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\underbrace{5 u(t)}_{\\text{From input pole } s=0} + \\underbrace{\\left[2e^{-t} - 5e^{-t} u(t)\\right]}_{\\text{From system pole } s=-1}, \\quad t > 0^-"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Forced Response (Steady-State):** $y_{\\text{forced}}(t) = 5u(t)$",
-      "**Natural Response (Transient):** $y_{\\text{natural}}(t) = 2e^{-t} - 5e^{-t} u(t), \\quad t > 0^-$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 6: Loop Current $i(t)$ and Jump Discontinuity Analysis (Slide 246)"
-    },
-    {
-     "t": "p",
-     "text": "The current flowing through the series RC circuit is:"
-    },
-    {
-     "t": "math",
-     "tex": "i(t) = C \\frac{dy(t)}{dt} = 1 \\cdot \\frac{d}{dt}\\left[ 2e^{-t} + 5(1 - e^{-t})u(t) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Using generalized calculus with distribution theory:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{dt}\\left[ 5(1 - e^{-t})u(t) \\right] = 5(1 - e^{-t}) \\frac{du(t)}{dt} + \\frac{d}{dt}[5(1 - e^{-t})] u(t)"
-    },
-    {
-     "t": "math",
-     "tex": "= 5(1 - e^{-t}) \\delta(t) + 5e^{-t} u(t)"
-    },
-    {
-     "t": "p",
-     "text": "Since $(1 - e^{-t}) = 0$ at $t = 0$, by the sifting property $f(t)\\delta(t) = f(0)\\delta(t) = 0 \\cdot \\delta(t) = 0$. Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "i(t) = -2e^{-t} + 5e^{-t} u(t), \\quad t > 0^-"
-    },
-    {
-     "t": "p",
-     "text": "**Physical Verification of the Current Jump:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $t = 0^-$: $v_{\\text{in}}(0^-) = 0\\text{ V}$, $v_C(0^-) = 2\\text{ V}$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "i(0^-) = \\frac{v_{\\text{in}}(0^-) - v_C(0^-)}{R} = \\frac{0 - 2}{1} = -2\\text{ A}"
-    },
-    {
-     "t": "p",
-     "text": "From formula: $i(0^-) = -2e^{-0} + 0 = -2\\text{ A}$ $\\checkmark$ (Exact match!)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $t = 0^+$: $v_{\\text{in}}(0^+) = 5\\text{ V}$, $v_C(0^+) = 2\\text{ V}$ (capacitor voltage cannot change instantaneously)."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "i(0^+) = \\frac{v_{\\text{in}}(0^+) - v_C(0^+)}{R} = \\frac{5 - 2}{1} = +3\\text{ A}"
-    },
-    {
-     "t": "p",
-     "text": "From formula: $i(0^+) = -2e^{-0} + 5e^{-0}(1) = -2 + 5 = +3\\text{ A}$ $\\checkmark$ (Exact match!)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion:** While voltage across the capacitor is continuous ($y(0^-) = y(0^+) = 2\\text{ V}$), the loop current undergoes a finite step discontinuity of $\\Delta i = +5\\text{ A}$ at $t = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slides 239, 242)"
+      },
+      {
+       "t": "p",
+       "text": "An LTI system is governed by the first-order differential equation:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dy(t)}{dt} + y(t) = x(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Initial Condition: $y(0^-) = 2\\text{ V}$",
+        "Input Signal: $x(t) = 5u(t)\\text{ V}$",
+        "Equivalent Physical System: Series RC circuit with $R = 1\\ \\Omega$, $C = 1\\text{ F}$, initial capacitor voltage $v_C(0^-) = 2\\text{ V}$, connected to a step source $5u(t)$ at $t = 0$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Taking the Unilateral Laplace Transform"
+      },
+      {
+       "t": "p",
+       "text": "Applying the differentiation property:"
+      },
+      {
+       "t": "math",
+       "tex": "[s Y(s) - y(0^-)] + Y(s) = X(s)"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s)(s + 1) = y(0^-) + X(s)"
+      },
+      {
+       "t": "p",
+       "text": "Dividing by $(s + 1)$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s) = \\underbrace{\\frac{y(0^-)}{s + 1}}_{Y_{\\text{ZIR}}(s)} + \\underbrace{\\frac{X(s)}{s + 1}}_{Y_{\\text{ZSR}}(s)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Substituting Numerical Values"
+      },
+      {
+       "t": "p",
+       "text": "Given $y(0^-) = 2$ and $x(t) = 5u(t) \\implies X(s) = \\frac{5}{s}$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZIR}}(s) = \\frac{2}{s + 1}"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZSR}}(s) = \\frac{5}{s(s + 1)} = \\frac{5}{s} - \\frac{5}{s + 1}"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s) = \\frac{2}{s + 1} + \\frac{5}{s} - \\frac{5}{s + 1} = \\frac{5}{s} - \\frac{3}{s + 1}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Inverse Transform and the Fatal $u(t)$ Notation Trap (Slide 241)"
+      },
+      {
+       "t": "p",
+       "text": "How should the time-domain solution $y(t)$ be expressed?"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Mistake 1 (Naive Multiplication by $u(t)$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = [2e^{-t} + 5 - 5e^{-t}] u(t) = [5 - 3e^{-t}] u(t)"
+      },
+      {
+       "t": "p",
+       "text": "*Audit of Mistake 1:* Test at $t = 0^-$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(0^-) = [5 - 3e^{-0^-}] u(0^-) = [5 - 3](0) = 0 \\neq 2\\text{ V}!"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying the entire expression by $u(t)$ completely obliterates the initial condition at $t = 0^-$!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Mistake 2 (Omitting the step function entirely):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 5 - 3e^{-t} \\quad \\forall t"
+      },
+      {
+       "t": "p",
+       "text": "*Audit of Mistake 2:* As $t \\to -\\infty$, $y(t) \\to -\\infty$. But the input was only applied at $t = 0$, so this expression is physically invalid for $t < 0$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**The Mathematically Correct Formulation (Slide 241, 243):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\underbrace{2e^{-t}}_{\\text{Valid for } t > 0^-} + \\underbrace{5[1 - e^{-t}] u(t)}_{\\text{ZSR starts at } t = 0}, \\quad t > 0^-"
+      },
+      {
+       "t": "p",
+       "text": "Let us verify:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $t = 0^-$: $y(0^-) = 2e^{-0} + 5[1 - 1](0) = 2\\text{ V}$ $\\checkmark$ (Matches initial condition!)",
+        "At $t = 0^+$: $y(0^+) = 2e^{-0} + 5[1 - e^{-0}](1) = 2 + 0 = 2\\text{ V}$ $\\checkmark$ (Capacitor voltage is continuous!)",
+        "At $t \\to \\infty$: $y(\\infty) = 0 + 5[1 - 0] = 5\\text{ V}$ $\\checkmark$ (Final steady-state capacitor voltage!)"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Comparison with Network Theory Transient Formula (Slide 243)"
+      },
+      {
+       "t": "p",
+       "text": "In electrical circuit theory, the standard formula is:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = y(\\infty) + [y(0^+) - y(\\infty)] e^{-t/\\tau} = 5 + [2 - 5] e^{-t} = 5 - 3e^{-t}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Network theory formulas implicitly assume $t \\ge 0^+$.",
+        "Evaluating at $t = 1\\text{ s}$:",
+        "Network formula: $y(1) = 5 - 3e^{-1} \\approx 3.8964\\text{ V}$.",
+        "Laplace formula: $y(1) = 2e^{-1} + 5[1 - e^{-1}] = 5 - 3e^{-1} \\approx 3.8964\\text{ V}$.",
+        "Both formulas yield **identical results for all $t > 0$**! Laplace transform is superior because it explicitly maintains validity across the switching boundary $t = 0^- \\to 0^+$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Identification of All Four Response Components (Slide 245)"
+      },
+      {
+       "t": "p",
+       "text": "From $Y(s) = \\underbrace{\\frac{2}{s+1}}_{\\text{ZIR}} + \\underbrace{\\left(\\frac{5}{s} - \\frac{5}{s+1}\\right)}_{\\text{ZSR}}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Zero-Input Response:** $y_{\\text{ZIR}}(t) = 2e^{-t}, \\quad t > 0^-$",
+        "**Zero-State Response:** $y_{\\text{ZSR}}(t) = 5[1 - e^{-t}] u(t)$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Now re-group terms according to pole origin:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "System pole is at $s = -1$ (from $H(s) = \\frac{1}{s+1}$).",
+        "Input pole is at $s = 0$ (from $X(s) = \\frac{5}{s}$)."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\underbrace{5 u(t)}_{\\text{From input pole } s=0} + \\underbrace{\\left[2e^{-t} - 5e^{-t} u(t)\\right]}_{\\text{From system pole } s=-1}, \\quad t > 0^-"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Forced Response (Steady-State):** $y_{\\text{forced}}(t) = 5u(t)$",
+        "**Natural Response (Transient):** $y_{\\text{natural}}(t) = 2e^{-t} - 5e^{-t} u(t), \\quad t > 0^-$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 6: Loop Current $i(t)$ and Jump Discontinuity Analysis (Slide 246)"
+      },
+      {
+       "t": "p",
+       "text": "The current flowing through the series RC circuit is:"
+      },
+      {
+       "t": "math",
+       "tex": "i(t) = C \\frac{dy(t)}{dt} = 1 \\cdot \\frac{d}{dt}\\left[ 2e^{-t} + 5(1 - e^{-t})u(t) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Using generalized calculus with distribution theory:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{dt}\\left[ 5(1 - e^{-t})u(t) \\right] = 5(1 - e^{-t}) \\frac{du(t)}{dt} + \\frac{d}{dt}[5(1 - e^{-t})] u(t)"
+      },
+      {
+       "t": "math",
+       "tex": "= 5(1 - e^{-t}) \\delta(t) + 5e^{-t} u(t)"
+      },
+      {
+       "t": "p",
+       "text": "Since $(1 - e^{-t}) = 0$ at $t = 0$, by the sifting property $f(t)\\delta(t) = f(0)\\delta(t) = 0 \\cdot \\delta(t) = 0$. Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "i(t) = -2e^{-t} + 5e^{-t} u(t), \\quad t > 0^-"
+      },
+      {
+       "t": "p",
+       "text": "**Physical Verification of the Current Jump:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $t = 0^-$: $v_{\\text{in}}(0^-) = 0\\text{ V}$, $v_C(0^-) = 2\\text{ V}$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "i(0^-) = \\frac{v_{\\text{in}}(0^-) - v_C(0^-)}{R} = \\frac{0 - 2}{1} = -2\\text{ A}"
+      },
+      {
+       "t": "p",
+       "text": "From formula: $i(0^-) = -2e^{-0} + 0 = -2\\text{ A}$ $\\checkmark$ (Exact match!)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $t = 0^+$: $v_{\\text{in}}(0^+) = 5\\text{ V}$, $v_C(0^+) = 2\\text{ V}$ (capacitor voltage cannot change instantaneously)."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "i(0^+) = \\frac{v_{\\text{in}}(0^+) - v_C(0^+)}{R} = \\frac{5 - 2}{1} = +3\\text{ A}"
+      },
+      {
+       "t": "p",
+       "text": "From formula: $i(0^+) = -2e^{-0} + 5e^{-0}(1) = -2 + 5 = +3\\text{ A}$ $\\checkmark$ (Exact match!)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion:** While voltage across the capacitor is continuous ($y(0^-) = y(0^+) = 2\\text{ V}$), the loop current undergoes a finite step discontinuity of $\\Delta i = +5\\text{ A}$ at $t = 0$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "5.3 Worked Problem 2: 2nd-Order Differential Equation (Slides 247\u2013249)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 247)"
-    },
-    {
-     "t": "p",
-     "text": "Consider an LTI system characterized by the second-order differential equation:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d^2y(t)}{dt^2} + 3\\frac{dy(t)}{dt} + 2y(t) = x(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Input: $x(t) = u(t)$",
-      "Initial Conditions: $y(0^-) = 0$, $y'(0^-) = 1$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Find $y(t)$, the transfer function $H(s)$, and explicitly identify ZIR, ZSR, Natural response, and Forced response."
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Taking the Unilateral Laplace Transform"
-    },
-    {
-     "t": "p",
-     "text": "Applying the ULT derivative properties:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{ULT}\\left\\{\\frac{d^2y}{dt^2}\\right\\} = s^2 Y(s) - s y(0^-) - y'(0^-)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{ULT}\\left\\{3\\frac{dy}{dt}\\right\\} = 3[s Y(s) - y(0^-)]"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{ULT}\\{2y(t)\\} = 2Y(s)"
-    },
-    {
-     "t": "p",
-     "text": "Substituting into the differential equation:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left[ s^2 Y(s) - s y(0^-) - y'(0^-) \\right] + 3\\left[ s Y(s) - y(0^-) \\right] + 2Y(s) = X(s)"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s)[s^2 + 3s + 2] - y(0^-)[s + 3] - y'(0^-) = X(s)"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $y(0^-) = 0$ and $y'(0^-) = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s)[s^2 + 3s + 2] - 1 = X(s)"
-    },
-    {
-     "t": "math",
-     "tex": "Y(s) = \\frac{1}{s^2 + 3s + 2} + \\frac{X(s)}{s^2 + 3s + 2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: System Transfer Function $H(s)$"
-    },
-    {
-     "t": "p",
-     "text": "By definition, the transfer function is the ratio of output to input under **strictly zero initial conditions**:"
-    },
-    {
-     "t": "math",
-     "tex": "H(s) \\triangleq \\left. \\frac{Y(s)}{X(s)} \\right|_{\\text{All I.C.} = 0} = \\frac{1}{s^2 + 3s + 2} = \\frac{1}{(s + 1)(s + 2)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Partial Fraction Expansion of ZIR and ZSR (Slide 248)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Zero-Input Response (ZIR):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZIR}}(s) = \\frac{1}{(s + 1)(s + 2)} = \\frac{A}{s + 1} + \\frac{B}{s + 2}"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{1}{s + 2} \\right|_{s = -1} = 1, \\quad B = \\left. \\frac{1}{s + 1} \\right|_{s = -2} = -1"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZIR}}(s) = \\frac{1}{s + 1} - \\frac{1}{s + 2}"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{ZIR}}(t) = [e^{-t} - e^{-2t}], \\quad t > 0^-"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Zero-State Response (ZSR):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $x(t) = u(t) \\implies X(s) = \\frac{1}{s}$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZSR}}(s) = \\frac{1}{s(s + 1)(s + 2)} = \\frac{C}{s} + \\frac{D}{s + 1} + \\frac{E}{s + 2}"
-    },
-    {
-     "t": "math",
-     "tex": "C = \\left. \\frac{1}{(s+1)(s+2)} \\right|_{s=0} = \\frac{1}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "D = \\left. \\frac{1}{s(s+2)} \\right|_{s=-1} = \\frac{1}{(-1)(1)} = -1"
-    },
-    {
-     "t": "math",
-     "tex": "E = \\left. \\frac{1}{s(s+1)} \\right|_{s=-2} = \\frac{1}{(-2)(-1)} = \\frac{1}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZSR}}(s) = \\frac{1/2}{s} - \\frac{1}{s + 1} + \\frac{1/2}{s + 2}"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{ZSR}}(t) = \\left[ \\frac{1}{2} - e^{-t} + \\frac{1}{2}e^{-2t} \\right] u(t)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Verification of Initial Conditions"
-    },
-    {
-     "t": "p",
-     "text": "Total response:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = [e^{-t} - e^{-2t}] + \\left[ \\frac{1}{2} - e^{-t} + \\frac{1}{2}e^{-2t} \\right] u(t), \\quad t > 0^-"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $t = 0^-$: $y(0^-) = [e^0 - e^0] + 0 = 0\\text{ V}$ $\\checkmark$",
-      "Taking derivative for $t \\in (0^-, 0^+)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left. \\frac{dy}{dt} \\right|_{t=0^-} = \\left. \\left[ -e^{-t} + 2e^{-2t} \\right] \\right|_{t=0^-} = -1 + 2 = +1"
-    },
-    {
-     "t": "p",
-     "text": "$\\checkmark$ (Matches $y'(0^-) = 1$!)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Classification Summary (Slide 249)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ZIR:** $y_{\\text{ZIR}}(t) = e^{-t} - e^{-2t}, \\quad t > 0^-$",
-      "**ZSR:** $y_{\\text{ZSR}}(t) = \\left[\\frac{1}{2} - e^{-t} + \\frac{1}{2}e^{-2t}\\right] u(t)$",
-      "**Forced Response:** Associated with the input pole at $s = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{forced}}(t) = \\frac{1}{2} u(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Natural Response:** Associated with the system poles at $s = -1$ and $s = -2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{natural}}(t) = [e^{-t} - e^{-2t}] + \\left[-e^{-t} + \\frac{1}{2}e^{-2t}\\right] u(t), \\quad t > 0^-"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 247)"
+      },
+      {
+       "t": "p",
+       "text": "Consider an LTI system characterized by the second-order differential equation:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d^2y(t)}{dt^2} + 3\\frac{dy(t)}{dt} + 2y(t) = x(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Input: $x(t) = u(t)$",
+        "Initial Conditions: $y(0^-) = 0$, $y'(0^-) = 1$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Find $y(t)$, the transfer function $H(s)$, and explicitly identify ZIR, ZSR, Natural response, and Forced response."
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Taking the Unilateral Laplace Transform"
+      },
+      {
+       "t": "p",
+       "text": "Applying the ULT derivative properties:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{ULT}\\left\\{\\frac{d^2y}{dt^2}\\right\\} = s^2 Y(s) - s y(0^-) - y'(0^-)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{ULT}\\left\\{3\\frac{dy}{dt}\\right\\} = 3[s Y(s) - y(0^-)]"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{ULT}\\{2y(t)\\} = 2Y(s)"
+      },
+      {
+       "t": "p",
+       "text": "Substituting into the differential equation:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left[ s^2 Y(s) - s y(0^-) - y'(0^-) \\right] + 3\\left[ s Y(s) - y(0^-) \\right] + 2Y(s) = X(s)"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s)[s^2 + 3s + 2] - y(0^-)[s + 3] - y'(0^-) = X(s)"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $y(0^-) = 0$ and $y'(0^-) = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s)[s^2 + 3s + 2] - 1 = X(s)"
+      },
+      {
+       "t": "math",
+       "tex": "Y(s) = \\frac{1}{s^2 + 3s + 2} + \\frac{X(s)}{s^2 + 3s + 2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: System Transfer Function $H(s)$"
+      },
+      {
+       "t": "p",
+       "text": "By definition, the transfer function is the ratio of output to input under **strictly zero initial conditions**:"
+      },
+      {
+       "t": "math",
+       "tex": "H(s) \\triangleq \\left. \\frac{Y(s)}{X(s)} \\right|_{\\text{All I.C.} = 0} = \\frac{1}{s^2 + 3s + 2} = \\frac{1}{(s + 1)(s + 2)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Partial Fraction Expansion of ZIR and ZSR (Slide 248)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Zero-Input Response (ZIR):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZIR}}(s) = \\frac{1}{(s + 1)(s + 2)} = \\frac{A}{s + 1} + \\frac{B}{s + 2}"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{1}{s + 2} \\right|_{s = -1} = 1, \\quad B = \\left. \\frac{1}{s + 1} \\right|_{s = -2} = -1"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZIR}}(s) = \\frac{1}{s + 1} - \\frac{1}{s + 2}"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{ZIR}}(t) = [e^{-t} - e^{-2t}], \\quad t > 0^-"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Zero-State Response (ZSR):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $x(t) = u(t) \\implies X(s) = \\frac{1}{s}$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZSR}}(s) = \\frac{1}{s(s + 1)(s + 2)} = \\frac{C}{s} + \\frac{D}{s + 1} + \\frac{E}{s + 2}"
+      },
+      {
+       "t": "math",
+       "tex": "C = \\left. \\frac{1}{(s+1)(s+2)} \\right|_{s=0} = \\frac{1}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "D = \\left. \\frac{1}{s(s+2)} \\right|_{s=-1} = \\frac{1}{(-1)(1)} = -1"
+      },
+      {
+       "t": "math",
+       "tex": "E = \\left. \\frac{1}{s(s+1)} \\right|_{s=-2} = \\frac{1}{(-2)(-1)} = \\frac{1}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZSR}}(s) = \\frac{1/2}{s} - \\frac{1}{s + 1} + \\frac{1/2}{s + 2}"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{ZSR}}(t) = \\left[ \\frac{1}{2} - e^{-t} + \\frac{1}{2}e^{-2t} \\right] u(t)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Verification of Initial Conditions"
+      },
+      {
+       "t": "p",
+       "text": "Total response:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = [e^{-t} - e^{-2t}] + \\left[ \\frac{1}{2} - e^{-t} + \\frac{1}{2}e^{-2t} \\right] u(t), \\quad t > 0^-"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $t = 0^-$: $y(0^-) = [e^0 - e^0] + 0 = 0\\text{ V}$ $\\checkmark$",
+        "Taking derivative for $t \\in (0^-, 0^+)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left. \\frac{dy}{dt} \\right|_{t=0^-} = \\left. \\left[ -e^{-t} + 2e^{-2t} \\right] \\right|_{t=0^-} = -1 + 2 = +1"
+      },
+      {
+       "t": "p",
+       "text": "$\\checkmark$ (Matches $y'(0^-) = 1$!)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Classification Summary (Slide 249)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ZIR:** $y_{\\text{ZIR}}(t) = e^{-t} - e^{-2t}, \\quad t > 0^-$",
+        "**ZSR:** $y_{\\text{ZSR}}(t) = \\left[\\frac{1}{2} - e^{-t} + \\frac{1}{2}e^{-2t}\\right] u(t)$",
+        "**Forced Response:** Associated with the input pole at $s = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{forced}}(t) = \\frac{1}{2} u(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Natural Response:** Associated with the system poles at $s = -1$ and $s = -2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{natural}}(t) = [e^{-t} - e^{-2t}] + \\left[-e^{-t} + \\frac{1}{2}e^{-2t}\\right] u(t), \\quad t > 0^-"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14977,68 +14911,67 @@ export default {
      "text": "6.3 Worked IVT Drill Problems (Slide 256)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 1: Strictly Proper Rational Function (Slide 256)"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{2s^2 + 5s + 12}{s^3 + 4s^2 + 14s + 20}, \\quad x(t) \\text{ causal}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Check condition: $\\deg(\\text{Num}) = 2 < \\deg(\\text{Den}) = 3$. Strictly proper $\\checkmark$.",
-      "Apply IVT:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(0^+) = \\lim_{s \\to \\infty} s X(s) = \\lim_{s \\to \\infty} \\frac{s(2s^2 + 5s + 12)}{s^3 + 4s^2 + 14s + 20} = \\lim_{s \\to \\infty} \\frac{2s^3 + 5s^2 + 12s}{s^3 + 4s^2 + 14s + 20}"
-    },
-    {
-     "t": "p",
-     "text": "Divide numerator and denominator by $s^3$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(0^+) = \\lim_{s \\to \\infty} \\frac{2 + \\frac{5}{s} + \\frac{12}{s^2}}{1 + \\frac{4}{s} + \\frac{14}{s^2} + \\frac{20}{s^3}} = \\frac{2 + 0 + 0}{1 + 0 + 0 + 0} = 2"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 2: Damped Sinusoid (Slide 256)"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{s + 2}{(s + 2)^2 + 3^2}, \\quad \\text{ROC: } \\text{Re}(s) > -2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Check condition: $\\deg(\\text{Num}) = 1 < \\deg(\\text{Den}) = 2$. Strictly proper $\\checkmark$.",
-      "Apply IVT:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(0^+) = \\lim_{s \\to \\infty} s X(s) = \\lim_{s \\to \\infty} \\frac{s(s + 2)}{s^2 + 4s + 13} = \\lim_{s \\to \\infty} \\frac{s^2 + 2s}{s^2 + 4s + 13} = 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Time-domain verification:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = e^{-2t} \\cos(3t) u(t) \\implies x(0^+) = e^0 \\cos(0) = 1 \\cdot 1 = 1 \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Drill 1: Strictly Proper Rational Function (Slide 256)"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{2s^2 + 5s + 12}{s^3 + 4s^2 + 14s + 20}, \\quad x(t) \\text{ causal}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Check condition: $\\deg(\\text{Num}) = 2 < \\deg(\\text{Den}) = 3$. Strictly proper $\\checkmark$.",
+        "Apply IVT:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(0^+) = \\lim_{s \\to \\infty} s X(s) = \\lim_{s \\to \\infty} \\frac{s(2s^2 + 5s + 12)}{s^3 + 4s^2 + 14s + 20} = \\lim_{s \\to \\infty} \\frac{2s^3 + 5s^2 + 12s}{s^3 + 4s^2 + 14s + 20}"
+      },
+      {
+       "t": "p",
+       "text": "Divide numerator and denominator by $s^3$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(0^+) = \\lim_{s \\to \\infty} \\frac{2 + \\frac{5}{s} + \\frac{12}{s^2}}{1 + \\frac{4}{s} + \\frac{14}{s^2} + \\frac{20}{s^3}} = \\frac{2 + 0 + 0}{1 + 0 + 0 + 0} = 2"
+      },
+      {
+       "t": "h4",
+       "text": "Drill 2: Damped Sinusoid (Slide 256)"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{s + 2}{(s + 2)^2 + 3^2}, \\quad \\text{ROC: } \\text{Re}(s) > -2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Check condition: $\\deg(\\text{Num}) = 1 < \\deg(\\text{Den}) = 2$. Strictly proper $\\checkmark$.",
+        "Apply IVT:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(0^+) = \\lim_{s \\to \\infty} s X(s) = \\lim_{s \\to \\infty} \\frac{s(s + 2)}{s^2 + 4s + 13} = \\lim_{s \\to \\infty} \\frac{s^2 + 2s}{s^2 + 4s + 13} = 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Time-domain verification:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = e^{-2t} \\cos(3t) u(t) \\implies x(0^+) = e^0 \\cos(0) = 1 \\cdot 1 = 1 \\quad \\checkmark"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -15107,312 +15040,311 @@ export default {
      "text": "7.3 Exhaustive Visual & Mathematical Audit of the 6 Benchmark Cases (Slides 257\u2013260)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Case (i): Simple Pole at Origin + Stable Pole (Slide 257)"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(s) = \\frac{1}{s(s+1)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Poles of $X_1(s)$: $s = 0$ (simple), $s = -1$.",
-      "Evaluate poles of $s X_1(s)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s X_1(s) = s \\cdot \\frac{1}{s(s+1)} = \\frac{1}{s+1}"
-    },
-    {
-     "t": "p",
-     "text": "Pole of $s X_1(s)$ is at $s = -1 \\in \\text{OLHP}$ ($\\text{Re}(-1) < 0$)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**FVT Status:** **APPLICABLE $\\checkmark$**",
-      "Calculation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_1(\\infty) = \\lim_{s \\to 0} s X_1(s) = \\lim_{s \\to 0} \\frac{1}{s+1} = \\frac{1}{0+1} = 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Time-Domain Proof:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_1(s) = \\frac{1}{s} - \\frac{1}{s+1} \\implies x_1(t) = [1 - e^{-t}] u(t)"
-    },
-    {
-     "t": "math",
-     "tex": "x_1(\\infty) = \\lim_{t \\to \\infty} [1 - e^{-t}] = 1 - 0 = 1 \\quad \\checkmark"
-    },
-    {
-     "t": "h4",
-     "text": "Case (ii): Double Pole at Origin (Slide 258)"
-    },
-    {
-     "t": "math",
-     "tex": "X_2(s) = \\frac{1}{s^2(s+1)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Poles of $X_2(s)$: $s = 0$ (multiplicity 2), $s = -1$.",
-      "Evaluate poles of $s X_2(s)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s X_2(s) = s \\cdot \\frac{1}{s^2(s+1)} = \\frac{1}{s(s+1)}"
-    },
-    {
-     "t": "p",
-     "text": "Poles of $s X_2(s)$ are at $s = 0$ and $s = -1$.\n  The pole at $s = 0$ does **not** lie in the OLHP ($\\text{Re}(0) \\nless 0$)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**FVT Status:** **NOT APPLICABLE $\\times$ (Final value is undefined / diverges to $\\infty$)**",
-      "Time-Domain Proof:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_2(s) = \\frac{1}{s^2} - \\frac{1}{s} + \\frac{1}{s+1} \\implies x_2(t) = [t - 1 + e^{-t}] u(t)"
-    },
-    {
-     "t": "math",
-     "tex": "x_2(\\infty) = \\lim_{t \\to \\infty} [t - 1 + e^{-t}] = \\infty - 1 + 0 = \\infty"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**GATE Pitfall:** If a student blindly applies the formula:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{s \\to 0} s X_2(s) = \\lim_{s \\to 0} \\frac{1}{s(s+1)} = \\infty"
-    },
-    {
-     "t": "p",
-     "text": "While the mathematical limit evaluates to $\\infty$, in GATE options \"Undefined\" or \"Does not exist\" is the correct response."
-    },
-    {
-     "t": "h4",
-     "text": "Case (iii): Pole in the Right Half Plane (Slide 259)"
-    },
-    {
-     "t": "math",
-     "tex": "X_3(s) = \\frac{s+2}{(s+3)(s-1)}, \\quad \\text{ROC: } \\text{Re}(s) > 1 \\text{ (Causal)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Poles of $X_3(s)$: $s = -3 \\in \\text{OLHP}$, $s = +1 \\in \\text{RHP}$.",
-      "Evaluate poles of $s X_3(s)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s X_3(s) = \\frac{s(s+2)}{(s+3)(s-1)}"
-    },
-    {
-     "t": "p",
-     "text": "The pole at $s = +1$ lies in the RHP ($\\text{Re}(1) > 0$)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**FVT Status:** **NOT APPLICABLE $\\times$ (Final value is undefined / diverges to $\\infty$)**",
-      "**The Deadly GATE Trap:** Blind application of the formula yields:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_3(\\infty) \\stackrel{?}{=} \\lim_{s \\to 0} s X_3(s) = \\lim_{s \\to 0} \\frac{s(s+2)}{(s+3)(s-1)} = \\frac{0 \\cdot 2}{3 \\cdot (-1)} = 0 \\quad \\mathbf{\\times\\times\\times\\text{ DEADLY TRAP!}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Time-Domain Proof:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_3(s) = \\frac{1/4}{s+3} + \\frac{3/4}{s-1} \\implies x_3(t) = \\left[ \\frac{1}{4}e^{-3t} + \\frac{3}{4}e^{t} \\right] u(t)"
-    },
-    {
-     "t": "math",
-     "tex": "x_3(\\infty) = \\lim_{t \\to \\infty} \\left[ \\frac{1}{4}e^{-\\infty} + \\frac{3}{4}e^{+\\infty} \\right] = 0 + \\infty = \\infty"
-    },
-    {
-     "t": "p",
-     "text": "The true final value is $\\infty$. The formula falsely gave $0$ because the pole condition was violated!"
-    },
-    {
-     "t": "h4",
-     "text": "Case (iv): Poles on the Imaginary Axis / Undamped Oscillation (Slide 259)"
-    },
-    {
-     "t": "math",
-     "tex": "X_4(s) = \\frac{\\omega_0}{s^2 + \\omega_0^2}, \\quad \\text{ROC: } \\text{Re}(s) > 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Poles of $X_4(s)$: $s = \\pm j\\omega_0$.",
-      "Evaluate poles of $s X_4(s)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s X_4(s) = \\frac{s \\omega_0}{s^2 + \\omega_0^2}"
-    },
-    {
-     "t": "p",
-     "text": "Poles are at $s = \\pm j\\omega_0$ on the $j\\omega$-axis ($\\text{Re}(s) = 0 \\nless 0$)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**FVT Status:** **NOT APPLICABLE $\\times$ (Signal oscillates perpetually; limit does not exist!)**",
-      "**The Deadly GATE Trap:** Blind application of the formula yields:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_4(\\infty) \\stackrel{?}{=} \\lim_{s \\to 0} s X_4(s) = \\lim_{s \\to 0} \\frac{s \\omega_0}{s^2 + \\omega_0^2} = \\frac{0 \\cdot \\omega_0}{0 + \\omega_0^2} = 0 \\quad \\mathbf{\\times\\times\\times\\text{ DEADLY TRAP!}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Time-Domain Proof:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_4(t) = \\sin(\\omega_0 t) u(t)"
-    },
-    {
-     "t": "p",
-     "text": "As $t \\to \\infty$, $\\sin(\\omega_0 t)$ oscillates indefinitely between $-1$ and $+1$. $\\lim_{t \\to \\infty} \\sin(\\omega_0 t)$ does not exist!"
-    },
-    {
-     "t": "h4",
-     "text": "Case (v): Damped Oscillation / Complex Conjugate Poles in OLHP (Slide 260)"
-    },
-    {
-     "t": "math",
-     "tex": "X_5(s) = \\frac{s+2}{(s+2)^2 + 3^2}, \\quad \\text{ROC: } \\text{Re}(s) > -2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Poles of $X_5(s)$: $s = -2 \\pm j3$.",
-      "Evaluate poles of $s X_5(s)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s X_5(s) = \\frac{s(s+2)}{(s+2)^2 + 9}"
-    },
-    {
-     "t": "p",
-     "text": "Both poles have real part $\\text{Re}(s) = -2 < 0 \\in \\text{OLHP}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**FVT Status:** **APPLICABLE $\\checkmark$**",
-      "Calculation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_5(\\infty) = \\lim_{s \\to 0} s X_5(s) = \\lim_{s \\to 0} \\frac{s(s+2)}{(s+2)^2 + 9} = \\frac{0 \\cdot 2}{4 + 9} = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Time-Domain Proof:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_5(t) = e^{-2t} \\cos(3t) u(t)"
-    },
-    {
-     "t": "math",
-     "tex": "x_5(\\infty) = \\lim_{t \\to \\infty} e^{-2t} \\cos(3t) = 0 \\cdot [\\text{bounded value between } -1 \\text{ and } +1] = 0 \\quad \\checkmark"
-    },
-    {
-     "t": "h4",
-     "text": "Case (vi): Improper Transform with Impulses at $t = 0$ (Slide 260)"
-    },
-    {
-     "t": "math",
-     "tex": "X_6(s) = \\frac{s^2 + 2s + 1}{s} = s + 2 + \\frac{1}{s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Evaluate poles of $s X_6(s)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s X_6(s) = s^2 + 2s + 1"
-    },
-    {
-     "t": "p",
-     "text": "This is a polynomial in $s$ with no finite poles (pole at $s = \\infty$)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Calculation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_6(\\infty) = \\lim_{s \\to 0} s X_6(s) = \\lim_{s \\to 0} (s^2 + 2s + 1) = 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Time-Domain Proof:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_6(t) = \\delta'(t) + 2\\delta(t) + u(t)"
-    },
-    {
-     "t": "p",
-     "text": "As $t \\to \\infty$, the singularity functions $\\delta'(t)$ and $\\delta(t)$ are strictly localized at $t = 0$ and have zero value for all $t > 0$.\n  For $t > 0$, $x_6(t) = u(t) = 1 \\implies x_6(\\infty) = 1 \\quad \\checkmark$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Audit Conclusion:** While IVT strictly fails on improper transforms because singularities occur at $t = 0$, FVT can still correctly predict the steady state if all transient terms and singularities decay as $t \\to \\infty$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Case (i): Simple Pole at Origin + Stable Pole (Slide 257)"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(s) = \\frac{1}{s(s+1)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Poles of $X_1(s)$: $s = 0$ (simple), $s = -1$.",
+        "Evaluate poles of $s X_1(s)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s X_1(s) = s \\cdot \\frac{1}{s(s+1)} = \\frac{1}{s+1}"
+      },
+      {
+       "t": "p",
+       "text": "Pole of $s X_1(s)$ is at $s = -1 \\in \\text{OLHP}$ ($\\text{Re}(-1) < 0$)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**FVT Status:** **APPLICABLE $\\checkmark$**",
+        "Calculation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_1(\\infty) = \\lim_{s \\to 0} s X_1(s) = \\lim_{s \\to 0} \\frac{1}{s+1} = \\frac{1}{0+1} = 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Time-Domain Proof:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_1(s) = \\frac{1}{s} - \\frac{1}{s+1} \\implies x_1(t) = [1 - e^{-t}] u(t)"
+      },
+      {
+       "t": "math",
+       "tex": "x_1(\\infty) = \\lim_{t \\to \\infty} [1 - e^{-t}] = 1 - 0 = 1 \\quad \\checkmark"
+      },
+      {
+       "t": "h4",
+       "text": "Case (ii): Double Pole at Origin (Slide 258)"
+      },
+      {
+       "t": "math",
+       "tex": "X_2(s) = \\frac{1}{s^2(s+1)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Poles of $X_2(s)$: $s = 0$ (multiplicity 2), $s = -1$.",
+        "Evaluate poles of $s X_2(s)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s X_2(s) = s \\cdot \\frac{1}{s^2(s+1)} = \\frac{1}{s(s+1)}"
+      },
+      {
+       "t": "p",
+       "text": "Poles of $s X_2(s)$ are at $s = 0$ and $s = -1$.\n  The pole at $s = 0$ does **not** lie in the OLHP ($\\text{Re}(0) \\nless 0$)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**FVT Status:** **NOT APPLICABLE $\\times$ (Final value is undefined / diverges to $\\infty$)**",
+        "Time-Domain Proof:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_2(s) = \\frac{1}{s^2} - \\frac{1}{s} + \\frac{1}{s+1} \\implies x_2(t) = [t - 1 + e^{-t}] u(t)"
+      },
+      {
+       "t": "math",
+       "tex": "x_2(\\infty) = \\lim_{t \\to \\infty} [t - 1 + e^{-t}] = \\infty - 1 + 0 = \\infty"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**GATE Pitfall:** If a student blindly applies the formula:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{s \\to 0} s X_2(s) = \\lim_{s \\to 0} \\frac{1}{s(s+1)} = \\infty"
+      },
+      {
+       "t": "p",
+       "text": "While the mathematical limit evaluates to $\\infty$, in GATE options \"Undefined\" or \"Does not exist\" is the correct response."
+      },
+      {
+       "t": "h4",
+       "text": "Case (iii): Pole in the Right Half Plane (Slide 259)"
+      },
+      {
+       "t": "math",
+       "tex": "X_3(s) = \\frac{s+2}{(s+3)(s-1)}, \\quad \\text{ROC: } \\text{Re}(s) > 1 \\text{ (Causal)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Poles of $X_3(s)$: $s = -3 \\in \\text{OLHP}$, $s = +1 \\in \\text{RHP}$.",
+        "Evaluate poles of $s X_3(s)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s X_3(s) = \\frac{s(s+2)}{(s+3)(s-1)}"
+      },
+      {
+       "t": "p",
+       "text": "The pole at $s = +1$ lies in the RHP ($\\text{Re}(1) > 0$)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**FVT Status:** **NOT APPLICABLE $\\times$ (Final value is undefined / diverges to $\\infty$)**",
+        "**The Deadly GATE Trap:** Blind application of the formula yields:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_3(\\infty) \\stackrel{?}{=} \\lim_{s \\to 0} s X_3(s) = \\lim_{s \\to 0} \\frac{s(s+2)}{(s+3)(s-1)} = \\frac{0 \\cdot 2}{3 \\cdot (-1)} = 0 \\quad \\mathbf{\\times\\times\\times\\text{ DEADLY TRAP!}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Time-Domain Proof:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_3(s) = \\frac{1/4}{s+3} + \\frac{3/4}{s-1} \\implies x_3(t) = \\left[ \\frac{1}{4}e^{-3t} + \\frac{3}{4}e^{t} \\right] u(t)"
+      },
+      {
+       "t": "math",
+       "tex": "x_3(\\infty) = \\lim_{t \\to \\infty} \\left[ \\frac{1}{4}e^{-\\infty} + \\frac{3}{4}e^{+\\infty} \\right] = 0 + \\infty = \\infty"
+      },
+      {
+       "t": "p",
+       "text": "The true final value is $\\infty$. The formula falsely gave $0$ because the pole condition was violated!"
+      },
+      {
+       "t": "h4",
+       "text": "Case (iv): Poles on the Imaginary Axis / Undamped Oscillation (Slide 259)"
+      },
+      {
+       "t": "math",
+       "tex": "X_4(s) = \\frac{\\omega_0}{s^2 + \\omega_0^2}, \\quad \\text{ROC: } \\text{Re}(s) > 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Poles of $X_4(s)$: $s = \\pm j\\omega_0$.",
+        "Evaluate poles of $s X_4(s)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s X_4(s) = \\frac{s \\omega_0}{s^2 + \\omega_0^2}"
+      },
+      {
+       "t": "p",
+       "text": "Poles are at $s = \\pm j\\omega_0$ on the $j\\omega$-axis ($\\text{Re}(s) = 0 \\nless 0$)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**FVT Status:** **NOT APPLICABLE $\\times$ (Signal oscillates perpetually; limit does not exist!)**",
+        "**The Deadly GATE Trap:** Blind application of the formula yields:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_4(\\infty) \\stackrel{?}{=} \\lim_{s \\to 0} s X_4(s) = \\lim_{s \\to 0} \\frac{s \\omega_0}{s^2 + \\omega_0^2} = \\frac{0 \\cdot \\omega_0}{0 + \\omega_0^2} = 0 \\quad \\mathbf{\\times\\times\\times\\text{ DEADLY TRAP!}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Time-Domain Proof:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_4(t) = \\sin(\\omega_0 t) u(t)"
+      },
+      {
+       "t": "p",
+       "text": "As $t \\to \\infty$, $\\sin(\\omega_0 t)$ oscillates indefinitely between $-1$ and $+1$. $\\lim_{t \\to \\infty} \\sin(\\omega_0 t)$ does not exist!"
+      },
+      {
+       "t": "h4",
+       "text": "Case (v): Damped Oscillation / Complex Conjugate Poles in OLHP (Slide 260)"
+      },
+      {
+       "t": "math",
+       "tex": "X_5(s) = \\frac{s+2}{(s+2)^2 + 3^2}, \\quad \\text{ROC: } \\text{Re}(s) > -2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Poles of $X_5(s)$: $s = -2 \\pm j3$.",
+        "Evaluate poles of $s X_5(s)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s X_5(s) = \\frac{s(s+2)}{(s+2)^2 + 9}"
+      },
+      {
+       "t": "p",
+       "text": "Both poles have real part $\\text{Re}(s) = -2 < 0 \\in \\text{OLHP}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**FVT Status:** **APPLICABLE $\\checkmark$**",
+        "Calculation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_5(\\infty) = \\lim_{s \\to 0} s X_5(s) = \\lim_{s \\to 0} \\frac{s(s+2)}{(s+2)^2 + 9} = \\frac{0 \\cdot 2}{4 + 9} = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Time-Domain Proof:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_5(t) = e^{-2t} \\cos(3t) u(t)"
+      },
+      {
+       "t": "math",
+       "tex": "x_5(\\infty) = \\lim_{t \\to \\infty} e^{-2t} \\cos(3t) = 0 \\cdot [\\text{bounded value between } -1 \\text{ and } +1] = 0 \\quad \\checkmark"
+      },
+      {
+       "t": "h4",
+       "text": "Case (vi): Improper Transform with Impulses at $t = 0$ (Slide 260)"
+      },
+      {
+       "t": "math",
+       "tex": "X_6(s) = \\frac{s^2 + 2s + 1}{s} = s + 2 + \\frac{1}{s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Evaluate poles of $s X_6(s)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s X_6(s) = s^2 + 2s + 1"
+      },
+      {
+       "t": "p",
+       "text": "This is a polynomial in $s$ with no finite poles (pole at $s = \\infty$)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Calculation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_6(\\infty) = \\lim_{s \\to 0} s X_6(s) = \\lim_{s \\to 0} (s^2 + 2s + 1) = 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Time-Domain Proof:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_6(t) = \\delta'(t) + 2\\delta(t) + u(t)"
+      },
+      {
+       "t": "p",
+       "text": "As $t \\to \\infty$, the singularity functions $\\delta'(t)$ and $\\delta(t)$ are strictly localized at $t = 0$ and have zero value for all $t > 0$.\n  For $t > 0$, $x_6(t) = u(t) = 1 \\implies x_6(\\infty) = 1 \\quad \\checkmark$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Audit Conclusion:** While IVT strictly fails on improper transforms because singularities occur at $t = 0$, FVT can still correctly predict the steady state if all transient terms and singularities decay as $t \\to \\infty$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -15494,7 +15426,7 @@ export default {
      "items": [
       "**Slide Coverage:** Slides 225 through 260 audited comprehensively across all 9 pages (`page_0057.png` to `page_0065.png`).",
       "**Mathematical Formulations:** Rigorously derived in KaTeX notation ($...$ and $$...$$).",
-      "**Practice Problems & Drills:** Every worked problem and derivation is enclosed in `<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>...</details>`.",
+      "**Practice Problems & Drills:** Every worked problem and derivation is enclosed in `<b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b>...`.",
       "**Chalkboard Slide Images:** 100% text and vector diagrams; zero chalkboard slide images embedded.",
       "**Audit Status:** Complete, verified, and ready for publication in PrepFusion Titans Batch course repository."
      ]

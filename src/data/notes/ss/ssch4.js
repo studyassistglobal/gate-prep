@@ -25,7 +25,7 @@ export default {
      "t": "alert",
      "type": "IMPORTANT",
      "title": null,
-     "text": "**Pedagogical Standards & Completeness Guarantee:**\n1. **100% Visual Slide Coverage:** Every single slide from `page_0001.png` through `page_0077.png` (307 chalkboard slides total across 77 pages) in `Printable_Fourier Transform.pdf` was visually inspected via high-resolution image audits (`view_file`). Zero formulas, derivations, or solved examples have been omitted.\n2. **Zero Matplotlib / Code Artifacts:** All system block diagrams, continuous spectra, replication combs, and filter characteristics are rendered as ultra-high-definition 4K Dark Blueprint engineering figures (`#0d1117` base, glowing neon cyan `#38bdf8`, electric blue `#60a5fa`, and amber gold `#fbbf24`).\n3. **Interactive Derivation Disclosure:** All step-by-step problem solutions and mathematical proofs are encapsulated within collapsible `<details open>` cards, pre-configured to render open during Dark Mode PDF export.\n4. **Self-Contained Module 11 Formula Compendium:** Includes an exhaustive formula compendium, the 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards Table, and the High-Speed 60-Second Rapid-Fire Diagnostic Decision Tree."
+     "text": "**Pedagogical Standards & Completeness Guarantee:**\n1. **100% Visual Slide Coverage:** Every single slide from `page_0001.png` through `page_0077.png` (307 chalkboard slides total across 77 pages) in `Printable_Fourier Transform.pdf` was visually inspected via high-resolution image audits (`view_file`). Zero formulas, derivations, or solved examples have been omitted.\n2. **Zero Matplotlib / Code Artifacts:** All system block diagrams, continuous spectra, replication combs, and filter characteristics are rendered as ultra-high-definition 4K Dark Blueprint engineering figures (`#0d1117` base, glowing neon cyan `#38bdf8`, electric blue `#60a5fa`, and amber gold `#fbbf24`).\n3. **Interactive Derivation Disclosure:** All step-by-step problem solutions and mathematical proofs are encapsulated within collapsible `` cards, pre-configured to render open during Dark Mode PDF export.\n4. **Self-Contained Module 11 Formula Compendium:** Includes an exhaustive formula compendium, the 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards Table, and the High-Speed 60-Second Rapid-Fire Diagnostic Decision Tree."
     }
    ]
   },
@@ -1080,152 +1080,151 @@ export default {
      "text": "Detailed Mathematical Breakdown (Drill 1: Slides 001 \u2013 004)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given the continuous-time periodic impulse train:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = A \\sum_{n=-\\infty}^\\infty \\delta(t - nT_0)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Find its Exponential Fourier Series Coefficients $c_n$.",
-      "Analyze the time-domain waveform as $T_0 \\to \\infty$.",
-      "Sketch the spectrum $c_n T_0$ as $\\omega_0 \\to 0$ and deduce the Fourier Transform of the resulting aperiodic signal."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Computation of EFS Coefficients $c_n$"
-    },
-    {
-     "t": "p",
-     "text": "The fundamental period is $T_0$, and the fundamental angular frequency is $\\omega_0 = \\frac{2\\pi}{T_0}$.  \nIntegrating over the symmetric period $\\left(-\\frac{T_0}{2}, \\frac{T_0}{2}\\right)$, the only impulse enclosed is at $t = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} \\int_{-T_0/2}^{T_0/2} A\\delta(t) e^{-j n \\omega_0 t} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Using the sifting property of the Dirac delta function:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-T_0/2}^{T_0/2} \\delta(t) e^{-j n \\omega_0 t} \\, dt = e^{-j n \\omega_0(0)} = 1"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{A}{T_0}, \\quad \\forall n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "The Fourier series coefficients are real, positive, and identically equal to $\\frac{A}{T_0}$ for every harmonic index $n$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Time-Domain Limiting Behavior ($T_0 \\to \\infty$)"
-    },
-    {
-     "t": "p",
-     "text": "As the period $T_0 \\to \\infty$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The impulse at $n = 0$ remains pinned at $t = 0$.",
-      "The impulses at $n = \\pm 1$ move to $t = \\pm T_0 \\to \\pm \\infty$.",
-      "The impulses at $n = \\pm 2$ move to $t = \\pm 2T_0 \\to \\pm \\infty$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Thus, over any finite observation window $[-T, T]$, all harmonic replicas vanish into infinity, leaving only a single isolated Dirac impulse:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{x}(t) = \\lim_{T_0 \\to \\infty} x(t) = A \\delta(t)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Frequency-Domain Limiting Behavior ($\\omega_0 \\to 0$)"
-    },
-    {
-     "t": "p",
-     "text": "Consider the scaled coefficients:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n T_0 = T_0 \\left(\\frac{A}{T_0}\\right) = A"
-    },
-    {
-     "t": "p",
-     "text": "The discrete harmonic lines occur at discrete frequencies:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_n = n\\omega_0 = n \\left(\\frac{2\\pi}{T_0}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "The frequency separation between adjacent spectral lines is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta\\omega = \\omega_0 = \\frac{2\\pi}{T_0}"
-    },
-    {
-     "t": "p",
-     "text": "As $T_0 \\to \\infty$, the spectral line spacing approaches zero ($\\omega_0 \\to 0$). The discrete sequence of spectral lines at intervals of $\\Delta\\omega$ merges into a dense continuum:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{\\omega_0 \\to 0} n\\omega_0 = \\omega"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\lim_{T_0 \\to \\infty} c_n T_0 = A, \\quad \\forall \\omega \\in (-\\infty, \\infty)"
-    },
-    {
-     "t": "code",
-     "text": "Discrete Spectrum (c\u2099 T\u2080 vs n\u03c9\u2080):\n    c\u2099T\u2080 |\n       A |   |   |   |   |   |   |   |   |   |   |\n      \u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500> \u03c9\n            -4\u03c9\u2080-3\u03c9\u2080-2\u03c9\u2080 -\u03c9\u2080  0  \u03c9\u2080  2\u03c9\u2080 3\u03c9\u2080 4\u03c9\u2080\n                        \u2502\n                        \u2502  Take limit \u03c9\u2080 \u2192 0 (lines merge)\n                        \u25bc\nContinuous Spectrum (X(\u03c9) vs \u03c9):\n    X(\u03c9) |\n       A |\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 (Flat horizontal line)\n      \u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> \u03c9\n         -\u221e                   0                      +\u221e"
-    },
-    {
-     "t": "h4",
-     "text": "Final Conclusion"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\mathcal{F}\\{A\\delta(t)\\} = A \\implies \\mathcal{F}\\{\\delta(t)\\} = 1}"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Sanity Checks"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trap 1:** Forgetting to scale $c_n$ by $T_0$. If one evaluates $\\lim_{T_0 \\to \\infty} c_n = \\lim_{T_0 \\to \\infty} \\frac{A}{T_0} = 0$, one incorrectly concludes that the Fourier transform is zero! CTFT represents spectral *density* ($c_n / \\Delta f = c_n T_0$), which remains non-zero.",
-      "**Trap 2:** Confusing the transform of $\\delta(t)$ with the transform of a DC constant. An impulse in time yields a constant spectrum in frequency ($\\delta(t) \\leftrightarrow 1$), whereas a constant in time yields an impulse in frequency ($1 \\leftrightarrow 2\\pi\\delta(\\omega)$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given the continuous-time periodic impulse train:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = A \\sum_{n=-\\infty}^\\infty \\delta(t - nT_0)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Find its Exponential Fourier Series Coefficients $c_n$.",
+        "Analyze the time-domain waveform as $T_0 \\to \\infty$.",
+        "Sketch the spectrum $c_n T_0$ as $\\omega_0 \\to 0$ and deduce the Fourier Transform of the resulting aperiodic signal."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Computation of EFS Coefficients $c_n$"
+      },
+      {
+       "t": "p",
+       "text": "The fundamental period is $T_0$, and the fundamental angular frequency is $\\omega_0 = \\frac{2\\pi}{T_0}$.  \nIntegrating over the symmetric period $\\left(-\\frac{T_0}{2}, \\frac{T_0}{2}\\right)$, the only impulse enclosed is at $t = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} \\int_{-T_0/2}^{T_0/2} A\\delta(t) e^{-j n \\omega_0 t} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Using the sifting property of the Dirac delta function:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-T_0/2}^{T_0/2} \\delta(t) e^{-j n \\omega_0 t} \\, dt = e^{-j n \\omega_0(0)} = 1"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{A}{T_0}, \\quad \\forall n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "The Fourier series coefficients are real, positive, and identically equal to $\\frac{A}{T_0}$ for every harmonic index $n$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Time-Domain Limiting Behavior ($T_0 \\to \\infty$)"
+      },
+      {
+       "t": "p",
+       "text": "As the period $T_0 \\to \\infty$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The impulse at $n = 0$ remains pinned at $t = 0$.",
+        "The impulses at $n = \\pm 1$ move to $t = \\pm T_0 \\to \\pm \\infty$.",
+        "The impulses at $n = \\pm 2$ move to $t = \\pm 2T_0 \\to \\pm \\infty$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Thus, over any finite observation window $[-T, T]$, all harmonic replicas vanish into infinity, leaving only a single isolated Dirac impulse:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{x}(t) = \\lim_{T_0 \\to \\infty} x(t) = A \\delta(t)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Frequency-Domain Limiting Behavior ($\\omega_0 \\to 0$)"
+      },
+      {
+       "t": "p",
+       "text": "Consider the scaled coefficients:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n T_0 = T_0 \\left(\\frac{A}{T_0}\\right) = A"
+      },
+      {
+       "t": "p",
+       "text": "The discrete harmonic lines occur at discrete frequencies:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_n = n\\omega_0 = n \\left(\\frac{2\\pi}{T_0}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "The frequency separation between adjacent spectral lines is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta\\omega = \\omega_0 = \\frac{2\\pi}{T_0}"
+      },
+      {
+       "t": "p",
+       "text": "As $T_0 \\to \\infty$, the spectral line spacing approaches zero ($\\omega_0 \\to 0$). The discrete sequence of spectral lines at intervals of $\\Delta\\omega$ merges into a dense continuum:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{\\omega_0 \\to 0} n\\omega_0 = \\omega"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\lim_{T_0 \\to \\infty} c_n T_0 = A, \\quad \\forall \\omega \\in (-\\infty, \\infty)"
+      },
+      {
+       "t": "code",
+       "text": "Discrete Spectrum (c\u2099 T\u2080 vs n\u03c9\u2080):\n    c\u2099T\u2080 |\n       A |   |   |   |   |   |   |   |   |   |   |\n      \u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500> \u03c9\n            -4\u03c9\u2080-3\u03c9\u2080-2\u03c9\u2080 -\u03c9\u2080  0  \u03c9\u2080  2\u03c9\u2080 3\u03c9\u2080 4\u03c9\u2080\n                        \u2502\n                        \u2502  Take limit \u03c9\u2080 \u2192 0 (lines merge)\n                        \u25bc\nContinuous Spectrum (X(\u03c9) vs \u03c9):\n    X(\u03c9) |\n       A |\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 (Flat horizontal line)\n      \u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> \u03c9\n         -\u221e                   0                      +\u221e"
+      },
+      {
+       "t": "h4",
+       "text": "Final Conclusion"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\mathcal{F}\\{A\\delta(t)\\} = A \\implies \\mathcal{F}\\{\\delta(t)\\} = 1}"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Sanity Checks"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Trap 1:** Forgetting to scale $c_n$ by $T_0$. If one evaluates $\\lim_{T_0 \\to \\infty} c_n = \\lim_{T_0 \\to \\infty} \\frac{A}{T_0} = 0$, one incorrectly concludes that the Fourier transform is zero! CTFT represents spectral *density* ($c_n / \\Delta f = c_n T_0$), which remains non-zero.",
+        "**Trap 2:** Confusing the transform of $\\delta(t)$ with the transform of a DC constant. An impulse in time yields a constant spectrum in frequency ($\\delta(t) \\leftrightarrow 1$), whereas a constant in time yields an impulse in frequency ($1 \\leftrightarrow 2\\pi\\delta(\\omega)$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1240,173 +1239,172 @@ export default {
      "text": "Detailed Mathematical Breakdown (Drill 2: Slides 005 \u2013 008)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given a periodic rectangular pulse train of amplitude $A$, pulse width $2T_1$, and period $T_0$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "State the Exponential Fourier Series coefficients $c_n$.",
-      "Derive the Continuous-Time Fourier Transform of the single isolated rectangular pulse $x(t) = A\\,\\text{rect}\\left(\\frac{t}{2T_1}\\right)$ by taking the limit $T_0 \\to \\infty$.",
-      "Sketch $X(\\omega)$, identifying the peak amplitude and the first three pairs of zero crossings."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Periodic Pulse Train EFS Coefficients"
-    },
-    {
-     "t": "p",
-     "text": "The periodic signal is defined over the fundamental period $\\left[-\\frac{T_0}{2}, \\frac{T_0}{2}\\right]$ as:"
-    },
-    {
-     "t": "math",
-     "tex": "x_p(t) = \\begin{cases} A, & -T_1 \\le t \\le T_1 \\\\ 0, & T_1 < |t| \\le \\frac{T_0}{2} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "The Fourier coefficients are:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} \\int_{-T_1}^{T_1} A e^{-j n \\omega_0 t} \\, dt = \\frac{A}{T_0} \\left[ \\frac{e^{-j n \\omega_0 t}}{-j n \\omega_0} \\right]_{-T_1}^{T_1} = \\frac{2A}{n \\omega_0 T_0} \\sin(n \\omega_0 T_1)"
-    },
-    {
-     "t": "p",
-     "text": "Multiply numerator and denominator by $T_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{2A T_1}{T_0} \\frac{\\sin(n \\omega_0 T_1)}{n \\omega_0 T_1} = \\frac{2A T_1}{T_0} \\, \\text{Sa}(n \\omega_0 T_1)"
-    },
-    {
-     "t": "p",
-     "text": "where $\\text{Sa}(\\theta) \\triangleq \\frac{\\sin\\theta}{\\theta}$ is the unnormalized sampling function."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Continuous Limiting Transition ($T_0 \\to \\infty$)"
-    },
-    {
-     "t": "p",
-     "text": "Multiply both sides by $T_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n T_0 = 2A T_1 \\, \\text{Sa}(n \\omega_0 T_1)"
-    },
-    {
-     "t": "p",
-     "text": "As $T_0 \\to \\infty$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$\\omega_0 = \\frac{2\\pi}{T_0} \\to 0$.",
-      "The discrete discrete harmonic points $n\\omega_0$ become dense:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{\\omega_0 \\to 0} n\\omega_0 = \\omega"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "The discrete envelope samples merge into a continuous function:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\lim_{T_0 \\to \\infty} c_n T_0 = 2A T_1 \\, \\text{Sa}(\\omega T_1) = 2A T_1 \\frac{\\sin(\\omega T_1)}{\\omega T_1}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Graphical Spectrum Analysis"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**DC Value ($\\omega = 0$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{\\omega \\to 0} X(\\omega) = 2A T_1 \\lim_{\\omega \\to 0} \\frac{\\sin(\\omega T_1)}{\\omega T_1} = 2A T_1 \\times 1 = 2A T_1"
-    },
-    {
-     "t": "p",
-     "text": "Notice that $2AT_1 = \\text{Area under the time-domain pulse } x(t)$!"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area} = \\int_{-\\infty}^\\infty x(t) \\, dt = X(0) = 2A T_1"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Zero Crossings (Null Frequencies):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Zero crossings occur when the numerator vanishes while the denominator is non-zero:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\omega T_1) = 0 \\iff \\omega T_1 = \\pm k\\pi \\quad (k = 1, 2, 3, \\dots)"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{\\text{null}} = \\pm \\frac{k\\pi}{T_1}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "First nulls: $\\omega = \\pm \\frac{\\pi}{T_1}$",
-      "Second nulls: $\\omega = \\pm \\frac{2\\pi}{T_1}$",
-      "Third nulls: $\\omega = \\pm \\frac{3\\pi}{T_1}$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Main Lobe Null-to-Null Bandwidth:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{BW}_{\\text{null-to-null}} = \\frac{\\pi}{T_1} - \\left(-\\frac{\\pi}{T_1}\\right) = \\frac{2\\pi}{T_1} \\text{ rad/s}"
-    },
-    {
-     "t": "code",
-     "text": "                CONTINUOUS FOURIER TRANSFORM SPECTRUM X(\u03c9)\n                     Peak = 2AT\u2081\n                         |\n                       * * *\n                     *   |   *\n                    *    |    *\n                   *     |     *\n                 \u2500*\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500*\u2500\u2500\u2500\u2500\u2500*\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500*\u2500\u2500\u2500\u2500\u2500> \u03c9\n               -2\u03c0/T\u2081  -\u03c0/T\u2081 0  \u03c0/T\u2081    2\u03c0/T\u2081\n                 <--- Main Lobe --->"
-    },
-    {
-     "t": "h4",
-     "text": "Final Conclusion"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A\\,\\text{rect}\\left(\\frac{t}{2T_1}\\right) \\xleftrightarrow{\\quad\\mathcal{F}\\quad} 2A T_1 \\, \\text{Sa}(\\omega T_1) = 2A T_1 \\frac{\\sin(\\omega T_1)}{\\omega T_1}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given a periodic rectangular pulse train of amplitude $A$, pulse width $2T_1$, and period $T_0$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "State the Exponential Fourier Series coefficients $c_n$.",
+        "Derive the Continuous-Time Fourier Transform of the single isolated rectangular pulse $x(t) = A\\,\\text{rect}\\left(\\frac{t}{2T_1}\\right)$ by taking the limit $T_0 \\to \\infty$.",
+        "Sketch $X(\\omega)$, identifying the peak amplitude and the first three pairs of zero crossings."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Periodic Pulse Train EFS Coefficients"
+      },
+      {
+       "t": "p",
+       "text": "The periodic signal is defined over the fundamental period $\\left[-\\frac{T_0}{2}, \\frac{T_0}{2}\\right]$ as:"
+      },
+      {
+       "t": "math",
+       "tex": "x_p(t) = \\begin{cases} A, & -T_1 \\le t \\le T_1 \\\\ 0, & T_1 < |t| \\le \\frac{T_0}{2} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "The Fourier coefficients are:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} \\int_{-T_1}^{T_1} A e^{-j n \\omega_0 t} \\, dt = \\frac{A}{T_0} \\left[ \\frac{e^{-j n \\omega_0 t}}{-j n \\omega_0} \\right]_{-T_1}^{T_1} = \\frac{2A}{n \\omega_0 T_0} \\sin(n \\omega_0 T_1)"
+      },
+      {
+       "t": "p",
+       "text": "Multiply numerator and denominator by $T_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{2A T_1}{T_0} \\frac{\\sin(n \\omega_0 T_1)}{n \\omega_0 T_1} = \\frac{2A T_1}{T_0} \\, \\text{Sa}(n \\omega_0 T_1)"
+      },
+      {
+       "t": "p",
+       "text": "where $\\text{Sa}(\\theta) \\triangleq \\frac{\\sin\\theta}{\\theta}$ is the unnormalized sampling function."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Continuous Limiting Transition ($T_0 \\to \\infty$)"
+      },
+      {
+       "t": "p",
+       "text": "Multiply both sides by $T_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n T_0 = 2A T_1 \\, \\text{Sa}(n \\omega_0 T_1)"
+      },
+      {
+       "t": "p",
+       "text": "As $T_0 \\to \\infty$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$\\omega_0 = \\frac{2\\pi}{T_0} \\to 0$.",
+        "The discrete discrete harmonic points $n\\omega_0$ become dense:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{\\omega_0 \\to 0} n\\omega_0 = \\omega"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "The discrete envelope samples merge into a continuous function:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\lim_{T_0 \\to \\infty} c_n T_0 = 2A T_1 \\, \\text{Sa}(\\omega T_1) = 2A T_1 \\frac{\\sin(\\omega T_1)}{\\omega T_1}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Graphical Spectrum Analysis"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**DC Value ($\\omega = 0$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{\\omega \\to 0} X(\\omega) = 2A T_1 \\lim_{\\omega \\to 0} \\frac{\\sin(\\omega T_1)}{\\omega T_1} = 2A T_1 \\times 1 = 2A T_1"
+      },
+      {
+       "t": "p",
+       "text": "Notice that $2AT_1 = \\text{Area under the time-domain pulse } x(t)$!"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area} = \\int_{-\\infty}^\\infty x(t) \\, dt = X(0) = 2A T_1"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Zero Crossings (Null Frequencies):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Zero crossings occur when the numerator vanishes while the denominator is non-zero:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\omega T_1) = 0 \\iff \\omega T_1 = \\pm k\\pi \\quad (k = 1, 2, 3, \\dots)"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{\\text{null}} = \\pm \\frac{k\\pi}{T_1}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "First nulls: $\\omega = \\pm \\frac{\\pi}{T_1}$",
+        "Second nulls: $\\omega = \\pm \\frac{2\\pi}{T_1}$",
+        "Third nulls: $\\omega = \\pm \\frac{3\\pi}{T_1}$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Main Lobe Null-to-Null Bandwidth:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{BW}_{\\text{null-to-null}} = \\frac{\\pi}{T_1} - \\left(-\\frac{\\pi}{T_1}\\right) = \\frac{2\\pi}{T_1} \\text{ rad/s}"
+      },
+      {
+       "t": "code",
+       "text": "                CONTINUOUS FOURIER TRANSFORM SPECTRUM X(\u03c9)\n                     Peak = 2AT\u2081\n                         |\n                       * * *\n                     *   |   *\n                    *    |    *\n                   *     |     *\n                 \u2500*\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500*\u2500\u2500\u2500\u2500\u2500*\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500*\u2500\u2500\u2500\u2500\u2500> \u03c9\n               -2\u03c0/T\u2081  -\u03c0/T\u2081 0  \u03c0/T\u2081    2\u03c0/T\u2081\n                 <--- Main Lobe --->"
+      },
+      {
+       "t": "h4",
+       "text": "Final Conclusion"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A\\,\\text{rect}\\left(\\frac{t}{2T_1}\\right) \\xleftrightarrow{\\quad\\mathcal{F}\\quad} 2A T_1 \\, \\text{Sa}(\\omega T_1) = 2A T_1 \\frac{\\sin(\\omega T_1)}{\\omega T_1}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1550,158 +1548,157 @@ export default {
      "text": "Detailed Mathematical Breakdown (Drill 3: Slides 019 \u2013 020)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given that $\\mathcal{F}\\{x(t)\\} = X(\\omega) = \\int_{-\\infty}^\\infty x(t)e^{-j\\omega t}dt$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Derive the Fourier transform of $y(t) = x(3t)$.",
-      "Derive the Fourier transform of $z(t) = x(-3t)$.",
-      "Generalize the result to obtain the master scaling property for an arbitrary real non-zero constant $a$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(at) \\xleftrightarrow{\\quad\\mathcal{F}\\quad} \\frac{1}{|a|} X\\left(\\frac{\\omega}{a}\\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Derivation for $y(t) = x(3t)$"
-    },
-    {
-     "t": "p",
-     "text": "By definition of the forward Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\int_{-\\infty}^\\infty y(t) e^{-j\\omega t} \\, dt = \\int_{-\\infty}^\\infty x(3t) e^{-j\\omega t} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Introduce the substitution:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha = 3t \\implies t = \\frac{\\alpha}{3}, \\quad dt = \\frac{d\\alpha}{3}"
-    },
-    {
-     "t": "p",
-     "text": "Limits of integration:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "As $t \\to -\\infty \\implies \\alpha = 3(-\\infty) = -\\infty$",
-      "As $t \\to +\\infty \\implies \\alpha = 3(+\\infty) = +\\infty$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Substituting into the integral:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\int_{-\\infty}^\\infty x(\\alpha) e^{-j\\omega(\\alpha/3)} \\frac{d\\alpha}{3} = \\frac{1}{3} \\int_{-\\infty}^\\infty x(\\alpha) e^{-j\\left(\\frac{\\omega}{3}\\right)\\alpha} \\, d\\alpha"
-    },
-    {
-     "t": "p",
-     "text": "Recognizing the integral as the Fourier transform of $x(\\cdot)$ evaluated at angular frequency $\\frac{\\omega}{3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{Y(\\omega) = \\mathcal{F}\\{x(3t)\\} = \\frac{1}{3} X\\left(\\frac{\\omega}{3}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Derivation for $z(t) = x(-3t)$"
-    },
-    {
-     "t": "p",
-     "text": "By definition:"
-    },
-    {
-     "t": "math",
-     "tex": "Z(\\omega) = \\int_{-\\infty}^\\infty x(-3t) e^{-j\\omega t} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "Introduce the substitution:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha = -3t \\implies t = -\\frac{\\alpha}{3}, \\quad dt = -\\frac{d\\alpha}{3}"
-    },
-    {
-     "t": "p",
-     "text": "Limits of integration:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "As $t \\to -\\infty \\implies \\alpha = -3(-\\infty) = +\\infty$",
-      "As $t \\to +\\infty \\implies \\alpha = -3(+\\infty) = -\\infty$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Substituting into the integral:"
-    },
-    {
-     "t": "math",
-     "tex": "Z(\\omega) = \\int_{+\\infty}^{-\\infty} x(\\alpha) e^{-j\\omega(-\\alpha/3)} \\left(-\\frac{d\\alpha}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Use the minus sign of the differential to invert the limits of integration ($\\int_\\infty^{-\\infty} -d\\alpha = \\int_{-\\infty}^\\infty d\\alpha$):"
-    },
-    {
-     "t": "math",
-     "tex": "Z(\\omega) = \\frac{1}{3} \\int_{-\\infty}^\\infty x(\\alpha) e^{-j\\left(-\\frac{\\omega}{3}\\right)\\alpha} \\, d\\alpha"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the transform integral at frequency $-\\frac{\\omega}{3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{Z(\\omega) = \\mathcal{F}\\{x(-3t)\\} = \\frac{1}{3} X\\left(-\\frac{\\omega}{3}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Synthesis of the General Scaling Rule"
-    },
-    {
-     "t": "p",
-     "text": "Comparing Step 1 ($a = +3$) and Step 2 ($a = -3$):"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $a = +3$, the amplitude factor is $\\frac{1}{3} = \\frac{1}{|+3|}$.",
-      "For $a = -3$, the amplitude factor is $\\frac{1}{3} = \\frac{1}{|-3|}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "In both cases, the frequency argument scales inversely: $\\frac{\\omega}{a}$.  \nThus, for any non-zero real scalar $a \\in \\mathbb{R}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(at) \\xleftrightarrow{\\quad\\mathcal{F}\\quad} \\frac{1}{|a|} X\\left(\\frac{\\omega}{a}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given that $\\mathcal{F}\\{x(t)\\} = X(\\omega) = \\int_{-\\infty}^\\infty x(t)e^{-j\\omega t}dt$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Derive the Fourier transform of $y(t) = x(3t)$.",
+        "Derive the Fourier transform of $z(t) = x(-3t)$.",
+        "Generalize the result to obtain the master scaling property for an arbitrary real non-zero constant $a$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(at) \\xleftrightarrow{\\quad\\mathcal{F}\\quad} \\frac{1}{|a|} X\\left(\\frac{\\omega}{a}\\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Derivation for $y(t) = x(3t)$"
+      },
+      {
+       "t": "p",
+       "text": "By definition of the forward Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\int_{-\\infty}^\\infty y(t) e^{-j\\omega t} \\, dt = \\int_{-\\infty}^\\infty x(3t) e^{-j\\omega t} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Introduce the substitution:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha = 3t \\implies t = \\frac{\\alpha}{3}, \\quad dt = \\frac{d\\alpha}{3}"
+      },
+      {
+       "t": "p",
+       "text": "Limits of integration:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "As $t \\to -\\infty \\implies \\alpha = 3(-\\infty) = -\\infty$",
+        "As $t \\to +\\infty \\implies \\alpha = 3(+\\infty) = +\\infty$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Substituting into the integral:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\int_{-\\infty}^\\infty x(\\alpha) e^{-j\\omega(\\alpha/3)} \\frac{d\\alpha}{3} = \\frac{1}{3} \\int_{-\\infty}^\\infty x(\\alpha) e^{-j\\left(\\frac{\\omega}{3}\\right)\\alpha} \\, d\\alpha"
+      },
+      {
+       "t": "p",
+       "text": "Recognizing the integral as the Fourier transform of $x(\\cdot)$ evaluated at angular frequency $\\frac{\\omega}{3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{Y(\\omega) = \\mathcal{F}\\{x(3t)\\} = \\frac{1}{3} X\\left(\\frac{\\omega}{3}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Derivation for $z(t) = x(-3t)$"
+      },
+      {
+       "t": "p",
+       "text": "By definition:"
+      },
+      {
+       "t": "math",
+       "tex": "Z(\\omega) = \\int_{-\\infty}^\\infty x(-3t) e^{-j\\omega t} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "Introduce the substitution:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha = -3t \\implies t = -\\frac{\\alpha}{3}, \\quad dt = -\\frac{d\\alpha}{3}"
+      },
+      {
+       "t": "p",
+       "text": "Limits of integration:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "As $t \\to -\\infty \\implies \\alpha = -3(-\\infty) = +\\infty$",
+        "As $t \\to +\\infty \\implies \\alpha = -3(+\\infty) = -\\infty$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Substituting into the integral:"
+      },
+      {
+       "t": "math",
+       "tex": "Z(\\omega) = \\int_{+\\infty}^{-\\infty} x(\\alpha) e^{-j\\omega(-\\alpha/3)} \\left(-\\frac{d\\alpha}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Use the minus sign of the differential to invert the limits of integration ($\\int_\\infty^{-\\infty} -d\\alpha = \\int_{-\\infty}^\\infty d\\alpha$):"
+      },
+      {
+       "t": "math",
+       "tex": "Z(\\omega) = \\frac{1}{3} \\int_{-\\infty}^\\infty x(\\alpha) e^{-j\\left(-\\frac{\\omega}{3}\\right)\\alpha} \\, d\\alpha"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the transform integral at frequency $-\\frac{\\omega}{3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{Z(\\omega) = \\mathcal{F}\\{x(-3t)\\} = \\frac{1}{3} X\\left(-\\frac{\\omega}{3}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Synthesis of the General Scaling Rule"
+      },
+      {
+       "t": "p",
+       "text": "Comparing Step 1 ($a = +3$) and Step 2 ($a = -3$):"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $a = +3$, the amplitude factor is $\\frac{1}{3} = \\frac{1}{|+3|}$.",
+        "For $a = -3$, the amplitude factor is $\\frac{1}{3} = \\frac{1}{|-3|}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "In both cases, the frequency argument scales inversely: $\\frac{\\omega}{a}$.  \nThus, for any non-zero real scalar $a \\in \\mathbb{R}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(at) \\xleftrightarrow{\\quad\\mathcal{F}\\quad} \\frac{1}{|a|} X\\left(\\frac{\\omega}{a}\\right)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1716,205 +1713,204 @@ export default {
      "text": "Detailed Mathematical Breakdown (Drill 4: Slide 024)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given $x(t) \\xleftrightarrow{\\mathcal{F}} X(\\omega)$, find the Fourier Transform of:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(-2t + 3)"
-    },
-    {
-     "t": "p",
-     "text": "Demonstrate the solution using two distinct operational sequences:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method I:** Apply scaling and reversal first, followed by time shifting.",
-      "**Method II:** Apply time shifting first, followed by time scaling and reversal."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Method I: Scaling & Reversal First, Then Time Shifting"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Define Intermediate Signal $g(t)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Apply time scaling by $a = -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = x(-2t)"
-    },
-    {
-     "t": "p",
-     "text": "By the time scaling property ($x(at) \\leftrightarrow \\frac{1}{|a|}X(\\omega/a)$ with $a = -2$):"
-    },
-    {
-     "t": "math",
-     "tex": "G(\\omega) = \\frac{1}{|-2|} X\\left(\\frac{\\omega}{-2}\\right) = \\frac{1}{2} X\\left(-\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Express $y(t)$ in terms of $g(t)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "We must rewrite the argument $-2t + 3$ by factoring out the coefficient of $t$:"
-    },
-    {
-     "t": "math",
-     "tex": "-2t + 3 = -2\\left(t - \\frac{3}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x\\left(-2\\left(t - \\frac{3}{2}\\right)\\right) = g\\left(t - \\frac{3}{2}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Apply Time Shifting Property to $g(t)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The signal $g(t)$ is delayed by $t_0 = \\frac{3}{2}$. By the time shifting property ($g(t - t_0) \\leftrightarrow e^{-j\\omega t_0} G(\\omega)$):"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = e^{-j\\omega (3/2)} G(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $G(\\omega) = \\frac{1}{2} X\\left(-\\frac{\\omega}{2}\\right)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{Y(\\omega) = \\frac{1}{2} e^{-j \\frac{3\\omega}{2}} X\\left(-\\frac{\\omega}{2}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Method II: Time Shifting First, Then Time Scaling"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Define Intermediate Signal $h(t)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Apply time shifting by advancing $x(t)$ by $+3$:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = x(t + 3)"
-    },
-    {
-     "t": "p",
-     "text": "By the time shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = e^{j 3\\omega} X(\\omega)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Apply Scaling by $a = +2$ to $h(t)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $p(t) = h(2t) = x(2t + 3)$.  \n   By the scaling property:"
-    },
-    {
-     "t": "math",
-     "tex": "P(\\omega) = \\frac{1}{2} H\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Replace every occurrence of $\\omega$ in $H(\\omega)$ with $\\frac{\\omega}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "P(\\omega) = \\frac{1}{2} e^{j 3(\\omega/2)} X\\left(\\frac{\\omega}{2}\\right) = \\frac{1}{2} e^{j \\frac{3\\omega}{2}} X\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Apply Time Reversal to $p(t)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = p(-t) = x(2(-t) + 3) = x(-2t + 3)"
-    },
-    {
-     "t": "p",
-     "text": "By the time reversal property ($p(-t) \\leftrightarrow P(-\\omega)$):"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = P(-\\omega) = \\frac{1}{2} e^{j \\frac{3(-\\omega)}{2}} X\\left(\\frac{-\\omega}{2}\\right) = \\frac{1}{2} e^{-j \\frac{3\\omega}{2}} X\\left(-\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Verification"
-    },
-    {
-     "t": "p",
-     "text": "Both methods produce the identical analytical closed-form:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\mathcal{F}\\{x(-2t + 3)\\} = \\frac{1}{2} e^{-j \\frac{3\\omega}{2}} X\\left(-\\frac{\\omega}{2}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "The Fatal Exam Trap"
-    },
-    {
-     "t": "p",
-     "text": "The most widespread mistake in GATE is failing to factor out $-2$ in Method I:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{WRONG: } g(t) = x(-2t) \\implies g(t + 3) = x(-2(t+3)) = x(-2t - 6) \\ne x(-2t + 3)"
-    },
-    {
-     "t": "p",
-     "text": "Whenever scaling is performed first, the shift must be applied as $t \\to t - \\frac{b}{|a|}$ or $t \\to t + \\frac{b}{a}$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given $x(t) \\xleftrightarrow{\\mathcal{F}} X(\\omega)$, find the Fourier Transform of:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(-2t + 3)"
+      },
+      {
+       "t": "p",
+       "text": "Demonstrate the solution using two distinct operational sequences:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Method I:** Apply scaling and reversal first, followed by time shifting.",
+        "**Method II:** Apply time shifting first, followed by time scaling and reversal."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Method I: Scaling & Reversal First, Then Time Shifting"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Define Intermediate Signal $g(t)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Apply time scaling by $a = -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = x(-2t)"
+      },
+      {
+       "t": "p",
+       "text": "By the time scaling property ($x(at) \\leftrightarrow \\frac{1}{|a|}X(\\omega/a)$ with $a = -2$):"
+      },
+      {
+       "t": "math",
+       "tex": "G(\\omega) = \\frac{1}{|-2|} X\\left(\\frac{\\omega}{-2}\\right) = \\frac{1}{2} X\\left(-\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Express $y(t)$ in terms of $g(t)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "We must rewrite the argument $-2t + 3$ by factoring out the coefficient of $t$:"
+      },
+      {
+       "t": "math",
+       "tex": "-2t + 3 = -2\\left(t - \\frac{3}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x\\left(-2\\left(t - \\frac{3}{2}\\right)\\right) = g\\left(t - \\frac{3}{2}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Apply Time Shifting Property to $g(t)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The signal $g(t)$ is delayed by $t_0 = \\frac{3}{2}$. By the time shifting property ($g(t - t_0) \\leftrightarrow e^{-j\\omega t_0} G(\\omega)$):"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = e^{-j\\omega (3/2)} G(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $G(\\omega) = \\frac{1}{2} X\\left(-\\frac{\\omega}{2}\\right)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{Y(\\omega) = \\frac{1}{2} e^{-j \\frac{3\\omega}{2}} X\\left(-\\frac{\\omega}{2}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Method II: Time Shifting First, Then Time Scaling"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Define Intermediate Signal $h(t)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Apply time shifting by advancing $x(t)$ by $+3$:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = x(t + 3)"
+      },
+      {
+       "t": "p",
+       "text": "By the time shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = e^{j 3\\omega} X(\\omega)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Apply Scaling by $a = +2$ to $h(t)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $p(t) = h(2t) = x(2t + 3)$.  \n   By the scaling property:"
+      },
+      {
+       "t": "math",
+       "tex": "P(\\omega) = \\frac{1}{2} H\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Replace every occurrence of $\\omega$ in $H(\\omega)$ with $\\frac{\\omega}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "P(\\omega) = \\frac{1}{2} e^{j 3(\\omega/2)} X\\left(\\frac{\\omega}{2}\\right) = \\frac{1}{2} e^{j \\frac{3\\omega}{2}} X\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Apply Time Reversal to $p(t)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = p(-t) = x(2(-t) + 3) = x(-2t + 3)"
+      },
+      {
+       "t": "p",
+       "text": "By the time reversal property ($p(-t) \\leftrightarrow P(-\\omega)$):"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = P(-\\omega) = \\frac{1}{2} e^{j \\frac{3(-\\omega)}{2}} X\\left(\\frac{-\\omega}{2}\\right) = \\frac{1}{2} e^{-j \\frac{3\\omega}{2}} X\\left(-\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Verification"
+      },
+      {
+       "t": "p",
+       "text": "Both methods produce the identical analytical closed-form:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\mathcal{F}\\{x(-2t + 3)\\} = \\frac{1}{2} e^{-j \\frac{3\\omega}{2}} X\\left(-\\frac{\\omega}{2}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "The Fatal Exam Trap"
+      },
+      {
+       "t": "p",
+       "text": "The most widespread mistake in GATE is failing to factor out $-2$ in Method I:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{WRONG: } g(t) = x(-2t) \\implies g(t + 3) = x(-2(t+3)) = x(-2t - 6) \\ne x(-2t + 3)"
+      },
+      {
+       "t": "p",
+       "text": "Whenever scaling is performed first, the shift must be applied as $t \\to t - \\frac{b}{|a|}$ or $t \\to t + \\frac{b}{a}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1929,293 +1925,291 @@ export default {
      "text": "Detailed Mathematical Breakdown (Drill 5: Slide 025)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given $x(t) \\xleftrightarrow{\\mathcal{F}} X(\\omega)$.  \nA signal $g(t)$ is formed by affine transformation:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\alpha \\, x(at + b)"
-    },
-    {
-     "t": "p",
-     "text": "where $\\alpha, a, b \\in \\mathbb{R}$.  \nIts Continuous-Time Fourier Transform is given as:"
-    },
-    {
-     "t": "math",
-     "tex": "G(\\omega) = \\frac{1}{2} e^{-j \\frac{3\\omega}{2}} X\\left(-\\frac{\\omega}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Find the numerical value of:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha + a + b = ?"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Forward Expansion of $g(t) = \\alpha x(at + b)$"
-    },
-    {
-     "t": "p",
-     "text": "Rewrite $g(t)$ by factoring out $a$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = \\alpha \\, x\\left(a\\left(t + \\frac{b}{a}\\right)\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Let $y(t) = \\alpha \\, x(at)$.  \nBy the linearity and time-scaling properties:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\frac{\\alpha}{|a|} X\\left(\\frac{\\omega}{a}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Now express $g(t)$ as a time shift of $y(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = y\\left(t + \\frac{b}{a}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "By the time-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "G(\\omega) = e^{j\\omega \\left(\\frac{b}{a}\\right)} Y(\\omega) = \\frac{\\alpha}{|a|} e^{j\\omega \\left(\\frac{b}{a}\\right)} X\\left(\\frac{\\omega}{a}\\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Term-by-Term Comparison with Given $G(\\omega)$"
-    },
-    {
-     "t": "p",
-     "text": "We are given:"
-    },
-    {
-     "t": "math",
-     "tex": "G(\\omega) = \\frac{1}{2} e^{-j \\frac{3}{2}\\omega} X\\left(-\\frac{\\omega}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Equating corresponding terms:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Frequency Scaling Factor:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X\\left(\\frac{\\omega}{a}\\right) = X\\left(-\\frac{\\omega}{3}\\right) \\implies \\frac{1}{a} = -\\frac{1}{3} \\implies \\boxed{a = -3}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Phase / Time Shift Factor:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\omega \\left(\\frac{b}{a}\\right)} = e^{-j \\frac{3}{2}\\omega} \\implies \\frac{b}{a} = -\\frac{3}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $a = -3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{b}{-3} = -\\frac{3}{2} \\implies b = (-3) \\times \\left(-\\frac{3}{2}\\right) \\implies \\boxed{b = \\frac{9}{2} = 4.5}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Amplitude Scaling Factor:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\alpha}{|a|} = \\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $|a| = |-3| = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\alpha}{3} = \\frac{1}{2} \\implies \\boxed{\\alpha = \\frac{3}{2} = 1.5}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Compute the Required Sum"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha + a + b = \\frac{3}{2} + (-3) + \\frac{9}{2} = \\left(\\frac{3}{2} + \\frac{9}{2}\\right) - 3 = \\frac{12}{2} - 3 = 6 - 3 = 3"
-    },
-    {
-     "t": "h4",
-     "text": "Final Conclusion"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\alpha + a + b = 3}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given $x(t) \\xleftrightarrow{\\mathcal{F}} X(\\omega)$.  \nA signal $g(t)$ is formed by affine transformation:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\alpha \\, x(at + b)"
+      },
+      {
+       "t": "p",
+       "text": "where $\\alpha, a, b \\in \\mathbb{R}$.  \nIts Continuous-Time Fourier Transform is given as:"
+      },
+      {
+       "t": "math",
+       "tex": "G(\\omega) = \\frac{1}{2} e^{-j \\frac{3\\omega}{2}} X\\left(-\\frac{\\omega}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Find the numerical value of:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha + a + b = ?"
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Forward Expansion of $g(t) = \\alpha x(at + b)$"
+      },
+      {
+       "t": "p",
+       "text": "Rewrite $g(t)$ by factoring out $a$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = \\alpha \\, x\\left(a\\left(t + \\frac{b}{a}\\right)\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Let $y(t) = \\alpha \\, x(at)$.  \nBy the linearity and time-scaling properties:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\frac{\\alpha}{|a|} X\\left(\\frac{\\omega}{a}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Now express $g(t)$ as a time shift of $y(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = y\\left(t + \\frac{b}{a}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "By the time-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "G(\\omega) = e^{j\\omega \\left(\\frac{b}{a}\\right)} Y(\\omega) = \\frac{\\alpha}{|a|} e^{j\\omega \\left(\\frac{b}{a}\\right)} X\\left(\\frac{\\omega}{a}\\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Term-by-Term Comparison with Given $G(\\omega)$"
+      },
+      {
+       "t": "p",
+       "text": "We are given:"
+      },
+      {
+       "t": "math",
+       "tex": "G(\\omega) = \\frac{1}{2} e^{-j \\frac{3}{2}\\omega} X\\left(-\\frac{\\omega}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Equating corresponding terms:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Frequency Scaling Factor:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X\\left(\\frac{\\omega}{a}\\right) = X\\left(-\\frac{\\omega}{3}\\right) \\implies \\frac{1}{a} = -\\frac{1}{3} \\implies \\boxed{a = -3}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Phase / Time Shift Factor:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\omega \\left(\\frac{b}{a}\\right)} = e^{-j \\frac{3}{2}\\omega} \\implies \\frac{b}{a} = -\\frac{3}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $a = -3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{b}{-3} = -\\frac{3}{2} \\implies b = (-3) \\times \\left(-\\frac{3}{2}\\right) \\implies \\boxed{b = \\frac{9}{2} = 4.5}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Amplitude Scaling Factor:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\alpha}{|a|} = \\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $|a| = |-3| = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\alpha}{3} = \\frac{1}{2} \\implies \\boxed{\\alpha = \\frac{3}{2} = 1.5}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Compute the Required Sum"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha + a + b = \\frac{3}{2} + (-3) + \\frac{9}{2} = \\left(\\frac{3}{2} + \\frac{9}{2}\\right) - 3 = \\frac{12}{2} - 3 = 6 - 3 = 3"
+      },
+      {
+       "t": "h4",
+       "text": "Final Conclusion"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\alpha + a + b = 3}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
      "text": "Detailed Mathematical Breakdown (Drill 6 & 7: Slides 026 \u2013 028)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement 1: Continuous Spectra Conversion"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Given $X(\\omega)$ is a rectangular pulse:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\begin{cases} A, & -2\\pi < \\omega < 2\\pi \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Determine and sketch $X(f)$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Given $X(\\omega)$ consists of two triangular pulses of height $A$: one over $\\omega \\in [-3\\pi, -2\\pi]$ and one over $\\omega \\in [2\\pi, 3\\pi]$. Determine the corresponding boundaries and peak height in the cyclic frequency domain $X(f)$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement 2: Impulsive Spectra Conversion"
-    },
-    {
-     "t": "p",
-     "text": "Given the spectral representation $X(\\omega) = \\delta(\\omega)$, prove from first principles that $X(f) = \\frac{1}{2\\pi}\\delta(f)$."
-    },
-    {
-     "t": "h4",
-     "text": "Solution to Problem 1: Continuous Spectra Mapping"
-    },
-    {
-     "t": "p",
-     "text": "For any continuous function $X(\\omega)$, the conversion to cyclic frequency $f$ is a direct coordinate substitution:"
-    },
-    {
-     "t": "math",
-     "tex": "X(f) = \\left. X(\\omega) \\right|_{\\omega = 2\\pi f}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**For Rectangular Spectrum:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-2\\pi < \\omega < 2\\pi \\iff -2\\pi < 2\\pi f < 2\\pi \\iff -1 < f < 1"
-    },
-    {
-     "t": "p",
-     "text": "The function value $A$ is independent of $\\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(f) = \\begin{cases} A, & -1 < f < 1 \\\\ 0, & \\text{otherwise} \\end{cases} = A\\,\\text{rect}\\left(\\frac{f}{2}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "*Crucial Observation:* The height remains $A$. It is **NOT** scaled by $\\frac{1}{2\\pi}$. Only the horizontal coordinates are scaled by $\\frac{1}{2\\pi}$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**For Triangular Spectrum:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Positive band: $2\\pi \\le \\omega \\le 3\\pi \\implies \\frac{2\\pi}{2\\pi} \\le f \\le \\frac{3\\pi}{2\\pi} \\implies 1 \\le f \\le 1.5\\text{ Hz}$.",
-      "Negative band: $-3\\pi \\le \\omega \\le -2\\pi \\implies -1.5 \\le f \\le -1\\text{ Hz}$.",
-      "Peak height: The apex of the triangle had height $A$ in the $\\omega$-domain; its apex remains at height $A$ in the $f$-domain."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Solution to Problem 2: Dirac Delta Area Preservation"
-    },
-    {
-     "t": "p",
-     "text": "Let $X(\\omega) = \\delta(\\omega)$. We seek the representation $X(f)$ such that the total area (or action under integration) represents the physical signal correctly."
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the inverse Fourier transform at $t = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = \\frac{1}{2\\pi} \\int_{-\\infty}^\\infty X(\\omega) \\, d\\omega = \\frac{1}{2\\pi} \\int_{-\\infty}^\\infty \\delta(\\omega) \\, d\\omega = \\frac{1}{2\\pi}(1) = \\frac{1}{2\\pi}"
-    },
-    {
-     "t": "p",
-     "text": "Now express $x(0)$ using the cyclic frequency synthesis equation:"
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = \\int_{-\\infty}^\\infty X(f) \\, df"
-    },
-    {
-     "t": "p",
-     "text": "Equating the two expressions for $x(0)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^\\infty X(f) \\, df = \\frac{1}{2\\pi}"
-    },
-    {
-     "t": "p",
-     "text": "Since $X(\\omega) = \\delta(\\omega)$ is non-zero only at $\\omega = 0$ (which corresponds to $f = 0$), $X(f)$ must also be concentrated entirely at $f = 0$. For an impulse at $f = 0$ to integrate to $\\frac{1}{2\\pi}$, its weight must be $\\frac{1}{2\\pi}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(f) = \\frac{1}{2\\pi} \\delta(f)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement 1: Continuous Spectra Conversion"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Given $X(\\omega)$ is a rectangular pulse:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\begin{cases} A, & -2\\pi < \\omega < 2\\pi \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Determine and sketch $X(f)$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Given $X(\\omega)$ consists of two triangular pulses of height $A$: one over $\\omega \\in [-3\\pi, -2\\pi]$ and one over $\\omega \\in [2\\pi, 3\\pi]$. Determine the corresponding boundaries and peak height in the cyclic frequency domain $X(f)$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Problem Statement 2: Impulsive Spectra Conversion"
+      },
+      {
+       "t": "p",
+       "text": "Given the spectral representation $X(\\omega) = \\delta(\\omega)$, prove from first principles that $X(f) = \\frac{1}{2\\pi}\\delta(f)$."
+      },
+      {
+       "t": "h4",
+       "text": "Solution to Problem 1: Continuous Spectra Mapping"
+      },
+      {
+       "t": "p",
+       "text": "For any continuous function $X(\\omega)$, the conversion to cyclic frequency $f$ is a direct coordinate substitution:"
+      },
+      {
+       "t": "math",
+       "tex": "X(f) = \\left. X(\\omega) \\right|_{\\omega = 2\\pi f}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**For Rectangular Spectrum:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-2\\pi < \\omega < 2\\pi \\iff -2\\pi < 2\\pi f < 2\\pi \\iff -1 < f < 1"
+      },
+      {
+       "t": "p",
+       "text": "The function value $A$ is independent of $\\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(f) = \\begin{cases} A, & -1 < f < 1 \\\\ 0, & \\text{otherwise} \\end{cases} = A\\,\\text{rect}\\left(\\frac{f}{2}\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "*Crucial Observation:* The height remains $A$. It is **NOT** scaled by $\\frac{1}{2\\pi}$. Only the horizontal coordinates are scaled by $\\frac{1}{2\\pi}$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**For Triangular Spectrum:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Positive band: $2\\pi \\le \\omega \\le 3\\pi \\implies \\frac{2\\pi}{2\\pi} \\le f \\le \\frac{3\\pi}{2\\pi} \\implies 1 \\le f \\le 1.5\\text{ Hz}$.",
+        "Negative band: $-3\\pi \\le \\omega \\le -2\\pi \\implies -1.5 \\le f \\le -1\\text{ Hz}$.",
+        "Peak height: The apex of the triangle had height $A$ in the $\\omega$-domain; its apex remains at height $A$ in the $f$-domain."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Solution to Problem 2: Dirac Delta Area Preservation"
+      },
+      {
+       "t": "p",
+       "text": "Let $X(\\omega) = \\delta(\\omega)$. We seek the representation $X(f)$ such that the total area (or action under integration) represents the physical signal correctly."
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the inverse Fourier transform at $t = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = \\frac{1}{2\\pi} \\int_{-\\infty}^\\infty X(\\omega) \\, d\\omega = \\frac{1}{2\\pi} \\int_{-\\infty}^\\infty \\delta(\\omega) \\, d\\omega = \\frac{1}{2\\pi}(1) = \\frac{1}{2\\pi}"
+      },
+      {
+       "t": "p",
+       "text": "Now express $x(0)$ using the cyclic frequency synthesis equation:"
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = \\int_{-\\infty}^\\infty X(f) \\, df"
+      },
+      {
+       "t": "p",
+       "text": "Equating the two expressions for $x(0)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^\\infty X(f) \\, df = \\frac{1}{2\\pi}"
+      },
+      {
+       "t": "p",
+       "text": "Since $X(\\omega) = \\delta(\\omega)$ is non-zero only at $\\omega = 0$ (which corresponds to $f = 0$), $X(f)$ must also be concentrated entirely at $f = 0$. For an impulse at $f = 0$ to integrate to $\\frac{1}{2\\pi}$, its weight must be $\\frac{1}{2\\pi}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(f) = \\frac{1}{2\\pi} \\delta(f)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -2230,183 +2224,182 @@ export default {
      "text": "Detailed Mathematical Breakdown (Drill 8: Slides 031 \u2013 032)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given the frequency-domain spectrum:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\omega \\cdot \\text{rect}\\left(\\frac{\\omega - 2\\pi}{4\\pi}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Sketch $X(\\omega)$ versus $\\omega$, specifying the domain boundaries, slope, and peak value.",
-      "Derive the analytical mathematical expression for $X(f)$ in the cyclic frequency domain.",
-      "Sketch $X(f)$ versus $f$, labeling the corresponding support interval, slope, and peak value."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Analysis and Sketch of $X(\\omega)$"
-    },
-    {
-     "t": "p",
-     "text": "Recall the standard definition of the rectangular gate function:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{rect}\\left(\\frac{\\theta - \\theta_0}{W}\\right) = \\begin{cases} 1, & |\\theta - \\theta_0| \\le \\frac{W}{2} \\iff \\theta_0 - \\frac{W}{2} \\le \\theta \\le \\theta_0 + \\frac{W}{2} \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "For $\\text{rect}\\left(\\frac{\\omega - 2\\pi}{4\\pi}\\right)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Center: $\\omega_0 = 2\\pi$",
-      "Width: $W = 4\\pi$",
-      "Active Interval:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2\\pi - \\frac{4\\pi}{2} \\le \\omega \\le 2\\pi + \\frac{4\\pi}{2} \\implies 0 \\le \\omega \\le 4\\pi"
-    },
-    {
-     "t": "p",
-     "text": "Within this active interval $[0, 4\\pi]$, the gate is 1, so:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\omega \\times 1 = \\omega, \\quad \\text{for } 0 \\le \\omega \\le 4\\pi"
-    },
-    {
-     "t": "p",
-     "text": "Outside this interval, $X(\\omega) = 0$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**At $\\omega = 0$:** $X(0) = 0$",
-      "**At $\\omega = 2\\pi$:** $X(2\\pi) = 2\\pi$",
-      "**At $\\omega = 4\\pi$:** $X(4\\pi) = 4\\pi$",
-      "**Slope:** $\\frac{d X(\\omega)}{d\\omega} = 1$"
-     ]
-    },
-    {
-     "t": "code",
-     "text": "                   SPECTRUM X(\u03c9) vs \u03c9 (ANGULAR FREQUENCY)\n          X(\u03c9) |\n           4\u03c0  |                 /|\n               |                / |\n               |               /  |  Slope = 1\n               |              /   |\n               |             /    |\n            0  +\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> \u03c9\n               0           2\u03c0    4\u03c0"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Derivation of the Expression for $X(f)$"
-    },
-    {
-     "t": "p",
-     "text": "To convert from angular frequency $\\omega$ to cyclic frequency $f$, substitute $\\omega = 2\\pi f$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(f) = \\left. X(\\omega) \\right|_{\\omega = 2\\pi f}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $\\omega = 2\\pi f$ directly into $X(\\omega) = \\omega \\cdot \\text{rect}\\left(\\frac{\\omega - 2\\pi}{4\\pi}\\right)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(f) = (2\\pi f) \\cdot \\text{rect}\\left(\\frac{2\\pi f - 2\\pi}{4\\pi}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Simplify the argument of the rectangular pulse:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2\\pi f - 2\\pi}{4\\pi} = \\frac{2\\pi(f - 1)}{2\\pi(2)} = \\frac{f - 1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the exact closed-form expression for $X(f)$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(f) = 2\\pi f \\cdot \\text{rect}\\left(\\frac{f - 1}{2}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Analysis and Sketch of $X(f)$"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the support of $\\text{rect}\\left(\\frac{f - 1}{2}\\right)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Center: $f_0 = 1\\text{ Hz}$",
-      "Width: $\\Delta f = 2\\text{ Hz}$",
-      "Active Interval:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "1 - \\frac{2}{2} \\le f \\le 1 + \\frac{2}{2} \\implies 0 \\le f \\le 2\\text{ Hz}"
-    },
-    {
-     "t": "p",
-     "text": "Within the active interval $[0, 2]$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(f) = 2\\pi f"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**At $f = 0$:** $X(0) = 2\\pi(0) = 0$",
-      "**At $f = 1$:** $X(1) = 2\\pi(1) = 2\\pi$",
-      "**At $f = 2$:** $X(2) = 2\\pi(2) = 4\\pi$",
-      "**Slope in $f$-Domain:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Slope} = \\frac{\\Delta X}{\\Delta f} = \\frac{4\\pi - 0}{2 - 0} = 2\\pi"
-    },
-    {
-     "t": "code",
-     "text": "                   SPECTRUM X(f) vs f (CYCLIC FREQUENCY)\n          X(f) |\n           4\u03c0  |                 /|\n               |                / |\n               |               /  |  Slope = 2\u03c0\n               |              /   |\n               |             /    |\n            0  +\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> f (Hz)\n               0            1     2"
-    },
-    {
-     "t": "h4",
-     "text": "Critical GATE Insights"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Peak Invariance:** The peak value of the spectrum remains $4\\pi$ in both domains ($X(\\omega)_{\\max} = 4\\pi$ at $\\omega = 4\\pi$, and $X(f)_{\\max} = 4\\pi$ at $f = 2$).",
-      "**Slope Scaling:** The slope changes from $1$ in the $\\omega$-domain to $2\\pi$ in the $f$-domain by the chain rule:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d X(f)}{df} = \\frac{d X(\\omega)}{d\\omega} \\frac{d\\omega}{df} = 1 \\times 2\\pi = 2\\pi"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given the frequency-domain spectrum:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\omega \\cdot \\text{rect}\\left(\\frac{\\omega - 2\\pi}{4\\pi}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Sketch $X(\\omega)$ versus $\\omega$, specifying the domain boundaries, slope, and peak value.",
+        "Derive the analytical mathematical expression for $X(f)$ in the cyclic frequency domain.",
+        "Sketch $X(f)$ versus $f$, labeling the corresponding support interval, slope, and peak value."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Analysis and Sketch of $X(\\omega)$"
+      },
+      {
+       "t": "p",
+       "text": "Recall the standard definition of the rectangular gate function:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{rect}\\left(\\frac{\\theta - \\theta_0}{W}\\right) = \\begin{cases} 1, & |\\theta - \\theta_0| \\le \\frac{W}{2} \\iff \\theta_0 - \\frac{W}{2} \\le \\theta \\le \\theta_0 + \\frac{W}{2} \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "For $\\text{rect}\\left(\\frac{\\omega - 2\\pi}{4\\pi}\\right)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Center: $\\omega_0 = 2\\pi$",
+        "Width: $W = 4\\pi$",
+        "Active Interval:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2\\pi - \\frac{4\\pi}{2} \\le \\omega \\le 2\\pi + \\frac{4\\pi}{2} \\implies 0 \\le \\omega \\le 4\\pi"
+      },
+      {
+       "t": "p",
+       "text": "Within this active interval $[0, 4\\pi]$, the gate is 1, so:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\omega \\times 1 = \\omega, \\quad \\text{for } 0 \\le \\omega \\le 4\\pi"
+      },
+      {
+       "t": "p",
+       "text": "Outside this interval, $X(\\omega) = 0$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**At $\\omega = 0$:** $X(0) = 0$",
+        "**At $\\omega = 2\\pi$:** $X(2\\pi) = 2\\pi$",
+        "**At $\\omega = 4\\pi$:** $X(4\\pi) = 4\\pi$",
+        "**Slope:** $\\frac{d X(\\omega)}{d\\omega} = 1$"
+       ]
+      },
+      {
+       "t": "code",
+       "text": "                   SPECTRUM X(\u03c9) vs \u03c9 (ANGULAR FREQUENCY)\n          X(\u03c9) |\n           4\u03c0  |                 /|\n               |                / |\n               |               /  |  Slope = 1\n               |              /   |\n               |             /    |\n            0  +\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> \u03c9\n               0           2\u03c0    4\u03c0"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Derivation of the Expression for $X(f)$"
+      },
+      {
+       "t": "p",
+       "text": "To convert from angular frequency $\\omega$ to cyclic frequency $f$, substitute $\\omega = 2\\pi f$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(f) = \\left. X(\\omega) \\right|_{\\omega = 2\\pi f}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $\\omega = 2\\pi f$ directly into $X(\\omega) = \\omega \\cdot \\text{rect}\\left(\\frac{\\omega - 2\\pi}{4\\pi}\\right)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(f) = (2\\pi f) \\cdot \\text{rect}\\left(\\frac{2\\pi f - 2\\pi}{4\\pi}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Simplify the argument of the rectangular pulse:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2\\pi f - 2\\pi}{4\\pi} = \\frac{2\\pi(f - 1)}{2\\pi(2)} = \\frac{f - 1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the exact closed-form expression for $X(f)$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(f) = 2\\pi f \\cdot \\text{rect}\\left(\\frac{f - 1}{2}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Analysis and Sketch of $X(f)$"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the support of $\\text{rect}\\left(\\frac{f - 1}{2}\\right)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Center: $f_0 = 1\\text{ Hz}$",
+        "Width: $\\Delta f = 2\\text{ Hz}$",
+        "Active Interval:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "1 - \\frac{2}{2} \\le f \\le 1 + \\frac{2}{2} \\implies 0 \\le f \\le 2\\text{ Hz}"
+      },
+      {
+       "t": "p",
+       "text": "Within the active interval $[0, 2]$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(f) = 2\\pi f"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**At $f = 0$:** $X(0) = 2\\pi(0) = 0$",
+        "**At $f = 1$:** $X(1) = 2\\pi(1) = 2\\pi$",
+        "**At $f = 2$:** $X(2) = 2\\pi(2) = 4\\pi$",
+        "**Slope in $f$-Domain:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Slope} = \\frac{\\Delta X}{\\Delta f} = \\frac{4\\pi - 0}{2 - 0} = 2\\pi"
+      },
+      {
+       "t": "code",
+       "text": "                   SPECTRUM X(f) vs f (CYCLIC FREQUENCY)\n          X(f) |\n           4\u03c0  |                 /|\n               |                / |\n               |               /  |  Slope = 2\u03c0\n               |              /   |\n               |             /    |\n            0  +\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500> f (Hz)\n               0            1     2"
+      },
+      {
+       "t": "h4",
+       "text": "Critical GATE Insights"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Peak Invariance:** The peak value of the spectrum remains $4\\pi$ in both domains ($X(\\omega)_{\\max} = 4\\pi$ at $\\omega = 4\\pi$, and $X(f)_{\\max} = 4\\pi$ at $f = 2$).",
+        "**Slope Scaling:** The slope changes from $1$ in the $\\omega$-domain to $2\\pi$ in the $f$-domain by the chain rule:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d X(f)}{df} = \\frac{d X(\\omega)}{d\\omega} \\frac{d\\omega}{df} = 1 \\times 2\\pi = 2\\pi"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -2778,194 +2771,193 @@ export default {
      "text": "GATE 2024 Exam Problem Statement:\nConsider two continuous-time signals x(t) and y(t) as defined below:\n  - x(t) is a triangular pulse non-zero on t \u2208 [-1, 0] with apex at t = -0.5, x(-0.5) = -1.\n  - y(t) is a triangular pulse non-zero on t \u2208 [-2, 2] with apex at t = 0, y(0) = +1.\nIf X(f) denotes the Fourier transform of x(t), then the Fourier transform Y(f) of y(t) is:\n  (A) -4 X(4f) e^{-j\u03c0f}\n  (B) -4 X(4f) e^{-j 4\u03c0 f}\n  (C) -(1/4) X(f/4) e^{-j\u03c0f}\n  (D) (1/4) X(f/4) e^{-j 4\u03c0 f}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Geometric Characterization of Primitive Signals"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Signal $x(t)$:",
-      "Non-zero domain: $-1 \\le t \\le 0$ (Total base width $W_x = 1$).",
-      "Vertex/Peak location: $t_{\\text{peak}, x} = -0.5$.",
-      "Peak amplitude: $x(-0.5) = -1$ (Inverted triangle).",
-      "Mathematical description:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\begin{cases} -2(t + 1), & -1 \\le t \\le -0.5 \\\\ 2t, & -0.5 \\le t \\le 0 \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Signal $y(t)$:",
-      "Non-zero domain: $-2 \\le t \\le 2$ (Total base width $W_y = 4$).",
-      "Vertex/Peak location: $t_{\\text{peak}, y} = 0$.",
-      "Peak amplitude: $y(0) = +1$ (Upright triangle).",
-      "Mathematical description:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\begin{cases} 1 + \\frac{1}{2}t, & -2 \\le t \\le 0 \\\\ 1 - \\frac{1}{2}t, & 0 \\le t \\le 2 \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Parametric Relation Formulation: $y(t) = K \\cdot x(a t + b)$"
-    },
-    {
-     "t": "p",
-     "text": "We express $y(t)$ via an affine transformation of the independent variable and an amplitude scale factor $K$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Amplitude Inversion & Scaling:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Ratio of heights} = \\frac{y_{\\text{peak}}}{x_{\\text{peak}}} = \\frac{+1}{-1} = -1 \\implies K = -1"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Time Width Scaling Factor $a$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Base width scaling} = \\frac{W_x}{|a|} = W_y \\implies \\frac{1}{|a|} = 4 \\implies |a| = \\frac{1}{4}"
-    },
-    {
-     "t": "p",
-     "text": "Because neither signal is time-reversed (both triangles have symmetric slopes about their midpoints, or we preserve positive orientation), we choose $a = 1/4$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Intermediate Signal Construction $\\alpha(t)$"
-    },
-    {
-     "t": "p",
-     "text": "Define intermediate signal $\\alpha(t)$ representing amplitude inversion and time expansion by $4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha(t) = -x\\left(\\frac{t}{4}\\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Domain of $\\alpha(t)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-1 \\le \\frac{t}{4} \\le 0 \\implies -4 \\le t \\le 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Apex location of $\\alpha(t)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{t}{4} = -0.5 \\implies t_{\\text{peak}, \\alpha} = -2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Peak value of $\\alpha(t)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha(-2) = -x(-0.5) = -(-1) = +1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fourier Transform of $\\alpha(t)$ via scaling property:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{FT}\\left\\{ x(at) \\right\\} = \\frac{1}{|a|} X\\left(\\frac{f}{a}\\right) \\implies \\mathcal{FT}\\left\\{ -x\\left(\\frac{t}{4}\\right) \\right\\} = -\\frac{1}{1/4} X\\left(\\frac{f}{1/4}\\right) = -4 X(4f)"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore \\alpha(f) = -4 X(4f)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Shifting $\\alpha(t)$ to match $y(t)$"
-    },
-    {
-     "t": "p",
-     "text": "Compare $\\alpha(t)$ with $y(t)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\alpha(t)$ has its peak at $t = -2$ with base $[-4, 0]$.",
-      "$y(t)$ has its peak at $t = 0$ with base $[-2, 2]$.",
-      "To shift the peak from $t = -2$ to $t = 0$, we delay $\\alpha(t)$ (shift to the right) by $t_0 = 2$ units:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\alpha(t - 2)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Check base domain:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-4 \\le t - 2 \\le 0 \\implies -2 \\le t \\le 2 \\quad \\text{(Exact match!)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Applying Time-Shifting Property in Cyclic Frequency $f$"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{FT}\\{ \\alpha(t - t_0) \\} = e^{-j 2\\pi f t_0} \\alpha(f)"
-    },
-    {
-     "t": "p",
-     "text": "Setting $t_0 = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(f) = e^{-j 2\\pi f (2)} \\alpha(f) = e^{-j 4\\pi f} [-4 X(4f)] = -4 e^{-j 4\\pi f} X(4f)"
-    },
-    {
-     "t": "h4",
-     "text": "Conclusion & Correct GATE Option:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{Y(f) = -4 X(4f) e^{-j 4\\pi f}} \\quad \\implies \\quad \\mathbf{Option\\ (B)}"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Pitfall (Order of Operations Trap):**\nIf a student attempts to write $y(t) = -x\\left(\\frac{t - 2}{4}\\right)$ incorrectly as $-x\\left(\\frac{t}{4} - 2\\right)$, they will erroneously find a shift of $t_0 = 8$ or miss the factor of $4$ in the exponent, landing on Option (A). Always isolate the time variable inside parentheses: $x\\left( a(t - t_0) \\right)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Geometric Characterization of Primitive Signals"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Signal $x(t)$:",
+        "Non-zero domain: $-1 \\le t \\le 0$ (Total base width $W_x = 1$).",
+        "Vertex/Peak location: $t_{\\text{peak}, x} = -0.5$.",
+        "Peak amplitude: $x(-0.5) = -1$ (Inverted triangle).",
+        "Mathematical description:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\begin{cases} -2(t + 1), & -1 \\le t \\le -0.5 \\\\ 2t, & -0.5 \\le t \\le 0 \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Signal $y(t)$:",
+        "Non-zero domain: $-2 \\le t \\le 2$ (Total base width $W_y = 4$).",
+        "Vertex/Peak location: $t_{\\text{peak}, y} = 0$.",
+        "Peak amplitude: $y(0) = +1$ (Upright triangle).",
+        "Mathematical description:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\begin{cases} 1 + \\frac{1}{2}t, & -2 \\le t \\le 0 \\\\ 1 - \\frac{1}{2}t, & 0 \\le t \\le 2 \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Parametric Relation Formulation: $y(t) = K \\cdot x(a t + b)$"
+      },
+      {
+       "t": "p",
+       "text": "We express $y(t)$ via an affine transformation of the independent variable and an amplitude scale factor $K$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Amplitude Inversion & Scaling:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Ratio of heights} = \\frac{y_{\\text{peak}}}{x_{\\text{peak}}} = \\frac{+1}{-1} = -1 \\implies K = -1"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Time Width Scaling Factor $a$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Base width scaling} = \\frac{W_x}{|a|} = W_y \\implies \\frac{1}{|a|} = 4 \\implies |a| = \\frac{1}{4}"
+      },
+      {
+       "t": "p",
+       "text": "Because neither signal is time-reversed (both triangles have symmetric slopes about their midpoints, or we preserve positive orientation), we choose $a = 1/4$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Intermediate Signal Construction $\\alpha(t)$"
+      },
+      {
+       "t": "p",
+       "text": "Define intermediate signal $\\alpha(t)$ representing amplitude inversion and time expansion by $4$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha(t) = -x\\left(\\frac{t}{4}\\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Domain of $\\alpha(t)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-1 \\le \\frac{t}{4} \\le 0 \\implies -4 \\le t \\le 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Apex location of $\\alpha(t)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{t}{4} = -0.5 \\implies t_{\\text{peak}, \\alpha} = -2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Peak value of $\\alpha(t)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha(-2) = -x(-0.5) = -(-1) = +1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fourier Transform of $\\alpha(t)$ via scaling property:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{FT}\\left\\{ x(at) \\right\\} = \\frac{1}{|a|} X\\left(\\frac{f}{a}\\right) \\implies \\mathcal{FT}\\left\\{ -x\\left(\\frac{t}{4}\\right) \\right\\} = -\\frac{1}{1/4} X\\left(\\frac{f}{1/4}\\right) = -4 X(4f)"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore \\alpha(f) = -4 X(4f)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Shifting $\\alpha(t)$ to match $y(t)$"
+      },
+      {
+       "t": "p",
+       "text": "Compare $\\alpha(t)$ with $y(t)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\alpha(t)$ has its peak at $t = -2$ with base $[-4, 0]$.",
+        "$y(t)$ has its peak at $t = 0$ with base $[-2, 2]$.",
+        "To shift the peak from $t = -2$ to $t = 0$, we delay $\\alpha(t)$ (shift to the right) by $t_0 = 2$ units:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\alpha(t - 2)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Check base domain:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-4 \\le t - 2 \\le 0 \\implies -2 \\le t \\le 2 \\quad \\text{(Exact match!)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Applying Time-Shifting Property in Cyclic Frequency $f$"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{FT}\\{ \\alpha(t - t_0) \\} = e^{-j 2\\pi f t_0} \\alpha(f)"
+      },
+      {
+       "t": "p",
+       "text": "Setting $t_0 = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(f) = e^{-j 2\\pi f (2)} \\alpha(f) = e^{-j 4\\pi f} [-4 X(4f)] = -4 e^{-j 4\\pi f} X(4f)"
+      },
+      {
+       "t": "h4",
+       "text": "Conclusion & Correct GATE Option:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{Y(f) = -4 X(4f) e^{-j 4\\pi f}} \\quad \\implies \\quad \\mathbf{Option\\ (B)}"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Pitfall (Order of Operations Trap):**\nIf a student attempts to write $y(t) = -x\\left(\\frac{t - 2}{4}\\right)$ incorrectly as $-x\\left(\\frac{t}{4} - 2\\right)$, they will erroneously find a shift of $t_0 = 8$ or miss the factor of $4$ in the exponent, landing on Option (A). Always isolate the time variable inside parentheses: $x\\left( a(t - t_0) \\right)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -2976,74 +2968,73 @@ export default {
      "text": "Problem Statement:\nGiven x(t) \u2194 X(f). Determine the continuous-time Fourier transform of:\n  g(t) = e^{j 3 t} x(t / 2)\nin terms of X(f)."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Time Scaling Property"
-    },
-    {
-     "t": "p",
-     "text": "Let $y(t) = x(t/2)$. By the scaling property in the cyclic frequency domain:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{FT}\\{ x(at) \\} = \\frac{1}{|a|} X\\left(\\frac{f}{a}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Here $a = 1/2$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(f) = \\frac{1}{1/2} X\\left(\\frac{f}{1/2}\\right) = 2 X(2f)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Frequency Shifting (Modulation) Property"
-    },
-    {
-     "t": "p",
-     "text": "The given modulation term is $e^{j 3 t}$.\nRecall the complex exponential frequency shift in terms of cyclic frequency $f$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j 2\\pi f_0 t} y(t) \\longleftrightarrow Y(f - f_0)"
-    },
-    {
-     "t": "p",
-     "text": "Equating the exponent arguments:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\pi f_0 t = 3 t \\implies f_0 = \\frac{3}{2\\pi} \\text{ Hz}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Function Composition"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $f \\to f - f_0 = f - \\frac{3}{2\\pi}$ into the expression for $Y(f)$:"
-    },
-    {
-     "t": "math",
-     "tex": "G(f) = Y\\left(f - \\frac{3}{2\\pi}\\right) = 2 X\\left( 2\\left( f - \\frac{3}{2\\pi} \\right) \\right) = 2 X\\left( 2f - \\frac{3}{\\pi} \\right)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\mathcal{FT}\\left\\{ e^{j 3t} x(t/2) \\right\\} = 2 X\\left(2f - \\frac{3}{\\pi}\\right)}"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Trap Alert:** Notice the argument of $X(\\cdot)$! A common student blunder is writing $2 X(2f - 3)$. In the $f$-domain, the frequency shift MUST be expressed in Hertz ($f_0 = 3/2\\pi$). Multiplying through by $2$ gives $2f - \\frac{3}{\\pi}$, NOT $2f - 3$!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Time Scaling Property"
+      },
+      {
+       "t": "p",
+       "text": "Let $y(t) = x(t/2)$. By the scaling property in the cyclic frequency domain:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{FT}\\{ x(at) \\} = \\frac{1}{|a|} X\\left(\\frac{f}{a}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Here $a = 1/2$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(f) = \\frac{1}{1/2} X\\left(\\frac{f}{1/2}\\right) = 2 X(2f)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Frequency Shifting (Modulation) Property"
+      },
+      {
+       "t": "p",
+       "text": "The given modulation term is $e^{j 3 t}$.\nRecall the complex exponential frequency shift in terms of cyclic frequency $f$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j 2\\pi f_0 t} y(t) \\longleftrightarrow Y(f - f_0)"
+      },
+      {
+       "t": "p",
+       "text": "Equating the exponent arguments:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\pi f_0 t = 3 t \\implies f_0 = \\frac{3}{2\\pi} \\text{ Hz}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Function Composition"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $f \\to f - f_0 = f - \\frac{3}{2\\pi}$ into the expression for $Y(f)$:"
+      },
+      {
+       "t": "math",
+       "tex": "G(f) = Y\\left(f - \\frac{3}{2\\pi}\\right) = 2 X\\left( 2\\left( f - \\frac{3}{2\\pi} \\right) \\right) = 2 X\\left( 2f - \\frac{3}{\\pi} \\right)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\mathcal{FT}\\left\\{ e^{j 3t} x(t/2) \\right\\} = 2 X\\left(2f - \\frac{3}{\\pi}\\right)}"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Trap Alert:** Notice the argument of $X(\\cdot)$! A common student blunder is writing $2 X(2f - 3)$. In the $f$-domain, the frequency shift MUST be expressed in Hertz ($f_0 = 3/2\\pi$). Multiplying through by $2$ gives $2f - \\frac{3}{\\pi}$, NOT $2f - 3$!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3054,118 +3045,117 @@ export default {
      "text": "Problem Statement:\nGiven x(t) \u2194 X(\u03c9). Determine the continuous-time Fourier transform of:\n  z(t) = e^{j 3 t} x(-2t + 3)\nin terms of X(\u03c9)."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "We solve this using two independent methodologies to reinforce operational rigor."
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Scaling & Reflection $\\to$ Shifting $\\to$ Modulation (Recommended)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Define base reflected and scaled signal:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(-2t) \\longleftrightarrow Y(\\omega) = \\frac{1}{|-2|} X\\left(\\frac{\\omega}{-2}\\right) = \\frac{1}{2} X\\left(-\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Apply true time shift by factoring out the coefficient of $t$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(-2t + 3) = x\\left( -2\\left(t - \\frac{3}{2}\\right) \\right) = y\\left(t - \\frac{3}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "By the time-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha(t) = y\\left(t - \\frac{3}{2}\\right) \\longleftrightarrow \\alpha(\\omega) = e^{-j\\omega(3/2)} Y(\\omega) = \\frac{1}{2} e^{-j\\frac{3}{2}\\omega} X\\left(-\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Apply frequency modulation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z(t) = e^{j 3 t} \\alpha(t) \\longleftrightarrow Z(\\omega) = \\alpha(\\omega - 3)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $\\omega \\to \\omega - 3$ into $\\alpha(\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "Z(\\omega) = \\frac{1}{2} e^{-j \\frac{3}{2}(\\omega - 3)} X\\left( -\\frac{\\omega - 3}{2} \\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Shifting $\\to$ Scaling & Reflection $\\to$ Modulation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Time shift first:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = x(t + 3) \\longleftrightarrow G(\\omega) = e^{j 3\\omega} X(\\omega)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Scale and reflect time $t \\to -2t$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha(t) = g(-2t) = x(-2t + 3) \\longleftrightarrow \\alpha(\\omega) = \\frac{1}{|-2|} G\\left(\\frac{\\omega}{-2}\\right) = \\frac{1}{2} G\\left(-\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $-\\omega/2$ for $\\omega$ in $G(\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha(\\omega) = \\frac{1}{2} e^{j 3(-\\omega/2)} X\\left(-\\frac{\\omega}{2}\\right) = \\frac{1}{2} e^{-j \\frac{3}{2}\\omega} X\\left(-\\frac{\\omega}{2}\\right) \\quad \\text{(Identical to Method 1!)}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Modulate by $e^{j 3t}$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Z(\\omega) = \\alpha(\\omega - 3) = \\frac{1}{2} e^{-j \\frac{3}{2}(\\omega - 3)} X\\left(-\\frac{\\omega - 3}{2}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\mathcal{FT}\\left\\{ e^{j 3t} x(-2t + 3) \\right\\} = \\frac{1}{2} e^{-j \\frac{3}{2}(\\omega - 3)} X\\left(-\\frac{\\omega - 3}{2}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "We solve this using two independent methodologies to reinforce operational rigor."
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Scaling & Reflection $\\to$ Shifting $\\to$ Modulation (Recommended)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Define base reflected and scaled signal:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(-2t) \\longleftrightarrow Y(\\omega) = \\frac{1}{|-2|} X\\left(\\frac{\\omega}{-2}\\right) = \\frac{1}{2} X\\left(-\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Apply true time shift by factoring out the coefficient of $t$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(-2t + 3) = x\\left( -2\\left(t - \\frac{3}{2}\\right) \\right) = y\\left(t - \\frac{3}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "By the time-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha(t) = y\\left(t - \\frac{3}{2}\\right) \\longleftrightarrow \\alpha(\\omega) = e^{-j\\omega(3/2)} Y(\\omega) = \\frac{1}{2} e^{-j\\frac{3}{2}\\omega} X\\left(-\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Apply frequency modulation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z(t) = e^{j 3 t} \\alpha(t) \\longleftrightarrow Z(\\omega) = \\alpha(\\omega - 3)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $\\omega \\to \\omega - 3$ into $\\alpha(\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "Z(\\omega) = \\frac{1}{2} e^{-j \\frac{3}{2}(\\omega - 3)} X\\left( -\\frac{\\omega - 3}{2} \\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Shifting $\\to$ Scaling & Reflection $\\to$ Modulation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Time shift first:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = x(t + 3) \\longleftrightarrow G(\\omega) = e^{j 3\\omega} X(\\omega)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Scale and reflect time $t \\to -2t$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha(t) = g(-2t) = x(-2t + 3) \\longleftrightarrow \\alpha(\\omega) = \\frac{1}{|-2|} G\\left(\\frac{\\omega}{-2}\\right) = \\frac{1}{2} G\\left(-\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $-\\omega/2$ for $\\omega$ in $G(\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha(\\omega) = \\frac{1}{2} e^{j 3(-\\omega/2)} X\\left(-\\frac{\\omega}{2}\\right) = \\frac{1}{2} e^{-j \\frac{3}{2}\\omega} X\\left(-\\frac{\\omega}{2}\\right) \\quad \\text{(Identical to Method 1!)}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Modulate by $e^{j 3t}$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Z(\\omega) = \\alpha(\\omega - 3) = \\frac{1}{2} e^{-j \\frac{3}{2}(\\omega - 3)} X\\left(-\\frac{\\omega - 3}{2}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\mathcal{FT}\\left\\{ e^{j 3t} x(-2t + 3) \\right\\} = \\frac{1}{2} e^{-j \\frac{3}{2}(\\omega - 3)} X\\left(-\\frac{\\omega - 3}{2}\\right)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3176,146 +3166,145 @@ export default {
      "text": "Problem Statement:\nGiven that x(t) \u2194 X(f). A signal f(t) has a Fourier transform given by:\n  F(f) = e^{j 5\u03c0 f} X(-4f + 3)\nFind f(t) purely in terms of x(t)."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Deconstruct the Spectral Argument"
-    },
-    {
-     "t": "p",
-     "text": "The target spectrum is:"
-    },
-    {
-     "t": "math",
-     "tex": "F(f) = e^{j 5\\pi f} X(-4f + 3)"
-    },
-    {
-     "t": "p",
-     "text": "Let us define an un-modulated spectrum $G(f) = X(-4f + 3)$ so that:"
-    },
-    {
-     "t": "math",
-     "tex": "F(f) = e^{j 5\\pi f} G(f)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Synthesize $G(f) = X(-4f + 3)$ from $X(f)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Introduce scaling/reversal in $f$-domain:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(-4f) = X\\left(\\frac{f}{-1/4}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "By the frequency scaling property:"
-    },
-    {
-     "t": "math",
-     "tex": "x\\left(-\\frac{t}{4}\\right) \\longleftrightarrow \\frac{1}{|-1/4|} X\\left(\\frac{f}{-1/4}\\right) = 4 X(-4f)"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\frac{1}{4} x\\left(-\\frac{t}{4}\\right) \\longleftrightarrow Y(f) = X(-4f)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Shift the cyclic frequency argument:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "We require $G(f) = X(-4f + 3)$. Factor out $-4$:"
-    },
-    {
-     "t": "math",
-     "tex": "G(f) = X\\left( -4\\left(f - \\frac{3}{4}\\right) \\right) = Y\\left(f - \\frac{3}{4}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Recall that a shift in frequency $Y(f - f_0)$ corresponds to modulation in time:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j 2\\pi f_0 t} y(t) \\longleftrightarrow Y(f - f_0)"
-    },
-    {
-     "t": "p",
-     "text": "Here $f_0 = \\frac{3}{4}\\text{ Hz}$. Hence the required carrier frequency is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = 2\\pi f_0 = 2\\pi\\left(\\frac{3}{4}\\right) = \\frac{3\\pi}{2} \\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = e^{j \\frac{3\\pi}{2} t} y(t) = \\frac{1}{4} e^{j \\frac{3\\pi}{2} t} x\\left(-\\frac{t}{4}\\right) \\longleftrightarrow G(f) = X(-4f + 3)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Synthesize the Linear Phase Factor $e^{j 5\\pi f}$"
-    },
-    {
-     "t": "p",
-     "text": "Now consider $F(f) = e^{j 5\\pi f} G(f)$.\nBy the time-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t + t_0) \\longleftrightarrow e^{j 2\\pi f t_0} G(f)"
-    },
-    {
-     "t": "p",
-     "text": "Equate the phase exponents:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\pi f t_0 = 5\\pi f \\implies t_0 = \\frac{5}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, $f(t)$ is simply the advanced signal $g\\left(t + \\frac{5}{2}\\right)$:"
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = g\\left(t + \\frac{5}{2}\\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Substitute and Simplify"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $t \\to t + \\frac{5}{2}$ everywhere into $g(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "f(t) = \\frac{1}{4} e^{j \\frac{3\\pi}{2}\\left(t + \\frac{5}{2}\\right)} x\\left( -\\frac{t + \\frac{5}{2}}{4} \\right) = \\frac{1}{4} e^{j \\frac{3\\pi}{2}\\left(t + \\frac{5}{2}\\right)} x\\left( -\\frac{t}{4} - \\frac{5}{8} \\right)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{f(t) = \\frac{1}{4} e^{j \\frac{3\\pi}{2}\\left(t + \\frac{5}{2}\\right)} x\\left(-\\frac{t + 5/2}{4}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Deconstruct the Spectral Argument"
+      },
+      {
+       "t": "p",
+       "text": "The target spectrum is:"
+      },
+      {
+       "t": "math",
+       "tex": "F(f) = e^{j 5\\pi f} X(-4f + 3)"
+      },
+      {
+       "t": "p",
+       "text": "Let us define an un-modulated spectrum $G(f) = X(-4f + 3)$ so that:"
+      },
+      {
+       "t": "math",
+       "tex": "F(f) = e^{j 5\\pi f} G(f)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Synthesize $G(f) = X(-4f + 3)$ from $X(f)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Introduce scaling/reversal in $f$-domain:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(-4f) = X\\left(\\frac{f}{-1/4}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "By the frequency scaling property:"
+      },
+      {
+       "t": "math",
+       "tex": "x\\left(-\\frac{t}{4}\\right) \\longleftrightarrow \\frac{1}{|-1/4|} X\\left(\\frac{f}{-1/4}\\right) = 4 X(-4f)"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\frac{1}{4} x\\left(-\\frac{t}{4}\\right) \\longleftrightarrow Y(f) = X(-4f)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Shift the cyclic frequency argument:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "We require $G(f) = X(-4f + 3)$. Factor out $-4$:"
+      },
+      {
+       "t": "math",
+       "tex": "G(f) = X\\left( -4\\left(f - \\frac{3}{4}\\right) \\right) = Y\\left(f - \\frac{3}{4}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Recall that a shift in frequency $Y(f - f_0)$ corresponds to modulation in time:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j 2\\pi f_0 t} y(t) \\longleftrightarrow Y(f - f_0)"
+      },
+      {
+       "t": "p",
+       "text": "Here $f_0 = \\frac{3}{4}\\text{ Hz}$. Hence the required carrier frequency is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = 2\\pi f_0 = 2\\pi\\left(\\frac{3}{4}\\right) = \\frac{3\\pi}{2} \\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = e^{j \\frac{3\\pi}{2} t} y(t) = \\frac{1}{4} e^{j \\frac{3\\pi}{2} t} x\\left(-\\frac{t}{4}\\right) \\longleftrightarrow G(f) = X(-4f + 3)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Synthesize the Linear Phase Factor $e^{j 5\\pi f}$"
+      },
+      {
+       "t": "p",
+       "text": "Now consider $F(f) = e^{j 5\\pi f} G(f)$.\nBy the time-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t + t_0) \\longleftrightarrow e^{j 2\\pi f t_0} G(f)"
+      },
+      {
+       "t": "p",
+       "text": "Equate the phase exponents:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\pi f t_0 = 5\\pi f \\implies t_0 = \\frac{5}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, $f(t)$ is simply the advanced signal $g\\left(t + \\frac{5}{2}\\right)$:"
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = g\\left(t + \\frac{5}{2}\\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Substitute and Simplify"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $t \\to t + \\frac{5}{2}$ everywhere into $g(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "f(t) = \\frac{1}{4} e^{j \\frac{3\\pi}{2}\\left(t + \\frac{5}{2}\\right)} x\\left( -\\frac{t + \\frac{5}{2}}{4} \\right) = \\frac{1}{4} e^{j \\frac{3\\pi}{2}\\left(t + \\frac{5}{2}\\right)} x\\left( -\\frac{t}{4} - \\frac{5}{8} \\right)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{f(t) = \\frac{1}{4} e^{j \\frac{3\\pi}{2}\\left(t + \\frac{5}{2}\\right)} x\\left(-\\frac{t + 5/2}{4}\\right)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -3982,88 +3971,87 @@ export default {
      "text": "Problem Statement:\n(a) Find the inverse Fourier transform of X(\u03c9) = 2 / (4 + \u03c9\u00b2).\n(b) Hence, evaluate the definite integral:\n      I = \u222b_{-\u221e}^{\u221e} \\frac{2}{4 + \u03c9\u00b2} e^{j 2\u03c9} d\u03c9"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Part (a): Synthesizing $x(t)$"
-    },
-    {
-     "t": "p",
-     "text": "Recall the standard transform pair:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-a|t|} \\longleftrightarrow \\frac{2a}{a^2 + \\omega^2} \\quad (a > 0)"
-    },
-    {
-     "t": "p",
-     "text": "Match the denominator: $a^2 = 4 \\implies a = 2$.\nFor $a = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-2|t|} \\longleftrightarrow \\frac{2(2)}{2^2 + \\omega^2} = \\frac{4}{4 + \\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Our target spectrum is:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{2}{4 + \\omega^2} = \\frac{1}{2} \\left[ \\frac{4}{4 + \\omega^2} \\right]"
-    },
-    {
-     "t": "p",
-     "text": "By linearity:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2} e^{-2|t|} = \\frac{e^{-2|t|}}{2}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (b): Evaluating the Definite Integral via IFT Definition"
-    },
-    {
-     "t": "p",
-     "text": "Recall the continuous-time synthesis equation:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega) e^{j\\omega t}\\, d\\omega \\implies \\int_{-\\infty}^{\\infty} X(\\omega) e^{j\\omega t}\\, d\\omega = 2\\pi x(t)"
-    },
-    {
-     "t": "p",
-     "text": "Notice that the given integral matches this synthesis form with $X(\\omega) = \\frac{2}{4 + \\omega^2}$ and $t = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_{-\\infty}^{\\infty} \\left( \\frac{2}{4 + \\omega^2} \\right) e^{j\\omega (2)}\\, d\\omega = 2\\pi \\cdot x(2)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $t = 2$ into our derived expression for $x(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(2) = \\frac{1}{2} e^{-2|2|} = \\frac{1}{2} e^{-4}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "I = 2\\pi \\left( \\frac{1}{2} e^{-4} \\right) = \\pi e^{-4}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x(t) = \\frac{1}{2} e^{-2|t|}, \\quad \\int_{-\\infty}^{\\infty} \\frac{2}{4 + \\omega^2} e^{j 2\\omega}\\, d\\omega = \\pi e^{-4}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part (a): Synthesizing $x(t)$"
+      },
+      {
+       "t": "p",
+       "text": "Recall the standard transform pair:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-a|t|} \\longleftrightarrow \\frac{2a}{a^2 + \\omega^2} \\quad (a > 0)"
+      },
+      {
+       "t": "p",
+       "text": "Match the denominator: $a^2 = 4 \\implies a = 2$.\nFor $a = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-2|t|} \\longleftrightarrow \\frac{2(2)}{2^2 + \\omega^2} = \\frac{4}{4 + \\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Our target spectrum is:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{2}{4 + \\omega^2} = \\frac{1}{2} \\left[ \\frac{4}{4 + \\omega^2} \\right]"
+      },
+      {
+       "t": "p",
+       "text": "By linearity:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2} e^{-2|t|} = \\frac{e^{-2|t|}}{2}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (b): Evaluating the Definite Integral via IFT Definition"
+      },
+      {
+       "t": "p",
+       "text": "Recall the continuous-time synthesis equation:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega) e^{j\\omega t}\\, d\\omega \\implies \\int_{-\\infty}^{\\infty} X(\\omega) e^{j\\omega t}\\, d\\omega = 2\\pi x(t)"
+      },
+      {
+       "t": "p",
+       "text": "Notice that the given integral matches this synthesis form with $X(\\omega) = \\frac{2}{4 + \\omega^2}$ and $t = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_{-\\infty}^{\\infty} \\left( \\frac{2}{4 + \\omega^2} \\right) e^{j\\omega (2)}\\, d\\omega = 2\\pi \\cdot x(2)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $t = 2$ into our derived expression for $x(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(2) = \\frac{1}{2} e^{-2|2|} = \\frac{1}{2} e^{-4}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "I = 2\\pi \\left( \\frac{1}{2} e^{-4} \\right) = \\pi e^{-4}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x(t) = \\frac{1}{2} e^{-2|t|}, \\quad \\int_{-\\infty}^{\\infty} \\frac{2}{4 + \\omega^2} e^{j 2\\omega}\\, d\\omega = \\pi e^{-4}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4074,40 +4062,39 @@ export default {
      "text": "Problem Statement:\nFind the inverse Fourier transform of:\n  X(\u03c9) = \\frac{2\\omega}{4 + \\omega\u00b2}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Recall the standard antisymmetric exponential pair:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-a|t|} \\text{sgn}(t) \\longleftrightarrow \\frac{-2j\\omega}{a^2 + \\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Multiply both sides of the transform pair by $j$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{FT}\\left\\{ j\\, e^{-a|t|} \\text{sgn}(t) \\right\\} = j \\left( \\frac{-2j\\omega}{a^2 + \\omega^2} \\right) = \\frac{-2j^2 \\omega}{a^2 + \\omega^2} = \\frac{2\\omega}{a^2 + \\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing with $X(\\omega) = \\frac{2\\omega}{4 + \\omega^2}$, we identify $a^2 = 4 \\implies a = 2$.\nTherefore:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = j\\, e^{-2|t|} \\text{sgn}(t)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\mathcal{FT}^{-1}\\left\\{ \\frac{2\\omega}{4 + \\omega^2} \\right\\} = j\\, e^{-2|t|} \\text{sgn}(t)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Recall the standard antisymmetric exponential pair:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-a|t|} \\text{sgn}(t) \\longleftrightarrow \\frac{-2j\\omega}{a^2 + \\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Multiply both sides of the transform pair by $j$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{FT}\\left\\{ j\\, e^{-a|t|} \\text{sgn}(t) \\right\\} = j \\left( \\frac{-2j\\omega}{a^2 + \\omega^2} \\right) = \\frac{-2j^2 \\omega}{a^2 + \\omega^2} = \\frac{2\\omega}{a^2 + \\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing with $X(\\omega) = \\frac{2\\omega}{4 + \\omega^2}$, we identify $a^2 = 4 \\implies a = 2$.\nTherefore:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = j\\, e^{-2|t|} \\text{sgn}(t)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\mathcal{FT}^{-1}\\left\\{ \\frac{2\\omega}{4 + \\omega^2} \\right\\} = j\\, e^{-2|t|} \\text{sgn}(t)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4118,60 +4105,59 @@ export default {
      "text": "Problem Statement:\nFind the continuous-time signal x(t) corresponding to:\n  X(f) = \\frac{1}{1 - jf}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Method: Convert to Radian Frequency $\\omega$"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $f = \\frac{\\omega}{2\\pi}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{1 - j\\left(\\frac{\\omega}{2\\pi}\\right)} = \\frac{2\\pi}{2\\pi - j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Recall the anti-causal exponential pair:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{at} u(-t) \\longleftrightarrow \\frac{1}{a - j\\omega} \\quad (a > 0)"
-    },
-    {
-     "t": "p",
-     "text": "Setting $a = 2\\pi > 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{2\\pi t} u(-t) \\longleftrightarrow \\frac{1}{2\\pi - j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying by the constant scalar factor $2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\pi e^{2\\pi t} u(-t) \\longleftrightarrow \\frac{2\\pi}{2\\pi - j\\omega} = X(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2\\pi e^{2\\pi t} u(-t)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\mathcal{FT}^{-1}\\left\\{ \\frac{1}{1 - jf} \\right\\} = 2\\pi e^{2\\pi t} u(-t)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Method: Convert to Radian Frequency $\\omega$"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $f = \\frac{\\omega}{2\\pi}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{1 - j\\left(\\frac{\\omega}{2\\pi}\\right)} = \\frac{2\\pi}{2\\pi - j\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Recall the anti-causal exponential pair:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{at} u(-t) \\longleftrightarrow \\frac{1}{a - j\\omega} \\quad (a > 0)"
+      },
+      {
+       "t": "p",
+       "text": "Setting $a = 2\\pi > 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{2\\pi t} u(-t) \\longleftrightarrow \\frac{1}{2\\pi - j\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying by the constant scalar factor $2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\pi e^{2\\pi t} u(-t) \\longleftrightarrow \\frac{2\\pi}{2\\pi - j\\omega} = X(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2\\pi e^{2\\pi t} u(-t)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\mathcal{FT}^{-1}\\left\\{ \\frac{1}{1 - jf} \\right\\} = 2\\pi e^{2\\pi t} u(-t)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4182,56 +4168,55 @@ export default {
      "text": "Problem Statement:\nFind the continuous-time signal x(t) corresponding to:\n  X(f) = \\frac{1}{1 + f\u00b2}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $f = \\frac{\\omega}{2\\pi}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{1 + \\left(\\frac{\\omega}{2\\pi}\\right)^2} = \\frac{1}{1 + \\frac{\\omega^2}{4\\pi^2}} = \\frac{4\\pi^2}{4\\pi^2 + \\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Recall the bilateral symmetric exponential pair:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-a|t|} \\longleftrightarrow \\frac{2a}{a^2 + \\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Here $a^2 = 4\\pi^2 \\implies a = 2\\pi$.\nThe canonical numerator for $a = 2\\pi$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "2a = 2(2\\pi) = 4\\pi"
-    },
-    {
-     "t": "p",
-     "text": "Rewrite $X(\\omega)$ to isolate this factor:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\pi \\left[ \\frac{4\\pi}{4\\pi^2 + \\omega^2} \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Taking the inverse Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\pi\\, e^{-2\\pi |t|}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\mathcal{FT}^{-1}\\left\\{ \\frac{1}{1 + f^2} \\right\\} = \\pi\\, e^{-2\\pi |t|}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Substitute $f = \\frac{\\omega}{2\\pi}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{1 + \\left(\\frac{\\omega}{2\\pi}\\right)^2} = \\frac{1}{1 + \\frac{\\omega^2}{4\\pi^2}} = \\frac{4\\pi^2}{4\\pi^2 + \\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Recall the bilateral symmetric exponential pair:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-a|t|} \\longleftrightarrow \\frac{2a}{a^2 + \\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Here $a^2 = 4\\pi^2 \\implies a = 2\\pi$.\nThe canonical numerator for $a = 2\\pi$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "2a = 2(2\\pi) = 4\\pi"
+      },
+      {
+       "t": "p",
+       "text": "Rewrite $X(\\omega)$ to isolate this factor:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\pi \\left[ \\frac{4\\pi}{4\\pi^2 + \\omega^2} \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Taking the inverse Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\pi\\, e^{-2\\pi |t|}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\mathcal{FT}^{-1}\\left\\{ \\frac{1}{1 + f^2} \\right\\} = \\pi\\, e^{-2\\pi |t|}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4242,116 +4227,115 @@ export default {
      "text": "Problem Statement:\nFind the inverse Fourier transform of:\n  X(f) = \\frac{4f}{1 + 3f\u00b2}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Conversion to Angular Frequency $\\omega$"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $f = \\frac{\\omega}{2\\pi}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{4\\left(\\frac{\\omega}{2\\pi}\\right)}{1 + 3\\left(\\frac{\\omega}{2\\pi}\\right)^2} = \\frac{\\frac{2\\omega}{\\pi}}{1 + \\frac{3\\omega^2}{4\\pi^2}} = \\frac{\\frac{2\\omega}{\\pi} \\times 4\\pi^2}{4\\pi^2 + 3\\omega^2} = \\frac{8\\pi \\omega}{4\\pi^2 + 3\\omega^2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Establish the Base Prototype Function $Y(\\omega)$"
-    },
-    {
-     "t": "p",
-     "text": "Recall from Slide 057:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{j}{2} e^{-a|t|} \\text{sgn}(t) \\longleftrightarrow \\frac{\\omega}{a^2 + \\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Choose $a = 2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\frac{j}{2} e^{-2\\pi |t|} \\text{sgn}(t) \\longleftrightarrow Y(\\omega) = \\frac{\\omega}{4\\pi^2 + \\omega^2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Implement Frequency Scaling Property"
-    },
-    {
-     "t": "p",
-     "text": "Notice that the denominator has $3\\omega^2 = (\\sqrt{3}\\omega)^2$.\nEvaluate $Y(\\sqrt{3}\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\sqrt{3}\\omega) = \\frac{\\sqrt{3}\\omega}{4\\pi^2 + (\\sqrt{3}\\omega)^2} = \\frac{\\sqrt{3}\\omega}{4\\pi^2 + 3\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Recall the time-scaling duality property:"
-    },
-    {
-     "t": "math",
-     "tex": "y(k t) \\longleftrightarrow \\frac{1}{|k|} Y\\left(\\frac{\\omega}{k}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "To obtain $Y(k \\omega)$, let scaling factor in time be $1/k$:"
-    },
-    {
-     "t": "math",
-     "tex": "y\\left(\\frac{t}{k}\\right) \\longleftrightarrow |k| Y(k \\omega) \\implies \\frac{1}{|k|} y\\left(\\frac{t}{k}\\right) \\longleftrightarrow Y(k \\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Here $k = \\sqrt{3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{\\sqrt{3}} y\\left(\\frac{t}{\\sqrt{3}}\\right) \\longleftrightarrow Y(\\sqrt{3}\\omega) = \\frac{\\sqrt{3}\\omega}{4\\pi^2 + 3\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Divide both sides by $\\sqrt{3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{3} y\\left(\\frac{t}{\\sqrt{3}}\\right) \\longleftrightarrow \\frac{\\omega}{4\\pi^2 + 3\\omega^2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Scale by $8\\pi$ to Form $X(\\omega)$"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 8\\pi \\left[ \\frac{\\omega}{4\\pi^2 + 3\\omega^2} \\right] \\longleftrightarrow x(t) = \\frac{8\\pi}{3} y\\left(\\frac{t}{\\sqrt{3}}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $y(t) = \\frac{j}{2} e^{-2\\pi |t|} \\text{sgn}(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{8\\pi}{3} \\left[ \\frac{j}{2} e^{-2\\pi \\left|\\frac{t}{\\sqrt{3}}\\right|} \\text{sgn}\\left(\\frac{t}{\\sqrt{3}}\\right) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\sqrt{3} > 0$, $\\text{sgn}\\left(\\frac{t}{\\sqrt{3}}\\right) = \\text{sgn}(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{j 4\\pi}{3} e^{-\\frac{2\\pi}{\\sqrt{3}}|t|} \\text{sgn}(t)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\mathcal{FT}^{-1}\\left\\{ \\frac{4f}{1 + 3f^2} \\right\\} = j \\frac{4\\pi}{3} e^{-\\frac{2\\pi}{\\sqrt{3}}|t|} \\text{sgn}(t)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Conversion to Angular Frequency $\\omega$"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $f = \\frac{\\omega}{2\\pi}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{4\\left(\\frac{\\omega}{2\\pi}\\right)}{1 + 3\\left(\\frac{\\omega}{2\\pi}\\right)^2} = \\frac{\\frac{2\\omega}{\\pi}}{1 + \\frac{3\\omega^2}{4\\pi^2}} = \\frac{\\frac{2\\omega}{\\pi} \\times 4\\pi^2}{4\\pi^2 + 3\\omega^2} = \\frac{8\\pi \\omega}{4\\pi^2 + 3\\omega^2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Establish the Base Prototype Function $Y(\\omega)$"
+      },
+      {
+       "t": "p",
+       "text": "Recall from Slide 057:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{j}{2} e^{-a|t|} \\text{sgn}(t) \\longleftrightarrow \\frac{\\omega}{a^2 + \\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Choose $a = 2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\frac{j}{2} e^{-2\\pi |t|} \\text{sgn}(t) \\longleftrightarrow Y(\\omega) = \\frac{\\omega}{4\\pi^2 + \\omega^2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Implement Frequency Scaling Property"
+      },
+      {
+       "t": "p",
+       "text": "Notice that the denominator has $3\\omega^2 = (\\sqrt{3}\\omega)^2$.\nEvaluate $Y(\\sqrt{3}\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\sqrt{3}\\omega) = \\frac{\\sqrt{3}\\omega}{4\\pi^2 + (\\sqrt{3}\\omega)^2} = \\frac{\\sqrt{3}\\omega}{4\\pi^2 + 3\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Recall the time-scaling duality property:"
+      },
+      {
+       "t": "math",
+       "tex": "y(k t) \\longleftrightarrow \\frac{1}{|k|} Y\\left(\\frac{\\omega}{k}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "To obtain $Y(k \\omega)$, let scaling factor in time be $1/k$:"
+      },
+      {
+       "t": "math",
+       "tex": "y\\left(\\frac{t}{k}\\right) \\longleftrightarrow |k| Y(k \\omega) \\implies \\frac{1}{|k|} y\\left(\\frac{t}{k}\\right) \\longleftrightarrow Y(k \\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Here $k = \\sqrt{3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{\\sqrt{3}} y\\left(\\frac{t}{\\sqrt{3}}\\right) \\longleftrightarrow Y(\\sqrt{3}\\omega) = \\frac{\\sqrt{3}\\omega}{4\\pi^2 + 3\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Divide both sides by $\\sqrt{3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{3} y\\left(\\frac{t}{\\sqrt{3}}\\right) \\longleftrightarrow \\frac{\\omega}{4\\pi^2 + 3\\omega^2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Scale by $8\\pi$ to Form $X(\\omega)$"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 8\\pi \\left[ \\frac{\\omega}{4\\pi^2 + 3\\omega^2} \\right] \\longleftrightarrow x(t) = \\frac{8\\pi}{3} y\\left(\\frac{t}{\\sqrt{3}}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $y(t) = \\frac{j}{2} e^{-2\\pi |t|} \\text{sgn}(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{8\\pi}{3} \\left[ \\frac{j}{2} e^{-2\\pi \\left|\\frac{t}{\\sqrt{3}}\\right|} \\text{sgn}\\left(\\frac{t}{\\sqrt{3}}\\right) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\sqrt{3} > 0$, $\\text{sgn}\\left(\\frac{t}{\\sqrt{3}}\\right) = \\text{sgn}(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{j 4\\pi}{3} e^{-\\frac{2\\pi}{\\sqrt{3}}|t|} \\text{sgn}(t)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\mathcal{FT}^{-1}\\left\\{ \\frac{4f}{1 + 3f^2} \\right\\} = j \\frac{4\\pi}{3} e^{-\\frac{2\\pi}{\\sqrt{3}}|t|} \\text{sgn}(t)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -5095,7 +5079,7 @@ export default {
     },
     {
      "t": "p",
-     "text": "Every concept, waveform geometry, integration step, trigonometric identity, and graphical spectrum has been transcribed into clear mathematical typography using standard Markdown and KaTeX notation. In compliance with strict auditing guidelines, **zero chalkboard images are embedded**. All drill questions, derivations, and practice problems are fully solved with complete step-by-step intermediate working and enclosed inside expandable `<details open>` containers highlighting typical GATE examination traps, common algebraic errors, and rapid-solving shortcuts."
+     "text": "Every concept, waveform geometry, integration step, trigonometric identity, and graphical spectrum has been transcribed into clear mathematical typography using standard Markdown and KaTeX notation. In compliance with strict auditing guidelines, **zero chalkboard images are embedded**. All drill questions, derivations, and practice problems are fully solved with complete step-by-step intermediate working and enclosed inside expandable `` containers highlighting typical GATE examination traps, common algebraic errors, and rapid-solving shortcuts."
     },
     {
      "t": "h3",
@@ -6207,100 +6191,99 @@ export default {
      "tex": "u(t) \\longleftrightarrow \\frac{1}{j\\omega} + \\pi\\delta(\\omega)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Posing the Convergence Problem of Direct Integration**  \nIf one attempts direct integration:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{u(t)\\} = \\int_0^\\infty 1 \\cdot e^{-j\\omega t}\\,dt = \\left[ \\frac{e^{-j\\omega t}}{-j\\omega} \\right]_0^\\infty = \\frac{\\lim_{t \\to \\infty} e^{-j\\omega t} - 1}{-j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\lim_{t \\to \\infty} e^{-j\\omega t}$ oscillates indefinitely on the unit circle without converging, the standard Riemann integral does not exist. Hence, we introduce a convergence factor $e^{-at}$ ($a > 0$):"
-    },
-    {
-     "t": "math",
-     "tex": "u(t) = \\lim_{a \\to 0^+} e^{-at}u(t)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Rationalization of the Limit Spectrum**"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{e^{-at}u(t)\\} = \\frac{1}{a+j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying the numerator and denominator by the complex conjugate $(a - j\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{a+j\\omega} = \\frac{a - j\\omega}{(a+j\\omega)(a-j\\omega)} = \\frac{a}{a^2+\\omega^2} - j\\frac{\\omega}{a^2+\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Evaluating the Real Part (Cauchy-Lorentzian Distribution)**  \nConsider the function $g_a(\\omega) = \\frac{a}{a^2+\\omega^2}$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "As $\\omega \\to 0$, $g_a(0) = \\frac{1}{a} \\to \\infty$ as $a \\to 0^+$.",
-      "For any $\\omega \\ne 0$, $\\lim_{a \\to 0^+} \\frac{a}{a^2+\\omega^2} = 0$.",
-      "The total area under $g_a(\\omega)$ over $\\omega \\in (-\\infty, \\infty)$ is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^\\infty \\frac{a}{a^2+\\omega^2}\\,d\\omega = \\left[ \\arctan\\left(\\frac{\\omega}{a}\\right) \\right]_{-\\infty}^\\infty = \\frac{\\pi}{2} - \\left(-\\frac{\\pi}{2}\\right) = \\pi"
-    },
-    {
-     "t": "p",
-     "text": "This precisely satisfies the definition of an impulse of weight $\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{a \\to 0^+} \\frac{a}{a^2+\\omega^2} = \\pi \\delta(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Evaluating the Imaginary Part**  \nFor $\\omega \\ne 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{a \\to 0^+} -j\\frac{\\omega}{a^2+\\omega^2} = -j\\frac{\\omega}{\\omega^2} = \\frac{-j}{\\omega} = \\frac{1}{j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Combining real and imaginary parts:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{u(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{1}{j\\omega} + \\pi\\delta(\\omega)}"
-    },
-    {
-     "t": "p",
-     "text": "**GATE Exam Traps:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trap 1:** Forgetting the DC impulse term $\\pi\\delta(\\omega)$ and writing only $\\frac{1}{j\\omega}$. Remember that $u(t)$ has a non-zero average (DC) value of $\\frac{1}{2}$. The DC component always contributes an impulse $2\\pi \\times (\\text{DC value}) \\times \\delta(\\omega) = 2\\pi (1/2) \\delta(\\omega) = \\pi\\delta(\\omega)$.",
-      "**Trap 2:** Expressing the transform in cyclic frequency $f$. Since $\\omega = 2\\pi f$, substituting gives $\\frac{1}{j 2\\pi f} + \\pi \\delta(2\\pi f)$. Using the impulse scaling property $\\delta(k f) = \\frac{1}{|k|}\\delta(f)$, we get $\\pi \\times \\frac{1}{2\\pi}\\delta(f) = \\frac{\\delta(f)}{2}$. Therefore:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{u(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{1}{j 2\\pi f} + \\frac{1}{2}\\delta(f)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Posing the Convergence Problem of Direct Integration**  \nIf one attempts direct integration:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{u(t)\\} = \\int_0^\\infty 1 \\cdot e^{-j\\omega t}\\,dt = \\left[ \\frac{e^{-j\\omega t}}{-j\\omega} \\right]_0^\\infty = \\frac{\\lim_{t \\to \\infty} e^{-j\\omega t} - 1}{-j\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\lim_{t \\to \\infty} e^{-j\\omega t}$ oscillates indefinitely on the unit circle without converging, the standard Riemann integral does not exist. Hence, we introduce a convergence factor $e^{-at}$ ($a > 0$):"
+      },
+      {
+       "t": "math",
+       "tex": "u(t) = \\lim_{a \\to 0^+} e^{-at}u(t)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Rationalization of the Limit Spectrum**"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{e^{-at}u(t)\\} = \\frac{1}{a+j\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying the numerator and denominator by the complex conjugate $(a - j\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{a+j\\omega} = \\frac{a - j\\omega}{(a+j\\omega)(a-j\\omega)} = \\frac{a}{a^2+\\omega^2} - j\\frac{\\omega}{a^2+\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Evaluating the Real Part (Cauchy-Lorentzian Distribution)**  \nConsider the function $g_a(\\omega) = \\frac{a}{a^2+\\omega^2}$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "As $\\omega \\to 0$, $g_a(0) = \\frac{1}{a} \\to \\infty$ as $a \\to 0^+$.",
+        "For any $\\omega \\ne 0$, $\\lim_{a \\to 0^+} \\frac{a}{a^2+\\omega^2} = 0$.",
+        "The total area under $g_a(\\omega)$ over $\\omega \\in (-\\infty, \\infty)$ is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^\\infty \\frac{a}{a^2+\\omega^2}\\,d\\omega = \\left[ \\arctan\\left(\\frac{\\omega}{a}\\right) \\right]_{-\\infty}^\\infty = \\frac{\\pi}{2} - \\left(-\\frac{\\pi}{2}\\right) = \\pi"
+      },
+      {
+       "t": "p",
+       "text": "This precisely satisfies the definition of an impulse of weight $\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{a \\to 0^+} \\frac{a}{a^2+\\omega^2} = \\pi \\delta(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Evaluating the Imaginary Part**  \nFor $\\omega \\ne 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{a \\to 0^+} -j\\frac{\\omega}{a^2+\\omega^2} = -j\\frac{\\omega}{\\omega^2} = \\frac{-j}{\\omega} = \\frac{1}{j\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Combining real and imaginary parts:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{u(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{1}{j\\omega} + \\pi\\delta(\\omega)}"
+      },
+      {
+       "t": "p",
+       "text": "**GATE Exam Traps:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Trap 1:** Forgetting the DC impulse term $\\pi\\delta(\\omega)$ and writing only $\\frac{1}{j\\omega}$. Remember that $u(t)$ has a non-zero average (DC) value of $\\frac{1}{2}$. The DC component always contributes an impulse $2\\pi \\times (\\text{DC value}) \\times \\delta(\\omega) = 2\\pi (1/2) \\delta(\\omega) = \\pi\\delta(\\omega)$.",
+        "**Trap 2:** Expressing the transform in cyclic frequency $f$. Since $\\omega = 2\\pi f$, substituting gives $\\frac{1}{j 2\\pi f} + \\pi \\delta(2\\pi f)$. Using the impulse scaling property $\\delta(k f) = \\frac{1}{|k|}\\delta(f)$, we get $\\pi \\times \\frac{1}{2\\pi}\\delta(f) = \\frac{\\delta(f)}{2}$. Therefore:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{u(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{1}{j 2\\pi f} + \\frac{1}{2}\\delta(f)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6351,63 +6334,62 @@ export default {
      "tex": "\\text{sgn}(t) \\longleftrightarrow \\frac{2}{j\\omega}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Signal Decomposition**  \nExpress the bipolar step $\\text{sgn}(t)$ in terms of causal steps:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{sgn}(t) = u(t) - u(-t)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Applying Transform Linearity & Time Reversal**  \nWe know $u(t) \\longleftrightarrow U(\\omega) = \\frac{1}{j\\omega} + \\pi\\delta(\\omega)$.  \nBy time reversal property, $x(-t) \\longleftrightarrow X(-\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{u(-t)\\} = \\frac{1}{j(-\\omega)} + \\pi\\delta(-\\omega) = -\\frac{1}{j\\omega} + \\pi\\delta(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Subtracting the Two Transforms**"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{\\text{sgn}(t)\\} = \\left(\\frac{1}{j\\omega} + \\pi\\delta(\\omega)\\right) - \\left(-\\frac{1}{j\\omega} + \\pi\\delta(\\omega)\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{\\text{sgn}(t)\\} = \\frac{1}{j\\omega} + \\pi\\delta(\\omega) + \\frac{1}{j\\omega} - \\pi\\delta(\\omega) = \\frac{2}{j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Expressing in Cyclic Frequency**  \nWith $\\omega = 2\\pi f$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(f) = \\frac{2}{j(2\\pi f)} = \\frac{1}{j\\pi f}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{2}{j\\omega} = \\frac{1}{j\\pi f}}"
-    },
-    {
-     "t": "p",
-     "text": "**GATE Exam Traps:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trap 1:** Why is there no impulse $\\delta(\\omega)$ in the transform of $\\text{sgn}(t)$? Because $\\text{sgn}(t)$ is an odd function, its average (DC) value is identically zero ($\\int_{-T}^T \\text{sgn}(t)\\,dt = 0$). Hence, no impulse at $\\omega = 0$ can exist.",
-      "**Trap 2:** Notice that $X(\\omega) = \\frac{2}{j\\omega} = -j\\frac{2}{\\omega}$ is purely imaginary and odd. For any real and odd time signal $x(t)$, its Fourier transform **must be purely imaginary and odd**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Signal Decomposition**  \nExpress the bipolar step $\\text{sgn}(t)$ in terms of causal steps:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{sgn}(t) = u(t) - u(-t)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Applying Transform Linearity & Time Reversal**  \nWe know $u(t) \\longleftrightarrow U(\\omega) = \\frac{1}{j\\omega} + \\pi\\delta(\\omega)$.  \nBy time reversal property, $x(-t) \\longleftrightarrow X(-\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{u(-t)\\} = \\frac{1}{j(-\\omega)} + \\pi\\delta(-\\omega) = -\\frac{1}{j\\omega} + \\pi\\delta(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Subtracting the Two Transforms**"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{\\text{sgn}(t)\\} = \\left(\\frac{1}{j\\omega} + \\pi\\delta(\\omega)\\right) - \\left(-\\frac{1}{j\\omega} + \\pi\\delta(\\omega)\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{\\text{sgn}(t)\\} = \\frac{1}{j\\omega} + \\pi\\delta(\\omega) + \\frac{1}{j\\omega} - \\pi\\delta(\\omega) = \\frac{2}{j\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Expressing in Cyclic Frequency**  \nWith $\\omega = 2\\pi f$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(f) = \\frac{2}{j(2\\pi f)} = \\frac{1}{j\\pi f}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{2}{j\\omega} = \\frac{1}{j\\pi f}}"
+      },
+      {
+       "t": "p",
+       "text": "**GATE Exam Traps:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Trap 1:** Why is there no impulse $\\delta(\\omega)$ in the transform of $\\text{sgn}(t)$? Because $\\text{sgn}(t)$ is an odd function, its average (DC) value is identically zero ($\\int_{-T}^T \\text{sgn}(t)\\,dt = 0$). Hence, no impulse at $\\omega = 0$ can exist.",
+        "**Trap 2:** Notice that $X(\\omega) = \\frac{2}{j\\omega} = -j\\frac{2}{\\omega}$ is purely imaginary and odd. For any real and odd time signal $x(t)$, its Fourier transform **must be purely imaginary and odd**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6454,34 +6436,33 @@ export default {
      "text": "Graph shows single infinite-amplitude arrow of weight 1 at $t = 0$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Evaluation via Sifting Integral**  \nThe impulse $\\delta(t)$ satisfies the fundamental sifting property: $\\int_{-\\infty}^\\infty \\phi(t)\\delta(t-t_0)\\,dt = \\phi(t_0)$.  \nHere $t_0 = 0$ and $\\phi(t) = e^{-j\\omega t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\int_{-\\infty}^\\infty \\delta(t)\\,e^{-j\\omega t}\\,dt = \\left. e^{-j\\omega t} \\right|_{t=0} = e^0 = 1"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Spectral Interpretation**  \n$X(\\omega) = 1$ for all $\\omega \\in (-\\infty, \\infty)$. The spectrum contains all frequencies from $-\\infty$ to $+\\infty$ with identical unit amplitude and zero phase lag (pure white spectrum)."
-    },
-    {
-     "t": "p",
-     "text": "**GATE Exam Traps:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Dual Relation Trap:** Do not confuse $\\delta(t) \\longleftrightarrow 1$ with the transform of a DC constant $1 \\longleftrightarrow 2\\pi\\delta(\\omega)$. A time impulse produces an infinitely wide constant spectrum; a time constant produces an infinitely narrow frequency impulse."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Evaluation via Sifting Integral**  \nThe impulse $\\delta(t)$ satisfies the fundamental sifting property: $\\int_{-\\infty}^\\infty \\phi(t)\\delta(t-t_0)\\,dt = \\phi(t_0)$.  \nHere $t_0 = 0$ and $\\phi(t) = e^{-j\\omega t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\int_{-\\infty}^\\infty \\delta(t)\\,e^{-j\\omega t}\\,dt = \\left. e^{-j\\omega t} \\right|_{t=0} = e^0 = 1"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Spectral Interpretation**  \n$X(\\omega) = 1$ for all $\\omega \\in (-\\infty, \\infty)$. The spectrum contains all frequencies from $-\\infty$ to $+\\infty$ with identical unit amplitude and zero phase lag (pure white spectrum)."
+      },
+      {
+       "t": "p",
+       "text": "**GATE Exam Traps:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Dual Relation Trap:** Do not confuse $\\delta(t) \\longleftrightarrow 1$ with the transform of a DC constant $1 \\longleftrightarrow 2\\pi\\delta(\\omega)$. A time impulse produces an infinitely wide constant spectrum; a time constant produces an infinitely narrow frequency impulse."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6500,61 +6481,60 @@ export default {
      "tex": "\\begin{array}{|c|c|c|c|}\n\\hline\n\\textbf{No.} & \\mathbf{x(t)} & \\mathbf{X(\\omega)} & \\mathbf{X(f)} \\\\ \\hline\n1 & \\delta(t) & 1 & 1 \\\\ \\hline\n2 & 1 & 2\\pi\\delta(\\omega) & \\delta(f) \\\\ \\hline\n3 & u(t) & \\frac{1}{j\\omega} + \\pi\\delta(\\omega) & \\frac{1}{j2\\pi f} + \\frac{\\delta(f)}{2} \\\\ \\hline\n4 & \\text{sgn}(t) & \\frac{2}{j\\omega} & \\frac{1}{j\\pi f} \\\\ \\hline\n5 & e^{-at}u(t) \\quad (a > 0) & \\frac{1}{a+j\\omega} & \\frac{1}{a+j2\\pi f} \\\\ \\hline\n6 & e^{at}u(-t) \\quad (a > 0) & \\frac{1}{a-j\\omega} & \\frac{1}{a-j2\\pi f} \\\\ \\hline\n7 & e^{-a|t|} \\quad (a > 0) & \\frac{2a}{a^2+\\omega^2} & \\frac{2a}{a^2+4\\pi^2 f^2} \\\\ \\hline\n8 & e^{-a|t|}\\text{sgn}(t) \\quad (a > 0) & \\frac{-2j\\omega}{a^2+\\omega^2} & \\frac{-j4\\pi f}{a^2+4\\pi^2 f^2} \\\\ \\hline\n\\end{array}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Key Structural Symmetries for Quick GATE Recall:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Pairs 5 & 6 (Time Reversal):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$e^{at}u(-t)$ is the time-reversed version of $e^{-at}u(t)$. In frequency domain, replace $\\omega$ with $-\\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{a+j(-\\omega)} = \\frac{1}{a-j\\omega}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Pair 7 (Bilateral Exponential as Sum):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$e^{-a|t|} = e^{-at}u(t) + e^{at}u(-t)$.  \n   Adding their transforms:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{a+j\\omega} + \\frac{1}{a-j\\omega} = \\frac{(a-j\\omega) + (a+j\\omega)}{(a+j\\omega)(a-j\\omega)} = \\frac{2a}{a^2+\\omega^2}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Pair 8 (Anti-symmetric Bilateral Exponential):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$e^{-a|t|}\\text{sgn}(t) = e^{-at}u(t) - e^{at}u(-t)$.  \n   Subtracting their transforms:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{a+j\\omega} - \\frac{1}{a-j\\omega} = \\frac{(a-j\\omega) - (a+j\\omega)}{a^2+\\omega^2} = \\frac{-2j\\omega}{a^2+\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Key Structural Symmetries for Quick GATE Recall:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Pairs 5 & 6 (Time Reversal):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$e^{at}u(-t)$ is the time-reversed version of $e^{-at}u(t)$. In frequency domain, replace $\\omega$ with $-\\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{a+j(-\\omega)} = \\frac{1}{a-j\\omega}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Pair 7 (Bilateral Exponential as Sum):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$e^{-a|t|} = e^{-at}u(t) + e^{at}u(-t)$.  \n   Adding their transforms:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{a+j\\omega} + \\frac{1}{a-j\\omega} = \\frac{(a-j\\omega) + (a+j\\omega)}{(a+j\\omega)(a-j\\omega)} = \\frac{2a}{a^2+\\omega^2}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Pair 8 (Anti-symmetric Bilateral Exponential):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$e^{-a|t|}\\text{sgn}(t) = e^{-at}u(t) - e^{at}u(-t)$.  \n   Subtracting their transforms:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{a+j\\omega} - \\frac{1}{a-j\\omega} = \\frac{(a-j\\omega) - (a+j\\omega)}{a^2+\\omega^2} = \\frac{-2j\\omega}{a^2+\\omega^2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6597,78 +6577,77 @@ export default {
      "tex": "x(t) = j\\pi\\,\\text{sgn}(t)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Method 1: Direct Mapping via Cyclic Domain**  \nFrom Slide 068, Pair 4:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{1}{j\\pi f} = \\frac{-j}{\\pi f}"
-    },
-    {
-     "t": "p",
-     "text": "Multiply both sides by $j\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "j\\pi\\,\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} j\\pi \\left(\\frac{1}{j\\pi f}\\right) = \\frac{1}{f}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, by inspection:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = j\\pi\\,\\text{sgn}(t)}"
-    },
-    {
-     "t": "p",
-     "text": "**Method 2: Conversion to Radian Frequency ($\\omega$)**  \nSince $f = \\frac{\\omega}{2\\pi}$, the spectrum in $\\omega$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\left. X(f) \\right|_{f = \\frac{\\omega}{2\\pi}} = \\frac{1}{\\frac{\\omega}{2\\pi}} = \\frac{2\\pi}{\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Recall:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{\\text{sgn}(t)\\} = \\frac{2}{j\\omega} = -j\\frac{2}{\\omega} \\implies \\frac{1}{\\omega} = \\frac{j}{2}\\mathcal{F}\\{\\text{sgn}(t)\\}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 2\\pi \\left(\\frac{1}{\\omega}\\right) = 2\\pi \\left[ \\frac{j}{2}\\mathcal{F}\\{\\text{sgn}(t)\\} \\right] = j\\pi \\mathcal{F}\\{\\text{sgn}(t)\\}"
-    },
-    {
-     "t": "p",
-     "text": "Taking the inverse Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = j\\pi\\,\\text{sgn}(t)}"
-    },
-    {
-     "t": "p",
-     "text": "**GATE Exam Traps:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Missing the factor of $j$: If $X(f)$ is real and odd, $x(t)$ **must be imaginary and odd**. Since $\\frac{1}{f}$ is real and odd, $x(t)$ cannot be real; it must have the factor $j$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Method 1: Direct Mapping via Cyclic Domain**  \nFrom Slide 068, Pair 4:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{1}{j\\pi f} = \\frac{-j}{\\pi f}"
+      },
+      {
+       "t": "p",
+       "text": "Multiply both sides by $j\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "j\\pi\\,\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} j\\pi \\left(\\frac{1}{j\\pi f}\\right) = \\frac{1}{f}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, by inspection:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = j\\pi\\,\\text{sgn}(t)}"
+      },
+      {
+       "t": "p",
+       "text": "**Method 2: Conversion to Radian Frequency ($\\omega$)**  \nSince $f = \\frac{\\omega}{2\\pi}$, the spectrum in $\\omega$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\left. X(f) \\right|_{f = \\frac{\\omega}{2\\pi}} = \\frac{1}{\\frac{\\omega}{2\\pi}} = \\frac{2\\pi}{\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Recall:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{\\text{sgn}(t)\\} = \\frac{2}{j\\omega} = -j\\frac{2}{\\omega} \\implies \\frac{1}{\\omega} = \\frac{j}{2}\\mathcal{F}\\{\\text{sgn}(t)\\}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 2\\pi \\left(\\frac{1}{\\omega}\\right) = 2\\pi \\left[ \\frac{j}{2}\\mathcal{F}\\{\\text{sgn}(t)\\} \\right] = j\\pi \\mathcal{F}\\{\\text{sgn}(t)\\}"
+      },
+      {
+       "t": "p",
+       "text": "Taking the inverse Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = j\\pi\\,\\text{sgn}(t)}"
+      },
+      {
+       "t": "p",
+       "text": "**GATE Exam Traps:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Missing the factor of $j$: If $X(f)$ is real and odd, $x(t)$ **must be imaginary and odd**. Since $\\frac{1}{f}$ is real and odd, $x(t)$ cannot be real; it must have the factor $j$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6703,48 +6682,47 @@ export default {
      "tex": "\\boxed{t^n x(t) \\longleftrightarrow j^n \\frac{d^n}{d\\omega^n}X(\\omega) \\longrightarrow \\left(\\frac{j}{2\\pi}\\right)^n \\frac{d^n}{df^n}X(f)}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Proof of Property:**  \nStarting from the forward Fourier transform integral:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\int_{-\\infty}^\\infty x(t)\\,e^{-j\\omega t}\\,dt"
-    },
-    {
-     "t": "p",
-     "text": "Differentiating both sides with respect to $\\omega$ using Leibniz's rule:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{d\\omega}X(\\omega) = \\frac{d}{d\\omega}\\int_{-\\infty}^\\infty x(t)\\,e^{-j\\omega t}\\,dt = \\int_{-\\infty}^\\infty x(t)\\,\\frac{\\partial}{\\partial\\omega}\\left(e^{-j\\omega t}\\right)\\,dt"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{d\\omega}X(\\omega) = \\int_{-\\infty}^\\infty x(t) (-jt)\\,e^{-j\\omega t}\\,dt = -j \\int_{-\\infty}^\\infty [t\\,x(t)]\\,e^{-j\\omega t}\\,dt"
-    },
-    {
-     "t": "p",
-     "text": "Multiply both sides by $j$ (noting that $j \\times (-j) = -j^2 = 1$):"
-    },
-    {
-     "t": "math",
-     "tex": "j\\frac{d}{d\\omega}X(\\omega) = \\int_{-\\infty}^\\infty [t\\,x(t)]\\,e^{-j\\omega t}\\,dt = \\mathcal{F}\\{t\\,x(t)\\}"
-    },
-    {
-     "t": "p",
-     "text": "By induction, applying the derivative operator $n$ times:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{t^n x(t)\\} = j^n \\frac{d^n}{d\\omega^n}X(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Proof of Property:**  \nStarting from the forward Fourier transform integral:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\int_{-\\infty}^\\infty x(t)\\,e^{-j\\omega t}\\,dt"
+      },
+      {
+       "t": "p",
+       "text": "Differentiating both sides with respect to $\\omega$ using Leibniz's rule:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{d\\omega}X(\\omega) = \\frac{d}{d\\omega}\\int_{-\\infty}^\\infty x(t)\\,e^{-j\\omega t}\\,dt = \\int_{-\\infty}^\\infty x(t)\\,\\frac{\\partial}{\\partial\\omega}\\left(e^{-j\\omega t}\\right)\\,dt"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{d\\omega}X(\\omega) = \\int_{-\\infty}^\\infty x(t) (-jt)\\,e^{-j\\omega t}\\,dt = -j \\int_{-\\infty}^\\infty [t\\,x(t)]\\,e^{-j\\omega t}\\,dt"
+      },
+      {
+       "t": "p",
+       "text": "Multiply both sides by $j$ (noting that $j \\times (-j) = -j^2 = 1$):"
+      },
+      {
+       "t": "math",
+       "tex": "j\\frac{d}{d\\omega}X(\\omega) = \\int_{-\\infty}^\\infty [t\\,x(t)]\\,e^{-j\\omega t}\\,dt = \\mathcal{F}\\{t\\,x(t)\\}"
+      },
+      {
+       "t": "p",
+       "text": "By induction, applying the derivative operator $n$ times:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{t^n x(t)\\} = j^n \\frac{d^n}{d\\omega^n}X(\\omega)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6795,56 +6773,55 @@ export default {
      "tex": "x(t) = j\\pi e^{-4\\pi|t|}\\text{sgn}(t)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Express $X(f)$ in terms of $\\omega$**  \nSubstitute $f = \\frac{\\omega}{2\\pi}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{\\frac{\\omega}{2\\pi}}{4 + \\left(\\frac{\\omega}{2\\pi}\\right)^2} = \\frac{\\frac{\\omega}{2\\pi}}{\\frac{16\\pi^2 + \\omega^2}{4\\pi^2}} = \\frac{\\omega}{2\\pi} \\times \\frac{4\\pi^2}{\\omega^2 + (4\\pi)^2} = \\frac{2\\pi\\omega}{\\omega^2 + (4\\pi)^2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Identify the Canonical Form**  \nRecall from Slide 068, Pair 8:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-a|t|}\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{-2j\\omega}{a^2+\\omega^2} \\implies \\frac{j}{2} e^{-a|t|}\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{\\omega}{a^2+\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Parameter Matching**  \nMatching the denominator $\\omega^2 + (4\\pi)^2$ with $\\omega^2 + a^2$ yields:"
-    },
-    {
-     "t": "math",
-     "tex": "a = 4\\pi"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{j}{2} e^{-4\\pi|t|}\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{\\omega}{(4\\pi)^2+\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying both sides by $2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\pi \\left(\\frac{j}{2} e^{-4\\pi|t|}\\text{sgn}(t)\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{2\\pi\\omega}{(4\\pi)^2+\\omega^2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = j\\pi e^{-4\\pi|t|}\\text{sgn}(t)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Express $X(f)$ in terms of $\\omega$**  \nSubstitute $f = \\frac{\\omega}{2\\pi}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{\\frac{\\omega}{2\\pi}}{4 + \\left(\\frac{\\omega}{2\\pi}\\right)^2} = \\frac{\\frac{\\omega}{2\\pi}}{\\frac{16\\pi^2 + \\omega^2}{4\\pi^2}} = \\frac{\\omega}{2\\pi} \\times \\frac{4\\pi^2}{\\omega^2 + (4\\pi)^2} = \\frac{2\\pi\\omega}{\\omega^2 + (4\\pi)^2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Identify the Canonical Form**  \nRecall from Slide 068, Pair 8:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-a|t|}\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{-2j\\omega}{a^2+\\omega^2} \\implies \\frac{j}{2} e^{-a|t|}\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{\\omega}{a^2+\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Parameter Matching**  \nMatching the denominator $\\omega^2 + (4\\pi)^2$ with $\\omega^2 + a^2$ yields:"
+      },
+      {
+       "t": "math",
+       "tex": "a = 4\\pi"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{j}{2} e^{-4\\pi|t|}\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{\\omega}{(4\\pi)^2+\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying both sides by $2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\pi \\left(\\frac{j}{2} e^{-4\\pi|t|}\\text{sgn}(t)\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{2\\pi\\omega}{(4\\pi)^2+\\omega^2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = j\\pi e^{-4\\pi|t|}\\text{sgn}(t)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6903,72 +6880,71 @@ export default {
      "tex": "x(t) = \\frac{j\\pi^2}{3} t\\,e^{-6\\pi|t|}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Simplify $X(\\omega)$**"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\left. \\frac{f}{(9+f^2)^2} \\right|_{f = \\frac{\\omega}{2\\pi}} = \\frac{\\frac{\\omega}{2\\pi}}{\\left(9 + \\frac{\\omega^2}{4\\pi^2}\\right)^2} = \\frac{\\frac{\\omega}{2\\pi}}{\\frac{(36\\pi^2+\\omega^2)^2}{16\\pi^4}} = \\frac{8\\pi^3\\omega}{(\\omega^2+36\\pi^2)^2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Differentiate Known Base Pair in Frequency Domain**"
-    },
-    {
-     "t": "math",
-     "tex": "x_0(t) = e^{-a|t|} \\longleftrightarrow X_0(\\omega) = \\frac{2a}{a^2+\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Using multiplication by $t$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{t\\,x_0(t)\\} = j\\frac{d}{d\\omega}\\left( \\frac{2a}{a^2+\\omega^2} \\right) = j\\left( \\frac{-2a \\cdot 2\\omega}{(a^2+\\omega^2)^2} \\right) = \\frac{-4aj\\omega}{(a^2+\\omega^2)^2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Equate Denominators**"
-    },
-    {
-     "t": "math",
-     "tex": "a^2 = 36\\pi^2 \\implies a = 6\\pi \\quad (a > 0)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $a = 6\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{t\\,e^{-6\\pi|t|}\\} = \\frac{-4(6\\pi)j\\omega}{(\\omega^2 + 36\\pi^2)^2} = \\frac{-24\\pi j \\omega}{(\\omega^2 + 36\\pi^2)^2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Scale Both Sides to Match Numerator**  \nWe require numerator $8\\pi^3\\omega$. Multiply both sides by:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{8\\pi^3}{-24\\pi j} = \\frac{\\pi^2}{-3j} = \\frac{j\\pi^2}{3}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\left\\{ \\frac{j\\pi^2}{3} t\\,e^{-6\\pi|t|} \\right\\} = \\frac{j\\pi^2}{3} \\times \\frac{-24\\pi j\\omega}{(\\omega^2+36\\pi^2)^2} = \\frac{8\\pi^3\\omega}{(\\omega^2+36\\pi^2)^2} = X(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Taking the inverse Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = \\frac{j\\pi^2}{3} t\\,e^{-6\\pi|t|}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Simplify $X(\\omega)$**"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\left. \\frac{f}{(9+f^2)^2} \\right|_{f = \\frac{\\omega}{2\\pi}} = \\frac{\\frac{\\omega}{2\\pi}}{\\left(9 + \\frac{\\omega^2}{4\\pi^2}\\right)^2} = \\frac{\\frac{\\omega}{2\\pi}}{\\frac{(36\\pi^2+\\omega^2)^2}{16\\pi^4}} = \\frac{8\\pi^3\\omega}{(\\omega^2+36\\pi^2)^2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Differentiate Known Base Pair in Frequency Domain**"
+      },
+      {
+       "t": "math",
+       "tex": "x_0(t) = e^{-a|t|} \\longleftrightarrow X_0(\\omega) = \\frac{2a}{a^2+\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Using multiplication by $t$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{t\\,x_0(t)\\} = j\\frac{d}{d\\omega}\\left( \\frac{2a}{a^2+\\omega^2} \\right) = j\\left( \\frac{-2a \\cdot 2\\omega}{(a^2+\\omega^2)^2} \\right) = \\frac{-4aj\\omega}{(a^2+\\omega^2)^2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Equate Denominators**"
+      },
+      {
+       "t": "math",
+       "tex": "a^2 = 36\\pi^2 \\implies a = 6\\pi \\quad (a > 0)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $a = 6\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{t\\,e^{-6\\pi|t|}\\} = \\frac{-4(6\\pi)j\\omega}{(\\omega^2 + 36\\pi^2)^2} = \\frac{-24\\pi j \\omega}{(\\omega^2 + 36\\pi^2)^2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Scale Both Sides to Match Numerator**  \nWe require numerator $8\\pi^3\\omega$. Multiply both sides by:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{8\\pi^3}{-24\\pi j} = \\frac{\\pi^2}{-3j} = \\frac{j\\pi^2}{3}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\left\\{ \\frac{j\\pi^2}{3} t\\,e^{-6\\pi|t|} \\right\\} = \\frac{j\\pi^2}{3} \\times \\frac{-24\\pi j\\omega}{(\\omega^2+36\\pi^2)^2} = \\frac{8\\pi^3\\omega}{(\\omega^2+36\\pi^2)^2} = X(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Taking the inverse Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = \\frac{j\\pi^2}{3} t\\,e^{-6\\pi|t|}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7003,33 +6979,36 @@ export default {
      "tex": "1 \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi\\delta(-\\omega) = 2\\pi\\delta(\\omega)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Visualizing the Duality Bridge:**  \nThe arrows demonstrate the cross-mapping:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Take the frequency response expression $X(\\cdot)$, replace its variable with $t$ to form the time signal $X(t)$.",
-      "Take the original time signal expression $x(\\cdot)$, replace its variable with $-\\omega$ (and multiply by $2\\pi$) to obtain the new spectrum $2\\pi x(-\\omega)$.",
-      "For cyclic frequency, no $2\\pi$ scaling occurs: simply replace $t$ with $-f$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Verification via DC Constant:**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 1 \\implies X(\\omega) = \\int_{-\\infty}^\\infty 1 \\cdot e^{-j\\omega t}\\,dt = 2\\pi\\delta(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "This matches perfectly with the duality result from $\\delta(t) \\longleftrightarrow 1$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Visualizing the Duality Bridge:**  \nThe arrows demonstrate the cross-mapping:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Take the frequency response expression $X(\\cdot)$, replace its variable with $t$ to form the time signal $X(t)$.",
+        "Take the original time signal expression $x(\\cdot)$, replace its variable with $-\\omega$ (and multiply by $2\\pi$) to obtain the new spectrum $2\\pi x(-\\omega)$.",
+        "For cyclic frequency, no $2\\pi$ scaling occurs: simply replace $t$ with $-f$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Verification via DC Constant:**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 1 \\implies X(\\omega) = \\int_{-\\infty}^\\infty 1 \\cdot e^{-j\\omega t}\\,dt = 2\\pi\\delta(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "This matches perfectly with the duality result from $\\delta(t) \\longleftrightarrow 1$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7088,70 +7067,73 @@ export default {
      "text": "Notice: $2\\omega = 2(2\\pi f) = 4\\pi f$. The results match completely!"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Detailed Breakdown of the Reconciliation:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "When using Radian Duality:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$X(\\omega) = \\frac{1}{2+j\\omega}$. Replacing $\\omega \\to t$ directly creates the signal $y(t) = \\frac{1}{2+jt}$.  \n  Its transform is:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = 2\\pi \\left[ e^{-2(-\\omega)}u(-\\omega) \\right] = 2\\pi e^{2\\omega}u(-\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Expressed in terms of $f$ (using $\\omega = 2\\pi f$):"
-    },
-    {
-     "t": "math",
-     "tex": "Y(f) = 2\\pi e^{2(2\\pi f)}u(-2\\pi f) = 2\\pi e^{4\\pi f}u(-f)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "When using Cyclic Duality:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$X(f) = \\frac{1}{2+j 2\\pi f}$. Replacing $f \\to t$ creates the signal $z(t) = \\frac{1}{2+j 2\\pi t}$ (NOT $\\frac{1}{2+jt}$!).  \n  Its transform is:"
-    },
-    {
-     "t": "math",
-     "tex": "Z(f) = e^{-2(-f)}u(-f) = e^{2f}u(-f)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "To get from $z(t) = \\frac{1}{2+j 2\\pi t}$ to $y(t) = \\frac{1}{2+jt}$, we must scale time by $a = \\frac{1}{2\\pi}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = z(at) = z\\left(\\frac{t}{2\\pi}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "By time scaling property $x(at) \\longleftrightarrow \\frac{1}{|a|}X\\left(\\frac{f}{a}\\right)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\left\\{z\\left(\\frac{t}{2\\pi}\\right)\\right\\} = \\frac{1}{|1/2\\pi|} Z\\left(\\frac{f}{1/2\\pi}\\right) = 2\\pi Z(2\\pi f) = 2\\pi e^{2(2\\pi f)}u(-2\\pi f) = 2\\pi e^{4\\pi f}u(-f)"
-    },
-    {
-     "t": "p",
-     "text": "Both paths yield the exact identical spectrum!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Detailed Breakdown of the Reconciliation:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "When using Radian Duality:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$X(\\omega) = \\frac{1}{2+j\\omega}$. Replacing $\\omega \\to t$ directly creates the signal $y(t) = \\frac{1}{2+jt}$.  \n  Its transform is:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = 2\\pi \\left[ e^{-2(-\\omega)}u(-\\omega) \\right] = 2\\pi e^{2\\omega}u(-\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Expressed in terms of $f$ (using $\\omega = 2\\pi f$):"
+      },
+      {
+       "t": "math",
+       "tex": "Y(f) = 2\\pi e^{2(2\\pi f)}u(-2\\pi f) = 2\\pi e^{4\\pi f}u(-f)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "When using Cyclic Duality:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$X(f) = \\frac{1}{2+j 2\\pi f}$. Replacing $f \\to t$ creates the signal $z(t) = \\frac{1}{2+j 2\\pi t}$ (NOT $\\frac{1}{2+jt}$!).  \n  Its transform is:"
+      },
+      {
+       "t": "math",
+       "tex": "Z(f) = e^{-2(-f)}u(-f) = e^{2f}u(-f)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "To get from $z(t) = \\frac{1}{2+j 2\\pi t}$ to $y(t) = \\frac{1}{2+jt}$, we must scale time by $a = \\frac{1}{2\\pi}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = z(at) = z\\left(\\frac{t}{2\\pi}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "By time scaling property $x(at) \\longleftrightarrow \\frac{1}{|a|}X\\left(\\frac{f}{a}\\right)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\left\\{z\\left(\\frac{t}{2\\pi}\\right)\\right\\} = \\frac{1}{|1/2\\pi|} Z\\left(\\frac{f}{1/2\\pi}\\right) = 2\\pi Z(2\\pi f) = 2\\pi e^{2(2\\pi f)}u(-2\\pi f) = 2\\pi e^{4\\pi f}u(-f)"
+      },
+      {
+       "t": "p",
+       "text": "Both paths yield the exact identical spectrum!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7198,48 +7180,47 @@ export default {
      "tex": "X(f) = 2\\pi e^{-3|2\\pi f|} = 2\\pi e^{-6\\pi |f|}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Identify the Known Base Pair**  \nThe Lorentzian shape $\\frac{1}{t^2+a^2}$ is the dual of the bilateral exponential:"
-    },
-    {
-     "t": "math",
-     "tex": "x_0(t) = e^{-a|t|} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} X_0(\\omega) = \\frac{2a}{a^2+\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Apply Radian Duality**"
-    },
-    {
-     "t": "math",
-     "tex": "X_0(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi x_0(-\\omega)"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2a}{a^2+t^2} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi e^{-a|-\\omega|} = 2\\pi e^{-a|\\omega|}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Substitute Numerical Parameters**  \nHere $a^2 = 9 \\implies a = 3$ (since $a > 0$). The numerator matches $2a = 2(3) = 6$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(\\omega) = 2\\pi e^{-3|\\omega|}}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Convert to Cyclic Frequency**  \nSubstitute $\\omega = 2\\pi f$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(f) = 2\\pi e^{-6\\pi|f|}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Identify the Known Base Pair**  \nThe Lorentzian shape $\\frac{1}{t^2+a^2}$ is the dual of the bilateral exponential:"
+      },
+      {
+       "t": "math",
+       "tex": "x_0(t) = e^{-a|t|} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} X_0(\\omega) = \\frac{2a}{a^2+\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Apply Radian Duality**"
+      },
+      {
+       "t": "math",
+       "tex": "X_0(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi x_0(-\\omega)"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2a}{a^2+t^2} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi e^{-a|-\\omega|} = 2\\pi e^{-a|\\omega|}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Substitute Numerical Parameters**  \nHere $a^2 = 9 \\implies a = 3$ (since $a > 0$). The numerator matches $2a = 2(3) = 6$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(\\omega) = 2\\pi e^{-3|\\omega|}}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Convert to Cyclic Frequency**  \nSubstitute $\\omega = 2\\pi f$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(f) = 2\\pi e^{-6\\pi|f|}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7282,64 +7263,63 @@ export default {
      "tex": "X(f) = j\\pi e^{-3|2\\pi f|}\\text{sgn}(-2\\pi f) = j\\pi e^{-6\\pi|f|}\\text{sgn}(-f) = -j\\pi e^{-6\\pi|f|}\\text{sgn}(f)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Set Up Base Transform Pair**"
-    },
-    {
-     "t": "math",
-     "tex": "x_0(t) = e^{-a|t|}\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} X_0(\\omega) = \\frac{-2j\\omega}{a^2+\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Apply Radian Duality**"
-    },
-    {
-     "t": "math",
-     "tex": "X_0(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi x_0(-\\omega)"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{-2jt}{a^2+t^2} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi \\left[ e^{-a|-\\omega|}\\text{sgn}(-\\omega) \\right] = 2\\pi e^{-a|\\omega|}\\text{sgn}(-\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Isolate Time Signal**  \nDivide both sides by $-2j$ (noting that $\\frac{1}{-2j} = \\frac{j}{2}$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{t}{a^2+t^2} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} j\\pi e^{-a|\\omega|}\\text{sgn}(-\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\text{sgn}(-\\omega) = -\\text{sgn}(\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{t}{a^2+t^2} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} -j\\pi e^{-a|\\omega|}\\text{sgn}(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Substitute $a = 3$ and Convert to $f$**"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = -j\\pi e^{-3|\\omega|}\\text{sgn}(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $\\omega = 2\\pi f$ (using $\\text{sgn}(2\\pi f) = \\text{sgn}(f)$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(f) = -j\\pi e^{-6\\pi|f|}\\text{sgn}(f)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Set Up Base Transform Pair**"
+      },
+      {
+       "t": "math",
+       "tex": "x_0(t) = e^{-a|t|}\\text{sgn}(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} X_0(\\omega) = \\frac{-2j\\omega}{a^2+\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Apply Radian Duality**"
+      },
+      {
+       "t": "math",
+       "tex": "X_0(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi x_0(-\\omega)"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{-2jt}{a^2+t^2} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi \\left[ e^{-a|-\\omega|}\\text{sgn}(-\\omega) \\right] = 2\\pi e^{-a|\\omega|}\\text{sgn}(-\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Isolate Time Signal**  \nDivide both sides by $-2j$ (noting that $\\frac{1}{-2j} = \\frac{j}{2}$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{t}{a^2+t^2} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} j\\pi e^{-a|\\omega|}\\text{sgn}(-\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\text{sgn}(-\\omega) = -\\text{sgn}(\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{t}{a^2+t^2} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} -j\\pi e^{-a|\\omega|}\\text{sgn}(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Substitute $a = 3$ and Convert to $f$**"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = -j\\pi e^{-3|\\omega|}\\text{sgn}(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $\\omega = 2\\pi f$ (using $\\text{sgn}(2\\pi f) = \\text{sgn}(f)$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(f) = -j\\pi e^{-6\\pi|f|}\\text{sgn}(f)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7394,51 +7374,50 @@ export default {
      "tex": "X(f) = \\frac{-j\\pi(2\\pi f)}{6}e^{-3|2\\pi f|} = \\frac{-j\\pi^2 f}{3}e^{-6\\pi|f|}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Synthesis:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Start with known pair: $y(t) = \\frac{j}{4a} t\\,e^{-a|t|} \\longleftrightarrow Y(\\omega) = \\frac{\\omega}{(a^2+\\omega^2)^2}$.",
-      "Replace $\\omega \\to t$ to form the time function $Y(t) = \\frac{t}{(a^2+t^2)^2}$.",
-      "By Duality, its Fourier transform is $2\\pi y(-\\omega)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\left\\{ \\frac{t}{(a^2+t^2)^2} \\right\\} = 2\\pi \\left( \\frac{j}{4a}(-\\omega)e^{-a|-\\omega|} \\right) = \\frac{-j\\pi\\omega}{2a}e^{-a|\\omega|}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "For $a = 3$, $2a = 6$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{-j\\pi\\omega}{6}e^{-3|\\omega|}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "In cyclic frequency ($f = \\omega / 2\\pi$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(f) = \\frac{-j\\pi (2\\pi f)}{6}e^{-3(2\\pi|f|)} = \\boxed{\\frac{-j\\pi^2 f}{3}e^{-6\\pi|f|}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step-by-Step Synthesis:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Start with known pair: $y(t) = \\frac{j}{4a} t\\,e^{-a|t|} \\longleftrightarrow Y(\\omega) = \\frac{\\omega}{(a^2+\\omega^2)^2}$.",
+        "Replace $\\omega \\to t$ to form the time function $Y(t) = \\frac{t}{(a^2+t^2)^2}$.",
+        "By Duality, its Fourier transform is $2\\pi y(-\\omega)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\left\\{ \\frac{t}{(a^2+t^2)^2} \\right\\} = 2\\pi \\left( \\frac{j}{4a}(-\\omega)e^{-a|-\\omega|} \\right) = \\frac{-j\\pi\\omega}{2a}e^{-a|\\omega|}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "For $a = 3$, $2a = 6$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{-j\\pi\\omega}{6}e^{-3|\\omega|}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "In cyclic frequency ($f = \\omega / 2\\pi$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(f) = \\frac{-j\\pi (2\\pi f)}{6}e^{-3(2\\pi|f|)} = \\boxed{\\frac{-j\\pi^2 f}{3}e^{-6\\pi|f|}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7489,36 +7468,35 @@ export default {
      "tex": "X(f) = \\pi j e^{j 4\\pi f}\\text{sgn}(-2\\pi f) = \\pi j e^{j 4\\pi f}\\text{sgn}(-f) = -j\\pi e^{j 4\\pi f}\\text{sgn}(f)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Duality on Signum Function**  \nFrom $\\text{sgn}(t) \\longleftrightarrow \\frac{2}{j\\omega}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{t} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} -j\\pi\\,\\text{sgn}(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Apply Time Advance by 2**  \nUsing $g(t+t_0) \\longleftrightarrow e^{j\\omega t_0}G(\\omega)$ with $t_0 = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\left\\{\\frac{1}{t+2}\\right\\} = e^{j\\omega(2)} \\left[ -j\\pi\\,\\text{sgn}(\\omega) \\right] = -j\\pi\\,e^{j 2\\omega}\\text{sgn}(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Convert to Cyclic Domain**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(f) = -j\\pi\\,e^{j 4\\pi f}\\text{sgn}(f)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Duality on Signum Function**  \nFrom $\\text{sgn}(t) \\longleftrightarrow \\frac{2}{j\\omega}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{t} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} -j\\pi\\,\\text{sgn}(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Apply Time Advance by 2**  \nUsing $g(t+t_0) \\longleftrightarrow e^{j\\omega t_0}G(\\omega)$ with $t_0 = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\left\\{\\frac{1}{t+2}\\right\\} = e^{j\\omega(2)} \\left[ -j\\pi\\,\\text{sgn}(\\omega) \\right] = -j\\pi\\,e^{j 2\\omega}\\text{sgn}(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Convert to Cyclic Domain**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(f) = -j\\pi\\,e^{j 4\\pi f}\\text{sgn}(f)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7549,12 +7527,15 @@ export default {
      "tex": "\\sin(\\omega_0 t) \\cdot x(t) = x(t)\\left[\\frac{e^{j\\omega_0 t} - e^{-j\\omega_0 t}}{2j}\\right] = \\frac{X(\\omega-\\omega_0) - X(\\omega+\\omega_0)}{2j}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Theoretical Summary:**  \nCarrier modulation is the cornerstone of telecommunications (Double-Sideband Suppressed Carrier, DSB-SC). Multiplying by a sinusoid shifts the baseband message centered around $\\omega = 0$ to carrier frequencies $\\pm \\omega_0$, allowing transmission through bandpass communication channels.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Theoretical Summary:**  \nCarrier modulation is the cornerstone of telecommunications (Double-Sideband Suppressed Carrier, DSB-SC). Multiplying by a sinusoid shifts the baseband message centered around $\\omega = 0$ to carrier frequencies $\\pm \\omega_0$, allowing transmission through bandpass communication channels."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7625,41 +7606,40 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Mathematical Rigor for $Z(\\omega)$:**"
-    },
-    {
-     "t": "math",
-     "tex": "Z(\\omega) = \\frac{1}{2j}X(\\omega - 10) - \\frac{1}{2j}X(\\omega + 10)"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\frac{1}{2j} = -j\\frac{1}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "Z(\\omega) = -j\\frac{1}{2}X(\\omega - 10) + j\\frac{1}{2}X(\\omega + 10)"
-    },
-    {
-     "t": "p",
-     "text": "Notice that:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For positive carrier lobe ($\\omega \\approx +10$): $Z(\\omega) = -j\\frac{A}{2} = \\frac{A}{2}\\angle -90^\\circ$.",
-      "For negative carrier lobe ($\\omega \\approx -10$): $Z(\\omega) = +j\\frac{A}{2} = \\frac{A}{2}\\angle +90^\\circ$.",
-      "The magnitude spectrum $|Z(\\omega)|$ is **even**, with peak amplitude $A/2$ at both $\\pm 10$.",
-      "The phase spectrum $\\angle Z(\\omega)$ is **odd**, switching between $-90^\\circ$ and $+90^\\circ$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Mathematical Rigor for $Z(\\omega)$:**"
+      },
+      {
+       "t": "math",
+       "tex": "Z(\\omega) = \\frac{1}{2j}X(\\omega - 10) - \\frac{1}{2j}X(\\omega + 10)"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\frac{1}{2j} = -j\\frac{1}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "Z(\\omega) = -j\\frac{1}{2}X(\\omega - 10) + j\\frac{1}{2}X(\\omega + 10)"
+      },
+      {
+       "t": "p",
+       "text": "Notice that:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For positive carrier lobe ($\\omega \\approx +10$): $Z(\\omega) = -j\\frac{A}{2} = \\frac{A}{2}\\angle -90^\\circ$.",
+        "For negative carrier lobe ($\\omega \\approx -10$): $Z(\\omega) = +j\\frac{A}{2} = \\frac{A}{2}\\angle +90^\\circ$.",
+        "The magnitude spectrum $|Z(\\omega)|$ is **even**, with peak amplitude $A/2$ at both $\\pm 10$.",
+        "The phase spectrum $\\angle Z(\\omega)$ is **odd**, switching between $-90^\\circ$ and $+90^\\circ$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7698,20 +7678,23 @@ export default {
      "tex": "x(t+t_0) - x(t-t_0) \\longleftrightarrow e^{j\\omega t_0}X(\\omega) - e^{-j\\omega t_0}X(\\omega) = 2jX(\\omega)\\sin(\\omega t_0)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Application Shortcut:**  \nWhen an exam problem presents an input signal like $y(t) = x(t+3) + x(t-3)$ passing through a linear time-invariant system with impulse response $h(t)$, the output Fourier transform is simply:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = 2\\cos(3\\omega)X(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "The system acts as a comb-like spectral filter with transfer function $H_{\\text{eff}}(\\omega) = 2\\cos(3\\omega)$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Exam Application Shortcut:**  \nWhen an exam problem presents an input signal like $y(t) = x(t+3) + x(t-3)$ passing through a linear time-invariant system with impulse response $h(t)$, the output Fourier transform is simply:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = 2\\cos(3\\omega)X(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "The system acts as a comb-like spectral filter with transfer function $H_{\\text{eff}}(\\omega) = 2\\cos(3\\omega)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7770,25 +7753,24 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Full Derivation Summary & Exam Points:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Area under time pulse = $A \\times \\tau = X(0)$.",
-      "First null in Hz: $f_{\\text{null}, 1} = \\frac{\\omega_{\\text{null}, 1}}{2\\pi} = \\frac{2\\pi / \\tau}{2\\pi} = \\frac{1}{\\tau}\\text{ Hz}$.",
-      "Mainlobe width = $\\frac{4\\pi}{\\tau}\\text{ rad/s} = \\frac{2}{\\tau}\\text{ Hz}$.",
-      "High frequency envelope decay = $-20\\text{ dB/decade}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Full Derivation Summary & Exam Points:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Area under time pulse = $A \\times \\tau = X(0)$.",
+        "First null in Hz: $f_{\\text{null}, 1} = \\frac{\\omega_{\\text{null}, 1}}{2\\pi} = \\frac{2\\pi / \\tau}{2\\pi} = \\frac{1}{\\tau}\\text{ Hz}$.",
+        "Mainlobe width = $\\frac{4\\pi}{\\tau}\\text{ rad/s} = \\frac{2}{\\tau}\\text{ Hz}$.",
+        "High frequency envelope decay = $-20\\text{ dB/decade}$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7871,28 +7853,27 @@ export default {
      "text": "*Time shifting purely introduces a linear phase shift $\\theta(\\omega) = -\\omega t_0$ without altering the magnitude spectrum.*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Generalized Shifted Rectangular Pulse Formula:**  \nFor any rectangular pulse spanning $t \\in [t_1, t_2]$ with amplitude $A$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Total width: $\\tau = t_2 - t_1$.",
-      "Center point: $t_0 = \\frac{t_1 + t_2}{2}$.",
-      "Formula:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = A\\,\\text{rect}\\left(\\frac{t - t_0}{\\tau}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} A\\tau\\,\\text{Sa}\\left(\\frac{\\omega\\tau}{2}\\right) e^{-j\\omega t_0}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Generalized Shifted Rectangular Pulse Formula:**  \nFor any rectangular pulse spanning $t \\in [t_1, t_2]$ with amplitude $A$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Total width: $\\tau = t_2 - t_1$.",
+        "Center point: $t_0 = \\frac{t_1 + t_2}{2}$.",
+        "Formula:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = A\\,\\text{rect}\\left(\\frac{t - t_0}{\\tau}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} A\\tau\\,\\text{Sa}\\left(\\frac{\\omega\\tau}{2}\\right) e^{-j\\omega t_0}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7951,48 +7932,51 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Direct Integration Derivation (Verification of Chalkboard Result):**  \nWrite $x(t)$ piecewise for semi-base $\\tau$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\begin{cases} A\\left(1 + \\frac{t}{\\tau}\\right), & -\\tau \\le t \\le 0 \\\\ A\\left(1 - \\frac{t}{\\tau}\\right), & 0 \\le t \\le \\tau \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Since $x(t)$ is an even function, $X(\\omega) = 2\\int_0^\\tau A\\left(1 - \\frac{t}{\\tau}\\right)\\cos(\\omega t)\\,dt$.  \nIntegrate by parts:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^\\tau \\cos(\\omega t)\\,dt = \\frac{\\sin(\\omega\\tau)}{\\omega}"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_0^\\tau t\\cos(\\omega t)\\,dt = \\left[ t\\frac{\\sin(\\omega t)}{\\omega} \\right]_0^\\tau - \\int_0^\\tau \\frac{\\sin(\\omega t)}{\\omega}\\,dt = \\frac{\\tau\\sin(\\omega\\tau)}{\\omega} - \\frac{1 - \\cos(\\omega\\tau)}{\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Combine terms:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 2A \\left[ \\frac{\\sin(\\omega\\tau)}{\\omega} - \\frac{\\sin(\\omega\\tau)}{\\omega} + \\frac{1 - \\cos(\\omega\\tau)}{\\tau\\omega^2} \\right] = \\frac{2A[1 - \\cos(\\omega\\tau)]}{\\tau\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Using the half-angle trigonometric identity $1 - \\cos(2\\theta) = 2\\sin^2\\theta$ with $\\theta = \\frac{\\omega\\tau}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{2A \\left[ 2\\sin^2\\left(\\frac{\\omega\\tau}{2}\\right) \\right]}{\\tau\\omega^2} = \\frac{4A\\sin^2(\\omega\\tau/2)}{\\tau\\omega^2} = A\\tau \\left[ \\frac{\\sin(\\omega\\tau/2)}{\\frac{\\omega\\tau}{2}} \\right]^2 = A\\tau\\,\\text{Sa}^2\\left(\\frac{\\omega\\tau}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "This proves the chalkboard result with 100% mathematical certainty!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Direct Integration Derivation (Verification of Chalkboard Result):**  \nWrite $x(t)$ piecewise for semi-base $\\tau$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\begin{cases} A\\left(1 + \\frac{t}{\\tau}\\right), & -\\tau \\le t \\le 0 \\\\ A\\left(1 - \\frac{t}{\\tau}\\right), & 0 \\le t \\le \\tau \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Since $x(t)$ is an even function, $X(\\omega) = 2\\int_0^\\tau A\\left(1 - \\frac{t}{\\tau}\\right)\\cos(\\omega t)\\,dt$.  \nIntegrate by parts:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^\\tau \\cos(\\omega t)\\,dt = \\frac{\\sin(\\omega\\tau)}{\\omega}"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_0^\\tau t\\cos(\\omega t)\\,dt = \\left[ t\\frac{\\sin(\\omega t)}{\\omega} \\right]_0^\\tau - \\int_0^\\tau \\frac{\\sin(\\omega t)}{\\omega}\\,dt = \\frac{\\tau\\sin(\\omega\\tau)}{\\omega} - \\frac{1 - \\cos(\\omega\\tau)}{\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Combine terms:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 2A \\left[ \\frac{\\sin(\\omega\\tau)}{\\omega} - \\frac{\\sin(\\omega\\tau)}{\\omega} + \\frac{1 - \\cos(\\omega\\tau)}{\\tau\\omega^2} \\right] = \\frac{2A[1 - \\cos(\\omega\\tau)]}{\\tau\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Using the half-angle trigonometric identity $1 - \\cos(2\\theta) = 2\\sin^2\\theta$ with $\\theta = \\frac{\\omega\\tau}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{2A \\left[ 2\\sin^2\\left(\\frac{\\omega\\tau}{2}\\right) \\right]}{\\tau\\omega^2} = \\frac{4A\\sin^2(\\omega\\tau/2)}{\\tau\\omega^2} = A\\tau \\left[ \\frac{\\sin(\\omega\\tau/2)}{\\frac{\\omega\\tau}{2}} \\right]^2 = A\\tau\\,\\text{Sa}^2\\left(\\frac{\\omega\\tau}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "This proves the chalkboard result with 100% mathematical certainty!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8071,18 +8055,17 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**CRITICAL AUDIT FINDING \u2014 Instructor Chalkboard Typo on Slide 095 (Drill 1):**  \nIn Problem 1, the instructor correctly wrote the intermediate step:\n$$X_1(\\omega) = 4\\,\\text{Sa}^2\\left(\\frac{\\omega}{2}\\right)e^{-j 3\\omega}$$\nHowever, when drawing the rectangular pink box around the final answer, the instructor accidentally omitted the denominator 2 in the argument of $\\text{Sa}^2$, writing:\n$$4 e^{-j 3\\omega}\\text{Sa}^2(\\omega) \\quad \\longleftarrow \\mathbf{INSTRUCTOR\\;SLIP!}$$\nThe mathematically correct answer is:\n$$\\boxed{X_1(\\omega) = 4 e^{-j 3\\omega}\\text{Sa}^2\\left(\\frac{\\omega}{2}\\right)}$$\n**Proof:** For $x_1(t)$, the semi-base is $\\tau = 1$. The formula dictates $\\text{Sa}^2\\left(\\frac{\\omega\\tau}{2}\\right) = \\text{Sa}^2\\left(\\frac{\\omega \\times 1}{2}\\right) = \\text{Sa}^2\\left(\\frac{\\omega}{2}\\right)$. The instructor erroneously dropped the $/2$ inside the box."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**CRITICAL AUDIT FINDING \u2014 Instructor Chalkboard Typo on Slide 095 (Drill 1):**  \nIn Problem 1, the instructor correctly wrote the intermediate step:\n$$X_1(\\omega) = 4\\,\\text{Sa}^2\\left(\\frac{\\omega}{2}\\right)e^{-j 3\\omega}$$\nHowever, when drawing the rectangular pink box around the final answer, the instructor accidentally omitted the denominator 2 in the argument of $\\text{Sa}^2$, writing:\n$$4 e^{-j 3\\omega}\\text{Sa}^2(\\omega) \\quad \\longleftarrow \\mathbf{INSTRUCTOR\\;SLIP!}$$\nThe mathematically correct answer is:\n$$\\boxed{X_1(\\omega) = 4 e^{-j 3\\omega}\\text{Sa}^2\\left(\\frac{\\omega}{2}\\right)}$$\n**Proof:** For $x_1(t)$, the semi-base is $\\tau = 1$. The formula dictates $\\text{Sa}^2\\left(\\frac{\\omega\\tau}{2}\\right) = \\text{Sa}^2\\left(\\frac{\\omega \\times 1}{2}\\right) = \\text{Sa}^2\\left(\\frac{\\omega}{2}\\right)$. The instructor erroneously dropped the $/2$ inside the box."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8137,92 +8120,95 @@ export default {
      "text": "Chalkboard note explicitly emphasizes: *\"NOT TO REMEMBER\"* (meaning: do not memorize blindly; always synthesize instantly via duality from the base rectangular transform!)."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Derivation & Sinc Generalization:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Start with unit rectangular pulse:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{rect}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\tau\\,\\text{Sa}\\left(\\frac{\\omega\\tau}{2}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Apply Radian Duality $X(t) \\longleftrightarrow 2\\pi x(-\\omega)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\tau\\,\\text{Sa}\\left(\\frac{\\tau t}{2}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi\\,\\text{rect}\\left(\\frac{\\omega}{\\tau}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "To obtain $\\text{Sa}(W t)$ for any arbitrary bandwidth parameter $W$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set $\\frac{\\tau}{2} = W \\implies \\tau = 2W$:"
-    },
-    {
-     "t": "math",
-     "tex": "2W\\,\\text{Sa}(W t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi\\,\\text{rect}\\left(\\frac{\\omega}{2W}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Dividing by $2W$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Sa}(Wt) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{\\pi}{W}\\,\\text{rect}\\left(\\frac{\\omega}{2W}\\right)}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Generalization to $\\text{Sa}^2(Wt)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Applying duality to the triangular pulse $A\\,\\text{tri}(t/\\tau) \\longleftrightarrow A\\tau\\,\\text{Sa}^2(\\omega\\tau/2)$ with $A=1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tri}\\left(\\frac{t}{\\tau}\\right) \\longleftrightarrow \\tau\\,\\text{Sa}^2\\left(\\frac{\\omega\\tau}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Duality yields:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tau\\,\\text{Sa}^2\\left(\\frac{\\tau t}{2}\\right) \\longleftrightarrow 2\\pi\\,\\text{tri}\\left(\\frac{\\omega}{\\tau}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Setting $\\tau = 2W$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Sa}^2(Wt) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{\\pi}{W}\\,\\text{tri}\\left(\\frac{\\omega}{2W}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "*This proves that the Fourier Transform of a squared sampling function is a triangular brick-wall spectrum in the frequency domain!*\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step-by-Step Derivation & Sinc Generalization:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Start with unit rectangular pulse:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{rect}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\tau\\,\\text{Sa}\\left(\\frac{\\omega\\tau}{2}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Apply Radian Duality $X(t) \\longleftrightarrow 2\\pi x(-\\omega)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\tau\\,\\text{Sa}\\left(\\frac{\\tau t}{2}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi\\,\\text{rect}\\left(\\frac{\\omega}{\\tau}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "To obtain $\\text{Sa}(W t)$ for any arbitrary bandwidth parameter $W$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set $\\frac{\\tau}{2} = W \\implies \\tau = 2W$:"
+      },
+      {
+       "t": "math",
+       "tex": "2W\\,\\text{Sa}(W t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} 2\\pi\\,\\text{rect}\\left(\\frac{\\omega}{2W}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Dividing by $2W$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Sa}(Wt) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{\\pi}{W}\\,\\text{rect}\\left(\\frac{\\omega}{2W}\\right)}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Generalization to $\\text{Sa}^2(Wt)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Applying duality to the triangular pulse $A\\,\\text{tri}(t/\\tau) \\longleftrightarrow A\\tau\\,\\text{Sa}^2(\\omega\\tau/2)$ with $A=1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tri}\\left(\\frac{t}{\\tau}\\right) \\longleftrightarrow \\tau\\,\\text{Sa}^2\\left(\\frac{\\omega\\tau}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Duality yields:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tau\\,\\text{Sa}^2\\left(\\frac{\\tau t}{2}\\right) \\longleftrightarrow 2\\pi\\,\\text{tri}\\left(\\frac{\\omega}{\\tau}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Setting $\\tau = 2W$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Sa}^2(Wt) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{\\pi}{W}\\,\\text{tri}\\left(\\frac{\\omega}{2W}\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "*This proves that the Fourier Transform of a squared sampling function is a triangular brick-wall spectrum in the frequency domain!*"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -9326,67 +9312,66 @@ export default {
      "tex": "x(t) \\longleftrightarrow X(\\omega) \\implies X(t) \\longleftrightarrow 2\\pi x(-\\omega)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Forward Transform (Time Rect $\\to$ Frequency Sinc):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_1(t) = \\text{rect}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} X_1(\\omega) = \\tau \\, \\text{Sa}\\left(\\frac{\\omega\\tau}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "where $\\text{Sa}(\\theta) \\equiv \\frac{\\sin\\theta}{\\theta}$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Dual Transform (Time Sinc $\\to$ Frequency Rect):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "By Duality:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi x_1(-\\omega)"
-    },
-    {
-     "t": "math",
-     "tex": "\\tau \\, \\text{Sa}\\left(\\frac{t\\tau}{2}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\, \\text{rect}\\left(\\frac{-\\omega}{\\tau}\\right) = 2\\pi \\, \\text{rect}\\left(\\frac{\\omega}{\\tau}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Harmonic Normalization:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Setting $\\tau = 2$ gives the standard bedrock relation:"
-    },
-    {
-     "t": "math",
-     "tex": "2 \\, \\text{Sa}(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\, \\text{rect}\\left(\\frac{\\omega}{2}\\right) \\implies \\text{Sa}(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\pi \\, \\text{rect}\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**EXAM TRAP \u2014 NOTATION CONFUSION ($\\text{sinc}$ vs $\\text{Sa}$):**\n- In standard engineering literature, $\\text{Sa}(\\theta) = \\frac{\\sin\\theta}{\\theta}$, which has its first zero at $\\theta = \\pm \\pi$.\n- The normalized sinc function is defined as $\\text{sinc}(\\theta) \\equiv \\frac{\\sin(\\pi\\theta)}{\\pi\\theta} = \\text{Sa}(\\pi\\theta)$, which has its first zero at $\\theta = \\pm 1$.\nAlways verify whether a GATE question defines $\\text{sinc}(t)$ with or without the factor of $\\pi$ in the denominator and argument!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Forward Transform (Time Rect $\\to$ Frequency Sinc):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_1(t) = \\text{rect}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} X_1(\\omega) = \\tau \\, \\text{Sa}\\left(\\frac{\\omega\\tau}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "where $\\text{Sa}(\\theta) \\equiv \\frac{\\sin\\theta}{\\theta}$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Dual Transform (Time Sinc $\\to$ Frequency Rect):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "By Duality:"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi x_1(-\\omega)"
+      },
+      {
+       "t": "math",
+       "tex": "\\tau \\, \\text{Sa}\\left(\\frac{t\\tau}{2}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\, \\text{rect}\\left(\\frac{-\\omega}{\\tau}\\right) = 2\\pi \\, \\text{rect}\\left(\\frac{\\omega}{\\tau}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Harmonic Normalization:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Setting $\\tau = 2$ gives the standard bedrock relation:"
+      },
+      {
+       "t": "math",
+       "tex": "2 \\, \\text{Sa}(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\, \\text{rect}\\left(\\frac{\\omega}{2}\\right) \\implies \\text{Sa}(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\pi \\, \\text{rect}\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**EXAM TRAP \u2014 NOTATION CONFUSION ($\\text{sinc}$ vs $\\text{Sa}$):**\n- In standard engineering literature, $\\text{Sa}(\\theta) = \\frac{\\sin\\theta}{\\theta}$, which has its first zero at $\\theta = \\pm \\pi$.\n- The normalized sinc function is defined as $\\text{sinc}(\\theta) \\equiv \\frac{\\sin(\\pi\\theta)}{\\pi\\theta} = \\text{Sa}(\\pi\\theta)$, which has its first zero at $\\theta = \\pm 1$.\nAlways verify whether a GATE question defines $\\text{sinc}(t)$ with or without the factor of $\\pi$ in the denominator and argument!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9405,74 +9390,73 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Express in terms of canonical parameter $a$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Comparing $x(t) = \\frac{\\sin t}{t}$ with the general prototype $x(t) = \\frac{\\sin at}{\\pi t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\pi \\left[ \\frac{\\sin(1\\cdot t)}{\\pi t} \\right] \\implies a = 1, \\quad \\text{Multiplier} = \\pi"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Apply the transform identity:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $\\frac{\\sin at}{\\pi t} \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\text{rect}\\left(\\frac{\\omega}{2a}\\right)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\pi \\, \\text{rect}\\left(\\frac{\\omega}{2(1)}\\right) = \\pi \\, \\text{rect}\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Geometric boundaries:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The argument $\\left|\\frac{\\omega}{2}\\right| \\le \\frac{1}{2} \\iff -1 \\le \\omega \\le 1$."
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\begin{cases} \\pi, & -1 \\le \\omega \\le 1 \\\\ 0, & |\\omega| > 1 \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**DC Value Cross-Check:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using the Area Theorem: $X(0) = \\int_{-\\infty}^\\infty \\frac{\\sin t}{t} dt = \\pi$ (Dirichlet integral).\n   Our result gives $X(0) = \\pi$, which perfectly matches!"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE SHORTCUT \u2014 DIRICHLET INTEGRAL VIA FT:**\nYou never need to use contour integration or Cauchy's residue theorem to evaluate $\\int_{-\\infty}^\\infty \\frac{\\sin t}{t} dt$. Simply recognize it as $X(0)$ for $x(t) = \\frac{\\sin t}{t}$, which immediately yields $\\pi$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Express in terms of canonical parameter $a$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Comparing $x(t) = \\frac{\\sin t}{t}$ with the general prototype $x(t) = \\frac{\\sin at}{\\pi t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\pi \\left[ \\frac{\\sin(1\\cdot t)}{\\pi t} \\right] \\implies a = 1, \\quad \\text{Multiplier} = \\pi"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Apply the transform identity:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $\\frac{\\sin at}{\\pi t} \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\text{rect}\\left(\\frac{\\omega}{2a}\\right)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\pi \\, \\text{rect}\\left(\\frac{\\omega}{2(1)}\\right) = \\pi \\, \\text{rect}\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Geometric boundaries:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The argument $\\left|\\frac{\\omega}{2}\\right| \\le \\frac{1}{2} \\iff -1 \\le \\omega \\le 1$."
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\begin{cases} \\pi, & -1 \\le \\omega \\le 1 \\\\ 0, & |\\omega| > 1 \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**DC Value Cross-Check:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using the Area Theorem: $X(0) = \\int_{-\\infty}^\\infty \\frac{\\sin t}{t} dt = \\pi$ (Dirichlet integral).\n   Our result gives $X(0) = \\pi$, which perfectly matches!"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE SHORTCUT \u2014 DIRICHLET INTEGRAL VIA FT:**\nYou never need to use contour integration or Cauchy's residue theorem to evaluate $\\int_{-\\infty}^\\infty \\frac{\\sin t}{t} dt$. Simply recognize it as $X(0)$ for $x(t) = \\frac{\\sin t}{t}$, which immediately yields $\\pi$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9501,64 +9485,67 @@ export default {
      "tex": "\\frac{a}{\\pi}\\text{Sa}(at) \\longrightarrow \\frac{1}{a} \\times \\frac{a}{\\pi} \\times \\pi \\, \\text{rect}\\left(\\frac{\\omega}{2a}\\right) = \\text{rect}\\left(\\frac{\\omega}{2a}\\right)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Baseline pair:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sa}(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\pi \\, \\text{rect}\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Time Scaling Property:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall that for any $a > 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "f(at) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\frac{1}{a} F\\left(\\frac{\\omega}{a}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Applying this to $f(t) = \\text{Sa}(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sa}(at) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\frac{1}{a} \\left[ \\pi \\, \\text{rect}\\left(\\frac{\\omega/a}{2}\\right) \\right] = \\frac{\\pi}{a} \\, \\text{rect}\\left(\\frac{\\omega}{2a}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Scaling by the pre-factor $\\frac{a}{\\pi}$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{a}{\\pi} \\text{Sa}(at) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\frac{a}{\\pi} \\left[ \\frac{\\pi}{a} \\, \\text{rect}\\left(\\frac{\\omega}{2a}\\right) \\right] = \\text{rect}\\left(\\frac{\\omega}{2a}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Conclusion:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The spectral height is exactly $1$, and the pulse extends from $-a$ to $+a$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Baseline pair:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sa}(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\pi \\, \\text{rect}\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Time Scaling Property:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall that for any $a > 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "f(at) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\frac{1}{a} F\\left(\\frac{\\omega}{a}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Applying this to $f(t) = \\text{Sa}(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sa}(at) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\frac{1}{a} \\left[ \\pi \\, \\text{rect}\\left(\\frac{\\omega/a}{2}\\right) \\right] = \\frac{\\pi}{a} \\, \\text{rect}\\left(\\frac{\\omega}{2a}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Scaling by the pre-factor $\\frac{a}{\\pi}$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{a}{\\pi} \\text{Sa}(at) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\frac{a}{\\pi} \\left[ \\frac{\\pi}{a} \\, \\text{rect}\\left(\\frac{\\omega}{2a}\\right) \\right] = \\text{rect}\\left(\\frac{\\omega}{2a}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Conclusion:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The spectral height is exactly $1$, and the pulse extends from $-a$ to $+a$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9576,66 +9563,65 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Analytical Formulation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\begin{cases} 1, & |\\omega| \\le a \\\\ 0, & |\\omega| > a \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Properties of this Fundamental Pair:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Signal Energy:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "By Parseval's Theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "E = \\int_{-\\infty}^{\\infty} |x(t)|^2 \\, dt = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} |X(\\omega)|^2 \\, d\\omega = \\frac{1}{2\\pi} \\int_{-a}^{a} (1)^2 \\, d\\omega = \\frac{2a}{2\\pi} = \\frac{a}{\\pi}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^{\\infty} \\left( \\frac{\\sin at}{\\pi t} \\right)^2 dt = \\frac{a}{\\pi}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Central Value / Area Theorem:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = \\lim_{t\\to 0} \\frac{\\sin at}{\\pi t} = \\frac{a}{\\pi}"
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega) \\, d\\omega = \\frac{1}{2\\pi} [1 \\times 2a] = \\frac{a}{\\pi} \\quad \\text{(Verified)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Analytical Formulation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\begin{cases} 1, & |\\omega| \\le a \\\\ 0, & |\\omega| > a \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Properties of this Fundamental Pair:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Signal Energy:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "By Parseval's Theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "E = \\int_{-\\infty}^{\\infty} |x(t)|^2 \\, dt = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} |X(\\omega)|^2 \\, d\\omega = \\frac{1}{2\\pi} \\int_{-a}^{a} (1)^2 \\, d\\omega = \\frac{2a}{2\\pi} = \\frac{a}{\\pi}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^{\\infty} \\left( \\frac{\\sin at}{\\pi t} \\right)^2 dt = \\frac{a}{\\pi}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Central Value / Area Theorem:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = \\lim_{t\\to 0} \\frac{\\sin at}{\\pi t} = \\frac{a}{\\pi}"
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega) \\, d\\omega = \\frac{1}{2\\pi} [1 \\times 2a] = \\frac{a}{\\pi} \\quad \\text{(Verified)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9654,70 +9640,69 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Algebraic manipulation to standard form:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using the standard definition $\\text{sinc}(\\theta) \\equiv \\frac{\\sin\\pi\\theta}{\\pi\\theta}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\text{sinc}\\left(\\frac{t}{3}\\right) = \\frac{\\sin\\left(\\pi \\frac{t}{3}\\right)}{\\pi \\frac{t}{3}} = \\frac{\\sin\\left(\\frac{\\pi}{3} t\\right)}{\\frac{\\pi}{3} t} = 3 \\left[ \\frac{\\sin\\left(\\frac{\\pi}{3} t\\right)}{\\pi t} \\right]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Identify parameter $a$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Comparing with $\\frac{\\sin at}{\\pi t}$, we have $a = \\frac{\\pi}{3}$."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Compute $X(\\omega)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 3 \\times \\text{rect}\\left(\\frac{\\omega}{2a}\\right) = 3 \\, \\text{rect}\\left(\\frac{\\omega}{2\\pi/3}\\right) = 3 \\, \\text{rect}\\left(\\frac{3\\omega}{2\\pi}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Step 4: Spectral Support:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The pulse exists for $\\left|\\frac{3\\omega}{2\\pi}\\right| \\le \\frac{1}{2} \\iff |\\omega| \\le \\frac{\\pi}{3}$."
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\begin{cases} 3, & -\\frac{\\pi}{3} \\le \\omega \\le \\frac{\\pi}{3} \\\\ 0, & |\\omega| > \\frac{\\pi}{3} \\end{cases}"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE EXAM SHORTCUT:**\nFor any signal of the form $x(t) = \\text{sinc}(k t)$:\n$$X(\\omega) = \\frac{1}{k} \\, \\text{rect}\\left(\\frac{\\omega}{2\\pi k}\\right)$$\nHere $k = 1/3 \\implies X(\\omega) = 3 \\, \\text{rect}\\left(\\frac{3\\omega}{2\\pi}\\right)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Algebraic manipulation to standard form:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using the standard definition $\\text{sinc}(\\theta) \\equiv \\frac{\\sin\\pi\\theta}{\\pi\\theta}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\text{sinc}\\left(\\frac{t}{3}\\right) = \\frac{\\sin\\left(\\pi \\frac{t}{3}\\right)}{\\pi \\frac{t}{3}} = \\frac{\\sin\\left(\\frac{\\pi}{3} t\\right)}{\\frac{\\pi}{3} t} = 3 \\left[ \\frac{\\sin\\left(\\frac{\\pi}{3} t\\right)}{\\pi t} \\right]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Identify parameter $a$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Comparing with $\\frac{\\sin at}{\\pi t}$, we have $a = \\frac{\\pi}{3}$."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Compute $X(\\omega)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 3 \\times \\text{rect}\\left(\\frac{\\omega}{2a}\\right) = 3 \\, \\text{rect}\\left(\\frac{\\omega}{2\\pi/3}\\right) = 3 \\, \\text{rect}\\left(\\frac{3\\omega}{2\\pi}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Step 4: Spectral Support:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The pulse exists for $\\left|\\frac{3\\omega}{2\\pi}\\right| \\le \\frac{1}{2} \\iff |\\omega| \\le \\frac{\\pi}{3}$."
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\begin{cases} 3, & -\\frac{\\pi}{3} \\le \\omega \\le \\frac{\\pi}{3} \\\\ 0, & |\\omega| > \\frac{\\pi}{3} \\end{cases}"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE EXAM SHORTCUT:**\nFor any signal of the form $x(t) = \\text{sinc}(k t)$:\n$$X(\\omega) = \\frac{1}{k} \\, \\text{rect}\\left(\\frac{\\omega}{2\\pi k}\\right)$$\nHere $k = 1/3 \\implies X(\\omega) = 3 \\, \\text{rect}\\left(\\frac{3\\omega}{2\\pi}\\right)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9737,62 +9722,61 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Transform of unshifted signal:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $y(t) = \\text{sinc}(t) = \\frac{\\sin\\pi t}{\\pi t}$. Here $a = \\pi$."
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Apply Time-Shifting Property:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "With $x(t) = y(t - t_0)$ where $t_0 = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = Y(\\omega) e^{-j\\omega t_0} = e^{-j 2\\omega} \\, \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Magnitude and Phase Analysis:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Magnitude Spectrum:** $|X(\\omega)| = \\left|e^{-j 2\\omega}\\right| \\cdot \\left|\\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)\\right| = \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)$.",
-      "**Phase Spectrum:** $\\angle X(\\omega) = -2\\omega$ for $|\\omega| \\le \\pi$."
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE EXAM TRAP \u2014 EVALUATING AT FREQUENCY $\\omega$:**\nIf asked for $\\angle X(\\omega)$ at $\\omega = \\frac{\\pi}{2}$:\n$$\\angle X\\left(\\frac{\\pi}{2}\\right) = -2 \\left(\\frac{\\pi}{2}\\right) = -\\pi \\text{ rad}$$\nDo not forget that the phase is strictly undefined outside the spectral support $|\\omega| > \\pi$ where the magnitude is zero."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Transform of unshifted signal:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $y(t) = \\text{sinc}(t) = \\frac{\\sin\\pi t}{\\pi t}$. Here $a = \\pi$."
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Apply Time-Shifting Property:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "With $x(t) = y(t - t_0)$ where $t_0 = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = Y(\\omega) e^{-j\\omega t_0} = e^{-j 2\\omega} \\, \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Magnitude and Phase Analysis:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Magnitude Spectrum:** $|X(\\omega)| = \\left|e^{-j 2\\omega}\\right| \\cdot \\left|\\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)\\right| = \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)$.",
+        "**Phase Spectrum:** $\\angle X(\\omega) = -2\\omega$ for $|\\omega| \\le \\pi$."
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE EXAM TRAP \u2014 EVALUATING AT FREQUENCY $\\omega$:**\nIf asked for $\\angle X(\\omega)$ at $\\omega = \\frac{\\pi}{2}$:\n$$\\angle X\\left(\\frac{\\pi}{2}\\right) = -2 \\left(\\frac{\\pi}{2}\\right) = -\\pi \\text{ rad}$$\nDo not forget that the phase is strictly undefined outside the spectral support $|\\omega| > \\pi$ where the magnitude is zero."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9812,64 +9796,67 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Express $X(f)$ in terms of Sampling function:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(f) = \\frac{\\sin 3f}{2f} = \\frac{3}{2} \\left[ \\frac{\\sin 3f}{3f} \\right] = \\frac{3}{2} \\, \\text{Sa}(3f)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Use direct $f$-domain Duality pair:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall that in the cyclic frequency domain:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\, \\text{rect}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} A\\tau \\, \\frac{\\sin(\\pi f \\tau)}{\\pi f \\tau} = A\\tau \\, \\text{Sa}(\\pi f \\tau)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Equate arguments and coefficients:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\pi f \\tau = 3f \\implies \\pi \\tau = 3 \\implies \\tau = \\frac{3}{\\pi}"
-    },
-    {
-     "t": "math",
-     "tex": "A\\tau = \\frac{3}{2} \\implies A\\left(\\frac{3}{\\pi}\\right) = \\frac{3}{2} \\implies A = \\frac{\\pi}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Step 4: Synthesize $x(t)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = A \\, \\text{rect}\\left(\\frac{t}{\\tau}\\right) = \\frac{\\pi}{2} \\, \\text{rect}\\left(\\frac{t}{3/\\pi}\\right) = \\frac{\\pi}{2} \\, \\text{rect}\\left(\\frac{\\pi t}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "This represents a rectangular pulse centered at $t = 0$, width $\\tau = \\frac{3}{\\pi}$, and height $\\frac{\\pi}{2}$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Express $X(f)$ in terms of Sampling function:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(f) = \\frac{\\sin 3f}{2f} = \\frac{3}{2} \\left[ \\frac{\\sin 3f}{3f} \\right] = \\frac{3}{2} \\, \\text{Sa}(3f)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Use direct $f$-domain Duality pair:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall that in the cyclic frequency domain:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\, \\text{rect}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} A\\tau \\, \\frac{\\sin(\\pi f \\tau)}{\\pi f \\tau} = A\\tau \\, \\text{Sa}(\\pi f \\tau)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Equate arguments and coefficients:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\pi f \\tau = 3f \\implies \\pi \\tau = 3 \\implies \\tau = \\frac{3}{\\pi}"
+      },
+      {
+       "t": "math",
+       "tex": "A\\tau = \\frac{3}{2} \\implies A\\left(\\frac{3}{\\pi}\\right) = \\frac{3}{2} \\implies A = \\frac{\\pi}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Step 4: Synthesize $x(t)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = A \\, \\text{rect}\\left(\\frac{t}{\\tau}\\right) = \\frac{\\pi}{2} \\, \\text{rect}\\left(\\frac{t}{3/\\pi}\\right) = \\frac{\\pi}{2} \\, \\text{rect}\\left(\\frac{\\pi t}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "This represents a rectangular pulse centered at $t = 0$, width $\\tau = \\frac{3}{\\pi}$, and height $\\frac{\\pi}{2}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9905,82 +9892,81 @@ export default {
      "tex": "x(t) = 3 e^{j 1.5 t} \\frac{\\sin(2.5 t)}{\\pi t}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Spectral Center and Half-Bandwidth:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Lower edge $\\omega_1 = -1$, Upper edge $\\omega_2 = 4$."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Total Bandwidth } 2a = \\omega_2 - \\omega_1 = 4 - (-1) = 5 \\implies a = 2.5"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Center Frequency } \\omega_0 = \\frac{\\omega_1 + \\omega_2}{2} = \\frac{-1 + 4}{2} = 1.5 \\text{ rad/s}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Center-shifting (Demodulation):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Define $Y(\\omega)$ centered at $\\omega = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = X(\\omega + \\omega_0) = X(\\omega + 1.5) = 3 \\, \\text{rect}\\left(\\frac{\\omega}{5}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Invert symmetric spectrum $Y(\\omega)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using $\\text{rect}\\left(\\frac{\\omega}{2a}\\right) \\longleftrightarrow \\frac{\\sin at}{\\pi t}$ with $a = 2.5$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 3 \\left[ \\frac{\\sin(2.5 t)}{\\pi t} \\right]"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Step 4: Apply Frequency-Shifting Property:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $Y(\\omega) = X(\\omega + 1.5) \\iff y(t) = x(t) e^{-j 1.5 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = y(t) e^{j 1.5 t} = 3 e^{j 1.5 t} \\frac{\\sin(2.5 t)}{\\pi t}"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**COMPLEX SIGNAL CHECK:**\nNotice that $X(\\omega)$ is NOT conjugate-symmetric ($X(-\\omega) \\neq X^*(\\omega)$). Therefore, the time-domain signal $x(t)$ MUST be complex-valued! The factor $e^{j 1.5 t}$ introduces the necessary imaginary component."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Spectral Center and Half-Bandwidth:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Lower edge $\\omega_1 = -1$, Upper edge $\\omega_2 = 4$."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Total Bandwidth } 2a = \\omega_2 - \\omega_1 = 4 - (-1) = 5 \\implies a = 2.5"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Center Frequency } \\omega_0 = \\frac{\\omega_1 + \\omega_2}{2} = \\frac{-1 + 4}{2} = 1.5 \\text{ rad/s}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Center-shifting (Demodulation):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Define $Y(\\omega)$ centered at $\\omega = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = X(\\omega + \\omega_0) = X(\\omega + 1.5) = 3 \\, \\text{rect}\\left(\\frac{\\omega}{5}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Invert symmetric spectrum $Y(\\omega)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using $\\text{rect}\\left(\\frac{\\omega}{2a}\\right) \\longleftrightarrow \\frac{\\sin at}{\\pi t}$ with $a = 2.5$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 3 \\left[ \\frac{\\sin(2.5 t)}{\\pi t} \\right]"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Step 4: Apply Frequency-Shifting Property:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $Y(\\omega) = X(\\omega + 1.5) \\iff y(t) = x(t) e^{-j 1.5 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = y(t) e^{j 1.5 t} = 3 e^{j 1.5 t} \\frac{\\sin(2.5 t)}{\\pi t}"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**COMPLEX SIGNAL CHECK:**\nNotice that $X(\\omega)$ is NOT conjugate-symmetric ($X(-\\omega) \\neq X^*(\\omega)$). Therefore, the time-domain signal $x(t)$ MUST be complex-valued! The factor $e^{j 1.5 t}$ introduces the necessary imaginary component."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10009,68 +9995,67 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Define triangular waveform:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\text{tri}\\left(\\frac{t}{\\tau}\\right) = \\begin{cases} 1 - \\frac{|t|}{\\tau}, & |t| \\le \\tau \\\\ 0, & |t| > \\tau \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Forward Fourier Transform:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "By evaluating the integral (or using convolution $\\text{rect}(t/\\tau) * \\text{rect}(t/\\tau)$):"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\tau \\, \\text{Sa}^2\\left(\\frac{\\omega\\tau}{2}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Invoking Duality ($x(t) \\leftrightarrow X(\\omega) \\implies X(t) \\leftrightarrow 2\\pi x(-\\omega)$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\tau \\, \\text{Sa}^2\\left(\\frac{t\\tau}{2}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\, \\text{tri}\\left(-\\frac{\\omega}{\\tau}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\text{tri}(\\theta)$ is an even function: $\\text{tri}(-\\theta) = \\text{tri}(\\theta)$."
-    },
-    {
-     "t": "math",
-     "tex": "\\tau \\, \\text{Sa}^2\\left(\\frac{t\\tau}{2}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\, \\text{tri}\\left(\\frac{\\omega}{\\tau}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Step 4: Special case $\\tau = 2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2 \\, \\text{Sa}^2(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\, \\text{tri}\\left(\\frac{\\omega}{2}\\right) \\implies \\boxed{\\text{Sa}^2(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\pi \\, \\text{tri}\\left(\\frac{\\omega}{2}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Define triangular waveform:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\text{tri}\\left(\\frac{t}{\\tau}\\right) = \\begin{cases} 1 - \\frac{|t|}{\\tau}, & |t| \\le \\tau \\\\ 0, & |t| > \\tau \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Forward Fourier Transform:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "By evaluating the integral (or using convolution $\\text{rect}(t/\\tau) * \\text{rect}(t/\\tau)$):"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\tau \\, \\text{Sa}^2\\left(\\frac{\\omega\\tau}{2}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Invoking Duality ($x(t) \\leftrightarrow X(\\omega) \\implies X(t) \\leftrightarrow 2\\pi x(-\\omega)$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\tau \\, \\text{Sa}^2\\left(\\frac{t\\tau}{2}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\, \\text{tri}\\left(-\\frac{\\omega}{\\tau}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\text{tri}(\\theta)$ is an even function: $\\text{tri}(-\\theta) = \\text{tri}(\\theta)$."
+      },
+      {
+       "t": "math",
+       "tex": "\\tau \\, \\text{Sa}^2\\left(\\frac{t\\tau}{2}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\, \\text{tri}\\left(\\frac{\\omega}{\\tau}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Step 4: Special case $\\tau = 2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2 \\, \\text{Sa}^2(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\, \\text{tri}\\left(\\frac{\\omega}{2}\\right) \\implies \\boxed{\\text{Sa}^2(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\pi \\, \\text{tri}\\left(\\frac{\\omega}{2}\\right)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10103,60 +10088,59 @@ export default {
      "tex": "\\frac{A a^2}{\\pi^2} \\text{Sa}^2(at) \\longrightarrow \\frac{A a^2}{\\pi^2} \\times \\frac{\\pi}{a} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right) = \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Baseline Duality Pair:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sa}^2(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\pi \\, \\text{tri}\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Apply Time Scaling Property:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "With scaling factor $a > 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sa}^2(at) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\frac{1}{a} \\left[ \\pi \\, \\text{tri}\\left(\\frac{\\omega/a}{2}\\right) \\right] = \\frac{\\pi}{a} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Multiply by Constant $\\frac{A a^2}{\\pi^2}$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{A a^2}{\\pi^2} \\left[ \\frac{\\pi}{a} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right) \\right] = \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Result:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A\\left[\\frac{\\sin at}{\\pi t}\\right]^2 \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Baseline Duality Pair:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sa}^2(t) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\pi \\, \\text{tri}\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Apply Time Scaling Property:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "With scaling factor $a > 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sa}^2(at) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\frac{1}{a} \\left[ \\pi \\, \\text{tri}\\left(\\frac{\\omega/a}{2}\\right) \\right] = \\frac{\\pi}{a} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Multiply by Constant $\\frac{A a^2}{\\pi^2}$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{A a^2}{\\pi^2} \\left[ \\frac{\\pi}{a} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right) \\right] = \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Result:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A\\left[\\frac{\\sin at}{\\pi t}\\right]^2 \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10176,62 +10160,61 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Spectral Form:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\begin{cases} \\frac{Aa}{\\pi} \\left(1 - \\frac{|\\omega|}{2a}\\right), & |\\omega| \\le 2a \\\\ 0, & |\\omega| > 2a \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Energy and Area Theorem Verification:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Central Value Theorem:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^{\\infty} x(t) \\, dt = X(0) = \\frac{Aa}{\\pi}"
-    },
-    {
-     "t": "p",
-     "text": "Let $A = 1 \\implies \\int_{-\\infty}^{\\infty} \\left[\\frac{\\sin at}{\\pi t}\\right]^2 dt = \\frac{a}{\\pi}$.\n     This perfectly matches the energy calculated in Slide 100!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Inverse Central Value Theorem:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega) \\, d\\omega = \\frac{1}{2\\pi} \\left[ \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\right] = \\frac{1}{2\\pi} \\left[ \\frac{1}{2} \\times (4a) \\times \\frac{Aa}{\\pi} \\right] = \\frac{A a^2}{\\pi^2}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating $x(0)$ directly from time expression:"
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = A \\left[ \\lim_{t\\to 0} \\frac{\\sin at}{\\pi t} \\right]^2 = A \\left( \\frac{a}{\\pi} \\right)^2 = \\frac{A a^2}{\\pi^2} \\quad \\text{(Verified)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Spectral Form:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\begin{cases} \\frac{Aa}{\\pi} \\left(1 - \\frac{|\\omega|}{2a}\\right), & |\\omega| \\le 2a \\\\ 0, & |\\omega| > 2a \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Energy and Area Theorem Verification:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Central Value Theorem:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^{\\infty} x(t) \\, dt = X(0) = \\frac{Aa}{\\pi}"
+      },
+      {
+       "t": "p",
+       "text": "Let $A = 1 \\implies \\int_{-\\infty}^{\\infty} \\left[\\frac{\\sin at}{\\pi t}\\right]^2 dt = \\frac{a}{\\pi}$.\n     This perfectly matches the energy calculated in Slide 100!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Inverse Central Value Theorem:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega) \\, d\\omega = \\frac{1}{2\\pi} \\left[ \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\right] = \\frac{1}{2\\pi} \\left[ \\frac{1}{2} \\times (4a) \\times \\frac{Aa}{\\pi} \\right] = \\frac{A a^2}{\\pi^2}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating $x(0)$ directly from time expression:"
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = A \\left[ \\lim_{t\\to 0} \\frac{\\sin at}{\\pi t} \\right]^2 = A \\left( \\frac{a}{\\pi} \\right)^2 = \\frac{A a^2}{\\pi^2} \\quad \\text{(Verified)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10251,63 +10234,62 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Parameter",
-      "$x_1(t) = A \\frac{\\sin at}{\\pi t}$",
-      "$x_2(t) = A \\left[\\frac{\\sin at}{\\pi t}\\right]^2$"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "table",
+       "header": [
+        "Parameter",
+        "$x_1(t) = A \\frac{\\sin at}{\\pi t}$",
+        "$x_2(t) = A \\left[\\frac{\\sin at}{\\pi t}\\right]^2$"
+       ],
+       "align": [
+        ":---",
+        ":---:",
+        ":---:"
+       ],
+       "rows": [
+        [
+         "**Spectral Profile**",
+         "Rectangular Pulse",
+         "Isosceles Triangular Pulse"
+        ],
+        [
+         "**Spectral Peak**",
+         "$A$",
+         "$\\frac{Aa}{\\pi}$"
+        ],
+        [
+         "**Base Support**",
+         "$[-a, +a]$",
+         "$[-2a, +2a]$"
+        ],
+        [
+         "**Single-Sided Bandwidth**",
+         "$a$ rad/s",
+         "$2a$ rad/s (Doubled!)"
+        ],
+        [
+         "**Time Decay Rate**",
+         "$1/t$",
+         "$1/t^2$"
+        ],
+        [
+         "**Frequency Decay Rate**",
+         "Abrupt drop at $\\pm a$",
+         "Smooth slope to zero at $\\pm 2a$"
+        ]
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**GATE EXAM TAKEAWAY \u2014 BANDWIDTH MULTIPLICATION:**\nSquaring any time-domain signal $x(t)$ corresponds to self-convolution in the frequency domain: $X(\\omega) * X(\\omega)$. Convolution of two bandlimited signals with bandwidth $B$ results in a signal with bandwidth **$2B$**. Therefore, squaring in time **doubles the signal bandwidth**."
+      }
      ],
-     "align": [
-      ":---",
-      ":---:",
-      ":---:"
-     ],
-     "rows": [
-      [
-       "**Spectral Profile**",
-       "Rectangular Pulse",
-       "Isosceles Triangular Pulse"
-      ],
-      [
-       "**Spectral Peak**",
-       "$A$",
-       "$\\frac{Aa}{\\pi}$"
-      ],
-      [
-       "**Base Support**",
-       "$[-a, +a]$",
-       "$[-2a, +2a]$"
-      ],
-      [
-       "**Single-Sided Bandwidth**",
-       "$a$ rad/s",
-       "$2a$ rad/s (Doubled!)"
-      ],
-      [
-       "**Time Decay Rate**",
-       "$1/t$",
-       "$1/t^2$"
-      ],
-      [
-       "**Frequency Decay Rate**",
-       "Abrupt drop at $\\pm a$",
-       "Smooth slope to zero at $\\pm 2a$"
-      ]
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**GATE EXAM TAKEAWAY \u2014 BANDWIDTH MULTIPLICATION:**\nSquaring any time-domain signal $x(t)$ corresponds to self-convolution in the frequency domain: $X(\\omega) * X(\\omega)$. Convolution of two bandlimited signals with bandwidth $B$ results in a signal with bandwidth **$2B$**. Therefore, squaring in time **doubles the signal bandwidth**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "open": true
     },
     {
      "t": "h3",
@@ -10328,61 +10310,60 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Match with prototype $A\\left[\\frac{\\sin at}{\\pi t}\\right]^2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{4} \\left[\\frac{\\sin 3t}{t}\\right]^2 = \\frac{\\pi^2}{4} \\left[\\frac{\\sin 3t}{\\pi t}\\right]^2"
-    },
-    {
-     "t": "p",
-     "text": "Here $A = \\frac{\\pi^2}{4}$ and $a = 3$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Apply the master transform pair:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $A = \\frac{\\pi^2}{4}$ and $a = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Peak Height } = \\frac{\\left(\\frac{\\pi^2}{4}\\right)(3)}{\\pi} = \\frac{3\\pi}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Base Parameter } 2a = 2(3) = 6"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Analytical Result:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{3\\pi}{4} \\, \\text{tri}\\left(\\frac{\\omega}{6}\\right) = \\begin{cases} \\frac{3\\pi}{4} \\left(1 - \\frac{|\\omega|}{6}\\right), & |\\omega| \\le 6 \\\\ 0, & |\\omega| > 6 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Match with prototype $A\\left[\\frac{\\sin at}{\\pi t}\\right]^2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{4} \\left[\\frac{\\sin 3t}{t}\\right]^2 = \\frac{\\pi^2}{4} \\left[\\frac{\\sin 3t}{\\pi t}\\right]^2"
+      },
+      {
+       "t": "p",
+       "text": "Here $A = \\frac{\\pi^2}{4}$ and $a = 3$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Apply the master transform pair:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $A = \\frac{\\pi^2}{4}$ and $a = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Peak Height } = \\frac{\\left(\\frac{\\pi^2}{4}\\right)(3)}{\\pi} = \\frac{3\\pi}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Base Parameter } 2a = 2(3) = 6"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Analytical Result:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{3\\pi}{4} \\, \\text{tri}\\left(\\frac{\\omega}{6}\\right) = \\begin{cases} \\frac{3\\pi}{4} \\left(1 - \\frac{|\\omega|}{6}\\right), & |\\omega| \\le 6 \\\\ 0, & |\\omega| > 6 \\end{cases}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10424,68 +10405,71 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Direct Formulation in Cyclic Frequency $f$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall the cyclic frequency Fourier transform pair for a triangular pulse:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\, \\text{tri}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} A\\tau \\, \\text{sinc}^2(f\\tau) = A\\tau \\left[ \\frac{\\sin(\\pi f\\tau)}{\\pi f\\tau} \\right]^2"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Manipulate the given $X(f)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(f) = \\frac{\\sin^2 2f}{8f^2} = \\frac{1}{8} \\left[ \\frac{\\sin 2f}{f} \\right]^2 = \\frac{4}{8} \\left[ \\frac{\\sin 2f}{2f} \\right]^2 = \\frac{1}{2} \\, \\text{Sa}^2(2f)"
-    },
-    {
-     "t": "p",
-     "text": "Write the argument as $\\pi f \\tau$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\pi f \\tau = 2f \\implies \\tau = \\frac{2}{\\pi}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Solve for Amplitude $A$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A\\tau = \\frac{1}{2} \\implies A\\left(\\frac{2}{\\pi}\\right) = \\frac{1}{2} \\implies A = \\frac{\\pi}{4}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Step 4: Synthesize $x(t)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = A \\, \\text{tri}\\left(\\frac{t}{\\tau}\\right) = \\frac{\\pi}{4} \\, \\text{tri}\\left(\\frac{t}{2/\\pi}\\right) = \\frac{\\pi}{4} \\, \\text{tri}\\left(\\frac{\\pi t}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "This is a triangular pulse centered at $t = 0$ with peak height $\\pi/4$ and base support $\\left[-\\frac{2}{\\pi}, +\\frac{2}{\\pi}\\right]$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Direct Formulation in Cyclic Frequency $f$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall the cyclic frequency Fourier transform pair for a triangular pulse:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\, \\text{tri}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} A\\tau \\, \\text{sinc}^2(f\\tau) = A\\tau \\left[ \\frac{\\sin(\\pi f\\tau)}{\\pi f\\tau} \\right]^2"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Manipulate the given $X(f)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(f) = \\frac{\\sin^2 2f}{8f^2} = \\frac{1}{8} \\left[ \\frac{\\sin 2f}{f} \\right]^2 = \\frac{4}{8} \\left[ \\frac{\\sin 2f}{2f} \\right]^2 = \\frac{1}{2} \\, \\text{Sa}^2(2f)"
+      },
+      {
+       "t": "p",
+       "text": "Write the argument as $\\pi f \\tau$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\pi f \\tau = 2f \\implies \\tau = \\frac{2}{\\pi}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Solve for Amplitude $A$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A\\tau = \\frac{1}{2} \\implies A\\left(\\frac{2}{\\pi}\\right) = \\frac{1}{2} \\implies A = \\frac{\\pi}{4}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Step 4: Synthesize $x(t)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = A \\, \\text{tri}\\left(\\frac{t}{\\tau}\\right) = \\frac{\\pi}{4} \\, \\text{tri}\\left(\\frac{t}{2/\\pi}\\right) = \\frac{\\pi}{4} \\, \\text{tri}\\left(\\frac{\\pi t}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "This is a triangular pulse centered at $t = 0$ with peak height $\\pi/4$ and base support $\\left[-\\frac{2}{\\pi}, +\\frac{2}{\\pi}\\right]$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10512,16 +10496,15 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "code",
-     "text": "Time Domain x(t)                                    Frequency Domain X(omega)\n----------------                                    -------------------------\n1. Rectangular Pulse                                1. Sampling Function (Sa)\n       ^                                                    ^\n     A |------+                                        A*tau|\n       |      |                                            / \\\n   ----+------+------> t                            ------*---+*------> omega\n     -tau/2  tau/2                                      -2pi/tau 2pi/tau\n\n2. Triangular Pulse                                 2. Squared Sampling (Sa^2)\n       ^                                                    ^\n     A |  /\\                                           A*tau|\n       | /  \\                                              / \\\n   ----+------+------> t                            ------*---+*------> omega\n      -tau    tau                                       -2pi/tau 2pi/tau\n\n3. Sinc Pulse                                       3. Rectangular Spectrum\n       ^                                                    ^\n   A*a |                                                  A |------+\n   --- |  /\\                                                |      |\n   pi  | /  \\                                               |      |\n   ----+------+------> t                            --------+------+------> omega\n                                                           -a      a\n\n4. Squared Sinc Pulse                               4. Triangular Spectrum\n       ^                                                    ^\n  A*a^2|                                               Aa/pi|  /\\\n  -----|  /\\                                                | /  \\\n  pi^2 | /  \\                                               |/    \\\n   ----+------+------> t                            --------+------+------> omega\n                                                          -2a     2a"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "code",
+       "text": "Time Domain x(t)                                    Frequency Domain X(omega)\n----------------                                    -------------------------\n1. Rectangular Pulse                                1. Sampling Function (Sa)\n       ^                                                    ^\n     A |------+                                        A*tau|\n       |      |                                            / \\\n   ----+------+------> t                            ------*---+*------> omega\n     -tau/2  tau/2                                      -2pi/tau 2pi/tau\n\n2. Triangular Pulse                                 2. Squared Sampling (Sa^2)\n       ^                                                    ^\n     A |  /\\                                           A*tau|\n       | /  \\                                              / \\\n   ----+------+------> t                            ------*---+*------> omega\n      -tau    tau                                       -2pi/tau 2pi/tau\n\n3. Sinc Pulse                                       3. Rectangular Spectrum\n       ^                                                    ^\n   A*a |                                                  A |------+\n   --- |  /\\                                                |      |\n   pi  | /  \\                                               |      |\n   ----+------+------> t                            --------+------+------> omega\n                                                           -a      a\n\n4. Squared Sinc Pulse                               4. Triangular Spectrum\n       ^                                                    ^\n  A*a^2|                                               Aa/pi|  /\\\n  -----|  /\\                                                | /  \\\n  pi^2 | /  \\                                               |/    \\\n   ----+------+------> t                            --------+------+------> omega\n                                                          -2a     2a"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10562,57 +10545,56 @@ export default {
      "tex": "x(t) = \\frac{y(t + 2) + y(t - 2)}{2}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Dual Time-Shifting Theorem:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\omega t_0} Y(\\omega) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} y(t + t_0), \\qquad e^{-j\\omega t_0} Y(\\omega) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} y(t - t_0)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Linear combination:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{2} Y(\\omega) e^{j 2\\omega} + \\frac{1}{2} Y(\\omega) e^{-j 2\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Taking the inverse Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2} y(t + 2) + \\frac{1}{2} y(t - 2) = \\frac{y(t + 2) + y(t - 2)}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Evaluate at target point $t = 2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(2) = \\frac{y(2 + 2) + y(2 - 2)}{2} = \\frac{y(4) + y(0)}{2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Dual Time-Shifting Theorem:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\omega t_0} Y(\\omega) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} y(t + t_0), \\qquad e^{-j\\omega t_0} Y(\\omega) \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} y(t - t_0)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Linear combination:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{2} Y(\\omega) e^{j 2\\omega} + \\frac{1}{2} Y(\\omega) e^{-j 2\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Taking the inverse Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2} y(t + 2) + \\frac{1}{2} y(t - 2) = \\frac{y(t + 2) + y(t - 2)}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Evaluate at target point $t = 2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(2) = \\frac{y(2 + 2) + y(2 - 2)}{2} = \\frac{y(4) + y(0)}{2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10658,82 +10640,81 @@ export default {
      "tex": "x(2) = \\frac{9/(2\\pi) + 0.0031}{2} = \\frac{1.4324 + 0.0031}{2} \\approx 0.72"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Recover $y(t)$ from $Y(\\omega)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$Y(\\omega)$ is a triangle with base $[-3, 3]$ and peak $3$.\n   Using $A \\left[\\frac{\\sin at}{\\pi t}\\right]^2 \\longleftrightarrow \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)$:"
-    },
-    {
-     "t": "math",
-     "tex": "2a = 3 \\implies a = \\frac{3}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Peak } \\frac{Aa}{\\pi} = 3 \\implies \\frac{A(3/2)}{\\pi} = 3 \\implies A = 2\\pi"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 2\\pi \\left[ \\frac{\\sin\\left(\\frac{3}{2}t\\right)}{\\pi t} \\right]^2"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Numerical evaluation at $t = 0$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(0) = 2\\pi \\left( \\frac{3}{2\\pi} \\right)^2 = \\frac{9}{2\\pi} \\approx 1.43239"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Numerical evaluation at $t = 4$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(6 \\text{ rad}) \\approx -0.279415"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin^2(6) \\approx 0.07807"
-    },
-    {
-     "t": "math",
-     "tex": "y(4) = \\frac{0.07807}{8\\pi} = \\frac{0.07807}{25.1327} \\approx 0.003106"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Step 4: Combine:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(2) = \\frac{1.43239 + 0.00311}{2} = \\frac{1.43550}{2} \\approx 0.7178 \\approx 0.72"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE EXAM TRAP \u2014 RADIANS VS DEGREES:**\nIn evaluating $\\sin(6)$, the argument is $6$ **radians** ($\\approx 343.77^\\circ$), NOT $6$ degrees! Computing $\\sin(6^\\circ)$ is a fatal error that leads to an incorrect numerical answer in Virtual Calculator questions."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Recover $y(t)$ from $Y(\\omega)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$Y(\\omega)$ is a triangle with base $[-3, 3]$ and peak $3$.\n   Using $A \\left[\\frac{\\sin at}{\\pi t}\\right]^2 \\longleftrightarrow \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)$:"
+      },
+      {
+       "t": "math",
+       "tex": "2a = 3 \\implies a = \\frac{3}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Peak } \\frac{Aa}{\\pi} = 3 \\implies \\frac{A(3/2)}{\\pi} = 3 \\implies A = 2\\pi"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 2\\pi \\left[ \\frac{\\sin\\left(\\frac{3}{2}t\\right)}{\\pi t} \\right]^2"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Numerical evaluation at $t = 0$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(0) = 2\\pi \\left( \\frac{3}{2\\pi} \\right)^2 = \\frac{9}{2\\pi} \\approx 1.43239"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Numerical evaluation at $t = 4$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(6 \\text{ rad}) \\approx -0.279415"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin^2(6) \\approx 0.07807"
+      },
+      {
+       "t": "math",
+       "tex": "y(4) = \\frac{0.07807}{8\\pi} = \\frac{0.07807}{25.1327} \\approx 0.003106"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Step 4: Combine:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(2) = \\frac{1.43239 + 0.00311}{2} = \\frac{1.43550}{2} \\approx 0.7178 \\approx 0.72"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE EXAM TRAP \u2014 RADIANS VS DEGREES:**\nIn evaluating $\\sin(6)$, the argument is $6$ **radians** ($\\approx 343.77^\\circ$), NOT $6$ degrees! Computing $\\sin(6^\\circ)$ is a fatal error that leads to an incorrect numerical answer in Virtual Calculator questions."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10776,61 +10757,60 @@ export default {
      "tex": "x\\left(\\frac{1}{2\\pi}^-\\right) = \\frac{y\\left(\\frac{1}{\\pi}^-\\right) + y(0)}{2}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Identify carrier modulation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The factor $\\cos f$ represents modulation in frequency.\n   Converting cyclic frequency $f$ to radian frequency $\\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "f = \\frac{\\omega}{2\\pi} \\implies e^{\\pm j f} = e^{\\pm j \\frac{\\omega}{2\\pi}}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Inverse Fourier Transform using Time Shifting:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) e^{\\pm j \\frac{\\omega}{2\\pi}} \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} y\\left(t \\pm \\frac{1}{2\\pi}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2} y\\left(t + \\frac{1}{2\\pi}\\right) + \\frac{1}{2} y\\left(t - \\frac{1}{2\\pi}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Evaluate at $t = \\frac{1}{2\\pi}^-$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "t + \\frac{1}{2\\pi} = \\frac{1}{2\\pi}^- + \\frac{1}{2\\pi} = \\frac{1}{\\pi}^-"
-    },
-    {
-     "t": "math",
-     "tex": "t - \\frac{1}{2\\pi} = \\frac{1}{2\\pi}^- - \\frac{1}{2\\pi} = 0^-"
-    },
-    {
-     "t": "math",
-     "tex": "x\\left(\\frac{1}{2\\pi}^-\\right) = \\frac{y\\left(\\frac{1}{\\pi}^-\\right) + y(0^-)}{2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Identify carrier modulation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The factor $\\cos f$ represents modulation in frequency.\n   Converting cyclic frequency $f$ to radian frequency $\\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "f = \\frac{\\omega}{2\\pi} \\implies e^{\\pm j f} = e^{\\pm j \\frac{\\omega}{2\\pi}}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Inverse Fourier Transform using Time Shifting:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) e^{\\pm j \\frac{\\omega}{2\\pi}} \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} y\\left(t \\pm \\frac{1}{2\\pi}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2} y\\left(t + \\frac{1}{2\\pi}\\right) + \\frac{1}{2} y\\left(t - \\frac{1}{2\\pi}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Evaluate at $t = \\frac{1}{2\\pi}^-$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "t + \\frac{1}{2\\pi} = \\frac{1}{2\\pi}^- + \\frac{1}{2\\pi} = \\frac{1}{\\pi}^-"
+      },
+      {
+       "t": "math",
+       "tex": "t - \\frac{1}{2\\pi} = \\frac{1}{2\\pi}^- - \\frac{1}{2\\pi} = 0^-"
+      },
+      {
+       "t": "math",
+       "tex": "x\\left(\\frac{1}{2\\pi}^-\\right) = \\frac{y\\left(\\frac{1}{\\pi}^-\\right) + y(0^-)}{2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10873,64 +10853,63 @@ export default {
      "tex": "x\\left(\\frac{1}{2\\pi}^-\\right) = \\frac{2\\pi + 2\\pi}{2} = 2\\pi"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Structure of $y(t)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The pulse $y(t) = 2\\pi \\, \\text{rect}\\left(\\frac{\\pi t}{2}\\right)$ has total width $\\tau = \\frac{2}{\\pi}$.\n   Its boundaries are located at:"
-    },
-    {
-     "t": "math",
-     "tex": "t = \\pm \\frac{\\tau}{2} = \\pm \\frac{1}{\\pi}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Check boundary inclusion for $\\left(\\frac{1}{\\pi}^-\\right)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The point $t = \\frac{1}{\\pi}^-$ lies strictly inside the pulse support $\\left(-\\frac{1}{\\pi}, +\\frac{1}{\\pi}\\right)$."
-    },
-    {
-     "t": "math",
-     "tex": "y\\left(\\frac{1}{\\pi}^-\\right) = 2\\pi"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Check value at origin:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(0^-) = 2\\pi"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Step 4: Compute $x\\left(\\frac{1}{2\\pi}^-\\right)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x\\left(\\frac{1}{2\\pi}^-\\right) = \\frac{2\\pi + 2\\pi}{2} = 2\\pi"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Structure of $y(t)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The pulse $y(t) = 2\\pi \\, \\text{rect}\\left(\\frac{\\pi t}{2}\\right)$ has total width $\\tau = \\frac{2}{\\pi}$.\n   Its boundaries are located at:"
+      },
+      {
+       "t": "math",
+       "tex": "t = \\pm \\frac{\\tau}{2} = \\pm \\frac{1}{\\pi}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Check boundary inclusion for $\\left(\\frac{1}{\\pi}^-\\right)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The point $t = \\frac{1}{\\pi}^-$ lies strictly inside the pulse support $\\left(-\\frac{1}{\\pi}, +\\frac{1}{\\pi}\\right)$."
+      },
+      {
+       "t": "math",
+       "tex": "y\\left(\\frac{1}{\\pi}^-\\right) = 2\\pi"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Check value at origin:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(0^-) = 2\\pi"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Step 4: Compute $x\\left(\\frac{1}{2\\pi}^-\\right)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x\\left(\\frac{1}{2\\pi}^-\\right) = \\frac{2\\pi + 2\\pi}{2} = 2\\pi"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10974,57 +10953,56 @@ export default {
      "tex": "x\\left(\\frac{1}{2\\pi}^-\\right) = \\pi + \\pi = 2\\pi"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Support of individual rectangular pulses:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "First pulse: $x_1(t) = \\pi \\, \\text{rect}\\left(\\frac{\\pi t}{3}\\right)$ is non-zero for $|t| < \\frac{1.5}{\\pi}$.",
-      "Second pulse: $x_2(t) = \\pi \\, \\text{rect}(\\pi t)$ is non-zero for $|t| < \\frac{0.5}{\\pi}$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Position of $t = \\frac{1}{2\\pi}^- = \\frac{0.5}{\\pi}^-$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $x_1(t)$: $\\frac{0.5}{\\pi} < \\frac{1.5}{\\pi} \\implies x_1\\left(\\frac{0.5}{\\pi}^-\\right) = \\pi$.",
-      "For $x_2(t)$: $\\frac{0.5}{\\pi}^-$ is strictly inside the upper edge $\\frac{0.5}{\\pi} \\implies x_2\\left(\\frac{0.5}{\\pi}^-\\right) = \\pi$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Summation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x\\left(\\frac{1}{2\\pi}^-\\right) = \\pi + \\pi = 2\\pi"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE EXAM TRAP \u2014 THE DIRICHLET DISCONTINUITY AT $t = \\frac{1}{2\\pi}$:**\nWhat if the question asked for $x(t)$ at the exact point $t = \\frac{1}{2\\pi}$ or at $t = \\frac{1}{2\\pi}^+$?\n- At $t = \\frac{1}{2\\pi}^+$, $t > \\frac{0.5}{\\pi} \\implies x_2(t) = 0$, so $x\\left(\\frac{1}{2\\pi}^+\\right) = \\pi + 0 = \\pi$.\n- At the exact point of discontinuity $t = \\frac{1}{2\\pi}$, by the Dirichlet convergence condition of inverse Fourier transform:\n  $$x\\left(\\frac{1}{2\\pi}\\right) = \\frac{x\\left(\\frac{1}{2\\pi}^-\\right) + x\\left(\\frac{1}{2\\pi}^+\\right)}{2} = \\frac{2\\pi + \\pi}{2} = 1.5\\pi$$\nThis proves why the question specifically specified $t = \\frac{1}{2\\pi}^-$!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Support of individual rectangular pulses:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "First pulse: $x_1(t) = \\pi \\, \\text{rect}\\left(\\frac{\\pi t}{3}\\right)$ is non-zero for $|t| < \\frac{1.5}{\\pi}$.",
+        "Second pulse: $x_2(t) = \\pi \\, \\text{rect}(\\pi t)$ is non-zero for $|t| < \\frac{0.5}{\\pi}$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Position of $t = \\frac{1}{2\\pi}^- = \\frac{0.5}{\\pi}^-$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $x_1(t)$: $\\frac{0.5}{\\pi} < \\frac{1.5}{\\pi} \\implies x_1\\left(\\frac{0.5}{\\pi}^-\\right) = \\pi$.",
+        "For $x_2(t)$: $\\frac{0.5}{\\pi}^-$ is strictly inside the upper edge $\\frac{0.5}{\\pi} \\implies x_2\\left(\\frac{0.5}{\\pi}^-\\right) = \\pi$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Summation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x\\left(\\frac{1}{2\\pi}^-\\right) = \\pi + \\pi = 2\\pi"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE EXAM TRAP \u2014 THE DIRICHLET DISCONTINUITY AT $t = \\frac{1}{2\\pi}$:**\nWhat if the question asked for $x(t)$ at the exact point $t = \\frac{1}{2\\pi}$ or at $t = \\frac{1}{2\\pi}^+$?\n- At $t = \\frac{1}{2\\pi}^+$, $t > \\frac{0.5}{\\pi} \\implies x_2(t) = 0$, so $x\\left(\\frac{1}{2\\pi}^+\\right) = \\pi + 0 = \\pi$.\n- At the exact point of discontinuity $t = \\frac{1}{2\\pi}$, by the Dirichlet convergence condition of inverse Fourier transform:\n  $$x\\left(\\frac{1}{2\\pi}\\right) = \\frac{x\\left(\\frac{1}{2\\pi}^-\\right) + x\\left(\\frac{1}{2\\pi}^+\\right)}{2} = \\frac{2\\pi + \\pi}{2} = 1.5\\pi$$\nThis proves why the question specifically specified $t = \\frac{1}{2\\pi}^-$!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11050,53 +11028,56 @@ export default {
      "tex": "X(f) = Y(f - 3) - Y(f + 3)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Deconstruct into shifted prototypes:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The positive triangle is centered at $f = +3$: $Y(f - 3)$.\n   The negative triangle is centered at $f = -3$: $-Y(f + 3)$."
-    },
-    {
-     "t": "math",
-     "tex": "X(f) = Y(f - 3) - Y(f + 3)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Spectral Symmetry Check:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Notice that $X(-f) = Y(-f - 3) - Y(-f + 3) = Y(-(f + 3)) - Y(-(f - 3))$.\n   Since $Y(f)$ is an even function ($Y(-f) = Y(f)$):"
-    },
-    {
-     "t": "math",
-     "tex": "X(-f) = Y(f + 3) - Y(f - 3) = -[Y(f - 3) - Y(f + 3)] = -X(f)"
-    },
-    {
-     "t": "p",
-     "text": "$X(f)$ is **purely odd and real**."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Mathematical implication for $x(t)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $X(f)$ is real and odd, $x(t)$ must be **purely imaginary and odd**!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Deconstruct into shifted prototypes:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The positive triangle is centered at $f = +3$: $Y(f - 3)$.\n   The negative triangle is centered at $f = -3$: $-Y(f + 3)$."
+      },
+      {
+       "t": "math",
+       "tex": "X(f) = Y(f - 3) - Y(f + 3)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Spectral Symmetry Check:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Notice that $X(-f) = Y(-f - 3) - Y(-f + 3) = Y(-(f + 3)) - Y(-(f - 3))$.\n   Since $Y(f)$ is an even function ($Y(-f) = Y(f)$):"
+      },
+      {
+       "t": "math",
+       "tex": "X(-f) = Y(f + 3) - Y(f - 3) = -[Y(f - 3) - Y(f + 3)] = -X(f)"
+      },
+      {
+       "t": "p",
+       "text": "$X(f)$ is **purely odd and real**."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Mathematical implication for $x(t)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $X(f)$ is real and odd, $x(t)$ must be **purely imaginary and odd**!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11155,92 +11136,91 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Inverse transform of $Y(f)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$Y(\\omega) = 4 \\, \\text{tri}\\left(\\frac{\\omega}{2\\pi}\\right)$.\n   Using $A \\left[\\frac{\\sin at}{\\pi t}\\right]^2 \\longleftrightarrow \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)$:"
-    },
-    {
-     "t": "math",
-     "tex": "2a = 2\\pi \\implies a = \\pi"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{Aa}{\\pi} = \\frac{A\\pi}{\\pi} = A = 4"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 4 \\left[ \\frac{\\sin\\pi t}{\\pi t} \\right]^2"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Modulated time signal:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2j \\, y(t) \\sin(6\\pi t) = 8j \\left[ \\frac{\\sin\\pi t}{\\pi t} \\right]^2 \\sin(6\\pi t)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Evaluate at $t = \\pi^2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\pi t = \\pi \\cdot \\pi^2 = \\pi^3 \\approx 31.006277 \\text{ rad}"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\pi^3) = \\sin(31.006277 \\text{ rad}) \\approx -0.4042"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\sin(\\pi^3)}{\\pi^3} \\approx \\frac{-0.4042}{31.0063} \\approx -0.013036"
-    },
-    {
-     "t": "math",
-     "tex": "\\left[\\frac{\\sin(\\pi^3)}{\\pi^3}\\right]^2 \\approx (-0.013036)^2 \\approx 1.699 \\times 10^{-4}"
-    },
-    {
-     "t": "p",
-     "text": "Now evaluate the sine modulation argument:"
-    },
-    {
-     "t": "math",
-     "tex": "6\\pi t = 6\\pi(\\pi^2) = 6\\pi^3 \\approx 6 \\times 31.006277 = 186.0377 \\text{ rad}"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(186.0377 \\text{ rad}) \\approx -0.630"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Step 4: Product:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(\\pi^2) = 8j \\times (1.65 \\times 10^{-4}) \\times (-0.630) \\approx -j 8.33 \\times 10^{-4}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Inverse transform of $Y(f)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$Y(\\omega) = 4 \\, \\text{tri}\\left(\\frac{\\omega}{2\\pi}\\right)$.\n   Using $A \\left[\\frac{\\sin at}{\\pi t}\\right]^2 \\longleftrightarrow \\frac{Aa}{\\pi} \\, \\text{tri}\\left(\\frac{\\omega}{2a}\\right)$:"
+      },
+      {
+       "t": "math",
+       "tex": "2a = 2\\pi \\implies a = \\pi"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{Aa}{\\pi} = \\frac{A\\pi}{\\pi} = A = 4"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 4 \\left[ \\frac{\\sin\\pi t}{\\pi t} \\right]^2"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Modulated time signal:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2j \\, y(t) \\sin(6\\pi t) = 8j \\left[ \\frac{\\sin\\pi t}{\\pi t} \\right]^2 \\sin(6\\pi t)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Evaluate at $t = \\pi^2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\pi t = \\pi \\cdot \\pi^2 = \\pi^3 \\approx 31.006277 \\text{ rad}"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\pi^3) = \\sin(31.006277 \\text{ rad}) \\approx -0.4042"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\sin(\\pi^3)}{\\pi^3} \\approx \\frac{-0.4042}{31.0063} \\approx -0.013036"
+      },
+      {
+       "t": "math",
+       "tex": "\\left[\\frac{\\sin(\\pi^3)}{\\pi^3}\\right]^2 \\approx (-0.013036)^2 \\approx 1.699 \\times 10^{-4}"
+      },
+      {
+       "t": "p",
+       "text": "Now evaluate the sine modulation argument:"
+      },
+      {
+       "t": "math",
+       "tex": "6\\pi t = 6\\pi(\\pi^2) = 6\\pi^3 \\approx 6 \\times 31.006277 = 186.0377 \\text{ rad}"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(186.0377 \\text{ rad}) \\approx -0.630"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Step 4: Product:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(\\pi^2) = 8j \\times (1.65 \\times 10^{-4}) \\times (-0.630) \\approx -j 8.33 \\times 10^{-4}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11266,34 +11246,37 @@ export default {
      "text": "where $y(t) = 3 \\, \\text{rect}\\left(\\frac{t}{\\pi}\\right)$ (rectangular window of width $\\pi$, height $3$) and $z(t) = \\cos t$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Mathematical definition of $x(t)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\begin{cases} 3\\cos t, & -\\frac{\\pi}{2} \\le t \\le \\frac{\\pi}{2} \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Windowing representation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\left[ 3 \\, \\text{rect}\\left(\\frac{t}{\\pi}\\right) \\right] \\cdot \\cos t"
-    },
-    {
-     "t": "p",
-     "text": "This represents windowed cosine modulation.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Mathematical definition of $x(t)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\begin{cases} 3\\cos t, & -\\frac{\\pi}{2} \\le t \\le \\frac{\\pi}{2} \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Windowing representation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\left[ 3 \\, \\text{rect}\\left(\\frac{t}{\\pi}\\right) \\right] \\cdot \\cos t"
+      },
+      {
+       "t": "p",
+       "text": "This represents windowed cosine modulation."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11344,81 +11327,80 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Compute $Y(\\omega)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = 3 \\times \\pi \\, \\frac{\\sin(\\omega\\pi/2)}{\\omega\\pi/2} = \\frac{6\\sin\\left(\\frac{\\omega\\pi}{2}\\right)}{\\omega}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Evaluate at shifted frequencies:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "With $\\omega = \\frac{\\pi}{2} \\approx 1.570796$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Term 1 ($\\omega - 1 \\approx 0.570796$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\theta_1 = 0.570796 \\times \\frac{\\pi}{2} \\approx 0.8966 \\text{ rad}"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\theta_1) = \\sin(0.8966 \\text{ rad}) \\approx 0.7812"
-    },
-    {
-     "t": "math",
-     "tex": "Y(0.5708) = \\frac{6 \\times 0.7812}{0.5708} \\approx 8.212"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Term 2 ($\\omega + 1 \\approx 2.570796$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\theta_2 = 2.570796 \\times \\frac{\\pi}{2} \\approx 4.0382 \\text{ rad}"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\theta_2) = \\sin(4.0382 \\text{ rad}) = \\sin(\\pi + 0.8966) = -\\sin(0.8966) \\approx -0.7812"
-    },
-    {
-     "t": "math",
-     "tex": "Y(2.5708) = \\frac{6 \\times (-0.7812)}{2.5708} \\approx -1.823"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Average the two terms:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\pi/2) = \\frac{8.212 + (-1.823)}{2} = \\frac{6.389}{2} \\approx 3.195 \\approx 3.20"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Compute $Y(\\omega)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = 3 \\times \\pi \\, \\frac{\\sin(\\omega\\pi/2)}{\\omega\\pi/2} = \\frac{6\\sin\\left(\\frac{\\omega\\pi}{2}\\right)}{\\omega}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Evaluate at shifted frequencies:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "With $\\omega = \\frac{\\pi}{2} \\approx 1.570796$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Term 1 ($\\omega - 1 \\approx 0.570796$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\theta_1 = 0.570796 \\times \\frac{\\pi}{2} \\approx 0.8966 \\text{ rad}"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\theta_1) = \\sin(0.8966 \\text{ rad}) \\approx 0.7812"
+      },
+      {
+       "t": "math",
+       "tex": "Y(0.5708) = \\frac{6 \\times 0.7812}{0.5708} \\approx 8.212"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Term 2 ($\\omega + 1 \\approx 2.570796$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\theta_2 = 2.570796 \\times \\frac{\\pi}{2} \\approx 4.0382 \\text{ rad}"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\theta_2) = \\sin(4.0382 \\text{ rad}) = \\sin(\\pi + 0.8966) = -\\sin(0.8966) \\approx -0.7812"
+      },
+      {
+       "t": "math",
+       "tex": "Y(2.5708) = \\frac{6 \\times (-0.7812)}{2.5708} \\approx -1.823"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Average the two terms:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\pi/2) = \\frac{8.212 + (-1.823)}{2} = \\frac{6.389}{2} \\approx 3.195 \\approx 3.20"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11469,58 +11451,57 @@ export default {
      "tex": "e^{-j\\omega_0 t} \\leftrightarrow 2\\pi\\delta(\\omega + \\omega_0) = \\delta(f + f_0)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Complex exponential transform derivation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall the inverse Fourier transform integral:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega) e^{j\\omega t} \\, d\\omega"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $X(\\omega) = 2\\pi \\delta(\\omega - \\omega_0)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} 2\\pi \\delta(\\omega - \\omega_0) e^{j\\omega t} \\, d\\omega = e^{j\\omega_0 t}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, by the uniqueness of the Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\omega_0 t} \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\delta(\\omega - \\omega_0)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Linear superposition across all harmonics:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\sum_{n=-\\infty}^\\infty c_n \\mathcal{FT}\\{e^{j n \\omega_0 t}\\} = \\sum_{n=-\\infty}^\\infty c_n [2\\pi \\delta(\\omega - n\\omega_0)] = 2\\pi \\sum_{n=-\\infty}^\\infty c_n \\delta(\\omega - n\\omega_0)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Complex exponential transform derivation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall the inverse Fourier transform integral:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega) e^{j\\omega t} \\, d\\omega"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $X(\\omega) = 2\\pi \\delta(\\omega - \\omega_0)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} 2\\pi \\delta(\\omega - \\omega_0) e^{j\\omega t} \\, d\\omega = e^{j\\omega_0 t}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, by the uniqueness of the Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\omega_0 t} \\stackrel{\\mathcal{FT}}{\\longleftrightarrow} 2\\pi \\delta(\\omega - \\omega_0)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Linear superposition across all harmonics:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $x(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j n \\omega_0 t}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\sum_{n=-\\infty}^\\infty c_n \\mathcal{FT}\\{e^{j n \\omega_0 t}\\} = \\sum_{n=-\\infty}^\\infty c_n [2\\pi \\delta(\\omega - n\\omega_0)] = 2\\pi \\sum_{n=-\\infty}^\\infty c_n \\delta(\\omega - n\\omega_0)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11555,18 +11536,17 @@ export default {
      "tex": "x(t) = \\sum_{n=-\\infty}^{\\infty} c_n e^{j n \\omega_0 t} \\longleftrightarrow X(\\omega) = 2\\pi \\sum_{n=-\\infty}^{\\infty} c_n \\delta(\\omega - n\\omega_0); \\quad X(f) = \\sum_{n=-\\infty}^{\\infty} c_n \\delta(f - n f_0)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**GATE EXAM CARDINAL RULE \u2014 THE $2\\pi$ FACTOR:**\n- When operating in **angular frequency $\\omega$ (rad/s)**:\n  Every impulse is scaled by **$2\\pi$**: $\\text{Area} = 2\\pi c_n$.\n- When operating in **cyclic frequency $f$ (Hz)**:\n  There is **NO $2\\pi$ factor**: $\\text{Area} = c_n$.\nForgetting the $2\\pi$ factor when converting between $c_n$ and $X(\\omega)$ is the single most common mistake in GATE Signals & Systems!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**GATE EXAM CARDINAL RULE \u2014 THE $2\\pi$ FACTOR:**\n- When operating in **angular frequency $\\omega$ (rad/s)**:\n  Every impulse is scaled by **$2\\pi$**: $\\text{Area} = 2\\pi c_n$.\n- When operating in **cyclic frequency $f$ (Hz)**:\n  There is **NO $2\\pi$ factor**: $\\text{Area} = c_n$.\nForgetting the $2\\pi$ factor when converting between $c_n$ and $X(\\omega)$ is the single most common mistake in GATE Signals & Systems!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11607,42 +11587,41 @@ export default {
      "tex": "\\boxed{X(\\omega) = \\frac{\\pi}{j}\\delta(\\omega - \\omega_0) - \\frac{\\pi}{j}\\delta(\\omega + \\omega_0) = -j\\pi\\delta(\\omega - \\omega_0) + j\\pi\\delta(\\omega + \\omega_0)}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Determine Exponential Fourier Series Coefficients:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sin(\\omega_0 t) = \\left(\\frac{1}{2j}\\right) e^{j\\omega_0 t} + \\left(-\\frac{1}{2j}\\right) e^{-j\\omega_0 t}"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{2j} = -j\\frac{1}{2}, \\qquad c_{-1} = -\\frac{1}{2j} = j\\frac{1}{2}, \\qquad c_n = 0 \\quad (|n| \\neq 1)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Apply CTFS-to-CTFT bridge:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 2\\pi [c_1 \\delta(\\omega - \\omega_0) + c_{-1}\\delta(\\omega + \\omega_0)] = 2\\pi \\left[ \\frac{1}{2j}\\delta(\\omega - \\omega_0) - \\frac{1}{2j}\\delta(\\omega + \\omega_0) \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{\\pi}{j} \\delta(\\omega - \\omega_0) - \\frac{\\pi}{j} \\delta(\\omega + \\omega_0) = -j\\pi \\delta(\\omega - \\omega_0) + j\\pi \\delta(\\omega + \\omega_0)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Determine Exponential Fourier Series Coefficients:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sin(\\omega_0 t) = \\left(\\frac{1}{2j}\\right) e^{j\\omega_0 t} + \\left(-\\frac{1}{2j}\\right) e^{-j\\omega_0 t}"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{2j} = -j\\frac{1}{2}, \\qquad c_{-1} = -\\frac{1}{2j} = j\\frac{1}{2}, \\qquad c_n = 0 \\quad (|n| \\neq 1)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Apply CTFS-to-CTFT bridge:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 2\\pi [c_1 \\delta(\\omega - \\omega_0) + c_{-1}\\delta(\\omega + \\omega_0)] = 2\\pi \\left[ \\frac{1}{2j}\\delta(\\omega - \\omega_0) - \\frac{1}{2j}\\delta(\\omega + \\omega_0) \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{\\pi}{j} \\delta(\\omega - \\omega_0) - \\frac{\\pi}{j} \\delta(\\omega + \\omega_0) = -j\\pi \\delta(\\omega - \\omega_0) + j\\pi \\delta(\\omega + \\omega_0)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11664,22 +11643,21 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "code",
-     "text": "CTFS Spectrum (Discrete c_n vs n):\n                   ^ c_n\n                   |\n                   |      ^ 1/(2j) = -j/2\n                   |      |\n   ----+-----------+------+-----------+------> n\n      -1           0     +1\n       |\n       v -1/(2j) = +j/2\n\nCTFT Spectrum (Continuous Dirac Impulses X(omega) vs omega):\n                   ^ X(omega)\n                   |\n                   |      ^ Area = pi/j = -j*pi\n                   |      |\n   ----+-----------+------+-----------+------> omega\n     -w0           0     +w0\n       |\n       v Area = -pi/j = +j*pi"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**ODD SYMMETRY CHECK:**\nThe time signal $x(t) = \\sin(\\omega_0 t)$ is real and odd. Therefore, its Fourier series coefficients $c_n$ must be purely imaginary and odd: $c_{-n} = -c_n = c_n^*$. Similarly, $X(\\omega)$ must be purely imaginary and odd: $X(-\\omega) = -X(\\omega) = X^*(\\omega)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "code",
+       "text": "CTFS Spectrum (Discrete c_n vs n):\n                   ^ c_n\n                   |\n                   |      ^ 1/(2j) = -j/2\n                   |      |\n   ----+-----------+------+-----------+------> n\n      -1           0     +1\n       |\n       v -1/(2j) = +j/2\n\nCTFT Spectrum (Continuous Dirac Impulses X(omega) vs omega):\n                   ^ X(omega)\n                   |\n                   |      ^ Area = pi/j = -j*pi\n                   |      |\n   ----+-----------+------+-----------+------> omega\n     -w0           0     +w0\n       |\n       v Area = -pi/j = +j*pi"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**ODD SYMMETRY CHECK:**\nThe time signal $x(t) = \\sin(\\omega_0 t)$ is real and odd. Therefore, its Fourier series coefficients $c_n$ must be purely imaginary and odd: $c_{-n} = -c_n = c_n^*$. Similarly, $X(\\omega)$ must be purely imaginary and odd: $X(-\\omega) = -X(\\omega) = X^*(\\omega)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11703,42 +11681,41 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Reading the discrete coefficient values from the chalkboard axes:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Harmonic $n = 0$ (DC component): $c_0 = 1$.",
-      "Positive harmonics: $c_1 = -2$, $c_2 = 0$, $c_3 = 1$.",
-      "Negative harmonics: $c_{-1} = -1$, $c_{-2} = -3$, $c_{-3} = 3$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Apply the master mapping:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Each discrete coefficient $c_n$ converts to a continuous Dirac delta impulse at $\\omega = n\\omega_0$ with area:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area} = 2\\pi c_n"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Reading the discrete coefficient values from the chalkboard axes:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Harmonic $n = 0$ (DC component): $c_0 = 1$.",
+        "Positive harmonics: $c_1 = -2$, $c_2 = 0$, $c_3 = 1$.",
+        "Negative harmonics: $c_{-1} = -1$, $c_{-2} = -3$, $c_{-3} = 3$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Apply the master mapping:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Each discrete coefficient $c_n$ converts to a continuous Dirac delta impulse at $\\omega = n\\omega_0$ with area:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area} = 2\\pi c_n"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11762,42 +11739,41 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "code",
-     "text": "                            ^ X(omega)\n                            |\n           ^ 6pi            |\n           |                |                                ^ 2pi\n           |                |        ^ 2pi                   |\n   --------+--------+-------+--------+-------+-------+-------+--------> omega\n         -3w0     -2w0     -w0       0      w0      2w0     3w0\n                    |       |                |\n                    |       v -2pi           |\n                    |                        v -4pi\n                    v -6pi"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Analytical CTFT Expression:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 6\\pi \\delta(\\omega + 3\\omega_0) - 6\\pi \\delta(\\omega + 2\\omega_0) - 2\\pi \\delta(\\omega + \\omega_0) + 2\\pi \\delta(\\omega) - 4\\pi \\delta(\\omega - \\omega_0) + 2\\pi \\delta(\\omega - 3\\omega_0)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Total Signal Power:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "By Parseval's Power Relation:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\sum_{n=-\\infty}^\\infty |c_n|^2 = |3|^2 + |-3|^2 + |-1|^2 + |1|^2 + |-2|^2 + |0|^2 + |1|^2 = 9 + 9 + 1 + 1 + 4 + 0 + 1 = 25 \\text{ W}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "code",
+       "text": "                            ^ X(omega)\n                            |\n           ^ 6pi            |\n           |                |                                ^ 2pi\n           |                |        ^ 2pi                   |\n   --------+--------+-------+--------+-------+-------+-------+--------> omega\n         -3w0     -2w0     -w0       0      w0      2w0     3w0\n                    |       |                |\n                    |       v -2pi           |\n                    |                        v -4pi\n                    v -6pi"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Analytical CTFT Expression:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 6\\pi \\delta(\\omega + 3\\omega_0) - 6\\pi \\delta(\\omega + 2\\omega_0) - 2\\pi \\delta(\\omega + \\omega_0) + 2\\pi \\delta(\\omega) - 4\\pi \\delta(\\omega - \\omega_0) + 2\\pi \\delta(\\omega - 3\\omega_0)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Total Signal Power:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "By Parseval's Power Relation:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\sum_{n=-\\infty}^\\infty |c_n|^2 = |3|^2 + |-3|^2 + |-1|^2 + |1|^2 + |-2|^2 + |0|^2 + |1|^2 = 9 + 9 + 1 + 1 + 4 + 0 + 1 = 25 \\text{ W}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11839,52 +11815,51 @@ export default {
      "tex": "\\boxed{X(\\omega) = \\pi \\delta(\\omega - \\omega_0) + \\pi \\delta(\\omega + \\omega_0)}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: FS Coefficients:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{2}, \\quad c_{-1} = \\frac{1}{2}, \\quad c_n = 0 \\quad (|n| \\neq 1)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: CTFT Synthesis:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 2\\pi [c_1 \\delta(\\omega - \\omega_0) + c_{-1}\\delta(\\omega + \\omega_0)] = \\pi \\delta(\\omega - \\omega_0) + \\pi \\delta(\\omega + \\omega_0)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Symmetry Properties:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x(t) = \\cos(\\omega_0 t)$ is real and even.",
-      "$X(\\omega)$ is purely real and even."
-     ]
-    },
-    {
-     "t": "code",
-     "text": "                   ^ X(omega)\n                   |\n           ^ pi    |    ^ pi\n           |       |    |\n   --------+-------+----+--------> omega\n         -w0       0   +w0"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: FS Coefficients:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{2}, \\quad c_{-1} = \\frac{1}{2}, \\quad c_n = 0 \\quad (|n| \\neq 1)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: CTFT Synthesis:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 2\\pi [c_1 \\delta(\\omega - \\omega_0) + c_{-1}\\delta(\\omega + \\omega_0)] = \\pi \\delta(\\omega - \\omega_0) + \\pi \\delta(\\omega + \\omega_0)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Symmetry Properties:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x(t) = \\cos(\\omega_0 t)$ is real and even.",
+        "$X(\\omega)$ is purely real and even."
+       ]
+      },
+      {
+       "t": "code",
+       "text": "                   ^ X(omega)\n                   |\n           ^ pi    |    ^ pi\n           |       |    |\n   --------+-------+----+--------> omega\n         -w0       0   +w0"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11922,109 +11897,108 @@ export default {
      "tex": "X(\\omega) = 2\\pi \\sum_{n=-\\infty}^\\infty c_n \\delta(\\omega - n\\omega_0)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1: Time Derivative Formulation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Between integer points, $\\frac{dx}{dt} = 1$.\n   At $t = k$, $x(k^+) - x(k^-) = 0 - 1 = -1 \\implies -\\delta(t - k)$."
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} = 1 - \\sum_{k=-\\infty}^\\infty \\delta(t - k)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2: Differentiation Property of CTFS:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t) \\stackrel{\\mathcal{FS}}{\\longleftrightarrow} c_n$. Then:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} \\stackrel{\\mathcal{FS}}{\\longleftrightarrow} j n \\omega_0 c_n"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3: Solve for $c_n$ for $n \\neq 0$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The constant term $+1$ affects ONLY the DC component ($n = 0$) and contributes nothing to harmonics $n \\neq 0$.\n   The periodic impulse train $-\\sum_{k=-\\infty}^\\infty \\delta(t - k)$ with period $T_0 = 1$ has Fourier series coefficients:"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = \\frac{1}{T_0} \\int_{0^-}^{1^-} [-\\delta(t)] e^{-j n \\omega_0 t} \\, dt = \\frac{-1}{1} = -1 \\quad \\forall n"
-    },
-    {
-     "t": "p",
-     "text": "Equating to the derivative property:"
-    },
-    {
-     "t": "math",
-     "tex": "j n \\omega_0 c_n = -1 \\implies c_n = \\frac{-1}{j n \\omega_0} = \\frac{j}{n \\omega_0}"
-    },
-    {
-     "t": "p",
-     "text": "With $\\omega_0 = 2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{j}{2\\pi n} \\quad (n \\neq 0)"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Step 4: DC Value Determination:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "As calculated on the chalkboard:"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{1}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Step 5: CTFT Synthesis:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 2\\pi \\sum_{n=-\\infty}^\\infty c_n \\delta(\\omega - n\\omega_0) = 2\\pi c_0 \\delta(\\omega) + 2\\pi \\sum_{n=-\\infty, n\\neq 0}^\\infty \\left( \\frac{j}{2\\pi n} \\right) \\delta(\\omega - 2\\pi n)"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(\\omega) = \\pi \\delta(\\omega) + \\sum_{n=-\\infty, n\\neq 0}^\\infty \\frac{j}{n} \\delta(\\omega - 2\\pi n)}"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE EXAM TRAP \u2014 DC IMPULSE OMISSION:**\nWhen using the differentiation method to find the Fourier transform of a periodic signal, differentiation destroys the DC component ($j(0)\\omega_0 c_0 = 0$). You MUST evaluate $c_0$ independently from the average area of $x(t)$, which contributes the central impulse $2\\pi c_0 \\delta(\\omega) = \\pi \\delta(\\omega)$ to $X(\\omega)$. Leaving out the DC impulse results in a completely wrong answer in GATE MSQ / NAT problems!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1: Time Derivative Formulation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Between integer points, $\\frac{dx}{dt} = 1$.\n   At $t = k$, $x(k^+) - x(k^-) = 0 - 1 = -1 \\implies -\\delta(t - k)$."
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} = 1 - \\sum_{k=-\\infty}^\\infty \\delta(t - k)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2: Differentiation Property of CTFS:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t) \\stackrel{\\mathcal{FS}}{\\longleftrightarrow} c_n$. Then:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} \\stackrel{\\mathcal{FS}}{\\longleftrightarrow} j n \\omega_0 c_n"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3: Solve for $c_n$ for $n \\neq 0$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The constant term $+1$ affects ONLY the DC component ($n = 0$) and contributes nothing to harmonics $n \\neq 0$.\n   The periodic impulse train $-\\sum_{k=-\\infty}^\\infty \\delta(t - k)$ with period $T_0 = 1$ has Fourier series coefficients:"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = \\frac{1}{T_0} \\int_{0^-}^{1^-} [-\\delta(t)] e^{-j n \\omega_0 t} \\, dt = \\frac{-1}{1} = -1 \\quad \\forall n"
+      },
+      {
+       "t": "p",
+       "text": "Equating to the derivative property:"
+      },
+      {
+       "t": "math",
+       "tex": "j n \\omega_0 c_n = -1 \\implies c_n = \\frac{-1}{j n \\omega_0} = \\frac{j}{n \\omega_0}"
+      },
+      {
+       "t": "p",
+       "text": "With $\\omega_0 = 2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{j}{2\\pi n} \\quad (n \\neq 0)"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Step 4: DC Value Determination:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "As calculated on the chalkboard:"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{1}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Step 5: CTFT Synthesis:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 2\\pi \\sum_{n=-\\infty}^\\infty c_n \\delta(\\omega - n\\omega_0) = 2\\pi c_0 \\delta(\\omega) + 2\\pi \\sum_{n=-\\infty, n\\neq 0}^\\infty \\left( \\frac{j}{2\\pi n} \\right) \\delta(\\omega - 2\\pi n)"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(\\omega) = \\pi \\delta(\\omega) + \\sum_{n=-\\infty, n\\neq 0}^\\infty \\frac{j}{n} \\delta(\\omega - 2\\pi n)}"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE EXAM TRAP \u2014 DC IMPULSE OMISSION:**\nWhen using the differentiation method to find the Fourier transform of a periodic signal, differentiation destroys the DC component ($j(0)\\omega_0 c_0 = 0$). You MUST evaluate $c_0$ independently from the average area of $x(t)$, which contributes the central impulse $2\\pi c_0 \\delta(\\omega) = \\pi \\delta(\\omega)$ to $X(\\omega)$. Leaving out the DC impulse results in a completely wrong answer in GATE MSQ / NAT problems!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -12165,7 +12139,7 @@ export default {
     {
      "t": "ul",
      "items": [
-      "Every single drill, numerical evaluation, and graphical question enclosed in `<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>...</details>`."
+      "Every single drill, numerical evaluation, and graphical question enclosed in `<b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b>...`."
      ]
     },
     {
@@ -13078,133 +13052,132 @@ export default {
      "text": "**Problem Statement:**\nA continuous-time periodic signal $x(t)$ with fundamental period $T_0 = 1$ is defined over one period $t \\in [0, 1)$ as $x(t) = t$. Find its exponential Fourier series coefficients $c_n$ and its continuous-time Fourier transform $X(\\omega)$ using the time-differentiation property."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Compute the First Derivative"
-    },
-    {
-     "t": "p",
-     "text": "Differentiating $x(t)$ over one period:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "On the continuous segment $t \\in (0, 1)$, the slope is $\\frac{d}{dt}(t) = 1$.",
-      "At the transition boundaries $t = k \\in \\mathbb{Z}$, $x(t)$ experiences a negative step discontinuity jumping from $x(1^-) = 1$ down to $x(1^+) = 0$. The step change is $\\Delta x = 0 - 1 = -1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore, the derivative $\\frac{dx(t)}{dt}$ consists of a constant DC baseline of $+1$ and an infinite train of negative Dirac impulses of area $-1$ located at integer multiples of $T_0 = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\frac{dx(t)}{dt} = 1 - \\sum_{k=-\\infty}^{+\\infty} \\delta(t - k)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Relate Fourier Series Coefficients via Differentiation"
-    },
-    {
-     "t": "p",
-     "text": "Let $c_n$ be the CTFS coefficients of $x(t)$, and $d_n$ be the CTFS coefficients of $y(t) = \\frac{dx(t)}{dt}$.\nBy the time-differentiation property of CTFS:"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = j n \\omega_0 c_n = j 2\\pi n c_n \\quad (\\text{since } \\omega_0 = 2\\pi / T_0 = 2\\pi)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Compute CTFS Coefficients $d_n$ of the Derivative"
-    },
-    {
-     "t": "p",
-     "text": "The derivative $y(t)$ is composed of:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "A constant DC term $1$, which contributes only to the $n=0$ coefficient.",
-      "An impulse train $-\\sum_{k} \\delta(t - k)$ with period $T_0 = 1$ and strength $-1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For any periodic impulse train $g(t) = A \\sum_k \\delta(t - k T_0)$, its CTFS coefficients are identical for all $n$:"
-    },
-    {
-     "t": "math",
-     "tex": "g_n = \\frac{A}{T_0} = \\frac{-1}{1} = -1 \\quad \\forall n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "For $n \\ne 0$, the constant baseline $1$ has zero harmonic contribution. Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = -1 \\quad \\text{for all } n \\ne 0"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Solve for $c_n$ ($n \\ne 0$)"
-    },
-    {
-     "t": "p",
-     "text": "Equating $d_n = j 2\\pi n c_n$:"
-    },
-    {
-     "t": "math",
-     "tex": "j 2\\pi n c_n = -1 \\implies c_n = \\frac{-1}{j 2\\pi n} = \\frac{j}{2\\pi n} \\quad (n \\ne 0)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Evaluate the DC Component $c_0$ Independently"
-    },
-    {
-     "t": "p",
-     "text": "The differentiation formula cannot evaluate $c_0$ because $j 2\\pi (0) c_0 = 0 \\cdot c_0 = 0$.\nThe DC component must be calculated directly from the area under one period:"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{1}{T_0} \\int_{0}^{T_0} x(t) \\, dt = \\frac{1}{1} \\int_{0}^{1} t \\, dt = \\left[ \\frac{t^2}{2} \\right]_0^1 = \\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the complete piecewise expression for $c_n$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_n = \\begin{cases} \\frac{1}{2}, & n = 0 \\\\ \\frac{j}{2\\pi n}, & n \\ne 0 \\end{cases}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 6: Synthesize the CTFT $X(\\omega)$"
-    },
-    {
-     "t": "p",
-     "text": "Using the periodic CTFT formula $X(\\omega) = 2\\pi \\sum_{n=-\\infty}^\\infty c_n \\delta(\\omega - n\\omega_0)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 2\\pi \\left[ \\frac{1}{2}\\delta(\\omega) + \\sum_{n=-\\infty, n \\ne 0}^{+\\infty} \\frac{j}{2\\pi n} \\delta(\\omega - 2\\pi n) \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(\\omega) = \\pi \\delta(\\omega) + \\sum_{n=-\\infty, n \\ne 0}^{+\\infty} \\frac{j}{n} \\delta(\\omega - 2\\pi n)}"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Trap**:\nForgetting the impulse $\\pi \\delta(\\omega)$ at $\\omega = 0$ is the most frequent student error. Differentiation destroys DC information; the DC coefficient must always be retrieved by direct area integration!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Compute the First Derivative"
+      },
+      {
+       "t": "p",
+       "text": "Differentiating $x(t)$ over one period:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "On the continuous segment $t \\in (0, 1)$, the slope is $\\frac{d}{dt}(t) = 1$.",
+        "At the transition boundaries $t = k \\in \\mathbb{Z}$, $x(t)$ experiences a negative step discontinuity jumping from $x(1^-) = 1$ down to $x(1^+) = 0$. The step change is $\\Delta x = 0 - 1 = -1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore, the derivative $\\frac{dx(t)}{dt}$ consists of a constant DC baseline of $+1$ and an infinite train of negative Dirac impulses of area $-1$ located at integer multiples of $T_0 = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\frac{dx(t)}{dt} = 1 - \\sum_{k=-\\infty}^{+\\infty} \\delta(t - k)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Relate Fourier Series Coefficients via Differentiation"
+      },
+      {
+       "t": "p",
+       "text": "Let $c_n$ be the CTFS coefficients of $x(t)$, and $d_n$ be the CTFS coefficients of $y(t) = \\frac{dx(t)}{dt}$.\nBy the time-differentiation property of CTFS:"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = j n \\omega_0 c_n = j 2\\pi n c_n \\quad (\\text{since } \\omega_0 = 2\\pi / T_0 = 2\\pi)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Compute CTFS Coefficients $d_n$ of the Derivative"
+      },
+      {
+       "t": "p",
+       "text": "The derivative $y(t)$ is composed of:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "A constant DC term $1$, which contributes only to the $n=0$ coefficient.",
+        "An impulse train $-\\sum_{k} \\delta(t - k)$ with period $T_0 = 1$ and strength $-1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For any periodic impulse train $g(t) = A \\sum_k \\delta(t - k T_0)$, its CTFS coefficients are identical for all $n$:"
+      },
+      {
+       "t": "math",
+       "tex": "g_n = \\frac{A}{T_0} = \\frac{-1}{1} = -1 \\quad \\forall n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "For $n \\ne 0$, the constant baseline $1$ has zero harmonic contribution. Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = -1 \\quad \\text{for all } n \\ne 0"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Solve for $c_n$ ($n \\ne 0$)"
+      },
+      {
+       "t": "p",
+       "text": "Equating $d_n = j 2\\pi n c_n$:"
+      },
+      {
+       "t": "math",
+       "tex": "j 2\\pi n c_n = -1 \\implies c_n = \\frac{-1}{j 2\\pi n} = \\frac{j}{2\\pi n} \\quad (n \\ne 0)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Evaluate the DC Component $c_0$ Independently"
+      },
+      {
+       "t": "p",
+       "text": "The differentiation formula cannot evaluate $c_0$ because $j 2\\pi (0) c_0 = 0 \\cdot c_0 = 0$.\nThe DC component must be calculated directly from the area under one period:"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{1}{T_0} \\int_{0}^{T_0} x(t) \\, dt = \\frac{1}{1} \\int_{0}^{1} t \\, dt = \\left[ \\frac{t^2}{2} \\right]_0^1 = \\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the complete piecewise expression for $c_n$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_n = \\begin{cases} \\frac{1}{2}, & n = 0 \\\\ \\frac{j}{2\\pi n}, & n \\ne 0 \\end{cases}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 6: Synthesize the CTFT $X(\\omega)$"
+      },
+      {
+       "t": "p",
+       "text": "Using the periodic CTFT formula $X(\\omega) = 2\\pi \\sum_{n=-\\infty}^\\infty c_n \\delta(\\omega - n\\omega_0)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 2\\pi \\left[ \\frac{1}{2}\\delta(\\omega) + \\sum_{n=-\\infty, n \\ne 0}^{+\\infty} \\frac{j}{2\\pi n} \\delta(\\omega - 2\\pi n) \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(\\omega) = \\pi \\delta(\\omega) + \\sum_{n=-\\infty, n \\ne 0}^{+\\infty} \\frac{j}{n} \\delta(\\omega - 2\\pi n)}"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Trap**:\nForgetting the impulse $\\pi \\delta(\\omega)$ at $\\omega = 0$ is the most frequent student error. Differentiation destroys DC information; the DC coefficient must always be retrieved by direct area integration!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13223,145 +13196,144 @@ export default {
      "text": "Find its fundamental period $T_0$, fundamental frequency $\\omega_0$, exponential Fourier series coefficients $c_n$, and continuous-time Fourier transform $X(\\omega)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Expand and Plot the Waveform"
-    },
-    {
-     "t": "p",
-     "text": "Expanding the summation:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\dots + \\delta(t+1) - \\delta(t+1/2) + \\delta(t) - \\delta(t-1/2) + \\delta(t-1) - \\delta(t-3/2) + \\delta(t-2) - \\dots"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At integer multiples $t = k \\in \\mathbb{Z}$ ($n = 2k$ is even): $(-1)^{2k} = +1 \\implies +\\delta(t - k)$.",
-      "At half-integer multiples $t = k + \\frac{1}{2}$ ($n = 2k+1$ is odd): $(-1)^{2k+1} = -1 \\implies -\\delta\\left(t - \\left(k + \\frac{1}{2}\\right)\\right)$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Determine Fundamental Period $T_0$"
-    },
-    {
-     "t": "p",
-     "text": "The distance between consecutive impulses is $\\Delta t = 1/2$. However, the sign alternates: $+1, -1, +1, -1, \\dots$.\nA full cycle of the pattern requires both a positive impulse and a negative impulse:"
-    },
-    {
-     "t": "math",
-     "tex": "T_0 = 2 \\times \\frac{1}{2} = 1 \\text{ second}"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{1} = 2\\pi \\text{ rad/s}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Decompose into Standard Periodic Impulse Trains"
-    },
-    {
-     "t": "p",
-     "text": "Decompose $x(t)$ into two sub-trains with period $T_0 = 1$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$x_1(t) = \\sum_{k=-\\infty}^{+\\infty} \\delta(t - k)$ (impulse train at integers, strength $+1$)",
-      "$x_2(t) = -\\sum_{k=-\\infty}^{+\\infty} \\delta\\left(t - k - \\frac{1}{2}\\right)$ (impulse train shifted by $t_0 = 1/2$, strength $-1$)"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = x_1(t) + x_2(t)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Compute CTFS Coefficients via Time Shifting"
-    },
-    {
-     "t": "p",
-     "text": "For $x_1(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{n}^{(1)} = \\frac{1}{T_0} = \\frac{1}{1} = 1 \\quad \\forall n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "For $x_2(t)$, applying the time-shift theorem ($t_0 = T_0 / 2 = 1/2$):"
-    },
-    {
-     "t": "math",
-     "tex": "c_{n}^{(2)} = -\\frac{1}{T_0} e^{-j n \\omega_0 (1/2)} = -1 \\cdot e^{-j n (2\\pi)(1/2)} = -e^{-j n \\pi} = -(-1)^n"
-    },
-    {
-     "t": "p",
-     "text": "By linearity:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = c_{n}^{(1)} + c_{n}^{(2)} = 1 - (-1)^n"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Harmonic Partitioning"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n$ even ($n = 0, \\pm 2, \\pm 4, \\dots$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = 1 - (+1) = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n$ odd ($n = \\pm 1, \\pm 3, \\pm 5, \\dots$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = 1 - (-1) = 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_n = \\begin{cases} 2, & n \\text{ is odd} \\\\ 0, & n \\text{ is even} \\end{cases}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 6: Synthesize CTFT $X(\\omega)$"
-    },
-    {
-     "t": "p",
-     "text": "Using $X(\\omega) = 2\\pi \\sum_{n=-\\infty}^\\infty c_n \\delta(\\omega - n\\omega_0)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 2\\pi \\sum_{n \\text{ odd}} 2 \\, \\delta(\\omega - 2\\pi n) = 4\\pi \\sum_{k=-\\infty}^{+\\infty} \\delta(\\omega - 2\\pi(2k+1))"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(\\omega) = 4\\pi \\sum_{k=-\\infty}^{+\\infty} \\delta[\\omega - 2(2k+1)\\pi]}"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**Quick Verification via Half-Wave Symmetry**:\nNotice that shifting $x(t)$ by half a period $T_0/2 = 1/2$ gives $x(t + 1/2) = -x(t)$.\nThis is the textbook definition of **Half-Wave Symmetry (HWS)**.\nAny signal with HWS has strictly zero even harmonics ($c_{\\text{even}} = 0$). Here, $c_{\\text{even}} = 0$, confirming our result instantly!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Expand and Plot the Waveform"
+      },
+      {
+       "t": "p",
+       "text": "Expanding the summation:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\dots + \\delta(t+1) - \\delta(t+1/2) + \\delta(t) - \\delta(t-1/2) + \\delta(t-1) - \\delta(t-3/2) + \\delta(t-2) - \\dots"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At integer multiples $t = k \\in \\mathbb{Z}$ ($n = 2k$ is even): $(-1)^{2k} = +1 \\implies +\\delta(t - k)$.",
+        "At half-integer multiples $t = k + \\frac{1}{2}$ ($n = 2k+1$ is odd): $(-1)^{2k+1} = -1 \\implies -\\delta\\left(t - \\left(k + \\frac{1}{2}\\right)\\right)$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Determine Fundamental Period $T_0$"
+      },
+      {
+       "t": "p",
+       "text": "The distance between consecutive impulses is $\\Delta t = 1/2$. However, the sign alternates: $+1, -1, +1, -1, \\dots$.\nA full cycle of the pattern requires both a positive impulse and a negative impulse:"
+      },
+      {
+       "t": "math",
+       "tex": "T_0 = 2 \\times \\frac{1}{2} = 1 \\text{ second}"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{1} = 2\\pi \\text{ rad/s}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Decompose into Standard Periodic Impulse Trains"
+      },
+      {
+       "t": "p",
+       "text": "Decompose $x(t)$ into two sub-trains with period $T_0 = 1$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$x_1(t) = \\sum_{k=-\\infty}^{+\\infty} \\delta(t - k)$ (impulse train at integers, strength $+1$)",
+        "$x_2(t) = -\\sum_{k=-\\infty}^{+\\infty} \\delta\\left(t - k - \\frac{1}{2}\\right)$ (impulse train shifted by $t_0 = 1/2$, strength $-1$)"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = x_1(t) + x_2(t)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Compute CTFS Coefficients via Time Shifting"
+      },
+      {
+       "t": "p",
+       "text": "For $x_1(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{n}^{(1)} = \\frac{1}{T_0} = \\frac{1}{1} = 1 \\quad \\forall n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "For $x_2(t)$, applying the time-shift theorem ($t_0 = T_0 / 2 = 1/2$):"
+      },
+      {
+       "t": "math",
+       "tex": "c_{n}^{(2)} = -\\frac{1}{T_0} e^{-j n \\omega_0 (1/2)} = -1 \\cdot e^{-j n (2\\pi)(1/2)} = -e^{-j n \\pi} = -(-1)^n"
+      },
+      {
+       "t": "p",
+       "text": "By linearity:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = c_{n}^{(1)} + c_{n}^{(2)} = 1 - (-1)^n"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Harmonic Partitioning"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n$ even ($n = 0, \\pm 2, \\pm 4, \\dots$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = 1 - (+1) = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n$ odd ($n = \\pm 1, \\pm 3, \\pm 5, \\dots$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = 1 - (-1) = 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_n = \\begin{cases} 2, & n \\text{ is odd} \\\\ 0, & n \\text{ is even} \\end{cases}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 6: Synthesize CTFT $X(\\omega)$"
+      },
+      {
+       "t": "p",
+       "text": "Using $X(\\omega) = 2\\pi \\sum_{n=-\\infty}^\\infty c_n \\delta(\\omega - n\\omega_0)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 2\\pi \\sum_{n \\text{ odd}} 2 \\, \\delta(\\omega - 2\\pi n) = 4\\pi \\sum_{k=-\\infty}^{+\\infty} \\delta(\\omega - 2\\pi(2k+1))"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(\\omega) = 4\\pi \\sum_{k=-\\infty}^{+\\infty} \\delta[\\omega - 2(2k+1)\\pi]}"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**Quick Verification via Half-Wave Symmetry**:\nNotice that shifting $x(t)$ by half a period $T_0/2 = 1/2$ gives $x(t + 1/2) = -x(t)$.\nThis is the textbook definition of **Half-Wave Symmetry (HWS)**.\nAny signal with HWS has strictly zero even harmonics ($c_{\\text{even}} = 0$). Here, $c_{\\text{even}} = 0$, confirming our result instantly!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13380,120 +13352,119 @@ export default {
      "text": "Find the general expression for $c_n$ using the continuous-time Fourier transform of a single period. Determine all absent harmonics when (i) $\\alpha = 4$, and (ii) $\\alpha = 3$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: CTFT of the Isolated Single Period"
-    },
-    {
-     "t": "p",
-     "text": "The isolated single period centered at the origin has total duration $\\tau = 2 \\times \\frac{T_0}{\\alpha} = \\frac{2T_0}{\\alpha}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_{T_0}(t) = A \\, \\text{rect}\\left(\\frac{t}{2T_0 / \\alpha}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "The CTFT of $A \\, \\text{rect}(t / \\tau)$ is $A \\tau \\, \\text{Sa}\\left(\\frac{\\omega \\tau}{2}\\right)$.\nHere $\\tau = \\frac{2T_0}{\\alpha}$, so:"
-    },
-    {
-     "t": "math",
-     "tex": "X_{T_0}(\\omega) = A \\left(\\frac{2T_0}{\\alpha}\\right) \\text{Sa}\\left( \\frac{\\omega}{2} \\cdot \\frac{2T_0}{\\alpha} \\right) = \\frac{2A T_0}{\\alpha} \\text{Sa}\\left(\\frac{\\omega T_0}{\\alpha}\\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Sampling at Harmonic Frequencies"
-    },
-    {
-     "t": "p",
-     "text": "Using the Master Bridging Identity $c_n = \\frac{1}{T_0} X_{T_0}(n\\omega_0)$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} \\left[ \\frac{2A T_0}{\\alpha} \\text{Sa}\\left(\\frac{n \\omega_0 T_0}{\\alpha}\\right) \\right] = \\frac{2A}{\\alpha} \\text{Sa}\\left(\\frac{n \\omega_0 T_0}{\\alpha}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\omega_0 T_0 = 2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_n = \\frac{2A}{\\alpha} \\text{Sa}\\left(\\frac{2n\\pi}{\\alpha}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Harmonic Null Condition"
-    },
-    {
-     "t": "p",
-     "text": "The sampling function $\\text{Sa}(\\theta) = 0$ if and only if $\\theta = k\\pi$ for integer $k \\ne 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2n\\pi}{\\alpha} = k\\pi \\implies n = \\frac{k \\alpha}{2}, \\quad k \\in \\mathbb{Z} \\setminus \\{0\\}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Case (i) $\\alpha = 4$"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $\\alpha = 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "n = \\frac{4k}{2} = 2k, \\quad k \\in \\mathbb{Z} \\setminus \\{0\\}"
-    },
-    {
-     "t": "p",
-     "text": "Harmonics for which $c_n = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "n = \\pm 2, \\pm 4, \\pm 6, \\pm 8, \\dots"
-    },
-    {
-     "t": "p",
-     "text": "**Result:** All even harmonics are strictly absent ($c_n = 0$ for $n = 2k$)."
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Case (ii) $\\alpha = 3$"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $\\alpha = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2n\\pi}{3} = k\\pi \\implies 2n = 3k"
-    },
-    {
-     "t": "p",
-     "text": "For $n$ to be an integer, $3k$ must be even, meaning $k$ must be an even integer $k = 2m$ ($m \\ne 0$):"
-    },
-    {
-     "t": "math",
-     "tex": "2n = 3(2m) = 6m \\implies n = 3m, \\quad m \\in \\mathbb{Z} \\setminus \\{0\\}"
-    },
-    {
-     "t": "p",
-     "text": "Harmonics for which $c_n = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "n = \\pm 3, \\pm 6, \\pm 9, \\pm 12, \\dots"
-    },
-    {
-     "t": "p",
-     "text": "**Result:** All triplen harmonics (integer multiples of 3) are strictly absent ($c_n = 0$ for $n = 3m$)."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: CTFT of the Isolated Single Period"
+      },
+      {
+       "t": "p",
+       "text": "The isolated single period centered at the origin has total duration $\\tau = 2 \\times \\frac{T_0}{\\alpha} = \\frac{2T_0}{\\alpha}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_{T_0}(t) = A \\, \\text{rect}\\left(\\frac{t}{2T_0 / \\alpha}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "The CTFT of $A \\, \\text{rect}(t / \\tau)$ is $A \\tau \\, \\text{Sa}\\left(\\frac{\\omega \\tau}{2}\\right)$.\nHere $\\tau = \\frac{2T_0}{\\alpha}$, so:"
+      },
+      {
+       "t": "math",
+       "tex": "X_{T_0}(\\omega) = A \\left(\\frac{2T_0}{\\alpha}\\right) \\text{Sa}\\left( \\frac{\\omega}{2} \\cdot \\frac{2T_0}{\\alpha} \\right) = \\frac{2A T_0}{\\alpha} \\text{Sa}\\left(\\frac{\\omega T_0}{\\alpha}\\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Sampling at Harmonic Frequencies"
+      },
+      {
+       "t": "p",
+       "text": "Using the Master Bridging Identity $c_n = \\frac{1}{T_0} X_{T_0}(n\\omega_0)$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} \\left[ \\frac{2A T_0}{\\alpha} \\text{Sa}\\left(\\frac{n \\omega_0 T_0}{\\alpha}\\right) \\right] = \\frac{2A}{\\alpha} \\text{Sa}\\left(\\frac{n \\omega_0 T_0}{\\alpha}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\omega_0 T_0 = 2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_n = \\frac{2A}{\\alpha} \\text{Sa}\\left(\\frac{2n\\pi}{\\alpha}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Harmonic Null Condition"
+      },
+      {
+       "t": "p",
+       "text": "The sampling function $\\text{Sa}(\\theta) = 0$ if and only if $\\theta = k\\pi$ for integer $k \\ne 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2n\\pi}{\\alpha} = k\\pi \\implies n = \\frac{k \\alpha}{2}, \\quad k \\in \\mathbb{Z} \\setminus \\{0\\}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Case (i) $\\alpha = 4$"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $\\alpha = 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "n = \\frac{4k}{2} = 2k, \\quad k \\in \\mathbb{Z} \\setminus \\{0\\}"
+      },
+      {
+       "t": "p",
+       "text": "Harmonics for which $c_n = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "n = \\pm 2, \\pm 4, \\pm 6, \\pm 8, \\dots"
+      },
+      {
+       "t": "p",
+       "text": "**Result:** All even harmonics are strictly absent ($c_n = 0$ for $n = 2k$)."
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Case (ii) $\\alpha = 3$"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $\\alpha = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2n\\pi}{3} = k\\pi \\implies 2n = 3k"
+      },
+      {
+       "t": "p",
+       "text": "For $n$ to be an integer, $3k$ must be even, meaning $k$ must be an even integer $k = 2m$ ($m \\ne 0$):"
+      },
+      {
+       "t": "math",
+       "tex": "2n = 3(2m) = 6m \\implies n = 3m, \\quad m \\in \\mathbb{Z} \\setminus \\{0\\}"
+      },
+      {
+       "t": "p",
+       "text": "Harmonics for which $c_n = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "n = \\pm 3, \\pm 6, \\pm 9, \\pm 12, \\dots"
+      },
+      {
+       "t": "p",
+       "text": "**Result:** All triplen harmonics (integer multiples of 3) are strictly absent ($c_n = 0$ for $n = 3m$)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13515,139 +13486,138 @@ export default {
      "text": "Determine the absent harmonics in $x(t)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Level-Shift Decomposition"
-    },
-    {
-     "t": "p",
-     "text": "Direct integration of this piecewise waveform is tedious. Instead, apply a DC level shift:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t) + A"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating $y(t)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "On $[2T_0/3, T_0]$: $y(t) = -A + A = 0$.",
-      "On $[0, 2T_0/3]$: the triangular pulse now sits on a zero baseline ($y = 0$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Its peak value becomes $A + A = 2A$ at $t = T_0/3$.\n  Its base duration is $2T_0/3$, which means its semi-width is $\\tau_0 = T_0/3$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Represent the Shifted Single Period"
-    },
-    {
-     "t": "p",
-     "text": "The isolated single period of $y(t)$ is a standard triangle centered at $t_c = T_0/3$:"
-    },
-    {
-     "t": "math",
-     "tex": "y_{T_0}(t) = 2A \\, \\text{tri}\\left( \\frac{t - T_0/3}{T_0/3} \\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: CTFT of the Isolated Triangle"
-    },
-    {
-     "t": "p",
-     "text": "Recall that for a symmetric triangle centered at the origin:"
-    },
-    {
-     "t": "math",
-     "tex": "H \\, \\text{tri}\\left(\\frac{t}{\\tau_0}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} H \\tau_0 \\, \\text{Sa}^2\\left(\\frac{\\omega \\tau_0}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Here $H = 2A$ and $\\tau_0 = T_0/3$:"
-    },
-    {
-     "t": "math",
-     "tex": "2A \\, \\text{tri}\\left(\\frac{t}{T_0/3}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} (2A)\\left(\\frac{T_0}{3}\\right) \\text{Sa}^2\\left(\\frac{\\omega T_0}{6}\\right) = \\frac{2A T_0}{3} \\text{Sa}^2\\left(\\frac{\\omega T_0}{6}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Applying the time-shift property for shift $t_c = T_0/3$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{T_0}(\\omega) = \\frac{2A T_0}{3} \\text{Sa}^2\\left(\\frac{\\omega T_0}{6}\\right) e^{-j\\omega T_0/3}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Compute CTFS Coefficients $d_n$ of $y(t)$"
-    },
-    {
-     "t": "p",
-     "text": "Using $d_n = \\frac{1}{T_0} Y_{T_0}(n\\omega_0)$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_n = \\frac{1}{T_0} \\left[ \\frac{2A T_0}{3} \\text{Sa}^2\\left(\\frac{n\\omega_0 T_0}{6}\\right) e^{-j n \\omega_0 T_0/3} \\right] = \\frac{2A}{3} \\text{Sa}^2\\left(\\frac{2n\\pi}{6}\\right) e^{-j 2n\\pi/3} = \\frac{2A}{3} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) e^{-j 2n\\pi/3}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Relate $d_n$ to $c_n$ of the Original Signal $x(t)$"
-    },
-    {
-     "t": "p",
-     "text": "Since $y(t) = x(t) + A$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_0 = c_0 + A \\implies c_0 = d_0 - A"
-    },
-    {
-     "t": "p",
-     "text": "For all non-zero harmonics $n \\ne 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = d_n = \\frac{2A}{3} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) e^{-j 2n\\pi/3}"
-    },
-    {
-     "t": "p",
-     "text": "The DC shift does **not** alter any AC harmonic coefficients!"
-    },
-    {
-     "t": "h4",
-     "text": "Step 6: Identify Harmonic Nulls"
-    },
-    {
-     "t": "p",
-     "text": "$c_n = 0$ when $\\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{n\\pi}{3} = k\\pi \\implies \\boxed{n = 3k, \\quad k \\in \\mathbb{Z} \\setminus \\{0\\}}"
-    },
-    {
-     "t": "p",
-     "text": "Absent harmonics are:"
-    },
-    {
-     "t": "math",
-     "tex": "n = \\pm 3, \\pm 6, \\pm 9, \\pm 12, \\dots"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:** All multiples of 3 are absent from the Fourier spectrum of $x(t)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Level-Shift Decomposition"
+      },
+      {
+       "t": "p",
+       "text": "Direct integration of this piecewise waveform is tedious. Instead, apply a DC level shift:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t) + A"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating $y(t)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "On $[2T_0/3, T_0]$: $y(t) = -A + A = 0$.",
+        "On $[0, 2T_0/3]$: the triangular pulse now sits on a zero baseline ($y = 0$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Its peak value becomes $A + A = 2A$ at $t = T_0/3$.\n  Its base duration is $2T_0/3$, which means its semi-width is $\\tau_0 = T_0/3$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Represent the Shifted Single Period"
+      },
+      {
+       "t": "p",
+       "text": "The isolated single period of $y(t)$ is a standard triangle centered at $t_c = T_0/3$:"
+      },
+      {
+       "t": "math",
+       "tex": "y_{T_0}(t) = 2A \\, \\text{tri}\\left( \\frac{t - T_0/3}{T_0/3} \\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: CTFT of the Isolated Triangle"
+      },
+      {
+       "t": "p",
+       "text": "Recall that for a symmetric triangle centered at the origin:"
+      },
+      {
+       "t": "math",
+       "tex": "H \\, \\text{tri}\\left(\\frac{t}{\\tau_0}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} H \\tau_0 \\, \\text{Sa}^2\\left(\\frac{\\omega \\tau_0}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Here $H = 2A$ and $\\tau_0 = T_0/3$:"
+      },
+      {
+       "t": "math",
+       "tex": "2A \\, \\text{tri}\\left(\\frac{t}{T_0/3}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} (2A)\\left(\\frac{T_0}{3}\\right) \\text{Sa}^2\\left(\\frac{\\omega T_0}{6}\\right) = \\frac{2A T_0}{3} \\text{Sa}^2\\left(\\frac{\\omega T_0}{6}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Applying the time-shift property for shift $t_c = T_0/3$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{T_0}(\\omega) = \\frac{2A T_0}{3} \\text{Sa}^2\\left(\\frac{\\omega T_0}{6}\\right) e^{-j\\omega T_0/3}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Compute CTFS Coefficients $d_n$ of $y(t)$"
+      },
+      {
+       "t": "p",
+       "text": "Using $d_n = \\frac{1}{T_0} Y_{T_0}(n\\omega_0)$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_n = \\frac{1}{T_0} \\left[ \\frac{2A T_0}{3} \\text{Sa}^2\\left(\\frac{n\\omega_0 T_0}{6}\\right) e^{-j n \\omega_0 T_0/3} \\right] = \\frac{2A}{3} \\text{Sa}^2\\left(\\frac{2n\\pi}{6}\\right) e^{-j 2n\\pi/3} = \\frac{2A}{3} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) e^{-j 2n\\pi/3}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Relate $d_n$ to $c_n$ of the Original Signal $x(t)$"
+      },
+      {
+       "t": "p",
+       "text": "Since $y(t) = x(t) + A$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_0 = c_0 + A \\implies c_0 = d_0 - A"
+      },
+      {
+       "t": "p",
+       "text": "For all non-zero harmonics $n \\ne 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = d_n = \\frac{2A}{3} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) e^{-j 2n\\pi/3}"
+      },
+      {
+       "t": "p",
+       "text": "The DC shift does **not** alter any AC harmonic coefficients!"
+      },
+      {
+       "t": "h4",
+       "text": "Step 6: Identify Harmonic Nulls"
+      },
+      {
+       "t": "p",
+       "text": "$c_n = 0$ when $\\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{n\\pi}{3} = k\\pi \\implies \\boxed{n = 3k, \\quad k \\in \\mathbb{Z} \\setminus \\{0\\}}"
+      },
+      {
+       "t": "p",
+       "text": "Absent harmonics are:"
+      },
+      {
+       "t": "math",
+       "tex": "n = \\pm 3, \\pm 6, \\pm 9, \\pm 12, \\dots"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:** All multiples of 3 are absent from the Fourier spectrum of $x(t)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13662,134 +13632,133 @@ export default {
      "tex": "\\frac{P_{7\\text{th}}}{P_{5\\text{th}}} = ?"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Definition of Harmonic Power"
-    },
-    {
-     "t": "p",
-     "text": "The total power in the $n$-th harmonic of a real periodic signal includes both positive and negative frequency components:"
-    },
-    {
-     "t": "math",
-     "tex": "P_{n\\text{th}} = |c_n|^2 + |c_{-n}|^2"
-    },
-    {
-     "t": "p",
-     "text": "Since $x(t)$ is real, $|c_{-n}| = |c_n|$. Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "P_{n\\text{th}} = 2|c_n|^2"
-    },
-    {
-     "t": "p",
-     "text": "The ratio of powers between the 7th and 5th harmonics is simply:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{P_{7\\text{th}}}{P_{5\\text{th}}} = \\frac{2|c_7|^2}{2|c_5|^2} = \\frac{|c_7|^2}{|c_5|^2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Determine $c_n$ via Level Shift"
-    },
-    {
-     "t": "p",
-     "text": "Shift $x(t)$ upward by $A$: $y(t) = x(t) + A$.\n$y(t)$ is a unipolar pulse train with:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Amplitude $= 2A$",
-      "Pulse width $\\tau = 1$",
-      "Fundamental period $T_0 = 2 \\implies \\omega_0 = \\frac{2\\pi}{2} = \\pi$",
-      "Center of pulse $= t_0 = 1/2$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The isolated pulse is $y_0(t) = 2A \\, \\text{rect}\\left(\\frac{t - 1/2}{1}\\right)$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_0(\\omega) = 2A \\, \\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j\\omega / 2}"
-    },
-    {
-     "t": "p",
-     "text": "The CTFS coefficients for $n \\ne 0$ are:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} Y_0(n\\omega_0) = \\frac{1}{2} \\left[ 2A \\, \\text{Sa}\\left(\\frac{n\\pi}{2}\\right) e^{-j n\\pi / 2} \\right] = A \\, \\text{Sa}\\left(\\frac{n\\pi}{2}\\right) e^{-j n\\pi / 2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Compute the Magnitude $|c_n|$"
-    },
-    {
-     "t": "math",
-     "tex": "|c_n| = |A| \\left| \\text{Sa}\\left(\\frac{n\\pi}{2}\\right) \\right| = |A| \\left| \\frac{\\sin(n\\pi / 2)}{n\\pi / 2} \\right|"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For even $n$: $\\sin(n\\pi/2) = 0 \\implies |c_n| = 0$.",
-      "For odd $n$: $|\\sin(n\\pi/2)| = 1$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|c_n| = \\frac{|A|}{n\\pi / 2} = \\frac{2|A|}{\\pi} \\cdot \\frac{1}{n} \\quad (n \\text{ odd})"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Asymptotic Power Law & Ratio Computation"
-    },
-    {
-     "t": "p",
-     "text": "Since $|c_n| \\propto \\frac{1}{n}$ for odd harmonics, the harmonic power scales as:"
-    },
-    {
-     "t": "math",
-     "tex": "|c_n|^2 \\propto \\frac{1}{n^2}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating for $n = 7$ and $n = 5$:"
-    },
-    {
-     "t": "math",
-     "tex": "|c_7| = \\frac{2|A|}{7\\pi} \\implies |c_7|^2 = \\frac{4A^2}{49\\pi^2}"
-    },
-    {
-     "t": "math",
-     "tex": "|c_5| = \\frac{2|A|}{5\\pi} \\implies |c_5|^2 = \\frac{4A^2}{25\\pi^2}"
-    },
-    {
-     "t": "p",
-     "text": "Taking the ratio:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{P_{7\\text{th}}}{P_{5\\text{th}}} = \\frac{|c_7|^2}{|c_5|^2} = \\frac{\\frac{4A^2}{49\\pi^2}}{\\frac{4A^2}{25\\pi^2}} = \\frac{25}{49}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\frac{P_{7\\text{th}}}{P_{5\\text{th}}} = \\frac{25}{49} \\approx 0.5102}"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Harmonic Roll-off Law**:\nBecause a square wave has jump discontinuities ($C^0$ discontinuities), its Fourier coefficients decay asymptotically as $\\mathcal{O}(1/n)$, and its harmonic powers decay as $\\mathcal{O}(1/n^2)$. For waveforms whose derivatives have discontinuities (like triangular waves), the decay is $\\mathcal{O}(1/n^2)$ and power decays as $\\mathcal{O}(1/n^4)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Definition of Harmonic Power"
+      },
+      {
+       "t": "p",
+       "text": "The total power in the $n$-th harmonic of a real periodic signal includes both positive and negative frequency components:"
+      },
+      {
+       "t": "math",
+       "tex": "P_{n\\text{th}} = |c_n|^2 + |c_{-n}|^2"
+      },
+      {
+       "t": "p",
+       "text": "Since $x(t)$ is real, $|c_{-n}| = |c_n|$. Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "P_{n\\text{th}} = 2|c_n|^2"
+      },
+      {
+       "t": "p",
+       "text": "The ratio of powers between the 7th and 5th harmonics is simply:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{P_{7\\text{th}}}{P_{5\\text{th}}} = \\frac{2|c_7|^2}{2|c_5|^2} = \\frac{|c_7|^2}{|c_5|^2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Determine $c_n$ via Level Shift"
+      },
+      {
+       "t": "p",
+       "text": "Shift $x(t)$ upward by $A$: $y(t) = x(t) + A$.\n$y(t)$ is a unipolar pulse train with:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Amplitude $= 2A$",
+        "Pulse width $\\tau = 1$",
+        "Fundamental period $T_0 = 2 \\implies \\omega_0 = \\frac{2\\pi}{2} = \\pi$",
+        "Center of pulse $= t_0 = 1/2$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The isolated pulse is $y_0(t) = 2A \\, \\text{rect}\\left(\\frac{t - 1/2}{1}\\right)$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_0(\\omega) = 2A \\, \\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j\\omega / 2}"
+      },
+      {
+       "t": "p",
+       "text": "The CTFS coefficients for $n \\ne 0$ are:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} Y_0(n\\omega_0) = \\frac{1}{2} \\left[ 2A \\, \\text{Sa}\\left(\\frac{n\\pi}{2}\\right) e^{-j n\\pi / 2} \\right] = A \\, \\text{Sa}\\left(\\frac{n\\pi}{2}\\right) e^{-j n\\pi / 2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Compute the Magnitude $|c_n|$"
+      },
+      {
+       "t": "math",
+       "tex": "|c_n| = |A| \\left| \\text{Sa}\\left(\\frac{n\\pi}{2}\\right) \\right| = |A| \\left| \\frac{\\sin(n\\pi / 2)}{n\\pi / 2} \\right|"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For even $n$: $\\sin(n\\pi/2) = 0 \\implies |c_n| = 0$.",
+        "For odd $n$: $|\\sin(n\\pi/2)| = 1$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|c_n| = \\frac{|A|}{n\\pi / 2} = \\frac{2|A|}{\\pi} \\cdot \\frac{1}{n} \\quad (n \\text{ odd})"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Asymptotic Power Law & Ratio Computation"
+      },
+      {
+       "t": "p",
+       "text": "Since $|c_n| \\propto \\frac{1}{n}$ for odd harmonics, the harmonic power scales as:"
+      },
+      {
+       "t": "math",
+       "tex": "|c_n|^2 \\propto \\frac{1}{n^2}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating for $n = 7$ and $n = 5$:"
+      },
+      {
+       "t": "math",
+       "tex": "|c_7| = \\frac{2|A|}{7\\pi} \\implies |c_7|^2 = \\frac{4A^2}{49\\pi^2}"
+      },
+      {
+       "t": "math",
+       "tex": "|c_5| = \\frac{2|A|}{5\\pi} \\implies |c_5|^2 = \\frac{4A^2}{25\\pi^2}"
+      },
+      {
+       "t": "p",
+       "text": "Taking the ratio:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{P_{7\\text{th}}}{P_{5\\text{th}}} = \\frac{|c_7|^2}{|c_5|^2} = \\frac{\\frac{4A^2}{49\\pi^2}}{\\frac{4A^2}{25\\pi^2}} = \\frac{25}{49}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\frac{P_{7\\text{th}}}{P_{5\\text{th}}} = \\frac{25}{49} \\approx 0.5102}"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Harmonic Roll-off Law**:\nBecause a square wave has jump discontinuities ($C^0$ discontinuities), its Fourier coefficients decay asymptotically as $\\mathcal{O}(1/n)$, and its harmonic powers decay as $\\mathcal{O}(1/n^2)$. For waveforms whose derivatives have discontinuities (like triangular waves), the decay is $\\mathcal{O}(1/n^2)$ and power decays as $\\mathcal{O}(1/n^4)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13807,124 +13776,123 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Via CTFS Synthesis"
-    },
-    {
-     "t": "p",
-     "text": "The isolated pulse is a triangle of height $H = 2$ and semi-width $\\tau_0 = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 2 \\, \\text{tri}\\left(\\frac{t}{1}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} Y(\\omega) = 2 \\, \\text{Sa}^2\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "The CTFS coefficients are:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} Y(n\\omega_0) = \\frac{1}{3} \\cdot 2 \\, \\text{Sa}^2\\left(\\frac{n \\cdot (2\\pi/3)}{2}\\right) = \\frac{2}{3} \\, \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "The continuous-time Fourier transform is:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 2\\pi \\sum_{n=-\\infty}^{+\\infty} c_n \\delta(\\omega - n\\omega_0) = 2\\pi \\sum_{n=-\\infty}^{+\\infty} \\frac{2}{3} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) \\delta\\left(\\omega - \\frac{2n\\pi}{3}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(\\omega) = \\frac{4\\pi}{3} \\sum_{n=-\\infty}^{+\\infty} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) \\delta\\left(\\omega - \\frac{2n\\pi}{3}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Via Infinite Pulse Superposition"
-    },
-    {
-     "t": "p",
-     "text": "Express the periodic signal as the infinite sum of identical aperiodic triangles shifted by multiples of $T_0 = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{k=-\\infty}^{+\\infty} y(t - 3k) = y(t) + [y(t-3) + y(t+3)] + [y(t-6) + y(t+6)] + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Taking the CTFT of each term using the time-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = Y(\\omega) + [e^{-j3\\omega} Y(\\omega) + e^{j3\\omega} Y(\\omega)] + [e^{-j6\\omega} Y(\\omega) + e^{j6\\omega} Y(\\omega)] + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Factoring out $Y(\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = Y(\\omega) \\left[ 1 + (e^{j3\\omega} + e^{-j3\\omega}) + (e^{j6\\omega} + e^{-j6\\omega}) + \\dots \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Using Euler's identity $e^{j\\theta} + e^{-j\\theta} = 2\\cos\\theta$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = Y(\\omega) \\left[ 1 + 2\\cos(3\\omega) + 2\\cos(6\\omega) + 2\\cos(9\\omega) + \\dots \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = Y(\\omega) \\left[ 1 + 2\\sum_{n=1}^{+\\infty} \\cos(3n\\omega) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $Y(\\omega) = 2 \\, \\text{Sa}^2(\\omega / 2)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(\\omega) = 2 \\, \\text{Sa}^2\\left(\\frac{\\omega}{2}\\right) \\left[ 1 + 2\\sum_{n=1}^{+\\infty} \\cos(3n\\omega) \\right]}"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Equivalence of Methods 1 and 2:"
-    },
-    {
-     "t": "p",
-     "text": "By the **Poisson Summation Formula**, an infinite sum of harmonically related cosines is mathematically identical to a train of Dirac impulses:"
-    },
-    {
-     "t": "math",
-     "tex": "1 + 2\\sum_{n=1}^{+\\infty} \\cos(n \\omega_0 t) = \\sum_{n=-\\infty}^{+\\infty} e^{j n \\omega_0 t} = \\frac{2\\pi}{\\omega_0} \\sum_{k=-\\infty}^{+\\infty} \\delta\\left(t - \\frac{2\\pi k}{\\omega_0}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "In the frequency domain with period $\\Omega_0 = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "1 + 2\\sum_{n=1}^{+\\infty} \\cos(3n\\omega) = \\frac{2\\pi}{3} \\sum_{k=-\\infty}^{+\\infty} \\delta\\left(\\omega - \\frac{2\\pi k}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying by $2\\text{Sa}^2(\\omega/2)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 2\\text{Sa}^2(\\omega/2) \\cdot \\frac{2\\pi}{3} \\sum_{k=-\\infty}^{+\\infty} \\delta\\left(\\omega - \\frac{2k\\pi}{3}\\right) = \\frac{4\\pi}{3} \\sum_{k=-\\infty}^{+\\infty} \\text{Sa}^2\\left(\\frac{k\\pi}{3}\\right) \\delta\\left(\\omega - \\frac{2k\\pi}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Both methods yield identical results!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Method 1: Via CTFS Synthesis"
+      },
+      {
+       "t": "p",
+       "text": "The isolated pulse is a triangle of height $H = 2$ and semi-width $\\tau_0 = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 2 \\, \\text{tri}\\left(\\frac{t}{1}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} Y(\\omega) = 2 \\, \\text{Sa}^2\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "The CTFS coefficients are:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} Y(n\\omega_0) = \\frac{1}{3} \\cdot 2 \\, \\text{Sa}^2\\left(\\frac{n \\cdot (2\\pi/3)}{2}\\right) = \\frac{2}{3} \\, \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "The continuous-time Fourier transform is:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 2\\pi \\sum_{n=-\\infty}^{+\\infty} c_n \\delta(\\omega - n\\omega_0) = 2\\pi \\sum_{n=-\\infty}^{+\\infty} \\frac{2}{3} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) \\delta\\left(\\omega - \\frac{2n\\pi}{3}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(\\omega) = \\frac{4\\pi}{3} \\sum_{n=-\\infty}^{+\\infty} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) \\delta\\left(\\omega - \\frac{2n\\pi}{3}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Via Infinite Pulse Superposition"
+      },
+      {
+       "t": "p",
+       "text": "Express the periodic signal as the infinite sum of identical aperiodic triangles shifted by multiples of $T_0 = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{k=-\\infty}^{+\\infty} y(t - 3k) = y(t) + [y(t-3) + y(t+3)] + [y(t-6) + y(t+6)] + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Taking the CTFT of each term using the time-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = Y(\\omega) + [e^{-j3\\omega} Y(\\omega) + e^{j3\\omega} Y(\\omega)] + [e^{-j6\\omega} Y(\\omega) + e^{j6\\omega} Y(\\omega)] + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Factoring out $Y(\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = Y(\\omega) \\left[ 1 + (e^{j3\\omega} + e^{-j3\\omega}) + (e^{j6\\omega} + e^{-j6\\omega}) + \\dots \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Using Euler's identity $e^{j\\theta} + e^{-j\\theta} = 2\\cos\\theta$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = Y(\\omega) \\left[ 1 + 2\\cos(3\\omega) + 2\\cos(6\\omega) + 2\\cos(9\\omega) + \\dots \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = Y(\\omega) \\left[ 1 + 2\\sum_{n=1}^{+\\infty} \\cos(3n\\omega) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $Y(\\omega) = 2 \\, \\text{Sa}^2(\\omega / 2)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(\\omega) = 2 \\, \\text{Sa}^2\\left(\\frac{\\omega}{2}\\right) \\left[ 1 + 2\\sum_{n=1}^{+\\infty} \\cos(3n\\omega) \\right]}"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Equivalence of Methods 1 and 2:"
+      },
+      {
+       "t": "p",
+       "text": "By the **Poisson Summation Formula**, an infinite sum of harmonically related cosines is mathematically identical to a train of Dirac impulses:"
+      },
+      {
+       "t": "math",
+       "tex": "1 + 2\\sum_{n=1}^{+\\infty} \\cos(n \\omega_0 t) = \\sum_{n=-\\infty}^{+\\infty} e^{j n \\omega_0 t} = \\frac{2\\pi}{\\omega_0} \\sum_{k=-\\infty}^{+\\infty} \\delta\\left(t - \\frac{2\\pi k}{\\omega_0}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "In the frequency domain with period $\\Omega_0 = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "1 + 2\\sum_{n=1}^{+\\infty} \\cos(3n\\omega) = \\frac{2\\pi}{3} \\sum_{k=-\\infty}^{+\\infty} \\delta\\left(\\omega - \\frac{2\\pi k}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying by $2\\text{Sa}^2(\\omega/2)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 2\\text{Sa}^2(\\omega/2) \\cdot \\frac{2\\pi}{3} \\sum_{k=-\\infty}^{+\\infty} \\delta\\left(\\omega - \\frac{2k\\pi}{3}\\right) = \\frac{4\\pi}{3} \\sum_{k=-\\infty}^{+\\infty} \\text{Sa}^2\\left(\\frac{k\\pi}{3}\\right) \\delta\\left(\\omega - \\frac{2k\\pi}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Both methods yield identical results!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13943,71 +13911,70 @@ export default {
      "text": "Find its Fourier transform $X(\\omega)$. Does $x(t)$ possess Fourier series coefficients $c_n$?"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Periodicity Analysis (The Faculty Trap)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "A periodic signal must repeat indefinitely over $-\\infty < t < +\\infty$.",
-      "Here, $x(t) = 0$ for all $|t| > 4$.",
-      "Therefore, $x(t)$ is **strictly non-periodic** (aperiodic) and energy-type ($E_x < \\infty$).",
-      "**Exam Trap:** Fourier series coefficients $c_n$ **DO NOT EXIST** ($c_n \\to \\text{invalid / cross}$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Compute CTFT via Linearity and Time-Shifting"
-    },
-    {
-     "t": "p",
-     "text": "The base triangle is $y(t) = 2 \\, \\text{tri}(t)$, with transform:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = 2 \\, \\text{Sa}^2\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Using the time-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\mathcal{F}\\{y(t+3) + y(t) + y(t-3)\\} = Y(\\omega) e^{j3\\omega} + Y(\\omega) + Y(\\omega) e^{-j3\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Factoring out $Y(\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = Y(\\omega) [1 + (e^{j3\\omega} + e^{-j3\\omega})] = Y(\\omega) [1 + 2\\cos(3\\omega)]"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Closed-Form Spectrum"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $Y(\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(\\omega) = 2 \\, \\text{Sa}^2\\left(\\frac{\\omega}{2}\\right) [1 + 2\\cos(3\\omega)]}"
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**Comparison Matrix: Periodic Waveform vs Finite Tri-Pulse Cluster**:\n\n| Attribute | Drill 6: Periodic Waveform ($T_0=3$) | Drill 7: Tri-Pulse Cluster ($N=3$) |\n|:---|:---|:---|\n| **Nature** | Power signal ($P > 0, E = \\infty$) | Energy signal ($E < \\infty, P = 0$) |\n| **Fourier Series $c_n$** | Exists: $c_n = \\frac{2}{3}\\text{Sa}^2(n\\pi/3)$ | Does NOT exist |\n| **Spectrum Type** | Discrete line spectrum of Dirac deltas | Purely continuous spectrum |\n| **Modulation Term** | Infinite sum: $1 + 2\\sum_{n=1}^\\infty \\cos(3n\\omega)$ | Single cosine: $1 + 2\\cos(3\\omega)$ |"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Periodicity Analysis (The Faculty Trap)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "A periodic signal must repeat indefinitely over $-\\infty < t < +\\infty$.",
+        "Here, $x(t) = 0$ for all $|t| > 4$.",
+        "Therefore, $x(t)$ is **strictly non-periodic** (aperiodic) and energy-type ($E_x < \\infty$).",
+        "**Exam Trap:** Fourier series coefficients $c_n$ **DO NOT EXIST** ($c_n \\to \\text{invalid / cross}$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Compute CTFT via Linearity and Time-Shifting"
+      },
+      {
+       "t": "p",
+       "text": "The base triangle is $y(t) = 2 \\, \\text{tri}(t)$, with transform:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = 2 \\, \\text{Sa}^2\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Using the time-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\mathcal{F}\\{y(t+3) + y(t) + y(t-3)\\} = Y(\\omega) e^{j3\\omega} + Y(\\omega) + Y(\\omega) e^{-j3\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Factoring out $Y(\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = Y(\\omega) [1 + (e^{j3\\omega} + e^{-j3\\omega})] = Y(\\omega) [1 + 2\\cos(3\\omega)]"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Closed-Form Spectrum"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $Y(\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(\\omega) = 2 \\, \\text{Sa}^2\\left(\\frac{\\omega}{2}\\right) [1 + 2\\cos(3\\omega)]}"
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**Comparison Matrix: Periodic Waveform vs Finite Tri-Pulse Cluster**:\n\n| Attribute | Drill 6: Periodic Waveform ($T_0=3$) | Drill 7: Tri-Pulse Cluster ($N=3$) |\n|:---|:---|:---|\n| **Nature** | Power signal ($P > 0, E = \\infty$) | Energy signal ($E < \\infty, P = 0$) |\n| **Fourier Series $c_n$** | Exists: $c_n = \\frac{2}{3}\\text{Sa}^2(n\\pi/3)$ | Does NOT exist |\n| **Spectrum Type** | Discrete line spectrum of Dirac deltas | Purely continuous spectrum |\n| **Modulation Term** | Infinite sum: $1 + 2\\sum_{n=1}^\\infty \\cos(3n\\omega)$ | Single cosine: $1 + 2\\cos(3\\omega)$ |"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14018,147 +13985,146 @@ export default {
      "text": "**Theoretical Derivation:**\nDemonstrate how the trigonometric Fourier series simplifies for (1) strictly even periodic signals, and (2) strictly odd periodic signals. Establish the exact relationships between the trigonometric coefficients ($a_n, b_n$) and the exponential coefficients $c_n$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Fundamental Inter-Conversion Formulas:"
-    },
-    {
-     "t": "p",
-     "text": "The trigonometric Fourier series of a periodic signal $x(t)$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = a_0 + \\sum_{n=1}^{+\\infty} [a_n \\cos(n\\omega_0 t) + b_n \\sin(n\\omega_0 t)]"
-    },
-    {
-     "t": "p",
-     "text": "The exponential Fourier series is:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=-\\infty}^{+\\infty} c_n e^{j n \\omega_0 t} = c_0 + \\sum_{n=1}^{+\\infty} [c_n e^{j n \\omega_0 t} + c_{-n} e^{-j n \\omega_0 t}]"
-    },
-    {
-     "t": "p",
-     "text": "Expanding $e^{\\pm j n \\omega_0 t} = \\cos(n\\omega_0 t) \\pm j \\sin(n\\omega_0 t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = c_0 + \\sum_{n=1}^{+\\infty} [(c_n + c_{-n}) \\cos(n\\omega_0 t) + j(c_n - c_{-n}) \\sin(n\\omega_0 t)]"
-    },
-    {
-     "t": "p",
-     "text": "Comparing coefficients:"
-    },
-    {
-     "t": "math",
-     "tex": "a_0 = c_0, \\quad a_n = c_n + c_{-n}, \\quad b_n = j(c_n - c_{-n})"
-    },
-    {
-     "t": "p",
-     "text": "Inverting these expressions:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_n = \\frac{a_n - j b_n}{2}, \\quad c_{-n} = \\frac{a_n + j b_n}{2} \\quad (n \\ge 1)}"
-    },
-    {
-     "t": "h4",
-     "text": "Case 1: $x(t)$ is Even ($x(t) = x(-t)$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The sine integrals vanish: $b_n = 0$ for all $n \\ge 1$.",
-      "The trigonometric series contains only cosine terms:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = a_0 + \\sum_{n=1}^{+\\infty} a_n \\cos(n\\omega_0 t) = \\sum_{n=0}^{+\\infty} a_n \\cos(n\\omega_0 t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Substituting $b_n = 0$ into the exponential formula:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{a_n - j(0)}{2} = \\frac{a_n}{2} \\implies \\boxed{a_n = 2 c_n \\quad (n \\ge 1)}"
-    },
-    {
-     "t": "p",
-     "text": "For $n = 0$: $a_0 = c_0$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Consequently:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = c_0 + 2\\sum_{n=1}^{+\\infty} c_n \\cos(n\\omega_0 t)}"
-    },
-    {
-     "t": "p",
-     "text": "Since $x(t)$ is real and even, $c_n$ is purely real and even ($c_n = c_{-n} \\in \\mathbb{R}$)."
-    },
-    {
-     "t": "h4",
-     "text": "Case 2: $x(t)$ is Odd ($x(t) = -x(-t)$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The average value vanishes: $a_0 = c_0 = 0$.",
-      "The cosine integrals vanish: $a_n = 0$ for all $n \\ge 1$.",
-      "The trigonometric series contains only sine terms:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sum_{n=1}^{+\\infty} b_n \\sin(n\\omega_0 t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Substituting $a_n = 0$ into the exponential formula:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{0 - j b_n}{2} = -j \\frac{b_n}{2} \\implies \\boxed{b_n = 2j c_n \\quad (n \\ge 1)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Consequently:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) = 2j \\sum_{n=1}^{+\\infty} c_n \\sin(n\\omega_0 t)}"
-    },
-    {
-     "t": "p",
-     "text": "Since $x(t)$ is real and odd, $c_n$ is purely imaginary and odd ($c_n = -c_{-n} \\in j\\mathbb{R}$).\n  Letting $c_n = j \\beta_n$ where $\\beta_n \\in \\mathbb{R}$:"
-    },
-    {
-     "t": "math",
-     "tex": "2j c_n = 2j(j \\beta_n) = -2 \\beta_n \\in \\mathbb{R}"
-    },
-    {
-     "t": "p",
-     "text": "The term $2j c_n$ is always strictly real, guaranteeing that $x(t)$ is a real-valued signal!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Fundamental Inter-Conversion Formulas:"
+      },
+      {
+       "t": "p",
+       "text": "The trigonometric Fourier series of a periodic signal $x(t)$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = a_0 + \\sum_{n=1}^{+\\infty} [a_n \\cos(n\\omega_0 t) + b_n \\sin(n\\omega_0 t)]"
+      },
+      {
+       "t": "p",
+       "text": "The exponential Fourier series is:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=-\\infty}^{+\\infty} c_n e^{j n \\omega_0 t} = c_0 + \\sum_{n=1}^{+\\infty} [c_n e^{j n \\omega_0 t} + c_{-n} e^{-j n \\omega_0 t}]"
+      },
+      {
+       "t": "p",
+       "text": "Expanding $e^{\\pm j n \\omega_0 t} = \\cos(n\\omega_0 t) \\pm j \\sin(n\\omega_0 t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = c_0 + \\sum_{n=1}^{+\\infty} [(c_n + c_{-n}) \\cos(n\\omega_0 t) + j(c_n - c_{-n}) \\sin(n\\omega_0 t)]"
+      },
+      {
+       "t": "p",
+       "text": "Comparing coefficients:"
+      },
+      {
+       "t": "math",
+       "tex": "a_0 = c_0, \\quad a_n = c_n + c_{-n}, \\quad b_n = j(c_n - c_{-n})"
+      },
+      {
+       "t": "p",
+       "text": "Inverting these expressions:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_n = \\frac{a_n - j b_n}{2}, \\quad c_{-n} = \\frac{a_n + j b_n}{2} \\quad (n \\ge 1)}"
+      },
+      {
+       "t": "h4",
+       "text": "Case 1: $x(t)$ is Even ($x(t) = x(-t)$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The sine integrals vanish: $b_n = 0$ for all $n \\ge 1$.",
+        "The trigonometric series contains only cosine terms:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = a_0 + \\sum_{n=1}^{+\\infty} a_n \\cos(n\\omega_0 t) = \\sum_{n=0}^{+\\infty} a_n \\cos(n\\omega_0 t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Substituting $b_n = 0$ into the exponential formula:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{a_n - j(0)}{2} = \\frac{a_n}{2} \\implies \\boxed{a_n = 2 c_n \\quad (n \\ge 1)}"
+      },
+      {
+       "t": "p",
+       "text": "For $n = 0$: $a_0 = c_0$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Consequently:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = c_0 + 2\\sum_{n=1}^{+\\infty} c_n \\cos(n\\omega_0 t)}"
+      },
+      {
+       "t": "p",
+       "text": "Since $x(t)$ is real and even, $c_n$ is purely real and even ($c_n = c_{-n} \\in \\mathbb{R}$)."
+      },
+      {
+       "t": "h4",
+       "text": "Case 2: $x(t)$ is Odd ($x(t) = -x(-t)$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The average value vanishes: $a_0 = c_0 = 0$.",
+        "The cosine integrals vanish: $a_n = 0$ for all $n \\ge 1$.",
+        "The trigonometric series contains only sine terms:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sum_{n=1}^{+\\infty} b_n \\sin(n\\omega_0 t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Substituting $a_n = 0$ into the exponential formula:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{0 - j b_n}{2} = -j \\frac{b_n}{2} \\implies \\boxed{b_n = 2j c_n \\quad (n \\ge 1)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Consequently:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) = 2j \\sum_{n=1}^{+\\infty} c_n \\sin(n\\omega_0 t)}"
+      },
+      {
+       "t": "p",
+       "text": "Since $x(t)$ is real and odd, $c_n$ is purely imaginary and odd ($c_n = -c_{-n} \\in j\\mathbb{R}$).\n  Letting $c_n = j \\beta_n$ where $\\beta_n \\in \\mathbb{R}$:"
+      },
+      {
+       "t": "math",
+       "tex": "2j c_n = 2j(j \\beta_n) = -2 \\beta_n \\in \\mathbb{R}"
+      },
+      {
+       "t": "p",
+       "text": "The term $2j c_n$ is always strictly real, guaranteeing that $x(t)$ is a real-valued signal!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14181,152 +14147,151 @@ export default {
      "text": "Demonstrate why direct inspection of phase parity is ambiguous, and prove that this phase spectrum corresponds to a strictly real signal."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Examine Phase Values Modulo $2\\pi$"
-    },
-    {
-     "t": "p",
-     "text": "Phase enters the Fourier transform exclusively through the complex exponential phasor $e^{j\\angle X(\\omega)}$.\nEvaluate the phasors at each frequency:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = \\pm \\omega_0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\angle X(\\omega_0)} = e^{j\\pi} = -1"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\angle X(-\\omega_0)} = e^{-j\\pi} = -1"
-    },
-    {
-     "t": "p",
-     "text": "Both phasors are identical: $e^{j\\angle X(\\omega_0)} = e^{j\\angle X(-\\omega_0)} = -1$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = \\pm 2\\omega_0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\angle X(2\\omega_0)} = e^{j2\\pi} = +1"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\angle X(-2\\omega_0)} = e^{-j2\\pi} = +1"
-    },
-    {
-     "t": "p",
-     "text": "Both phasors are identical: $e^{j\\angle X(2\\omega_0)} = e^{j\\angle X(-2\\omega_0)} = +1$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = \\pm 3\\omega_0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\angle X(3\\omega_0)} = e^{-j\\pi} = -1"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\angle X(-3\\omega_0)} = e^{j\\pi} = -1"
-    },
-    {
-     "t": "p",
-     "text": "Both phasors are identical: $e^{j\\angle X(3\\omega_0)} = e^{j\\angle X(-3\\omega_0)} = -1$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: The Fallacy of Visual Symmetry"
-    },
-    {
-     "t": "p",
-     "text": "Because $+2\\pi k$ can be added to any phase angle without changing the complex value:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If we plot $\\angle X(\\omega_0) = \\pi$ and $\\angle X(-\\omega_0) = \\pi$ (adding $2\\pi$ to $-\\pi$), the graph appears **strictly EVEN**.",
-      "If we plot $\\angle X(\\omega_0) = \\pi$ and $\\angle X(-\\omega_0) = -\\pi$, the graph appears **strictly ODD**.",
-      "If we plot $\\angle X(3\\omega_0) = 3\\pi$ and $\\angle X(-3\\omega_0) = \\pi$, the graph appears **NENO (Neither Even Nor Odd)**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "All three plots represent the **exact same physical signal**!\nHence the faculty dictum:"
-    },
-    {
-     "t": "p",
-     "text": "*\"Phase spectrum: No meaning of Even, odd or NENO when inspected without modulo $2\\pi$ unwrapping.\"*"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Apply the Phase Angle Sum Test"
-    },
-    {
-     "t": "p",
-     "text": "Compute the sum $S(\\omega) = \\angle X(\\omega) + \\angle X(-\\omega)$ at each harmonic:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = \\omega_0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "S(\\omega_0) = \\angle X(\\omega_0) + \\angle X(-\\omega_0) = \\pi + (-\\pi) = 0 = 2(0)\\pi"
-    },
-    {
-     "t": "p",
-     "text": "If wrapped: $\\pi + \\pi = 2\\pi = 2(1)\\pi$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = 2\\omega_0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "S(2\\omega_0) = 2\\pi + (-2\\pi) = 0 = 2(0)\\pi"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = 3\\omega_0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "S(3\\omega_0) = -\\pi + \\pi = 0 = 2(0)\\pi"
-    },
-    {
-     "t": "p",
-     "text": "In all cases, the sum is an **even multiple of $\\pi$**:"
-    },
-    {
-     "t": "math",
-     "tex": "S(\\omega) = 2n\\pi, \\quad n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, the signal $x(t)$ is strictly **REAL**!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Examine Phase Values Modulo $2\\pi$"
+      },
+      {
+       "t": "p",
+       "text": "Phase enters the Fourier transform exclusively through the complex exponential phasor $e^{j\\angle X(\\omega)}$.\nEvaluate the phasors at each frequency:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = \\pm \\omega_0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\angle X(\\omega_0)} = e^{j\\pi} = -1"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\angle X(-\\omega_0)} = e^{-j\\pi} = -1"
+      },
+      {
+       "t": "p",
+       "text": "Both phasors are identical: $e^{j\\angle X(\\omega_0)} = e^{j\\angle X(-\\omega_0)} = -1$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = \\pm 2\\omega_0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\angle X(2\\omega_0)} = e^{j2\\pi} = +1"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\angle X(-2\\omega_0)} = e^{-j2\\pi} = +1"
+      },
+      {
+       "t": "p",
+       "text": "Both phasors are identical: $e^{j\\angle X(2\\omega_0)} = e^{j\\angle X(-2\\omega_0)} = +1$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = \\pm 3\\omega_0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\angle X(3\\omega_0)} = e^{-j\\pi} = -1"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\angle X(-3\\omega_0)} = e^{j\\pi} = -1"
+      },
+      {
+       "t": "p",
+       "text": "Both phasors are identical: $e^{j\\angle X(3\\omega_0)} = e^{j\\angle X(-3\\omega_0)} = -1$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: The Fallacy of Visual Symmetry"
+      },
+      {
+       "t": "p",
+       "text": "Because $+2\\pi k$ can be added to any phase angle without changing the complex value:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If we plot $\\angle X(\\omega_0) = \\pi$ and $\\angle X(-\\omega_0) = \\pi$ (adding $2\\pi$ to $-\\pi$), the graph appears **strictly EVEN**.",
+        "If we plot $\\angle X(\\omega_0) = \\pi$ and $\\angle X(-\\omega_0) = -\\pi$, the graph appears **strictly ODD**.",
+        "If we plot $\\angle X(3\\omega_0) = 3\\pi$ and $\\angle X(-3\\omega_0) = \\pi$, the graph appears **NENO (Neither Even Nor Odd)**."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "All three plots represent the **exact same physical signal**!\nHence the faculty dictum:"
+      },
+      {
+       "t": "p",
+       "text": "*\"Phase spectrum: No meaning of Even, odd or NENO when inspected without modulo $2\\pi$ unwrapping.\"*"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Apply the Phase Angle Sum Test"
+      },
+      {
+       "t": "p",
+       "text": "Compute the sum $S(\\omega) = \\angle X(\\omega) + \\angle X(-\\omega)$ at each harmonic:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = \\omega_0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "S(\\omega_0) = \\angle X(\\omega_0) + \\angle X(-\\omega_0) = \\pi + (-\\pi) = 0 = 2(0)\\pi"
+      },
+      {
+       "t": "p",
+       "text": "If wrapped: $\\pi + \\pi = 2\\pi = 2(1)\\pi$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = 2\\omega_0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "S(2\\omega_0) = 2\\pi + (-2\\pi) = 0 = 2(0)\\pi"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = 3\\omega_0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "S(3\\omega_0) = -\\pi + \\pi = 0 = 2(0)\\pi"
+      },
+      {
+       "t": "p",
+       "text": "In all cases, the sum is an **even multiple of $\\pi$**:"
+      },
+      {
+       "t": "math",
+       "tex": "S(\\omega) = 2n\\pi, \\quad n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, the signal $x(t)$ is strictly **REAL**!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14345,144 +14310,143 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Part 1: Real Signal Derivation"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t)$ be real: $x(t) = x^*(t)$.\nFrom the conjugation property:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\mathcal{F}\\{x(t)\\} = \\mathcal{F}\\{x^*(t)\\} = X^*(-\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Express $X(\\omega)$ and $X^*(-\\omega)$ in polar form:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = |X(\\omega)| e^{j\\angle X(\\omega)}"
-    },
-    {
-     "t": "math",
-     "tex": "X(-\\omega) = |X(-\\omega)| e^{j\\angle X(-\\omega)}"
-    },
-    {
-     "t": "p",
-     "text": "Conjugating $X(-\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X^*(-\\omega) = |X(-\\omega)| e^{-j\\angle X(-\\omega)}"
-    },
-    {
-     "t": "p",
-     "text": "Equating the two:"
-    },
-    {
-     "t": "math",
-     "tex": "|X(\\omega)| e^{j\\angle X(\\omega)} = |X(-\\omega)| e^{-j\\angle X(-\\omega)}"
-    },
-    {
-     "t": "p",
-     "text": "Divide both sides by $|X(-\\omega)| e^{-j\\angle X(-\\omega)}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{|X(\\omega)|}{|X(-\\omega)|} e^{j[\\angle X(\\omega) + \\angle X(-\\omega)]} = 1"
-    },
-    {
-     "t": "p",
-     "text": "For a complex number $R e^{j\\theta} = 1$ (where $R > 0$ and $\\theta \\in \\mathbb{R}$):"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "The magnitude must equal $1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{|X(\\omega)|}{|X(-\\omega)|} = 1 \\implies \\boxed{|X(\\omega)| = |X(-\\omega)|} \\quad (\\text{Even Magnitude})"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "The angle must be an integer multiple of $2\\pi$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi, \\quad n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "h4",
-     "text": "Part 2: Purely Imaginary Signal Derivation"
-    },
-    {
-     "t": "p",
-     "text": "Let $x(t)$ be purely imaginary: $x(t) = -x^*(t)$.\nFrom linearity and conjugation:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\mathcal{F}\\{x(t)\\} = \\mathcal{F}\\{-x^*(t)\\} = -X^*(-\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Express $-X^*(-\\omega)$ in polar form using $-1 = e^{j(2n+1)\\pi}$:"
-    },
-    {
-     "t": "math",
-     "tex": "-X^*(-\\omega) = e^{j(2n+1)\\pi} \\cdot |X(-\\omega)| e^{-j\\angle X(-\\omega)} = |X(-\\omega)| e^{j[(2n+1)\\pi - \\angle X(-\\omega)]}"
-    },
-    {
-     "t": "p",
-     "text": "Equating to $X(\\omega) = |X(\\omega)| e^{j\\angle X(\\omega)}$:"
-    },
-    {
-     "t": "math",
-     "tex": "|X(\\omega)| e^{j\\angle X(\\omega)} = |X(-\\omega)| e^{j[(2n+1)\\pi - \\angle X(-\\omega)]}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Equating magnitudes:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{|X(\\omega)| = |X(-\\omega)|} \\quad (\\text{Even Magnitude})"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Equating angles modulo $2k\\pi$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(\\omega) = (2n+1)\\pi - \\angle X(-\\omega) + 2k\\pi"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\angle X(\\omega) + \\angle X(-\\omega) = (2m+1)\\pi, \\quad m \\in \\mathbb{Z}}"
-    },
-    {
-     "t": "p",
-     "text": "This completes the analytical proof for both cases. $\\blacksquare$"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part 1: Real Signal Derivation"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t)$ be real: $x(t) = x^*(t)$.\nFrom the conjugation property:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\mathcal{F}\\{x(t)\\} = \\mathcal{F}\\{x^*(t)\\} = X^*(-\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Express $X(\\omega)$ and $X^*(-\\omega)$ in polar form:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = |X(\\omega)| e^{j\\angle X(\\omega)}"
+      },
+      {
+       "t": "math",
+       "tex": "X(-\\omega) = |X(-\\omega)| e^{j\\angle X(-\\omega)}"
+      },
+      {
+       "t": "p",
+       "text": "Conjugating $X(-\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X^*(-\\omega) = |X(-\\omega)| e^{-j\\angle X(-\\omega)}"
+      },
+      {
+       "t": "p",
+       "text": "Equating the two:"
+      },
+      {
+       "t": "math",
+       "tex": "|X(\\omega)| e^{j\\angle X(\\omega)} = |X(-\\omega)| e^{-j\\angle X(-\\omega)}"
+      },
+      {
+       "t": "p",
+       "text": "Divide both sides by $|X(-\\omega)| e^{-j\\angle X(-\\omega)}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{|X(\\omega)|}{|X(-\\omega)|} e^{j[\\angle X(\\omega) + \\angle X(-\\omega)]} = 1"
+      },
+      {
+       "t": "p",
+       "text": "For a complex number $R e^{j\\theta} = 1$ (where $R > 0$ and $\\theta \\in \\mathbb{R}$):"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "The magnitude must equal $1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{|X(\\omega)|}{|X(-\\omega)|} = 1 \\implies \\boxed{|X(\\omega)| = |X(-\\omega)|} \\quad (\\text{Even Magnitude})"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "The angle must be an integer multiple of $2\\pi$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi, \\quad n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "h4",
+       "text": "Part 2: Purely Imaginary Signal Derivation"
+      },
+      {
+       "t": "p",
+       "text": "Let $x(t)$ be purely imaginary: $x(t) = -x^*(t)$.\nFrom linearity and conjugation:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\mathcal{F}\\{x(t)\\} = \\mathcal{F}\\{-x^*(t)\\} = -X^*(-\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Express $-X^*(-\\omega)$ in polar form using $-1 = e^{j(2n+1)\\pi}$:"
+      },
+      {
+       "t": "math",
+       "tex": "-X^*(-\\omega) = e^{j(2n+1)\\pi} \\cdot |X(-\\omega)| e^{-j\\angle X(-\\omega)} = |X(-\\omega)| e^{j[(2n+1)\\pi - \\angle X(-\\omega)]}"
+      },
+      {
+       "t": "p",
+       "text": "Equating to $X(\\omega) = |X(\\omega)| e^{j\\angle X(\\omega)}$:"
+      },
+      {
+       "t": "math",
+       "tex": "|X(\\omega)| e^{j\\angle X(\\omega)} = |X(-\\omega)| e^{j[(2n+1)\\pi - \\angle X(-\\omega)]}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Equating magnitudes:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{|X(\\omega)| = |X(-\\omega)|} \\quad (\\text{Even Magnitude})"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Equating angles modulo $2k\\pi$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(\\omega) = (2n+1)\\pi - \\angle X(-\\omega) + 2k\\pi"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\angle X(\\omega) + \\angle X(-\\omega) = (2m+1)\\pi, \\quad m \\in \\mathbb{Z}}"
+      },
+      {
+       "t": "p",
+       "text": "This completes the analytical proof for both cases. $\\blacksquare$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14493,72 +14457,71 @@ export default {
      "text": "**Problem Statement:**\nFormalize the 5-rule conclusion matrix from Slide 157 and the Decision Tree from Slide 158 into an algorithmic diagnostic procedure for GATE questions. Show how each branch eliminates non-viable signal classes."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "The 5 Conclusion Rules (Slide 157):"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Rule 1:** $|X(\\omega)|$ is Even $\\implies x(t)$ is either **Real** or **Purely Imaginary** (or a complex signal whose real and imaginary parts satisfy specific quadrature conditions).",
-      "**Rule 2:** $|X(\\omega)|$ is NOT Even $\\implies x(t)$ is strictly **General Complex** ($x_R(t) \\ne 0$ and $x_I(t) \\ne 0$).",
-      "**Rule 3:** $\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi$ (Even Multiple of $\\pi$) $\\implies x(t)$ is **Real** or Complex.",
-      "**Rule 4:** $\\angle X(\\omega) + \\angle X(-\\omega) = (2n+1)\\pi$ (Odd Multiple of $\\pi$) $\\implies x(t)$ is **Purely Imaginary** or Complex.",
-      "**Rule 5:** $\\angle X(\\omega) + \\angle X(-\\omega) \\ne k\\pi$ $\\implies x(t)$ is strictly **Complex**."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "The 2-Step GATE Elimination Procedure:"
-    },
-    {
-     "t": "p",
-     "text": "Given any graphical or analytical spectrum $X(\\omega)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 1: The Magnitude Filter**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Plot or evaluate $|X(\\omega)|$. Check reflectional symmetry about the vertical axis $\\omega = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "|X(-\\omega)| \\stackrel{?}{=} |X(\\omega)|"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If **NO**: Terminate immediately! Conclude $x(t)$ is **Complex**. (Do not waste time computing phase).",
-      "If **YES**: $x(t)$ is guaranteed to be Real or Purely Imaginary. Proceed to Step 2.",
-      "**Step 2: The Phase Sum Test**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Select any test frequency $\\omega_1$ where $X(\\omega_1) \\ne 0$ and compute:"
-    },
-    {
-     "t": "math",
-     "tex": "S = \\angle X(\\omega_1) + \\angle X(-\\omega_1)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $S = 2n\\pi \\in \\{0, \\pm 2\\pi, \\pm 4\\pi, \\dots\\} \\implies x(t)$ is **REAL**.",
-      "If $S = (2n+1)\\pi \\in \\{\\pm \\pi, \\pm 3\\pi, \\pm 5\\pi, \\dots\\} \\implies x(t)$ is **PURELY IMAGINARY**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "The 5 Conclusion Rules (Slide 157):"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Rule 1:** $|X(\\omega)|$ is Even $\\implies x(t)$ is either **Real** or **Purely Imaginary** (or a complex signal whose real and imaginary parts satisfy specific quadrature conditions).",
+        "**Rule 2:** $|X(\\omega)|$ is NOT Even $\\implies x(t)$ is strictly **General Complex** ($x_R(t) \\ne 0$ and $x_I(t) \\ne 0$).",
+        "**Rule 3:** $\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi$ (Even Multiple of $\\pi$) $\\implies x(t)$ is **Real** or Complex.",
+        "**Rule 4:** $\\angle X(\\omega) + \\angle X(-\\omega) = (2n+1)\\pi$ (Odd Multiple of $\\pi$) $\\implies x(t)$ is **Purely Imaginary** or Complex.",
+        "**Rule 5:** $\\angle X(\\omega) + \\angle X(-\\omega) \\ne k\\pi$ $\\implies x(t)$ is strictly **Complex**."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "The 2-Step GATE Elimination Procedure:"
+      },
+      {
+       "t": "p",
+       "text": "Given any graphical or analytical spectrum $X(\\omega)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Step 1: The Magnitude Filter**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Plot or evaluate $|X(\\omega)|$. Check reflectional symmetry about the vertical axis $\\omega = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "|X(-\\omega)| \\stackrel{?}{=} |X(\\omega)|"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If **NO**: Terminate immediately! Conclude $x(t)$ is **Complex**. (Do not waste time computing phase).",
+        "If **YES**: $x(t)$ is guaranteed to be Real or Purely Imaginary. Proceed to Step 2.",
+        "**Step 2: The Phase Sum Test**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Select any test frequency $\\omega_1$ where $X(\\omega_1) \\ne 0$ and compute:"
+      },
+      {
+       "t": "math",
+       "tex": "S = \\angle X(\\omega_1) + \\angle X(-\\omega_1)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $S = 2n\\pi \\in \\{0, \\pm 2\\pi, \\pm 4\\pi, \\dots\\} \\implies x(t)$ is **REAL**.",
+        "If $S = (2n+1)\\pi \\in \\{\\pm \\pi, \\pm 3\\pi, \\pm 5\\pi, \\dots\\} \\implies x(t)$ is **PURELY IMAGINARY**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14583,173 +14546,172 @@ export default {
      "text": "Determine the nature of the time-domain signal $x(t)$:\n(a) REAL  \n(b) Purely IMAGINARY  \n(c) COMPLEX  \n(d) NONE of the above"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Assign Magnitude and Phase to Real Bipolar Functions"
-    },
-    {
-     "t": "p",
-     "text": "Recall that any real-valued number $X \\in \\mathbb{R}$ has:"
-    },
-    {
-     "t": "math",
-     "tex": "X = |X| e^{j\\theta}, \\quad \\text{where } \\theta = \\begin{cases} 0 \\text{ (or } 2k\\pi), & X > 0 \\\\ \\pi \\text{ (or } (2k+1)\\pi), & X < 0 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "We evaluate the magnitude $|X(\\omega)|$ and phase $\\angle X(\\omega)$ for each lobe:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Lobe on $[3, 4]$ (centered at $\\omega = 3.5$)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$X(3.5) = +3 > 0 \\implies |X(3.5)| = 3, \\quad \\angle X(3.5) = 0 \\equiv 2\\pi$"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Lobe on $[5, 6]$ (centered at $\\omega = 5.5$)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$X(5.5) = -3 < 0 \\implies |X(5.5)| = |-3| = 3, \\quad \\angle X(5.5) = -\\pi \\equiv +\\pi$"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Lobe on $[-4, -3]$ (centered at $\\omega = -3.5$)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$X(-3.5) = -3 < 0 \\implies |X(-3.5)| = |-3| = 3, \\quad \\angle X(-3.5) = -\\pi \\equiv +\\pi$"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Lobe on $[-6, -5]$ (centered at $\\omega = -5.5$)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$X(-5.5) = +3 > 0 \\implies |X(-5.5)| = 3, \\quad \\angle X(-5.5) = 0 \\equiv 2\\pi$"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Test Magnitude Parity (Step 1 of Decision Tree)"
-    },
-    {
-     "t": "p",
-     "text": "Compare positive and negative frequency pairs:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = 3.5$: $|X(3.5)| = 3$, and $|X(-3.5)| = 3 \\implies |X(3.5)| = |X(-3.5)|$.",
-      "At $\\omega = 5.5$: $|X(5.5)| = 3$, and $|X(-5.5)| = 3 \\implies |X(5.5)| = |X(-5.5)|$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Across all $\\omega$, the magnitude spectrum $|X(\\omega)|$ exhibits perfect even symmetry:"
-    },
-    {
-     "t": "math",
-     "tex": "|X(\\omega)| = |X(-\\omega)|"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, $x(t)$ **cannot be complex**; it is either **REAL** or **PURELY IMAGINARY**."
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Test Phase Angle Sum (Step 2 of Decision Tree)"
-    },
-    {
-     "t": "p",
-     "text": "Compute $S(\\omega) = \\angle X(\\omega) + \\angle X(-\\omega)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pair 1 ($\\{\\omega = 3.5, -3.5\\}$)**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(3.5) = 2\\pi, \\quad \\angle X(-3.5) = -\\pi"
-    },
-    {
-     "t": "math",
-     "tex": "S(3.5) = \\angle X(3.5) + \\angle X(-3.5) = 2\\pi + (-\\pi) = +\\pi"
-    },
-    {
-     "t": "p",
-     "text": "Notice that $\\pi = (2 \\times 0 + 1)\\pi$, which is an **odd multiple of $\\pi$**!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pair 2 ($\\{\\omega = 5.5, -5.5\\}$)**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(5.5) = -\\pi, \\quad \\angle X(-5.5) = 2\\pi"
-    },
-    {
-     "t": "math",
-     "tex": "S(5.5) = \\angle X(5.5) + \\angle X(-5.5) = -\\pi + 2\\pi = +\\pi"
-    },
-    {
-     "t": "p",
-     "text": "Again, $\\pi$ is an **odd multiple of $\\pi$**!"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Final Conclusion"
-    },
-    {
-     "t": "p",
-     "text": "Because:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$|X(\\omega)|$ is strictly EVEN, and",
-      "$\\angle X(\\omega) + \\angle X(-\\omega) = (2n+1)\\pi$ for all $\\omega$,"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The time-domain signal $x(t)$ is strictly **PURELY IMAGINARY**!"
-    },
-    {
-     "t": "p",
-     "text": "**Correct Answer:** **(b) Purely IMAGINARY**"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE Candidate Trap**:\nMany students mistakenly think that because $X(\\omega)$ is purely real-valued (drawn entirely along the vertical axis without any imaginary unit $j$), the signal $x(t)$ must be real. This is a fatal misconception!\nRemember: If $x(t)$ is imaginary and odd, its Fourier transform $X(\\omega)$ is **purely REAL and ODD**!\nHere, $X(\\omega)$ is neither even nor odd, but when decomposed into magnitude and phase, its phase satisfies the odd multiple of $\\pi$ condition, proving $x(t)$ is purely imaginary!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Assign Magnitude and Phase to Real Bipolar Functions"
+      },
+      {
+       "t": "p",
+       "text": "Recall that any real-valued number $X \\in \\mathbb{R}$ has:"
+      },
+      {
+       "t": "math",
+       "tex": "X = |X| e^{j\\theta}, \\quad \\text{where } \\theta = \\begin{cases} 0 \\text{ (or } 2k\\pi), & X > 0 \\\\ \\pi \\text{ (or } (2k+1)\\pi), & X < 0 \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "We evaluate the magnitude $|X(\\omega)|$ and phase $\\angle X(\\omega)$ for each lobe:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Lobe on $[3, 4]$ (centered at $\\omega = 3.5$)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$X(3.5) = +3 > 0 \\implies |X(3.5)| = 3, \\quad \\angle X(3.5) = 0 \\equiv 2\\pi$"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Lobe on $[5, 6]$ (centered at $\\omega = 5.5$)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$X(5.5) = -3 < 0 \\implies |X(5.5)| = |-3| = 3, \\quad \\angle X(5.5) = -\\pi \\equiv +\\pi$"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Lobe on $[-4, -3]$ (centered at $\\omega = -3.5$)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$X(-3.5) = -3 < 0 \\implies |X(-3.5)| = |-3| = 3, \\quad \\angle X(-3.5) = -\\pi \\equiv +\\pi$"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Lobe on $[-6, -5]$ (centered at $\\omega = -5.5$)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$X(-5.5) = +3 > 0 \\implies |X(-5.5)| = 3, \\quad \\angle X(-5.5) = 0 \\equiv 2\\pi$"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Test Magnitude Parity (Step 1 of Decision Tree)"
+      },
+      {
+       "t": "p",
+       "text": "Compare positive and negative frequency pairs:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = 3.5$: $|X(3.5)| = 3$, and $|X(-3.5)| = 3 \\implies |X(3.5)| = |X(-3.5)|$.",
+        "At $\\omega = 5.5$: $|X(5.5)| = 3$, and $|X(-5.5)| = 3 \\implies |X(5.5)| = |X(-5.5)|$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Across all $\\omega$, the magnitude spectrum $|X(\\omega)|$ exhibits perfect even symmetry:"
+      },
+      {
+       "t": "math",
+       "tex": "|X(\\omega)| = |X(-\\omega)|"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, $x(t)$ **cannot be complex**; it is either **REAL** or **PURELY IMAGINARY**."
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Test Phase Angle Sum (Step 2 of Decision Tree)"
+      },
+      {
+       "t": "p",
+       "text": "Compute $S(\\omega) = \\angle X(\\omega) + \\angle X(-\\omega)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pair 1 ($\\{\\omega = 3.5, -3.5\\}$)**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(3.5) = 2\\pi, \\quad \\angle X(-3.5) = -\\pi"
+      },
+      {
+       "t": "math",
+       "tex": "S(3.5) = \\angle X(3.5) + \\angle X(-3.5) = 2\\pi + (-\\pi) = +\\pi"
+      },
+      {
+       "t": "p",
+       "text": "Notice that $\\pi = (2 \\times 0 + 1)\\pi$, which is an **odd multiple of $\\pi$**!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pair 2 ($\\{\\omega = 5.5, -5.5\\}$)**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(5.5) = -\\pi, \\quad \\angle X(-5.5) = 2\\pi"
+      },
+      {
+       "t": "math",
+       "tex": "S(5.5) = \\angle X(5.5) + \\angle X(-5.5) = -\\pi + 2\\pi = +\\pi"
+      },
+      {
+       "t": "p",
+       "text": "Again, $\\pi$ is an **odd multiple of $\\pi$**!"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Final Conclusion"
+      },
+      {
+       "t": "p",
+       "text": "Because:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$|X(\\omega)|$ is strictly EVEN, and",
+        "$\\angle X(\\omega) + \\angle X(-\\omega) = (2n+1)\\pi$ for all $\\omega$,"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The time-domain signal $x(t)$ is strictly **PURELY IMAGINARY**!"
+      },
+      {
+       "t": "p",
+       "text": "**Correct Answer:** **(b) Purely IMAGINARY**"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE Candidate Trap**:\nMany students mistakenly think that because $X(\\omega)$ is purely real-valued (drawn entirely along the vertical axis without any imaginary unit $j$), the signal $x(t)$ must be real. This is a fatal misconception!\nRemember: If $x(t)$ is imaginary and odd, its Fourier transform $X(\\omega)$ is **purely REAL and ODD**!\nHere, $X(\\omega)$ is neither even nor odd, but when decomposed into magnitude and phase, its phase satisfies the odd multiple of $\\pi$ condition, proving $x(t)$ is purely imaginary!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -15659,39 +15621,42 @@ export default {
      "text": "**Problem Statement:**  \nA signal $x(t)$ has a Fourier transform $X(\\omega)$ whose magnitude spectrum $|X(\\omega)|$ is non-zero only for $\\omega > 0$ (single-sided triangular band). Determine whether $x(t)$ is Real, Purely Imaginary, or Complex."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Test Conjugate Symmetry Condition**  \nFor any real-valued signal $x(t) \\in \\mathbb{R}$, its magnitude spectrum must be an even function of frequency:"
-    },
-    {
-     "t": "math",
-     "tex": "|X(\\omega)| = |X(-\\omega)| \\quad \\forall \\omega \\in \\mathbb{R}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Evaluate Support of $|X(\\omega)|$**  \nGiven that $X(\\omega) \\neq 0$ only for $\\omega \\in (\\omega_1, \\omega_2)$ where $\\omega_1 > 0$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $\\omega > 0$: $|X(\\omega)| > 0$.",
-      "For $-\\omega < 0$: $|X(-\\omega)| = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Clearly, $|X(\\omega)| \\neq |X(-\\omega)|$."
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:**  \nBecause the magnitude spectrum lacks even symmetry, $x(t)$ **cannot be real** nor purely imaginary (both require $|X(\\omega)|$ to be even).  \nTherefore, $x(t)$ is strictly **Complex**."
-    },
-    {
-     "t": "p",
-     "text": "**Exam Trap:**  \nStudents frequently confuse one-sided causal time signals $x(t)u(t)$ (which can be real, e.g., $e^{-at}u(t)$) with single-sided frequency signals $X(\\omega)u(\\omega)$ (which can NEVER be real in the time domain, as they violate Hermitian symmetry).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Test Conjugate Symmetry Condition**  \nFor any real-valued signal $x(t) \\in \\mathbb{R}$, its magnitude spectrum must be an even function of frequency:"
+      },
+      {
+       "t": "math",
+       "tex": "|X(\\omega)| = |X(-\\omega)| \\quad \\forall \\omega \\in \\mathbb{R}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Evaluate Support of $|X(\\omega)|$**  \nGiven that $X(\\omega) \\neq 0$ only for $\\omega \\in (\\omega_1, \\omega_2)$ where $\\omega_1 > 0$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $\\omega > 0$: $|X(\\omega)| > 0$.",
+        "For $-\\omega < 0$: $|X(-\\omega)| = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Clearly, $|X(\\omega)| \\neq |X(-\\omega)|$."
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:**  \nBecause the magnitude spectrum lacks even symmetry, $x(t)$ **cannot be real** nor purely imaginary (both require $|X(\\omega)|$ to be even).  \nTherefore, $x(t)$ is strictly **Complex**."
+      },
+      {
+       "t": "p",
+       "text": "**Exam Trap:**  \nStudents frequently confuse one-sided causal time signals $x(t)u(t)$ (which can be real, e.g., $e^{-at}u(t)$) with single-sided frequency signals $X(\\omega)u(\\omega)$ (which can NEVER be real in the time domain, as they violate Hermitian symmetry)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15717,65 +15682,68 @@ export default {
      "text": "Determine if $x(t)$ is Real, Imaginary, or Complex."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Formulate the Modulo-$2\\pi$ Conjugate Symmetry Criterion**  \nA signal with an even magnitude spectrum is purely real if and only if its phase spectrum satisfies:"
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi, \\quad n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Test at Given Frequency Pairs**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "At $\\omega = a$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(a) + \\angle X(-a) = \\frac{\\pi}{2} + \\frac{3\\pi}{2} = \\frac{4\\pi}{2} = 2\\pi \\quad (n = 1)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "At $\\omega = c$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(c) + \\angle X(-c) = -\\pi + \\pi = 0 = 0\\pi \\quad (n = 0)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "At $\\omega = b$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(b) + \\angle X(-b) = 0 + 0 = 0 \\quad (n = 0)"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:**  \nEvery frequency pair satisfies the phase condition $\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi$. Together with the even magnitude spectrum $|X(\\omega)| = |X(-\\omega)|$, $X(\\omega)$ is strictly conjugate-symmetric:"
-    },
-    {
-     "t": "math",
-     "tex": "X(-\\omega) = X^*(\\omega) \\implies \\mathbf{x(t) \\text{ is REAL}}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Trap:**  \nMany candidates assume that $\\angle X(-\\omega)$ must strictly equal $-\\angle X(\\omega)$ in the principal branch $(-\\pi, \\pi]$. At $\\omega = a$, $\\angle X(a) = \\pi/2$ and $\\angle X(-a) = 3\\pi/2 \\equiv -\\pi/2 \\pmod{2\\pi}$. Always test the condition modulo $2\\pi$!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Formulate the Modulo-$2\\pi$ Conjugate Symmetry Criterion**  \nA signal with an even magnitude spectrum is purely real if and only if its phase spectrum satisfies:"
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi, \\quad n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Test at Given Frequency Pairs**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "At $\\omega = a$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(a) + \\angle X(-a) = \\frac{\\pi}{2} + \\frac{3\\pi}{2} = \\frac{4\\pi}{2} = 2\\pi \\quad (n = 1)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "At $\\omega = c$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(c) + \\angle X(-c) = -\\pi + \\pi = 0 = 0\\pi \\quad (n = 0)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "At $\\omega = b$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(b) + \\angle X(-b) = 0 + 0 = 0 \\quad (n = 0)"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:**  \nEvery frequency pair satisfies the phase condition $\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi$. Together with the even magnitude spectrum $|X(\\omega)| = |X(-\\omega)|$, $X(\\omega)$ is strictly conjugate-symmetric:"
+      },
+      {
+       "t": "math",
+       "tex": "X(-\\omega) = X^*(\\omega) \\implies \\mathbf{x(t) \\text{ is REAL}}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Trap:**  \nMany candidates assume that $\\angle X(-\\omega)$ must strictly equal $-\\angle X(\\omega)$ in the principal branch $(-\\pi, \\pi]$. At $\\omega = a$, $\\angle X(a) = \\pi/2$ and $\\angle X(-a) = 3\\pi/2 \\equiv -\\pi/2 \\pmod{2\\pi}$. Always test the condition modulo $2\\pi$!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15786,32 +15754,35 @@ export default {
      "text": "**Problem Statement:**  \nTwo signals $x_1(t)$ and $x_2(t)$ have magnitude spectra $|X_1(\\omega)|$ and $|X_2(\\omega)|$ that are both confirmed to be even functions of frequency. Which of the following statements is true for sure?  \n(a) $x_1(t)$ is purely real for sure.  \n(b) $x_2(t)$ is purely real for sure.  \n(c) $x_1(t)x_2(t)$ is purely real for sure.  \n(d) None of the above."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Check Sufficiency of Even Magnitude**  \nAn even magnitude spectrum $|X(\\omega)| = |X(-\\omega)|$ guarantees that $x(t)$ could be:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Real (if $\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi$)",
-      "Purely Imaginary (if $\\angle X(\\omega) + \\angle X(-\\omega) = (2n+1)\\pi$)",
-      "Complex with balanced magnitude (if $\\angle X(\\omega)$ is arbitrary)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since no phase information is provided, neither $x_1(t)$ nor $x_2(t)$ is guaranteed to be real."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Check the Product $x_1(t)x_2(t)$**  \nIf $x_1(t)$ is purely real and $x_2(t)$ is purely imaginary, the product $x_1(t)x_2(t)$ is purely imaginary. If both are complex, the product is generally complex."
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:**  \nNone of the assertions (a), (b), or (c) holds unconditionally.  \nCorrect Option: **(d) None of the above**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Check Sufficiency of Even Magnitude**  \nAn even magnitude spectrum $|X(\\omega)| = |X(-\\omega)|$ guarantees that $x(t)$ could be:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Real (if $\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi$)",
+        "Purely Imaginary (if $\\angle X(\\omega) + \\angle X(-\\omega) = (2n+1)\\pi$)",
+        "Complex with balanced magnitude (if $\\angle X(\\omega)$ is arbitrary)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since no phase information is provided, neither $x_1(t)$ nor $x_2(t)$ is guaranteed to be real."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Check the Product $x_1(t)x_2(t)$**  \nIf $x_1(t)$ is purely real and $x_2(t)$ is purely imaginary, the product $x_1(t)x_2(t)$ is purely imaginary. If both are complex, the product is generally complex."
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:**  \nNone of the assertions (a), (b), or (c) holds unconditionally.  \nCorrect Option: **(d) None of the above**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15822,77 +15793,80 @@ export default {
      "text": "**Problem Statement:**  \nGiven two signals $x_1(t)$ and $x_2(t)$ whose spectra $X_1(\\omega)$ and $X_2(\\omega)$ are purely real-valued. $X_1(\\omega)$ is a trapezoid non-zero only for $\\omega > 0$, and $X_2(\\omega)$ is its mirror image non-zero only for $\\omega < 0$, such that $X_1(-\\omega) = X_2(\\omega)$.  \nDetermine which statements are correct:  \n(a) $x_1(t)$ is complex.  \n(b) $x_2(t)$ is complex.  \n(c) $x_1(t)x_2(t)$ is purely real.  \n(d) All of the above."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Assess $x_1(t)$ and $x_2(t)$ Individually**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$X_1(\\omega)$ has support only on $\\omega > 0 \\implies |X_1(\\omega)|$ is NOT even $\\implies x_1(t)$ is complex.",
-      "$X_2(\\omega)$ has support only on $\\omega < 0 \\implies |X_2(\\omega)|$ is NOT even $\\implies x_2(t)$ is complex."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Thus, statements (a) and (b) are both true."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Analyze the Relationship Between $x_1(t)$ and $x_2(t)$**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$X_1(\\omega)$ is purely real $\\implies X_1(\\omega) = X_1^*(\\omega) \\implies x_1(t) = x_1^*(-t)$ (Conjugate Symmetric).",
-      "Given $X_2(\\omega) = X_1(-\\omega)$. Taking the inverse Fourier transform:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_2(t) = x_1(-t)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Taking the complex conjugate:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_2^*(t) = x_1^*(-t)"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "But because $x_1(t)$ is conjugate symmetric, $x_1^*(-t) = x_1(t)$. Substituting:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x_1(t) = x_2^*(t)}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Evaluate the Product $x_1(t)x_2(t)$**"
-    },
-    {
-     "t": "math",
-     "tex": "x_1(t) x_2(t) = x_2^*(t) x_2(t) = |x_2(t)|^2 \\ge 0 \\in \\mathbb{R}"
-    },
-    {
-     "t": "p",
-     "text": "The product is strictly real-valued (and non-negative) for all $t$. Thus, statement (c) is also true!"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:**  \nCorrect Option: **(d) All of the above**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Assess $x_1(t)$ and $x_2(t)$ Individually**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$X_1(\\omega)$ has support only on $\\omega > 0 \\implies |X_1(\\omega)|$ is NOT even $\\implies x_1(t)$ is complex.",
+        "$X_2(\\omega)$ has support only on $\\omega < 0 \\implies |X_2(\\omega)|$ is NOT even $\\implies x_2(t)$ is complex."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Thus, statements (a) and (b) are both true."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Analyze the Relationship Between $x_1(t)$ and $x_2(t)$**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$X_1(\\omega)$ is purely real $\\implies X_1(\\omega) = X_1^*(\\omega) \\implies x_1(t) = x_1^*(-t)$ (Conjugate Symmetric).",
+        "Given $X_2(\\omega) = X_1(-\\omega)$. Taking the inverse Fourier transform:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_2(t) = x_1(-t)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Taking the complex conjugate:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_2^*(t) = x_1^*(-t)"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "But because $x_1(t)$ is conjugate symmetric, $x_1^*(-t) = x_1(t)$. Substituting:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x_1(t) = x_2^*(t)}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Evaluate the Product $x_1(t)x_2(t)$**"
+      },
+      {
+       "t": "math",
+       "tex": "x_1(t) x_2(t) = x_2^*(t) x_2(t) = |x_2(t)|^2 \\ge 0 \\in \\mathbb{R}"
+      },
+      {
+       "t": "p",
+       "text": "The product is strictly real-valued (and non-negative) for all $t$. Thus, statement (c) is also true!"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:**  \nCorrect Option: **(d) All of the above**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15903,92 +15877,95 @@ export default {
      "text": "**Problem Statement:**  \nA real signal $x(t)$ is supported on $t \\in [-1, 3]$ with vertices $(-1, 0)$, $(0, 2)$, $(1, 1)$, $(2, 2)$, $(3, 0)$ and is zero elsewhere. Find the possible mathematical forms of its phase spectrum $\\angle X(\\omega)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Identify Axis of Symmetry**  \nReflecting about $t = 1$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $t = 1 - 1 = 0$, $x(0) = 2$; for $t = 1 + 1 = 2$, $x(2) = 2$.",
-      "For $t = 1 - 2 = -1$, $x(-1) = 0$; for $t = 1 + 2 = 3$, $x(3) = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The signal satisfies:"
-    },
-    {
-     "t": "math",
-     "tex": "x(1 - \\tau) = x(1 + \\tau) \\quad \\forall \\tau \\in \\mathbb{R}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, shifting left by 1 gives an even signal:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) \\triangleq x(t + 1) \\implies y(-t) = y(t)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Apply Fourier Time-Shift Property**"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = e^{j\\omega} X(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Since $y(t)$ is real and even, $Y(\\omega)$ is purely real and even:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = Y(-\\omega) \\implies e^{j\\omega} X(\\omega) = e^{-j\\omega} X(-\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "In polar form with $|X(\\omega)| = |X(-\\omega)|$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega + \\angle X(\\omega) = -\\omega + \\angle X(-\\omega) + 2k\\pi \\implies \\angle X(\\omega) - \\angle X(-\\omega) = -2\\omega + 2k\\pi \\tag{1}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Apply Real Signal Phase Constraint**  \nSince $x(t)$ is real:"
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi \\tag{2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Solve for $\\angle X(\\omega)$**  \nAdding (1) and (2):"
-    },
-    {
-     "t": "math",
-     "tex": "2\\angle X(\\omega) = -2\\omega + 2(n + k)\\pi \\implies \\mathbf{\\angle X(\\omega) = -\\omega + m\\pi, \\quad m \\in \\mathbb{Z}}"
-    },
-    {
-     "t": "p",
-     "text": "**Allowable Phase Options:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$m = 0 \\implies \\angle X(\\omega) = -\\omega$",
-      "$m = 1 \\implies \\angle X(\\omega) = \\pi - \\omega$",
-      "$m = -1 \\implies \\angle X(\\omega) = -\\pi - \\omega$",
-      "$m = -2 \\implies \\angle X(\\omega) = -2\\pi - \\omega$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "All options are mathematically equivalent representations differing by sign flips of the spectral lobes!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Identify Axis of Symmetry**  \nReflecting about $t = 1$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $t = 1 - 1 = 0$, $x(0) = 2$; for $t = 1 + 1 = 2$, $x(2) = 2$.",
+        "For $t = 1 - 2 = -1$, $x(-1) = 0$; for $t = 1 + 2 = 3$, $x(3) = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The signal satisfies:"
+      },
+      {
+       "t": "math",
+       "tex": "x(1 - \\tau) = x(1 + \\tau) \\quad \\forall \\tau \\in \\mathbb{R}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, shifting left by 1 gives an even signal:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) \\triangleq x(t + 1) \\implies y(-t) = y(t)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Apply Fourier Time-Shift Property**"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = e^{j\\omega} X(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Since $y(t)$ is real and even, $Y(\\omega)$ is purely real and even:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = Y(-\\omega) \\implies e^{j\\omega} X(\\omega) = e^{-j\\omega} X(-\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "In polar form with $|X(\\omega)| = |X(-\\omega)|$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega + \\angle X(\\omega) = -\\omega + \\angle X(-\\omega) + 2k\\pi \\implies \\angle X(\\omega) - \\angle X(-\\omega) = -2\\omega + 2k\\pi \\tag{1}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Apply Real Signal Phase Constraint**  \nSince $x(t)$ is real:"
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(\\omega) + \\angle X(-\\omega) = 2n\\pi \\tag{2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Solve for $\\angle X(\\omega)$**  \nAdding (1) and (2):"
+      },
+      {
+       "t": "math",
+       "tex": "2\\angle X(\\omega) = -2\\omega + 2(n + k)\\pi \\implies \\mathbf{\\angle X(\\omega) = -\\omega + m\\pi, \\quad m \\in \\mathbb{Z}}"
+      },
+      {
+       "t": "p",
+       "text": "**Allowable Phase Options:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$m = 0 \\implies \\angle X(\\omega) = -\\omega$",
+        "$m = 1 \\implies \\angle X(\\omega) = \\pi - \\omega$",
+        "$m = -1 \\implies \\angle X(\\omega) = -\\pi - \\omega$",
+        "$m = -2 \\implies \\angle X(\\omega) = -2\\pi - \\omega$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "All options are mathematically equivalent representations differing by sign flips of the spectral lobes!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16008,59 +15985,58 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Part 1: Finite Energy Pulse $x_1(t)$**"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area} = \\int_{-\\infty}^\\infty x_1(t) \\, dt = A \\times 1 = A < \\infty"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\lim_{T \\to \\infty} \\frac{\\text{Area}}{T} = \\lim_{T \\to \\infty} \\frac{A}{T} = \\mathbf{0}"
-    },
-    {
-     "t": "p",
-     "text": "*Rule:* Any finite-duration or finite-energy signal has zero DC value."
-    },
-    {
-     "t": "p",
-     "text": "**Part 2: Unit Step $x_2(t) = A u(t)$**  \nIntegrating over the symmetric window $[-T/2, T/2]$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\lim_{T \\to \\infty} \\frac{1}{T} \\int_0^{T/2} A \\, dt = \\lim_{T \\to \\infty} \\frac{A \\cdot (T/2)}{T} = \\mathbf{\\frac{A}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "**Part 3: Ramp-Step Signal $x_3(t)$**  \nDecompose into two components:"
-    },
-    {
-     "t": "math",
-     "tex": "x_3(t) = x_{\\text{triangle}}(t) + A u(t)"
-    },
-    {
-     "t": "p",
-     "text": "where $x_{\\text{triangle}}(t)$ is supported on $[-T_0, 0]$ with peak $A$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\text{Area of triangle} = \\frac{1}{2} T_0 A < \\infty \\implies \\text{DC}_{\\text{triangle}} = 0$.",
-      "$\\text{DC of } A u(t) = \\frac{A}{2}$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = 0 + \\frac{A}{2} = \\mathbf{\\frac{A}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Part 1: Finite Energy Pulse $x_1(t)$**"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area} = \\int_{-\\infty}^\\infty x_1(t) \\, dt = A \\times 1 = A < \\infty"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\lim_{T \\to \\infty} \\frac{\\text{Area}}{T} = \\lim_{T \\to \\infty} \\frac{A}{T} = \\mathbf{0}"
+      },
+      {
+       "t": "p",
+       "text": "*Rule:* Any finite-duration or finite-energy signal has zero DC value."
+      },
+      {
+       "t": "p",
+       "text": "**Part 2: Unit Step $x_2(t) = A u(t)$**  \nIntegrating over the symmetric window $[-T/2, T/2]$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\lim_{T \\to \\infty} \\frac{1}{T} \\int_0^{T/2} A \\, dt = \\lim_{T \\to \\infty} \\frac{A \\cdot (T/2)}{T} = \\mathbf{\\frac{A}{2}}"
+      },
+      {
+       "t": "p",
+       "text": "**Part 3: Ramp-Step Signal $x_3(t)$**  \nDecompose into two components:"
+      },
+      {
+       "t": "math",
+       "tex": "x_3(t) = x_{\\text{triangle}}(t) + A u(t)"
+      },
+      {
+       "t": "p",
+       "text": "where $x_{\\text{triangle}}(t)$ is supported on $[-T_0, 0]$ with peak $A$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\text{Area of triangle} = \\frac{1}{2} T_0 A < \\infty \\implies \\text{DC}_{\\text{triangle}} = 0$.",
+        "$\\text{DC of } A u(t) = \\frac{A}{2}$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = 0 + \\frac{A}{2} = \\mathbf{\\frac{A}{2}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16071,48 +16047,51 @@ export default {
      "text": "**Problem Statement:**  \nFind the Fourier transform of $x(t) = A\\,\\text{rect}\\left(\\frac{t}{T}\\right)$ using the differentiation property."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Check DC Component**  \nSince $x(t)$ is a pulse of finite duration $T$, its total area is $AT < \\infty$, so its DC value is $c_0 = 0$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Differentiate the Waveform**  \nThe signal has step discontinuities at $t = -T/2$ (jump $+A$) and at $t = +T/2$ (jump $-A$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} = A \\delta\\left(t + \\frac{T}{2}\\right) - A \\delta\\left(t - \\frac{T}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Apply Fourier Transform**"
-    },
-    {
-     "t": "math",
-     "tex": "j\\omega X(\\omega) = A e^{j\\omega T/2} - A e^{-j\\omega T/2} = 2j A \\sin\\left(\\frac{\\omega T}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Solve for $X(\\omega)$**  \nDividing by $j\\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{2j A \\sin(\\omega T/2)}{j\\omega} = \\frac{2A \\sin(\\omega T/2)}{\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Multiply and divide by $T/2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X(\\omega) = AT \\frac{\\sin(\\omega T/2)}{\\omega T/2} = AT\\,\\text{Sa}\\left(\\frac{\\omega T}{2}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "Since $c_0 = 0$, no delta correction is needed.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Check DC Component**  \nSince $x(t)$ is a pulse of finite duration $T$, its total area is $AT < \\infty$, so its DC value is $c_0 = 0$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Differentiate the Waveform**  \nThe signal has step discontinuities at $t = -T/2$ (jump $+A$) and at $t = +T/2$ (jump $-A$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} = A \\delta\\left(t + \\frac{T}{2}\\right) - A \\delta\\left(t - \\frac{T}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Apply Fourier Transform**"
+      },
+      {
+       "t": "math",
+       "tex": "j\\omega X(\\omega) = A e^{j\\omega T/2} - A e^{-j\\omega T/2} = 2j A \\sin\\left(\\frac{\\omega T}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Solve for $X(\\omega)$**  \nDividing by $j\\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{2j A \\sin(\\omega T/2)}{j\\omega} = \\frac{2A \\sin(\\omega T/2)}{\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Multiply and divide by $T/2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X(\\omega) = AT \\frac{\\sin(\\omega T/2)}{\\omega T/2} = AT\\,\\text{Sa}\\left(\\frac{\\omega T}{2}\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "Since $c_0 = 0$, no delta correction is needed."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16123,48 +16102,47 @@ export default {
      "text": "**Problem Statement:**  \nDerive the Fourier transform of the unit step function $x(t) = u(t)$ using the differentiation property."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Identify DC Value**  \nFrom Drill 44.1, the DC component of $u(t)$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Differentiate in Time**"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{du(t)}{dt} = \\delta(t)"
-    },
-    {
-     "t": "p",
-     "text": "Taking the Fourier transform of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "j\\omega X(\\omega) = \\mathcal{F}\\{\\delta(t)\\} = 1"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Invert and Restore the Lost DC Component**  \nDividing by $j\\omega$ accounts only for the AC derivative portion. To restore the DC component:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{j\\omega} + 2\\pi c_0 \\delta(\\omega) = \\frac{1}{j\\omega} + 2\\pi \\left(\\frac{1}{2}\\right) \\delta(\\omega)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{u(t) \\longleftrightarrow \\frac{1}{j\\omega} + \\pi \\delta(\\omega)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Identify DC Value**  \nFrom Drill 44.1, the DC component of $u(t)$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Differentiate in Time**"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{du(t)}{dt} = \\delta(t)"
+      },
+      {
+       "t": "p",
+       "text": "Taking the Fourier transform of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "j\\omega X(\\omega) = \\mathcal{F}\\{\\delta(t)\\} = 1"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Invert and Restore the Lost DC Component**  \nDividing by $j\\omega$ accounts only for the AC derivative portion. To restore the DC component:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{j\\omega} + 2\\pi c_0 \\delta(\\omega) = \\frac{1}{j\\omega} + 2\\pi \\left(\\frac{1}{2}\\right) \\delta(\\omega)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{u(t) \\longleftrightarrow \\frac{1}{j\\omega} + \\pi \\delta(\\omega)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16175,64 +16153,63 @@ export default {
      "text": "**Problem Statement:**  \nFind the Fourier transform of $x(t) = r(t + 1) - r(t - 1)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Waveform Analysis & DC Value**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $t < -1$: $x(t) = 0$.",
-      "For $-1 \\le t \\le 1$: slope is $+1$, so $x(t) = t + 1$. At $t = 1$, $x(1) = 2$.",
-      "For $t > 1$: the $-r(t - 1)$ term cancels the $+1$ slope, so $x(t) = 2$ for all $t > 1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The asymptotic levels are $x(-\\infty) = 0$ and $x(+\\infty) = 2$."
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{0 + 2}{2} = 1"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: First Derivative**"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} = u(t + 1) - u(t - 1) = \\text{rect}\\left(\\frac{t}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "This is a standard rectangular pulse of height 1 and width 2 centered at $t = 0$."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\left\\{\\text{rect}\\left(\\frac{t}{2}\\right)\\right\\} = 2\\,\\text{Sa}\\left(\\frac{2\\omega}{2}\\right) = 2\\,\\text{Sa}(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Assemble Full Spectrum**"
-    },
-    {
-     "t": "math",
-     "tex": "j\\omega X(\\omega) = 2\\,\\text{Sa}(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Adding the DC impulse $2\\pi c_0 \\delta(\\omega) = 2\\pi(1)\\delta(\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X(\\omega) = \\frac{2\\,\\text{Sa}(\\omega)}{j\\omega} + 2\\pi \\delta(\\omega)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Waveform Analysis & DC Value**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $t < -1$: $x(t) = 0$.",
+        "For $-1 \\le t \\le 1$: slope is $+1$, so $x(t) = t + 1$. At $t = 1$, $x(1) = 2$.",
+        "For $t > 1$: the $-r(t - 1)$ term cancels the $+1$ slope, so $x(t) = 2$ for all $t > 1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The asymptotic levels are $x(-\\infty) = 0$ and $x(+\\infty) = 2$."
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{0 + 2}{2} = 1"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: First Derivative**"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} = u(t + 1) - u(t - 1) = \\text{rect}\\left(\\frac{t}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "This is a standard rectangular pulse of height 1 and width 2 centered at $t = 0$."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\left\\{\\text{rect}\\left(\\frac{t}{2}\\right)\\right\\} = 2\\,\\text{Sa}\\left(\\frac{2\\omega}{2}\\right) = 2\\,\\text{Sa}(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Assemble Full Spectrum**"
+      },
+      {
+       "t": "math",
+       "tex": "j\\omega X(\\omega) = 2\\,\\text{Sa}(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Adding the DC impulse $2\\pi c_0 \\delta(\\omega) = 2\\pi(1)\\delta(\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X(\\omega) = \\frac{2\\,\\text{Sa}(\\omega)}{j\\omega} + 2\\pi \\delta(\\omega)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16251,68 +16228,71 @@ export default {
      "text": "using (a) differentiation, (b) decomposition into overlapping rectangular pulses, and (c) decomposition into contiguous rectangular pulses."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Method A: Differentiation Property**  \nSince $x(t)$ has finite duration ($t \\in [0, 2]$), its DC value is $c_0 = 0$.\nEvaluating discontinuities:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $t = 0$: jump from $0$ to $A \\implies +A\\delta(t)$",
-      "At $t = 1$: jump from $A$ to $2A \\implies +A\\delta(t - 1)$",
-      "At $t = 2$: jump from $2A$ to $0 \\implies -2A\\delta(t - 2)$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} = A\\delta(t) + A\\delta(t - 1) - 2A\\delta(t - 2)"
-    },
-    {
-     "t": "p",
-     "text": "Taking the Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "j\\omega X(\\omega) = A + A e^{-j\\omega} - 2A e^{-j2\\omega}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X(\\omega) = \\frac{A\\left(1 + e^{-j\\omega} - 2e^{-j2\\omega}\\right)}{j\\omega}}"
-    },
-    {
-     "t": "p",
-     "text": "**Method B: Overlapping Rectangles Decomposition**  \nDecompose as a base rectangle of height $A$ on $[0, 2]$ plus an upper step of height $A$ on $[1, 2]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = A\\,\\text{rect}\\left(\\frac{t - 1}{2}\\right) + A\\,\\text{rect}\\left(\\frac{t - 1.5}{1}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Using $\\mathcal{F}\\{A\\,\\text{rect}(t/T)\\} = AT\\,\\text{Sa}(\\omega T/2)$ and the time-shift theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X(\\omega) = 2A\\,\\text{Sa}(\\omega) e^{-j\\omega} + A\\,\\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j1.5\\omega}}"
-    },
-    {
-     "t": "p",
-     "text": "**Method C: Contiguous Rectangles Decomposition**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = A\\,\\text{rect}\\left(\\frac{t - 0.5}{1}\\right) + 2A\\,\\text{rect}\\left(\\frac{t - 1.5}{1}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X(\\omega) = A\\,\\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j0.5\\omega} + 2A\\,\\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j1.5\\omega}}"
-    },
-    {
-     "t": "p",
-     "text": "All three expressions are analytically identical, easily verified by expanding $\\text{Sa}(\\theta) = \\frac{e^{j\\theta}-e^{-j\\theta}}{2j\\theta}$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Method A: Differentiation Property**  \nSince $x(t)$ has finite duration ($t \\in [0, 2]$), its DC value is $c_0 = 0$.\nEvaluating discontinuities:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $t = 0$: jump from $0$ to $A \\implies +A\\delta(t)$",
+        "At $t = 1$: jump from $A$ to $2A \\implies +A\\delta(t - 1)$",
+        "At $t = 2$: jump from $2A$ to $0 \\implies -2A\\delta(t - 2)$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} = A\\delta(t) + A\\delta(t - 1) - 2A\\delta(t - 2)"
+      },
+      {
+       "t": "p",
+       "text": "Taking the Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "j\\omega X(\\omega) = A + A e^{-j\\omega} - 2A e^{-j2\\omega}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X(\\omega) = \\frac{A\\left(1 + e^{-j\\omega} - 2e^{-j2\\omega}\\right)}{j\\omega}}"
+      },
+      {
+       "t": "p",
+       "text": "**Method B: Overlapping Rectangles Decomposition**  \nDecompose as a base rectangle of height $A$ on $[0, 2]$ plus an upper step of height $A$ on $[1, 2]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = A\\,\\text{rect}\\left(\\frac{t - 1}{2}\\right) + A\\,\\text{rect}\\left(\\frac{t - 1.5}{1}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Using $\\mathcal{F}\\{A\\,\\text{rect}(t/T)\\} = AT\\,\\text{Sa}(\\omega T/2)$ and the time-shift theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X(\\omega) = 2A\\,\\text{Sa}(\\omega) e^{-j\\omega} + A\\,\\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j1.5\\omega}}"
+      },
+      {
+       "t": "p",
+       "text": "**Method C: Contiguous Rectangles Decomposition**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = A\\,\\text{rect}\\left(\\frac{t - 0.5}{1}\\right) + 2A\\,\\text{rect}\\left(\\frac{t - 1.5}{1}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X(\\omega) = A\\,\\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j0.5\\omega} + 2A\\,\\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j1.5\\omega}}"
+      },
+      {
+       "t": "p",
+       "text": "All three expressions are analytically identical, easily verified by expanding $\\text{Sa}(\\theta) = \\frac{e^{j\\theta}-e^{-j\\theta}}{2j\\theta}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16323,47 +16303,46 @@ export default {
      "text": "**Problem Statement:**  \nFind the Fourier transform of $x(t) = 2t\\,[u(t) - u(t - 2)]$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Inspect Waveform and DC Level**  \nThe waveform rises with constant slope $m = 2$ from $(0, 0)$ to $(2, 4)$, then abruptly drops to zero at $t = 2$.  \nFinite duration $\\implies c_0 = 0$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: First Derivative**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "On $t \\in (0, 2)$: slope is constant $+2 \\implies$ rectangular pulse $2\\,\\text{rect}\\left(\\frac{t - 1}{2}\\right)$.",
-      "At $t = 2$: drop of $-4 \\implies -4\\delta(t - 2)$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} = 2\\,\\text{rect}\\left(\\frac{t - 1}{2}\\right) - 4\\delta(t - 2)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Fourier Transform**"
-    },
-    {
-     "t": "math",
-     "tex": "j\\omega X(\\omega) = 2 \\left[2\\,\\text{Sa}(\\omega)\\right] e^{-j\\omega} - 4 e^{-j2\\omega} = 4\\,\\text{Sa}(\\omega) e^{-j\\omega} - 4 e^{-j2\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Dividing by $j\\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X(\\omega) = \\frac{4\\,\\text{Sa}(\\omega) e^{-j\\omega} - 4 e^{-j2\\omega}}{j\\omega}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Inspect Waveform and DC Level**  \nThe waveform rises with constant slope $m = 2$ from $(0, 0)$ to $(2, 4)$, then abruptly drops to zero at $t = 2$.  \nFinite duration $\\implies c_0 = 0$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: First Derivative**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "On $t \\in (0, 2)$: slope is constant $+2 \\implies$ rectangular pulse $2\\,\\text{rect}\\left(\\frac{t - 1}{2}\\right)$.",
+        "At $t = 2$: drop of $-4 \\implies -4\\delta(t - 2)$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} = 2\\,\\text{rect}\\left(\\frac{t - 1}{2}\\right) - 4\\delta(t - 2)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Fourier Transform**"
+      },
+      {
+       "t": "math",
+       "tex": "j\\omega X(\\omega) = 2 \\left[2\\,\\text{Sa}(\\omega)\\right] e^{-j\\omega} - 4 e^{-j2\\omega} = 4\\,\\text{Sa}(\\omega) e^{-j\\omega} - 4 e^{-j2\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Dividing by $j\\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X(\\omega) = \\frac{4\\,\\text{Sa}(\\omega) e^{-j\\omega} - 4 e^{-j2\\omega}}{j\\omega}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16382,96 +16361,99 @@ export default {
      "text": "Compare the 1st Derivative method with the 2nd Derivative method."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute DC Offset**  \nAs $t \\to -\\infty$, $x(t) = 2$; as $t \\to +\\infty$, $x(t) = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{x(-\\infty) + x(+\\infty)}{2} = \\frac{2 + 1}{2} = \\frac{3}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{c_0\\} = 2\\pi c_0 \\delta(\\omega) = 2\\pi\\left(\\frac{3}{2}\\right)\\delta(\\omega) = 3\\pi \\delta(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "**Method 1: First Derivative**  \nSlopes of the linear segments:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$t \\in (-2, 0)$: slope $m = -1 \\implies -\\text{rect}\\left(\\frac{t + 1}{2}\\right)$",
-      "$t \\in (0, 1)$: slope $m = +1 \\implies +\\text{rect}\\left(\\frac{t - 0.5}{1}\\right)$",
-      "Elsewhere: slope is 0."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dx(t)}{dt} = -\\text{rect}\\left(\\frac{t + 1}{2}\\right) + \\text{rect}\\left(\\frac{t - 0.5}{1}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Taking FT:"
-    },
-    {
-     "t": "math",
-     "tex": "j\\omega X(\\omega) = -2\\,\\text{Sa}(\\omega) e^{j\\omega} + \\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j0.5\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Adding the DC impulse:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X(\\omega) = \\frac{-2\\,\\text{Sa}(\\omega) e^{j\\omega} + \\text{Sa}(\\omega/2) e^{-j\\omega/2}}{j\\omega} + 3\\pi \\delta(\\omega)}"
-    },
-    {
-     "t": "p",
-     "text": "**Method 2: Second Derivative**  \nDifferentiating the slope changes directly:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $t = -2$: slope changes from $0$ to $-1 \\implies \\Delta m = -1 - 0 = -1 \\implies -\\delta(t + 2)$",
-      "At $t = 0$: slope changes from $-1$ to $+1 \\implies \\Delta m = 1 - (-1) = +2 \\implies +2\\delta(t)$",
-      "At $t = 1$: slope changes from $+1$ to $0 \\implies \\Delta m = 0 - 1 = -1 \\implies -\\delta(t - 1)$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d^2 x(t)}{dt^2} = -\\delta(t + 2) + 2\\delta(t) - \\delta(t - 1)"
-    },
-    {
-     "t": "p",
-     "text": "Taking FT:"
-    },
-    {
-     "t": "math",
-     "tex": "(j\\omega)^2 X(\\omega) = -\\omega^2 X(\\omega) = -e^{j2\\omega} + 2 - e^{-j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Dividing by $-\\omega^2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{-e^{j2\\omega} + 2 - e^{-j\\omega}}{-\\omega^2} = \\frac{e^{j2\\omega} - 2 + e^{-j\\omega}}{\\omega^2}"
-    },
-    {
-     "t": "p",
-     "text": "Adding the DC impulse:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X(\\omega) = \\frac{e^{j2\\omega} - 2 + e^{-j\\omega}}{\\omega^2} + 3\\pi \\delta(\\omega)}"
-    },
-    {
-     "t": "p",
-     "text": "**Key Takeaway:** The second derivative completely avoids Sinc terms by turning all piecewise linear ramps directly into impulses!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Compute DC Offset**  \nAs $t \\to -\\infty$, $x(t) = 2$; as $t \\to +\\infty$, $x(t) = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{x(-\\infty) + x(+\\infty)}{2} = \\frac{2 + 1}{2} = \\frac{3}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{c_0\\} = 2\\pi c_0 \\delta(\\omega) = 2\\pi\\left(\\frac{3}{2}\\right)\\delta(\\omega) = 3\\pi \\delta(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "**Method 1: First Derivative**  \nSlopes of the linear segments:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$t \\in (-2, 0)$: slope $m = -1 \\implies -\\text{rect}\\left(\\frac{t + 1}{2}\\right)$",
+        "$t \\in (0, 1)$: slope $m = +1 \\implies +\\text{rect}\\left(\\frac{t - 0.5}{1}\\right)$",
+        "Elsewhere: slope is 0."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dx(t)}{dt} = -\\text{rect}\\left(\\frac{t + 1}{2}\\right) + \\text{rect}\\left(\\frac{t - 0.5}{1}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Taking FT:"
+      },
+      {
+       "t": "math",
+       "tex": "j\\omega X(\\omega) = -2\\,\\text{Sa}(\\omega) e^{j\\omega} + \\text{Sa}\\left(\\frac{\\omega}{2}\\right) e^{-j0.5\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Adding the DC impulse:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X(\\omega) = \\frac{-2\\,\\text{Sa}(\\omega) e^{j\\omega} + \\text{Sa}(\\omega/2) e^{-j\\omega/2}}{j\\omega} + 3\\pi \\delta(\\omega)}"
+      },
+      {
+       "t": "p",
+       "text": "**Method 2: Second Derivative**  \nDifferentiating the slope changes directly:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $t = -2$: slope changes from $0$ to $-1 \\implies \\Delta m = -1 - 0 = -1 \\implies -\\delta(t + 2)$",
+        "At $t = 0$: slope changes from $-1$ to $+1 \\implies \\Delta m = 1 - (-1) = +2 \\implies +2\\delta(t)$",
+        "At $t = 1$: slope changes from $+1$ to $0 \\implies \\Delta m = 0 - 1 = -1 \\implies -\\delta(t - 1)$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d^2 x(t)}{dt^2} = -\\delta(t + 2) + 2\\delta(t) - \\delta(t - 1)"
+      },
+      {
+       "t": "p",
+       "text": "Taking FT:"
+      },
+      {
+       "t": "math",
+       "tex": "(j\\omega)^2 X(\\omega) = -\\omega^2 X(\\omega) = -e^{j2\\omega} + 2 - e^{-j\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Dividing by $-\\omega^2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{-e^{j2\\omega} + 2 - e^{-j\\omega}}{-\\omega^2} = \\frac{e^{j2\\omega} - 2 + e^{-j\\omega}}{\\omega^2}"
+      },
+      {
+       "t": "p",
+       "text": "Adding the DC impulse:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X(\\omega) = \\frac{e^{j2\\omega} - 2 + e^{-j\\omega}}{\\omega^2} + 3\\pi \\delta(\\omega)}"
+      },
+      {
+       "t": "p",
+       "text": "**Key Takeaway:** The second derivative completely avoids Sinc terms by turning all piecewise linear ramps directly into impulses!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16490,51 +16472,50 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Part 1: Frequency-Domain Integral $I_1$**  \nThe inverse Fourier transform synthesis equation states:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2\\pi} \\int_{-\\infty}^\\infty X(\\omega) e^{j\\omega t} \\, d\\omega \\implies \\int_{-\\infty}^\\infty X(\\omega) e^{j\\omega t} \\, d\\omega = 2\\pi x(t)"
-    },
-    {
-     "t": "p",
-     "text": "Comparing the exponent $e^{j\\omega t}$ with $e^{-j 2\\omega}$, set $t = -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{I_1 = \\int_{-\\infty}^\\infty X(\\omega) e^{-j 2\\omega} \\, d\\omega = 2\\pi x(-2)}"
-    },
-    {
-     "t": "p",
-     "text": "**Part 2: Modulated Time Integral $I_2$**  \nUsing Euler's formula $\\cos(2t) = \\frac{e^{j 2t} + e^{-j 2t}}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "I_2 = \\frac{1}{2}\\int_{-\\infty}^\\infty x(t) e^{j 2t} \\, dt + \\frac{1}{2}\\int_{-\\infty}^\\infty x(t) e^{-j 2t} \\, dt"
-    },
-    {
-     "t": "p",
-     "text": "From the forward Fourier transform $X(\\omega) = \\int_{-\\infty}^\\infty x(t) e^{-j\\omega t} \\, dt$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\int_{-\\infty}^\\infty x(t) e^{-j(-2)t} \\, dt = X(-2)$",
-      "$\\int_{-\\infty}^\\infty x(t) e^{-j(2)t} \\, dt = X(2)$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{I_2 = \\frac{1}{2} X(2) + \\frac{1}{2} X(-2)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Part 1: Frequency-Domain Integral $I_1$**  \nThe inverse Fourier transform synthesis equation states:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2\\pi} \\int_{-\\infty}^\\infty X(\\omega) e^{j\\omega t} \\, d\\omega \\implies \\int_{-\\infty}^\\infty X(\\omega) e^{j\\omega t} \\, d\\omega = 2\\pi x(t)"
+      },
+      {
+       "t": "p",
+       "text": "Comparing the exponent $e^{j\\omega t}$ with $e^{-j 2\\omega}$, set $t = -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{I_1 = \\int_{-\\infty}^\\infty X(\\omega) e^{-j 2\\omega} \\, d\\omega = 2\\pi x(-2)}"
+      },
+      {
+       "t": "p",
+       "text": "**Part 2: Modulated Time Integral $I_2$**  \nUsing Euler's formula $\\cos(2t) = \\frac{e^{j 2t} + e^{-j 2t}}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "I_2 = \\frac{1}{2}\\int_{-\\infty}^\\infty x(t) e^{j 2t} \\, dt + \\frac{1}{2}\\int_{-\\infty}^\\infty x(t) e^{-j 2t} \\, dt"
+      },
+      {
+       "t": "p",
+       "text": "From the forward Fourier transform $X(\\omega) = \\int_{-\\infty}^\\infty x(t) e^{-j\\omega t} \\, dt$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\int_{-\\infty}^\\infty x(t) e^{-j(-2)t} \\, dt = X(-2)$",
+        "$\\int_{-\\infty}^\\infty x(t) e^{-j(2)t} \\, dt = X(2)$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{I_2 = \\frac{1}{2} X(2) + \\frac{1}{2} X(-2)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16557,68 +16538,67 @@ export default {
      "tex": "A = \\int_{-\\infty}^\\infty x(t) e^{-j t} \\, dt"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Relate the Target Integral to $X(\\omega)$**  \nThe target integral is the Fourier transform of $x(t)$ evaluated at $\\omega = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\int_{-\\infty}^\\infty x(t) e^{-j\\omega t} \\, dt \\right|_{\\omega = 1} = X(1)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Express $x(t)$ as an Integration / Convolution**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = y(t) * u(t), \\quad \\text{where } y(t) = \\frac{\\sin 2t}{3t} = \\frac{\\pi}{3} \\frac{\\sin 2t}{\\pi t}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Find $Y(\\omega)$ and $Y(0)$**  \nUsing the standard pair $\\frac{\\sin W t}{\\pi t} \\leftrightarrow \\text{rect}\\left(\\frac{\\omega}{2W}\\right)$ with $W = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\frac{\\pi}{3} \\text{rect}\\left(\\frac{\\omega}{4}\\right) = \\begin{cases} \\frac{\\pi}{3}, & |\\omega| < 2 \\\\ 0, & |\\omega| > 2 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "At $\\omega = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(0) = \\frac{\\pi}{3}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Formulate $X(\\omega)$ Using Integration Property**"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{Y(\\omega)}{j\\omega} + \\pi Y(0) \\delta(\\omega) = \\frac{Y(\\omega)}{j\\omega} + \\pi \\left(\\frac{\\pi}{3}\\right) \\delta(\\omega) = \\frac{Y(\\omega)}{j\\omega} + \\frac{\\pi^2}{3} \\delta(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Evaluate at $\\omega = 1$**"
-    },
-    {
-     "t": "math",
-     "tex": "A = X(1) = \\frac{Y(1)}{j(1)} + \\frac{\\pi^2}{3} \\delta(1)"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\delta(1) \\equiv 0$ (the impulse exists only at $\\omega = 0$):\nAnd since $\\omega = 1$ falls inside $(-2, 2)$, $Y(1) = \\frac{\\pi}{3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\frac{\\pi/3}{j} = \\mathbf{-j \\frac{\\pi}{3}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Relate the Target Integral to $X(\\omega)$**  \nThe target integral is the Fourier transform of $x(t)$ evaluated at $\\omega = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\int_{-\\infty}^\\infty x(t) e^{-j\\omega t} \\, dt \\right|_{\\omega = 1} = X(1)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Express $x(t)$ as an Integration / Convolution**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = y(t) * u(t), \\quad \\text{where } y(t) = \\frac{\\sin 2t}{3t} = \\frac{\\pi}{3} \\frac{\\sin 2t}{\\pi t}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Find $Y(\\omega)$ and $Y(0)$**  \nUsing the standard pair $\\frac{\\sin W t}{\\pi t} \\leftrightarrow \\text{rect}\\left(\\frac{\\omega}{2W}\\right)$ with $W = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\frac{\\pi}{3} \\text{rect}\\left(\\frac{\\omega}{4}\\right) = \\begin{cases} \\frac{\\pi}{3}, & |\\omega| < 2 \\\\ 0, & |\\omega| > 2 \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "At $\\omega = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(0) = \\frac{\\pi}{3}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Formulate $X(\\omega)$ Using Integration Property**"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{Y(\\omega)}{j\\omega} + \\pi Y(0) \\delta(\\omega) = \\frac{Y(\\omega)}{j\\omega} + \\pi \\left(\\frac{\\pi}{3}\\right) \\delta(\\omega) = \\frac{Y(\\omega)}{j\\omega} + \\frac{\\pi^2}{3} \\delta(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Evaluate at $\\omega = 1$**"
+      },
+      {
+       "t": "math",
+       "tex": "A = X(1) = \\frac{Y(1)}{j(1)} + \\frac{\\pi^2}{3} \\delta(1)"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\delta(1) \\equiv 0$ (the impulse exists only at $\\omega = 0$):\nAnd since $\\omega = 1$ falls inside $(-2, 2)$, $Y(1) = \\frac{\\pi}{3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\frac{\\pi/3}{j} = \\mathbf{-j \\frac{\\pi}{3}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16637,87 +16617,86 @@ export default {
      "text": "where $\\text{sinc}(t) \\triangleq \\frac{\\sin \\pi t}{\\pi t}$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Identify Convolution Structure**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = y(t) * h(t) = \\int_{-\\infty}^\\infty y(\\tau) h(t - \\tau) \\, d\\tau"
-    },
-    {
-     "t": "p",
-     "text": "where:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\text{sinc}(t) = \\frac{\\sin \\pi t}{\\pi t}"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\text{sinc}(3t) = \\frac{\\sin 3\\pi t}{3\\pi t} = \\frac{1}{3} \\frac{\\sin 3\\pi t}{\\pi t}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Determine Spectra $Y(\\omega)$ and $H(\\omega)$**  \nUsing $\\frac{\\sin W t}{\\pi t} \\leftrightarrow \\text{rect}\\left(\\frac{\\omega}{2W}\\right)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $y(t)$: $W = \\pi \\implies Y(\\omega) = \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)$, which has height 1 over $[-\\pi, \\pi]$.",
-      "For $h(t)$: $W = 3\\pi \\implies H(\\omega) = \\frac{1}{3} \\text{rect}\\left(\\frac{\\omega}{6\\pi}\\right)$, which has height $\\frac{1}{3}$ over $[-3\\pi, 3\\pi]$."
-     ]
-    },
-    {
-     "t": "code",
-     "text": "   Y(\u03c9) [Width 2\u03c0, Height 1]          H(\u03c9) [Width 6\u03c0, Height 1/3]\n          \u2502                                  \u2502\n      \u250c\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2510                         \u250c\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2510 (height 1/3)\n   \u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500> \u03c9               \u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500> \u03c9\n     -\u03c0       \u03c0                       -3\u03c0         3\u03c0"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Multiply in Frequency Domain**  \nBy the convolution theorem, $X(\\omega) = Y(\\omega) \\cdot H(\\omega)$.  \nSince the support of $Y(\\omega)$ ($[-\\pi, \\pi]$) is entirely contained within the passband of $H(\\omega)$ ($[-3\\pi, 3\\pi]$):"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = 1 \\cdot \\frac{1}{3} = \\frac{1}{3} \\quad \\text{for } |\\omega| \\le \\pi"
-    },
-    {
-     "t": "p",
-     "text": "and zero elsewhere:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{3} \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Take Inverse Fourier Transform**"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x(t) = \\frac{1}{3} \\frac{\\sin \\pi t}{\\pi t} = \\frac{1}{3} \\text{sinc}(t)}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Shortcut (Sinc Convolution Filtering Theorem):**  \nWhen two sinc functions are convolved:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{sinc}(a t) * \\text{sinc}(b t) = \\frac{1}{\\max(a, b)} \\text{sinc}(\\min(a, b) t)"
-    },
-    {
-     "t": "p",
-     "text": "Here $a = 1, b = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{sinc}(t) * \\text{sinc}(3t) = \\frac{1}{3} \\text{sinc}(1 \\cdot t) = \\frac{1}{3} \\text{sinc}(t)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Identify Convolution Structure**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = y(t) * h(t) = \\int_{-\\infty}^\\infty y(\\tau) h(t - \\tau) \\, d\\tau"
+      },
+      {
+       "t": "p",
+       "text": "where:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\text{sinc}(t) = \\frac{\\sin \\pi t}{\\pi t}"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\text{sinc}(3t) = \\frac{\\sin 3\\pi t}{3\\pi t} = \\frac{1}{3} \\frac{\\sin 3\\pi t}{\\pi t}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Determine Spectra $Y(\\omega)$ and $H(\\omega)$**  \nUsing $\\frac{\\sin W t}{\\pi t} \\leftrightarrow \\text{rect}\\left(\\frac{\\omega}{2W}\\right)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $y(t)$: $W = \\pi \\implies Y(\\omega) = \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)$, which has height 1 over $[-\\pi, \\pi]$.",
+        "For $h(t)$: $W = 3\\pi \\implies H(\\omega) = \\frac{1}{3} \\text{rect}\\left(\\frac{\\omega}{6\\pi}\\right)$, which has height $\\frac{1}{3}$ over $[-3\\pi, 3\\pi]$."
+       ]
+      },
+      {
+       "t": "code",
+       "text": "   Y(\u03c9) [Width 2\u03c0, Height 1]          H(\u03c9) [Width 6\u03c0, Height 1/3]\n          \u2502                                  \u2502\n      \u250c\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2510                         \u250c\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2510 (height 1/3)\n   \u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500> \u03c9               \u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500> \u03c9\n     -\u03c0       \u03c0                       -3\u03c0         3\u03c0"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Multiply in Frequency Domain**  \nBy the convolution theorem, $X(\\omega) = Y(\\omega) \\cdot H(\\omega)$.  \nSince the support of $Y(\\omega)$ ($[-\\pi, \\pi]$) is entirely contained within the passband of $H(\\omega)$ ($[-3\\pi, 3\\pi]$):"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = 1 \\cdot \\frac{1}{3} = \\frac{1}{3} \\quad \\text{for } |\\omega| \\le \\pi"
+      },
+      {
+       "t": "p",
+       "text": "and zero elsewhere:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{3} \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Take Inverse Fourier Transform**"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x(t) = \\frac{1}{3} \\frac{\\sin \\pi t}{\\pi t} = \\frac{1}{3} \\text{sinc}(t)}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Shortcut (Sinc Convolution Filtering Theorem):**  \nWhen two sinc functions are convolved:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{sinc}(a t) * \\text{sinc}(b t) = \\frac{1}{\\max(a, b)} \\text{sinc}(\\min(a, b) t)"
+      },
+      {
+       "t": "p",
+       "text": "Here $a = 1, b = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{sinc}(t) * \\text{sinc}(3t) = \\frac{1}{3} \\text{sinc}(1 \\cdot t) = \\frac{1}{3} \\text{sinc}(t)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17688,62 +17667,61 @@ export default {
      "text": "**Problem Statement:** An LTI system has impulse response $h(t) = \\frac{1}{3} \\frac{\\sin 3\\pi t}{\\pi t}$. If the input signal is $y(t) = \\frac{\\sin \\pi t}{\\pi t}$, find the output signal $x(t) = y(t) * h(t)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute the Fourier transform of the input signal $y(t)$**\nRecall the standard Fourier transform pair:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\sin W t}{\\pi t} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\operatorname{rect}\\left(\\frac{\\omega}{2W}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Here $W = \\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\operatorname{rect}\\left(\\frac{\\omega}{2\\pi}\\right) = \\begin{cases} 1, & -\\pi \\le \\omega \\le \\pi \\\\ 0, & |\\omega| > \\pi \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Compute the Fourier transform of the impulse response $h(t)$**\nHere $h(t) = \\frac{1}{3} \\frac{\\sin 3\\pi t}{\\pi t}$, so $W = 3\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\frac{1}{3} \\operatorname{rect}\\left(\\frac{\\omega}{6\\pi}\\right) = \\begin{cases} \\frac{1}{3}, & -3\\pi \\le \\omega \\le 3\\pi \\\\ 0, & |\\omega| > 3\\pi \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Compute the output spectrum $X(\\omega) = Y(\\omega) H(\\omega)$**\nSince $Y(\\omega)$ has support $[-\\pi, \\pi]$ and $H(\\omega)$ has support $[-3\\pi, 3\\pi]$, the overlap is completely bounded by the narrower window $[-\\pi, \\pi]$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = Y(\\omega) \\cdot H(\\omega) = (1) \\cdot \\left(\\frac{1}{3}\\right) = \\frac{1}{3} \\operatorname{rect}\\left(\\frac{\\omega}{2\\pi}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Take the Inverse Fourier Transform to obtain $x(t)$**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{3} \\mathcal{F}^{-1}\\left\\{\\operatorname{rect}\\left(\\frac{\\omega}{2\\pi}\\right)\\right\\} = \\frac{1}{3} \\frac{\\sin \\pi t}{\\pi t} = \\frac{1}{3} \\operatorname{sinc}(t)"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Trap & Key Takeaway:**"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "When convolving two sinc pulses in time, their spectra are rectangular pulses. Multiplying two concentric rectangular pulses yields the **narrower** rectangular pulse with the product of their heights. Hence, the output sinc pulse always adopts the **smaller** bandwidth!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Compute the Fourier transform of the input signal $y(t)$**\nRecall the standard Fourier transform pair:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\sin W t}{\\pi t} \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\operatorname{rect}\\left(\\frac{\\omega}{2W}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Here $W = \\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\operatorname{rect}\\left(\\frac{\\omega}{2\\pi}\\right) = \\begin{cases} 1, & -\\pi \\le \\omega \\le \\pi \\\\ 0, & |\\omega| > \\pi \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Compute the Fourier transform of the impulse response $h(t)$**\nHere $h(t) = \\frac{1}{3} \\frac{\\sin 3\\pi t}{\\pi t}$, so $W = 3\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\frac{1}{3} \\operatorname{rect}\\left(\\frac{\\omega}{6\\pi}\\right) = \\begin{cases} \\frac{1}{3}, & -3\\pi \\le \\omega \\le 3\\pi \\\\ 0, & |\\omega| > 3\\pi \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Compute the output spectrum $X(\\omega) = Y(\\omega) H(\\omega)$**\nSince $Y(\\omega)$ has support $[-\\pi, \\pi]$ and $H(\\omega)$ has support $[-3\\pi, 3\\pi]$, the overlap is completely bounded by the narrower window $[-\\pi, \\pi]$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = Y(\\omega) \\cdot H(\\omega) = (1) \\cdot \\left(\\frac{1}{3}\\right) = \\frac{1}{3} \\operatorname{rect}\\left(\\frac{\\omega}{2\\pi}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Take the Inverse Fourier Transform to obtain $x(t)$**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{3} \\mathcal{F}^{-1}\\left\\{\\operatorname{rect}\\left(\\frac{\\omega}{2\\pi}\\right)\\right\\} = \\frac{1}{3} \\frac{\\sin \\pi t}{\\pi t} = \\frac{1}{3} \\operatorname{sinc}(t)"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Trap & Key Takeaway:**"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "When convolving two sinc pulses in time, their spectra are rectangular pulses. Multiplying two concentric rectangular pulses yields the **narrower** rectangular pulse with the product of their heights. Hence, the output sinc pulse always adopts the **smaller** bandwidth!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17762,112 +17740,111 @@ export default {
      "text": "Find the central value $x(0) = \\left. x(t) \\right|_{t=0}$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Unpack the Fatal Exam Trap**\nA common mistake made by students is evaluating each term at $t=0$ directly:"
-    },
-    {
-     "t": "math",
-     "tex": "x(0) \\stackrel{?}{=} \\operatorname{sinc}(0) * \\operatorname{sinc}(0) * \\operatorname{sinc}(0) * \\operatorname{sinc}(0) = 1 * 1 * 1 * 1 = 1 \\quad \\text{\u274c (FATAL ERROR)}"
-    },
-    {
-     "t": "p",
-     "text": "*Convolution is an integral operation over all time $\\tau \\in (-\\infty, \\infty)$! The value of a convolution at $t=0$ is NOT the convolution of the instantaneous values.*"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Determine the Fourier transform of the kernel $y(t) = \\operatorname{sinc}(2t)$**"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\operatorname{sinc}(2t) = \\frac{\\sin 2\\pi t}{2\\pi t} = \\frac{1}{2} \\left[ \\frac{\\sin 2\\pi t}{\\pi t} \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Using $\\frac{\\sin W t}{\\pi t} \\leftrightarrow \\operatorname{rect}\\left(\\frac{\\omega}{2W}\\right)$ with $W = 2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\frac{1}{2} \\operatorname{rect}\\left(\\frac{\\omega}{4\\pi}\\right) = \\begin{cases} \\frac{1}{2}, & -2\\pi \\le \\omega \\le 2\\pi \\\\ 0, & |\\omega| > 2\\pi \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Compute $X(\\omega)$ using the convolution property**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = y(t) * y(t) * y(t) * y(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} X(\\omega) = [Y(\\omega)]^4"
-    },
-    {
-     "t": "p",
-     "text": "Since $Y(\\omega)$ is a rectangular pulse:"
-    },
-    {
-     "t": "math",
-     "tex": "[Y(\\omega)]^4 = \\left( \\frac{1}{2} \\right)^4 \\left[ \\operatorname{rect}\\left(\\frac{\\omega}{4\\pi}\\right) \\right]^4"
-    },
-    {
-     "t": "p",
-     "text": "For a standard binary rect function, $[\\operatorname{rect}(\\cdot)]^k = \\operatorname{rect}(\\cdot)$ for any integer $k \\ge 1$.\nTherefore:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{16} \\operatorname{rect}\\left(\\frac{\\omega}{4\\pi}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Solve for $x(0)$ via two independent methods**"
-    },
-    {
-     "t": "p",
-     "text": "*Method I: By Inverse Fourier Transform Definition at $t=0$*"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega) e^{j\\omega t}\\,d\\omega \\implies x(0) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega)\\,d\\omega"
-    },
-    {
-     "t": "p",
-     "text": "The integral $\\int_{-\\infty}^\\infty X(\\omega)\\,d\\omega$ is the area under $X(\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area} = \\text{width} \\times \\text{height} = (4\\pi) \\times \\left(\\frac{1}{16}\\right) = \\frac{\\pi}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = \\frac{1}{2\\pi} \\left( \\frac{\\pi}{4} \\right) = \\frac{1}{8}"
-    },
-    {
-     "t": "p",
-     "text": "*Method II: By Closed-Form Time Reconstruction*"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\mathcal{F}^{-1}\\{X(\\omega)\\} = \\frac{1}{16} \\mathcal{F}^{-1}\\left\\{\\operatorname{rect}\\left(\\frac{\\omega}{4\\pi}\\right)\\right\\} = \\frac{1}{16} \\left[ \\frac{\\sin 2\\pi t}{\\pi t} \\right] = \\frac{1}{8} \\left[ \\frac{\\sin 2\\pi t}{2\\pi t} \\right] = \\frac{1}{8} \\operatorname{sinc}(2t)"
-    },
-    {
-     "t": "p",
-     "text": "Now evaluating at $t = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = \\frac{1}{8} \\operatorname{sinc}(0) = \\frac{1}{8} (1) = \\frac{1}{8}"
-    },
-    {
-     "t": "p",
-     "text": "Both methods yield identically:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(0) = \\frac{1}{8}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Unpack the Fatal Exam Trap**\nA common mistake made by students is evaluating each term at $t=0$ directly:"
+      },
+      {
+       "t": "math",
+       "tex": "x(0) \\stackrel{?}{=} \\operatorname{sinc}(0) * \\operatorname{sinc}(0) * \\operatorname{sinc}(0) * \\operatorname{sinc}(0) = 1 * 1 * 1 * 1 = 1 \\quad \\text{\u274c (FATAL ERROR)}"
+      },
+      {
+       "t": "p",
+       "text": "*Convolution is an integral operation over all time $\\tau \\in (-\\infty, \\infty)$! The value of a convolution at $t=0$ is NOT the convolution of the instantaneous values.*"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Determine the Fourier transform of the kernel $y(t) = \\operatorname{sinc}(2t)$**"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\operatorname{sinc}(2t) = \\frac{\\sin 2\\pi t}{2\\pi t} = \\frac{1}{2} \\left[ \\frac{\\sin 2\\pi t}{\\pi t} \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Using $\\frac{\\sin W t}{\\pi t} \\leftrightarrow \\operatorname{rect}\\left(\\frac{\\omega}{2W}\\right)$ with $W = 2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\frac{1}{2} \\operatorname{rect}\\left(\\frac{\\omega}{4\\pi}\\right) = \\begin{cases} \\frac{1}{2}, & -2\\pi \\le \\omega \\le 2\\pi \\\\ 0, & |\\omega| > 2\\pi \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Compute $X(\\omega)$ using the convolution property**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = y(t) * y(t) * y(t) * y(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} X(\\omega) = [Y(\\omega)]^4"
+      },
+      {
+       "t": "p",
+       "text": "Since $Y(\\omega)$ is a rectangular pulse:"
+      },
+      {
+       "t": "math",
+       "tex": "[Y(\\omega)]^4 = \\left( \\frac{1}{2} \\right)^4 \\left[ \\operatorname{rect}\\left(\\frac{\\omega}{4\\pi}\\right) \\right]^4"
+      },
+      {
+       "t": "p",
+       "text": "For a standard binary rect function, $[\\operatorname{rect}(\\cdot)]^k = \\operatorname{rect}(\\cdot)$ for any integer $k \\ge 1$.\nTherefore:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{16} \\operatorname{rect}\\left(\\frac{\\omega}{4\\pi}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Solve for $x(0)$ via two independent methods**"
+      },
+      {
+       "t": "p",
+       "text": "*Method I: By Inverse Fourier Transform Definition at $t=0$*"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega) e^{j\\omega t}\\,d\\omega \\implies x(0) = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X(\\omega)\\,d\\omega"
+      },
+      {
+       "t": "p",
+       "text": "The integral $\\int_{-\\infty}^\\infty X(\\omega)\\,d\\omega$ is the area under $X(\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area} = \\text{width} \\times \\text{height} = (4\\pi) \\times \\left(\\frac{1}{16}\\right) = \\frac{\\pi}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = \\frac{1}{2\\pi} \\left( \\frac{\\pi}{4} \\right) = \\frac{1}{8}"
+      },
+      {
+       "t": "p",
+       "text": "*Method II: By Closed-Form Time Reconstruction*"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\mathcal{F}^{-1}\\{X(\\omega)\\} = \\frac{1}{16} \\mathcal{F}^{-1}\\left\\{\\operatorname{rect}\\left(\\frac{\\omega}{4\\pi}\\right)\\right\\} = \\frac{1}{16} \\left[ \\frac{\\sin 2\\pi t}{\\pi t} \\right] = \\frac{1}{8} \\left[ \\frac{\\sin 2\\pi t}{2\\pi t} \\right] = \\frac{1}{8} \\operatorname{sinc}(2t)"
+      },
+      {
+       "t": "p",
+       "text": "Now evaluating at $t = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = \\frac{1}{8} \\operatorname{sinc}(0) = \\frac{1}{8} (1) = \\frac{1}{8}"
+      },
+      {
+       "t": "p",
+       "text": "Both methods yield identically:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(0) = \\frac{1}{8}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17886,64 +17863,63 @@ export default {
      "text": "using the multiplication-in-time / convolution-in-frequency property."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Set up the product representation**\nLet $y(t) = \\frac{\\sin at}{\\pi t} \\implies x(t) = y(t) \\cdot y(t)$.\nThe Fourier transform of $y(t)$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\operatorname{rect}\\left(\\frac{\\omega}{2a}\\right) = \\begin{cases} 1, & -a \\le \\omega \\le a \\\\ 0, & |\\omega| > a \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Apply the multiplication-in-time property**"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{2\\pi} [Y(\\omega) * Y(\\omega)]"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Convolve $Y(\\omega)$ with itself graphically**\nWe are convolving two identical rectangular pulses of width $W = 2a$ and amplitude $A = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) * Y(\\omega) = A^2 W \\operatorname{tri}\\left(\\frac{\\omega}{W}\\right) = (1)^2 (2a) \\operatorname{tri}\\left(\\frac{\\omega}{2a}\\right) = 2a \\operatorname{tri}\\left(\\frac{\\omega}{2a}\\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The triangle extends from $-2a$ to $+2a$ (total base $= 4a$).",
-      "The peak value at $\\omega = 0$ is $2a$.",
-      "The slope of the sides is $\\pm 1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Scale by the factor $\\frac{1}{2\\pi}$**"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{2\\pi} \\left[ 2a \\operatorname{tri}\\left(\\frac{\\omega}{2a}\\right) \\right] = \\frac{a}{\\pi} \\operatorname{tri}\\left(\\frac{\\omega}{2a}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Piecewise definition:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\begin{cases} \\frac{a}{\\pi} \\left(1 - \\frac{|\\omega|}{2a}\\right), & |\\omega| \\le 2a \\\\ 0, & |\\omega| > 2a \\end{cases}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(\\omega) = \\frac{a}{\\pi} \\operatorname{tri}\\left(\\frac{\\omega}{2a}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Set up the product representation**\nLet $y(t) = \\frac{\\sin at}{\\pi t} \\implies x(t) = y(t) \\cdot y(t)$.\nThe Fourier transform of $y(t)$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\operatorname{rect}\\left(\\frac{\\omega}{2a}\\right) = \\begin{cases} 1, & -a \\le \\omega \\le a \\\\ 0, & |\\omega| > a \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Apply the multiplication-in-time property**"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{2\\pi} [Y(\\omega) * Y(\\omega)]"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Convolve $Y(\\omega)$ with itself graphically**\nWe are convolving two identical rectangular pulses of width $W = 2a$ and amplitude $A = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) * Y(\\omega) = A^2 W \\operatorname{tri}\\left(\\frac{\\omega}{W}\\right) = (1)^2 (2a) \\operatorname{tri}\\left(\\frac{\\omega}{2a}\\right) = 2a \\operatorname{tri}\\left(\\frac{\\omega}{2a}\\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The triangle extends from $-2a$ to $+2a$ (total base $= 4a$).",
+        "The peak value at $\\omega = 0$ is $2a$.",
+        "The slope of the sides is $\\pm 1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Scale by the factor $\\frac{1}{2\\pi}$**"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{2\\pi} \\left[ 2a \\operatorname{tri}\\left(\\frac{\\omega}{2a}\\right) \\right] = \\frac{a}{\\pi} \\operatorname{tri}\\left(\\frac{\\omega}{2a}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Piecewise definition:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\begin{cases} \\frac{a}{\\pi} \\left(1 - \\frac{|\\omega|}{2a}\\right), & |\\omega| \\le 2a \\\\ 0, & |\\omega| > 2a \\end{cases}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(\\omega) = \\frac{a}{\\pi} \\operatorname{tri}\\left(\\frac{\\omega}{2a}\\right)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17970,72 +17946,71 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Determine the inverse transform $y(t)$ using duality**\nFrom the time multiplication property:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1(t) x_2(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{1}{2\\pi} [X_1(\\omega) * X_2(\\omega)] = \\frac{1}{2\\pi} Y(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) \\stackrel{\\mathcal{F}^{-1}}{\\longleftrightarrow} y(t) = 2\\pi [x_1(t) x_2(t)]"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $x_1(t)$ and $x_2(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 2\\pi \\left[ \\frac{\\sin 2t}{\\pi t} \\right] \\left[ \\frac{\\sin 3t}{3t} \\right] = \\frac{2 \\sin 2t \\sin 3t}{3 t^2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Determine individual spectra $X_1(\\omega)$ and $X_2(\\omega)$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_1(t) = \\frac{\\sin 2t}{\\pi t} \\leftrightarrow X_1(\\omega) = \\operatorname{rect}\\left(\\frac{\\omega}{4}\\right)$ (height $A_1 = 1$, width $W_1 = 4$, support $[-2, 2]$).",
-      "$x_2(t) = \\frac{\\pi}{3} \\frac{\\sin 3t}{\\pi t} \\leftrightarrow X_2(\\omega) = \\frac{\\pi}{3} \\operatorname{rect}\\left(\\frac{\\omega}{6}\\right)$ (height $A_2 = \\pi/3$, width $W_2 = 6$, support $[-3, 3]$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Graphical Convolution $Y(\\omega) = X_1(\\omega) * X_2(\\omega)$**\nSince $W_1 = 4 \\ne W_2 = 6$, the result is a symmetric trapezoid:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Total Base:** $[-(W_1 + W_2)/2, (W_1 + W_2)/2] = [-(4+6)/2, (4+6)/2] = [-5, 5]$ (width $= 10$).",
-      "**Flat Top:** $[-(W_2 - W_1)/2, (W_2 - W_1)/2] = [-(6-4)/2, (6-4)/2] = [-1, 1]$ (width $= 2$).",
-      "**Peak Height:** $A_1 A_2 \\min(W_1, W_2) = (1) \\left(\\frac{\\pi}{3}\\right) (4) = \\frac{4\\pi}{3}$.",
-      "**Slope of ramps:** $m = \\pm A_1 A_2 = \\pm \\frac{\\pi}{3}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Piecewise formulation of $Y(\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\begin{cases}\n\\frac{\\pi}{3}(\\omega + 5), & -5 \\le \\omega \\le -1 \\\\ \n\\frac{4\\pi}{3}, & -1 \\le \\omega \\le 1 \\\\ \n-\\frac{\\pi}{3}(\\omega - 5), & 1 \\le \\omega \\le 5 \\\\ \n0, & |\\omega| > 5 \n\\end{cases}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y(t) = \\frac{2 \\sin 2t \\sin 3t}{3 t^2}, \\quad Y_{\\max} = \\frac{4\\pi}{3} \\text{ on } [-1, 1]}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Determine the inverse transform $y(t)$ using duality**\nFrom the time multiplication property:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1(t) x_2(t) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} \\frac{1}{2\\pi} [X_1(\\omega) * X_2(\\omega)] = \\frac{1}{2\\pi} Y(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) \\stackrel{\\mathcal{F}^{-1}}{\\longleftrightarrow} y(t) = 2\\pi [x_1(t) x_2(t)]"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $x_1(t)$ and $x_2(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 2\\pi \\left[ \\frac{\\sin 2t}{\\pi t} \\right] \\left[ \\frac{\\sin 3t}{3t} \\right] = \\frac{2 \\sin 2t \\sin 3t}{3 t^2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Determine individual spectra $X_1(\\omega)$ and $X_2(\\omega)$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_1(t) = \\frac{\\sin 2t}{\\pi t} \\leftrightarrow X_1(\\omega) = \\operatorname{rect}\\left(\\frac{\\omega}{4}\\right)$ (height $A_1 = 1$, width $W_1 = 4$, support $[-2, 2]$).",
+        "$x_2(t) = \\frac{\\pi}{3} \\frac{\\sin 3t}{\\pi t} \\leftrightarrow X_2(\\omega) = \\frac{\\pi}{3} \\operatorname{rect}\\left(\\frac{\\omega}{6}\\right)$ (height $A_2 = \\pi/3$, width $W_2 = 6$, support $[-3, 3]$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Graphical Convolution $Y(\\omega) = X_1(\\omega) * X_2(\\omega)$**\nSince $W_1 = 4 \\ne W_2 = 6$, the result is a symmetric trapezoid:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Total Base:** $[-(W_1 + W_2)/2, (W_1 + W_2)/2] = [-(4+6)/2, (4+6)/2] = [-5, 5]$ (width $= 10$).",
+        "**Flat Top:** $[-(W_2 - W_1)/2, (W_2 - W_1)/2] = [-(6-4)/2, (6-4)/2] = [-1, 1]$ (width $= 2$).",
+        "**Peak Height:** $A_1 A_2 \\min(W_1, W_2) = (1) \\left(\\frac{\\pi}{3}\\right) (4) = \\frac{4\\pi}{3}$.",
+        "**Slope of ramps:** $m = \\pm A_1 A_2 = \\pm \\frac{\\pi}{3}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Piecewise formulation of $Y(\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\begin{cases}\n\\frac{\\pi}{3}(\\omega + 5), & -5 \\le \\omega \\le -1 \\\\ \n\\frac{4\\pi}{3}, & -1 \\le \\omega \\le 1 \\\\ \n-\\frac{\\pi}{3}(\\omega - 5), & 1 \\le \\omega \\le 5 \\\\ \n0, & |\\omega| > 5 \n\\end{cases}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y(t) = \\frac{2 \\sin 2t \\sin 3t}{3 t^2}, \\quad Y_{\\max} = \\frac{4\\pi}{3} \\text{ on } [-1, 1]}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18050,116 +18025,115 @@ export default {
      "tex": "Y(\\omega) = \\operatorname{sinc}(2\\omega) * \\operatorname{Sa}^2(3\\omega)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Formulate the transformation strategy**\nDirectly integrating $\\int_{-\\infty}^\\infty \\operatorname{sinc}(2\\alpha)\\operatorname{Sa}^2(3(\\omega-\\alpha))\\,d\\alpha$ is analytically intractable. Instead, use duality:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Invert each factor to the time domain: $X_1(\\omega) \\to x_1(t)$ and $X_2(\\omega) \\to x_2(t)$.",
-      "Compute the time-domain product: $y(t) = 2\\pi [x_1(t) x_2(t)]$.",
-      "Take the forward Fourier transform of $y(t)$ to obtain $Y(\\omega)$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Invert $X_1(\\omega) = \\operatorname{sinc}(2\\omega)$**\nRewrite in terms of the sampling function $\\operatorname{Sa}(\\theta) = \\frac{\\sin\\theta}{\\theta}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(\\omega) = \\operatorname{sinc}(2\\omega) = \\frac{\\sin(2\\pi\\omega)}{2\\pi\\omega} = \\operatorname{Sa}(2\\pi\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Recall the standard transform pair:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\operatorname{rect}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} A\\tau \\operatorname{Sa}\\left(\\frac{\\omega\\tau}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Matching arguments: $\\frac{\\tau}{2} = 2\\pi \\implies \\tau = 4\\pi$.\nMatching amplitudes: $A\\tau = 1 \\implies A(4\\pi) = 1 \\implies A = \\frac{1}{4\\pi}$.\nTherefore:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1(t) = \\frac{1}{4\\pi} \\operatorname{rect}\\left(\\frac{t}{4\\pi}\\right) = \\begin{cases} \\frac{1}{4\\pi}, & -2\\pi \\le t \\le 2\\pi \\\\ 0, & |t| > 2\\pi \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "*(Note that $2\\pi \\approx 6.283$.)*"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Invert $X_2(\\omega) = \\operatorname{Sa}^2(3\\omega)$**\nRecall the standard transform pair:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\operatorname{tri}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} A\\tau \\operatorname{Sa}^2\\left(\\frac{\\omega\\tau}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Matching arguments: $\\frac{\\tau}{2} = 3 \\implies \\tau = 6$.\nMatching amplitudes: $A\\tau = 1 \\implies A(6) = 1 \\implies A = \\frac{1}{6}$.\nTherefore:"
-    },
-    {
-     "t": "math",
-     "tex": "x_2(t) = \\frac{1}{6} \\operatorname{tri}\\left(\\frac{t}{6}\\right) = \\begin{cases} \\frac{1}{6}\\left(1 - \\frac{|t|}{6}\\right), & -6 \\le t \\le 6 \\\\ 0, & |t| > 6 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Compute the time product $x_1(t) \\cdot x_2(t)$**\nObserve the interval of support:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_2(t)$ is non-zero strictly on $[-6, 6]$.",
-      "$x_1(t)$ is a constant flat pulse of height $\\frac{1}{4\\pi}$ over $[-2\\pi, 2\\pi] \\approx [-6.283, 6.283]$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because $[-6, 6] \\subset [-2\\pi, 2\\pi]$, the rectangular pulse completely covers the triangle without truncating its slopes!"
-    },
-    {
-     "t": "math",
-     "tex": "x_1(t) \\cdot x_2(t) = \\left(\\frac{1}{4\\pi}\\right) \\cdot \\left[ \\frac{1}{6} \\operatorname{tri}\\left(\\frac{t}{6}\\right) \\right] = \\frac{1}{24\\pi} \\operatorname{tri}\\left(\\frac{t}{6}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Apply the duality factor $2\\pi$ to synthesize $y(t)$**"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = 2\\pi [x_1(t) x_2(t)] = 2\\pi \\left[ \\frac{1}{24\\pi} \\operatorname{tri}\\left(\\frac{t}{6}\\right) \\right] = \\frac{1}{12} \\operatorname{tri}\\left(\\frac{t}{6}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 6: Transform back to the frequency domain**"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\mathcal{F}\\left\\{ \\frac{1}{12} \\operatorname{tri}\\left(\\frac{t}{6}\\right) \\right\\}"
-    },
-    {
-     "t": "p",
-     "text": "Using $A \\operatorname{tri}(t/\\tau) \\leftrightarrow A\\tau \\operatorname{Sa}^2(\\omega\\tau/2)$ with $A = 1/12$ and $\\tau = 6$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\left(\\frac{1}{12}\\right)(6) \\operatorname{Sa}^2\\left(\\frac{6\\omega}{2}\\right) = \\frac{1}{2} \\operatorname{Sa}^2(3\\omega)"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\operatorname{sinc}(2\\omega) * \\operatorname{Sa}^2(3\\omega) = \\frac{1}{2} \\operatorname{Sa}^2(3\\omega)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Formulate the transformation strategy**\nDirectly integrating $\\int_{-\\infty}^\\infty \\operatorname{sinc}(2\\alpha)\\operatorname{Sa}^2(3(\\omega-\\alpha))\\,d\\alpha$ is analytically intractable. Instead, use duality:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Invert each factor to the time domain: $X_1(\\omega) \\to x_1(t)$ and $X_2(\\omega) \\to x_2(t)$.",
+        "Compute the time-domain product: $y(t) = 2\\pi [x_1(t) x_2(t)]$.",
+        "Take the forward Fourier transform of $y(t)$ to obtain $Y(\\omega)$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Invert $X_1(\\omega) = \\operatorname{sinc}(2\\omega)$**\nRewrite in terms of the sampling function $\\operatorname{Sa}(\\theta) = \\frac{\\sin\\theta}{\\theta}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(\\omega) = \\operatorname{sinc}(2\\omega) = \\frac{\\sin(2\\pi\\omega)}{2\\pi\\omega} = \\operatorname{Sa}(2\\pi\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Recall the standard transform pair:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\operatorname{rect}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} A\\tau \\operatorname{Sa}\\left(\\frac{\\omega\\tau}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Matching arguments: $\\frac{\\tau}{2} = 2\\pi \\implies \\tau = 4\\pi$.\nMatching amplitudes: $A\\tau = 1 \\implies A(4\\pi) = 1 \\implies A = \\frac{1}{4\\pi}$.\nTherefore:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1(t) = \\frac{1}{4\\pi} \\operatorname{rect}\\left(\\frac{t}{4\\pi}\\right) = \\begin{cases} \\frac{1}{4\\pi}, & -2\\pi \\le t \\le 2\\pi \\\\ 0, & |t| > 2\\pi \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "*(Note that $2\\pi \\approx 6.283$.)*"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Invert $X_2(\\omega) = \\operatorname{Sa}^2(3\\omega)$**\nRecall the standard transform pair:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\operatorname{tri}\\left(\\frac{t}{\\tau}\\right) \\stackrel{\\mathcal{F}}{\\longleftrightarrow} A\\tau \\operatorname{Sa}^2\\left(\\frac{\\omega\\tau}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Matching arguments: $\\frac{\\tau}{2} = 3 \\implies \\tau = 6$.\nMatching amplitudes: $A\\tau = 1 \\implies A(6) = 1 \\implies A = \\frac{1}{6}$.\nTherefore:"
+      },
+      {
+       "t": "math",
+       "tex": "x_2(t) = \\frac{1}{6} \\operatorname{tri}\\left(\\frac{t}{6}\\right) = \\begin{cases} \\frac{1}{6}\\left(1 - \\frac{|t|}{6}\\right), & -6 \\le t \\le 6 \\\\ 0, & |t| > 6 \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Compute the time product $x_1(t) \\cdot x_2(t)$**\nObserve the interval of support:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_2(t)$ is non-zero strictly on $[-6, 6]$.",
+        "$x_1(t)$ is a constant flat pulse of height $\\frac{1}{4\\pi}$ over $[-2\\pi, 2\\pi] \\approx [-6.283, 6.283]$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Because $[-6, 6] \\subset [-2\\pi, 2\\pi]$, the rectangular pulse completely covers the triangle without truncating its slopes!"
+      },
+      {
+       "t": "math",
+       "tex": "x_1(t) \\cdot x_2(t) = \\left(\\frac{1}{4\\pi}\\right) \\cdot \\left[ \\frac{1}{6} \\operatorname{tri}\\left(\\frac{t}{6}\\right) \\right] = \\frac{1}{24\\pi} \\operatorname{tri}\\left(\\frac{t}{6}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Apply the duality factor $2\\pi$ to synthesize $y(t)$**"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = 2\\pi [x_1(t) x_2(t)] = 2\\pi \\left[ \\frac{1}{24\\pi} \\operatorname{tri}\\left(\\frac{t}{6}\\right) \\right] = \\frac{1}{12} \\operatorname{tri}\\left(\\frac{t}{6}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 6: Transform back to the frequency domain**"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\mathcal{F}\\left\\{ \\frac{1}{12} \\operatorname{tri}\\left(\\frac{t}{6}\\right) \\right\\}"
+      },
+      {
+       "t": "p",
+       "text": "Using $A \\operatorname{tri}(t/\\tau) \\leftrightarrow A\\tau \\operatorname{Sa}^2(\\omega\\tau/2)$ with $A = 1/12$ and $\\tau = 6$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\left(\\frac{1}{12}\\right)(6) \\operatorname{Sa}^2\\left(\\frac{6\\omega}{2}\\right) = \\frac{1}{2} \\operatorname{Sa}^2(3\\omega)"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\operatorname{sinc}(2\\omega) * \\operatorname{Sa}^2(3\\omega) = \\frac{1}{2} \\operatorname{Sa}^2(3\\omega)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18179,76 +18153,75 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Proof of Statement (a):**\nRecall the general Parseval inner product in cyclic frequency:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^{\\infty} g(t) h(t)\\,dt = \\int_{-\\infty}^{\\infty} G(f) H(-f)\\,df"
-    },
-    {
-     "t": "p",
-     "text": "Let $g(t) = x_1(-t)$ and $h(t) = x_2(t)$.\nUsing the time-reversal property: $\\mathcal{F}\\{x_1(-t)\\} = X_1(-f) \\implies G(f) = X_1(-f)$.\nAlso $H(f) = X_2(f)$.\nSubstituting these into Parseval's identity:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^{\\infty} x_1(-t) x_2(t)\\,dt = \\int_{-\\infty}^{\\infty} G(f) H(-f)\\,df = \\int_{-\\infty}^{\\infty} X_1(-f) X_2(-f)\\,df"
-    },
-    {
-     "t": "p",
-     "text": "Now apply the substitution $u = -f \\implies df = -du$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{\\infty}^{-\\infty} X_1(u) X_2(u) (-du) = \\int_{-\\infty}^{\\infty} X_1(u) X_2(u)\\,du = \\int_{-\\infty}^{\\infty} X_1(f) X_2(f)\\,df"
-    },
-    {
-     "t": "p",
-     "text": "Thus, statement (a) is **proven TRUE**."
-    },
-    {
-     "t": "p",
-     "text": "**Proof of Statement (b):**\nLet $g(t) = x_1(t)$ and $k(t) = x_2^*(-t)$.\nFrom the conjugate time-reversal property:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{x_2^*(-t)\\} = X_2^*(f) \\implies K(f) = X_2^*(f)"
-    },
-    {
-     "t": "p",
-     "text": "Now applying the Parseval inner product to $g(t)$ and $k(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^{\\infty} g(t) k(t)\\,dt = \\int_{-\\infty}^{\\infty} G(f) K(-f)\\,df"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $g(t) = x_1(t)$, $k(t) = x_2^*(-t)$, $G(f) = X_1(f)$, and $K(-f) = X_2^*(-f)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^{\\infty} x_1(t) x_2^*(-t)\\,dt = \\int_{-\\infty}^{\\infty} X_1(f) X_2^*(-f)\\,df"
-    },
-    {
-     "t": "p",
-     "text": "Thus, statement (b) is **proven TRUE**."
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:** Both statements (a) and (b) are mathematically sound."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Correct Answer: (c) Both}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Proof of Statement (a):**\nRecall the general Parseval inner product in cyclic frequency:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^{\\infty} g(t) h(t)\\,dt = \\int_{-\\infty}^{\\infty} G(f) H(-f)\\,df"
+      },
+      {
+       "t": "p",
+       "text": "Let $g(t) = x_1(-t)$ and $h(t) = x_2(t)$.\nUsing the time-reversal property: $\\mathcal{F}\\{x_1(-t)\\} = X_1(-f) \\implies G(f) = X_1(-f)$.\nAlso $H(f) = X_2(f)$.\nSubstituting these into Parseval's identity:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^{\\infty} x_1(-t) x_2(t)\\,dt = \\int_{-\\infty}^{\\infty} G(f) H(-f)\\,df = \\int_{-\\infty}^{\\infty} X_1(-f) X_2(-f)\\,df"
+      },
+      {
+       "t": "p",
+       "text": "Now apply the substitution $u = -f \\implies df = -du$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{\\infty}^{-\\infty} X_1(u) X_2(u) (-du) = \\int_{-\\infty}^{\\infty} X_1(u) X_2(u)\\,du = \\int_{-\\infty}^{\\infty} X_1(f) X_2(f)\\,df"
+      },
+      {
+       "t": "p",
+       "text": "Thus, statement (a) is **proven TRUE**."
+      },
+      {
+       "t": "p",
+       "text": "**Proof of Statement (b):**\nLet $g(t) = x_1(t)$ and $k(t) = x_2^*(-t)$.\nFrom the conjugate time-reversal property:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{x_2^*(-t)\\} = X_2^*(f) \\implies K(f) = X_2^*(f)"
+      },
+      {
+       "t": "p",
+       "text": "Now applying the Parseval inner product to $g(t)$ and $k(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^{\\infty} g(t) k(t)\\,dt = \\int_{-\\infty}^{\\infty} G(f) K(-f)\\,df"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $g(t) = x_1(t)$, $k(t) = x_2^*(-t)$, $G(f) = X_1(f)$, and $K(-f) = X_2^*(-f)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^{\\infty} x_1(t) x_2^*(-t)\\,dt = \\int_{-\\infty}^{\\infty} X_1(f) X_2^*(-f)\\,df"
+      },
+      {
+       "t": "p",
+       "text": "Thus, statement (b) is **proven TRUE**."
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:** Both statements (a) and (b) are mathematically sound."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Correct Answer: (c) Both}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18259,88 +18232,87 @@ export default {
      "text": "**Problem Statement:** Find the total energy of the signal $x(t) = \\frac{\\sin 2\\pi t}{t}$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Method I: Time-Domain Integration via Standard Sinc Square Scaling**\nExpress $x(t)$ in terms of the normalized sinc function:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2\\pi \\frac{\\sin 2\\pi t}{2\\pi t} = 2\\pi \\operatorname{sinc}(2t)"
-    },
-    {
-     "t": "p",
-     "text": "The energy integral is:"
-    },
-    {
-     "t": "math",
-     "tex": "E = \\int_{-\\infty}^{\\infty} |x(t)|^2\\,dt = \\int_{-\\infty}^{\\infty} [2\\pi \\operatorname{sinc}(2t)]^2\\,dt = 4\\pi^2 \\int_{-\\infty}^{\\infty} \\operatorname{sinc}^2(2t)\\,dt"
-    },
-    {
-     "t": "p",
-     "text": "Using the area scaling property:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{If } \\int_{-\\infty}^{\\infty} g(t)\\,dt = A, \\quad \\text{then } \\int_{-\\infty}^{\\infty} g(at)\\,dt = \\frac{A}{|a|}"
-    },
-    {
-     "t": "p",
-     "text": "Here $g(t) = \\operatorname{sinc}^2(t)$ has standard area $A = 1$. With $a = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\infty}^{\\infty} \\operatorname{sinc}^2(2t)\\,dt = \\frac{1}{|2|} = \\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "E = 4\\pi^2 \\left( \\frac{1}{2} \\right) = 2\\pi^2"
-    },
-    {
-     "t": "p",
-     "text": "**Method II: Frequency-Domain Integration via Rayleigh's Theorem**\nRewrite $x(t)$ in standard form:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\pi \\left[ \\frac{\\sin 2\\pi t}{\\pi t} \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Taking the Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\pi \\operatorname{rect}\\left(\\frac{\\omega}{4\\pi}\\right) = \\begin{cases} \\pi, & -2\\pi \\le \\omega \\le 2\\pi \\\\ 0, & |\\omega| > 2\\pi \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Compute the frequency-domain energy $E\\{X(\\omega)\\}$:"
-    },
-    {
-     "t": "math",
-     "tex": "E\\{X(\\omega)\\} = \\int_{-\\infty}^{\\infty} |X(\\omega)|^2\\,d\\omega = \\int_{-2\\pi}^{2\\pi} \\pi^2\\,d\\omega = \\pi^2 (4\\pi) = 4\\pi^3"
-    },
-    {
-     "t": "p",
-     "text": "Apply Rayleigh's energy relation:"
-    },
-    {
-     "t": "math",
-     "tex": "E = \\frac{E\\{X(\\omega)\\}}{2\\pi} = \\frac{4\\pi^3}{2\\pi} = 2\\pi^2"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{E = 2\\pi^2 \\approx 19.739 \\text{ Joules}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Method I: Time-Domain Integration via Standard Sinc Square Scaling**\nExpress $x(t)$ in terms of the normalized sinc function:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2\\pi \\frac{\\sin 2\\pi t}{2\\pi t} = 2\\pi \\operatorname{sinc}(2t)"
+      },
+      {
+       "t": "p",
+       "text": "The energy integral is:"
+      },
+      {
+       "t": "math",
+       "tex": "E = \\int_{-\\infty}^{\\infty} |x(t)|^2\\,dt = \\int_{-\\infty}^{\\infty} [2\\pi \\operatorname{sinc}(2t)]^2\\,dt = 4\\pi^2 \\int_{-\\infty}^{\\infty} \\operatorname{sinc}^2(2t)\\,dt"
+      },
+      {
+       "t": "p",
+       "text": "Using the area scaling property:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{If } \\int_{-\\infty}^{\\infty} g(t)\\,dt = A, \\quad \\text{then } \\int_{-\\infty}^{\\infty} g(at)\\,dt = \\frac{A}{|a|}"
+      },
+      {
+       "t": "p",
+       "text": "Here $g(t) = \\operatorname{sinc}^2(t)$ has standard area $A = 1$. With $a = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\infty}^{\\infty} \\operatorname{sinc}^2(2t)\\,dt = \\frac{1}{|2|} = \\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "E = 4\\pi^2 \\left( \\frac{1}{2} \\right) = 2\\pi^2"
+      },
+      {
+       "t": "p",
+       "text": "**Method II: Frequency-Domain Integration via Rayleigh's Theorem**\nRewrite $x(t)$ in standard form:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\pi \\left[ \\frac{\\sin 2\\pi t}{\\pi t} \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Taking the Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\pi \\operatorname{rect}\\left(\\frac{\\omega}{4\\pi}\\right) = \\begin{cases} \\pi, & -2\\pi \\le \\omega \\le 2\\pi \\\\ 0, & |\\omega| > 2\\pi \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Compute the frequency-domain energy $E\\{X(\\omega)\\}$:"
+      },
+      {
+       "t": "math",
+       "tex": "E\\{X(\\omega)\\} = \\int_{-\\infty}^{\\infty} |X(\\omega)|^2\\,d\\omega = \\int_{-2\\pi}^{2\\pi} \\pi^2\\,d\\omega = \\pi^2 (4\\pi) = 4\\pi^3"
+      },
+      {
+       "t": "p",
+       "text": "Apply Rayleigh's energy relation:"
+      },
+      {
+       "t": "math",
+       "tex": "E = \\frac{E\\{X(\\omega)\\}}{2\\pi} = \\frac{4\\pi^3}{2\\pi} = 2\\pi^2"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{E = 2\\pi^2 \\approx 19.739 \\text{ Joules}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18351,83 +18323,82 @@ export default {
      "text": "**Problem Statement:** Find the total energy of $x(t) = \\operatorname{sinc}^2(t)$ (equivalent to evaluating $\\int_{-\\infty}^\\infty \\operatorname{sinc}^4(t)\\,dt$)."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Identify that time integration is intractable directly**"
-    },
-    {
-     "t": "math",
-     "tex": "E = \\int_{-\\infty}^{\\infty} |x(t)|^2\\,dt = \\int_{-\\infty}^{\\infty} \\operatorname{sinc}^4(t)\\,dt"
-    },
-    {
-     "t": "p",
-     "text": "There is no elementary antiderivative for $\\operatorname{sinc}^4(t)$. By Rayleigh's theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "E = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} |X(\\omega)|^2\\,d\\omega"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Obtain the Fourier transform $X(\\omega)$**\nFrom Drill 3, with $a = \\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\operatorname{sinc}^2(t) = \\left[ \\frac{\\sin \\pi t}{\\pi t} \\right]^2 \\stackrel{\\mathcal{F}}{\\longleftrightarrow} X(\\omega) = \\operatorname{tri}\\left(\\frac{\\omega}{2\\pi}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "This is a symmetric triangular pulse:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Non-zero on $[-2\\pi, 2\\pi]$ (base width $b = 4\\pi$).",
-      "Peak amplitude $A = 1$ at $\\omega = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Integrate the squared triangular spectrum**\n*Theorem:* The energy of an isosceles triangular pulse of base $b$ and peak height $A$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "E_{\\text{tri}} = \\int_{-\\infty}^{\\infty} [X_{\\text{tri}}(\\omega)]^2\\,d\\omega = \\frac{1}{3} A^2 b"
-    },
-    {
-     "t": "p",
-     "text": "*Direct verification:*"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-2\\pi}^{2\\pi} \\left(1 - \\frac{|\\omega|}{2\\pi}\\right)^2\\,d\\omega = 2 \\int_0^{2\\pi} \\left(1 - \\frac{\\omega}{2\\pi}\\right)^2\\,d\\omega"
-    },
-    {
-     "t": "p",
-     "text": "Let $u = 1 - \\frac{\\omega}{2\\pi} \\implies d\\omega = -2\\pi\\,du$:"
-    },
-    {
-     "t": "math",
-     "tex": "2 \\int_1^0 u^2 (-2\\pi\\,du) = 4\\pi \\int_0^1 u^2\\,du = 4\\pi \\left[ \\frac{u^3}{3} \\right]_0^1 = \\frac{4\\pi}{3}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Scale by $\\frac{1}{2\\pi}$**"
-    },
-    {
-     "t": "math",
-     "tex": "E = \\frac{E\\{X(\\omega)\\}}{2\\pi} = \\frac{4\\pi / 3}{2\\pi} = \\frac{2}{3}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\int_{-\\infty}^{\\infty} \\operatorname{sinc}^4(t)\\,dt = \\frac{2}{3}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Identify that time integration is intractable directly**"
+      },
+      {
+       "t": "math",
+       "tex": "E = \\int_{-\\infty}^{\\infty} |x(t)|^2\\,dt = \\int_{-\\infty}^{\\infty} \\operatorname{sinc}^4(t)\\,dt"
+      },
+      {
+       "t": "p",
+       "text": "There is no elementary antiderivative for $\\operatorname{sinc}^4(t)$. By Rayleigh's theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "E = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} |X(\\omega)|^2\\,d\\omega"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Obtain the Fourier transform $X(\\omega)$**\nFrom Drill 3, with $a = \\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\operatorname{sinc}^2(t) = \\left[ \\frac{\\sin \\pi t}{\\pi t} \\right]^2 \\stackrel{\\mathcal{F}}{\\longleftrightarrow} X(\\omega) = \\operatorname{tri}\\left(\\frac{\\omega}{2\\pi}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "This is a symmetric triangular pulse:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Non-zero on $[-2\\pi, 2\\pi]$ (base width $b = 4\\pi$).",
+        "Peak amplitude $A = 1$ at $\\omega = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Integrate the squared triangular spectrum**\n*Theorem:* The energy of an isosceles triangular pulse of base $b$ and peak height $A$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "E_{\\text{tri}} = \\int_{-\\infty}^{\\infty} [X_{\\text{tri}}(\\omega)]^2\\,d\\omega = \\frac{1}{3} A^2 b"
+      },
+      {
+       "t": "p",
+       "text": "*Direct verification:*"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-2\\pi}^{2\\pi} \\left(1 - \\frac{|\\omega|}{2\\pi}\\right)^2\\,d\\omega = 2 \\int_0^{2\\pi} \\left(1 - \\frac{\\omega}{2\\pi}\\right)^2\\,d\\omega"
+      },
+      {
+       "t": "p",
+       "text": "Let $u = 1 - \\frac{\\omega}{2\\pi} \\implies d\\omega = -2\\pi\\,du$:"
+      },
+      {
+       "t": "math",
+       "tex": "2 \\int_1^0 u^2 (-2\\pi\\,du) = 4\\pi \\int_0^1 u^2\\,du = 4\\pi \\left[ \\frac{u^3}{3} \\right]_0^1 = \\frac{4\\pi}{3}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Scale by $\\frac{1}{2\\pi}$**"
+      },
+      {
+       "t": "math",
+       "tex": "E = \\frac{E\\{X(\\omega)\\}}{2\\pi} = \\frac{4\\pi / 3}{2\\pi} = \\frac{2}{3}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\int_{-\\infty}^{\\infty} \\operatorname{sinc}^4(t)\\,dt = \\frac{2}{3}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18442,82 +18413,81 @@ export default {
      "tex": "I = \\int_{-\\infty}^{\\infty} \\operatorname{sinc}^3(t)\\,dt"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Decompose into an inner product of two signals**\nExpress the integrand as:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{sinc}^3(t) = x_1(t) \\cdot x_2(t)"
-    },
-    {
-     "t": "p",
-     "text": "where $x_1(t) = \\operatorname{sinc}^2(t)$ and $x_2(t) = \\operatorname{sinc}(t)$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Apply Parseval's inner product theorem**"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_{-\\infty}^{\\infty} x_1(t) x_2(t)\\,dt = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X_1(\\omega) X_2(-\\omega)\\,d\\omega"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Identify the Fourier transforms**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_1(t) = \\operatorname{sinc}^2(t) \\leftrightarrow X_1(\\omega) = \\operatorname{tri}\\left(\\frac{\\omega}{2\\pi}\\right)$ (triangle of base $[-2\\pi, 2\\pi]$, peak $1$).",
-      "$x_2(t) = \\operatorname{sinc}(t) = \\frac{\\sin\\pi t}{\\pi t} \\leftrightarrow X_2(\\omega) = \\operatorname{rect}\\left(\\frac{\\omega}{2\\pi}\\right)$ (rectangle of base $[-\\pi, \\pi]$, height $1$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because $X_2(\\omega)$ is real and even, $X_2(-\\omega) = X_2(\\omega)$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Compute the overlap product $P(\\omega) = X_1(\\omega) X_2(-\\omega)$**\nSince $X_2(\\omega) = 1$ for $|\\omega| \\le \\pi$ and $0$ elsewhere, the product isolates the central slice of the triangle on $[-\\pi, \\pi]$:\nAt $\\omega = \\pm \\pi$: $X_1(\\pm \\pi) = 1 - \\frac{\\pi}{2\\pi} = \\frac{1}{2}$.\nAt $\\omega = 0$: $X_1(0) = 1$.\nThe product $P(\\omega)$ forms a symmetrical trapezoid over $[-\\pi, \\pi]$ with base width $2\\pi$, lower height $1/2$, and apex height $1$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Compute the area under $P(\\omega)$**\nDivide $P(\\omega)$ into a lower rectangular pedestal and an upper triangular cap:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Area} = \\text{Area}_{\\text{rect}} + \\text{Area}_{\\text{tri}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\text{Area}_{\\text{rect}} = \\text{base} \\times \\text{height} = (2\\pi) \\times \\left(\\frac{1}{2}\\right) = \\pi$",
-      "$\\text{Area}_{\\text{tri}} = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times (2\\pi) \\times \\left(1 - \\frac{1}{2}\\right) = \\frac{\\pi}{2}$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Total Area} = \\pi + \\frac{\\pi}{2} = \\frac{3\\pi}{2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 6: Scale by $\\frac{1}{2\\pi}$**"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\frac{1}{2\\pi} \\left( \\frac{3\\pi}{2} \\right) = \\frac{3}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\int_{-\\infty}^{\\infty} \\operatorname{sinc}^3(t)\\,dt = \\frac{3}{4}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Decompose into an inner product of two signals**\nExpress the integrand as:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{sinc}^3(t) = x_1(t) \\cdot x_2(t)"
+      },
+      {
+       "t": "p",
+       "text": "where $x_1(t) = \\operatorname{sinc}^2(t)$ and $x_2(t) = \\operatorname{sinc}(t)$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Apply Parseval's inner product theorem**"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_{-\\infty}^{\\infty} x_1(t) x_2(t)\\,dt = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} X_1(\\omega) X_2(-\\omega)\\,d\\omega"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Identify the Fourier transforms**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_1(t) = \\operatorname{sinc}^2(t) \\leftrightarrow X_1(\\omega) = \\operatorname{tri}\\left(\\frac{\\omega}{2\\pi}\\right)$ (triangle of base $[-2\\pi, 2\\pi]$, peak $1$).",
+        "$x_2(t) = \\operatorname{sinc}(t) = \\frac{\\sin\\pi t}{\\pi t} \\leftrightarrow X_2(\\omega) = \\operatorname{rect}\\left(\\frac{\\omega}{2\\pi}\\right)$ (rectangle of base $[-\\pi, \\pi]$, height $1$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Because $X_2(\\omega)$ is real and even, $X_2(-\\omega) = X_2(\\omega)$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Compute the overlap product $P(\\omega) = X_1(\\omega) X_2(-\\omega)$**\nSince $X_2(\\omega) = 1$ for $|\\omega| \\le \\pi$ and $0$ elsewhere, the product isolates the central slice of the triangle on $[-\\pi, \\pi]$:\nAt $\\omega = \\pm \\pi$: $X_1(\\pm \\pi) = 1 - \\frac{\\pi}{2\\pi} = \\frac{1}{2}$.\nAt $\\omega = 0$: $X_1(0) = 1$.\nThe product $P(\\omega)$ forms a symmetrical trapezoid over $[-\\pi, \\pi]$ with base width $2\\pi$, lower height $1/2$, and apex height $1$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Compute the area under $P(\\omega)$**\nDivide $P(\\omega)$ into a lower rectangular pedestal and an upper triangular cap:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Area} = \\text{Area}_{\\text{rect}} + \\text{Area}_{\\text{tri}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\text{Area}_{\\text{rect}} = \\text{base} \\times \\text{height} = (2\\pi) \\times \\left(\\frac{1}{2}\\right) = \\pi$",
+        "$\\text{Area}_{\\text{tri}} = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times (2\\pi) \\times \\left(1 - \\frac{1}{2}\\right) = \\frac{\\pi}{2}$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Total Area} = \\pi + \\frac{\\pi}{2} = \\frac{3\\pi}{2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 6: Scale by $\\frac{1}{2\\pi}$**"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\frac{1}{2\\pi} \\left( \\frac{3\\pi}{2} \\right) = \\frac{3}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\int_{-\\infty}^{\\infty} \\operatorname{sinc}^3(t)\\,dt = \\frac{3}{4}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18532,128 +18502,127 @@ export default {
      "tex": "x(t) = \\frac{\\sin 2t}{\\pi t} \\cdot \\frac{\\sin 3t}{t}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Express $x(t)$ in standardized sinc/rect form**"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = x_1(t) \\cdot x_2(t) = \\left[ \\frac{\\sin 2t}{\\pi t} \\right] \\cdot \\left[ \\pi \\frac{\\sin 3t}{\\pi t} \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Their Fourier transforms are:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$X_1(\\omega) = \\operatorname{rect}\\left(\\frac{\\omega}{4}\\right)$ (width $4$, height $1$, support $[-2, 2]$).",
-      "$X_2(\\omega) = \\pi \\operatorname{rect}\\left(\\frac{\\omega}{6}\\right)$ (width $6$, height $\\pi$, support $[-3, 3]$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Obtain $X(\\omega)$ via frequency convolution**"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{2\\pi} [X_1(\\omega) * X_2(\\omega)]"
-    },
-    {
-     "t": "p",
-     "text": "The convolution of the two rect pulses yields a trapezoid $T(\\omega) = X_1(\\omega) * X_2(\\omega)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Support base: $[- (2+3), (2+3)] = [-5, 5]$ (width $10$).",
-      "Flat top: $[- (3-2), (3-2)] = [-1, 1]$ (width $2$).",
-      "Peak height: $A_1 A_2 \\min(W_1, W_2) = (1)(\\pi)(4) = 4\\pi$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Scaling by $\\frac{1}{2\\pi}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(\\omega) = \\frac{1}{2\\pi} T(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "The trapezoid $X(\\omega)$ has:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Base: $[-5, 5]$.",
-      "Flat top: $[-1, 1]$.",
-      "Peak height: $\\frac{4\\pi}{2\\pi} = 2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Calculate the energy $E\\{X(\\omega)\\} = \\int_{-\\infty}^\\infty |X(\\omega)|^2\\,d\\omega$**\nSplit the symmetrical trapezoid into three geometric sections:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Region I (Left Ramp $[-5, -1]$):** Triangle of base $b = 4$ and height $A = 2$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "E_{\\text{I}} = \\frac{1}{3} A^2 b = \\frac{1}{3} (2)^2 (4) = \\frac{16}{3}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Region II (Central Flat Top $[-1, 1]$):** Rectangle of width $w = 2$ and height $A = 2$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "E_{\\text{II}} = A^2 w = (2)^2 (2) = 8"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Region III (Right Ramp $[1, 5]$):** Triangle of base $b = 4$ and height $A = 2$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "E_{\\text{III}} = \\frac{1}{3} A^2 b = \\frac{1}{3} (2)^2 (4) = \\frac{16}{3}"
-    },
-    {
-     "t": "p",
-     "text": "Total spectral energy:"
-    },
-    {
-     "t": "math",
-     "tex": "E\\{X(\\omega)\\} = E_{\\text{I}} + E_{\\text{II}} + E_{\\text{III}} = \\frac{16}{3} + 8 + \\frac{16}{3} = \\frac{32}{3} + \\frac{24}{3} = \\frac{56}{3}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Compute physical energy $E\\{x(t)\\}$**"
-    },
-    {
-     "t": "math",
-     "tex": "E\\{x(t)\\} = \\frac{E\\{X(\\omega)\\}}{2\\pi} = \\frac{56/3}{2\\pi} = \\frac{28}{3\\pi} \\approx 2.9709 \\text{ Joules}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{E\\{x(t)\\} = \\frac{28}{3\\pi} \\approx 2.97 \\text{ J}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Express $x(t)$ in standardized sinc/rect form**"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = x_1(t) \\cdot x_2(t) = \\left[ \\frac{\\sin 2t}{\\pi t} \\right] \\cdot \\left[ \\pi \\frac{\\sin 3t}{\\pi t} \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Their Fourier transforms are:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$X_1(\\omega) = \\operatorname{rect}\\left(\\frac{\\omega}{4}\\right)$ (width $4$, height $1$, support $[-2, 2]$).",
+        "$X_2(\\omega) = \\pi \\operatorname{rect}\\left(\\frac{\\omega}{6}\\right)$ (width $6$, height $\\pi$, support $[-3, 3]$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Obtain $X(\\omega)$ via frequency convolution**"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{2\\pi} [X_1(\\omega) * X_2(\\omega)]"
+      },
+      {
+       "t": "p",
+       "text": "The convolution of the two rect pulses yields a trapezoid $T(\\omega) = X_1(\\omega) * X_2(\\omega)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Support base: $[- (2+3), (2+3)] = [-5, 5]$ (width $10$).",
+        "Flat top: $[- (3-2), (3-2)] = [-1, 1]$ (width $2$).",
+        "Peak height: $A_1 A_2 \\min(W_1, W_2) = (1)(\\pi)(4) = 4\\pi$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Scaling by $\\frac{1}{2\\pi}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(\\omega) = \\frac{1}{2\\pi} T(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "The trapezoid $X(\\omega)$ has:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Base: $[-5, 5]$.",
+        "Flat top: $[-1, 1]$.",
+        "Peak height: $\\frac{4\\pi}{2\\pi} = 2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Calculate the energy $E\\{X(\\omega)\\} = \\int_{-\\infty}^\\infty |X(\\omega)|^2\\,d\\omega$**\nSplit the symmetrical trapezoid into three geometric sections:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Region I (Left Ramp $[-5, -1]$):** Triangle of base $b = 4$ and height $A = 2$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "E_{\\text{I}} = \\frac{1}{3} A^2 b = \\frac{1}{3} (2)^2 (4) = \\frac{16}{3}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Region II (Central Flat Top $[-1, 1]$):** Rectangle of width $w = 2$ and height $A = 2$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "E_{\\text{II}} = A^2 w = (2)^2 (2) = 8"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Region III (Right Ramp $[1, 5]$):** Triangle of base $b = 4$ and height $A = 2$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "E_{\\text{III}} = \\frac{1}{3} A^2 b = \\frac{1}{3} (2)^2 (4) = \\frac{16}{3}"
+      },
+      {
+       "t": "p",
+       "text": "Total spectral energy:"
+      },
+      {
+       "t": "math",
+       "tex": "E\\{X(\\omega)\\} = E_{\\text{I}} + E_{\\text{II}} + E_{\\text{III}} = \\frac{16}{3} + 8 + \\frac{16}{3} = \\frac{32}{3} + \\frac{24}{3} = \\frac{56}{3}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Compute physical energy $E\\{x(t)\\}$**"
+      },
+      {
+       "t": "math",
+       "tex": "E\\{x(t)\\} = \\frac{E\\{X(\\omega)\\}}{2\\pi} = \\frac{56/3}{2\\pi} = \\frac{28}{3\\pi} \\approx 2.9709 \\text{ Joules}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{E\\{x(t)\\} = \\frac{28}{3\\pi} \\approx 2.97 \\text{ J}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18685,108 +18654,107 @@ export default {
      "text": "Sketch and find the mathematical expression for the output spectrum $Y(\\omega) = X(\\omega) H(\\omega)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Understand the filtering equation $Y(\\omega) = X(\\omega) H(\\omega)$**\nMultiplication in frequency occurs point-by-point. We analyze each spectral feature of $X(\\omega)$ independently against $H(\\omega)$:"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Continuous Spectrum on $[-4, -1]$**\nThe input triangle is given by:"
-    },
-    {
-     "t": "math",
-     "tex": "X_{\\text{cont}}(\\omega) = \\begin{cases} 1.5(\\omega + 4), & -4 \\le \\omega \\le -3 \\\\ -0.75(\\omega + 1), & -3 \\le \\omega \\le -1 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Now evaluate $H(\\omega)$ over this domain:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $\\omega \\in [-4, -3)$: $H(\\omega) = 0$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = X(\\omega) \\cdot 0 = 0"
-    },
-    {
-     "t": "p",
-     "text": "*The rising ramp of the triangle is completely eliminated!*"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $\\omega \\in [-3, -1]$: $H(\\omega) = -2$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = [-0.75(\\omega + 1)] \\cdot (-2) = 1.5(\\omega + 1)"
-    },
-    {
-     "t": "p",
-     "text": "At $\\omega = -3$: $Y(-3) = 1.5(-3 + 1) = -3$.\n  At $\\omega = -1$: $Y(-1) = 1.5(-1 + 1) = 0$.\n  *This produces an inverted ramp starting at $-3$ at $\\omega = -3$ and rising linearly to $0$ at $\\omega = -1$.*"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Discrete Impulse at $\\omega = 1$**\nInput component: $X_{\\text{imp1}}(\\omega) = -\\delta(\\omega - 1)$.\nUsing the sampling property of the impulse:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{imp1}}(\\omega) = [-\\delta(\\omega - 1)] H(\\omega) = -H(1) \\delta(\\omega - 1)"
-    },
-    {
-     "t": "p",
-     "text": "Looking at $H(\\omega)$, at $\\omega = 1$, the filter has zero transmission: $H(1) = 0$."
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{imp1}}(\\omega) = 0"
-    },
-    {
-     "t": "p",
-     "text": "*The impulse at $\\omega = 1$ is completely rejected by the filter.*"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Discrete Impulse at $\\omega = 3$**\nInput component: $X_{\\text{imp2}}(\\omega) = +2\\delta(\\omega - 3)$.\nUsing the sampling property:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{imp2}}(\\omega) = [2\\delta(\\omega - 3)] H(\\omega) = 2 H(3) \\delta(\\omega - 3)"
-    },
-    {
-     "t": "p",
-     "text": "Looking at $H(\\omega)$, for $\\omega \\in [2, 4]$, $H(\\omega) = 1$. Thus $H(3) = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{imp2}}(\\omega) = 2(1) \\delta(\\omega - 3) = 2\\delta(\\omega - 3)"
-    },
-    {
-     "t": "p",
-     "text": "*The impulse at $\\omega = 3$ passes through unattenuated with strength $2$.*"
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Composite Output Formulation**"
-    },
-    {
-     "t": "math",
-     "tex": "Y(\\omega) = \\begin{cases} 1.5(\\omega + 1), & -3 \\le \\omega \\le -1 \\\\ 2\\delta(\\omega - 3), & \\omega = 3 \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{Y(\\omega) = 1.5(\\omega + 1) \\operatorname{rect}\\left(\\frac{\\omega + 2}{2}\\right) + 2\\delta(\\omega - 3)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Understand the filtering equation $Y(\\omega) = X(\\omega) H(\\omega)$**\nMultiplication in frequency occurs point-by-point. We analyze each spectral feature of $X(\\omega)$ independently against $H(\\omega)$:"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Continuous Spectrum on $[-4, -1]$**\nThe input triangle is given by:"
+      },
+      {
+       "t": "math",
+       "tex": "X_{\\text{cont}}(\\omega) = \\begin{cases} 1.5(\\omega + 4), & -4 \\le \\omega \\le -3 \\\\ -0.75(\\omega + 1), & -3 \\le \\omega \\le -1 \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Now evaluate $H(\\omega)$ over this domain:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $\\omega \\in [-4, -3)$: $H(\\omega) = 0$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = X(\\omega) \\cdot 0 = 0"
+      },
+      {
+       "t": "p",
+       "text": "*The rising ramp of the triangle is completely eliminated!*"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $\\omega \\in [-3, -1]$: $H(\\omega) = -2$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = [-0.75(\\omega + 1)] \\cdot (-2) = 1.5(\\omega + 1)"
+      },
+      {
+       "t": "p",
+       "text": "At $\\omega = -3$: $Y(-3) = 1.5(-3 + 1) = -3$.\n  At $\\omega = -1$: $Y(-1) = 1.5(-1 + 1) = 0$.\n  *This produces an inverted ramp starting at $-3$ at $\\omega = -3$ and rising linearly to $0$ at $\\omega = -1$.*"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Discrete Impulse at $\\omega = 1$**\nInput component: $X_{\\text{imp1}}(\\omega) = -\\delta(\\omega - 1)$.\nUsing the sampling property of the impulse:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{imp1}}(\\omega) = [-\\delta(\\omega - 1)] H(\\omega) = -H(1) \\delta(\\omega - 1)"
+      },
+      {
+       "t": "p",
+       "text": "Looking at $H(\\omega)$, at $\\omega = 1$, the filter has zero transmission: $H(1) = 0$."
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{imp1}}(\\omega) = 0"
+      },
+      {
+       "t": "p",
+       "text": "*The impulse at $\\omega = 1$ is completely rejected by the filter.*"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Discrete Impulse at $\\omega = 3$**\nInput component: $X_{\\text{imp2}}(\\omega) = +2\\delta(\\omega - 3)$.\nUsing the sampling property:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{imp2}}(\\omega) = [2\\delta(\\omega - 3)] H(\\omega) = 2 H(3) \\delta(\\omega - 3)"
+      },
+      {
+       "t": "p",
+       "text": "Looking at $H(\\omega)$, for $\\omega \\in [2, 4]$, $H(\\omega) = 1$. Thus $H(3) = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{imp2}}(\\omega) = 2(1) \\delta(\\omega - 3) = 2\\delta(\\omega - 3)"
+      },
+      {
+       "t": "p",
+       "text": "*The impulse at $\\omega = 3$ passes through unattenuated with strength $2$.*"
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Composite Output Formulation**"
+      },
+      {
+       "t": "math",
+       "tex": "Y(\\omega) = \\begin{cases} 1.5(\\omega + 1), & -3 \\le \\omega \\le -1 \\\\ 2\\delta(\\omega - 3), & \\omega = 3 \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{Y(\\omega) = 1.5(\\omega + 1) \\operatorname{rect}\\left(\\frac{\\omega + 2}{2}\\right) + 2\\delta(\\omega - 3)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -20259,284 +20227,283 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Part (a): $h(t) = \\delta(t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Fourier Transform**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\mathcal{F}\\{\\delta(t)\\} = 1 = 1 \\cdot e^{j0} \\quad \\forall \\omega \\in (-\\infty, \\infty)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Filter Classification**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $|H(\\omega)| = 1$ for all frequencies from $-\\infty$ to $+\\infty$, no frequency is attenuated."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{Type: \\text{ All-Pass Filter (APF)}}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Cutoff Frequency & Bandwidth**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_c = \\text{None (passes all frequencies)}, \\quad \\mathbf{\\text{BW} = \\infty}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (b): $h(t) = \\text{sinc}(t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Fourier Transform Formulation**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall the standard continuous-time transform pair:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\sin(a t)}{\\pi t} \\xleftrightarrow{\\mathcal{F}} \\text{rect}\\left(\\frac{\\omega}{2a}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Here, $\\text{sinc}(t) = \\frac{\\sin(\\pi t)}{\\pi t}$, so $a = \\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right) = \\begin{cases} 1, & |\\omega| \\le \\pi \\\\ 0, & |\\omega| > \\pi \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Filter Classification**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The frequency response is strictly non-zero from $-\\pi$ to $+\\pi$ rad/s and zero elsewhere."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{Type: \\text{ Ideal Low-Pass Filter (LPF)}}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Cutoff Frequency & Bandwidth**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\omega_c = \\pi \\text{ rad/s} \\quad \\left(f_c = \\frac{\\omega_c}{2\\pi} = \\frac{1}{2} \\text{ Hz}\\right)}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{BW} = \\omega_c - 0 = \\pi \\text{ rad/s} \\quad (0.5 \\text{ Hz})}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (c): $h(t) = \\delta(t) - \\text{sinc}(t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Fourier Transform Formulation**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using linearity:"
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\mathcal{F}\\{\\delta(t)\\} - \\mathcal{F}\\{\\text{sinc}(t)\\} = 1 - \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right) = \\begin{cases} 0, & |\\omega| \\le \\pi \\\\ 1, & |\\omega| > \\pi \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Filter Classification**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Low frequencies below $\\pi$ rad/s are completely suppressed, while high frequencies above $\\pi$ are passed with unity gain."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{Type: \\text{ Ideal High-Pass Filter (HPF)}}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Cutoff Frequency & Bandwidth**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\omega_c = \\pi \\text{ rad/s} \\quad \\left(f_c = 0.5 \\text{ Hz}\\right)}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{BW} = \\infty - \\pi = \\infty}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (d): $h(t) = \\text{sinc}(t)\\cos(2\\pi t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Fourier Transform via Modulation Property**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $p(t) = \\text{sinc}(t) \\xleftrightarrow{\\mathcal{F}} P(\\omega) = \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)$.\n   Using Euler's formula: $\\cos(2\\pi t) = \\frac{e^{j 2\\pi t} + e^{-j 2\\pi t}}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\frac{1}{2} p(t) e^{j 2\\pi t} + \\frac{1}{2} p(t) e^{-j 2\\pi t}"
-    },
-    {
-     "t": "p",
-     "text": "Applying the frequency-shift property $\\mathcal{F}\\{p(t)e^{\\pm j\\omega_0 t}\\} = P(\\omega \\mp \\omega_0)$ with $\\omega_0 = 2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\frac{1}{2} P(\\omega - 2\\pi) + \\frac{1}{2} P(\\omega + 2\\pi) = \\frac{1}{2}\\text{rect}\\left(\\frac{\\omega - 2\\pi}{2\\pi}\\right) + \\frac{1}{2}\\text{rect}\\left(\\frac{\\omega + 2\\pi}{2\\pi}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Spectral Intervals**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The first pulse $P(\\omega - 2\\pi)$ is centered at $\\omega = +2\\pi$, spanning $[2\\pi - \\pi, 2\\pi + \\pi] = [\\pi, 3\\pi]$ with height $1/2$.",
-      "The second pulse $P(\\omega + 2\\pi)$ is centered at $\\omega = -2\\pi$, spanning $[-2\\pi - \\pi, -2\\pi + \\pi] = [-3\\pi, -\\pi]$ with height $1/2$.",
-      "Between $-\\pi$ and $+\\pi$, $H(\\omega) = 0$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Filter Classification**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{Type: \\text{ Ideal Band-Pass Filter (BPF)}}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Cutoff Frequencies & Bandwidth**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\omega_L = \\pi \\text{ rad/s} \\quad \\left(f_L = 0.5 \\text{ Hz}\\right)}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\omega_H = 3\\pi \\text{ rad/s} \\quad \\left(f_H = 1.5 \\text{ Hz}\\right)}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{BW} = \\omega_H - \\omega_L = 3\\pi - \\pi = 2\\pi \\text{ rad/s} \\quad (1.0 \\text{ Hz})}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (e): $h(t) = \\frac{\\delta(t)}{2} - \\text{sinc}(t)\\cos(2\\pi t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Fourier Transform Formulation**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\frac{1}{2} - H_{(d)}(\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "Since $H_{(d)}(\\omega)$ equals $1/2$ on $[\\pi, 3\\pi]$ and $[-3\\pi, -\\pi]$, and $0$ elsewhere:"
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\begin{cases} \\frac{1}{2} - \\frac{1}{2} = 0, & \\pi \\le |\\omega| \\le 3\\pi \\\\ \\frac{1}{2} - 0 = \\frac{1}{2}, & 0 \\le |\\omega| < \\pi \\text{ and } |\\omega| > 3\\pi \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Filter Classification**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The system blocks the frequency band $[\\pi, 3\\pi]$ rad/s while passing lower and higher frequencies."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{Type: \\text{ Band-Stop Filter (BSF) / Notch Filter}}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Cutoff Frequencies & Bandwidth**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\omega_L = \\pi \\text{ rad/s}, \\quad \\omega_H = 3\\pi \\text{ rad/s}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{BW} = (\\pi - 0) + (\\infty - 3\\pi) = \\infty}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part (a): $h(t) = \\delta(t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Fourier Transform**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\mathcal{F}\\{\\delta(t)\\} = 1 = 1 \\cdot e^{j0} \\quad \\forall \\omega \\in (-\\infty, \\infty)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Filter Classification**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $|H(\\omega)| = 1$ for all frequencies from $-\\infty$ to $+\\infty$, no frequency is attenuated."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{Type: \\text{ All-Pass Filter (APF)}}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Cutoff Frequency & Bandwidth**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_c = \\text{None (passes all frequencies)}, \\quad \\mathbf{\\text{BW} = \\infty}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (b): $h(t) = \\text{sinc}(t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Fourier Transform Formulation**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall the standard continuous-time transform pair:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\sin(a t)}{\\pi t} \\xleftrightarrow{\\mathcal{F}} \\text{rect}\\left(\\frac{\\omega}{2a}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Here, $\\text{sinc}(t) = \\frac{\\sin(\\pi t)}{\\pi t}$, so $a = \\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right) = \\begin{cases} 1, & |\\omega| \\le \\pi \\\\ 0, & |\\omega| > \\pi \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Filter Classification**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The frequency response is strictly non-zero from $-\\pi$ to $+\\pi$ rad/s and zero elsewhere."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{Type: \\text{ Ideal Low-Pass Filter (LPF)}}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Cutoff Frequency & Bandwidth**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\omega_c = \\pi \\text{ rad/s} \\quad \\left(f_c = \\frac{\\omega_c}{2\\pi} = \\frac{1}{2} \\text{ Hz}\\right)}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{BW} = \\omega_c - 0 = \\pi \\text{ rad/s} \\quad (0.5 \\text{ Hz})}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (c): $h(t) = \\delta(t) - \\text{sinc}(t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Fourier Transform Formulation**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using linearity:"
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\mathcal{F}\\{\\delta(t)\\} - \\mathcal{F}\\{\\text{sinc}(t)\\} = 1 - \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right) = \\begin{cases} 0, & |\\omega| \\le \\pi \\\\ 1, & |\\omega| > \\pi \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Filter Classification**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Low frequencies below $\\pi$ rad/s are completely suppressed, while high frequencies above $\\pi$ are passed with unity gain."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{Type: \\text{ Ideal High-Pass Filter (HPF)}}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Cutoff Frequency & Bandwidth**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\omega_c = \\pi \\text{ rad/s} \\quad \\left(f_c = 0.5 \\text{ Hz}\\right)}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{BW} = \\infty - \\pi = \\infty}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (d): $h(t) = \\text{sinc}(t)\\cos(2\\pi t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Fourier Transform via Modulation Property**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $p(t) = \\text{sinc}(t) \\xleftrightarrow{\\mathcal{F}} P(\\omega) = \\text{rect}\\left(\\frac{\\omega}{2\\pi}\\right)$.\n   Using Euler's formula: $\\cos(2\\pi t) = \\frac{e^{j 2\\pi t} + e^{-j 2\\pi t}}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\frac{1}{2} p(t) e^{j 2\\pi t} + \\frac{1}{2} p(t) e^{-j 2\\pi t}"
+      },
+      {
+       "t": "p",
+       "text": "Applying the frequency-shift property $\\mathcal{F}\\{p(t)e^{\\pm j\\omega_0 t}\\} = P(\\omega \\mp \\omega_0)$ with $\\omega_0 = 2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\frac{1}{2} P(\\omega - 2\\pi) + \\frac{1}{2} P(\\omega + 2\\pi) = \\frac{1}{2}\\text{rect}\\left(\\frac{\\omega - 2\\pi}{2\\pi}\\right) + \\frac{1}{2}\\text{rect}\\left(\\frac{\\omega + 2\\pi}{2\\pi}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Spectral Intervals**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The first pulse $P(\\omega - 2\\pi)$ is centered at $\\omega = +2\\pi$, spanning $[2\\pi - \\pi, 2\\pi + \\pi] = [\\pi, 3\\pi]$ with height $1/2$.",
+        "The second pulse $P(\\omega + 2\\pi)$ is centered at $\\omega = -2\\pi$, spanning $[-2\\pi - \\pi, -2\\pi + \\pi] = [-3\\pi, -\\pi]$ with height $1/2$.",
+        "Between $-\\pi$ and $+\\pi$, $H(\\omega) = 0$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Filter Classification**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{Type: \\text{ Ideal Band-Pass Filter (BPF)}}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Cutoff Frequencies & Bandwidth**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\omega_L = \\pi \\text{ rad/s} \\quad \\left(f_L = 0.5 \\text{ Hz}\\right)}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\omega_H = 3\\pi \\text{ rad/s} \\quad \\left(f_H = 1.5 \\text{ Hz}\\right)}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{BW} = \\omega_H - \\omega_L = 3\\pi - \\pi = 2\\pi \\text{ rad/s} \\quad (1.0 \\text{ Hz})}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (e): $h(t) = \\frac{\\delta(t)}{2} - \\text{sinc}(t)\\cos(2\\pi t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Fourier Transform Formulation**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\frac{1}{2} - H_{(d)}(\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "Since $H_{(d)}(\\omega)$ equals $1/2$ on $[\\pi, 3\\pi]$ and $[-3\\pi, -\\pi]$, and $0$ elsewhere:"
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\begin{cases} \\frac{1}{2} - \\frac{1}{2} = 0, & \\pi \\le |\\omega| \\le 3\\pi \\\\ \\frac{1}{2} - 0 = \\frac{1}{2}, & 0 \\le |\\omega| < \\pi \\text{ and } |\\omega| > 3\\pi \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Filter Classification**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The system blocks the frequency band $[\\pi, 3\\pi]$ rad/s while passing lower and higher frequencies."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{Type: \\text{ Band-Stop Filter (BSF) / Notch Filter}}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Cutoff Frequencies & Bandwidth**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\omega_L = \\pi \\text{ rad/s}, \\quad \\omega_H = 3\\pi \\text{ rad/s}}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{BW} = (\\pi - 0) + (\\infty - 3\\pi) = \\infty}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20565,296 +20532,295 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fundamental Frequency & DC Value of Input"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Fundamental Period**: $T_0 = 3\\text{ s}$.",
-      "**Fundamental Angular Frequency**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{3}\\text{ rad/s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**DC Component ($a_0$ / Average Value)**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_0 = \\frac{1}{T_0} \\int_0^{T_0} x(t) dt = \\frac{1}{3} \\left[ \\int_0^{1.5} A dt + \\int_{1.5}^3 \\left(-\\frac{2A}{3}\\right) dt \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "a_0 = \\frac{1}{3} \\left[ A(1.5) - \\frac{2A}{3}(1.5) \\right] = \\frac{1}{3} \\left[ \\frac{3A}{2} - A \\right] = \\frac{1}{3} \\cdot \\frac{A}{2} = \\frac{A}{6}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Harmonic Structure & \"Hidden Odd Harmonics\" Proof"
-    },
-    {
-     "t": "p",
-     "text": "Let us decompose $x(t)$ into its DC offset and an AC zero-mean signal $x_{\\text{AC}}(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\frac{A}{6} + x_{\\text{AC}}(t)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating $x_{\\text{AC}}(t) = x(t) - \\frac{A}{6}$ over the two half-periods:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $0 \\le t < 1.5$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_{\\text{AC}}(t) = A - \\frac{A}{6} = +\\frac{5A}{6}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $1.5 \\le t < 3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_{\\text{AC}}(t) = -\\frac{2A}{3} - \\frac{A}{6} = -\\frac{4A}{6} - \\frac{A}{6} = -\\frac{5A}{6}"
-    },
-    {
-     "t": "p",
-     "text": "Notice that $x_{\\text{AC}}(t)$ is a symmetric square wave alternating between $+5A/6$ and $-5A/6$ with half-period $T_0/2 = 1.5\\text{ s}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_{\\text{AC}}\\left(t + \\frac{T_0}{2}\\right) = -x_{\\text{AC}}(t)"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion**: $x_{\\text{AC}}(t)$ exhibits **Strict Half-Wave Symmetry (HWS)**!\nA signal possessing half-wave symmetry contains **ONLY ODD HARMONICS** in its Fourier series. Therefore, $x(t)$ consists exclusively of:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Frequencies present in } x(t) = \\left\\{ 0 \\text{ (DC)}, \\omega_0, 3\\omega_0, 5\\omega_0, 7\\omega_0, 9\\omega_0, \\dots \\right\\}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating these frequencies numerically:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\text{DC}: \\omega = 0 \\text{ rad/s}$",
-      "$n = 1: \\omega_0 = \\frac{2\\pi}{3} \\approx 2.094 \\text{ rad/s}$",
-      "$n = 3: 3\\omega_0 = 3\\left(\\frac{2\\pi}{3}\\right) = 2\\pi \\approx 6.283 \\text{ rad/s}$",
-      "$n = 5: 5\\omega_0 = \\frac{10\\pi}{3} \\approx 10.472 \\text{ rad/s}$",
-      "$n = 7: 7\\omega_0 = \\frac{14\\pi}{3} \\approx 14.661 \\text{ rad/s}$",
-      "$n = 9: 9\\omega_0 = 6\\pi \\approx 18.850 \\text{ rad/s}$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Evaluation of System Outputs"
-    },
-    {
-     "t": "h4",
-     "text": "Filter (a): $h(t) = \\delta(t) \\implies H(\\omega) = 1$ (All-Pass Filter)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Every spectral component passes without change.",
-      "Output:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y(t) = x(t) \\quad \\text{(Exact same square wave)}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental Frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\omega_{\\text{fund}} = \\omega_0 = \\frac{2\\pi}{3} \\text{ rad/s}}"
-    },
-    {
-     "t": "h4",
-     "text": "Filter (b): $h(t) = \\text{sinc}(t) \\implies$ Ideal LPF with $\\omega_c = \\pi$ rad/s"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Compare signal frequencies with filter cutoff $\\omega_c = \\pi \\approx 3.142\\text{ rad/s}$:",
-      "$\\omega = 0 < \\pi \\implies$ **Passed** (DC component $\\frac{A}{6}$)",
-      "$\\omega = \\omega_0 = \\frac{2\\pi}{3} \\approx 2.094 < \\pi \\implies$ **Passed** (Fundamental sinusoidal tone)",
-      "$\\omega = 3\\omega_0 = 2\\pi \\approx 6.283 > \\pi \\implies$ **Blocked**",
-      "All higher harmonics ($5\\omega_0, 7\\omega_0, \\dots > \\pi$) are **Blocked**.",
-      "Output Expression:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\frac{A}{6} + a_1 \\sin\\left(\\frac{2\\pi}{3} t\\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Nature of Output**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y(t) \\text{ is a pure sinusoid of frequency } \\frac{2\\pi}{3}\\text{ rad/s with a DC offset of } \\frac{A}{6}.}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental Frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\omega_{\\text{fund}} = \\frac{2\\pi}{3} \\text{ rad/s}}"
-    },
-    {
-     "t": "h4",
-     "text": "Filter (c): $h(t) = \\delta(t) - \\text{sinc}(t) \\implies$ Ideal HPF with $\\omega_c = \\pi$ rad/s"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Frequencies compared with $\\omega_c = \\pi$:",
-      "$\\omega = 0 < \\pi \\implies$ **Blocked** (DC is eliminated)",
-      "$\\omega = \\omega_0 = \\frac{2\\pi}{3} < \\pi \\implies$ **Blocked** (Fundamental tone is eliminated!)",
-      "$\\omega = 3\\omega_0 = 2\\pi > \\pi \\implies$ **Passed**",
-      "All higher odd harmonics ($5\\omega_0, 7\\omega_0, 9\\omega_0, \\dots > \\pi$) are **Passed** with unity gain.",
-      "Output Expression:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = x(t) - \\frac{A}{6} - a_1 \\sin\\left(\\frac{2\\pi}{3} t\\right) = \\sum_{k=3, 5, 7, \\dots} a_k \\sin\\left(k \\frac{2\\pi}{3} t\\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Fundamental Frequency Calculation (The Missing Fundamental Paradox)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The output $y(t)$ contains sinusoids at frequencies:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Omega_1 = 3\\omega_0 = 2\\pi, \\quad \\Omega_2 = 5\\omega_0 = \\frac{10\\pi}{3}, \\quad \\Omega_3 = 7\\omega_0 = \\frac{14\\pi}{3}, \\quad \\dots"
-    },
-    {
-     "t": "p",
-     "text": "The fundamental frequency of a sum of harmonically related sinusoids is the **Greatest Common Divisor (GCD / HCF)** of its constituent frequencies:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{\\text{fund}} = \\gcd\\left(3\\omega_0, 5\\omega_0, 7\\omega_0, 9\\omega_0, \\dots\\right) = \\omega_0 \\cdot \\gcd(3, 5, 7, 9, \\dots)"
-    },
-    {
-     "t": "p",
-     "text": "Since the greatest common divisor of consecutive odd integers $\\{3, 5, 7, \\dots\\}$ is $1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\omega_{\\text{fund}} = 1 \\cdot \\omega_0 = \\frac{2\\pi}{3} \\text{ rad/s}}"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Crucial GATE Exam Trap**:\nEven though the component at $\\frac{2\\pi}{3}\\text{ rad/s}$ is **physically absent** from the output, the fundamental frequency of $y(t)$ remains $\\frac{2\\pi}{3}\\text{ rad/s}$! The waveform repeats every $T_0 = \\frac{2\\pi}{\\omega_{\\text{fund}}} = 3\\text{ s}$."
-    },
-    {
-     "t": "h4",
-     "text": "Filter (d): $h(t) = \\text{sinc}(t)\\cos(2\\pi t) \\implies$ Ideal BPF with Passband $[\\pi, 3\\pi]$ rad/s"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Passband range: $[\\pi, 3\\pi] \\approx [3.142, 9.425]\\text{ rad/s}$.",
-      "Testing input frequencies:",
-      "$\\omega = 0 \\notin [\\pi, 3\\pi] \\implies$ Blocked.",
-      "$\\omega = \\omega_0 = \\frac{2\\pi}{3} \\approx 2.094 < \\pi \\implies$ Blocked.",
-      "$\\omega = 3\\omega_0 = 2\\pi \\approx 6.283 \\in [\\pi, 3\\pi] \\implies$ **PASSED!**",
-      "$\\omega = 5\\omega_0 = \\frac{10\\pi}{3} \\approx 10.472 > 3\\pi \\implies$ Blocked.",
-      "All higher harmonics $> 3\\pi \\implies$ Blocked.",
-      "**Output Signal**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Only the 3rd harmonic survives!"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y(t) = \\alpha \\sin(2\\pi t)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental Frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\omega_{\\text{fund}} = 2\\pi \\text{ rad/s} \\quad (f_{\\text{fund}} = 1 \\text{ Hz})}"
-    },
-    {
-     "t": "h4",
-     "text": "Filter (e): $h(t) = \\frac{\\delta(t)}{2} - \\text{sinc}(t)\\cos(2\\pi t) \\implies$ BSF with Stopband $[\\pi, 3\\pi]$ rad/s"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The filter rejects any frequency in $[\\pi, 3\\pi]$ and passes all other frequencies with gain $1/2$.",
-      "Frequencies evaluated:",
-      "$\\omega = 0$ (DC): Passed with gain $1/2 \\implies \\text{DC component } = \\frac{A}{12}$.",
-      "$\\omega = \\omega_0 = \\frac{2\\pi}{3}$: Passed with gain $1/2$.",
-      "$\\omega = 3\\omega_0 = 2\\pi$: **BLOCKED** (falls inside stopband $[\\pi, 3\\pi]$).",
-      "$\\omega = 5\\omega_0, 7\\omega_0, 9\\omega_0, \\dots$: Passed with gain $1/2$.",
-      "Output Expression:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\frac{A}{12} + \\alpha \\sin\\left(\\frac{2\\pi}{3} t\\right) + \\beta \\sin\\left(\\frac{10\\pi}{3} t\\right) + \\gamma \\sin\\left(\\frac{14\\pi}{3} t\\right) + \\dots"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental Frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\omega_{\\text{fund}} = \\gcd\\left(\\omega_0, 5\\omega_0, 7\\omega_0, \\dots\\right) = \\omega_0 = \\frac{2\\pi}{3} \\text{ rad/s}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Fundamental Frequency & DC Value of Input"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Fundamental Period**: $T_0 = 3\\text{ s}$.",
+        "**Fundamental Angular Frequency**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{3}\\text{ rad/s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**DC Component ($a_0$ / Average Value)**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_0 = \\frac{1}{T_0} \\int_0^{T_0} x(t) dt = \\frac{1}{3} \\left[ \\int_0^{1.5} A dt + \\int_{1.5}^3 \\left(-\\frac{2A}{3}\\right) dt \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "a_0 = \\frac{1}{3} \\left[ A(1.5) - \\frac{2A}{3}(1.5) \\right] = \\frac{1}{3} \\left[ \\frac{3A}{2} - A \\right] = \\frac{1}{3} \\cdot \\frac{A}{2} = \\frac{A}{6}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Harmonic Structure & \"Hidden Odd Harmonics\" Proof"
+      },
+      {
+       "t": "p",
+       "text": "Let us decompose $x(t)$ into its DC offset and an AC zero-mean signal $x_{\\text{AC}}(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\frac{A}{6} + x_{\\text{AC}}(t)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating $x_{\\text{AC}}(t) = x(t) - \\frac{A}{6}$ over the two half-periods:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $0 \\le t < 1.5$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_{\\text{AC}}(t) = A - \\frac{A}{6} = +\\frac{5A}{6}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $1.5 \\le t < 3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_{\\text{AC}}(t) = -\\frac{2A}{3} - \\frac{A}{6} = -\\frac{4A}{6} - \\frac{A}{6} = -\\frac{5A}{6}"
+      },
+      {
+       "t": "p",
+       "text": "Notice that $x_{\\text{AC}}(t)$ is a symmetric square wave alternating between $+5A/6$ and $-5A/6$ with half-period $T_0/2 = 1.5\\text{ s}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_{\\text{AC}}\\left(t + \\frac{T_0}{2}\\right) = -x_{\\text{AC}}(t)"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion**: $x_{\\text{AC}}(t)$ exhibits **Strict Half-Wave Symmetry (HWS)**!\nA signal possessing half-wave symmetry contains **ONLY ODD HARMONICS** in its Fourier series. Therefore, $x(t)$ consists exclusively of:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Frequencies present in } x(t) = \\left\\{ 0 \\text{ (DC)}, \\omega_0, 3\\omega_0, 5\\omega_0, 7\\omega_0, 9\\omega_0, \\dots \\right\\}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating these frequencies numerically:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\text{DC}: \\omega = 0 \\text{ rad/s}$",
+        "$n = 1: \\omega_0 = \\frac{2\\pi}{3} \\approx 2.094 \\text{ rad/s}$",
+        "$n = 3: 3\\omega_0 = 3\\left(\\frac{2\\pi}{3}\\right) = 2\\pi \\approx 6.283 \\text{ rad/s}$",
+        "$n = 5: 5\\omega_0 = \\frac{10\\pi}{3} \\approx 10.472 \\text{ rad/s}$",
+        "$n = 7: 7\\omega_0 = \\frac{14\\pi}{3} \\approx 14.661 \\text{ rad/s}$",
+        "$n = 9: 9\\omega_0 = 6\\pi \\approx 18.850 \\text{ rad/s}$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Evaluation of System Outputs"
+      },
+      {
+       "t": "h4",
+       "text": "Filter (a): $h(t) = \\delta(t) \\implies H(\\omega) = 1$ (All-Pass Filter)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Every spectral component passes without change.",
+        "Output:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y(t) = x(t) \\quad \\text{(Exact same square wave)}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental Frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\omega_{\\text{fund}} = \\omega_0 = \\frac{2\\pi}{3} \\text{ rad/s}}"
+      },
+      {
+       "t": "h4",
+       "text": "Filter (b): $h(t) = \\text{sinc}(t) \\implies$ Ideal LPF with $\\omega_c = \\pi$ rad/s"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Compare signal frequencies with filter cutoff $\\omega_c = \\pi \\approx 3.142\\text{ rad/s}$:",
+        "$\\omega = 0 < \\pi \\implies$ **Passed** (DC component $\\frac{A}{6}$)",
+        "$\\omega = \\omega_0 = \\frac{2\\pi}{3} \\approx 2.094 < \\pi \\implies$ **Passed** (Fundamental sinusoidal tone)",
+        "$\\omega = 3\\omega_0 = 2\\pi \\approx 6.283 > \\pi \\implies$ **Blocked**",
+        "All higher harmonics ($5\\omega_0, 7\\omega_0, \\dots > \\pi$) are **Blocked**.",
+        "Output Expression:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\frac{A}{6} + a_1 \\sin\\left(\\frac{2\\pi}{3} t\\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Nature of Output**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y(t) \\text{ is a pure sinusoid of frequency } \\frac{2\\pi}{3}\\text{ rad/s with a DC offset of } \\frac{A}{6}.}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental Frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\omega_{\\text{fund}} = \\frac{2\\pi}{3} \\text{ rad/s}}"
+      },
+      {
+       "t": "h4",
+       "text": "Filter (c): $h(t) = \\delta(t) - \\text{sinc}(t) \\implies$ Ideal HPF with $\\omega_c = \\pi$ rad/s"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Frequencies compared with $\\omega_c = \\pi$:",
+        "$\\omega = 0 < \\pi \\implies$ **Blocked** (DC is eliminated)",
+        "$\\omega = \\omega_0 = \\frac{2\\pi}{3} < \\pi \\implies$ **Blocked** (Fundamental tone is eliminated!)",
+        "$\\omega = 3\\omega_0 = 2\\pi > \\pi \\implies$ **Passed**",
+        "All higher odd harmonics ($5\\omega_0, 7\\omega_0, 9\\omega_0, \\dots > \\pi$) are **Passed** with unity gain.",
+        "Output Expression:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = x(t) - \\frac{A}{6} - a_1 \\sin\\left(\\frac{2\\pi}{3} t\\right) = \\sum_{k=3, 5, 7, \\dots} a_k \\sin\\left(k \\frac{2\\pi}{3} t\\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Fundamental Frequency Calculation (The Missing Fundamental Paradox)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The output $y(t)$ contains sinusoids at frequencies:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Omega_1 = 3\\omega_0 = 2\\pi, \\quad \\Omega_2 = 5\\omega_0 = \\frac{10\\pi}{3}, \\quad \\Omega_3 = 7\\omega_0 = \\frac{14\\pi}{3}, \\quad \\dots"
+      },
+      {
+       "t": "p",
+       "text": "The fundamental frequency of a sum of harmonically related sinusoids is the **Greatest Common Divisor (GCD / HCF)** of its constituent frequencies:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{\\text{fund}} = \\gcd\\left(3\\omega_0, 5\\omega_0, 7\\omega_0, 9\\omega_0, \\dots\\right) = \\omega_0 \\cdot \\gcd(3, 5, 7, 9, \\dots)"
+      },
+      {
+       "t": "p",
+       "text": "Since the greatest common divisor of consecutive odd integers $\\{3, 5, 7, \\dots\\}$ is $1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\omega_{\\text{fund}} = 1 \\cdot \\omega_0 = \\frac{2\\pi}{3} \\text{ rad/s}}"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Crucial GATE Exam Trap**:\nEven though the component at $\\frac{2\\pi}{3}\\text{ rad/s}$ is **physically absent** from the output, the fundamental frequency of $y(t)$ remains $\\frac{2\\pi}{3}\\text{ rad/s}$! The waveform repeats every $T_0 = \\frac{2\\pi}{\\omega_{\\text{fund}}} = 3\\text{ s}$."
+      },
+      {
+       "t": "h4",
+       "text": "Filter (d): $h(t) = \\text{sinc}(t)\\cos(2\\pi t) \\implies$ Ideal BPF with Passband $[\\pi, 3\\pi]$ rad/s"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Passband range: $[\\pi, 3\\pi] \\approx [3.142, 9.425]\\text{ rad/s}$.",
+        "Testing input frequencies:",
+        "$\\omega = 0 \\notin [\\pi, 3\\pi] \\implies$ Blocked.",
+        "$\\omega = \\omega_0 = \\frac{2\\pi}{3} \\approx 2.094 < \\pi \\implies$ Blocked.",
+        "$\\omega = 3\\omega_0 = 2\\pi \\approx 6.283 \\in [\\pi, 3\\pi] \\implies$ **PASSED!**",
+        "$\\omega = 5\\omega_0 = \\frac{10\\pi}{3} \\approx 10.472 > 3\\pi \\implies$ Blocked.",
+        "All higher harmonics $> 3\\pi \\implies$ Blocked.",
+        "**Output Signal**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Only the 3rd harmonic survives!"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y(t) = \\alpha \\sin(2\\pi t)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental Frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\omega_{\\text{fund}} = 2\\pi \\text{ rad/s} \\quad (f_{\\text{fund}} = 1 \\text{ Hz})}"
+      },
+      {
+       "t": "h4",
+       "text": "Filter (e): $h(t) = \\frac{\\delta(t)}{2} - \\text{sinc}(t)\\cos(2\\pi t) \\implies$ BSF with Stopband $[\\pi, 3\\pi]$ rad/s"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The filter rejects any frequency in $[\\pi, 3\\pi]$ and passes all other frequencies with gain $1/2$.",
+        "Frequencies evaluated:",
+        "$\\omega = 0$ (DC): Passed with gain $1/2 \\implies \\text{DC component } = \\frac{A}{12}$.",
+        "$\\omega = \\omega_0 = \\frac{2\\pi}{3}$: Passed with gain $1/2$.",
+        "$\\omega = 3\\omega_0 = 2\\pi$: **BLOCKED** (falls inside stopband $[\\pi, 3\\pi]$).",
+        "$\\omega = 5\\omega_0, 7\\omega_0, 9\\omega_0, \\dots$: Passed with gain $1/2$.",
+        "Output Expression:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\frac{A}{12} + \\alpha \\sin\\left(\\frac{2\\pi}{3} t\\right) + \\beta \\sin\\left(\\frac{10\\pi}{3} t\\right) + \\gamma \\sin\\left(\\frac{14\\pi}{3} t\\right) + \\dots"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental Frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\omega_{\\text{fund}} = \\gcd\\left(\\omega_0, 5\\omega_0, 7\\omega_0, \\dots\\right) = \\omega_0 = \\frac{2\\pi}{3} \\text{ rad/s}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20873,150 +20839,149 @@ export default {
      "text": "Determine the system output $y(t)$ and sketch the input and output spectra."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Characterize System Frequency Response $H(\\omega)$"
-    },
-    {
-     "t": "p",
-     "text": "Using $\\frac{\\sin(a t)}{\\pi t} \\xleftrightarrow{\\mathcal{F}} \\text{rect}\\left(\\frac{\\omega}{2a}\\right)$:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\frac{1}{5} \\left[ \\frac{\\sin(30\\pi t)}{\\pi t} \\right] \\xleftrightarrow{\\mathcal{F}} H(\\omega) = \\frac{1}{5} \\text{rect}\\left(\\frac{\\omega}{60\\pi}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "The system is an Ideal Low-Pass Filter with:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Passband Gain: $K = \\frac{1}{5}$",
-      "Cutoff Frequency: $\\omega_c = 30\\pi\\text{ rad/s} \\quad (f_c = 15\\text{ Hz})$",
-      "Mathematical form:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\begin{cases} \\frac{1}{5}, & |\\omega| \\le 30\\pi \\\\ 0, & |\\omega| > 30\\pi \\end{cases}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Expand Input Signal into Distinct Tones"
-    },
-    {
-     "t": "p",
-     "text": "Use the product-to-sum trigonometric identity:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\sin A \\cos B = \\sin(A + B) + \\sin(A - B)"
-    },
-    {
-     "t": "p",
-     "text": "Setting $A = 45\\pi t$ and $B = 20\\pi t$:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\sin(45\\pi t)\\cos(20\\pi t) = \\sin(65\\pi t) + \\sin(25\\pi t)"
-    },
-    {
-     "t": "p",
-     "text": "Substituting this back into $x(t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\sin(40\\pi t) + 5\\sin(20\\pi t) + \\sin(25\\pi t) + \\sin(65\\pi t)"
-    },
-    {
-     "t": "p",
-     "text": "Listing all angular frequencies in $x(t)$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$\\omega_1 = 20\\pi\\text{ rad/s}$",
-      "$\\omega_2 = 25\\pi\\text{ rad/s}$",
-      "$\\omega_3 = 40\\pi\\text{ rad/s}$",
-      "$\\omega_4 = 65\\pi\\text{ rad/s}$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Apply Filter Response to Each Tone"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Tone 1 ($\\omega_1 = 20\\pi$ rad/s)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$20\\pi < 30\\pi \\implies H(20\\pi) = \\frac{1}{5}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Output component} = 5 \\cdot \\left(\\frac{1}{5}\\right) \\sin(20\\pi t) = \\sin(20\\pi t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Tone 2 ($\\omega_2 = 25\\pi$ rad/s)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$25\\pi < 30\\pi \\implies H(25\\pi) = \\frac{1}{5}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Output component} = 1 \\cdot \\left(\\frac{1}{5}\\right) \\sin(25\\pi t) = \\frac{1}{5} \\sin(25\\pi t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Tone 3 ($\\omega_3 = 40\\pi$ rad/s)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$40\\pi > 30\\pi \\implies H(40\\pi) = 0$."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Output component} = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Tone 4 ($\\omega_4 = 65\\pi$ rad/s)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$65\\pi > 30\\pi \\implies H(65\\pi) = 0$."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Output component} = 0"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Final Output Expression"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\sin(20\\pi t) + \\frac{1}{5}\\sin(25\\pi t)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Characterize System Frequency Response $H(\\omega)$"
+      },
+      {
+       "t": "p",
+       "text": "Using $\\frac{\\sin(a t)}{\\pi t} \\xleftrightarrow{\\mathcal{F}} \\text{rect}\\left(\\frac{\\omega}{2a}\\right)$:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\frac{1}{5} \\left[ \\frac{\\sin(30\\pi t)}{\\pi t} \\right] \\xleftrightarrow{\\mathcal{F}} H(\\omega) = \\frac{1}{5} \\text{rect}\\left(\\frac{\\omega}{60\\pi}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "The system is an Ideal Low-Pass Filter with:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Passband Gain: $K = \\frac{1}{5}$",
+        "Cutoff Frequency: $\\omega_c = 30\\pi\\text{ rad/s} \\quad (f_c = 15\\text{ Hz})$",
+        "Mathematical form:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\begin{cases} \\frac{1}{5}, & |\\omega| \\le 30\\pi \\\\ 0, & |\\omega| > 30\\pi \\end{cases}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Expand Input Signal into Distinct Tones"
+      },
+      {
+       "t": "p",
+       "text": "Use the product-to-sum trigonometric identity:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\sin A \\cos B = \\sin(A + B) + \\sin(A - B)"
+      },
+      {
+       "t": "p",
+       "text": "Setting $A = 45\\pi t$ and $B = 20\\pi t$:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\sin(45\\pi t)\\cos(20\\pi t) = \\sin(65\\pi t) + \\sin(25\\pi t)"
+      },
+      {
+       "t": "p",
+       "text": "Substituting this back into $x(t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\sin(40\\pi t) + 5\\sin(20\\pi t) + \\sin(25\\pi t) + \\sin(65\\pi t)"
+      },
+      {
+       "t": "p",
+       "text": "Listing all angular frequencies in $x(t)$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$\\omega_1 = 20\\pi\\text{ rad/s}$",
+        "$\\omega_2 = 25\\pi\\text{ rad/s}$",
+        "$\\omega_3 = 40\\pi\\text{ rad/s}$",
+        "$\\omega_4 = 65\\pi\\text{ rad/s}$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Apply Filter Response to Each Tone"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Tone 1 ($\\omega_1 = 20\\pi$ rad/s)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$20\\pi < 30\\pi \\implies H(20\\pi) = \\frac{1}{5}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Output component} = 5 \\cdot \\left(\\frac{1}{5}\\right) \\sin(20\\pi t) = \\sin(20\\pi t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Tone 2 ($\\omega_2 = 25\\pi$ rad/s)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$25\\pi < 30\\pi \\implies H(25\\pi) = \\frac{1}{5}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Output component} = 1 \\cdot \\left(\\frac{1}{5}\\right) \\sin(25\\pi t) = \\frac{1}{5} \\sin(25\\pi t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Tone 3 ($\\omega_3 = 40\\pi$ rad/s)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$40\\pi > 30\\pi \\implies H(40\\pi) = 0$."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Output component} = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Tone 4 ($\\omega_4 = 65\\pi$ rad/s)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$65\\pi > 30\\pi \\implies H(65\\pi) = 0$."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Output component} = 0"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Final Output Expression"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\sin(20\\pi t) + \\frac{1}{5}\\sin(25\\pi t)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21036,195 +21001,194 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Part (a): $x_1(t) = \\sin(5\\pi t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Euler Representation**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_1(t) = \\frac{e^{j 5\\pi t} - e^{-j 5\\pi t}}{2j}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Continuous-Time Fourier Transform**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using $\\mathcal{F}\\{e^{j\\omega_0 t}\\} = 2\\pi \\delta(\\omega - \\omega_0)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(\\omega) = \\frac{2\\pi \\delta(\\omega - 5\\pi) - 2\\pi \\delta(\\omega + 5\\pi)}{2j} = \\frac{\\pi}{j} \\delta(\\omega - 5\\pi) - \\frac{\\pi}{j} \\delta(\\omega + 5\\pi)"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\frac{1}{j} = -j$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(\\omega) = -j\\pi \\delta(\\omega - 5\\pi) + j\\pi \\delta(\\omega + 5\\pi)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Spectral Characteristics**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Impulse at $\\omega = +5\\pi$ with weight $-j\\pi = \\pi e^{-j\\pi/2}$.",
-      "Impulse at $\\omega = -5\\pi$ with weight $+j\\pi = \\pi e^{j\\pi/2}$.",
-      "Pure imaginary, odd spectrum ($X_1(-\\omega) = -X_1(\\omega)$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Part (b): $y_1(t) = \\cos(5\\pi t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Euler Representation**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_1(t) = \\frac{e^{j 5\\pi t} + e^{-j 5\\pi t}}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Fourier Transform**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y_1(\\omega) = \\pi \\delta(\\omega - 5\\pi) + \\pi \\delta(\\omega + 5\\pi)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Spectral Characteristics**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Two real impulses of weight $\\pi$ located at $\\omega = \\pm 5\\pi$.",
-      "Pure real, even spectrum ($Y_1(-\\omega) = Y_1(\\omega)$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Part (c): $x_2(t) = \\sin(5\\pi t + \\pi/4)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Euler Decomposition**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_2(t) = \\frac{e^{j(5\\pi t + \\pi/4)} - e^{-j(5\\pi t + \\pi/4)}}{2j} = \\frac{e^{j\\pi/4}}{2j} e^{j 5\\pi t} - \\frac{e^{-j\\pi/4}}{2j} e^{-j 5\\pi t}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Fourier Transform**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_2(\\omega) = \\frac{e^{j\\pi/4}}{2j} \\cdot 2\\pi \\delta(\\omega - 5\\pi) - \\frac{e^{-j\\pi/4}}{2j} \\cdot 2\\pi \\delta(\\omega + 5\\pi)"
-    },
-    {
-     "t": "math",
-     "tex": "X_2(\\omega) = \\frac{\\pi}{j} e^{j\\pi/4} \\delta(\\omega - 5\\pi) - \\frac{\\pi}{j} e^{-j\\pi/4} \\delta(\\omega + 5\\pi)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Alternative Polar Form**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using $\\frac{1}{j} = e^{-j\\pi/2}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Weight at $\\omega = +5\\pi$: $\\pi e^{-j\\pi/2} e^{j\\pi/4} = \\pi e^{-j\\pi/4}$.",
-      "Weight at $\\omega = -5\\pi$: $-\\pi e^{-j\\pi/2} e^{-j\\pi/4} = -\\pi e^{-j 3\\pi/4} = \\pi e^{j\\pi/4}$.",
-      "Satisfies conjugate symmetry: $X_2(-\\omega) = X_2^*(\\omega)$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Part (d): $y_2(t) = \\cos(5\\pi t - \\pi/3)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Euler Decomposition**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_2(t) = \\frac{e^{j(5\\pi t - \\pi/3)} + e^{-j(5\\pi t - \\pi/3)}}{2} = \\frac{e^{-j\\pi/3}}{2} e^{j 5\\pi t} + \\frac{e^{j\\pi/3}}{2} e^{-j 5\\pi t}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Fourier Transform**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y_2(\\omega) = \\pi e^{-j\\pi/3} \\delta(\\omega - 5\\pi) + \\pi e^{j\\pi/3} \\delta(\\omega + 5\\pi)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Spectral Characteristics**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Weight at $\\omega = +5\\pi$: $\\pi e^{-j\\pi/3}$.",
-      "Weight at $\\omega = -5\\pi$: $\\pi e^{j\\pi/3} = [\\pi e^{-j\\pi/3}]^*$.",
-      "Magnitude is even ($|Y_2(\\pm 5\\pi)| = \\pi$), and phase is odd ($\\angle Y_2(5\\pi) = -\\pi/3$, $\\angle Y_2(-5\\pi) = +\\pi/3$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part (a): $x_1(t) = \\sin(5\\pi t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Euler Representation**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_1(t) = \\frac{e^{j 5\\pi t} - e^{-j 5\\pi t}}{2j}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Continuous-Time Fourier Transform**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using $\\mathcal{F}\\{e^{j\\omega_0 t}\\} = 2\\pi \\delta(\\omega - \\omega_0)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(\\omega) = \\frac{2\\pi \\delta(\\omega - 5\\pi) - 2\\pi \\delta(\\omega + 5\\pi)}{2j} = \\frac{\\pi}{j} \\delta(\\omega - 5\\pi) - \\frac{\\pi}{j} \\delta(\\omega + 5\\pi)"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\frac{1}{j} = -j$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(\\omega) = -j\\pi \\delta(\\omega - 5\\pi) + j\\pi \\delta(\\omega + 5\\pi)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Spectral Characteristics**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Impulse at $\\omega = +5\\pi$ with weight $-j\\pi = \\pi e^{-j\\pi/2}$.",
+        "Impulse at $\\omega = -5\\pi$ with weight $+j\\pi = \\pi e^{j\\pi/2}$.",
+        "Pure imaginary, odd spectrum ($X_1(-\\omega) = -X_1(\\omega)$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Part (b): $y_1(t) = \\cos(5\\pi t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Euler Representation**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_1(t) = \\frac{e^{j 5\\pi t} + e^{-j 5\\pi t}}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Fourier Transform**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y_1(\\omega) = \\pi \\delta(\\omega - 5\\pi) + \\pi \\delta(\\omega + 5\\pi)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Spectral Characteristics**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Two real impulses of weight $\\pi$ located at $\\omega = \\pm 5\\pi$.",
+        "Pure real, even spectrum ($Y_1(-\\omega) = Y_1(\\omega)$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Part (c): $x_2(t) = \\sin(5\\pi t + \\pi/4)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Euler Decomposition**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_2(t) = \\frac{e^{j(5\\pi t + \\pi/4)} - e^{-j(5\\pi t + \\pi/4)}}{2j} = \\frac{e^{j\\pi/4}}{2j} e^{j 5\\pi t} - \\frac{e^{-j\\pi/4}}{2j} e^{-j 5\\pi t}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Fourier Transform**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_2(\\omega) = \\frac{e^{j\\pi/4}}{2j} \\cdot 2\\pi \\delta(\\omega - 5\\pi) - \\frac{e^{-j\\pi/4}}{2j} \\cdot 2\\pi \\delta(\\omega + 5\\pi)"
+      },
+      {
+       "t": "math",
+       "tex": "X_2(\\omega) = \\frac{\\pi}{j} e^{j\\pi/4} \\delta(\\omega - 5\\pi) - \\frac{\\pi}{j} e^{-j\\pi/4} \\delta(\\omega + 5\\pi)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Alternative Polar Form**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using $\\frac{1}{j} = e^{-j\\pi/2}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Weight at $\\omega = +5\\pi$: $\\pi e^{-j\\pi/2} e^{j\\pi/4} = \\pi e^{-j\\pi/4}$.",
+        "Weight at $\\omega = -5\\pi$: $-\\pi e^{-j\\pi/2} e^{-j\\pi/4} = -\\pi e^{-j 3\\pi/4} = \\pi e^{j\\pi/4}$.",
+        "Satisfies conjugate symmetry: $X_2(-\\omega) = X_2^*(\\omega)$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Part (d): $y_2(t) = \\cos(5\\pi t - \\pi/3)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Euler Decomposition**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_2(t) = \\frac{e^{j(5\\pi t - \\pi/3)} + e^{-j(5\\pi t - \\pi/3)}}{2} = \\frac{e^{-j\\pi/3}}{2} e^{j 5\\pi t} + \\frac{e^{j\\pi/3}}{2} e^{-j 5\\pi t}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Fourier Transform**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y_2(\\omega) = \\pi e^{-j\\pi/3} \\delta(\\omega - 5\\pi) + \\pi e^{j\\pi/3} \\delta(\\omega + 5\\pi)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Spectral Characteristics**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Weight at $\\omega = +5\\pi$: $\\pi e^{-j\\pi/3}$.",
+        "Weight at $\\omega = -5\\pi$: $\\pi e^{j\\pi/3} = [\\pi e^{-j\\pi/3}]^*$.",
+        "Magnitude is even ($|Y_2(\\pm 5\\pi)| = \\pi$), and phase is odd ($\\angle Y_2(5\\pi) = -\\pi/3$, $\\angle Y_2(-5\\pi) = +\\pi/3$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21259,146 +21223,145 @@ export default {
      "text": "Determine the steady-state continuous-time output $y(t)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Decompose Input Signal into Monochromatic Sinusoids"
-    },
-    {
-     "t": "p",
-     "text": "Using the identity $2\\cos A \\cos B = \\cos(A + B) + \\cos(A - B)$:"
-    },
-    {
-     "t": "math",
-     "tex": "4\\cos(25\\pi t)\\cos\\left(10\\pi t + \\frac{\\pi}{3}\\right) = 2 \\left[ \\cos\\left(35\\pi t + \\frac{\\pi}{3}\\right) + \\cos\\left(15\\pi t - \\frac{\\pi}{3}\\right) \\\\right]"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the input signal is composed of three distinct angular frequencies:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\underbrace{2\\sin\\left(5\\pi t + \\frac{\\pi}{4}\\right)}_{\\text{Tone 1: } \\omega_1 = 5\\pi} + \\underbrace{2\\cos\\left(35\\pi t + \\frac{\\pi}{3}\\right)}_{\\text{Tone 2: } \\omega_2 = 35\\pi} + \\underbrace{2\\cos\\left(15\\pi t - \\frac{\\pi}{3}\\right)}_{\\text{Tone 3: } \\omega_3 = 15\\pi}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: System Evaluation at Each Frequency"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**At $\\omega_1 = 5\\pi$ rad/s**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $5\\pi < 10\\pi$, $|H(5\\pi)| = 3$.",
-      "Phase: $\\angle H(5\\pi) = +\\frac{3\\pi}{2}$.",
-      "Therefore, the complex transfer function is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(j 5\\pi) = 3 e^{j 3\\pi/2} = -3j"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Output component for Tone 1:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_1(t) = 2 \\cdot |H(5\\pi)| \\sin\\left(5\\pi t + \\frac{\\pi}{4} + \\angle H(5\\pi)\\right) = 2 \\cdot 3 \\sin\\left(5\\pi t + \\frac{\\pi}{4} + \\frac{3\\pi}{2}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "y_1(t) = 6 \\sin\\left(5\\pi t + \\frac{\\pi}{4} + \\frac{3\\pi}{2}\\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Using the trigonometric reduction $\\sin\\left(\\theta + \\frac{3\\pi}{2}\\right) = -\\cos(\\theta)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_1(t) = -6\\cos\\left(5\\pi t + \\frac{\\pi}{4}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**At $\\omega_2 = 35\\pi$ rad/s**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $35\\pi > 20\\pi$, $|H(35\\pi)| = 0$.",
-      "Output component for Tone 2:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_2(t) = 0"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**At $\\omega_3 = 15\\pi$ rad/s**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "From the given chalkboard specification: $|H(15\\pi)| = \\frac{1}{2}$.",
-      "Phase: $\\angle H(15\\pi) = +\\frac{3\\pi}{2}$.",
-      "Output component for Tone 3:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_3(t) = 2 \\cdot |H(15\\pi)| \\cos\\left(15\\pi t - \\frac{\\pi}{3} + \\angle H(15\\pi)\\right) = 2 \\cdot \\left(\\frac{1}{2}\\right) \\cos\\left(15\\pi t - \\frac{\\pi}{3} + \\frac{3\\pi}{2}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "y_3(t) = 1 \\cdot \\cos\\left(15\\pi t - \\frac{\\pi}{3} + \\frac{3\\pi}{2}\\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Using the trigonometric reduction $\\cos\\left(\\theta + \\frac{3\\pi}{2}\\right) = +\\sin(\\theta)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_3(t) = \\sin\\left(15\\pi t - \\frac{\\pi}{3}\\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Total Output $y(t)$"
-    },
-    {
-     "t": "p",
-     "text": "Combining all components by linearity:"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = y_1(t) + y_2(t) + y_3(t)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y(t) = -6\\cos\\left(5\\pi t + \\frac{\\pi}{4}\\right) + \\sin\\left(15\\pi t - \\frac{\\pi}{3}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Decompose Input Signal into Monochromatic Sinusoids"
+      },
+      {
+       "t": "p",
+       "text": "Using the identity $2\\cos A \\cos B = \\cos(A + B) + \\cos(A - B)$:"
+      },
+      {
+       "t": "math",
+       "tex": "4\\cos(25\\pi t)\\cos\\left(10\\pi t + \\frac{\\pi}{3}\\right) = 2 \\left[ \\cos\\left(35\\pi t + \\frac{\\pi}{3}\\right) + \\cos\\left(15\\pi t - \\frac{\\pi}{3}\\right) \\\\right]"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the input signal is composed of three distinct angular frequencies:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\underbrace{2\\sin\\left(5\\pi t + \\frac{\\pi}{4}\\right)}_{\\text{Tone 1: } \\omega_1 = 5\\pi} + \\underbrace{2\\cos\\left(35\\pi t + \\frac{\\pi}{3}\\right)}_{\\text{Tone 2: } \\omega_2 = 35\\pi} + \\underbrace{2\\cos\\left(15\\pi t - \\frac{\\pi}{3}\\right)}_{\\text{Tone 3: } \\omega_3 = 15\\pi}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: System Evaluation at Each Frequency"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**At $\\omega_1 = 5\\pi$ rad/s**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $5\\pi < 10\\pi$, $|H(5\\pi)| = 3$.",
+        "Phase: $\\angle H(5\\pi) = +\\frac{3\\pi}{2}$.",
+        "Therefore, the complex transfer function is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(j 5\\pi) = 3 e^{j 3\\pi/2} = -3j"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Output component for Tone 1:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_1(t) = 2 \\cdot |H(5\\pi)| \\sin\\left(5\\pi t + \\frac{\\pi}{4} + \\angle H(5\\pi)\\right) = 2 \\cdot 3 \\sin\\left(5\\pi t + \\frac{\\pi}{4} + \\frac{3\\pi}{2}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "y_1(t) = 6 \\sin\\left(5\\pi t + \\frac{\\pi}{4} + \\frac{3\\pi}{2}\\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Using the trigonometric reduction $\\sin\\left(\\theta + \\frac{3\\pi}{2}\\right) = -\\cos(\\theta)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_1(t) = -6\\cos\\left(5\\pi t + \\frac{\\pi}{4}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**At $\\omega_2 = 35\\pi$ rad/s**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $35\\pi > 20\\pi$, $|H(35\\pi)| = 0$.",
+        "Output component for Tone 2:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_2(t) = 0"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**At $\\omega_3 = 15\\pi$ rad/s**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "From the given chalkboard specification: $|H(15\\pi)| = \\frac{1}{2}$.",
+        "Phase: $\\angle H(15\\pi) = +\\frac{3\\pi}{2}$.",
+        "Output component for Tone 3:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_3(t) = 2 \\cdot |H(15\\pi)| \\cos\\left(15\\pi t - \\frac{\\pi}{3} + \\angle H(15\\pi)\\right) = 2 \\cdot \\left(\\frac{1}{2}\\right) \\cos\\left(15\\pi t - \\frac{\\pi}{3} + \\frac{3\\pi}{2}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "y_3(t) = 1 \\cdot \\cos\\left(15\\pi t - \\frac{\\pi}{3} + \\frac{3\\pi}{2}\\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Using the trigonometric reduction $\\cos\\left(\\theta + \\frac{3\\pi}{2}\\right) = +\\sin(\\theta)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_3(t) = \\sin\\left(15\\pi t - \\frac{\\pi}{3}\\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Total Output $y(t)$"
+      },
+      {
+       "t": "p",
+       "text": "Combining all components by linearity:"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = y_1(t) + y_2(t) + y_3(t)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y(t) = -6\\cos\\left(5\\pi t + \\frac{\\pi}{4}\\right) + \\sin\\left(15\\pi t - \\frac{\\pi}{3}\\right)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21416,114 +21379,113 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Part (a): Baseband Signal $m(t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Maximum frequency: $f_m = 7\\text{ kHz}$.",
-      "**Nyquist Rate**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{N.R.} = 2 \\cdot f_m = 2 \\times 7\\text{ kHz} = \\mathbf{14\\text{ kHz}}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Nyquist Interval**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "T_N = \\\\frac{1}{\\\\text{N.R.}} = \\\\frac{1}{14000}\\\\text{ s} \\\\approx \\\\mathbf{71.43\\\\text{ }\\\\mu\\\\text{s}}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (b): Modulated Signal $x(t) = m(t)\\sin(2\\pi f_0 t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Modulation Spectrum**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = m(t) \\left[ \\frac{e^{j 2\\pi f_0 t} - e^{-j 2\\pi f_0 t}}{2j} \\right] \\xleftrightarrow{\\mathcal{F}} X(f) = \\frac{1}{2j} M(f - f_0) - \\frac{1}{2j} M(f + f_0)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Spectral Range Calculation**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Original baseband spectrum $M(f)$ is confined to $[-7\\text{ kHz}, +7\\text{ kHz}]$.",
-      "Shifted upper band $M(f - f_0)$ is centered at $f_0 = 10\\text{ kHz}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Upper band limits} = [10 - 7, 10 + 7] = [3\\text{ kHz}, 17\\text{ kHz}]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Shifted lower band $M(f + f_0)$ is centered at $-f_0 = -10\\text{ kHz}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Lower band limits} = [-10 - 7, -10 + 7] = [-17\\text{ kHz}, -3\\text{ kHz}]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Maximum Frequency Component ($f_{\\max}$)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The absolute highest frequency present in $x(t)$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "f_{\\max} = f_0 + f_m = 10\\text{ kHz} + 7\\text{ kHz} = \\mathbf{17\\text{ kHz}}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Nyquist Rate of $x(t)$**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{N.R.} = 2 \\cdot f_{\\max} = 2 \\times 17\\text{ kHz} = 34\\text{ kHz}}"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Rule for Modulation**:\nMultiplying a baseband signal (bandlimited to $f_m$) by a carrier of frequency $f_0$ shifts the maximum frequency to $f_{\\max} = f_0 + f_m$. Hence, the low-pass Nyquist rate becomes:\n$$\\text{N.R.} = 2(f_0 + f_m)$$"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part (a): Baseband Signal $m(t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Maximum frequency: $f_m = 7\\text{ kHz}$.",
+        "**Nyquist Rate**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{N.R.} = 2 \\cdot f_m = 2 \\times 7\\text{ kHz} = \\mathbf{14\\text{ kHz}}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Nyquist Interval**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "T_N = \\\\frac{1}{\\\\text{N.R.}} = \\\\frac{1}{14000}\\\\text{ s} \\\\approx \\\\mathbf{71.43\\\\text{ }\\\\mu\\\\text{s}}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (b): Modulated Signal $x(t) = m(t)\\sin(2\\pi f_0 t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Modulation Spectrum**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = m(t) \\left[ \\frac{e^{j 2\\pi f_0 t} - e^{-j 2\\pi f_0 t}}{2j} \\right] \\xleftrightarrow{\\mathcal{F}} X(f) = \\frac{1}{2j} M(f - f_0) - \\frac{1}{2j} M(f + f_0)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Spectral Range Calculation**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Original baseband spectrum $M(f)$ is confined to $[-7\\text{ kHz}, +7\\text{ kHz}]$.",
+        "Shifted upper band $M(f - f_0)$ is centered at $f_0 = 10\\text{ kHz}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Upper band limits} = [10 - 7, 10 + 7] = [3\\text{ kHz}, 17\\text{ kHz}]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Shifted lower band $M(f + f_0)$ is centered at $-f_0 = -10\\text{ kHz}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Lower band limits} = [-10 - 7, -10 + 7] = [-17\\text{ kHz}, -3\\text{ kHz}]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Maximum Frequency Component ($f_{\\max}$)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The absolute highest frequency present in $x(t)$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "f_{\\max} = f_0 + f_m = 10\\text{ kHz} + 7\\text{ kHz} = \\mathbf{17\\text{ kHz}}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Nyquist Rate of $x(t)$**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{N.R.} = 2 \\cdot f_{\\max} = 2 \\times 17\\text{ kHz} = 34\\text{ kHz}}"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Rule for Modulation**:\nMultiplying a baseband signal (bandlimited to $f_m$) by a carrier of frequency $f_0$ shifts the maximum frequency to $f_{\\max} = f_0 + f_m$. Hence, the low-pass Nyquist rate becomes:\n$$\\text{N.R.} = 2(f_0 + f_m)$$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21542,151 +21504,150 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Part (a): Linear Superposition $y_a(t) = m_1(t) \\pm m_2(t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Fourier Transform**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y_a(f) = M_1(f) \\pm M_2(f)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Spectral Support**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$M_1(f)$ is non-zero on $[-f_{m_1}, f_{m_1}]$.",
-      "$M_2(f)$ is non-zero on $[-f_{m_2}, f_{m_2}]$.",
-      "Since $f_{m_1} > f_{m_2}$, the support of the sum spans $[-f_{m_1}, f_{m_1}]$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Maximum Frequency & Nyquist Rate**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_{\\max} = \\max(f_{m_1}, f_{m_2}) = f_{m_1}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{N.R.} = 2 f_{m_1}}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (b): Product / Modulation $y_b(t) = m_1(t) \\cdot m_2(t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Fourier Transform via Convolution**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y_b(f) = M_1(f) * M_2(f)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Width of Convolution**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The upper limit of convolution of two intervals $[a, b]$ and $[c, d]$ is $b + d$, and the lower limit is $a + c$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Upper Limit} = f_{m_1} + f_{m_2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Lower Limit} = -f_{m_1} + (-f_{m_2}) = -(f_{m_1} + f_{m_2})"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Maximum Frequency & Nyquist Rate**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_{\\max} = f_{m_1} + f_{m_2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{N.R.} = 2(f_{m_1} + f_{m_2})}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (c): Convolution $y_c(t) = m_1(t) * m_2(t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Fourier Transform via Multiplication**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y_c(f) = M_1(f) \\cdot M_2(f)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Overlap of Intervals**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Pointwise multiplication produces non-zero values only on the intersection of their supports:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Support} = [-f_{m_1}, f_{m_1}] \\cap [-f_{m_2}, f_{m_2}] = [-f_{m_2}, f_{m_2}]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Maximum Frequency & Nyquist Rate**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_{\\max} = \\min(f_{m_1}, f_{m_2}) = f_{m_2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{N.R.} = 2 f_{m_2}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part (a): Linear Superposition $y_a(t) = m_1(t) \\pm m_2(t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Fourier Transform**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y_a(f) = M_1(f) \\pm M_2(f)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Spectral Support**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$M_1(f)$ is non-zero on $[-f_{m_1}, f_{m_1}]$.",
+        "$M_2(f)$ is non-zero on $[-f_{m_2}, f_{m_2}]$.",
+        "Since $f_{m_1} > f_{m_2}$, the support of the sum spans $[-f_{m_1}, f_{m_1}]$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Maximum Frequency & Nyquist Rate**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_{\\max} = \\max(f_{m_1}, f_{m_2}) = f_{m_1}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{N.R.} = 2 f_{m_1}}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (b): Product / Modulation $y_b(t) = m_1(t) \\cdot m_2(t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Fourier Transform via Convolution**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y_b(f) = M_1(f) * M_2(f)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Width of Convolution**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The upper limit of convolution of two intervals $[a, b]$ and $[c, d]$ is $b + d$, and the lower limit is $a + c$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Upper Limit} = f_{m_1} + f_{m_2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Lower Limit} = -f_{m_1} + (-f_{m_2}) = -(f_{m_1} + f_{m_2})"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Maximum Frequency & Nyquist Rate**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_{\\max} = f_{m_1} + f_{m_2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{N.R.} = 2(f_{m_1} + f_{m_2})}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (c): Convolution $y_c(t) = m_1(t) * m_2(t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Fourier Transform via Multiplication**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y_c(f) = M_1(f) \\cdot M_2(f)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Overlap of Intervals**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Pointwise multiplication produces non-zero values only on the intersection of their supports:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Support} = [-f_{m_1}, f_{m_1}] \\cap [-f_{m_2}, f_{m_2}] = [-f_{m_2}, f_{m_2}]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Maximum Frequency & Nyquist Rate**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_{\\max} = \\min(f_{m_1}, f_{m_2}) = f_{m_2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{N.R.} = 2 f_{m_2}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -21783,7 +21744,7 @@ export default {
      "start": 1,
      "items": [
       "**Zero Chalkboard Slide Images**: All chalkboard illustrations, spectral drawings, circuit/system diagrams, and mathematical derivations are converted into crystal-clear text, standard GitHub Flavored Markdown, ASCII/Unicode spectral diagrams, and rigorous KaTeX mathematical typography.",
-      "**Complete Step-by-Step Derivations**: Every single solved drill, numerical exercise, and design problem is worked out exhaustively from first principles and enclosed within `<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>...</details>`.",
+      "**Complete Step-by-Step Derivations**: Every single solved drill, numerical exercise, and design problem is worked out exhaustively from first principles and enclosed within `<b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b>...`.",
       "**Comprehensive GATE Focus**: In-depth theoretical commentary, common student pitfalls, \"Aliasing vs. Signal Recovery\" paradoxes, and Master Operational Calculus rules are codified for high-yield preparation across GATE ECE, EE, and IN."
      ]
     },
@@ -22210,219 +22171,218 @@ export default {
      "text": "**Problem Statement (Chalkboard Slide 258):**\nA composite continuous-time signal $y(t)$ is defined by the system equations:\n$$x(t) = \\left\\{\\text{sinc}\\left(\\frac{t}{3}\\right)\\right\\}^2 \\times \\{\\text{sinc}(2t)\\}^3 + \\{\\text{Sa}(3t)\\}^4$$\n$$h(t) = \\text{sinc}\\left(\\frac{10}{3}t\\right) * \\text{sinc}(5t)$$\n$$y(t) = x(t) \\cdot h(t)$$\nDetermine the Nyquist Rate ($\\text{N.R.}$) of $y(t)$ in $\\text{rad/sec}$ and in $\\text{Hz}$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Definition of Standard Functions & Baseband Bandwidths"
-    },
-    {
-     "t": "p",
-     "text": "Recall the definitions of the Sampling and Sinc functions:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Normalized Sinc function**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{sinc}(at) = \\frac{\\sin(\\pi a t)}{\\pi a t} \\xrightarrow{\\mathcal{F}} \\frac{1}{|a|} \\text{rect}\\left(\\frac{f}{a}\\right) = \\frac{1}{|a|} \\text{rect}\\left(\\frac{\\omega}{2\\pi a}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "The spectral support in frequency is $|f| \\le \\frac{|a|}{2}$, which corresponds in angular frequency to:"
-    },
-    {
-     "t": "math",
-     "tex": "|\\omega| \\le 2\\pi \\left(\\frac{|a|}{2}\\right) = \\pi |a| \\implies \\omega_m = \\pi |a| \\quad [\\text{rad/s}]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Unnormalized Sampling function**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sa}(at) = \\frac{\\sin(at)}{at} \\xrightarrow{\\mathcal{F}} \\frac{\\pi}{|a|} \\text{rect}\\left(\\frac{\\omega}{2a}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "The spectral support in angular frequency is $|\\omega| \\le |a| \\implies \\omega_m = |a| \\quad [\\text{rad/s}]$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Bandwidth of Individual Terms in $x(t)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Term 1**: $x_{1a}(t) = \\left\\{\\text{sinc}\\left(\\frac{t}{3}\\right)\\right\\}^2$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Here $a = 1/3 \\implies \\omega_{\\text{base}} = \\frac{\\pi}{3}\\text{ rad/s}$.",
-      "Squaring doubles the maximum angular frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{1a,\\max} = 2 \\times \\frac{\\pi}{3} = \\frac{2\\pi}{3}\\text{ rad/s}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Term 2**: $x_{1b}(t) = \\{\\text{sinc}(2t)\\}^3$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Here $a = 2 \\implies \\omega_{\\text{base}} = 2\\pi\\text{ rad/s}$.",
-      "Cubing triples the maximum angular frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{1b,\\max} = 3 \\times (2\\pi) = 6\\pi\\text{ rad/s}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Product Term**: $x_1(t) = x_{1a}(t) \\cdot x_{1b}(t)$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Multiplication in time causes frequency convolution $\\implies$ sum of bandwidths:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{x1,\\max} = \\frac{2\\pi}{3} + 6\\pi = \\frac{2\\pi + 18\\pi}{3} = \\frac{20\\pi}{3}\\text{ rad/s} \\approx 6.66\\pi \\approx 20.944\\text{ rad/s}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Term 3**: $x_2(t) = \\{\\text{Sa}(3t)\\}^4$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Base bandwidth of $\\text{Sa}(3t)$ is $\\omega_{\\text{base}} = 3\\text{ rad/s}$.",
-      "Raising to the 4th power multiplies bandwidth by 4:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{x2,\\max} = 4 \\times 3 = 12\\text{ rad/s}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Addition**: $x(t) = x_1(t) + x_2(t)$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Addition yields the maximum of the individual bandwidths:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{x,\\max} = \\max\\left(\\omega_{x1,\\max}, \\omega_{x2,\\max}\\right) = \\max\\left(\\frac{20\\pi}{3}, 12\\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\frac{20\\pi}{3} = \\frac{20 \\times 3.14159}{3} \\approx 20.944 > 12$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{x,\\max} = \\frac{20\\pi}{3}\\text{ rad/s}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Bandwidth of Impulse Response $h(t)$"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\text{sinc}\\left(\\frac{10}{3}t\\right) * \\text{sinc}(5t)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "For $\\text{sinc}\\left(\\frac{10}{3}t\\right)$: $\\omega_{h1} = \\pi \\times \\frac{10}{3} = \\frac{10\\pi}{3}\\text{ rad/s} \\approx 3.33\\pi \\approx 10.47\\text{ rad/s}$.",
-      "For $\\text{sinc}(5t)$: $\\omega_{h2} = \\pi \\times 5 = 5\\pi\\text{ rad/s} \\approx 15.71\\text{ rad/s}$.",
-      "Convolution in time corresponds to multiplication in frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{h,\\max} = \\min\\left(\\omega_{h1}, \\omega_{h2}\\right) = \\min\\left(\\frac{10\\pi}{3}, 5\\pi\\right) = \\frac{10\\pi}{3}\\text{ rad/s}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Bandwidth and Nyquist Rate of $y(t) = x(t) \\cdot h(t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Multiplication in time causes frequency convolution $\\implies$ sum of maximum frequencies:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{y,\\max} = \\omega_{x,\\max} + \\omega_{h,\\max} = \\frac{20\\pi}{3} + \\frac{10\\pi}{3} = \\frac{30\\pi}{3} = 10\\pi\\text{ rad/s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Nyquist Rate in $\\text{rad/sec}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{N.R.}_{\\omega} = 2 \\omega_{y,\\max} = 2(10\\pi) = 20\\pi\\text{ rad/sec}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Nyquist Rate in $\\text{Hz}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_{y,\\max} = \\frac{\\omega_{y,\\max}}{2\\pi} = \\frac{10\\pi}{2\\pi} = 5\\text{ Hz}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{N.R.}_f = 2 f_{y,\\max} = 2 \\times 5 = 10\\text{ Hz}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Trap Alert**:\nStudents frequently confuse $\\text{sinc}(at)$ with $\\text{Sa}(at)$. Remember: $\\text{sinc}(t)$ contains an implicit $\\pi$ ($\\frac{\\sin \\pi t}{\\pi t}$), meaning its angular bandwidth is $\\pi\\text{ rad/s}$. In contrast, $\\text{Sa}(t) = \\frac{\\sin t}{t}$ does not have $\\pi$, meaning its angular bandwidth is $1\\text{ rad/s}$. Failing to distinguish between them produces numeric errors when comparing $\\frac{20\\pi}{3} \\approx 20.94$ against $12$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Definition of Standard Functions & Baseband Bandwidths"
+      },
+      {
+       "t": "p",
+       "text": "Recall the definitions of the Sampling and Sinc functions:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Normalized Sinc function**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{sinc}(at) = \\frac{\\sin(\\pi a t)}{\\pi a t} \\xrightarrow{\\mathcal{F}} \\frac{1}{|a|} \\text{rect}\\left(\\frac{f}{a}\\right) = \\frac{1}{|a|} \\text{rect}\\left(\\frac{\\omega}{2\\pi a}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "The spectral support in frequency is $|f| \\le \\frac{|a|}{2}$, which corresponds in angular frequency to:"
+      },
+      {
+       "t": "math",
+       "tex": "|\\omega| \\le 2\\pi \\left(\\frac{|a|}{2}\\right) = \\pi |a| \\implies \\omega_m = \\pi |a| \\quad [\\text{rad/s}]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Unnormalized Sampling function**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sa}(at) = \\frac{\\sin(at)}{at} \\xrightarrow{\\mathcal{F}} \\frac{\\pi}{|a|} \\text{rect}\\left(\\frac{\\omega}{2a}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "The spectral support in angular frequency is $|\\omega| \\le |a| \\implies \\omega_m = |a| \\quad [\\text{rad/s}]$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Bandwidth of Individual Terms in $x(t)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Term 1**: $x_{1a}(t) = \\left\\{\\text{sinc}\\left(\\frac{t}{3}\\right)\\right\\}^2$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Here $a = 1/3 \\implies \\omega_{\\text{base}} = \\frac{\\pi}{3}\\text{ rad/s}$.",
+        "Squaring doubles the maximum angular frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{1a,\\max} = 2 \\times \\frac{\\pi}{3} = \\frac{2\\pi}{3}\\text{ rad/s}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Term 2**: $x_{1b}(t) = \\{\\text{sinc}(2t)\\}^3$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Here $a = 2 \\implies \\omega_{\\text{base}} = 2\\pi\\text{ rad/s}$.",
+        "Cubing triples the maximum angular frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{1b,\\max} = 3 \\times (2\\pi) = 6\\pi\\text{ rad/s}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Product Term**: $x_1(t) = x_{1a}(t) \\cdot x_{1b}(t)$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Multiplication in time causes frequency convolution $\\implies$ sum of bandwidths:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{x1,\\max} = \\frac{2\\pi}{3} + 6\\pi = \\frac{2\\pi + 18\\pi}{3} = \\frac{20\\pi}{3}\\text{ rad/s} \\approx 6.66\\pi \\approx 20.944\\text{ rad/s}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Term 3**: $x_2(t) = \\{\\text{Sa}(3t)\\}^4$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Base bandwidth of $\\text{Sa}(3t)$ is $\\omega_{\\text{base}} = 3\\text{ rad/s}$.",
+        "Raising to the 4th power multiplies bandwidth by 4:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{x2,\\max} = 4 \\times 3 = 12\\text{ rad/s}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Addition**: $x(t) = x_1(t) + x_2(t)$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Addition yields the maximum of the individual bandwidths:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{x,\\max} = \\max\\left(\\omega_{x1,\\max}, \\omega_{x2,\\max}\\right) = \\max\\left(\\frac{20\\pi}{3}, 12\\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\frac{20\\pi}{3} = \\frac{20 \\times 3.14159}{3} \\approx 20.944 > 12$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{x,\\max} = \\frac{20\\pi}{3}\\text{ rad/s}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Bandwidth of Impulse Response $h(t)$"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\text{sinc}\\left(\\frac{10}{3}t\\right) * \\text{sinc}(5t)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "For $\\text{sinc}\\left(\\frac{10}{3}t\\right)$: $\\omega_{h1} = \\pi \\times \\frac{10}{3} = \\frac{10\\pi}{3}\\text{ rad/s} \\approx 3.33\\pi \\approx 10.47\\text{ rad/s}$.",
+        "For $\\text{sinc}(5t)$: $\\omega_{h2} = \\pi \\times 5 = 5\\pi\\text{ rad/s} \\approx 15.71\\text{ rad/s}$.",
+        "Convolution in time corresponds to multiplication in frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{h,\\max} = \\min\\left(\\omega_{h1}, \\omega_{h2}\\right) = \\min\\left(\\frac{10\\pi}{3}, 5\\pi\\right) = \\frac{10\\pi}{3}\\text{ rad/s}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Bandwidth and Nyquist Rate of $y(t) = x(t) \\cdot h(t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Multiplication in time causes frequency convolution $\\implies$ sum of maximum frequencies:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{y,\\max} = \\omega_{x,\\max} + \\omega_{h,\\max} = \\frac{20\\pi}{3} + \\frac{10\\pi}{3} = \\frac{30\\pi}{3} = 10\\pi\\text{ rad/s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Nyquist Rate in $\\text{rad/sec}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{N.R.}_{\\omega} = 2 \\omega_{y,\\max} = 2(10\\pi) = 20\\pi\\text{ rad/sec}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Nyquist Rate in $\\text{Hz}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_{y,\\max} = \\frac{\\omega_{y,\\max}}{2\\pi} = \\frac{10\\pi}{2\\pi} = 5\\text{ Hz}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{N.R.}_f = 2 f_{y,\\max} = 2 \\times 5 = 10\\text{ Hz}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Trap Alert**:\nStudents frequently confuse $\\text{sinc}(at)$ with $\\text{Sa}(at)$. Remember: $\\text{sinc}(t)$ contains an implicit $\\pi$ ($\\frac{\\sin \\pi t}{\\pi t}$), meaning its angular bandwidth is $\\pi\\text{ rad/s}$. In contrast, $\\text{Sa}(t) = \\frac{\\sin t}{t}$ does not have $\\pi$, meaning its angular bandwidth is $1\\text{ rad/s}$. Failing to distinguish between them produces numeric errors when comparing $\\frac{20\\pi}{3} \\approx 20.94$ against $12$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -22433,156 +22393,155 @@ export default {
      "text": "**Problem Statement (Chalkboard Slide 259):**\nGiven the baseband message signal:\n$$m(t) = \\text{Sa}(3t)$$\nA system output $y(t)$ is formed by:\n$$y(t) = [m^2(t) \\cdot \\cos(2t)]^2 * [m(-8t + 3)]^2$$\n1. Determine the Nyquist Rate of $y(t)$ in $\\text{rad/sec}$.\n2. Determine the Nyquist Interval ($\\text{N.I.}$) of $y(t)$ in $\\text{seconds}$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Base Bandwidth of $m(t)$"
-    },
-    {
-     "t": "math",
-     "tex": "m(t) = \\text{Sa}(3t) = \\frac{\\sin(3t)}{3t} \\implies \\omega_m = 3\\text{ rad/s}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Bandwidth of Term 1, $y_1(t) = [m^2(t) \\cdot \\cos(2t)]^2$"
-    },
-    {
-     "t": "p",
-     "text": "We decompose the operations hierarchically from inside out:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Signal squaring: $m^2(t) \\implies \\omega_{a} = 2 \\times \\omega_m = 2 \\times 3 = 6\\text{ rad/s}$.",
-      "Modulation by cosine: $m^2(t) \\cdot \\cos(2t)$:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Recall modulation property: $x(t)\\cos(\\omega_0 t) \\leftrightarrow \\frac{1}{2}[X(\\omega - \\omega_0) + X(\\omega + \\omega_0)]$.",
-      "The spectrum shifts by $\\pm \\omega_0 = \\pm 2\\text{ rad/s}$.",
-      "The new boundary is $\\omega_b = \\omega_a + \\omega_0 = 6 + 2 = 8\\text{ rad/s}$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Outer squaring: $[m^2(t)\\cos(2t)]^2$:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Squaring in time doubles the spectral range:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{y1,\\max} = 2 \\times 8 = 16\\text{ rad/s}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Bandwidth of Term 2, $y_2(t) = [m(-8t + 3)]^2$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Time-shifting and time-scaling: $m(-8t + 3)$:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The time shift of $+3$ (or delay $t_0 = 3/8$) contributes solely a linear phase factor $e^{-j\\omega t_0}$ and does not affect the magnitude or bandwidth.",
-      "The scaling factor is $a = -8$. The bandwidth scales by $|a| = |-8| = 8$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{c} = 8 \\times \\omega_m = 8 \\times 3 = 24\\text{ rad/s}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Squaring: $[m(-8t + 3)]^2$:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Squaring doubles the bandwidth:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{y2,\\max} = 2 \\times 24 = 48\\text{ rad/s}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Bandwidth of $y(t) = y_1(t) * y_2(t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Time convolution corresponds to frequency multiplication $\\implies \\min$ of bandwidths:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{y,\\max} = \\min(\\omega_{y1,\\max}, \\omega_{y2,\\max}) = \\min(16, 48) = 16\\text{ rad/s}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Nyquist Rate and Nyquist Interval"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Nyquist Rate in $\\text{rad/sec}$**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{N.R.}_{\\omega} = 2 \\omega_{y,\\max} = 2 \\times 16 = 32\\text{ rad/sec}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Nyquist Rate in $\\text{Hz}$**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_{y,\\max} = \\frac{\\omega_{y,\\max}}{2\\pi} = \\frac{16}{2\\pi} = \\frac{8}{\\pi}\\text{ Hz}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{N.R.}_f = 2 f_{y,\\max} = \\frac{16}{\\pi}\\text{ Hz}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Nyquist Interval ($\\text{N.I.}$)**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{N.I.} = \\frac{1}{\\text{N.R.}_f} = \\frac{1}{16/\\pi} = \\frac{\\pi}{16}\\text{ seconds}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Trap Alert**:\nNever calculate convolution bandwidth by adding! Many students mistakenly calculate $16 + 48 = 64\\text{ rad/s}$. Adding bandwidths applies strictly to **time multiplication**. For **time convolution**, the spectra multiply, so the bandwidth is dictated strictly by the **narrower** signal: $\\min(\\omega_1, \\omega_2)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Base Bandwidth of $m(t)$"
+      },
+      {
+       "t": "math",
+       "tex": "m(t) = \\text{Sa}(3t) = \\frac{\\sin(3t)}{3t} \\implies \\omega_m = 3\\text{ rad/s}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Bandwidth of Term 1, $y_1(t) = [m^2(t) \\cdot \\cos(2t)]^2$"
+      },
+      {
+       "t": "p",
+       "text": "We decompose the operations hierarchically from inside out:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Signal squaring: $m^2(t) \\implies \\omega_{a} = 2 \\times \\omega_m = 2 \\times 3 = 6\\text{ rad/s}$.",
+        "Modulation by cosine: $m^2(t) \\cdot \\cos(2t)$:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Recall modulation property: $x(t)\\cos(\\omega_0 t) \\leftrightarrow \\frac{1}{2}[X(\\omega - \\omega_0) + X(\\omega + \\omega_0)]$.",
+        "The spectrum shifts by $\\pm \\omega_0 = \\pm 2\\text{ rad/s}$.",
+        "The new boundary is $\\omega_b = \\omega_a + \\omega_0 = 6 + 2 = 8\\text{ rad/s}$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Outer squaring: $[m^2(t)\\cos(2t)]^2$:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Squaring in time doubles the spectral range:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{y1,\\max} = 2 \\times 8 = 16\\text{ rad/s}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Bandwidth of Term 2, $y_2(t) = [m(-8t + 3)]^2$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Time-shifting and time-scaling: $m(-8t + 3)$:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The time shift of $+3$ (or delay $t_0 = 3/8$) contributes solely a linear phase factor $e^{-j\\omega t_0}$ and does not affect the magnitude or bandwidth.",
+        "The scaling factor is $a = -8$. The bandwidth scales by $|a| = |-8| = 8$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{c} = 8 \\times \\omega_m = 8 \\times 3 = 24\\text{ rad/s}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Squaring: $[m(-8t + 3)]^2$:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Squaring doubles the bandwidth:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{y2,\\max} = 2 \\times 24 = 48\\text{ rad/s}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Bandwidth of $y(t) = y_1(t) * y_2(t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Time convolution corresponds to frequency multiplication $\\implies \\min$ of bandwidths:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{y,\\max} = \\min(\\omega_{y1,\\max}, \\omega_{y2,\\max}) = \\min(16, 48) = 16\\text{ rad/s}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Nyquist Rate and Nyquist Interval"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Nyquist Rate in $\\text{rad/sec}$**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{N.R.}_{\\omega} = 2 \\omega_{y,\\max} = 2 \\times 16 = 32\\text{ rad/sec}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Nyquist Rate in $\\text{Hz}$**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_{y,\\max} = \\frac{\\omega_{y,\\max}}{2\\pi} = \\frac{16}{2\\pi} = \\frac{8}{\\pi}\\text{ Hz}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{N.R.}_f = 2 f_{y,\\max} = \\frac{16}{\\pi}\\text{ Hz}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Nyquist Interval ($\\text{N.I.}$)**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{N.I.} = \\frac{1}{\\text{N.R.}_f} = \\frac{1}{16/\\pi} = \\frac{\\pi}{16}\\text{ seconds}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Trap Alert**:\nNever calculate convolution bandwidth by adding! Many students mistakenly calculate $16 + 48 = 64\\text{ rad/s}$. Adding bandwidths applies strictly to **time multiplication**. For **time convolution**, the spectra multiply, so the bandwidth is dictated strictly by the **narrower** signal: $\\min(\\omega_1, \\omega_2)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -22958,143 +22917,142 @@ export default {
      "text": "**Problem Statement (Chalkboard Slides 275\u2013277):**\nAn analog baseband message signal $m(t)$ is bandlimited to $2\\text{ Hz}$ ($f_m = 2\\text{ Hz}$).\nThe signal is multiplied by an impulse train $c(t) = \\sum_{n=-\\infty}^\\infty \\delta(t - n T_s)$ where $f_s = 1/T_s$, producing $m_s(t)$.\nThe sampled signal $m_s(t)$ is subsequently applied to an LTI reconstruction filter having impulse response:\n$$h(t) = \\frac{\\sin(10\\pi t)}{f_s \\pi t}$$\n1. **Part (a)**: Find the minimum sampling frequency $f_s$ to avoid aliasing at $m_s(t)$.\n2. **Part (b)**: Find the minimum sampling frequency $f_s$ for proper recovery of the message signal $m(t)$ at the output $y(t)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Solution to Part (a) \u2014 Anti-Aliasing Threshold at $m_s(t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Message bandwidth: $f_m = 2\\text{ Hz}$.",
-      "The sampled signal spectrum is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "M_s(f) = f_s \\sum_{n=-\\infty}^\\infty M(f - n f_s)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Central spectrum extends over $[-2\\text{ Hz}, +2\\text{ Hz}]$.",
-      "First positive replica is centered at $f_s$ and extends over $[f_s - 2, f_s + 2]\\text{ Hz}$.",
-      "To prevent aliasing at $m_s(t)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_s - f_m \\ge f_m \\implies f_s - 2 \\ge 2 \\implies f_s \\ge 4\\text{ Hz}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Therefore:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{(f_s)_{\\min}^{\\text{aliasing}} = 4\\text{ Hz}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Solution to Part (b) \u2014 Frequency Response of Given Filter $h(t)$"
-    },
-    {
-     "t": "p",
-     "text": "We determine the filter transfer function $H(f)$:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\frac{\\sin(10\\pi t)}{f_s \\pi t} = \\frac{10}{f_s} \\frac{\\sin(10\\pi t)}{10\\pi t} = \\frac{10}{f_s} \\text{sinc}(10 t)"
-    },
-    {
-     "t": "p",
-     "text": "Recall standard Fourier transform pair:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\sin(2\\pi f_c t)}{\\pi t} \\xrightarrow{\\mathcal{F}} \\text{rect}\\left(\\frac{f}{2 f_c}\\right) = \\begin{cases} 1, & |f| \\le f_c \\\\ 0, & |f| > f_c \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Here $2\\pi f_c = 10\\pi \\implies f_c = 5\\text{ Hz}$.\nScaling by $\\frac{1}{f_s}$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(f) = \\frac{1}{f_s} \\text{rect}\\left(\\frac{f}{10}\\right) = \\begin{cases} \\frac{1}{f_s}, & -5\\text{ Hz} \\le f \\le +5\\text{ Hz} \\\\ 0, & |f| > 5\\text{ Hz} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "The filter is a brick-wall low-pass filter with:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Cutoff frequency: $f_c = 5\\text{ Hz}$",
-      "Passband gain: $A_p = \\frac{1}{f_s}$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Determining Condition for Proper Output Recovery $y(t) = m(t)$"
-    },
-    {
-     "t": "p",
-     "text": "For the output $Y(f) = M_s(f) \\cdot H(f)$ to equal $M(f)$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Passband constraint**: The filter must completely cover the message band without truncation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_c \\ge f_m \\implies 5\\text{ Hz} \\ge 2\\text{ Hz} \\quad \\text{(Satisfied!)}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Stopband constraint**: The filter must not capture any part of the adjacent spectral replica at $+f_s$."
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The lower edge of the replica at $+f_s$ is $f_s - f_m = f_s - 2$.",
-      "For the filter to reject this entire replica, the replica's lower edge must lie outside or at the filter cutoff edge:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_s - f_m \\ge f_c \\implies f_s - 2 \\ge 5 \\implies f_s \\ge 7\\text{ Hz}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Therefore:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{(f_s)_{\\min}^{\\text{recovery}} = 7\\text{ Hz}}"
-    },
-    {
-     "t": "code",
-     "text": "Spectral Diagram for Recovery Condition:\n\n         Center M(f)                              Replica at fs\n             /|\\                                       /|\\\n   _________/_|_\\_____________________________________/_|_\\______ f\n           -2 0  2                                  fs-2 fs fs+2\n                  \\_________________________________/\n                                   |\n                      H(f) Cutoff Boundary (fc = 5 Hz)\n                                   v\n             .-----------------------------. (Gain = 1/fs)\n             |                             |\n   __________|_____________________________|_____________________ f\n            -5              0              5 <= fs - 2  ==>  fs >= 7 Hz"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Summary & Comparative Insights**:\n- If the question asks: *\"Find minimum sampling rate to prevent aliasing\"* $\\implies \\mathbf{4\\text{ Hz}}$.\n- If the question asks: *\"Find minimum sampling rate to recover $m(t)$ using the given filter\"* $\\implies \\mathbf{7\\text{ Hz}}$.\nAt $f_s = 4\\text{ Hz}$, $m_s(t)$ has no aliasing, but the filter ($f_c = 5\\text{ Hz}$) lets through the replica from $4 - 2 = 2\\text{ Hz}$ to $5\\text{ Hz}$, completely corrupting $y(t)$!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Solution to Part (a) \u2014 Anti-Aliasing Threshold at $m_s(t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Message bandwidth: $f_m = 2\\text{ Hz}$.",
+        "The sampled signal spectrum is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "M_s(f) = f_s \\sum_{n=-\\infty}^\\infty M(f - n f_s)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Central spectrum extends over $[-2\\text{ Hz}, +2\\text{ Hz}]$.",
+        "First positive replica is centered at $f_s$ and extends over $[f_s - 2, f_s + 2]\\text{ Hz}$.",
+        "To prevent aliasing at $m_s(t)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_s - f_m \\ge f_m \\implies f_s - 2 \\ge 2 \\implies f_s \\ge 4\\text{ Hz}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Therefore:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{(f_s)_{\\min}^{\\text{aliasing}} = 4\\text{ Hz}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Solution to Part (b) \u2014 Frequency Response of Given Filter $h(t)$"
+      },
+      {
+       "t": "p",
+       "text": "We determine the filter transfer function $H(f)$:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\frac{\\sin(10\\pi t)}{f_s \\pi t} = \\frac{10}{f_s} \\frac{\\sin(10\\pi t)}{10\\pi t} = \\frac{10}{f_s} \\text{sinc}(10 t)"
+      },
+      {
+       "t": "p",
+       "text": "Recall standard Fourier transform pair:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\sin(2\\pi f_c t)}{\\pi t} \\xrightarrow{\\mathcal{F}} \\text{rect}\\left(\\frac{f}{2 f_c}\\right) = \\begin{cases} 1, & |f| \\le f_c \\\\ 0, & |f| > f_c \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Here $2\\pi f_c = 10\\pi \\implies f_c = 5\\text{ Hz}$.\nScaling by $\\frac{1}{f_s}$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(f) = \\frac{1}{f_s} \\text{rect}\\left(\\frac{f}{10}\\right) = \\begin{cases} \\frac{1}{f_s}, & -5\\text{ Hz} \\le f \\le +5\\text{ Hz} \\\\ 0, & |f| > 5\\text{ Hz} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "The filter is a brick-wall low-pass filter with:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Cutoff frequency: $f_c = 5\\text{ Hz}$",
+        "Passband gain: $A_p = \\frac{1}{f_s}$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Determining Condition for Proper Output Recovery $y(t) = m(t)$"
+      },
+      {
+       "t": "p",
+       "text": "For the output $Y(f) = M_s(f) \\cdot H(f)$ to equal $M(f)$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Passband constraint**: The filter must completely cover the message band without truncation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_c \\ge f_m \\implies 5\\text{ Hz} \\ge 2\\text{ Hz} \\quad \\text{(Satisfied!)}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Stopband constraint**: The filter must not capture any part of the adjacent spectral replica at $+f_s$."
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The lower edge of the replica at $+f_s$ is $f_s - f_m = f_s - 2$.",
+        "For the filter to reject this entire replica, the replica's lower edge must lie outside or at the filter cutoff edge:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_s - f_m \\ge f_c \\implies f_s - 2 \\ge 5 \\implies f_s \\ge 7\\text{ Hz}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Therefore:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{(f_s)_{\\min}^{\\text{recovery}} = 7\\text{ Hz}}"
+      },
+      {
+       "t": "code",
+       "text": "Spectral Diagram for Recovery Condition:\n\n         Center M(f)                              Replica at fs\n             /|\\                                       /|\\\n   _________/_|_\\_____________________________________/_|_\\______ f\n           -2 0  2                                  fs-2 fs fs+2\n                  \\_________________________________/\n                                   |\n                      H(f) Cutoff Boundary (fc = 5 Hz)\n                                   v\n             .-----------------------------. (Gain = 1/fs)\n             |                             |\n   __________|_____________________________|_____________________ f\n            -5              0              5 <= fs - 2  ==>  fs >= 7 Hz"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Summary & Comparative Insights**:\n- If the question asks: *\"Find minimum sampling rate to prevent aliasing\"* $\\implies \\mathbf{4\\text{ Hz}}$.\n- If the question asks: *\"Find minimum sampling rate to recover $m(t)$ using the given filter\"* $\\implies \\mathbf{7\\text{ Hz}}$.\nAt $f_s = 4\\text{ Hz}$, $m_s(t)$ has no aliasing, but the filter ($f_c = 5\\text{ Hz}$) lets through the replica from $4 - 2 = 2\\text{ Hz}$ to $5\\text{ Hz}$, completely corrupting $y(t)$!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -23105,360 +23063,359 @@ export default {
      "text": "**Problem Statement (Chalkboard Slides 278\u2013283):**\nA single-tone sinusoidal message signal is given by:\n$$m(t) = 3\\cos(2\\pi t)$$\nThe signal is sampled using an ideal impulse train carrier $c(t) = \\sum_{n=-\\infty}^\\infty \\delta(t - n T_s)$ to produce $m_s(t) = m(t)\\cdot c(t)$, which is then passed to a reconstruction filter $h(t)$ to yield $y(t)$.\n\nAnalyze the sampled spectrum $M_s(f)$, comment on the presence or absence of aliasing, and determine whether proper recovery of $m(t)$ is possible using a **Low-Pass Filter (LPF)** or a **Band-Pass Filter (BPF)** for the following four sampling frequencies:\n- **Case (d)**: $f_s = 3\\text{ Hz} \\quad (f_s > 2 f_m)$\n- **Case (c)**: $f_s = 2\\text{ Hz} \\quad (f_s = 2 f_m)$\n- **Case (a)**: $f_s = 1\\text{ Hz} \\quad (f_s = f_m)$\n- **Case (b)**: $f_s = 0.5\\text{ Hz} \\quad (f_s = f_m / 2)$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Baseband Spectrum of Sinusoid"
-    },
-    {
-     "t": "p",
-     "text": "For $m(t) = 3\\cos(2\\pi t)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Angular frequency $\\omega_0 = 2\\pi \\implies f_0 = f_m = 1\\text{ Hz}$.",
-      "Euler expansion: $m(t) = \\frac{3}{2} e^{j 2\\pi (1) t} + \\frac{3}{2} e^{-j 2\\pi (1) t} = A e^{j 2\\pi t} + A e^{-j 2\\pi t}$, with $A = 1.5$.",
-      "Fourier Transform:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "M(f) = A \\delta(f - 1) + A \\delta(f + 1) = 1.5 \\delta(f - 1) + 1.5 \\delta(f + 1)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Sampled signal spectrum:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "M_s(f) = f_s \\sum_{n=-\\infty}^\\infty M(f - n f_s) = A f_s \\sum_{n=-\\infty}^\\infty [\\delta(f - n f_s - 1) + \\delta(f - n f_s + 1)]"
-    },
-    {
-     "t": "p",
-     "text": "The spectral impulses are positioned at frequencies:"
-    },
-    {
-     "t": "math",
-     "tex": "f = n f_s \\pm 1, \\quad n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Detailed Analysis of Case (d) \u2014 $f_s = 3\\text{ Hz}$ ($f_s > 2 f_m$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Discrete spectral locations: $f = 3n \\pm 1$:",
-      "$n = 0 \\implies \\pm 1\\text{ Hz}$",
-      "$n = +1 \\implies 3 \\pm 1 \\implies +2\\text{ Hz}, +4\\text{ Hz}$",
-      "$n = -1 \\implies -3 \\pm 1 \\implies -4\\text{ Hz}, -2\\text{ Hz}$",
-      "$n = +2 \\implies 6 \\pm 1 \\implies +5\\text{ Hz}, +7\\text{ Hz}$",
-      "$n = -2 \\implies -6 \\pm 1 \\implies -7\\text{ Hz}, -5\\text{ Hz}$",
-      "**Set of impulse locations**: $\\{\\dots, -7, -5, -4, -2, -1, +1, +2, +4, +5, +7, \\dots\\}\\text{ Hz}$.",
-      "Every impulse is located at a distinct frequency point; no two impulses collide!",
-      "**Aliasing Verdict**: **NO ALIASING ($\\checkmark$)**.",
-      "**Filter Recovery Options**:"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**LPF Option**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Passband cutoff $f_c$ chosen between $1\\text{ Hz}$ and $2\\text{ Hz}$ (e.g., $f_c = 1.5\\text{ Hz}$).",
-      "Passband gain: $A_p = \\frac{1}{f_s} = \\frac{1}{3}$.",
-      "Output contains only the pair at $\\pm 1\\text{ Hz}$ with weight $(A f_s) \\times \\frac{1}{f_s} = A = 1.5$.",
-      "Result: $y(t) = 3\\cos(2\\pi t) = m(t)$. (**LPF: SUCCESS $\\checkmark$**)"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**BPF Option**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Centered at $f = \\pm 1\\text{ Hz}$ with passband $(0.5\\text{ Hz}, 1.5\\text{ Hz})$ and gain $\\frac{1}{f_s}$.",
-      "Isolates the pair at $\\pm 1\\text{ Hz}$.",
-      "Result: $y(t) = m(t)$. (**BPF: SUCCESS $\\checkmark$**)"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Detailed Analysis of Case (c) \u2014 $f_s = 2\\text{ Hz}$ ($f_s = 2 f_m$, Critical Sampling)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Discrete spectral locations: $f = 2n \\pm 1$:",
-      "$n = 0 \\implies \\mathbf{\\pm 1\\text{ Hz}}$",
-      "$n = +1 \\implies 2 \\pm 1 \\implies \\mathbf{+1\\text{ Hz}}, \\mathbf{+3\\text{ Hz}}$",
-      "$n = -1 \\implies -2 \\pm 1 \\implies \\mathbf{-3\\text{ Hz}}, \\mathbf{-1\\text{ Hz}}$",
-      "$n = +2 \\implies 4 \\pm 1 \\implies \\mathbf{+3\\text{ Hz}}, \\mathbf{+5\\text{ Hz}}$",
-      "$n = -2 \\implies -4 \\pm 1 \\implies \\mathbf{-5\\text{ Hz}}, \\mathbf{-3\\text{ Hz}}$",
-      "**Key Observation 1**: Notice that impulses occur **exclusively at odd integers**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Impulse Frequencies} = \\{\\dots, -7, -5, -3, -1, +1, +3, +5, +7, \\dots\\}\\text{ Hz}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Key Observation 2**: There is **ABSOLUTELY NO IMPULSE AT DC ($f = 0$)**!",
-      "**Key Observation 3**: At every odd integer, exactly **two impulses collide and add**:",
-      "At $f = +1\\text{ Hz}$: from $n = 0$ ($+1$) and $n = +1$ ($2 - 1 = +1$). Total area $= A f_s + A f_s = 2 A f_s$.",
-      "At $f = -1\\text{ Hz}$: from $n = 0$ ($-1$) and $n = -1$ ($-2 + 1 = -1$). Total area $= 2 A f_s$.",
-      "At $f = \\pm 3\\text{ Hz}$: Total area $= 2 A f_s$.",
-      "**Aliasing Verdict**: Aliasing has occurred in the strictest sense because replicas overlapped at the boundary odd frequencies.",
-      "**Can we still recover $m(t)$? YES!**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**LPF Option**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Cutoff frequency: Choose $f_c = 1.5\\text{ Hz}$ (or any value in $(1\\text{ Hz}, 3\\text{ Hz})$).",
-      "Because there is zero energy at $f = 0$, the filter captures **only** the impulses at $\\pm 1\\text{ Hz}$.",
-      "Because the impulse area is doubled ($2 A f_s$), we design the filter passband gain to be:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Passband Gain} = \\frac{1}{2 f_s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Output area: $(2 A f_s) \\times \\frac{1}{2 f_s} = A = 1.5$.",
-      "Output signal: $y(t) = 3\\cos(2\\pi t) = m(t)$. (**LPF: SUCCESS $\\checkmark$**)"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**BPF Option**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "BPF centered at $1\\text{ Hz}$ (passband $(0.5\\text{ Hz}, 1.5\\text{ Hz})$) with gain $\\frac{1}{2 f_s}$.",
-      "Output signal: $y(t) = m(t)$. (**BPF: SUCCESS $\\checkmark$**)"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Detailed Analysis of Case (a) \u2014 $f_s = 1\\text{ Hz}$ ($f_s = f_m$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Discrete spectral locations: $f = n \\pm 1$:",
-      "$n = 0 \\implies \\mathbf{+1, -1}$",
-      "$n = +1 \\implies 1 \\pm 1 \\implies \\mathbf{0, +2}$",
-      "$n = -1 \\implies -1 \\pm 1 \\implies \\mathbf{-2, 0}$",
-      "$n = +2 \\implies 2 \\pm 1 \\implies \\mathbf{+1, +3}$",
-      "$n = -2 \\implies -2 \\pm 1 \\implies \\mathbf{-3, -1}$",
-      "**Key Observations**:",
-      "At $f = 0$ (DC): Two impulses arrive from $n = +1$ and $n = -1$. Total area $= 2 A f_s$.",
-      "At $f = \\pm 1\\text{ Hz}$: Two impulses arrive from $n = 0$ and $n = \\pm 2$. Total area $= 2 A f_s$.",
-      "At every integer $k \\in \\mathbb{Z}$: Impulses land with strength $2 A f_s$.",
-      "**Aliasing Verdict**: **SEVERE ALIASING ($\\checkmark$)**.",
-      "**Can we recover $m(t)$?**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**LPF Option**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "To capture the message at $\\pm 1\\text{ Hz}$, any low-pass filter must have cutoff $f_c \\ge 1\\text{ Hz}$.",
-      "But a low-pass filter with $f_c \\ge 1\\text{ Hz}$ will **unavoidably capture the DC impulse at $f = 0$**!",
-      "The output would be:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(f) = H(0)(2 A f_s) \\delta(f) + H(1)(2 A f_s)[\\delta(f-1) + \\delta(f+1)]"
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = \\text{Constant DC Offset} + C \\cos(2\\pi t) \\ne m(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**LPF FAILS COMPLETELY ($\\times$)**!"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**BPF Option**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Use a **Band-Pass Filter** centered at $f = 1\\text{ Hz}$ with passband from $0.5\\text{ Hz}$ to $1.5\\text{ Hz}$.",
-      "The BPF completely blocks the DC component at $f = 0$ and blocks higher harmonics at $f \\ge 2\\text{ Hz}$!",
-      "It passes exclusively the impulses at $\\pm 1\\text{ Hz}$.",
-      "With passband gain set to $A_p = \\frac{1}{2 f_s}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y(t) = (2 A f_s) \\cdot \\frac{1}{2 f_s} [\\cos(2\\pi t)] \\cdot 2 = 3\\cos(2\\pi t) = m(t)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**BPF SUCCEEDS BRILLIANTLY ($\\checkmark$)**!"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Detailed Analysis of Case (b) \u2014 $f_s = 0.5\\text{ Hz}$ ($f_s = f_m / 2$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Discrete spectral locations: $f = 0.5n \\pm 1$:",
-      "$n = 0 \\implies \\mathbf{\\pm 1}$",
-      "$n = \\pm 1 \\implies \\pm 0.5 \\pm 1 \\implies \\mathbf{\\pm 1.5, \\mp 0.5}$",
-      "$n = \\pm 2 \\implies \\pm 1 \\pm 1 \\implies \\mathbf{\\pm 2, 0}$",
-      "$n = \\pm 3 \\implies \\pm 1.5 \\pm 1 \\implies \\mathbf{\\pm 2.5, \\mp 0.5}$",
-      "$n = \\pm 4 \\implies \\pm 2 \\pm 1 \\implies \\mathbf{\\pm 3, \\pm 1}$",
-      "**Key Observations**:",
-      "Impulses exist at every multiple of $0.5\\text{ Hz}$: $\\{0, \\pm 0.5, \\pm 1.0, \\pm 1.5, \\pm 2.0, \\dots\\}$.",
-      "At $f = \\pm 1\\text{ Hz}$, two impulses coincide: from $n = 0$ and $n = \\pm 4$. Strength $= 2 A f_s$.",
-      "**Aliasing Verdict**: **SEVERE ALIASING ($\\checkmark$)**.",
-      "**Can we recover $m(t)$?**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**LPF Option**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "An LPF passing $1\\text{ Hz}$ unavoidably captures the impulses at $0\\text{ Hz}$ and $\\pm 0.5\\text{ Hz}$.",
-      "**LPF FAILS COMPLETELY ($\\times$)**!"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**BPF Option**:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Design a sharp **Band-Pass Filter** centered at $1\\text{ Hz}$ with narrow passband, e.g., $(0.75\\text{ Hz}, 1.25\\text{ Hz})$ (Bandwidth $< 0.5\\text{ Hz}$).",
-      "It isolates the impulse pair at $\\pm 1\\text{ Hz}$, rejecting $0.5\\text{ Hz}$ and $1.5\\text{ Hz}$.",
-      "Passband gain: $A_p = \\frac{1}{2 f_s}$.",
-      "Output is $y(t) = m(t)$!",
-      "**BPF SUCCEEDS ($\\checkmark$)**!"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Master Summary Table: Sinusoidal Sampling Regimes (Slide 278)"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Sampling Frequency $f_s$",
-      "Regime Relation",
-      "Aliasing Status",
-      "LPF Recovery Feasibility",
-      "BPF Recovery Feasibility",
-      "Required Filter Gain"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Baseband Spectrum of Sinusoid"
+      },
+      {
+       "t": "p",
+       "text": "For $m(t) = 3\\cos(2\\pi t)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Angular frequency $\\omega_0 = 2\\pi \\implies f_0 = f_m = 1\\text{ Hz}$.",
+        "Euler expansion: $m(t) = \\frac{3}{2} e^{j 2\\pi (1) t} + \\frac{3}{2} e^{-j 2\\pi (1) t} = A e^{j 2\\pi t} + A e^{-j 2\\pi t}$, with $A = 1.5$.",
+        "Fourier Transform:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "M(f) = A \\delta(f - 1) + A \\delta(f + 1) = 1.5 \\delta(f - 1) + 1.5 \\delta(f + 1)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Sampled signal spectrum:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "M_s(f) = f_s \\sum_{n=-\\infty}^\\infty M(f - n f_s) = A f_s \\sum_{n=-\\infty}^\\infty [\\delta(f - n f_s - 1) + \\delta(f - n f_s + 1)]"
+      },
+      {
+       "t": "p",
+       "text": "The spectral impulses are positioned at frequencies:"
+      },
+      {
+       "t": "math",
+       "tex": "f = n f_s \\pm 1, \\quad n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Detailed Analysis of Case (d) \u2014 $f_s = 3\\text{ Hz}$ ($f_s > 2 f_m$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Discrete spectral locations: $f = 3n \\pm 1$:",
+        "$n = 0 \\implies \\pm 1\\text{ Hz}$",
+        "$n = +1 \\implies 3 \\pm 1 \\implies +2\\text{ Hz}, +4\\text{ Hz}$",
+        "$n = -1 \\implies -3 \\pm 1 \\implies -4\\text{ Hz}, -2\\text{ Hz}$",
+        "$n = +2 \\implies 6 \\pm 1 \\implies +5\\text{ Hz}, +7\\text{ Hz}$",
+        "$n = -2 \\implies -6 \\pm 1 \\implies -7\\text{ Hz}, -5\\text{ Hz}$",
+        "**Set of impulse locations**: $\\{\\dots, -7, -5, -4, -2, -1, +1, +2, +4, +5, +7, \\dots\\}\\text{ Hz}$.",
+        "Every impulse is located at a distinct frequency point; no two impulses collide!",
+        "**Aliasing Verdict**: **NO ALIASING ($\\checkmark$)**.",
+        "**Filter Recovery Options**:"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**LPF Option**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Passband cutoff $f_c$ chosen between $1\\text{ Hz}$ and $2\\text{ Hz}$ (e.g., $f_c = 1.5\\text{ Hz}$).",
+        "Passband gain: $A_p = \\frac{1}{f_s} = \\frac{1}{3}$.",
+        "Output contains only the pair at $\\pm 1\\text{ Hz}$ with weight $(A f_s) \\times \\frac{1}{f_s} = A = 1.5$.",
+        "Result: $y(t) = 3\\cos(2\\pi t) = m(t)$. (**LPF: SUCCESS $\\checkmark$**)"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**BPF Option**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Centered at $f = \\pm 1\\text{ Hz}$ with passband $(0.5\\text{ Hz}, 1.5\\text{ Hz})$ and gain $\\frac{1}{f_s}$.",
+        "Isolates the pair at $\\pm 1\\text{ Hz}$.",
+        "Result: $y(t) = m(t)$. (**BPF: SUCCESS $\\checkmark$**)"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Detailed Analysis of Case (c) \u2014 $f_s = 2\\text{ Hz}$ ($f_s = 2 f_m$, Critical Sampling)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Discrete spectral locations: $f = 2n \\pm 1$:",
+        "$n = 0 \\implies \\mathbf{\\pm 1\\text{ Hz}}$",
+        "$n = +1 \\implies 2 \\pm 1 \\implies \\mathbf{+1\\text{ Hz}}, \\mathbf{+3\\text{ Hz}}$",
+        "$n = -1 \\implies -2 \\pm 1 \\implies \\mathbf{-3\\text{ Hz}}, \\mathbf{-1\\text{ Hz}}$",
+        "$n = +2 \\implies 4 \\pm 1 \\implies \\mathbf{+3\\text{ Hz}}, \\mathbf{+5\\text{ Hz}}$",
+        "$n = -2 \\implies -4 \\pm 1 \\implies \\mathbf{-5\\text{ Hz}}, \\mathbf{-3\\text{ Hz}}$",
+        "**Key Observation 1**: Notice that impulses occur **exclusively at odd integers**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Impulse Frequencies} = \\{\\dots, -7, -5, -3, -1, +1, +3, +5, +7, \\dots\\}\\text{ Hz}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Key Observation 2**: There is **ABSOLUTELY NO IMPULSE AT DC ($f = 0$)**!",
+        "**Key Observation 3**: At every odd integer, exactly **two impulses collide and add**:",
+        "At $f = +1\\text{ Hz}$: from $n = 0$ ($+1$) and $n = +1$ ($2 - 1 = +1$). Total area $= A f_s + A f_s = 2 A f_s$.",
+        "At $f = -1\\text{ Hz}$: from $n = 0$ ($-1$) and $n = -1$ ($-2 + 1 = -1$). Total area $= 2 A f_s$.",
+        "At $f = \\pm 3\\text{ Hz}$: Total area $= 2 A f_s$.",
+        "**Aliasing Verdict**: Aliasing has occurred in the strictest sense because replicas overlapped at the boundary odd frequencies.",
+        "**Can we still recover $m(t)$? YES!**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**LPF Option**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Cutoff frequency: Choose $f_c = 1.5\\text{ Hz}$ (or any value in $(1\\text{ Hz}, 3\\text{ Hz})$).",
+        "Because there is zero energy at $f = 0$, the filter captures **only** the impulses at $\\pm 1\\text{ Hz}$.",
+        "Because the impulse area is doubled ($2 A f_s$), we design the filter passband gain to be:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Passband Gain} = \\frac{1}{2 f_s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Output area: $(2 A f_s) \\times \\frac{1}{2 f_s} = A = 1.5$.",
+        "Output signal: $y(t) = 3\\cos(2\\pi t) = m(t)$. (**LPF: SUCCESS $\\checkmark$**)"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**BPF Option**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "BPF centered at $1\\text{ Hz}$ (passband $(0.5\\text{ Hz}, 1.5\\text{ Hz})$) with gain $\\frac{1}{2 f_s}$.",
+        "Output signal: $y(t) = m(t)$. (**BPF: SUCCESS $\\checkmark$**)"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Detailed Analysis of Case (a) \u2014 $f_s = 1\\text{ Hz}$ ($f_s = f_m$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Discrete spectral locations: $f = n \\pm 1$:",
+        "$n = 0 \\implies \\mathbf{+1, -1}$",
+        "$n = +1 \\implies 1 \\pm 1 \\implies \\mathbf{0, +2}$",
+        "$n = -1 \\implies -1 \\pm 1 \\implies \\mathbf{-2, 0}$",
+        "$n = +2 \\implies 2 \\pm 1 \\implies \\mathbf{+1, +3}$",
+        "$n = -2 \\implies -2 \\pm 1 \\implies \\mathbf{-3, -1}$",
+        "**Key Observations**:",
+        "At $f = 0$ (DC): Two impulses arrive from $n = +1$ and $n = -1$. Total area $= 2 A f_s$.",
+        "At $f = \\pm 1\\text{ Hz}$: Two impulses arrive from $n = 0$ and $n = \\pm 2$. Total area $= 2 A f_s$.",
+        "At every integer $k \\in \\mathbb{Z}$: Impulses land with strength $2 A f_s$.",
+        "**Aliasing Verdict**: **SEVERE ALIASING ($\\checkmark$)**.",
+        "**Can we recover $m(t)$?**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**LPF Option**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "To capture the message at $\\pm 1\\text{ Hz}$, any low-pass filter must have cutoff $f_c \\ge 1\\text{ Hz}$.",
+        "But a low-pass filter with $f_c \\ge 1\\text{ Hz}$ will **unavoidably capture the DC impulse at $f = 0$**!",
+        "The output would be:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(f) = H(0)(2 A f_s) \\delta(f) + H(1)(2 A f_s)[\\delta(f-1) + \\delta(f+1)]"
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = \\text{Constant DC Offset} + C \\cos(2\\pi t) \\ne m(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**LPF FAILS COMPLETELY ($\\times$)**!"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**BPF Option**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Use a **Band-Pass Filter** centered at $f = 1\\text{ Hz}$ with passband from $0.5\\text{ Hz}$ to $1.5\\text{ Hz}$.",
+        "The BPF completely blocks the DC component at $f = 0$ and blocks higher harmonics at $f \\ge 2\\text{ Hz}$!",
+        "It passes exclusively the impulses at $\\pm 1\\text{ Hz}$.",
+        "With passband gain set to $A_p = \\frac{1}{2 f_s}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y(t) = (2 A f_s) \\cdot \\frac{1}{2 f_s} [\\cos(2\\pi t)] \\cdot 2 = 3\\cos(2\\pi t) = m(t)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**BPF SUCCEEDS BRILLIANTLY ($\\checkmark$)**!"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Detailed Analysis of Case (b) \u2014 $f_s = 0.5\\text{ Hz}$ ($f_s = f_m / 2$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Discrete spectral locations: $f = 0.5n \\pm 1$:",
+        "$n = 0 \\implies \\mathbf{\\pm 1}$",
+        "$n = \\pm 1 \\implies \\pm 0.5 \\pm 1 \\implies \\mathbf{\\pm 1.5, \\mp 0.5}$",
+        "$n = \\pm 2 \\implies \\pm 1 \\pm 1 \\implies \\mathbf{\\pm 2, 0}$",
+        "$n = \\pm 3 \\implies \\pm 1.5 \\pm 1 \\implies \\mathbf{\\pm 2.5, \\mp 0.5}$",
+        "$n = \\pm 4 \\implies \\pm 2 \\pm 1 \\implies \\mathbf{\\pm 3, \\pm 1}$",
+        "**Key Observations**:",
+        "Impulses exist at every multiple of $0.5\\text{ Hz}$: $\\{0, \\pm 0.5, \\pm 1.0, \\pm 1.5, \\pm 2.0, \\dots\\}$.",
+        "At $f = \\pm 1\\text{ Hz}$, two impulses coincide: from $n = 0$ and $n = \\pm 4$. Strength $= 2 A f_s$.",
+        "**Aliasing Verdict**: **SEVERE ALIASING ($\\checkmark$)**.",
+        "**Can we recover $m(t)$?**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**LPF Option**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "An LPF passing $1\\text{ Hz}$ unavoidably captures the impulses at $0\\text{ Hz}$ and $\\pm 0.5\\text{ Hz}$.",
+        "**LPF FAILS COMPLETELY ($\\times$)**!"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**BPF Option**:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Design a sharp **Band-Pass Filter** centered at $1\\text{ Hz}$ with narrow passband, e.g., $(0.75\\text{ Hz}, 1.25\\text{ Hz})$ (Bandwidth $< 0.5\\text{ Hz}$).",
+        "It isolates the impulse pair at $\\pm 1\\text{ Hz}$, rejecting $0.5\\text{ Hz}$ and $1.5\\text{ Hz}$.",
+        "Passband gain: $A_p = \\frac{1}{2 f_s}$.",
+        "Output is $y(t) = m(t)$!",
+        "**BPF SUCCEEDS ($\\checkmark$)**!"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Master Summary Table: Sinusoidal Sampling Regimes (Slide 278)"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Sampling Frequency $f_s$",
+        "Regime Relation",
+        "Aliasing Status",
+        "LPF Recovery Feasibility",
+        "BPF Recovery Feasibility",
+        "Required Filter Gain"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---",
+        ":---:",
+        ":---:",
+        ":---:"
+       ],
+       "rows": [
+        [
+         "$f_s = 3\\text{ Hz}$",
+         "$f_s > 2 f_m$ (Over-sampling)",
+         "**No Aliasing**",
+         "**YES ($\\checkmark$)** ($f_c = 1.5\\text{ Hz}$)",
+         "**YES ($\\checkmark$)** (Center $1\\text{ Hz}$)",
+         "$\\frac{1}{f_s}$"
+        ],
+        [
+         "$f_s = 2\\text{ Hz}$",
+         "$f_s = 2 f_m$ (Critical Nyquist)",
+         "**Replicas Overlap**",
+         "**YES ($\\checkmark$)** ($f_c = 1.5\\text{ Hz}$, no DC)",
+         "**YES ($\\checkmark$)** (Center $1\\text{ Hz}$)",
+         "$\\frac{1}{2 f_s}$"
+        ],
+        [
+         "$f_s = 1\\text{ Hz}$",
+         "$f_s = f_m$ (Under-sampling)",
+         "**Aliasing (DC Present)**",
+         "**NO ($\\times$)** (DC corruption)",
+         "**YES ($\\checkmark$)** (Center $1\\text{ Hz}$)",
+         "$\\frac{1}{2 f_s}$"
+        ],
+        [
+         "$f_s = 0.5\\text{ Hz}$",
+         "$f_s = f_m / 2$ (Under-sampling)",
+         "**Aliasing (Harmonics Present)**",
+         "**NO ($\\times$)** (Multi-tone corruption)",
+         "**YES ($\\checkmark$)** (Narrow band at $1\\text{ Hz}$)",
+         "$\\frac{1}{2 f_s}$"
+        ]
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Prof. Insight & GATE Golden Rule**:\nFor general baseband signals, sampling below $2 f_m$ causes permanent, unrecoverable data loss. But for a **pure sinusoid**, whose spectrum consists of isolated line impulses rather than continuous frequency bands, under-sampling merely creates discrete ghost lines. As long as the desired line at $f_m$ does not collide with an unresolvable line of different origin, a **Band-Pass Filter (BPF)** can isolate it and reconstruct the analog sinusoid perfectly!"
+      }
      ],
-     "align": [
-      ":---",
-      ":---",
-      ":---",
-      ":---:",
-      ":---:",
-      ":---:"
-     ],
-     "rows": [
-      [
-       "$f_s = 3\\text{ Hz}$",
-       "$f_s > 2 f_m$ (Over-sampling)",
-       "**No Aliasing**",
-       "**YES ($\\checkmark$)** ($f_c = 1.5\\text{ Hz}$)",
-       "**YES ($\\checkmark$)** (Center $1\\text{ Hz}$)",
-       "$\\frac{1}{f_s}$"
-      ],
-      [
-       "$f_s = 2\\text{ Hz}$",
-       "$f_s = 2 f_m$ (Critical Nyquist)",
-       "**Replicas Overlap**",
-       "**YES ($\\checkmark$)** ($f_c = 1.5\\text{ Hz}$, no DC)",
-       "**YES ($\\checkmark$)** (Center $1\\text{ Hz}$)",
-       "$\\frac{1}{2 f_s}$"
-      ],
-      [
-       "$f_s = 1\\text{ Hz}$",
-       "$f_s = f_m$ (Under-sampling)",
-       "**Aliasing (DC Present)**",
-       "**NO ($\\times$)** (DC corruption)",
-       "**YES ($\\checkmark$)** (Center $1\\text{ Hz}$)",
-       "$\\frac{1}{2 f_s}$"
-      ],
-      [
-       "$f_s = 0.5\\text{ Hz}$",
-       "$f_s = f_m / 2$ (Under-sampling)",
-       "**Aliasing (Harmonics Present)**",
-       "**NO ($\\times$)** (Multi-tone corruption)",
-       "**YES ($\\checkmark$)** (Narrow band at $1\\text{ Hz}$)",
-       "$\\frac{1}{2 f_s}$"
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Prof. Insight & GATE Golden Rule**:\nFor general baseband signals, sampling below $2 f_m$ causes permanent, unrecoverable data loss. But for a **pure sinusoid**, whose spectrum consists of isolated line impulses rather than continuous frequency bands, under-sampling merely creates discrete ghost lines. As long as the desired line at $f_m$ does not collide with an unresolvable line of different origin, a **Band-Pass Filter (BPF)** can isolate it and reconstruct the analog sinusoid perfectly!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "open": true
     },
     {
      "t": "h3",
@@ -23469,233 +23426,232 @@ export default {
      "text": "**Problem Statement (Chalkboard Slide 284 & Page 72):**\nA message signal $m(t)$ is bandlimited to $2\\text{ Hz}$ ($f_m = 2\\text{ Hz}$).\nThe signal is sampled by multiplying it with an arbitrary **even** periodic signal $c(t)$ having fundamental angular frequency $\\omega_0 = 8\\pi\\text{ rad/s}$ (fundamental frequency $f_0 = 4\\text{ Hz}$):\n$$c(t) = \\sum_{n=-\\infty}^\\infty c_n e^{j 8\\pi n t}$$\nThe resulting sampled signal $m_s(t) = m(t) \\cdot c(t)$ is applied to an LTI system with frequency response $H(\\omega)$ to produce output $y(t)$.\n1. **Part (a)**: Design $H(\\omega)$ (filter type, cutoff frequency, and passband gain) such that the output is $y(t) = m(t)$.\n2. **Part (b)**: Design $H(\\omega)$ such that the output is $y(t) = 2 m(t) \\cos(16\\pi t)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fourier Series and Fourier Transform of Carrier $c(t)$"
-    },
-    {
-     "t": "p",
-     "text": "Given that $c(t)$ is a real and even periodic signal:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$c(-t) = c(t) \\implies c_{-n} = c_n \\in \\mathbb{R}$.",
-      "Fundamental frequency: $\\omega_0 = 8\\pi\\text{ rad/s} \\implies f_0 = \\frac{8\\pi}{2\\pi} = 4\\text{ Hz}$.",
-      "Expansion in exponential harmonics:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c(t) = c_0 + c_1 e^{j 8\\pi t} + c_{-1} e^{-j 8\\pi t} + c_2 e^{j 16\\pi t} + c_{-2} e^{-j 16\\pi t} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Since $c_{-1} = c_1$ and $c_{-2} = c_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "c(t) = c_0 + 2 c_1 \\cos(8\\pi t) + 2 c_2 \\cos(16\\pi t) + \\dots"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fourier transform of $c(t)$ in cyclic frequency $f$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "C(f) = \\sum_{n=-\\infty}^\\infty c_n \\delta(f - n f_0) = \\dots + c_{-2} \\delta(f + 8) + c_{-1} \\delta(f + 4) + c_0 \\delta(f) + c_1 \\delta(f - 4) + c_2 \\delta(f - 8) + \\dots"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Spectrum of the Sampled Signal $m_s(t)$"
-    },
-    {
-     "t": "math",
-     "tex": "m_s(t) = m(t) \\cdot c(t) \\xrightarrow{\\mathcal{F}} M_s(f) = M(f) * C(f)"
-    },
-    {
-     "t": "math",
-     "tex": "M_s(f) = \\sum_{n=-\\infty}^\\infty c_n M(f - n f_0) = \\sum_{n=-\\infty}^\\infty c_n M(f - 4n)"
-    },
-    {
-     "t": "p",
-     "text": "Expanding explicitly:"
-    },
-    {
-     "t": "math",
-     "tex": "M_s(f) = c_0 M(f) + c_1 M(f - 4) + c_{-1} M(f + 4) + c_2 M(f - 8) + c_{-2} M(f + 8) + \\dots"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Spectral Boundaries & Overlap Check"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Message bandwidth: $f_m = 2\\text{ Hz} \\implies M(f)$ spans $[-2\\text{ Hz}, +2\\text{ Hz}]$.",
-      "The replicas are positioned as follows:",
-      "$n = 0$: Central replica $c_0 M(f)$ spans $[-2\\text{ Hz}, +2\\text{ Hz}]$.",
-      "$n = +1$: Replica $c_1 M(f - 4)$ spans $[4 - 2, 4 + 2] = [2\\text{ Hz}, 6\\text{ Hz}]$.",
-      "$n = -1$: Replica $c_{-1} M(f + 4)$ spans $[-6\\text{ Hz}, -2\\text{ Hz}]$.",
-      "$n = +2$: Replica $c_2 M(f - 8)$ spans $[8 - 2, 8 + 2] = [6\\text{ Hz}, 10\\text{ Hz}]$.",
-      "$n = -2$: Replica $c_{-2} M(f + 8)$ spans $[-10\\text{ Hz}, -6\\text{ Hz}]$.",
-      "**Spectral Gap Analysis**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The central replica ends at $+2\\text{ Hz}$, and the $n = +1$ replica begins at $+2\\text{ Hz}$.\n  The replicas **touch at boundary points without overlap**! Because $f_0 = 4\\text{ Hz} = 2 f_m$, this is a critical sampling scenario across the harmonics!"
-    },
-    {
-     "t": "code",
-     "text": "Composite Sampled Spectrum Ms(f):\n\n          c-2            c-1            c0            c1            c2\n          /|\\            /|\\           /|\\            /|\\           /|\\\n         / | \\          / | \\         / | \\          / | \\         / | \\\n   _____/__|__\\________/__|__\\_______/__|__\\________/__|__\\_______/__|__\\_____ f\n      -10 -8  -6      -6  -4  -2    -2  0   2      2   4   6     6   8  10"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Part (a) Design \u2014 Obtaining $y(t) = m(t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Required output spectrum: $Y(f) = M(f)$.",
-      "In $M_s(f)$, the baseband component is $c_0 M(f)$ extending over $[-2\\text{ Hz}, +2\\text{ Hz}]$.",
-      "To isolate this component:"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "We employ an **Ideal Low-Pass Filter (ILPF)**.",
-      "Cutoff frequency: $f_c = 2\\text{ Hz}$ (or $\\omega_c = 4\\pi\\text{ rad/s}$).",
-      "Filter Gain: Must scale $c_0$ to $1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(0) = \\frac{1}{c_0}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Mathematical Specification of $H(f)$ and $H(\\omega)$**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(f) = \\begin{cases} \\frac{1}{c_0}, & |f| \\le 2\\text{ Hz} \\\\ 0, & |f| > 2\\text{ Hz} \\end{cases} \\iff H(\\omega) = \\frac{1}{c_0} \\text{rect}\\left(\\frac{\\omega}{8\\pi}\\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Impulse Response $h(t)$**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\frac{1}{c_0} \\frac{\\sin(4\\pi t)}{\\pi t} = \\frac{4}{c_0} \\text{sinc}(4t)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Part (b) Design \u2014 Obtaining $y(t) = 2 m(t)\\cos(16\\pi t)$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Required output spectrum:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{2 m(t)\\cos(16\\pi t)\\} = \\mathcal{F}\\left\\{m(t) [e^{j 16\\pi t} + e^{-j 16\\pi t}]\\right\\} = M(f - 8) + M(f + 8)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Looking at $M_s(f)$, the terms located at $\\pm 8\\text{ Hz}$ are:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_2 M(f - 8) + c_{-2} M(f + 8)"
-    },
-    {
-     "t": "p",
-     "text": "Since $c(t)$ is even, $c_{-2} = c_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "= c_2 [M(f - 8) + M(f + 8)]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "To transform this into $[M(f - 8) + M(f + 8)]$:"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "We employ an **Ideal Band-Pass Filter (IBPF)** centered at $f = \\pm 8\\text{ Hz}$ ($\\omega = \\pm 16\\pi\\text{ rad/s}$).",
-      "Passbands:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Positive Passband}: [6\\text{ Hz}, 10\\text{ Hz}] \\quad (12\\pi \\le \\omega \\le 20\\pi)"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Negative Passband}: [-10\\text{ Hz}, -6\\text{ Hz}] \\quad (-20\\pi \\le \\omega \\le -12\\pi)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Passband Gain: Must eliminate the coefficient $c_2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Gain} = \\frac{1}{c_2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Mathematical Specification of $H(\\omega)$**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(\\omega) = \\frac{1}{c_2} \\left[ \\text{rect}\\left(\\frac{\\omega - 16\\pi}{8\\pi}\\right) + \\text{rect}\\left(\\frac{\\omega + 16\\pi}{8\\pi}\\right) \\right]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Impulse Response $h(t)$**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using modulation property of Fourier Transform:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\frac{2}{c_2} \\left[ \\frac{\\sin(4\\pi t)}{\\pi t} \\right] \\cos(16\\pi t) = \\frac{8}{c_2} \\text{sinc}(4t) \\cos(16\\pi t)"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Trap Alert**:\nIn part (b), students often forget that the BPF must have dual passbands at both positive and negative frequencies ($+8\\text{ Hz}$ and $-8\\text{ Hz}$) to produce a real-valued time-domain signal $y(t) = 2m(t)\\cos(16\\pi t)$. Filtering only the positive band at $+8\\text{ Hz}$ results in a complex analytic signal $c_2 M(f-8) \\to m(t)e^{j 16\\pi t}$, which is not real!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Fourier Series and Fourier Transform of Carrier $c(t)$"
+      },
+      {
+       "t": "p",
+       "text": "Given that $c(t)$ is a real and even periodic signal:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$c(-t) = c(t) \\implies c_{-n} = c_n \\in \\mathbb{R}$.",
+        "Fundamental frequency: $\\omega_0 = 8\\pi\\text{ rad/s} \\implies f_0 = \\frac{8\\pi}{2\\pi} = 4\\text{ Hz}$.",
+        "Expansion in exponential harmonics:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c(t) = c_0 + c_1 e^{j 8\\pi t} + c_{-1} e^{-j 8\\pi t} + c_2 e^{j 16\\pi t} + c_{-2} e^{-j 16\\pi t} + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Since $c_{-1} = c_1$ and $c_{-2} = c_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "c(t) = c_0 + 2 c_1 \\cos(8\\pi t) + 2 c_2 \\cos(16\\pi t) + \\dots"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fourier transform of $c(t)$ in cyclic frequency $f$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "C(f) = \\sum_{n=-\\infty}^\\infty c_n \\delta(f - n f_0) = \\dots + c_{-2} \\delta(f + 8) + c_{-1} \\delta(f + 4) + c_0 \\delta(f) + c_1 \\delta(f - 4) + c_2 \\delta(f - 8) + \\dots"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Spectrum of the Sampled Signal $m_s(t)$"
+      },
+      {
+       "t": "math",
+       "tex": "m_s(t) = m(t) \\cdot c(t) \\xrightarrow{\\mathcal{F}} M_s(f) = M(f) * C(f)"
+      },
+      {
+       "t": "math",
+       "tex": "M_s(f) = \\sum_{n=-\\infty}^\\infty c_n M(f - n f_0) = \\sum_{n=-\\infty}^\\infty c_n M(f - 4n)"
+      },
+      {
+       "t": "p",
+       "text": "Expanding explicitly:"
+      },
+      {
+       "t": "math",
+       "tex": "M_s(f) = c_0 M(f) + c_1 M(f - 4) + c_{-1} M(f + 4) + c_2 M(f - 8) + c_{-2} M(f + 8) + \\dots"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Spectral Boundaries & Overlap Check"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Message bandwidth: $f_m = 2\\text{ Hz} \\implies M(f)$ spans $[-2\\text{ Hz}, +2\\text{ Hz}]$.",
+        "The replicas are positioned as follows:",
+        "$n = 0$: Central replica $c_0 M(f)$ spans $[-2\\text{ Hz}, +2\\text{ Hz}]$.",
+        "$n = +1$: Replica $c_1 M(f - 4)$ spans $[4 - 2, 4 + 2] = [2\\text{ Hz}, 6\\text{ Hz}]$.",
+        "$n = -1$: Replica $c_{-1} M(f + 4)$ spans $[-6\\text{ Hz}, -2\\text{ Hz}]$.",
+        "$n = +2$: Replica $c_2 M(f - 8)$ spans $[8 - 2, 8 + 2] = [6\\text{ Hz}, 10\\text{ Hz}]$.",
+        "$n = -2$: Replica $c_{-2} M(f + 8)$ spans $[-10\\text{ Hz}, -6\\text{ Hz}]$.",
+        "**Spectral Gap Analysis**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The central replica ends at $+2\\text{ Hz}$, and the $n = +1$ replica begins at $+2\\text{ Hz}$.\n  The replicas **touch at boundary points without overlap**! Because $f_0 = 4\\text{ Hz} = 2 f_m$, this is a critical sampling scenario across the harmonics!"
+      },
+      {
+       "t": "code",
+       "text": "Composite Sampled Spectrum Ms(f):\n\n          c-2            c-1            c0            c1            c2\n          /|\\            /|\\           /|\\            /|\\           /|\\\n         / | \\          / | \\         / | \\          / | \\         / | \\\n   _____/__|__\\________/__|__\\_______/__|__\\________/__|__\\_______/__|__\\_____ f\n      -10 -8  -6      -6  -4  -2    -2  0   2      2   4   6     6   8  10"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Part (a) Design \u2014 Obtaining $y(t) = m(t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Required output spectrum: $Y(f) = M(f)$.",
+        "In $M_s(f)$, the baseband component is $c_0 M(f)$ extending over $[-2\\text{ Hz}, +2\\text{ Hz}]$.",
+        "To isolate this component:"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "We employ an **Ideal Low-Pass Filter (ILPF)**.",
+        "Cutoff frequency: $f_c = 2\\text{ Hz}$ (or $\\omega_c = 4\\pi\\text{ rad/s}$).",
+        "Filter Gain: Must scale $c_0$ to $1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(0) = \\frac{1}{c_0}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Mathematical Specification of $H(f)$ and $H(\\omega)$**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(f) = \\begin{cases} \\frac{1}{c_0}, & |f| \\le 2\\text{ Hz} \\\\ 0, & |f| > 2\\text{ Hz} \\end{cases} \\iff H(\\omega) = \\frac{1}{c_0} \\text{rect}\\left(\\frac{\\omega}{8\\pi}\\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Impulse Response $h(t)$**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\frac{1}{c_0} \\frac{\\sin(4\\pi t)}{\\pi t} = \\frac{4}{c_0} \\text{sinc}(4t)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Part (b) Design \u2014 Obtaining $y(t) = 2 m(t)\\cos(16\\pi t)$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Required output spectrum:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{2 m(t)\\cos(16\\pi t)\\} = \\mathcal{F}\\left\\{m(t) [e^{j 16\\pi t} + e^{-j 16\\pi t}]\\right\\} = M(f - 8) + M(f + 8)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Looking at $M_s(f)$, the terms located at $\\pm 8\\text{ Hz}$ are:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_2 M(f - 8) + c_{-2} M(f + 8)"
+      },
+      {
+       "t": "p",
+       "text": "Since $c(t)$ is even, $c_{-2} = c_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "= c_2 [M(f - 8) + M(f + 8)]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "To transform this into $[M(f - 8) + M(f + 8)]$:"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "We employ an **Ideal Band-Pass Filter (IBPF)** centered at $f = \\pm 8\\text{ Hz}$ ($\\omega = \\pm 16\\pi\\text{ rad/s}$).",
+        "Passbands:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Positive Passband}: [6\\text{ Hz}, 10\\text{ Hz}] \\quad (12\\pi \\le \\omega \\le 20\\pi)"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Negative Passband}: [-10\\text{ Hz}, -6\\text{ Hz}] \\quad (-20\\pi \\le \\omega \\le -12\\pi)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Passband Gain: Must eliminate the coefficient $c_2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Gain} = \\frac{1}{c_2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Mathematical Specification of $H(\\omega)$**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(\\omega) = \\frac{1}{c_2} \\left[ \\text{rect}\\left(\\frac{\\omega - 16\\pi}{8\\pi}\\right) + \\text{rect}\\left(\\frac{\\omega + 16\\pi}{8\\pi}\\right) \\right]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Impulse Response $h(t)$**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using modulation property of Fourier Transform:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\frac{2}{c_2} \\left[ \\frac{\\sin(4\\pi t)}{\\pi t} \\right] \\cos(16\\pi t) = \\frac{8}{c_2} \\text{sinc}(4t) \\cos(16\\pi t)"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Trap Alert**:\nIn part (b), students often forget that the BPF must have dual passbands at both positive and negative frequencies ($+8\\text{ Hz}$ and $-8\\text{ Hz}$) to produce a real-valued time-domain signal $y(t) = 2m(t)\\cos(16\\pi t)$. Filtering only the positive band at $+8\\text{ Hz}$ results in a complex analytic signal $c_2 M(f-8) \\to m(t)e^{j 16\\pi t}$, which is not real!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -24372,823 +24328,820 @@ export default {
      "text": "2. Comprehensive Carrier Sampling Drill: Triangular Carrier & Spectral Nulls (Slides 288\u2013291)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h3",
-     "text": "Problem Statement (Slide 288)"
-    },
-    {
-     "t": "p",
-     "text": "A continuous-time message signal $m(t) = 2\\cos(4\\pi t)$ is sampled by multiplying it with a periodic triangular carrier wave $c(t)$, producing the sampled signal $m_s(t) = m(t) \\cdot c(t)$. The sampled signal is passed through an LTI filter $h(t)$ to yield output $y(t)$."
-    },
-    {
-     "t": "p",
-     "text": "The carrier $c(t)$ has:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Fundamental period $T_0 = 0.2\\text{ s}$ (fundamental frequency $f_0 = 5\\text{ Hz}$, $\\omega_0 = 10\\pi\\text{ rad/s}$).",
-      "Waveform over one period $[-T_0/2, T_0/2]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c(t) = \\begin{cases} 2\\left(1 - \\frac{|t|}{T_0/3}\\right), & |t| \\le \\frac{T_0}{3} \\\\ 0, & \\frac{T_0}{3} < |t| \\le \\frac{T_0}{2} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "(A symmetric triangular pulse of peak amplitude $A_{\\text{tri}} = 2$ and base width $\\tau = \\frac{2 T_0}{3}$)."
-    },
-    {
-     "t": "p",
-     "text": "**Questions:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Which of the following frequency components will **NOT** be present in the sampled signal $m_s(t)$?"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "(A) $8\\text{ Hz}$\n   (B) $17\\text{ Hz}$\n   (C) $28\\text{ Hz}$\n   (D) $38\\text{ Hz}$"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "For the exact distortionless recovery of $m(t)$, an ideal Low-Pass Filter is used. Determine the required Passband Gain (PBG) of the filter such that $y(t) = m(t)$."
-     ]
-    },
-    {
-     "t": "h3",
-     "text": "Step-by-Step Mathematical Solution"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fourier Analysis of the Periodic Triangular Carrier"
-    },
-    {
-     "t": "p",
-     "text": "The single triangular pulse centered at $t = 0$ is defined as:"
-    },
-    {
-     "t": "math",
-     "tex": "g(t) = 2 \\, \\text{tri}\\left(\\frac{t}{T_0/3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Recall the standard Fourier transform pair for a triangular pulse of amplitude $A$ and base width $2\\tau_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\, \\text{tri}\\left(\\frac{t}{\\tau_0}\\right) \\longleftrightarrow A \\tau_0 \\, \\text{Sa}^2\\left(\\frac{\\omega \\tau_0}{2}\\right) = A \\tau_0 \\, \\text{sinc}^2\\left(\\frac{f \\tau_0}{\\pi} \\dots\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Here, $A = 2$ and half-base $\\tau_0 = \\frac{T_0}{3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "G(\\omega) = 2 \\cdot \\left(\\frac{T_0}{3}\\right) \\text{Sa}^2\\left(\\frac{\\omega T_0}{6}\\right) = \\frac{2 T_0}{3} \\text{Sa}^2\\left(\\frac{\\omega T_0}{6}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "The exponential Fourier series coefficients $c_n$ of the periodic pulse train $c(t) = \\sum_{k=-\\infty}^\\infty g(t - k T_0)$ are given by:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{1}{T_0} G(n \\omega_0) = \\frac{1}{T_0} \\left[ \\frac{2 T_0}{3} \\text{Sa}^2\\left(\\frac{n \\omega_0 T_0}{6}\\right) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\omega_0 T_0 = 2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{n \\omega_0 T_0}{6} = \\frac{n (2\\pi)}{6} = \\frac{n\\pi}{3}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, the Fourier series coefficients are:"
-    },
-    {
-     "t": "math",
-     "tex": "c_n = \\frac{2}{3} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "where $\\text{Sa}(x) = \\frac{\\sin x}{x}$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Evaluation of DC and Null Coefficients"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**DC Coefficient ($n = 0$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{2}{3} \\lim_{n \\to 0} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) = \\frac{2}{3} \\cdot 1^2 = \\frac{2}{3}"
-    },
-    {
-     "t": "p",
-     "text": "*(Verification by time-domain area:*"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = \\frac{1}{T_0} \\int_{-T_0/2}^{T_0/2} c(t) \\, dt = \\frac{1}{T_0} \\left[ \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\right] = \\frac{1}{T_0} \\left[ \\frac{1}{2} \\times \\left(\\frac{2 T_0}{3}\\right) \\times 2 \\right] = \\frac{2}{3}"
-    },
-    {
-     "t": "p",
-     "text": "*Exact match!).*"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Harmonic Null Condition:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The sampling function $\\text{Sa}\\left(\\frac{n\\pi}{3}\\right) = \\frac{\\sin(n\\pi/3)}{n\\pi/3} = 0$ whenever the numerator vanishes and the denominator is non-zero:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin\\left(\\frac{n\\pi}{3}\\right) = 0 \\iff \\frac{n\\pi}{3} = m\\pi \\quad (m \\in \\mathbb{Z}, m \\ne 0) \\iff n = 3m"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c_n = 0 \\quad \\text{for all } n \\in \\{\\pm 3, \\pm 6, \\pm 9, \\pm 12, \\dots\\}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Spectral Decomposition of the Sampled Signal"
-    },
-    {
-     "t": "p",
-     "text": "The message signal is:"
-    },
-    {
-     "t": "math",
-     "tex": "m(t) = 2\\cos(4\\pi t) = e^{j 4\\pi t} + e^{-j 4\\pi t} \\longleftrightarrow M(f) = \\delta(f - 2) + \\delta(f + 2)"
-    },
-    {
-     "t": "p",
-     "text": "Its message frequency is $f_m = 2\\text{ Hz}$."
-    },
-    {
-     "t": "p",
-     "text": "The spectrum of the sampled signal is:"
-    },
-    {
-     "t": "math",
-     "tex": "M_s(f) = C(f) * M(f) = \\sum_{n=-\\infty}^{\\infty} c_n \\left[ \\delta(f - n f_0 - 2) + \\delta(f - n f_0 + 2) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Given $f_0 = \\frac{1}{T_0} = \\frac{1}{0.2} = 5\\text{ Hz}$, the frequencies present in the positive spectrum are:"
-    },
-    {
-     "t": "math",
-     "tex": "f = |n f_0 \\pm f_m| = |5n \\pm 2|\\text{ Hz}"
-    },
-    {
-     "t": "p",
-     "text": "with amplitude $|c_n|$."
-    },
-    {
-     "t": "p",
-     "text": "Let us systematically compute the frequency components for each harmonic index $n$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = 0$:** $f = |0 \\pm 2| = 2\\text{ Hz}$, amplitude $= c_0 = \\frac{2}{3}$.",
-      "**$n = 1$:** $f = 5(1) \\pm 2 = 3\\text{ Hz}$ and $7\\text{ Hz}$, amplitude $= c_1 = \\frac{2}{3}\\text{Sa}^2(\\pi/3) = \\frac{2}{3}\\left(\\frac{\\sqrt{3}/2}{\\pi/3}\\right)^2 = \\frac{9}{2\\pi^2}$.",
-      "**$n = 2$:** $f = 5(2) \\pm 2 = 8\\text{ Hz}$ and $12\\text{ Hz}$, amplitude $= c_2 = \\frac{2}{3}\\text{Sa}^2(2\\pi/3) \\ne 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$\\implies \\mathbf{8\\text{ Hz}}$ **is PRESENT.**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = 3$:** $c_3 = 0 \\implies$ components at $5(3) \\pm 2 = 13\\text{ Hz}$ and $17\\text{ Hz}$ have **ZERO amplitude!**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$\\implies \\mathbf{17\\text{ Hz}}$ **is NOT PRESENT.**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = 4$:** $f = 5(4) \\pm 2 = 18\\text{ Hz}$ and $22\\text{ Hz}$, amplitude $= c_4 \\ne 0$.",
-      "**$n = 5$:** $f = 5(5) \\pm 2 = 23\\text{ Hz}$ and $27\\text{ Hz}$, amplitude $= c_5 \\ne 0$.",
-      "**$n = 6$:** $c_6 = 0 \\implies$ components at $5(6) \\pm 2 = 28\\text{ Hz}$ and $32\\text{ Hz}$ have **ZERO amplitude!**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$\\implies \\mathbf{28\\text{ Hz}}$ **is NOT PRESENT.**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**$n = 7$:** $f = 5(7) \\pm 2 = 33\\text{ Hz}$ and $37\\text{ Hz}$, amplitude $= c_7 \\ne 0$.",
-      "**$n = 8$:** $f = 5(8) \\pm 2 = 38\\text{ Hz}$ and $42\\text{ Hz}$, amplitude $= c_8 = \\frac{2}{3}\\text{Sa}^2(8\\pi/3) \\ne 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$\\implies \\mathbf{38\\text{ Hz}}$ **is PRESENT.**"
-    },
-    {
-     "t": "h4",
-     "text": "Answer to Part (a):"
-    },
-    {
-     "t": "p",
-     "text": "The frequencies **NOT present** in $m_s(t)$ are:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{17\\text{ Hz} \\quad \\text{and} \\quad 28\\text{ Hz} \\quad \\text{(Options B and C)}}"
-    },
-    {
-     "t": "p",
-     "text": "*(In a single-choice exam, $17\\text{ Hz}$ is the primary option; in an MSQ format, both B and C are correct).*"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Passband Gain (PBG) for Exact Message Recovery (Slide 291)"
-    },
-    {
-     "t": "p",
-     "text": "The baseband component in $M_s(f)$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "M_s(f)\\Big|_{\\text{baseband}} = c_0 M(f) = \\frac{2}{3} M(f)"
-    },
-    {
-     "t": "p",
-     "text": "The next nearest spectral line occurs at $f = 5(1) - 2 = 3\\text{ Hz}$.\nTherefore, an ideal LPF with cutoff frequency $f_c$ satisfying:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\text{ Hz} \\le f_c < 3\\text{ Hz}"
-    },
-    {
-     "t": "p",
-     "text": "will cleanly isolate the baseband component."
-    },
-    {
-     "t": "p",
-     "text": "To ensure $y(t) = m(t) \\implies Y(f) = M(f)$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(f) = H(f) \\cdot M_s(f) = H(0) \\cdot c_0 M(f) = M(f)"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{PBG} = H(0) = \\frac{1}{c_0} = \\frac{1}{2/3} = \\frac{3}{2} = 1.5"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Passband Gain (PBG)} = 1.5}"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Common Pitfalls:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Pulse Width vs Half-Width:** Notice the triangle equation $c(t) = 2(1 - |t|/(T_0/3))$. The denominator is the half-base $\\tau_0 = T_0/3$. If a student mistakes $T_0/3$ for the total base width, the nulls shift to $n = 6m$, leading to incorrect frequency absences.",
-      "**DC Gain Normalization:** Students frequently assume the LPF gain must be $T_s = 0.2$. That rule applies strictly to ideal Dirac impulse train sampling! For general carrier sampling, the gain is $\\frac{1}{c_0}$, where $c_0$ is the average (DC) value of the carrier."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Problem Statement (Slide 288)"
+      },
+      {
+       "t": "p",
+       "text": "A continuous-time message signal $m(t) = 2\\cos(4\\pi t)$ is sampled by multiplying it with a periodic triangular carrier wave $c(t)$, producing the sampled signal $m_s(t) = m(t) \\cdot c(t)$. The sampled signal is passed through an LTI filter $h(t)$ to yield output $y(t)$."
+      },
+      {
+       "t": "p",
+       "text": "The carrier $c(t)$ has:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Fundamental period $T_0 = 0.2\\text{ s}$ (fundamental frequency $f_0 = 5\\text{ Hz}$, $\\omega_0 = 10\\pi\\text{ rad/s}$).",
+        "Waveform over one period $[-T_0/2, T_0/2]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c(t) = \\begin{cases} 2\\left(1 - \\frac{|t|}{T_0/3}\\right), & |t| \\le \\frac{T_0}{3} \\\\ 0, & \\frac{T_0}{3} < |t| \\le \\frac{T_0}{2} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "(A symmetric triangular pulse of peak amplitude $A_{\\text{tri}} = 2$ and base width $\\tau = \\frac{2 T_0}{3}$)."
+      },
+      {
+       "t": "p",
+       "text": "**Questions:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Which of the following frequency components will **NOT** be present in the sampled signal $m_s(t)$?"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "(A) $8\\text{ Hz}$\n   (B) $17\\text{ Hz}$\n   (C) $28\\text{ Hz}$\n   (D) $38\\text{ Hz}$"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "For the exact distortionless recovery of $m(t)$, an ideal Low-Pass Filter is used. Determine the required Passband Gain (PBG) of the filter such that $y(t) = m(t)$."
+       ]
+      },
+      {
+       "t": "h3",
+       "text": "Step-by-Step Mathematical Solution"
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Fourier Analysis of the Periodic Triangular Carrier"
+      },
+      {
+       "t": "p",
+       "text": "The single triangular pulse centered at $t = 0$ is defined as:"
+      },
+      {
+       "t": "math",
+       "tex": "g(t) = 2 \\, \\text{tri}\\left(\\frac{t}{T_0/3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Recall the standard Fourier transform pair for a triangular pulse of amplitude $A$ and base width $2\\tau_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\, \\text{tri}\\left(\\frac{t}{\\tau_0}\\right) \\longleftrightarrow A \\tau_0 \\, \\text{Sa}^2\\left(\\frac{\\omega \\tau_0}{2}\\right) = A \\tau_0 \\, \\text{sinc}^2\\left(\\frac{f \\tau_0}{\\pi} \\dots\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Here, $A = 2$ and half-base $\\tau_0 = \\frac{T_0}{3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "G(\\omega) = 2 \\cdot \\left(\\frac{T_0}{3}\\right) \\text{Sa}^2\\left(\\frac{\\omega T_0}{6}\\right) = \\frac{2 T_0}{3} \\text{Sa}^2\\left(\\frac{\\omega T_0}{6}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "The exponential Fourier series coefficients $c_n$ of the periodic pulse train $c(t) = \\sum_{k=-\\infty}^\\infty g(t - k T_0)$ are given by:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{1}{T_0} G(n \\omega_0) = \\frac{1}{T_0} \\left[ \\frac{2 T_0}{3} \\text{Sa}^2\\left(\\frac{n \\omega_0 T_0}{6}\\right) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\omega_0 T_0 = 2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{n \\omega_0 T_0}{6} = \\frac{n (2\\pi)}{6} = \\frac{n\\pi}{3}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, the Fourier series coefficients are:"
+      },
+      {
+       "t": "math",
+       "tex": "c_n = \\frac{2}{3} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "where $\\text{Sa}(x) = \\frac{\\sin x}{x}$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Evaluation of DC and Null Coefficients"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**DC Coefficient ($n = 0$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{2}{3} \\lim_{n \\to 0} \\text{Sa}^2\\left(\\frac{n\\pi}{3}\\right) = \\frac{2}{3} \\cdot 1^2 = \\frac{2}{3}"
+      },
+      {
+       "t": "p",
+       "text": "*(Verification by time-domain area:*"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = \\frac{1}{T_0} \\int_{-T_0/2}^{T_0/2} c(t) \\, dt = \\frac{1}{T_0} \\left[ \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\right] = \\frac{1}{T_0} \\left[ \\frac{1}{2} \\times \\left(\\frac{2 T_0}{3}\\right) \\times 2 \\right] = \\frac{2}{3}"
+      },
+      {
+       "t": "p",
+       "text": "*Exact match!).*"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Harmonic Null Condition:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The sampling function $\\text{Sa}\\left(\\frac{n\\pi}{3}\\right) = \\frac{\\sin(n\\pi/3)}{n\\pi/3} = 0$ whenever the numerator vanishes and the denominator is non-zero:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin\\left(\\frac{n\\pi}{3}\\right) = 0 \\iff \\frac{n\\pi}{3} = m\\pi \\quad (m \\in \\mathbb{Z}, m \\ne 0) \\iff n = 3m"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c_n = 0 \\quad \\text{for all } n \\in \\{\\pm 3, \\pm 6, \\pm 9, \\pm 12, \\dots\\}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Spectral Decomposition of the Sampled Signal"
+      },
+      {
+       "t": "p",
+       "text": "The message signal is:"
+      },
+      {
+       "t": "math",
+       "tex": "m(t) = 2\\cos(4\\pi t) = e^{j 4\\pi t} + e^{-j 4\\pi t} \\longleftrightarrow M(f) = \\delta(f - 2) + \\delta(f + 2)"
+      },
+      {
+       "t": "p",
+       "text": "Its message frequency is $f_m = 2\\text{ Hz}$."
+      },
+      {
+       "t": "p",
+       "text": "The spectrum of the sampled signal is:"
+      },
+      {
+       "t": "math",
+       "tex": "M_s(f) = C(f) * M(f) = \\sum_{n=-\\infty}^{\\infty} c_n \\left[ \\delta(f - n f_0 - 2) + \\delta(f - n f_0 + 2) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Given $f_0 = \\frac{1}{T_0} = \\frac{1}{0.2} = 5\\text{ Hz}$, the frequencies present in the positive spectrum are:"
+      },
+      {
+       "t": "math",
+       "tex": "f = |n f_0 \\pm f_m| = |5n \\pm 2|\\text{ Hz}"
+      },
+      {
+       "t": "p",
+       "text": "with amplitude $|c_n|$."
+      },
+      {
+       "t": "p",
+       "text": "Let us systematically compute the frequency components for each harmonic index $n$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = 0$:** $f = |0 \\pm 2| = 2\\text{ Hz}$, amplitude $= c_0 = \\frac{2}{3}$.",
+        "**$n = 1$:** $f = 5(1) \\pm 2 = 3\\text{ Hz}$ and $7\\text{ Hz}$, amplitude $= c_1 = \\frac{2}{3}\\text{Sa}^2(\\pi/3) = \\frac{2}{3}\\left(\\frac{\\sqrt{3}/2}{\\pi/3}\\right)^2 = \\frac{9}{2\\pi^2}$.",
+        "**$n = 2$:** $f = 5(2) \\pm 2 = 8\\text{ Hz}$ and $12\\text{ Hz}$, amplitude $= c_2 = \\frac{2}{3}\\text{Sa}^2(2\\pi/3) \\ne 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$\\implies \\mathbf{8\\text{ Hz}}$ **is PRESENT.**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = 3$:** $c_3 = 0 \\implies$ components at $5(3) \\pm 2 = 13\\text{ Hz}$ and $17\\text{ Hz}$ have **ZERO amplitude!**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$\\implies \\mathbf{17\\text{ Hz}}$ **is NOT PRESENT.**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = 4$:** $f = 5(4) \\pm 2 = 18\\text{ Hz}$ and $22\\text{ Hz}$, amplitude $= c_4 \\ne 0$.",
+        "**$n = 5$:** $f = 5(5) \\pm 2 = 23\\text{ Hz}$ and $27\\text{ Hz}$, amplitude $= c_5 \\ne 0$.",
+        "**$n = 6$:** $c_6 = 0 \\implies$ components at $5(6) \\pm 2 = 28\\text{ Hz}$ and $32\\text{ Hz}$ have **ZERO amplitude!**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$\\implies \\mathbf{28\\text{ Hz}}$ **is NOT PRESENT.**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**$n = 7$:** $f = 5(7) \\pm 2 = 33\\text{ Hz}$ and $37\\text{ Hz}$, amplitude $= c_7 \\ne 0$.",
+        "**$n = 8$:** $f = 5(8) \\pm 2 = 38\\text{ Hz}$ and $42\\text{ Hz}$, amplitude $= c_8 = \\frac{2}{3}\\text{Sa}^2(8\\pi/3) \\ne 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$\\implies \\mathbf{38\\text{ Hz}}$ **is PRESENT.**"
+      },
+      {
+       "t": "h4",
+       "text": "Answer to Part (a):"
+      },
+      {
+       "t": "p",
+       "text": "The frequencies **NOT present** in $m_s(t)$ are:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{17\\text{ Hz} \\quad \\text{and} \\quad 28\\text{ Hz} \\quad \\text{(Options B and C)}}"
+      },
+      {
+       "t": "p",
+       "text": "*(In a single-choice exam, $17\\text{ Hz}$ is the primary option; in an MSQ format, both B and C are correct).*"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Passband Gain (PBG) for Exact Message Recovery (Slide 291)"
+      },
+      {
+       "t": "p",
+       "text": "The baseband component in $M_s(f)$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "M_s(f)\\Big|_{\\text{baseband}} = c_0 M(f) = \\frac{2}{3} M(f)"
+      },
+      {
+       "t": "p",
+       "text": "The next nearest spectral line occurs at $f = 5(1) - 2 = 3\\text{ Hz}$.\nTherefore, an ideal LPF with cutoff frequency $f_c$ satisfying:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\text{ Hz} \\le f_c < 3\\text{ Hz}"
+      },
+      {
+       "t": "p",
+       "text": "will cleanly isolate the baseband component."
+      },
+      {
+       "t": "p",
+       "text": "To ensure $y(t) = m(t) \\implies Y(f) = M(f)$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(f) = H(f) \\cdot M_s(f) = H(0) \\cdot c_0 M(f) = M(f)"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{PBG} = H(0) = \\frac{1}{c_0} = \\frac{1}{2/3} = \\frac{3}{2} = 1.5"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Passband Gain (PBG)} = 1.5}"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Common Pitfalls:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Pulse Width vs Half-Width:** Notice the triangle equation $c(t) = 2(1 - |t|/(T_0/3))$. The denominator is the half-base $\\tau_0 = T_0/3$. If a student mistakes $T_0/3$ for the total base width, the nulls shift to $n = 6m$, leading to incorrect frequency absences.",
+        "**DC Gain Normalization:** Students frequently assume the LPF gain must be $T_s = 0.2$. That rule applies strictly to ideal Dirac impulse train sampling! For general carrier sampling, the gain is $\\frac{1}{c_0}$, where $c_0$ is the average (DC) value of the carrier."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
      "text": "3. High-Order Modulated BPF Output Analysis (GATE Drill Q.48, Slides 292\u2013295)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h3",
-     "text": "Problem Statement (GATE Exam Question, Slide 292)"
-    },
-    {
-     "t": "p",
-     "text": "A continuous-time signal:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 \\cos\\left(8\\pi t + \\frac{\\pi}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "is sampled using an ideal impulse train at a sampling rate of $f_s = 15\\text{ Hz}$. The sampled signal $x_s(t)$ is passed through a continuous-time LTI system with impulse response:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\left( \\frac{\\sin 2\\pi t}{\\pi t} \\right) \\cos\\left(38\\pi t - \\frac{\\pi}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "producing an output $x_0(t)$. The expression for $x_0(t)$ is:\n(A) $15 \\sin\\left(38\\pi t + \\frac{\\pi}{3}\\right)$\n(B) $15 \\sin\\left(38\\pi t - \\frac{\\pi}{3}\\right)$\n(C) $15 \\cos\\left(38\\pi t - \\frac{\\pi}{6}\\right)$\n(D) $15 \\cos\\left(38\\pi t + \\frac{\\pi}{6}\\right)$"
-    },
-    {
-     "t": "h3",
-     "text": "Step-by-Step Mathematical Derivation"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Input Signal Spectrum"
-    },
-    {
-     "t": "p",
-     "text": "Express $x(t)$ using complex exponentials:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = 2 \\cos\\left(8\\pi t + \\frac{\\pi}{3}\\right) = e^{j(8\\pi t + \\pi/3)} + e^{-j(8\\pi t + \\pi/3)} = e^{j\\pi/3} e^{j 2\\pi(4) t} + e^{-j\\pi/3} e^{-j 2\\pi(4) t}"
-    },
-    {
-     "t": "p",
-     "text": "The input frequency is $f_0 = 4\\text{ Hz}$. The Fourier transform is:"
-    },
-    {
-     "t": "math",
-     "tex": "X(f) = e^{j\\pi/3} \\delta(f - 4) + e^{-j\\pi/3} \\delta(f + 4)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Spectrum of the Sampled Signal"
-    },
-    {
-     "t": "p",
-     "text": "Sampling with an impulse train at $f_s = 15\\text{ Hz}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_s(t) = x(t) \\sum_{n=-\\infty}^\\infty \\delta(t - n T_s) \\longleftrightarrow X_s(f) = f_s \\sum_{n=-\\infty}^\\infty X(f - n f_s)"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $f_s = 15$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_s(f) = 15 \\sum_{n=-\\infty}^\\infty \\left[ e^{j\\pi/3} \\delta(f - 15n - 4) + e^{-j\\pi/3} \\delta(f - 15n + 4) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Let us compute the impulse locations and their complex weights:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 0$:",
-      "$f = +4\\text{ Hz}$, weight $= 15 e^{j\\pi/3}$",
-      "$f = -4\\text{ Hz}$, weight $= 15 e^{-j\\pi/3}$",
-      "For $n = 1$:",
-      "$f = 15 + 4 = 19\\text{ Hz}$, weight $= 15 e^{j\\pi/3}$",
-      "$f = 15 - 4 = 11\\text{ Hz}$, weight $= 15 e^{-j\\pi/3}$",
-      "For $n = -1$:",
-      "$f = -15 + 4 = -11\\text{ Hz}$, weight $= 15 e^{j\\pi/3}$",
-      "$f = -15 - 4 = -19\\text{ Hz}$, weight $= 15 e^{-j\\pi/3}$"
-     ]
-    },
-    {
-     "t": "code",
-     "text": "   Sampled Spectrum X_s(f):\n   \n         15 e^{-jpi/3}     15 e^{-jpi/3}     15 e^{jpi/3}      15 e^{jpi/3}\n              ^                 ^                 ^                 ^\n              |                 |                 |                 |\n   -----------|-----------------|--------|--------|-----------------|------------> f (Hz)\n             -19               -11       0        11                19\n                                      -4   +4"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Frequency Response of the Reconstruction Filter $H(f)$"
-    },
-    {
-     "t": "p",
-     "text": "The impulse response is:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = p(t) \\cdot \\cos\\left(38\\pi t - \\frac{\\pi}{2}\\right), \\quad \\text{where } p(t) = \\frac{\\sin 2\\pi t}{\\pi t}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Transform of Baseband Prototype $p(t)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\left\\{ \\frac{\\sin 2\\pi t}{\\pi t} \\right\\} = P(f) = \\text{rect}\\left(\\frac{f}{2}\\right) = \\begin{cases} 1, & |f| < 1 \\\\ 0, & |f| > 1 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "$P(f)$ is a rectangular filter of width $2\\text{ Hz}$ centered at $f = 0$ ($[-1, 1]\\text{ Hz}$)."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Modulation Analysis:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Notice the carrier frequency:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_c = 38\\pi\\text{ rad/s} \\implies f_c = \\frac{38\\pi}{2\\pi} = 19\\text{ Hz}"
-    },
-    {
-     "t": "p",
-     "text": "Expanding the cosine:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos\\left(38\\pi t - \\frac{\\pi}{2}\\right) = \\frac{e^{j(38\\pi t - \\pi/2)} + e^{-j(38\\pi t - \\pi/2)}}{2} = \\frac{e^{-j\\pi/2}}{2} e^{j 2\\pi(19) t} + \\frac{e^{j\\pi/2}}{2} e^{-j 2\\pi(19) t}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Modulated Filter Spectrum $H(f)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using the frequency-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "H(f) = \\frac{e^{-j\\pi/2}}{2} P(f - 19) + \\frac{e^{j\\pi/2}}{2} P(f + 19)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Positive Passband: centered at $f = +19\\text{ Hz}$, spanning $[19 - 1, 19 + 1] = [18, 20]\\text{ Hz}$ with gain $\\frac{1}{2} e^{-j\\pi/2} = -\\frac{j}{2}$.",
-      "Negative Passband: centered at $f = -19\\text{ Hz}$, spanning $[-20, -18]\\text{ Hz}$ with gain $\\frac{1}{2} e^{j\\pi/2} = +\\frac{j}{2}$."
-     ]
-    },
-    {
-     "t": "code",
-     "text": "   Filter Frequency Response H(f):\n   \n         (1/2) e^{jpi/2}                                     (1/2) e^{-jpi/2}\n          +---------+                                         +---------+\n          |         |                                         |         |\n   -------|---------|--------------------|--------------------|---------|---------> f (Hz)\n         -20  -19  -18                   0                   18   19   20"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: System Filtering Operation"
-    },
-    {
-     "t": "p",
-     "text": "The output spectrum is $X_0(f) = X_s(f) \\cdot H(f)$.\nWe compare the impulses of $X_s(f)$ with the passbands of $H(f)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The only impulse falling within $[18, 20]\\text{ Hz}$ is at $f = +19\\text{ Hz}$ (from the $n = +1$ replica of $e^{j\\pi/3}\\delta(f-4)$).",
-      "The only impulse falling within $[-20, -18]\\text{ Hz}$ is at $f = -19\\text{ Hz}$ (from the $n = -1$ replica of $e^{-j\\pi/3}\\delta(f+4)$).",
-      "All other impulses (at $\\pm 4, \\pm 11, \\pm 26, \\dots\\text{ Hz}$) fall into the stopband and are completely suppressed to zero!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the product at $f = \\pm 19\\text{ Hz}$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**At $f = +19\\text{ Hz}$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_0(19) = X_s(19) \\cdot H(19) = \\left( 15 e^{j\\pi/3} \\right) \\cdot \\left( \\frac{1}{2} e^{-j\\pi/2} \\right) = \\frac{15}{2} e^{j(\\pi/3 - \\pi/2)} = \\frac{15}{2} e^{-j\\pi/6}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**At $f = -19\\text{ Hz}$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_0(-19) = X_s(-19) \\cdot H(-19) = \\left( 15 e^{-j\\pi/3} \\right) \\cdot \\left( \\frac{1}{2} e^{j\\pi/2} \\right) = \\frac{15}{2} e^{-j(\\pi/3 - \\pi/2)} = \\frac{15}{2} e^{j\\pi/6}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the output spectrum consists of two impulses:"
-    },
-    {
-     "t": "math",
-     "tex": "X_0(f) = \\frac{15}{2} e^{-j\\pi/6} \\delta(f - 19) + \\frac{15}{2} e^{j\\pi/6} \\delta(f + 19)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Inverse Fourier Transform & Equivalence Verification"
-    },
-    {
-     "t": "p",
-     "text": "Taking the inverse Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "x_0(t) = \\frac{15}{2} e^{-j\\pi/6} e^{j 2\\pi(19) t} + \\frac{15}{2} e^{j\\pi/6} e^{-j 2\\pi(19) t} = 15 \\cos\\left(38\\pi t - \\frac{\\pi}{6}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Now test the trigonometric identity relating cosine and sine:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos\\theta = \\sin\\left(\\theta + \\frac{\\pi}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $\\theta = 38\\pi t - \\frac{\\pi}{6}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_0(t) = 15 \\sin\\left(38\\pi t - \\frac{\\pi}{6} + \\frac{\\pi}{2}\\right) = 15 \\sin\\left(38\\pi t + \\frac{2\\pi}{6}\\right) = 15 \\sin\\left(38\\pi t + \\frac{\\pi}{3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Both expressions are strictly identical:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x_0(t) = 15 \\sin\\left(38\\pi t + \\frac{\\pi}{3}\\right) = 15 \\cos\\left(38\\pi t - \\frac{\\pi}{6}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "Matching with the GATE options:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Option (A): $15 \\sin(38\\pi t + \\pi/3)$ $\\implies$ **CORRECT**",
-      "Option (C): $15 \\cos(38\\pi t - \\pi/6)$ $\\implies$ **MATHEMATICALLY EQUIVALENT & CORRECT**"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Key Pitfalls:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Phase Signs on Negative Frequencies:** When writing $H(f) = \\frac{e^{-j\\phi}}{2} P(f-f_c) + \\frac{e^{j\\phi}}{2} P(f+f_c)$, ensure the phase sign is reversed for the negative frequency component to maintain conjugate symmetry for real impulse responses ($h(t) \\in \\mathbb{R} \\iff H(-f) = H^*(f)$).",
-      "**Trigonometric Conversion Error:** Confusing $\\sin(\\theta + \\pi/2) = \\cos\\theta$ with $\\sin(\\theta - \\pi/2) = -\\cos\\theta$ leads students to pick Option (B) instead of Option (A)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Problem Statement (GATE Exam Question, Slide 292)"
+      },
+      {
+       "t": "p",
+       "text": "A continuous-time signal:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 \\cos\\left(8\\pi t + \\frac{\\pi}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "is sampled using an ideal impulse train at a sampling rate of $f_s = 15\\text{ Hz}$. The sampled signal $x_s(t)$ is passed through a continuous-time LTI system with impulse response:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\left( \\frac{\\sin 2\\pi t}{\\pi t} \\right) \\cos\\left(38\\pi t - \\frac{\\pi}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "producing an output $x_0(t)$. The expression for $x_0(t)$ is:\n(A) $15 \\sin\\left(38\\pi t + \\frac{\\pi}{3}\\right)$\n(B) $15 \\sin\\left(38\\pi t - \\frac{\\pi}{3}\\right)$\n(C) $15 \\cos\\left(38\\pi t - \\frac{\\pi}{6}\\right)$\n(D) $15 \\cos\\left(38\\pi t + \\frac{\\pi}{6}\\right)$"
+      },
+      {
+       "t": "h3",
+       "text": "Step-by-Step Mathematical Derivation"
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Input Signal Spectrum"
+      },
+      {
+       "t": "p",
+       "text": "Express $x(t)$ using complex exponentials:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = 2 \\cos\\left(8\\pi t + \\frac{\\pi}{3}\\right) = e^{j(8\\pi t + \\pi/3)} + e^{-j(8\\pi t + \\pi/3)} = e^{j\\pi/3} e^{j 2\\pi(4) t} + e^{-j\\pi/3} e^{-j 2\\pi(4) t}"
+      },
+      {
+       "t": "p",
+       "text": "The input frequency is $f_0 = 4\\text{ Hz}$. The Fourier transform is:"
+      },
+      {
+       "t": "math",
+       "tex": "X(f) = e^{j\\pi/3} \\delta(f - 4) + e^{-j\\pi/3} \\delta(f + 4)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Spectrum of the Sampled Signal"
+      },
+      {
+       "t": "p",
+       "text": "Sampling with an impulse train at $f_s = 15\\text{ Hz}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_s(t) = x(t) \\sum_{n=-\\infty}^\\infty \\delta(t - n T_s) \\longleftrightarrow X_s(f) = f_s \\sum_{n=-\\infty}^\\infty X(f - n f_s)"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $f_s = 15$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_s(f) = 15 \\sum_{n=-\\infty}^\\infty \\left[ e^{j\\pi/3} \\delta(f - 15n - 4) + e^{-j\\pi/3} \\delta(f - 15n + 4) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Let us compute the impulse locations and their complex weights:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 0$:",
+        "$f = +4\\text{ Hz}$, weight $= 15 e^{j\\pi/3}$",
+        "$f = -4\\text{ Hz}$, weight $= 15 e^{-j\\pi/3}$",
+        "For $n = 1$:",
+        "$f = 15 + 4 = 19\\text{ Hz}$, weight $= 15 e^{j\\pi/3}$",
+        "$f = 15 - 4 = 11\\text{ Hz}$, weight $= 15 e^{-j\\pi/3}$",
+        "For $n = -1$:",
+        "$f = -15 + 4 = -11\\text{ Hz}$, weight $= 15 e^{j\\pi/3}$",
+        "$f = -15 - 4 = -19\\text{ Hz}$, weight $= 15 e^{-j\\pi/3}$"
+       ]
+      },
+      {
+       "t": "code",
+       "text": "   Sampled Spectrum X_s(f):\n   \n         15 e^{-jpi/3}     15 e^{-jpi/3}     15 e^{jpi/3}      15 e^{jpi/3}\n              ^                 ^                 ^                 ^\n              |                 |                 |                 |\n   -----------|-----------------|--------|--------|-----------------|------------> f (Hz)\n             -19               -11       0        11                19\n                                      -4   +4"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Frequency Response of the Reconstruction Filter $H(f)$"
+      },
+      {
+       "t": "p",
+       "text": "The impulse response is:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = p(t) \\cdot \\cos\\left(38\\pi t - \\frac{\\pi}{2}\\right), \\quad \\text{where } p(t) = \\frac{\\sin 2\\pi t}{\\pi t}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Transform of Baseband Prototype $p(t)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\left\\{ \\frac{\\sin 2\\pi t}{\\pi t} \\right\\} = P(f) = \\text{rect}\\left(\\frac{f}{2}\\right) = \\begin{cases} 1, & |f| < 1 \\\\ 0, & |f| > 1 \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "$P(f)$ is a rectangular filter of width $2\\text{ Hz}$ centered at $f = 0$ ($[-1, 1]\\text{ Hz}$)."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Modulation Analysis:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Notice the carrier frequency:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_c = 38\\pi\\text{ rad/s} \\implies f_c = \\frac{38\\pi}{2\\pi} = 19\\text{ Hz}"
+      },
+      {
+       "t": "p",
+       "text": "Expanding the cosine:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos\\left(38\\pi t - \\frac{\\pi}{2}\\right) = \\frac{e^{j(38\\pi t - \\pi/2)} + e^{-j(38\\pi t - \\pi/2)}}{2} = \\frac{e^{-j\\pi/2}}{2} e^{j 2\\pi(19) t} + \\frac{e^{j\\pi/2}}{2} e^{-j 2\\pi(19) t}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Modulated Filter Spectrum $H(f)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using the frequency-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "H(f) = \\frac{e^{-j\\pi/2}}{2} P(f - 19) + \\frac{e^{j\\pi/2}}{2} P(f + 19)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Positive Passband: centered at $f = +19\\text{ Hz}$, spanning $[19 - 1, 19 + 1] = [18, 20]\\text{ Hz}$ with gain $\\frac{1}{2} e^{-j\\pi/2} = -\\frac{j}{2}$.",
+        "Negative Passband: centered at $f = -19\\text{ Hz}$, spanning $[-20, -18]\\text{ Hz}$ with gain $\\frac{1}{2} e^{j\\pi/2} = +\\frac{j}{2}$."
+       ]
+      },
+      {
+       "t": "code",
+       "text": "   Filter Frequency Response H(f):\n   \n         (1/2) e^{jpi/2}                                     (1/2) e^{-jpi/2}\n          +---------+                                         +---------+\n          |         |                                         |         |\n   -------|---------|--------------------|--------------------|---------|---------> f (Hz)\n         -20  -19  -18                   0                   18   19   20"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: System Filtering Operation"
+      },
+      {
+       "t": "p",
+       "text": "The output spectrum is $X_0(f) = X_s(f) \\cdot H(f)$.\nWe compare the impulses of $X_s(f)$ with the passbands of $H(f)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The only impulse falling within $[18, 20]\\text{ Hz}$ is at $f = +19\\text{ Hz}$ (from the $n = +1$ replica of $e^{j\\pi/3}\\delta(f-4)$).",
+        "The only impulse falling within $[-20, -18]\\text{ Hz}$ is at $f = -19\\text{ Hz}$ (from the $n = -1$ replica of $e^{-j\\pi/3}\\delta(f+4)$).",
+        "All other impulses (at $\\pm 4, \\pm 11, \\pm 26, \\dots\\text{ Hz}$) fall into the stopband and are completely suppressed to zero!"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the product at $f = \\pm 19\\text{ Hz}$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**At $f = +19\\text{ Hz}$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_0(19) = X_s(19) \\cdot H(19) = \\left( 15 e^{j\\pi/3} \\right) \\cdot \\left( \\frac{1}{2} e^{-j\\pi/2} \\right) = \\frac{15}{2} e^{j(\\pi/3 - \\pi/2)} = \\frac{15}{2} e^{-j\\pi/6}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**At $f = -19\\text{ Hz}$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_0(-19) = X_s(-19) \\cdot H(-19) = \\left( 15 e^{-j\\pi/3} \\right) \\cdot \\left( \\frac{1}{2} e^{j\\pi/2} \\right) = \\frac{15}{2} e^{-j(\\pi/3 - \\pi/2)} = \\frac{15}{2} e^{j\\pi/6}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the output spectrum consists of two impulses:"
+      },
+      {
+       "t": "math",
+       "tex": "X_0(f) = \\frac{15}{2} e^{-j\\pi/6} \\delta(f - 19) + \\frac{15}{2} e^{j\\pi/6} \\delta(f + 19)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Inverse Fourier Transform & Equivalence Verification"
+      },
+      {
+       "t": "p",
+       "text": "Taking the inverse Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "x_0(t) = \\frac{15}{2} e^{-j\\pi/6} e^{j 2\\pi(19) t} + \\frac{15}{2} e^{j\\pi/6} e^{-j 2\\pi(19) t} = 15 \\cos\\left(38\\pi t - \\frac{\\pi}{6}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Now test the trigonometric identity relating cosine and sine:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos\\theta = \\sin\\left(\\theta + \\frac{\\pi}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $\\theta = 38\\pi t - \\frac{\\pi}{6}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_0(t) = 15 \\sin\\left(38\\pi t - \\frac{\\pi}{6} + \\frac{\\pi}{2}\\right) = 15 \\sin\\left(38\\pi t + \\frac{2\\pi}{6}\\right) = 15 \\sin\\left(38\\pi t + \\frac{\\pi}{3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Both expressions are strictly identical:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x_0(t) = 15 \\sin\\left(38\\pi t + \\frac{\\pi}{3}\\right) = 15 \\cos\\left(38\\pi t - \\frac{\\pi}{6}\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "Matching with the GATE options:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Option (A): $15 \\sin(38\\pi t + \\pi/3)$ $\\implies$ **CORRECT**",
+        "Option (C): $15 \\cos(38\\pi t - \\pi/6)$ $\\implies$ **MATHEMATICALLY EQUIVALENT & CORRECT**"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Key Pitfalls:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Phase Signs on Negative Frequencies:** When writing $H(f) = \\frac{e^{-j\\phi}}{2} P(f-f_c) + \\frac{e^{j\\phi}}{2} P(f+f_c)$, ensure the phase sign is reversed for the negative frequency component to maintain conjugate symmetry for real impulse responses ($h(t) \\in \\mathbb{R} \\iff H(-f) = H^*(f)$).",
+        "**Trigonometric Conversion Error:** Confusing $\\sin(\\theta + \\pi/2) = \\cos\\theta$ with $\\sin(\\theta - \\pi/2) = -\\cos\\theta$ leads students to pick Option (B) instead of Option (A)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
      "text": "4. Phase Invariance of Baseband Recovery under Delayed Sampling (GATE Drill Q.38, Slides 296\u2013300)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h3",
-     "text": "Problem Statement (GATE Exam Question, Slide 296)"
-    },
-    {
-     "t": "p",
-     "text": "Consider a continuous-time finite-energy signal $f(t)$ whose Fourier transform vanishes outside the frequency interval $[-\\omega_c, \\omega_c]$, where $\\omega_c$ is in rad/sec.\nThe signal $f(t)$ is uniformly sampled to obtain $y(t) = f(t) p(t)$. Here:"
-    },
-    {
-     "t": "math",
-     "tex": "p(t) = \\sum_{n=-\\infty}^\\infty \\delta(t - \\tau - n T_s)"
-    },
-    {
-     "t": "p",
-     "text": "with $\\delta(t)$ being the Dirac impulse, $T_s > 0$, and $\\tau > 0$ representing an arbitrary time delay. The sampled signal $y(t)$ is passed through an ideal lowpass filter:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = \\omega_c T_s \\frac{\\sin(\\omega_c t)}{\\pi \\omega_c t} = T_s \\frac{\\sin(\\omega_c t)}{\\pi t}"
-    },
-    {
-     "t": "p",
-     "text": "with cutoff frequency $\\omega_c$ and passband gain $T_s$."
-    },
-    {
-     "t": "p",
-     "text": "The output of the filter is given by:\n(A) $f(t)$ if $T_s < \\pi/\\omega_c$\n(B) $f(t - \\tau)$ if $T_s < \\pi/\\omega_c$\n(C) $f(t - \\tau)$ if $T_s < 2\\pi/\\omega_c$\n(D) $T_s f(t)$ if $T_s < 2\\pi/\\omega_c$"
-    },
-    {
-     "t": "h3",
-     "text": "Step-by-Step Mathematical Derivation"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Fourier Transform of the Delayed Dirac Comb"
-    },
-    {
-     "t": "p",
-     "text": "Let $c(t) = \\sum_{n=-\\infty}^\\infty \\delta(t - n T_s)$ be the standard unshifted periodic impulse train.\nIts Fourier transform is:"
-    },
-    {
-     "t": "math",
-     "tex": "C(f) = f_s \\sum_{n=-\\infty}^\\infty \\delta(f - n f_s), \\quad \\text{where } f_s = \\frac{1}{T_s}"
-    },
-    {
-     "t": "p",
-     "text": "The delayed sampling signal is $p(t) = c(t - \\tau)$. Applying the time-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "P(f) = \\mathcal{F}\\{c(t - \\tau)\\} = e^{-j 2\\pi f \\tau} C(f) = f_s e^{-j 2\\pi f \\tau} \\sum_{n=-\\infty}^\\infty \\delta(f - n f_s)"
-    },
-    {
-     "t": "p",
-     "text": "Applying the impulse sifting property $g(f) \\delta(f - f_0) = g(f_0) \\delta(f - f_0)$:"
-    },
-    {
-     "t": "math",
-     "tex": "P(f) = f_s \\sum_{n=-\\infty}^\\infty e^{-j 2\\pi (n f_s) \\tau} \\delta(f - n f_s)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Spectrum of the Sampled Signal"
-    },
-    {
-     "t": "p",
-     "text": "The sampled signal is $y(t) = f(t) p(t)$. In the frequency domain:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(f) = F(f) * P(f) = F(f) * \\left[ f_s \\sum_{n=-\\infty}^\\infty e^{-j 2\\pi n f_s \\tau} \\delta(f - n f_s) \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "Y(f) = f_s \\sum_{n=-\\infty}^\\infty e^{-j 2\\pi n f_s \\tau} F(f - n f_s)"
-    },
-    {
-     "t": "p",
-     "text": "Expanding the sum term-by-term:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(f) = f_s F(f) \\cdot e^{-j 2\\pi(0)\\tau} + f_s F(f - f_s) e^{-j 2\\pi f_s \\tau} + f_s F(f + f_s) e^{+j 2\\pi f_s \\tau} + \\dots"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{n = 0 \\text{ (Baseband Replica):}} \\quad f_s e^{0} F(f) = \\mathbf{f_s F(f)}"
-    },
-    {
-     "t": "code",
-     "text": "   Sampled Spectrum Y(f) with Phase Factors:\n   \n           f_s e^{j 2pi f_s \\tau}             f_s               f_s e^{-j 2pi f_s \\tau}\n                   /\\                         /\\                         /\\\n                  /  \\                       /  \\                       /  \\\n     ------------/----\\---------------------/----\\---------------------/----\\---------> f\n             -f_s-f_c -f_s+f_c             -f_c    f_c              f_s-f_c  f_s+f_c\n                 (n = -1)                   (n = 0)                   (n = +1)\n                                      [Phase = e^0 = 1 !]"
-    },
-    {
-     "t": "p",
-     "text": "**CRITICAL DISCOVERY:**\nThe baseband replica ($n = 0$) has phase factor $e^{-j 2\\pi (0) f_s \\tau} = e^0 = 1$.\n**It is completely independent of the time delay $\\tau$!**"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Low-Pass Filtering & Nyquist Condition"
-    },
-    {
-     "t": "p",
-     "text": "The reconstruction filter is:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = T_s \\frac{\\sin(\\omega_c t)}{\\pi t} = T_s \\frac{\\sin(2\\pi f_c t)}{\\pi t} \\longleftrightarrow H(f) = T_s \\, \\text{rect}\\left(\\frac{f}{2 f_c}\\right) = \\begin{cases} T_s, & |f| \\le f_c \\\\ 0, & |f| > f_c \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "where $f_c = \\frac{\\omega_c}{2\\pi}$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Non-Aliasing Condition:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "To guarantee that the $n = \\pm 1$ sideband replicas do not overlap with the baseband passband $[-f_c, f_c]$:"
-    },
-    {
-     "t": "math",
-     "tex": "f_s - f_c > f_c \\implies f_s > 2 f_c"
-    },
-    {
-     "t": "p",
-     "text": "Expressing in terms of $T_s$ and $\\omega_c$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{T_s} > 2 \\left( \\frac{\\omega_c}{2\\pi} \\right) = \\frac{\\omega_c}{\\pi} \\implies T_s < \\frac{\\pi}{\\omega_c}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Filter Output Calculation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "When $T_s < \\frac{\\pi}{\\omega_c}$, only the $n = 0$ term passes through $H(f)$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{out}}(f) = Y(f) \\cdot H(f) = \\left[ f_s F(f) \\right] \\cdot T_s = (f_s T_s) F(f) = 1 \\cdot F(f) = F(f)"
-    },
-    {
-     "t": "p",
-     "text": "Taking the inverse Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{out}}(t) = \\mathcal{F}^{-1}\\{F(f)\\} = f(t)"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Output} = f(t) \\quad \\text{if } T_s < \\frac{\\pi}{\\omega_c} \\quad \\text{(Option A)}}"
-    },
-    {
-     "t": "h3",
-     "text": "Step 4: Pedagogical Extension \u2014 What if a BPF is used? (Slide 300)"
-    },
-    {
-     "t": "p",
-     "text": "Suppose instead of the LPF, we employ a Bandpass Filter $H_{\\text{BPF}}(f)$ centered at $\\pm f_s$ with bandwidth $2 f_c$ and gain $T_s$.\nThe filter will isolate the $n = \\pm 1$ replicas:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{BPF}}(f) = T_s \\left[ f_s e^{-j 2\\pi f_s \\tau} F(f - f_s) + f_s e^{+j 2\\pi f_s \\tau} F(f + f_s) \\right] = e^{-j 2\\pi f_s \\tau} F(f - f_s) + e^{+j 2\\pi f_s \\tau} F(f + f_s)"
-    },
-    {
-     "t": "p",
-     "text": "Taking the inverse Fourier transform:"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{BPF}}(t) = e^{-j 2\\pi f_s \\tau} f(t) e^{j 2\\pi f_s t} + e^{+j 2\\pi f_s \\tau} f(t) e^{-j 2\\pi f_s t} = f(t) \\left[ e^{j(2\\pi f_s t - 2\\pi f_s \\tau)} + e^{-j(2\\pi f_s t - 2\\pi f_s \\tau)} \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{BPF}}(t) = 2 f(t) \\cos(2\\pi f_s t - 2\\pi f_s \\tau)"
-    },
-    {
-     "t": "p",
-     "text": "In bandpass reconstruction, the delay $\\tau$ **does** manifest as a carrier phase lag of $-2\\pi f_s \\tau$ radians!"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Common Pitfalls:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**The \"Shifted Signal\" Trap:** An overwhelming majority of students choose Option (B) ($f(t - \\tau)$), intuitively believing that since the sampling impulses are delayed by $\\tau$, the reconstructed signal must also be delayed by $\\tau$. This intuition is false! Sifting through an ideal LPF eliminates all harmonics where $\\tau$ lives, leaving the pure, unshifted $f(t)$.",
-      "**Angular Nyquist Rate:** Remember that $\\omega_s = \\frac{2\\pi}{T_s}$. The condition $\\omega_s > 2\\omega_c$ yields $\\frac{2\\pi}{T_s} > 2\\omega_c \\implies T_s < \\frac{\\pi}{\\omega_c}$. Using $T_s < \\frac{2\\pi}{\\omega_c}$ corresponds to $\\omega_s > \\omega_c$, which is severe undersampling by a factor of 2!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Problem Statement (GATE Exam Question, Slide 296)"
+      },
+      {
+       "t": "p",
+       "text": "Consider a continuous-time finite-energy signal $f(t)$ whose Fourier transform vanishes outside the frequency interval $[-\\omega_c, \\omega_c]$, where $\\omega_c$ is in rad/sec.\nThe signal $f(t)$ is uniformly sampled to obtain $y(t) = f(t) p(t)$. Here:"
+      },
+      {
+       "t": "math",
+       "tex": "p(t) = \\sum_{n=-\\infty}^\\infty \\delta(t - \\tau - n T_s)"
+      },
+      {
+       "t": "p",
+       "text": "with $\\delta(t)$ being the Dirac impulse, $T_s > 0$, and $\\tau > 0$ representing an arbitrary time delay. The sampled signal $y(t)$ is passed through an ideal lowpass filter:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = \\omega_c T_s \\frac{\\sin(\\omega_c t)}{\\pi \\omega_c t} = T_s \\frac{\\sin(\\omega_c t)}{\\pi t}"
+      },
+      {
+       "t": "p",
+       "text": "with cutoff frequency $\\omega_c$ and passband gain $T_s$."
+      },
+      {
+       "t": "p",
+       "text": "The output of the filter is given by:\n(A) $f(t)$ if $T_s < \\pi/\\omega_c$\n(B) $f(t - \\tau)$ if $T_s < \\pi/\\omega_c$\n(C) $f(t - \\tau)$ if $T_s < 2\\pi/\\omega_c$\n(D) $T_s f(t)$ if $T_s < 2\\pi/\\omega_c$"
+      },
+      {
+       "t": "h3",
+       "text": "Step-by-Step Mathematical Derivation"
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Fourier Transform of the Delayed Dirac Comb"
+      },
+      {
+       "t": "p",
+       "text": "Let $c(t) = \\sum_{n=-\\infty}^\\infty \\delta(t - n T_s)$ be the standard unshifted periodic impulse train.\nIts Fourier transform is:"
+      },
+      {
+       "t": "math",
+       "tex": "C(f) = f_s \\sum_{n=-\\infty}^\\infty \\delta(f - n f_s), \\quad \\text{where } f_s = \\frac{1}{T_s}"
+      },
+      {
+       "t": "p",
+       "text": "The delayed sampling signal is $p(t) = c(t - \\tau)$. Applying the time-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "P(f) = \\mathcal{F}\\{c(t - \\tau)\\} = e^{-j 2\\pi f \\tau} C(f) = f_s e^{-j 2\\pi f \\tau} \\sum_{n=-\\infty}^\\infty \\delta(f - n f_s)"
+      },
+      {
+       "t": "p",
+       "text": "Applying the impulse sifting property $g(f) \\delta(f - f_0) = g(f_0) \\delta(f - f_0)$:"
+      },
+      {
+       "t": "math",
+       "tex": "P(f) = f_s \\sum_{n=-\\infty}^\\infty e^{-j 2\\pi (n f_s) \\tau} \\delta(f - n f_s)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Spectrum of the Sampled Signal"
+      },
+      {
+       "t": "p",
+       "text": "The sampled signal is $y(t) = f(t) p(t)$. In the frequency domain:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(f) = F(f) * P(f) = F(f) * \\left[ f_s \\sum_{n=-\\infty}^\\infty e^{-j 2\\pi n f_s \\tau} \\delta(f - n f_s) \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "Y(f) = f_s \\sum_{n=-\\infty}^\\infty e^{-j 2\\pi n f_s \\tau} F(f - n f_s)"
+      },
+      {
+       "t": "p",
+       "text": "Expanding the sum term-by-term:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(f) = f_s F(f) \\cdot e^{-j 2\\pi(0)\\tau} + f_s F(f - f_s) e^{-j 2\\pi f_s \\tau} + f_s F(f + f_s) e^{+j 2\\pi f_s \\tau} + \\dots"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{n = 0 \\text{ (Baseband Replica):}} \\quad f_s e^{0} F(f) = \\mathbf{f_s F(f)}"
+      },
+      {
+       "t": "code",
+       "text": "   Sampled Spectrum Y(f) with Phase Factors:\n   \n           f_s e^{j 2pi f_s \\tau}             f_s               f_s e^{-j 2pi f_s \\tau}\n                   /\\                         /\\                         /\\\n                  /  \\                       /  \\                       /  \\\n     ------------/----\\---------------------/----\\---------------------/----\\---------> f\n             -f_s-f_c -f_s+f_c             -f_c    f_c              f_s-f_c  f_s+f_c\n                 (n = -1)                   (n = 0)                   (n = +1)\n                                      [Phase = e^0 = 1 !]"
+      },
+      {
+       "t": "p",
+       "text": "**CRITICAL DISCOVERY:**\nThe baseband replica ($n = 0$) has phase factor $e^{-j 2\\pi (0) f_s \\tau} = e^0 = 1$.\n**It is completely independent of the time delay $\\tau$!**"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Low-Pass Filtering & Nyquist Condition"
+      },
+      {
+       "t": "p",
+       "text": "The reconstruction filter is:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = T_s \\frac{\\sin(\\omega_c t)}{\\pi t} = T_s \\frac{\\sin(2\\pi f_c t)}{\\pi t} \\longleftrightarrow H(f) = T_s \\, \\text{rect}\\left(\\frac{f}{2 f_c}\\right) = \\begin{cases} T_s, & |f| \\le f_c \\\\ 0, & |f| > f_c \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "where $f_c = \\frac{\\omega_c}{2\\pi}$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Non-Aliasing Condition:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "To guarantee that the $n = \\pm 1$ sideband replicas do not overlap with the baseband passband $[-f_c, f_c]$:"
+      },
+      {
+       "t": "math",
+       "tex": "f_s - f_c > f_c \\implies f_s > 2 f_c"
+      },
+      {
+       "t": "p",
+       "text": "Expressing in terms of $T_s$ and $\\omega_c$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{T_s} > 2 \\left( \\frac{\\omega_c}{2\\pi} \\right) = \\frac{\\omega_c}{\\pi} \\implies T_s < \\frac{\\pi}{\\omega_c}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Filter Output Calculation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "When $T_s < \\frac{\\pi}{\\omega_c}$, only the $n = 0$ term passes through $H(f)$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{out}}(f) = Y(f) \\cdot H(f) = \\left[ f_s F(f) \\right] \\cdot T_s = (f_s T_s) F(f) = 1 \\cdot F(f) = F(f)"
+      },
+      {
+       "t": "p",
+       "text": "Taking the inverse Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{out}}(t) = \\mathcal{F}^{-1}\\{F(f)\\} = f(t)"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Output} = f(t) \\quad \\text{if } T_s < \\frac{\\pi}{\\omega_c} \\quad \\text{(Option A)}}"
+      },
+      {
+       "t": "h3",
+       "text": "Step 4: Pedagogical Extension \u2014 What if a BPF is used? (Slide 300)"
+      },
+      {
+       "t": "p",
+       "text": "Suppose instead of the LPF, we employ a Bandpass Filter $H_{\\text{BPF}}(f)$ centered at $\\pm f_s$ with bandwidth $2 f_c$ and gain $T_s$.\nThe filter will isolate the $n = \\pm 1$ replicas:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{BPF}}(f) = T_s \\left[ f_s e^{-j 2\\pi f_s \\tau} F(f - f_s) + f_s e^{+j 2\\pi f_s \\tau} F(f + f_s) \\right] = e^{-j 2\\pi f_s \\tau} F(f - f_s) + e^{+j 2\\pi f_s \\tau} F(f + f_s)"
+      },
+      {
+       "t": "p",
+       "text": "Taking the inverse Fourier transform:"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{BPF}}(t) = e^{-j 2\\pi f_s \\tau} f(t) e^{j 2\\pi f_s t} + e^{+j 2\\pi f_s \\tau} f(t) e^{-j 2\\pi f_s t} = f(t) \\left[ e^{j(2\\pi f_s t - 2\\pi f_s \\tau)} + e^{-j(2\\pi f_s t - 2\\pi f_s \\tau)} \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{BPF}}(t) = 2 f(t) \\cos(2\\pi f_s t - 2\\pi f_s \\tau)"
+      },
+      {
+       "t": "p",
+       "text": "In bandpass reconstruction, the delay $\\tau$ **does** manifest as a carrier phase lag of $-2\\pi f_s \\tau$ radians!"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Common Pitfalls:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**The \"Shifted Signal\" Trap:** An overwhelming majority of students choose Option (B) ($f(t - \\tau)$), intuitively believing that since the sampling impulses are delayed by $\\tau$, the reconstructed signal must also be delayed by $\\tau$. This intuition is false! Sifting through an ideal LPF eliminates all harmonics where $\\tau$ lives, leaving the pure, unshifted $f(t)$.",
+        "**Angular Nyquist Rate:** Remember that $\\omega_s = \\frac{2\\pi}{T_s}$. The condition $\\omega_s > 2\\omega_c$ yields $\\frac{2\\pi}{T_s} > 2\\omega_c \\implies T_s < \\frac{\\pi}{\\omega_c}$. Using $T_s < \\frac{2\\pi}{\\omega_c}$ corresponds to $\\omega_s > \\omega_c$, which is severe undersampling by a factor of 2!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -25199,357 +25152,354 @@ export default {
      "text": "5.1 Drill: Continuous-to-Discrete Signal Mapping (Slide 301)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "A continuous-time signal $x(t) = 4 + 3\\sin\\left(\\frac{3\\pi}{5} t\\right)$ is sampled uniformly at a rate of $2\\text{ samples/second}$. Find the resulting discrete-time sequence $x[n]$."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Sampling Interval:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_s = 2\\text{ samples/s} \\implies T_s = \\frac{1}{f_s} = \\frac{1}{2}\\text{ s}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Discrete Signal Substitution:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Substituting $t = n T_s = \\frac{n}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = x(n T_s) = 4 + 3\\sin\\left(\\frac{3\\pi}{5} \\cdot \\frac{n}{2}\\right) = 4 + 3\\sin\\left(\\frac{3\\pi n}{10}\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Discrete Frequency & Periodicity Analysis:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The discrete angular frequency is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Omega = \\frac{3\\pi}{10}\\text{ rad/sample}"
-    },
-    {
-     "t": "p",
-     "text": "A discrete-time sinusoid $\\sin(\\Omega n)$ is periodic if and only if $\\frac{\\Omega}{2\\pi} \\in \\mathbb{Q}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\Omega}{2\\pi} = \\frac{3\\pi / 10}{2\\pi} = \\frac{3}{20}"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\frac{3}{20}$ is rational with coprime integers ($k = 3, N = 20$), the sequence is periodic with fundamental period:"
-    },
-    {
-     "t": "math",
-     "tex": "N = \\frac{2\\pi k}{\\Omega} = \\frac{2\\pi (3)}{3\\pi / 10} = 20\\text{ samples}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = 4 + 3\\sin\\left(\\frac{3\\pi n}{10}\\right), \\quad \\text{Fundamental Period } N = 20}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "A continuous-time signal $x(t) = 4 + 3\\sin\\left(\\frac{3\\pi}{5} t\\right)$ is sampled uniformly at a rate of $2\\text{ samples/second}$. Find the resulting discrete-time sequence $x[n]$."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Sampling Interval:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_s = 2\\text{ samples/s} \\implies T_s = \\frac{1}{f_s} = \\frac{1}{2}\\text{ s}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Discrete Signal Substitution:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Substituting $t = n T_s = \\frac{n}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = x(n T_s) = 4 + 3\\sin\\left(\\frac{3\\pi}{5} \\cdot \\frac{n}{2}\\right) = 4 + 3\\sin\\left(\\frac{3\\pi n}{10}\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Discrete Frequency & Periodicity Analysis:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The discrete angular frequency is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Omega = \\frac{3\\pi}{10}\\text{ rad/sample}"
+      },
+      {
+       "t": "p",
+       "text": "A discrete-time sinusoid $\\sin(\\Omega n)$ is periodic if and only if $\\frac{\\Omega}{2\\pi} \\in \\mathbb{Q}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\Omega}{2\\pi} = \\frac{3\\pi / 10}{2\\pi} = \\frac{3}{20}"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\frac{3}{20}$ is rational with coprime integers ($k = 3, N = 20$), the sequence is periodic with fundamental period:"
+      },
+      {
+       "t": "math",
+       "tex": "N = \\frac{2\\pi k}{\\Omega} = \\frac{2\\pi (3)}{3\\pi / 10} = 20\\text{ samples}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = 4 + 3\\sin\\left(\\frac{3\\pi n}{10}\\right), \\quad \\text{Fundamental Period } N = 20}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "5.2 Drill: Undersampled Trapezoidal Spectrum & Slope Cancellation (Slides 302\u2013303)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "A continuous-time signal $x(t)$ has a trapezoidal Fourier transform magnitude $|X(\\omega)|$ defined by:"
-    },
-    {
-     "t": "math",
-     "tex": "|X(\\omega)| = \\begin{cases} 1, & |\\omega| \\le 2 \\\\ 3 - |\\omega|, & 2 \\le |\\omega| \\le 3 \\\\ 0, & |\\omega| > 3 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "The signal $x(t)$ is sampled at uniform time intervals of $T_s = \\frac{2\\pi}{5}\\text{ seconds}$.\nSketch and mathematically determine the sampled spectrum $|X_s(\\omega)|$."
-    },
-    {
-     "t": "code",
-     "text": "   Continuous Spectrum |X(\\omega)|:\n   \n                1 +-------------+\n                 /|             |\\\n                / |             | \\\n               /  |             |  \\\n   -----------+---+-------------+---+-------------> \\omega (rad/s)\n             -3  -2      0      2   3"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Sampling Angular Frequency:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_s = \\frac{2\\pi}{T_s} = \\frac{2\\pi}{2\\pi / 5} = 5\\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "The maximum frequency of the message signal is $\\omega_m = 3\\text{ rad/s}$.\n   The theoretical Nyquist rate is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{\\text{Nyq}} = 2\\omega_m = 2 \\times 3 = 6\\text{ rad/s}"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\omega_s = 5 < 6\\text{ rad/s}$, **spectral aliasing occurs!**"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Sampled Spectrum Summation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The Fourier transform of the sampled signal is:"
-    },
-    {
-     "t": "math",
-     "tex": "X_s(\\omega) = \\frac{1}{T_s} \\sum_{k=-\\infty}^{\\infty} X(\\omega - k \\omega_s) = \\frac{5}{2\\pi} \\sum_{k=-\\infty}^{\\infty} X(\\omega - 5k)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Analysis of Replicas in the Overlap Band $[2, 3]$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Baseband Replica ($k = 0$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Occupies $[-3, 3]\\text{ rad/s}$.\n     In the interval $\\omega \\in [2, 3]$, it forms a falling linear ramp:"
-    },
-    {
-     "t": "math",
-     "tex": "X_0(\\omega) = 3 - \\omega"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**First Shifted Replica ($k = 1$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Shifted to the right by $\\omega_s = 5\\text{ rad/s}$.\n     Occupies $[5 - 3, 5 + 3] = [2, 8]\\text{ rad/s}$.\n     In the interval $\\omega \\in [2, 3]$, it forms the rising linear ramp of the left wing:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(\\omega) = X(\\omega - 5) = 3 - |(\\omega - 5)|"
-    },
-    {
-     "t": "p",
-     "text": "For $\\omega \\in [2, 3]$, $\\omega - 5 \\in [-3, -2]$, so $|\\omega - 5| = 5 - \\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(\\omega) = 3 - (5 - \\omega) = \\omega - 2"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Superposition of the Overlapping Ramps:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "In the aliased interval $\\omega \\in [2, 3]$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_{\\text{total}}(\\omega) = X_0(\\omega) + X_1(\\omega) = (3 - \\omega) + (\\omega - 2) = 3 - 2 = 1"
-    },
-    {
-     "t": "p",
-     "text": "The negative slope of the baseband ($-1$) exactly cancels the positive slope of the adjacent replica ($+1$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{d\\omega} [X_0(\\omega) + X_1(\\omega)] = -1 + 1 = 0"
-    },
-    {
-     "t": "code",
-     "text": "   Detailed Superposition in Overlap Band [2, 3]:\n   \n      Amplitude\n          1 +-------------+             . . . Replica 1 starts\n            |             |\\           /\n            |             | \\         /\n            |             |  \\       /\n            |             |   \\     /\n            |             |    \\   /\n            |             |     \\ /   <- Crosses at 0.5 when \\omega = 2.5\n          0 +-------------+------+----+-------------> \\omega\n            0             2     2.5   3\n            \n      Sum:  [ 3 - \\omega ] + [ \\omega - 2 ] = 1  (Constant Flat Top!)"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Periodicity across all $\\omega$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "On $[0, 2]$: Baseband flat top $= 1$.",
-      "On $[2, 3]$: Falling ramp $+$ Rising ramp $= 1$.",
-      "On $[3, 5]$: Replica 1 flat top $[5-2, 5] = [3, 5]$ has amplitude $1$.",
-      "On $[5, 7]$: Replica 1 flat top $[5, 5+2] = [5, 7]$ has amplitude $1$.",
-      "On $[7, 8]$: Replica 1 falling ramp $(8 - \\omega)$ $+$ Replica 2 rising ramp $(\\omega - 7) = 1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore, the infinite sum $\\sum_{k=-\\infty}^{\\infty} X(\\omega - 5k) \\equiv 1$ for **ALL** $\\omega \\in \\mathbb{R}$!"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "**Final Result:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_s(\\omega) = \\frac{1}{T_s} \\times 1 = \\frac{5}{2\\pi} = \\text{constant}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{|X_s(\\omega)| = \\frac{5}{2\\pi} \\quad \\text{for all } \\omega \\in (-\\infty, \\infty)}"
-    },
-    {
-     "t": "h4",
-     "text": "Remarkable Pedagogical Insight:"
-    },
-    {
-     "t": "p",
-     "text": "Undersampling does **not** always destroy spectral flatness! When signal spectra possess complementary linear tapers whose slopes add to zero, the aliased spectrum synthesizes a completely flat horizontal line without any ripple!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "A continuous-time signal $x(t)$ has a trapezoidal Fourier transform magnitude $|X(\\omega)|$ defined by:"
+      },
+      {
+       "t": "math",
+       "tex": "|X(\\omega)| = \\begin{cases} 1, & |\\omega| \\le 2 \\\\ 3 - |\\omega|, & 2 \\le |\\omega| \\le 3 \\\\ 0, & |\\omega| > 3 \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "The signal $x(t)$ is sampled at uniform time intervals of $T_s = \\frac{2\\pi}{5}\\text{ seconds}$.\nSketch and mathematically determine the sampled spectrum $|X_s(\\omega)|$."
+      },
+      {
+       "t": "code",
+       "text": "   Continuous Spectrum |X(\\omega)|:\n   \n                1 +-------------+\n                 /|             |\\\n                / |             | \\\n               /  |             |  \\\n   -----------+---+-------------+---+-------------> \\omega (rad/s)\n             -3  -2      0      2   3"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Sampling Angular Frequency:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_s = \\frac{2\\pi}{T_s} = \\frac{2\\pi}{2\\pi / 5} = 5\\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "The maximum frequency of the message signal is $\\omega_m = 3\\text{ rad/s}$.\n   The theoretical Nyquist rate is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{\\text{Nyq}} = 2\\omega_m = 2 \\times 3 = 6\\text{ rad/s}"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\omega_s = 5 < 6\\text{ rad/s}$, **spectral aliasing occurs!**"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Sampled Spectrum Summation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The Fourier transform of the sampled signal is:"
+      },
+      {
+       "t": "math",
+       "tex": "X_s(\\omega) = \\frac{1}{T_s} \\sum_{k=-\\infty}^{\\infty} X(\\omega - k \\omega_s) = \\frac{5}{2\\pi} \\sum_{k=-\\infty}^{\\infty} X(\\omega - 5k)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Analysis of Replicas in the Overlap Band $[2, 3]$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Baseband Replica ($k = 0$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Occupies $[-3, 3]\\text{ rad/s}$.\n     In the interval $\\omega \\in [2, 3]$, it forms a falling linear ramp:"
+      },
+      {
+       "t": "math",
+       "tex": "X_0(\\omega) = 3 - \\omega"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**First Shifted Replica ($k = 1$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Shifted to the right by $\\omega_s = 5\\text{ rad/s}$.\n     Occupies $[5 - 3, 5 + 3] = [2, 8]\\text{ rad/s}$.\n     In the interval $\\omega \\in [2, 3]$, it forms the rising linear ramp of the left wing:"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(\\omega) = X(\\omega - 5) = 3 - |(\\omega - 5)|"
+      },
+      {
+       "t": "p",
+       "text": "For $\\omega \\in [2, 3]$, $\\omega - 5 \\in [-3, -2]$, so $|\\omega - 5| = 5 - \\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(\\omega) = 3 - (5 - \\omega) = \\omega - 2"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Superposition of the Overlapping Ramps:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "In the aliased interval $\\omega \\in [2, 3]$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_{\\text{total}}(\\omega) = X_0(\\omega) + X_1(\\omega) = (3 - \\omega) + (\\omega - 2) = 3 - 2 = 1"
+      },
+      {
+       "t": "p",
+       "text": "The negative slope of the baseband ($-1$) exactly cancels the positive slope of the adjacent replica ($+1$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{d\\omega} [X_0(\\omega) + X_1(\\omega)] = -1 + 1 = 0"
+      },
+      {
+       "t": "code",
+       "text": "   Detailed Superposition in Overlap Band [2, 3]:\n   \n      Amplitude\n          1 +-------------+             . . . Replica 1 starts\n            |             |\\           /\n            |             | \\         /\n            |             |  \\       /\n            |             |   \\     /\n            |             |    \\   /\n            |             |     \\ /   <- Crosses at 0.5 when \\omega = 2.5\n          0 +-------------+------+----+-------------> \\omega\n            0             2     2.5   3\n            \n      Sum:  [ 3 - \\omega ] + [ \\omega - 2 ] = 1  (Constant Flat Top!)"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Periodicity across all $\\omega$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "On $[0, 2]$: Baseband flat top $= 1$.",
+        "On $[2, 3]$: Falling ramp $+$ Rising ramp $= 1$.",
+        "On $[3, 5]$: Replica 1 flat top $[5-2, 5] = [3, 5]$ has amplitude $1$.",
+        "On $[5, 7]$: Replica 1 flat top $[5, 5+2] = [5, 7]$ has amplitude $1$.",
+        "On $[7, 8]$: Replica 1 falling ramp $(8 - \\omega)$ $+$ Replica 2 rising ramp $(\\omega - 7) = 1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore, the infinite sum $\\sum_{k=-\\infty}^{\\infty} X(\\omega - 5k) \\equiv 1$ for **ALL** $\\omega \\in \\mathbb{R}$!"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "**Final Result:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_s(\\omega) = \\frac{1}{T_s} \\times 1 = \\frac{5}{2\\pi} = \\text{constant}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{|X_s(\\omega)| = \\frac{5}{2\\pi} \\quad \\text{for all } \\omega \\in (-\\infty, \\infty)}"
+      },
+      {
+       "t": "h4",
+       "text": "Remarkable Pedagogical Insight:"
+      },
+      {
+       "t": "p",
+       "text": "Undersampling does **not** always destroy spectral flatness! When signal spectra possess complementary linear tapers whose slopes add to zero, the aliased spectrum synthesizes a completely flat horizontal line without any ripple!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "5.3 Drill: Nyquist Sampling Duration & Sample Count (Slide 304)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "A continuous-time signal $x(t)$ bandlimited to maximum frequency $f_m$ is sampled at thrice its Nyquist rate for a duration of $2\\text{ seconds}$. If a total of $48\\text{ samples}$ are required, determine the maximum frequency $f_m$."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Nyquist Rate Definition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{N.R.} = 2 f_m"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Actual Sampling Rate:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f_s = 3 \\times \\text{N.R.} = 3 \\times (2 f_m) = 6 f_m"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Total Collected Samples:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "In duration $T = 2\\text{ seconds}$:"
-    },
-    {
-     "t": "math",
-     "tex": "N = f_s \\times T"
-    },
-    {
-     "t": "p",
-     "text": "Given $N = 48$ samples:"
-    },
-    {
-     "t": "math",
-     "tex": "f_s = \\frac{N}{T} = \\frac{48\\text{ samples}}{2\\text{ s}} = 24\\text{ samples/sec} \\implies f_s = 24\\text{ Hz}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Solve for $f_m$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "6 f_m = 24 \\implies f_m = \\frac{24}{6} = 4\\text{ Hz}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{f_m = 4\\text{ Hz}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "A continuous-time signal $x(t)$ bandlimited to maximum frequency $f_m$ is sampled at thrice its Nyquist rate for a duration of $2\\text{ seconds}$. If a total of $48\\text{ samples}$ are required, determine the maximum frequency $f_m$."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Nyquist Rate Definition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{N.R.} = 2 f_m"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Actual Sampling Rate:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f_s = 3 \\times \\text{N.R.} = 3 \\times (2 f_m) = 6 f_m"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Total Collected Samples:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "In duration $T = 2\\text{ seconds}$:"
+      },
+      {
+       "t": "math",
+       "tex": "N = f_s \\times T"
+      },
+      {
+       "t": "p",
+       "text": "Given $N = 48$ samples:"
+      },
+      {
+       "t": "math",
+       "tex": "f_s = \\frac{N}{T} = \\frac{48\\text{ samples}}{2\\text{ s}} = 24\\text{ samples/sec} \\implies f_s = 24\\text{ Hz}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Solve for $f_m$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "6 f_m = 24 \\implies f_m = \\frac{24}{6} = 4\\text{ Hz}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{f_m = 4\\text{ Hz}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -26133,202 +26083,201 @@ export default {
      "text": "8.3 Numerical Drill & Interleaving Verification (Slides 306\u2013307)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 306)"
-    },
-    {
-     "t": "p",
-     "text": "A continuous-time bandpass signal $m(t)$ has a non-zero spectrum occupying $110\\text{ Hz} \\le |f| \\le 150\\text{ Hz}$.\nDetermine:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "The naive baseband Nyquist rate.",
-      "The minimum permissible sampling rate $(f_s)_{\\min}$ using the bandpass sampling theorem.",
-      "Verify that at $(f_s)_{\\min}$, no spectral aliasing occurs by sketching the spectral placement."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Signal Parameters"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Lower cutoff frequency: $f_L = 110\\text{ Hz}$",
-      "Upper cutoff frequency: $f_H = 150\\text{ Hz}$",
-      "Bandwidth: $B = f_H - f_L = 150 - 110 = 40\\text{ Hz}$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Naive Baseband Nyquist Rate"
-    },
-    {
-     "t": "p",
-     "text": "Treating the signal as a general baseband signal with maximum frequency $f_{\\max} = 150\\text{ Hz}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{N.R.}_{\\text{baseband}} = 2 f_H = 2 \\times 150 = 300\\text{ Hz}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Bandpass Sampling Rate Calculation"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Determine the Maximum Integer $k$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "k = \\left\\lfloor \\frac{f_H}{B} \\right\\rfloor = \\left\\lfloor \\frac{150}{40} \\right\\rfloor = \\lfloor 3.75 \\rfloor = 3"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Calculate $(f_s)_{\\min}$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(f_s)_{\\min} = \\frac{2 f_H}{k} = \\frac{2 \\times 150}{3} = \\frac{300}{3} = 100\\text{ Hz}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{(f_s)_{\\min} = 100\\text{ Hz}}"
-    },
-    {
-     "t": "p",
-     "text": "Notice that $(f_s)_{\\min} = 100\\text{ Hz} > 2B = 80\\text{ Hz}$, satisfying $(f_s)_{\\min} \\ge 2B$.\nSampling at $100\\text{ Hz}$ provides a **$66.7\\%$ reduction** in sampling rate compared to the naive $300\\text{ Hz}$ rate!"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Spectral Placement & Non-Overlapping Verification (Slide 307)"
-    },
-    {
-     "t": "p",
-     "text": "Let us track the position of the spectral replicas when sampled at $f_s = 100\\text{ Hz}$.\nThe original positive band is $P_0 = [110, 150]\\text{ Hz}$ and negative band is $N_0 = [-150, -110]\\text{ Hz}$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Original Bands ($n = 0$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$N_0 \\in [-150, -110]\\text{ Hz}$",
-      "$P_0 \\in [110, 150]\\text{ Hz}$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**First Positive Shift ($n = +1$, shift by $+100\\text{ Hz}$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$N_0 + 100 = [-150 + 100, -110 + 100] = [-50, -10]\\text{ Hz}$",
-      "$P_0 + 100 = [110 + 100, 150 + 100] = [210, 250]\\text{ Hz}$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**First Negative Shift ($n = -1$, shift by $-100\\text{ Hz}$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$P_0 - 100 = [110 - 100, 150 - 100] = [10, 50]\\text{ Hz}$",
-      "$N_0 - 100 = [-150 - 100, -110 - 100] = [-250, -210]\\text{ Hz}$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Second Positive Shift ($n = +2$, shift by $+200\\text{ Hz}$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$N_0 + 200 = [-150 + 200, -110 + 200] = [50, 90]\\text{ Hz}$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Second Negative Shift ($n = -2$, shift by $-200\\text{ Hz}$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$P_0 - 200 = [110 - 200, 150 - 200] = [-90, -50]\\text{ Hz}$"
-     ]
-    },
-    {
-     "t": "code",
-     "text": "   Composite Interleaved Spectrum for f_s = 100 Hz:\n   \n      -150  -110      -50   -10   0   10    50        110   150\n        /\\              /\\            /\\                /\\\n       /  \\            /  \\          /  \\              /  \\\n   ---/----\\----------/----\\--------/----\\------------/----\\---------> f (Hz)\n     [-150,-110]    [-50, -10]    [10, 50]         [110, 150]\n        (N_0)       (N_0 + 100)  (P_0 - 100)          (P_0)\n        \n   Notice: [-50, -10] and [10, 50] leave a clear gap around DC [-10, 10]!\n   No bands touch or overlap! Zero aliasing!"
-    },
-    {
-     "t": "p",
-     "text": "All bands sit perfectly side-by-side with zero overlap:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Band 1: $[-150, -110]$",
-      "Band 2: $[-90, -50]$",
-      "Band 3: $[-50, -10]$",
-      "DC Gap: $[-10, 10]$",
-      "Band 4: $[10, 50]$",
-      "Band 5: $[50, 90]$",
-      "Band 6: $[110, 150]$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Spectral Inversion Phenomenon:"
-    },
-    {
-     "t": "p",
-     "text": "Notice that for the downconverted replica in $[10, 50]\\text{ Hz}$, $f = 110\\text{ Hz}$ mapped to $10\\text{ Hz}$ and $f = 150\\text{ Hz}$ mapped to $50\\text{ Hz}$.\nSince $k = 3$ is **odd**, the shifted positive replica is directly downconverted without inversion. If $k$ is **even**, the positive baseband replica is formed from the inverted negative band!"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Common Pitfalls:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Rounding Direction:** $k = \\lfloor f_H / B \\rfloor$ MUST use the **FLOOR** (greatest integer) function, NOT ceiling or standard rounding! Choosing $k = 4$ would yield $f_s = 300/4 = 75\\text{ Hz} < 2B = 80\\text{ Hz}$, resulting in severe spectral overlap.",
-      "**Valid Frequency Gaps:** Remember that not all rates above $(f_s)_{\\min}$ are valid! Bandpass sampling features \"forbidden bands\" where aliasing occurs between the integer windows. Sampling must strictly obey $\\frac{2 f_H}{k} \\le f_s \\le \\frac{2 f_L}{k-1}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 306)"
+      },
+      {
+       "t": "p",
+       "text": "A continuous-time bandpass signal $m(t)$ has a non-zero spectrum occupying $110\\text{ Hz} \\le |f| \\le 150\\text{ Hz}$.\nDetermine:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "The naive baseband Nyquist rate.",
+        "The minimum permissible sampling rate $(f_s)_{\\min}$ using the bandpass sampling theorem.",
+        "Verify that at $(f_s)_{\\min}$, no spectral aliasing occurs by sketching the spectral placement."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Signal Parameters"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Lower cutoff frequency: $f_L = 110\\text{ Hz}$",
+        "Upper cutoff frequency: $f_H = 150\\text{ Hz}$",
+        "Bandwidth: $B = f_H - f_L = 150 - 110 = 40\\text{ Hz}$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Naive Baseband Nyquist Rate"
+      },
+      {
+       "t": "p",
+       "text": "Treating the signal as a general baseband signal with maximum frequency $f_{\\max} = 150\\text{ Hz}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{N.R.}_{\\text{baseband}} = 2 f_H = 2 \\times 150 = 300\\text{ Hz}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Bandpass Sampling Rate Calculation"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Determine the Maximum Integer $k$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "k = \\left\\lfloor \\frac{f_H}{B} \\right\\rfloor = \\left\\lfloor \\frac{150}{40} \\right\\rfloor = \\lfloor 3.75 \\rfloor = 3"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Calculate $(f_s)_{\\min}$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(f_s)_{\\min} = \\frac{2 f_H}{k} = \\frac{2 \\times 150}{3} = \\frac{300}{3} = 100\\text{ Hz}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{(f_s)_{\\min} = 100\\text{ Hz}}"
+      },
+      {
+       "t": "p",
+       "text": "Notice that $(f_s)_{\\min} = 100\\text{ Hz} > 2B = 80\\text{ Hz}$, satisfying $(f_s)_{\\min} \\ge 2B$.\nSampling at $100\\text{ Hz}$ provides a **$66.7\\%$ reduction** in sampling rate compared to the naive $300\\text{ Hz}$ rate!"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Spectral Placement & Non-Overlapping Verification (Slide 307)"
+      },
+      {
+       "t": "p",
+       "text": "Let us track the position of the spectral replicas when sampled at $f_s = 100\\text{ Hz}$.\nThe original positive band is $P_0 = [110, 150]\\text{ Hz}$ and negative band is $N_0 = [-150, -110]\\text{ Hz}$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Original Bands ($n = 0$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$N_0 \\in [-150, -110]\\text{ Hz}$",
+        "$P_0 \\in [110, 150]\\text{ Hz}$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**First Positive Shift ($n = +1$, shift by $+100\\text{ Hz}$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$N_0 + 100 = [-150 + 100, -110 + 100] = [-50, -10]\\text{ Hz}$",
+        "$P_0 + 100 = [110 + 100, 150 + 100] = [210, 250]\\text{ Hz}$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**First Negative Shift ($n = -1$, shift by $-100\\text{ Hz}$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$P_0 - 100 = [110 - 100, 150 - 100] = [10, 50]\\text{ Hz}$",
+        "$N_0 - 100 = [-150 - 100, -110 - 100] = [-250, -210]\\text{ Hz}$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Second Positive Shift ($n = +2$, shift by $+200\\text{ Hz}$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$N_0 + 200 = [-150 + 200, -110 + 200] = [50, 90]\\text{ Hz}$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Second Negative Shift ($n = -2$, shift by $-200\\text{ Hz}$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$P_0 - 200 = [110 - 200, 150 - 200] = [-90, -50]\\text{ Hz}$"
+       ]
+      },
+      {
+       "t": "code",
+       "text": "   Composite Interleaved Spectrum for f_s = 100 Hz:\n   \n      -150  -110      -50   -10   0   10    50        110   150\n        /\\              /\\            /\\                /\\\n       /  \\            /  \\          /  \\              /  \\\n   ---/----\\----------/----\\--------/----\\------------/----\\---------> f (Hz)\n     [-150,-110]    [-50, -10]    [10, 50]         [110, 150]\n        (N_0)       (N_0 + 100)  (P_0 - 100)          (P_0)\n        \n   Notice: [-50, -10] and [10, 50] leave a clear gap around DC [-10, 10]!\n   No bands touch or overlap! Zero aliasing!"
+      },
+      {
+       "t": "p",
+       "text": "All bands sit perfectly side-by-side with zero overlap:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Band 1: $[-150, -110]$",
+        "Band 2: $[-90, -50]$",
+        "Band 3: $[-50, -10]$",
+        "DC Gap: $[-10, 10]$",
+        "Band 4: $[10, 50]$",
+        "Band 5: $[50, 90]$",
+        "Band 6: $[110, 150]$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Spectral Inversion Phenomenon:"
+      },
+      {
+       "t": "p",
+       "text": "Notice that for the downconverted replica in $[10, 50]\\text{ Hz}$, $f = 110\\text{ Hz}$ mapped to $10\\text{ Hz}$ and $f = 150\\text{ Hz}$ mapped to $50\\text{ Hz}$.\nSince $k = 3$ is **odd**, the shifted positive replica is directly downconverted without inversion. If $k$ is **even**, the positive baseband replica is formed from the inverted negative band!"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Common Pitfalls:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Rounding Direction:** $k = \\lfloor f_H / B \\rfloor$ MUST use the **FLOOR** (greatest integer) function, NOT ceiling or standard rounding! Choosing $k = 4$ would yield $f_s = 300/4 = 75\\text{ Hz} < 2B = 80\\text{ Hz}$, resulting in severe spectral overlap.",
+        "**Valid Frequency Gaps:** Remember that not all rates above $(f_s)_{\\min}$ are valid! Bandpass sampling features \"forbidden bands\" where aliasing occurs between the integer windows. Sampling must strictly obey $\\frac{2 f_H}{k} \\le f_s \\le \\frac{2 f_L}{k-1}$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",

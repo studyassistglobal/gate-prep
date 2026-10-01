@@ -6,6 +6,12 @@ import Icon from '../components/Icon.jsx';
 import NoteBlock from '../components/NoteBlock.jsx';
 import NotFound from './NotFound.jsx';
 
+// Progressive mounting: big sections (800-2,900 blocks, thousands of KaTeX
+// spans) must not mount in one commit — the first screens render immediately,
+// the rest fills in over idle frames so the page never freezes.
+const INITIAL_BLOCKS = 15;
+const BLOCK_CHUNK = 15;
+
 export default function Chapter() {
   const { courseId, subjectId, chapterId } = useParams();
   const location = useLocation();
@@ -15,6 +21,7 @@ export default function Chapter() {
   const [loading, setLoading] = useState(true);
   const [readSet, setReadSet] = useState(() => new Set());
   const [tocOpen, setTocOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_BLOCKS);
 
   useEffect(() => {
     let alive = true;
@@ -47,7 +54,32 @@ export default function Chapter() {
   useEffect(() => {
     window.scrollTo({ top: 0 });
     setTocOpen(false);
+    setVisibleCount(INITIAL_BLOCKS);
   }, [activeIdx, chapterId]);
+
+  // mount the remaining blocks in idle-time chunks
+  useEffect(() => {
+    if (!module) return;
+    const sec = module.sections[activeIdx];
+    if (!sec || visibleCount >= sec.blocks.length) return;
+    let cancelled = false;
+    let ricId = 0;
+    let timerId = 0;
+    const step = () => {
+      if (cancelled) return;
+      setVisibleCount((v) => Math.min(v + BLOCK_CHUNK, sec.blocks.length));
+    };
+    if (typeof window.requestIdleCallback === 'function') {
+      ricId = window.requestIdleCallback(step, { timeout: 120 });
+    } else {
+      timerId = window.setTimeout(step, 40);
+    }
+    return () => {
+      cancelled = true;
+      if (ricId && typeof window.cancelIdleCallback === 'function') window.cancelIdleCallback(ricId);
+      if (timerId) clearTimeout(timerId);
+    };
+  }, [module, activeIdx, visibleCount]);
 
   // mobile TOC drawer: Escape closes, body scroll locks while open
   useEffect(() => {
@@ -179,7 +211,7 @@ export default function Chapter() {
                     {readSet.has(section.id) ? 'Read' : 'Mark read'}
                   </button>
                 </div>
-                {section.blocks.map((b, bi) => <NoteBlock key={bi} block={b} />)}
+                {section.blocks.slice(0, visibleCount).map((b, bi) => <NoteBlock key={bi} block={b} />)}
 
                 <div className="gp-section-nav">
                   {prevSec ? (

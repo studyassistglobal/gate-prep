@@ -21,7 +21,7 @@ export default {
      "t": "alert",
      "type": "NOTE",
      "title": null,
-     "text": "### Master Pedagogical Design Principles\n1. **Zero Prior Knowledge Assumed:** You can study directly from this document without watching the video lectures. Every step, theorem, gate-level truth table, and topological derivation is explained with first-principles rigor.\n2. **Clean Practice Questions (No Spoilers):** Every example, classroom exercise, and GATE PYQ presents the clean problem statement and unmarked diagrams first. Complete step-by-step faculty derivations, alternative solving methods, and exam traps are encapsulated within collapsible `<details>` containers.\n3. **High-Contrast Dark Mode Publication Quality:** Full KaTeX mathematical typesetting, standardized Markdown tables, and crisp high-resolution architectural figures."
+     "text": "### Master Pedagogical Design Principles\n1. **Zero Prior Knowledge Assumed:** You can study directly from this document without watching the video lectures. Every step, theorem, gate-level truth table, and topological derivation is explained with first-principles rigor.\n2. **Clean Practice Questions (No Spoilers):** Every example, classroom exercise, and GATE PYQ presents the clean problem statement and unmarked diagrams first. Complete step-by-step faculty derivations, alternative solving methods, and exam traps are encapsulated within collapsible `` containers.\n3. **High-Contrast Dark Mode Publication Quality:** Full KaTeX mathematical typesetting, standardized Markdown tables, and crisp high-resolution architectural figures."
     }
    ]
   },

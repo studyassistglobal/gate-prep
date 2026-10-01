@@ -494,53 +494,56 @@ export default {
      "tex": "\\lim_{s \\to -\\infty} X(s) = \\lim_{s \\to -\\infty} \\frac{1}{s^2} = \\frac{1}{\\infty} = 0 \\implies \\text{NOT a pole}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Pole-Zero Decomposition:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The denominator is quadratic, $D(s) = s^2 + 3s + 2 = (s+1)(s+2)$. Finite poles occur at roots of $D(s) = 0 \\implies s_1 = -1, s_2 = -2$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Asymptotic Pole Check at Complex Infinity:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "A point $s = \\infty$ is defined as a pole if $\\lim_{s \\to \\infty} \\vert X(s)\\vert = \\infty$. Here, since the degree of the denominator ($n=2$) strictly exceeds the degree of the numerator ($m=0$), $X(s) \\to 0$ as $\\vert s\\vert \\to \\infty$. Thus, there are two zeros at infinity and no pole at infinity."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**ROC Enumeration:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since poles are vertical lines at $\\sigma = -2$ and $\\sigma = -1$, three possible non-overlapping ROC configurations exist:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 1 ($\\sigma > -1$):** ROC lies to the right of the rightmost pole ($s = -1$). The signal $x(t) = (e^{-t} - e^{-2t})u(t)$ is strictly **Causal**.",
-      "**Case 2 ($-2 < \\sigma < -1$):** ROC is an open strip bounded by two poles. The signal $x(t) = -e^{-t}u(-t) - e^{-2t}u(t)$ contains both positive and negative time components, hence strictly **Non-Causal**.",
-      "**Case 3 ($\\sigma < -2$):** ROC lies to the left of the leftmost pole ($s = -2$). The signal $x(t) = (-e^{-t} + e^{-2t})u(-t)$ is strictly **Anti-Causal**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**GATE Exam Trap:**\nNever assume a rational function has poles at infinity unless the degree of the numerator exceeds the degree of the denominator ($m > n$).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Pole-Zero Decomposition:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The denominator is quadratic, $D(s) = s^2 + 3s + 2 = (s+1)(s+2)$. Finite poles occur at roots of $D(s) = 0 \\implies s_1 = -1, s_2 = -2$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Asymptotic Pole Check at Complex Infinity:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A point $s = \\infty$ is defined as a pole if $\\lim_{s \\to \\infty} \\vert X(s)\\vert = \\infty$. Here, since the degree of the denominator ($n=2$) strictly exceeds the degree of the numerator ($m=0$), $X(s) \\to 0$ as $\\vert s\\vert \\to \\infty$. Thus, there are two zeros at infinity and no pole at infinity."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**ROC Enumeration:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since poles are vertical lines at $\\sigma = -2$ and $\\sigma = -1$, three possible non-overlapping ROC configurations exist:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 1 ($\\sigma > -1$):** ROC lies to the right of the rightmost pole ($s = -1$). The signal $x(t) = (e^{-t} - e^{-2t})u(t)$ is strictly **Causal**.",
+        "**Case 2 ($-2 < \\sigma < -1$):** ROC is an open strip bounded by two poles. The signal $x(t) = -e^{-t}u(-t) - e^{-2t}u(t)$ contains both positive and negative time components, hence strictly **Non-Causal**.",
+        "**Case 3 ($\\sigma < -2$):** ROC lies to the left of the leftmost pole ($s = -2$). The signal $x(t) = (-e^{-t} + e^{-2t})u(-t)$ is strictly **Anti-Causal**."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**GATE Exam Trap:**\nNever assume a rational function has poles at infinity unless the degree of the numerator exceeds the degree of the denominator ($m > n$)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -589,34 +592,37 @@ export default {
      "tex": "\\lim_{s \\to \\infty} \\frac{e^s}{2s} = \\lim_{s \\to \\infty} \\frac{e^s}{2} = \\frac{e^\\infty}{2} = \\infty \\implies s = +\\infty \\text{ is a POLE!}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Impact of the Time-Shift Factor $e^s$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "In Laplace transform properties, multiplication by $e^{s t_0}$ represents a time-advance by $t_0$. Here, $t_0 = +1$, shifting signals to the left:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}^{-1}\\left\\{\\frac{1}{s+a}\\right\\} = e^{-at}u(t) \\implies \\mathcal{L}^{-1}\\left\\{\\frac{e^s}{s+a}\\right\\} = e^{-a(t+1)}u(t+1)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Identification of the Infinite Pole:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The exponential numerator $e^s = \\sum_{k=0}^\\infty \\frac{s^k}{k!}$ grows faster than any polynomial $s^2$. Therefore, as $\\text{Re}(s) \\to +\\infty$, $X(s)$ blows up to $\\infty$. Thus, $s = +\\infty$ acts as an essential pole of infinite order.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Impact of the Time-Shift Factor $e^s$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "In Laplace transform properties, multiplication by $e^{s t_0}$ represents a time-advance by $t_0$. Here, $t_0 = +1$, shifting signals to the left:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}^{-1}\\left\\{\\frac{1}{s+a}\\right\\} = e^{-at}u(t) \\implies \\mathcal{L}^{-1}\\left\\{\\frac{e^s}{s+a}\\right\\} = e^{-a(t+1)}u(t+1)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Identification of the Infinite Pole:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The exponential numerator $e^s = \\sum_{k=0}^\\infty \\frac{s^k}{k!}$ grows faster than any polynomial $s^2$. Therefore, as $\\text{Re}(s) \\to +\\infty$, $X(s)$ blows up to $\\infty$. Thus, $s = +\\infty$ acts as an essential pole of infinite order."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -663,45 +669,48 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Why is the region $-1 < \\text{Re}(s) < \\infty$ NON-CAUSAL?**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For a signal to be causal, its ROC must be of the form $\\text{Re}(s) > \\sigma_{\\max}$ where $\\sigma_{\\max}$ is the rightmost pole, extending to $+\\infty$ *without being bounded by another pole*.\n   However, here $s = +\\infty$ **is itself a pole**! Consequently, the region between $-1$ and $+\\infty$ is bounded on both sides by poles ($\\sigma = -1$ and $\\sigma = +\\infty$). Therefore, it is a **strip**, and any strip ROC corresponds to a two-sided (Non-Causal) signal!"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Verification via Time Domain:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}^{-1}\\left\\{\\frac{e^s}{(s+1)(s+2)}\\right\\} = \\left[ e^{-(t+1)} - e^{-2(t+1)} \\right] u(t+1)"
-    },
-    {
-     "t": "p",
-     "text": "The unit step $u(t+1)$ turns ON at $t = -1$. Because the signal is non-zero in the interval $-1 \\le t < 0$, it is strictly **Non-Causal**!"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Anti-Causal Existence:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For $\\text{Re}(s) < -2$, the ROC is to the left of the leftmost pole ($-2$) extending toward $-\\infty$ (where no pole exists). Hence, the signal for this ROC is strictly Anti-Causal, turning off for $t > -1$ (specifically zero for $t > -1$).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Why is the region $-1 < \\text{Re}(s) < \\infty$ NON-CAUSAL?**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For a signal to be causal, its ROC must be of the form $\\text{Re}(s) > \\sigma_{\\max}$ where $\\sigma_{\\max}$ is the rightmost pole, extending to $+\\infty$ *without being bounded by another pole*.\n   However, here $s = +\\infty$ **is itself a pole**! Consequently, the region between $-1$ and $+\\infty$ is bounded on both sides by poles ($\\sigma = -1$ and $\\sigma = +\\infty$). Therefore, it is a **strip**, and any strip ROC corresponds to a two-sided (Non-Causal) signal!"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Verification via Time Domain:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}^{-1}\\left\\{\\frac{e^s}{(s+1)(s+2)}\\right\\} = \\left[ e^{-(t+1)} - e^{-2(t+1)} \\right] u(t+1)"
+      },
+      {
+       "t": "p",
+       "text": "The unit step $u(t+1)$ turns ON at $t = -1$. Because the signal is non-zero in the interval $-1 \\le t < 0$, it is strictly **Non-Causal**!"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Anti-Causal Existence:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For $\\text{Re}(s) < -2$, the ROC is to the left of the leftmost pole ($-2$) extending toward $-\\infty$ (where no pole exists). Hence, the signal for this ROC is strictly Anti-Causal, turning off for $t > -1$ (specifically zero for $t > -1$)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -738,30 +747,33 @@ export default {
      "tex": "\\lim_{s \\to \\infty} X(s) = \\lim_{s \\to \\infty} \\frac{e^{-s}}{s^2} = \\frac{e^{-\\infty}}{\\infty} = \\frac{0}{\\infty} = 0 \\implies \\text{NOT a pole at } +\\infty"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Asymptotic Behavior:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since the numerator has $e^{-s}$, as $s \\to +\\infty$, $e^{-s} \\to 0$ exponentially fast. Thus $\\lim_{s \\to \\infty} X(s) = 0$, confirming that $s = +\\infty$ is a zero of infinite order, not a pole."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Time-Domain Delay:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$e^{-s}$ corresponds to a time delay of $t_0 = 1$ second. This pushes step functions to $u(t-1)$, which begins at $t = +1 > 0$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Asymptotic Behavior:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since the numerator has $e^{-s}$, as $s \\to +\\infty$, $e^{-s} \\to 0$ exponentially fast. Thus $\\lim_{s \\to \\infty} X(s) = 0$, confirming that $s = +\\infty$ is a zero of infinite order, not a pole."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Time-Domain Delay:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$e^{-s}$ corresponds to a time delay of $t_0 = 1$ second. This pushes step functions to $u(t-1)$, which begins at $t = +1 > 0$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -808,38 +820,41 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Why does a Causal signal exist here?**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because $s = +\\infty$ is NOT a pole. The rightmost pole of the entire system is $s = -1$. Therefore, the region $\\text{Re}(s) > -1$ is unbounded to the right and contains $+\\infty$. Thus, it represents a valid **Causal** signal:"
-    },
-    {
-     "t": "math",
-     "tex": "x(t) = \\left[ e^{-(t-1)} - e^{-2(t-1)} \\right] u(t-1)"
-    },
-    {
-     "t": "p",
-     "text": "Since $u(t-1) = 0$ for all $t < 1$, $x(t) = 0$ for all $t < 0$, satisfying the strict causality condition!"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Why does NO Anti-Causal signal exist?**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "To be anti-causal, the ROC must extend to $-\\infty$. But here $s = -\\infty$ is a pole! Hence the region $-\\infty < \\text{Re}(s) < -2$ is a bounded strip, making that signal two-sided (Non-Causal).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Why does a Causal signal exist here?**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Because $s = +\\infty$ is NOT a pole. The rightmost pole of the entire system is $s = -1$. Therefore, the region $\\text{Re}(s) > -1$ is unbounded to the right and contains $+\\infty$. Thus, it represents a valid **Causal** signal:"
+      },
+      {
+       "t": "math",
+       "tex": "x(t) = \\left[ e^{-(t-1)} - e^{-2(t-1)} \\right] u(t-1)"
+      },
+      {
+       "t": "p",
+       "text": "Since $u(t-1) = 0$ for all $t < 1$, $x(t) = 0$ for all $t < 0$, satisfying the strict causality condition!"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Why does NO Anti-Causal signal exist?**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "To be anti-causal, the ROC must extend to $-\\infty$. But here $s = -\\infty$ is a pole! Hence the region $-\\infty < \\text{Re}(s) < -2$ is a bounded strip, making that signal two-sided (Non-Causal)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -913,29 +928,28 @@ export default {
      "tex": "\\text{Conclusion: ALL valid ROCs are strips bounded between poles} \\implies x(t) \\text{ CANNOT be causal or anti-causal!}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Time-Domain Proof of Inherent Non-Causality:**\nExpanding the numerator:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{e^s}{(s+1)(s+2)} - \\frac{e^{-s}}{(s+1)(s+2)}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "The $e^s$ term forces a time-advance ($t \\to t+1$), creating non-zero components for $t \\in [-1, 0]$. This destroys **causality**.",
-      "The $e^{-s}$ term forces a time-delay ($t \\to t-1$), creating non-zero components for $t > 1$. This destroys **anti-causality**.",
-      "Therefore, regardless of which pole boundaries enclose the ROC, the resulting time-domain signal is non-zero for both positive and negative time. The signal is strictly and unavoidably **Non-Causal**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Time-Domain Proof of Inherent Non-Causality:**\nExpanding the numerator:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{e^s}{(s+1)(s+2)} - \\frac{e^{-s}}{(s+1)(s+2)}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "The $e^s$ term forces a time-advance ($t \\to t+1$), creating non-zero components for $t \\in [-1, 0]$. This destroys **causality**.",
+        "The $e^{-s}$ term forces a time-delay ($t \\to t-1$), creating non-zero components for $t > 1$. This destroys **anti-causality**.",
+        "Therefore, regardless of which pole boundaries enclose the ROC, the resulting time-domain signal is non-zero for both positive and negative time. The signal is strictly and unavoidably **Non-Causal**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -992,23 +1006,22 @@ export default {
      "tex": "\\implies h(t) \\not\\to \\text{causal} \\implies \\text{System is SURELY NON-CAUSAL!}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Master Rule for LTI Systems with Exponential Numerators:**\nGiven $H(s) = e^{s t_0} H_{\\text{rational}}(s)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $t_0 > 0$ (time-advance): The numerator creates a pole at $s = +\\infty$. An LTI system described by this transfer function **can NEVER be causal**, because $h(t) = h_{\\text{rational}}(t + t_0)$ produces an output $t_0$ seconds before the input arrives.",
-      "Thus, even if all finite poles lie in the open left-half plane, the system is **surely non-causal**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Master Rule for LTI Systems with Exponential Numerators:**\nGiven $H(s) = e^{s t_0} H_{\\text{rational}}(s)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $t_0 > 0$ (time-advance): The numerator creates a pole at $s = +\\infty$. An LTI system described by this transfer function **can NEVER be causal**, because $h(t) = h_{\\text{rational}}(t + t_0)$ produces an output $t_0$ seconds before the input arrives.",
+        "Thus, even if all finite poles lie in the open left-half plane, the system is **surely non-causal**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1066,19 +1079,22 @@ export default {
      "tex": "\\text{ROCs: } -\\infty < \\text{Re}(s) < -2 \\quad \\text{and} \\quad -2 < \\text{Re}(s) < +\\infty \\implies \\text{Both are Strips (Non-Causal)}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Why does $\\delta'(t)$ make the signal non-causal?**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The derivative of the Dirac impulse $\\delta'(t)$ is an odd doublet centered at $t = 0$. Its energy/support is distributed symmetrically across $t = 0^-$ and $t = 0^+$. Because $\\delta'(t)$ is strictly non-zero in any neighborhood $(- \\epsilon, 0)$, it violates strict causality unless defined under unilateral transforms where initial conditions are handled at $0^-$. Under the bilateral Laplace transform, improper fractions possessing poles at both $+\\infty$ and $-\\infty$ generate strips, yielding non-causal sequences.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Why does $\\delta'(t)$ make the signal non-causal?**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The derivative of the Dirac impulse $\\delta'(t)$ is an odd doublet centered at $t = 0$. Its energy/support is distributed symmetrically across $t = 0^-$ and $t = 0^+$. Because $\\delta'(t)$ is strictly non-zero in any neighborhood $(- \\epsilon, 0)$, it violates strict causality unless defined under unilateral transforms where initial conditions are handled at $0^-$. Under the bilateral Laplace transform, improper fractions possessing poles at both $+\\infty$ and $-\\infty$ generate strips, yielding non-causal sequences."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1177,20 +1193,23 @@ export default {
      "text": "A rectangular pulse of unit amplitude ($A = 1$) spanning strictly from $t = -1$ to $t = 0$.\n    Since $x(t) = 0$ for all $t > 0$, $x(t)$ is **Anti-Causal**."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Visual Verification:**"
-    },
-    {
-     "t": "code",
-     "text": "            x(t)\n             ^\n             | 1 +-------+\n             |   |       |\n        -----+---+-------+---------> t\n                -1       0"
-    },
-    {
-     "t": "p",
-     "text": "Because the signal is supported entirely on $[-1, 0]$ (in the negative time half-line), $x(t) = 0$ for all $t > 0$. By definition, this signal is strictly **Anti-Causal**.\nThe single pole is at $s = +\\infty$, so the ROC is to the left of this rightmost pole, covering the entire finite $s$-plane!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Visual Verification:**"
+      },
+      {
+       "t": "code",
+       "text": "            x(t)\n             ^\n             | 1 +-------+\n             |   |       |\n        -----+---+-------+---------> t\n                -1       0"
+      },
+      {
+       "t": "p",
+       "text": "Because the signal is supported entirely on $[-1, 0]$ (in the negative time half-line), $x(t) = 0$ for all $t > 0$. By definition, this signal is strictly **Anti-Causal**.\nThe single pole is at $s = +\\infty$, so the ROC is to the left of this rightmost pole, covering the entire finite $s$-plane!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1413,34 +1432,37 @@ export default {
      "tex": "x(t) = \\left[ \\frac{e^{-3t} - e^{-2t}}{t} \\right] u(t)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step-by-step resolution of minus sign:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-t\\,x(t) = (e^{-2t} - e^{-3t})u(t) \\implies x(t) = -\\frac{e^{-2t} - e^{-3t}}{t}u(t) = \\frac{e^{-3t} - e^{-2t}}{t}u(t)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Behavior at $t = 0$ (L'H\u00f4pital verification):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{t \\to 0^+} x(t) = \\lim_{t \\to 0^+} \\frac{e^{-3t} - e^{-2t}}{t} = \\lim_{t \\to 0^+} \\frac{-3e^{-3t} - (-2e^{-2t})}{1} = -3 - (-2) = -1"
-    },
-    {
-     "t": "p",
-     "text": "The function is finite and well-behaved at $t = 0$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step-by-step resolution of minus sign:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-t\\,x(t) = (e^{-2t} - e^{-3t})u(t) \\implies x(t) = -\\frac{e^{-2t} - e^{-3t}}{t}u(t) = \\frac{e^{-3t} - e^{-2t}}{t}u(t)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Behavior at $t = 0$ (L'H\u00f4pital verification):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{t \\to 0^+} x(t) = \\lim_{t \\to 0^+} \\frac{e^{-3t} - e^{-2t}}{t} = \\lim_{t \\to 0^+} \\frac{-3e^{-3t} - (-2e^{-2t})}{1} = -3 - (-2) = -1"
+      },
+      {
+       "t": "p",
+       "text": "The function is finite and well-behaved at $t = 0$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1937,47 +1959,46 @@ export default {
      "tex": "\\text{Base coefficient sequence: } c_k = \\left\\{ \\underset{\\uparrow}{2}, \\frac{3}{2j}, 0, 2, 0, 0, 0, 2, 0, -\\frac{3}{2j} \\right\\}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**THE CRITICAL CONTRAST WITH CTFS ($c_{13}$ Trap):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "In CTFS, $c_{13} = 0$ because continuous harmonics are distinct for all $n \\in \\mathbb{Z}$.",
-      "In DTFS, **$c_k$ is strictly periodic with period $N_0 = 10$**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{k + m N_0} = c_k \\quad \\forall m \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{13} = c_{13 - 10} = c_3 = 2 \\neq 0!"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-7} = c_{-7 + 10} = c_3 = 2!"
-    },
-    {
-     "t": "math",
-     "tex": "c_9 = c_{9 - 10} = c_{-1} = -\\frac{3}{2j}!"
-    },
-    {
-     "t": "math",
-     "tex": "c_{11} = c_{11 - 10} = c_1 = \\frac{3}{2j}!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**THE CRITICAL CONTRAST WITH CTFS ($c_{13}$ Trap):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "In CTFS, $c_{13} = 0$ because continuous harmonics are distinct for all $n \\in \\mathbb{Z}$.",
+        "In DTFS, **$c_k$ is strictly periodic with period $N_0 = 10$**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{k + m N_0} = c_k \\quad \\forall m \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{13} = c_{13 - 10} = c_3 = 2 \\neq 0!"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-7} = c_{-7 + 10} = c_3 = 2!"
+      },
+      {
+       "t": "math",
+       "tex": "c_9 = c_{9 - 10} = c_{-1} = -\\frac{3}{2j}!"
+      },
+      {
+       "t": "math",
+       "tex": "c_{11} = c_{11 - 10} = c_1 = \\frac{3}{2j}!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -2177,44 +2198,43 @@ export default {
      "text": "The chalkboard diagram explicitly displays the repetitive periodic nature of $c_k$ across $k \\in [-13, 13]$, showing identical spectral clusters repeating every $N_0 = 10$ bins."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Formal Mathematical Proof of DTFS Periodicity:**\nEvaluate $c_{k + N_0}$ using the analysis definition:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{k + N_0} = \\frac{1}{N_0} \\sum_{n = \\langle N_0 \\rangle} x[n] e^{-j (k + N_0) \\omega_0 n}"
-    },
-    {
-     "t": "p",
-     "text": "Expand the exponent using $\\omega_0 = \\frac{2\\pi}{N_0}$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j (k + N_0) \\omega_0 n} = e^{-j k \\omega_0 n} \\cdot e^{-j N_0 \\left(\\frac{2\\pi}{N_0}\\right) n} = e^{-j k \\omega_0 n} \\cdot e^{-j 2\\pi n}"
-    },
-    {
-     "t": "p",
-     "text": "For all integer sample indices $n \\in \\mathbb{Z}$, $e^{-j 2\\pi n} = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{k + N_0} = \\frac{1}{N_0} \\sum_{n = \\langle N_0 \\rangle} x[n] e^{-j k \\omega_0 n} (1) = c_k \\quad \\blacksquare"
-    },
-    {
-     "t": "p",
-     "text": "**GATE Exam Pitfall:**\nWhen asked to evaluate $\\sum_{k=-\\infty}^\\infty \\vert c_k\\vert^2$ for a DTFS signal, the answer is **infinite** because $c_k$ is periodic and non-zero over an infinite range of $k$. Parseval's relation for DTFS is strictly formulated over **one period**:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\frac{1}{N_0} \\sum_{n=\\langle N_0 \\rangle} \\vert x[n]\\vert^2 = \\sum_{k=\\langle N_0 \\rangle} \\vert c_k\\vert^2"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Formal Mathematical Proof of DTFS Periodicity:**\nEvaluate $c_{k + N_0}$ using the analysis definition:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{k + N_0} = \\frac{1}{N_0} \\sum_{n = \\langle N_0 \\rangle} x[n] e^{-j (k + N_0) \\omega_0 n}"
+      },
+      {
+       "t": "p",
+       "text": "Expand the exponent using $\\omega_0 = \\frac{2\\pi}{N_0}$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j (k + N_0) \\omega_0 n} = e^{-j k \\omega_0 n} \\cdot e^{-j N_0 \\left(\\frac{2\\pi}{N_0}\\right) n} = e^{-j k \\omega_0 n} \\cdot e^{-j 2\\pi n}"
+      },
+      {
+       "t": "p",
+       "text": "For all integer sample indices $n \\in \\mathbb{Z}$, $e^{-j 2\\pi n} = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{k + N_0} = \\frac{1}{N_0} \\sum_{n = \\langle N_0 \\rangle} x[n] e^{-j k \\omega_0 n} (1) = c_k \\quad \\blacksquare"
+      },
+      {
+       "t": "p",
+       "text": "**GATE Exam Pitfall:**\nWhen asked to evaluate $\\sum_{k=-\\infty}^\\infty \\vert c_k\\vert^2$ for a DTFS signal, the answer is **infinite** because $c_k$ is periodic and non-zero over an infinite range of $k$. Parseval's relation for DTFS is strictly formulated over **one period**:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\frac{1}{N_0} \\sum_{n=\\langle N_0 \\rangle} \\vert x[n]\\vert^2 = \\sum_{k=\\langle N_0 \\rangle} \\vert c_k\\vert^2"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -2848,52 +2868,51 @@ export default {
      "text": "Determine the bilateral Z-transform and Region of Convergence (ROC) of $x_1[n] = a^n u[n]$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Formulation of Analysis Equation"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(z) = \\sum_{n=-\\infty}^\\infty a^n u[n] z^{-n} = \\sum_{n=0}^\\infty a^n z^{-n} = \\sum_{n=0}^\\infty (a z^{-1})^n"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Summation of Infinite Geometric Series"
-    },
-    {
-     "t": "p",
-     "text": "Recall that the infinite geometric series $\\sum_{n=0}^\\infty w^n = \\frac{1}{1 - w}$ converges if and only if $\\vert w\\vert < 1$.\nHere, $w = a z^{-1} = \\frac{a}{z}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\vert a z^{-1}\\vert < 1 \\iff \\frac{\\vert a\\vert}{\\vert z\\vert} < 1 \\iff \\vert z\\vert > \\vert a\\vert"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Closed-Form Rational Expression"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(z) = \\frac{1}{1 - a z^{-1}} = \\frac{z}{z - a}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Key Takeaways:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Zero-Pole Pattern:** Single pole at $z = a$, single zero at $z = 0$.",
-      "**Causality:** The sequence is causal ($x_1[n] = 0$ for $n < 0$). The ROC is the **exterior of the circle** of radius $\\vert a\\vert$ and extends outward to include $z = \\infty$.",
-      "**Stability:** The system is BIBO stable if and only if the unit circle $\\vert z\\vert = 1$ is contained in the ROC, which requires $\\vert a\\vert < 1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Formulation of Analysis Equation"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(z) = \\sum_{n=-\\infty}^\\infty a^n u[n] z^{-n} = \\sum_{n=0}^\\infty a^n z^{-n} = \\sum_{n=0}^\\infty (a z^{-1})^n"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Summation of Infinite Geometric Series"
+      },
+      {
+       "t": "p",
+       "text": "Recall that the infinite geometric series $\\sum_{n=0}^\\infty w^n = \\frac{1}{1 - w}$ converges if and only if $\\vert w\\vert < 1$.\nHere, $w = a z^{-1} = \\frac{a}{z}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\vert a z^{-1}\\vert < 1 \\iff \\frac{\\vert a\\vert}{\\vert z\\vert} < 1 \\iff \\vert z\\vert > \\vert a\\vert"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Closed-Form Rational Expression"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(z) = \\frac{1}{1 - a z^{-1}} = \\frac{z}{z - a}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Key Takeaways:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Zero-Pole Pattern:** Single pole at $z = a$, single zero at $z = 0$.",
+        "**Causality:** The sequence is causal ($x_1[n] = 0$ for $n < 0$). The ROC is the **exterior of the circle** of radius $\\vert a\\vert$ and extends outward to include $z = \\infty$.",
+        "**Stability:** The system is BIBO stable if and only if the unit circle $\\vert z\\vert = 1$ is contained in the ROC, which requires $\\vert a\\vert < 1$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -2904,72 +2923,71 @@ export default {
      "text": "Determine the bilateral Z-transform and Region of Convergence (ROC) of $x_2[n] = -a^n u[-n-1]$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Formulation of Analysis Equation"
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = \\sum_{n=-\\infty}^\\infty \\left( -a^n u[-n-1] \\right) z^{-n} = -\\sum_{n=-\\infty}^{-1} a^n z^{-n}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Index Substitution for Summation"
-    },
-    {
-     "t": "p",
-     "text": "Let $m = -n \\implies$ as $n$ goes from $-\\infty$ to $-1$, $m$ goes from $1$ to $+\\infty$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = -\\sum_{m=1}^\\infty a^{-m} z^m = -\\sum_{m=1}^\\infty \\left( a^{-1} z \\right)^m = -\\sum_{m=1}^\\infty \\left( \\frac{z}{a} \\right)^m"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Summation of Geometric Series"
-    },
-    {
-     "t": "p",
-     "text": "Using $\\sum_{m=1}^\\infty w^m = \\frac{w}{1 - w}$ (convergent for $\\vert w\\vert < 1$):"
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = -\\frac{\\frac{z}{a}}{1 - \\frac{z}{a}} = -\\frac{z}{a - z} = \\frac{z}{z - a} = \\frac{1}{1 - a z^{-1}}"
-    },
-    {
-     "t": "p",
-     "text": "Condition for convergence:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert \\frac{z}{a} \\right\\vert < 1 \\iff \\vert z\\vert < \\vert a\\vert"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: The Supreme Non-Uniqueness Theorem"
-    },
-    {
-     "t": "p",
-     "text": "Comparing Problem 1 and Problem 2:"
-    },
-    {
-     "t": "math",
-     "tex": "a^n u[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} \\frac{z}{z - a}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
-    },
-    {
-     "t": "math",
-     "tex": "-a^n u[-n-1] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} \\frac{z}{z - a}, \\quad \\text{ROC: } \\vert z\\vert < \\vert a\\vert"
-    },
-    {
-     "t": "p",
-     "text": "**The Golden Law:** An algebraic expression $X(z)$ in the $z$-domain does NOT uniquely specify a time-domain sequence $x[n]$! The time sequence is defined uniquely **ONLY when both $X(z)$ AND its Region of Convergence (ROC) are specified**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Formulation of Analysis Equation"
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = \\sum_{n=-\\infty}^\\infty \\left( -a^n u[-n-1] \\right) z^{-n} = -\\sum_{n=-\\infty}^{-1} a^n z^{-n}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Index Substitution for Summation"
+      },
+      {
+       "t": "p",
+       "text": "Let $m = -n \\implies$ as $n$ goes from $-\\infty$ to $-1$, $m$ goes from $1$ to $+\\infty$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = -\\sum_{m=1}^\\infty a^{-m} z^m = -\\sum_{m=1}^\\infty \\left( a^{-1} z \\right)^m = -\\sum_{m=1}^\\infty \\left( \\frac{z}{a} \\right)^m"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Summation of Geometric Series"
+      },
+      {
+       "t": "p",
+       "text": "Using $\\sum_{m=1}^\\infty w^m = \\frac{w}{1 - w}$ (convergent for $\\vert w\\vert < 1$):"
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = -\\frac{\\frac{z}{a}}{1 - \\frac{z}{a}} = -\\frac{z}{a - z} = \\frac{z}{z - a} = \\frac{1}{1 - a z^{-1}}"
+      },
+      {
+       "t": "p",
+       "text": "Condition for convergence:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert \\frac{z}{a} \\right\\vert < 1 \\iff \\vert z\\vert < \\vert a\\vert"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: The Supreme Non-Uniqueness Theorem"
+      },
+      {
+       "t": "p",
+       "text": "Comparing Problem 1 and Problem 2:"
+      },
+      {
+       "t": "math",
+       "tex": "a^n u[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} \\frac{z}{z - a}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
+      },
+      {
+       "t": "math",
+       "tex": "-a^n u[-n-1] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} \\frac{z}{z - a}, \\quad \\text{ROC: } \\vert z\\vert < \\vert a\\vert"
+      },
+      {
+       "t": "p",
+       "text": "**The Golden Law:** An algebraic expression $X(z)$ in the $z$-domain does NOT uniquely specify a time-domain sequence $x[n]$! The time sequence is defined uniquely **ONLY when both $X(z)$ AND its Region of Convergence (ROC) are specified**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -2980,75 +2998,78 @@ export default {
      "text": "Determine the Z-transform and ROC of $x[n] = a^{\\vert n\\vert}$ where $\\vert a\\vert < 1$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Decomposition into Causal and Anti-Causal Components"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = a^{\\vert n\\vert} = a^n u[n] + a^{-n} u[-n-1]"
-    },
-    {
-     "t": "p",
-     "text": "Notice that for $n < 0$, $\\vert n\\vert = -n$, so $a^{\\vert n\\vert} = a^{-n} = (1/a)^n$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Transform of Each Component"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Component 1: $x_1[n] = a^n u[n] \\implies X_1(z) = \\frac{z}{z - a}$, with $\\text{ROC}_1: \\vert z\\vert > \\vert a\\vert$.",
-      "Component 2: $x_2[n] = (1/a)^n u[-n-1] = -\\left[ -(1/a)^n u[-n-1] \\right]$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using Canonical Pair 2 with parameter $b = 1/a$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = -\\frac{z}{z - 1/a} = \\frac{z}{1/a - z} = \\frac{a z}{1 - a z}, \\quad \\text{ROC}_2: \\vert z\\vert < \\vert 1/a\\vert = \\frac{1}{\\vert a\\vert}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Intersection of ROCs (The Annular Ring)"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC} = \\text{ROC}_1 \\cap \\text{ROC}_2 = \\{ \\vert z\\vert > \\vert a\\vert \\} \\cap \\left\\{ \\vert z\\vert < \\frac{1}{\\vert a\\vert} \\right\\} = \\vert a\\vert < \\vert z\\vert < \\frac{1}{\\vert a\\vert}"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\vert a\\vert < 1$, we have $\\vert a\\vert < 1 < \\frac{1}{\\vert a\\vert}$, so the intersection is non-empty and forms a valid concentric annular ring!"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Closed-Form Expression"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z}{z - a} - \\frac{z}{z - 1/a} = \\frac{1}{1 - a z^{-1}} + \\frac{a z}{1 - a z} = \\frac{(1 - a z) + a z (1 - a z^{-1})}{(1 - a z^{-1})(1 - a z)} = \\frac{1 - a^2}{(1 - a z^{-1})(1 - a z)}"
-    },
-    {
-     "t": "p",
-     "text": "In powers of $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{-(1 - a^2) z}{(z - a)(z - 1/a)}"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Trap:"
-    },
-    {
-     "t": "p",
-     "text": "If $\\vert a\\vert > 1$, then $\\vert a\\vert > 1/\\vert a\\vert \\implies$ the regions $\\vert z\\vert > \\vert a\\vert$ and $\\vert z\\vert < 1/\\vert a\\vert$ do NOT overlap $\\implies \\text{ROC} = \\emptyset \\implies$ **The Z-transform of $a^{\\vert n\\vert}$ DOES NOT EXIST for $\\vert a\\vert \\ge 1$!**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Decomposition into Causal and Anti-Causal Components"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = a^{\\vert n\\vert} = a^n u[n] + a^{-n} u[-n-1]"
+      },
+      {
+       "t": "p",
+       "text": "Notice that for $n < 0$, $\\vert n\\vert = -n$, so $a^{\\vert n\\vert} = a^{-n} = (1/a)^n$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Transform of Each Component"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Component 1: $x_1[n] = a^n u[n] \\implies X_1(z) = \\frac{z}{z - a}$, with $\\text{ROC}_1: \\vert z\\vert > \\vert a\\vert$.",
+        "Component 2: $x_2[n] = (1/a)^n u[-n-1] = -\\left[ -(1/a)^n u[-n-1] \\right]$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using Canonical Pair 2 with parameter $b = 1/a$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = -\\frac{z}{z - 1/a} = \\frac{z}{1/a - z} = \\frac{a z}{1 - a z}, \\quad \\text{ROC}_2: \\vert z\\vert < \\vert 1/a\\vert = \\frac{1}{\\vert a\\vert}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Intersection of ROCs (The Annular Ring)"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC} = \\text{ROC}_1 \\cap \\text{ROC}_2 = \\{ \\vert z\\vert > \\vert a\\vert \\} \\cap \\left\\{ \\vert z\\vert < \\frac{1}{\\vert a\\vert} \\right\\} = \\vert a\\vert < \\vert z\\vert < \\frac{1}{\\vert a\\vert}"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\vert a\\vert < 1$, we have $\\vert a\\vert < 1 < \\frac{1}{\\vert a\\vert}$, so the intersection is non-empty and forms a valid concentric annular ring!"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Closed-Form Expression"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z}{z - a} - \\frac{z}{z - 1/a} = \\frac{1}{1 - a z^{-1}} + \\frac{a z}{1 - a z} = \\frac{(1 - a z) + a z (1 - a z^{-1})}{(1 - a z^{-1})(1 - a z)} = \\frac{1 - a^2}{(1 - a z^{-1})(1 - a z)}"
+      },
+      {
+       "t": "p",
+       "text": "In powers of $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{-(1 - a^2) z}{(z - a)(z - 1/a)}"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Trap:"
+      },
+      {
+       "t": "p",
+       "text": "If $\\vert a\\vert > 1$, then $\\vert a\\vert > 1/\\vert a\\vert \\implies$ the regions $\\vert z\\vert > \\vert a\\vert$ and $\\vert z\\vert < 1/\\vert a\\vert$ do NOT overlap $\\implies \\text{ROC} = \\emptyset \\implies$ **The Z-transform of $a^{\\vert n\\vert}$ DOES NOT EXIST for $\\vert a\\vert \\ge 1$!**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3068,60 +3089,59 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Analysis of Sequence 1: Causal Finite Length"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(z) = 1 + 2z^{-1} + 3z^{-2} + 4z^{-3} = 1 + \\frac{2}{z} + \\frac{3}{z^2} + \\frac{4}{z^3} = \\frac{z^3 + 2z^2 + 3z + 4}{z^3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Singularity: As $z \\to 0$, $X_1(z) \\to \\infty$ (Pole of order 3 at $z = 0$).",
-      "As $z \\to \\infty$, $X_1(z) \\to 1 < \\infty$ (Converges at infinity).",
-      "**ROC:** Entire $z$-plane except $z = 0$ ($0 < \\vert z\\vert \\le \\infty$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Analysis of Sequence 2: Anti-Causal Finite Length"
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = 4z^3 + 3z^2 + 2z + 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Singularity: As $z \\to \\infty$, $X_2(z) \\to \\infty$ (Pole of order 3 at $z = \\infty$).",
-      "As $z \\to 0$, $X_2(z) \\to 1 < \\infty$ (Converges at origin).",
-      "**ROC:** Entire $z$-plane except $z = \\infty$ ($0 \\le \\vert z\\vert < \\infty$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Analysis of Sequence 3: Two-Sided Finite Length"
-    },
-    {
-     "t": "math",
-     "tex": "X_3(z) = 1z^2 + 2z + 3 + 4z^{-1} + 5z^{-2} = \\frac{z^4 + 2z^3 + 3z^2 + 4z + 5}{z^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "As $z \\to 0$, $X_3(z) \\to \\infty$ (due to $z^{-1}, z^{-2}$).",
-      "As $z \\to \\infty$, $X_3(z) \\to \\infty$ (due to $z^1, z^2$).",
-      "**ROC:** Entire $z$-plane except BOTH $z = 0$ and $z = \\infty$ ($0 < \\vert z\\vert < \\infty$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Analysis of Sequence 1: Causal Finite Length"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(z) = 1 + 2z^{-1} + 3z^{-2} + 4z^{-3} = 1 + \\frac{2}{z} + \\frac{3}{z^2} + \\frac{4}{z^3} = \\frac{z^3 + 2z^2 + 3z + 4}{z^3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Singularity: As $z \\to 0$, $X_1(z) \\to \\infty$ (Pole of order 3 at $z = 0$).",
+        "As $z \\to \\infty$, $X_1(z) \\to 1 < \\infty$ (Converges at infinity).",
+        "**ROC:** Entire $z$-plane except $z = 0$ ($0 < \\vert z\\vert \\le \\infty$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Analysis of Sequence 2: Anti-Causal Finite Length"
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = 4z^3 + 3z^2 + 2z + 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Singularity: As $z \\to \\infty$, $X_2(z) \\to \\infty$ (Pole of order 3 at $z = \\infty$).",
+        "As $z \\to 0$, $X_2(z) \\to 1 < \\infty$ (Converges at origin).",
+        "**ROC:** Entire $z$-plane except $z = \\infty$ ($0 \\le \\vert z\\vert < \\infty$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Analysis of Sequence 3: Two-Sided Finite Length"
+      },
+      {
+       "t": "math",
+       "tex": "X_3(z) = 1z^2 + 2z + 3 + 4z^{-1} + 5z^{-2} = \\frac{z^4 + 2z^3 + 3z^2 + 4z + 5}{z^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "As $z \\to 0$, $X_3(z) \\to \\infty$ (due to $z^{-1}, z^{-2}$).",
+        "As $z \\to \\infty$, $X_3(z) \\to \\infty$ (due to $z^1, z^2$).",
+        "**ROC:** Entire $z$-plane except BOTH $z = 0$ and $z = \\infty$ ($0 < \\vert z\\vert < \\infty$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -3992,239 +4012,238 @@ export default {
      "text": "The chalkboard works through five foundational numerical drills to derive the precise bounds on $r$ that guarantee absolute summability of $x[n] r^{-n}$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 1: Right-Sided Growing Sequence $x[n] = 2^n u[n]$ (Slide 073)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Signal:** $x[n] = 2^n u[n]$. Here $a = 2 > 1$, so $x[n]$ is not absolutely summable.",
-      "**Weighted Signal:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n] r^{-n} = 2^n u[n] r^{-n} = \\left(\\frac{2}{r}\\right)^n u[n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Convergence Condition:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The sequence is of the form $A^n u[n]$ where $A = \\frac{2}{r}$. For absolute summability, we require:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert < 1 \\implies \\left\\vert \\frac{2}{r} \\right\\vert < 1"
-    },
-    {
-     "t": "p",
-     "text": "Since $r > 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2}{r} < 1 \\implies \\boxed{r > 2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ROC Geometry:** An exterior region outside the circle of radius 2 in the complex plane."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Drill 2: Alternating Right-Sided Sequence $x[n] = (-2)^n u[n]$ (Slide 074)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Signal:** $x[n] = (-2)^n u[n]$. Base $a = -2$, magnitude $\\vert a \\vert = 2 > 1$.",
-      "**Weighted Signal:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n] r^{-n} = (-2)^n r^{-n} u[n] = \\left(-\\frac{2}{r}\\right)^n u[n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Convergence Condition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert -\\frac{2}{r} \\right\\vert < 1 \\implies \\frac{\\vert -2 \\vert}{r} < 1 \\implies \\frac{2}{r} < 1 \\implies \\boxed{r > 2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Key Takeaway:** The phase/sign of $a$ has zero effect on the convergence radius. The ROC depends solely on the magnitude $\\vert a \\vert$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Drill 3: Left-Sided Growing Sequence $x[n] = (1/2)^n u[-n-1]$ (Slide 075)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Signal:** $x[n] = (1/2)^n u[-n-1]$. Base $a = 1/2 < 1$. Left-sided sequences require $\\vert a \\vert > 1$ to converge naturally; hence $x[n]$ is not absolutely summable.",
-      "**Weighted Signal:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n] r^{-n} = \\left(\\frac{1}{2}\\right)^n r^{-n} u[-n-1] = \\left(\\frac{1}{2r}\\right)^n u[-n-1]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Convergence Condition:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The sequence is of the form $A^n u[-n-1]$ with $A = \\frac{1}{2r}$. Absolute summability requires:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert > 1 \\implies \\left\\vert \\frac{1}{2r} \\right\\vert > 1 \\implies \\frac{1}{2r} > 1 \\implies \\boxed{r < \\frac{1}{2}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ROC Geometry:** An interior disk centered at the origin of radius $1/2$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Drill 4: Left-Sided Decaying Sequence $x[n] = 2^n u[-n-1]$ (Slide 076)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Signal:** $x[n] = 2^n u[-n-1]$. Base $a = 2 > 1$. It is already naturally absolutely summable!",
-      "**Weighted Signal:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n] r^{-n} = \\left(\\frac{2}{r}\\right)^n u[-n-1]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Convergence Condition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert \\frac{2}{r} \\right\\vert > 1 \\implies \\frac{2}{r} > 1 \\implies \\boxed{r < 2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Key Takeaway:** Because $r < 2$ includes the unit circle $r = 1$, the DTFT exists naturally for this signal without any modification!"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Drill 5: The Two-Sided DC Signal $x[n] = 1^n$ (Slide 077)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Problem Statement:** Determine if there exists any positive real $r$ such that $x[n] r^{-n}$ is absolutely summable for the constant sequence $x[n] = 1 = 1^n$ for all $n \\in \\mathbb{Z}$.",
-      "**Bilateral Decomposition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 1 = u[n] + u[-n-1]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Multiply by $r^{-n}$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n] r^{-n} = 1^n r^{-n} = r^{-n} = \\underbrace{(1/r)^n u[n]}_{\\text{Right-Sided Component}} + \\underbrace{(1/r)^n u[-n-1]}_{\\text{Left-Sided Component}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Individual Components:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "For the right-sided component $(1/r)^n u[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert \\frac{1}{r} \\right\\vert < 1 \\implies \\frac{1}{r} < 1 \\implies \\mathbf{r > 1}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "For the left-sided component $(1/r)^n u[-n-1]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert \\frac{1}{r} \\right\\vert > 1 \\implies \\frac{1}{r} > 1 \\implies \\mathbf{r < 1}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Simultaneous Convergence Requirement:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For the overall sum $\\sum_{n=-\\infty}^\\infty \\vert y[n] \\vert$ to converge, $r$ must satisfy both conditions simultaneously:"
-    },
-    {
-     "t": "math",
-     "tex": "r \\in (1, \\infty) \\cap (0, 1) = \\emptyset"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Final Mathematical Conclusion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{There is NO value of } r > 0 \\text{ for which } x[n] = 1 \\text{ is absolutely summable.}}"
-    },
-    {
-     "t": "p",
-     "text": "The bilateral Z-transform of $x[n] = 1$ does **NOT exist** because its Region of Convergence is the empty set $\\emptyset$."
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE Exam Trap on Constant Signals:** Students frequently confuse the discrete impulse-response representation with the bilateral transform. While the Fourier transform of $1$ can be expressed via distributions as $2\\pi \\sum \\delta(\\omega - 2\\pi k)$, the bilateral Z-transform has **NO valid Region of Convergence (ROC = $\\emptyset$)** because the required strip of convergence has collapsed to zero width ($1 < \\vert z \\vert < 1$)."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 073 076 Convergence Drills /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Drill 1: Right-Sided Growing Sequence $x[n] = 2^n u[n]$ (Slide 073)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Signal:** $x[n] = 2^n u[n]$. Here $a = 2 > 1$, so $x[n]$ is not absolutely summable.",
+        "**Weighted Signal:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n] r^{-n} = 2^n u[n] r^{-n} = \\left(\\frac{2}{r}\\right)^n u[n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Convergence Condition:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The sequence is of the form $A^n u[n]$ where $A = \\frac{2}{r}$. For absolute summability, we require:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert < 1 \\implies \\left\\vert \\frac{2}{r} \\right\\vert < 1"
+      },
+      {
+       "t": "p",
+       "text": "Since $r > 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2}{r} < 1 \\implies \\boxed{r > 2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ROC Geometry:** An exterior region outside the circle of radius 2 in the complex plane."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Drill 2: Alternating Right-Sided Sequence $x[n] = (-2)^n u[n]$ (Slide 074)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Signal:** $x[n] = (-2)^n u[n]$. Base $a = -2$, magnitude $\\vert a \\vert = 2 > 1$.",
+        "**Weighted Signal:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n] r^{-n} = (-2)^n r^{-n} u[n] = \\left(-\\frac{2}{r}\\right)^n u[n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Convergence Condition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert -\\frac{2}{r} \\right\\vert < 1 \\implies \\frac{\\vert -2 \\vert}{r} < 1 \\implies \\frac{2}{r} < 1 \\implies \\boxed{r > 2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Key Takeaway:** The phase/sign of $a$ has zero effect on the convergence radius. The ROC depends solely on the magnitude $\\vert a \\vert$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Drill 3: Left-Sided Growing Sequence $x[n] = (1/2)^n u[-n-1]$ (Slide 075)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Signal:** $x[n] = (1/2)^n u[-n-1]$. Base $a = 1/2 < 1$. Left-sided sequences require $\\vert a \\vert > 1$ to converge naturally; hence $x[n]$ is not absolutely summable.",
+        "**Weighted Signal:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n] r^{-n} = \\left(\\frac{1}{2}\\right)^n r^{-n} u[-n-1] = \\left(\\frac{1}{2r}\\right)^n u[-n-1]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Convergence Condition:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The sequence is of the form $A^n u[-n-1]$ with $A = \\frac{1}{2r}$. Absolute summability requires:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert > 1 \\implies \\left\\vert \\frac{1}{2r} \\right\\vert > 1 \\implies \\frac{1}{2r} > 1 \\implies \\boxed{r < \\frac{1}{2}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ROC Geometry:** An interior disk centered at the origin of radius $1/2$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Drill 4: Left-Sided Decaying Sequence $x[n] = 2^n u[-n-1]$ (Slide 076)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Signal:** $x[n] = 2^n u[-n-1]$. Base $a = 2 > 1$. It is already naturally absolutely summable!",
+        "**Weighted Signal:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n] r^{-n} = \\left(\\frac{2}{r}\\right)^n u[-n-1]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Convergence Condition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert \\frac{2}{r} \\right\\vert > 1 \\implies \\frac{2}{r} > 1 \\implies \\boxed{r < 2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Key Takeaway:** Because $r < 2$ includes the unit circle $r = 1$, the DTFT exists naturally for this signal without any modification!"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Drill 5: The Two-Sided DC Signal $x[n] = 1^n$ (Slide 077)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Problem Statement:** Determine if there exists any positive real $r$ such that $x[n] r^{-n}$ is absolutely summable for the constant sequence $x[n] = 1 = 1^n$ for all $n \\in \\mathbb{Z}$.",
+        "**Bilateral Decomposition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 1 = u[n] + u[-n-1]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Multiply by $r^{-n}$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n] r^{-n} = 1^n r^{-n} = r^{-n} = \\underbrace{(1/r)^n u[n]}_{\\text{Right-Sided Component}} + \\underbrace{(1/r)^n u[-n-1]}_{\\text{Left-Sided Component}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Individual Components:**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "For the right-sided component $(1/r)^n u[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert \\frac{1}{r} \\right\\vert < 1 \\implies \\frac{1}{r} < 1 \\implies \\mathbf{r > 1}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "For the left-sided component $(1/r)^n u[-n-1]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert \\frac{1}{r} \\right\\vert > 1 \\implies \\frac{1}{r} > 1 \\implies \\mathbf{r < 1}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Simultaneous Convergence Requirement:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For the overall sum $\\sum_{n=-\\infty}^\\infty \\vert y[n] \\vert$ to converge, $r$ must satisfy both conditions simultaneously:"
+      },
+      {
+       "t": "math",
+       "tex": "r \\in (1, \\infty) \\cap (0, 1) = \\emptyset"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Final Mathematical Conclusion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{There is NO value of } r > 0 \\text{ for which } x[n] = 1 \\text{ is absolutely summable.}}"
+      },
+      {
+       "t": "p",
+       "text": "The bilateral Z-transform of $x[n] = 1$ does **NOT exist** because its Region of Convergence is the empty set $\\emptyset$."
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE Exam Trap on Constant Signals:** Students frequently confuse the discrete impulse-response representation with the bilateral transform. While the Fourier transform of $1$ can be expressed via distributions as $2\\pi \\sum \\delta(\\omega - 2\\pi k)$, the bilateral Z-transform has **NO valid Region of Convergence (ROC = $\\emptyset$)** because the required strip of convergence has collapsed to zero width ($1 < \\vert z \\vert < 1$)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -4317,68 +4336,67 @@ export default {
      "text": "Therefore, the DTFT exists if and only if the Region of Convergence (ROC) of $X(z)$ **encloses the unit circle**."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 080)"
-    },
-    {
-     "t": "p",
-     "text": "Plot the following complex points on the $z$-plane:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "(a) $z_a = 3 e^{j 30^\\circ}$",
-      "(b) $z_b = \\frac{1}{2} e^{j 120^\\circ}$",
-      "(c) $z_c = 2 e^{-j 40^\\circ}$",
-      "(d) $z_d = 5 e^{j 210^\\circ}$",
-      "(e) $z_e = -3 e^{j 60^\\circ}$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Solution:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Point (a):** $r = 3$, $\\theta = +30^\\circ$ (Quadrant I). Radial distance 3 units at $+30^\\circ$ counterclockwise from positive real axis.",
-      "**Point (b):** $r = 0.5$, $\\theta = +120^\\circ$ (Quadrant II). Inside the unit circle ($r < 1$).",
-      "**Point (c):** $r = 2$, $\\theta = -40^\\circ$ (Quadrant IV). Radial distance 2 units at $40^\\circ$ clockwise.",
-      "**Point (d):** $r = 5$, $\\theta = 210^\\circ = 210^\\circ - 360^\\circ = -150^\\circ$ (Quadrant III).",
-      "**Point (e): Handling Negative Radial Coordinates (Crucial Exam Rule):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "In complex polar coordinates $z = r e^{j\\theta}$, the radius $r = \\vert z \\vert$ **must always be strictly non-negative** ($r \\ge 0$).\n  Using Euler's identity, $-1 = e^{j 180^\\circ} = e^{-j 180^\\circ}$:"
-    },
-    {
-     "t": "math",
-     "tex": "z_e = -3 e^{j 60^\\circ} = 3 \\cdot (-1) \\cdot e^{j 60^\\circ} = 3 e^{j 180^\\circ} e^{j 60^\\circ} = 3 e^{j(180^\\circ + 60^\\circ)} = 3 e^{j 240^\\circ}"
-    },
-    {
-     "t": "p",
-     "text": "Converting to principal branch angle $\\theta \\in (-180^\\circ, 180^\\circ]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\theta = 240^\\circ - 360^\\circ = -120^\\circ"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{z_e = 3 e^{-j 120^\\circ} \\implies r = 3, \\; \\theta = -120^\\circ \\quad (\\text{Quadrant III})}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 080 Complex Coordinate Drills /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 080)"
+      },
+      {
+       "t": "p",
+       "text": "Plot the following complex points on the $z$-plane:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "(a) $z_a = 3 e^{j 30^\\circ}$",
+        "(b) $z_b = \\frac{1}{2} e^{j 120^\\circ}$",
+        "(c) $z_c = 2 e^{-j 40^\\circ}$",
+        "(d) $z_d = 5 e^{j 210^\\circ}$",
+        "(e) $z_e = -3 e^{j 60^\\circ}$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Solution:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Point (a):** $r = 3$, $\\theta = +30^\\circ$ (Quadrant I). Radial distance 3 units at $+30^\\circ$ counterclockwise from positive real axis.",
+        "**Point (b):** $r = 0.5$, $\\theta = +120^\\circ$ (Quadrant II). Inside the unit circle ($r < 1$).",
+        "**Point (c):** $r = 2$, $\\theta = -40^\\circ$ (Quadrant IV). Radial distance 2 units at $40^\\circ$ clockwise.",
+        "**Point (d):** $r = 5$, $\\theta = 210^\\circ = 210^\\circ - 360^\\circ = -150^\\circ$ (Quadrant III).",
+        "**Point (e): Handling Negative Radial Coordinates (Crucial Exam Rule):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "In complex polar coordinates $z = r e^{j\\theta}$, the radius $r = \\vert z \\vert$ **must always be strictly non-negative** ($r \\ge 0$).\n  Using Euler's identity, $-1 = e^{j 180^\\circ} = e^{-j 180^\\circ}$:"
+      },
+      {
+       "t": "math",
+       "tex": "z_e = -3 e^{j 60^\\circ} = 3 \\cdot (-1) \\cdot e^{j 60^\\circ} = 3 e^{j 180^\\circ} e^{j 60^\\circ} = 3 e^{j(180^\\circ + 60^\\circ)} = 3 e^{j 240^\\circ}"
+      },
+      {
+       "t": "p",
+       "text": "Converting to principal branch angle $\\theta \\in (-180^\\circ, 180^\\circ]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\theta = 240^\\circ - 360^\\circ = -120^\\circ"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{z_e = 3 e^{-j 120^\\circ} \\implies r = 3, \\; \\theta = -120^\\circ \\quad (\\text{Quadrant III})}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4413,240 +4431,239 @@ export default {
      "text": "4.4 Solved Blackboard Singularity Drills (Slides 082\u2013086)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem (a): $X(z) = \\frac{z^2}{(z-1)(z+2)}$ (Slide 083, BL)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Finite Poles:** Denominator $(z-1)(z+2) = 0 \\implies z = 1, z = -2$.",
-      "**Test at $z = 0$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to 0} X(z) = \\frac{0^2}{(0-1)(0+2)} = \\frac{0}{-2} = 0 \\implies \\text{Zero at } z = 0 \\text{ (NOT a pole)}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Test at $z = \\infty$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z^2}{z^2 + z - 2} = 1 \\ne \\infty \\implies \\text{Finite value (NOT a pole)}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Poles:** $\\boxed{z_p = 1, -2}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Problem (b): $X(z) = \\frac{z}{(z-1)(z+2)}$ (Slide 083, BL)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Finite Poles:** $z = 1, z = -2$.",
-      "**Test at $z = 0$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to 0} X(z) = \\frac{0}{-2} = 0 \\implies \\text{Zero at } z = 0 \\text{ (NOT a pole)}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Test at $z = \\infty$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z}{z^2} = \\lim_{z \\to \\infty} \\frac{1}{z} = 0 \\implies \\text{Zero at } z = \\infty \\text{ (NOT a pole)}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Poles:** $\\boxed{z_p = 1, -2}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Problem (c): $X(z) = \\frac{z - z^{-1}}{z - 1}$ (Slide 084, BR)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Algebraic Reduction:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z - \\frac{1}{z}}{z - 1} = \\frac{\\frac{z^2 - 1}{z}}{z - 1} = \\frac{(z - 1)(z + 1)}{z (z - 1)}"
-    },
-    {
-     "t": "p",
-     "text": "The factor $(z - 1)$ cancels identically:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z + 1}{z} = 1 + z^{-1}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of $z = 1$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to 1} X(z) = \\frac{1 + 1}{1} = 2 \\ne \\infty"
-    },
-    {
-     "t": "p",
-     "text": "The point $z = 1$ is a **removable singularity**. It is NEITHER a pole NOR a zero!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Test at $z = 0$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to 0} X(z) = \\lim_{z \\to 0} \\frac{z+1}{z} = \\frac{1}{0} = \\infty \\implies \\boxed{z = 0 \\text{ is a POLE}}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Test at $z = \\infty$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z+1}{z} = 1 \\ne \\infty \\implies \\text{NOT a pole}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Poles:** $\\boxed{z_p = 0}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Problem (d): $X(z) = \\frac{z - z^3}{z - 1}$ (Slide 085, TL)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Algebraic Reduction:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z(1 - z^2)}{z - 1} = \\frac{-z(z^2 - 1)}{z - 1} = \\frac{-z(z - 1)(z + 1)}{z - 1} = -z(z + 1)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of $z = 1$:** Common factor cancels; $\\lim_{z \\to 1} X(z) = -2 \\ne \\infty \\implies$ NOT a pole.",
-      "**Finite Roots:** At $z = 0$ and $z = -1$, $X(z) = 0 \\implies$ finite zeros.",
-      "**Test at $z \\to \\infty$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\left[ -z(z+1) \\right] = -\\infty \\implies \\boxed{z = \\infty \\text{ is a POLE}}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Poles:** $\\boxed{z_p = \\infty}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Problem (e): $X(z) = z^{-2} + z^{-1} + 1 + z + z^2$ (Slide 085, TL)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "This is a two-sided Laurent polynomial:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{1}{z^2} + \\frac{1}{z} + 1 + z + z^2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Test at $z \\to 0$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to 0} X(z) = \\lim_{z \\to 0} \\left( \\frac{1}{0^2} + \\frac{1}{0} + 1 + 0 + 0 \\right) = \\infty \\implies \\boxed{z = 0 \\text{ is a pole}}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Test at $z \\to \\infty$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\left( 0 + 0 + 1 + \\infty + \\infty^2 \\right) = \\infty \\implies \\boxed{z = \\infty \\text{ is a pole}}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Poles:** $\\boxed{z_p = 0 \\text{ and } z_p = \\infty}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Problem (f): $X(z) = 1 + z + z^2$ (Slide 086, TR)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Non-causal / left-sided polynomial containing strictly non-negative powers of $z$:",
-      "At $z \\to 0$: $\\lim_{z \\to 0} (1 + 0 + 0) = 1 \\ne \\infty \\implies$ NOT a pole.",
-      "At $z \\to \\infty$: $\\lim_{z \\to \\infty} (1 + \\infty + \\infty^2) = \\infty \\implies \\boxed{z = \\infty \\text{ is a pole}}$.",
-      "**Poles:** $\\boxed{z_p = \\infty}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Problem (g): $X(z) = z^{-2} + z^{-1} + 1 = \\frac{1}{z^2} + \\frac{1}{z} + 1$ (Slide 086, TR)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Causal / right-sided polynomial containing strictly negative powers of $z$:",
-      "At $z \\to 0$: $\\lim_{z \\to 0} (\\frac{1}{0} + \\dots) = \\infty \\implies \\boxed{z = 0 \\text{ is a pole}}$.",
-      "At $z \\to \\infty$: $\\lim_{z \\to \\infty} (0 + 0 + 1) = 1 \\ne \\infty \\implies$ NOT a pole.",
-      "**Poles:** $\\boxed{z_p = 0}$."
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**Laurent Polynomial Singularity Rule for GATE:**\n- Strictly causal finite sequences ($x[n]$ non-zero only for $n \\ge 0$) have poles **only at $z = 0$**.\n- Strictly anti-causal finite sequences ($x[n]$ non-zero only for $n \\le 0$) have poles **only at $z = \\infty$**.\n- Bilateral finite sequences non-zero for both positive and negative $n$ have poles at **both $z = 0$ and $z = \\infty$**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 082 086 Singularity Drills /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem (a): $X(z) = \\frac{z^2}{(z-1)(z+2)}$ (Slide 083, BL)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Finite Poles:** Denominator $(z-1)(z+2) = 0 \\implies z = 1, z = -2$.",
+        "**Test at $z = 0$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to 0} X(z) = \\frac{0^2}{(0-1)(0+2)} = \\frac{0}{-2} = 0 \\implies \\text{Zero at } z = 0 \\text{ (NOT a pole)}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Test at $z = \\infty$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z^2}{z^2 + z - 2} = 1 \\ne \\infty \\implies \\text{Finite value (NOT a pole)}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Poles:** $\\boxed{z_p = 1, -2}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Problem (b): $X(z) = \\frac{z}{(z-1)(z+2)}$ (Slide 083, BL)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Finite Poles:** $z = 1, z = -2$.",
+        "**Test at $z = 0$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to 0} X(z) = \\frac{0}{-2} = 0 \\implies \\text{Zero at } z = 0 \\text{ (NOT a pole)}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Test at $z = \\infty$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z}{z^2} = \\lim_{z \\to \\infty} \\frac{1}{z} = 0 \\implies \\text{Zero at } z = \\infty \\text{ (NOT a pole)}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Poles:** $\\boxed{z_p = 1, -2}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Problem (c): $X(z) = \\frac{z - z^{-1}}{z - 1}$ (Slide 084, BR)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Algebraic Reduction:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z - \\frac{1}{z}}{z - 1} = \\frac{\\frac{z^2 - 1}{z}}{z - 1} = \\frac{(z - 1)(z + 1)}{z (z - 1)}"
+      },
+      {
+       "t": "p",
+       "text": "The factor $(z - 1)$ cancels identically:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z + 1}{z} = 1 + z^{-1}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of $z = 1$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to 1} X(z) = \\frac{1 + 1}{1} = 2 \\ne \\infty"
+      },
+      {
+       "t": "p",
+       "text": "The point $z = 1$ is a **removable singularity**. It is NEITHER a pole NOR a zero!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Test at $z = 0$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to 0} X(z) = \\lim_{z \\to 0} \\frac{z+1}{z} = \\frac{1}{0} = \\infty \\implies \\boxed{z = 0 \\text{ is a POLE}}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Test at $z = \\infty$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z+1}{z} = 1 \\ne \\infty \\implies \\text{NOT a pole}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Poles:** $\\boxed{z_p = 0}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Problem (d): $X(z) = \\frac{z - z^3}{z - 1}$ (Slide 085, TL)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Algebraic Reduction:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z(1 - z^2)}{z - 1} = \\frac{-z(z^2 - 1)}{z - 1} = \\frac{-z(z - 1)(z + 1)}{z - 1} = -z(z + 1)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of $z = 1$:** Common factor cancels; $\\lim_{z \\to 1} X(z) = -2 \\ne \\infty \\implies$ NOT a pole.",
+        "**Finite Roots:** At $z = 0$ and $z = -1$, $X(z) = 0 \\implies$ finite zeros.",
+        "**Test at $z \\to \\infty$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\left[ -z(z+1) \\right] = -\\infty \\implies \\boxed{z = \\infty \\text{ is a POLE}}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Poles:** $\\boxed{z_p = \\infty}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Problem (e): $X(z) = z^{-2} + z^{-1} + 1 + z + z^2$ (Slide 085, TL)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "This is a two-sided Laurent polynomial:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{1}{z^2} + \\frac{1}{z} + 1 + z + z^2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Test at $z \\to 0$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to 0} X(z) = \\lim_{z \\to 0} \\left( \\frac{1}{0^2} + \\frac{1}{0} + 1 + 0 + 0 \\right) = \\infty \\implies \\boxed{z = 0 \\text{ is a pole}}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Test at $z \\to \\infty$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\left( 0 + 0 + 1 + \\infty + \\infty^2 \\right) = \\infty \\implies \\boxed{z = \\infty \\text{ is a pole}}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Poles:** $\\boxed{z_p = 0 \\text{ and } z_p = \\infty}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Problem (f): $X(z) = 1 + z + z^2$ (Slide 086, TR)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Non-causal / left-sided polynomial containing strictly non-negative powers of $z$:",
+        "At $z \\to 0$: $\\lim_{z \\to 0} (1 + 0 + 0) = 1 \\ne \\infty \\implies$ NOT a pole.",
+        "At $z \\to \\infty$: $\\lim_{z \\to \\infty} (1 + \\infty + \\infty^2) = \\infty \\implies \\boxed{z = \\infty \\text{ is a pole}}$.",
+        "**Poles:** $\\boxed{z_p = \\infty}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Problem (g): $X(z) = z^{-2} + z^{-1} + 1 = \\frac{1}{z^2} + \\frac{1}{z} + 1$ (Slide 086, TR)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Causal / right-sided polynomial containing strictly negative powers of $z$:",
+        "At $z \\to 0$: $\\lim_{z \\to 0} (\\frac{1}{0} + \\dots) = \\infty \\implies \\boxed{z = 0 \\text{ is a pole}}$.",
+        "At $z \\to \\infty$: $\\lim_{z \\to \\infty} (0 + 0 + 1) = 1 \\ne \\infty \\implies$ NOT a pole.",
+        "**Poles:** $\\boxed{z_p = 0}$."
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**Laurent Polynomial Singularity Rule for GATE:**\n- Strictly causal finite sequences ($x[n]$ non-zero only for $n \\ge 0$) have poles **only at $z = 0$**.\n- Strictly anti-causal finite sequences ($x[n]$ non-zero only for $n \\le 0$) have poles **only at $z = \\infty$**.\n- Bilateral finite sequences non-zero for both positive and negative $n$ have poles at **both $z = 0$ and $z = \\infty$**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4843,113 +4860,112 @@ export default {
      "text": "4.8 Master Exam Drill: Sampled Continuous System Pole Mapping (Slide 096)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 096)"
-    },
-    {
-     "t": "p",
-     "text": "An analog continuous-time system has the transfer function:"
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = \\frac{1}{s+2}"
-    },
-    {
-     "t": "p",
-     "text": "The signal $x(t)$ is sampled with a sampling frequency $f_s = 2\\text{ Hz}$ to form the discrete sequence $x[n] = x(n T_s)$. Find the exact pole location of the resulting discrete-time Z-transform $X(z)$."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Identify Analog Pole:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The analog pole $s_p$ is the root of the denominator of $X(s)$:"
-    },
-    {
-     "t": "math",
-     "tex": "s + 2 = 0 \\implies s_p = -2"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Determine Sampling Period $T_s$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given $f_s = 2\\text{ Hz}$:"
-    },
-    {
-     "t": "math",
-     "tex": "T_s = \\frac{1}{f_s} = \\frac{1}{2}\\text{ seconds} = 0.5\\text{ s}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Apply S-to-Z Conformal Mapping Formula:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Under impulse-invariance sampling, the continuous-time pole $s_p$ maps to the discrete-time pole $z_p$ via:"
-    },
-    {
-     "t": "math",
-     "tex": "z_p = e^{s_p T_s}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Calculate Numerical Coordinates:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z_p = e^{(-2) \\times \\left(\\frac{1}{2}\\right)} = e^{-1} = \\frac{1}{e} \\approx 0.367879"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Stability Verification:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Analog pole: $\\text{Re}(s_p) = -2 < 0 \\implies$ Strictly in the LHP (BIBO stable continuous system).",
-      "Discrete pole: $\\vert z_p \\vert = e^{-1} \\approx 0.368 < 1 \\implies$ Strictly inside the unit circle (BIBO stable discrete system)."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "**Final Output:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{z_p = e^{-1} = \\frac{1}{e}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 096 Sampled Pole Mapping /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 096)"
+      },
+      {
+       "t": "p",
+       "text": "An analog continuous-time system has the transfer function:"
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = \\frac{1}{s+2}"
+      },
+      {
+       "t": "p",
+       "text": "The signal $x(t)$ is sampled with a sampling frequency $f_s = 2\\text{ Hz}$ to form the discrete sequence $x[n] = x(n T_s)$. Find the exact pole location of the resulting discrete-time Z-transform $X(z)$."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Identify Analog Pole:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The analog pole $s_p$ is the root of the denominator of $X(s)$:"
+      },
+      {
+       "t": "math",
+       "tex": "s + 2 = 0 \\implies s_p = -2"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Determine Sampling Period $T_s$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given $f_s = 2\\text{ Hz}$:"
+      },
+      {
+       "t": "math",
+       "tex": "T_s = \\frac{1}{f_s} = \\frac{1}{2}\\text{ seconds} = 0.5\\text{ s}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Apply S-to-Z Conformal Mapping Formula:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Under impulse-invariance sampling, the continuous-time pole $s_p$ maps to the discrete-time pole $z_p$ via:"
+      },
+      {
+       "t": "math",
+       "tex": "z_p = e^{s_p T_s}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Calculate Numerical Coordinates:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z_p = e^{(-2) \\times \\left(\\frac{1}{2}\\right)} = e^{-1} = \\frac{1}{e} \\approx 0.367879"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Stability Verification:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Analog pole: $\\text{Re}(s_p) = -2 < 0 \\implies$ Strictly in the LHP (BIBO stable continuous system).",
+        "Discrete pole: $\\vert z_p \\vert = e^{-1} \\approx 0.368 < 1 \\implies$ Strictly inside the unit circle (BIBO stable discrete system)."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "**Final Output:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{z_p = e^{-1} = \\frac{1}{e}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -4996,68 +5012,67 @@ export default {
      "text": "Under standard conditions, the ROC of the linear combination is precisely the intersection $R_1 \\cap R_2$. However, **ROC expansion ($\\text{ROC} \\supset R_1 \\cap R_2$) occurs if and only if the linear combination results in a pole-zero cancellation that removes the outermost or innermost bounding pole**."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof of Pole-Zero Cancellation ROC Expansion:"
-    },
-    {
-     "t": "p",
-     "text": "Consider the two causal signals:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1[n] = a^n u[n] \\xleftrightarrow{\\mathcal{Z}} X_1(z) = \\frac{1}{1 - a z^{-1}} = \\frac{z}{z - a}, \\quad \\text{ROC}_1: \\vert z \\vert > \\vert a \\vert"
-    },
-    {
-     "t": "math",
-     "tex": "x_2[n] = a^{n-1} u[n-1] \\xleftrightarrow{\\mathcal{Z}} X_2(z) = \\frac{z^{-1}}{1 - a z^{-1}} = \\frac{1}{z - a}, \\quad \\text{ROC}_2: \\vert z \\vert > \\vert a \\vert"
-    },
-    {
-     "t": "p",
-     "text": "Both individual transforms possess a pole at $z = a$, restricting both ROCs to $\\vert z \\vert > \\vert a \\vert$. The naive intersection is:"
-    },
-    {
-     "t": "math",
-     "tex": "R_1 \\cap R_2 = \\{z : \\vert z \\vert > \\vert a \\vert\\}"
-    },
-    {
-     "t": "p",
-     "text": "Now construct the linear combination:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = x_1[n] - a x_2[n] = a^n u[n] - a \\left[ a^{n-1} u[n-1] \\right] = a^n u[n] - a^n u[n-1] = \\delta[n]"
-    },
-    {
-     "t": "p",
-     "text": "In the Z-domain:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = X_1(z) - a X_2(z) = \\frac{z}{z - a} - \\frac{a}{z - a} = \\frac{z - a}{z - a} = 1"
-    },
-    {
-     "t": "p",
-     "text": "The pole at $z = a$ is cancelled completely by the zero at $z = a$!\nFor $x[n] = \\delta[n]$, the true ROC is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC} = \\text{Entire } z\\text{-plane} \\quad (\\vert z \\vert > 0 \\text{ or all } z)"
-    },
-    {
-     "t": "p",
-     "text": "Because the entire $z$-plane is strictly larger than $\\{z : \\vert z \\vert > \\vert a \\vert\\}$, the ROC has expanded:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{ROC} \\supset R_1 \\cap R_2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Proof of ROC Expansion /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof of Pole-Zero Cancellation ROC Expansion:"
+      },
+      {
+       "t": "p",
+       "text": "Consider the two causal signals:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1[n] = a^n u[n] \\xleftrightarrow{\\mathcal{Z}} X_1(z) = \\frac{1}{1 - a z^{-1}} = \\frac{z}{z - a}, \\quad \\text{ROC}_1: \\vert z \\vert > \\vert a \\vert"
+      },
+      {
+       "t": "math",
+       "tex": "x_2[n] = a^{n-1} u[n-1] \\xleftrightarrow{\\mathcal{Z}} X_2(z) = \\frac{z^{-1}}{1 - a z^{-1}} = \\frac{1}{z - a}, \\quad \\text{ROC}_2: \\vert z \\vert > \\vert a \\vert"
+      },
+      {
+       "t": "p",
+       "text": "Both individual transforms possess a pole at $z = a$, restricting both ROCs to $\\vert z \\vert > \\vert a \\vert$. The naive intersection is:"
+      },
+      {
+       "t": "math",
+       "tex": "R_1 \\cap R_2 = \\{z : \\vert z \\vert > \\vert a \\vert\\}"
+      },
+      {
+       "t": "p",
+       "text": "Now construct the linear combination:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = x_1[n] - a x_2[n] = a^n u[n] - a \\left[ a^{n-1} u[n-1] \\right] = a^n u[n] - a^n u[n-1] = \\delta[n]"
+      },
+      {
+       "t": "p",
+       "text": "In the Z-domain:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = X_1(z) - a X_2(z) = \\frac{z}{z - a} - \\frac{a}{z - a} = \\frac{z - a}{z - a} = 1"
+      },
+      {
+       "t": "p",
+       "text": "The pole at $z = a$ is cancelled completely by the zero at $z = a$!\nFor $x[n] = \\delta[n]$, the true ROC is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC} = \\text{Entire } z\\text{-plane} \\quad (\\vert z \\vert > 0 \\text{ or all } z)"
+      },
+      {
+       "t": "p",
+       "text": "Because the entire $z$-plane is strictly larger than $\\{z : \\vert z \\vert > \\vert a \\vert\\}$, the ROC has expanded:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{ROC} \\supset R_1 \\cap R_2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5282,208 +5297,207 @@ export default {
      "text": "5.6 Detailed Derivations of High-Yield Transform Pairs"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Derivation 1: The Ramp-Weighted Sequence $n a^n u[n]$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Base Pair:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = a^n u[n] \\xleftrightarrow{\\mathcal{Z}} X(z) = \\frac{1}{1 - a z^{-1}} = \\frac{z}{z - a}, \\quad \\text{ROC}: \\vert z \\vert > \\vert a \\vert"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Apply Differentiation Property:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{n a^n u[n]\\} = -z \\frac{d}{dz} \\left[ \\frac{1}{1 - a z^{-1}} \\right]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Compute Derivative:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{dz} \\left(1 - a z^{-1}\\right)^{-1} = -(1 - a z^{-1})^{-2} \\cdot \\left(a z^{-2}\\right) = -\\frac{a z^{-2}}{\\left(1 - a z^{-1}\\right)^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Multiply by $-z$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-z \\left[ -\\frac{a z^{-2}}{\\left(1 - a z^{-1}\\right)^2} \\right] = \\frac{a z^{-1}}{\\left(1 - a z^{-1}\\right)^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Express in Positive Powers of $z$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{a z^{-1}}{\\left(1 - a z^{-1}\\right)^2} = \\frac{a/z}{\\left(\\frac{z - a}{z}\\right)^2} = \\frac{a/z}{\\frac{(z - a)^2}{z^2}} = \\frac{a z}{(z - a)^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Master Transform Pair:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{n a^n u[n] \\xleftrightarrow{\\mathcal{Z}} \\frac{a z^{-1}}{(1 - a z^{-1})^2} = \\frac{a z}{(z - a)^2}, \\quad \\text{ROC}: \\vert z \\vert > \\vert a \\vert}"
-    },
-    {
-     "t": "h4",
-     "text": "Derivation 2: Left-Sided Counterpart $-n a^n u[-n-1]$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Base Pair:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-a^n u[-n-1] \\xleftrightarrow{\\mathcal{Z}} \\frac{1}{1 - a z^{-1}} = \\frac{z}{z - a}, \\quad \\text{ROC}: \\vert z \\vert < \\vert a \\vert"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Apply Multiplication by $n$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{-n a^n u[-n-1]\\} = -z \\frac{d}{dz} \\left[ \\frac{z}{z - a} \\right] = -z \\left[ \\frac{1 \\cdot (z - a) - z \\cdot 1}{(z - a)^2} \\right] = -z \\left[ \\frac{-a}{(z - a)^2} \\right] = \\frac{a z}{(z - a)^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Master Pair:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{-n a^n u[-n-1] \\xleftrightarrow{\\mathcal{Z}} \\frac{a z}{(z - a)^2}, \\quad \\text{ROC}: \\vert z \\vert < \\vert a \\vert}"
-    },
-    {
-     "t": "h4",
-     "text": "Derivation 3: The Parabolic-Weighted Sequence $n^2 a^n u[n]$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Representation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "n^2 a^n u[n] = n \\cdot \\left( n a^n u[n] \\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Apply Differentiation Property to $Y(z) = \\frac{a z}{(z - a)^2}$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{n^2 a^n u[n]\\} = -z \\frac{d}{dz} \\left[ \\frac{a z}{(z - a)^2} \\right]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Compute Quotient Derivative:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{dz} \\left[ \\frac{a z}{(z - a)^2} \\right] = \\frac{a(z - a)^2 - a z \\cdot 2(z - a)}{(z - a)^4} = \\frac{a(z - a) - 2 a z}{(z - a)^3} = \\frac{a z - a^2 - 2 a z}{(z - a)^3} = \\frac{-a z - a^2}{(z - a)^3} = -\\frac{a(z + a)}{(z - a)^3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Multiply by $-z$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-z \\left[ -\\frac{a(z + a)}{(z - a)^3} \\right] = \\frac{a z (z + a)}{(z - a)^3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Alternative Negative-Power Representation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{a z (z + a)}{(z - a)^3} = \\frac{a z^2 (1 + a z^{-1})}{z^3 (1 - a z^{-1})^3} = \\frac{a z^{-1} (1 + a z^{-1})}{(1 - a z^{-1})^3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Master Transform Pair:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{n^2 a^n u[n] \\xleftrightarrow{\\mathcal{Z}} \\frac{a z (z + a)}{(z - a)^3} = \\frac{a z^{-1}(1 + a z^{-1})}{(1 - a z^{-1})^3}, \\quad \\text{ROC}: \\vert z \\vert > \\vert a \\vert}"
-    },
-    {
-     "t": "h4",
-     "text": "Derivation 4: Alternating Sequence $n (-a)^n u[n]$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "In the formula for $n a^n u[n]$, substitute $a \\to -a$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\left. \\frac{a z}{(z - a)^2} \\right\\vert_{a \\to -a} = \\frac{(-a) z}{(z - (-a))^2} = -\\frac{a z}{(z + a)^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Negative-Power Representation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{-a z^{-1}}{(1 + a z^{-1})^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Master Transform Pair:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{n (-a)^n u[n] \\xleftrightarrow{\\mathcal{Z}} -\\frac{a z}{(z + a)^2} = \\frac{-a z^{-1}}{(1 + a z^{-1})^2}, \\quad \\text{ROC}: \\vert z \\vert > \\vert a \\vert}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  High-Yield Transform Pairs /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Derivation 1: The Ramp-Weighted Sequence $n a^n u[n]$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Base Pair:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = a^n u[n] \\xleftrightarrow{\\mathcal{Z}} X(z) = \\frac{1}{1 - a z^{-1}} = \\frac{z}{z - a}, \\quad \\text{ROC}: \\vert z \\vert > \\vert a \\vert"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Apply Differentiation Property:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{n a^n u[n]\\} = -z \\frac{d}{dz} \\left[ \\frac{1}{1 - a z^{-1}} \\right]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Compute Derivative:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{dz} \\left(1 - a z^{-1}\\right)^{-1} = -(1 - a z^{-1})^{-2} \\cdot \\left(a z^{-2}\\right) = -\\frac{a z^{-2}}{\\left(1 - a z^{-1}\\right)^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Multiply by $-z$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-z \\left[ -\\frac{a z^{-2}}{\\left(1 - a z^{-1}\\right)^2} \\right] = \\frac{a z^{-1}}{\\left(1 - a z^{-1}\\right)^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Express in Positive Powers of $z$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{a z^{-1}}{\\left(1 - a z^{-1}\\right)^2} = \\frac{a/z}{\\left(\\frac{z - a}{z}\\right)^2} = \\frac{a/z}{\\frac{(z - a)^2}{z^2}} = \\frac{a z}{(z - a)^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Master Transform Pair:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{n a^n u[n] \\xleftrightarrow{\\mathcal{Z}} \\frac{a z^{-1}}{(1 - a z^{-1})^2} = \\frac{a z}{(z - a)^2}, \\quad \\text{ROC}: \\vert z \\vert > \\vert a \\vert}"
+      },
+      {
+       "t": "h4",
+       "text": "Derivation 2: Left-Sided Counterpart $-n a^n u[-n-1]$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Base Pair:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-a^n u[-n-1] \\xleftrightarrow{\\mathcal{Z}} \\frac{1}{1 - a z^{-1}} = \\frac{z}{z - a}, \\quad \\text{ROC}: \\vert z \\vert < \\vert a \\vert"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Apply Multiplication by $n$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{-n a^n u[-n-1]\\} = -z \\frac{d}{dz} \\left[ \\frac{z}{z - a} \\right] = -z \\left[ \\frac{1 \\cdot (z - a) - z \\cdot 1}{(z - a)^2} \\right] = -z \\left[ \\frac{-a}{(z - a)^2} \\right] = \\frac{a z}{(z - a)^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Master Pair:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{-n a^n u[-n-1] \\xleftrightarrow{\\mathcal{Z}} \\frac{a z}{(z - a)^2}, \\quad \\text{ROC}: \\vert z \\vert < \\vert a \\vert}"
+      },
+      {
+       "t": "h4",
+       "text": "Derivation 3: The Parabolic-Weighted Sequence $n^2 a^n u[n]$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Representation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "n^2 a^n u[n] = n \\cdot \\left( n a^n u[n] \\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Apply Differentiation Property to $Y(z) = \\frac{a z}{(z - a)^2}$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{n^2 a^n u[n]\\} = -z \\frac{d}{dz} \\left[ \\frac{a z}{(z - a)^2} \\right]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Compute Quotient Derivative:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{dz} \\left[ \\frac{a z}{(z - a)^2} \\right] = \\frac{a(z - a)^2 - a z \\cdot 2(z - a)}{(z - a)^4} = \\frac{a(z - a) - 2 a z}{(z - a)^3} = \\frac{a z - a^2 - 2 a z}{(z - a)^3} = \\frac{-a z - a^2}{(z - a)^3} = -\\frac{a(z + a)}{(z - a)^3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Multiply by $-z$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-z \\left[ -\\frac{a(z + a)}{(z - a)^3} \\right] = \\frac{a z (z + a)}{(z - a)^3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Alternative Negative-Power Representation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{a z (z + a)}{(z - a)^3} = \\frac{a z^2 (1 + a z^{-1})}{z^3 (1 - a z^{-1})^3} = \\frac{a z^{-1} (1 + a z^{-1})}{(1 - a z^{-1})^3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Master Transform Pair:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{n^2 a^n u[n] \\xleftrightarrow{\\mathcal{Z}} \\frac{a z (z + a)}{(z - a)^3} = \\frac{a z^{-1}(1 + a z^{-1})}{(1 - a z^{-1})^3}, \\quad \\text{ROC}: \\vert z \\vert > \\vert a \\vert}"
+      },
+      {
+       "t": "h4",
+       "text": "Derivation 4: Alternating Sequence $n (-a)^n u[n]$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "In the formula for $n a^n u[n]$, substitute $a \\to -a$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\left. \\frac{a z}{(z - a)^2} \\right\\vert_{a \\to -a} = \\frac{(-a) z}{(z - (-a))^2} = -\\frac{a z}{(z + a)^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Negative-Power Representation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{-a z^{-1}}{(1 + a z^{-1})^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Master Transform Pair:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{n (-a)^n u[n] \\xleftrightarrow{\\mathcal{Z}} -\\frac{a z}{(z + a)^2} = \\frac{-a z^{-1}}{(1 + a z^{-1})^2}, \\quad \\text{ROC}: \\vert z \\vert > \\vert a \\vert}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5558,94 +5572,93 @@ export default {
      "text": "6. Comprehensive Interactive Derivations Card Index"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Property",
-      "Time Domain Sequence $x[n]$",
-      "Z-Domain Transform $X(z)$",
-      "Region of Convergence (ROC)",
-      "Key Exam Caveat / Trap"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Complete Master Table of Discrete-Time Z-Transform Properties /b",
+     "blocks": [
+      {
+       "t": "table",
+       "header": [
+        "Property",
+        "Time Domain Sequence $x[n]$",
+        "Z-Domain Transform $X(z)$",
+        "Region of Convergence (ROC)",
+        "Key Exam Caveat / Trap"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---",
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**Linearity**",
+         "$c_1 x_1[n] + c_2 x_2[n]$",
+         "$c_1 X_1(z) + c_2 X_2(z)$",
+         "$\\supseteq R_1 \\cap R_2$",
+         "ROC expands if pole-zero cancellation removes bounding pole."
+        ],
+        [
+         "**Time Shifting**",
+         "$x[n - n_0]$",
+         "$z^{-n_0} X(z)$",
+         "$R_x \\setminus \\{0 \\text{ or } \\infty\\}$",
+         "Delays ($n_0 > 0$) introduce poles at $z=0$; advances ($n_0 < 0$) introduce poles at $z=\\infty$."
+        ],
+        [
+         "**$z$-Domain Scaling**",
+         "$a^n x[n]$",
+         "$X(z/a)$",
+         "$\\vert a \\vert R_x$",
+         "ROC radially expands by $\\vert a \\vert$; pole locations scale as $a z_p$."
+        ],
+        [
+         "**Modulation**",
+         "$e^{j\\Omega_0 n} x[n]$",
+         "$X(e^{-j\\Omega_0} z)$",
+         "$R_x$",
+         "ROC radius is completely unchanged; poles rotate by angle $+\\Omega_0$."
+        ],
+        [
+         "**Time Reversal**",
+         "$x[-n]$",
+         "$X(z^{-1})$",
+         "$1/R_x$",
+         "Inverts radius ($r \\to 1/r$); right-sided transforms into left-sided."
+        ],
+        [
+         "**Time Expansion**",
+         "$x_{(k)}[n]$",
+         "$X(z^k)$",
+         "$R_x^{1/k}$",
+         "Injects $k-1$ zeros; spawns $k$-fold rotational symmetry of poles."
+        ],
+        [
+         "**Differentiation**",
+         "$n x[n]$",
+         "$-z \\frac{d X(z)}{dz}$",
+         "$R_x$",
+         "Multiplies poles by higher order; preserves ROC radius."
+        ],
+        [
+         "**Convolution**",
+         "$x_1[n] * x_2[n]$",
+         "$X_1(z) X_2(z)$",
+         "$\\supseteq R_1 \\cap R_2$",
+         "Convolution in time becomes multiplication; ROC may expand via cancellation."
+        ],
+        [
+         "**Accumulation**",
+         "$\\sum_{k=-\\infty}^n x[k]$",
+         "$\\frac{1}{1 - z^{-1}} X(z)$",
+         "$\\supseteq R_x \\cap \\{\\vert z \\vert > 1\\}$",
+         "Adds pole at $z = 1$ on unit circle."
+        ]
+       ]
+      }
      ],
-     "align": [
-      ":---",
-      ":---",
-      ":---",
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**Linearity**",
-       "$c_1 x_1[n] + c_2 x_2[n]$",
-       "$c_1 X_1(z) + c_2 X_2(z)$",
-       "$\\supseteq R_1 \\cap R_2$",
-       "ROC expands if pole-zero cancellation removes bounding pole."
-      ],
-      [
-       "**Time Shifting**",
-       "$x[n - n_0]$",
-       "$z^{-n_0} X(z)$",
-       "$R_x \\setminus \\{0 \\text{ or } \\infty\\}$",
-       "Delays ($n_0 > 0$) introduce poles at $z=0$; advances ($n_0 < 0$) introduce poles at $z=\\infty$."
-      ],
-      [
-       "**$z$-Domain Scaling**",
-       "$a^n x[n]$",
-       "$X(z/a)$",
-       "$\\vert a \\vert R_x$",
-       "ROC radially expands by $\\vert a \\vert$; pole locations scale as $a z_p$."
-      ],
-      [
-       "**Modulation**",
-       "$e^{j\\Omega_0 n} x[n]$",
-       "$X(e^{-j\\Omega_0} z)$",
-       "$R_x$",
-       "ROC radius is completely unchanged; poles rotate by angle $+\\Omega_0$."
-      ],
-      [
-       "**Time Reversal**",
-       "$x[-n]$",
-       "$X(z^{-1})$",
-       "$1/R_x$",
-       "Inverts radius ($r \\to 1/r$); right-sided transforms into left-sided."
-      ],
-      [
-       "**Time Expansion**",
-       "$x_{(k)}[n]$",
-       "$X(z^k)$",
-       "$R_x^{1/k}$",
-       "Injects $k-1$ zeros; spawns $k$-fold rotational symmetry of poles."
-      ],
-      [
-       "**Differentiation**",
-       "$n x[n]$",
-       "$-z \\frac{d X(z)}{dz}$",
-       "$R_x$",
-       "Multiplies poles by higher order; preserves ROC radius."
-      ],
-      [
-       "**Convolution**",
-       "$x_1[n] * x_2[n]$",
-       "$X_1(z) X_2(z)$",
-       "$\\supseteq R_1 \\cap R_2$",
-       "Convolution in time becomes multiplication; ROC may expand via cancellation."
-      ],
-      [
-       "**Accumulation**",
-       "$\\sum_{k=-\\infty}^n x[k]$",
-       "$\\frac{1}{1 - z^{-1}} X(z)$",
-       "$\\supseteq R_x \\cap \\{\\vert z \\vert > 1\\}$",
-       "Adds pole at $z = 1$ on unit circle."
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "open": true
     },
     {
      "t": "h2",
@@ -7235,1961 +7248,1943 @@ export default {
      "text": "Drill 1: Pole Mapping of Sampled Analog Filter (Slides 097\u2013098)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "An analog continuous-time system has the transfer function:"
-    },
-    {
-     "t": "math",
-     "tex": "H(s) = \\frac{2s + 6}{s^2 + 6s + 8}"
-    },
-    {
-     "t": "p",
-     "text": "The impulse response $h(t)$ is sampled with a sampling rate of $f_s = 2\\text{ Hz}$ ($T_s = 1/f_s = 0.5\\text{ s}$). The resulting discrete-time system function is modeled as:"
-    },
-    {
-     "t": "math",
-     "tex": "H(z) = \\frac{2z^2 - 0.5032z}{z^2 - 0.5032z + k}"
-    },
-    {
-     "t": "p",
-     "text": "Find the exact numerical value of the parameter $k$."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Continuous-Time Pole Extraction:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Factor the continuous denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "s^2 + 6s + 8 = (s + 4)(s + 2) = 0 \\implies s_{p_1} = -4, \\quad s_{p_2} = -2"
-    },
-    {
-     "t": "p",
-     "text": "Both poles lie strictly in the open left-half of the $s$-plane ($\\text{Re}(s) < 0$)."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Impulse Invariant Conformal Mapping:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using the mapping equation $z = e^{s T_s}$ with sampling period $T_s = 0.5\\text{ s} = 1/2\\text{ s}$:"
-    },
-    {
-     "t": "math",
-     "tex": "z_{p_1} = e^{s_{p_1} T_s} = e^{-4 \\times 0.5} = e^{-2}"
-    },
-    {
-     "t": "math",
-     "tex": "z_{p_2} = e^{s_{p_2} T_s} = e^{-2 \\times 0.5} = e^{-1}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Discrete Denominator Characteristic Equation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Any monic second-order polynomial with roots $z_{p_1}$ and $z_{p_2}$ can be expanded as:"
-    },
-    {
-     "t": "math",
-     "tex": "D(z) = (z - z_{p_1})(z - z_{p_2}) = z^2 - (z_{p_1} + z_{p_2})z + (z_{p_1} \\cdot z_{p_2}) = 0"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Coefficient Identification & Numerical Evaluation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given denominator: $z^2 - 0.5032z + k = 0$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Verification of Linear Coefficient (Sum of Poles):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z_{p_1} + z_{p_2} = e^{-2} + e^{-1} \\approx 0.135335 + 0.367879 = 0.503214 \\approx 0.5032"
-    },
-    {
-     "t": "p",
-     "text": "This matches the given $-0.5032z$ coefficient perfectly!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Constant Term Determination (Product of Poles):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "k = z_{p_1} \\cdot z_{p_2} = e^{-2} \\cdot e^{-1} = e^{-(2 + 1)} = e^{-3}"
-    },
-    {
-     "t": "p",
-     "text": "Computing the exponential:"
-    },
-    {
-     "t": "math",
-     "tex": "k = e^{-3} = \\frac{1}{e^3} \\approx \\frac{1}{20.085537} \\approx \\mathbf{0.049787} \\approx \\mathbf{0.049}"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**Exam Trap Alert:**\nDo NOT attempt to map the continuous zeros to discrete zeros using $z = e^{s T_s}$! Impulse invariance preserves **poles only** ($z_p = e^{s_p T_s}$). Continuous-time zeros are **not** preserved under impulse invariance; discrete zeros arise from the partial fraction residues and sampling combinatorics. Trying to equate numerator zeros using $e^{s_z T_s}$ is a classic GATE blunder."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 097 098 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "An analog continuous-time system has the transfer function:"
+      },
+      {
+       "t": "math",
+       "tex": "H(s) = \\frac{2s + 6}{s^2 + 6s + 8}"
+      },
+      {
+       "t": "p",
+       "text": "The impulse response $h(t)$ is sampled with a sampling rate of $f_s = 2\\text{ Hz}$ ($T_s = 1/f_s = 0.5\\text{ s}$). The resulting discrete-time system function is modeled as:"
+      },
+      {
+       "t": "math",
+       "tex": "H(z) = \\frac{2z^2 - 0.5032z}{z^2 - 0.5032z + k}"
+      },
+      {
+       "t": "p",
+       "text": "Find the exact numerical value of the parameter $k$."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Continuous-Time Pole Extraction:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Factor the continuous denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "s^2 + 6s + 8 = (s + 4)(s + 2) = 0 \\implies s_{p_1} = -4, \\quad s_{p_2} = -2"
+      },
+      {
+       "t": "p",
+       "text": "Both poles lie strictly in the open left-half of the $s$-plane ($\\text{Re}(s) < 0$)."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Impulse Invariant Conformal Mapping:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using the mapping equation $z = e^{s T_s}$ with sampling period $T_s = 0.5\\text{ s} = 1/2\\text{ s}$:"
+      },
+      {
+       "t": "math",
+       "tex": "z_{p_1} = e^{s_{p_1} T_s} = e^{-4 \\times 0.5} = e^{-2}"
+      },
+      {
+       "t": "math",
+       "tex": "z_{p_2} = e^{s_{p_2} T_s} = e^{-2 \\times 0.5} = e^{-1}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Discrete Denominator Characteristic Equation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Any monic second-order polynomial with roots $z_{p_1}$ and $z_{p_2}$ can be expanded as:"
+      },
+      {
+       "t": "math",
+       "tex": "D(z) = (z - z_{p_1})(z - z_{p_2}) = z^2 - (z_{p_1} + z_{p_2})z + (z_{p_1} \\cdot z_{p_2}) = 0"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Coefficient Identification & Numerical Evaluation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given denominator: $z^2 - 0.5032z + k = 0$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Verification of Linear Coefficient (Sum of Poles):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z_{p_1} + z_{p_2} = e^{-2} + e^{-1} \\approx 0.135335 + 0.367879 = 0.503214 \\approx 0.5032"
+      },
+      {
+       "t": "p",
+       "text": "This matches the given $-0.5032z$ coefficient perfectly!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Constant Term Determination (Product of Poles):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "k = z_{p_1} \\cdot z_{p_2} = e^{-2} \\cdot e^{-1} = e^{-(2 + 1)} = e^{-3}"
+      },
+      {
+       "t": "p",
+       "text": "Computing the exponential:"
+      },
+      {
+       "t": "math",
+       "tex": "k = e^{-3} = \\frac{1}{e^3} \\approx \\frac{1}{20.085537} \\approx \\mathbf{0.049787} \\approx \\mathbf{0.049}"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**Exam Trap Alert:**\nDo NOT attempt to map the continuous zeros to discrete zeros using $z = e^{s T_s}$! Impulse invariance preserves **poles only** ($z_p = e^{s_p T_s}$). Continuous-time zeros are **not** preserved under impulse invariance; discrete zeros arise from the partial fraction residues and sampling combinatorics. Trying to equate numerator zeros using $e^{s_z T_s}$ is a classic GATE blunder."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 2: Standard Unilateral Real Exponentials (Slides 099\u2013100)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Find the Z-transform, pole locations, and ROC for:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$x_1[n] = 2^n u[n]$",
-      "$x_2[n] = (1/2)^n u[n]$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Analysis of $x_1[n] = 2^n u[n]$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_1(z) = \\sum_{n=-\\infty}^\\infty x_1[n] z^{-n} = \\sum_{n=0}^\\infty 2^n z^{-n} = \\sum_{n=0}^\\infty \\left(\\frac{2}{z}\\right)^n"
-    },
-    {
-     "t": "p",
-     "text": "Convergence condition for infinite geometric series:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert \\frac{2}{z} \\right\\vert < 1 \\iff \\mathbf{\\vert z \\vert > 2}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the closed-form sum:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(z) = \\frac{1}{1 - 2z^{-1}} = \\frac{z}{z - 2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pole:** $z = 2$ (lies outside unit circle $\\vert z \\vert = 1$).",
-      "**ROC:** $\\vert z \\vert > 2$ (exterior of circle of radius 2; excludes unit circle).",
-      "**DTFT:** Does not exist (diverges)."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Analysis of $x_2[n] = (1/2)^n u[n]$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = \\sum_{n=0}^\\infty (1/2)^n z^{-n} = \\sum_{n=0}^\\infty \\left(\\frac{1}{2z}\\right)^n"
-    },
-    {
-     "t": "p",
-     "text": "Convergence condition:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert \\frac{1}{2z} \\right\\vert < 1 \\iff \\mathbf{\\vert z \\vert > 1/2}"
-    },
-    {
-     "t": "p",
-     "text": "Closed-form expression:"
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = \\frac{1}{1 - \\frac{1}{2}z^{-1}} = \\frac{z}{z - 1/2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pole:** $z = 1/2 = 0.5$ (lies strictly inside unit circle).",
-      "**Behavior at $z \\to \\infty$:** $\\lim_{z\\to\\infty} X_2(z) = \\lim_{z\\to\\infty} \\frac{z}{z-0.5} = 1 < \\infty$. Therefore, $z = \\infty$ is an ordinary point, **not a pole**.",
-      "**ROC:** $\\frac{1}{2} < \\vert z \\vert \\le \\infty$ (includes the unit circle $\\vert z \\vert = 1$).",
-      "**DTFT:** Exists! Setting $z = e^{j\\omega}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_2(e^{j\\omega}) = \\frac{1}{1 - 0.5 e^{-j\\omega}}"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**Exam Trap Alert:**\nA causal sequence $x[n] u[n]$ has an ROC that extends outward to infinity. Check if $z = \\infty$ is a pole: for strictly proper or equal degree rational forms ($N \\le M$), $X(\\infty) = x[0] < \\infty$, so $\\infty$ is included in the ROC. If $x[n]$ had samples at $n < 0$, positive powers of $z$ would make $X(\\infty) = \\infty$, forcing $\\infty$ out of the ROC."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 099 100 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Find the Z-transform, pole locations, and ROC for:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$x_1[n] = 2^n u[n]$",
+        "$x_2[n] = (1/2)^n u[n]$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Analysis of $x_1[n] = 2^n u[n]$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_1(z) = \\sum_{n=-\\infty}^\\infty x_1[n] z^{-n} = \\sum_{n=0}^\\infty 2^n z^{-n} = \\sum_{n=0}^\\infty \\left(\\frac{2}{z}\\right)^n"
+      },
+      {
+       "t": "p",
+       "text": "Convergence condition for infinite geometric series:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert \\frac{2}{z} \\right\\vert < 1 \\iff \\mathbf{\\vert z \\vert > 2}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the closed-form sum:"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(z) = \\frac{1}{1 - 2z^{-1}} = \\frac{z}{z - 2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pole:** $z = 2$ (lies outside unit circle $\\vert z \\vert = 1$).",
+        "**ROC:** $\\vert z \\vert > 2$ (exterior of circle of radius 2; excludes unit circle).",
+        "**DTFT:** Does not exist (diverges)."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Analysis of $x_2[n] = (1/2)^n u[n]$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = \\sum_{n=0}^\\infty (1/2)^n z^{-n} = \\sum_{n=0}^\\infty \\left(\\frac{1}{2z}\\right)^n"
+      },
+      {
+       "t": "p",
+       "text": "Convergence condition:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert \\frac{1}{2z} \\right\\vert < 1 \\iff \\mathbf{\\vert z \\vert > 1/2}"
+      },
+      {
+       "t": "p",
+       "text": "Closed-form expression:"
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = \\frac{1}{1 - \\frac{1}{2}z^{-1}} = \\frac{z}{z - 1/2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pole:** $z = 1/2 = 0.5$ (lies strictly inside unit circle).",
+        "**Behavior at $z \\to \\infty$:** $\\lim_{z\\to\\infty} X_2(z) = \\lim_{z\\to\\infty} \\frac{z}{z-0.5} = 1 < \\infty$. Therefore, $z = \\infty$ is an ordinary point, **not a pole**.",
+        "**ROC:** $\\frac{1}{2} < \\vert z \\vert \\le \\infty$ (includes the unit circle $\\vert z \\vert = 1$).",
+        "**DTFT:** Exists! Setting $z = e^{j\\omega}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_2(e^{j\\omega}) = \\frac{1}{1 - 0.5 e^{-j\\omega}}"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**Exam Trap Alert:**\nA causal sequence $x[n] u[n]$ has an ROC that extends outward to infinity. Check if $z = \\infty$ is a pole: for strictly proper or equal degree rational forms ($N \\le M$), $X(\\infty) = x[0] < \\infty$, so $\\infty$ is included in the ROC. If $x[n]$ had samples at $n < 0$, positive powers of $z$ would make $X(\\infty) = \\infty$, forcing $\\infty$ out of the ROC."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 3: Standard Anti-Causal Real Exponentials (Slides 101\u2013102)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Find the Z-transform, pole locations, and ROC for:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$x_3[n] = -(2)^n u[-n-1]$",
-      "$x_4[n] = -(1/2)^n u[-n-1]$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Analysis of $x_3[n] = -(2)^n u[-n-1]$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because $u[-n-1] = 1$ for $-n-1 \\ge 0 \\iff n \\le -1$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_3(z) = \\sum_{n=-\\infty}^{-1} \\left[ -(2)^n \\right] z^{-n} = -\\sum_{n=-\\infty}^{-1} (2/z)^n"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $m = -n$ ($m$ runs from $1$ to $\\infty$):"
-    },
-    {
-     "t": "math",
-     "tex": "X_3(z) = -\\sum_{m=1}^\\infty (2/z)^{-m} = -\\sum_{m=1}^\\infty \\left(\\frac{z}{2}\\right)^m"
-    },
-    {
-     "t": "p",
-     "text": "Geometric series converges if and only if:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert \\frac{z}{2} \\right\\vert < 1 \\iff \\mathbf{\\vert z \\vert < 2}"
-    },
-    {
-     "t": "p",
-     "text": "Summing with first term $A = z/2$ and ratio $\\rho = z/2$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_3(z) = - \\frac{\\frac{z}{2}}{1 - \\frac{z}{2}} = -\\frac{z}{2 - z} = \\frac{z}{z - 2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pole:** $z = 2$.",
-      "**ROC:** $\\vert z \\vert < 2$ (interior of circle of radius 2; includes unit circle $\\vert z \\vert = 1$).",
-      "**DTFT:** Exists! Because unit circle lies inside $\\vert z \\vert < 2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_3(e^{j\\omega}) = \\frac{e^{j\\omega}}{e^{j\\omega} - 2} = \\frac{1}{1 - 2 e^{-j\\omega}}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Analysis of $x_4[n] = -(1/2)^n u[-n-1]$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_4(z) = -\\sum_{m=1}^\\infty \\left(\\frac{z}{1/2}\\right)^m = -\\sum_{m=1}^\\infty (2z)^m"
-    },
-    {
-     "t": "p",
-     "text": "Convergence requires:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert 2z \\vert < 1 \\iff \\mathbf{\\vert z \\vert < 1/2}"
-    },
-    {
-     "t": "p",
-     "text": "Closed-form sum:"
-    },
-    {
-     "t": "math",
-     "tex": "X_4(z) = -\\frac{2z}{1 - 2z} = \\frac{2z}{2z - 1} = \\frac{z}{z - 1/2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pole:** $z = 1/2$.",
-      "**Behavior at $z = 0$:** $\\lim_{z\\to 0} X_4(z) = \\frac{0}{0 - 1/2} = 0 < \\infty$. Therefore, $z = 0$ is an ordinary point, **not a pole**.",
-      "**ROC:** $0 \\le \\vert z \\vert < 1/2$ (excludes the unit circle $\\vert z \\vert = 1$).",
-      "**DTFT:** Does not exist (diverges)."
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**Exam Trap: Discrete Step Function Reversal Trap:**\nIn continuous-time, the time-reversal of $u(t)$ is $u(-t)$, and their supports partition the real line cleanly at $t=0$ (except for the single point $t=0$).\nIn discrete-time, if you try $u[-n]$, the sample at $n=0$ is **doubly counted** because $u[0] = 1$ and $u[-0] = 1$!\nThus:\n$$u[n] + u[-n] = 1 + \\delta[n]$$\nTo form an exact disjoint partition of the discrete integer lattice $\\mathbb{Z}$:\n$$u[n] + u[-n-1] = 1, \\quad \\forall n \\in \\mathbb{Z}$$\nThe causal part is supported on $[0, +\\infty)$ and the anti-causal part is supported on $(-\\infty, -1]$. The anti-causal step function is ALWAYS $u[-n-1]$, NEVER $u[-n]$!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 101 102 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Find the Z-transform, pole locations, and ROC for:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$x_3[n] = -(2)^n u[-n-1]$",
+        "$x_4[n] = -(1/2)^n u[-n-1]$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Analysis of $x_3[n] = -(2)^n u[-n-1]$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Because $u[-n-1] = 1$ for $-n-1 \\ge 0 \\iff n \\le -1$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_3(z) = \\sum_{n=-\\infty}^{-1} \\left[ -(2)^n \\right] z^{-n} = -\\sum_{n=-\\infty}^{-1} (2/z)^n"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $m = -n$ ($m$ runs from $1$ to $\\infty$):"
+      },
+      {
+       "t": "math",
+       "tex": "X_3(z) = -\\sum_{m=1}^\\infty (2/z)^{-m} = -\\sum_{m=1}^\\infty \\left(\\frac{z}{2}\\right)^m"
+      },
+      {
+       "t": "p",
+       "text": "Geometric series converges if and only if:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert \\frac{z}{2} \\right\\vert < 1 \\iff \\mathbf{\\vert z \\vert < 2}"
+      },
+      {
+       "t": "p",
+       "text": "Summing with first term $A = z/2$ and ratio $\\rho = z/2$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_3(z) = - \\frac{\\frac{z}{2}}{1 - \\frac{z}{2}} = -\\frac{z}{2 - z} = \\frac{z}{z - 2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pole:** $z = 2$.",
+        "**ROC:** $\\vert z \\vert < 2$ (interior of circle of radius 2; includes unit circle $\\vert z \\vert = 1$).",
+        "**DTFT:** Exists! Because unit circle lies inside $\\vert z \\vert < 2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_3(e^{j\\omega}) = \\frac{e^{j\\omega}}{e^{j\\omega} - 2} = \\frac{1}{1 - 2 e^{-j\\omega}}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Analysis of $x_4[n] = -(1/2)^n u[-n-1]$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_4(z) = -\\sum_{m=1}^\\infty \\left(\\frac{z}{1/2}\\right)^m = -\\sum_{m=1}^\\infty (2z)^m"
+      },
+      {
+       "t": "p",
+       "text": "Convergence requires:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert 2z \\vert < 1 \\iff \\mathbf{\\vert z \\vert < 1/2}"
+      },
+      {
+       "t": "p",
+       "text": "Closed-form sum:"
+      },
+      {
+       "t": "math",
+       "tex": "X_4(z) = -\\frac{2z}{1 - 2z} = \\frac{2z}{2z - 1} = \\frac{z}{z - 1/2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Pole:** $z = 1/2$.",
+        "**Behavior at $z = 0$:** $\\lim_{z\\to 0} X_4(z) = \\frac{0}{0 - 1/2} = 0 < \\infty$. Therefore, $z = 0$ is an ordinary point, **not a pole**.",
+        "**ROC:** $0 \\le \\vert z \\vert < 1/2$ (excludes the unit circle $\\vert z \\vert = 1$).",
+        "**DTFT:** Does not exist (diverges)."
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**Exam Trap: Discrete Step Function Reversal Trap:**\nIn continuous-time, the time-reversal of $u(t)$ is $u(-t)$, and their supports partition the real line cleanly at $t=0$ (except for the single point $t=0$).\nIn discrete-time, if you try $u[-n]$, the sample at $n=0$ is **doubly counted** because $u[0] = 1$ and $u[-0] = 1$!\nThus:\n$$u[n] + u[-n] = 1 + \\delta[n]$$\nTo form an exact disjoint partition of the discrete integer lattice $\\mathbb{Z}$:\n$$u[n] + u[-n-1] = 1, \\quad \\forall n \\in \\mathbb{Z}$$\nThe causal part is supported on $[0, +\\infty)$ and the anti-causal part is supported on $(-\\infty, -1]$. The anti-causal step function is ALWAYS $u[-n-1]$, NEVER $u[-n]$!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 4: Negative Pole Alternating Sequences (Slide 103)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Find the transforms and ROCs for the four negative-base variations:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$x_5[n] = (-2)^n u[n]$",
-      "$x_6[n] = (-1/2)^n u[n]$",
-      "$x_7[n] = -(-2)^n u[-n-1]$",
-      "$x_8[n] = -(-1/2)^n u[-n-1]$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "Using the master formulas with $a = -2$ and $a = -1/2$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$x_5[n] = (-2)^n u[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_5(z) = \\frac{z}{z - (-2)} = \\mathbf{\\frac{z}{z + 2}}, \\quad \\text{ROC: } \\vert z \\vert > \\vert -2 \\vert \\implies \\mathbf{\\vert z \\vert > 2}"
-    },
-    {
-     "t": "p",
-     "text": "Pole is at $z = -2$ (negative real axis). ROC boundary is $\\vert z \\vert = 2$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "$x_6[n] = (-1/2)^n u[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_6(z) = \\frac{z}{z - (-1/2)} = \\mathbf{\\frac{z}{z + 1/2}}, \\quad \\text{ROC: } \\vert z \\vert > \\vert -1/2 \\vert \\implies \\mathbf{\\vert z \\vert > 1/2}"
-    },
-    {
-     "t": "p",
-     "text": "Pole is at $z = -0.5$. Since $1/2 < 1$, unit circle is in ROC $\\implies$ DTFT exists."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "$x_7[n] = -(-2)^n u[-n-1]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_7(z) = \\mathbf{\\frac{z}{z + 2}}, \\quad \\text{ROC: } \\vert z \\vert < \\vert -2 \\vert \\implies \\mathbf{\\vert z \\vert < 2}"
-    },
-    {
-     "t": "p",
-     "text": "Pole at $z = -2$. Unit circle is in ROC $\\implies$ DTFT exists."
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "$x_8[n] = -(-1/2)^n u[-n-1]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_8(z) = \\mathbf{\\frac{z}{z + 1/2}}, \\quad \\text{ROC: } \\vert z \\vert < \\vert -1/2 \\vert \\implies \\mathbf{\\vert z \\vert < 1/2}"
-    },
-    {
-     "t": "p",
-     "text": "Pole at $z = -0.5$. Unit circle is NOT in ROC $\\implies$ DTFT diverges."
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**Exam Trap Alert:**\nThe ROC inequality ALWAYS depends on the **modulus** $\\vert a \\vert$, NEVER on the signed value $a$! Writing $\\vert z \\vert > -2$ or $\\vert z \\vert < -2$ is mathematically nonsensical because absolute values are non-negative. The pole location is signed ($z_p = -2$), but the ROC boundary circle radius is strictly positive ($r = \\vert z_p \\vert = 2$)."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 103 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Find the transforms and ROCs for the four negative-base variations:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$x_5[n] = (-2)^n u[n]$",
+        "$x_6[n] = (-1/2)^n u[n]$",
+        "$x_7[n] = -(-2)^n u[-n-1]$",
+        "$x_8[n] = -(-1/2)^n u[-n-1]$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "Using the master formulas with $a = -2$ and $a = -1/2$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$x_5[n] = (-2)^n u[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_5(z) = \\frac{z}{z - (-2)} = \\mathbf{\\frac{z}{z + 2}}, \\quad \\text{ROC: } \\vert z \\vert > \\vert -2 \\vert \\implies \\mathbf{\\vert z \\vert > 2}"
+      },
+      {
+       "t": "p",
+       "text": "Pole is at $z = -2$ (negative real axis). ROC boundary is $\\vert z \\vert = 2$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "$x_6[n] = (-1/2)^n u[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_6(z) = \\frac{z}{z - (-1/2)} = \\mathbf{\\frac{z}{z + 1/2}}, \\quad \\text{ROC: } \\vert z \\vert > \\vert -1/2 \\vert \\implies \\mathbf{\\vert z \\vert > 1/2}"
+      },
+      {
+       "t": "p",
+       "text": "Pole is at $z = -0.5$. Since $1/2 < 1$, unit circle is in ROC $\\implies$ DTFT exists."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "$x_7[n] = -(-2)^n u[-n-1]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_7(z) = \\mathbf{\\frac{z}{z + 2}}, \\quad \\text{ROC: } \\vert z \\vert < \\vert -2 \\vert \\implies \\mathbf{\\vert z \\vert < 2}"
+      },
+      {
+       "t": "p",
+       "text": "Pole at $z = -2$. Unit circle is in ROC $\\implies$ DTFT exists."
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "$x_8[n] = -(-1/2)^n u[-n-1]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_8(z) = \\mathbf{\\frac{z}{z + 1/2}}, \\quad \\text{ROC: } \\vert z \\vert < \\vert -1/2 \\vert \\implies \\mathbf{\\vert z \\vert < 1/2}"
+      },
+      {
+       "t": "p",
+       "text": "Pole at $z = -0.5$. Unit circle is NOT in ROC $\\implies$ DTFT diverges."
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**Exam Trap Alert:**\nThe ROC inequality ALWAYS depends on the **modulus** $\\vert a \\vert$, NEVER on the signed value $a$! Writing $\\vert z \\vert > -2$ or $\\vert z \\vert < -2$ is mathematically nonsensical because absolute values are non-negative. The pole location is signed ($z_p = -2$), but the ROC boundary circle radius is strictly positive ($r = \\vert z_p \\vert = 2$)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 5: Anti-Causal Sequence with Missing Negative Sign (Slide 104)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Find the Z-transform and ROC for:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\left(-\\frac{1}{3}\\right)^n u[-n-1]"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Recall the canonical anti-causal transform pair:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-a^n u[-n-1] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} \\frac{z}{z - a}, \\quad \\text{ROC: } \\vert z \\vert < \\vert a \\vert"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Notice that the target signal lacks the leading negative sign:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = +\\left(-\\frac{1}{3}\\right)^n u[-n-1] = - \\left[ -\\left(-\\frac{1}{3}\\right)^n u[-n-1] \\right]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Here, the base is $a = -1/3$. The inner bracket transforms to:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\left\\{ -\\left(-\\frac{1}{3}\\right)^n u[-n-1] \\right\\} = \\frac{z}{z - (-1/3)} = \\frac{z}{z + 1/3}, \\quad \\vert z \\vert < 1/3"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Multiplying by the external factor of $-1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(z) = - \\left( \\frac{z}{z + 1/3} \\right) = \\frac{-z}{z + 1/3} = \\frac{-1}{1 + \\frac{1}{3}z^{-1}}, \\quad \\text{ROC: } \\vert z \\vert < \\frac{1}{3}}"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Chalkboard Trap:**\nMany students forget the leading $-1$ and mistakenly write $X(z) = \\frac{z}{z+1/3}$. Always check the definition: $\\sum_{n=-\\infty}^{-1} a^n z^{-n}$ evaluates to $+\\frac{z/a}{1 - z/a} = -\\frac{z}{z-a}$. Without the leading minus sign, the transform is strictly negative!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 104 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Find the Z-transform and ROC for:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\left(-\\frac{1}{3}\\right)^n u[-n-1]"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Recall the canonical anti-causal transform pair:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-a^n u[-n-1] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} \\frac{z}{z - a}, \\quad \\text{ROC: } \\vert z \\vert < \\vert a \\vert"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Notice that the target signal lacks the leading negative sign:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = +\\left(-\\frac{1}{3}\\right)^n u[-n-1] = - \\left[ -\\left(-\\frac{1}{3}\\right)^n u[-n-1] \\right]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Here, the base is $a = -1/3$. The inner bracket transforms to:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\left\\{ -\\left(-\\frac{1}{3}\\right)^n u[-n-1] \\right\\} = \\frac{z}{z - (-1/3)} = \\frac{z}{z + 1/3}, \\quad \\vert z \\vert < 1/3"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Multiplying by the external factor of $-1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(z) = - \\left( \\frac{z}{z + 1/3} \\right) = \\frac{-z}{z + 1/3} = \\frac{-1}{1 + \\frac{1}{3}z^{-1}}, \\quad \\text{ROC: } \\vert z \\vert < \\frac{1}{3}}"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Chalkboard Trap:**\nMany students forget the leading $-1$ and mistakenly write $X(z) = \\frac{z}{z+1/3}$. Always check the definition: $\\sum_{n=-\\infty}^{-1} a^n z^{-n}$ evaluates to $+\\frac{z/a}{1 - z/a} = -\\frac{z}{z-a}$. Without the leading minus sign, the transform is strictly negative!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 6: Complex Exponential Diagnostic Suite (Slides 105\u2013106)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Find the Z-transform, pole locations, and ROC for:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$x_1[n] = e^{2n} u[n]$",
-      "$x_2[n] = e^{j\\omega_0 n} u[n]$",
-      "$x_3[n] = e^{-j\\omega_0 n} u[n]$",
-      "$x_4[n] = -e^{j\\omega_0 n} u[-n-1]$",
-      "$x_5[n] = -e^{-j\\omega_0 n} u[-n-1]$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**$x_1[n] = e^{2n} u[n] = (e^2)^n u[n]$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Base $a = e^2 \\approx 7.389$."
-    },
-    {
-     "t": "math",
-     "tex": "X_1(z) = \\frac{z}{z - e^2}, \\quad \\text{ROC: } \\vert z \\vert > e^2"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**$x_2[n] = e^{j\\omega_0 n} u[n] = (e^{j\\omega_0})^n u[n]$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Base $a = e^{j\\omega_0}$. Modulus $\\vert a \\vert = \\vert e^{j\\omega_0} \\vert = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = \\frac{z}{z - e^{j\\omega_0}}, \\quad \\text{ROC: } \\vert z \\vert > 1"
-    },
-    {
-     "t": "p",
-     "text": "Pole lies exactly on the unit circle at angle $\\omega_0$. ROC is strictly outside the unit circle ($\\{z : \\vert z \\vert > 1\\}$); the unit circle itself is excluded because a pole sits on it!"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**$x_3[n] = e^{-j\\omega_0 n} u[n] = (e^{-j\\omega_0})^n u[n]$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Base $a = e^{-j\\omega_0}, \\vert a \\vert = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "X_3(z) = \\frac{z}{z - e^{-j\\omega_0}}, \\quad \\text{ROC: } \\vert z \\vert > 1"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**$x_4[n] = -e^{j\\omega_0 n} u[-n-1] = -(e^{j\\omega_0})^n u[-n-1]$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Anti-causal sequence with base $a = e^{j\\omega_0}, \\vert a \\vert = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "X_4(z) = \\frac{z}{z - e^{j\\omega_0}}, \\quad \\text{ROC: } \\vert z \\vert < 1"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**$x_5[n] = -e^{-j\\omega_0 n} u[-n-1]$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Anti-causal sequence with base $a = e^{-j\\omega_0}, \\vert a \\vert = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "X_5(z) = \\frac{z}{z - e^{-j\\omega_0}}, \\quad \\text{ROC: } \\vert z \\vert < 1"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 105 106 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Find the Z-transform, pole locations, and ROC for:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$x_1[n] = e^{2n} u[n]$",
+        "$x_2[n] = e^{j\\omega_0 n} u[n]$",
+        "$x_3[n] = e^{-j\\omega_0 n} u[n]$",
+        "$x_4[n] = -e^{j\\omega_0 n} u[-n-1]$",
+        "$x_5[n] = -e^{-j\\omega_0 n} u[-n-1]$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**$x_1[n] = e^{2n} u[n] = (e^2)^n u[n]$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Base $a = e^2 \\approx 7.389$."
+      },
+      {
+       "t": "math",
+       "tex": "X_1(z) = \\frac{z}{z - e^2}, \\quad \\text{ROC: } \\vert z \\vert > e^2"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**$x_2[n] = e^{j\\omega_0 n} u[n] = (e^{j\\omega_0})^n u[n]$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Base $a = e^{j\\omega_0}$. Modulus $\\vert a \\vert = \\vert e^{j\\omega_0} \\vert = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = \\frac{z}{z - e^{j\\omega_0}}, \\quad \\text{ROC: } \\vert z \\vert > 1"
+      },
+      {
+       "t": "p",
+       "text": "Pole lies exactly on the unit circle at angle $\\omega_0$. ROC is strictly outside the unit circle ($\\{z : \\vert z \\vert > 1\\}$); the unit circle itself is excluded because a pole sits on it!"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**$x_3[n] = e^{-j\\omega_0 n} u[n] = (e^{-j\\omega_0})^n u[n]$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Base $a = e^{-j\\omega_0}, \\vert a \\vert = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "X_3(z) = \\frac{z}{z - e^{-j\\omega_0}}, \\quad \\text{ROC: } \\vert z \\vert > 1"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**$x_4[n] = -e^{j\\omega_0 n} u[-n-1] = -(e^{j\\omega_0})^n u[-n-1]$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Anti-causal sequence with base $a = e^{j\\omega_0}, \\vert a \\vert = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "X_4(z) = \\frac{z}{z - e^{j\\omega_0}}, \\quad \\text{ROC: } \\vert z \\vert < 1"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**$x_5[n] = -e^{-j\\omega_0 n} u[-n-1]$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Anti-causal sequence with base $a = e^{-j\\omega_0}, \\vert a \\vert = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "X_5(z) = \\frac{z}{z - e^{-j\\omega_0}}, \\quad \\text{ROC: } \\vert z \\vert < 1"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 7: General Complex Exponents (Slide 107)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Find the Z-transform and ROC for:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$x_6[n] = e^{(3+2j)n} u[n]$",
-      "$x_7[n] = (3+2j)^n u[n]$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**$x_6[n] = e^{(3+2j)n} u[n] = [e^{3+2j}]^n u[n]$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Base $a = e^{3+2j} = e^3 \\cdot e^{j 2}$.\n   Modulus of base: $\\vert a \\vert = \\vert e^3 \\vert \\cdot \\vert e^{j 2} \\vert = e^3 \\cdot 1 = e^3 \\approx 20.0855$."
-    },
-    {
-     "t": "math",
-     "tex": "X_6(z) = \\frac{z}{z - e^{3+2j}}, \\quad \\text{ROC: } \\vert z \\vert > e^3"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**$x_7[n] = (3+2j)^n u[n]$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Base $a = 3 + 2j$.\n   Modulus of base: $\\vert a \\vert = \\sqrt{3^2 + 2^2} = \\sqrt{9 + 4} = \\sqrt{13} \\approx 3.60555$."
-    },
-    {
-     "t": "math",
-     "tex": "X_7(z) = \\frac{z}{z - (3+2j)}, \\quad \\text{ROC: } \\vert z \\vert > \\sqrt{13}"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Insight:**\nNotice the crucial difference between $e^{(3+2j)n}$ and $(3+2j)^n$:\n- In $e^{(3+2j)n}$, the base is $e^{3+j2}$, so the magnitude is $e^{\\text{Re}} = e^3$.\n- In $(3+2j)^n$, the base is $3+j2$, so the magnitude is $\\sqrt{3^2+2^2} = \\sqrt{13}$.\nAlways determine the absolute radial boundary by taking the modulus of the base $a$!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 107 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Find the Z-transform and ROC for:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$x_6[n] = e^{(3+2j)n} u[n]$",
+        "$x_7[n] = (3+2j)^n u[n]$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**$x_6[n] = e^{(3+2j)n} u[n] = [e^{3+2j}]^n u[n]$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Base $a = e^{3+2j} = e^3 \\cdot e^{j 2}$.\n   Modulus of base: $\\vert a \\vert = \\vert e^3 \\vert \\cdot \\vert e^{j 2} \\vert = e^3 \\cdot 1 = e^3 \\approx 20.0855$."
+      },
+      {
+       "t": "math",
+       "tex": "X_6(z) = \\frac{z}{z - e^{3+2j}}, \\quad \\text{ROC: } \\vert z \\vert > e^3"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**$x_7[n] = (3+2j)^n u[n]$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Base $a = 3 + 2j$.\n   Modulus of base: $\\vert a \\vert = \\sqrt{3^2 + 2^2} = \\sqrt{9 + 4} = \\sqrt{13} \\approx 3.60555$."
+      },
+      {
+       "t": "math",
+       "tex": "X_7(z) = \\frac{z}{z - (3+2j)}, \\quad \\text{ROC: } \\vert z \\vert > \\sqrt{13}"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Insight:**\nNotice the crucial difference between $e^{(3+2j)n}$ and $(3+2j)^n$:\n- In $e^{(3+2j)n}$, the base is $e^{3+j2}$, so the magnitude is $e^{\\text{Re}} = e^3$.\n- In $(3+2j)^n$, the base is $3+j2$, so the magnitude is $\\sqrt{3^2+2^2} = \\sqrt{13}$.\nAlways determine the absolute radial boundary by taking the modulus of the base $a$!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 8: Bilateral Symmetrical Decaying Exponential (Slides 111\u2013112)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Find the Z-transform, ROC, and DTFT for:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\left(\\frac{1}{2}\\right)^{\\vert n \\vert}"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Decompose the sequence into causal and anti-causal parts:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\left(\\frac{1}{2}\\right)^n u[n] + \\left(\\frac{1}{2}\\right)^{-n} u[-n-1] = \\left(\\frac{1}{2}\\right)^n u[n] + 2^n u[-n-1]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Compute the Z-transform of each component:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\left\\{ \\left(\\frac{1}{2}\\right)^n u[n] \\right\\} = \\frac{z}{z - 1/2}, \\quad \\text{ROC}_1: \\vert z \\vert > \\frac{1}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{2^n u[-n-1]\\} = \\mathcal{Z}\\left\\{ -[-2^n u[-n-1]] \\right\\} = -\\frac{z}{z - 2}, \\quad \\text{ROC}_2: \\vert z \\vert < 2"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Combine using linearity:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z}{z - 1/2} - \\frac{z}{z - 2} = \\frac{z(z - 2) - z(z - 1/2)}{(z - 1/2)(z - 2)} = \\frac{-1.5 z}{(z - 1/2)(z - 2)}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "ROC is the intersection:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC} = \\left\\{ \\vert z \\vert > 1/2 \\right\\} \\cap \\left\\{ \\vert z \\vert < 2 \\right\\} = \\mathbf{\\frac{1}{2} < \\vert z \\vert < 2}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Since $1/2 < 1 < 2$, the unit circle lies inside the ROC. The DTFT is obtained by substituting $z = e^{j\\omega}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{e^{j\\omega}}{e^{j\\omega} - 1/2} - \\frac{e^{j\\omega}}{e^{j\\omega} - 2} = \\frac{0.75}{1.25 - \\cos\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 111 112 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Find the Z-transform, ROC, and DTFT for:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\left(\\frac{1}{2}\\right)^{\\vert n \\vert}"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Decompose the sequence into causal and anti-causal parts:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\left(\\frac{1}{2}\\right)^n u[n] + \\left(\\frac{1}{2}\\right)^{-n} u[-n-1] = \\left(\\frac{1}{2}\\right)^n u[n] + 2^n u[-n-1]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Compute the Z-transform of each component:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\left\\{ \\left(\\frac{1}{2}\\right)^n u[n] \\right\\} = \\frac{z}{z - 1/2}, \\quad \\text{ROC}_1: \\vert z \\vert > \\frac{1}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{2^n u[-n-1]\\} = \\mathcal{Z}\\left\\{ -[-2^n u[-n-1]] \\right\\} = -\\frac{z}{z - 2}, \\quad \\text{ROC}_2: \\vert z \\vert < 2"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Combine using linearity:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z}{z - 1/2} - \\frac{z}{z - 2} = \\frac{z(z - 2) - z(z - 1/2)}{(z - 1/2)(z - 2)} = \\frac{-1.5 z}{(z - 1/2)(z - 2)}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "ROC is the intersection:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC} = \\left\\{ \\vert z \\vert > 1/2 \\right\\} \\cap \\left\\{ \\vert z \\vert < 2 \\right\\} = \\mathbf{\\frac{1}{2} < \\vert z \\vert < 2}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Since $1/2 < 1 < 2$, the unit circle lies inside the ROC. The DTFT is obtained by substituting $z = e^{j\\omega}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{e^{j\\omega}}{e^{j\\omega} - 1/2} - \\frac{e^{j\\omega}}{e^{j\\omega} - 2} = \\frac{0.75}{1.25 - \\cos\\omega}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 9: Bilateral Symmetrical Growing Exponential (Slide 113)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Find the Z-transform and ROC for:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 2^{\\vert n \\vert}"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Decompose into causal and anti-causal parts:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 2^n u[n] + 2^{-n} u[-n-1] = 2^n u[n] + (1/2)^n u[-n-1]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Component transforms:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{2^n u[n]\\} = \\frac{z}{z-2}, \\quad \\text{ROC}_1: \\vert z \\vert > 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\left\\{(1/2)^n u[-n-1]\\right\\} = -\\frac{z}{z - 1/2}, \\quad \\text{ROC}_2: \\vert z \\vert < \\frac{1}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "ROC Intersection:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC} = \\left\\{ \\vert z \\vert > 2 \\right\\} \\cap \\left\\{ \\vert z \\vert < 1/2 \\right\\} = \\emptyset"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Since the intersection is empty, **$X(z)$ Does Not Exist (D.N.E.)**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 113 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Find the Z-transform and ROC for:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 2^{\\vert n \\vert}"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Decompose into causal and anti-causal parts:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 2^n u[n] + 2^{-n} u[-n-1] = 2^n u[n] + (1/2)^n u[-n-1]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Component transforms:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{2^n u[n]\\} = \\frac{z}{z-2}, \\quad \\text{ROC}_1: \\vert z \\vert > 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\left\\{(1/2)^n u[-n-1]\\right\\} = -\\frac{z}{z - 1/2}, \\quad \\text{ROC}_2: \\vert z \\vert < \\frac{1}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "ROC Intersection:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC} = \\left\\{ \\vert z \\vert > 2 \\right\\} \\cap \\left\\{ \\vert z \\vert < 1/2 \\right\\} = \\emptyset"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Since the intersection is empty, **$X(z)$ Does Not Exist (D.N.E.)**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 10: Complete Derivation of Causal Damped Cosine (Slides 114\u2013116)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Derive the Z-transform, pole locations, and ROC for $x[n] = a^n \\cos(\\omega_0 n) u[n]$."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Apply Euler's formula:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{2} (a e^{j\\omega_0})^n u[n] + \\frac{1}{2} (a e^{-j\\omega_0})^n u[n]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Transform each term:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{1}{2} \\left[ \\frac{z}{z - a e^{j\\omega_0}} + \\frac{z}{z - a e^{-j\\omega_0}} \\right], \\quad \\text{ROC: } \\vert z \\vert > \\vert a \\vert"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Combine over a common denominator:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "D(z) = (z - a e^{j\\omega_0})(z - a e^{-j\\omega_0}) = z^2 - 2az\\cos\\omega_0 + a^2"
-    },
-    {
-     "t": "math",
-     "tex": "N(z) = \\frac{1}{2} \\left[ z(z - a e^{-j\\omega_0}) + z(z - a e^{j\\omega_0}) \\right] = z^2 - az\\cos\\omega_0"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Result:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(z) = \\frac{z^2 - az\\cos\\omega_0}{z^2 - 2az\\cos\\omega_0 + a^2}, \\quad \\text{ROC: } \\vert z \\vert > \\vert a \\vert}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Poles: $z_p = a e^{\\pm j\\omega_0}$, lying on a circle of radius $\\vert a \\vert$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 114 116 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Derive the Z-transform, pole locations, and ROC for $x[n] = a^n \\cos(\\omega_0 n) u[n]$."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Apply Euler's formula:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{2} (a e^{j\\omega_0})^n u[n] + \\frac{1}{2} (a e^{-j\\omega_0})^n u[n]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Transform each term:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{1}{2} \\left[ \\frac{z}{z - a e^{j\\omega_0}} + \\frac{z}{z - a e^{-j\\omega_0}} \\right], \\quad \\text{ROC: } \\vert z \\vert > \\vert a \\vert"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Combine over a common denominator:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "D(z) = (z - a e^{j\\omega_0})(z - a e^{-j\\omega_0}) = z^2 - 2az\\cos\\omega_0 + a^2"
+      },
+      {
+       "t": "math",
+       "tex": "N(z) = \\frac{1}{2} \\left[ z(z - a e^{-j\\omega_0}) + z(z - a e^{j\\omega_0}) \\right] = z^2 - az\\cos\\omega_0"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Result:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(z) = \\frac{z^2 - az\\cos\\omega_0}{z^2 - 2az\\cos\\omega_0 + a^2}, \\quad \\text{ROC: } \\vert z \\vert > \\vert a \\vert}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Poles: $z_p = a e^{\\pm j\\omega_0}$, lying on a circle of radius $\\vert a \\vert$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 11: Complete Derivation of Causal Damped Sine (Slide 117)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Derive the Z-transform, pole locations, and ROC for $x[n] = a^n \\sin(\\omega_0 n) u[n]$."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Apply Euler's formula:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{2j} (a e^{j\\omega_0})^n u[n] - \\frac{1}{2j} (a e^{-j\\omega_0})^n u[n]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Transform:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{1}{2j} \\left[ \\frac{z}{z - a e^{j\\omega_0}} - \\frac{z}{z - a e^{-j\\omega_0}} \\right] = \\frac{1}{2j} \\frac{z(z - a e^{-j\\omega_0}) - z(z - a e^{j\\omega_0})}{z^2 - 2az\\cos\\omega_0 + a^2}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Simplify the numerator:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "N(z) = \\frac{1}{2j} [-az e^{-j\\omega_0} + az e^{j\\omega_0}] = az \\left( \\frac{e^{j\\omega_0} - e^{-j\\omega_0}}{2j} \\right) = az\\sin\\omega_0"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Result:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(z) = \\frac{az\\sin\\omega_0}{z^2 - 2az\\cos\\omega_0 + a^2}, \\quad \\text{ROC: } \\vert z \\vert > \\vert a \\vert}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 117 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Derive the Z-transform, pole locations, and ROC for $x[n] = a^n \\sin(\\omega_0 n) u[n]$."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Apply Euler's formula:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{2j} (a e^{j\\omega_0})^n u[n] - \\frac{1}{2j} (a e^{-j\\omega_0})^n u[n]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Transform:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{1}{2j} \\left[ \\frac{z}{z - a e^{j\\omega_0}} - \\frac{z}{z - a e^{-j\\omega_0}} \\right] = \\frac{1}{2j} \\frac{z(z - a e^{-j\\omega_0}) - z(z - a e^{j\\omega_0})}{z^2 - 2az\\cos\\omega_0 + a^2}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Simplify the numerator:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "N(z) = \\frac{1}{2j} [-az e^{-j\\omega_0} + az e^{j\\omega_0}] = az \\left( \\frac{e^{j\\omega_0} - e^{-j\\omega_0}}{2j} \\right) = az\\sin\\omega_0"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Result:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(z) = \\frac{az\\sin\\omega_0}{z^2 - 2az\\cos\\omega_0 + a^2}, \\quad \\text{ROC: } \\vert z \\vert > \\vert a \\vert}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 12: Bilateral Undamped & Periodic Sequences (Slide 119)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Prove that the bilateral Z-transform does not exist for:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$x_1[n] = 1$ (for all $n \\in \\mathbb{Z}$)",
-      "$x_2[n] = \\cos(\\omega_0 n)$ (for all $n \\in \\mathbb{Z}$)",
-      "Any periodic sequence $x_p[n] = x_p[n+N]$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Proof:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "For $x_1[n] = 1$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Partition into causal and anti-causal parts:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1[n] = u[n] + u[-n-1]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$u[n] \\longleftrightarrow \\frac{z}{z-1}$ with $\\text{ROC}_1: \\vert z \\vert > 1$.",
-      "$u[-n-1] = -[-u[-n-1]] \\longleftrightarrow -\\frac{z}{z-1}$ with $\\text{ROC}_2: \\vert z \\vert < 1$.",
-      "Intersection: $\\{\\vert z \\vert > 1\\} \\cap \\{\\vert z \\vert < 1\\} = \\emptyset$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore, no ROC exists, and the bilateral Z-transform **Does Not Exist**."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "For $x_2[n] = \\cos(\\omega_0 n)$:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The causal component $\\cos(\\omega_0 n) u[n]$ converges for $\\vert z \\vert > 1$.",
-      "The anti-causal component $\\cos(\\omega_0 n) u[-n-1]$ converges for $\\vert z \\vert < 1$.",
-      "Intersection is strictly empty: $\\{\\vert z \\vert > 1\\} \\cap \\{\\vert z \\vert < 1\\} = \\emptyset$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore, $X_2(z)$ **Does Not Exist**."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "For any periodic sequence:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "A non-zero periodic sequence has infinite energy and non-zero power extending from $-\\infty$ to $+\\infty$. There exists no value of $r = \\vert z \\vert$ that can simultaneously damp the sequence as $n \\to +\\infty$ ($r > 1$) and as $n \\to -\\infty$ ($r < 1$). Thus, the bilateral Z-transform does not exist."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 119 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Prove that the bilateral Z-transform does not exist for:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$x_1[n] = 1$ (for all $n \\in \\mathbb{Z}$)",
+        "$x_2[n] = \\cos(\\omega_0 n)$ (for all $n \\in \\mathbb{Z}$)",
+        "Any periodic sequence $x_p[n] = x_p[n+N]$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Proof:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "For $x_1[n] = 1$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Partition into causal and anti-causal parts:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1[n] = u[n] + u[-n-1]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$u[n] \\longleftrightarrow \\frac{z}{z-1}$ with $\\text{ROC}_1: \\vert z \\vert > 1$.",
+        "$u[-n-1] = -[-u[-n-1]] \\longleftrightarrow -\\frac{z}{z-1}$ with $\\text{ROC}_2: \\vert z \\vert < 1$.",
+        "Intersection: $\\{\\vert z \\vert > 1\\} \\cap \\{\\vert z \\vert < 1\\} = \\emptyset$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore, no ROC exists, and the bilateral Z-transform **Does Not Exist**."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "For $x_2[n] = \\cos(\\omega_0 n)$:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The causal component $\\cos(\\omega_0 n) u[n]$ converges for $\\vert z \\vert > 1$.",
+        "The anti-causal component $\\cos(\\omega_0 n) u[-n-1]$ converges for $\\vert z \\vert < 1$.",
+        "Intersection is strictly empty: $\\{\\vert z \\vert > 1\\} \\cap \\{\\vert z \\vert < 1\\} = \\emptyset$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore, $X_2(z)$ **Does Not Exist**."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "For any periodic sequence:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A non-zero periodic sequence has infinite energy and non-zero power extending from $-\\infty$ to $+\\infty$. There exists no value of $r = \\vert z \\vert$ that can simultaneously damp the sequence as $n \\to +\\infty$ ($r > 1$) and as $n \\to -\\infty$ ($r < 1$). Thus, the bilateral Z-transform does not exist."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 13: Numerical Damped Sinusoid & Chalkboard Slip Rectification (Slides 120\u2013121)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Find the Z-transform, pole locations, and ROC for the sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 2^n \\sin\\left(\\frac{\\pi}{3} n\\right) u[n]"
-    },
-    {
-     "t": "p",
-     "text": "Plot the pole constellation in the complex $z$-plane and identify the chalkboard transcription error."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Parameter Identification:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Matching with $a^n \\sin(\\omega_0 n) u[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "a = 2, \\qquad \\omega_0 = \\frac{\\pi}{3} = 60^\\circ"
-    },
-    {
-     "t": "p",
-     "text": "Trigonometric constants:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}, \\qquad \\sin\\left(\\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Transform Computation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using the standard formula:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{a z \\sin\\omega_0}{z^2 - 2 a z \\cos\\omega_0 + a^2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Numerator:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "N(z) = (2) z \\left(\\frac{\\sqrt{3}}{2}\\right) = \\sqrt{3} z"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Denominator:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "D(z) = z^2 - 2(2) z \\left(\\frac{1}{2}\\right) + 2^2 = z^2 - 2z + 4"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(z) = \\frac{\\sqrt{3} z}{z^2 - 2z + 4}, \\quad \\text{ROC: } \\vert z \\vert > 2}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Rigorous Pole Calculation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Set the denominator equal to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "z^2 - 2z + 4 = 0"
-    },
-    {
-     "t": "p",
-     "text": "Using the quadratic root formula:"
-    },
-    {
-     "t": "math",
-     "tex": "z = \\frac{-(-2) \\pm \\sqrt{(-2)^2 - 4(1)(4)}}{2(1)} = \\frac{2 \\pm \\sqrt{4 - 16}}{2} = \\frac{2 \\pm \\sqrt{-12}}{2} = \\frac{2 \\pm j 2\\sqrt{3}}{2} = \\mathbf{+1 \\pm j\\sqrt{3}}"
-    },
-    {
-     "t": "p",
-     "text": "In polar coordinates:"
-    },
-    {
-     "t": "math",
-     "tex": "z_{p_1} = 2 e^{j\\pi/3} = 2 \\angle +60^\\circ, \\qquad z_{p_2} = 2 e^{-j\\pi/3} = 2 \\angle -60^\\circ"
-    },
-    {
-     "t": "p",
-     "text": "Modulus of poles:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert z_{p_1} \\vert = \\vert z_{p_2} \\vert = \\sqrt{1^2 + (\\sqrt{3})^2} = \\sqrt{1 + 3} = \\sqrt{4} = 2"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Visual Chalkboard Audit & Error Rectification (Slide 121):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Chalkboard Slip:** On Slide 121, the chalkboard displays handwritten notes:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z_{p_1} = -1 + j\\sqrt{3}, \\qquad z_{p_2} = -1 - j\\sqrt{3}"
-    },
-    {
-     "t": "p",
-     "text": "and sketches the poles in the **second and third quadrants** (left of imaginary axis)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Root Cause Analysis:** The instructor made a sign transcription slip when dividing $\\frac{-(-2)}{2}$, writing $-1$ instead of $+1$.",
-      "**Rectified Truth:** The real part of the poles is strictly **positive** ($+1$), because the quadratic equation is $z^2 - 2z + 4 = 0$ (negative coefficient of linear term means roots have positive real part). The poles reside in the **first and fourth quadrants** at $\\pm 60^\\circ$ on the circle of radius 2."
-     ]
-    },
-    {
-     "t": "code",
-     "text": "                      Im(z)\n                        |\n                        |      x  z_p1 = +1 + j\u221a3 = 2 e^(+j\u03c0/3)\n                        |     /\n                        |    /\n         ---------------+---+------------- Re(z)\n                        | 0 | 1     2\n                        |    \\\n                        |     \\\n                        |      x  z_p2 = +1 - j\u221a3 = 2 e^(-j\u03c0/3)\n                        |\n              Circle of radius |z| = 2"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 120 121 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Find the Z-transform, pole locations, and ROC for the sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 2^n \\sin\\left(\\frac{\\pi}{3} n\\right) u[n]"
+      },
+      {
+       "t": "p",
+       "text": "Plot the pole constellation in the complex $z$-plane and identify the chalkboard transcription error."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Parameter Identification:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Matching with $a^n \\sin(\\omega_0 n) u[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "a = 2, \\qquad \\omega_0 = \\frac{\\pi}{3} = 60^\\circ"
+      },
+      {
+       "t": "p",
+       "text": "Trigonometric constants:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}, \\qquad \\sin\\left(\\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Transform Computation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using the standard formula:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{a z \\sin\\omega_0}{z^2 - 2 a z \\cos\\omega_0 + a^2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Numerator:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "N(z) = (2) z \\left(\\frac{\\sqrt{3}}{2}\\right) = \\sqrt{3} z"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Denominator:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "D(z) = z^2 - 2(2) z \\left(\\frac{1}{2}\\right) + 2^2 = z^2 - 2z + 4"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(z) = \\frac{\\sqrt{3} z}{z^2 - 2z + 4}, \\quad \\text{ROC: } \\vert z \\vert > 2}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Rigorous Pole Calculation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Set the denominator equal to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "z^2 - 2z + 4 = 0"
+      },
+      {
+       "t": "p",
+       "text": "Using the quadratic root formula:"
+      },
+      {
+       "t": "math",
+       "tex": "z = \\frac{-(-2) \\pm \\sqrt{(-2)^2 - 4(1)(4)}}{2(1)} = \\frac{2 \\pm \\sqrt{4 - 16}}{2} = \\frac{2 \\pm \\sqrt{-12}}{2} = \\frac{2 \\pm j 2\\sqrt{3}}{2} = \\mathbf{+1 \\pm j\\sqrt{3}}"
+      },
+      {
+       "t": "p",
+       "text": "In polar coordinates:"
+      },
+      {
+       "t": "math",
+       "tex": "z_{p_1} = 2 e^{j\\pi/3} = 2 \\angle +60^\\circ, \\qquad z_{p_2} = 2 e^{-j\\pi/3} = 2 \\angle -60^\\circ"
+      },
+      {
+       "t": "p",
+       "text": "Modulus of poles:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert z_{p_1} \\vert = \\vert z_{p_2} \\vert = \\sqrt{1^2 + (\\sqrt{3})^2} = \\sqrt{1 + 3} = \\sqrt{4} = 2"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Visual Chalkboard Audit & Error Rectification (Slide 121):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Chalkboard Slip:** On Slide 121, the chalkboard displays handwritten notes:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z_{p_1} = -1 + j\\sqrt{3}, \\qquad z_{p_2} = -1 - j\\sqrt{3}"
+      },
+      {
+       "t": "p",
+       "text": "and sketches the poles in the **second and third quadrants** (left of imaginary axis)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Root Cause Analysis:** The instructor made a sign transcription slip when dividing $\\frac{-(-2)}{2}$, writing $-1$ instead of $+1$.",
+        "**Rectified Truth:** The real part of the poles is strictly **positive** ($+1$), because the quadratic equation is $z^2 - 2z + 4 = 0$ (negative coefficient of linear term means roots have positive real part). The poles reside in the **first and fourth quadrants** at $\\pm 60^\\circ$ on the circle of radius 2."
+       ]
+      },
+      {
+       "t": "code",
+       "text": "                      Im(z)\n                        |\n                        |      x  z_p1 = +1 + j\u221a3 = 2 e^(+j\u03c0/3)\n                        |     /\n                        |    /\n         ---------------+---+------------- Re(z)\n                        | 0 | 1     2\n                        |    \\\n                        |     \\\n                        |      x  z_p2 = +1 - j\u221a3 = 2 e^(-j\u03c0/3)\n                        |\n              Circle of radius |z| = 2"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 14: Discrete-Time Scaling: Decimation vs Expansion (Slide 123)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Given the discrete-time sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\{ \\underset{\\uparrow}{1}, 7, 3, 4, -1 \\}"
-    },
-    {
-     "t": "p",
-     "text": "Compute:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Decimated sequence $y[n] = x[2n]$",
-      "Expanded sequence $w[n] = x[n/2]$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Decimation (Downsampling by 2):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[2n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$y[0] = x[0] = 1$",
-      "$y[1] = x[2] = 3$",
-      "$y[2] = x[4] = -1$",
-      "For all other indices, samples are zero."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\{ \\underset{\\uparrow}{1}, 3, -1 \\}"
-    },
-    {
-     "t": "p",
-     "text": "Notice that samples $x[1]=7$ and $x[3]=4$ are permanently discarded (loss of information / potential aliasing)."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Expansion (Upsampling / Stretching by 2):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "w[n] = x[n/2] = \\begin{cases} x[n/2], & n \\text{ is even} \\\\ 0, & n \\text{ is odd} \\end{cases}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$w[0] = x[0] = 1$",
-      "$w[1] = 0$ (inserted zero)",
-      "$w[2] = x[1] = 7$",
-      "$w[3] = 0$ (inserted zero)",
-      "$w[4] = x[2] = 3$",
-      "$w[5] = 0$ (inserted zero)",
-      "$w[6] = x[3] = 4$",
-      "$w[7] = 0$ (inserted zero)",
-      "$w[8] = x[4] = -1$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "w[n] = \\{ \\underset{\\uparrow}{1}, 0, 7, 0, 3, 0, 4, 0, -1 \\}"
-    },
-    {
-     "t": "p",
-     "text": "In the transform domain:"
-    },
-    {
-     "t": "math",
-     "tex": "W(z) = X(z^2)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 123 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Given the discrete-time sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\{ \\underset{\\uparrow}{1}, 7, 3, 4, -1 \\}"
+      },
+      {
+       "t": "p",
+       "text": "Compute:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Decimated sequence $y[n] = x[2n]$",
+        "Expanded sequence $w[n] = x[n/2]$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Decimation (Downsampling by 2):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[2n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$y[0] = x[0] = 1$",
+        "$y[1] = x[2] = 3$",
+        "$y[2] = x[4] = -1$",
+        "For all other indices, samples are zero."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\{ \\underset{\\uparrow}{1}, 3, -1 \\}"
+      },
+      {
+       "t": "p",
+       "text": "Notice that samples $x[1]=7$ and $x[3]=4$ are permanently discarded (loss of information / potential aliasing)."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Expansion (Upsampling / Stretching by 2):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "w[n] = x[n/2] = \\begin{cases} x[n/2], & n \\text{ is even} \\\\ 0, & n \\text{ is odd} \\end{cases}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$w[0] = x[0] = 1$",
+        "$w[1] = 0$ (inserted zero)",
+        "$w[2] = x[1] = 7$",
+        "$w[3] = 0$ (inserted zero)",
+        "$w[4] = x[2] = 3$",
+        "$w[5] = 0$ (inserted zero)",
+        "$w[6] = x[3] = 4$",
+        "$w[7] = 0$ (inserted zero)",
+        "$w[8] = x[4] = -1$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "w[n] = \\{ \\underset{\\uparrow}{1}, 0, 7, 0, 3, 0, 4, 0, -1 \\}"
+      },
+      {
+       "t": "p",
+       "text": "In the transform domain:"
+      },
+      {
+       "t": "math",
+       "tex": "W(z) = X(z^2)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 15: Compound Property Verification: $y[n] = x[-n-1]$ (Slides 124\u2013125)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Given the primary pair:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = a^n u[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} X(z) = \\frac{z}{z - a}, \\quad \\text{ROC: } \\vert z \\vert > \\vert a \\vert"
-    },
-    {
-     "t": "p",
-     "text": "Determine the Z-transform and ROC of $y[n] = x[-n-1]$ using:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Operational properties (Time reversal followed by time shift).",
-      "Direct algebraic expansion using canonical transform pairs."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Operational Property Chain Rule (Slide 124):"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Step 1 \u2014 Time Reversal:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Define intermediate signal $g[n] = x[-n]$.\n   Applying the time-reversal property:"
-    },
-    {
-     "t": "math",
-     "tex": "G(z) = X\\left(z^{-1}\\right) = \\frac{z^{-1}}{z^{-1} - a}"
-    },
-    {
-     "t": "p",
-     "text": "The ROC inverts:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert z^{-1} \\vert > \\vert a \\vert \\iff \\vert z \\vert < \\frac{1}{\\vert a \\vert}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Step 2 \u2014 Time Advance by 1 Sample:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Express $y[n]$ in terms of $g[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[-n - 1] = x[-(n + 1)] = g[n + 1]"
-    },
-    {
-     "t": "p",
-     "text": "Applying the time-shift property ($n_0 = -1$):"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = z^{+1} G(z) = z \\cdot \\left[ \\frac{z^{-1}}{z^{-1} - a} \\right] = \\frac{1}{z^{-1} - a}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Step 3 \u2014 Algebraic Simplification:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Multiply numerator and denominator by $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{1 \\cdot z}{(z^{-1} - a) \\cdot z} = \\mathbf{\\frac{z}{1 - az}}"
-    },
-    {
-     "t": "p",
-     "text": "The ROC is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\vert z \\vert < \\frac{1}{\\vert a \\vert}}"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Direct Time-Domain Algebraic Restructuring (Slide 125):"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Substitute the explicit expression for $x[n]$ into $y[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = a^{-(n+1)} u[-(n+1)] = a^{-n-1} u[-n-1] = a^{-1} \\cdot (a^{-1})^n u[-n-1] = \\frac{1}{a} \\left(\\frac{1}{a}\\right)^n u[-n-1]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Put into canonical anti-causal form $-b^n u[-n-1]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = -\\frac{1}{a} \\left[ -\\left(\\frac{1}{a}\\right)^n u[-n-1] \\right]"
-    },
-    {
-     "t": "p",
-     "text": "where the effective base is $b = 1/a$."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Using the standard pair $\\mathcal{Z}\\{-b^n u[-n-1]\\} = \\frac{z}{z - b}$ with $\\vert z \\vert < \\vert b \\vert$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = -\\frac{1}{a} \\left[ \\frac{z}{z - \\frac{1}{a}} \\right] = -\\frac{1}{a} \\left[ \\frac{a z}{a z - 1} \\right] = -\\frac{z}{a z - 1} = \\mathbf{\\frac{z}{1 - az}}"
-    },
-    {
-     "t": "p",
-     "text": "with ROC:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert z \\vert < \\left\\vert \\frac{1}{a} \\right\\vert = \\mathbf{\\frac{1}{\\vert a \\vert}}"
-    },
-    {
-     "t": "p",
-     "text": "Both independent methods arrive at the identical mathematical expression and ROC, confirming theoretical consistency!"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**Order of Operations Trap:**\nWhen decomposing $x[-n-1]$:\n- If reversing first: $x[n] \\to x[-n]$, then to get $x[-n-1]$, replace $n$ with $n+1$, which shifts left: $g[n+1] = x[-(n+1)] = x[-n-1] \\implies z^{+1} X(z^{-1})$.\n- If shifting first: $x[n] \\to x[n-1] \\implies z^{-1} X(z)$, then replacing $n$ with $-n$ gives $x[-n-1] \\implies (z^{-1})^{-1} X(z^{-1}) = z X(z^{-1})$.\nEither path is valid, but beware of confusing $x[-(n+1)]$ with $x[-(n-1)]$!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 124 125 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Given the primary pair:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = a^n u[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} X(z) = \\frac{z}{z - a}, \\quad \\text{ROC: } \\vert z \\vert > \\vert a \\vert"
+      },
+      {
+       "t": "p",
+       "text": "Determine the Z-transform and ROC of $y[n] = x[-n-1]$ using:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Operational properties (Time reversal followed by time shift).",
+        "Direct algebraic expansion using canonical transform pairs."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Operational Property Chain Rule (Slide 124):"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Step 1 \u2014 Time Reversal:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Define intermediate signal $g[n] = x[-n]$.\n   Applying the time-reversal property:"
+      },
+      {
+       "t": "math",
+       "tex": "G(z) = X\\left(z^{-1}\\right) = \\frac{z^{-1}}{z^{-1} - a}"
+      },
+      {
+       "t": "p",
+       "text": "The ROC inverts:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert z^{-1} \\vert > \\vert a \\vert \\iff \\vert z \\vert < \\frac{1}{\\vert a \\vert}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Step 2 \u2014 Time Advance by 1 Sample:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Express $y[n]$ in terms of $g[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[-n - 1] = x[-(n + 1)] = g[n + 1]"
+      },
+      {
+       "t": "p",
+       "text": "Applying the time-shift property ($n_0 = -1$):"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = z^{+1} G(z) = z \\cdot \\left[ \\frac{z^{-1}}{z^{-1} - a} \\right] = \\frac{1}{z^{-1} - a}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Step 3 \u2014 Algebraic Simplification:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Multiply numerator and denominator by $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{1 \\cdot z}{(z^{-1} - a) \\cdot z} = \\mathbf{\\frac{z}{1 - az}}"
+      },
+      {
+       "t": "p",
+       "text": "The ROC is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\vert z \\vert < \\frac{1}{\\vert a \\vert}}"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Direct Time-Domain Algebraic Restructuring (Slide 125):"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Substitute the explicit expression for $x[n]$ into $y[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = a^{-(n+1)} u[-(n+1)] = a^{-n-1} u[-n-1] = a^{-1} \\cdot (a^{-1})^n u[-n-1] = \\frac{1}{a} \\left(\\frac{1}{a}\\right)^n u[-n-1]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Put into canonical anti-causal form $-b^n u[-n-1]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = -\\frac{1}{a} \\left[ -\\left(\\frac{1}{a}\\right)^n u[-n-1] \\right]"
+      },
+      {
+       "t": "p",
+       "text": "where the effective base is $b = 1/a$."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Using the standard pair $\\mathcal{Z}\\{-b^n u[-n-1]\\} = \\frac{z}{z - b}$ with $\\vert z \\vert < \\vert b \\vert$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = -\\frac{1}{a} \\left[ \\frac{z}{z - \\frac{1}{a}} \\right] = -\\frac{1}{a} \\left[ \\frac{a z}{a z - 1} \\right] = -\\frac{z}{a z - 1} = \\mathbf{\\frac{z}{1 - az}}"
+      },
+      {
+       "t": "p",
+       "text": "with ROC:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert z \\vert < \\left\\vert \\frac{1}{a} \\right\\vert = \\mathbf{\\frac{1}{\\vert a \\vert}}"
+      },
+      {
+       "t": "p",
+       "text": "Both independent methods arrive at the identical mathematical expression and ROC, confirming theoretical consistency!"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**Order of Operations Trap:**\nWhen decomposing $x[-n-1]$:\n- If reversing first: $x[n] \\to x[-n]$, then to get $x[-n-1]$, replace $n$ with $n+1$, which shifts left: $g[n+1] = x[-(n+1)] = x[-n-1] \\implies z^{+1} X(z^{-1})$.\n- If shifting first: $x[n] \\to x[n-1] \\implies z^{-1} X(z)$, then replacing $n$ with $-n$ gives $x[-n-1] \\implies (z^{-1})^{-1} X(z^{-1}) = z X(z^{-1})$.\nEither path is valid, but beware of confusing $x[-(n+1)]$ with $x[-(n-1)]$!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 16: Complex Modulation / Scaling Property Drill (Slide 126)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Given the fundamental step pair:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = u[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} X(z) = \\frac{z}{z - 1}, \\quad \\text{ROC: } \\vert z \\vert > 1"
-    },
-    {
-     "t": "p",
-     "text": "Derive the transform of $y[n] = a^n u[n]$ using the z-domain scaling property."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "State the scaling property:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z_0^n x[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} X\\left(\\frac{z}{z_0}\\right), \\quad \\text{ROC: } \\vert z \\vert > \\vert z_0 \\vert R_x"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Identify parameters: $x[n] = u[n]$ and $z_0 = a$.",
-      "Substitute $z \\to z/a$ into $X(z)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = X\\left(\\frac{z}{a}\\right) = \\frac{\\frac{z}{a}}{\\frac{z}{a} - 1}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Multiply numerator and denominator by $a$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{z}{z - a}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Transform the ROC:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert \\frac{z}{a} \\right\\vert > 1 \\iff \\mathbf{\\vert z \\vert > \\vert a \\vert}"
-    },
-    {
-     "t": "p",
-     "text": "This confirms the standard unilateral exponential transform $a^n u[n] \\leftrightarrow \\frac{z}{z-a}, \\vert z \\vert > \\vert a \\vert$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 126 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Given the fundamental step pair:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = u[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} X(z) = \\frac{z}{z - 1}, \\quad \\text{ROC: } \\vert z \\vert > 1"
+      },
+      {
+       "t": "p",
+       "text": "Derive the transform of $y[n] = a^n u[n]$ using the z-domain scaling property."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "State the scaling property:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z_0^n x[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} X\\left(\\frac{z}{z_0}\\right), \\quad \\text{ROC: } \\vert z \\vert > \\vert z_0 \\vert R_x"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Identify parameters: $x[n] = u[n]$ and $z_0 = a$.",
+        "Substitute $z \\to z/a$ into $X(z)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = X\\left(\\frac{z}{a}\\right) = \\frac{\\frac{z}{a}}{\\frac{z}{a} - 1}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Multiply numerator and denominator by $a$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{z}{z - a}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Transform the ROC:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert \\frac{z}{a} \\right\\vert > 1 \\iff \\mathbf{\\vert z \\vert > \\vert a \\vert}"
+      },
+      {
+       "t": "p",
+       "text": "This confirms the standard unilateral exponential transform $a^n u[n] \\leftrightarrow \\frac{z}{z-a}, \\vert z \\vert > \\vert a \\vert$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 17: Unit Impulse and Cross-Domain Matrix (Slide 127)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Determine the Z-transform and Region of Convergence for the unit impulse sequence $x[n] = \\delta[n]$, and build a cross-domain comparison across all four major signal processing transforms."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "By definition of the bilateral Z-transform:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\sum_{n=-\\infty}^\\infty \\delta[n] z^{-n}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "The discrete Kronecker delta is defined as:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\delta[n] = \\begin{cases} 1, & n = 0 \\\\ 0, & n \\ne 0 \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Thus, only the $n=0$ term survives in the infinite sum:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\delta[0] z^{-0} = 1 \\cdot 1 = \\mathbf{1}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Since $X(z) = 1$ contains no positive or negative powers of $z$, it does not blow up at $z = 0$ or $z = \\infty$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore, the **ROC is the entire complex plane $\\mathbb{C}$**:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{0 \\le \\vert z \\vert \\le \\infty}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Since the ROC includes the unit circle $\\vert z \\vert = 1$, the DTFT is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\left. X(z) \\right\\vert_{z=e^{j\\omega}} = 1"
-    },
-    {
-     "t": "h4",
-     "text": "Cross-Domain Unity Matrix:"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Domain",
-      "Signal Representation",
-      "Transform Name",
-      "Transform Value",
-      "Convergence Domain / ROC"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 127 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Determine the Z-transform and Region of Convergence for the unit impulse sequence $x[n] = \\delta[n]$, and build a cross-domain comparison across all four major signal processing transforms."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "By definition of the bilateral Z-transform:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\sum_{n=-\\infty}^\\infty \\delta[n] z^{-n}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "The discrete Kronecker delta is defined as:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\delta[n] = \\begin{cases} 1, & n = 0 \\\\ 0, & n \\ne 0 \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Thus, only the $n=0$ term survives in the infinite sum:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\delta[0] z^{-0} = 1 \\cdot 1 = \\mathbf{1}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Since $X(z) = 1$ contains no positive or negative powers of $z$, it does not blow up at $z = 0$ or $z = \\infty$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore, the **ROC is the entire complex plane $\\mathbb{C}$**:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{0 \\le \\vert z \\vert \\le \\infty}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Since the ROC includes the unit circle $\\vert z \\vert = 1$, the DTFT is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\left. X(z) \\right\\vert_{z=e^{j\\omega}} = 1"
+      },
+      {
+       "t": "h4",
+       "text": "Cross-Domain Unity Matrix:"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Domain",
+        "Signal Representation",
+        "Transform Name",
+        "Transform Value",
+        "Convergence Domain / ROC"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---",
+        ":---:",
+        ":---"
+       ],
+       "rows": [
+        [
+         "Continuous-Time",
+         "$\\delta(t)$",
+         "Continuous-Time Fourier (CTFT)",
+         "$1$",
+         "All $\\omega \\in \\mathbb{R}$"
+        ],
+        [
+         "Continuous-Time",
+         "$\\delta(t)$",
+         "Bilateral Laplace Transform (LT)",
+         "$1$",
+         "Entire $s$-plane (All $s \\in \\mathbb{C}$)"
+        ],
+        [
+         "Discrete-Time",
+         "$\\delta[n]$",
+         "Discrete-Time Fourier (DTFT)",
+         "$1$",
+         "All $\\omega \\in [-\\pi, \\pi]$"
+        ],
+        [
+         "Discrete-Time",
+         "$\\delta[n]$",
+         "Bilateral Z-Transform (ZT)",
+         "$1$",
+         "Entire $z$-plane (All $z \\in \\mathbb{C}$)"
+        ]
+       ]
+      }
      ],
-     "align": [
-      ":---",
-      ":---",
-      ":---",
-      ":---:",
-      ":---"
-     ],
-     "rows": [
-      [
-       "Continuous-Time",
-       "$\\delta(t)$",
-       "Continuous-Time Fourier (CTFT)",
-       "$1$",
-       "All $\\omega \\in \\mathbb{R}$"
-      ],
-      [
-       "Continuous-Time",
-       "$\\delta(t)$",
-       "Bilateral Laplace Transform (LT)",
-       "$1$",
-       "Entire $s$-plane (All $s \\in \\mathbb{C}$)"
-      ],
-      [
-       "Discrete-Time",
-       "$\\delta[n]$",
-       "Discrete-Time Fourier (DTFT)",
-       "$1$",
-       "All $\\omega \\in [-\\pi, \\pi]$"
-      ],
-      [
-       "Discrete-Time",
-       "$\\delta[n]$",
-       "Bilateral Z-Transform (ZT)",
-       "$1$",
-       "Entire $z$-plane (All $z \\in \\mathbb{C}$)"
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 18: Finite Duration Finite Amplitude (FDFA) Sequence Analysis (Slide 128)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Find the Z-transform, pole locations, and ROC for the discrete sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\{ 1, 2, \\underset{\\uparrow}{-1}, 3, 2 \\}"
-    },
-    {
-     "t": "p",
-     "text": "where the arrow indicates the origin sample $n = 0$."
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Time-Domain Decomposition into Shifted Impulses:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Identifying sample values at each integer index:"
-    },
-    {
-     "t": "math",
-     "tex": "x[-2] = 1, \\quad x[-1] = 2, \\quad x[0] = -1, \\quad x[1] = 3, \\quad x[2] = 2"
-    },
-    {
-     "t": "p",
-     "text": "Expressing as a linear combination of shifted unit impulses:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\delta[n+2] + 2\\delta[n+1] - \\delta[n] + 3\\delta[n-1] + 2\\delta[n-2]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Applying Linearity and Time-Shifting Properties:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $\\delta[n - n_0] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} z^{-n_0}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{\\delta[n+2]\\} = z^2"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{2\\delta[n+1]\\} = 2z^1"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{-\\delta[n]\\} = -1"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{3\\delta[n-1]\\} = 3z^{-1} = \\frac{3}{z}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{2\\delta[n-2]\\} = 2z^{-2} = \\frac{2}{z^2}"
-    },
-    {
-     "t": "p",
-     "text": "Summing the individual transforms:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(z) = z^2 + 2z - 1 + 3z^{-1} + 2z^{-2} = z^2 + 2z - 1 + \\frac{3}{z} + \\frac{2}{z^2}}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Singularity & Pole Analysis:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Behavior as $z \\to 0$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to 0} X(z) = 0^2 + 2(0) - 1 + \\frac{3}{0} + \\frac{2}{0^2} = \\infty"
-    },
-    {
-     "t": "p",
-     "text": "Due to the causal samples ($n = 1, 2$), terms with $z^{-1}$ and $z^{-2}$ blow up as $z \\to 0$. Therefore, **$z = 0$ is a pole of order 2**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Behavior as $z \\to \\infty$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X(z) = (\\infty)^2 + 2(\\infty) - 1 + 0 + 0 = \\infty"
-    },
-    {
-     "t": "p",
-     "text": "Due to the anti-causal samples ($n = -2, -1$), terms with $z^2$ and $z^1$ blow up as $z \\to \\infty$. Therefore, **$z = \\infty$ is a pole of order 2**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Behavior for $0 < \\vert z \\vert < \\infty$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For every finite non-zero complex number $z \\ne 0$, each term is bounded and finite. The sum is strictly finite."
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Region of Convergence:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{ROC: } 0 < \\vert z \\vert < \\infty \\quad (\\text{Entire } z\\text{-plane except } z = 0 \\text{ and } z = \\infty)}"
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**Master Taxonomy of Finite Duration Sequences (FDFA):**\n1. **Causal FDFA ($x[n] = 0$ for $n < 0$ and $n > N$):** Transform has only negative powers of $z$ ($z^{-1}, \\dots, z^{-N}$).\n   $$\\text{ROC: Entire } z\\text{-plane except } z = 0 \\quad (0 < \\vert z \\vert \\le \\infty)$$\n2. **Anti-Causal FDFA ($x[n] = 0$ for $n > 0$ and $n < -N$):** Transform has only positive powers of $z$ ($z^1, \\dots, z^N$).\n   $$\\text{ROC: Entire } z\\text{-plane except } z = \\infty \\quad (0 \\le \\vert z \\vert < \\infty)$$\n3. **Two-Sided FDFA ($x[n]$ non-zero for both positive and negative $n$):** Transform has both positive and negative powers of $z$.\n   $$\\text{ROC: Entire } z\\text{-plane except } z = 0 \\text{ and } z = \\infty \\quad (0 < \\vert z \\vert < \\infty)$$"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 128 Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Find the Z-transform, pole locations, and ROC for the discrete sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\{ 1, 2, \\underset{\\uparrow}{-1}, 3, 2 \\}"
+      },
+      {
+       "t": "p",
+       "text": "where the arrow indicates the origin sample $n = 0$."
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Time-Domain Decomposition into Shifted Impulses:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Identifying sample values at each integer index:"
+      },
+      {
+       "t": "math",
+       "tex": "x[-2] = 1, \\quad x[-1] = 2, \\quad x[0] = -1, \\quad x[1] = 3, \\quad x[2] = 2"
+      },
+      {
+       "t": "p",
+       "text": "Expressing as a linear combination of shifted unit impulses:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\delta[n+2] + 2\\delta[n+1] - \\delta[n] + 3\\delta[n-1] + 2\\delta[n-2]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Applying Linearity and Time-Shifting Properties:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $\\delta[n - n_0] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} z^{-n_0}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{\\delta[n+2]\\} = z^2"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{2\\delta[n+1]\\} = 2z^1"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{-\\delta[n]\\} = -1"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{3\\delta[n-1]\\} = 3z^{-1} = \\frac{3}{z}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{2\\delta[n-2]\\} = 2z^{-2} = \\frac{2}{z^2}"
+      },
+      {
+       "t": "p",
+       "text": "Summing the individual transforms:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(z) = z^2 + 2z - 1 + 3z^{-1} + 2z^{-2} = z^2 + 2z - 1 + \\frac{3}{z} + \\frac{2}{z^2}}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Singularity & Pole Analysis:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Behavior as $z \\to 0$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to 0} X(z) = 0^2 + 2(0) - 1 + \\frac{3}{0} + \\frac{2}{0^2} = \\infty"
+      },
+      {
+       "t": "p",
+       "text": "Due to the causal samples ($n = 1, 2$), terms with $z^{-1}$ and $z^{-2}$ blow up as $z \\to 0$. Therefore, **$z = 0$ is a pole of order 2**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Behavior as $z \\to \\infty$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X(z) = (\\infty)^2 + 2(\\infty) - 1 + 0 + 0 = \\infty"
+      },
+      {
+       "t": "p",
+       "text": "Due to the anti-causal samples ($n = -2, -1$), terms with $z^2$ and $z^1$ blow up as $z \\to \\infty$. Therefore, **$z = \\infty$ is a pole of order 2**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Behavior for $0 < \\vert z \\vert < \\infty$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For every finite non-zero complex number $z \\ne 0$, each term is bounded and finite. The sum is strictly finite."
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Region of Convergence:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{ROC: } 0 < \\vert z \\vert < \\infty \\quad (\\text{Entire } z\\text{-plane except } z = 0 \\text{ and } z = \\infty)}"
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**Master Taxonomy of Finite Duration Sequences (FDFA):**\n1. **Causal FDFA ($x[n] = 0$ for $n < 0$ and $n > N$):** Transform has only negative powers of $z$ ($z^{-1}, \\dots, z^{-N}$).\n   $$\\text{ROC: Entire } z\\text{-plane except } z = 0 \\quad (0 < \\vert z \\vert \\le \\infty)$$\n2. **Anti-Causal FDFA ($x[n] = 0$ for $n > 0$ and $n < -N$):** Transform has only positive powers of $z$ ($z^1, \\dots, z^N$).\n   $$\\text{ROC: Entire } z\\text{-plane except } z = \\infty \\quad (0 \\le \\vert z \\vert < \\infty)$$\n3. **Two-Sided FDFA ($x[n]$ non-zero for both positive and negative $n$):** Transform has both positive and negative powers of $z$.\n   $$\\text{ROC: Entire } z\\text{-plane except } z = 0 \\text{ and } z = \\infty \\quad (0 < \\vert z \\vert < \\infty)$$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -9200,406 +9195,402 @@ export default {
      "text": "Drill 19 (GATE Benchmark): Convolution Pole-Zero Cancellation and ROC Expansion"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Let $x_1[n] = (0.5)^n u[n]$ and $x_2[n] = \\delta[n] - 0.5 \\delta[n-1]$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Find $X_1(z)$ and its ROC.",
-      "Find $X_2(z)$ and its ROC.",
-      "Compute the nominal intersection $R_1 \\cap R_2$.",
-      "Determine the overall output $y[n] = x_1[n] * x_2[n]$, its transform $Y(z)$, and its true ROC."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Transform of $x_1[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_1(z) = \\frac{z}{z - 0.5}, \\quad R_1: \\vert z \\vert > 0.5"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Transform of $x_2[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = 1 - 0.5 z^{-1} = \\frac{z - 0.5}{z}, \\quad R_2: \\vert z \\vert > 0"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Nominal intersection:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "R_1 \\cap R_2 = \\left\\{ \\vert z \\vert > 0.5 \\right\\} \\cap \\left\\{ \\vert z \\vert > 0 \\right\\} = \\vert z \\vert > 0.5"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Compute $Y(z) = X_1(z) X_2(z)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\left( \\frac{z}{z - 0.5} \\right) \\left( \\frac{z - 0.5}{z} \\right) = 1"
-    },
-    {
-     "t": "p",
-     "text": "The zero of $X_2(z)$ at $z = 0.5$ exactly cancels the pole of $X_1(z)$ at $z = 0.5$, and the zero of $X_1(z)$ at $z = 0$ cancels the pole of $X_2(z)$ at $z = 0$!"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Inverting to the time domain:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\delta[n]"
-    },
-    {
-     "t": "p",
-     "text": "The true ROC of $Y(z) = 1$ is the **entire complex plane $\\mathbb{C}$** ($0 \\le \\vert z \\vert \\le \\infty$).\n   Thus, the true ROC is strictly larger than $R_1 \\cap R_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}_y = \\mathbb{C} \\supset \\left( \\vert z \\vert > 0.5 \\right)"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Takeaway:**\nWhenever an FIR filter acts as an inverse filter canceling all IIR poles of the input signal, the resulting convolution has a finite duration, expanding the ROC to the entire complex plane."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Drill 19  Convolution ROC Expansion /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Let $x_1[n] = (0.5)^n u[n]$ and $x_2[n] = \\delta[n] - 0.5 \\delta[n-1]$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Find $X_1(z)$ and its ROC.",
+        "Find $X_2(z)$ and its ROC.",
+        "Compute the nominal intersection $R_1 \\cap R_2$.",
+        "Determine the overall output $y[n] = x_1[n] * x_2[n]$, its transform $Y(z)$, and its true ROC."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Transform of $x_1[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_1(z) = \\frac{z}{z - 0.5}, \\quad R_1: \\vert z \\vert > 0.5"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Transform of $x_2[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = 1 - 0.5 z^{-1} = \\frac{z - 0.5}{z}, \\quad R_2: \\vert z \\vert > 0"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Nominal intersection:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "R_1 \\cap R_2 = \\left\\{ \\vert z \\vert > 0.5 \\right\\} \\cap \\left\\{ \\vert z \\vert > 0 \\right\\} = \\vert z \\vert > 0.5"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Compute $Y(z) = X_1(z) X_2(z)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\left( \\frac{z}{z - 0.5} \\right) \\left( \\frac{z - 0.5}{z} \\right) = 1"
+      },
+      {
+       "t": "p",
+       "text": "The zero of $X_2(z)$ at $z = 0.5$ exactly cancels the pole of $X_1(z)$ at $z = 0.5$, and the zero of $X_1(z)$ at $z = 0$ cancels the pole of $X_2(z)$ at $z = 0$!"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Inverting to the time domain:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\delta[n]"
+      },
+      {
+       "t": "p",
+       "text": "The true ROC of $Y(z) = 1$ is the **entire complex plane $\\mathbb{C}$** ($0 \\le \\vert z \\vert \\le \\infty$).\n   Thus, the true ROC is strictly larger than $R_1 \\cap R_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}_y = \\mathbb{C} \\supset \\left( \\vert z \\vert > 0.5 \\right)"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Takeaway:**\nWhenever an FIR filter acts as an inverse filter canceling all IIR poles of the input signal, the resulting convolution has a finite duration, expanding the ROC to the entire complex plane."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 20 (GATE Benchmark): Accumulator Zero Cancellation and System Stability"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "A discrete-time sequence $x[n]$ is defined as:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\delta[n] - \\delta[n-1]"
-    },
-    {
-     "t": "p",
-     "text": "Let $y[n] = \\sum_{k=-\\infty}^n x[k]$ be the accumulated running sum."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Find $X(z)$ and evaluate $X(1)$.",
-      "Compute $Y(z)$ using the accumulation property.",
-      "Determine the ROC of $Y(z)$ and check whether the pole at $z=1$ is active."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Z-transform of $x[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = 1 - z^{-1} = \\frac{z - 1}{z}, \\quad R_x: \\vert z \\vert > 0"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating at $z = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = \\frac{1 - 1}{1} = 0"
-    },
-    {
-     "t": "p",
-     "text": "The sum of all samples of $x[n]$ is $\\sum_{-\\infty}^\\infty x[n] = 1 - 1 = 0$, producing a zero at $z = 1$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Applying the accumulation property:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{z}{z - 1} X(z) = \\left( \\frac{z}{z - 1} \\right) \\left( \\frac{z - 1}{z} \\right) = 1"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "The pole at $z = 1$ introduced by the accumulator is canceled by the zero of $X(z)$ at $z = 1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The resulting sequence is:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\delta[n]"
-    },
-    {
-     "t": "p",
-     "text": "The true ROC is the entire $z$-plane, and the output is bounded and stable despite passing through an accumulator with a pole on the unit circle!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Drill 20  Accumulator Zero Cancellation /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "A discrete-time sequence $x[n]$ is defined as:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\delta[n] - \\delta[n-1]"
+      },
+      {
+       "t": "p",
+       "text": "Let $y[n] = \\sum_{k=-\\infty}^n x[k]$ be the accumulated running sum."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Find $X(z)$ and evaluate $X(1)$.",
+        "Compute $Y(z)$ using the accumulation property.",
+        "Determine the ROC of $Y(z)$ and check whether the pole at $z=1$ is active."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Z-transform of $x[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = 1 - z^{-1} = \\frac{z - 1}{z}, \\quad R_x: \\vert z \\vert > 0"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating at $z = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = \\frac{1 - 1}{1} = 0"
+      },
+      {
+       "t": "p",
+       "text": "The sum of all samples of $x[n]$ is $\\sum_{-\\infty}^\\infty x[n] = 1 - 1 = 0$, producing a zero at $z = 1$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Applying the accumulation property:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{z}{z - 1} X(z) = \\left( \\frac{z}{z - 1} \\right) \\left( \\frac{z - 1}{z} \\right) = 1"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "The pole at $z = 1$ introduced by the accumulator is canceled by the zero of $X(z)$ at $z = 1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The resulting sequence is:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\delta[n]"
+      },
+      {
+       "t": "p",
+       "text": "The true ROC is the entire $z$-plane, and the output is bounded and stable despite passing through an accumulator with a pole on the unit circle!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 21 (GATE Benchmark): Modulated Sequence Contour Inversion and Product ROC"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "Let $x_1[n] = (0.5)^n u[n]$ and $x_2[n] = (0.8)^n u[n]$.\nLet $y[n] = x_1[n] x_2[n]$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Evaluate $y[n]$ directly in the time domain and determine its Z-transform and ROC.",
-      "Confirm using the multiplication in time domain ROC property: $r_{1,\\min} r_{2,\\min} < \\vert z \\vert < r_{1,\\max} r_{2,\\max}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Time-domain product:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = (0.5)^n (0.8)^n u[n] u[n] = (0.5 \\times 0.8)^n u[n] = (0.4)^n u[n]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Computing the Z-transform directly:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{z}{z - 0.4}, \\quad \\text{ROC: } \\vert z \\vert > 0.4"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Verification using the product property:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $x_1[n]$: $R_{x1}$ is $0.5 < \\vert z \\vert \\le \\infty \\implies r_{1,\\min} = 0.5, r_{1,\\max} = \\infty$.",
-      "For $x_2[n]$: $R_{x2}$ is $0.8 < \\vert z \\vert \\le \\infty \\implies r_{2,\\min} = 0.8, r_{2,\\max} = \\infty$.",
-      "The product ROC boundary is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "r_{\\min} = r_{1,\\min} \\cdot r_{2,\\min} = 0.5 \\times 0.8 = 0.4"
-    },
-    {
-     "t": "math",
-     "tex": "r_{\\max} = r_{1,\\max} \\cdot r_{2,\\max} = \\infty \\times \\infty = \\infty"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Thus, the property predicts:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}_y = \\vert z \\vert > 0.4"
-    },
-    {
-     "t": "p",
-     "text": "This perfectly validates the contour convolution theorem!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Drill 21  Time Multiplication /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "Let $x_1[n] = (0.5)^n u[n]$ and $x_2[n] = (0.8)^n u[n]$.\nLet $y[n] = x_1[n] x_2[n]$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Evaluate $y[n]$ directly in the time domain and determine its Z-transform and ROC.",
+        "Confirm using the multiplication in time domain ROC property: $r_{1,\\min} r_{2,\\min} < \\vert z \\vert < r_{1,\\max} r_{2,\\max}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Time-domain product:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = (0.5)^n (0.8)^n u[n] u[n] = (0.5 \\times 0.8)^n u[n] = (0.4)^n u[n]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Computing the Z-transform directly:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{z}{z - 0.4}, \\quad \\text{ROC: } \\vert z \\vert > 0.4"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Verification using the product property:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $x_1[n]$: $R_{x1}$ is $0.5 < \\vert z \\vert \\le \\infty \\implies r_{1,\\min} = 0.5, r_{1,\\max} = \\infty$.",
+        "For $x_2[n]$: $R_{x2}$ is $0.8 < \\vert z \\vert \\le \\infty \\implies r_{2,\\min} = 0.8, r_{2,\\max} = \\infty$.",
+        "The product ROC boundary is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "r_{\\min} = r_{1,\\min} \\cdot r_{2,\\min} = 0.5 \\times 0.8 = 0.4"
+      },
+      {
+       "t": "math",
+       "tex": "r_{\\max} = r_{1,\\max} \\cdot r_{2,\\max} = \\infty \\times \\infty = \\infty"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Thus, the property predicts:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}_y = \\vert z \\vert > 0.4"
+      },
+      {
+       "t": "p",
+       "text": "This perfectly validates the contour convolution theorem!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "Drill 22 (GATE Benchmark): Real Signal Pole-Zero Conjugate Symmetry & DTFT Phase Constraints"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "A real discrete-time LTI system has a pole at $z_1 = 0.6 e^{j\\pi/4}$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "What other pole must the system necessarily possess?",
-      "If the system is known to be stable and causal, what is its ROC?",
-      "Prove that the DTFT phase response $\\angle H(e^{j\\omega})$ satisfies odd symmetry $\\angle H(e^{j\\omega}) = -\\angle H(e^{-j\\omega})$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Conjugate Pole Requirement:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because the system impulse response $h[n]$ is real-valued ($h[n] \\in \\mathbb{R}$), its transfer function satisfies:"
-    },
-    {
-     "t": "math",
-     "tex": "H(z) = H^*(z^*)"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, if $z_1$ is a pole, its complex conjugate:"
-    },
-    {
-     "t": "math",
-     "tex": "z_2 = z_1^* = \\left( 0.6 e^{j\\pi/4} \\right)^* = \\mathbf{0.6 e^{-j\\pi/4}}"
-    },
-    {
-     "t": "p",
-     "text": "**must also be a pole** of the system."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**ROC Determination:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The poles have magnitude $\\vert z_1 \\vert = \\vert z_2 \\vert = 0.6 < 1$.\n   Since the system is causal, its ROC must be exterior to the outermost pole:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{ROC: } \\vert z \\vert > 0.6}"
-    },
-    {
-     "t": "p",
-     "text": "Because $\\vert z \\vert > 0.6$ contains the unit circle $\\vert z \\vert = 1$, the system is BIBO stable!"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Phase Symmetry Proof on Unit Circle:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluating on the unit circle $z = e^{j\\omega}$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{j\\omega}) = \\vert H(e^{j\\omega}) \\vert e^{j\\angle H(e^{j\\omega})}"
-    },
-    {
-     "t": "p",
-     "text": "By the conjugation property:"
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{-j\\omega}) = H^*\\left( (e^{-j\\omega})^* \\right) = H^*(e^{j\\omega}) = \\vert H(e^{j\\omega}) \\vert e^{-j\\angle H(e^{j\\omega})}"
-    },
-    {
-     "t": "p",
-     "text": "Equating phase angles on both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\angle H(e^{-j\\omega}) = -\\angle H(e^{j\\omega})}"
-    },
-    {
-     "t": "p",
-     "text": "This proves that the phase of any real discrete system is strictly an odd function of frequency $\\omega$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Drill 22  Real Conjugate Symmetry /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "A real discrete-time LTI system has a pole at $z_1 = 0.6 e^{j\\pi/4}$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "What other pole must the system necessarily possess?",
+        "If the system is known to be stable and causal, what is its ROC?",
+        "Prove that the DTFT phase response $\\angle H(e^{j\\omega})$ satisfies odd symmetry $\\angle H(e^{j\\omega}) = -\\angle H(e^{-j\\omega})$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Conjugate Pole Requirement:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Because the system impulse response $h[n]$ is real-valued ($h[n] \\in \\mathbb{R}$), its transfer function satisfies:"
+      },
+      {
+       "t": "math",
+       "tex": "H(z) = H^*(z^*)"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, if $z_1$ is a pole, its complex conjugate:"
+      },
+      {
+       "t": "math",
+       "tex": "z_2 = z_1^* = \\left( 0.6 e^{j\\pi/4} \\right)^* = \\mathbf{0.6 e^{-j\\pi/4}}"
+      },
+      {
+       "t": "p",
+       "text": "**must also be a pole** of the system."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**ROC Determination:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The poles have magnitude $\\vert z_1 \\vert = \\vert z_2 \\vert = 0.6 < 1$.\n   Since the system is causal, its ROC must be exterior to the outermost pole:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{ROC: } \\vert z \\vert > 0.6}"
+      },
+      {
+       "t": "p",
+       "text": "Because $\\vert z \\vert > 0.6$ contains the unit circle $\\vert z \\vert = 1$, the system is BIBO stable!"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Phase Symmetry Proof on Unit Circle:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluating on the unit circle $z = e^{j\\omega}$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{j\\omega}) = \\vert H(e^{j\\omega}) \\vert e^{j\\angle H(e^{j\\omega})}"
+      },
+      {
+       "t": "p",
+       "text": "By the conjugation property:"
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{-j\\omega}) = H^*\\left( (e^{-j\\omega})^* \\right) = H^*(e^{j\\omega}) = \\vert H(e^{j\\omega}) \\vert e^{-j\\angle H(e^{j\\omega})}"
+      },
+      {
+       "t": "p",
+       "text": "Equating phase angles on both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\angle H(e^{-j\\omega}) = -\\angle H(e^{j\\omega})}"
+      },
+      {
+       "t": "p",
+       "text": "This proves that the phase of any real discrete system is strictly an odd function of frequency $\\omega$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -9632,7 +9623,7 @@ export default {
      "items": [
       "**Total Chalkboard Slides Audited:** 32 Slides (Slides 097 to 128 across Pages 25 to 32).",
       "**Embedded Chalkboard Images:** Zero (100% publication-grade KaTeX transcription).",
-      "**All Interactive Derivations:** Fully wrapped in `<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>...</details>` blocks.",
+      "**All Interactive Derivations:** Fully wrapped in `<b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b>...` blocks.",
       "**GFM Table Compatibility:** 100% of mathematical pipes sanitized with `\\vert`."
      ]
     }
@@ -10275,61 +10266,60 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Algebraic Z-Transform Formulation**\nApplying the definition $X(z) = \\sum_{n=-\\infty}^\\infty x[n] z^{-n}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = 3 z^0 - 2 z^{-1} + 1 z^{-2} + 0 z^{-3} + 2 z^{-4} = 3 - \\frac{2}{z} + \\frac{1}{z^2} + \\frac{2}{z^4}"
-    },
-    {
-     "t": "p",
-     "text": "Expressing over a common denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{3z^4 - 2z^3 + z^2 + 2}{z^4}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Pole-Zero Structure and Singularity Analysis**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Poles**: The denominator roots are $z^4 = 0$, representing a pole of multiplicity 4 at the origin $z = 0$.",
-      "**Behavior at $z = \\infty$**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{3z^4 - 2z^3 + z^2 + 2}{z^4} = 3 < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "Since $X(\\infty)$ is finite and non-zero, $z = \\infty$ is an ordinary analytic point (neither a pole nor a zero)."
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: ROC Determination**\nBecause $x[n]$ is causal and finite-duration, convergence is guaranteed everywhere except at the pole $z = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}: \\vert z \\vert > 0 \\quad (0 < \\vert z \\vert \\le \\infty)"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap**: Many students memorize \"Finite duration signals have an ROC equal to the entire $z$-plane.\" This is **false**! If the signal contains any non-zero sample at $n > 0$, $z = 0$ is an explicit pole and must be excluded from the ROC."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Algebraic Z-Transform Formulation**\nApplying the definition $X(z) = \\sum_{n=-\\infty}^\\infty x[n] z^{-n}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = 3 z^0 - 2 z^{-1} + 1 z^{-2} + 0 z^{-3} + 2 z^{-4} = 3 - \\frac{2}{z} + \\frac{1}{z^2} + \\frac{2}{z^4}"
+      },
+      {
+       "t": "p",
+       "text": "Expressing over a common denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{3z^4 - 2z^3 + z^2 + 2}{z^4}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Pole-Zero Structure and Singularity Analysis**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Poles**: The denominator roots are $z^4 = 0$, representing a pole of multiplicity 4 at the origin $z = 0$.",
+        "**Behavior at $z = \\infty$**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{3z^4 - 2z^3 + z^2 + 2}{z^4} = 3 < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "Since $X(\\infty)$ is finite and non-zero, $z = \\infty$ is an ordinary analytic point (neither a pole nor a zero)."
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: ROC Determination**\nBecause $x[n]$ is causal and finite-duration, convergence is guaranteed everywhere except at the pole $z = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}: \\vert z \\vert > 0 \\quad (0 < \\vert z \\vert \\le \\infty)"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap**: Many students memorize \"Finite duration signals have an ROC equal to the entire $z$-plane.\" This is **false**! If the signal contains any non-zero sample at $n > 0$, $z = 0$ is an explicit pole and must be excluded from the ROC."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10369,52 +10359,51 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Algebraic Representation**"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\sum_{n=-4}^0 x[n] z^{-n} = -3 z^4 + 2 z^3 + z^2 + 2 z + 1"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Boundary Singularity Tests**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**At $z = 0$**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = -3(0)^4 + 2(0)^3 + (0)^2 + 2(0) + 1 = 1 < \\infty \\implies z = 0 \\text{ is NOT a pole.}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**At $z \\to \\infty$**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\left( -3z^4 \\right) = -\\infty \\implies z = \\infty \\text{ is a pole of order 4.}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Exact ROC Statement**\nThe ROC includes the origin and extends outward up to, but not including, infinity:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}: \\vert z \\vert < \\infty \\quad (0 \\le \\vert z \\vert < \\infty)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Algebraic Representation**"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\sum_{n=-4}^0 x[n] z^{-n} = -3 z^4 + 2 z^3 + z^2 + 2 z + 1"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Boundary Singularity Tests**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**At $z = 0$**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = -3(0)^4 + 2(0)^3 + (0)^2 + 2(0) + 1 = 1 < \\infty \\implies z = 0 \\text{ is NOT a pole.}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**At $z \\to \\infty$**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\left( -3z^4 \\right) = -\\infty \\implies z = \\infty \\text{ is a pole of order 4.}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Exact ROC Statement**\nThe ROC includes the origin and extends outward up to, but not including, infinity:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}: \\vert z \\vert < \\infty \\quad (0 \\le \\vert z \\vert < \\infty)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10437,27 +10426,26 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Pedagogical Proofs for Statement Truth Values:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Statement (a) is FALSE**: A finite duration signal only has an ROC equal to the entire $z$-plane if it has no negative powers (which blow up at $z=0$) and no positive powers (which blow up at $z=\\infty$). This occurs if and only if $x[n] = c \\delta[n]$.",
-      "**Statement (b) is TRUE**: $\\mathcal{Z}\\{\\delta[n]\\} = \\sum_{n=-\\infty}^\\infty \\delta[n] z^{-n} = 1$. The constant $1$ has no poles anywhere in the finite plane or at infinity. Hence $\\text{ROC} = \\mathbb{C}$.",
-      "**Statement (c) is TRUE**: A causal finite-duration signal $x[n]$ for $0 \\le n \\le N$ has $X(z) = \\sum_{n=0}^N x[n] z^{-n}$. The term $z^{-N}$ introduces a pole at $z = 0$. $\\lim_{z \\to \\infty} X(z) = x[0] < \\infty$. ROC is $\\vert z \\vert > 0$.",
-      "**Statement (d) is TRUE**: An anti-causal finite-duration signal $x[n]$ for $-M \\le n \\le 0$ has $X(z) = \\sum_{n=-M}^0 x[n] z^{-n}$. Positive powers $z^M$ introduce a pole at $z = \\infty$. $\\lim_{z \\to 0} X(z) = x[0] < \\infty$. ROC is $\\vert z \\vert < \\infty$.",
-      "**Statement (e) is TRUE**: A two-sided finite-duration signal extends from $-M \\le n \\le N$ ($M, N > 0$). It possesses poles at both $z = 0$ and $z = \\infty$. ROC is $0 < \\vert z \\vert < \\infty$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Pedagogical Proofs for Statement Truth Values:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Statement (a) is FALSE**: A finite duration signal only has an ROC equal to the entire $z$-plane if it has no negative powers (which blow up at $z=0$) and no positive powers (which blow up at $z=\\infty$). This occurs if and only if $x[n] = c \\delta[n]$.",
+        "**Statement (b) is TRUE**: $\\mathcal{Z}\\{\\delta[n]\\} = \\sum_{n=-\\infty}^\\infty \\delta[n] z^{-n} = 1$. The constant $1$ has no poles anywhere in the finite plane or at infinity. Hence $\\text{ROC} = \\mathbb{C}$.",
+        "**Statement (c) is TRUE**: A causal finite-duration signal $x[n]$ for $0 \\le n \\le N$ has $X(z) = \\sum_{n=0}^N x[n] z^{-n}$. The term $z^{-N}$ introduces a pole at $z = 0$. $\\lim_{z \\to \\infty} X(z) = x[0] < \\infty$. ROC is $\\vert z \\vert > 0$.",
+        "**Statement (d) is TRUE**: An anti-causal finite-duration signal $x[n]$ for $-M \\le n \\le 0$ has $X(z) = \\sum_{n=-M}^0 x[n] z^{-n}$. Positive powers $z^M$ introduce a pole at $z = \\infty$. $\\lim_{z \\to 0} X(z) = x[0] < \\infty$. ROC is $\\vert z \\vert < \\infty$.",
+        "**Statement (e) is TRUE**: A two-sided finite-duration signal extends from $-M \\le n \\le N$ ($M, N > 0$). It possesses poles at both $z = 0$ and $z = \\infty$. ROC is $0 < \\vert z \\vert < \\infty$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10518,118 +10506,117 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Proper Sequencing of Operations**\nWe must factor the argument of $x\\left[-\\frac{n}{3} + 2\\right]$ to separate shifting from scaling:"
-    },
-    {
-     "t": "math",
-     "tex": "x\\left[-\\frac{n}{3} + 2\\right] = x\\left[-\\frac{1}{3}(n - 6)\\right]"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Property-by-Property Forward Progression**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Time Expansion (Decimation/Interpolation Property)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall that $x[n/m]$ represents a signal expanded by integer factor $m$ with zero-interleaving:"
-    },
-    {
-     "t": "math",
-     "tex": "x\\left[\\frac{n}{3}\\right] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} X(z^3)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Time Reversal**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g[n] = x\\left[-\\frac{n}{3}\\right] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} G(z) = X((z^{-1})^3) = X(z^{-3})"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Time Shifting by $+6$ (Delay)**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "f[n] = g[n - 6] = x\\left[-\\frac{1}{3}(n - 6)\\right] = x\\left[-\\frac{n}{3} + 2\\right]"
-    },
-    {
-     "t": "math",
-     "tex": "F(z) = z^{-6} G(z) = z^{-6} X(z^{-3})"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Z-Domain Scaling (Multiplication by $a^n$)**:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Using $a^n f[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} F(z/a)$ with $a = -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = F\\left(\\frac{z}{-2}\\right) = \\left( \\frac{z}{-2} \\right)^{-6} X\\left( \\left( \\frac{z}{-2} \\right)^{-3} \\right)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the powers:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left( \\frac{z}{-2} \\right)^{-6} = (-2)^6 z^{-6} = 64 z^{-6} = \\frac{64}{z^6}"
-    },
-    {
-     "t": "math",
-     "tex": "\\left( \\frac{z}{-2} \\right)^{-3} = (-2)^3 z^{-3} = -8 z^{-3} = -\\frac{8}{z^3}"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{64}{z^6} X\\left(-\\frac{8}{z^3}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: ROC Mapping**\nThe original ROC is $\\vert z_{\\text{orig}} \\vert > \\frac{3}{2}$.\nHere, the argument passed into $X(\\cdot)$ is $z_{\\text{orig}} = -\\frac{8}{z^3}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert -\\frac{8}{z^3} \\right\\vert > \\frac{3}{2} \\iff \\frac{8}{\\vert z \\vert^3} > \\frac{3}{2} \\iff \\vert z \\vert^3 < \\frac{16}{3} \\approx 5.333 \\iff \\vert z \\vert < \\left(\\frac{16}{3}\\right)^{1/3} \\approx 1.747"
-    },
-    {
-     "t": "p",
-     "text": "Furthermore, the factor $\\frac{64}{z^6}$ introduces a pole of order 6 at the origin $z = 0$.\nThus, the complete ROC is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}: 0 < \\vert z \\vert < \\left(\\frac{16}{3}\\right)^{1/3} \\approx 1.747"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Common Student Error**: Forgetting to factor $-\\frac{1}{3}$ from the shift! If a student shifts by $2$ instead of $6$, they obtain $z^{-2}$, which is completely incorrect. The shift must be applied to the isolated variable $n$: $-\\frac{n}{3} + 2 = -\\frac{1}{3}(n - 6)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Proper Sequencing of Operations**\nWe must factor the argument of $x\\left[-\\frac{n}{3} + 2\\right]$ to separate shifting from scaling:"
+      },
+      {
+       "t": "math",
+       "tex": "x\\left[-\\frac{n}{3} + 2\\right] = x\\left[-\\frac{1}{3}(n - 6)\\right]"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Property-by-Property Forward Progression**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Time Expansion (Decimation/Interpolation Property)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall that $x[n/m]$ represents a signal expanded by integer factor $m$ with zero-interleaving:"
+      },
+      {
+       "t": "math",
+       "tex": "x\\left[\\frac{n}{3}\\right] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} X(z^3)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Time Reversal**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g[n] = x\\left[-\\frac{n}{3}\\right] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} G(z) = X((z^{-1})^3) = X(z^{-3})"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Time Shifting by $+6$ (Delay)**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "f[n] = g[n - 6] = x\\left[-\\frac{1}{3}(n - 6)\\right] = x\\left[-\\frac{n}{3} + 2\\right]"
+      },
+      {
+       "t": "math",
+       "tex": "F(z) = z^{-6} G(z) = z^{-6} X(z^{-3})"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Z-Domain Scaling (Multiplication by $a^n$)**:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Using $a^n f[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} F(z/a)$ with $a = -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = F\\left(\\frac{z}{-2}\\right) = \\left( \\frac{z}{-2} \\right)^{-6} X\\left( \\left( \\frac{z}{-2} \\right)^{-3} \\right)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the powers:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left( \\frac{z}{-2} \\right)^{-6} = (-2)^6 z^{-6} = 64 z^{-6} = \\frac{64}{z^6}"
+      },
+      {
+       "t": "math",
+       "tex": "\\left( \\frac{z}{-2} \\right)^{-3} = (-2)^3 z^{-3} = -8 z^{-3} = -\\frac{8}{z^3}"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{64}{z^6} X\\left(-\\frac{8}{z^3}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: ROC Mapping**\nThe original ROC is $\\vert z_{\\text{orig}} \\vert > \\frac{3}{2}$.\nHere, the argument passed into $X(\\cdot)$ is $z_{\\text{orig}} = -\\frac{8}{z^3}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert -\\frac{8}{z^3} \\right\\vert > \\frac{3}{2} \\iff \\frac{8}{\\vert z \\vert^3} > \\frac{3}{2} \\iff \\vert z \\vert^3 < \\frac{16}{3} \\approx 5.333 \\iff \\vert z \\vert < \\left(\\frac{16}{3}\\right)^{1/3} \\approx 1.747"
+      },
+      {
+       "t": "p",
+       "text": "Furthermore, the factor $\\frac{64}{z^6}$ introduces a pole of order 6 at the origin $z = 0$.\nThus, the complete ROC is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}: 0 < \\vert z \\vert < \\left(\\frac{16}{3}\\right)^{1/3} \\approx 1.747"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Common Student Error**: Forgetting to factor $-\\frac{1}{3}$ from the shift! If a student shifts by $2$ instead of $6$, they obtain $z^{-2}$, which is completely incorrect. The shift must be applied to the isolated variable $n$: $-\\frac{n}{3} + 2 = -\\frac{1}{3}(n - 6)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10688,54 +10675,53 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Algebraic Factorization of the Cyclotomic Identity**\nUsing the standard polynomial identity:"
-    },
-    {
-     "t": "math",
-     "tex": "z^N - a^N = (z - a)\\left( z^{N-1} + a z^{N-2} + a^2 z^{N-3} + \\dots + a^{N-1} \\right) = (z - a) \\sum_{k=0}^{N-1} a^k z^{N-1-k}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute this into $X(z)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{(z - a) \\sum_{k=0}^{N-1} a^k z^{N-1-k}}{z^{N-1}(z - a)}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Elimination of Removable Singularity**\nThe factor $(z - a)$ in the denominator is identically canceled by the root at $z = a$ in the numerator:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{1}{z^{N-1}} \\sum_{k=0}^{N-1} a^k z^{N-1-k} = \\sum_{k=0}^{N-1} a^k z^{-k} = 1 + a z^{-1} + a^2 z^{-2} + \\dots + a^{N-1} z^{-(N-1)}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Classification of $x[n]$**\nBy inspection of the polynomial in $z^{-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\sum_{k=0}^{N-1} a^k \\delta[n - k] = \\begin{cases} a^n, & 0 \\le n \\le N-1 \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "The sequence has length $N$ (Finite Duration).",
-      "All non-zero samples occur for $n \\ge 0$ (Causal / Right-Sided).",
-      "The only singularity is at the origin $z = 0$, where $z^{-(N-1)} \\to \\infty$.",
-      "**Conclusion**: $x[n]$ is a **Finite-Duration Causal** signal with $\\text{ROC}: \\vert z \\vert > 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Algebraic Factorization of the Cyclotomic Identity**\nUsing the standard polynomial identity:"
+      },
+      {
+       "t": "math",
+       "tex": "z^N - a^N = (z - a)\\left( z^{N-1} + a z^{N-2} + a^2 z^{N-3} + \\dots + a^{N-1} \\right) = (z - a) \\sum_{k=0}^{N-1} a^k z^{N-1-k}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute this into $X(z)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{(z - a) \\sum_{k=0}^{N-1} a^k z^{N-1-k}}{z^{N-1}(z - a)}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Elimination of Removable Singularity**\nThe factor $(z - a)$ in the denominator is identically canceled by the root at $z = a$ in the numerator:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{1}{z^{N-1}} \\sum_{k=0}^{N-1} a^k z^{N-1-k} = \\sum_{k=0}^{N-1} a^k z^{-k} = 1 + a z^{-1} + a^2 z^{-2} + \\dots + a^{N-1} z^{-(N-1)}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Classification of $x[n]$**\nBy inspection of the polynomial in $z^{-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\sum_{k=0}^{N-1} a^k \\delta[n - k] = \\begin{cases} a^n, & 0 \\le n \\le N-1 \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "The sequence has length $N$ (Finite Duration).",
+        "All non-zero samples occur for $n \\ge 0$ (Causal / Right-Sided).",
+        "The only singularity is at the origin $z = 0$, where $z^{-(N-1)} \\to \\infty$.",
+        "**Conclusion**: $x[n]$ is a **Finite-Duration Causal** signal with $\\text{ROC}: \\vert z \\vert > 0$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10796,108 +10782,107 @@ export default {
      "tex": "\\mathbf{x[n] = -\\frac{(-a)^n}{n} u[n-1]}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Differentiation in the Z-Domain**\nLet $y[n] = n x[n]$. By the differentiation property:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = -z \\frac{d}{dz} X(z)"
-    },
-    {
-     "t": "p",
-     "text": "Differentiating $X(z) = \\log(1 + a z^{-1})$ with respect to $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{dz} \\log(1 + a z^{-1}) = \\frac{1}{1 + a z^{-1}} \\cdot \\frac{d}{dz}(a z^{-1}) = \\frac{1}{1 + a z^{-1}} \\left( -a z^{-2} \\right) = \\frac{-a}{z^2 (1 + a z^{-1})}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying by $-z$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = -z \\left[ \\frac{-a}{z^2 (1 + a z^{-1})} \\right] = \\frac{a}{z (1 + a z^{-1})} = \\frac{a}{z + a}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Inverting $Y(z)$**\nWe know:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\left\\{ (-a)^n u[n] \\right\\} = \\frac{z}{z + a}, \\quad \\vert z \\vert > \\vert a \\vert"
-    },
-    {
-     "t": "p",
-     "text": "By the time-delay property ($x[n-1] \\leftrightarrow z^{-1} X(z)$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\left\\{ (-a)^{n-1} u[n-1] \\right\\} = z^{-1} \\left( \\frac{z}{z + a} \\right) = \\frac{1}{z + a}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying by the constant $a$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{a}{z + a} \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} y[n] = a (-a)^{n-1} u[n-1]"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Solving for $x[n]$**\nSince $y[n] = n x[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "n x[n] = a (-a)^{n-1} u[n-1] = -(-a)(-a)^{n-1} u[n-1] = -(-a)^n u[n-1]"
-    },
-    {
-     "t": "p",
-     "text": "Dividing by $n$ (valid for $n \\ge 1$, and $u[n-1] = 0$ for $n \\le 0$):"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = -\\frac{(-a)^n}{n} u[n-1]"
-    },
-    {
-     "t": "p",
-     "text": "**Alternative Verification via Taylor Series Expansion (Long Division):**\nRecall the Mercator series for $\\log(1 + w)$ valid for $\\vert w \\vert < 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\log(1 + w) = \\sum_{k=1}^\\infty (-1)^{k-1} \\frac{w^k}{k} = w - \\frac{w^2}{2} + \\frac{w^3}{3} - \\frac{w^4}{4} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Setting $w = a z^{-1}$ (which satisfies $\\vert a z^{-1} \\vert < 1 \\iff \\vert z \\vert > \\vert a \\vert$):"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\sum_{k=1}^\\infty (-1)^{k-1} \\frac{a^k z^{-k}}{k} = a z^{-1} - \\frac{a^2}{2} z^{-2} + \\frac{a^3}{3} z^{-3} - \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Comparing directly to $X(z) = \\sum_{n=1}^\\infty x[n] z^{-n}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[1] = a = -\\frac{(-a)^1}{1}, \\quad x[2] = -\\frac{a^2}{2} = -\\frac{(-a)^2}{2}, \\quad x[3] = \\frac{a^3}{3} = -\\frac{(-a)^3}{3}"
-    },
-    {
-     "t": "p",
-     "text": "This confirms the result:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = -\\frac{(-a)^n}{n} u[n-1]"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Differentiation in the Z-Domain**\nLet $y[n] = n x[n]$. By the differentiation property:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = -z \\frac{d}{dz} X(z)"
+      },
+      {
+       "t": "p",
+       "text": "Differentiating $X(z) = \\log(1 + a z^{-1})$ with respect to $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{dz} \\log(1 + a z^{-1}) = \\frac{1}{1 + a z^{-1}} \\cdot \\frac{d}{dz}(a z^{-1}) = \\frac{1}{1 + a z^{-1}} \\left( -a z^{-2} \\right) = \\frac{-a}{z^2 (1 + a z^{-1})}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying by $-z$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = -z \\left[ \\frac{-a}{z^2 (1 + a z^{-1})} \\right] = \\frac{a}{z (1 + a z^{-1})} = \\frac{a}{z + a}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Inverting $Y(z)$**\nWe know:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\left\\{ (-a)^n u[n] \\right\\} = \\frac{z}{z + a}, \\quad \\vert z \\vert > \\vert a \\vert"
+      },
+      {
+       "t": "p",
+       "text": "By the time-delay property ($x[n-1] \\leftrightarrow z^{-1} X(z)$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\left\\{ (-a)^{n-1} u[n-1] \\right\\} = z^{-1} \\left( \\frac{z}{z + a} \\right) = \\frac{1}{z + a}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying by the constant $a$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{a}{z + a} \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} y[n] = a (-a)^{n-1} u[n-1]"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Solving for $x[n]$**\nSince $y[n] = n x[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "n x[n] = a (-a)^{n-1} u[n-1] = -(-a)(-a)^{n-1} u[n-1] = -(-a)^n u[n-1]"
+      },
+      {
+       "t": "p",
+       "text": "Dividing by $n$ (valid for $n \\ge 1$, and $u[n-1] = 0$ for $n \\le 0$):"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = -\\frac{(-a)^n}{n} u[n-1]"
+      },
+      {
+       "t": "p",
+       "text": "**Alternative Verification via Taylor Series Expansion (Long Division):**\nRecall the Mercator series for $\\log(1 + w)$ valid for $\\vert w \\vert < 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\log(1 + w) = \\sum_{k=1}^\\infty (-1)^{k-1} \\frac{w^k}{k} = w - \\frac{w^2}{2} + \\frac{w^3}{3} - \\frac{w^4}{4} + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Setting $w = a z^{-1}$ (which satisfies $\\vert a z^{-1} \\vert < 1 \\iff \\vert z \\vert > \\vert a \\vert$):"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\sum_{k=1}^\\infty (-1)^{k-1} \\frac{a^k z^{-k}}{k} = a z^{-1} - \\frac{a^2}{2} z^{-2} + \\frac{a^3}{3} z^{-3} - \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Comparing directly to $X(z) = \\sum_{n=1}^\\infty x[n] z^{-n}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[1] = a = -\\frac{(-a)^1}{1}, \\quad x[2] = -\\frac{a^2}{2} = -\\frac{(-a)^2}{2}, \\quad x[3] = \\frac{a^3}{3} = -\\frac{(-a)^3}{3}"
+      },
+      {
+       "t": "p",
+       "text": "This confirms the result:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = -\\frac{(-a)^n}{n} u[n-1]"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10933,52 +10918,51 @@ export default {
      "tex": "\\mathbf{(1 - n) x[n-1] \\longleftrightarrow \\frac{dX(z)}{dz}}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Forward Relationship**\nFrom the differentiation property:"
-    },
-    {
-     "t": "math",
-     "tex": "-z \\frac{dX(z)}{dz} = \\mathcal{Z}\\{ n x[n] \\}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Algebraic Isolation of the Derivative**\nMultiply both sides by $-z^{-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{dX(z)}{dz} = -z^{-1} \\mathcal{Z}\\{ n x[n] \\}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Application of Time Delay**\nRecall that multiplication by $z^{-1}$ in the Z-domain corresponds to a delay of 1 sample in the time domain:"
-    },
-    {
-     "t": "math",
-     "tex": "z^{-1} \\mathcal{Z}\\{ g[n] \\} = \\mathcal{Z}\\{ g[n-1] \\}"
-    },
-    {
-     "t": "p",
-     "text": "Let $g[n] = n x[n]$. Then:"
-    },
-    {
-     "t": "math",
-     "tex": "g[n-1] = (n - 1) x[n - 1]"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}^{-1}\\left\\{ \\frac{dX(z)}{dz} \\right\\} = - g[n-1] = -(n - 1) x[n - 1] = (1 - n) x[n - 1]"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Forward Relationship**\nFrom the differentiation property:"
+      },
+      {
+       "t": "math",
+       "tex": "-z \\frac{dX(z)}{dz} = \\mathcal{Z}\\{ n x[n] \\}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Algebraic Isolation of the Derivative**\nMultiply both sides by $-z^{-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{dX(z)}{dz} = -z^{-1} \\mathcal{Z}\\{ n x[n] \\}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Application of Time Delay**\nRecall that multiplication by $z^{-1}$ in the Z-domain corresponds to a delay of 1 sample in the time domain:"
+      },
+      {
+       "t": "math",
+       "tex": "z^{-1} \\mathcal{Z}\\{ g[n] \\} = \\mathcal{Z}\\{ g[n-1] \\}"
+      },
+      {
+       "t": "p",
+       "text": "Let $g[n] = n x[n]$. Then:"
+      },
+      {
+       "t": "math",
+       "tex": "g[n-1] = (n - 1) x[n - 1]"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}^{-1}\\left\\{ \\frac{dX(z)}{dz} \\right\\} = - g[n-1] = -(n - 1) x[n - 1] = (1 - n) x[n - 1]"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11027,36 +11011,35 @@ export default {
      "tex": "\\mathbf{n a^{n-1} u[n] \\longleftrightarrow \\frac{z}{(z - a)^2}}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Differentiation**\nLet $x[n] = a^n u[n] \\leftrightarrow X(z) = \\frac{z}{z - a}$.\nUsing the quotient rule:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{dz}\\left[ \\frac{z}{z - a} \\right] = \\frac{1 \\cdot (z - a) - z \\cdot 1}{(z - a)^2} = \\frac{-a}{(z - a)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Applying the multiplication-by-$n$ property:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{ n a^n u[n] \\} = -z \\frac{dX(z)}{dz} = -z \\left[ \\frac{-a}{(z - a)^2} \\right] = \\frac{a z}{(z - a)^2}, \\quad \\vert z \\vert > \\vert a \\vert"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Canonical Form for Partial Fraction Inversion**\nDividing both sides by the constant $a$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{ n a^{n-1} u[n] \\} = \\frac{z}{(z - a)^2}, \\quad \\vert z \\vert > \\vert a \\vert"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Differentiation**\nLet $x[n] = a^n u[n] \\leftrightarrow X(z) = \\frac{z}{z - a}$.\nUsing the quotient rule:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{dz}\\left[ \\frac{z}{z - a} \\right] = \\frac{1 \\cdot (z - a) - z \\cdot 1}{(z - a)^2} = \\frac{-a}{(z - a)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Applying the multiplication-by-$n$ property:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{ n a^n u[n] \\} = -z \\frac{dX(z)}{dz} = -z \\left[ \\frac{-a}{(z - a)^2} \\right] = \\frac{a z}{(z - a)^2}, \\quad \\vert z \\vert > \\vert a \\vert"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Canonical Form for Partial Fraction Inversion**\nDividing both sides by the constant $a$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{ n a^{n-1} u[n] \\} = \\frac{z}{(z - a)^2}, \\quad \\vert z \\vert > \\vert a \\vert"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11075,34 +11058,33 @@ export default {
      "text": "\\vert Order | Causal / Right-Sided Sequence ($x[n]$ for $\\vert z \\vert > \\vert a \\vert$) | Standard Z-Domain Form ($X(z)$) | Anti-Causal / Left-Sided Sequence ($x[n]$ for $\\vert z \\vert < \\vert a \\vert$) \\vert\n| :---: | :--- | :---: | :--- |\n| **1** | $a^n u[n]$ | $\\dfrac{z}{z - a}$ | $-a^n u[-n-1]$ \\vert\n| **2** | $\\dfrac{n a^{n-1}}{1!} u[n]$ | $\\dfrac{z}{(z - a)^2}$ | $-n a^{n-1} u[-n-1]$ \\vert\n| **3** | $\\dfrac{n(n-1) a^{n-2}}{2!} u[n]$ | $\\dfrac{z}{(z - a)^3}$ | $-\\dfrac{n(n-1) a^{n-2}}{2!} u[-n-1]$ \\vert\n| **4** | $\\dfrac{n(n-1)(n-2) a^{n-3}}{3!} u[n]$ | $\\dfrac{z}{(z - a)^4}$ | $-\\dfrac{n(n-1)(n-2) a^{n-3}}{3!} u[-n-1]$ |"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Universal Binomial Formulation:**\nFor any positive integer pole multiplicity $m$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\binom{n}{m-1} a^{n-m+1} u[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} \\frac{z}{(z - a)^m}, \\quad \\vert z \\vert > \\vert a \\vert}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{-\\binom{n}{m-1} a^{n-m+1} u[-n-1] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} \\frac{z}{(z - a)^m}, \\quad \\vert z \\vert < \\vert a \\vert}"
-    },
-    {
-     "t": "p",
-     "text": "where $\\binom{n}{k} = \\frac{n(n-1)(n-2)\\dots(n-k+1)}{k!}$."
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Exam Shortcut**: If a problem presents a repeated pole $\\frac{z}{(z-a)^3}$, do NOT perform partial fraction differentiation on the entire expression! Directly identify $m=3$, so the time function is $\\frac{n(n-1)}{2} a^{n-2} u[n]$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Universal Binomial Formulation:**\nFor any positive integer pole multiplicity $m$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\binom{n}{m-1} a^{n-m+1} u[n] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} \\frac{z}{(z - a)^m}, \\quad \\vert z \\vert > \\vert a \\vert}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{-\\binom{n}{m-1} a^{n-m+1} u[-n-1] \\stackrel{\\mathcal{Z}}{\\longleftrightarrow} \\frac{z}{(z - a)^m}, \\quad \\vert z \\vert < \\vert a \\vert}"
+      },
+      {
+       "t": "p",
+       "text": "where $\\binom{n}{k} = \\frac{n(n-1)(n-2)\\dots(n-k+1)}{k!}$."
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Exam Shortcut**: If a problem presents a repeated pole $\\frac{z}{(z-a)^3}$, do NOT perform partial fraction differentiation on the entire expression! Directly identify $m=3$, so the time function is $\\frac{n(n-1)}{2} a^{n-2} u[n]$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11166,52 +11148,51 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: General Formula for Right-Sided Periodic Sequences**\nAny sequence formed by repeating a block $y[n]$ of length $N_0$ starting at $n = 0$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\sum_{k=0}^\\infty y[n - k N_0]"
-    },
-    {
-     "t": "p",
-     "text": "Taking the bilateral Z-transform:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\sum_{k=0}^\\infty Y(z) z^{-k N_0} = Y(z) \\sum_{k=0}^\\infty (z^{-N_0})^k"
-    },
-    {
-     "t": "p",
-     "text": "By the infinite geometric series sum formula $\\sum_{k=0}^\\infty w^k = \\frac{1}{1 - w}$, valid for $\\vert w \\vert < 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{Y(z)}{1 - z^{-N_0}}, \\quad \\text{ROC: } \\vert z^{-N_0} \\vert < 1 \\iff \\vert z \\vert > 1"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Pole Locations**\nThe poles are the roots of $z^{N_0} - 1 = 0$, which are the $N_0$-th roots of unity:"
-    },
-    {
-     "t": "math",
-     "tex": "p_k = e^{j \\frac{2\\pi k}{N_0}}, \\quad k = 0, 1, \\dots, N_0 - 1"
-    },
-    {
-     "t": "p",
-     "text": "Every pole lies strictly on the unit circle: $\\vert p_k \\vert = 1$.\nBecause the sequence is right-sided and causal, the ROC must be the exterior of the outermost pole circle:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}: \\vert z \\vert > 1"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: General Formula for Right-Sided Periodic Sequences**\nAny sequence formed by repeating a block $y[n]$ of length $N_0$ starting at $n = 0$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\sum_{k=0}^\\infty y[n - k N_0]"
+      },
+      {
+       "t": "p",
+       "text": "Taking the bilateral Z-transform:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\sum_{k=0}^\\infty Y(z) z^{-k N_0} = Y(z) \\sum_{k=0}^\\infty (z^{-N_0})^k"
+      },
+      {
+       "t": "p",
+       "text": "By the infinite geometric series sum formula $\\sum_{k=0}^\\infty w^k = \\frac{1}{1 - w}$, valid for $\\vert w \\vert < 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{Y(z)}{1 - z^{-N_0}}, \\quad \\text{ROC: } \\vert z^{-N_0} \\vert < 1 \\iff \\vert z \\vert > 1"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Pole Locations**\nThe poles are the roots of $z^{N_0} - 1 = 0$, which are the $N_0$-th roots of unity:"
+      },
+      {
+       "t": "math",
+       "tex": "p_k = e^{j \\frac{2\\pi k}{N_0}}, \\quad k = 0, 1, \\dots, N_0 - 1"
+      },
+      {
+       "t": "p",
+       "text": "Every pole lies strictly on the unit circle: $\\vert p_k \\vert = 1$.\nBecause the sequence is right-sided and causal, the ROC must be the exterior of the outermost pole circle:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}: \\vert z \\vert > 1"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11251,52 +11232,51 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Time-Shift Analysis**\nNotice that this signal is simply an advanced version of the causal periodic signal from Slide 140:"
-    },
-    {
-     "t": "math",
-     "tex": "x_{\\text{non-causal}}[n] = x_{\\text{causal}}[n + 3]"
-    },
-    {
-     "t": "p",
-     "text": "By the time-advance property:"
-    },
-    {
-     "t": "math",
-     "tex": "X_{\\text{non-causal}}(z) = z^{+3} X_{\\text{causal}}(z) = z^3 \\left( \\frac{z^3 + 2z^2 + 3z}{z^3 - 1} \\right) = \\frac{z^6 + 2z^5 + 3z^4}{z^3 - 1}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Causality Destruction by Advance Shifting**\nIn $X_{\\text{causal}}(z)$, the degree of the numerator is 3 and denominator is 3. As $z \\to \\infty$, the ratio approaches 1 (analytic at $\\infty$).\nHowever, advancing the sequence by 3 samples multiplies the rational function by $z^3$, raising the numerator degree to 6 while the denominator remains degree 3."
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X_{\\text{non-causal}}(z) = \\lim_{z \\to \\infty} z^3 = \\infty"
-    },
-    {
-     "t": "p",
-     "text": "Thus, **$z = \\infty$ becomes a pole of multiplicity 3**!"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: ROC Consequences**\nAn ROC can never contain any poles. Because $z = \\infty$ is a pole, the ROC cannot include infinity:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}: 1 < \\vert z \\vert < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "Because the ROC is bounded on both the inside (by $\\vert z \\vert = 1$) and outside (by $\\vert z \\vert = \\infty$), the ROC is an **annular ring**. An annular ROC strictly represents a **non-causal** signal!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Time-Shift Analysis**\nNotice that this signal is simply an advanced version of the causal periodic signal from Slide 140:"
+      },
+      {
+       "t": "math",
+       "tex": "x_{\\text{non-causal}}[n] = x_{\\text{causal}}[n + 3]"
+      },
+      {
+       "t": "p",
+       "text": "By the time-advance property:"
+      },
+      {
+       "t": "math",
+       "tex": "X_{\\text{non-causal}}(z) = z^{+3} X_{\\text{causal}}(z) = z^3 \\left( \\frac{z^3 + 2z^2 + 3z}{z^3 - 1} \\right) = \\frac{z^6 + 2z^5 + 3z^4}{z^3 - 1}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Causality Destruction by Advance Shifting**\nIn $X_{\\text{causal}}(z)$, the degree of the numerator is 3 and denominator is 3. As $z \\to \\infty$, the ratio approaches 1 (analytic at $\\infty$).\nHowever, advancing the sequence by 3 samples multiplies the rational function by $z^3$, raising the numerator degree to 6 while the denominator remains degree 3."
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X_{\\text{non-causal}}(z) = \\lim_{z \\to \\infty} z^3 = \\infty"
+      },
+      {
+       "t": "p",
+       "text": "Thus, **$z = \\infty$ becomes a pole of multiplicity 3**!"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: ROC Consequences**\nAn ROC can never contain any poles. Because $z = \\infty$ is a pole, the ROC cannot include infinity:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}: 1 < \\vert z \\vert < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "Because the ROC is bounded on both the inside (by $\\vert z \\vert = 1$) and outside (by $\\vert z \\vert = \\infty$), the ROC is an **annular ring**. An annular ROC strictly represents a **non-causal** signal!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11351,32 +11331,31 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Convergence Condition:**\nThe geometric series $\\sum_{k=0}^\\infty (z^3)^k$ converges if and only if:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert z^3 \\vert < 1 \\iff \\vert z \\vert < 1"
-    },
-    {
-     "t": "p",
-     "text": "Because $z = 0$ is an ordinary point ($X(0) = 1$), the disc of convergence includes the origin:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}: 0 \\le \\vert z \\vert < 1"
-    },
-    {
-     "t": "p",
-     "text": "Since the ROC is a disc centered at the origin enclosing $z = 0$, the sequence is strictly **anti-causal**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Convergence Condition:**\nThe geometric series $\\sum_{k=0}^\\infty (z^3)^k$ converges if and only if:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert z^3 \\vert < 1 \\iff \\vert z \\vert < 1"
+      },
+      {
+       "t": "p",
+       "text": "Because $z = 0$ is an ordinary point ($X(0) = 1$), the disc of convergence includes the origin:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}: 0 \\le \\vert z \\vert < 1"
+      },
+      {
+       "t": "p",
+       "text": "Since the ROC is a disc centered at the origin enclosing $z = 0$, the sequence is strictly **anti-causal**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11422,36 +11401,35 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Time-Delay Analysis**\nThe signal is delayed by 3 samples relative to the purely anti-causal signal:"
-    },
-    {
-     "t": "math",
-     "tex": "x_{\\text{non-causal}}[n] = x_{\\text{anti-causal}}[n - 3]"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = z^{-3} X_{\\text{anti-causal}}(z) = z^{-3} \\left( \\frac{1 + 2z + 3z^2}{1 - z^3} \\right) = \\frac{1 + 2z + 3z^2}{z^3(1 - z^3)}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Anti-Causality Destruction by Delay Shifting**\nDelaying an anti-causal signal introduces positive time samples ($n = 1, 2, 3$).\nIn the $z$-domain, multiplication by $z^{-3}$ creates a pole of order 3 at the origin $z = 0$.\nThe ROC must satisfy both $\\vert z \\vert < 1$ (from the geometric series) and $\\vert z \\vert > 0$ (to avoid the pole at $z = 0$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}: 0 < \\vert z \\vert < 1"
-    },
-    {
-     "t": "p",
-     "text": "An ROC that excludes the origin can NEVER correspond to an anti-causal signal. Thus, the sequence is **non-causal**!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Time-Delay Analysis**\nThe signal is delayed by 3 samples relative to the purely anti-causal signal:"
+      },
+      {
+       "t": "math",
+       "tex": "x_{\\text{non-causal}}[n] = x_{\\text{anti-causal}}[n - 3]"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = z^{-3} X_{\\text{anti-causal}}(z) = z^{-3} \\left( \\frac{1 + 2z + 3z^2}{1 - z^3} \\right) = \\frac{1 + 2z + 3z^2}{z^3(1 - z^3)}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Anti-Causality Destruction by Delay Shifting**\nDelaying an anti-causal signal introduces positive time samples ($n = 1, 2, 3$).\nIn the $z$-domain, multiplication by $z^{-3}$ creates a pole of order 3 at the origin $z = 0$.\nThe ROC must satisfy both $\\vert z \\vert < 1$ (from the geometric series) and $\\vert z \\vert > 0$ (to avoid the pole at $z = 0$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}: 0 < \\vert z \\vert < 1"
+      },
+      {
+       "t": "p",
+       "text": "An ROC that excludes the origin can NEVER correspond to an anti-causal signal. Thus, the sequence is **non-causal**!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11475,36 +11453,35 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Intersection of Convergence Regions:**\nBy the linearity property of the Z-transform, if $x[n] = x_1[n] + x_2[n]$, the resulting ROC contains the intersection of the individual ROCs:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{R} \\supseteq \\mathcal{R}_1 \\cap \\mathcal{R}_2"
-    },
-    {
-     "t": "p",
-     "text": "Here:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{R}_1 = \\{ z \\in \\mathbb{C} : 0 < \\vert z \\vert < \\infty \\}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{R}_2 = \\{ z \\in \\mathbb{C} : \\vert z \\vert > 1 \\}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{R} = \\mathcal{R}_1 \\cap \\mathcal{R}_2 = \\{ z \\in \\mathbb{C} : 1 < \\vert z \\vert < \\infty \\}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Intersection of Convergence Regions:**\nBy the linearity property of the Z-transform, if $x[n] = x_1[n] + x_2[n]$, the resulting ROC contains the intersection of the individual ROCs:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{R} \\supseteq \\mathcal{R}_1 \\cap \\mathcal{R}_2"
+      },
+      {
+       "t": "p",
+       "text": "Here:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{R}_1 = \\{ z \\in \\mathbb{C} : 0 < \\vert z \\vert < \\infty \\}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{R}_2 = \\{ z \\in \\mathbb{C} : \\vert z \\vert > 1 \\}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{R} = \\mathcal{R}_1 \\cap \\mathcal{R}_2 = \\{ z \\in \\mathbb{C} : 1 < \\vert z \\vert < \\infty \\}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11526,74 +11503,73 @@ export default {
      "tex": "\\mathbf{X(z) \\text{ doesn\\'t converge}}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Mathematical Proof of Non-Convergence:**\nLet $x[n]$ be a two-sided periodic sequence with period $N_0$ ($x[n + N_0] = x[n]$ for all $n \\in \\mathbb{Z}$).\nDecompose $x[n]$ into its causal and anti-causal halves:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = x[n]u[n] + x[n]u[-n-1] = x_R[n] + x_L[n]"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "For the right-sided component $x_R[n]$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because $x_R[n]$ repeats indefinitely as $n \\to +\\infty$, convergence of $\\sum_{n=0}^\\infty x[n] z^{-n}$ requires:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert z \\vert > 1"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "For the left-sided component $x_L[n]$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because $x_L[n]$ repeats indefinitely as $n \\to -\\infty$, convergence of $\\sum_{n=-\\infty}^{-1} x[n] z^{-n}$ requires:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert z \\vert < 1"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Total ROC Intersection:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC} = \\mathcal{R}_R \\cap \\mathcal{R}_L = \\{ z : \\vert z \\vert > 1 \\} \\cap \\{ z : \\vert z \\vert < 1 \\} = \\emptyset"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Conclusion**: The intersection is the **empty set**. No value of $z$ in the complex plane can simultaneously satisfy both conditions. Therefore, the ordinary bilateral Z-transform of an infinite two-sided periodic sequence **does not exist**!"
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "In the generalized Fourier sense (DTFT), periodic sequences have transforms containing Dirac delta impulses $\\delta(\\omega - \\omega_k)$ on the unit circle, but their standard Z-transform has no region of convergence."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Mathematical Proof of Non-Convergence:**\nLet $x[n]$ be a two-sided periodic sequence with period $N_0$ ($x[n + N_0] = x[n]$ for all $n \\in \\mathbb{Z}$).\nDecompose $x[n]$ into its causal and anti-causal halves:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = x[n]u[n] + x[n]u[-n-1] = x_R[n] + x_L[n]"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "For the right-sided component $x_R[n]$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Because $x_R[n]$ repeats indefinitely as $n \\to +\\infty$, convergence of $\\sum_{n=0}^\\infty x[n] z^{-n}$ requires:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert z \\vert > 1"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "For the left-sided component $x_L[n]$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Because $x_L[n]$ repeats indefinitely as $n \\to -\\infty$, convergence of $\\sum_{n=-\\infty}^{-1} x[n] z^{-n}$ requires:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert z \\vert < 1"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Total ROC Intersection:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC} = \\mathcal{R}_R \\cap \\mathcal{R}_L = \\{ z : \\vert z \\vert > 1 \\} \\cap \\{ z : \\vert z \\vert < 1 \\} = \\emptyset"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Conclusion**: The intersection is the **empty set**. No value of $z$ in the complex plane can simultaneously satisfy both conditions. Therefore, the ordinary bilateral Z-transform of an infinite two-sided periodic sequence **does not exist**!"
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "In the generalized Fourier sense (DTFT), periodic sequences have transforms containing Dirac delta impulses $\\delta(\\omega - \\omega_k)$ on the unit circle, but their standard Z-transform has no region of convergence."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11649,64 +11625,63 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Topological Ring Decomposition:**\nThe three pole magnitudes $\\{0.5, 1.5, 2.0\\}$ divide the complex $z$-plane into 4 mutually disjoint concentric regions:"
-    },
-    {
-     "t": "code",
-     "text": "               Region 4: |z| > 2 (Causal)\n             --------------------------------- Pole Circle |z| = 2.0\n               Region 3: 1.5 < |z| < 2 (Non-Causal)\n             --------------------------------- Pole Circle |z| = 1.5\n               Region 2: 0.5 < |z| < 1.5 (Non-Causal)\n             --------------------------------- Pole Circle |z| = 0.5\n               Region 1: |z| < 0.5 (Anti-Causal)"
-    },
-    {
-     "t": "p",
-     "text": "Each specific region dictates whether each term in the sum is causal or anti-causal:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "In **Region 4** ($\\vert z \\vert > 2$): $\\vert z \\vert$ is greater than all pole radii. All 3 terms are causal:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\left[ (2)^n + (1/2)^n + (-3/2)^n \\right] u[n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "In **Region 1** ($\\vert z \\vert < 0.5$): $\\vert z \\vert$ is smaller than all pole radii. All 3 terms are anti-causal:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = -\\left[ (2)^n + (1/2)^n + (-3/2)^n \\right] u[-n-1]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "In **Region 3** ($1.5 < \\vert z \\vert < 2$): $\\vert z \\vert > 0.5$ (causal for $1/2$), $\\vert z \\vert > 1.5$ (causal for $-3/2$), but $\\vert z \\vert < 2$ (anti-causal for $2$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = (1/2)^n u[n] + (-3/2)^n u[n] - (2)^n u[-n-1]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "In **Region 2** ($0.5 < \\vert z \\vert < 1.5$): $\\vert z \\vert > 0.5$ (causal for $1/2$), but $\\vert z \\vert < 1.5$ (anti-causal for $-3/2$) and $\\vert z \\vert < 2$ (anti-causal for $2$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = (1/2)^n u[n] - (-3/2)^n u[-n-1] - (2)^n u[-n-1]"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Topological Ring Decomposition:**\nThe three pole magnitudes $\\{0.5, 1.5, 2.0\\}$ divide the complex $z$-plane into 4 mutually disjoint concentric regions:"
+      },
+      {
+       "t": "code",
+       "text": "               Region 4: |z| > 2 (Causal)\n             --------------------------------- Pole Circle |z| = 2.0\n               Region 3: 1.5 < |z| < 2 (Non-Causal)\n             --------------------------------- Pole Circle |z| = 1.5\n               Region 2: 0.5 < |z| < 1.5 (Non-Causal)\n             --------------------------------- Pole Circle |z| = 0.5\n               Region 1: |z| < 0.5 (Anti-Causal)"
+      },
+      {
+       "t": "p",
+       "text": "Each specific region dictates whether each term in the sum is causal or anti-causal:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "In **Region 4** ($\\vert z \\vert > 2$): $\\vert z \\vert$ is greater than all pole radii. All 3 terms are causal:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\left[ (2)^n + (1/2)^n + (-3/2)^n \\right] u[n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "In **Region 1** ($\\vert z \\vert < 0.5$): $\\vert z \\vert$ is smaller than all pole radii. All 3 terms are anti-causal:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = -\\left[ (2)^n + (1/2)^n + (-3/2)^n \\right] u[-n-1]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "In **Region 3** ($1.5 < \\vert z \\vert < 2$): $\\vert z \\vert > 0.5$ (causal for $1/2$), $\\vert z \\vert > 1.5$ (causal for $-3/2$), but $\\vert z \\vert < 2$ (anti-causal for $2$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = (1/2)^n u[n] + (-3/2)^n u[n] - (2)^n u[-n-1]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "In **Region 2** ($0.5 < \\vert z \\vert < 1.5$): $\\vert z \\vert > 0.5$ (causal for $1/2$), but $\\vert z \\vert < 1.5$ (anti-causal for $-3/2$) and $\\vert z \\vert < 2$ (anti-causal for $2$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = (1/2)^n u[n] - (-3/2)^n u[-n-1] - (2)^n u[-n-1]"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11800,36 +11775,35 @@ export default {
      "tex": "\\text{ROC: } 1/2 < \\vert z \\vert < 3/2 \\quad \\longrightarrow \\mathbf{\\text{NON-Causal}}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Why Case (a) is Non-Causal Despite Having $+u[n+2]$:**\nA sequence is **causal** if and only if $x[n] = 0$ for all $n < 0$.\nHere, the step $u[n+2]$ turns on at $n = -2$.\nThus, non-zero samples exist at $n = -2$ and $n = -1$!\nIn the $z$-domain, because the signal possesses non-zero samples at negative time indices, $\\lim_{z \\to \\infty} X(z)$ diverges, creating a pole at $z = \\infty$.\nThe ROC is strictly bounded from above:"
-    },
-    {
-     "t": "math",
-     "tex": "2 < \\vert z \\vert < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "Because the ROC does NOT include infinity, it forms an annular strip, proving the sequence is **non-causal**!"
-    },
-    {
-     "t": "p",
-     "text": "**Why Case (b) Remains Anti-Causal:**\nThe anti-causal pair from time shifting is:"
-    },
-    {
-     "t": "math",
-     "tex": "-a^n u[-n-1] \\longleftrightarrow \\frac{z}{z - a} \\implies -a^{n+2} u[-(n+2)-1] = -a^{n+2} u[-n-3] \\longleftrightarrow z^2 \\frac{z}{z - a} = \\frac{z^3}{z - a}"
-    },
-    {
-     "t": "p",
-     "text": "The step $u[-n-3]$ is non-zero when $-n - 3 \\ge 0 \\iff n \\le -3$.\nAll samples exist for $n \\le -3 < 0$. There are NO samples for $n \\ge 0$.\nThe ROC is $\\vert z \\vert < 1/2$. Because $X(0) = 0$, the origin is included ($0 \\le \\vert z \\vert < 1/2$).\nThus, Case (b) is **strictly anti-causal**!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Why Case (a) is Non-Causal Despite Having $+u[n+2]$:**\nA sequence is **causal** if and only if $x[n] = 0$ for all $n < 0$.\nHere, the step $u[n+2]$ turns on at $n = -2$.\nThus, non-zero samples exist at $n = -2$ and $n = -1$!\nIn the $z$-domain, because the signal possesses non-zero samples at negative time indices, $\\lim_{z \\to \\infty} X(z)$ diverges, creating a pole at $z = \\infty$.\nThe ROC is strictly bounded from above:"
+      },
+      {
+       "t": "math",
+       "tex": "2 < \\vert z \\vert < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "Because the ROC does NOT include infinity, it forms an annular strip, proving the sequence is **non-causal**!"
+      },
+      {
+       "t": "p",
+       "text": "**Why Case (b) Remains Anti-Causal:**\nThe anti-causal pair from time shifting is:"
+      },
+      {
+       "t": "math",
+       "tex": "-a^n u[-n-1] \\longleftrightarrow \\frac{z}{z - a} \\implies -a^{n+2} u[-(n+2)-1] = -a^{n+2} u[-n-3] \\longleftrightarrow z^2 \\frac{z}{z - a} = \\frac{z^3}{z - a}"
+      },
+      {
+       "t": "p",
+       "text": "The step $u[-n-3]$ is non-zero when $-n - 3 \\ge 0 \\iff n \\le -3$.\nAll samples exist for $n \\le -3 < 0$. There are NO samples for $n \\ge 0$.\nThe ROC is $\\vert z \\vert < 1/2$. Because $X(0) = 0$, the origin is included ($0 \\le \\vert z \\vert < 1/2$).\nThus, Case (b) is **strictly anti-causal**!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11902,40 +11876,39 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Why Case (b) is Non-Causal Despite Having $-u[-n+1]$:**\nConsider the step argument:"
-    },
-    {
-     "t": "math",
-     "tex": "-n + 1 \\ge 0 \\iff n \\le 1"
-    },
-    {
-     "t": "p",
-     "text": "This sequence has non-zero values at:"
-    },
-    {
-     "t": "math",
-     "tex": "n = \\dots, -2, -1, 0, \\mathbf{+1}"
-    },
-    {
-     "t": "p",
-     "text": "Because a non-zero sample exists at positive time ($n = +1 > 0$), the sequence is NOT anti-causal! An anti-causal sequence must be identically zero for all $n > 0$.\nIn the $z$-domain, the sample at $n = +1$ produces a term $x[1] z^{-1}$, which diverges at $z = 0$.\nThus, $z = 0$ is a pole, and the ROC must exclude the origin:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}: 0 < \\vert z \\vert < \\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Because the origin is excluded, this region is an annular strip, proving that the signal is **non-causal**!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Why Case (b) is Non-Causal Despite Having $-u[-n+1]$:**\nConsider the step argument:"
+      },
+      {
+       "t": "math",
+       "tex": "-n + 1 \\ge 0 \\iff n \\le 1"
+      },
+      {
+       "t": "p",
+       "text": "This sequence has non-zero values at:"
+      },
+      {
+       "t": "math",
+       "tex": "n = \\dots, -2, -1, 0, \\mathbf{+1}"
+      },
+      {
+       "t": "p",
+       "text": "Because a non-zero sample exists at positive time ($n = +1 > 0$), the sequence is NOT anti-causal! An anti-causal sequence must be identically zero for all $n > 0$.\nIn the $z$-domain, the sample at $n = +1$ produces a term $x[1] z^{-1}$, which diverges at $z = 0$.\nThus, $z = 0$ is a pole, and the ROC must exclude the origin:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}: 0 < \\vert z \\vert < \\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Because the origin is excluded, this region is an annular strip, proving that the signal is **non-causal**!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13630,99 +13603,98 @@ export default {
      "text": "To demonstrate that a rational transfer function $X(z)$ is mathematically incomplete without its ROC specification. The ROC dictates causality, anti-causality, bilateral behavior, and finite versus infinite temporal duration."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Complete Chalkboard Taxonomy Table:"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Given ROC Specification",
-      "Equivalent Geometric Range",
-      "Temporal Nature of $x[n]$",
-      "Analytical Characteristics & Physical Interpretation"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Complete Chalkboard Taxonomy Table:"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Given ROC Specification",
+        "Equivalent Geometric Range",
+        "Temporal Nature of $x[n]$",
+        "Analytical Characteristics & Physical Interpretation"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "$\\vert z\\vert < \\alpha$",
+         "$0 \\le \\vert z\\vert < \\alpha$",
+         "**Anti-Causal** (Left-Sided)",
+         "Interior of circular disc of radius $\\alpha$. Sequence satisfies $x[n] = 0$ for $n > 0$. Includes origin $z = 0$."
+        ],
+        [
+         "$0 < \\vert z\\vert < \\alpha$",
+         "$0 < \\vert z\\vert < \\alpha$",
+         "**Non-Causal** (Two-Sided / Left-Sided with Right Spike)",
+         "Interior disc punctured at $z = 0$. Missing origin indicates positive powers of $z^{-1}$ ($z^{-k}$ for $k > 0$), so $x[n] \\ne 0$ for some $n > 0$."
+        ],
+        [
+         "$\\alpha < \\vert z\\vert < \\infty$",
+         "$\\alpha < \\vert z\\vert < \\infty$",
+         "**Non-Causal** (Two-Sided / Right-Sided with Left Spike)",
+         "Exterior region punctured at $z = \\infty$. Missing infinity indicates presence of positive powers of $z$ ($z^k$ for $k > 0$), so $x[n] \\ne 0$ for some $n < 0$."
+        ],
+        [
+         "$\\alpha < \\vert z\\vert \\le \\infty$",
+         "$\\alpha < \\vert z\\vert \\le \\infty$",
+         "**Causal** (Right-Sided)",
+         "Exterior of circle of radius $\\alpha$ extending to and including infinity. Sequence satisfies $x[n] = 0$ for $n < 0$."
+        ],
+        [
+         "$\\alpha < \\vert z\\vert < \\beta$",
+         "$\\alpha < \\vert z\\vert < \\beta$",
+         "**Non-Causal** (Two-Sided Infinite)",
+         "Concentric annular ring bounded by radii $\\alpha$ and $\\beta$. Sequence has infinite duration in both directions ($n \\to +\\infty$ and $n \\to -\\infty$)."
+        ],
+        [
+         "$0 \\le \\vert z\\vert \\le \\infty$",
+         "Entire Complex Plane",
+         "**F.D. + F.A., Impulse Sequence**",
+         "Finite Duration + Finite Amplitude. Contains only $\\delta[n]$ at origin ($X(z) = c$)."
+        ],
+        [
+         "$0 < \\vert z\\vert \\le \\infty$",
+         "Entire Plane except $z = 0$",
+         "**F.D. + F.A., Causal**",
+         "Finite duration right-sided sequence ($x[n] = \\sum_{k=0}^{M} c_k \\delta[n-k]$). Only negative powers $z^{-k}$."
+        ],
+        [
+         "$0 < \\vert z\\vert < \\infty$",
+         "Entire Plane except $z = 0, \\infty$",
+         "**F.D. + F.A., Non-Causal**",
+         "Finite duration two-sided sequence ($x[n] = \\sum_{k=-N_1}^{N_2} c_k \\delta[n-k]$). Contains both $z^k$ and $z^{-k}$."
+        ],
+        [
+         "$0 \\le \\vert z\\vert < \\infty$",
+         "Entire Plane except $z = \\infty$",
+         "**F.D. + F.A., Anti-Causal**",
+         "Finite duration left-sided sequence ($x[n] = \\sum_{k=0}^{M} c_k \\delta[n+k]$). Only positive powers $z^k$."
+        ]
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Critical Exam Traps & Takeaways:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Causality Criterion:** A right-sided signal is causal if and only if its ROC includes $z = \\infty$. If the ROC excludes $\\infty$, it cannot be causal.",
+        "**Anti-Causality Criterion:** A left-sided signal is anti-causal if and only if its ROC includes $z = 0$. If the ROC excludes $0$, it cannot be anti-causal.",
+        "**Finite-Duration Sequences:** All finite-duration, finite-amplitude sequences converge everywhere on the complex plane, except possibly at $z = 0$ (if $x[n] \\ne 0$ for some $n > 0$) and/or $z = \\infty$ (if $x[n] \\ne 0$ for some $n < 0$)."
+       ]
+      }
      ],
-     "align": [
-      ":---",
-      ":---",
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "$\\vert z\\vert < \\alpha$",
-       "$0 \\le \\vert z\\vert < \\alpha$",
-       "**Anti-Causal** (Left-Sided)",
-       "Interior of circular disc of radius $\\alpha$. Sequence satisfies $x[n] = 0$ for $n > 0$. Includes origin $z = 0$."
-      ],
-      [
-       "$0 < \\vert z\\vert < \\alpha$",
-       "$0 < \\vert z\\vert < \\alpha$",
-       "**Non-Causal** (Two-Sided / Left-Sided with Right Spike)",
-       "Interior disc punctured at $z = 0$. Missing origin indicates positive powers of $z^{-1}$ ($z^{-k}$ for $k > 0$), so $x[n] \\ne 0$ for some $n > 0$."
-      ],
-      [
-       "$\\alpha < \\vert z\\vert < \\infty$",
-       "$\\alpha < \\vert z\\vert < \\infty$",
-       "**Non-Causal** (Two-Sided / Right-Sided with Left Spike)",
-       "Exterior region punctured at $z = \\infty$. Missing infinity indicates presence of positive powers of $z$ ($z^k$ for $k > 0$), so $x[n] \\ne 0$ for some $n < 0$."
-      ],
-      [
-       "$\\alpha < \\vert z\\vert \\le \\infty$",
-       "$\\alpha < \\vert z\\vert \\le \\infty$",
-       "**Causal** (Right-Sided)",
-       "Exterior of circle of radius $\\alpha$ extending to and including infinity. Sequence satisfies $x[n] = 0$ for $n < 0$."
-      ],
-      [
-       "$\\alpha < \\vert z\\vert < \\beta$",
-       "$\\alpha < \\vert z\\vert < \\beta$",
-       "**Non-Causal** (Two-Sided Infinite)",
-       "Concentric annular ring bounded by radii $\\alpha$ and $\\beta$. Sequence has infinite duration in both directions ($n \\to +\\infty$ and $n \\to -\\infty$)."
-      ],
-      [
-       "$0 \\le \\vert z\\vert \\le \\infty$",
-       "Entire Complex Plane",
-       "**F.D. + F.A., Impulse Sequence**",
-       "Finite Duration + Finite Amplitude. Contains only $\\delta[n]$ at origin ($X(z) = c$)."
-      ],
-      [
-       "$0 < \\vert z\\vert \\le \\infty$",
-       "Entire Plane except $z = 0$",
-       "**F.D. + F.A., Causal**",
-       "Finite duration right-sided sequence ($x[n] = \\sum_{k=0}^{M} c_k \\delta[n-k]$). Only negative powers $z^{-k}$."
-      ],
-      [
-       "$0 < \\vert z\\vert < \\infty$",
-       "Entire Plane except $z = 0, \\infty$",
-       "**F.D. + F.A., Non-Causal**",
-       "Finite duration two-sided sequence ($x[n] = \\sum_{k=-N_1}^{N_2} c_k \\delta[n-k]$). Contains both $z^k$ and $z^{-k}$."
-      ],
-      [
-       "$0 \\le \\vert z\\vert < \\infty$",
-       "Entire Plane except $z = \\infty$",
-       "**F.D. + F.A., Anti-Causal**",
-       "Finite duration left-sided sequence ($x[n] = \\sum_{k=0}^{M} c_k \\delta[n+k]$). Only positive powers $z^k$."
-      ]
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Critical Exam Traps & Takeaways:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Causality Criterion:** A right-sided signal is causal if and only if its ROC includes $z = \\infty$. If the ROC excludes $\\infty$, it cannot be causal.",
-      "**Anti-Causality Criterion:** A left-sided signal is anti-causal if and only if its ROC includes $z = 0$. If the ROC excludes $0$, it cannot be anti-causal.",
-      "**Finite-Duration Sequences:** All finite-duration, finite-amplitude sequences converge everywhere on the complex plane, except possibly at $z = 0$ (if $x[n] \\ne 0$ for some $n > 0$) and/or $z = \\infty$ (if $x[n] \\ne 0$ for some $n < 0$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "open": true
     },
     {
      "t": "h3",
@@ -13753,114 +13725,117 @@ export default {
      "text": "To illustrate why multiplying numerator and denominator by $z^2$ is essential to expose true pole locations, and why expanding $\\frac{X(z)}{z}$ is mathematically superior to expanding $X(z)$ directly."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Conversion to Positive Powers of $z$"
-    },
-    {
-     "t": "p",
-     "text": "Multiply numerator and denominator by $z^2$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{1 \\cdot z^2}{z^2 \\left(1 - \\frac{1}{3}z^{-1}\\right)\\left(1 - 2z^{-1}\\right)} = \\frac{z^2}{\\left(z - \\frac{1}{3}\\right)(z - 2)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Locating Finite and Boundary Singularities"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Finite Poles:** Denominator roots are:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z_p = \\frac{1}{3}, \\quad z_p = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Behavior at $z = 0$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = \\frac{0^2}{\\left(0 - \\frac{1}{3}\\right)(0 - 2)} = \\frac{0}{\\frac{2}{3}} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Since $X(0) = 0$, $z = 0$ is a double zero, **NOT a pole**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Behavior at $z = \\infty$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z^2}{z^2 - \\frac{7}{3}z + \\frac{2}{3}} = \\frac{1}{1} = 1 < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "Since the limit is finite and non-zero, **$z = \\infty$ is NOT a pole**."
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Partial Fraction Expansion of $\\frac{X(z)}{z}$"
-    },
-    {
-     "t": "p",
-     "text": "Dividing $X(z)$ by $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{X(z)}{z} = \\frac{z}{\\left(z - \\frac{1}{3}\\right)(z - 2)}"
-    },
-    {
-     "t": "p",
-     "text": "Using Heaviside cover-up method:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{X(z)}{z} = \\frac{A}{z - \\frac{1}{3}} + \\frac{B}{z - 2}"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{z}{z - 2} \\right|_{z = 1/3} = \\frac{\\frac{1}{3}}{\\frac{1}{3} - 2} = \\frac{\\frac{1}{3}}{-\\frac{5}{3}} = -\\frac{1}{5}"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{z}{z - \\frac{1}{3}} \\right|_{z = 2} = \\frac{2}{2 - \\frac{1}{3}} = \\frac{2}{\\frac{5}{3}} = \\frac{6}{5}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying back by $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(z) = -\\frac{1}{5} \\frac{z}{z - \\frac{1}{3}} + \\frac{6}{5} \\frac{z}{z - 2}}"
-    },
-    {
-     "t": "h4",
-     "text": "Critical Exam Trap:"
-    },
-    {
-     "t": "p",
-     "text": "If a student expands $X(z)$ directly instead of $\\frac{X(z)}{z}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z^2}{(z - 1/3)(z - 2)} = 1 + \\frac{\\frac{7}{3}z - \\frac{2}{3}}{(z - 1/3)(z - 2)}"
-    },
-    {
-     "t": "p",
-     "text": "The division introduces a constant term $1$ (yielding $\\delta[n]$), plus terms of the form $\\frac{C}{z - a}$ which invert to delayed steps $a^{n-1}u[n-1]$. While mathematically valid, this increases algebraic effort and causes frequent index errors. Expanding $\\frac{X(z)}{z}$ yields standard $\\frac{z}{z-a} \\leftrightarrow a^n u[n]$ terms directly!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Conversion to Positive Powers of $z$"
+      },
+      {
+       "t": "p",
+       "text": "Multiply numerator and denominator by $z^2$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{1 \\cdot z^2}{z^2 \\left(1 - \\frac{1}{3}z^{-1}\\right)\\left(1 - 2z^{-1}\\right)} = \\frac{z^2}{\\left(z - \\frac{1}{3}\\right)(z - 2)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Locating Finite and Boundary Singularities"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Finite Poles:** Denominator roots are:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z_p = \\frac{1}{3}, \\quad z_p = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Behavior at $z = 0$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = \\frac{0^2}{\\left(0 - \\frac{1}{3}\\right)(0 - 2)} = \\frac{0}{\\frac{2}{3}} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Since $X(0) = 0$, $z = 0$ is a double zero, **NOT a pole**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Behavior at $z = \\infty$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z^2}{z^2 - \\frac{7}{3}z + \\frac{2}{3}} = \\frac{1}{1} = 1 < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "Since the limit is finite and non-zero, **$z = \\infty$ is NOT a pole**."
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Partial Fraction Expansion of $\\frac{X(z)}{z}$"
+      },
+      {
+       "t": "p",
+       "text": "Dividing $X(z)$ by $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{X(z)}{z} = \\frac{z}{\\left(z - \\frac{1}{3}\\right)(z - 2)}"
+      },
+      {
+       "t": "p",
+       "text": "Using Heaviside cover-up method:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{X(z)}{z} = \\frac{A}{z - \\frac{1}{3}} + \\frac{B}{z - 2}"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{z}{z - 2} \\right|_{z = 1/3} = \\frac{\\frac{1}{3}}{\\frac{1}{3} - 2} = \\frac{\\frac{1}{3}}{-\\frac{5}{3}} = -\\frac{1}{5}"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{z}{z - \\frac{1}{3}} \\right|_{z = 2} = \\frac{2}{2 - \\frac{1}{3}} = \\frac{2}{\\frac{5}{3}} = \\frac{6}{5}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying back by $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(z) = -\\frac{1}{5} \\frac{z}{z - \\frac{1}{3}} + \\frac{6}{5} \\frac{z}{z - 2}}"
+      },
+      {
+       "t": "h4",
+       "text": "Critical Exam Trap:"
+      },
+      {
+       "t": "p",
+       "text": "If a student expands $X(z)$ directly instead of $\\frac{X(z)}{z}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z^2}{(z - 1/3)(z - 2)} = 1 + \\frac{\\frac{7}{3}z - \\frac{2}{3}}{(z - 1/3)(z - 2)}"
+      },
+      {
+       "t": "p",
+       "text": "The division introduces a constant term $1$ (yielding $\\delta[n]$), plus terms of the form $\\frac{C}{z - a}$ which invert to delayed steps $a^{n-1}u[n-1]$. While mathematically valid, this increases algebraic effort and causes frequent index errors. Expanding $\\frac{X(z)}{z}$ yields standard $\\frac{z}{z-a} \\leftrightarrow a^n u[n]$ terms directly!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13892,102 +13867,101 @@ export default {
      "text": "To show how pole positions determine concentric boundaries in the complex plane, and how each annular or circular region assigns a causal (right-sided) or anti-causal (left-sided) character to each partial fraction component."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Fundamental Transform Pairs:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{z}{z - a} \\longleftrightarrow \\begin{cases} a^n u[n], & |z| > |a| \\quad \\text{(Exterior / Causal)} \\\\ -a^n u[-n-1], & |z| < |a| \\quad \\text{(Interior / Anti-Causal)} \\end{cases}"
-    },
-    {
-     "t": "h4",
-     "text": "Case 1: Causal ROC ($|z| > 2$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Region is exterior to both poles ($|z| > 1/3$ and $|z| > 2$).",
-      "Both terms invert to right-sided (causal) sequences:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = -\\frac{1}{5} \\left(\\frac{1}{3}\\right)^n u[n] + \\frac{6}{5} (2)^n u[n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**System Properties:** Causal, UNSTABLE (pole at $z=2$ lies outside unit circle; ROC does not contain $|z|=1$).",
-      "**Initial Value Verification:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[0] = -\\frac{1}{5}(1) + \\frac{6}{5}(1) = \\frac{5}{5} = 1"
-    },
-    {
-     "t": "p",
-     "text": "From $X(z)$: $\\lim_{z \\to \\infty} X(z) = 1$. Matches Initial Value Theorem!"
-    },
-    {
-     "t": "h4",
-     "text": "Case 2: Anti-Causal ROC ($|z| < 1/3$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Region is interior to both poles ($|z| < 1/3$ and $|z| < 2$).",
-      "Both terms invert to left-sided (anti-causal) sequences:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = -\\frac{1}{5} \\left[ -\\left(\\frac{1}{3}\\right)^n u[-n-1] \\right] + \\frac{6}{5} \\left[ -(2)^n u[-n-1] \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\frac{1}{5} \\left(\\frac{1}{3}\\right)^n u[-n-1] - \\frac{6}{5} (2)^n u[-n-1]}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**System Properties:** Anti-causal, UNSTABLE (ROC does not contain $|z|=1$).",
-      "Note that $x[n] = 0$ for all $n \\ge 0$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Case 3: Non-Causal Annular ROC ($1/3 < |z| < 2$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For pole at $z = 1/3$: $|z| > 1/3 \\implies$ Causal (right-sided).",
-      "For pole at $z = 2$: $|z| < 2 \\implies$ Anti-causal (left-sided)."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = -\\frac{1}{5} \\left(\\frac{1}{3}\\right)^n u[n] - \\frac{6}{5} (2)^n u[-n-1]}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**System Properties:** Non-causal (two-sided), **BIBO STABLE** because the annular band $1/3 < |z| < 2$ contains the Unit Circle $|z| = 1$!",
-      "**Absolute Summability Check:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^{\\infty} |x[n]| = \\frac{1}{5} \\sum_{n=0}^{\\infty} \\left(\\frac{1}{3}\\right)^n + \\frac{6}{5} \\sum_{n=-\\infty}^{-1} 2^n = \\frac{1}{5}\\left(\\frac{1}{1 - 1/3}\\right) + \\frac{6}{5}\\left(\\frac{1/2}{1 - 1/2}\\right) = \\frac{3}{10} + \\frac{6}{5} = 1.5 < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Fundamental Transform Pairs:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{z}{z - a} \\longleftrightarrow \\begin{cases} a^n u[n], & |z| > |a| \\quad \\text{(Exterior / Causal)} \\\\ -a^n u[-n-1], & |z| < |a| \\quad \\text{(Interior / Anti-Causal)} \\end{cases}"
+      },
+      {
+       "t": "h4",
+       "text": "Case 1: Causal ROC ($|z| > 2$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Region is exterior to both poles ($|z| > 1/3$ and $|z| > 2$).",
+        "Both terms invert to right-sided (causal) sequences:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = -\\frac{1}{5} \\left(\\frac{1}{3}\\right)^n u[n] + \\frac{6}{5} (2)^n u[n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**System Properties:** Causal, UNSTABLE (pole at $z=2$ lies outside unit circle; ROC does not contain $|z|=1$).",
+        "**Initial Value Verification:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[0] = -\\frac{1}{5}(1) + \\frac{6}{5}(1) = \\frac{5}{5} = 1"
+      },
+      {
+       "t": "p",
+       "text": "From $X(z)$: $\\lim_{z \\to \\infty} X(z) = 1$. Matches Initial Value Theorem!"
+      },
+      {
+       "t": "h4",
+       "text": "Case 2: Anti-Causal ROC ($|z| < 1/3$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Region is interior to both poles ($|z| < 1/3$ and $|z| < 2$).",
+        "Both terms invert to left-sided (anti-causal) sequences:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = -\\frac{1}{5} \\left[ -\\left(\\frac{1}{3}\\right)^n u[-n-1] \\right] + \\frac{6}{5} \\left[ -(2)^n u[-n-1] \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\frac{1}{5} \\left(\\frac{1}{3}\\right)^n u[-n-1] - \\frac{6}{5} (2)^n u[-n-1]}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**System Properties:** Anti-causal, UNSTABLE (ROC does not contain $|z|=1$).",
+        "Note that $x[n] = 0$ for all $n \\ge 0$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Case 3: Non-Causal Annular ROC ($1/3 < |z| < 2$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For pole at $z = 1/3$: $|z| > 1/3 \\implies$ Causal (right-sided).",
+        "For pole at $z = 2$: $|z| < 2 \\implies$ Anti-causal (left-sided)."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = -\\frac{1}{5} \\left(\\frac{1}{3}\\right)^n u[n] - \\frac{6}{5} (2)^n u[-n-1]}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**System Properties:** Non-causal (two-sided), **BIBO STABLE** because the annular band $1/3 < |z| < 2$ contains the Unit Circle $|z| = 1$!",
+        "**Absolute Summability Check:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^{\\infty} |x[n]| = \\frac{1}{5} \\sum_{n=0}^{\\infty} \\left(\\frac{1}{3}\\right)^n + \\frac{6}{5} \\sum_{n=-\\infty}^{-1} 2^n = \\frac{1}{5}\\left(\\frac{1}{1 - 1/3}\\right) + \\frac{6}{5}\\left(\\frac{1/2}{1 - 1/2}\\right) = \\frac{3}{10} + \\frac{6}{5} = 1.5 < \\infty"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14018,60 +13992,59 @@ export default {
      "text": "To demonstrate the conversion procedure from DSP filter form (negative powers of $z$) to continuous pole form, showing that no spurious poles exist at $z = 0$ or $z = \\infty$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Converting to Positive Powers of $z$"
-    },
-    {
-     "t": "p",
-     "text": "Multiply numerator and denominator by $z^2$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{\\left(3 - \\frac{5}{6}z^{-1}\\right) z^2}{\\left(1 - \\frac{1}{4}z^{-1}\\right) z \\cdot \\left(1 - \\frac{1}{3}z^{-1}\\right) z} = \\frac{3z^2 - \\frac{5}{6}z}{\\left(z - \\frac{1}{4}\\right)\\left(z - \\frac{1}{3}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Pole Locations & Boundary Tests"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Denominator roots: $z = 1/4$ and $z = 1/3$.",
-      "Check $z = 0$: $X(0) = \\frac{0}{(-1/4)(-1/3)} = 0 \\implies$ zero at $z=0$, NO pole.",
-      "Check $z = \\infty$: $\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{3z^2}{z^2} = 3 < \\infty \\implies$ finite value, NO pole."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Partial Fraction Decomposition of $\\frac{X(z)}{z}$"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{X(z)}{z} = \\frac{3z - \\frac{5}{6}}{\\left(z - \\frac{1}{4}\\right)\\left(z - \\frac{1}{3}\\right)} = \\frac{A}{z - \\frac{1}{4}} + \\frac{B}{z - \\frac{1}{3}}"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{3z - \\frac{5}{6}}{z - \\frac{1}{3}} \\right|_{z = 1/4} = \\frac{3(1/4) - \\frac{5}{6}}{1/4 - 1/3} = \\frac{\\frac{3}{4} - \\frac{5}{6}}{-\\frac{1}{12}} = \\frac{\\frac{9 - 10}{12}}{-\\frac{1}{12}} = \\frac{-\\frac{1}{12}}{-\\frac{1}{12}} = 1"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{3z - \\frac{5}{6}}{z - \\frac{1}{4}} \\right|_{z = 1/3} = \\frac{3(1/3) - \\frac{5}{6}}{1/3 - 1/4} = \\frac{1 - \\frac{5}{6}}{\\frac{1}{12}} = \\frac{\\frac{1}{6}}{\\frac{1}{12}} = 2"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying back by $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(z) = \\frac{z}{z - \\frac{1}{4}} + \\frac{2z}{z - \\frac{1}{3}}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Converting to Positive Powers of $z$"
+      },
+      {
+       "t": "p",
+       "text": "Multiply numerator and denominator by $z^2$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{\\left(3 - \\frac{5}{6}z^{-1}\\right) z^2}{\\left(1 - \\frac{1}{4}z^{-1}\\right) z \\cdot \\left(1 - \\frac{1}{3}z^{-1}\\right) z} = \\frac{3z^2 - \\frac{5}{6}z}{\\left(z - \\frac{1}{4}\\right)\\left(z - \\frac{1}{3}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Pole Locations & Boundary Tests"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Denominator roots: $z = 1/4$ and $z = 1/3$.",
+        "Check $z = 0$: $X(0) = \\frac{0}{(-1/4)(-1/3)} = 0 \\implies$ zero at $z=0$, NO pole.",
+        "Check $z = \\infty$: $\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{3z^2}{z^2} = 3 < \\infty \\implies$ finite value, NO pole."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Partial Fraction Decomposition of $\\frac{X(z)}{z}$"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{X(z)}{z} = \\frac{3z - \\frac{5}{6}}{\\left(z - \\frac{1}{4}\\right)\\left(z - \\frac{1}{3}\\right)} = \\frac{A}{z - \\frac{1}{4}} + \\frac{B}{z - \\frac{1}{3}}"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{3z - \\frac{5}{6}}{z - \\frac{1}{3}} \\right|_{z = 1/4} = \\frac{3(1/4) - \\frac{5}{6}}{1/4 - 1/3} = \\frac{\\frac{3}{4} - \\frac{5}{6}}{-\\frac{1}{12}} = \\frac{\\frac{9 - 10}{12}}{-\\frac{1}{12}} = \\frac{-\\frac{1}{12}}{-\\frac{1}{12}} = 1"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{3z - \\frac{5}{6}}{z - \\frac{1}{4}} \\right|_{z = 1/3} = \\frac{3(1/3) - \\frac{5}{6}}{1/3 - 1/4} = \\frac{1 - \\frac{5}{6}}{\\frac{1}{12}} = \\frac{\\frac{1}{6}}{\\frac{1}{12}} = 2"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying back by $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(z) = \\frac{z}{z - \\frac{1}{4}} + \\frac{2z}{z - \\frac{1}{3}}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14103,75 +14076,74 @@ export default {
      "text": "To demonstrate stability versus instability in multi-pole systems where all poles lie inside the unit circle."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Case 1: Causal ROC ($|z| > 1/3$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Both poles ($1/4$ and $1/3$) have magnitudes $< 1/3$.",
-      "Both components are right-sided:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\left(\\frac{1}{4}\\right)^n u[n] + 2 \\left(\\frac{1}{3}\\right)^n u[n]}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**System Properties:** Causal, **BIBO STABLE** (all poles inside unit circle; $|z| > 1/3$ includes $|z|=1$).",
-      "Initial value: $x[0] = 1 + 2 = 3$. Matches $\\lim_{z \\to \\infty} X(z) = 3$!"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Case 2: Anti-Causal ROC ($|z| < 1/4$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Both components are left-sided:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = -\\left(\\frac{1}{4}\\right)^n u[-n-1] - 2 \\left(\\frac{1}{3}\\right)^n u[-n-1]}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**System Properties:** Anti-causal, UNSTABLE (ROC $|z| < 1/4$ excludes unit circle $|z|=1$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Case 3: Non-Causal Annular ROC ($1/4 < |z| < 1/3$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Pole at $z = 1/4$: $|z| > 1/4 \\implies$ right-sided (causal).",
-      "Pole at $z = 1/3$: $|z| < 1/3 \\implies$ left-sided (anti-causal)."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\left(\\frac{1}{4}\\right)^n u[n] - 2 \\left(\\frac{1}{3}\\right)^n u[-n-1]}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**System Properties:** Non-causal, UNSTABLE (the annular ring $1/4 < |z| < 1/3$ excludes the unit circle $|z|=1$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Case 1: Causal ROC ($|z| > 1/3$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Both poles ($1/4$ and $1/3$) have magnitudes $< 1/3$.",
+        "Both components are right-sided:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\left(\\frac{1}{4}\\right)^n u[n] + 2 \\left(\\frac{1}{3}\\right)^n u[n]}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**System Properties:** Causal, **BIBO STABLE** (all poles inside unit circle; $|z| > 1/3$ includes $|z|=1$).",
+        "Initial value: $x[0] = 1 + 2 = 3$. Matches $\\lim_{z \\to \\infty} X(z) = 3$!"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Case 2: Anti-Causal ROC ($|z| < 1/4$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Both components are left-sided:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = -\\left(\\frac{1}{4}\\right)^n u[-n-1] - 2 \\left(\\frac{1}{3}\\right)^n u[-n-1]}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**System Properties:** Anti-causal, UNSTABLE (ROC $|z| < 1/4$ excludes unit circle $|z|=1$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Case 3: Non-Causal Annular ROC ($1/4 < |z| < 1/3$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Pole at $z = 1/4$: $|z| > 1/4 \\implies$ right-sided (causal).",
+        "Pole at $z = 1/3$: $|z| < 1/3 \\implies$ left-sided (anti-causal)."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\left(\\frac{1}{4}\\right)^n u[n] - 2 \\left(\\frac{1}{3}\\right)^n u[-n-1]}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**System Properties:** Non-causal, UNSTABLE (the annular ring $1/4 < |z| < 1/3$ excludes the unit circle $|z|=1$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14198,107 +14170,106 @@ export default {
      "text": "To derive the transform pair for repeated poles using frequency differentiation combined with the time-advance property, and to resolve the classical GATE trap regarding $(n+1)u[n+1]$ versus $(n+1)u[n]$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Base Transform Pair"
-    },
-    {
-     "t": "math",
-     "tex": "a^n u[n] \\longleftrightarrow \\frac{z}{z - a}, \\quad |z| > |a|"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Applying Frequency Differentiation Property"
-    },
-    {
-     "t": "p",
-     "text": "Recall: $n x[n] \\longleftrightarrow -z \\frac{d X(z)}{dz}$."
-    },
-    {
-     "t": "math",
-     "tex": "-z \\frac{d}{dz} \\left[ \\frac{z}{z - a} \\right] = -z \\left[ \\frac{(z - a)(1) - z(1)}{(z - a)^2} \\right] = -z \\left[ \\frac{-a}{(z - a)^2} \\right] = \\frac{az}{(z - a)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "n a^n u[n] \\longleftrightarrow \\frac{az}{(z - a)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Dividing both sides by $a$:"
-    },
-    {
-     "t": "math",
-     "tex": "n a^{n-1} u[n] \\longleftrightarrow \\frac{z}{(z - a)^2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Applying Time-Advance Property"
-    },
-    {
-     "t": "p",
-     "text": "Recall: $x[n+1] \\longleftrightarrow z X(z)$.\nMultiplying $\\frac{z}{(z - a)^2}$ by $z$ yields $\\frac{z^2}{(z - a)^2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\left\\{ (n+1) a^{(n+1)-1} u[n+1] \\right\\} = \\frac{z^2}{(z - a)^2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{(n+1) a^n u[n+1] \\longleftrightarrow \\frac{z^2}{(z - a)^2}, \\quad |z| > |a|}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Resolving the GATE Causality Identity Trap"
-    },
-    {
-     "t": "p",
-     "text": "Examine the sequence $(n+1) u[n+1]$ sample-by-sample:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = -1$: $(n+1) = -1 + 1 = 0$. Thus, at $n = -1$, the sample amplitude is $0 \\cdot u[0] = 0$!",
-      "For $n < -1$: $u[n+1] = 0$.",
-      "For $n \\ge 0$: $u[n+1] = 1 = u[n]$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore, identically for all $n \\in \\mathbb{Z}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{(n+1) u[n+1] = (n+1) u[n]}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $a = 1/2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = (n+1) \\left(\\frac{1}{2}\\right)^n u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Sanity Check via Initial Value Theorem:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[0] = (0+1)(1/2)^0 (1) = 1$.",
-      "From $X(z)$: $\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z^2}{z^2 - z + 1/4} = 1$. Perfect match!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Base Transform Pair"
+      },
+      {
+       "t": "math",
+       "tex": "a^n u[n] \\longleftrightarrow \\frac{z}{z - a}, \\quad |z| > |a|"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Applying Frequency Differentiation Property"
+      },
+      {
+       "t": "p",
+       "text": "Recall: $n x[n] \\longleftrightarrow -z \\frac{d X(z)}{dz}$."
+      },
+      {
+       "t": "math",
+       "tex": "-z \\frac{d}{dz} \\left[ \\frac{z}{z - a} \\right] = -z \\left[ \\frac{(z - a)(1) - z(1)}{(z - a)^2} \\right] = -z \\left[ \\frac{-a}{(z - a)^2} \\right] = \\frac{az}{(z - a)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "n a^n u[n] \\longleftrightarrow \\frac{az}{(z - a)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Dividing both sides by $a$:"
+      },
+      {
+       "t": "math",
+       "tex": "n a^{n-1} u[n] \\longleftrightarrow \\frac{z}{(z - a)^2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Applying Time-Advance Property"
+      },
+      {
+       "t": "p",
+       "text": "Recall: $x[n+1] \\longleftrightarrow z X(z)$.\nMultiplying $\\frac{z}{(z - a)^2}$ by $z$ yields $\\frac{z^2}{(z - a)^2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\left\\{ (n+1) a^{(n+1)-1} u[n+1] \\right\\} = \\frac{z^2}{(z - a)^2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{(n+1) a^n u[n+1] \\longleftrightarrow \\frac{z^2}{(z - a)^2}, \\quad |z| > |a|}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Resolving the GATE Causality Identity Trap"
+      },
+      {
+       "t": "p",
+       "text": "Examine the sequence $(n+1) u[n+1]$ sample-by-sample:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = -1$: $(n+1) = -1 + 1 = 0$. Thus, at $n = -1$, the sample amplitude is $0 \\cdot u[0] = 0$!",
+        "For $n < -1$: $u[n+1] = 0$.",
+        "For $n \\ge 0$: $u[n+1] = 1 = u[n]$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore, identically for all $n \\in \\mathbb{Z}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{(n+1) u[n+1] = (n+1) u[n]}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $a = 1/2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = (n+1) \\left(\\frac{1}{2}\\right)^n u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Sanity Check via Initial Value Theorem:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[0] = (0+1)(1/2)^0 (1) = 1$.",
+        "From $X(z)$: $\\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z^2}{z^2 - z + 1/4} = 1$. Perfect match!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14325,76 +14296,79 @@ export default {
      "text": "To derive the left-sided counterpart for repeated poles, illustrating the precise index shifting and negative sign conventions."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Base Anti-Causal Pair"
-    },
-    {
-     "t": "math",
-     "tex": "-a^n u[-n-1] \\longleftrightarrow \\frac{z}{z - a}, \\quad |z| < |a|"
-    },
-    {
-     "t": "p",
-     "text": "Applying frequency differentiation $-z \\frac{d}{dz}$:"
-    },
-    {
-     "t": "math",
-     "tex": "-n a^n u[-n-1] \\longleftrightarrow \\frac{az}{(z - a)^2} \\implies -n a^{n-1} u[-n-1] \\longleftrightarrow \\frac{z}{(z - a)^2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Time Advance by $+1$ Sample"
-    },
-    {
-     "t": "p",
-     "text": "Shift $n \\to n+1$:"
-    },
-    {
-     "t": "math",
-     "tex": "-(n+1) a^{(n+1)-1} u[-(n+1)-1] \\longleftrightarrow z \\cdot \\frac{z}{(z - a)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Notice the step argument:"
-    },
-    {
-     "t": "math",
-     "tex": "-(n+1) - 1 = -n - 1 - 1 = -n - 2"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{-(n+1) a^n u[-n-2] \\longleftrightarrow \\frac{z^2}{(z - a)^2}, \\quad |z| < |a|}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Evaluation for $a = 1/2$"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = -(n+1) \\left(\\frac{1}{2}\\right)^n u[-n-2]}"
-    },
-    {
-     "t": "h4",
-     "text": "Sample Verification:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n \\ge -1$: $u[-n-2] = 0 \\implies x[n] = 0$.",
-      "For $n = -2$: $x[-2] = -(-2+1)(1/2)^{-2} (1) = -(-1)(4) = +4$.",
-      "For $n = -3$: $x[-3] = -(-3+1)(1/2)^{-3} (1) = -(-2)(8) = +16$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The sequence exists strictly for $n \\le -2$, confirming pure anti-causality.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Base Anti-Causal Pair"
+      },
+      {
+       "t": "math",
+       "tex": "-a^n u[-n-1] \\longleftrightarrow \\frac{z}{z - a}, \\quad |z| < |a|"
+      },
+      {
+       "t": "p",
+       "text": "Applying frequency differentiation $-z \\frac{d}{dz}$:"
+      },
+      {
+       "t": "math",
+       "tex": "-n a^n u[-n-1] \\longleftrightarrow \\frac{az}{(z - a)^2} \\implies -n a^{n-1} u[-n-1] \\longleftrightarrow \\frac{z}{(z - a)^2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Time Advance by $+1$ Sample"
+      },
+      {
+       "t": "p",
+       "text": "Shift $n \\to n+1$:"
+      },
+      {
+       "t": "math",
+       "tex": "-(n+1) a^{(n+1)-1} u[-(n+1)-1] \\longleftrightarrow z \\cdot \\frac{z}{(z - a)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Notice the step argument:"
+      },
+      {
+       "t": "math",
+       "tex": "-(n+1) - 1 = -n - 1 - 1 = -n - 2"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{-(n+1) a^n u[-n-2] \\longleftrightarrow \\frac{z^2}{(z - a)^2}, \\quad |z| < |a|}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Evaluation for $a = 1/2$"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = -(n+1) \\left(\\frac{1}{2}\\right)^n u[-n-2]}"
+      },
+      {
+       "t": "h4",
+       "text": "Sample Verification:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n \\ge -1$: $u[-n-2] = 0 \\implies x[n] = 0$.",
+        "For $n = -2$: $x[-2] = -(-2+1)(1/2)^{-2} (1) = -(-1)(4) = +4$.",
+        "For $n = -3$: $x[-3] = -(-3+1)(1/2)^{-3} (1) = -(-2)(8) = +16$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The sequence exists strictly for $n \\le -2$, confirming pure anti-causality."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14425,68 +14399,67 @@ export default {
      "text": "To demonstrate that a finite Laurent polynomial corresponds to an impulse-train sequence, and to illustrate how powers of $z$ map to discrete time shifts."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Direct Term-by-Term Inversion"
-    },
-    {
-     "t": "p",
-     "text": "Using the standard delta pair $\\delta[n - n_0] \\longleftrightarrow z^{-n_0}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$4z^2 = 4 z^{-(-2)} \\longleftrightarrow 4 \\delta[n+2]$",
-      "$2 = 2 z^0 \\longleftrightarrow 2 \\delta[n]$",
-      "$3z^{-1} \\longleftrightarrow 3 \\delta[n-1]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Summing all components:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = 4 \\delta[n+2] + 2 \\delta[n] + 3 \\delta[n-1]}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Tabular Sequence Representation"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\{ \\underset{\\uparrow}{4}, 0, 2, 3 \\} \\quad \\text{or with origin marked: } x[n] = \\{4, 0, \\underset{\\uparrow}{2}, 3\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $n = -2$: $x[-2] = 4$",
-      "At $n = -1$: $x[-1] = 0$",
-      "At $n = 0$: $x[0] = 2$",
-      "At $n = 1$: $x[1] = 3$",
-      "For all other $n$: $x[n] = 0$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Signal Classification"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Duration:** Finite Duration (non-zero only for $n \\in \\{-2, 0, 1\\}$).",
-      "**Amplitude:** Finite Amplitude (maximum amplitude is $4 < \\infty$).",
-      "**Causality:** **STRICTLY NON-CAUSAL** because $x[-2] = 4 \\ne 0$ for $n = -2 < 0$.",
-      "**ROC Topology:** Punctured at $z = 0$ (due to $3z^{-1}$) and punctured at $z = \\infty$ (due to $4z^2$). Hence $\\text{ROC}: 0 < |z| < \\infty$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Direct Term-by-Term Inversion"
+      },
+      {
+       "t": "p",
+       "text": "Using the standard delta pair $\\delta[n - n_0] \\longleftrightarrow z^{-n_0}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$4z^2 = 4 z^{-(-2)} \\longleftrightarrow 4 \\delta[n+2]$",
+        "$2 = 2 z^0 \\longleftrightarrow 2 \\delta[n]$",
+        "$3z^{-1} \\longleftrightarrow 3 \\delta[n-1]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Summing all components:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = 4 \\delta[n+2] + 2 \\delta[n] + 3 \\delta[n-1]}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Tabular Sequence Representation"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\{ \\underset{\\uparrow}{4}, 0, 2, 3 \\} \\quad \\text{or with origin marked: } x[n] = \\{4, 0, \\underset{\\uparrow}{2}, 3\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $n = -2$: $x[-2] = 4$",
+        "At $n = -1$: $x[-1] = 0$",
+        "At $n = 0$: $x[0] = 2$",
+        "At $n = 1$: $x[1] = 3$",
+        "For all other $n$: $x[n] = 0$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Signal Classification"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Duration:** Finite Duration (non-zero only for $n \\in \\{-2, 0, 1\\}$).",
+        "**Amplitude:** Finite Amplitude (maximum amplitude is $4 < \\infty$).",
+        "**Causality:** **STRICTLY NON-CAUSAL** because $x[-2] = 4 \\ne 0$ for $n = -2 < 0$.",
+        "**ROC Topology:** Punctured at $z = 0$ (due to $3z^{-1}$) and punctured at $z = \\infty$ (due to $4z^2$). Hence $\\text{ROC}: 0 < |z| < \\infty$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14521,67 +14494,70 @@ export default {
      "text": "To show that $a^{|n|}$ decomposes into a causal component and an anti-causal component, generating an annular ROC that encompasses the Unit Circle."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Verification of Identity $(2)^n u[-n-1] = (1/2)^{-n} u[-n-1]$"
-    },
-    {
-     "t": "p",
-     "text": "For $n < 0$, let $n = -m$ where $m \\ge 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "(2)^n = 2^{-m} = \\left(\\frac{1}{2}\\right)^m = \\left(\\frac{1}{2}\\right)^{-n} = \\left(\\frac{1}{2}\\right)^{|n|}"
-    },
-    {
-     "t": "p",
-     "text": "For $n \\ge 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left(\\frac{1}{2}\\right)^n = \\left(\\frac{1}{2}\\right)^{|n|}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, $x[n] = (1/2)^{|n|}$ for all $n \\in \\mathbb{Z}$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Infinite Impulse Train Expansion"
-    },
-    {
-     "t": "math",
-     "tex": "\\dots + \\frac{1}{8}\\delta[n+3] + \\frac{1}{4}\\delta[n+2] + \\frac{1}{2}\\delta[n+1] + \\delta[n] + \\frac{1}{2}\\delta[n-1] + \\frac{1}{4}\\delta[n-2] + \\frac{1}{8}\\delta[n-3] + \\dots"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Z-Transform Evaluation"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Causal part: $\\mathcal{Z}\\left\\{\\left(\\frac{1}{2}\\right)^n u[n]\\right\\} = \\frac{z}{z - 1/2}$, with ROC: $|z| > 1/2$.",
-      "Anti-causal part: $\\mathcal{Z}\\left\\{(2)^n u[-n-1]\\right\\} = -\\frac{z}{z - 2}$, with ROC: $|z| < 2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Combining terms:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(z) = \\frac{z}{z - \\frac{1}{2}} - \\frac{z}{z - 2}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{ROC}: \\frac{1}{2} < |z| < 2}"
-    },
-    {
-     "t": "p",
-     "text": "Since the ROC is an annular ring bounded by $1/2$ and $2$, it contains the Unit Circle $|z| = 1$. Therefore, **the system/signal is BIBO STABLE**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Verification of Identity $(2)^n u[-n-1] = (1/2)^{-n} u[-n-1]$"
+      },
+      {
+       "t": "p",
+       "text": "For $n < 0$, let $n = -m$ where $m \\ge 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "(2)^n = 2^{-m} = \\left(\\frac{1}{2}\\right)^m = \\left(\\frac{1}{2}\\right)^{-n} = \\left(\\frac{1}{2}\\right)^{|n|}"
+      },
+      {
+       "t": "p",
+       "text": "For $n \\ge 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left(\\frac{1}{2}\\right)^n = \\left(\\frac{1}{2}\\right)^{|n|}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, $x[n] = (1/2)^{|n|}$ for all $n \\in \\mathbb{Z}$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Infinite Impulse Train Expansion"
+      },
+      {
+       "t": "math",
+       "tex": "\\dots + \\frac{1}{8}\\delta[n+3] + \\frac{1}{4}\\delta[n+2] + \\frac{1}{2}\\delta[n+1] + \\delta[n] + \\frac{1}{2}\\delta[n-1] + \\frac{1}{4}\\delta[n-2] + \\frac{1}{8}\\delta[n-3] + \\dots"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Z-Transform Evaluation"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Causal part: $\\mathcal{Z}\\left\\{\\left(\\frac{1}{2}\\right)^n u[n]\\right\\} = \\frac{z}{z - 1/2}$, with ROC: $|z| > 1/2$.",
+        "Anti-causal part: $\\mathcal{Z}\\left\\{(2)^n u[-n-1]\\right\\} = -\\frac{z}{z - 2}$, with ROC: $|z| < 2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Combining terms:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(z) = \\frac{z}{z - \\frac{1}{2}} - \\frac{z}{z - 2}}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{ROC}: \\frac{1}{2} < |z| < 2}"
+      },
+      {
+       "t": "p",
+       "text": "Since the ROC is an annular ring bounded by $1/2$ and $2$, it contains the Unit Circle $|z| = 1$. Therefore, **the system/signal is BIBO STABLE**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14604,76 +14580,79 @@ export default {
      "text": "To introduce the Definition Method (Method II), showing that the coefficient of $z^{-k}$ in $X(z)$ is identically equal to $x[k]$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Proof of the Coefficient Extraction Property:"
-    },
-    {
-     "t": "p",
-     "text": "From the definition of the bilateral Z-transform:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\sum_{n=-\\infty}^{\\infty} x[n] z^{-n}"
-    },
-    {
-     "t": "p",
-     "text": "Expanding explicitly:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\dots + x[-2] z^2 + x[-1] z + x[0] z^0 + x[1] z^{-1} + x[2] z^{-2} + x[3] z^{-3} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Comparing powers of $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Coefficient of } z^{-k} \\text{ in } X(z) \\equiv x[k] = \\left. x[n] \\right|_{n = k}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Coefficient of } z^{+k} \\text{ in } X(z) \\equiv x[-k] = \\left. x[n] \\right|_{n = -k}}"
-    },
-    {
-     "t": "h4",
-     "text": "Applying to $z^{-2}$:"
-    },
-    {
-     "t": "p",
-     "text": "Here $k = 2$. Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Coefficient of } z^{-2} = x[2]"
-    },
-    {
-     "t": "p",
-     "text": "From $x[n] = (1/2)^n u[n] + (2)^n u[-n-1]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[2] = \\left(\\frac{1}{2}\\right)^2 u[2] + (2)^2 u[-2-1] = \\frac{1}{4}(1) + 4(0) = \\frac{1}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Ans: } \\frac{1}{4}}"
-    },
-    {
-     "t": "h4",
-     "text": "Alternative Verification via Laurent Series:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z}{z - 1/2} - \\frac{z}{z - 2} = \\frac{1}{1 - \\frac{1}{2}z^{-1}} + \\frac{\\frac{1}{2}z}{1 - \\frac{1}{2}z}"
-    },
-    {
-     "t": "p",
-     "text": "For $|z| > 1/2$, $\\frac{1}{1 - \\frac{1}{2}z^{-1}} = 1 + \\frac{1}{2}z^{-1} + \\frac{1}{4}z^{-2} + \\dots$\nThe second term for $|z| < 2$ expands in positive powers of $z$.\nThus, the coefficient of $z^{-2}$ is strictly $\\frac{1}{4}$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Mathematical Proof of the Coefficient Extraction Property:"
+      },
+      {
+       "t": "p",
+       "text": "From the definition of the bilateral Z-transform:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\sum_{n=-\\infty}^{\\infty} x[n] z^{-n}"
+      },
+      {
+       "t": "p",
+       "text": "Expanding explicitly:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\dots + x[-2] z^2 + x[-1] z + x[0] z^0 + x[1] z^{-1} + x[2] z^{-2} + x[3] z^{-3} + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Comparing powers of $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Coefficient of } z^{-k} \\text{ in } X(z) \\equiv x[k] = \\left. x[n] \\right|_{n = k}}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Coefficient of } z^{+k} \\text{ in } X(z) \\equiv x[-k] = \\left. x[n] \\right|_{n = -k}}"
+      },
+      {
+       "t": "h4",
+       "text": "Applying to $z^{-2}$:"
+      },
+      {
+       "t": "p",
+       "text": "Here $k = 2$. Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Coefficient of } z^{-2} = x[2]"
+      },
+      {
+       "t": "p",
+       "text": "From $x[n] = (1/2)^n u[n] + (2)^n u[-n-1]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[2] = \\left(\\frac{1}{2}\\right)^2 u[2] + (2)^2 u[-2-1] = \\frac{1}{4}(1) + 4(0) = \\frac{1}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Ans: } \\frac{1}{4}}"
+      },
+      {
+       "t": "h4",
+       "text": "Alternative Verification via Laurent Series:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z}{z - 1/2} - \\frac{z}{z - 2} = \\frac{1}{1 - \\frac{1}{2}z^{-1}} + \\frac{\\frac{1}{2}z}{1 - \\frac{1}{2}z}"
+      },
+      {
+       "t": "p",
+       "text": "For $|z| > 1/2$, $\\frac{1}{1 - \\frac{1}{2}z^{-1}} = 1 + \\frac{1}{2}z^{-1} + \\frac{1}{4}z^{-2} + \\dots$\nThe second term for $|z| < 2$ expands in positive powers of $z$.\nThus, the coefficient of $z^{-2}$ is strictly $\\frac{1}{4}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14714,29 +14693,28 @@ export default {
      "text": "To test mastery of the Definition Method on high-order powers ($z^{-50}, z^{50}$) where polynomial division is completely impossible by hand."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Overview of Solution Strategy:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Decompose $X(z)$ into partial fractions.",
-      "Obtain general analytical expressions for $x[n]$ under each ROC.",
-      "Apply the identity:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Coeff of } z^{-m} = x[m], \\quad \\text{Coeff of } z^m = x[-m]"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Overview of Solution Strategy:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Decompose $X(z)$ into partial fractions.",
+        "Obtain general analytical expressions for $x[n]$ under each ROC.",
+        "Apply the identity:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Coeff of } z^{-m} = x[m], \\quad \\text{Coeff of } z^m = x[-m]"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14751,88 +14729,87 @@ export default {
      "text": "Decompose $X(z) = \\frac{z+1}{z^2 - 3z + 2}$ into partial fractions, determine the causal sequence, and evaluate Part (a)."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Factorization and Partial Fractions"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z + 1}{(z - 2)(z - 1)} = \\frac{A}{z - 2} + \\frac{B}{z - 1}"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{z + 1}{z - 1} \\right|_{z = 2} = \\frac{2 + 1}{2 - 1} = 3"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{z + 1}{z - 2} \\right|_{z = 1} = \\frac{1 + 1}{1 - 2} = -2"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(z) = \\frac{3}{z - 2} - \\frac{2}{z - 1}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Inversion of $\\frac{1}{z - a}$ Terms"
-    },
-    {
-     "t": "p",
-     "text": "Notice that $X(z)$ here does NOT have $z$ in the numerator!\nRecall:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{z}{z - a} \\longleftrightarrow a^n u[n]"
-    },
-    {
-     "t": "p",
-     "text": "By the time-delay property $z^{-1} W(z) \\longleftrightarrow w[n-1]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{z - a} = z^{-1} \\left[ \\frac{z}{z - a} \\right] \\longleftrightarrow a^{n-1} u[n-1], \\quad |z| > |a|"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{z - a} \\longleftrightarrow -a^{n-1} u[-n], \\quad |z| < |a|"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Causal Sequence (ROC: $|z| > 2$)"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 3 (2)^{n-1} u[n-1] - 2 (1)^{n-1} u[n-1]"
-    },
-    {
-     "t": "p",
-     "text": "Rewriting $3(2)^{n-1} = \\frac{3}{2}(2)^n$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\frac{3}{2}(2)^n u[n-1] - 2 u[n-1], \\quad |z| > 2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Evaluating Part (a)"
-    },
-    {
-     "t": "p",
-     "text": "Coefficient of $z^{-3} = x[3]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[3] = \\frac{3}{2}(2)^3 u[2] - 2 u[2] = \\frac{3}{2}(8)(1) - 2(1) = 12 - 2 = 10"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Ans (a): } 10}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Factorization and Partial Fractions"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z + 1}{(z - 2)(z - 1)} = \\frac{A}{z - 2} + \\frac{B}{z - 1}"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{z + 1}{z - 1} \\right|_{z = 2} = \\frac{2 + 1}{2 - 1} = 3"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{z + 1}{z - 2} \\right|_{z = 1} = \\frac{1 + 1}{1 - 2} = -2"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(z) = \\frac{3}{z - 2} - \\frac{2}{z - 1}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Inversion of $\\frac{1}{z - a}$ Terms"
+      },
+      {
+       "t": "p",
+       "text": "Notice that $X(z)$ here does NOT have $z$ in the numerator!\nRecall:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{z}{z - a} \\longleftrightarrow a^n u[n]"
+      },
+      {
+       "t": "p",
+       "text": "By the time-delay property $z^{-1} W(z) \\longleftrightarrow w[n-1]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{z - a} = z^{-1} \\left[ \\frac{z}{z - a} \\right] \\longleftrightarrow a^{n-1} u[n-1], \\quad |z| > |a|"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{z - a} \\longleftrightarrow -a^{n-1} u[-n], \\quad |z| < |a|"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Causal Sequence (ROC: $|z| > 2$)"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 3 (2)^{n-1} u[n-1] - 2 (1)^{n-1} u[n-1]"
+      },
+      {
+       "t": "p",
+       "text": "Rewriting $3(2)^{n-1} = \\frac{3}{2}(2)^n$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\frac{3}{2}(2)^n u[n-1] - 2 u[n-1], \\quad |z| > 2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Evaluating Part (a)"
+      },
+      {
+       "t": "p",
+       "text": "Coefficient of $z^{-3} = x[3]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[3] = \\frac{3}{2}(2)^3 u[2] - 2 u[2] = \\frac{3}{2}(8)(1) - 2(1) = 12 - 2 = 10"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Ans (a): } 10}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14847,59 +14824,58 @@ export default {
      "text": "Derive $x[n]$ for Anti-Causal ($|z| < 1$) and Non-Causal ($1 < |z| < 2$) ROCs, and evaluate Part (b)."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Case 1: Anti-Causal Sequence (ROC: $|z| < 1$)"
-    },
-    {
-     "t": "p",
-     "text": "Both poles ($z=1, 2$) are exterior to the ROC ($|z| < 1 < 2$).\nUsing $\\frac{1}{z - a} \\longleftrightarrow -a^{n-1} u[-n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 3 \\left[ -(2)^{n-1} u[-n] \\right] - 2 \\left[ -(1)^{n-1} u[-n] \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = -\\frac{3}{2}(2)^n u[-n] + 2 u[-n], \\quad |z| < 1}"
-    },
-    {
-     "t": "h4",
-     "text": "Case 2: Non-Causal Sequence (ROC: $1 < |z| < 2$)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For pole at $z = 1$: $|z| > 1 \\implies$ Causal $\\implies -2 u[n-1]$.",
-      "For pole at $z = 2$: $|z| < 2 \\implies$ Anti-causal $\\implies -\\frac{3}{2}(2)^n u[-n]$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = -\\frac{3}{2}(2)^n u[-n] - 2 u[n-1], \\quad 1 < |z| < 2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Evaluating Part (b)"
-    },
-    {
-     "t": "p",
-     "text": "For $x[n]$ causal, find the coefficient of $z^{-50} = x[50]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[50] = \\frac{3}{2}(2)^{50} u[49] - 2 u[49] = \\frac{3}{2}(2)^{50} - 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Ans (b): } \\frac{3}{2}(2)^{50} - 2 \\quad \\left(\\text{or } 3 \\cdot 2^{49} - 2\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Case 1: Anti-Causal Sequence (ROC: $|z| < 1$)"
+      },
+      {
+       "t": "p",
+       "text": "Both poles ($z=1, 2$) are exterior to the ROC ($|z| < 1 < 2$).\nUsing $\\frac{1}{z - a} \\longleftrightarrow -a^{n-1} u[-n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 3 \\left[ -(2)^{n-1} u[-n] \\right] - 2 \\left[ -(1)^{n-1} u[-n] \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = -\\frac{3}{2}(2)^n u[-n] + 2 u[-n], \\quad |z| < 1}"
+      },
+      {
+       "t": "h4",
+       "text": "Case 2: Non-Causal Sequence (ROC: $1 < |z| < 2$)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For pole at $z = 1$: $|z| > 1 \\implies$ Causal $\\implies -2 u[n-1]$.",
+        "For pole at $z = 2$: $|z| < 2 \\implies$ Anti-causal $\\implies -\\frac{3}{2}(2)^n u[-n]$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = -\\frac{3}{2}(2)^n u[-n] - 2 u[n-1], \\quad 1 < |z| < 2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Evaluating Part (b)"
+      },
+      {
+       "t": "p",
+       "text": "For $x[n]$ causal, find the coefficient of $z^{-50} = x[50]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[50] = \\frac{3}{2}(2)^{50} u[49] - 2 u[49] = \\frac{3}{2}(2)^{50} - 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Ans (b): } \\frac{3}{2}(2)^{50} - 2 \\quad \\left(\\text{or } 3 \\cdot 2^{49} - 2\\right)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14922,78 +14898,77 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Evaluating Part (c):"
-    },
-    {
-     "t": "p",
-     "text": "For anti-causal $x[n]$, the coefficient of $z^3$ corresponds to $x[-3]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[-3] = -\\frac{3}{2}(2)^{-3} u[-(-3)] + 2 u[-(-3)] = -\\frac{3}{2}\\left(\\frac{1}{8}\\right)(1) + 2(1) = -\\frac{3}{16} + 2 = \\frac{29}{16}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Ans (c): } \\frac{29}{16}}"
-    },
-    {
-     "t": "h4",
-     "text": "Evaluating Part (d):"
-    },
-    {
-     "t": "p",
-     "text": "For anti-causal $x[n]$, the coefficient of $z^{50}$ corresponds to $x[-50]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[-50] = -\\frac{3}{2}(2)^{-50} u[50] + 2 u[50] = -\\frac{3}{2}(2)^{-50} + 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Ans (d): } -\\frac{3}{2}(2)^{-50} + 2}"
-    },
-    {
-     "t": "h4",
-     "text": "Evaluating Part (e): The Zero Trap!"
-    },
-    {
-     "t": "p",
-     "text": "Given ROC is $|z| < 1$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "As proved in Slide 161, an ROC of the form $|z| < R_{\\min}$ corresponds strictly to an **Anti-Causal sequence**.",
-      "By definition of anti-causality:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 0 \\quad \\forall \\, n > 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The coefficient of $z^{-10}$ in $X(z)$ is precisely $x[10]$.",
-      "Since $10 > 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[10] \\equiv 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Ans (e): } 0}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Evaluating Part (c):"
+      },
+      {
+       "t": "p",
+       "text": "For anti-causal $x[n]$, the coefficient of $z^3$ corresponds to $x[-3]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[-3] = -\\frac{3}{2}(2)^{-3} u[-(-3)] + 2 u[-(-3)] = -\\frac{3}{2}\\left(\\frac{1}{8}\\right)(1) + 2(1) = -\\frac{3}{16} + 2 = \\frac{29}{16}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Ans (c): } \\frac{29}{16}}"
+      },
+      {
+       "t": "h4",
+       "text": "Evaluating Part (d):"
+      },
+      {
+       "t": "p",
+       "text": "For anti-causal $x[n]$, the coefficient of $z^{50}$ corresponds to $x[-50]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[-50] = -\\frac{3}{2}(2)^{-50} u[50] + 2 u[50] = -\\frac{3}{2}(2)^{-50} + 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Ans (d): } -\\frac{3}{2}(2)^{-50} + 2}"
+      },
+      {
+       "t": "h4",
+       "text": "Evaluating Part (e): The Zero Trap!"
+      },
+      {
+       "t": "p",
+       "text": "Given ROC is $|z| < 1$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "As proved in Slide 161, an ROC of the form $|z| < R_{\\min}$ corresponds strictly to an **Anti-Causal sequence**.",
+        "By definition of anti-causality:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 0 \\quad \\forall \\, n > 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The coefficient of $z^{-10}$ in $X(z)$ is precisely $x[10]$.",
+        "Since $10 > 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[10] \\equiv 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Ans (e): } 0}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15016,77 +14991,76 @@ export default {
      "text": "To master algorithmic polynomial division in descending powers of $z$, proving that the quotient coefficients generate the exact causal impulse train."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Fundamental Ordering Rules of Long Division:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Causal Sequence ($|z| > R_{\\max}$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Both Numerator and Denominator MUST be arranged in **descending powers of $z$** (e.g., $z^2, z^1, z^0, z^{-1}$).",
-      "The quotient naturally generates non-positive powers: $c_0 + c_1 z^{-1} + c_2 z^{-2} + \\dots$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Anti-Causal Sequence ($|z| < R_{\\min}$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Both Numerator and Denominator MUST be arranged in **ascending powers of $z$** (e.g., $z^0, z^1, z^2, \\dots$).",
-      "The quotient naturally generates non-negative powers: $d_0 + d_1 z + d_2 z^2 + \\dots$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Non-Causal Annular ROC ($R_1 < |z| < R_2$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**LONG DIVISION CANNOT BE USED!** (Division cannot produce a two-sided series)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Execution of Causal Long Division:"
-    },
-    {
-     "t": "p",
-     "text": "Dividend: $z + 1$  \nDivisor: $z^2 - 3z + 2$"
-    },
-    {
-     "t": "code",
-     "text": "                  z^-1 + 4 z^-2 + 10 z^-3 + 22 z^-4 + ...\n                 ---------------------------------------\nz^2 - 3z + 2    ) z + 1\n                  z - 3 + 2 z^-1             [Subtract: (z^-1)*(z^2 - 3z + 2)]\n                  -----------------------\n                      4 - 2 z^-1\n                      4 - 12 z^-1 + 8 z^-2   [Subtract: (4 z^-2)*(z^2 - 3z + 2)]\n                      -------------------\n                          10 z^-1 - 8 z^-2\n                          10 z^-1 - 30 z^-2 + 20 z^-3  [Subtract: (10 z^-3)*(z^2 - 3z + 2)]\n                          ---------------------------\n                                    22 z^-2 - 20 z^-3"
-    },
-    {
-     "t": "p",
-     "text": "Quotient generated:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = z^{-1} + 4z^{-2} + 10z^{-3} + 22z^{-4} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Fundamental Ordering Rules of Long Division:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Causal Sequence ($|z| > R_{\\max}$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Both Numerator and Denominator MUST be arranged in **descending powers of $z$** (e.g., $z^2, z^1, z^0, z^{-1}$).",
+        "The quotient naturally generates non-positive powers: $c_0 + c_1 z^{-1} + c_2 z^{-2} + \\dots$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Anti-Causal Sequence ($|z| < R_{\\min}$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Both Numerator and Denominator MUST be arranged in **ascending powers of $z$** (e.g., $z^0, z^1, z^2, \\dots$).",
+        "The quotient naturally generates non-negative powers: $d_0 + d_1 z + d_2 z^2 + \\dots$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Non-Causal Annular ROC ($R_1 < |z| < R_2$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**LONG DIVISION CANNOT BE USED!** (Division cannot produce a two-sided series)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Execution of Causal Long Division:"
+      },
+      {
+       "t": "p",
+       "text": "Dividend: $z + 1$  \nDivisor: $z^2 - 3z + 2$"
+      },
+      {
+       "t": "code",
+       "text": "                  z^-1 + 4 z^-2 + 10 z^-3 + 22 z^-4 + ...\n                 ---------------------------------------\nz^2 - 3z + 2    ) z + 1\n                  z - 3 + 2 z^-1             [Subtract: (z^-1)*(z^2 - 3z + 2)]\n                  -----------------------\n                      4 - 2 z^-1\n                      4 - 12 z^-1 + 8 z^-2   [Subtract: (4 z^-2)*(z^2 - 3z + 2)]\n                      -------------------\n                          10 z^-1 - 8 z^-2\n                          10 z^-1 - 30 z^-2 + 20 z^-3  [Subtract: (10 z^-3)*(z^2 - 3z + 2)]\n                          ---------------------------\n                                    22 z^-2 - 20 z^-3"
+      },
+      {
+       "t": "p",
+       "text": "Quotient generated:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = z^{-1} + 4z^{-2} + 10z^{-3} + 22z^{-4} + \\dots"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15101,49 +15075,52 @@ export default {
      "text": "Reconstruct the causal impulse response from the Slide 175 quotient, verify consistency with PFE, and set up the ascending polynomial long division for the anti-causal case."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Causal Sequence Reconstruction:"
-    },
-    {
-     "t": "p",
-     "text": "From $X(z) = z^{-1} + 4z^{-2} + 10z^{-3} + 22z^{-4} + \\dots$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\delta[n-1] + 4\\delta[n-2] + 10\\delta[n-3] + 22\\delta[n-4] + \\dots}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[0] = 0$",
-      "$x[1] = 1$",
-      "$x[2] = 4$",
-      "$x[3] = 10 \\quad \\implies$ Exactly matches Part (a) PFE derivation!",
-      "$x[4] = 22 \\quad \\implies$ PFE check: $\\frac{3}{2}(2)^4 - 2 = 24 - 2 = 22$. Perfect match!"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Setting up Anti-Causal Long Division (Ascending Powers):"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Dividend: $1 + z$",
-      "Divisor: $2 - 3z + z^2$"
-     ]
-    },
-    {
-     "t": "code",
-     "text": "                   1/2 + 5/4 z + ...\n                 -------------------\n2 - 3z + z^2    ) 1 + z\n                  1 - 1.5 z + 0.5 z^2\n                  -------------------\n                      2.5 z - 0.5 z^2"
-    },
-    {
-     "t": "p",
-     "text": "First quotient term is $\\frac{1}{2}$, second term is $\\frac{2.5z}{2} = \\frac{5}{4}z$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Causal Sequence Reconstruction:"
+      },
+      {
+       "t": "p",
+       "text": "From $X(z) = z^{-1} + 4z^{-2} + 10z^{-3} + 22z^{-4} + \\dots$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\delta[n-1] + 4\\delta[n-2] + 10\\delta[n-3] + 22\\delta[n-4] + \\dots}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[0] = 0$",
+        "$x[1] = 1$",
+        "$x[2] = 4$",
+        "$x[3] = 10 \\quad \\implies$ Exactly matches Part (a) PFE derivation!",
+        "$x[4] = 22 \\quad \\implies$ PFE check: $\\frac{3}{2}(2)^4 - 2 = 24 - 2 = 22$. Perfect match!"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Setting up Anti-Causal Long Division (Ascending Powers):"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Dividend: $1 + z$",
+        "Divisor: $2 - 3z + z^2$"
+       ]
+      },
+      {
+       "t": "code",
+       "text": "                   1/2 + 5/4 z + ...\n                 -------------------\n2 - 3z + z^2    ) 1 + z\n                  1 - 1.5 z + 0.5 z^2\n                  -------------------\n                      2.5 z - 0.5 z^2"
+      },
+      {
+       "t": "p",
+       "text": "First quotient term is $\\frac{1}{2}$, second term is $\\frac{2.5z}{2} = \\frac{5}{4}z$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -15162,70 +15139,69 @@ export default {
      "text": "Complete the ascending long division of $X(z) = \\frac{1+z}{2 - 3z + z^2}$, reconstruct the anti-causal impulse train $x[n]$, and verify that the coefficient of $z^3$ matches the PFE result $x[-3] = \\frac{29}{16}$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Execution of Ascending Division:"
-    },
-    {
-     "t": "p",
-     "text": "Divisor: $2 - 3z + z^2$  \nDividend: $1 + z$"
-    },
-    {
-     "t": "code",
-     "text": "                   1/2 + 5/4 z + 13/8 z^2 + 29/16 z^3 + ...\n                 ------------------------------------------\n2 - 3z + z^2    ) 1 + z\n                  1 - 3/2 z + 1/2 z^2\n                  ------------------------------------------\n                      5/2 z - 1/2 z^2\n                      5/2 z - 15/4 z^2 + 5/4 z^3\n                      --------------------------------------\n                              13/4 z^2 - 5/4 z^3\n                              13/4 z^2 - 39/8 z^3 + 13/8 z^4\n                              ------------------------------\n                                         29/8 z^3 - 13/8 z^4"
-    },
-    {
-     "t": "p",
-     "text": "Quotient generated:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{1}{2} + \\frac{5}{4} z + \\frac{13}{8} z^2 + \\frac{29}{16} z^3 + \\dots"
-    },
-    {
-     "t": "h4",
-     "text": "Inverse Z-Transform Reconstruction:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\frac{1}{2}\\delta[n] + \\frac{5}{4}\\delta[n+1] + \\frac{13}{8}\\delta[n+2] + \\frac{29}{16}\\delta[n+3] + \\dots}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[0] = 1/2$",
-      "$x[-1] = 5/4$",
-      "$x[-2] = 13/8$",
-      "$x[-3] = 29/16$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Exact PFE Verification:"
-    },
-    {
-     "t": "p",
-     "text": "From Slide 173, anti-causal formula was:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = -\\frac{3}{2}(2)^n u[-n] + 2 u[-n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[0] = -3/2(1) + 2 = 1/2$ (Matches!)",
-      "$x[-1] = -3/2(1/2) + 2 = -3/4 + 2 = 5/4$ (Matches!)",
-      "$x[-2] = -3/2(1/4) + 2 = -3/8 + 2 = 13/8$ (Matches!)",
-      "$x[-3] = -3/2(1/8) + 2 = -3/16 + 2 = 29/16$ (Matches!)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Execution of Ascending Division:"
+      },
+      {
+       "t": "p",
+       "text": "Divisor: $2 - 3z + z^2$  \nDividend: $1 + z$"
+      },
+      {
+       "t": "code",
+       "text": "                   1/2 + 5/4 z + 13/8 z^2 + 29/16 z^3 + ...\n                 ------------------------------------------\n2 - 3z + z^2    ) 1 + z\n                  1 - 3/2 z + 1/2 z^2\n                  ------------------------------------------\n                      5/2 z - 1/2 z^2\n                      5/2 z - 15/4 z^2 + 5/4 z^3\n                      --------------------------------------\n                              13/4 z^2 - 5/4 z^3\n                              13/4 z^2 - 39/8 z^3 + 13/8 z^4\n                              ------------------------------\n                                         29/8 z^3 - 13/8 z^4"
+      },
+      {
+       "t": "p",
+       "text": "Quotient generated:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{1}{2} + \\frac{5}{4} z + \\frac{13}{8} z^2 + \\frac{29}{16} z^3 + \\dots"
+      },
+      {
+       "t": "h4",
+       "text": "Inverse Z-Transform Reconstruction:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\frac{1}{2}\\delta[n] + \\frac{5}{4}\\delta[n+1] + \\frac{13}{8}\\delta[n+2] + \\frac{29}{16}\\delta[n+3] + \\dots}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[0] = 1/2$",
+        "$x[-1] = 5/4$",
+        "$x[-2] = 13/8$",
+        "$x[-3] = 29/16$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Exact PFE Verification:"
+      },
+      {
+       "t": "p",
+       "text": "From Slide 173, anti-causal formula was:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = -\\frac{3}{2}(2)^n u[-n] + 2 u[-n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[0] = -3/2(1) + 2 = 1/2$ (Matches!)",
+        "$x[-1] = -3/2(1/2) + 2 = -3/4 + 2 = 5/4$ (Matches!)",
+        "$x[-2] = -3/2(1/4) + 2 = -3/8 + 2 = 13/8$ (Matches!)",
+        "$x[-3] = -3/2(1/8) + 2 = -3/16 + 2 = 29/16$ (Matches!)"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15256,82 +15232,85 @@ export default {
      "text": "To illustrate how an apparent pole at $z = 1/2$ is cancelled by a root of the numerator, transforming what seems like an infinite IIR response into a finite-duration FIR pulse."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Algebraic Decomposition"
-    },
-    {
-     "t": "p",
-     "text": "Note that $1024 = 2^{10} \\implies \\frac{1}{1024} = 2^{-10} = \\left(\\frac{1}{2}\\right)^{10}$."
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{1}{1 - \\frac{1}{2}z^{-1}} - \\frac{2^{-10} z^{-10}}{1 - \\frac{1}{2}z^{-1}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Inversion via Standard Pairs and Time-Shift Property"
-    },
-    {
-     "t": "p",
-     "text": "Recall:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left(\\frac{1}{2}\\right)^n u[n] \\longleftrightarrow \\frac{1}{1 - \\frac{1}{2}z^{-1}}"
-    },
-    {
-     "t": "p",
-     "text": "By the time-delay property $w[n - n_0] \\longleftrightarrow z^{-n_0} W(z)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left(\\frac{1}{2}\\right)^{n-10} u[n-10] \\longleftrightarrow \\frac{z^{-10}}{1 - \\frac{1}{2}z^{-1}}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting back:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\left(\\frac{1}{2}\\right)^n u[n] - 2^{-10} \\left(\\frac{1}{2}\\right)^{n-10} u[n-10]"
-    },
-    {
-     "t": "p",
-     "text": "Since $2^{-10} \\left(\\frac{1}{2}\\right)^{n-10} = \\left(\\frac{1}{2}\\right)^{10} \\left(\\frac{1}{2}\\right)^{n-10} = \\left(\\frac{1}{2}\\right)^n$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\left(\\frac{1}{2}\\right)^n u[n] - \\left(\\frac{1}{2}\\right)^n u[n-10]"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\left(\\frac{1}{2}\\right)^n \\big[ u[n] - u[n-10] \\big]}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Sequence Characteristics"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The gate sequence $u[n] - u[n-10] = 1$ for $n = 0, 1, 2, \\dots, 9$ (exactly 10 samples) and $0$ elsewhere.",
-      "**Duration:** Strictly Finite Duration (10 samples).",
-      "**Amplitude:** Finite Amplitude ($|x[n]| \\le 1$).",
-      "**Causality:** **CAUSAL** ($x[n] = 0$ for $n < 0$).",
-      "**Pole-Zero Cancellation Proof:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1 - \\left(\\frac{1}{2}z^{-1}\\right)^{10}}{1 - \\frac{1}{2}z^{-1}} = \\sum_{n=0}^{9} \\left(\\frac{1}{2}\\right)^n z^{-n}"
-    },
-    {
-     "t": "p",
-     "text": "This is a polynomial in $z^{-1}$ of degree 9. It has NO poles in the finite complex plane except a 9th-order pole at $z = 0$. Hence $\\text{ROC}: |z| > 0$ (entire plane except origin).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Algebraic Decomposition"
+      },
+      {
+       "t": "p",
+       "text": "Note that $1024 = 2^{10} \\implies \\frac{1}{1024} = 2^{-10} = \\left(\\frac{1}{2}\\right)^{10}$."
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{1}{1 - \\frac{1}{2}z^{-1}} - \\frac{2^{-10} z^{-10}}{1 - \\frac{1}{2}z^{-1}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Inversion via Standard Pairs and Time-Shift Property"
+      },
+      {
+       "t": "p",
+       "text": "Recall:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left(\\frac{1}{2}\\right)^n u[n] \\longleftrightarrow \\frac{1}{1 - \\frac{1}{2}z^{-1}}"
+      },
+      {
+       "t": "p",
+       "text": "By the time-delay property $w[n - n_0] \\longleftrightarrow z^{-n_0} W(z)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left(\\frac{1}{2}\\right)^{n-10} u[n-10] \\longleftrightarrow \\frac{z^{-10}}{1 - \\frac{1}{2}z^{-1}}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting back:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\left(\\frac{1}{2}\\right)^n u[n] - 2^{-10} \\left(\\frac{1}{2}\\right)^{n-10} u[n-10]"
+      },
+      {
+       "t": "p",
+       "text": "Since $2^{-10} \\left(\\frac{1}{2}\\right)^{n-10} = \\left(\\frac{1}{2}\\right)^{10} \\left(\\frac{1}{2}\\right)^{n-10} = \\left(\\frac{1}{2}\\right)^n$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\left(\\frac{1}{2}\\right)^n u[n] - \\left(\\frac{1}{2}\\right)^n u[n-10]"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\left(\\frac{1}{2}\\right)^n \\big[ u[n] - u[n-10] \\big]}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Sequence Characteristics"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The gate sequence $u[n] - u[n-10] = 1$ for $n = 0, 1, 2, \\dots, 9$ (exactly 10 samples) and $0$ elsewhere.",
+        "**Duration:** Strictly Finite Duration (10 samples).",
+        "**Amplitude:** Finite Amplitude ($|x[n]| \\le 1$).",
+        "**Causality:** **CAUSAL** ($x[n] = 0$ for $n < 0$).",
+        "**Pole-Zero Cancellation Proof:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1 - \\left(\\frac{1}{2}z^{-1}\\right)^{10}}{1 - \\frac{1}{2}z^{-1}} = \\sum_{n=0}^{9} \\left(\\frac{1}{2}\\right)^n z^{-n}"
+      },
+      {
+       "t": "p",
+       "text": "This is a polynomial in $z^{-1}$ of degree 9. It has NO poles in the finite complex plane except a 9th-order pole at $z = 0$. Hence $\\text{ROC}: |z| > 0$ (entire plane except origin)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15358,44 +15337,43 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Execution of Causal Long Division:"
-    },
-    {
-     "t": "p",
-     "text": "Dividend: $z^2 + 3z$  \nDivisor: $z^2 - 3z + 9$"
-    },
-    {
-     "t": "code",
-     "text": "                   1 + 6 z^-1 + 9 z^-2 + ...\n                 ---------------------------\nz^2 - 3z + 9    ) z^2 + 3z\n                  z^2 - 3z + 9\n                  --------------------------\n                        6z - 9\n                        6z - 18 + 54 z^-1\n                        --------------------\n                             9 - 54 z^-1\n                             9 - 27 z^-1 + 81 z^-2\n                             ---------------------\n                                -27 z^-1 - 81 z^-2"
-    },
-    {
-     "t": "p",
-     "text": "Quotient generated:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = 1 + 6z^{-1} + 9z^{-2} - 27z^{-3} + \\dots"
-    },
-    {
-     "t": "h4",
-     "text": "Extraction of Coefficient:"
-    },
-    {
-     "t": "p",
-     "text": "The coefficient of $z^{-2}$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Coeff of } z^{-2} = 9 \\implies x[2] = 9}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Execution of Causal Long Division:"
+      },
+      {
+       "t": "p",
+       "text": "Dividend: $z^2 + 3z$  \nDivisor: $z^2 - 3z + 9$"
+      },
+      {
+       "t": "code",
+       "text": "                   1 + 6 z^-1 + 9 z^-2 + ...\n                 ---------------------------\nz^2 - 3z + 9    ) z^2 + 3z\n                  z^2 - 3z + 9\n                  --------------------------\n                        6z - 9\n                        6z - 18 + 54 z^-1\n                        --------------------\n                             9 - 54 z^-1\n                             9 - 27 z^-1 + 81 z^-2\n                             ---------------------\n                                -27 z^-1 - 81 z^-2"
+      },
+      {
+       "t": "p",
+       "text": "Quotient generated:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = 1 + 6z^{-1} + 9z^{-2} - 27z^{-3} + \\dots"
+      },
+      {
+       "t": "h4",
+       "text": "Extraction of Coefficient:"
+      },
+      {
+       "t": "p",
+       "text": "The coefficient of $z^{-2}$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Coeff of } z^{-2} = 9 \\implies x[2] = 9}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15414,67 +15392,66 @@ export default {
      "tex": "z^2 - 2az\\cos\\omega_0 + a^2"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Pole Calculation"
-    },
-    {
-     "t": "math",
-     "tex": "z^2 - 3z + 9 = 0 \\implies z = \\frac{3 \\pm \\sqrt{(-3)^2 - 4(1)(9)}}{2} = \\frac{3 \\pm \\sqrt{9 - 36}}{2} = \\frac{3 \\pm j\\sqrt{27}}{2} = \\frac{3}{2} \\pm j\\frac{3\\sqrt{3}}{2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Polar Magnitude and Angle"
-    },
-    {
-     "t": "math",
-     "tex": "|z_p| = \\sqrt{\\left(\\frac{3}{2}\\right)^2 + \\left(\\frac{3\\sqrt{3}}{2}\\right)^2} = \\sqrt{\\frac{9}{4} + \\frac{27}{4}} = \\sqrt{\\frac{36}{4}} = \\sqrt{9} = 3"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Parameter Identification"
-    },
-    {
-     "t": "p",
-     "text": "Equating coefficients with $z^2 - 2az\\cos\\omega_0 + a^2$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$a^2 = 9 \\implies a = \\pm 3$",
-      "$2a\\cos\\omega_0 = 3 \\implies a\\cos\\omega_0 = \\frac{3}{2}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Case 1 ($a = +3$):**"
-    },
-    {
-     "t": "math",
-     "tex": "3 \\cos\\omega_0 = \\frac{3}{2} \\implies \\cos\\omega_0 = \\frac{1}{2} \\implies \\omega_0 = \\frac{\\pi}{3}"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin\\omega_0 = \\sin\\left(\\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}"
-    },
-    {
-     "t": "p",
-     "text": "**Case 2 ($a = -3$):**"
-    },
-    {
-     "t": "math",
-     "tex": "-3 \\cos\\omega_0 = \\frac{3}{2} \\implies \\cos\\omega_0 = -\\frac{1}{2} \\implies \\omega_0 = \\frac{2\\pi}{3}"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin\\omega_0 = \\sin\\left(\\frac{2\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Pole Calculation"
+      },
+      {
+       "t": "math",
+       "tex": "z^2 - 3z + 9 = 0 \\implies z = \\frac{3 \\pm \\sqrt{(-3)^2 - 4(1)(9)}}{2} = \\frac{3 \\pm \\sqrt{9 - 36}}{2} = \\frac{3 \\pm j\\sqrt{27}}{2} = \\frac{3}{2} \\pm j\\frac{3\\sqrt{3}}{2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Polar Magnitude and Angle"
+      },
+      {
+       "t": "math",
+       "tex": "|z_p| = \\sqrt{\\left(\\frac{3}{2}\\right)^2 + \\left(\\frac{3\\sqrt{3}}{2}\\right)^2} = \\sqrt{\\frac{9}{4} + \\frac{27}{4}} = \\sqrt{\\frac{36}{4}} = \\sqrt{9} = 3"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Parameter Identification"
+      },
+      {
+       "t": "p",
+       "text": "Equating coefficients with $z^2 - 2az\\cos\\omega_0 + a^2$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$a^2 = 9 \\implies a = \\pm 3$",
+        "$2a\\cos\\omega_0 = 3 \\implies a\\cos\\omega_0 = \\frac{3}{2}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Case 1 ($a = +3$):**"
+      },
+      {
+       "t": "math",
+       "tex": "3 \\cos\\omega_0 = \\frac{3}{2} \\implies \\cos\\omega_0 = \\frac{1}{2} \\implies \\omega_0 = \\frac{\\pi}{3}"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin\\omega_0 = \\sin\\left(\\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}"
+      },
+      {
+       "t": "p",
+       "text": "**Case 2 ($a = -3$):**"
+      },
+      {
+       "t": "math",
+       "tex": "-3 \\cos\\omega_0 = \\frac{3}{2} \\implies \\cos\\omega_0 = -\\frac{1}{2} \\implies \\omega_0 = \\frac{2\\pi}{3}"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin\\omega_0 = \\sin\\left(\\frac{2\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15489,64 +15466,63 @@ export default {
      "text": "Investigate whether the representations $(3)^n \\cos\\left(\\frac{\\pi}{3}n\\right)u[n]$ and $(-3)^n \\cos\\left(\\frac{2\\pi}{3}n\\right)u[n]$ represent different signals or the exact same signal."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Proof of Identity:"
-    },
-    {
-     "t": "p",
-     "text": "Using the trigonometric identity $\\cos\\left(\\frac{2\\pi}{3}n\\right) = \\cos\\left(\\left(\\pi - \\frac{\\pi}{3}\\right)n\\right) = \\cos(\\pi n - \\frac{\\pi}{3}n)$:\nSince $\\cos(A - B) = \\cos A \\cos B + \\sin A \\sin B$ and $\\sin(\\pi n) \\equiv 0$ for all integers $n$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\cos\\left(\\pi n - \\frac{\\pi}{3}n\\right) = \\cos(\\pi n) \\cos\\left(\\frac{\\pi}{3}n\\right) = (-1)^n \\cos\\left(\\frac{\\pi}{3}n\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Now consider the sequence $(-3)^n \\cos\\left(\\frac{2\\pi}{3}n\\right)u[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "(-3)^n \\cos\\left(\\frac{2\\pi}{3}n\\right) u[n] = (-1)^n (3)^n \\cdot \\left[ (-1)^n \\cos\\left(\\frac{\\pi}{3}n\\right) \\right] u[n]"
-    },
-    {
-     "t": "p",
-     "text": "Since $(-1)^n \\cdot (-1)^n = (-1)^{2n} = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{(-3)^n \\cos\\left(\\frac{2\\pi}{3}n\\right) u[n] \\equiv (3)^n \\cos\\left(\\frac{\\pi}{3}n\\right) u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Z-Transform of Cosine Component:"
-    },
-    {
-     "t": "math",
-     "tex": "a^n \\cos(\\omega_0 n) u[n] \\longleftrightarrow \\frac{z^2 - az\\cos\\omega_0}{z^2 - 2az\\cos\\omega_0 + a^2}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $a = 3, \\omega_0 = \\pi/3 \\implies az\\cos\\omega_0 = 3z(1/2) = \\frac{3}{2}z$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{(3)^n \\cos\\left(\\frac{\\pi}{3}n\\right) u[n] \\longleftrightarrow \\frac{z^2 - \\frac{3}{2}z}{z^2 - 3z + 9}, \\quad |z| > 3}"
-    },
-    {
-     "t": "p",
-     "text": "For anti-causal ROC ($|z| < 3$):"
-    },
-    {
-     "t": "math",
-     "tex": "-(3)^n \\cos\\left(\\frac{\\pi}{3}n\\right) u[-n-1] \\longleftrightarrow \\frac{z^2 - \\frac{3}{2}z}{z^2 - 3z + 9}, \\quad |z| < 3"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Mathematical Proof of Identity:"
+      },
+      {
+       "t": "p",
+       "text": "Using the trigonometric identity $\\cos\\left(\\frac{2\\pi}{3}n\\right) = \\cos\\left(\\left(\\pi - \\frac{\\pi}{3}\\right)n\\right) = \\cos(\\pi n - \\frac{\\pi}{3}n)$:\nSince $\\cos(A - B) = \\cos A \\cos B + \\sin A \\sin B$ and $\\sin(\\pi n) \\equiv 0$ for all integers $n$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\cos\\left(\\pi n - \\frac{\\pi}{3}n\\right) = \\cos(\\pi n) \\cos\\left(\\frac{\\pi}{3}n\\right) = (-1)^n \\cos\\left(\\frac{\\pi}{3}n\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Now consider the sequence $(-3)^n \\cos\\left(\\frac{2\\pi}{3}n\\right)u[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "(-3)^n \\cos\\left(\\frac{2\\pi}{3}n\\right) u[n] = (-1)^n (3)^n \\cdot \\left[ (-1)^n \\cos\\left(\\frac{\\pi}{3}n\\right) \\right] u[n]"
+      },
+      {
+       "t": "p",
+       "text": "Since $(-1)^n \\cdot (-1)^n = (-1)^{2n} = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{(-3)^n \\cos\\left(\\frac{2\\pi}{3}n\\right) u[n] \\equiv (3)^n \\cos\\left(\\frac{\\pi}{3}n\\right) u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Z-Transform of Cosine Component:"
+      },
+      {
+       "t": "math",
+       "tex": "a^n \\cos(\\omega_0 n) u[n] \\longleftrightarrow \\frac{z^2 - az\\cos\\omega_0}{z^2 - 2az\\cos\\omega_0 + a^2}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $a = 3, \\omega_0 = \\pi/3 \\implies az\\cos\\omega_0 = 3z(1/2) = \\frac{3}{2}z$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{(3)^n \\cos\\left(\\frac{\\pi}{3}n\\right) u[n] \\longleftrightarrow \\frac{z^2 - \\frac{3}{2}z}{z^2 - 3z + 9}, \\quad |z| > 3}"
+      },
+      {
+       "t": "p",
+       "text": "For anti-causal ROC ($|z| < 3$):"
+      },
+      {
+       "t": "math",
+       "tex": "-(3)^n \\cos\\left(\\frac{\\pi}{3}n\\right) u[-n-1] \\longleftrightarrow \\frac{z^2 - \\frac{3}{2}z}{z^2 - 3z + 9}, \\quad |z| < 3"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15561,64 +15537,63 @@ export default {
      "text": "Determine the causal and anti-causal inverse transforms for the remainder numerator term $\\frac{\\frac{9}{2}z}{z^2 - 3z + 9}$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Base Damped Sine Pair:"
-    },
-    {
-     "t": "math",
-     "tex": "a^n \\sin(\\omega_0 n) u[n] \\longleftrightarrow \\frac{az\\sin\\omega_0}{z^2 - 2az\\cos\\omega_0 + a^2}"
-    },
-    {
-     "t": "p",
-     "text": "With $a = 3, \\omega_0 = \\pi/3$:"
-    },
-    {
-     "t": "math",
-     "tex": "az\\sin\\omega_0 = 3 z \\sin\\left(\\frac{\\pi}{3}\\right) = 3 z \\left(\\frac{\\sqrt{3}}{2}\\right) = \\frac{3\\sqrt{3}}{2}z"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "(3)^n \\sin\\left(\\frac{\\pi}{3}n\\right) u[n] \\longleftrightarrow \\frac{\\frac{3\\sqrt{3}}{2}z}{z^2 - 3z + 9}"
-    },
-    {
-     "t": "h4",
-     "text": "Numerator Scaling:"
-    },
-    {
-     "t": "p",
-     "text": "We require the numerator to equal $\\frac{9}{2}z$. Let:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{9}{2}z = K \\cdot \\left(\\frac{3\\sqrt{3}}{2}z\\right) \\implies K = \\frac{9/2}{3\\sqrt{3}/2} = \\frac{9}{3\\sqrt{3}} = \\frac{3}{\\sqrt{3}} = \\sqrt{3}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\sqrt{3} \\cdot 3^n \\sin\\left(\\frac{\\pi}{3}n\\right) u[n] \\longleftrightarrow \\frac{\\frac{9}{2}z}{z^2 - 3z + 9}, \\quad |z| > 3}"
-    },
-    {
-     "t": "p",
-     "text": "For anti-causal ROC ($|z| < 3$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{-\\sqrt{3} \\cdot 3^n \\sin\\left(\\frac{\\pi}{3}n\\right) u[-n-1] \\longleftrightarrow \\frac{\\frac{9}{2}z}{z^2 - 3z + 9}, \\quad |z| < 3}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Base Damped Sine Pair:"
+      },
+      {
+       "t": "math",
+       "tex": "a^n \\sin(\\omega_0 n) u[n] \\longleftrightarrow \\frac{az\\sin\\omega_0}{z^2 - 2az\\cos\\omega_0 + a^2}"
+      },
+      {
+       "t": "p",
+       "text": "With $a = 3, \\omega_0 = \\pi/3$:"
+      },
+      {
+       "t": "math",
+       "tex": "az\\sin\\omega_0 = 3 z \\sin\\left(\\frac{\\pi}{3}\\right) = 3 z \\left(\\frac{\\sqrt{3}}{2}\\right) = \\frac{3\\sqrt{3}}{2}z"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "(3)^n \\sin\\left(\\frac{\\pi}{3}n\\right) u[n] \\longleftrightarrow \\frac{\\frac{3\\sqrt{3}}{2}z}{z^2 - 3z + 9}"
+      },
+      {
+       "t": "h4",
+       "text": "Numerator Scaling:"
+      },
+      {
+       "t": "p",
+       "text": "We require the numerator to equal $\\frac{9}{2}z$. Let:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{9}{2}z = K \\cdot \\left(\\frac{3\\sqrt{3}}{2}z\\right) \\implies K = \\frac{9/2}{3\\sqrt{3}/2} = \\frac{9}{3\\sqrt{3}} = \\frac{3}{\\sqrt{3}} = \\sqrt{3}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\sqrt{3} \\cdot 3^n \\sin\\left(\\frac{\\pi}{3}n\\right) u[n] \\longleftrightarrow \\frac{\\frac{9}{2}z}{z^2 - 3z + 9}, \\quad |z| > 3}"
+      },
+      {
+       "t": "p",
+       "text": "For anti-causal ROC ($|z| < 3$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{-\\sqrt{3} \\cdot 3^n \\sin\\left(\\frac{\\pi}{3}n\\right) u[-n-1] \\longleftrightarrow \\frac{\\frac{9}{2}z}{z^2 - 3z + 9}, \\quad |z| < 3}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15633,48 +15608,47 @@ export default {
      "text": "Assemble the full inverse Z-transform $x[n]$ for both causal and anti-causal ROCs, and evaluate $x[2]$ to verify consistency with the Long Division result from Slide 179 ($x[2] = 9$)."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Case 1: Causal ROC ($|z| > 3$)"
-    },
-    {
-     "t": "p",
-     "text": "Summing the cosine and sine components:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\left[ 3^n \\cos\\left(\\frac{\\pi}{3}n\\right) + \\sqrt{3} \\cdot 3^n \\sin\\left(\\frac{\\pi}{3}n\\right) \\right] u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Analytical Verification at $n = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[2] = 3^2 \\cos\\left(\\frac{2\\pi}{3}\\right) + \\sqrt{3} \\cdot 3^2 \\sin\\left(\\frac{2\\pi}{3}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "x[2] = 9 \\left(-\\frac{1}{2}\\right) + 9\\sqrt{3} \\left(\\frac{\\sqrt{3}}{2}\\right) = -\\frac{9}{2} + \\frac{9 \\cdot 3}{2} = -\\frac{9}{2} + \\frac{27}{2} = \\frac{18}{2} = 9"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[2] = 9 \\equiv \\text{Coefficient of } z^{-2} \\text{ from Slide 179!}}"
-    },
-    {
-     "t": "h4",
-     "text": "Case 2: Anti-Causal ROC ($|z| < 3$)"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\left[ -3^n \\cos\\left(\\frac{\\pi}{3}n\\right) - \\sqrt{3} \\cdot 3^n \\sin\\left(\\frac{\\pi}{3}n\\right) \\right] u[-n-1]}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Case 1: Causal ROC ($|z| > 3$)"
+      },
+      {
+       "t": "p",
+       "text": "Summing the cosine and sine components:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\left[ 3^n \\cos\\left(\\frac{\\pi}{3}n\\right) + \\sqrt{3} \\cdot 3^n \\sin\\left(\\frac{\\pi}{3}n\\right) \\right] u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Analytical Verification at $n = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[2] = 3^2 \\cos\\left(\\frac{2\\pi}{3}\\right) + \\sqrt{3} \\cdot 3^2 \\sin\\left(\\frac{2\\pi}{3}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "x[2] = 9 \\left(-\\frac{1}{2}\\right) + 9\\sqrt{3} \\left(\\frac{\\sqrt{3}}{2}\\right) = -\\frac{9}{2} + \\frac{9 \\cdot 3}{2} = -\\frac{9}{2} + \\frac{27}{2} = \\frac{18}{2} = 9"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[2] = 9 \\equiv \\text{Coefficient of } z^{-2} \\text{ from Slide 179!}}"
+      },
+      {
+       "t": "h4",
+       "text": "Case 2: Anti-Causal ROC ($|z| < 3$)"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\left[ -3^n \\cos\\left(\\frac{\\pi}{3}n\\right) - \\sqrt{3} \\cdot 3^n \\sin\\left(\\frac{\\pi}{3}n\\right) \\right] u[-n-1]}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15698,20 +15672,23 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Fundamental Summation Theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^{\\infty} x[n] = \\left. X(z) \\right|_{z = 1}"
-    },
-    {
-     "t": "p",
-     "text": "provided the Unit Circle $|z| = 1$ is contained in the ROC of $X(z)$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Fundamental Summation Theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^{\\infty} x[n] = \\left. X(z) \\right|_{z = 1}"
+      },
+      {
+       "t": "p",
+       "text": "provided the Unit Circle $|z| = 1$ is contained in the ROC of $X(z)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15726,52 +15703,51 @@ export default {
      "text": "Evaluate $S = \\sum_{n=0}^{\\infty} \\left(\\frac{1}{3}\\right)^n$ using both infinite GP and the Z-transform evaluation theorem."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Standard Infinite GP Formula"
-    },
-    {
-     "t": "math",
-     "tex": "S = 1 + \\frac{1}{3} + \\left(\\frac{1}{3}\\right)^2 + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Since common ratio $r = 1/3 < 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "S = \\frac{a}{1 - r} = \\frac{1}{1 - 1/3} = \\frac{1}{2/3} = \\frac{3}{2}"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Z-Transform Evaluation Theorem"
-    },
-    {
-     "t": "p",
-     "text": "Let $x[n] = (1/3)^n u[n]$."
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z}{z - 1/3} = \\frac{1}{1 - \\frac{1}{3}z^{-1}}, \\quad \\text{ROC: } |z| > \\frac{1}{3}"
-    },
-    {
-     "t": "p",
-     "text": "Check ROC: The point $z = 1$ satisfies $|1| = 1 > 1/3$, so $z = 1$ lies inside the ROC!"
-    },
-    {
-     "t": "math",
-     "tex": "S = \\sum_{n=0}^{\\infty} \\left(\\frac{1}{3}\\right)^n = \\left. X(z) \\right|_{z = 1} = \\frac{1}{1 - 1/3} = \\frac{3}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{S = \\frac{3}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Method 1: Standard Infinite GP Formula"
+      },
+      {
+       "t": "math",
+       "tex": "S = 1 + \\frac{1}{3} + \\left(\\frac{1}{3}\\right)^2 + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Since common ratio $r = 1/3 < 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "S = \\frac{a}{1 - r} = \\frac{1}{1 - 1/3} = \\frac{1}{2/3} = \\frac{3}{2}"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Z-Transform Evaluation Theorem"
+      },
+      {
+       "t": "p",
+       "text": "Let $x[n] = (1/3)^n u[n]$."
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z}{z - 1/3} = \\frac{1}{1 - \\frac{1}{3}z^{-1}}, \\quad \\text{ROC: } |z| > \\frac{1}{3}"
+      },
+      {
+       "t": "p",
+       "text": "Check ROC: The point $z = 1$ satisfies $|1| = 1 > 1/3$, so $z = 1$ lies inside the ROC!"
+      },
+      {
+       "t": "math",
+       "tex": "S = \\sum_{n=0}^{\\infty} \\left(\\frac{1}{3}\\right)^n = \\left. X(z) \\right|_{z = 1} = \\frac{1}{1 - 1/3} = \\frac{3}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{S = \\frac{3}{2}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15786,72 +15762,71 @@ export default {
      "text": "Evaluate $S = \\sum_{n=0}^{\\infty} n \\left(\\frac{1}{3}\\right)^n$ using both Arithmetico-Geometric Progression (AGP) and the Z-transform property."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Classical AGP Summation"
-    },
-    {
-     "t": "math",
-     "tex": "S = 0 + \\frac{1}{3} + 2\\left(\\frac{1}{3}\\right)^2 + 3\\left(\\frac{1}{3}\\right)^3 + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Multiply by common ratio $1/3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{3}S = 0 + 0 + \\left(\\frac{1}{3}\\right)^2 + 2\\left(\\frac{1}{3}\\right)^3 + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Subtract:"
-    },
-    {
-     "t": "math",
-     "tex": "S - \\frac{1}{3}S = \\frac{2}{3}S = \\frac{1}{3} + \\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{1}{3}\\right)^3 + \\dots = \\frac{1/3}{1 - 1/3} = \\frac{1/3}{2/3} = \\frac{1}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2}{3}S = \\frac{1}{2} \\implies S = \\frac{1}{2} \\cdot \\frac{3}{2} = \\frac{3}{4}"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Z-Transform Property"
-    },
-    {
-     "t": "p",
-     "text": "Recall:"
-    },
-    {
-     "t": "math",
-     "tex": "n a^n u[n] \\longleftrightarrow \\frac{az}{(z - a)^2}, \\quad |z| > |a|"
-    },
-    {
-     "t": "p",
-     "text": "For $a = 1/3$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{\\frac{1}{3}z}{\\left(z - \\frac{1}{3}\\right)^2}, \\quad \\text{ROC: } |z| > \\frac{1}{3}"
-    },
-    {
-     "t": "p",
-     "text": "Since $z = 1 \\in \\text{ROC}$:"
-    },
-    {
-     "t": "math",
-     "tex": "S = \\left. X(z) \\right|_{z = 1} = \\frac{1/3}{\\left(1 - \\frac{1}{3}\\right)^2} = \\frac{1/3}{(2/3)^2} = \\frac{1/3}{4/9} = \\frac{1}{3} \\cdot \\frac{9}{4} = \\frac{3}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{S = \\frac{3}{4}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Method 1: Classical AGP Summation"
+      },
+      {
+       "t": "math",
+       "tex": "S = 0 + \\frac{1}{3} + 2\\left(\\frac{1}{3}\\right)^2 + 3\\left(\\frac{1}{3}\\right)^3 + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Multiply by common ratio $1/3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{3}S = 0 + 0 + \\left(\\frac{1}{3}\\right)^2 + 2\\left(\\frac{1}{3}\\right)^3 + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Subtract:"
+      },
+      {
+       "t": "math",
+       "tex": "S - \\frac{1}{3}S = \\frac{2}{3}S = \\frac{1}{3} + \\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{1}{3}\\right)^3 + \\dots = \\frac{1/3}{1 - 1/3} = \\frac{1/3}{2/3} = \\frac{1}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2}{3}S = \\frac{1}{2} \\implies S = \\frac{1}{2} \\cdot \\frac{3}{2} = \\frac{3}{4}"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Z-Transform Property"
+      },
+      {
+       "t": "p",
+       "text": "Recall:"
+      },
+      {
+       "t": "math",
+       "tex": "n a^n u[n] \\longleftrightarrow \\frac{az}{(z - a)^2}, \\quad |z| > |a|"
+      },
+      {
+       "t": "p",
+       "text": "For $a = 1/3$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{\\frac{1}{3}z}{\\left(z - \\frac{1}{3}\\right)^2}, \\quad \\text{ROC: } |z| > \\frac{1}{3}"
+      },
+      {
+       "t": "p",
+       "text": "Since $z = 1 \\in \\text{ROC}$:"
+      },
+      {
+       "t": "math",
+       "tex": "S = \\left. X(z) \\right|_{z = 1} = \\frac{1/3}{\\left(1 - \\frac{1}{3}\\right)^2} = \\frac{1/3}{(2/3)^2} = \\frac{1/3}{4/9} = \\frac{1}{3} \\cdot \\frac{9}{4} = \\frac{3}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{S = \\frac{3}{4}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15866,56 +15841,55 @@ export default {
      "text": "Evaluate $S = \\sum_{n=0}^{\\infty} \\left(\\frac{1}{2}\\right)^n \\cos\\left(\\frac{\\pi}{3}n\\right)$ using the Z-transform evaluation theorem."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Formulating the Signal and its Z-Transform"
-    },
-    {
-     "t": "p",
-     "text": "Let $x[n] = (1/2)^n \\cos\\left(\\frac{\\pi}{3}n\\right) u[n]$.\nUsing standard damped cosine transform:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z^2 - az\\cos\\omega_0}{z^2 - 2az\\cos\\omega_0 + a^2}"
-    },
-    {
-     "t": "p",
-     "text": "Parameters: $a = 1/2$, $\\omega_0 = \\pi/3 \\implies \\cos(\\pi/3) = 1/2$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$az\\cos\\omega_0 = (1/2)(1/2)z = \\frac{1}{4}z$",
-      "$2az\\cos\\omega_0 = 2(1/4)z = \\frac{1}{2}z$",
-      "$a^2 = (1/2)^2 = \\frac{1}{4}$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z^2 - \\frac{1}{4}z}{z^2 - \\frac{1}{2}z + \\frac{1}{4}}, \\quad \\text{ROC: } |z| > \\frac{1}{2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Evaluation at $z = 1$"
-    },
-    {
-     "t": "p",
-     "text": "Since $|z| = 1 > 1/2$, $z = 1$ lies inside the ROC."
-    },
-    {
-     "t": "math",
-     "tex": "S = X(1) = \\frac{1^2 - \\frac{1}{4}(1)}{1^2 - \\frac{1}{2}(1) + \\frac{1}{4}} = \\frac{1 - \\frac{1}{4}}{1 - \\frac{1}{2} + \\frac{1}{4}} = \\frac{\\frac{3}{4}}{\\frac{3}{4}} = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{S = 1}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Formulating the Signal and its Z-Transform"
+      },
+      {
+       "t": "p",
+       "text": "Let $x[n] = (1/2)^n \\cos\\left(\\frac{\\pi}{3}n\\right) u[n]$.\nUsing standard damped cosine transform:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z^2 - az\\cos\\omega_0}{z^2 - 2az\\cos\\omega_0 + a^2}"
+      },
+      {
+       "t": "p",
+       "text": "Parameters: $a = 1/2$, $\\omega_0 = \\pi/3 \\implies \\cos(\\pi/3) = 1/2$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$az\\cos\\omega_0 = (1/2)(1/2)z = \\frac{1}{4}z$",
+        "$2az\\cos\\omega_0 = 2(1/4)z = \\frac{1}{2}z$",
+        "$a^2 = (1/2)^2 = \\frac{1}{4}$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z^2 - \\frac{1}{4}z}{z^2 - \\frac{1}{2}z + \\frac{1}{4}}, \\quad \\text{ROC: } |z| > \\frac{1}{2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Evaluation at $z = 1$"
+      },
+      {
+       "t": "p",
+       "text": "Since $|z| = 1 > 1/2$, $z = 1$ lies inside the ROC."
+      },
+      {
+       "t": "math",
+       "tex": "S = X(1) = \\frac{1^2 - \\frac{1}{4}(1)}{1^2 - \\frac{1}{2}(1) + \\frac{1}{4}} = \\frac{1 - \\frac{1}{4}}{1 - \\frac{1}{2} + \\frac{1}{4}} = \\frac{\\frac{3}{4}}{\\frac{3}{4}} = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{S = 1}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15930,63 +15904,62 @@ export default {
      "text": "Evaluate $S = \\sum_{n=-\\infty}^{\\infty} \\left(\\frac{1}{2}\\right)^{|n|} \\cos\\left(\\frac{\\pi}{3}n\\right)$ using symmetry properties."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Parity / Symmetry Analysis"
-    },
-    {
-     "t": "p",
-     "text": "Let $x[n] = (1/2)^{|n|} \\cos\\left(\\frac{\\pi}{3}n\\right)$."
-    },
-    {
-     "t": "math",
-     "tex": "x[-n] = \\left(\\frac{1}{2}\\right)^{|-n|} \\cos\\left(-\\frac{\\pi}{3}n\\right) = \\left(\\frac{1}{2}\\right)^{|n|} \\cos\\left(\\frac{\\pi}{3}n\\right) = x[n]"
-    },
-    {
-     "t": "p",
-     "text": "Hence, $x[n]$ is an **EVEN** sequence."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Splitting the Summation"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^{\\infty} x[n] = \\sum_{n=-\\infty}^{-1} x[n] + x[0] + \\sum_{n=1}^{\\infty} x[n]"
-    },
-    {
-     "t": "p",
-     "text": "Since $x[n]$ is even, $\\sum_{n=-\\infty}^{-1} x[n] = \\sum_{n=1}^{\\infty} x[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^{\\infty} x[n] = x[0] + 2 \\sum_{n=1}^{\\infty} x[n] = 2 \\left[ x[0] + \\sum_{n=1}^{\\infty} x[n] \\right] - x[0] = 2 \\sum_{n=0}^{\\infty} x[n] - x[0]"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Evaluation"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[0] = (1/2)^0 \\cos(0) = 1 \\times 1 = 1$.",
-      "From Slide 187: $\\sum_{n=0}^{\\infty} x[n] = 1$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "S = 2(1) - 1 = 2 - 1 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{S = 1}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Parity / Symmetry Analysis"
+      },
+      {
+       "t": "p",
+       "text": "Let $x[n] = (1/2)^{|n|} \\cos\\left(\\frac{\\pi}{3}n\\right)$."
+      },
+      {
+       "t": "math",
+       "tex": "x[-n] = \\left(\\frac{1}{2}\\right)^{|-n|} \\cos\\left(-\\frac{\\pi}{3}n\\right) = \\left(\\frac{1}{2}\\right)^{|n|} \\cos\\left(\\frac{\\pi}{3}n\\right) = x[n]"
+      },
+      {
+       "t": "p",
+       "text": "Hence, $x[n]$ is an **EVEN** sequence."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Splitting the Summation"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^{\\infty} x[n] = \\sum_{n=-\\infty}^{-1} x[n] + x[0] + \\sum_{n=1}^{\\infty} x[n]"
+      },
+      {
+       "t": "p",
+       "text": "Since $x[n]$ is even, $\\sum_{n=-\\infty}^{-1} x[n] = \\sum_{n=1}^{\\infty} x[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^{\\infty} x[n] = x[0] + 2 \\sum_{n=1}^{\\infty} x[n] = 2 \\left[ x[0] + \\sum_{n=1}^{\\infty} x[n] \\right] - x[0] = 2 \\sum_{n=0}^{\\infty} x[n] - x[0]"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Evaluation"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[0] = (1/2)^0 \\cos(0) = 1 \\times 1 = 1$.",
+        "From Slide 187: $\\sum_{n=0}^{\\infty} x[n] = 1$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "S = 2(1) - 1 = 2 - 1 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{S = 1}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16001,53 +15974,52 @@ export default {
      "text": "State and prove the Difference Property and Discrete Convolution Property of the Z-transform, specifying ROC behaviors and boundary conditions."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Property 1: Backward Difference"
-    },
-    {
-     "t": "p",
-     "text": "If $x[n] \\longleftrightarrow X(z)$ with $\\text{ROC} = R$, then:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n-1] \\longleftrightarrow z^{-1} X(z)"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n] - x[n-1] \\longleftrightarrow Y(z) = X(z) - z^{-1}X(z) = (1 - z^{-1}) X(z) = \\frac{z-1}{z} X(z)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Zero Placement:** Introduces a zero at $z = 1$, blocking DC components.",
-      "**ROC:** Same as $R$, except $z = 0$ may be excluded if not already excluded."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Property 2: Discrete Convolution"
-    },
-    {
-     "t": "p",
-     "text": "If $x[n] \\longleftrightarrow X(z)$ with $\\text{ROC} = R_1$, and $h[n] \\longleftrightarrow H(z)$ with $\\text{ROC} = R_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n] * h[n] \\longleftrightarrow Y(z) = X(z) \\cdot H(z)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**ROC:** $\\text{ROC} \\supseteq R_1 \\cap R_2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Property 1: Backward Difference"
+      },
+      {
+       "t": "p",
+       "text": "If $x[n] \\longleftrightarrow X(z)$ with $\\text{ROC} = R$, then:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n-1] \\longleftrightarrow z^{-1} X(z)"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n] - x[n-1] \\longleftrightarrow Y(z) = X(z) - z^{-1}X(z) = (1 - z^{-1}) X(z) = \\frac{z-1}{z} X(z)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Zero Placement:** Introduces a zero at $z = 1$, blocking DC components.",
+        "**ROC:** Same as $R$, except $z = 0$ may be excluded if not already excluded."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Property 2: Discrete Convolution"
+      },
+      {
+       "t": "p",
+       "text": "If $x[n] \\longleftrightarrow X(z)$ with $\\text{ROC} = R_1$, and $h[n] \\longleftrightarrow H(z)$ with $\\text{ROC} = R_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n] * h[n] \\longleftrightarrow Y(z) = X(z) \\cdot H(z)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**ROC:** $\\text{ROC} \\supseteq R_1 \\cap R_2$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16062,52 +16034,51 @@ export default {
      "text": "State the discrete accumulation property. For $y[n] = \\sum_{k=-\\infty}^{n-2} x[k]$, express $Y(z)$ in terms of $X(z)$ given that the ROC of $x[n]$ is $|z| < 2$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Fundamental Accumulation Property:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{k=-\\infty}^{n} x[k] = x[n] * u[n] \\longleftrightarrow \\frac{X(z)}{1 - z^{-1}} = \\frac{z}{z - 1} X(z)"
-    },
-    {
-     "t": "h4",
-     "text": "Shifted Accumulator Analysis:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\sum_{k=-\\infty}^{n-2} x[k] = x[n-2] + x[n-3] + x[n-4] + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Taking Z-transform term-by-term:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = X(z) z^{-2} + X(z) z^{-3} + X(z) z^{-4} + \\dots = X(z) \\left[ z^{-2} + z^{-3} + z^{-4} + \\dots \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Factoring out $z^{-2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = X(z) z^{-2} \\left[ 1 + z^{-1} + z^{-2} + \\dots \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Summing the geometric series (valid for $|z^{-1}| < 1 \\iff |z| > 1$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{Y(z) = \\frac{z^{-2} X(z)}{1 - z^{-1}}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Fundamental Accumulation Property:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{k=-\\infty}^{n} x[k] = x[n] * u[n] \\longleftrightarrow \\frac{X(z)}{1 - z^{-1}} = \\frac{z}{z - 1} X(z)"
+      },
+      {
+       "t": "h4",
+       "text": "Shifted Accumulator Analysis:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\sum_{k=-\\infty}^{n-2} x[k] = x[n-2] + x[n-3] + x[n-4] + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Taking Z-transform term-by-term:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = X(z) z^{-2} + X(z) z^{-3} + X(z) z^{-4} + \\dots = X(z) \\left[ z^{-2} + z^{-3} + z^{-4} + \\dots \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Factoring out $z^{-2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = X(z) z^{-2} \\left[ 1 + z^{-1} + z^{-2} + \\dots \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Summing the geometric series (valid for $|z^{-1}| < 1 \\iff |z| > 1$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{Y(z) = \\frac{z^{-2} X(z)}{1 - z^{-1}}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16122,75 +16093,78 @@ export default {
      "text": "Determine the overall ROC for $Y(z) = \\frac{z^{-2} X(z)}{1 - z^{-1}}$ when $x[n]$ has ROC $|z| < 2$. Verify the result via the convolution theorem."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: ROC Intersection"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\text{ROC}_1$ (from accumulation series): $|z| > 1$.",
-      "$\\text{ROC}_2$ (from $X(z)$): $|z| < 2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The total ROC is the intersection:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{ROC}: 1 < |z| < 2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Verification via Convolution Theorem"
-    },
-    {
-     "t": "p",
-     "text": "Write $Y(z) = X(z) \\cdot G(z)$, where:"
-    },
-    {
-     "t": "math",
-     "tex": "G(z) = \\frac{z^{-2}}{1 - z^{-1}} = z^{-2} \\cdot \\mathcal{Z}\\{u[n]\\}"
-    },
-    {
-     "t": "p",
-     "text": "By the time-delay property:"
-    },
-    {
-     "t": "math",
-     "tex": "g[n] = u[n-2]"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n] * u[n-2] = \\sum_{k=-\\infty}^{\\infty} x[k] u[n - k - 2]"
-    },
-    {
-     "t": "p",
-     "text": "Now examine the unit step condition:"
-    },
-    {
-     "t": "math",
-     "tex": "u[n - k - 2] = 1 \\iff n - k - 2 \\ge 0 \\iff k \\le n - 2"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\sum_{k=-\\infty}^{n-2} x[k]"
-    },
-    {
-     "t": "p",
-     "text": "The analytical identity is completely verified!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: ROC Intersection"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\text{ROC}_1$ (from accumulation series): $|z| > 1$.",
+        "$\\text{ROC}_2$ (from $X(z)$): $|z| < 2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The total ROC is the intersection:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{ROC}: 1 < |z| < 2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Verification via Convolution Theorem"
+      },
+      {
+       "t": "p",
+       "text": "Write $Y(z) = X(z) \\cdot G(z)$, where:"
+      },
+      {
+       "t": "math",
+       "tex": "G(z) = \\frac{z^{-2}}{1 - z^{-1}} = z^{-2} \\cdot \\mathcal{Z}\\{u[n]\\}"
+      },
+      {
+       "t": "p",
+       "text": "By the time-delay property:"
+      },
+      {
+       "t": "math",
+       "tex": "g[n] = u[n-2]"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n] * u[n-2] = \\sum_{k=-\\infty}^{\\infty} x[k] u[n - k - 2]"
+      },
+      {
+       "t": "p",
+       "text": "Now examine the unit step condition:"
+      },
+      {
+       "t": "math",
+       "tex": "u[n - k - 2] = 1 \\iff n - k - 2 \\ge 0 \\iff k \\le n - 2"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\sum_{k=-\\infty}^{n-2} x[k]"
+      },
+      {
+       "t": "p",
+       "text": "The analytical identity is completely verified!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -16213,92 +16187,95 @@ export default {
      "text": "using both the time-domain convolution sum formula and the Z-transform partial fraction method."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Closed-Form Time-Domain Convolution Sum Formula"
-    },
-    {
-     "t": "p",
-     "text": "For $a \\ne b$:"
-    },
-    {
-     "t": "math",
-     "tex": "a^n u[n] * b^n u[n] = \\left[ \\frac{a^{n+1} - b^{n+1}}{a - b} \\right] u[n]"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $a = 2, b = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\left[ \\frac{2^{n+1} - 3^{n+1}}{2 - 3} \\right] u[n] = \\frac{2^{n+1} - 3^{n+1}}{-1} u[n]"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = (3)^{n+1} u[n] - (2)^{n+1} u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Z-Transform Approach"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(z) = \\frac{z}{z - 2}, \\quad \\text{ROC: } |z| > 2"
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = \\frac{z}{z - 3}, \\quad \\text{ROC: } |z| > 3"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = X_1(z) X_2(z) = \\frac{z^2}{(z - 2)(z - 3)}, \\quad \\text{ROC: } |z| > 3"
-    },
-    {
-     "t": "p",
-     "text": "Partial Fraction Expansion of $\\frac{Y(z)}{z}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{Y(z)}{z} = \\frac{z}{(z - 2)(z - 3)} = \\frac{A}{z - 2} + \\frac{B}{z - 3}"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{z}{z - 3} \\right|_{z = 2} = \\frac{2}{2 - 3} = -2"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{z}{z - 2} \\right|_{z = 3} = \\frac{3}{3 - 2} = 3"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying back by $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{3z}{z - 3} - \\frac{2z}{z - 2}"
-    },
-    {
-     "t": "p",
-     "text": "Taking inverse Z-transform for causal ROC $|z| > 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = 3 (3)^n u[n] - 2 (2)^n u[n]"
-    },
-    {
-     "t": "p",
-     "text": "Since $3(3)^n = 3^{n+1}$ and $2(2)^n = 2^{n+1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = (3)^{n+1} u[n] - (2)^{n+1} u[n]}"
-    },
-    {
-     "t": "p",
-     "text": "Both methods produce identical results.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Method 1: Closed-Form Time-Domain Convolution Sum Formula"
+      },
+      {
+       "t": "p",
+       "text": "For $a \\ne b$:"
+      },
+      {
+       "t": "math",
+       "tex": "a^n u[n] * b^n u[n] = \\left[ \\frac{a^{n+1} - b^{n+1}}{a - b} \\right] u[n]"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $a = 2, b = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\left[ \\frac{2^{n+1} - 3^{n+1}}{2 - 3} \\right] u[n] = \\frac{2^{n+1} - 3^{n+1}}{-1} u[n]"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = (3)^{n+1} u[n] - (2)^{n+1} u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Z-Transform Approach"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(z) = \\frac{z}{z - 2}, \\quad \\text{ROC: } |z| > 2"
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = \\frac{z}{z - 3}, \\quad \\text{ROC: } |z| > 3"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = X_1(z) X_2(z) = \\frac{z^2}{(z - 2)(z - 3)}, \\quad \\text{ROC: } |z| > 3"
+      },
+      {
+       "t": "p",
+       "text": "Partial Fraction Expansion of $\\frac{Y(z)}{z}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{Y(z)}{z} = \\frac{z}{(z - 2)(z - 3)} = \\frac{A}{z - 2} + \\frac{B}{z - 3}"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{z}{z - 3} \\right|_{z = 2} = \\frac{2}{2 - 3} = -2"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{z}{z - 2} \\right|_{z = 3} = \\frac{3}{3 - 2} = 3"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying back by $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{3z}{z - 3} - \\frac{2z}{z - 2}"
+      },
+      {
+       "t": "p",
+       "text": "Taking inverse Z-transform for causal ROC $|z| > 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = 3 (3)^n u[n] - 2 (2)^n u[n]"
+      },
+      {
+       "t": "p",
+       "text": "Since $3(3)^n = 3^{n+1}$ and $2(2)^n = 2^{n+1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = (3)^{n+1} u[n] - (2)^{n+1} u[n]}"
+      },
+      {
+       "t": "p",
+       "text": "Both methods produce identical results."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17326,72 +17303,71 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Why $X(z)$ does not exist for $x[n] = 2^n$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The bilateral sequence $x[n] = 2^n$ is two-sided and unbounded:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\sum_{n=-\\infty}^\\infty 2^n z^{-n} = \\sum_{n=0}^\\infty (2 z^{-1})^n + \\sum_{n=-\\infty}^{-1} (2 z^{-1})^n"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The causal part $\\sum_{n=0}^\\infty (2z^{-1})^n$ requires $\\vert 2z^{-1}\\vert < 1 \\implies \\vert z\\vert > 2$.",
-      "The anti-causal part $\\sum_{m=1}^\\infty (2^{-1} z)^m$ requires $\\vert 2^{-1}z\\vert < 1 \\implies \\vert z\\vert < 2$.",
-      "The intersection of $\\vert z\\vert > 2$ and $\\vert z\\vert < 2$ is empty: $\\text{ROC} = \\emptyset$. Hence, $X(z)$ does not exist in any complex annulus!"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Why the Time-Domain Convolution Converges:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Even though the Z-transform cannot be applied, the discrete convolution integral is:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\sum_{k=-\\infty}^{\\infty} x[k] h[n-k] = \\sum_{k=-\\infty}^{\\infty} 2^k \\left(\\frac{1}{2}\\right)^{n-k} u[n-k]"
-    },
-    {
-     "t": "p",
-     "text": "Since $u[n-k] = 1$ for $k \\le n$ and $0$ for $k > n$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\left(\\frac{1}{2}\\right)^n \\sum_{k=-\\infty}^n 2^k \\left(\\frac{1}{2}\\right)^{-k} = \\left(\\frac{1}{2}\\right)^n \\sum_{k=-\\infty}^n 2^k \\cdot 2^k = \\left(\\frac{1}{2}\\right)^n \\sum_{k=-\\infty}^n 4^k"
-    },
-    {
-     "t": "p",
-     "text": "As $k \\to -\\infty$, $4^k \\to 0$ with exponential speed. The series converges absolutely for every finite $n$!"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap:**\nNever conclude that a convolution diverges merely because one of the inputs lacks a valid Z-transform or DTFT! The Z-transform is a sufficient tool, not a necessary condition for physical convolution. Always check the time-domain convolution sum when signals grow in one direction but are truncated or damped by an opposing causal impulse response."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Why $X(z)$ does not exist for $x[n] = 2^n$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The bilateral sequence $x[n] = 2^n$ is two-sided and unbounded:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\sum_{n=-\\infty}^\\infty 2^n z^{-n} = \\sum_{n=0}^\\infty (2 z^{-1})^n + \\sum_{n=-\\infty}^{-1} (2 z^{-1})^n"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The causal part $\\sum_{n=0}^\\infty (2z^{-1})^n$ requires $\\vert 2z^{-1}\\vert < 1 \\implies \\vert z\\vert > 2$.",
+        "The anti-causal part $\\sum_{m=1}^\\infty (2^{-1} z)^m$ requires $\\vert 2^{-1}z\\vert < 1 \\implies \\vert z\\vert < 2$.",
+        "The intersection of $\\vert z\\vert > 2$ and $\\vert z\\vert < 2$ is empty: $\\text{ROC} = \\emptyset$. Hence, $X(z)$ does not exist in any complex annulus!"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Why the Time-Domain Convolution Converges:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Even though the Z-transform cannot be applied, the discrete convolution integral is:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\sum_{k=-\\infty}^{\\infty} x[k] h[n-k] = \\sum_{k=-\\infty}^{\\infty} 2^k \\left(\\frac{1}{2}\\right)^{n-k} u[n-k]"
+      },
+      {
+       "t": "p",
+       "text": "Since $u[n-k] = 1$ for $k \\le n$ and $0$ for $k > n$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\left(\\frac{1}{2}\\right)^n \\sum_{k=-\\infty}^n 2^k \\left(\\frac{1}{2}\\right)^{-k} = \\left(\\frac{1}{2}\\right)^n \\sum_{k=-\\infty}^n 2^k \\cdot 2^k = \\left(\\frac{1}{2}\\right)^n \\sum_{k=-\\infty}^n 4^k"
+      },
+      {
+       "t": "p",
+       "text": "As $k \\to -\\infty$, $4^k \\to 0$ with exponential speed. The series converges absolutely for every finite $n$!"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap:**\nNever conclude that a convolution diverges merely because one of the inputs lacks a valid Z-transform or DTFT! The Z-transform is a sufficient tool, not a necessary condition for physical convolution. Always check the time-domain convolution sum when signals grow in one direction but are truncated or damped by an opposing causal impulse response."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17452,66 +17428,65 @@ export default {
      "tex": "\\underbrace{2^n}_{\\text{Eigen function}} \\longrightarrow \\left[ \\left(\\frac{1}{2}\\right)^n u[n] \\right] \\longrightarrow \\underbrace{(2)^n \\times \\frac{4}{3}}_{\\text{Eigenvalue} = \\frac{4}{3}}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation of the Eigenfunction Property:"
-    },
-    {
-     "t": "p",
-     "text": "For any discrete LTI system with impulse response $h[n]$, let the input be a complex exponential sequence $x[n] = z_0^n$, where $z_0 \\in \\mathbb{C}$ is a complex constant:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n] * h[n] = \\sum_{k=-\\infty}^{\\infty} h[k] x[n-k] = \\sum_{k=-\\infty}^{\\infty} h[k] z_0^{n-k} = z_0^n \\sum_{k=-\\infty}^{\\infty} h[k] z_0^{-k}"
-    },
-    {
-     "t": "p",
-     "text": "Define the system transfer function evaluated at $z = z_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(z_0) \\triangleq \\sum_{k=-\\infty}^{\\infty} h[k] z_0^{-k}"
-    },
-    {
-     "t": "p",
-     "text": "Provided this summation converges at $z = z_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = H(z_0) \\cdot z_0^n"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "The functional form of the signal $z_0^n$ is preserved entirely; it is merely scaled by the complex constant $H(z_0)$.",
-      "Therefore, $x[n] = z_0^n$ is an **eigenfunction** of the LTI system, and $H(z_0)$ is the associated **eigenvalue**.",
-      "In this problem, $h[n] = (1/2)^n u[n]$ and $z_0 = 2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(2) = \\sum_{k=0}^{\\infty} \\left(\\frac{1}{2}\\right)^k 2^{-k} = \\sum_{k=0}^{\\infty} \\left(\\frac{1}{4}\\right)^k = \\frac{1}{1 - 1/4} = \\frac{4}{3}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Hence, $y[n] = H(2) \\cdot 2^n = \\frac{4}{3} \\cdot 2^n$."
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Shortcut:**\nWhenever you see an infinite input $x[n] = z_0^n$ applied to an LTI system whose impulse response is causal and stable, do not compute tedious convolution summations. Directly evaluate $H(z)$ at $z = z_0$:\n$$y[n] = \\left. H(z) \\right\\vert_{z=z_0} \\cdot z_0^n$$\nThis shortcut is valid as long as $z_0$ lies strictly within the ROC of $H(z)$. Here, $h[n] = (0.5)^n u[n] \\implies \\text{ROC}: \\vert z\\vert > 0.5$. Since $z_0 = 2$ satisfies $\\vert 2\\vert > 0.5$, $H(2)$ converges unconditionally!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation of the Eigenfunction Property:"
+      },
+      {
+       "t": "p",
+       "text": "For any discrete LTI system with impulse response $h[n]$, let the input be a complex exponential sequence $x[n] = z_0^n$, where $z_0 \\in \\mathbb{C}$ is a complex constant:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n] * h[n] = \\sum_{k=-\\infty}^{\\infty} h[k] x[n-k] = \\sum_{k=-\\infty}^{\\infty} h[k] z_0^{n-k} = z_0^n \\sum_{k=-\\infty}^{\\infty} h[k] z_0^{-k}"
+      },
+      {
+       "t": "p",
+       "text": "Define the system transfer function evaluated at $z = z_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(z_0) \\triangleq \\sum_{k=-\\infty}^{\\infty} h[k] z_0^{-k}"
+      },
+      {
+       "t": "p",
+       "text": "Provided this summation converges at $z = z_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = H(z_0) \\cdot z_0^n"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "The functional form of the signal $z_0^n$ is preserved entirely; it is merely scaled by the complex constant $H(z_0)$.",
+        "Therefore, $x[n] = z_0^n$ is an **eigenfunction** of the LTI system, and $H(z_0)$ is the associated **eigenvalue**.",
+        "In this problem, $h[n] = (1/2)^n u[n]$ and $z_0 = 2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(2) = \\sum_{k=0}^{\\infty} \\left(\\frac{1}{2}\\right)^k 2^{-k} = \\sum_{k=0}^{\\infty} \\left(\\frac{1}{4}\\right)^k = \\frac{1}{1 - 1/4} = \\frac{4}{3}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Hence, $y[n] = H(2) \\cdot 2^n = \\frac{4}{3} \\cdot 2^n$."
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Shortcut:**\nWhenever you see an infinite input $x[n] = z_0^n$ applied to an LTI system whose impulse response is causal and stable, do not compute tedious convolution summations. Directly evaluate $H(z)$ at $z = z_0$:\n$$y[n] = \\left. H(z) \\right\\vert_{z=z_0} \\cdot z_0^n$$\nThis shortcut is valid as long as $z_0$ lies strictly within the ROC of $H(z)$. Here, $h[n] = (0.5)^n u[n] \\implies \\text{ROC}: \\vert z\\vert > 0.5$. Since $z_0 = 2$ satisfies $\\vert 2\\vert > 0.5$, $H(2)$ converges unconditionally!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17550,70 +17525,73 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof of Stability via Unit Circle:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "An LTI system is bounded-input bounded-output (BIBO) stable if and only if its impulse response is absolutely summable:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=-\\infty}^\\infty \\vert h[n]\\vert < \\infty"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "The Z-transform of $h[n]$ evaluated on the unit circle $z = e^{j\\Omega}$ is the DTFT:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{j\\Omega}) = \\left. H(z) \\right\\vert_{z=e^{j\\Omega}} = \\sum_{n=-\\infty}^\\infty h[n] e^{-j\\Omega n}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "For $H(e^{j\\Omega})$ to converge uniformly for all $\\Omega$, the condition $\\sum_{n=-\\infty}^\\infty \\vert h[n] e^{-j\\Omega n}\\vert = \\sum_{n=-\\infty}^\\infty \\vert h[n]\\vert < \\infty$ must hold.",
-      "Hence, BIBO stability is mathematically equivalent to the statement:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\vert z\\vert = 1 \\subset \\text{ROC of } H(z)}"
-    },
-    {
-     "t": "h4",
-     "text": "Causality Condition & Boundary at Infinity:"
-    },
-    {
-     "t": "p",
-     "text": "For a causal sequence $h[n]$, $h[n] = 0$ for $n < 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(z) = \\sum_{n=0}^\\infty h[n] z^{-n} = h[0] + h[1] z^{-1} + h[2] z^{-2} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "As $z \\to \\infty$, every term $z^{-n} \\to 0$ for $n \\ge 1$. Consequently:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z\\to\\infty} H(z) = h[0] < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "Thus, for any causal LTI system, $H(z)$ must be analytic at $z = \\infty$ (i.e., $z = \\infty$ cannot be a pole!).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof of Stability via Unit Circle:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "An LTI system is bounded-input bounded-output (BIBO) stable if and only if its impulse response is absolutely summable:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=-\\infty}^\\infty \\vert h[n]\\vert < \\infty"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "The Z-transform of $h[n]$ evaluated on the unit circle $z = e^{j\\Omega}$ is the DTFT:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{j\\Omega}) = \\left. H(z) \\right\\vert_{z=e^{j\\Omega}} = \\sum_{n=-\\infty}^\\infty h[n] e^{-j\\Omega n}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "For $H(e^{j\\Omega})$ to converge uniformly for all $\\Omega$, the condition $\\sum_{n=-\\infty}^\\infty \\vert h[n] e^{-j\\Omega n}\\vert = \\sum_{n=-\\infty}^\\infty \\vert h[n]\\vert < \\infty$ must hold.",
+        "Hence, BIBO stability is mathematically equivalent to the statement:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\vert z\\vert = 1 \\subset \\text{ROC of } H(z)}"
+      },
+      {
+       "t": "h4",
+       "text": "Causality Condition & Boundary at Infinity:"
+      },
+      {
+       "t": "p",
+       "text": "For a causal sequence $h[n]$, $h[n] = 0$ for $n < 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(z) = \\sum_{n=0}^\\infty h[n] z^{-n} = h[0] + h[1] z^{-1} + h[2] z^{-2} + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "As $z \\to \\infty$, every term $z^{-n} \\to 0$ for $n \\ge 1$. Consequently:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z\\to\\infty} H(z) = h[0] < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "Thus, for any causal LTI system, $H(z)$ must be analytic at $z = \\infty$ (i.e., $z = \\infty$ cannot be a pole!)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17659,54 +17637,53 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Proof via Polynomial Long Division:"
-    },
-    {
-     "t": "p",
-     "text": "Divide the numerator $N(z) = z^3 - 2z^2 + z$ by denominator $D(z) = z^2 + \\frac{1}{4}z + \\frac{1}{8}$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(z) = \\left( z - \\frac{9}{4} \\right) + \\frac{\\frac{23}{16}z + \\frac{9}{32}}{z^2 + \\frac{1}{4}z + \\frac{1}{8}}"
-    },
-    {
-     "t": "p",
-     "text": "Taking the inverse Z-transform term by term:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}^{-1}\\{z\\} = \\delta[n+1]"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}^{-1}\\left\\{-\\frac{9}{4}\\right\\} = -\\frac{9}{4} \\delta[n]"
-    },
-    {
-     "t": "p",
-     "text": "The strictly proper rational remainder yields terms of the form $(z_{p_1})^n u[n]$ and $(z_{p_2})^n u[n]$ if chosen right-sided.\nHowever, look at the first term:"
-    },
-    {
-     "t": "math",
-     "tex": "h[n] = \\delta[n+1] - \\frac{9}{4} \\delta[n] + h_{\\text{strictly proper}}[n]"
-    },
-    {
-     "t": "p",
-     "text": "Because $h[-1] = 1 \\ne 0$, the impulse response possesses non-zero energy at $n = -1 < 0$.\nBy the strict definition of causality ($h[n] = 0$ for all $n < 0$), this system **cannot** be causal under any ROC assignment!"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**GATE Exam Trap:**\nIn discrete-time systems, a rational transfer function $H(z) = \\frac{N(z)}{D(z)}$ can be causal **if and only if**:\n$$\\deg(N(z)) \\le \\deg(D(z))$$\nIf $\\deg(N(z)) > \\deg(D(z))$, the system has at least one pole at $z = \\infty$ of order $M = \\deg(N) - \\deg(D)$. This produces advance delta terms $\\delta[n+M], \\dots, \\delta[n+1]$, making the impulse response non-zero in negative time. It is **surely non-causal** regardless of what annular region you choose!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Proof via Polynomial Long Division:"
+      },
+      {
+       "t": "p",
+       "text": "Divide the numerator $N(z) = z^3 - 2z^2 + z$ by denominator $D(z) = z^2 + \\frac{1}{4}z + \\frac{1}{8}$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(z) = \\left( z - \\frac{9}{4} \\right) + \\frac{\\frac{23}{16}z + \\frac{9}{32}}{z^2 + \\frac{1}{4}z + \\frac{1}{8}}"
+      },
+      {
+       "t": "p",
+       "text": "Taking the inverse Z-transform term by term:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}^{-1}\\{z\\} = \\delta[n+1]"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}^{-1}\\left\\{-\\frac{9}{4}\\right\\} = -\\frac{9}{4} \\delta[n]"
+      },
+      {
+       "t": "p",
+       "text": "The strictly proper rational remainder yields terms of the form $(z_{p_1})^n u[n]$ and $(z_{p_2})^n u[n]$ if chosen right-sided.\nHowever, look at the first term:"
+      },
+      {
+       "t": "math",
+       "tex": "h[n] = \\delta[n+1] - \\frac{9}{4} \\delta[n] + h_{\\text{strictly proper}}[n]"
+      },
+      {
+       "t": "p",
+       "text": "Because $h[-1] = 1 \\ne 0$, the impulse response possesses non-zero energy at $n = -1 < 0$.\nBy the strict definition of causality ($h[n] = 0$ for all $n < 0$), this system **cannot** be causal under any ROC assignment!"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**GATE Exam Trap:**\nIn discrete-time systems, a rational transfer function $H(z) = \\frac{N(z)}{D(z)}$ can be causal **if and only if**:\n$$\\deg(N(z)) \\le \\deg(D(z))$$\nIf $\\deg(N(z)) > \\deg(D(z))$, the system has at least one pole at $z = \\infty$ of order $M = \\deg(N) - \\deg(D)$. This produces advance delta terms $\\delta[n+M], \\dots, \\delta[n+1]$, making the impulse response non-zero in negative time. It is **surely non-causal** regardless of what annular region you choose!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17770,80 +17747,79 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Complete Derivation of Stability Boundaries:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "The denominator polynomial is $D(z) = z^2 - (2r\\cos\\theta) z + r^2 = 0$.",
-      "The roots are complex conjugate pairs located at:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z_{p_1} = r e^{j\\theta}, \\quad z_{p_2} = r e^{-j\\theta}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "The magnitude of both poles is identical:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vert z_{p_1}\\vert = \\vert z_{p_2}\\vert = \\vert r\\vert"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "For BIBO stability, the ROC must contain the unit circle $\\vert z\\vert = 1$:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case A (Causal System):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "A causal system requires an exterior ROC: $\\text{ROC} = \\{z : \\vert z\\vert > \\vert r\\vert\\}$.\n     For $\\vert z\\vert = 1$ to lie inside this region:"
-    },
-    {
-     "t": "math",
-     "tex": "1 > \\vert r\\vert \\implies \\vert r\\vert < 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case B (Anti-Causal System):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "An anti-causal system requires an interior ROC: $\\text{ROC} = \\{z : \\vert z\\vert < \\vert r\\vert\\}$.\n     For $\\vert z\\vert = 1$ to lie inside this region:"
-    },
-    {
-     "t": "math",
-     "tex": "1 < \\vert r\\vert \\implies \\vert r\\vert > 1"
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**GATE Exam Trap:**\nIf a question asks: *\"Find the condition on $r$ for the system to be stable\"* without specifying causality, you must specify **both cases**. If the system is assumed causal (as is standard in digital filters), $\\vert r\\vert < 1$ puts both conjugate poles strictly inside the unit circle. If the system is anti-causal, $\\vert r\\vert > 1$ is required so that the unit circle lies inside the interior ROC."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Complete Derivation of Stability Boundaries:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "The denominator polynomial is $D(z) = z^2 - (2r\\cos\\theta) z + r^2 = 0$.",
+        "The roots are complex conjugate pairs located at:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z_{p_1} = r e^{j\\theta}, \\quad z_{p_2} = r e^{-j\\theta}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "The magnitude of both poles is identical:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vert z_{p_1}\\vert = \\vert z_{p_2}\\vert = \\vert r\\vert"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "For BIBO stability, the ROC must contain the unit circle $\\vert z\\vert = 1$:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case A (Causal System):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A causal system requires an exterior ROC: $\\text{ROC} = \\{z : \\vert z\\vert > \\vert r\\vert\\}$.\n     For $\\vert z\\vert = 1$ to lie inside this region:"
+      },
+      {
+       "t": "math",
+       "tex": "1 > \\vert r\\vert \\implies \\vert r\\vert < 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case B (Anti-Causal System):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "An anti-causal system requires an interior ROC: $\\text{ROC} = \\{z : \\vert z\\vert < \\vert r\\vert\\}$.\n     For $\\vert z\\vert = 1$ to lie inside this region:"
+      },
+      {
+       "t": "math",
+       "tex": "1 < \\vert r\\vert \\implies \\vert r\\vert > 1"
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**GATE Exam Trap:**\nIf a question asks: *\"Find the condition on $r$ for the system to be stable\"* without specifying causality, you must specify **both cases**. If the system is assumed causal (as is standard in digital filters), $\\vert r\\vert < 1$ puts both conjugate poles strictly inside the unit circle. If the system is anti-causal, $\\vert r\\vert > 1$ is required so that the unit circle lies inside the interior ROC."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17884,32 +17860,31 @@ export default {
      "text": "Zeros: $s_{z_1} = -2, s_{z_2} = -3$.\n    Poles: $s_{p_1} = 1, s_{p_2} = -4$.\n    Conclusion: Negating or scaling by a non-zero constant preserves the poles and zeros identically!"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Proof of Invariance:"
-    },
-    {
-     "t": "p",
-     "text": "Let $Y(s) = \\alpha X(s) = \\alpha \\frac{K \\prod_{i=1}^M (s - s_{z,i})}{\\prod_{j=1}^N (s - s_{p,j})}$ where $\\alpha \\ne 0, \\infty$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The zeros are the solutions to $Y(s) = 0 \\implies \\alpha K \\prod_{i=1}^M (s - s_{z,i}) = 0$. Since $\\alpha \\ne 0$, the roots are identically $s = s_{z,i}$.",
-      "The poles are the singularities where $1/Y(s) = 0 \\implies \\frac{1}{\\alpha K} \\prod_{j=1}^N (s - s_{p,j}) = 0$. The roots are identically $s = s_{p,j}$.",
-      "Hence, the pole-zero geometry in the complex frequency plane is invariant under amplitude scaling:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Poles and Zeros of } \\{-x(t)\\} \\equiv \\text{Poles and Zeros of } \\{x(t)\\}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Proof of Invariance:"
+      },
+      {
+       "t": "p",
+       "text": "Let $Y(s) = \\alpha X(s) = \\alpha \\frac{K \\prod_{i=1}^M (s - s_{z,i})}{\\prod_{j=1}^N (s - s_{p,j})}$ where $\\alpha \\ne 0, \\infty$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The zeros are the solutions to $Y(s) = 0 \\implies \\alpha K \\prod_{i=1}^M (s - s_{z,i}) = 0$. Since $\\alpha \\ne 0$, the roots are identically $s = s_{z,i}$.",
+        "The poles are the singularities where $1/Y(s) = 0 \\implies \\frac{1}{\\alpha K} \\prod_{j=1}^N (s - s_{p,j}) = 0$. The roots are identically $s = s_{p,j}$.",
+        "Hence, the pole-zero geometry in the complex frequency plane is invariant under amplitude scaling:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Poles and Zeros of } \\{-x(t)\\} \\equiv \\text{Poles and Zeros of } \\{x(t)\\}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -17953,53 +17928,56 @@ export default {
      "text": "Diagram: S-plane axes showing real pole at $-a$, and complex conjugate poles at $-a + jb$ and $-a - jb$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Symmetry Theorem for Real/Imaginary CT Signals:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "For any real signal $x(t) \\in \\mathbb{R}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s^*) = \\int_{-\\infty}^\\infty x(t) e^{-s^* t} dt = \\left[ \\int_{-\\infty}^\\infty x(t) e^{-st} dt \\right]^* = [X(s)]^*"
-    },
-    {
-     "t": "p",
-     "text": "This is the **Schwarz Reflection Principle** in Laplace analysis."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "If $s = s_p$ is a pole, $\\lim_{s \\to s_p} \\vert X(s)\\vert = \\infty$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Then $\\lim_{s \\to s_p^*} \\vert X(s)\\vert = \\lim_{s \\to s_p^*} \\vert X(s^*)\\vert^* = \\lim_{u \\to s_p} \\vert X(u)\\vert^* = \\infty$.\n   Therefore, $s = s_p^*$ is also guaranteed to be a pole!"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "For purely imaginary signals $x(t) = j y(t)$ where $y(t) \\in \\mathbb{R}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(s) = j Y(s)"
-    },
-    {
-     "t": "p",
-     "text": "Since scaling by $j$ does not alter pole positions, purely imaginary signals also obey identical conjugate pole symmetry!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Symmetry Theorem for Real/Imaginary CT Signals:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "For any real signal $x(t) \\in \\mathbb{R}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s^*) = \\int_{-\\infty}^\\infty x(t) e^{-s^* t} dt = \\left[ \\int_{-\\infty}^\\infty x(t) e^{-st} dt \\right]^* = [X(s)]^*"
+      },
+      {
+       "t": "p",
+       "text": "This is the **Schwarz Reflection Principle** in Laplace analysis."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "If $s = s_p$ is a pole, $\\lim_{s \\to s_p} \\vert X(s)\\vert = \\infty$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Then $\\lim_{s \\to s_p^*} \\vert X(s)\\vert = \\lim_{s \\to s_p^*} \\vert X(s^*)\\vert^* = \\lim_{u \\to s_p} \\vert X(u)\\vert^* = \\infty$.\n   Therefore, $s = s_p^*$ is also guaranteed to be a pole!"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "For purely imaginary signals $x(t) = j y(t)$ where $y(t) \\in \\mathbb{R}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(s) = j Y(s)"
+      },
+      {
+       "t": "p",
+       "text": "Since scaling by $j$ does not alter pole positions, purely imaginary signals also obey identical conjugate pole symmetry!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18027,40 +18005,43 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Complete Constellation Verification:"
-    },
-    {
-     "t": "p",
-     "text": "Total poles and zeros for $X(s)$ to represent a valid real or purely imaginary signal:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Complete Pole Set:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{P} = \\left\\{ -1+2j, -1-2j, 1+j, 1-j, -2 \\right\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Complete Zero Set:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z} = \\left\\{ -3+j, -3-j, 3+3j, 3-3j, 4 \\right\\}"
-    },
-    {
-     "t": "p",
-     "text": "Notice that real poles ($s = -2$) and real zeros ($s = 4$) require no distinct partner because $-2^* = -2$ and $4^* = 4$. Complex roots with non-zero imaginary parts must strictly occur in conjugate pairs.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Complete Constellation Verification:"
+      },
+      {
+       "t": "p",
+       "text": "Total poles and zeros for $X(s)$ to represent a valid real or purely imaginary signal:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Complete Pole Set:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{P} = \\left\\{ -1+2j, -1-2j, 1+j, 1-j, -2 \\right\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Complete Zero Set:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z} = \\left\\{ -3+j, -3-j, 3+3j, 3-3j, 4 \\right\\}"
+      },
+      {
+       "t": "p",
+       "text": "Notice that real poles ($s = -2$) and real zeros ($s = 4$) require no distinct partner because $-2^* = -2$ and $4^* = 4$. Complex roots with non-zero imaginary parts must strictly occur in conjugate pairs."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18133,36 +18114,35 @@ export default {
      "tex": "j 2 e^t \\left[\\frac{e^{2jt} - e^{-2jt}}{2j}\\right] = 2e^t \\cos(2t) \\to \\text{REAL}; \\quad 2j e^t \\sin(2t) \\to \\text{IMAGINARY}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof of Conjugate Signal Property:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{x^*(t)\\} = \\int_{-\\infty}^\\infty x^*(t) e^{-st} dt = \\left[ \\int_{-\\infty}^\\infty x(t) e^{-s^* t} dt \\right]^* = X^*(s^*)"
-    },
-    {
-     "t": "p",
-     "text": "If $X(s)$ has a denominator factor $(s - s_p)$, then:"
-    },
-    {
-     "t": "math",
-     "tex": "X^*(s^*) \\text{ has denominator } (s^* - s_p)^* = (s - s_p^*)"
-    },
-    {
-     "t": "p",
-     "text": "Hence, taking the complex conjugate of a signal in the time domain reflects every single pole and zero across the real axis:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{s_p \\longrightarrow s_p^*, \\quad s_z \\longrightarrow s_z^*}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof of Conjugate Signal Property:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{x^*(t)\\} = \\int_{-\\infty}^\\infty x^*(t) e^{-st} dt = \\left[ \\int_{-\\infty}^\\infty x(t) e^{-s^* t} dt \\right]^* = X^*(s^*)"
+      },
+      {
+       "t": "p",
+       "text": "If $X(s)$ has a denominator factor $(s - s_p)$, then:"
+      },
+      {
+       "t": "math",
+       "tex": "X^*(s^*) \\text{ has denominator } (s^* - s_p)^* = (s - s_p^*)"
+      },
+      {
+       "t": "p",
+       "text": "Hence, taking the complex conjugate of a signal in the time domain reflects every single pole and zero across the real axis:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{s_p \\longrightarrow s_p^*, \\quad s_z \\longrightarrow s_z^*}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18212,45 +18192,44 @@ export default {
      "tex": "y(t) = x(t) \\pm x^*(t) \\implies y^*(t) = x^*(t) \\pm x(t) \\implies y(t) = \\pm y^*(t) \\implies y(t): \\text{REAL / IMAGINARY}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Real and Imaginary Part Decomposition:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Every complex signal $x(t) = x_R(t) + j x_I(t)$ satisfies:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_R(t) = \\frac{x(t) + x^*(t)}{2}, \\quad x_I(t) = \\frac{x(t) - x^*(t)}{2j}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "In the Laplace domain:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_R(s) = \\frac{X(s) + X^*(s^*)}{2}, \\quad X_I(s) = \\frac{X(s) - X^*(s^*)}{2j}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "The poles of $X_R(s)$ and $X_I(s)$ are formed by the union of poles of $X(s)$ and their complex conjugates $X^*(s^*)$, proving why real and imaginary signals must have symmetric pole constellations across the real axis!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Real and Imaginary Part Decomposition:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Every complex signal $x(t) = x_R(t) + j x_I(t)$ satisfies:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_R(t) = \\frac{x(t) + x^*(t)}{2}, \\quad x_I(t) = \\frac{x(t) - x^*(t)}{2j}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "In the Laplace domain:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_R(s) = \\frac{X(s) + X^*(s^*)}{2}, \\quad X_I(s) = \\frac{X(s) - X^*(s^*)}{2j}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "The poles of $X_R(s)$ and $X_I(s)$ are formed by the union of poles of $X(s)$ and their complex conjugates $X^*(s^*)$, proving why real and imaginary signals must have symmetric pole constellations across the real axis!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18317,52 +18296,51 @@ export default {
      "text": "Diagram: S-plane showing poles at $(1+j)$ in the first quadrant and $(-1-j)$ in the third quadrant, symmetric about the origin."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Rigorous Proof of Origin Symmetry for Even Signals:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "By the time-reversal property of the Laplace Transform:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{L}\\{x(-t)\\} = \\int_{-\\infty}^\\infty x(-t) e^{-st} dt = \\int_{-\\infty}^\\infty x(\\tau) e^{s\\tau} d\\tau = X(-s)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "If $x(t)$ is even, $x(t) = x(-t) \\implies X(s) = X(-s)$.",
-      "If $s = s_p$ is a pole of $X(s)$, then $\\vert X(s_p)\\vert = \\infty$.",
-      "Since $X(-s) = X(s)$, evaluating at $s = -s_p$ gives:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vert X(-(-s_p))\\vert = \\vert X(s_p)\\vert = \\infty"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Thus, $s = -s_p$ is guaranteed to be a pole of $X(s)$.",
-      "The poles of any even signal are strictly **symmetric about the origin**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{s_p \\longleftrightarrow -s_p}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Rigorous Proof of Origin Symmetry for Even Signals:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "By the time-reversal property of the Laplace Transform:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{L}\\{x(-t)\\} = \\int_{-\\infty}^\\infty x(-t) e^{-st} dt = \\int_{-\\infty}^\\infty x(\\tau) e^{s\\tau} d\\tau = X(-s)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "If $x(t)$ is even, $x(t) = x(-t) \\implies X(s) = X(-s)$.",
+        "If $s = s_p$ is a pole of $X(s)$, then $\\vert X(s_p)\\vert = \\infty$.",
+        "Since $X(-s) = X(s)$, evaluating at $s = -s_p$ gives:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vert X(-(-s_p))\\vert = \\vert X(s_p)\\vert = \\infty"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Thus, $s = -s_p$ is guaranteed to be a pole of $X(s)$.",
+        "The poles of any even signal are strictly **symmetric about the origin**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{s_p \\longleftrightarrow -s_p}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18425,27 +18403,26 @@ export default {
      "tex": "x(t) = -x(-t) \\implies X(s) = -X(-s) \\implies s = s_p \\iff s = -s_p"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Unification of Even and Odd Origin Symmetry:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For an odd signal, $X(s) = -X(-s)$. The negative sign scales the amplitude by $-1$, which, as proved on Slide 198, does not change the roots of the denominator or numerator!",
-      "Therefore, both **Even** and **Odd** signals possess the exact same origin pole-zero symmetry:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x(t) \\text{ Even or Odd } \\implies \\left\\{ s = s_p \\iff s = -s_p \\right\\} \\text{ and } \\left\\{ s = s_z \\iff s = -s_z \\right\\}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Unification of Even and Odd Origin Symmetry:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For an odd signal, $X(s) = -X(-s)$. The negative sign scales the amplitude by $-1$, which, as proved on Slide 198, does not change the roots of the denominator or numerator!",
+        "Therefore, both **Even** and **Odd** signals possess the exact same origin pole-zero symmetry:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x(t) \\text{ Even or Odd } \\implies \\left\\{ s = s_p \\iff s = -s_p \\right\\} \\text{ and } \\left\\{ s = s_z \\iff s = -s_z \\right\\}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18492,24 +18469,23 @@ export default {
      "tex": "s_{z_1} = 1-j \\implies s_{z_2} = -s_{z_1} = -1+j"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Check:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Negation reflects points across both axes simultaneously ($s \\to -s \\iff \\text{Re}(s) \\to -\\text{Re}(s), \\text{Im}(s) \\to -\\text{Im}(s)$).",
-      "Given pole $s_{p_1} = -1 + 2j$ (Quadrant II) reflects to $s_{p_2} = 1 - 2j$ (Quadrant IV).",
-      "Given zero $s_{z_1} = 1 - j$ (Quadrant IV) reflects to $s_{z_2} = -1 + j$ (Quadrant II)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Check:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Negation reflects points across both axes simultaneously ($s \\to -s \\iff \\text{Re}(s) \\to -\\text{Re}(s), \\text{Im}(s) \\to -\\text{Im}(s)$).",
+        "Given pole $s_{p_1} = -1 + 2j$ (Quadrant II) reflects to $s_{p_2} = 1 - 2j$ (Quadrant IV).",
+        "Given zero $s_{z_1} = 1 - j$ (Quadrant IV) reflects to $s_{z_2} = -1 + j$ (Quadrant II)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18568,26 +18544,25 @@ export default {
      "text": "Pole at $s_{p_1} = -3$ and zero at $s_{z_1} = 1$.\n    Check: A pole at $-3$ requires a pole at $+3$. But here there is a zero at $1$!\n    Result: $\\mathbf{\\to \\text{NENO}}$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Systematic Classification Algorithm:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Examine all poles: For every pole $s_p$, is $-s_p$ also a pole with the exact same multiplicity?",
-      "Examine all zeros: For every zero $s_z$, is $-s_z$ also a zero with the exact same multiplicity?",
-      "If both tests pass $\\implies$ the signal could be **Even** or **Odd** (or an even/odd combination of generalized functions).",
-      "If either test fails $\\implies$ the signal is definitively **NENO**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Systematic Classification Algorithm:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Examine all poles: For every pole $s_p$, is $-s_p$ also a pole with the exact same multiplicity?",
+        "Examine all zeros: For every zero $s_z$, is $-s_z$ also a zero with the exact same multiplicity?",
+        "If both tests pass $\\implies$ the signal could be **Even** or **Odd** (or an even/odd combination of generalized functions).",
+        "If either test fails $\\implies$ the signal is definitively **NENO**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18642,44 +18617,47 @@ export default {
      "tex": "\\mathcal{P} = \\{ 1-j, 1+j, -1+j, -1-j \\}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Quad-Symmetry Theorem:"
-    },
-    {
-     "t": "p",
-     "text": "When a continuous signal combines both real/imaginary status AND time symmetry:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Real/Imaginary $\\implies X(s^*) = \\pm X^*(s) \\implies$ Reflection symmetry about the **Real Axis**.",
-      "Even/Odd $\\implies X(-s) = \\pm X(s) \\implies$ Reflection symmetry about the **Origin**.",
-      "Combining (1) and (2) automatically implies reflection symmetry about the **Imaginary Axis**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "s = s_p \\implies s = -s_p^*"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Therefore, any complex pole $s_0 = \\sigma_0 + j\\omega_0$ (with $\\sigma_0 \\ne 0, \\omega_0 \\ne 0$) generates a quadruplet constellation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{s \\in \\left\\{ \\pm \\sigma_0 \\pm j\\omega_0 \\right\\}}"
-    },
-    {
-     "t": "p",
-     "text": "occupying all four quadrants of the $s$-plane!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Quad-Symmetry Theorem:"
+      },
+      {
+       "t": "p",
+       "text": "When a continuous signal combines both real/imaginary status AND time symmetry:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Real/Imaginary $\\implies X(s^*) = \\pm X^*(s) \\implies$ Reflection symmetry about the **Real Axis**.",
+        "Even/Odd $\\implies X(-s) = \\pm X(s) \\implies$ Reflection symmetry about the **Origin**.",
+        "Combining (1) and (2) automatically implies reflection symmetry about the **Imaginary Axis**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "s = s_p \\implies s = -s_p^*"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Therefore, any complex pole $s_0 = \\sigma_0 + j\\omega_0$ (with $\\sigma_0 \\ne 0, \\omega_0 \\ne 0$) generates a quadruplet constellation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{s \\in \\left\\{ \\pm \\sigma_0 \\pm j\\omega_0 \\right\\}}"
+      },
+      {
+       "t": "p",
+       "text": "occupying all four quadrants of the $s$-plane!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18727,24 +18705,23 @@ export default {
      "tex": "s_{z,\\text{new}} = -s_z = -(1-j) = -1+j"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Transformation Summary:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Time reversal $t \\to -t$ maps every pole $s_p \\to -s_p$ and every zero $s_z \\to -s_z$.",
-      "The pole at $-3+j$ (in the left-half plane) shifts to $3-j$ (in the right-half plane).",
-      "The zero at $1-j$ (in the right-half plane) shifts to $-1+j$ (in the left-half plane)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Transformation Summary:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Time reversal $t \\to -t$ maps every pole $s_p \\to -s_p$ and every zero $s_z \\to -s_z$.",
+        "The pole at $-3+j$ (in the left-half plane) shifts to $3-j$ (in the right-half plane).",
+        "The zero at $1-j$ (in the right-half plane) shifts to $-1+j$ (in the left-half plane)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18827,41 +18804,40 @@ export default {
      "text": "Diagram: A rectangular 4-zero constellation centered at the origin in the $s$-plane."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Formulation of Autocorrelation Transforms:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Let $p(t) = h(t) * h(-t)$. By the convolution and time-reversal properties:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P(s) = \\mathcal{L}\\{h(t)\\} \\cdot \\mathcal{L}\\{h(-t)\\} = H(s) \\cdot H(-s)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "If $s_0$ is a zero of $H(s)$, then $H(s_0) = 0 \\implies P(s_0) = 0$.",
-      "Since $h(t)$ is real, $s_0^*$ is also a zero of $H(s) \\implies P(s_0^*) = 0$.",
-      "Furthermore, $H(-(-s_0)) = H(s_0) = 0 \\implies P(-s_0) = 0$ and $P(-s_0^*) = 0$.",
-      "Therefore, any non-real, non-imaginary zero $s_0 = \\sigma_0 + j\\omega_0$ of an autocorrelation filter automatically creates four zeros:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{s \\in \\left\\{ \\pm \\sigma_0 \\pm j\\omega_0 \\right\\}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Formulation of Autocorrelation Transforms:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Let $p(t) = h(t) * h(-t)$. By the convolution and time-reversal properties:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P(s) = \\mathcal{L}\\{h(t)\\} \\cdot \\mathcal{L}\\{h(-t)\\} = H(s) \\cdot H(-s)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "If $s_0$ is a zero of $H(s)$, then $H(s_0) = 0 \\implies P(s_0) = 0$.",
+        "Since $h(t)$ is real, $s_0^*$ is also a zero of $H(s) \\implies P(s_0^*) = 0$.",
+        "Furthermore, $H(-(-s_0)) = H(s_0) = 0 \\implies P(-s_0) = 0$ and $P(-s_0^*) = 0$.",
+        "Therefore, any non-real, non-imaginary zero $s_0 = \\sigma_0 + j\\omega_0$ of an autocorrelation filter automatically creates four zeros:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{s \\in \\left\\{ \\pm \\sigma_0 \\pm j\\omega_0 \\right\\}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18919,60 +18895,59 @@ export default {
      "tex": "x^*[n] \\longleftrightarrow X^*(z^*) : z = z_p^*"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof of Schwarz Reflection in the Z-Domain:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "For any discrete sequence $x[n] \\in \\mathbb{R}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z^*) = \\sum_{n=-\\infty}^\\infty x[n] (z^*)^{-n} = \\sum_{n=-\\infty}^\\infty x[n] (z^{-n})^* = \\left( \\sum_{n=-\\infty}^\\infty x[n] z^{-n} \\right)^* = X^*(z)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Therefore:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X^*(z^*) = X(z) \\quad \\text{for } x[n] \\in \\mathbb{R}}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "If $z = z_p$ is a pole such that $D(z_p) = 0$, then:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[D(z_p)]^* = 0 \\implies D(z_p^*) = 0"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Thus, for any real or purely imaginary discrete sequence, poles and zeros must either lie strictly on the real axis or occur in complex conjugate pairs:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{z_p \\longleftrightarrow z_p^*, \\quad z_z \\longleftrightarrow z_z^*}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof of Schwarz Reflection in the Z-Domain:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "For any discrete sequence $x[n] \\in \\mathbb{R}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z^*) = \\sum_{n=-\\infty}^\\infty x[n] (z^*)^{-n} = \\sum_{n=-\\infty}^\\infty x[n] (z^{-n})^* = \\left( \\sum_{n=-\\infty}^\\infty x[n] z^{-n} \\right)^* = X^*(z)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Therefore:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X^*(z^*) = X(z) \\quad \\text{for } x[n] \\in \\mathbb{R}}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "If $z = z_p$ is a pole such that $D(z_p) = 0$, then:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[D(z_p)]^* = 0 \\implies D(z_p^*) = 0"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Thus, for any real or purely imaginary discrete sequence, poles and zeros must either lie strictly on the real axis or occur in complex conjugate pairs:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{z_p \\longleftrightarrow z_p^*, \\quad z_z \\longleftrightarrow z_z^*}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19009,24 +18984,23 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Symmetry Verification in Discrete Domain:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The symmetry axis for real/imaginary discrete sequences remains the **horizontal Real axis** ($\\text{Im}(z) = 0$), precisely identical to the continuous Laplace domain.",
-      "Real poles ($z = -2$) and zeros ($z = 4$) require no paired counterpart.",
-      "Total count: 5 poles ($\\{-1\\pm 2j, 1\\pm j, -2\\}$) and 5 zeros ($\\{-3\\pm j, 3\\pm 3j, 4\\}$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Symmetry Verification in Discrete Domain:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The symmetry axis for real/imaginary discrete sequences remains the **horizontal Real axis** ($\\text{Im}(z) = 0$), precisely identical to the continuous Laplace domain.",
+        "Real poles ($z = -2$) and zeros ($z = 4$) require no paired counterpart.",
+        "Total count: 5 poles ($\\{-1\\pm 2j, 1\\pm j, -2\\}$) and 5 zeros ($\\{-3\\pm j, 3\\pm 3j, 4\\}$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19071,24 +19045,27 @@ export default {
      "text": "Notice that $z_{p_2} = z_{p_1}^*$.\n    Summary: $x[n] \\to z = z_p \\implies x^*[n] \\to z = z_p^*$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Verification:"
-    },
-    {
-     "t": "p",
-     "text": "For any causal complex exponential $x[n] = a^n u[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{a^n u[n]\\} = \\frac{1}{1 - a z^{-1}} = \\frac{z}{z - a}, \\quad \\text{ROC}: \\vert z\\vert > \\vert a\\vert"
-    },
-    {
-     "t": "p",
-     "text": "When $a = 2+3j$, pole is at $z_p = 2+3j$.\nWhen conjugated, $a^* = 2-3j$, pole moves to $z_p^* = 2-3j$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Verification:"
+      },
+      {
+       "t": "p",
+       "text": "For any causal complex exponential $x[n] = a^n u[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{a^n u[n]\\} = \\frac{1}{1 - a z^{-1}} = \\frac{z}{z - a}, \\quad \\text{ROC}: \\vert z\\vert > \\vert a\\vert"
+      },
+      {
+       "t": "p",
+       "text": "When $a = 2+3j$, pole is at $z_p = 2+3j$.\nWhen conjugated, $a^* = 2-3j$, pole moves to $z_p^* = 2-3j$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -19143,20 +19120,23 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Derivation of the Discrete Conjugate Map:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{x^*[n]\\} = \\sum_{n=-\\infty}^\\infty x^*[n] z^{-n} = \\left[ \\sum_{n=-\\infty}^\\infty x[n] (z^*)^{-n} \\right]^* = X^*(z^*)"
-    },
-    {
-     "t": "p",
-     "text": "Every singularity or root at $z = z_0$ maps directly to $z = z_0^*$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Derivation of the Discrete Conjugate Map:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{x^*[n]\\} = \\sum_{n=-\\infty}^\\infty x^*[n] z^{-n} = \\left[ \\sum_{n=-\\infty}^\\infty x[n] (z^*)^{-n} \\right]^* = X^*(z^*)"
+      },
+      {
+       "t": "p",
+       "text": "Every singularity or root at $z = z_0$ maps directly to $z = z_0^*$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19221,60 +19201,59 @@ export default {
      "text": "Diagram: $z$-plane showing $z_{p_1}$ at radius $\\sqrt{2}$, angle $+45^\\circ$ (outside unit circle), and $z_{p_2}$ at radius $1/\\sqrt{2}$, angle $-45^\\circ$ (inside unit circle)."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof of Reciprocal Pole Symmetry in the Z-Domain:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "By the time-reversal property of the Z-transform:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{x[-n]\\} = \\sum_{n=-\\infty}^\\infty x[-n] z^{-n} = \\sum_{m=-\\infty}^\\infty x[m] z^m = \\sum_{m=-\\infty}^\\infty x[m] (z^{-1})^{-m} = X(z^{-1})"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "For an even discrete sequence, $x[n] = x[-n] \\implies X(z) = X(1/z)$.",
-      "Suppose $z = z_p$ is a pole of $X(z)$, meaning $\\vert X(z_p)\\vert = \\infty$.",
-      "Setting $z = 1/z_p$ in the identity $X(z) = X(1/z)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\vert X\\left(\\frac{1}{z_p}\\right) \\right\\vert = \\vert X(z_p)\\vert = \\infty"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Therefore, $z = 1/z_p$ must also be a pole of $X(z)$!",
-      "**Geometric Inversion across the Unit Circle:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $z_p = r_0 e^{j\\theta_0}$.\n   Then $\\frac{1}{z_p} = \\frac{1}{r_0} e^{-j\\theta_0}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The radius inverts: $r_0 \\longleftrightarrow \\frac{1}{r_0}$.",
-      "The angle negates: $\\theta_0 \\longleftrightarrow -\\theta_0$.",
-      "One pole lies outside the unit circle ($r_0 > 1$) and the other lies inside ($1/r_0 < 1$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof of Reciprocal Pole Symmetry in the Z-Domain:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "By the time-reversal property of the Z-transform:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{x[-n]\\} = \\sum_{n=-\\infty}^\\infty x[-n] z^{-n} = \\sum_{m=-\\infty}^\\infty x[m] z^m = \\sum_{m=-\\infty}^\\infty x[m] (z^{-1})^{-m} = X(z^{-1})"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "For an even discrete sequence, $x[n] = x[-n] \\implies X(z) = X(1/z)$.",
+        "Suppose $z = z_p$ is a pole of $X(z)$, meaning $\\vert X(z_p)\\vert = \\infty$.",
+        "Setting $z = 1/z_p$ in the identity $X(z) = X(1/z)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\vert X\\left(\\frac{1}{z_p}\\right) \\right\\vert = \\vert X(z_p)\\vert = \\infty"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Therefore, $z = 1/z_p$ must also be a pole of $X(z)$!",
+        "**Geometric Inversion across the Unit Circle:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $z_p = r_0 e^{j\\theta_0}$.\n   Then $\\frac{1}{z_p} = \\frac{1}{r_0} e^{-j\\theta_0}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The radius inverts: $r_0 \\longleftrightarrow \\frac{1}{r_0}$.",
+        "The angle negates: $\\theta_0 \\longleftrightarrow -\\theta_0$.",
+        "One pole lies outside the unit circle ($r_0 > 1$) and the other lies inside ($1/r_0 < 1$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19338,32 +19317,35 @@ export default {
      "tex": "\\boxed{z_z = 2+2j, \\ \\frac{1}{4} - \\frac{j}{4}}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Check:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Polar form of $z_{p_1} = -1+j = \\sqrt{2} e^{j 135^\\circ}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Reciprocal: $z_{p_2} = \\frac{1}{\\sqrt{2}} e^{-j 135^\\circ} = \\frac{1}{\\sqrt{2}} \\left( -\\frac{1}{\\sqrt{2}} - j\\frac{1}{\\sqrt{2}} \\right) = -0.5 - 0.5j$. Matches!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Polar form of $z_{z_1} = 2+2j = \\sqrt{8} e^{j 45^\\circ} = 2\\sqrt{2} e^{j 45^\\circ}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Reciprocal: $z_{z_2} = \\frac{1}{2\\sqrt{2}} e^{-j 45^\\circ} = \\frac{1}{2\\sqrt{2}} \\left( \\frac{1}{\\sqrt{2}} - j\\frac{1}{\\sqrt{2}} \\right) = \\frac{1}{4} - \\frac{j}{4}$. Matches!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Check:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Polar form of $z_{p_1} = -1+j = \\sqrt{2} e^{j 135^\\circ}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Reciprocal: $z_{p_2} = \\frac{1}{\\sqrt{2}} e^{-j 135^\\circ} = \\frac{1}{\\sqrt{2}} \\left( -\\frac{1}{\\sqrt{2}} - j\\frac{1}{\\sqrt{2}} \\right) = -0.5 - 0.5j$. Matches!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Polar form of $z_{z_1} = 2+2j = \\sqrt{8} e^{j 45^\\circ} = 2\\sqrt{2} e^{j 45^\\circ}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Reciprocal: $z_{z_2} = \\frac{1}{2\\sqrt{2}} e^{-j 45^\\circ} = \\frac{1}{2\\sqrt{2}} \\left( \\frac{1}{\\sqrt{2}} - j\\frac{1}{\\sqrt{2}} \\right) = \\frac{1}{4} - \\frac{j}{4}$. Matches!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19423,68 +19405,67 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "The Z-Domain Quad-Symmetry Theorem:"
-    },
-    {
-     "t": "p",
-     "text": "Whenever a discrete signal is simultaneously (Real or Imaginary) and (Even or Odd):"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Conjugate Symmetry (Real Axis):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z \\in \\mathcal{P} \\implies z^* \\in \\mathcal{P}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Inversion Symmetry (Unit Circle):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z \\in \\mathcal{P} \\implies \\frac{1}{z} \\in \\mathcal{P}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Compound Symmetry (Conjugate Reciprocal):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Combining both yields:"
-    },
-    {
-     "t": "math",
-     "tex": "z \\in \\mathcal{P} \\implies \\frac{1}{z^*} \\in \\mathcal{P}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "For any complex pole $z_0 = r_0 e^{j\\theta_0}$ (with $r_0 \\ne 1, \\theta_0 \\ne 0, \\pi$), the four poles are:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\mathcal{P} = \\left\\{ r_0 e^{j\\theta_0}, \\ r_0 e^{-j\\theta_0}, \\ \\frac{1}{r_0} e^{j\\theta_0}, \\ \\frac{1}{r_0} e^{-j\\theta_0} \\right\\}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "The Z-Domain Quad-Symmetry Theorem:"
+      },
+      {
+       "t": "p",
+       "text": "Whenever a discrete signal is simultaneously (Real or Imaginary) and (Even or Odd):"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Conjugate Symmetry (Real Axis):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z \\in \\mathcal{P} \\implies z^* \\in \\mathcal{P}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Inversion Symmetry (Unit Circle):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z \\in \\mathcal{P} \\implies \\frac{1}{z} \\in \\mathcal{P}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Compound Symmetry (Conjugate Reciprocal):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Combining both yields:"
+      },
+      {
+       "t": "math",
+       "tex": "z \\in \\mathcal{P} \\implies \\frac{1}{z^*} \\in \\mathcal{P}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "For any complex pole $z_0 = r_0 e^{j\\theta_0}$ (with $r_0 \\ne 1, \\theta_0 \\ne 0, \\pi$), the four poles are:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\mathcal{P} = \\left\\{ r_0 e^{j\\theta_0}, \\ r_0 e^{-j\\theta_0}, \\ \\frac{1}{r_0} e^{j\\theta_0}, \\ \\frac{1}{r_0} e^{-j\\theta_0} \\right\\}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -19559,39 +19540,38 @@ export default {
      "text": "Boxed results: $\\boxed{2+4j}, \\ \\boxed{2-4j}, \\ \\boxed{0.1 - 0.2j}, \\ \\boxed{0.1 + 0.2j}$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Structure of Discrete Autocorrelation Transforms:"
-    },
-    {
-     "t": "p",
-     "text": "For any real filter $h[n]$, the deterministic autocorrelation is $r_{hh}[n] = h[n] * h[-n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "R_{hh}(z) = H(z) H(z^{-1})"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "If $z_0$ is a zero of $H(z)$, then $R_{hh}(z_0) = 0$.",
-      "Because $h[n]$ is real, $z_0^*$ is also a zero of $H(z) \\implies R_{hh}(z_0^*) = 0$.",
-      "From the factor $H(z^{-1})$, evaluating at $z = 1/z_0$ gives $H((1/z_0)^{-1}) = H(z_0) = 0 \\implies R_{hh}(1/z_0) = 0$.",
-      "Similarly, $R_{hh}(1/z_0^*) = 0$.",
-      "Thus, discrete autocorrelation filters always exhibit zeros and poles in **conjugate-reciprocal quadruplets**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\left\\{ z_0, \\ z_0^*, \\ \\frac{1}{z_0}, \\ \\frac{1}{z_0^*} \\right\\}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Structure of Discrete Autocorrelation Transforms:"
+      },
+      {
+       "t": "p",
+       "text": "For any real filter $h[n]$, the deterministic autocorrelation is $r_{hh}[n] = h[n] * h[-n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "R_{hh}(z) = H(z) H(z^{-1})"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "If $z_0$ is a zero of $H(z)$, then $R_{hh}(z_0) = 0$.",
+        "Because $h[n]$ is real, $z_0^*$ is also a zero of $H(z) \\implies R_{hh}(z_0^*) = 0$.",
+        "From the factor $H(z^{-1})$, evaluating at $z = 1/z_0$ gives $H((1/z_0)^{-1}) = H(z_0) = 0 \\implies R_{hh}(1/z_0) = 0$.",
+        "Similarly, $R_{hh}(1/z_0^*) = 0$.",
+        "Thus, discrete autocorrelation filters always exhibit zeros and poles in **conjugate-reciprocal quadruplets**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\left\\{ z_0, \\ z_0^*, \\ \\frac{1}{z_0}, \\ \\frac{1}{z_0^*} \\right\\}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19663,54 +19643,53 @@ export default {
      "text": "Boxed Result: $\\boxed{A = 2}$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Rigorous Proof of the Summation Identity:"
-    },
-    {
-     "t": "p",
-     "text": "By the definition of the bilateral Z-transform:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) \\triangleq \\sum_{n=-\\infty}^\\infty y[n] z^{-n}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $z = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(1) = \\sum_{n=-\\infty}^\\infty y[n] (1)^{-n} = \\sum_{n=-\\infty}^\\infty y[n]"
-    },
-    {
-     "t": "p",
-     "text": "By the convolution theorem, $Y(z) = X(z) H(z)$ holds in the intersection of their ROCs:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC}_Y = \\text{ROC}_X \\cap \\text{ROC}_H = \\{ z : \\vert z\\vert > 0.5 \\} \\cap \\{ z : \\vert z\\vert < 2 \\} = \\{ z : 0.5 < \\vert z\\vert < 2 \\}"
-    },
-    {
-     "t": "p",
-     "text": "Since $z = 1$ lies strictly in the interior of this annular ROC, the infinite summation converges absolutely to:"
-    },
-    {
-     "t": "math",
-     "tex": "A = X(1) \\cdot H(1) = \\left( \\frac{1}{1 - 0.5} \\right) \\left( \\frac{-1}{1 - 2} \\right) = (2)(1) = 2"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap:**\nYou can **only** evaluate an infinite sum as $\\sum y[n] = Y(1)$ if $z = 1$ is strictly inside the ROC! If $z = 1$ lies on the boundary or outside the ROC, the series diverges, and substituting $z = 1$ into an algebraic expression will yield a completely erroneous result. Always verify the ROC intersection first!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Rigorous Proof of the Summation Identity:"
+      },
+      {
+       "t": "p",
+       "text": "By the definition of the bilateral Z-transform:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) \\triangleq \\sum_{n=-\\infty}^\\infty y[n] z^{-n}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $z = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(1) = \\sum_{n=-\\infty}^\\infty y[n] (1)^{-n} = \\sum_{n=-\\infty}^\\infty y[n]"
+      },
+      {
+       "t": "p",
+       "text": "By the convolution theorem, $Y(z) = X(z) H(z)$ holds in the intersection of their ROCs:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC}_Y = \\text{ROC}_X \\cap \\text{ROC}_H = \\{ z : \\vert z\\vert > 0.5 \\} \\cap \\{ z : \\vert z\\vert < 2 \\} = \\{ z : 0.5 < \\vert z\\vert < 2 \\}"
+      },
+      {
+       "t": "p",
+       "text": "Since $z = 1$ lies strictly in the interior of this annular ROC, the infinite summation converges absolutely to:"
+      },
+      {
+       "t": "math",
+       "tex": "A = X(1) \\cdot H(1) = \\left( \\frac{1}{1 - 0.5} \\right) \\left( \\frac{-1}{1 - 2} \\right) = (2)(1) = 2"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap:**\nYou can **only** evaluate an infinite sum as $\\sum y[n] = Y(1)$ if $z = 1$ is strictly inside the ROC! If $z = 1$ lies on the boundary or outside the ROC, the series diverges, and substituting $z = 1$ into an algebraic expression will yield a completely erroneous result. Always verify the ROC intersection first!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19787,25 +19766,24 @@ export default {
      "tex": "\\left. y[n] \\right\\vert_{n=4} = \\sum_{k=0}^4 (k+1)(-k+5)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Overlap Bounds Analysis:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[k]$ is supported on $k \\in [0, 9]$.",
-      "$x[4-k]$ is supported where $0 \\le 4 - k \\le 9 \\iff -5 \\le k \\le 4$.",
-      "The product $x[k] x[4-k]$ is non-zero only on the intersection $[0, 9] \\cap [-5, 4] = [0, 4]$.",
-      "Over this interval, $x[k] = k+1$ and $x[4-k] = (4-k)+1 = 5-k$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Overlap Bounds Analysis:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[k]$ is supported on $k \\in [0, 9]$.",
+        "$x[4-k]$ is supported where $0 \\le 4 - k \\le 9 \\iff -5 \\le k \\le 4$.",
+        "The product $x[k] x[4-k]$ is non-zero only on the intersection $[0, 9] \\cap [-5, 4] = [0, 4]$.",
+        "Over this interval, $x[k] = k+1$ and $x[4-k] = (4-k)+1 = 5-k$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19898,32 +19876,35 @@ export default {
      "text": "Coefficient is $\\boxed{35}$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Equivalence of Discrete Convolution and Polynomial Multiplication:"
-    },
-    {
-     "t": "p",
-     "text": "For any finite-length causal sequences, the Z-transform is a polynomial in $z^{-1}$. The operation of discrete convolution in time:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\sum_{k=0}^n x[k] h[n-k]"
-    },
-    {
-     "t": "p",
-     "text": "is isomorphic to the Cauchy product of power series:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left( \\sum_{k=0}^\\infty x[k] z^{-k} \\right) \\left( \\sum_{m=0}^\\infty h[m] z^{-m} \\right) = \\sum_{n=0}^\\infty \\left( \\sum_{k=0}^n x[k] h[n-k] \\right) z^{-n}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, extracting the $n$-th sample $y[n]$ is identical to finding the coefficient of $z^{-n}$ in the polynomial product $X(z)H(z)$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Equivalence of Discrete Convolution and Polynomial Multiplication:"
+      },
+      {
+       "t": "p",
+       "text": "For any finite-length causal sequences, the Z-transform is a polynomial in $z^{-1}$. The operation of discrete convolution in time:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\sum_{k=0}^n x[k] h[n-k]"
+      },
+      {
+       "t": "p",
+       "text": "is isomorphic to the Cauchy product of power series:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left( \\sum_{k=0}^\\infty x[k] z^{-k} \\right) \\left( \\sum_{m=0}^\\infty h[m] z^{-m} \\right) = \\sum_{n=0}^\\infty \\left( \\sum_{k=0}^n x[k] h[n-k] \\right) z^{-n}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, extracting the $n$-th sample $y[n]$ is identical to finding the coefficient of $z^{-n}$ in the polynomial product $X(z)H(z)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -19988,36 +19969,35 @@ export default {
      "text": "Chalk condition: \"$z = 3$ should lie in the ROC of $Y(z)$\"."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Accumulator as Convolution with Unit Step:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "For any sequence $v[n]$, the running summation $y[n] = \\sum_{k=-\\infty}^n v[k]$ can be written as:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\sum_{k=-\\infty}^\\infty v[k] u[n-k] = v[n] * u[n]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Here, $v[n] = (0.5)^n u[n]$.",
-      "Since both $v[n]$ and $u[n]$ are causal, $y[n] = 0$ for $n < 0$.",
-      "The outer summation $\\sum_{n=-\\infty}^\\infty y[n] 3^{-n}$ is precisely the Z-transform $Y(z)$ evaluated at $z = 3$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Accumulator as Convolution with Unit Step:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "For any sequence $v[n]$, the running summation $y[n] = \\sum_{k=-\\infty}^n v[k]$ can be written as:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\sum_{k=-\\infty}^\\infty v[k] u[n-k] = v[n] * u[n]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Here, $v[n] = (0.5)^n u[n]$.",
+        "Since both $v[n]$ and $u[n]$ are causal, $y[n] = 0$ for $n < 0$.",
+        "The outer summation $\\sum_{n=-\\infty}^\\infty y[n] 3^{-n}$ is precisely the Z-transform $Y(z)$ evaluated at $z = 3$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20074,36 +20054,35 @@ export default {
      "tex": "y[n] = \\left[ 2 - (0.5)^n \\right] u[n]"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Simplification of Closed-Form:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{k=0}^n r^k = \\frac{1 - r^{n+1}}{1 - r}"
-    },
-    {
-     "t": "p",
-     "text": "For $r = 0.5$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1 - (0.5)^{n+1}}{1 - 0.5} = \\frac{1 - 0.5 \\cdot (0.5)^n}{0.5} = 2 - (0.5)^n"
-    },
-    {
-     "t": "p",
-     "text": "Thus, for all $n \\ge 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = 2 - (0.5)^n"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Simplification of Closed-Form:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{k=0}^n r^k = \\frac{1 - r^{n+1}}{1 - r}"
+      },
+      {
+       "t": "p",
+       "text": "For $r = 0.5$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1 - (0.5)^{n+1}}{1 - 0.5} = \\frac{1 - 0.5 \\cdot (0.5)^n}{0.5} = 2 - (0.5)^n"
+      },
+      {
+       "t": "p",
+       "text": "Thus, for all $n \\ge 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = 2 - (0.5)^n"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20138,24 +20117,23 @@ export default {
      "text": "Boxed Result: $\\boxed{\\frac{9}{5}}$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Verification:"
-    },
-    {
-     "t": "p",
-     "text": "Both Method I (product of rational transforms) and Method II (transform of simplified time expression) yield identical results:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(3) = \\frac{9}{5} = 1.8"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Verification:"
+      },
+      {
+       "t": "p",
+       "text": "Both Method I (product of rational transforms) and Method II (transform of simplified time expression) yield identical results:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(3) = \\frac{9}{5} = 1.8"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20220,91 +20198,94 @@ export default {
      "tex": "X(z) = \\frac{2}{z(z-1)^2} \\times \\frac{z-1}{z} = \\boxed{\\frac{2}{z^2(z-1)}}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Complete Inversion and Value at $n = 4$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Rewrite $X(z)$ in standard form:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{2}{z^2 (z - 1)} = 2 z^{-2} \\frac{1}{z - 1} = 2 z^{-3} \\frac{z}{z - 1}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "We recognize the standard transform pair:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{u[n]\\} = \\frac{z}{z - 1}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Applying the time-shifting property:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{u[n - 3]\\} = z^{-3} \\frac{z}{z - 1}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Multiplying by 2 gives:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 2 u[n - 3]"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Evaluating at $n = 4$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[4] = 2 u[4 - 3] = 2 u[1] = 2 \\times 1 = \\mathbf{2}"
-    },
-    {
-     "t": "h4",
-     "text": "Alternative Difference Operator Check:"
-    },
-    {
-     "t": "p",
-     "text": "Since $y[n] = \\sum_{k=0}^n x[k]$, the backward first difference recovers $x[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = y[n] - y[n-1]"
-    },
-    {
-     "t": "p",
-     "text": "In the Z-domain, this corresponds to multiplication by $(1 - z^{-1}) = \\frac{z-1}{z}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = Y(z) (1 - z^{-1}) = \\frac{2}{z(z-1)^2} \\cdot \\frac{z-1}{z} = \\frac{2}{z^2(z-1)}"
-    },
-    {
-     "t": "p",
-     "text": "This completely matches the chalkboard derivation!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Complete Inversion and Value at $n = 4$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Rewrite $X(z)$ in standard form:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{2}{z^2 (z - 1)} = 2 z^{-2} \\frac{1}{z - 1} = 2 z^{-3} \\frac{z}{z - 1}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "We recognize the standard transform pair:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{u[n]\\} = \\frac{z}{z - 1}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Applying the time-shifting property:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{u[n - 3]\\} = z^{-3} \\frac{z}{z - 1}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Multiplying by 2 gives:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 2 u[n - 3]"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Evaluating at $n = 4$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[4] = 2 u[4 - 3] = 2 u[1] = 2 \\times 1 = \\mathbf{2}"
+      },
+      {
+       "t": "h4",
+       "text": "Alternative Difference Operator Check:"
+      },
+      {
+       "t": "p",
+       "text": "Since $y[n] = \\sum_{k=0}^n x[k]$, the backward first difference recovers $x[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = y[n] - y[n-1]"
+      },
+      {
+       "t": "p",
+       "text": "In the Z-domain, this corresponds to multiplication by $(1 - z^{-1}) = \\frac{z-1}{z}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = Y(z) (1 - z^{-1}) = \\frac{2}{z(z-1)^2} \\cdot \\frac{z-1}{z} = \\frac{2}{z^2(z-1)}"
+      },
+      {
+       "t": "p",
+       "text": "This completely matches the chalkboard derivation!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -20345,172 +20326,175 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Application of the Unilateral Z-Transform"
-    },
-    {
-     "t": "p",
-     "text": "Take the unilateral Z-transform of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}^+\\{y[n]\\} - \\frac{1}{2} \\mathcal{Z}^+\\{y[n-1]\\} = \\mathcal{Z}^+\\{x[n]\\}"
-    },
-    {
-     "t": "p",
-     "text": "Using the first-order delay property $\\mathcal{Z}^+\\{y[n-1]\\} = z^{-1} Y^+(z) + y[-1]$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y^+(z) - \\frac{1}{2} \\left[ z^{-1} Y^+(z) + y[-1] \\right] = X^+(z)"
-    },
-    {
-     "t": "p",
-     "text": "Group terms in $Y^+(z)$ on the left:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left(1 - \\frac{1}{2} z^{-1}\\right) Y^+(z) - \\frac{1}{2} y[-1] = X^+(z)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the initial condition $y[-1] = 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left(1 - \\frac{1}{2} z^{-1}\\right) Y^+(z) - \\frac{1}{2}(4) = X^+(z) \\implies \\left(1 - \\frac{1}{2} z^{-1}\\right) Y^+(z) - 2 = X^+(z)"
-    },
-    {
-     "t": "p",
-     "text": "Solve algebraically for $Y^+(z)$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y^+(z) = \\underbrace{\\frac{2}{1 - \\frac{1}{2} z^{-1}}}_{Y_{\\text{zir}}(z)} + \\underbrace{\\frac{X^+(z)}{1 - \\frac{1}{2} z^{-1}}}_{Y_{\\text{zsr}}(z)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Derivation of the Zero-Input Response (ZIR)"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{zir}}(z) = \\frac{2}{1 - \\frac{1}{2} z^{-1}}"
-    },
-    {
-     "t": "p",
-     "text": "Taking the inverse unilateral Z-transform:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y_{\\text{zir}}[n] = 2 \\left(\\frac{1}{2}\\right)^n u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Derivation of the Zero-State Response (ZSR)"
-    },
-    {
-     "t": "p",
-     "text": "The unilateral Z-transform of the input $x[n] = \\left(\\frac{1}{3}\\right)^n u[n]$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "X^+(z) = \\frac{1}{1 - \\frac{1}{3} z^{-1}}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{zsr}}(z) = \\frac{1}{\\left(1 - \\frac{1}{2} z^{-1}\\right)\\left(1 - \\frac{1}{3} z^{-1}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "Perform partial fraction expansion:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{zsr}}(z) = \\frac{A}{1 - \\frac{1}{2} z^{-1}} + \\frac{B}{1 - \\frac{1}{3} z^{-1}}"
-    },
-    {
-     "t": "p",
-     "text": "Calculate residues:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{1}{1 - \\frac{1}{3} z^{-1}} \\right\\vert_{z^{-1} = 2} = \\frac{1}{1 - \\frac{2}{3}} = \\frac{1}{1/3} = 3"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{1}{1 - \\frac{1}{2} z^{-1}} \\right\\vert_{z^{-1} = 3} = \\frac{1}{1 - \\frac{3}{2}} = \\frac{1}{-1/2} = -2"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{zsr}}(z) = \\frac{3}{1 - \\frac{1}{2} z^{-1}} - \\frac{2}{1 - \\frac{1}{3} z^{-1}}"
-    },
-    {
-     "t": "p",
-     "text": "Inverting to the time domain:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y_{\\text{zsr}}[n] = \\left[ 3 \\left(\\frac{1}{2}\\right)^n - 2 \\left(\\frac{1}{3}\\right)^n \\right] u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Total Response"
-    },
-    {
-     "t": "p",
-     "text": "Summing ZIR and ZSR:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = y_{\\text{zir}}[n] + y_{\\text{zsr}}[n] = 2 \\left(\\frac{1}{2}\\right)^n u[n] + \\left[ 3 \\left(\\frac{1}{2}\\right)^n - 2 \\left(\\frac{1}{3}\\right)^n \\right] u[n]"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = \\left[ 5 \\left(\\frac{1}{2}\\right)^n - 2 \\left(\\frac{1}{3}\\right)^n \\right] u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Modal Decomposition (Natural vs. Forced)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Natural Response:** Modes corresponding to the system pole $z = \\frac{1}{2}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{natural}}[n] = \\left[ 2 \\left(\\frac{1}{2}\\right)^n + 3 \\left(\\frac{1}{2}\\right)^n \\right] u[n] = \\boxed{5 \\left(\\frac{1}{2}\\right)^n u[n]}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Forced Response:** Modes corresponding to the input excitation pole $z = \\frac{1}{3}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y_{\\text{forced}}[n] = -2 \\left(\\frac{1}{3}\\right)^n u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Consistency Check at $n = 0$:"
-    },
-    {
-     "t": "p",
-     "text": "From difference equation: $y[0] - \\frac{1}{2}y[-1] = x[0] \\implies y[0] - \\frac{1}{2}(4) = 1 \\implies y[0] = 3$.\nFrom formula: $y[0] = 5(1/2)^0 - 2(1/3)^0 = 5 - 2 = 3$. Exact match!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Application of the Unilateral Z-Transform"
+      },
+      {
+       "t": "p",
+       "text": "Take the unilateral Z-transform of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}^+\\{y[n]\\} - \\frac{1}{2} \\mathcal{Z}^+\\{y[n-1]\\} = \\mathcal{Z}^+\\{x[n]\\}"
+      },
+      {
+       "t": "p",
+       "text": "Using the first-order delay property $\\mathcal{Z}^+\\{y[n-1]\\} = z^{-1} Y^+(z) + y[-1]$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y^+(z) - \\frac{1}{2} \\left[ z^{-1} Y^+(z) + y[-1] \\right] = X^+(z)"
+      },
+      {
+       "t": "p",
+       "text": "Group terms in $Y^+(z)$ on the left:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left(1 - \\frac{1}{2} z^{-1}\\right) Y^+(z) - \\frac{1}{2} y[-1] = X^+(z)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the initial condition $y[-1] = 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left(1 - \\frac{1}{2} z^{-1}\\right) Y^+(z) - \\frac{1}{2}(4) = X^+(z) \\implies \\left(1 - \\frac{1}{2} z^{-1}\\right) Y^+(z) - 2 = X^+(z)"
+      },
+      {
+       "t": "p",
+       "text": "Solve algebraically for $Y^+(z)$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y^+(z) = \\underbrace{\\frac{2}{1 - \\frac{1}{2} z^{-1}}}_{Y_{\\text{zir}}(z)} + \\underbrace{\\frac{X^+(z)}{1 - \\frac{1}{2} z^{-1}}}_{Y_{\\text{zsr}}(z)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Derivation of the Zero-Input Response (ZIR)"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{zir}}(z) = \\frac{2}{1 - \\frac{1}{2} z^{-1}}"
+      },
+      {
+       "t": "p",
+       "text": "Taking the inverse unilateral Z-transform:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y_{\\text{zir}}[n] = 2 \\left(\\frac{1}{2}\\right)^n u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Derivation of the Zero-State Response (ZSR)"
+      },
+      {
+       "t": "p",
+       "text": "The unilateral Z-transform of the input $x[n] = \\left(\\frac{1}{3}\\right)^n u[n]$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "X^+(z) = \\frac{1}{1 - \\frac{1}{3} z^{-1}}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{zsr}}(z) = \\frac{1}{\\left(1 - \\frac{1}{2} z^{-1}\\right)\\left(1 - \\frac{1}{3} z^{-1}\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "Perform partial fraction expansion:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{zsr}}(z) = \\frac{A}{1 - \\frac{1}{2} z^{-1}} + \\frac{B}{1 - \\frac{1}{3} z^{-1}}"
+      },
+      {
+       "t": "p",
+       "text": "Calculate residues:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{1}{1 - \\frac{1}{3} z^{-1}} \\right\\vert_{z^{-1} = 2} = \\frac{1}{1 - \\frac{2}{3}} = \\frac{1}{1/3} = 3"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{1}{1 - \\frac{1}{2} z^{-1}} \\right\\vert_{z^{-1} = 3} = \\frac{1}{1 - \\frac{3}{2}} = \\frac{1}{-1/2} = -2"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{zsr}}(z) = \\frac{3}{1 - \\frac{1}{2} z^{-1}} - \\frac{2}{1 - \\frac{1}{3} z^{-1}}"
+      },
+      {
+       "t": "p",
+       "text": "Inverting to the time domain:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y_{\\text{zsr}}[n] = \\left[ 3 \\left(\\frac{1}{2}\\right)^n - 2 \\left(\\frac{1}{3}\\right)^n \\right] u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Total Response"
+      },
+      {
+       "t": "p",
+       "text": "Summing ZIR and ZSR:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = y_{\\text{zir}}[n] + y_{\\text{zsr}}[n] = 2 \\left(\\frac{1}{2}\\right)^n u[n] + \\left[ 3 \\left(\\frac{1}{2}\\right)^n - 2 \\left(\\frac{1}{3}\\right)^n \\right] u[n]"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = \\left[ 5 \\left(\\frac{1}{2}\\right)^n - 2 \\left(\\frac{1}{3}\\right)^n \\right] u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Modal Decomposition (Natural vs. Forced)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Natural Response:** Modes corresponding to the system pole $z = \\frac{1}{2}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{natural}}[n] = \\left[ 2 \\left(\\frac{1}{2}\\right)^n + 3 \\left(\\frac{1}{2}\\right)^n \\right] u[n] = \\boxed{5 \\left(\\frac{1}{2}\\right)^n u[n]}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Forced Response:** Modes corresponding to the input excitation pole $z = \\frac{1}{3}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y_{\\text{forced}}[n] = -2 \\left(\\frac{1}{3}\\right)^n u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Consistency Check at $n = 0$:"
+      },
+      {
+       "t": "p",
+       "text": "From difference equation: $y[0] - \\frac{1}{2}y[-1] = x[0] \\implies y[0] - \\frac{1}{2}(4) = 1 \\implies y[0] = 3$.\nFrom formula: $y[0] = 5(1/2)^0 - 2(1/3)^0 = 5 - 2 = 3$. Exact match!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20537,168 +20521,171 @@ export default {
      "text": "Find the complete closed-form solution $y[n]$ and decompose it into ZIR and ZSR."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Characteristic Roots of the System"
-    },
-    {
-     "t": "p",
-     "text": "The characteristic equation in $z$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "z^2 - \\frac{3}{4}z + \\frac{1}{8} = 0 \\iff \\left(z - \\frac{1}{2}\\right)\\left(z - \\frac{1}{4}\\right) = 0"
-    },
-    {
-     "t": "p",
-     "text": "System poles: $z_{p_1} = \\frac{1}{2}$, $z_{p_2} = \\frac{1}{4}$. Both lie strictly inside the unit circle ($\\vert z\\vert < 1$), so the system is BIBO stable."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Unilateral Transform with Initial Conditions"
-    },
-    {
-     "t": "p",
-     "text": "Apply $\\mathcal{Z}^+$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y^+(z) - \\frac{3}{4} \\left[ z^{-1} Y^+(z) + y[-1] \\right] + \\frac{1}{8} \\left[ z^{-2} Y^+(z) + z^{-1} y[-1] + y[-2] \\right] = X^+(z)"
-    },
-    {
-     "t": "p",
-     "text": "Group coefficients of $Y^+(z)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left( 1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2} \\right) Y^+(z) - \\frac{3}{4} y[-1] + \\frac{1}{8} z^{-1} y[-1] + \\frac{1}{8} y[-2] = X^+(z)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute initial conditions $y[-1] = 1$ and $y[-2] = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left( 1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2} \\right) Y^+(z) - \\frac{3}{4}(1) + \\frac{1}{8} z^{-1}(1) + \\frac{1}{8}(2) = X^+(z)"
-    },
-    {
-     "t": "math",
-     "tex": "\\left( 1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2} \\right) Y^+(z) - \\left( \\frac{1}{2} - \\frac{1}{8} z^{-1} \\right) = X^+(z)"
-    },
-    {
-     "t": "p",
-     "text": "Rearranging:"
-    },
-    {
-     "t": "math",
-     "tex": "Y^+(z) = \\underbrace{\\frac{\\frac{1}{2} - \\frac{1}{8} z^{-1}}{1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2}}}_{Y_{\\text{zir}}(z)} + \\underbrace{\\frac{X^+(z)}{1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2}}}_{Y_{\\text{zsr}}(z)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Zero-Input Response (ZIR)"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{zir}}(z) = \\frac{\\frac{1}{2} - \\frac{1}{8} z^{-1}}{\\left(1 - \\frac{1}{2} z^{-1}\\right)\\left(1 - \\frac{1}{4} z^{-1}\\right)} = \\frac{A_1}{1 - \\frac{1}{2} z^{-1}} + \\frac{A_2}{1 - \\frac{1}{4} z^{-1}}"
-    },
-    {
-     "t": "p",
-     "text": "Residues:"
-    },
-    {
-     "t": "math",
-     "tex": "A_1 = \\left. \\frac{\\frac{1}{2} - \\frac{1}{8} z^{-1}}{1 - \\frac{1}{4} z^{-1}} \\right\\vert_{z^{-1} = 2} = \\frac{\\frac{1}{2} - \\frac{1}{4}}{1 - \\frac{1}{2}} = \\frac{1/4}{1/2} = \\frac{1}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "A_2 = \\left. \\frac{\\frac{1}{2} - \\frac{1}{8} z^{-1}}{1 - \\frac{1}{2} z^{-1}} \\right\\vert_{z^{-1} = 4} = \\frac{\\frac{1}{2} - \\frac{1}{2}}{1 - 2} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Remarkable simplification: The initial conditions excite only the pole at $z = 1/2$!"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y_{\\text{zir}}[n] = \\frac{1}{2} \\left(\\frac{1}{2}\\right)^n u[n] = \\left(\\frac{1}{2}\\right)^{n+1} u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Zero-State Response (ZSR)"
-    },
-    {
-     "t": "p",
-     "text": "Since $x[n] = (1/2)^n u[n] \\implies X^+(z) = \\frac{1}{1 - \\frac{1}{2} z^{-1}}$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{zsr}}(z) = \\frac{1}{\\left(1 - \\frac{1}{2} z^{-1}\\right)^2 \\left(1 - \\frac{1}{4} z^{-1}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "Notice the repeated pole at $z = \\frac{1}{2}$ (resonance between input mode and system mode!).\nPartial fraction expansion:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{zsr}}(z) = \\frac{C_1}{1 - \\frac{1}{2} z^{-1}} + \\frac{C_2}{\\left(1 - \\frac{1}{2} z^{-1}\\right)^2} + \\frac{C_3}{1 - \\frac{1}{4} z^{-1}}"
-    },
-    {
-     "t": "p",
-     "text": "Residue calculations:"
-    },
-    {
-     "t": "math",
-     "tex": "C_3 = \\left. \\frac{1}{\\left(1 - \\frac{1}{2} z^{-1}\\right)^2} \\right\\vert_{z^{-1} = 4} = \\frac{1}{(1 - 2)^2} = 1"
-    },
-    {
-     "t": "math",
-     "tex": "C_2 = \\left. \\frac{1}{1 - \\frac{1}{4} z^{-1}} \\right\\vert_{z^{-1} = 2} = \\frac{1}{1 - \\frac{1}{2}} = 2"
-    },
-    {
-     "t": "p",
-     "text": "To find $C_1$, evaluate at $z^{-1} = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{zsr}}(\\infty) = 1 = C_1 + C_2 + C_3 = C_1 + 2 + 1 \\implies C_1 = -2"
-    },
-    {
-     "t": "p",
-     "text": "Inverting term by term:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\mathcal{Z}^{-1}\\left\\{\\frac{-2}{1 - \\frac{1}{2} z^{-1}}\\right\\} = -2 \\left(\\frac{1}{2}\\right)^n u[n]$",
-      "$\\mathcal{Z}^{-1}\\left\\{\\frac{2}{\\left(1 - \\frac{1}{2} z^{-1}\\right)^2}\\right\\} = 2 (n+1) \\left(\\frac{1}{2}\\right)^n u[n]$",
-      "$\\mathcal{Z}^{-1}\\left\\{\\frac{1}{1 - \\frac{1}{4} z^{-1}}\\right\\} = \\left(\\frac{1}{4}\\right)^n u[n]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Combine:"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{zsr}}[n] = \\left[ -2 \\left(\\frac{1}{2}\\right)^n + 2(n+1) \\left(\\frac{1}{2}\\right)^n + \\left(\\frac{1}{4}\\right)^n \\right] u[n] = \\boxed{\\left[ 2n \\left(\\frac{1}{2}\\right)^n + \\left(\\frac{1}{4}\\right)^n \\right] u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Total Response"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = y_{\\text{zir}}[n] + y_{\\text{zsr}}[n] = \\boxed{\\left[ \\left(2n + \\frac{1}{2}\\right) \\left(\\frac{1}{2}\\right)^n + \\left(\\frac{1}{4}\\right)^n \\right] u[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Verification at $n = 0$:"
-    },
-    {
-     "t": "p",
-     "text": "$y[0] - \\frac{3}{4}y[-1] + \\frac{1}{8}y[-2] = x[0] \\implies y[0] - \\frac{3}{4}(1) + \\frac{1}{8}(2) = 1 \\implies y[0] = 1 + \\frac{3}{4} - \\frac{1}{4} = \\frac{3}{2}$.\nFrom our formula: $y[0] = (0 + 1/2)(1) + 1 = 1.5$. Exact match!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Characteristic Roots of the System"
+      },
+      {
+       "t": "p",
+       "text": "The characteristic equation in $z$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "z^2 - \\frac{3}{4}z + \\frac{1}{8} = 0 \\iff \\left(z - \\frac{1}{2}\\right)\\left(z - \\frac{1}{4}\\right) = 0"
+      },
+      {
+       "t": "p",
+       "text": "System poles: $z_{p_1} = \\frac{1}{2}$, $z_{p_2} = \\frac{1}{4}$. Both lie strictly inside the unit circle ($\\vert z\\vert < 1$), so the system is BIBO stable."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Unilateral Transform with Initial Conditions"
+      },
+      {
+       "t": "p",
+       "text": "Apply $\\mathcal{Z}^+$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y^+(z) - \\frac{3}{4} \\left[ z^{-1} Y^+(z) + y[-1] \\right] + \\frac{1}{8} \\left[ z^{-2} Y^+(z) + z^{-1} y[-1] + y[-2] \\right] = X^+(z)"
+      },
+      {
+       "t": "p",
+       "text": "Group coefficients of $Y^+(z)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left( 1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2} \\right) Y^+(z) - \\frac{3}{4} y[-1] + \\frac{1}{8} z^{-1} y[-1] + \\frac{1}{8} y[-2] = X^+(z)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute initial conditions $y[-1] = 1$ and $y[-2] = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left( 1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2} \\right) Y^+(z) - \\frac{3}{4}(1) + \\frac{1}{8} z^{-1}(1) + \\frac{1}{8}(2) = X^+(z)"
+      },
+      {
+       "t": "math",
+       "tex": "\\left( 1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2} \\right) Y^+(z) - \\left( \\frac{1}{2} - \\frac{1}{8} z^{-1} \\right) = X^+(z)"
+      },
+      {
+       "t": "p",
+       "text": "Rearranging:"
+      },
+      {
+       "t": "math",
+       "tex": "Y^+(z) = \\underbrace{\\frac{\\frac{1}{2} - \\frac{1}{8} z^{-1}}{1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2}}}_{Y_{\\text{zir}}(z)} + \\underbrace{\\frac{X^+(z)}{1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2}}}_{Y_{\\text{zsr}}(z)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Zero-Input Response (ZIR)"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{zir}}(z) = \\frac{\\frac{1}{2} - \\frac{1}{8} z^{-1}}{\\left(1 - \\frac{1}{2} z^{-1}\\right)\\left(1 - \\frac{1}{4} z^{-1}\\right)} = \\frac{A_1}{1 - \\frac{1}{2} z^{-1}} + \\frac{A_2}{1 - \\frac{1}{4} z^{-1}}"
+      },
+      {
+       "t": "p",
+       "text": "Residues:"
+      },
+      {
+       "t": "math",
+       "tex": "A_1 = \\left. \\frac{\\frac{1}{2} - \\frac{1}{8} z^{-1}}{1 - \\frac{1}{4} z^{-1}} \\right\\vert_{z^{-1} = 2} = \\frac{\\frac{1}{2} - \\frac{1}{4}}{1 - \\frac{1}{2}} = \\frac{1/4}{1/2} = \\frac{1}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "A_2 = \\left. \\frac{\\frac{1}{2} - \\frac{1}{8} z^{-1}}{1 - \\frac{1}{2} z^{-1}} \\right\\vert_{z^{-1} = 4} = \\frac{\\frac{1}{2} - \\frac{1}{2}}{1 - 2} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Remarkable simplification: The initial conditions excite only the pole at $z = 1/2$!"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y_{\\text{zir}}[n] = \\frac{1}{2} \\left(\\frac{1}{2}\\right)^n u[n] = \\left(\\frac{1}{2}\\right)^{n+1} u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Zero-State Response (ZSR)"
+      },
+      {
+       "t": "p",
+       "text": "Since $x[n] = (1/2)^n u[n] \\implies X^+(z) = \\frac{1}{1 - \\frac{1}{2} z^{-1}}$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{zsr}}(z) = \\frac{1}{\\left(1 - \\frac{1}{2} z^{-1}\\right)^2 \\left(1 - \\frac{1}{4} z^{-1}\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "Notice the repeated pole at $z = \\frac{1}{2}$ (resonance between input mode and system mode!).\nPartial fraction expansion:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{zsr}}(z) = \\frac{C_1}{1 - \\frac{1}{2} z^{-1}} + \\frac{C_2}{\\left(1 - \\frac{1}{2} z^{-1}\\right)^2} + \\frac{C_3}{1 - \\frac{1}{4} z^{-1}}"
+      },
+      {
+       "t": "p",
+       "text": "Residue calculations:"
+      },
+      {
+       "t": "math",
+       "tex": "C_3 = \\left. \\frac{1}{\\left(1 - \\frac{1}{2} z^{-1}\\right)^2} \\right\\vert_{z^{-1} = 4} = \\frac{1}{(1 - 2)^2} = 1"
+      },
+      {
+       "t": "math",
+       "tex": "C_2 = \\left. \\frac{1}{1 - \\frac{1}{4} z^{-1}} \\right\\vert_{z^{-1} = 2} = \\frac{1}{1 - \\frac{1}{2}} = 2"
+      },
+      {
+       "t": "p",
+       "text": "To find $C_1$, evaluate at $z^{-1} = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{zsr}}(\\infty) = 1 = C_1 + C_2 + C_3 = C_1 + 2 + 1 \\implies C_1 = -2"
+      },
+      {
+       "t": "p",
+       "text": "Inverting term by term:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\mathcal{Z}^{-1}\\left\\{\\frac{-2}{1 - \\frac{1}{2} z^{-1}}\\right\\} = -2 \\left(\\frac{1}{2}\\right)^n u[n]$",
+        "$\\mathcal{Z}^{-1}\\left\\{\\frac{2}{\\left(1 - \\frac{1}{2} z^{-1}\\right)^2}\\right\\} = 2 (n+1) \\left(\\frac{1}{2}\\right)^n u[n]$",
+        "$\\mathcal{Z}^{-1}\\left\\{\\frac{1}{1 - \\frac{1}{4} z^{-1}}\\right\\} = \\left(\\frac{1}{4}\\right)^n u[n]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Combine:"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{zsr}}[n] = \\left[ -2 \\left(\\frac{1}{2}\\right)^n + 2(n+1) \\left(\\frac{1}{2}\\right)^n + \\left(\\frac{1}{4}\\right)^n \\right] u[n] = \\boxed{\\left[ 2n \\left(\\frac{1}{2}\\right)^n + \\left(\\frac{1}{4}\\right)^n \\right] u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Total Response"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = y_{\\text{zir}}[n] + y_{\\text{zsr}}[n] = \\boxed{\\left[ \\left(2n + \\frac{1}{2}\\right) \\left(\\frac{1}{2}\\right)^n + \\left(\\frac{1}{4}\\right)^n \\right] u[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Verification at $n = 0$:"
+      },
+      {
+       "t": "p",
+       "text": "$y[0] - \\frac{3}{4}y[-1] + \\frac{1}{8}y[-2] = x[0] \\implies y[0] - \\frac{3}{4}(1) + \\frac{1}{8}(2) = 1 \\implies y[0] = 1 + \\frac{3}{4} - \\frac{1}{4} = \\frac{3}{2}$.\nFrom our formula: $y[0] = (0 + 1/2)(1) + 1 = 1.5$. Exact match!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20721,75 +20708,74 @@ export default {
      "text": "Determine its response $y[n]$ to the unit step sequence $x[n] = u[n]$ assuming zero initial conditions."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: System and Input Transforms"
-    },
-    {
-     "t": "math",
-     "tex": "h[n] = \\cos\\left(\\frac{\\pi}{2} n\\right) u[n] \\longleftrightarrow H(z) = \\frac{1 - \\cos(\\pi/2) z^{-1}}{1 - 2\\cos(\\pi/2) z^{-1} + z^{-2}} = \\frac{1}{1 + z^{-2}}"
-    },
-    {
-     "t": "p",
-     "text": "Poles: $1 + z^{-2} = 0 \\implies z = \\pm j = e^{\\pm j\\pi/2}$.\nInput:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = u[n] \\longleftrightarrow X(z) = \\frac{1}{1 - z^{-1}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: System Output in Z-Domain"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = H(z) X(z) = \\frac{1}{(1 + z^{-2})(1 - z^{-1})} = \\frac{1}{(1 - j z^{-1})(1 + j z^{-1})(1 - z^{-1})}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Partial Fraction Expansion"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{A}{1 - z^{-1}} + \\frac{B}{1 - j z^{-1}} + \\frac{B^*}{1 + j z^{-1}}"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{1}{1 + z^{-2}} \\right\\vert_{z^{-1} = 1} = \\frac{1}{1 + 1} = \\frac{1}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{1}{(1 + j z^{-1})(1 - z^{-1})} \\right\\vert_{z^{-1} = -j} = \\frac{1}{(1 + 1)(1 + j)} = \\frac{1}{2(1 + j)} = \\frac{1 - j}{4} = \\frac{\\sqrt{2}}{4} e^{-j\\pi/4}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Time-Domain Inversion"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Step component: $\\frac{1}{2} u[n]$",
-      "Sinusoidal components:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2 \\operatorname{Re}\\left\\{ B (j)^n \\right\\} = 2 \\operatorname{Re}\\left\\{ \\frac{\\sqrt{2}}{4} e^{-j\\pi/4} e^{j\\frac{\\pi}{2} n} \\right\\} = \\frac{\\sqrt{2}}{2} \\cos\\left(\\frac{\\pi}{2} n - \\frac{\\pi}{4}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Combining:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = \\left[ \\frac{1}{2} + \\frac{\\sqrt{2}}{2} \\cos\\left(\\frac{\\pi}{2} n - \\frac{\\pi}{4}\\right) \\right] u[n]}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: System and Input Transforms"
+      },
+      {
+       "t": "math",
+       "tex": "h[n] = \\cos\\left(\\frac{\\pi}{2} n\\right) u[n] \\longleftrightarrow H(z) = \\frac{1 - \\cos(\\pi/2) z^{-1}}{1 - 2\\cos(\\pi/2) z^{-1} + z^{-2}} = \\frac{1}{1 + z^{-2}}"
+      },
+      {
+       "t": "p",
+       "text": "Poles: $1 + z^{-2} = 0 \\implies z = \\pm j = e^{\\pm j\\pi/2}$.\nInput:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = u[n] \\longleftrightarrow X(z) = \\frac{1}{1 - z^{-1}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: System Output in Z-Domain"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = H(z) X(z) = \\frac{1}{(1 + z^{-2})(1 - z^{-1})} = \\frac{1}{(1 - j z^{-1})(1 + j z^{-1})(1 - z^{-1})}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Partial Fraction Expansion"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{A}{1 - z^{-1}} + \\frac{B}{1 - j z^{-1}} + \\frac{B^*}{1 + j z^{-1}}"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{1}{1 + z^{-2}} \\right\\vert_{z^{-1} = 1} = \\frac{1}{1 + 1} = \\frac{1}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{1}{(1 + j z^{-1})(1 - z^{-1})} \\right\\vert_{z^{-1} = -j} = \\frac{1}{(1 + 1)(1 + j)} = \\frac{1}{2(1 + j)} = \\frac{1 - j}{4} = \\frac{\\sqrt{2}}{4} e^{-j\\pi/4}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Time-Domain Inversion"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Step component: $\\frac{1}{2} u[n]$",
+        "Sinusoidal components:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2 \\operatorname{Re}\\left\\{ B (j)^n \\right\\} = 2 \\operatorname{Re}\\left\\{ \\frac{\\sqrt{2}}{4} e^{-j\\pi/4} e^{j\\frac{\\pi}{2} n} \\right\\} = \\frac{\\sqrt{2}}{2} \\cos\\left(\\frac{\\pi}{2} n - \\frac{\\pi}{4}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Combining:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = \\left[ \\frac{1}{2} + \\frac{\\sqrt{2}}{2} \\cos\\left(\\frac{\\pi}{2} n - \\frac{\\pi}{4}\\right) \\right] u[n]}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20804,60 +20790,59 @@ export default {
      "text": "An infinite discrete sequence $x[n] = 3^n$ ($-\\infty < n < \\infty$) is passed through an LTI system with impulse response $h[n] = \\left(\\frac{1}{3}\\right)^n u[n]$.\nCompute the output sequence $y[n]$ and justify why the system does not blow up."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Direct Time-Domain Convolution"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\sum_{k=-\\infty}^\\infty h[k] x[n-k] = \\sum_{k=0}^\\infty \\left(\\frac{1}{3}\\right)^k 3^{n-k} = 3^n \\sum_{k=0}^\\infty \\left(\\frac{1}{3}\\right)^k 3^{-k} = 3^n \\sum_{k=0}^\\infty \\left(\\frac{1}{9}\\right)^k"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Geometric Series Summation"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\vert 1/9\\vert < 1$, the infinite series converges:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{k=0}^\\infty \\left(\\frac{1}{9}\\right)^k = \\frac{1}{1 - 1/9} = \\frac{9}{8}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = \\frac{9}{8} \\cdot 3^n}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Eigenfunction Interpretation"
-    },
-    {
-     "t": "p",
-     "text": "$x[n] = z_0^n$ with $z_0 = 3$.\nThe system function is $H(z) = \\frac{1}{1 - \\frac{1}{3} z^{-1}}$ with ROC: $\\vert z\\vert > 1/3$.\nSince $z_0 = 3$ lies in the ROC of $H(z)$ ($\\vert 3\\vert > 1/3$), the eigenvalue is:"
-    },
-    {
-     "t": "math",
-     "tex": "H(3) = \\frac{1}{1 - \\frac{1}{3}(3)^{-1}} = \\frac{1}{1 - 1/9} = \\frac{9}{8}"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = H(3) \\cdot 3^n = \\frac{9}{8} \\cdot 3^n"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Direct Time-Domain Convolution"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\sum_{k=-\\infty}^\\infty h[k] x[n-k] = \\sum_{k=0}^\\infty \\left(\\frac{1}{3}\\right)^k 3^{n-k} = 3^n \\sum_{k=0}^\\infty \\left(\\frac{1}{3}\\right)^k 3^{-k} = 3^n \\sum_{k=0}^\\infty \\left(\\frac{1}{9}\\right)^k"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Geometric Series Summation"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\vert 1/9\\vert < 1$, the infinite series converges:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{k=0}^\\infty \\left(\\frac{1}{9}\\right)^k = \\frac{1}{1 - 1/9} = \\frac{9}{8}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = \\frac{9}{8} \\cdot 3^n}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Eigenfunction Interpretation"
+      },
+      {
+       "t": "p",
+       "text": "$x[n] = z_0^n$ with $z_0 = 3$.\nThe system function is $H(z) = \\frac{1}{1 - \\frac{1}{3} z^{-1}}$ with ROC: $\\vert z\\vert > 1/3$.\nSince $z_0 = 3$ lies in the ROC of $H(z)$ ($\\vert 3\\vert > 1/3$), the eigenvalue is:"
+      },
+      {
+       "t": "math",
+       "tex": "H(3) = \\frac{1}{1 - \\frac{1}{3}(3)^{-1}} = \\frac{1}{1 - 1/9} = \\frac{9}{8}"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = H(3) \\cdot 3^n = \\frac{9}{8} \\cdot 3^n"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20880,52 +20865,55 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Discrete Convolution Sum"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\{1, 2, 3, 4\\}, \\quad h[n] = \\{3, 2, 1\\}"
-    },
-    {
-     "t": "math",
-     "tex": "y[3] = \\sum_{k=-\\infty}^\\infty x[k] h[3-k] = x[0]h[3] + x[1]h[2] + x[2]h[1] + x[3]h[0]"
-    },
-    {
-     "t": "p",
-     "text": "Since $h[3] = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[3] = (1)(0) + (2)(1) + (3)(2) + (4)(3) = 0 + 2 + 6 + 12 = \\mathbf{20}"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Z-Transform Polynomial Multiplication"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = 1 + 2z^{-1} + 3z^{-2} + 4z^{-3}"
-    },
-    {
-     "t": "math",
-     "tex": "H(z) = 3 + 2z^{-1} + z^{-2}"
-    },
-    {
-     "t": "p",
-     "text": "Multiply to collect terms with $z^{-3}$:"
-    },
-    {
-     "t": "math",
-     "tex": "[z^{-3}]\\{X(z)H(z)\\} = (1 \\cdot 0) + (2 \\cdot 1) + (3 \\cdot 2) + (4 \\cdot 3) = 2 + 6 + 12 = \\mathbf{20}"
-    },
-    {
-     "t": "p",
-     "text": "Both methods produce $y[3] = 20$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Method 1: Discrete Convolution Sum"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\{1, 2, 3, 4\\}, \\quad h[n] = \\{3, 2, 1\\}"
+      },
+      {
+       "t": "math",
+       "tex": "y[3] = \\sum_{k=-\\infty}^\\infty x[k] h[3-k] = x[0]h[3] + x[1]h[2] + x[2]h[1] + x[3]h[0]"
+      },
+      {
+       "t": "p",
+       "text": "Since $h[3] = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[3] = (1)(0) + (2)(1) + (3)(2) + (4)(3) = 0 + 2 + 6 + 12 = \\mathbf{20}"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Z-Transform Polynomial Multiplication"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = 1 + 2z^{-1} + 3z^{-2} + 4z^{-3}"
+      },
+      {
+       "t": "math",
+       "tex": "H(z) = 3 + 2z^{-1} + z^{-2}"
+      },
+      {
+       "t": "p",
+       "text": "Multiply to collect terms with $z^{-3}$:"
+      },
+      {
+       "t": "math",
+       "tex": "[z^{-3}]\\{X(z)H(z)\\} = (1 \\cdot 0) + (2 \\cdot 1) + (3 \\cdot 2) + (4 \\cdot 3) = 2 + 6 + 12 = \\mathbf{20}"
+      },
+      {
+       "t": "p",
+       "text": "Both methods produce $y[3] = 20$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -21532,278 +21520,276 @@ export default {
      "text": "2.2 Mathematical Audit of Slide 225: Method I (Z-Domain Inversion)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Originating on Slide 224, Concluded on Slide 225)"
-    },
-    {
-     "t": "p",
-     "text": "Given the output of a running accumulator:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{2}{z(z-1)^2}"
-    },
-    {
-     "t": "p",
-     "text": "where $y[n] = \\sum_{k=0}^n x[k]$ and $x[n]$ is causal. Determine the value of the input sample at $n = 4$, i.e., $x[4]$."
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation (Method I: Direct Z-Domain Shifting)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Express $X(z)$ in terms of $Y(z)$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $Y(z) = X(z) \\frac{z}{z-1}$, we isolate $X(z)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = Y(z) \\cdot \\frac{z-1}{z} = \\frac{2}{z(z-1)^2} \\cdot \\frac{z-1}{z} = \\frac{2(z-1)}{z^2(z-1)^2} = \\frac{2}{z^2(z-1)}"
-    },
-    {
-     "t": "p",
-     "text": "Factoring powers of $z^{-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = 2 z^{-3} \\frac{z}{z-1} = \\frac{2z^{-2}}{z-1}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Inverse Z-Transform via Time-Shifting Property:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall the standard transform pair:"
-    },
-    {
-     "t": "math",
-     "tex": "u[n] \\longleftrightarrow \\frac{z}{z-1}, \\quad \\text{ROC: } \\vert z\\vert > 1"
-    },
-    {
-     "t": "p",
-     "text": "Applying the time delay property $\\mathcal{Z}\\{x[n - n_0]\\} = z^{-n_0} X(z)$:"
-    },
-    {
-     "t": "math",
-     "tex": "u[n-3] \\longleftrightarrow z^{-3} \\left(\\frac{z}{z-1}\\right) = \\frac{z^{-2}}{z-1}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 2 u[n-3]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Evaluating at $n = 4$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left.x[n]\\right\\vert_{n=4} = 2 u[4-3] = 2 u[1]"
-    },
-    {
-     "t": "p",
-     "text": "Since $u[1] = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[4] = 2 \\times 1 = 2"
-    },
-    {
-     "t": "h4",
-     "text": "Alternative Perspective: First Difference Formulation (Slide 225 bottom)"
-    },
-    {
-     "t": "p",
-     "text": "On the bottom of Slide 225, the instructor establishes Method II:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\sum_{k=0}^n x[k] = x[n] + x[n-1] + x[n-2] + \\dots + x[0]"
-    },
-    {
-     "t": "math",
-     "tex": "y[n-1] = \\sum_{k=0}^{n-1} x[k] = x[n-1] + x[n-2] + \\dots + x[0]"
-    },
-    {
-     "t": "p",
-     "text": "Subtracting the two equations:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] - y[n-1] = x[n]"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Exam Shortcut:**\nWhen the transfer function of the accumulator output $Y(z)$ has a cancellation term $(z-1)$, computing $X(z) = Y(z)(1-z^{-1})$ first simplifies the degree of the denominator from 3 to 2, turning a tedious partial fraction problem into a trivial single-step time-shift inversion!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Originating on Slide 224, Concluded on Slide 225)"
+      },
+      {
+       "t": "p",
+       "text": "Given the output of a running accumulator:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{2}{z(z-1)^2}"
+      },
+      {
+       "t": "p",
+       "text": "where $y[n] = \\sum_{k=0}^n x[k]$ and $x[n]$ is causal. Determine the value of the input sample at $n = 4$, i.e., $x[4]$."
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation (Method I: Direct Z-Domain Shifting)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Express $X(z)$ in terms of $Y(z)$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $Y(z) = X(z) \\frac{z}{z-1}$, we isolate $X(z)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = Y(z) \\cdot \\frac{z-1}{z} = \\frac{2}{z(z-1)^2} \\cdot \\frac{z-1}{z} = \\frac{2(z-1)}{z^2(z-1)^2} = \\frac{2}{z^2(z-1)}"
+      },
+      {
+       "t": "p",
+       "text": "Factoring powers of $z^{-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = 2 z^{-3} \\frac{z}{z-1} = \\frac{2z^{-2}}{z-1}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Inverse Z-Transform via Time-Shifting Property:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall the standard transform pair:"
+      },
+      {
+       "t": "math",
+       "tex": "u[n] \\longleftrightarrow \\frac{z}{z-1}, \\quad \\text{ROC: } \\vert z\\vert > 1"
+      },
+      {
+       "t": "p",
+       "text": "Applying the time delay property $\\mathcal{Z}\\{x[n - n_0]\\} = z^{-n_0} X(z)$:"
+      },
+      {
+       "t": "math",
+       "tex": "u[n-3] \\longleftrightarrow z^{-3} \\left(\\frac{z}{z-1}\\right) = \\frac{z^{-2}}{z-1}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 2 u[n-3]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Evaluating at $n = 4$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left.x[n]\\right\\vert_{n=4} = 2 u[4-3] = 2 u[1]"
+      },
+      {
+       "t": "p",
+       "text": "Since $u[1] = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[4] = 2 \\times 1 = 2"
+      },
+      {
+       "t": "h4",
+       "text": "Alternative Perspective: First Difference Formulation (Slide 225 bottom)"
+      },
+      {
+       "t": "p",
+       "text": "On the bottom of Slide 225, the instructor establishes Method II:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\sum_{k=0}^n x[k] = x[n] + x[n-1] + x[n-2] + \\dots + x[0]"
+      },
+      {
+       "t": "math",
+       "tex": "y[n-1] = \\sum_{k=0}^{n-1} x[k] = x[n-1] + x[n-2] + \\dots + x[0]"
+      },
+      {
+       "t": "p",
+       "text": "Subtracting the two equations:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] - y[n-1] = x[n]"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Exam Shortcut:**\nWhen the transfer function of the accumulator output $Y(z)$ has a cancellation term $(z-1)$, computing $X(z) = Y(z)(1-z^{-1})$ first simplifies the degree of the denominator from 3 to 2, turning a tedious partial fraction problem into a trivial single-step time-shift inversion!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "2.3 Mathematical Audit of Slide 226: Method II (Accumulator Time-Domain Inversion)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Derivation (Method II: Differencing the Output Sequence)"
-    },
-    {
-     "t": "p",
-     "text": "On Slide 226, the instructor solves the problem entirely in the time domain by first finding $y[n]$ from $Y(z)$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Inverting $Y(z)$ via Double-Pole Standard Pairs:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{2}{z(z-1)^2} = \\frac{2z^{-1}}{(z-1)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Recall the foundational differentiation-in-frequency pair:"
-    },
-    {
-     "t": "math",
-     "tex": "a^n u[n] \\longleftrightarrow \\frac{z}{z-a}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying by $n$:"
-    },
-    {
-     "t": "math",
-     "tex": "n a^{n-1} u[n] \\longleftrightarrow \\frac{z}{(z-a)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Setting $a = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "n u[n] \\longleftrightarrow \\frac{z}{(z-1)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Now apply a time delay of 2 samples:"
-    },
-    {
-     "t": "math",
-     "tex": "(n-2) u[n-2] \\longleftrightarrow z^{-2} \\left[\\frac{z}{(z-1)^2}\\right] = \\frac{z^{-1}}{(z-1)^2}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying by scalar 2:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = 2 (n-2) u[n-2]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Constructing the First Difference:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = y[n] - y[n-1] = 2(n-2) u[n-2] - 2(n-1-2) u[n-1-2] = 2(n-2) u[n-2] - 2(n-3) u[n-3]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Evaluating at $n = 4$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left.x[n]\\right\\vert_{n=4} = 2(4-2) u[4-2] - 2(4-3) u[4-3] = 2(2) u[2] - 2(1) u[1]"
-    },
-    {
-     "t": "p",
-     "text": "Since $u[2] = 1$ and $u[1] = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[4] = 4(1) - 2(1) = 4 - 2 = 2"
-    },
-    {
-     "t": "h4",
-     "text": "Consistency Check Across All Time Indices"
-    },
-    {
-     "t": "p",
-     "text": "Let us evaluate $x[n]$ for the first several samples to observe how the delayed ramp difference generates the delayed step:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 0$: $y[0] = 2(-2)u[-2] = 0 \\implies x[0] = 0$",
-      "For $n = 1$: $y[1] = 2(-1)u[-1] = 0 \\implies x[1] = 0$",
-      "For $n = 2$: $y[2] = 2(0)u[0] = 0 \\implies x[2] = 0$",
-      "For $n = 3$: $y[3] = 2(1)u[1] = 2 \\implies x[3] = y[3] - y[2] = 2 - 0 = 2$",
-      "For $n = 4$: $y[4] = 2(2)u[2] = 4 \\implies x[4] = y[4] - y[3] = 4 - 2 = 2$",
-      "For $n = 5$: $y[5] = 2(3)u[3] = 6 \\implies x[5] = y[5] - y[4] = 6 - 4 = 2$",
-      "For any $n \\ge 3$: $x[n] = 2(n-2) - 2(n-3) = 2n - 4 - 2n + 6 = 2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 2 u[n-3]"
-    },
-    {
-     "t": "p",
-     "text": "This matches Method I with complete mathematical rigor!"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Exam Trap: The Index Misalignment Trap:**\nStudents frequently write $n u[n-2]$ instead of $(n-2)u[n-2]$ when using the time-shifting property. Remember: the time-shifting property requires replacing **every** occurrence of the independent variable $n$ by $(n - n_0)$.\n$$\\mathcal{Z}\\{w[n - n_0]\\} = z^{-n_0} W(z) \\implies \\mathcal{Z}^{-1}\\left\\{z^{-2} \\frac{z}{(z-1)^2}\\right\\} = (n-2)u[n-2] \\neq n u[n-2]$$"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Mathematical Derivation (Method II: Differencing the Output Sequence)"
+      },
+      {
+       "t": "p",
+       "text": "On Slide 226, the instructor solves the problem entirely in the time domain by first finding $y[n]$ from $Y(z)$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Inverting $Y(z)$ via Double-Pole Standard Pairs:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{2}{z(z-1)^2} = \\frac{2z^{-1}}{(z-1)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Recall the foundational differentiation-in-frequency pair:"
+      },
+      {
+       "t": "math",
+       "tex": "a^n u[n] \\longleftrightarrow \\frac{z}{z-a}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying by $n$:"
+      },
+      {
+       "t": "math",
+       "tex": "n a^{n-1} u[n] \\longleftrightarrow \\frac{z}{(z-a)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Setting $a = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "n u[n] \\longleftrightarrow \\frac{z}{(z-1)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Now apply a time delay of 2 samples:"
+      },
+      {
+       "t": "math",
+       "tex": "(n-2) u[n-2] \\longleftrightarrow z^{-2} \\left[\\frac{z}{(z-1)^2}\\right] = \\frac{z^{-1}}{(z-1)^2}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying by scalar 2:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = 2 (n-2) u[n-2]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Constructing the First Difference:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = y[n] - y[n-1] = 2(n-2) u[n-2] - 2(n-1-2) u[n-1-2] = 2(n-2) u[n-2] - 2(n-3) u[n-3]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Evaluating at $n = 4$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left.x[n]\\right\\vert_{n=4} = 2(4-2) u[4-2] - 2(4-3) u[4-3] = 2(2) u[2] - 2(1) u[1]"
+      },
+      {
+       "t": "p",
+       "text": "Since $u[2] = 1$ and $u[1] = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[4] = 4(1) - 2(1) = 4 - 2 = 2"
+      },
+      {
+       "t": "h4",
+       "text": "Consistency Check Across All Time Indices"
+      },
+      {
+       "t": "p",
+       "text": "Let us evaluate $x[n]$ for the first several samples to observe how the delayed ramp difference generates the delayed step:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 0$: $y[0] = 2(-2)u[-2] = 0 \\implies x[0] = 0$",
+        "For $n = 1$: $y[1] = 2(-1)u[-1] = 0 \\implies x[1] = 0$",
+        "For $n = 2$: $y[2] = 2(0)u[0] = 0 \\implies x[2] = 0$",
+        "For $n = 3$: $y[3] = 2(1)u[1] = 2 \\implies x[3] = y[3] - y[2] = 2 - 0 = 2$",
+        "For $n = 4$: $y[4] = 2(2)u[2] = 4 \\implies x[4] = y[4] - y[3] = 4 - 2 = 2$",
+        "For $n = 5$: $y[5] = 2(3)u[3] = 6 \\implies x[5] = y[5] - y[4] = 6 - 4 = 2$",
+        "For any $n \\ge 3$: $x[n] = 2(n-2) - 2(n-3) = 2n - 4 - 2n + 6 = 2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 2 u[n-3]"
+      },
+      {
+       "t": "p",
+       "text": "This matches Method I with complete mathematical rigor!"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Exam Trap: The Index Misalignment Trap:**\nStudents frequently write $n u[n-2]$ instead of $(n-2)u[n-2]$ when using the time-shifting property. Remember: the time-shifting property requires replacing **every** occurrence of the independent variable $n$ by $(n - n_0)$.\n$$\\mathcal{Z}\\{w[n - n_0]\\} = z^{-n_0} W(z) \\implies \\mathcal{Z}^{-1}\\left\\{z^{-2} \\frac{z}{(z-1)^2}\\right\\} = (n-2)u[n-2] \\neq n u[n-2]$$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -21828,134 +21814,133 @@ export default {
      "text": "3.2 Visual & Mathematical Audit of Slide 227: Six Core Step-Product Identities"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Dissection of the 6 Step Products (Slide 227)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Identity (a):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "u[-n] \\cdot u[n] = \\delta[n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$u[-n] = 1$ for $n \\in \\{\\dots, -3, -2, -1, 0\\}$ (Anti-Causal sequence)",
-      "$u[n] = 1$ for $n \\in \\{0, 1, 2, 3, \\dots\\}$ (Causal sequence)",
-      "Intersection of support: $\\{\\dots, -1, 0\\} \\cap \\{0, 1, \\dots\\} = \\{0\\}$.",
-      "At $n = 0$: $1 \\times 1 = 1 = \\delta[0]$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Identity (b):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "u[-n-1] \\cdot u[n] = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$u[-n-1] = 1 \\iff -n-1 \\ge 0 \\iff n \\le -1$, i.e., $n \\in \\{\\dots, -3, -2, -1\\}$ (Strictly anti-causal)",
-      "$u[n] = 1 \\iff n \\ge 0$, i.e., $n \\in \\{0, 1, 2, \\dots\\}$",
-      "Intersection of support: $\\emptyset$ (disjoint sets).",
-      "Product is identically 0 for all $n \\in \\mathbb{Z}$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Identity (c):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "u[-n+1] \\cdot u[n] = \\delta[n] + \\delta[n-1] = u[n] - u[n-2]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$u[-n+1] = 1 \\iff -n+1 \\ge 0 \\iff n \\le 1$, i.e., $n \\in \\{\\dots, -1, 0, 1\\}$",
-      "$u[n] = 1 \\iff n \\ge 0$",
-      "Intersection of support: $\\{0, 1\\}$.",
-      "Product values: at $n = 0$, $1 \\times 1 = 1$; at $n = 1$, $1 \\times 1 = 1$.",
-      "Expressible as sum of two impulses $\\delta[n] + \\delta[n-1]$ or rectangular pulse $u[n] - u[n-2]$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Identity (d):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "u[-n+4] \\cdot u[n] = u[n] - u[n-5]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$u[-n+4] = 1 \\iff n \\le 4$",
-      "Multiplied by $u[n]$ ($n \\ge 0$), non-zero support is $n \\in \\{0, 1, 2, 3, 4\\}$.",
-      "Equivalent to rectangular pulse of duration 5 samples: $u[n] - u[n-5] = \\sum_{k=0}^4 \\delta[n-k]$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Identity (e):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "u[n-5] \\cdot u[n] = u[n-5]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$u[n-5] = 1 \\iff n \\ge 5$",
-      "Since the interval $[5, \\infty)$ is a strict subset of $[0, \\infty)$, $u[n] = 1$ everywhere $u[n-5] = 1$.",
-      "The product simply reproduces $u[n-5]$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "**Identity (f):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "u[n+5] \\cdot u[n] = u[n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$u[n+5] = 1 \\iff n \\ge -5$",
-      "Since the interval $[0, \\infty)$ is a strict subset of $[-5, \\infty)$, $u[n+5] = 1$ everywhere $u[n] = 1$.",
-      "The product is gated to the narrower causal support, yielding $u[n]$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Dissection of the 6 Step Products (Slide 227)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Identity (a):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "u[-n] \\cdot u[n] = \\delta[n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$u[-n] = 1$ for $n \\in \\{\\dots, -3, -2, -1, 0\\}$ (Anti-Causal sequence)",
+        "$u[n] = 1$ for $n \\in \\{0, 1, 2, 3, \\dots\\}$ (Causal sequence)",
+        "Intersection of support: $\\{\\dots, -1, 0\\} \\cap \\{0, 1, \\dots\\} = \\{0\\}$.",
+        "At $n = 0$: $1 \\times 1 = 1 = \\delta[0]$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Identity (b):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "u[-n-1] \\cdot u[n] = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$u[-n-1] = 1 \\iff -n-1 \\ge 0 \\iff n \\le -1$, i.e., $n \\in \\{\\dots, -3, -2, -1\\}$ (Strictly anti-causal)",
+        "$u[n] = 1 \\iff n \\ge 0$, i.e., $n \\in \\{0, 1, 2, \\dots\\}$",
+        "Intersection of support: $\\emptyset$ (disjoint sets).",
+        "Product is identically 0 for all $n \\in \\mathbb{Z}$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Identity (c):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "u[-n+1] \\cdot u[n] = \\delta[n] + \\delta[n-1] = u[n] - u[n-2]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$u[-n+1] = 1 \\iff -n+1 \\ge 0 \\iff n \\le 1$, i.e., $n \\in \\{\\dots, -1, 0, 1\\}$",
+        "$u[n] = 1 \\iff n \\ge 0$",
+        "Intersection of support: $\\{0, 1\\}$.",
+        "Product values: at $n = 0$, $1 \\times 1 = 1$; at $n = 1$, $1 \\times 1 = 1$.",
+        "Expressible as sum of two impulses $\\delta[n] + \\delta[n-1]$ or rectangular pulse $u[n] - u[n-2]$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Identity (d):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "u[-n+4] \\cdot u[n] = u[n] - u[n-5]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$u[-n+4] = 1 \\iff n \\le 4$",
+        "Multiplied by $u[n]$ ($n \\ge 0$), non-zero support is $n \\in \\{0, 1, 2, 3, 4\\}$.",
+        "Equivalent to rectangular pulse of duration 5 samples: $u[n] - u[n-5] = \\sum_{k=0}^4 \\delta[n-k]$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Identity (e):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "u[n-5] \\cdot u[n] = u[n-5]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$u[n-5] = 1 \\iff n \\ge 5$",
+        "Since the interval $[5, \\infty)$ is a strict subset of $[0, \\infty)$, $u[n] = 1$ everywhere $u[n-5] = 1$.",
+        "The product simply reproduces $u[n-5]$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "**Identity (f):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "u[n+5] \\cdot u[n] = u[n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$u[n+5] = 1 \\iff n \\ge -5$",
+        "Since the interval $[0, \\infty)$ is a strict subset of $[-5, \\infty)$, $u[n+5] = 1$ everywhere $u[n] = 1$.",
+        "The product is gated to the narrower causal support, yielding $u[n]$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -22014,181 +21999,180 @@ export default {
      "text": "3.4 Visual & Mathematical Audit of Slides 229\u2013231: Benchmark 7-Signal UZT Catalog"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Evaluation of Signals $x_1[n]$ to $x_7[n]$"
-    },
-    {
-     "t": "p",
-     "text": "The instructor evaluates the UZT of 7 variations of exponential sequences:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Signal 1 (Slide 229):** $x_1[n] = a^n$ (two-sided signal defined for all $n \\in \\mathbb{Z}$)"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_1(z) = \\text{BZT}\\{a^n u[n]\\} = \\frac{z}{z-a} = \\frac{1}{1 - a z^{-1}}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Signal 2 (Slide 229):** $x_2[n] = a^n u[n]$ (strictly causal signal)"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_2(z) = \\text{BZT}\\{a^n u[n] \\cdot u[n]\\} = \\text{BZT}\\{a^n u[n]\\} = \\frac{z}{z-a}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
-    },
-    {
-     "t": "p",
-     "text": "*Crucial Observation:* $X_1(z) = X_2(z)$. The UZT cannot distinguish between $a^n$ and $a^n u[n]$ because it discards all information for $n < 0$."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Signal 3 (Slide 229):** $x_3[n] = a^n u[-n-1]$ (strictly anti-causal signal)"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_3(z) = \\text{BZT}\\{a^n u[-n-1] \\cdot u[n]\\} = \\text{BZT}\\{0\\} = 0"
-    },
-    {
-     "t": "p",
-     "text": "*Crucial Observation:* Any signal whose support is strictly restricted to $n \\le -1$ has a Unilateral Z-Transform that is **identically zero**."
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Signal 4 (Slide 230):** $x_4[n] = a^n u[-n]$ (anti-causal signal that includes the origin $n = 0$)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Applying Identity (a): $u[-n] \\cdot u[n] = \\delta[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_4[n] \\cdot u[n] = a^n \\delta[n] = a^0 \\delta[n] = 1 \\cdot \\delta[n] = \\delta[n]"
-    },
-    {
-     "t": "math",
-     "tex": "X_4(z) = \\text{BZT}\\{\\delta[n]\\} = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC: Entire } z\\text{-plane}"
-    },
-    {
-     "t": "p",
-     "text": "*Deadly GATE Trap:* Students routinely confuse $u[-n]$ with $u[-n-1]$ and incorrectly claim $X_4(z) = 0$. The sample at $n = 0$ survives and produces a constant transform of 1!"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Signal 5 (Slide 230):** $x_5[n] = a^n u[-n+5]$ (left-sided signal extending up to $n = 5$)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Applying Identity (d): $u[-n+5] \\cdot u[n] = u[n] - u[n-6]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_5[n] \\cdot u[n] = a^n \\left(u[n] - u[n-6]\\right) = a^n u[n] - a^n u[n-6]"
-    },
-    {
-     "t": "p",
-     "text": "Rewrite the second term in shifted form: $a^n u[n-6] = a^6 a^{n-6} u[n-6]$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_5(z) = \\mathcal{Z}\\{a^n u[n]\\} - a^6 \\mathcal{Z}\\{a^{n-6} u[n-6]\\} = \\frac{z}{z-a} - a^6 z^{-6} \\left(\\frac{z}{z-a}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "X_5(z) = \\frac{z - a^6 z^{-5}}{z-a}"
-    },
-    {
-     "t": "p",
-     "text": "*Alternative Finite Sum Formulation:*"
-    },
-    {
-     "t": "math",
-     "tex": "X_5(z) = \\sum_{n=0}^5 a^n z^{-n} = 1 + a z^{-1} + a^2 z^{-2} + a^3 z^{-3} + a^4 z^{-4} + a^5 z^{-5}"
-    },
-    {
-     "t": "p",
-     "text": "Sum of a finite geometric progression ($N = 6$ terms):"
-    },
-    {
-     "t": "math",
-     "tex": "X_5(z) = \\frac{1 - (a z^{-1})^6}{1 - a z^{-1}} = \\frac{1 - a^6 z^{-6}}{1 - a z^{-1}} \\cdot \\frac{z}{z} = \\frac{z - a^6 z^{-5}}{z - a}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{ROC: Entire } z\\text{-plane excluding } z = 0"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "**Signal 6 (Slide 231):** $x_6[n] = a^n u[n+5]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Applying Identity (f): $u[n+5] \\cdot u[n] = u[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_6[n] \\cdot u[n] = a^n u[n]"
-    },
-    {
-     "t": "math",
-     "tex": "X_6(z) = \\frac{z}{z-a}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
-    },
-    {
-     "t": "p",
-     "text": "*Exam Trap:* Even though the original signal started at $n = -5$, the UZT truncates the 5 negative samples ($n = -5, -4, -3, -2, -1$), making its transform identical to standard $a^n u[n]$."
-    },
-    {
-     "t": "ol",
-     "start": 7,
-     "items": [
-      "**Signal 7 (Slide 231):** $x_7[n] = a^n u[n-5]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Applying Identity (e): $u[n-5] \\cdot u[n] = u[n-5]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_7[n] \\cdot u[n] = a^n u[n-5] = a^5 a^{n-5} u[n-5]"
-    },
-    {
-     "t": "p",
-     "text": "Using the time-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "X_7(z) = a^5 z^{-5} \\left(\\frac{z}{z-a}\\right) = \\frac{a^5 z^{-4}}{z-a}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Evaluation of Signals $x_1[n]$ to $x_7[n]$"
+      },
+      {
+       "t": "p",
+       "text": "The instructor evaluates the UZT of 7 variations of exponential sequences:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Signal 1 (Slide 229):** $x_1[n] = a^n$ (two-sided signal defined for all $n \\in \\mathbb{Z}$)"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_1(z) = \\text{BZT}\\{a^n u[n]\\} = \\frac{z}{z-a} = \\frac{1}{1 - a z^{-1}}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Signal 2 (Slide 229):** $x_2[n] = a^n u[n]$ (strictly causal signal)"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_2(z) = \\text{BZT}\\{a^n u[n] \\cdot u[n]\\} = \\text{BZT}\\{a^n u[n]\\} = \\frac{z}{z-a}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
+      },
+      {
+       "t": "p",
+       "text": "*Crucial Observation:* $X_1(z) = X_2(z)$. The UZT cannot distinguish between $a^n$ and $a^n u[n]$ because it discards all information for $n < 0$."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Signal 3 (Slide 229):** $x_3[n] = a^n u[-n-1]$ (strictly anti-causal signal)"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_3(z) = \\text{BZT}\\{a^n u[-n-1] \\cdot u[n]\\} = \\text{BZT}\\{0\\} = 0"
+      },
+      {
+       "t": "p",
+       "text": "*Crucial Observation:* Any signal whose support is strictly restricted to $n \\le -1$ has a Unilateral Z-Transform that is **identically zero**."
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Signal 4 (Slide 230):** $x_4[n] = a^n u[-n]$ (anti-causal signal that includes the origin $n = 0$)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Applying Identity (a): $u[-n] \\cdot u[n] = \\delta[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_4[n] \\cdot u[n] = a^n \\delta[n] = a^0 \\delta[n] = 1 \\cdot \\delta[n] = \\delta[n]"
+      },
+      {
+       "t": "math",
+       "tex": "X_4(z) = \\text{BZT}\\{\\delta[n]\\} = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC: Entire } z\\text{-plane}"
+      },
+      {
+       "t": "p",
+       "text": "*Deadly GATE Trap:* Students routinely confuse $u[-n]$ with $u[-n-1]$ and incorrectly claim $X_4(z) = 0$. The sample at $n = 0$ survives and produces a constant transform of 1!"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Signal 5 (Slide 230):** $x_5[n] = a^n u[-n+5]$ (left-sided signal extending up to $n = 5$)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Applying Identity (d): $u[-n+5] \\cdot u[n] = u[n] - u[n-6]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_5[n] \\cdot u[n] = a^n \\left(u[n] - u[n-6]\\right) = a^n u[n] - a^n u[n-6]"
+      },
+      {
+       "t": "p",
+       "text": "Rewrite the second term in shifted form: $a^n u[n-6] = a^6 a^{n-6} u[n-6]$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_5(z) = \\mathcal{Z}\\{a^n u[n]\\} - a^6 \\mathcal{Z}\\{a^{n-6} u[n-6]\\} = \\frac{z}{z-a} - a^6 z^{-6} \\left(\\frac{z}{z-a}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "X_5(z) = \\frac{z - a^6 z^{-5}}{z-a}"
+      },
+      {
+       "t": "p",
+       "text": "*Alternative Finite Sum Formulation:*"
+      },
+      {
+       "t": "math",
+       "tex": "X_5(z) = \\sum_{n=0}^5 a^n z^{-n} = 1 + a z^{-1} + a^2 z^{-2} + a^3 z^{-3} + a^4 z^{-4} + a^5 z^{-5}"
+      },
+      {
+       "t": "p",
+       "text": "Sum of a finite geometric progression ($N = 6$ terms):"
+      },
+      {
+       "t": "math",
+       "tex": "X_5(z) = \\frac{1 - (a z^{-1})^6}{1 - a z^{-1}} = \\frac{1 - a^6 z^{-6}}{1 - a z^{-1}} \\cdot \\frac{z}{z} = \\frac{z - a^6 z^{-5}}{z - a}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{ROC: Entire } z\\text{-plane excluding } z = 0"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "**Signal 6 (Slide 231):** $x_6[n] = a^n u[n+5]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Applying Identity (f): $u[n+5] \\cdot u[n] = u[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_6[n] \\cdot u[n] = a^n u[n]"
+      },
+      {
+       "t": "math",
+       "tex": "X_6(z) = \\frac{z}{z-a}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
+      },
+      {
+       "t": "p",
+       "text": "*Exam Trap:* Even though the original signal started at $n = -5$, the UZT truncates the 5 negative samples ($n = -5, -4, -3, -2, -1$), making its transform identical to standard $a^n u[n]$."
+      },
+      {
+       "t": "ol",
+       "start": 7,
+       "items": [
+        "**Signal 7 (Slide 231):** $x_7[n] = a^n u[n-5]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Applying Identity (e): $u[n-5] \\cdot u[n] = u[n-5]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_7[n] \\cdot u[n] = a^n u[n-5] = a^5 a^{n-5} u[n-5]"
+      },
+      {
+       "t": "p",
+       "text": "Using the time-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "X_7(z) = a^5 z^{-5} \\left(\\frac{z}{z-a}\\right) = \\frac{a^5 z^{-4}}{z-a}, \\quad \\text{ROC: } \\vert z\\vert > \\vert a\\vert"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -22322,219 +22306,218 @@ export default {
      "text": "4.3 Visual & Mathematical Audit of Slides 233\u2013235: 1st-Order System with Initial Condition"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 233)"
-    },
-    {
-     "t": "p",
-     "text": "A discrete-time system is described by the difference equation:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] + 3y[n-1] = x[n]"
-    },
-    {
-     "t": "p",
-     "text": "Input: $x[n] = u[n]$, Initial Condition: $y[-1] = 1$.\nDetermine:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Transfer Function $H(z)$ and Impulse Response $h[n]$.",
-      "Zero-Input Response (ZIR) and Zero-State Response (ZSR).",
-      "Natural Response and Forced Response.",
-      "Total Response $y[n]$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Applying UZT and Decomposing into ZIR and ZSR (Slide 233)"
-    },
-    {
-     "t": "p",
-     "text": "Taking the Unilateral Z-Transform of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) + 3 \\left[ z^{-1} Y(z) + y[-1] \\right] = X(z)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the initial condition $y[-1] = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) + 3 z^{-1} Y(z) + 3(1) = X(z)"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) \\left[1 + 3 z^{-1}\\right] + 3 = X(z)"
-    },
-    {
-     "t": "p",
-     "text": "Isolating $Y(z)$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{-3}{1 + 3 z^{-1}} + \\frac{X(z)}{1 + 3 z^{-1}}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying numerator and denominator by $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\underbrace{\\frac{-3z}{z + 3}}_{Y_{\\text{ZIR}}(z)} + \\underbrace{\\frac{z X(z)}{z + 3}}_{Y_{\\text{ZSR}}(z)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Transfer Function $H(z)$ and Impulse Response $h[n]$"
-    },
-    {
-     "t": "p",
-     "text": "By definition, the Transfer Function is defined under **zero initial conditions** ($y[-1] = 0$):"
-    },
-    {
-     "t": "math",
-     "tex": "H(z) = \\left. \\frac{Y(z)}{X(z)} \\right\\vert_{\\text{initial conditions} = 0} = \\frac{z}{z + 3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "System pole: $z = -3$.",
-      "For a causal system, the ROC is $\\vert z\\vert > 3$.",
-      "Stability: The unit circle $\\vert z\\vert = 1$ is NOT included in the ROC (since $\\vert -3\\vert = 3 > 1$). Therefore, the system is **UNSTABLE**.",
-      "Impulse response:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "h[n] = \\mathcal{Z}^{-1}\\{H(z)\\} = (-3)^n u[n]"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Computing ZSR and Total Response (Slide 234)"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = u[n] \\longleftrightarrow X(z) = \\frac{z}{z-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZSR}}(z) = \\frac{z}{z+3} \\cdot \\frac{z}{z-1} = \\frac{z^2}{(z+3)(z-1)}"
-    },
-    {
-     "t": "p",
-     "text": "Expanding $\\frac{Y_{\\text{ZSR}}(z)}{z}$ in partial fractions:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{Y_{\\text{ZSR}}(z)}{z} = \\frac{z}{(z+3)(z-1)} = \\frac{A}{z+3} + \\frac{B}{z-1}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating residues:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{z}{z-1} \\right\\vert_{z=-3} = \\frac{-3}{-3-1} = \\frac{-3}{-4} = \\frac{3}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{z}{z+3} \\right\\vert_{z=1} = \\frac{1}{1+3} = \\frac{1}{4}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZSR}}(z) = \\frac{3}{4} \\frac{z}{z+3} + \\frac{1}{4} \\frac{z}{z-1}"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{ZSR}}[n] = \\frac{3}{4} (-3)^n u[n] + \\frac{1}{4} u[n]"
-    },
-    {
-     "t": "p",
-     "text": "Now invert the ZIR:"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZIR}}(z) = \\frac{-3z}{z+3} = -3 \\left(\\frac{z}{z+3}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{ZIR}}[n] = -3 (-3)^n u[n] = (-3)^{n+1} u[n], \\quad \\text{for } n \\ge 0"
-    },
-    {
-     "t": "p",
-     "text": "Note that for $n = -1$: $y_{\\text{ZIR}}[-1] = (-3)^{-1+1} = (-3)^0 = 1 = y[-1]$, matching the initial condition.\nTotal response $y[n]$ for $n \\ge -1$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\underbrace{-3(-3)^n}_{\\text{ZIR}} + \\underbrace{\\frac{3}{4}(-3)^n u[n] + \\frac{1}{4}u[n]}_{\\text{ZSR}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Deconstructing into Natural and Forced Responses (Slide 235)"
-    },
-    {
-     "t": "p",
-     "text": "The instructor on Slide 235 presents the critical distinction between state-based and frequency-based decompositions:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Forced Response ($y_{\\text{forced}}[n]$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Governed exclusively by the **input poles** (here, pole at $z = 1$ from step input):"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{forced}}[n] = \\frac{1}{4} u[n]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Natural Response ($y_{\\text{natural}}[n]$):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Governed exclusively by the **system/characteristic poles** (here, pole at $z = -3$):"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{natural}}[n] = (-3)^{n+1} + \\frac{3}{4} (-3)^n u[n] = \\left(-3 + \\frac{3}{4}\\right) (-3)^n u[n] = -\\frac{9}{4} (-3)^n u[n], \\quad n \\ge 0"
-    },
-    {
-     "t": "h4",
-     "text": "Comprehensive Response Summary Card (Slide 235 Box)"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\ny_{\\text{forced}}[n] &= \\frac{1}{4} u[n] \\\\\ny_{\\text{natural}}[n] &= (-3)^{n+1} + \\frac{3}{4}(-3)^n u[n], \\quad n \\ge -1 \\\\\ny_{\\text{ZIR}}[n] &= (-3)^{n+1}, \\quad n \\ge -1 \\\\\ny_{\\text{ZSR}}[n] &= \\frac{3}{4}(-3)^n u[n] + \\frac{1}{4} u[n] \\\\\nh[n] &= (-3)^n u[n]\n\\end{aligned}"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**The Transfer Function Fallacy:**\nUnder non-zero initial conditions, $Y(z) \\neq H(z) X(z)$. The total transform is $Y(z) = Y_{\\text{ZIR}}(z) + H(z)X(z)$.\nNever attempt to compute total response as $\\mathcal{Z}^{-1}\\{H(z)X(z)\\}$ when initial conditions are non-zero!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 233)"
+      },
+      {
+       "t": "p",
+       "text": "A discrete-time system is described by the difference equation:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] + 3y[n-1] = x[n]"
+      },
+      {
+       "t": "p",
+       "text": "Input: $x[n] = u[n]$, Initial Condition: $y[-1] = 1$.\nDetermine:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Transfer Function $H(z)$ and Impulse Response $h[n]$.",
+        "Zero-Input Response (ZIR) and Zero-State Response (ZSR).",
+        "Natural Response and Forced Response.",
+        "Total Response $y[n]$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Applying UZT and Decomposing into ZIR and ZSR (Slide 233)"
+      },
+      {
+       "t": "p",
+       "text": "Taking the Unilateral Z-Transform of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) + 3 \\left[ z^{-1} Y(z) + y[-1] \\right] = X(z)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the initial condition $y[-1] = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) + 3 z^{-1} Y(z) + 3(1) = X(z)"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) \\left[1 + 3 z^{-1}\\right] + 3 = X(z)"
+      },
+      {
+       "t": "p",
+       "text": "Isolating $Y(z)$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{-3}{1 + 3 z^{-1}} + \\frac{X(z)}{1 + 3 z^{-1}}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying numerator and denominator by $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\underbrace{\\frac{-3z}{z + 3}}_{Y_{\\text{ZIR}}(z)} + \\underbrace{\\frac{z X(z)}{z + 3}}_{Y_{\\text{ZSR}}(z)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Transfer Function $H(z)$ and Impulse Response $h[n]$"
+      },
+      {
+       "t": "p",
+       "text": "By definition, the Transfer Function is defined under **zero initial conditions** ($y[-1] = 0$):"
+      },
+      {
+       "t": "math",
+       "tex": "H(z) = \\left. \\frac{Y(z)}{X(z)} \\right\\vert_{\\text{initial conditions} = 0} = \\frac{z}{z + 3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "System pole: $z = -3$.",
+        "For a causal system, the ROC is $\\vert z\\vert > 3$.",
+        "Stability: The unit circle $\\vert z\\vert = 1$ is NOT included in the ROC (since $\\vert -3\\vert = 3 > 1$). Therefore, the system is **UNSTABLE**.",
+        "Impulse response:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "h[n] = \\mathcal{Z}^{-1}\\{H(z)\\} = (-3)^n u[n]"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Computing ZSR and Total Response (Slide 234)"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = u[n] \\longleftrightarrow X(z) = \\frac{z}{z-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZSR}}(z) = \\frac{z}{z+3} \\cdot \\frac{z}{z-1} = \\frac{z^2}{(z+3)(z-1)}"
+      },
+      {
+       "t": "p",
+       "text": "Expanding $\\frac{Y_{\\text{ZSR}}(z)}{z}$ in partial fractions:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{Y_{\\text{ZSR}}(z)}{z} = \\frac{z}{(z+3)(z-1)} = \\frac{A}{z+3} + \\frac{B}{z-1}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating residues:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{z}{z-1} \\right\\vert_{z=-3} = \\frac{-3}{-3-1} = \\frac{-3}{-4} = \\frac{3}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{z}{z+3} \\right\\vert_{z=1} = \\frac{1}{1+3} = \\frac{1}{4}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZSR}}(z) = \\frac{3}{4} \\frac{z}{z+3} + \\frac{1}{4} \\frac{z}{z-1}"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{ZSR}}[n] = \\frac{3}{4} (-3)^n u[n] + \\frac{1}{4} u[n]"
+      },
+      {
+       "t": "p",
+       "text": "Now invert the ZIR:"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZIR}}(z) = \\frac{-3z}{z+3} = -3 \\left(\\frac{z}{z+3}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{ZIR}}[n] = -3 (-3)^n u[n] = (-3)^{n+1} u[n], \\quad \\text{for } n \\ge 0"
+      },
+      {
+       "t": "p",
+       "text": "Note that for $n = -1$: $y_{\\text{ZIR}}[-1] = (-3)^{-1+1} = (-3)^0 = 1 = y[-1]$, matching the initial condition.\nTotal response $y[n]$ for $n \\ge -1$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\underbrace{-3(-3)^n}_{\\text{ZIR}} + \\underbrace{\\frac{3}{4}(-3)^n u[n] + \\frac{1}{4}u[n]}_{\\text{ZSR}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Deconstructing into Natural and Forced Responses (Slide 235)"
+      },
+      {
+       "t": "p",
+       "text": "The instructor on Slide 235 presents the critical distinction between state-based and frequency-based decompositions:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Forced Response ($y_{\\text{forced}}[n]$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Governed exclusively by the **input poles** (here, pole at $z = 1$ from step input):"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{forced}}[n] = \\frac{1}{4} u[n]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Natural Response ($y_{\\text{natural}}[n]$):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Governed exclusively by the **system/characteristic poles** (here, pole at $z = -3$):"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{natural}}[n] = (-3)^{n+1} + \\frac{3}{4} (-3)^n u[n] = \\left(-3 + \\frac{3}{4}\\right) (-3)^n u[n] = -\\frac{9}{4} (-3)^n u[n], \\quad n \\ge 0"
+      },
+      {
+       "t": "h4",
+       "text": "Comprehensive Response Summary Card (Slide 235 Box)"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\ny_{\\text{forced}}[n] &= \\frac{1}{4} u[n] \\\\\ny_{\\text{natural}}[n] &= (-3)^{n+1} + \\frac{3}{4}(-3)^n u[n], \\quad n \\ge -1 \\\\\ny_{\\text{ZIR}}[n] &= (-3)^{n+1}, \\quad n \\ge -1 \\\\\ny_{\\text{ZSR}}[n] &= \\frac{3}{4}(-3)^n u[n] + \\frac{1}{4} u[n] \\\\\nh[n] &= (-3)^n u[n]\n\\end{aligned}"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**The Transfer Function Fallacy:**\nUnder non-zero initial conditions, $Y(z) \\neq H(z) X(z)$. The total transform is $Y(z) = Y_{\\text{ZIR}}(z) + H(z)X(z)$.\nNever attempt to compute total response as $\\mathcal{Z}^{-1}\\{H(z)X(z)\\}$ when initial conditions are non-zero!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -22545,247 +22528,250 @@ export default {
      "text": "5.1 Visual & Mathematical Audit of Slides 236\u2013239: 2nd-Order System Complete Solution"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 236)"
-    },
-    {
-     "t": "p",
-     "text": "A causal discrete-time LTI system is defined by:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] - \\frac{3}{4} y[n-1] + \\frac{1}{8} y[n-2] = x[n]"
-    },
-    {
-     "t": "p",
-     "text": "Input: $x[n] = u[n]$. Initial conditions: relaxed (no initial conditions, i.e., $y[-1] = 0, y[-2] = 0$).\nDetermine:\n(a) Impulse response $h[n]$.\n(b) Step response: ZIR, ZSR, Natural response, Forced response, and Total response.\n(c) System stability."
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Transfer Function Factorization (Slide 237)"
-    },
-    {
-     "t": "p",
-     "text": "Under zero initial conditions:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) - \\frac{3}{4} z^{-1} Y(z) + \\frac{1}{8} z^{-2} Y(z) = X(z)"
-    },
-    {
-     "t": "math",
-     "tex": "H(z) = \\frac{Y(z)}{X(z)} = \\frac{1}{1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2}} = \\frac{z^2}{z^2 - \\frac{3}{4} z + \\frac{1}{8}} = \\frac{8z^2}{8z^2 - 6z + 1}"
-    },
-    {
-     "t": "p",
-     "text": "Factoring the denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "8z^2 - 6z + 1 = 8z^2 - 4z - 2z + 1 = 4z(2z - 1) - 1(2z - 1) = (4z - 1)(2z - 1)"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "H(z) = \\frac{8z^2}{(4z - 1)(2z - 1)}"
-    },
-    {
-     "t": "p",
-     "text": "Poles: $z_1 = \\frac{1}{4}$, $z_2 = \\frac{1}{2}$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Partial Fraction Expansion for $h[n]$ (Slide 237)"
-    },
-    {
-     "t": "p",
-     "text": "Expand $\\frac{H(z)}{z}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{H(z)}{z} = \\frac{8z}{(4z - 1)(2z - 1)} = \\frac{A}{4z - 1} + \\frac{B}{2z - 1}"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{8z}{2z - 1} \\right\\vert_{z = 1/4} = \\frac{8(1/4)}{2(1/4) - 1} = \\frac{2}{-1/2} = -4"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{8z}{4z - 1} \\right\\vert_{z = 1/2} = \\frac{8(1/2)}{4(1/2) - 1} = \\frac{4}{1} = 4"
-    },
-    {
-     "t": "p",
-     "text": "Expressing in standard monic linear factors in denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{A}{4z - 1} = \\frac{-4}{4(z - 1/4)} = \\frac{-1}{z - 1/4}"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{B}{2z - 1} = \\frac{4}{2(z - 1/2)} = \\frac{2}{z - 1/2}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying back by $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(z) = \\frac{-z}{z - 1/4} + \\frac{2z}{z - 1/2}"
-    },
-    {
-     "t": "p",
-     "text": "Since the system is causal, ROC is $\\vert z\\vert > \\frac{1}{2}$. Taking inverse Z-transform:"
-    },
-    {
-     "t": "math",
-     "tex": "h[n] = -\\left(\\frac{1}{4}\\right)^n u[n] + 2 \\left(\\frac{1}{2}\\right)^n u[n]"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Step Response Calculation (Slide 238)"
-    },
-    {
-     "t": "p",
-     "text": "With $x[n] = u[n] \\longleftrightarrow X(z) = \\frac{z}{z-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = H(z) X(z) = \\frac{8z^2}{(4z - 1)(2z - 1)} \\cdot \\frac{z}{z - 1}"
-    },
-    {
-     "t": "p",
-     "text": "Expand $\\frac{Y(z)}{z}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{Y(z)}{z} = \\frac{8z^2}{(4z - 1)(2z - 1)(z - 1)} = \\frac{A}{4z - 1} + \\frac{B}{2z - 1} + \\frac{C}{z - 1}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating residues:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $z = 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "C = \\left. \\frac{8z^2}{(4z - 1)(2z - 1)} \\right\\vert_{z = 1} = \\frac{8(1)^2}{(3)(1)} = \\frac{8}{3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $z = 1/2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{8z^2}{(4z - 1)(z - 1)} \\right\\vert_{z = 1/2} = \\frac{8(1/4)}{(1)(-1/2)} = \\frac{2}{-1/2} = -4 \\implies \\frac{-4}{2z - 1} = \\frac{-2}{z - 1/2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $z = 1/4$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A = \\left. \\frac{8z^2}{(2z - 1)(z - 1)} \\right\\vert_{z = 1/4} = \\frac{8(1/16)}{(-1/2)(-3/4)} = \\frac{1/2}{3/8} = \\frac{4}{3} \\implies \\frac{4/3}{4z - 1} = \\frac{1/3}{z - 1/4}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying through by $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = -2 \\left(\\frac{z}{z - 1/2}\\right) + \\frac{1}{3} \\left(\\frac{z}{z - 1/4}\\right) + \\frac{8}{3} \\left(\\frac{z}{z - 1}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Taking inverse transform:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = -2 \\left(\\frac{1}{2}\\right)^n u[n] + \\frac{1}{3} \\left(\\frac{1}{4}\\right)^n u[n] + \\frac{8}{3} u[n]"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Complete Decomposition & Stability Analysis (Slide 239)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**ZIR and ZSR:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since initial conditions are zero:"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{ZIR}}[n] = 0"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{ZSR}}[n] = y[n] = -2 \\left(\\frac{1}{2}\\right)^n u[n] + \\frac{1}{3} \\left(\\frac{1}{4}\\right)^n u[n] + \\frac{8}{3} u[n]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Forced and Natural Response:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Forced response** (from input pole at $z = 1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{forced}}[n] = \\frac{8}{3} u[n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Natural response** (from system poles at $z = 1/2, 1/4$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{natural}}[n] = -2 \\left(\\frac{1}{2}\\right)^n u[n] + \\frac{1}{3} \\left(\\frac{1}{4}\\right)^n u[n]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Stability:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The system poles are $p_1 = \\frac{1}{2}$ and $p_2 = \\frac{1}{4}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\vert p_1\\vert = 0.5 < 1, \\quad \\vert p_2\\vert = 0.25 < 1"
-    },
-    {
-     "t": "p",
-     "text": "Since the system is causal and ALL poles lie strictly inside the unit circle, the Region of Convergence $\\vert z\\vert > 0.5$ strictly contains the unit circle $\\vert z\\vert = 1$.\n   Therefore, the system is **BIBO STABLE**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 236)"
+      },
+      {
+       "t": "p",
+       "text": "A causal discrete-time LTI system is defined by:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] - \\frac{3}{4} y[n-1] + \\frac{1}{8} y[n-2] = x[n]"
+      },
+      {
+       "t": "p",
+       "text": "Input: $x[n] = u[n]$. Initial conditions: relaxed (no initial conditions, i.e., $y[-1] = 0, y[-2] = 0$).\nDetermine:\n(a) Impulse response $h[n]$.\n(b) Step response: ZIR, ZSR, Natural response, Forced response, and Total response.\n(c) System stability."
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Transfer Function Factorization (Slide 237)"
+      },
+      {
+       "t": "p",
+       "text": "Under zero initial conditions:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) - \\frac{3}{4} z^{-1} Y(z) + \\frac{1}{8} z^{-2} Y(z) = X(z)"
+      },
+      {
+       "t": "math",
+       "tex": "H(z) = \\frac{Y(z)}{X(z)} = \\frac{1}{1 - \\frac{3}{4} z^{-1} + \\frac{1}{8} z^{-2}} = \\frac{z^2}{z^2 - \\frac{3}{4} z + \\frac{1}{8}} = \\frac{8z^2}{8z^2 - 6z + 1}"
+      },
+      {
+       "t": "p",
+       "text": "Factoring the denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "8z^2 - 6z + 1 = 8z^2 - 4z - 2z + 1 = 4z(2z - 1) - 1(2z - 1) = (4z - 1)(2z - 1)"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "H(z) = \\frac{8z^2}{(4z - 1)(2z - 1)}"
+      },
+      {
+       "t": "p",
+       "text": "Poles: $z_1 = \\frac{1}{4}$, $z_2 = \\frac{1}{2}$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Partial Fraction Expansion for $h[n]$ (Slide 237)"
+      },
+      {
+       "t": "p",
+       "text": "Expand $\\frac{H(z)}{z}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{H(z)}{z} = \\frac{8z}{(4z - 1)(2z - 1)} = \\frac{A}{4z - 1} + \\frac{B}{2z - 1}"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{8z}{2z - 1} \\right\\vert_{z = 1/4} = \\frac{8(1/4)}{2(1/4) - 1} = \\frac{2}{-1/2} = -4"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{8z}{4z - 1} \\right\\vert_{z = 1/2} = \\frac{8(1/2)}{4(1/2) - 1} = \\frac{4}{1} = 4"
+      },
+      {
+       "t": "p",
+       "text": "Expressing in standard monic linear factors in denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{A}{4z - 1} = \\frac{-4}{4(z - 1/4)} = \\frac{-1}{z - 1/4}"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{B}{2z - 1} = \\frac{4}{2(z - 1/2)} = \\frac{2}{z - 1/2}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying back by $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(z) = \\frac{-z}{z - 1/4} + \\frac{2z}{z - 1/2}"
+      },
+      {
+       "t": "p",
+       "text": "Since the system is causal, ROC is $\\vert z\\vert > \\frac{1}{2}$. Taking inverse Z-transform:"
+      },
+      {
+       "t": "math",
+       "tex": "h[n] = -\\left(\\frac{1}{4}\\right)^n u[n] + 2 \\left(\\frac{1}{2}\\right)^n u[n]"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Step Response Calculation (Slide 238)"
+      },
+      {
+       "t": "p",
+       "text": "With $x[n] = u[n] \\longleftrightarrow X(z) = \\frac{z}{z-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = H(z) X(z) = \\frac{8z^2}{(4z - 1)(2z - 1)} \\cdot \\frac{z}{z - 1}"
+      },
+      {
+       "t": "p",
+       "text": "Expand $\\frac{Y(z)}{z}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{Y(z)}{z} = \\frac{8z^2}{(4z - 1)(2z - 1)(z - 1)} = \\frac{A}{4z - 1} + \\frac{B}{2z - 1} + \\frac{C}{z - 1}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating residues:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $z = 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "C = \\left. \\frac{8z^2}{(4z - 1)(2z - 1)} \\right\\vert_{z = 1} = \\frac{8(1)^2}{(3)(1)} = \\frac{8}{3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $z = 1/2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{8z^2}{(4z - 1)(z - 1)} \\right\\vert_{z = 1/2} = \\frac{8(1/4)}{(1)(-1/2)} = \\frac{2}{-1/2} = -4 \\implies \\frac{-4}{2z - 1} = \\frac{-2}{z - 1/2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $z = 1/4$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A = \\left. \\frac{8z^2}{(2z - 1)(z - 1)} \\right\\vert_{z = 1/4} = \\frac{8(1/16)}{(-1/2)(-3/4)} = \\frac{1/2}{3/8} = \\frac{4}{3} \\implies \\frac{4/3}{4z - 1} = \\frac{1/3}{z - 1/4}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying through by $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = -2 \\left(\\frac{z}{z - 1/2}\\right) + \\frac{1}{3} \\left(\\frac{z}{z - 1/4}\\right) + \\frac{8}{3} \\left(\\frac{z}{z - 1}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Taking inverse transform:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = -2 \\left(\\frac{1}{2}\\right)^n u[n] + \\frac{1}{3} \\left(\\frac{1}{4}\\right)^n u[n] + \\frac{8}{3} u[n]"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Complete Decomposition & Stability Analysis (Slide 239)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**ZIR and ZSR:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since initial conditions are zero:"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{ZIR}}[n] = 0"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{ZSR}}[n] = y[n] = -2 \\left(\\frac{1}{2}\\right)^n u[n] + \\frac{1}{3} \\left(\\frac{1}{4}\\right)^n u[n] + \\frac{8}{3} u[n]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Forced and Natural Response:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Forced response** (from input pole at $z = 1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{forced}}[n] = \\frac{8}{3} u[n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Natural response** (from system poles at $z = 1/2, 1/4$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{natural}}[n] = -2 \\left(\\frac{1}{2}\\right)^n u[n] + \\frac{1}{3} \\left(\\frac{1}{4}\\right)^n u[n]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Stability:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The system poles are $p_1 = \\frac{1}{2}$ and $p_2 = \\frac{1}{4}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\vert p_1\\vert = 0.5 < 1, \\quad \\vert p_2\\vert = 0.25 < 1"
+      },
+      {
+       "t": "p",
+       "text": "Since the system is causal and ALL poles lie strictly inside the unit circle, the Region of Convergence $\\vert z\\vert > 0.5$ strictly contains the unit circle $\\vert z\\vert = 1$.\n   Therefore, the system is **BIBO STABLE**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -22834,243 +22820,242 @@ export default {
      "text": "This is one of the most intellectually sophisticated problems in the curriculum, illustrating two distinct methods for handling difference equations with advance terms and negative-index boundary conditions."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 241)"
-    },
-    {
-     "t": "p",
-     "text": "Given the difference equation:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n+1] + y[n] = x[n-1] + x[n]"
-    },
-    {
-     "t": "p",
-     "text": "Input: $x[n] = 3 u[n] \\longleftrightarrow X(z) = \\frac{3z}{z-1}$.\nInitial conditions: $y[-1] = -2$, and $x[-1] = 0$.\nFind ZIR, ZSR, Natural response, Forced response, and Total response."
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Forward Shift UZT Formulation (Slides 241\u2013242)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Apply UZT using Forward Shift on $y[n+1]$ and Backward Shift on $x[n-1]$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{y[n+1]\\} = z Y(z) - z y[0]"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{Z}\\{x[n-1]\\} = z^{-1} X(z) + x[-1]"
-    },
-    {
-     "t": "p",
-     "text": "Substituting into the difference equation:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left[ z Y(z) - z y[0] \\right] + Y(z) = \\left[ z^{-1} X(z) + x[-1] \\right] + X(z)"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[-1] = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) [z + 1] - z y[0] = (z^{-1} + 1) X(z)"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\frac{z}{z + 1} y[0] + \\left( \\frac{z^{-1} + 1}{z + 1} \\right) X(z)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Crucial Algebraic Simplification:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{z^{-1} + 1}{z + 1} = \\frac{\\frac{1 + z}{z}}{z + 1} = \\frac{1}{z} = z^{-1}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting this and $X(z) = \\frac{3z}{z-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = y[0] \\frac{z}{z+1} + z^{-1} \\left( \\frac{3z}{z-1} \\right) = y[0] \\frac{z}{z+1} + \\frac{3}{z-1}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Inverse Z-Transform:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall that $\\frac{1}{z-1} = z^{-1} \\frac{z}{z-1} \\longleftrightarrow u[n-1]$."
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = y[0] (-1)^n + 3 u[n-1]"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Determining the Unknown Initial Condition $y[0]$ from $y[-1]$ (Slide 242):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The equation $y[n] = y[0](-1)^n + 3u[n-1]$ is valid for $n \\ge -1$.\n   Evaluating at $n = -1$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[-1] = y[0] (-1)^{-1} + 3 u[-2]"
-    },
-    {
-     "t": "p",
-     "text": "Since $u[-2] = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "-2 = -y[0] + 0 \\implies y[0] = 2"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $y[0] = 2$ back:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = 2(-1)^n + 3 u[n-1], \\quad n \\ge -1"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Index Pre-Shifting Technique (Slides 242\u2013243)"
-    },
-    {
-     "t": "p",
-     "text": "Instead of dealing with the forward-shift term $y[n+1]$ and determining $y[0]$, we can shift the entire difference equation backwards by 1 sample before transforming!\nSubstitute $n \\leftarrow n-1$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[(n-1)+1] + y[n-1] = x[(n-1)-1] + x[n-1]"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] + y[n-1] = x[n-2] + x[n-1]"
-    },
-    {
-     "t": "p",
-     "text": "Now the highest index is $n$, so only backward shifts appear!"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Apply Backward Shift UZT (Slide 243):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) + \\left[ z^{-1} Y(z) + y[-1] \\right] = \\left[ z^{-2} X(z) + z^{-1} x[-1] + x[-2] \\right] + \\left[ z^{-1} X(z) + x[-1] \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[-1] = 0, x[-2] = 0$, and $y[-1] = -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "(1 + z^{-1}) Y(z) + (-2) = (z^{-2} + z^{-1}) X(z)"
-    },
-    {
-     "t": "math",
-     "tex": "(1 + z^{-1}) Y(z) = 2 + (z^{-2} + z^{-1}) X(z)"
-    },
-    {
-     "t": "math",
-     "tex": "Y(z) = \\underbrace{\\frac{2}{1 + z^{-1}}}_{Y_{\\text{ZIR}}(z)} + \\underbrace{\\left( \\frac{z^{-2} + z^{-1}}{1 + z^{-1}} \\right) X(z)}_{Y_{\\text{ZSR}}(z)}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Simplifying ZIR and ZSR:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For ZIR:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZIR}}(z) = \\frac{2}{1 + z^{-1}} = \\frac{2z}{z + 1} \\implies y_{\\text{ZIR}}[n] = 2(-1)^n u[n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For ZSR:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{z^{-2} + z^{-1}}{1 + z^{-1}} = \\frac{z^{-1}(z^{-1} + 1)}{1 + z^{-1}} = z^{-1}"
-    },
-    {
-     "t": "math",
-     "tex": "Y_{\\text{ZSR}}(z) = z^{-1} X(z) = z^{-1} \\left(\\frac{3z}{z-1}\\right) = \\frac{3}{z-1}"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{ZSR}}[n] = 3 u[n-1]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Total Response:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = 2(-1)^n u[n] + 3 u[n-1], \\quad n \\ge 0"
-    },
-    {
-     "t": "p",
-     "text": "Check at $n = -1$: $y[-1] = 2(-1)^{-1} = -2$, perfectly consistent!"
-    },
-    {
-     "t": "h4",
-     "text": "Response Taxonomy Analysis (Slide 244)"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\n\\text{Total Response: } y[n] &= 2(-1)^n u[n] + 3u[n-1] \\\\\n\\text{Zero-Input Response (ZIR): } y_{\\text{ZIR}}[n] &= 2(-1)^n u[n] \\\\\n\\text{Zero-State Response (ZSR): } y_{\\text{ZSR}}[n] &= 3u[n-1] \\\\\n\\text{Forced Response: } y_{\\text{forced}}[n] &= 3u[n-1] \\\\\n\\text{Natural Response: } y_{\\text{natural}}[n] &= 2(-1)^n u[n]\n\\end{aligned}"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**The Remarkable Alignment:**\nIn general, Natural Response $\\neq$ ZIR and Forced Response $\\neq$ ZSR because the ZSR typically contains both natural and forced modes. However, in this problem, the transfer function numerator factor $(z^{-1}+1)$ perfectly cancelled the system pole $(1+z^{-1})$ in the ZSR! Consequently, the ZSR contains ONLY the forced mode $3u[n-1]$, making $y_{\\text{ZSR}} = y_{\\text{forced}}$ and $y_{\\text{ZIR}} = y_{\\text{natural}}$!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 241)"
+      },
+      {
+       "t": "p",
+       "text": "Given the difference equation:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n+1] + y[n] = x[n-1] + x[n]"
+      },
+      {
+       "t": "p",
+       "text": "Input: $x[n] = 3 u[n] \\longleftrightarrow X(z) = \\frac{3z}{z-1}$.\nInitial conditions: $y[-1] = -2$, and $x[-1] = 0$.\nFind ZIR, ZSR, Natural response, Forced response, and Total response."
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Forward Shift UZT Formulation (Slides 241\u2013242)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Apply UZT using Forward Shift on $y[n+1]$ and Backward Shift on $x[n-1]$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{y[n+1]\\} = z Y(z) - z y[0]"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{Z}\\{x[n-1]\\} = z^{-1} X(z) + x[-1]"
+      },
+      {
+       "t": "p",
+       "text": "Substituting into the difference equation:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left[ z Y(z) - z y[0] \\right] + Y(z) = \\left[ z^{-1} X(z) + x[-1] \\right] + X(z)"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[-1] = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) [z + 1] - z y[0] = (z^{-1} + 1) X(z)"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\frac{z}{z + 1} y[0] + \\left( \\frac{z^{-1} + 1}{z + 1} \\right) X(z)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Crucial Algebraic Simplification:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{z^{-1} + 1}{z + 1} = \\frac{\\frac{1 + z}{z}}{z + 1} = \\frac{1}{z} = z^{-1}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting this and $X(z) = \\frac{3z}{z-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = y[0] \\frac{z}{z+1} + z^{-1} \\left( \\frac{3z}{z-1} \\right) = y[0] \\frac{z}{z+1} + \\frac{3}{z-1}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Inverse Z-Transform:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall that $\\frac{1}{z-1} = z^{-1} \\frac{z}{z-1} \\longleftrightarrow u[n-1]$."
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = y[0] (-1)^n + 3 u[n-1]"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Determining the Unknown Initial Condition $y[0]$ from $y[-1]$ (Slide 242):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The equation $y[n] = y[0](-1)^n + 3u[n-1]$ is valid for $n \\ge -1$.\n   Evaluating at $n = -1$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[-1] = y[0] (-1)^{-1} + 3 u[-2]"
+      },
+      {
+       "t": "p",
+       "text": "Since $u[-2] = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "-2 = -y[0] + 0 \\implies y[0] = 2"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $y[0] = 2$ back:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = 2(-1)^n + 3 u[n-1], \\quad n \\ge -1"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Index Pre-Shifting Technique (Slides 242\u2013243)"
+      },
+      {
+       "t": "p",
+       "text": "Instead of dealing with the forward-shift term $y[n+1]$ and determining $y[0]$, we can shift the entire difference equation backwards by 1 sample before transforming!\nSubstitute $n \\leftarrow n-1$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[(n-1)+1] + y[n-1] = x[(n-1)-1] + x[n-1]"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] + y[n-1] = x[n-2] + x[n-1]"
+      },
+      {
+       "t": "p",
+       "text": "Now the highest index is $n$, so only backward shifts appear!"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Apply Backward Shift UZT (Slide 243):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) + \\left[ z^{-1} Y(z) + y[-1] \\right] = \\left[ z^{-2} X(z) + z^{-1} x[-1] + x[-2] \\right] + \\left[ z^{-1} X(z) + x[-1] \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[-1] = 0, x[-2] = 0$, and $y[-1] = -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "(1 + z^{-1}) Y(z) + (-2) = (z^{-2} + z^{-1}) X(z)"
+      },
+      {
+       "t": "math",
+       "tex": "(1 + z^{-1}) Y(z) = 2 + (z^{-2} + z^{-1}) X(z)"
+      },
+      {
+       "t": "math",
+       "tex": "Y(z) = \\underbrace{\\frac{2}{1 + z^{-1}}}_{Y_{\\text{ZIR}}(z)} + \\underbrace{\\left( \\frac{z^{-2} + z^{-1}}{1 + z^{-1}} \\right) X(z)}_{Y_{\\text{ZSR}}(z)}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Simplifying ZIR and ZSR:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For ZIR:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZIR}}(z) = \\frac{2}{1 + z^{-1}} = \\frac{2z}{z + 1} \\implies y_{\\text{ZIR}}[n] = 2(-1)^n u[n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For ZSR:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{z^{-2} + z^{-1}}{1 + z^{-1}} = \\frac{z^{-1}(z^{-1} + 1)}{1 + z^{-1}} = z^{-1}"
+      },
+      {
+       "t": "math",
+       "tex": "Y_{\\text{ZSR}}(z) = z^{-1} X(z) = z^{-1} \\left(\\frac{3z}{z-1}\\right) = \\frac{3}{z-1}"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{ZSR}}[n] = 3 u[n-1]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Total Response:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = 2(-1)^n u[n] + 3 u[n-1], \\quad n \\ge 0"
+      },
+      {
+       "t": "p",
+       "text": "Check at $n = -1$: $y[-1] = 2(-1)^{-1} = -2$, perfectly consistent!"
+      },
+      {
+       "t": "h4",
+       "text": "Response Taxonomy Analysis (Slide 244)"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\n\\text{Total Response: } y[n] &= 2(-1)^n u[n] + 3u[n-1] \\\\\n\\text{Zero-Input Response (ZIR): } y_{\\text{ZIR}}[n] &= 2(-1)^n u[n] \\\\\n\\text{Zero-State Response (ZSR): } y_{\\text{ZSR}}[n] &= 3u[n-1] \\\\\n\\text{Forced Response: } y_{\\text{forced}}[n] &= 3u[n-1] \\\\\n\\text{Natural Response: } y_{\\text{natural}}[n] &= 2(-1)^n u[n]\n\\end{aligned}"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**The Remarkable Alignment:**\nIn general, Natural Response $\\neq$ ZIR and Forced Response $\\neq$ ZSR because the ZSR typically contains both natural and forced modes. However, in this problem, the transfer function numerator factor $(z^{-1}+1)$ perfectly cancelled the system pole $(1+z^{-1})$ in the ZSR! Consequently, the ZSR contains ONLY the forced mode $3u[n-1]$, making $y_{\\text{ZSR}} = y_{\\text{forced}}$ and $y_{\\text{ZIR}} = y_{\\text{natural}}$!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -23247,88 +23232,87 @@ export default {
      "text": "6.4 Visual & Mathematical Audit of Slide 247: Solved Drills"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 1 (Slide 247 Left):"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z^3 + 2z^2 + 3}{z^2 + 2}"
-    },
-    {
-     "t": "p",
-     "text": "Find initial value $x[0]$."
-    },
-    {
-     "t": "p",
-     "text": "**Analysis:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Numerator degree $M = 3$.",
-      "Denominator degree $N = 2$.",
-      "$M > N \\implies \\lim_{z \\to \\infty} X(z) = \\infty$.",
-      "There is a pole at $z = \\infty$.",
-      "Long division yields:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = z + 2 + \\frac{-2z - 1}{z^2 + 2}"
-    },
-    {
-     "t": "p",
-     "text": "The term $z$ inverts to $\\delta[n+1]$, which means $x[-1] = 1 \\neq 0$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Sequence $x[n]$ is **non-causal**.",
-      "**Conclusion:** IVT is **NOT applicable**! Initial value has no meaning."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Drill 2 (Slide 247 Right):"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z^2 + 2z + 3}{z^2 + 2}"
-    },
-    {
-     "t": "p",
-     "text": "Find $x[0]$."
-    },
-    {
-     "t": "p",
-     "text": "**Analysis:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Numerator degree $M = 2$.",
-      "Denominator degree $N = 2$.",
-      "$M = N$, so no pole at $z = \\infty$. Sequence is causal.",
-      "Evaluating the limit:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[0] = \\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z^2 \\left(1 + \\frac{2}{z} + \\frac{3}{z^2}\\right)}{z^2 \\left(1 + \\frac{2}{z^2}\\right)} = \\frac{1 + 0 + 0}{1 + 0} = 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** $x[0] = 1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Drill 1 (Slide 247 Left):"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z^3 + 2z^2 + 3}{z^2 + 2}"
+      },
+      {
+       "t": "p",
+       "text": "Find initial value $x[0]$."
+      },
+      {
+       "t": "p",
+       "text": "**Analysis:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Numerator degree $M = 3$.",
+        "Denominator degree $N = 2$.",
+        "$M > N \\implies \\lim_{z \\to \\infty} X(z) = \\infty$.",
+        "There is a pole at $z = \\infty$.",
+        "Long division yields:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = z + 2 + \\frac{-2z - 1}{z^2 + 2}"
+      },
+      {
+       "t": "p",
+       "text": "The term $z$ inverts to $\\delta[n+1]$, which means $x[-1] = 1 \\neq 0$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Sequence $x[n]$ is **non-causal**.",
+        "**Conclusion:** IVT is **NOT applicable**! Initial value has no meaning."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Drill 2 (Slide 247 Right):"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z^2 + 2z + 3}{z^2 + 2}"
+      },
+      {
+       "t": "p",
+       "text": "Find $x[0]$."
+      },
+      {
+       "t": "p",
+       "text": "**Analysis:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Numerator degree $M = 2$.",
+        "Denominator degree $N = 2$.",
+        "$M = N$, so no pole at $z = \\infty$. Sequence is causal.",
+        "Evaluating the limit:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[0] = \\lim_{z \\to \\infty} X(z) = \\lim_{z \\to \\infty} \\frac{z^2 \\left(1 + \\frac{2}{z} + \\frac{3}{z^2}\\right)}{z^2 \\left(1 + \\frac{2}{z^2}\\right)} = \\frac{1 + 0 + 0}{1 + 0} = 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** $x[0] = 1$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -23631,291 +23615,294 @@ export default {
      "text": "8.5 Visual & Mathematical Audit of Slides 253\u2013254: Solved FVT Exam Drills"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Drill 1 (Slide 253 Left): Double Pole at $z = 1$ Trap"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z^2 + 3z - 2}{(z-1)^2 (z + 0.5)}"
-    },
-    {
-     "t": "p",
-     "text": "Determine the final value $x[\\infty]$."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-step Audit:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Identify all poles of $X(z)$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$z = 1$ with multiplicity 2 (double pole).",
-      "$z = -0.5$ (inside unit circle, $\\vert -0.5\\vert = 0.5 < 1$)."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Examine poles of $(z-1)X(z)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(z - 1) X(z) = \\frac{z^2 + 3z - 2}{(z - 1)(z + 0.5)}"
-    },
-    {
-     "t": "p",
-     "text": "Notice that $(z-1)X(z)$ **still has a pole at $z = 1$**!"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Time-domain behavior:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The double pole at $z = 1$ generates a ramp term $A \\cdot n u[n]$. As $n \\to \\infty$, $A \\cdot n \\to \\infty$."
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Verdict:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The condition that all poles of $(z-1)X(z)$ lie strictly inside the unit circle is **VIOLATED**.\n   **FVT is NOT APPLICABLE.** Final value diverges to $\\infty$."
-    },
-    {
-     "t": "h4",
-     "text": "Drill 2 (Slide 253 Right): Unit-Circle Oscillation Trap"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z^2 + 1}{(z^2 + z + 1)(z - 0.5)}, \\quad \\text{System is causal}"
-    },
-    {
-     "t": "p",
-     "text": "Determine the final value $x[\\infty]$."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-step Audit:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Identify all poles of $X(z)$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "From $(z - 0.5) = 0 \\implies z = 0.5$ (inside unit circle, $\\vert 0.5\\vert < 1$).",
-      "From $z^2 + z + 1 = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z = \\frac{-1 \\pm \\sqrt{1 - 4}}{2} = \\frac{-1 \\pm j\\sqrt{3}}{2} = 1 \\cdot e^{\\pm j 2\\pi/3}"
-    },
-    {
-     "t": "p",
-     "text": "Magnitude of these poles:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert z_p\\vert = \\sqrt{\\left(-\\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2} = \\sqrt{\\frac{1}{4} + \\frac{3}{4}} = 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "These poles lie **EXACTLY ON THE UNIT CIRCLE** at angles $\\pm \\frac{2\\pi}{3}$ ($\\pm 120^\\circ$)!"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**The Deadly Formula Trap:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If a student blindly calculates $\\lim_{z \\to 1} (z-1) X(z)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to 1} (z - 1) \\frac{z^2 + 1}{(z^2 + z + 1)(z - 0.5)} = \\frac{(0)(1 + 1)}{(1 + 1 + 1)(1 - 0.5)} = \\frac{0 \\cdot 2}{3 \\cdot 0.5} = 0"
-    },
-    {
-     "t": "p",
-     "text": "The student writes **$x[\\infty] = 0$** and loses full marks!"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Why the Formula Fails:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Inverting $X(z)$ via partial fractions:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = K_1 (0.5)^n u[n] + K_2 \\cos\\left(\\frac{2\\pi}{3} n + \\theta\\right) u[n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "As $n \\to \\infty$, $(0.5)^n \\to 0$.",
-      "However, $\\cos\\left(\\frac{2\\pi}{3} n + \\theta\\right)$ **never settles to a single value**! It perpetually cycles through three distinct values forever:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\{ \\cos(\\theta), \\cos\\left(\\theta + \\frac{2\\pi}{3}\\right), \\cos\\left(\\theta + \\frac{4\\pi}{3}\\right) \\right\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Therefore, the limit $\\lim_{n \\to \\infty} x[n]$ **DOES NOT EXIST**!"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Verdict:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Poles of $(z-1)X(z)$ lie on the unit circle.\n   **FVT is NOT APPLICABLE.** Final value does not exist."
-    },
-    {
-     "t": "h4",
-     "text": "Drill 3 (Slide 254): Valid FVT Execution"
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = \\frac{z^2 + z + 1}{(z - 1)(z - 0.5)}"
-    },
-    {
-     "t": "p",
-     "text": "Determine the final value $x[\\infty]$."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-step Audit:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Causality Check:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Numerator degree $M = 2$, Denominator degree $N = 2$."
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{z \\to \\infty} X(z) = 1 < \\infty"
-    },
-    {
-     "t": "p",
-     "text": "No pole at $z = \\infty$. The sequence is causal."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Pole Location Audit of $X(z)$:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Pole at $z = 1$: Simple pole (multiplicity 1).",
-      "Pole at $z = 0.5$: $\\vert 0.5\\vert = 0.5 < 1$ (strictly inside the unit circle)."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Pole Location Audit of $(z - 1) X(z)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(z - 1) X(z) = \\frac{z^2 + z + 1}{z - 0.5}"
-    },
-    {
-     "t": "p",
-     "text": "The only remaining pole is at $z = 0.5$.\n   Since $\\vert 0.5\\vert < 1$, ALL poles of $(z-1)X(z)$ lie strictly inside the unit circle!\n   **FVT is STRICTLY APPLICABLE.**"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Limit Evaluation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[\\infty] = \\lim_{z \\to 1} (z - 1) X(z) = \\lim_{z \\to 1} \\frac{z^2 + z + 1}{z - 0.5} = \\frac{1^2 + 1 + 1}{1 - 0.5} = \\frac{3}{0.5} = 6"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Physical Verification via Time-Domain Inversion:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Expand $\\frac{X(z)}{z}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{X(z)}{z} = \\frac{z^2 + z + 1}{z(z - 1)(z - 0.5)} = \\frac{A}{z} + \\frac{B}{z - 1} + \\frac{C}{z - 0.5}"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\left. \\frac{z^2 + z + 1}{z(z - 0.5)} \\right\\vert_{z = 1} = \\frac{1 + 1 + 1}{1(0.5)} = \\frac{3}{0.5} = 6"
-    },
-    {
-     "t": "p",
-     "text": "The term associated with $B$ is $6 \\frac{z}{z-1} \\longleftrightarrow 6 u[n]$.\n   All other terms correspond to decaying modes like $(0.5)^n$ and $\\delta[n]$, which decay to zero as $n \\to \\infty$.\n   Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lim_{n \\to \\infty} x[n] = 6"
-    },
-    {
-     "t": "p",
-     "text": "Exact match! Answer is **6**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Drill 1 (Slide 253 Left): Double Pole at $z = 1$ Trap"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z^2 + 3z - 2}{(z-1)^2 (z + 0.5)}"
+      },
+      {
+       "t": "p",
+       "text": "Determine the final value $x[\\infty]$."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-step Audit:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Identify all poles of $X(z)$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$z = 1$ with multiplicity 2 (double pole).",
+        "$z = -0.5$ (inside unit circle, $\\vert -0.5\\vert = 0.5 < 1$)."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Examine poles of $(z-1)X(z)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(z - 1) X(z) = \\frac{z^2 + 3z - 2}{(z - 1)(z + 0.5)}"
+      },
+      {
+       "t": "p",
+       "text": "Notice that $(z-1)X(z)$ **still has a pole at $z = 1$**!"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Time-domain behavior:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The double pole at $z = 1$ generates a ramp term $A \\cdot n u[n]$. As $n \\to \\infty$, $A \\cdot n \\to \\infty$."
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Verdict:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The condition that all poles of $(z-1)X(z)$ lie strictly inside the unit circle is **VIOLATED**.\n   **FVT is NOT APPLICABLE.** Final value diverges to $\\infty$."
+      },
+      {
+       "t": "h4",
+       "text": "Drill 2 (Slide 253 Right): Unit-Circle Oscillation Trap"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z^2 + 1}{(z^2 + z + 1)(z - 0.5)}, \\quad \\text{System is causal}"
+      },
+      {
+       "t": "p",
+       "text": "Determine the final value $x[\\infty]$."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-step Audit:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Identify all poles of $X(z)$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "From $(z - 0.5) = 0 \\implies z = 0.5$ (inside unit circle, $\\vert 0.5\\vert < 1$).",
+        "From $z^2 + z + 1 = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z = \\frac{-1 \\pm \\sqrt{1 - 4}}{2} = \\frac{-1 \\pm j\\sqrt{3}}{2} = 1 \\cdot e^{\\pm j 2\\pi/3}"
+      },
+      {
+       "t": "p",
+       "text": "Magnitude of these poles:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert z_p\\vert = \\sqrt{\\left(-\\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2} = \\sqrt{\\frac{1}{4} + \\frac{3}{4}} = 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "These poles lie **EXACTLY ON THE UNIT CIRCLE** at angles $\\pm \\frac{2\\pi}{3}$ ($\\pm 120^\\circ$)!"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**The Deadly Formula Trap:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If a student blindly calculates $\\lim_{z \\to 1} (z-1) X(z)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to 1} (z - 1) \\frac{z^2 + 1}{(z^2 + z + 1)(z - 0.5)} = \\frac{(0)(1 + 1)}{(1 + 1 + 1)(1 - 0.5)} = \\frac{0 \\cdot 2}{3 \\cdot 0.5} = 0"
+      },
+      {
+       "t": "p",
+       "text": "The student writes **$x[\\infty] = 0$** and loses full marks!"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Why the Formula Fails:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Inverting $X(z)$ via partial fractions:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = K_1 (0.5)^n u[n] + K_2 \\cos\\left(\\frac{2\\pi}{3} n + \\theta\\right) u[n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "As $n \\to \\infty$, $(0.5)^n \\to 0$.",
+        "However, $\\cos\\left(\\frac{2\\pi}{3} n + \\theta\\right)$ **never settles to a single value**! It perpetually cycles through three distinct values forever:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\{ \\cos(\\theta), \\cos\\left(\\theta + \\frac{2\\pi}{3}\\right), \\cos\\left(\\theta + \\frac{4\\pi}{3}\\right) \\right\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Therefore, the limit $\\lim_{n \\to \\infty} x[n]$ **DOES NOT EXIST**!"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Verdict:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Poles of $(z-1)X(z)$ lie on the unit circle.\n   **FVT is NOT APPLICABLE.** Final value does not exist."
+      },
+      {
+       "t": "h4",
+       "text": "Drill 3 (Slide 254): Valid FVT Execution"
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = \\frac{z^2 + z + 1}{(z - 1)(z - 0.5)}"
+      },
+      {
+       "t": "p",
+       "text": "Determine the final value $x[\\infty]$."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-step Audit:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Causality Check:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Numerator degree $M = 2$, Denominator degree $N = 2$."
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{z \\to \\infty} X(z) = 1 < \\infty"
+      },
+      {
+       "t": "p",
+       "text": "No pole at $z = \\infty$. The sequence is causal."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Pole Location Audit of $X(z)$:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Pole at $z = 1$: Simple pole (multiplicity 1).",
+        "Pole at $z = 0.5$: $\\vert 0.5\\vert = 0.5 < 1$ (strictly inside the unit circle)."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Pole Location Audit of $(z - 1) X(z)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(z - 1) X(z) = \\frac{z^2 + z + 1}{z - 0.5}"
+      },
+      {
+       "t": "p",
+       "text": "The only remaining pole is at $z = 0.5$.\n   Since $\\vert 0.5\\vert < 1$, ALL poles of $(z-1)X(z)$ lie strictly inside the unit circle!\n   **FVT is STRICTLY APPLICABLE.**"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Limit Evaluation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[\\infty] = \\lim_{z \\to 1} (z - 1) X(z) = \\lim_{z \\to 1} \\frac{z^2 + z + 1}{z - 0.5} = \\frac{1^2 + 1 + 1}{1 - 0.5} = \\frac{3}{0.5} = 6"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Physical Verification via Time-Domain Inversion:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Expand $\\frac{X(z)}{z}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{X(z)}{z} = \\frac{z^2 + z + 1}{z(z - 1)(z - 0.5)} = \\frac{A}{z} + \\frac{B}{z - 1} + \\frac{C}{z - 0.5}"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\left. \\frac{z^2 + z + 1}{z(z - 0.5)} \\right\\vert_{z = 1} = \\frac{1 + 1 + 1}{1(0.5)} = \\frac{3}{0.5} = 6"
+      },
+      {
+       "t": "p",
+       "text": "The term associated with $B$ is $6 \\frac{z}{z-1} \\longleftrightarrow 6 u[n]$.\n   All other terms correspond to decaying modes like $(0.5)^n$ and $\\delta[n]$, which decay to zero as $n \\to \\infty$.\n   Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lim_{n \\to \\infty} x[n] = 6"
+      },
+      {
+       "t": "p",
+       "text": "Exact match! Answer is **6**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",

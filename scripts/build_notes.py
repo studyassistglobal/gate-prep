@@ -544,9 +544,11 @@ def split_table_row(line):
     return cells
 
 def inline_clean(text, ch):
-    """Rewrite image links inside inline text (kept for p/ul/table cells)."""
+    """Rewrite image links inside inline text (kept for p/ul/table cells) and
+    strip stray <details>/<summary> tags the sources mention in prose."""
     def sub(m):
         return f"![{m.group(1)}]({rewrite_img_src(m.group(2), ch)})"
+    text = re.sub(r"</?details\b[^>]*>|</?summary>", "", text)
     return re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", sub, text)
 
 
@@ -585,10 +587,13 @@ def parse_blocks(lines, ch):
             blocks.append({"t": "code", "text": "\n".join(code).rstrip()})
             continue
 
-        # <details> collapsible (worked solutions) — the opener line may carry
-        # an inline <summary> (single-line form) or it may be a standalone line
-        if stripped.startswith("<details>"):
+        # <details> collapsible (worked solutions) — the opener may carry
+        # attributes (`<details open>`) and an inline <summary> (single-line
+        # form) or a standalone summary line
+        m_det = re.match(r"^<details\b[^>]*>", stripped)
+        if m_det:
             flush_para()
+            is_open = re.match(r"^<details\b[^>]*\bopen\b", stripped) is not None
             summary = "Solution"
             m0 = re.search(r"<summary>(.*?)</summary>", stripped)
             if m0:
@@ -598,7 +603,7 @@ def parse_blocks(lines, ch):
             depth = 1
             while i < n:
                 s2 = lines[i].strip()
-                if s2.startswith("<details>"):
+                if re.match(r"^<details\b", s2):
                     depth += 1
                 if s2.startswith("</details>"):
                     depth -= 1
@@ -611,7 +616,10 @@ def parse_blocks(lines, ch):
                 elif not s2.startswith("<summary>"):
                     inner.append(lines[i])
                 i += 1
-            blocks.append({"t": "details", "summary": summary, "blocks": parse_blocks(inner, ch)})
+            det = {"t": "details", "summary": summary, "blocks": parse_blocks(inner, ch)}
+            if is_open:
+                det["open"] = True
+            blocks.append(det)
             continue
         if stripped.startswith("<summary>"):
             i += 1

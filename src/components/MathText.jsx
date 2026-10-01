@@ -2,6 +2,33 @@ import { useEffect, useRef } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
+// KaTeX output cache: identical formulas (δ[n], x[n], …) appear dozens of
+// times per section; renderToString once per unique string and assign via a
+// single innerHTML write instead of per-node DOM insertion on the live tree.
+const katexCache = new Map();
+function renderKatex(math, displayMode) {
+  const key = (displayMode ? 'D' : 'I') + math;
+  let html = katexCache.get(key);
+  if (html === undefined) {
+    try {
+      html = katex.renderToString(math, { displayMode, throwOnError: false });
+    } catch {
+      html = null; // render failure — fall back to literal text
+    }
+    katexCache.set(key, html);
+  }
+  return html;
+}
+
+function mathSpan(math, displayMode, className, fallbackText) {
+  const span = document.createElement('span');
+  span.className = className;
+  const html = renderKatex(math, displayMode);
+  if (html !== null) span.innerHTML = html;
+  else span.appendChild(document.createTextNode(fallbackText));
+  return span;
+}
+
 /**
  * Render one line's inline content. Bold/code spans are tokenized OUTERMOST so
  * markdown emphasis can wrap math (`**Rise Time ($t_r$)**`), which the notes
@@ -30,27 +57,13 @@ function renderLine(line, container) {
     // Display math $$...$$ or \[...\]
     if ((part.startsWith('$$') && part.endsWith('$$')) || (part.startsWith('\\[') && part.endsWith('\\]'))) {
       const math = part.startsWith('$$') ? part.slice(2, -2) : part.slice(2, -2);
-      try {
-        const span = document.createElement('span');
-        span.className = 'math-display-wrap';
-        katex.render(math.trim(), span, { displayMode: true, throwOnError: false });
-        container.appendChild(span);
-      } catch {
-        container.appendChild(document.createTextNode(part));
-      }
+      container.appendChild(mathSpan(math.trim(), true, 'math-display-wrap', part));
       continue;
     }
     // Inline math $...$ or \(...\)
     if ((part.startsWith('$') && part.endsWith('$')) || (part.startsWith('\\(') && part.endsWith('\\)'))) {
       const math = part.startsWith('$') ? part.slice(1, -1) : part.slice(2, -2);
-      try {
-        const span = document.createElement('span');
-        span.className = 'math-inline-wrap';
-        katex.render(math.trim(), span, { displayMode: false, throwOnError: false });
-        container.appendChild(span);
-      } catch {
-        container.appendChild(document.createTextNode(part));
-      }
+      container.appendChild(mathSpan(math.trim(), false, 'math-inline-wrap', part));
       continue;
     }
     // Markdown image ![alt](url)
@@ -95,14 +108,7 @@ function renderInlineContent(text, container) {
 
     if ((seg.startsWith('$$') && seg.endsWith('$$')) || (seg.startsWith('\\[') && seg.endsWith('\\]'))) {
       const math = seg.startsWith('$$') ? seg.slice(2, -2) : seg.slice(2, -2);
-      try {
-        const span = document.createElement('span');
-        span.className = 'math-display-wrap';
-        katex.render(math.trim(), span, { displayMode: true, throwOnError: false });
-        container.appendChild(span);
-      } catch {
-        container.appendChild(document.createTextNode(seg));
-      }
+      container.appendChild(mathSpan(math.trim(), true, 'math-display-wrap', seg));
       continue;
     }
     if (seg.startsWith('![') && seg.includes('](') && seg.endsWith(')')) {

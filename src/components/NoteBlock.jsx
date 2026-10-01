@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import MathText from './MathText.jsx';
 import Icon from './Icon.jsx';
 
@@ -25,7 +25,7 @@ function Alert({ block }) {
 }
 
 function Details({ block }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(!!block.open);
   return (
     <div className={`gp-details${open ? ' open' : ''}`}>
       <button type="button" className="gp-details-summary" onClick={() => setOpen((o) => !o)}>
@@ -60,8 +60,10 @@ function Table({ block }) {
   );
 }
 
-/** Renders one typed note block (see scripts/build_notes.py for the type contract). */
-export default function NoteBlock({ block }) {
+/** Renders one typed note block (see scripts/build_notes.py for the type contract).
+ *  memo'd: sections hold hundreds of blocks — parent state changes (mark-read,
+ *  TOC drawer) must not re-render every block. Block objects are stable. */
+function NoteBlock({ block }) {
   switch (block.t) {
     case 'p':
       return <p className="gp-p"><MathText text={block.text} /></p>;
@@ -104,3 +106,5 @@ export default function NoteBlock({ block }) {
       return null;
   }
 }
+
+export default memo(NoteBlock);

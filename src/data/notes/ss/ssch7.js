@@ -103,70 +103,69 @@ export default {
      "tex": "\\begin{array}{rll}\n\\textbf{Analysis Equation (DTFT):} & X(e^{j\\omega}) = \\displaystyle\\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\omega n} & \\text{(Continuous \\& } 2\\pi\\text{-Periodic in } \\omega\\text{)} \\\\[12pt]\n\\textbf{Synthesis Equation (IDTFT):} & x[n] = \\displaystyle\\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} X(e^{j\\omega}) e^{j\\omega n} \\, d\\omega = \\frac{1}{2\\pi} \\int_{\\langle 2\\pi \\rangle} X(e^{j\\omega}) e^{j\\omega n} \\, d\\omega & \\text{(Discrete Sequence in } n\\text{)}\n\\end{array}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Proof of $2\\pi$-Periodicity"
-    },
-    {
-     "t": "p",
-     "text": "The complex exponential basis function $e^{-j\\omega n}$ satisfies:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j(\\omega + 2\\pi k)n} = e^{-j\\omega n} \\cdot e^{-j 2\\pi k n} = e^{-j\\omega n} \\cdot 1 = e^{-j\\omega n}, \\quad \\forall k, n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting this into the analysis sum:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j(\\omega + 2\\pi)}) = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j(\\omega + 2\\pi)n} = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\omega n} = X(e^{j\\omega})"
-    },
-    {
-     "t": "p",
-     "text": "Hence, the DTFT is inherently **continuous** and **periodic** in $\\omega$ with fundamental period $\\Omega_0 = 2\\pi$."
-    },
-    {
-     "t": "h4",
-     "text": "Orthogonality Derivation of the Synthesis Equation (IDTFT)"
-    },
-    {
-     "t": "p",
-     "text": "Multiply both sides of the analysis equation by $e^{j\\omega m}$ and integrate over one fundamental period $[-\\pi, \\pi]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\pi}^{\\pi} X(e^{j\\omega}) e^{j\\omega m} \\, d\\omega = \\int_{-\\pi}^{\\pi} \\left[ \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\omega n} \\right] e^{j\\omega m} \\, d\\omega = \\sum_{n=-\\infty}^{\\infty} x[n] \\int_{-\\pi}^{\\pi} e^{j\\omega (m-n)} \\, d\\omega"
-    },
-    {
-     "t": "p",
-     "text": "Using the orthogonality of harmonic complex exponentials:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\pi}^{\\pi} e^{j\\omega(m-n)} \\, d\\omega = \\begin{cases} 2\\pi, & m = n \\\\ 0, & m \\neq n \\end{cases} = 2\\pi \\, \\delta[m-n]"
-    },
-    {
-     "t": "p",
-     "text": "Substituting this back collapses the infinite summation to a single nonzero term at $n = m$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\pi}^{\\pi} X(e^{j\\omega}) e^{j\\omega m} \\, d\\omega = 2\\pi \\, x[m] \\implies x[m] = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} X(e^{j\\omega}) e^{j\\omega m} \\, d\\omega \\quad \\blacksquare"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap:** \n1. In Continuous-Time Fourier Transform (CTFT), $X(\\omega)$ is aperiodic. In DTFT, $X(e^{j\\omega})$ is **always $2\\pi$-periodic**. Any integration over the frequency variable must only be performed over an interval of length $2\\pi$ (e.g., $[-\\pi, \\pi]$ or $[0, 2\\pi]$).\n2. The IDTFT contains a normalisation factor of $\\frac{1}{2\\pi}$. Forgetting this factor is the most common pitfall in inverse evaluation questions."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Proof of $2\\pi$-Periodicity"
+      },
+      {
+       "t": "p",
+       "text": "The complex exponential basis function $e^{-j\\omega n}$ satisfies:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j(\\omega + 2\\pi k)n} = e^{-j\\omega n} \\cdot e^{-j 2\\pi k n} = e^{-j\\omega n} \\cdot 1 = e^{-j\\omega n}, \\quad \\forall k, n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting this into the analysis sum:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j(\\omega + 2\\pi)}) = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j(\\omega + 2\\pi)n} = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\omega n} = X(e^{j\\omega})"
+      },
+      {
+       "t": "p",
+       "text": "Hence, the DTFT is inherently **continuous** and **periodic** in $\\omega$ with fundamental period $\\Omega_0 = 2\\pi$."
+      },
+      {
+       "t": "h4",
+       "text": "Orthogonality Derivation of the Synthesis Equation (IDTFT)"
+      },
+      {
+       "t": "p",
+       "text": "Multiply both sides of the analysis equation by $e^{j\\omega m}$ and integrate over one fundamental period $[-\\pi, \\pi]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\pi}^{\\pi} X(e^{j\\omega}) e^{j\\omega m} \\, d\\omega = \\int_{-\\pi}^{\\pi} \\left[ \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\omega n} \\right] e^{j\\omega m} \\, d\\omega = \\sum_{n=-\\infty}^{\\infty} x[n] \\int_{-\\pi}^{\\pi} e^{j\\omega (m-n)} \\, d\\omega"
+      },
+      {
+       "t": "p",
+       "text": "Using the orthogonality of harmonic complex exponentials:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\pi}^{\\pi} e^{j\\omega(m-n)} \\, d\\omega = \\begin{cases} 2\\pi, & m = n \\\\ 0, & m \\neq n \\end{cases} = 2\\pi \\, \\delta[m-n]"
+      },
+      {
+       "t": "p",
+       "text": "Substituting this back collapses the infinite summation to a single nonzero term at $n = m$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\pi}^{\\pi} X(e^{j\\omega}) e^{j\\omega m} \\, d\\omega = 2\\pi \\, x[m] \\implies x[m] = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} X(e^{j\\omega}) e^{j\\omega m} \\, d\\omega \\quad \\blacksquare"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap:** \n1. In Continuous-Time Fourier Transform (CTFT), $X(\\omega)$ is aperiodic. In DTFT, $X(e^{j\\omega})$ is **always $2\\pi$-periodic**. Any integration over the frequency variable must only be performed over an interval of length $2\\pi$ (e.g., $[-\\pi, \\pi]$ or $[0, 2\\pi]$).\n2. The IDTFT contains a normalisation factor of $\\frac{1}{2\\pi}$. Forgetting this factor is the most common pitfall in inverse evaluation questions."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -201,63 +200,62 @@ export default {
      "tex": "X(e^{j(\\omega + 2\\pi)}) = \\frac{1}{1 - a e^{-j(\\omega + 2\\pi)}} = \\frac{1}{1 - a e^{-j\\omega} e^{-j 2\\pi}} = \\frac{1}{1 - a e^{-j\\omega}} = X(e^{j\\omega})"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Worked Examples:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Case $\\vert a\\vert < 1$ (Decaying Causal):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\left(\\frac{1}{2}\\right)^n u[n] \\implies X(e^{j\\omega}) = \\frac{1}{1 - \\frac{1}{2}e^{-j\\omega}}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Case $\\vert a\\vert \\ge 1$ (Growing Causal):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = (2)^n u[n] \\implies \\vert a\\vert = 2 > 1"
-    },
-    {
-     "t": "p",
-     "text": "The ROC of $X(z)$ is $\\vert z\\vert > 2$, which strictly excludes the unit circle $\\vert z\\vert = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore X(e^{j\\omega}) \\to \\textbf{NOT Defined (Does not exist in standard sense)}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Case Negative Base with $\\vert a\\vert < 1$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\left(-\\frac{1}{4}\\right)^n u[n] \\implies X(e^{j\\omega}) = \\frac{1}{1 - \\left(-\\frac{1}{4}\\right)e^{-j\\omega}} = \\frac{1}{1 + \\frac{1}{4}e^{-j\\omega}}"
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**Key Takeaway:** If $\\vert a\\vert \\ge 1$, $a^n u[n]$ does not have a standard continuous DTFT because its energy/magnitude grows without bound, violating Dirichlet's condition $\\sum \\vert x[n]\\vert < \\infty$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Worked Examples:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Case $\\vert a\\vert < 1$ (Decaying Causal):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\left(\\frac{1}{2}\\right)^n u[n] \\implies X(e^{j\\omega}) = \\frac{1}{1 - \\frac{1}{2}e^{-j\\omega}}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Case $\\vert a\\vert \\ge 1$ (Growing Causal):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = (2)^n u[n] \\implies \\vert a\\vert = 2 > 1"
+      },
+      {
+       "t": "p",
+       "text": "The ROC of $X(z)$ is $\\vert z\\vert > 2$, which strictly excludes the unit circle $\\vert z\\vert = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore X(e^{j\\omega}) \\to \\textbf{NOT Defined (Does not exist in standard sense)}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Case Negative Base with $\\vert a\\vert < 1$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\left(-\\frac{1}{4}\\right)^n u[n] \\implies X(e^{j\\omega}) = \\frac{1}{1 - \\left(-\\frac{1}{4}\\right)e^{-j\\omega}} = \\frac{1}{1 + \\frac{1}{4}e^{-j\\omega}}"
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**Key Takeaway:** If $\\vert a\\vert \\ge 1$, $a^n u[n]$ does not have a standard continuous DTFT because its energy/magnitude grows without bound, violating Dirichlet's condition $\\sum \\vert x[n]\\vert < \\infty$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -284,60 +282,59 @@ export default {
      "tex": "\\begin{array}{ll}\nZ\\text{-Transform:} & X(z) = \\displaystyle\\frac{z}{z - a} = \\frac{1}{1 - a z^{-1}}, \\quad \\text{ROC: } \\vert z\\vert < \\vert a\\vert \\\\[10pt]\n\\text{Condition for DTFT:} & \\text{ROC includes unit circle } \\vert z\\vert = 1 \\iff \\vert a\\vert > 1 \\\\[10pt]\n\\text{DTFT:} & X(e^{j\\omega}) = \\displaystyle\\frac{1}{1 - a e^{-j\\omega}}, \\quad \\text{for } \\vert a\\vert > 1\n\\end{array}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Worked Examples:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Anti-causal sequence with $\\vert a\\vert > 1$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = (2)^n u[-n-1] = - \\left[ -(2)^n u[-n-1] \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Here $a = 2 > 1$. The ROC of the underlying negative exponential is $\\vert z\\vert < 2$, which encompasses $\\vert z\\vert = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "X(z) = -\\frac{z}{z-2} = -\\frac{1}{1 - 2z^{-1}} \\implies X(e^{j\\omega}) = -\\frac{1}{1 - 2e^{-j\\omega}} = \\frac{1}{2e^{-j\\omega} - 1}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Anti-causal sequence with $\\vert a\\vert < 1$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\left(\\frac{1}{2}\\right)^n u[-n-1]"
-    },
-    {
-     "t": "p",
-     "text": "Here $a = 1/2 < 1$. The ROC is $\\vert z\\vert < 1/2$, which completely excludes the unit circle $\\vert z\\vert = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore X(e^{j\\omega}) \\to \\textbf{NOT Defined}"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Duality Trap:** Notice the sharp contrast:\n- Causal $a^n u[n]$ requires $\\vert a\\vert < 1$ for DTFT existence.\n- Anti-causal $a^n u[-n-1]$ requires $\\vert a\\vert > 1$ for DTFT existence!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Worked Examples:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Anti-causal sequence with $\\vert a\\vert > 1$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = (2)^n u[-n-1] = - \\left[ -(2)^n u[-n-1] \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Here $a = 2 > 1$. The ROC of the underlying negative exponential is $\\vert z\\vert < 2$, which encompasses $\\vert z\\vert = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "X(z) = -\\frac{z}{z-2} = -\\frac{1}{1 - 2z^{-1}} \\implies X(e^{j\\omega}) = -\\frac{1}{1 - 2e^{-j\\omega}} = \\frac{1}{2e^{-j\\omega} - 1}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Anti-causal sequence with $\\vert a\\vert < 1$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\left(\\frac{1}{2}\\right)^n u[-n-1]"
+      },
+      {
+       "t": "p",
+       "text": "Here $a = 1/2 < 1$. The ROC is $\\vert z\\vert < 1/2$, which completely excludes the unit circle $\\vert z\\vert = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore X(e^{j\\omega}) \\to \\textbf{NOT Defined}"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Duality Trap:** Notice the sharp contrast:\n- Causal $a^n u[n]$ requires $\\vert a\\vert < 1$ for DTFT existence.\n- Anti-causal $a^n u[-n-1]$ requires $\\vert a\\vert > 1$ for DTFT existence!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -376,64 +373,63 @@ export default {
      "text": "Since $\\vert a\\vert < 1$, we have $\\vert a\\vert < 1 < \\frac{1}{\\vert a\\vert}$, so the ROC is an open annulus strictly containing the unit circle $\\vert z\\vert = 1$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Complete Algebraic Derivation of DTFT"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $z = e^{j\\omega}$ into the combined $Z$-transform:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{1}{1 - a e^{-j\\omega}} + \\frac{a e^{j\\omega}}{1 - a e^{j\\omega}}"
-    },
-    {
-     "t": "p",
-     "text": "Combine over a common denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{(1 - a e^{j\\omega}) + a e^{j\\omega}(1 - a e^{-j\\omega})}{(1 - a e^{-j\\omega})(1 - a e^{j\\omega})}"
-    },
-    {
-     "t": "p",
-     "text": "Expand the numerator:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Numerator} = 1 - a e^{j\\omega} + a e^{j\\omega} - a^2 e^{j\\omega} e^{-j\\omega} = 1 - a^2"
-    },
-    {
-     "t": "p",
-     "text": "Expand the denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Denominator} = 1 - a e^{j\\omega} - a e^{-j\\omega} + a^2 e^{-j\\omega} e^{j\\omega} = 1 + a^2 - a(e^{j\\omega} + e^{-j\\omega})"
-    },
-    {
-     "t": "p",
-     "text": "Recalling Euler's identity $\\frac{e^{j\\omega} + e^{-j\\omega}}{2} = \\cos\\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Denominator} = 1 + a^2 - 2a \\cos\\omega"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{1 - a^2}{1 + a^2 - 2a\\cos\\omega}, \\quad \\vert a\\vert < 1 \\quad \\blacksquare"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Complete Algebraic Derivation of DTFT"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $z = e^{j\\omega}$ into the combined $Z$-transform:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{1}{1 - a e^{-j\\omega}} + \\frac{a e^{j\\omega}}{1 - a e^{j\\omega}}"
+      },
+      {
+       "t": "p",
+       "text": "Combine over a common denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{(1 - a e^{j\\omega}) + a e^{j\\omega}(1 - a e^{-j\\omega})}{(1 - a e^{-j\\omega})(1 - a e^{j\\omega})}"
+      },
+      {
+       "t": "p",
+       "text": "Expand the numerator:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Numerator} = 1 - a e^{j\\omega} + a e^{j\\omega} - a^2 e^{j\\omega} e^{-j\\omega} = 1 - a^2"
+      },
+      {
+       "t": "p",
+       "text": "Expand the denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Denominator} = 1 - a e^{j\\omega} - a e^{-j\\omega} + a^2 e^{-j\\omega} e^{j\\omega} = 1 + a^2 - a(e^{j\\omega} + e^{-j\\omega})"
+      },
+      {
+       "t": "p",
+       "text": "Recalling Euler's identity $\\frac{e^{j\\omega} + e^{-j\\omega}}{2} = \\cos\\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Denominator} = 1 + a^2 - 2a \\cos\\omega"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{1 - a^2}{1 + a^2 - 2a\\cos\\omega}, \\quad \\vert a\\vert < 1 \\quad \\blacksquare"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -456,32 +452,35 @@ export default {
      "tex": "\\begin{array}{rll}\n\\textbf{DC Frequency } (\\omega = 0): & \\left. X(e^{j\\omega})\\right\\vert_{\\omega = 0} = \\displaystyle\\frac{1 - a^2}{1 + a^2 - 2a} = \\frac{(1-a)(1+a)}{(1-a)^2} = \\frac{1+a}{1-a} \\\\[12pt]\n\\textbf{Nyquist / High Frequency } (\\omega = \\pi): & \\left. X(e^{j\\omega})\\right\\vert_{\\omega = \\pi} = \\displaystyle\\frac{1 - a^2}{1 + a^2 + 2a} = \\frac{(1-a)(1+a)}{(1+a)^2} = \\frac{1-a}{1+a}\n\\end{array}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Direct Verification via Summation Property"
-    },
-    {
-     "t": "p",
-     "text": "Recall the DC summation property of DTFT:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j0}) = \\sum_{n=-\\infty}^{\\infty} x[n] = \\sum_{n=-\\infty}^{\\infty} a^{\\vert n\\vert} = 1 + 2\\sum_{n=1}^{\\infty} a^n = 1 + \\frac{2a}{1-a} = \\frac{1 - a + 2a}{1 - a} = \\frac{1+a}{1-a}"
-    },
-    {
-     "t": "p",
-     "text": "This matches the formula identically.\nFor $\\omega = \\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\pi}) = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\pi n} = \\sum_{n=-\\infty}^{\\infty} (-1)^n a^{\\vert n\\vert} = 1 + 2\\sum_{n=1}^{\\infty} (-a)^n = 1 - \\frac{2a}{1+a} = \\frac{1-a}{1+a}"
-    },
-    {
-     "t": "p",
-     "text": "Both boundary values are strictly real and positive when $0 < a < 1$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Direct Verification via Summation Property"
+      },
+      {
+       "t": "p",
+       "text": "Recall the DC summation property of DTFT:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j0}) = \\sum_{n=-\\infty}^{\\infty} x[n] = \\sum_{n=-\\infty}^{\\infty} a^{\\vert n\\vert} = 1 + 2\\sum_{n=1}^{\\infty} a^n = 1 + \\frac{2a}{1-a} = \\frac{1 - a + 2a}{1 - a} = \\frac{1+a}{1-a}"
+      },
+      {
+       "t": "p",
+       "text": "This matches the formula identically.\nFor $\\omega = \\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\pi}) = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\pi n} = \\sum_{n=-\\infty}^{\\infty} (-1)^n a^{\\vert n\\vert} = 1 + 2\\sum_{n=1}^{\\infty} (-a)^n = 1 - \\frac{2a}{1+a} = \\frac{1-a}{1+a}"
+      },
+      {
+       "t": "p",
+       "text": "Both boundary values are strictly real and positive when $0 < a < 1$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -500,90 +499,93 @@ export default {
      "tex": "I = \\int_{-\\pi}^{\\pi} \\frac{3}{5 - 4\\cos\\omega} e^{j 2\\omega} \\, d\\omega"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Identification of the Underlying Sequence"
-    },
-    {
-     "t": "p",
-     "text": "We recognise the integrand as having the form $X(e^{j\\omega}) e^{j\\omega n}$ with $n = 2$, where:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{3}{5 - 4\\cos\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "We attempt to match this with the standard symmetric transform:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{1 - a^2}{1 + a^2 - 2a\\cos\\omega}"
-    },
-    {
-     "t": "h4",
-     "text": "The Direct Coefficient Equating Trap (Instructor Caution)"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Fatal Trap Demonstrated on Chalkboard:**\nEquating numerators and denominators directly:\n$$1 - a^2 = 3 \\implies a^2 = -2 \\quad \\text{and} \\quad 1 + a^2 = 5 \\implies a^2 = 4$$\nAdding them produces $2 = 8$, an absurd contradiction!\n**Why this fails:** A rational function can have a common multiplier $K$ in numerator and denominator: $\\frac{K(1-a^2)}{K(1+a^2-2a\\cos\\omega)}$."
-    },
-    {
-     "t": "h4",
-     "text": "Correct Method: Ratio Matching / DC Matching"
-    },
-    {
-     "t": "p",
-     "text": "Equate the ratio of constant term to cosine coefficient in the denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2a}{1+a^2} = \\frac{4}{5} \\implies 10a = 4 + 4a^2 \\implies 4a^2 - 10a + 4 = 0 \\implies 2a^2 - 5a + 2 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "(2a - 1)(a - 2) = 0 \\implies a = \\frac{1}{2} \\quad \\text{or} \\quad a = 2"
-    },
-    {
-     "t": "p",
-     "text": "Since existence requires $\\vert a\\vert < 1$, we select **$a = \\frac{1}{2}$**."
-    },
-    {
-     "t": "p",
-     "text": "Alternatively, evaluate at $\\omega = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left. X(e^{j\\omega}) \\right\\vert_{\\omega = 0} = \\frac{1 - a^2}{1 + a^2 - 2a} = \\frac{3}{5 - 4} = 3"
-    },
-    {
-     "t": "math",
-     "tex": "1 - a^2 = 3(1 + a^2 - 2a) = 3 + 3a^2 - 6a \\implies 4a^2 - 6a + 2 = 0 \\implies 2a^2 - 3a + 1 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "(2a - 1)(a - 1) = 0 \\implies a = 1 \\text{ (rejected, boundary)} \\quad \\text{or} \\quad a = \\frac{1}{2} \\text{ (accepted!)}"
-    },
-    {
-     "t": "h4",
-     "text": "Verification of Scaled Expression"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $a = 1/2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1 - (1/2)^2}{1 + (1/2)^2 - 2(1/2)\\cos\\omega} = \\frac{1 - 1/4}{5/4 - \\cos\\omega} = \\frac{3/4}{\\frac{5 - 4\\cos\\omega}{4}} = \\frac{3}{5 - 4\\cos\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "The form matches with scale factor $K = 1$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Identification of the Underlying Sequence"
+      },
+      {
+       "t": "p",
+       "text": "We recognise the integrand as having the form $X(e^{j\\omega}) e^{j\\omega n}$ with $n = 2$, where:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{3}{5 - 4\\cos\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "We attempt to match this with the standard symmetric transform:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{1 - a^2}{1 + a^2 - 2a\\cos\\omega}"
+      },
+      {
+       "t": "h4",
+       "text": "The Direct Coefficient Equating Trap (Instructor Caution)"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Fatal Trap Demonstrated on Chalkboard:**\nEquating numerators and denominators directly:\n$$1 - a^2 = 3 \\implies a^2 = -2 \\quad \\text{and} \\quad 1 + a^2 = 5 \\implies a^2 = 4$$\nAdding them produces $2 = 8$, an absurd contradiction!\n**Why this fails:** A rational function can have a common multiplier $K$ in numerator and denominator: $\\frac{K(1-a^2)}{K(1+a^2-2a\\cos\\omega)}$."
+      },
+      {
+       "t": "h4",
+       "text": "Correct Method: Ratio Matching / DC Matching"
+      },
+      {
+       "t": "p",
+       "text": "Equate the ratio of constant term to cosine coefficient in the denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2a}{1+a^2} = \\frac{4}{5} \\implies 10a = 4 + 4a^2 \\implies 4a^2 - 10a + 4 = 0 \\implies 2a^2 - 5a + 2 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "(2a - 1)(a - 2) = 0 \\implies a = \\frac{1}{2} \\quad \\text{or} \\quad a = 2"
+      },
+      {
+       "t": "p",
+       "text": "Since existence requires $\\vert a\\vert < 1$, we select **$a = \\frac{1}{2}$**."
+      },
+      {
+       "t": "p",
+       "text": "Alternatively, evaluate at $\\omega = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left. X(e^{j\\omega}) \\right\\vert_{\\omega = 0} = \\frac{1 - a^2}{1 + a^2 - 2a} = \\frac{3}{5 - 4} = 3"
+      },
+      {
+       "t": "math",
+       "tex": "1 - a^2 = 3(1 + a^2 - 2a) = 3 + 3a^2 - 6a \\implies 4a^2 - 6a + 2 = 0 \\implies 2a^2 - 3a + 1 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "(2a - 1)(a - 1) = 0 \\implies a = 1 \\text{ (rejected, boundary)} \\quad \\text{or} \\quad a = \\frac{1}{2} \\text{ (accepted!)}"
+      },
+      {
+       "t": "h4",
+       "text": "Verification of Scaled Expression"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $a = 1/2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1 - (1/2)^2}{1 + (1/2)^2 - 2(1/2)\\cos\\omega} = \\frac{1 - 1/4}{5/4 - \\cos\\omega} = \\frac{3/4}{\\frac{5 - 4\\cos\\omega}{4}} = \\frac{3}{5 - 4\\cos\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "The form matches with scale factor $K = 1$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -622,26 +624,25 @@ export default {
      "tex": "I = \\int_{-\\pi}^{\\pi} \\frac{3}{5 - 4\\cos\\omega} e^{j 2\\omega} \\, d\\omega = \\left. 2\\pi \\, x[n] \\right\\vert_{n = 2} = 2\\pi \\left(\\frac{1}{2}\\right)^{\\vert 2\\vert} = 2\\pi \\left(\\frac{1}{4}\\right) = \\frac{\\pi}{2}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Result Summary:"
-    },
-    {
-     "t": "math",
-     "tex": "I = \\int_{-\\pi}^{\\pi} \\frac{3}{5 - 4\\cos\\omega} e^{j 2\\omega} \\, d\\omega = \\frac{\\pi}{2}"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Exam Tip:** Never attempt contour integration or residues on trigonometric definite integrals of this form in GATE. Always recast the integral into the DTFT synthesis integral $2\\pi x[n_0]$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Result Summary:"
+      },
+      {
+       "t": "math",
+       "tex": "I = \\int_{-\\pi}^{\\pi} \\frac{3}{5 - 4\\cos\\omega} e^{j 2\\omega} \\, d\\omega = \\frac{\\pi}{2}"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Exam Tip:** Never attempt contour integration or residues on trigonometric definite integrals of this form in GATE. Always recast the integral into the DTFT synthesis integral $2\\pi x[n_0]$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -736,28 +737,31 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Phase Extrema Derivation"
-    },
-    {
-     "t": "p",
-     "text": "To find the frequency $\\omega_m$ where phase is extremised, set:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{d\\omega} \\left[ \\frac{\\frac{1}{2}\\sin\\omega}{1 - \\frac{1}{2}\\cos\\omega} \\right] = 0 \\implies \\frac{\\frac{1}{2}\\cos\\omega\\left(1 - \\frac{1}{2}\\cos\\omega\\right) - \\frac{1}{2}\\sin\\omega\\left(\\frac{1}{2}\\sin\\omega\\right)}{\\left(1 - \\frac{1}{2}\\cos\\omega\\right)^2} = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{2}\\cos\\omega - \\frac{1}{4}(\\cos^2\\omega + \\sin^2\\omega) = 0 \\implies \\frac{1}{2}\\cos\\omega - \\frac{1}{4} = 0 \\implies \\cos\\omega = \\frac{1}{2} \\implies \\omega = \\pm \\frac{\\pi}{3}"
-    },
-    {
-     "t": "p",
-     "text": "At $\\omega = \\pi/3$, $\\tan\\theta = \\frac{\\sqrt{3}/4}{3/4} = \\frac{1}{\\sqrt{3}} \\implies \\theta = \\frac{\\pi}{6} \\implies \\angle X(e^{j\\omega}) = -\\frac{\\pi}{6}$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Phase Extrema Derivation"
+      },
+      {
+       "t": "p",
+       "text": "To find the frequency $\\omega_m$ where phase is extremised, set:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{d\\omega} \\left[ \\frac{\\frac{1}{2}\\sin\\omega}{1 - \\frac{1}{2}\\cos\\omega} \\right] = 0 \\implies \\frac{\\frac{1}{2}\\cos\\omega\\left(1 - \\frac{1}{2}\\cos\\omega\\right) - \\frac{1}{2}\\sin\\omega\\left(\\frac{1}{2}\\sin\\omega\\right)}{\\left(1 - \\frac{1}{2}\\cos\\omega\\right)^2} = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{2}\\cos\\omega - \\frac{1}{4}(\\cos^2\\omega + \\sin^2\\omega) = 0 \\implies \\frac{1}{2}\\cos\\omega - \\frac{1}{4} = 0 \\implies \\cos\\omega = \\frac{1}{2} \\implies \\omega = \\pm \\frac{\\pi}{3}"
+      },
+      {
+       "t": "p",
+       "text": "At $\\omega = \\pi/3$, $\\tan\\theta = \\frac{\\sqrt{3}/4}{3/4} = \\frac{1}{\\sqrt{3}} \\implies \\theta = \\frac{\\pi}{6} \\implies \\angle X(e^{j\\omega}) = -\\frac{\\pi}{6}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -840,34 +844,33 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Why $\\omega = \\pi$ is the Maximum Frequency in Discrete Time:"
-    },
-    {
-     "t": "p",
-     "text": "In discrete-time sequences:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $\\omega = 0$: $e^{j 0 \\cdot n} = 1^n = [1, 1, 1, 1, \\dots]$ (Constant, zero rate of change).",
-      "At $\\omega = \\pi$: $e^{j \\pi \\cdot n} = (-1)^n = [1, -1, 1, -1, \\dots]$ (Alternates sign every single sample, highest possible rate of variation).",
-      "At $\\omega = 2\\pi$: $e^{j 2\\pi \\cdot n} = 1^n = [1, 1, 1, 1, \\dots]$ (Identical to DC due to aliasing)."
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**GATE Trap Matrix:** Never integrate up to $\\infty$ in discrete-time frequency analysis. All unique spectral information is completely contained in $[-\\pi, \\pi]$ or $[0, 2\\pi]$. The concept of \"infinite frequency\" does not exist in discrete time; $\\omega = \\pi$ is the absolute ceiling."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Why $\\omega = \\pi$ is the Maximum Frequency in Discrete Time:"
+      },
+      {
+       "t": "p",
+       "text": "In discrete-time sequences:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $\\omega = 0$: $e^{j 0 \\cdot n} = 1^n = [1, 1, 1, 1, \\dots]$ (Constant, zero rate of change).",
+        "At $\\omega = \\pi$: $e^{j \\pi \\cdot n} = (-1)^n = [1, -1, 1, -1, \\dots]$ (Alternates sign every single sample, highest possible rate of variation).",
+        "At $\\omega = 2\\pi$: $e^{j 2\\pi \\cdot n} = 1^n = [1, 1, 1, 1, \\dots]$ (Identical to DC due to aliasing)."
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**GATE Trap Matrix:** Never integrate up to $\\infty$ in discrete-time frequency analysis. All unique spectral information is completely contained in $[-\\pi, \\pi]$ or $[0, 2\\pi]$. The concept of \"infinite frequency\" does not exist in discrete time; $\\omega = \\pi$ is the absolute ceiling."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -985,64 +988,67 @@ export default {
      "text": "Slide 014 (Page 04, Top-Right): Derivation of the Discrete Sinc (Dirichlet Kernel)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Half-Angle Factoring"
-    },
-    {
-     "t": "p",
-     "text": "Factor out the half-angle phase factors from numerator and denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "1 - e^{-j 5\\omega} = e^{-j 5\\omega/2} \\left( e^{j 5\\omega/2} - e^{-j 5\\omega/2} \\right) = e^{-j 5\\omega/2} \\cdot 2j \\sin\\left(\\frac{5\\omega}{2}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "1 - e^{-j\\omega} = e^{-j\\omega/2} \\left( e^{j\\omega/2} - e^{-j\\omega/2} \\right) = e^{-j\\omega/2} \\cdot 2j \\sin\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Substitute these factors into $X(e^{j\\omega})$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{e^{j 2\\omega} \\cdot e^{-j 5\\omega/2} \\cdot 2j \\sin\\left(\\frac{5\\omega}{2}\\right)}{e^{-j\\omega/2} \\cdot 2j \\sin\\left(\\frac{\\omega}{2}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "Simplify the exponential phase terms:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{e^{j 2\\omega} \\cdot e^{-j 2.5\\omega}}{e^{-j 0.5\\omega}} = \\frac{e^{-j 0.5\\omega}}{e^{-j 0.5\\omega}} = 1"
-    },
-    {
-     "t": "p",
-     "text": "Thus, all phase factors cancel out exactly:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{\\sin\\left(\\frac{5\\omega}{2}\\right)}{\\sin\\left(\\frac{\\omega}{2}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Cosine Grouping Form"
-    },
-    {
-     "t": "p",
-     "text": "Grouping symmetric terms around $n = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = 1 + (e^{j\\omega} + e^{-j\\omega}) + (e^{j 2\\omega} + e^{-j 2\\omega}) = 1 + 2\\cos\\omega + 2\\cos 2\\omega"
-    },
-    {
-     "t": "p",
-     "text": "Both representations are mathematically equivalent.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Half-Angle Factoring"
+      },
+      {
+       "t": "p",
+       "text": "Factor out the half-angle phase factors from numerator and denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "1 - e^{-j 5\\omega} = e^{-j 5\\omega/2} \\left( e^{j 5\\omega/2} - e^{-j 5\\omega/2} \\right) = e^{-j 5\\omega/2} \\cdot 2j \\sin\\left(\\frac{5\\omega}{2}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "1 - e^{-j\\omega} = e^{-j\\omega/2} \\left( e^{j\\omega/2} - e^{-j\\omega/2} \\right) = e^{-j\\omega/2} \\cdot 2j \\sin\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Substitute these factors into $X(e^{j\\omega})$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{e^{j 2\\omega} \\cdot e^{-j 5\\omega/2} \\cdot 2j \\sin\\left(\\frac{5\\omega}{2}\\right)}{e^{-j\\omega/2} \\cdot 2j \\sin\\left(\\frac{\\omega}{2}\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "Simplify the exponential phase terms:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{e^{j 2\\omega} \\cdot e^{-j 2.5\\omega}}{e^{-j 0.5\\omega}} = \\frac{e^{-j 0.5\\omega}}{e^{-j 0.5\\omega}} = 1"
+      },
+      {
+       "t": "p",
+       "text": "Thus, all phase factors cancel out exactly:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{\\sin\\left(\\frac{5\\omega}{2}\\right)}{\\sin\\left(\\frac{\\omega}{2}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Cosine Grouping Form"
+      },
+      {
+       "t": "p",
+       "text": "Grouping symmetric terms around $n = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = 1 + (e^{j\\omega} + e^{-j\\omega}) + (e^{j 2\\omega} + e^{-j 2\\omega}) = 1 + 2\\cos\\omega + 2\\cos 2\\omega"
+      },
+      {
+       "t": "p",
+       "text": "Both representations are mathematically equivalent."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1122,71 +1128,70 @@ export default {
      "tex": "x[n] = 1, \\quad \\text{for } n \\in [-7, 8]"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Decomposition Strategy"
-    },
-    {
-     "t": "p",
-     "text": "The sequence spans from $n = -7$ to $n = 8$, totaling $8 - (-7) + 1 = 16$ samples. This sequence is not symmetric about $n = 0$.\nDecompose $x[n]$ into a symmetric core centered at $n = 0$ plus an asymmetric remainder:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Symmetric pulse:** $n \\in [-7, 7]$, containing $2(7) + 1 = 15$ samples.",
-      "**Remainder sample:** a single impulse at $n = 8$, $\\delta[n-8]$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = x_{\\text{sym}}[n] + \\delta[n-8]"
-    },
-    {
-     "t": "h4",
-     "text": "Closed-Form DTFT Evaluation"
-    },
-    {
-     "t": "p",
-     "text": "Applying the general Dirichlet kernel formula with $N = 7$ ($2N+1 = 15$) and amplitude $A = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_{\\text{sym}}(e^{j\\omega}) = \\frac{\\sin\\left(\\frac{15\\omega}{2}\\right)}{\\sin\\left(\\frac{\\omega}{2}\\right)} = \\frac{\\sin(7.5\\omega)}{\\sin(0.5\\omega)}"
-    },
-    {
-     "t": "p",
-     "text": "Applying the time-shift property to the single impulse:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\{\\delta[n-8]\\} = e^{-j 8\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "By linearity:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(e^{j\\omega}) = \\frac{\\sin(7.5\\omega)}{\\sin(0.5\\omega)} + e^{-j 8\\omega}}"
-    },
-    {
-     "t": "h4",
-     "text": "Cosine Expansion Form"
-    },
-    {
-     "t": "p",
-     "text": "Expanding term-by-term:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = 1 + 2\\cos\\omega + 2\\cos 2\\omega + 2\\cos 3\\omega + 2\\cos 4\\omega + 2\\cos 5\\omega + 2\\cos 6\\omega + 2\\cos 7\\omega + e^{-j 8\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Decomposition Strategy"
+      },
+      {
+       "t": "p",
+       "text": "The sequence spans from $n = -7$ to $n = 8$, totaling $8 - (-7) + 1 = 16$ samples. This sequence is not symmetric about $n = 0$.\nDecompose $x[n]$ into a symmetric core centered at $n = 0$ plus an asymmetric remainder:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Symmetric pulse:** $n \\in [-7, 7]$, containing $2(7) + 1 = 15$ samples.",
+        "**Remainder sample:** a single impulse at $n = 8$, $\\delta[n-8]$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = x_{\\text{sym}}[n] + \\delta[n-8]"
+      },
+      {
+       "t": "h4",
+       "text": "Closed-Form DTFT Evaluation"
+      },
+      {
+       "t": "p",
+       "text": "Applying the general Dirichlet kernel formula with $N = 7$ ($2N+1 = 15$) and amplitude $A = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_{\\text{sym}}(e^{j\\omega}) = \\frac{\\sin\\left(\\frac{15\\omega}{2}\\right)}{\\sin\\left(\\frac{\\omega}{2}\\right)} = \\frac{\\sin(7.5\\omega)}{\\sin(0.5\\omega)}"
+      },
+      {
+       "t": "p",
+       "text": "Applying the time-shift property to the single impulse:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\{\\delta[n-8]\\} = e^{-j 8\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "By linearity:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(e^{j\\omega}) = \\frac{\\sin(7.5\\omega)}{\\sin(0.5\\omega)} + e^{-j 8\\omega}}"
+      },
+      {
+       "t": "h4",
+       "text": "Cosine Expansion Form"
+      },
+      {
+       "t": "p",
+       "text": "Expanding term-by-term:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = 1 + 2\\cos\\omega + 2\\cos 2\\omega + 2\\cos 3\\omega + 2\\cos 4\\omega + 2\\cos 5\\omega + 2\\cos 6\\omega + 2\\cos 7\\omega + e^{-j 8\\omega}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1321,32 +1326,31 @@ export default {
      "text": "This is an infinite periodic impulse train of strength $2\\pi$ located at $\\omega = 0, \\pm 2\\pi, \\pm 4\\pi, \\dots$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Inverse DTFT Verification"
-    },
-    {
-     "t": "p",
-     "text": "Substitute into the IDTFT over $[-\\pi, \\pi]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} \\left[ 2\\pi \\sum_{l=-\\infty}^{\\infty} \\delta(\\omega - 2\\pi l) \\right] e^{j\\omega n} \\, d\\omega"
-    },
-    {
-     "t": "p",
-     "text": "In the integration interval $[-\\pi, \\pi]$, only the $l = 0$ impulse at $\\omega = 0$ lies within the integration limits:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} 2\\pi \\, \\delta(\\omega) e^{j\\omega n} \\, d\\omega = e^{j(0)n} = 1, \\quad \\forall n \\in \\mathbb{Z} \\quad \\blacksquare"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Inverse DTFT Verification"
+      },
+      {
+       "t": "p",
+       "text": "Substitute into the IDTFT over $[-\\pi, \\pi]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} \\left[ 2\\pi \\sum_{l=-\\infty}^{\\infty} \\delta(\\omega - 2\\pi l) \\right] e^{j\\omega n} \\, d\\omega"
+      },
+      {
+       "t": "p",
+       "text": "In the integration interval $[-\\pi, \\pi]$, only the $l = 0$ impulse at $\\omega = 0$ lies within the integration limits:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} 2\\pi \\, \\delta(\\omega) e^{j\\omega n} \\, d\\omega = e^{j(0)n} = 1, \\quad \\forall n \\in \\mathbb{Z} \\quad \\blacksquare"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1530,34 +1534,33 @@ export default {
      "tex": "a < 2\\pi - a \\implies 2a < 2\\pi \\implies \\boxed{a < \\pi}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "What happens if $a = \\pi$?"
-    },
-    {
-     "t": "p",
-     "text": "When $a = \\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{\\sin(\\pi n)}{\\pi n} = \\begin{cases} 1, & n = 0 \\\\ 0, & n \\neq 0 \\end{cases} = \\delta[n]"
-    },
-    {
-     "t": "p",
-     "text": "Its DTFT is $X(e^{j\\omega}) = 1$ for all $\\omega$, which matches the continuous constant band formed when adjacent rectangles of width $2\\pi$ touch edge-to-edge!"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "If $a > \\pi$, the rectangular blocks overlap, causing spectral aliasing and adding amplitudes together, violating the simple single-band ideal low-pass filter characteristic."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "What happens if $a = \\pi$?"
+      },
+      {
+       "t": "p",
+       "text": "When $a = \\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{\\sin(\\pi n)}{\\pi n} = \\begin{cases} 1, & n = 0 \\\\ 0, & n \\neq 0 \\end{cases} = \\delta[n]"
+      },
+      {
+       "t": "p",
+       "text": "Its DTFT is $X(e^{j\\omega}) = 1$ for all $\\omega$, which matches the continuous constant band formed when adjacent rectangles of width $2\\pi$ touch edge-to-edge!"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "If $a > \\pi$, the rectangular blocks overlap, causing spectral aliasing and adding amplitudes together, violating the simple single-band ideal low-pass filter characteristic."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1667,58 +1670,57 @@ export default {
      "text": "flowchart TD\n    A[\"Given Frequency Spectrum: X(\u03c9), X(e^{j\u03c9}), c_n, c_k\"] --> B{\"Is Magnitude Spectrum |X| Even?\"}\n    B -- \"NO (|X| is NOT Even)\" --> C[\"x(t) / x[n] is strictly COMPLEX\"]\n    B -- \"YES (|X| is Even)\" --> D{\"Evaluate Phase Sum: \u2220(+\u03c9) + \u2220(-\u03c9)\"}\n    D -- \"= 2n\u03c0 (Even multiple of \u03c0)\" --> E[\"x(t) / x[n] is strictly REAL\"]\n    D -- \"= (2n+1)\u03c0 (Odd multiple of \u03c0)\" --> F[\"x(t) / x[n] is strictly IMAGINARY\"]"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Justification:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Real Signal Condition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] \\in \\mathbb{R} \\iff X(e^{-j\\omega}) = X^*(e^{j\\omega})"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert X(e^{-j\\omega})\\vert e^{j\\angle X(e^{-j\\omega})} = \\vert X(e^{j\\omega})\\vert e^{-j\\angle X(e^{j\\omega})}"
-    },
-    {
-     "t": "p",
-     "text": "This requires:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert X(e^{-j\\omega})\\vert = \\vert X(e^{j\\omega})\\vert \\quad (\\text{Magnitude is Even})"
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(e^{-j\\omega}) = -\\angle X(e^{j\\omega}) + 2n\\pi \\implies \\angle X(e^{j\\omega}) + \\angle X(e^{-j\\omega}) = 2n\\pi"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Purely Imaginary Signal Condition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = j y[n], \\quad y[n] \\in \\mathbb{R} \\iff X(e^{-j\\omega}) = -X^*(e^{j\\omega}) = X^*(e^{j\\omega}) e^{j(2n+1)\\pi}"
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(e^{-j\\omega}) = -\\angle X(e^{j\\omega}) + (2n+1)\\pi \\implies \\angle X(e^{j\\omega}) + \\angle X(e^{-j\\omega}) = (2n+1)\\pi"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Mathematical Justification:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Real Signal Condition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] \\in \\mathbb{R} \\iff X(e^{-j\\omega}) = X^*(e^{j\\omega})"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert X(e^{-j\\omega})\\vert e^{j\\angle X(e^{-j\\omega})} = \\vert X(e^{j\\omega})\\vert e^{-j\\angle X(e^{j\\omega})}"
+      },
+      {
+       "t": "p",
+       "text": "This requires:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert X(e^{-j\\omega})\\vert = \\vert X(e^{j\\omega})\\vert \\quad (\\text{Magnitude is Even})"
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(e^{-j\\omega}) = -\\angle X(e^{j\\omega}) + 2n\\pi \\implies \\angle X(e^{j\\omega}) + \\angle X(e^{-j\\omega}) = 2n\\pi"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Purely Imaginary Signal Condition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = j y[n], \\quad y[n] \\in \\mathbb{R} \\iff X(e^{-j\\omega}) = -X^*(e^{j\\omega}) = X^*(e^{j\\omega}) e^{j(2n+1)\\pi}"
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(e^{-j\\omega}) = -\\angle X(e^{j\\omega}) + (2n+1)\\pi \\implies \\angle X(e^{j\\omega}) + \\angle X(e^{-j\\omega}) = (2n+1)\\pi"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1841,79 +1843,78 @@ export default {
      "text": "Determine the exact nature of the time-domain sequence $x[n]$ and its spectrum $X(e^{j\\omega})$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Magnitude Symmetry Check"
-    },
-    {
-     "t": "p",
-     "text": "The magnitude spectrum $\\vert X(e^{j\\omega})\\vert$ is non-zero over $[-b, -a]$ and $[a, b]$ with equal shape and height:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert X(e^{-j\\omega})\\vert = \\vert X(e^{j\\omega})\\vert \\implies \\textbf{Magnitude is EVEN}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, $x[n]$ cannot be complex or NENO; it is either purely Real or purely Imaginary, and either Even or Odd."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Real vs Imaginary Test (Phase Sum)"
-    },
-    {
-     "t": "p",
-     "text": "For $\\omega \\in [a, b]$, $-\\omega \\in [-b, -a]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\angle X(e^{j\\omega}) = 0, \\quad \\angle X(e^{-j\\omega}) = -\\pi"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sum} = \\angle X(e^{j\\omega}) + \\angle X(e^{-j\\omega}) = 0 + (-\\pi) = -\\pi"
-    },
-    {
-     "t": "p",
-     "text": "Because $-\\pi = (2(-1) + 1)\\pi$ is an **odd multiple of $\\pi$**:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] \\text{ is strictly IMAGINARY}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Even vs Odd Test (Phase Difference)"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Difference} = \\angle X(e^{j\\omega}) - \\angle X(e^{-j\\omega}) = 0 - (-\\pi) = +\\pi"
-    },
-    {
-     "t": "p",
-     "text": "Because $+\\pi = (2(0) + 1)\\pi$ is an **odd multiple of $\\pi$**:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] \\text{ is strictly ODD}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Final Classification"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Time Domain:** $x[n]$ is **Imaginary + Odd + Conjugate Symmetric ($I + O + C.S.$)**.",
-      "**Frequency Domain:** $X(e^{j\\omega})$ is **Real + Odd + Conjugate Anti-Symmetric ($R + O + C.A.S.$)**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Magnitude Symmetry Check"
+      },
+      {
+       "t": "p",
+       "text": "The magnitude spectrum $\\vert X(e^{j\\omega})\\vert$ is non-zero over $[-b, -a]$ and $[a, b]$ with equal shape and height:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert X(e^{-j\\omega})\\vert = \\vert X(e^{j\\omega})\\vert \\implies \\textbf{Magnitude is EVEN}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, $x[n]$ cannot be complex or NENO; it is either purely Real or purely Imaginary, and either Even or Odd."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Real vs Imaginary Test (Phase Sum)"
+      },
+      {
+       "t": "p",
+       "text": "For $\\omega \\in [a, b]$, $-\\omega \\in [-b, -a]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\angle X(e^{j\\omega}) = 0, \\quad \\angle X(e^{-j\\omega}) = -\\pi"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sum} = \\angle X(e^{j\\omega}) + \\angle X(e^{-j\\omega}) = 0 + (-\\pi) = -\\pi"
+      },
+      {
+       "t": "p",
+       "text": "Because $-\\pi = (2(-1) + 1)\\pi$ is an **odd multiple of $\\pi$**:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] \\text{ is strictly IMAGINARY}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Even vs Odd Test (Phase Difference)"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Difference} = \\angle X(e^{j\\omega}) - \\angle X(e^{-j\\omega}) = 0 - (-\\pi) = +\\pi"
+      },
+      {
+       "t": "p",
+       "text": "Because $+\\pi = (2(0) + 1)\\pi$ is an **odd multiple of $\\pi$**:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] \\text{ is strictly ODD}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Final Classification"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Time Domain:** $x[n]$ is **Imaginary + Odd + Conjugate Symmetric ($I + O + C.S.$)**.",
+        "**Frequency Domain:** $X(e^{j\\omega})$ is **Real + Odd + Conjugate Anti-Symmetric ($R + O + C.A.S.$)**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1948,54 +1949,53 @@ export default {
      "tex": "\\boxed{u[n] \\xrightarrow{\\text{DTFT}} \\frac{1}{1 - e^{-j\\omega}} + \\pi \\sum_{l=-\\infty}^{\\infty} \\delta(\\omega - 2\\pi l)}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Rigorous Decomposition Derivation"
-    },
-    {
-     "t": "p",
-     "text": "Decompose $u[n]$ into its even and odd parts:"
-    },
-    {
-     "t": "math",
-     "tex": "u[n] = \\frac{1}{2} + \\frac{1}{2} \\text{sgn}[n]"
-    },
-    {
-     "t": "p",
-     "text": "where $\\text{sgn}[n] = \\begin{cases} 1, & n > 0 \\\\ 0, & n = 0 \\\\ -1, & n < 0 \\end{cases}$.\nFrom Slide 019:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}\\left\\{\\frac{1}{2}\\right\\} = \\frac{1}{2} \\left[ 2\\pi \\sum_{l=-\\infty}^{\\infty} \\delta(\\omega - 2\\pi l) \\right] = \\pi \\sum_{l=-\\infty}^{\\infty} \\delta(\\omega - 2\\pi l)"
-    },
-    {
-     "t": "p",
-     "text": "For the odd component, we know that $(u[n] - u[n-1]) = \\delta[n]$. Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "(1 - e^{-j\\omega}) X(e^{j\\omega}) = 1 \\implies X(e^{j\\omega}) = \\frac{1}{1 - e^{-j\\omega}} \\quad (\\text{for } \\omega \\neq 2\\pi l)"
-    },
-    {
-     "t": "p",
-     "text": "Combining both contributions yields the complete distribution:"
-    },
-    {
-     "t": "math",
-     "tex": "U(e^{j\\omega}) = \\frac{1}{1 - e^{-j\\omega}} + \\pi \\sum_{l=-\\infty}^{\\infty} \\delta(\\omega - 2\\pi l) \\quad \\blacksquare"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap:** Writing $\\mathcal{F}\\{u[n]\\} = \\frac{1}{1 - e^{-j\\omega}}$ without the impulse train $\\pi \\sum \\delta(\\omega - 2\\pi l)$ is completely incorrect! The sequence $u[n]$ has a DC average value of $1/2$, which produces the impulsive term at $\\omega = 2\\pi l$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Rigorous Decomposition Derivation"
+      },
+      {
+       "t": "p",
+       "text": "Decompose $u[n]$ into its even and odd parts:"
+      },
+      {
+       "t": "math",
+       "tex": "u[n] = \\frac{1}{2} + \\frac{1}{2} \\text{sgn}[n]"
+      },
+      {
+       "t": "p",
+       "text": "where $\\text{sgn}[n] = \\begin{cases} 1, & n > 0 \\\\ 0, & n = 0 \\\\ -1, & n < 0 \\end{cases}$.\nFrom Slide 019:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}\\left\\{\\frac{1}{2}\\right\\} = \\frac{1}{2} \\left[ 2\\pi \\sum_{l=-\\infty}^{\\infty} \\delta(\\omega - 2\\pi l) \\right] = \\pi \\sum_{l=-\\infty}^{\\infty} \\delta(\\omega - 2\\pi l)"
+      },
+      {
+       "t": "p",
+       "text": "For the odd component, we know that $(u[n] - u[n-1]) = \\delta[n]$. Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "(1 - e^{-j\\omega}) X(e^{j\\omega}) = 1 \\implies X(e^{j\\omega}) = \\frac{1}{1 - e^{-j\\omega}} \\quad (\\text{for } \\omega \\neq 2\\pi l)"
+      },
+      {
+       "t": "p",
+       "text": "Combining both contributions yields the complete distribution:"
+      },
+      {
+       "t": "math",
+       "tex": "U(e^{j\\omega}) = \\frac{1}{1 - e^{-j\\omega}} + \\pi \\sum_{l=-\\infty}^{\\infty} \\delta(\\omega - 2\\pi l) \\quad \\blacksquare"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap:** Writing $\\mathcal{F}\\{u[n]\\} = \\frac{1}{1 - e^{-j\\omega}}$ without the impulse train $\\pi \\sum \\delta(\\omega - 2\\pi l)$ is completely incorrect! The sequence $u[n]$ has a DC average value of $1/2$, which produces the impulsive term at $\\omega = 2\\pi l$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -2837,153 +2837,152 @@ export default {
      "tex": "\\text{sgn}[n] = \\begin{cases} +1, & n > 0 \\\\ 0, & n = 0 \\\\ -1, & n < 0 \\end{cases}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Decomposition via Unit Step Sequences"
-    },
-    {
-     "t": "p",
-     "text": "Express the signum sequence as the difference between a causal step and an anti-causal step:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{sgn}[n] = u[n] - u[-n]"
-    },
-    {
-     "t": "p",
-     "text": "Verification at discrete sample points:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n > 0$: $u[n] = 1$, $u[-n] = 0 \\implies \\text{sgn}[n] = 1 - 0 = +1$.",
-      "For $n = 0$: $u[0] = 1$, $u[-0] = 1 \\implies \\text{sgn}[0] = 1 - 1 = 0$.",
-      "For $n < 0$: $u[n] = 0$, $u[-n] = 1 \\implies \\text{sgn}[n] = 0 - 1 = -1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The decomposition matches the definition for all $n \\in \\mathbb{Z}$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Recalling the DTFT of the Discrete Unit Step $u[n]$"
-    },
-    {
-     "t": "p",
-     "text": "The unit step has non-decaying average DC value $1/2$, yielding an impulse train at integer multiples of $2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "u[n] \\xrightarrow{\\text{DTFT}} \\frac{1}{1 - e^{-j\\omega}} + \\pi \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Application of Time-Reversal Property"
-    },
-    {
-     "t": "p",
-     "text": "Using the time-reversal property $x[-n] \\leftrightarrow X(e^{-j\\omega})$:"
-    },
-    {
-     "t": "math",
-     "tex": "u[-n] \\xrightarrow{\\text{DTFT}} \\frac{1}{1 - e^{j\\omega}} + \\pi \\sum_{l=-\\infty}^\\infty \\delta(-\\omega - 2\\pi l)"
-    },
-    {
-     "t": "p",
-     "text": "Because the Dirac delta function is even ($\\delta(-\\alpha) = \\delta(\\alpha)$) and the summation index ranges over all integers $l \\in \\mathbb{Z}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{l=-\\infty}^\\infty \\delta(-\\omega - 2\\pi l) = \\sum_{l=-\\infty}^\\infty \\delta(\\omega + 2\\pi l) = \\sum_{m=-\\infty}^\\infty \\delta(\\omega - 2\\pi m)"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the impulse train in $u[-n]$ is identical to the impulse train in $u[n]$!"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Subtraction and Cancellation of Impulse Trains"
-    },
-    {
-     "t": "p",
-     "text": "Subtracting the transforms:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\left[ \\frac{1}{1 - e^{-j\\omega}} + \\pi \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l) \\right] - \\left[ \\frac{1}{1 - e^{j\\omega}} + \\pi \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "The periodic impulse trains cancel completely:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{1}{1 - e^{-j\\omega}} - \\frac{1}{1 - e^{j\\omega}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Algebraic and Trigonometric Reduction"
-    },
-    {
-     "t": "p",
-     "text": "Rewrite the second term:"
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{1}{1 - e^{j\\omega}} = -\\frac{e^{-j\\omega}}{e^{-j\\omega} - 1} = +\\frac{e^{-j\\omega}}{1 - e^{-j\\omega}}"
-    },
-    {
-     "t": "p",
-     "text": "Combining over a common denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{1 + e^{-j\\omega}}{1 - e^{-j\\omega}}"
-    },
-    {
-     "t": "p",
-     "text": "Factor out the half-angle exponential $e^{-j\\omega/2}$ from numerator and denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{e^{-j\\omega/2} \\left[ e^{j\\omega/2} + e^{-j\\omega/2} \\right]}{e^{-j\\omega/2} \\left[ e^{j\\omega/2} - e^{-j\\omega/2} \\right]} = \\frac{2 \\cos(\\omega/2)}{2j \\sin(\\omega/2)}"
-    },
-    {
-     "t": "p",
-     "text": "Simplifying the complex fraction ($\\frac{1}{j} = -j$):"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\frac{-j \\cos(\\omega/2)}{\\sin(\\omega/2)} = -j \\cot\\left(\\frac{\\omega}{2}\\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 6: Final Boxed Transform Pair"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{sgn}[n] \\longleftrightarrow -j \\cot\\left(\\frac{\\omega}{2}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Conceptual Insights:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Symmetry Verification:** $\\text{sgn}[n]$ is purely real and strictly odd ($x[-n] = -x[n]$). According to DTFT symmetry theorems, the transform of any real and odd sequence MUST be purely imaginary and odd. Indeed, $-j\\cot(\\omega/2)$ contains only the imaginary unit $j$, and $\\cot(-\\omega/2) = -\\cot(\\omega/2)$ confirms odd symmetry.",
-      "**Impulse Trap:** Students often mistakenly assume that because $\\text{sgn}[n]$ does not decay to zero as $n \\to \\pm \\infty$, its DTFT must contain frequency impulses $\\delta(\\omega)$. However, the net average DC area of $\\text{sgn}[n]$ is zero ($\\sum_{n=-\\infty}^\\infty \\text{sgn}[n] = 0$), so the impulse coefficient at $\\omega = 0$ vanishes identically.",
-      "**Singularity at $\\omega = 0$:** As $\\omega \\to 0$, $\\cot(\\omega/2) \\approx \\frac{2}{\\omega}$, giving $X(e^{j\\omega}) \\approx \\frac{2}{j\\omega}$, which exactly mirrors the continuous-time Fourier transform pair $\\text{sgn}(t) \\leftrightarrow \\frac{2}{j\\omega}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Decomposition via Unit Step Sequences"
+      },
+      {
+       "t": "p",
+       "text": "Express the signum sequence as the difference between a causal step and an anti-causal step:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{sgn}[n] = u[n] - u[-n]"
+      },
+      {
+       "t": "p",
+       "text": "Verification at discrete sample points:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n > 0$: $u[n] = 1$, $u[-n] = 0 \\implies \\text{sgn}[n] = 1 - 0 = +1$.",
+        "For $n = 0$: $u[0] = 1$, $u[-0] = 1 \\implies \\text{sgn}[0] = 1 - 1 = 0$.",
+        "For $n < 0$: $u[n] = 0$, $u[-n] = 1 \\implies \\text{sgn}[n] = 0 - 1 = -1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The decomposition matches the definition for all $n \\in \\mathbb{Z}$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Recalling the DTFT of the Discrete Unit Step $u[n]$"
+      },
+      {
+       "t": "p",
+       "text": "The unit step has non-decaying average DC value $1/2$, yielding an impulse train at integer multiples of $2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "u[n] \\xrightarrow{\\text{DTFT}} \\frac{1}{1 - e^{-j\\omega}} + \\pi \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Application of Time-Reversal Property"
+      },
+      {
+       "t": "p",
+       "text": "Using the time-reversal property $x[-n] \\leftrightarrow X(e^{-j\\omega})$:"
+      },
+      {
+       "t": "math",
+       "tex": "u[-n] \\xrightarrow{\\text{DTFT}} \\frac{1}{1 - e^{j\\omega}} + \\pi \\sum_{l=-\\infty}^\\infty \\delta(-\\omega - 2\\pi l)"
+      },
+      {
+       "t": "p",
+       "text": "Because the Dirac delta function is even ($\\delta(-\\alpha) = \\delta(\\alpha)$) and the summation index ranges over all integers $l \\in \\mathbb{Z}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{l=-\\infty}^\\infty \\delta(-\\omega - 2\\pi l) = \\sum_{l=-\\infty}^\\infty \\delta(\\omega + 2\\pi l) = \\sum_{m=-\\infty}^\\infty \\delta(\\omega - 2\\pi m)"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the impulse train in $u[-n]$ is identical to the impulse train in $u[n]$!"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Subtraction and Cancellation of Impulse Trains"
+      },
+      {
+       "t": "p",
+       "text": "Subtracting the transforms:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\left[ \\frac{1}{1 - e^{-j\\omega}} + \\pi \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l) \\right] - \\left[ \\frac{1}{1 - e^{j\\omega}} + \\pi \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "The periodic impulse trains cancel completely:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{1}{1 - e^{-j\\omega}} - \\frac{1}{1 - e^{j\\omega}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Algebraic and Trigonometric Reduction"
+      },
+      {
+       "t": "p",
+       "text": "Rewrite the second term:"
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{1}{1 - e^{j\\omega}} = -\\frac{e^{-j\\omega}}{e^{-j\\omega} - 1} = +\\frac{e^{-j\\omega}}{1 - e^{-j\\omega}}"
+      },
+      {
+       "t": "p",
+       "text": "Combining over a common denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{1 + e^{-j\\omega}}{1 - e^{-j\\omega}}"
+      },
+      {
+       "t": "p",
+       "text": "Factor out the half-angle exponential $e^{-j\\omega/2}$ from numerator and denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{e^{-j\\omega/2} \\left[ e^{j\\omega/2} + e^{-j\\omega/2} \\right]}{e^{-j\\omega/2} \\left[ e^{j\\omega/2} - e^{-j\\omega/2} \\right]} = \\frac{2 \\cos(\\omega/2)}{2j \\sin(\\omega/2)}"
+      },
+      {
+       "t": "p",
+       "text": "Simplifying the complex fraction ($\\frac{1}{j} = -j$):"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\frac{-j \\cos(\\omega/2)}{\\sin(\\omega/2)} = -j \\cot\\left(\\frac{\\omega}{2}\\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 6: Final Boxed Transform Pair"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{sgn}[n] \\longleftrightarrow -j \\cot\\left(\\frac{\\omega}{2}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Conceptual Insights:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Symmetry Verification:** $\\text{sgn}[n]$ is purely real and strictly odd ($x[-n] = -x[n]$). According to DTFT symmetry theorems, the transform of any real and odd sequence MUST be purely imaginary and odd. Indeed, $-j\\cot(\\omega/2)$ contains only the imaginary unit $j$, and $\\cot(-\\omega/2) = -\\cot(\\omega/2)$ confirms odd symmetry.",
+        "**Impulse Trap:** Students often mistakenly assume that because $\\text{sgn}[n]$ does not decay to zero as $n \\to \\pm \\infty$, its DTFT must contain frequency impulses $\\delta(\\omega)$. However, the net average DC area of $\\text{sgn}[n]$ is zero ($\\sum_{n=-\\infty}^\\infty \\text{sgn}[n] = 0$), so the impulse coefficient at $\\omega = 0$ vanishes identically.",
+        "**Singularity at $\\omega = 0$:** As $\\omega \\to 0$, $\\cot(\\omega/2) \\approx \\frac{2}{\\omega}$, giving $X(e^{j\\omega}) \\approx \\frac{2}{j\\omega}$, which exactly mirrors the continuous-time Fourier transform pair $\\text{sgn}(t) \\leftrightarrow \\frac{2}{j\\omega}$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -2998,169 +2997,168 @@ export default {
      "tex": "x[n] = \\left[ \\frac{\\sin(\\frac{\\pi}{4} n)}{\\pi n} \\right] \\cdot \\left[ \\frac{\\sin(\\frac{2\\pi}{3} n)}{\\pi n} \\right]"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Identification of Factor Spectra"
-    },
-    {
-     "t": "p",
-     "text": "Let:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1[n] = \\frac{\\sin(\\omega_{c1} n)}{\\pi n}, \\quad \\text{where } \\omega_{c1} = \\frac{\\pi}{4}"
-    },
-    {
-     "t": "math",
-     "tex": "x_2[n] = \\frac{\\sin(\\omega_{c2} n)}{\\pi n}, \\quad \\text{where } \\omega_{c2} = \\frac{2\\pi}{3}"
-    },
-    {
-     "t": "p",
-     "text": "The DTFT of the canonical discrete sinc sequence $\\frac{\\sin(\\omega_c n)}{\\pi n}$ is a periodic train of rectangular pulses of height $1$ and width $2\\omega_c$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(e^{j\\omega}) = \\begin{cases} 1, & \\vert\\omega\\vert \\le \\frac{\\pi}{4} \\\\ 0, & \\frac{\\pi}{4} < \\vert\\omega\\vert \\le \\pi \\end{cases} \\quad (\\text{periodic with } 2\\pi)"
-    },
-    {
-     "t": "math",
-     "tex": "X_2(e^{j\\omega}) = \\begin{cases} 1, & \\vert\\omega\\vert \\le \\frac{2\\pi}{3} \\\\ 0, & \\frac{2\\pi}{3} < \\vert\\omega\\vert \\le \\pi \\end{cases} \\quad (\\text{periodic with } 2\\pi)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Multiplication Theorem in Discrete-Time"
-    },
-    {
-     "t": "p",
-     "text": "Time-domain multiplication corresponds to periodic convolution in frequency:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = x_1[n] \\cdot x_2[n] \\longleftrightarrow X(e^{j\\omega}) = \\frac{1}{2\\pi} \\left[ X_1(e^{j\\omega}) \\circledast X_2(e^{j\\omega}) \\right] = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi X_1(e^{j\\theta}) X_2(e^{j(\\omega - \\theta)}) d\\theta"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Determining Trapezoidal Geometry Over the Principal Period"
-    },
-    {
-     "t": "p",
-     "text": "The continuous convolution of two rectangular pulses of heights $A_1 = 1, A_2 = 1$ and widths $W_1 = 2\\omega_{c1} = \\frac{\\pi}{2}$, $W_2 = 2\\omega_{c2} = \\frac{4\\pi}{3}$ produces a symmetric trapezoid:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Peak Height of Convolution:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Height} = \\frac{1}{2\\pi} \\times A_1 \\times A_2 \\times \\min(W_1, W_2) = \\frac{1}{2\\pi} \\times 1 \\times 1 \\times \\frac{\\pi}{2} = \\frac{1}{4}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Flat-Top Width (Region of Maximum Overlap):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_{\\text{flat}} = \\vert W_2 - W_1\\vert = \\frac{4\\pi}{3} - \\frac{\\pi}{2} = \\frac{8\\pi - 3\\pi}{6} = \\frac{5\\pi}{6}"
-    },
-    {
-     "t": "p",
-     "text": "Since the trapezoid is centered at $\\omega = 0$, the flat top spans:"
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{W_{\\text{flat}}}{2} \\le \\omega \\le +\\frac{W_{\\text{flat}}}{2} \\implies -\\frac{5\\pi}{12} \\le \\omega \\le +\\frac{5\\pi}{12}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Total Base Width (Support of Single Pulse):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_{\\text{base}} = W_1 + W_2 = \\frac{\\pi}{2} + \\frac{4\\pi}{3} = \\frac{11\\pi}{6}"
-    },
-    {
-     "t": "p",
-     "text": "The base extends symmetrically across:"
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{W_{\\text{base}}}{2} \\le \\omega \\le +\\frac{W_{\\text{base}}}{2} \\implies -\\frac{11\\pi}{12} \\le \\omega \\le +\\frac{11\\pi}{12}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Transition / Ramp Width:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Each linear ramp has width equal to $\\min(W_1, W_2) = \\frac{\\pi}{2} = \\frac{6\\pi}{12}$.\n  Indeed, $\\frac{11\\pi}{12} - \\frac{5\\pi}{12} = \\frac{6\\pi}{12} = \\frac{\\pi}{2}$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Verification of Periodic Non-Overlap"
-    },
-    {
-     "t": "p",
-     "text": "Check whether neighboring periodic replicas centered at $\\pm 2\\pi$ overlap with the central trapezoid:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The base of the central trapezoid ends at $\\omega = +\\frac{11\\pi}{12}$.",
-      "The base of the right neighbor centered at $\\omega = 2\\pi$ begins at:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_{\\text{start}} = 2\\pi - \\frac{11\\pi}{12} = \\frac{13\\pi}{12}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\frac{11\\pi}{12} < \\pi < \\frac{13\\pi}{12}$, the gap between adjacent trapezoids has width:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta\\omega_{\\text{gap}} = \\frac{13\\pi}{12} - \\frac{11\\pi}{12} = \\frac{2\\pi}{12} = \\frac{\\pi}{6} > 0"
-    },
-    {
-     "t": "p",
-     "text": "There is NO aliasing between adjacent periods. The spectrum is identically zero over the interval $\\frac{11\\pi}{12} \\le \\vert\\omega\\vert \\le \\pi$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Analytical Specification of $X(e^{j\\omega})$ over $[-\\pi, \\pi]$"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(e^{j\\omega}) = \\begin{cases} \\frac{1}{4}, & \\vert\\omega\\vert \\le \\frac{5\\pi}{12} \\\\ \\frac{1}{4} - \\frac{1}{2\\pi}\\left( \\vert\\omega\\vert - \\frac{5\\pi}{12} \\right), & \\frac{5\\pi}{12} < \\vert\\omega\\vert \\le \\frac{11\\pi}{12} \\\\ 0, & \\frac{11\\pi}{12} < \\vert\\omega\\vert \\le \\pi \\end{cases}}"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Numerical Hazards:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**The $\\frac{1}{2\\pi}$ Normalization Factor:** The most frequent error in GATE is forgetting to divide the periodic convolution by $2\\pi$. Without this factor, the peak amplitude would erroneously be calculated as $\\pi/2$ instead of $1/4$.",
-      "**Periodic Gap Inspection:** Always verify whether $W_1 + W_2 > 2\\pi$. If $W_1 + W_2 > 2\\pi$, adjacent periodic trapezoids overlap, and their tails must be summed (as occurs in Slide 043)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Identification of Factor Spectra"
+      },
+      {
+       "t": "p",
+       "text": "Let:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1[n] = \\frac{\\sin(\\omega_{c1} n)}{\\pi n}, \\quad \\text{where } \\omega_{c1} = \\frac{\\pi}{4}"
+      },
+      {
+       "t": "math",
+       "tex": "x_2[n] = \\frac{\\sin(\\omega_{c2} n)}{\\pi n}, \\quad \\text{where } \\omega_{c2} = \\frac{2\\pi}{3}"
+      },
+      {
+       "t": "p",
+       "text": "The DTFT of the canonical discrete sinc sequence $\\frac{\\sin(\\omega_c n)}{\\pi n}$ is a periodic train of rectangular pulses of height $1$ and width $2\\omega_c$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(e^{j\\omega}) = \\begin{cases} 1, & \\vert\\omega\\vert \\le \\frac{\\pi}{4} \\\\ 0, & \\frac{\\pi}{4} < \\vert\\omega\\vert \\le \\pi \\end{cases} \\quad (\\text{periodic with } 2\\pi)"
+      },
+      {
+       "t": "math",
+       "tex": "X_2(e^{j\\omega}) = \\begin{cases} 1, & \\vert\\omega\\vert \\le \\frac{2\\pi}{3} \\\\ 0, & \\frac{2\\pi}{3} < \\vert\\omega\\vert \\le \\pi \\end{cases} \\quad (\\text{periodic with } 2\\pi)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Multiplication Theorem in Discrete-Time"
+      },
+      {
+       "t": "p",
+       "text": "Time-domain multiplication corresponds to periodic convolution in frequency:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = x_1[n] \\cdot x_2[n] \\longleftrightarrow X(e^{j\\omega}) = \\frac{1}{2\\pi} \\left[ X_1(e^{j\\omega}) \\circledast X_2(e^{j\\omega}) \\right] = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi X_1(e^{j\\theta}) X_2(e^{j(\\omega - \\theta)}) d\\theta"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Determining Trapezoidal Geometry Over the Principal Period"
+      },
+      {
+       "t": "p",
+       "text": "The continuous convolution of two rectangular pulses of heights $A_1 = 1, A_2 = 1$ and widths $W_1 = 2\\omega_{c1} = \\frac{\\pi}{2}$, $W_2 = 2\\omega_{c2} = \\frac{4\\pi}{3}$ produces a symmetric trapezoid:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Peak Height of Convolution:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Height} = \\frac{1}{2\\pi} \\times A_1 \\times A_2 \\times \\min(W_1, W_2) = \\frac{1}{2\\pi} \\times 1 \\times 1 \\times \\frac{\\pi}{2} = \\frac{1}{4}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Flat-Top Width (Region of Maximum Overlap):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_{\\text{flat}} = \\vert W_2 - W_1\\vert = \\frac{4\\pi}{3} - \\frac{\\pi}{2} = \\frac{8\\pi - 3\\pi}{6} = \\frac{5\\pi}{6}"
+      },
+      {
+       "t": "p",
+       "text": "Since the trapezoid is centered at $\\omega = 0$, the flat top spans:"
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{W_{\\text{flat}}}{2} \\le \\omega \\le +\\frac{W_{\\text{flat}}}{2} \\implies -\\frac{5\\pi}{12} \\le \\omega \\le +\\frac{5\\pi}{12}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Total Base Width (Support of Single Pulse):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_{\\text{base}} = W_1 + W_2 = \\frac{\\pi}{2} + \\frac{4\\pi}{3} = \\frac{11\\pi}{6}"
+      },
+      {
+       "t": "p",
+       "text": "The base extends symmetrically across:"
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{W_{\\text{base}}}{2} \\le \\omega \\le +\\frac{W_{\\text{base}}}{2} \\implies -\\frac{11\\pi}{12} \\le \\omega \\le +\\frac{11\\pi}{12}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Transition / Ramp Width:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Each linear ramp has width equal to $\\min(W_1, W_2) = \\frac{\\pi}{2} = \\frac{6\\pi}{12}$.\n  Indeed, $\\frac{11\\pi}{12} - \\frac{5\\pi}{12} = \\frac{6\\pi}{12} = \\frac{\\pi}{2}$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Verification of Periodic Non-Overlap"
+      },
+      {
+       "t": "p",
+       "text": "Check whether neighboring periodic replicas centered at $\\pm 2\\pi$ overlap with the central trapezoid:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The base of the central trapezoid ends at $\\omega = +\\frac{11\\pi}{12}$.",
+        "The base of the right neighbor centered at $\\omega = 2\\pi$ begins at:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_{\\text{start}} = 2\\pi - \\frac{11\\pi}{12} = \\frac{13\\pi}{12}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\frac{11\\pi}{12} < \\pi < \\frac{13\\pi}{12}$, the gap between adjacent trapezoids has width:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta\\omega_{\\text{gap}} = \\frac{13\\pi}{12} - \\frac{11\\pi}{12} = \\frac{2\\pi}{12} = \\frac{\\pi}{6} > 0"
+      },
+      {
+       "t": "p",
+       "text": "There is NO aliasing between adjacent periods. The spectrum is identically zero over the interval $\\frac{11\\pi}{12} \\le \\vert\\omega\\vert \\le \\pi$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Analytical Specification of $X(e^{j\\omega})$ over $[-\\pi, \\pi]$"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(e^{j\\omega}) = \\begin{cases} \\frac{1}{4}, & \\vert\\omega\\vert \\le \\frac{5\\pi}{12} \\\\ \\frac{1}{4} - \\frac{1}{2\\pi}\\left( \\vert\\omega\\vert - \\frac{5\\pi}{12} \\right), & \\frac{5\\pi}{12} < \\vert\\omega\\vert \\le \\frac{11\\pi}{12} \\\\ 0, & \\frac{11\\pi}{12} < \\vert\\omega\\vert \\le \\pi \\end{cases}}"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Numerical Hazards:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**The $\\frac{1}{2\\pi}$ Normalization Factor:** The most frequent error in GATE is forgetting to divide the periodic convolution by $2\\pi$. Without this factor, the peak amplitude would erroneously be calculated as $\\pi/2$ instead of $1/4$.",
+        "**Periodic Gap Inspection:** Always verify whether $W_1 + W_2 > 2\\pi$. If $W_1 + W_2 > 2\\pi$, adjacent periodic trapezoids overlap, and their tails must be summed (as occurs in Slide 043)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3180,289 +3178,288 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Part A: Energy of Single Scaled Sinc $x_A[n] = 3 \\frac{\\sin(\\pi n / 3)}{\\pi n}$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**DTFT Formulation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The DTFT $X_A(e^{j\\omega})$ is a rectangular pulse of height $A = 3$ spanning $[-\\pi/3, \\pi/3]$ over the principal period $[-\\pi, \\pi]$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Application of Parseval's Relation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "E_A = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi \\vert X_A(e^{j\\omega})\\vert^2 d\\omega = \\frac{1}{2\\pi} \\int_{-\\pi/3}^{\\pi/3} 3^2 d\\omega"
-    },
-    {
-     "t": "math",
-     "tex": "E_A = \\frac{1}{2\\pi} \\left[ 9 \\times \\left( \\frac{\\pi}{3} - \\left(-\\frac{\\pi}{3}\\right) \\right) \\right] = \\frac{1}{2\\pi} \\left[ 9 \\times \\frac{2\\pi}{3} \\right] = \\frac{6\\pi}{2\\pi} = 3\\text{ units}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{E\\{x_A[n]\\} = 3\\text{ units}}"
-    },
-    {
-     "t": "h4",
-     "text": "Part B: Energy of Squared Sinc Without Aliasing $x_B[n] = \\left[ \\frac{\\sin(\\pi n / 3)}{\\pi n} \\right]^2$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**DTFT Spectrum via Convolution:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $s[n] = \\frac{\\sin(\\pi n / 3)}{\\pi n} \\leftrightarrow S(e^{j\\omega}) = \\text{rect}$ of height $1$ and width $2\\pi/3$.\n   Then $x_B[n] = s^2[n] \\leftrightarrow X_B(e^{j\\omega}) = \\frac{1}{2\\pi} [S \\circledast S]$.\n   Since width $W = 2\\pi/3 < \\pi$, the periodic convolution over $[-\\pi, \\pi]$ is an isolated triangle with:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Base width: $W_{\\text{base}} = \\frac{2\\pi}{3} + \\frac{2\\pi}{3} = \\frac{4\\pi}{3}$ (from $-2\\pi/3$ to $+2\\pi/3$).",
-      "Peak Height: $H = \\frac{1}{2\\pi} \\times 1 \\times 1 \\times \\frac{2\\pi}{3} = \\frac{1}{3}$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Energy Formula for a Symmetric Triangular Waveform:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For any triangular waveform $g(\\omega)$ of peak amplitude $H$ and total base width $W$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int \\vert g(\\omega)\\vert^2 d\\omega = \\frac{H^2}{3} \\times W_{\\text{base}}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $H = 1/3$ and $W_{\\text{base}} = 4\\pi/3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\pi}^\\pi \\vert X_B(e^{j\\omega})\\vert^2 d\\omega = \\frac{(1/3)^2}{3} \\times \\frac{4\\pi}{3} = \\frac{1}{27} \\times \\frac{4\\pi}{3} = \\frac{4\\pi}{81}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Parseval's Total Energy:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "E_B = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi \\vert X_B(e^{j\\omega})\\vert^2 d\\omega = \\frac{1}{2\\pi} \\left[ \\frac{4\\pi}{81} \\right] = \\frac{2}{81}\\text{ units}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{E\\{x_B[n]\\} = \\frac{2}{81}\\text{ units}}"
-    },
-    {
-     "t": "h4",
-     "text": "Part C: Energy of Squared Sinc WITH Spectral Aliasing $x_C[n] = \\left[ \\frac{\\sin(2\\pi n / 3)}{\\pi n} \\right]^2$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Width of Generating Rectangular Spectrum:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Here $\\omega_c = \\frac{2\\pi}{3}$. Each rectangular spectrum has width $W_0 = 2\\omega_c = \\frac{4\\pi}{3}$.\n   Convolution of two rects of width $4\\pi/3$ creates an unaliased triangle of:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Peak height: $H_0 = \\frac{1}{2\\pi} \\times 1 \\times 1 \\times \\frac{4\\pi}{3} = \\frac{2}{3}$.",
-      "Base width: $W_{\\text{base}} = \\frac{4\\pi}{3} + \\frac{4\\pi}{3} = \\frac{8\\pi}{3}$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Spectral Aliasing / Periodic Overlap:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because base width $\\frac{8\\pi}{3} > 2\\pi$, adjacent periodic triangles overlap!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Central triangle (centered at $\\omega = 0$) spans $[-\\frac{4\\pi}{3}, +\\frac{4\\pi}{3}]$.",
-      "Right triangle (centered at $\\omega = 2\\pi$) spans $[2\\pi - \\frac{4\\pi}{3}, 2\\pi + \\frac{4\\pi}{3}] = [\\frac{2\\pi}{3}, \\frac{10\\pi}{3}]$.",
-      "Left triangle (centered at $\\omega = -2\\pi$) spans $[-\\frac{10\\pi}{3}, -\\frac{2\\pi}{3}]$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Slope Cancellation Phenomenon:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "On the overlap interval $\\omega \\in [2\\pi/3, \\pi]$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Slope of central triangle: $m_1 = \\frac{0 - 2/3}{4\\pi/3 - 0} = -\\frac{1}{2\\pi}$.",
-      "Slope of right triangle: $m_2 = \\frac{2/3 - 0}{2\\pi - 2\\pi/3} = +\\frac{1}{2\\pi}$.",
-      "The sum of slopes is $m_1 + m_2 = -\\frac{1}{2\\pi} + \\frac{1}{2\\pi} = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The spectrum on the overlap region is flat (constant).\n   Value at $\\omega = \\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_{\\text{center}}(e^{j\\pi}) = \\frac{2}{3} - \\frac{1}{2\\pi}(\\pi) = \\frac{2}{3} - \\frac{1}{2} = \\frac{1}{6}"
-    },
-    {
-     "t": "math",
-     "tex": "X_{\\text{right}}(e^{j\\pi}) = 0 + \\frac{1}{2\\pi}\\left( \\pi - \\frac{2\\pi}{3} \\right) = \\frac{1}{2\\pi}\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{6}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Total Spectrum: } \\quad X_C(e^{j\\omega}) = \\frac{1}{6} + \\frac{1}{6} = \\frac{1}{3} \\quad \\text{for } \\frac{2\\pi}{3} \\le \\vert\\omega\\vert \\le \\pi"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Decomposition into Rectangular Base + Triangular Peak:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Rather than setting up piecewise integrals, decompose $X_C(e^{j\\omega})$ over $[-\\pi, \\pi]$ into two simple geometric shapes:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Signal 1 ($X_1$): A uniform rectangle of constant height $H_1 = 1/3$ across the entire period $[-\\pi, \\pi]$ (width $2\\pi$).",
-      "Signal 2 ($X_2$): A triangle centered at $\\omega = 0$ of height $H_2 = \\frac{2}{3} - \\frac{1}{3} = \\frac{1}{3}$, spanning $[-2\\pi/3, 2\\pi/3]$ (width $4\\pi/3$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Then $X_C(e^{j\\omega}) = X_1(\\omega) + X_2(\\omega)$."
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Exact Integration via Superposition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\pi}^\\pi \\vert X_C(e^{j\\omega})\\vert^2 d\\omega = \\int_{-\\pi}^\\pi X_1^2(\\omega) d\\omega + \\int_{-\\pi}^\\pi X_2^2(\\omega) d\\omega + 2 \\int_{-\\pi}^\\pi X_1(\\omega) X_2(\\omega) d\\omega"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Component 1 (Rectangle Energy):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-\\pi}^\\pi \\left(\\frac{1}{3}\\right)^2 d\\omega = \\frac{1}{9} \\times 2\\pi = \\frac{2\\pi}{9} = \\frac{18\\pi}{81}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Component 2 (Triangle Energy):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\int_{-2\\pi/3}^{2\\pi/3} X_2^2(\\omega) d\\omega = \\frac{(1/3)^2}{3} \\times \\frac{4\\pi}{3} = \\frac{1}{27} \\times \\frac{4\\pi}{3} = \\frac{4\\pi}{81}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Component 3 (Cross Term):"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $X_1(\\omega) = 1/3$ is constant over the support of $X_2(\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "2 \\int_{-\\pi}^\\pi X_1(\\omega) X_2(\\omega) d\\omega = 2 \\times \\frac{1}{3} \\times \\text{Area}(X_2) = \\frac{2}{3} \\times \\left[ \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "= \\frac{2}{3} \\times \\left[ \\frac{1}{2} \\times \\frac{4\\pi}{3} \\times \\frac{1}{3} \\right] = \\frac{2}{3} \\times \\frac{2\\pi}{9} = \\frac{4\\pi}{27} = \\frac{12\\pi}{81}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Total Integral:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "E_{\\text{spectrum}} = \\frac{18\\pi}{81} + \\frac{4\\pi}{81} + \\frac{12\\pi}{81} = \\frac{34\\pi}{81}"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "**Total Signal Energy:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "E\\{x_C[n]\\} = \\frac{1}{2\\pi} E_{\\text{spectrum}} = \\frac{1}{2\\pi} \\times \\frac{34\\pi}{81} = \\frac{17}{81}\\text{ units}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{E\\{x_C[n]\\} = \\frac{17}{81}\\text{ units}}"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Pedagogical Insights:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Aliasing Fallacy:** Standard continuous-time convolution rules cannot be blindly integrated over $[-\\infty, \\infty]$ in discrete time. In DTFT, any spectral width exceeding $2\\pi$ wraps around periodically.",
-      "**The Cross-Term Trap:** When squaring a sum $X_1 + X_2$, many students forget the cross-term $2\\int X_1 X_2$. Signals $X_1$ and $X_2$ are NOT disjoint in frequency; they overlap over $[-2\\pi/3, 2\\pi/3]$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part A: Energy of Single Scaled Sinc $x_A[n] = 3 \\frac{\\sin(\\pi n / 3)}{\\pi n}$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**DTFT Formulation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The DTFT $X_A(e^{j\\omega})$ is a rectangular pulse of height $A = 3$ spanning $[-\\pi/3, \\pi/3]$ over the principal period $[-\\pi, \\pi]$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Application of Parseval's Relation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "E_A = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi \\vert X_A(e^{j\\omega})\\vert^2 d\\omega = \\frac{1}{2\\pi} \\int_{-\\pi/3}^{\\pi/3} 3^2 d\\omega"
+      },
+      {
+       "t": "math",
+       "tex": "E_A = \\frac{1}{2\\pi} \\left[ 9 \\times \\left( \\frac{\\pi}{3} - \\left(-\\frac{\\pi}{3}\\right) \\right) \\right] = \\frac{1}{2\\pi} \\left[ 9 \\times \\frac{2\\pi}{3} \\right] = \\frac{6\\pi}{2\\pi} = 3\\text{ units}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{E\\{x_A[n]\\} = 3\\text{ units}}"
+      },
+      {
+       "t": "h4",
+       "text": "Part B: Energy of Squared Sinc Without Aliasing $x_B[n] = \\left[ \\frac{\\sin(\\pi n / 3)}{\\pi n} \\right]^2$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**DTFT Spectrum via Convolution:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $s[n] = \\frac{\\sin(\\pi n / 3)}{\\pi n} \\leftrightarrow S(e^{j\\omega}) = \\text{rect}$ of height $1$ and width $2\\pi/3$.\n   Then $x_B[n] = s^2[n] \\leftrightarrow X_B(e^{j\\omega}) = \\frac{1}{2\\pi} [S \\circledast S]$.\n   Since width $W = 2\\pi/3 < \\pi$, the periodic convolution over $[-\\pi, \\pi]$ is an isolated triangle with:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Base width: $W_{\\text{base}} = \\frac{2\\pi}{3} + \\frac{2\\pi}{3} = \\frac{4\\pi}{3}$ (from $-2\\pi/3$ to $+2\\pi/3$).",
+        "Peak Height: $H = \\frac{1}{2\\pi} \\times 1 \\times 1 \\times \\frac{2\\pi}{3} = \\frac{1}{3}$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Energy Formula for a Symmetric Triangular Waveform:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For any triangular waveform $g(\\omega)$ of peak amplitude $H$ and total base width $W$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int \\vert g(\\omega)\\vert^2 d\\omega = \\frac{H^2}{3} \\times W_{\\text{base}}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $H = 1/3$ and $W_{\\text{base}} = 4\\pi/3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\pi}^\\pi \\vert X_B(e^{j\\omega})\\vert^2 d\\omega = \\frac{(1/3)^2}{3} \\times \\frac{4\\pi}{3} = \\frac{1}{27} \\times \\frac{4\\pi}{3} = \\frac{4\\pi}{81}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Parseval's Total Energy:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "E_B = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi \\vert X_B(e^{j\\omega})\\vert^2 d\\omega = \\frac{1}{2\\pi} \\left[ \\frac{4\\pi}{81} \\right] = \\frac{2}{81}\\text{ units}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{E\\{x_B[n]\\} = \\frac{2}{81}\\text{ units}}"
+      },
+      {
+       "t": "h4",
+       "text": "Part C: Energy of Squared Sinc WITH Spectral Aliasing $x_C[n] = \\left[ \\frac{\\sin(2\\pi n / 3)}{\\pi n} \\right]^2$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Width of Generating Rectangular Spectrum:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Here $\\omega_c = \\frac{2\\pi}{3}$. Each rectangular spectrum has width $W_0 = 2\\omega_c = \\frac{4\\pi}{3}$.\n   Convolution of two rects of width $4\\pi/3$ creates an unaliased triangle of:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Peak height: $H_0 = \\frac{1}{2\\pi} \\times 1 \\times 1 \\times \\frac{4\\pi}{3} = \\frac{2}{3}$.",
+        "Base width: $W_{\\text{base}} = \\frac{4\\pi}{3} + \\frac{4\\pi}{3} = \\frac{8\\pi}{3}$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Spectral Aliasing / Periodic Overlap:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Because base width $\\frac{8\\pi}{3} > 2\\pi$, adjacent periodic triangles overlap!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Central triangle (centered at $\\omega = 0$) spans $[-\\frac{4\\pi}{3}, +\\frac{4\\pi}{3}]$.",
+        "Right triangle (centered at $\\omega = 2\\pi$) spans $[2\\pi - \\frac{4\\pi}{3}, 2\\pi + \\frac{4\\pi}{3}] = [\\frac{2\\pi}{3}, \\frac{10\\pi}{3}]$.",
+        "Left triangle (centered at $\\omega = -2\\pi$) spans $[-\\frac{10\\pi}{3}, -\\frac{2\\pi}{3}]$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Slope Cancellation Phenomenon:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "On the overlap interval $\\omega \\in [2\\pi/3, \\pi]$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Slope of central triangle: $m_1 = \\frac{0 - 2/3}{4\\pi/3 - 0} = -\\frac{1}{2\\pi}$.",
+        "Slope of right triangle: $m_2 = \\frac{2/3 - 0}{2\\pi - 2\\pi/3} = +\\frac{1}{2\\pi}$.",
+        "The sum of slopes is $m_1 + m_2 = -\\frac{1}{2\\pi} + \\frac{1}{2\\pi} = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The spectrum on the overlap region is flat (constant).\n   Value at $\\omega = \\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_{\\text{center}}(e^{j\\pi}) = \\frac{2}{3} - \\frac{1}{2\\pi}(\\pi) = \\frac{2}{3} - \\frac{1}{2} = \\frac{1}{6}"
+      },
+      {
+       "t": "math",
+       "tex": "X_{\\text{right}}(e^{j\\pi}) = 0 + \\frac{1}{2\\pi}\\left( \\pi - \\frac{2\\pi}{3} \\right) = \\frac{1}{2\\pi}\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{6}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Total Spectrum: } \\quad X_C(e^{j\\omega}) = \\frac{1}{6} + \\frac{1}{6} = \\frac{1}{3} \\quad \\text{for } \\frac{2\\pi}{3} \\le \\vert\\omega\\vert \\le \\pi"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Decomposition into Rectangular Base + Triangular Peak:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Rather than setting up piecewise integrals, decompose $X_C(e^{j\\omega})$ over $[-\\pi, \\pi]$ into two simple geometric shapes:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Signal 1 ($X_1$): A uniform rectangle of constant height $H_1 = 1/3$ across the entire period $[-\\pi, \\pi]$ (width $2\\pi$).",
+        "Signal 2 ($X_2$): A triangle centered at $\\omega = 0$ of height $H_2 = \\frac{2}{3} - \\frac{1}{3} = \\frac{1}{3}$, spanning $[-2\\pi/3, 2\\pi/3]$ (width $4\\pi/3$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Then $X_C(e^{j\\omega}) = X_1(\\omega) + X_2(\\omega)$."
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Exact Integration via Superposition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\pi}^\\pi \\vert X_C(e^{j\\omega})\\vert^2 d\\omega = \\int_{-\\pi}^\\pi X_1^2(\\omega) d\\omega + \\int_{-\\pi}^\\pi X_2^2(\\omega) d\\omega + 2 \\int_{-\\pi}^\\pi X_1(\\omega) X_2(\\omega) d\\omega"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Component 1 (Rectangle Energy):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-\\pi}^\\pi \\left(\\frac{1}{3}\\right)^2 d\\omega = \\frac{1}{9} \\times 2\\pi = \\frac{2\\pi}{9} = \\frac{18\\pi}{81}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Component 2 (Triangle Energy):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\int_{-2\\pi/3}^{2\\pi/3} X_2^2(\\omega) d\\omega = \\frac{(1/3)^2}{3} \\times \\frac{4\\pi}{3} = \\frac{1}{27} \\times \\frac{4\\pi}{3} = \\frac{4\\pi}{81}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Component 3 (Cross Term):"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $X_1(\\omega) = 1/3$ is constant over the support of $X_2(\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "2 \\int_{-\\pi}^\\pi X_1(\\omega) X_2(\\omega) d\\omega = 2 \\times \\frac{1}{3} \\times \\text{Area}(X_2) = \\frac{2}{3} \\times \\left[ \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "= \\frac{2}{3} \\times \\left[ \\frac{1}{2} \\times \\frac{4\\pi}{3} \\times \\frac{1}{3} \\right] = \\frac{2}{3} \\times \\frac{2\\pi}{9} = \\frac{4\\pi}{27} = \\frac{12\\pi}{81}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Total Integral:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "E_{\\text{spectrum}} = \\frac{18\\pi}{81} + \\frac{4\\pi}{81} + \\frac{12\\pi}{81} = \\frac{34\\pi}{81}"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "**Total Signal Energy:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "E\\{x_C[n]\\} = \\frac{1}{2\\pi} E_{\\text{spectrum}} = \\frac{1}{2\\pi} \\times \\frac{34\\pi}{81} = \\frac{17}{81}\\text{ units}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{E\\{x_C[n]\\} = \\frac{17}{81}\\text{ units}}"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Pedagogical Insights:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Aliasing Fallacy:** Standard continuous-time convolution rules cannot be blindly integrated over $[-\\infty, \\infty]$ in discrete time. In DTFT, any spectral width exceeding $2\\pi$ wraps around periodically.",
+        "**The Cross-Term Trap:** When squaring a sum $X_1 + X_2$, many students forget the cross-term $2\\int X_1 X_2$. Signals $X_1$ and $X_2$ are NOT disjoint in frequency; they overlap over $[-2\\pi/3, 2\\pi/3]$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3477,91 +3474,90 @@ export default {
      "tex": "\\sum_{k=-\\infty}^n x[k] \\longleftrightarrow \\frac{X(e^{j\\omega})}{1 - e^{-j\\omega}} + \\pi X(e^{j0}) \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Formulating Accumulation as Convolution"
-    },
-    {
-     "t": "p",
-     "text": "The running sum can be represented as the convolution of $x[n]$ with the discrete unit step sequence $u[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\sum_{k=-\\infty}^n x[k] = \\sum_{k=-\\infty}^\\infty x[k] u[n - k] = x[n] * u[n]"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Applying the Convolution Theorem"
-    },
-    {
-     "t": "math",
-     "tex": "Y(e^{j\\omega}) = X(e^{j\\omega}) \\cdot U(e^{j\\omega})"
-    },
-    {
-     "t": "p",
-     "text": "Substituting the DTFT of $u[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "U(e^{j\\omega}) = \\frac{1}{1 - e^{-j\\omega}} + \\pi \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l)"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying through by $X(e^{j\\omega})$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(e^{j\\omega}) = \\frac{X(e^{j\\omega})}{1 - e^{-j\\omega}} + \\pi X(e^{j\\omega}) \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Application of the Sifting / Sampling Property of Delta"
-    },
-    {
-     "t": "p",
-     "text": "Using the identity $f(\\omega)\\delta(\\omega - \\omega_0) = f(\\omega_0)\\delta(\\omega - \\omega_0)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) \\delta(\\omega - 2\\pi l) = X(e^{j 2\\pi l}) \\delta(\\omega - 2\\pi l)"
-    },
-    {
-     "t": "p",
-     "text": "Because $X(e^{j\\omega})$ is strictly periodic with fundamental period $2\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j 2\\pi l}) = X(e^{j 0}) = \\sum_{n=-\\infty}^\\infty x[n] \\quad \\forall l \\in \\mathbb{Z}"
-    },
-    {
-     "t": "math",
-     "tex": "\\dots = X(e^{-j4\\pi}) = X(e^{-j2\\pi}) = X(e^{j0}) = X(e^{j2\\pi}) = X(e^{j4\\pi}) = \\dots"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Final Expression"
-    },
-    {
-     "t": "math",
-     "tex": "Y(e^{j\\omega}) = \\frac{X(e^{j\\omega})}{1 - e^{-j\\omega}} + \\pi X(e^{j0}) \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l)"
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Key Takeaways:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Condition for Zero Impulses:** The impulse train vanishes if and only if $X(e^{j0}) = 0$, which occurs when the discrete sequence has zero net DC sum ($\\sum_{n=-\\infty}^\\infty x[n] = 0$).",
-      "**Pole at $\\omega = 0$:** The factor $\\frac{1}{1 - e^{-j\\omega}}$ has a pole at $\\omega = 0$ ($e^{-j\\cdot 0} = 1$). Near $\\omega = 0$, $1 - e^{-j\\omega} \\approx j\\omega$, so $\\frac{1}{1 - e^{-j\\omega}} \\approx \\frac{1}{j\\omega}$, matching the CT integration property $\\frac{1}{j\\omega} + \\pi X(0)\\delta(\\omega)$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Formulating Accumulation as Convolution"
+      },
+      {
+       "t": "p",
+       "text": "The running sum can be represented as the convolution of $x[n]$ with the discrete unit step sequence $u[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\sum_{k=-\\infty}^n x[k] = \\sum_{k=-\\infty}^\\infty x[k] u[n - k] = x[n] * u[n]"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Applying the Convolution Theorem"
+      },
+      {
+       "t": "math",
+       "tex": "Y(e^{j\\omega}) = X(e^{j\\omega}) \\cdot U(e^{j\\omega})"
+      },
+      {
+       "t": "p",
+       "text": "Substituting the DTFT of $u[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "U(e^{j\\omega}) = \\frac{1}{1 - e^{-j\\omega}} + \\pi \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l)"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying through by $X(e^{j\\omega})$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(e^{j\\omega}) = \\frac{X(e^{j\\omega})}{1 - e^{-j\\omega}} + \\pi X(e^{j\\omega}) \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Application of the Sifting / Sampling Property of Delta"
+      },
+      {
+       "t": "p",
+       "text": "Using the identity $f(\\omega)\\delta(\\omega - \\omega_0) = f(\\omega_0)\\delta(\\omega - \\omega_0)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) \\delta(\\omega - 2\\pi l) = X(e^{j 2\\pi l}) \\delta(\\omega - 2\\pi l)"
+      },
+      {
+       "t": "p",
+       "text": "Because $X(e^{j\\omega})$ is strictly periodic with fundamental period $2\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j 2\\pi l}) = X(e^{j 0}) = \\sum_{n=-\\infty}^\\infty x[n] \\quad \\forall l \\in \\mathbb{Z}"
+      },
+      {
+       "t": "math",
+       "tex": "\\dots = X(e^{-j4\\pi}) = X(e^{-j2\\pi}) = X(e^{j0}) = X(e^{j2\\pi}) = X(e^{j4\\pi}) = \\dots"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Final Expression"
+      },
+      {
+       "t": "math",
+       "tex": "Y(e^{j\\omega}) = \\frac{X(e^{j\\omega})}{1 - e^{-j\\omega}} + \\pi X(e^{j0}) \\sum_{l=-\\infty}^\\infty \\delta(\\omega - 2\\pi l)"
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Key Takeaways:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Condition for Zero Impulses:** The impulse train vanishes if and only if $X(e^{j0}) = 0$, which occurs when the discrete sequence has zero net DC sum ($\\sum_{n=-\\infty}^\\infty x[n] = 0$).",
+        "**Pole at $\\omega = 0$:** The factor $\\frac{1}{1 - e^{-j\\omega}}$ has a pole at $\\omega = 0$ ($e^{-j\\cdot 0} = 1$). Near $\\omega = 0$, $1 - e^{-j\\omega} \\approx j\\omega$, so $\\frac{1}{1 - e^{-j\\omega}} \\approx \\frac{1}{j\\omega}$, matching the CT integration property $\\frac{1}{j\\omega} + \\pi X(0)\\delta(\\omega)$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3582,249 +3578,248 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Filter 1: $h_1[n] = \\delta[n] - 2\\delta[n-1] + \\delta[n-2]$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Transfer Function:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_1(z) = 1 - 2z^{-1} + z^{-2} = (1 - z^{-1})^2"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Frequency Evaluation:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At DC ($\\omega = 0 \\implies z = 1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_1(1) = 1 - 2(1) + 1 = 0 \\quad (\\text{Blocks DC completely})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At Nyquist ($\\omega = \\pi \\implies z = -1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_1(-1) = 1 - 2(-1) + (-1)^2 = 1 + 2 + 1 = 4 \\ne 0 \\quad (\\text{Maximum Pass})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At Mid-Band ($\\omega = \\pi/2 \\implies z = j$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_1(j) = 1 - 2j^{-1} + j^{-2} = 1 + 2j - 1 = 2j \\implies \\vert H_1(j)\\vert = 2"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Conclusion:** Blocks low frequencies and passes high frequencies $\\implies \\mathbf{High\\text{-}Pass\\ Filter\\ (HPF)}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Filter 2: $h_2[n] = \\delta[n] + 2\\delta[n-1] + \\delta[n-2]$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Transfer Function:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_2(z) = 1 + 2z^{-1} + z^{-2} = (1 + z^{-1})^2"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Frequency Evaluation:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At DC ($\\omega = 0 \\implies z = 1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_2(1) = 1 + 2(1) + 1 = 4 \\ne 0 \\quad (\\text{Maximum Pass})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At Nyquist ($\\omega = \\pi \\implies z = -1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_2(-1) = 1 + 2(-1) + (-1)^2 = 1 - 2 + 1 = 0 \\quad (\\text{Blocks High Freq completely})"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Conclusion:** Passes low frequencies and blocks high frequencies $\\implies \\mathbf{Low\\text{-}Pass\\ Filter\\ (LPF)}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Filter 3: $h_3[n] = \\delta[n+2] - \\delta[n]$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Transfer Function:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_3(z) = z^2 - 1 = (z - 1)(z + 1)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Frequency Evaluation:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At DC ($\\omega = 0 \\implies z = 1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_3(1) = 1^2 - 1 = 0 \\quad (\\text{Blocks DC})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At Nyquist ($\\omega = \\pi \\implies z = -1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_3(-1) = (-1)^2 - 1 = 1 - 1 = 0 \\quad (\\text{Blocks Nyquist})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At Mid-Band ($\\omega = \\pi/2 \\implies z = j$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_3(j) = j^2 - 1 = -1 - 1 = -2 \\ne 0 \\implies \\vert H_3(j)\\vert = 2 \\quad (\\text{Passes Mid-Band})"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Conclusion:** Blocks both DC and Nyquist frequencies while passing mid-band $\\implies \\mathbf{Band\\text{-}Pass\\ Filter\\ (BPF)}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Filter 4: $h_4[n] = \\delta[n+2] + \\delta[n]$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Transfer Function:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_4(z) = z^2 + 1 = (z - j)(z + j)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Frequency Evaluation:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At DC ($\\omega = 0 \\implies z = 1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_4(1) = 1^2 + 1 = 2 \\ne 0 \\quad (\\text{Passes DC})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At Nyquist ($\\omega = \\pi \\implies z = -1$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_4(-1) = (-1)^2 + 1 = 2 \\ne 0 \\quad (\\text{Passes Nyquist})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At Mid-Band ($\\omega = \\pi/2 \\implies z = j$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_4(j) = j^2 + 1 = -1 + 1 = 0 \\quad (\\text{Blocks Mid-Band completely})"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Zeros of Transmission:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "z^2 + 1 = 0 \\implies z = \\pm j = e^{\\pm j\\pi/2} \\implies \\omega = \\pm \\frac{\\pi}{2}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Conclusion:** Passes low and high frequencies, nulls mid frequencies $\\implies \\mathbf{Band\\text{-}Stop\\ Filter\\ (BSF)\\ /\\ Notch\\ Filter}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Filter 1: $h_1[n] = \\delta[n] - 2\\delta[n-1] + \\delta[n-2]$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Transfer Function:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_1(z) = 1 - 2z^{-1} + z^{-2} = (1 - z^{-1})^2"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Frequency Evaluation:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At DC ($\\omega = 0 \\implies z = 1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_1(1) = 1 - 2(1) + 1 = 0 \\quad (\\text{Blocks DC completely})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At Nyquist ($\\omega = \\pi \\implies z = -1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_1(-1) = 1 - 2(-1) + (-1)^2 = 1 + 2 + 1 = 4 \\ne 0 \\quad (\\text{Maximum Pass})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At Mid-Band ($\\omega = \\pi/2 \\implies z = j$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_1(j) = 1 - 2j^{-1} + j^{-2} = 1 + 2j - 1 = 2j \\implies \\vert H_1(j)\\vert = 2"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Conclusion:** Blocks low frequencies and passes high frequencies $\\implies \\mathbf{High\\text{-}Pass\\ Filter\\ (HPF)}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Filter 2: $h_2[n] = \\delta[n] + 2\\delta[n-1] + \\delta[n-2]$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Transfer Function:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_2(z) = 1 + 2z^{-1} + z^{-2} = (1 + z^{-1})^2"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Frequency Evaluation:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At DC ($\\omega = 0 \\implies z = 1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_2(1) = 1 + 2(1) + 1 = 4 \\ne 0 \\quad (\\text{Maximum Pass})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At Nyquist ($\\omega = \\pi \\implies z = -1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_2(-1) = 1 + 2(-1) + (-1)^2 = 1 - 2 + 1 = 0 \\quad (\\text{Blocks High Freq completely})"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Conclusion:** Passes low frequencies and blocks high frequencies $\\implies \\mathbf{Low\\text{-}Pass\\ Filter\\ (LPF)}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Filter 3: $h_3[n] = \\delta[n+2] - \\delta[n]$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Transfer Function:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_3(z) = z^2 - 1 = (z - 1)(z + 1)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Frequency Evaluation:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At DC ($\\omega = 0 \\implies z = 1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_3(1) = 1^2 - 1 = 0 \\quad (\\text{Blocks DC})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At Nyquist ($\\omega = \\pi \\implies z = -1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_3(-1) = (-1)^2 - 1 = 1 - 1 = 0 \\quad (\\text{Blocks Nyquist})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At Mid-Band ($\\omega = \\pi/2 \\implies z = j$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_3(j) = j^2 - 1 = -1 - 1 = -2 \\ne 0 \\implies \\vert H_3(j)\\vert = 2 \\quad (\\text{Passes Mid-Band})"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Conclusion:** Blocks both DC and Nyquist frequencies while passing mid-band $\\implies \\mathbf{Band\\text{-}Pass\\ Filter\\ (BPF)}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Filter 4: $h_4[n] = \\delta[n+2] + \\delta[n]$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Transfer Function:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_4(z) = z^2 + 1 = (z - j)(z + j)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Frequency Evaluation:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At DC ($\\omega = 0 \\implies z = 1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_4(1) = 1^2 + 1 = 2 \\ne 0 \\quad (\\text{Passes DC})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At Nyquist ($\\omega = \\pi \\implies z = -1$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_4(-1) = (-1)^2 + 1 = 2 \\ne 0 \\quad (\\text{Passes Nyquist})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At Mid-Band ($\\omega = \\pi/2 \\implies z = j$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_4(j) = j^2 + 1 = -1 + 1 = 0 \\quad (\\text{Blocks Mid-Band completely})"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Zeros of Transmission:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "z^2 + 1 = 0 \\implies z = \\pm j = e^{\\pm j\\pi/2} \\implies \\omega = \\pm \\frac{\\pi}{2}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Conclusion:** Passes low and high frequencies, nulls mid frequencies $\\implies \\mathbf{Band\\text{-}Stop\\ Filter\\ (BSF)\\ /\\ Notch\\ Filter}$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3859,239 +3854,238 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "System Goal Analysis:"
-    },
-    {
-     "t": "p",
-     "text": "Input contains two distinct frequencies: $\\omega_1 = \\pi/3$ and $\\omega_2 = 2\\pi/3$.\nOutput contains ONLY the $\\omega_2 = 2\\pi/3$ component with unity scaling ($+1$) and zero phase shift.\nTherefore, the frequency response $H(e^{j\\omega})$ must satisfy:"
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{j\\pi/3}) = 0 \\quad \\text{and} \\quad H(e^{j 2\\pi/3}) = +1"
-    },
-    {
-     "t": "h4",
-     "text": "Candidate (a) Analysis: $h_a[n] = -\\frac{1}{2}\\delta[n] + \\frac{1}{2}\\delta[n-1] + \\frac{1}{2}\\delta[n+1]$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Frequency Response:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_a(e^{j\\omega}) = -\\frac{1}{2} + \\frac{1}{2}e^{-j\\omega} + \\frac{1}{2}e^{j\\omega} = -\\frac{1}{2} + \\cos\\omega"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Evaluation at $\\omega_1 = \\pi/3$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_a(e^{j\\pi/3}) = -\\frac{1}{2} + \\cos\\left(\\frac{\\pi}{3}\\right) = -\\frac{1}{2} + \\frac{1}{2} = 0 \\quad (\\text{Null condition satisfied})"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Evaluation at $\\omega_2 = 2\\pi/3$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_a(e^{j 2\\pi/3}) = -\\frac{1}{2} + \\cos\\left(\\frac{2\\pi}{3}\\right) = -\\frac{1}{2} + \\left(-\\frac{1}{2}\\right) = -1"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Resulting Output for System (a):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_a[n] = 0 \\cdot \\cos\\left(\\frac{\\pi}{3} n\\right) + (-1) \\cdot \\cos\\left(\\frac{2\\pi}{3} n\\right) = -\\cos\\left(\\frac{2\\pi}{3} n\\right) \\ne +\\cos\\left(\\frac{2\\pi}{3} n\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Verdict:** Candidate (a) is **INCORRECT** due to the sign inversion ($-1$ gain)."
-    },
-    {
-     "t": "h4",
-     "text": "Candidate (b) Analysis: $h_b[n] = -\\delta[n] + \\delta[n-2] + \\delta[n+2]$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Frequency Response:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_b(e^{j\\omega}) = -1 + e^{-j 2\\omega} + e^{j 2\\omega} = -1 + 2\\cos(2\\omega)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Evaluation at $\\omega_1 = \\pi/3$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_b(e^{j\\pi/3}) = -1 + 2\\cos\\left(\\frac{2\\pi}{3}\\right) = -1 + 2\\left(-\\frac{1}{2}\\right) = -1 - 1 = -2 \\ne 0"
-    },
-    {
-     "t": "p",
-     "text": "System (b) completely fails to block the $\\omega_1 = \\pi/3$ component."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Evaluation at $\\omega_2 = 2\\pi/3$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_b(e^{j 2\\pi/3}) = -1 + 2\\cos\\left(\\frac{4\\pi}{3}\\right) = -1 + 2\\left(-\\frac{1}{2}\\right) = -2"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Resulting Output for System (b):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_b[n] = -2 \\left[ \\cos\\left(\\frac{\\pi}{3} n\\right) + \\cos\\left(\\frac{2\\pi}{3} n\\right) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "**Verdict:** Candidate (b) is **INCORRECT**."
-    },
-    {
-     "t": "h4",
-     "text": "Candidate (c) Analysis: $h_c[n] = 2 \\left[ \\frac{\\sin(\\pi n / 6)}{\\pi n} \\right] \\cos\\left(\\frac{2\\pi}{3} n\\right)$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Frequency Response via Modulation Theorem:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The baseband prototype $s[n] = \\frac{\\sin(\\pi n / 6)}{\\pi n}$ has DTFT:"
-    },
-    {
-     "t": "math",
-     "tex": "S(e^{j\\omega}) = \\begin{cases} 1, & \\vert\\omega\\vert \\le \\frac{\\pi}{6} \\\\ 0, & \\frac{\\pi}{6} < \\vert\\omega\\vert \\le \\pi \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying by $2\\cos(\\omega_0 n)$ with $\\omega_0 = 2\\pi/3$:"
-    },
-    {
-     "t": "math",
-     "tex": "H_c(e^{j\\omega}) = S(e^{j(\\omega - 2\\pi/3)}) + S(e^{j(\\omega + 2\\pi/3)})"
-    },
-    {
-     "t": "p",
-     "text": "This represents an ideal Band-Pass Filter with two passbands centered at $\\pm 2\\pi/3$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Positive passband:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left[ \\frac{2\\pi}{3} - \\frac{\\pi}{6}, \\; \\frac{2\\pi}{3} + \\frac{\\pi}{6} \\right] = \\left[ \\frac{4\\pi - \\pi}{6}, \\; \\frac{4\\pi + \\pi}{6} \\right] = \\left[ \\frac{\\pi}{2}, \\; \\frac{5\\pi}{6} \\right]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Passband gain: $1$ with zero phase."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Frequency Testing:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\omega_1 = \\frac{\\pi}{3} = \\frac{2\\pi}{6} \\approx 1.047\\text{ rad/s}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $\\frac{\\pi}{3} < \\frac{\\pi}{2}$, $\\omega_1$ lies strictly in the stopband:"
-    },
-    {
-     "t": "math",
-     "tex": "H_c(e^{j\\pi/3}) = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\omega_2 = \\frac{2\\pi}{3} = \\frac{4\\pi}{6} \\approx 2.094\\text{ rad/s}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $\\frac{\\pi}{2} \\le \\frac{2\\pi}{3} \\le \\frac{5\\pi}{6}$, $\\omega_2$ lies at the center of the passband:"
-    },
-    {
-     "t": "math",
-     "tex": "H_c(e^{j 2\\pi/3}) = 1"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Resulting Output for System (c):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_c[n] = 0 \\cdot \\cos\\left(\\frac{\\pi}{3} n\\right) + 1 \\cdot \\cos\\left(\\frac{2\\pi}{3} n\\right) = \\cos\\left(\\frac{2\\pi}{3} n\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Verdict:** Candidate (c) is **EXACTLY AND UNIQUELY CORRECT**."
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Common Fallacies:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**The Amplitude vs Phase Trap:** In candidate (a), students verify that $H(e^{j\\pi/3}) = 0$ and then check only the magnitude $\\vert H(e^{j 2\\pi/3})\\vert = \\vert -1\\vert = 1$. Concluding that candidate (a) is correct is a fatal trap because the phase response introduces a $-\\pi$ phase shift ($e^{j\\pi} = -1$), flipping the sign of the cosine to $-\\cos(2\\pi n/3)$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "System Goal Analysis:"
+      },
+      {
+       "t": "p",
+       "text": "Input contains two distinct frequencies: $\\omega_1 = \\pi/3$ and $\\omega_2 = 2\\pi/3$.\nOutput contains ONLY the $\\omega_2 = 2\\pi/3$ component with unity scaling ($+1$) and zero phase shift.\nTherefore, the frequency response $H(e^{j\\omega})$ must satisfy:"
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{j\\pi/3}) = 0 \\quad \\text{and} \\quad H(e^{j 2\\pi/3}) = +1"
+      },
+      {
+       "t": "h4",
+       "text": "Candidate (a) Analysis: $h_a[n] = -\\frac{1}{2}\\delta[n] + \\frac{1}{2}\\delta[n-1] + \\frac{1}{2}\\delta[n+1]$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Frequency Response:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_a(e^{j\\omega}) = -\\frac{1}{2} + \\frac{1}{2}e^{-j\\omega} + \\frac{1}{2}e^{j\\omega} = -\\frac{1}{2} + \\cos\\omega"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Evaluation at $\\omega_1 = \\pi/3$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_a(e^{j\\pi/3}) = -\\frac{1}{2} + \\cos\\left(\\frac{\\pi}{3}\\right) = -\\frac{1}{2} + \\frac{1}{2} = 0 \\quad (\\text{Null condition satisfied})"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Evaluation at $\\omega_2 = 2\\pi/3$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_a(e^{j 2\\pi/3}) = -\\frac{1}{2} + \\cos\\left(\\frac{2\\pi}{3}\\right) = -\\frac{1}{2} + \\left(-\\frac{1}{2}\\right) = -1"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Resulting Output for System (a):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_a[n] = 0 \\cdot \\cos\\left(\\frac{\\pi}{3} n\\right) + (-1) \\cdot \\cos\\left(\\frac{2\\pi}{3} n\\right) = -\\cos\\left(\\frac{2\\pi}{3} n\\right) \\ne +\\cos\\left(\\frac{2\\pi}{3} n\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Verdict:** Candidate (a) is **INCORRECT** due to the sign inversion ($-1$ gain)."
+      },
+      {
+       "t": "h4",
+       "text": "Candidate (b) Analysis: $h_b[n] = -\\delta[n] + \\delta[n-2] + \\delta[n+2]$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Frequency Response:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_b(e^{j\\omega}) = -1 + e^{-j 2\\omega} + e^{j 2\\omega} = -1 + 2\\cos(2\\omega)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Evaluation at $\\omega_1 = \\pi/3$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_b(e^{j\\pi/3}) = -1 + 2\\cos\\left(\\frac{2\\pi}{3}\\right) = -1 + 2\\left(-\\frac{1}{2}\\right) = -1 - 1 = -2 \\ne 0"
+      },
+      {
+       "t": "p",
+       "text": "System (b) completely fails to block the $\\omega_1 = \\pi/3$ component."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Evaluation at $\\omega_2 = 2\\pi/3$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_b(e^{j 2\\pi/3}) = -1 + 2\\cos\\left(\\frac{4\\pi}{3}\\right) = -1 + 2\\left(-\\frac{1}{2}\\right) = -2"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Resulting Output for System (b):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_b[n] = -2 \\left[ \\cos\\left(\\frac{\\pi}{3} n\\right) + \\cos\\left(\\frac{2\\pi}{3} n\\right) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "**Verdict:** Candidate (b) is **INCORRECT**."
+      },
+      {
+       "t": "h4",
+       "text": "Candidate (c) Analysis: $h_c[n] = 2 \\left[ \\frac{\\sin(\\pi n / 6)}{\\pi n} \\right] \\cos\\left(\\frac{2\\pi}{3} n\\right)$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Frequency Response via Modulation Theorem:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The baseband prototype $s[n] = \\frac{\\sin(\\pi n / 6)}{\\pi n}$ has DTFT:"
+      },
+      {
+       "t": "math",
+       "tex": "S(e^{j\\omega}) = \\begin{cases} 1, & \\vert\\omega\\vert \\le \\frac{\\pi}{6} \\\\ 0, & \\frac{\\pi}{6} < \\vert\\omega\\vert \\le \\pi \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying by $2\\cos(\\omega_0 n)$ with $\\omega_0 = 2\\pi/3$:"
+      },
+      {
+       "t": "math",
+       "tex": "H_c(e^{j\\omega}) = S(e^{j(\\omega - 2\\pi/3)}) + S(e^{j(\\omega + 2\\pi/3)})"
+      },
+      {
+       "t": "p",
+       "text": "This represents an ideal Band-Pass Filter with two passbands centered at $\\pm 2\\pi/3$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Positive passband:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left[ \\frac{2\\pi}{3} - \\frac{\\pi}{6}, \\; \\frac{2\\pi}{3} + \\frac{\\pi}{6} \\right] = \\left[ \\frac{4\\pi - \\pi}{6}, \\; \\frac{4\\pi + \\pi}{6} \\right] = \\left[ \\frac{\\pi}{2}, \\; \\frac{5\\pi}{6} \\right]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Passband gain: $1$ with zero phase."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Frequency Testing:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\omega_1 = \\frac{\\pi}{3} = \\frac{2\\pi}{6} \\approx 1.047\\text{ rad/s}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $\\frac{\\pi}{3} < \\frac{\\pi}{2}$, $\\omega_1$ lies strictly in the stopband:"
+      },
+      {
+       "t": "math",
+       "tex": "H_c(e^{j\\pi/3}) = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\omega_2 = \\frac{2\\pi}{3} = \\frac{4\\pi}{6} \\approx 2.094\\text{ rad/s}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $\\frac{\\pi}{2} \\le \\frac{2\\pi}{3} \\le \\frac{5\\pi}{6}$, $\\omega_2$ lies at the center of the passband:"
+      },
+      {
+       "t": "math",
+       "tex": "H_c(e^{j 2\\pi/3}) = 1"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Resulting Output for System (c):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_c[n] = 0 \\cdot \\cos\\left(\\frac{\\pi}{3} n\\right) + 1 \\cdot \\cos\\left(\\frac{2\\pi}{3} n\\right) = \\cos\\left(\\frac{2\\pi}{3} n\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Verdict:** Candidate (c) is **EXACTLY AND UNIQUELY CORRECT**."
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Common Fallacies:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**The Amplitude vs Phase Trap:** In candidate (a), students verify that $H(e^{j\\pi/3}) = 0$ and then check only the magnitude $\\vert H(e^{j 2\\pi/3})\\vert = \\vert -1\\vert = 1$. Concluding that candidate (a) is correct is a fatal trap because the phase response introduces a $-\\pi$ phase shift ($e^{j\\pi} = -1$), flipping the sign of the cosine to $-\\cos(2\\pi n/3)$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4102,156 +4096,155 @@ export default {
      "text": "Derive the response of an LTI system with impulse response $h[n]$ to a complex exponential input sequence $x[n] = z_0^n$ ($z_0 \\in \\mathbb{C}$), and establish the eigenvalue-eigenfunction relationship."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Definition of Eigenfunction in Discrete Systems"
-    },
-    {
-     "t": "p",
-     "text": "An input signal $x[n]$ is called an **eigenfunction** of an LTI system if the resulting output $y[n]$ is a scaled replica of the input:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\alpha \\cdot x[n]"
-    },
-    {
-     "t": "p",
-     "text": "where the complex scalar $\\alpha \\in \\mathbb{C}$ is the corresponding **eigenvalue**."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Evaluation of Discrete Convolution Sum"
-    },
-    {
-     "t": "p",
-     "text": "Let the input be $x[n] = z_0^n$ for all $n \\in \\mathbb{Z}$."
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n] * h[n] = \\sum_{k=-\\infty}^\\infty h[k] x[n - k] = \\sum_{k=-\\infty}^\\infty h[k] z_0^{n - k}"
-    },
-    {
-     "t": "p",
-     "text": "Factoring $z_0^n$ outside the summation:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = z_0^n \\left( \\sum_{k=-\\infty}^\\infty h[k] z_0^{-k} \\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Identification of System Transfer Function"
-    },
-    {
-     "t": "p",
-     "text": "The infinite summation is the bilateral $Z$-transform of $h[n]$ evaluated at $z = z_0$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(z_0) = \\sum_{k=-\\infty}^\\infty h[k] z_0^{-k}"
-    },
-    {
-     "t": "p",
-     "text": "Assuming $z_0$ lies strictly within the Region of Convergence (ROC) of $H(z)$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = H(z_0) \\cdot z_0^n"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Eigenfunction: } x[n] = z_0^n \\quad \\implies \\quad \\text{Eigenvalue: } \\alpha = H(z_0)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Specialization to Harmonic Exponentials on the Unit Circle"
-    },
-    {
-     "t": "p",
-     "text": "Setting $z_0 = e^{j\\omega_0}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = e^{j\\omega_0 n} \\implies y[n] = H(e^{j\\omega_0}) \\cdot e^{j\\omega_0 n}"
-    },
-    {
-     "t": "p",
-     "text": "Expressing $H(e^{j\\omega_0})$ in polar form: $H(e^{j\\omega_0}) = \\vert H(e^{j\\omega_0})\\vert e^{j \\angle H(e^{j\\omega_0})}$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\vert H(e^{j\\omega_0})\\vert e^{j(\\omega_0 n + \\angle H(e^{j\\omega_0}))}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Why Real Sinusoids Are NOT Strict Eigenfunctions"
-    },
-    {
-     "t": "p",
-     "text": "Consider $x[n] = \\cos(\\omega_0 n) = \\frac{1}{2} e^{j\\omega_0 n} + \\frac{1}{2} e^{-j\\omega_0 n}$.\nFor a real impulse response $h[n]$, $H(e^{-j\\omega_0}) = H^*(e^{j\\omega_0}) = \\vert H(e^{j\\omega_0})\\vert e^{-j \\angle H(e^{j\\omega_0})}$."
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\vert H(e^{j\\omega_0})\\vert \\cos(\\omega_0 n + \\angle H(e^{j\\omega_0}))"
-    },
-    {
-     "t": "p",
-     "text": "Unless the phase shift $\\angle H(e^{j\\omega_0})$ is an integer multiple of $\\pi$, the output contains a phase delay that alters the waveform shape relative to $\\cos(\\omega_0 n)$. Thus, real sinusoids are combinations of conjugate eigenfunctions, not individual eigenfunctions."
-    },
-    {
-     "t": "h4",
-     "text": "Exam Traps & Summary Table:"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Domain",
-      "Input Eigenfunction ($x[n]$)",
-      "System Operator",
-      "Output ($y[n]$)",
-      "System Eigenvalue ($\\alpha$)"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Definition of Eigenfunction in Discrete Systems"
+      },
+      {
+       "t": "p",
+       "text": "An input signal $x[n]$ is called an **eigenfunction** of an LTI system if the resulting output $y[n]$ is a scaled replica of the input:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\alpha \\cdot x[n]"
+      },
+      {
+       "t": "p",
+       "text": "where the complex scalar $\\alpha \\in \\mathbb{C}$ is the corresponding **eigenvalue**."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Evaluation of Discrete Convolution Sum"
+      },
+      {
+       "t": "p",
+       "text": "Let the input be $x[n] = z_0^n$ for all $n \\in \\mathbb{Z}$."
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n] * h[n] = \\sum_{k=-\\infty}^\\infty h[k] x[n - k] = \\sum_{k=-\\infty}^\\infty h[k] z_0^{n - k}"
+      },
+      {
+       "t": "p",
+       "text": "Factoring $z_0^n$ outside the summation:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = z_0^n \\left( \\sum_{k=-\\infty}^\\infty h[k] z_0^{-k} \\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Identification of System Transfer Function"
+      },
+      {
+       "t": "p",
+       "text": "The infinite summation is the bilateral $Z$-transform of $h[n]$ evaluated at $z = z_0$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(z_0) = \\sum_{k=-\\infty}^\\infty h[k] z_0^{-k}"
+      },
+      {
+       "t": "p",
+       "text": "Assuming $z_0$ lies strictly within the Region of Convergence (ROC) of $H(z)$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = H(z_0) \\cdot z_0^n"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Eigenfunction: } x[n] = z_0^n \\quad \\implies \\quad \\text{Eigenvalue: } \\alpha = H(z_0)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Specialization to Harmonic Exponentials on the Unit Circle"
+      },
+      {
+       "t": "p",
+       "text": "Setting $z_0 = e^{j\\omega_0}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = e^{j\\omega_0 n} \\implies y[n] = H(e^{j\\omega_0}) \\cdot e^{j\\omega_0 n}"
+      },
+      {
+       "t": "p",
+       "text": "Expressing $H(e^{j\\omega_0})$ in polar form: $H(e^{j\\omega_0}) = \\vert H(e^{j\\omega_0})\\vert e^{j \\angle H(e^{j\\omega_0})}$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\vert H(e^{j\\omega_0})\\vert e^{j(\\omega_0 n + \\angle H(e^{j\\omega_0}))}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Why Real Sinusoids Are NOT Strict Eigenfunctions"
+      },
+      {
+       "t": "p",
+       "text": "Consider $x[n] = \\cos(\\omega_0 n) = \\frac{1}{2} e^{j\\omega_0 n} + \\frac{1}{2} e^{-j\\omega_0 n}$.\nFor a real impulse response $h[n]$, $H(e^{-j\\omega_0}) = H^*(e^{j\\omega_0}) = \\vert H(e^{j\\omega_0})\\vert e^{-j \\angle H(e^{j\\omega_0})}$."
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\vert H(e^{j\\omega_0})\\vert \\cos(\\omega_0 n + \\angle H(e^{j\\omega_0}))"
+      },
+      {
+       "t": "p",
+       "text": "Unless the phase shift $\\angle H(e^{j\\omega_0})$ is an integer multiple of $\\pi$, the output contains a phase delay that alters the waveform shape relative to $\\cos(\\omega_0 n)$. Thus, real sinusoids are combinations of conjugate eigenfunctions, not individual eigenfunctions."
+      },
+      {
+       "t": "h4",
+       "text": "Exam Traps & Summary Table:"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Domain",
+        "Input Eigenfunction ($x[n]$)",
+        "System Operator",
+        "Output ($y[n]$)",
+        "System Eigenvalue ($\\alpha$)"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---",
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**Time Domain ($Z$-plane)**",
+         "$z_0^n$ ($z_0 \\in \\text{ROC}$)",
+         "Convolution $* h[n]$",
+         "$H(z_0) z_0^n$",
+         "$H(z_0) = \\sum h[k]z_0^{-k}$"
+        ],
+        [
+         "**Harmonic Frequency**",
+         "$e^{j\\omega_0 n}$",
+         "DTFT Operator",
+         "$H(e^{j\\omega_0}) e^{j\\omega_0 n}$",
+         "$H(e^{j\\omega_0}) = \\vert H\\vert e^{j\\angle H}$"
+        ],
+        [
+         "**Continuous-Time Analog**",
+         "$e^{s_0 t}$ ($s_0 \\in \\text{ROC}$)",
+         "Convolution $* h(t)$",
+         "$H(s_0) e^{s_0 t}$",
+         "$H(s_0) = \\int h(\\tau)e^{-s_0 \\tau} d\\tau$"
+        ]
+       ]
+      }
      ],
-     "align": [
-      ":---",
-      ":---",
-      ":---",
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**Time Domain ($Z$-plane)**",
-       "$z_0^n$ ($z_0 \\in \\text{ROC}$)",
-       "Convolution $* h[n]$",
-       "$H(z_0) z_0^n$",
-       "$H(z_0) = \\sum h[k]z_0^{-k}$"
-      ],
-      [
-       "**Harmonic Frequency**",
-       "$e^{j\\omega_0 n}$",
-       "DTFT Operator",
-       "$H(e^{j\\omega_0}) e^{j\\omega_0 n}$",
-       "$H(e^{j\\omega_0}) = \\vert H\\vert e^{j\\angle H}$"
-      ],
-      [
-       "**Continuous-Time Analog**",
-       "$e^{s_0 t}$ ($s_0 \\in \\text{ROC}$)",
-       "Convolution $* h(t)$",
-       "$H(s_0) e^{s_0 t}$",
-       "$H(s_0) = \\int h(\\tau)e^{-s_0 \\tau} d\\tau$"
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "open": true
     },
     {
      "t": "h2",
@@ -4774,18 +4767,17 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**The Two Infinite Support Traps in Discrete Eigenfunctions**:\n1. **Bilateral Domain Requirement**: The derivation strictly depends on $x[n]$ existing from $n = -\\infty$ to $n = +\\infty$. If the input is initiated at some finite time $n=0$ (e.g., $x[n] = z_0^n u[n]$), the convolution limits change to $\\sum_{k=-\\infty}^n h[k] z_0^{n-k}$, which includes starting transients. **$z_0^n u[n]$ is NEVER an eigenfunction!**\n2. **Convergence of the Infinite Sum**: The scalar $H(z_0) = \\sum_{k=-\\infty}^{\\infty} h[k] z_0^{-k}$ is only valid if this power series converges to a finite complex value. This brings us directly to the ROC requirement in Slide 066."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**The Two Infinite Support Traps in Discrete Eigenfunctions**:\n1. **Bilateral Domain Requirement**: The derivation strictly depends on $x[n]$ existing from $n = -\\infty$ to $n = +\\infty$. If the input is initiated at some finite time $n=0$ (e.g., $x[n] = z_0^n u[n]$), the convolution limits change to $\\sum_{k=-\\infty}^n h[k] z_0^{n-k}$, which includes starting transients. **$z_0^n u[n]$ is NEVER an eigenfunction!**\n2. **Convergence of the Infinite Sum**: The scalar $H(z_0) = \\sum_{k=-\\infty}^{\\infty} h[k] z_0^{-k}$ is only valid if this power series converges to a finite complex value. This brings us directly to the ROC requirement in Slide 066."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4820,18 +4812,17 @@ export default {
      "text": "If $z_0$ falls on a pole or outside the ROC, the convolution sum diverges ($y[n] \\to \\infty$). In that case, the eigenfunction relation cannot be evaluated."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Exam Trap Alert**:\nIn GATE examination questions, examiners frequently specify systems with causal or anti-causal impulse responses and ask for the output when $x[n] = z_0^n$.\nStudents who blindly substitute $z = z_0$ into the algebraic expression $\\frac{N(z)}{D(z)}$ without checking the ROC get completely trapped!\n- If $z_0 \\notin \\text{ROC}(H)$, the mathematical output does **NOT** exist in the steady state; the convolution sum diverges to infinity."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Exam Trap Alert**:\nIn GATE examination questions, examiners frequently specify systems with causal or anti-causal impulse responses and ask for the output when $x[n] = z_0^n$.\nStudents who blindly substitute $z = z_0$ into the algebraic expression $\\frac{N(z)}{D(z)}$ without checking the ROC get completely trapped!\n- If $z_0 \\notin \\text{ROC}(H)$, the mathematical output does **NOT** exist in the steady state; the convolution sum diverges to infinity."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4951,18 +4942,17 @@ export default {
      "tex": "y_3[n] = (1 - j) \\left(\\frac{1+j}{2}\\right)^n = \\sqrt{2} e^{-j\\pi/4} \\left(\\frac{1+j}{2}\\right)^n"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**Geometry of the ROC**:\nThe pole is at $z = \\frac{1}{2}$ on the positive real axis. The boundary of the ROC is a circle of radius $r = 0.5$.\nAny complex number $z_0$ with distance from origin $\\vert z_0\\vert > 0.5$ lies in the shaded region outside the circle, ensuring unconditional convergence of the eigenfunction sum."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**Geometry of the ROC**:\nThe pole is at $z = \\frac{1}{2}$ on the positive real axis. The boundary of the ROC is a circle of radius $r = 0.5$.\nAny complex number $z_0$ with distance from origin $\\vert z_0\\vert > 0.5$ lies in the shaded region outside the circle, ensuring unconditional convergence of the eigenfunction sum."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5041,18 +5031,17 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**Formulaic Blindness Trap**:\nAn unwary student would substitute $z = 1/4$ into the formula:\n$$H(1/4) = \\frac{1/4}{1/4 - 1/2} = \\frac{1/4}{-1/4} = -1 \\implies y[n] \\stackrel{?}{=} -(1/4)^n$$\n**This is completely wrong!** The algebraic expression $\\frac{z}{z-1/2}$ equals the Z-transform of $\\left(\\frac{1}{2}\\right)^n u[n]$ **only** for $\\vert z\\vert > 1/2$. For $\\vert z\\vert < 1/2$, the sum does not converge."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**Formulaic Blindness Trap**:\nAn unwary student would substitute $z = 1/4$ into the formula:\n$$H(1/4) = \\frac{1/4}{1/4 - 1/2} = \\frac{1/4}{-1/4} = -1 \\implies y[n] \\stackrel{?}{=} -(1/4)^n$$\n**This is completely wrong!** The algebraic expression $\\frac{z}{z-1/2}$ equals the Z-transform of $\\left(\\frac{1}{2}\\right)^n u[n]$ **only** for $\\vert z\\vert > 1/2$. For $\\vert z\\vert < 1/2$, the sum does not converge."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5225,18 +5214,17 @@ export default {
      "tex": "y[n] = \\left[\\frac{4 \\cdot 2^n - (1/2)^n}{3}\\right] u[n] = \\left[\\frac{2 \\cdot 2^{n+1} - 2 \\cdot (1/2)^{n+1}}{3}\\right] u[n] = \\left[\\frac{(2)^{n+1} - (1/2)^{n+1}}{3/2}\\right] u[n]"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Summary Table: $2^n$ vs $2^n u[n]$**:\n- Input $x[n] = 2^n$ (two-sided) $\\implies y[n] = \\frac{4}{3} \\cdot 2^n$ (pure steady-state eigenfunction response).\n- Input $x[n] = 2^n u[n]$ (one-sided) $\\implies y[n] = \\frac{4}{3} 2^n u[n] - \\frac{1}{3} (1/2)^n u[n]$ (contains forced response $\\frac{4}{3} 2^n u[n]$ PLUS natural transient $-\\frac{1}{3}(1/2)^n u[n]$!)."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Summary Table: $2^n$ vs $2^n u[n]$**:\n- Input $x[n] = 2^n$ (two-sided) $\\implies y[n] = \\frac{4}{3} \\cdot 2^n$ (pure steady-state eigenfunction response).\n- Input $x[n] = 2^n u[n]$ (one-sided) $\\implies y[n] = \\frac{4}{3} 2^n u[n] - \\frac{1}{3} (1/2)^n u[n]$ (contains forced response $\\frac{4}{3} 2^n u[n]$ PLUS natural transient $-\\frac{1}{3}(1/2)^n u[n]$!)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5597,18 +5585,17 @@ export default {
      "tex": "\\boxed{y[n] = A \\vert H(e^{j\\omega_0})\\vert \\sin\\left(\\omega_0 n + \\phi + \\angle H(e^{j\\omega_0})\\right)}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Key Distinction**:\n- If $h[n]$ is real and **NOT even**, the output has the same frequency, but its phase is shifted by $\\angle H(e^{j\\omega_0})$. Because of this phase shift, $y[n] \\neq \\lambda x[n]$, so $x[n]$ is technically **not an eigenfunction**.\n- If $h[n]$ is real and **EVEN**, the phase response is zero or integer multiples of $\\pi$ ($\\angle H(e^{j\\omega_0}) \\in \\{0, \\pi\\}$), so $y[n] = H(e^{j\\omega_0}) x[n]$ with $H(e^{j\\omega_0}) \\in \\mathbb{R}$. In this case, the sinusoid is truly an **eigenfunction**!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Key Distinction**:\n- If $h[n]$ is real and **NOT even**, the output has the same frequency, but its phase is shifted by $\\angle H(e^{j\\omega_0})$. Because of this phase shift, $y[n] \\neq \\lambda x[n]$, so $x[n]$ is technically **not an eigenfunction**.\n- If $h[n]$ is real and **EVEN**, the phase response is zero or integer multiples of $\\pi$ ($\\angle H(e^{j\\omega_0}) \\in \\{0, \\pi\\}$), so $y[n] = H(e^{j\\omega_0}) x[n]$ with $H(e^{j\\omega_0}) \\in \\mathbb{R}$. In this case, the sinusoid is truly an **eigenfunction**!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5807,18 +5794,17 @@ export default {
      "text": "The zeros of the transfer function are at $z = \\pm j = e^{\\pm j\\pi/2}$, which completely suppress the input frequencies $\\omega = \\pm \\pi/2$!"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**Z-Plane Pole-Zero Geometric Interpretation**:\nThe zeros are located directly on the unit circle at $z = e^{j\\pi/2} = j$ and $z = e^{-j\\pi/2} = -j$.\nWhen a signal has spectral energy at the angular location of a unit-circle zero, the magnitude response $\\vert H(e^{j\\omega})\\vert$ becomes identically zero, nulling the frequency completely!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**Z-Plane Pole-Zero Geometric Interpretation**:\nThe zeros are located directly on the unit circle at $z = e^{j\\pi/2} = j$ and $z = e^{-j\\pi/2} = -j$.\nWhen a signal has spectral energy at the angular location of a unit-circle zero, the magnitude response $\\vert H(e^{j\\omega})\\vert$ becomes identically zero, nulling the frequency completely!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5992,18 +5978,17 @@ export default {
      "tex": "\\mathcal{E}_{\\text{min}} = (-2)^2 + (-1)^2 + 2^2 + (-1)^2 = 4 + 1 + 4 + 1 = 10"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Terminology Trap**:\n- If the question states **\"a 3-point FIR filter $g[n]$ supported on an interval of length 3\"**, the samples must be contiguous (e.g., $n \\in \\{-1, 0, 1\\}$ or $\\{0, 1, 2\\}$).\n- If the question states **\"a 3-sparse impulse response $g[n]$ with at most 3 non-zero samples\"**, you are free to pick any 3 sample locations that capture the maximum energy!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Terminology Trap**:\n- If the question states **\"a 3-point FIR filter $g[n]$ supported on an interval of length 3\"**, the samples must be contiguous (e.g., $n \\in \\{-1, 0, 1\\}$ or $\\{0, 1, 2\\}$).\n- If the question states **\"a 3-sparse impulse response $g[n]$ with at most 3 non-zero samples\"**, you are free to pick any 3 sample locations that capture the maximum energy!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6328,18 +6313,17 @@ export default {
      "text": "It does **NOT** become $\\sin(-2\\omega)$!"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**The Continuous Frequency Blindspot**:\nThe sequence index $n$ in Fourier series represents harmonic number, not physical frequency.\nWhen time is scaled as $x(t) \\to x(\\alpha t)$, the waveform speeds up and its physical frequency scales by $\\alpha$, but its harmonic spectrum $c_n$ is identical!\nTherefore, $c[n] \\xrightarrow{\\text{DTFT}} C(e^{j\\omega})$ is completely invariant to $\\alpha$ unless we explicitly relate the continuous frequency to the discrete frequency!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**The Continuous Frequency Blindspot**:\nThe sequence index $n$ in Fourier series represents harmonic number, not physical frequency.\nWhen time is scaled as $x(t) \\to x(\\alpha t)$, the waveform speeds up and its physical frequency scales by $\\alpha$, but its harmonic spectrum $c_n$ is identical!\nTherefore, $c[n] \\xrightarrow{\\text{DTFT}} C(e^{j\\omega})$ is completely invariant to $\\alpha$ unless we explicitly relate the continuous frequency to the discrete frequency!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6599,18 +6583,17 @@ export default {
      "tex": "\\boxed{\\sum_{n=-\\infty}^{\\infty} x[2n+1] = \\frac{X(e^{j0}) - X(e^{j\\pi})}{2}}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Favorite Application**:\nSuppose you are given a complicated sequence like $x[n] = \\frac{\\sin(\\pi n / 4)}{\\pi n} \\cos\\left(\\frac{\\pi}{3}n\\right)$ and asked to find the sum of only its even samples $\\sum_{n=-\\infty}^\\infty x[2n]$.\nInstead of computing each sample, simply find its DTFT $X(e^{j\\omega})$, evaluate $X(e^{j0})$ and $X(e^{j\\pi})$, and take their average!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Favorite Application**:\nSuppose you are given a complicated sequence like $x[n] = \\frac{\\sin(\\pi n / 4)}{\\pi n} \\cos\\left(\\frac{\\pi}{3}n\\right)$ and asked to find the sum of only its even samples $\\sum_{n=-\\infty}^\\infty x[2n]$.\nInstead of computing each sample, simply find its DTFT $X(e^{j\\omega})$, evaluate $X(e^{j0})$ and $X(e^{j\\pi})$, and take their average!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7107,18 +7090,17 @@ export default {
      "tex": "x_4[n] = \\{1, 2, 1, 2\\}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Why Zero-Padding Matters for DFT**:\nAppending zeros in the time domain does **NOT** increase the physical frequency resolution of the signal (the continuous DTFT spectrum remains fundamentally unchanged in shape).\nInstead, zero-padding provides **spectral interpolation**, sampling the underlying continuous DTFT $X(e^{j\\omega})$ at more closely spaced frequency bins $\\omega_k = \\frac{2\\pi k}{N}$!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Why Zero-Padding Matters for DFT**:\nAppending zeros in the time domain does **NOT** increase the physical frequency resolution of the signal (the continuous DTFT spectrum remains fundamentally unchanged in shape).\nInstead, zero-padding provides **spectral interpolation**, sampling the underlying continuous DTFT $X(e^{j\\omega})$ at more closely spaced frequency bins $\\omega_k = \\frac{2\\pi k}{N}$!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7217,18 +7199,17 @@ export default {
      "tex": "-10 + 3(4) = -10 + 12 = 2 \\implies -10 \\pmod 4 = 2"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**DSP Application: Circular Time Reversal**:\nWhen a 4-point sequence $x[n] = \\{x[0], x[1], x[2], x[3]\\}$ is circularly time-reversed to form $x[((-n))_4]$:\n- For $n = 0$: $x[((-0))_4] = x[0]$\n- For $n = 1$: $x[((-1))_4] = x[3]$\n- For $n = 2$: $x[((-2))_4] = x[2]$\n- For $n = 3$: $x[((-3))_4] = x[1]$\nNotice that the zeroth sample $x[0]$ remains fixed at $n = 0$, while the remaining samples $x[1], x[2], x[3]$ are mirrored in reverse order! Understanding negative modulo arithmetic prevents catastrophic indexing errors in circular convolution."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**DSP Application: Circular Time Reversal**:\nWhen a 4-point sequence $x[n] = \\{x[0], x[1], x[2], x[3]\\}$ is circularly time-reversed to form $x[((-n))_4]$:\n- For $n = 0$: $x[((-0))_4] = x[0]$\n- For $n = 1$: $x[((-1))_4] = x[3]$\n- For $n = 2$: $x[((-2))_4] = x[2]$\n- For $n = 3$: $x[((-3))_4] = x[1]$\nNotice that the zeroth sample $x[0]$ remains fixed at $n = 0$, while the remaining samples $x[1], x[2], x[3]$ are mirrored in reverse order! Understanding negative modulo arithmetic prevents catastrophic indexing errors in circular convolution."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -7754,285 +7735,284 @@ export default {
      "text": "2.3 Worked Derivations & Diagnostic Drills: Modulo & Circular Operations"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 1 (Slides 097\u2013098): 4-Point Periodic Extension"
-    },
-    {
-     "t": "p",
-     "text": "Given the 4-point sequence $x[n] = \\{ \\underset{\\uparrow}{1}, 2, -1, 1 \\}$ for $n=0, 1, 2, 3$.\nConstruct and evaluate $y[n] = (x[n])_4 = x[n \\bmod 4]$ for $-4 \\le n \\le 5$."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Evaluation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Base samples:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = 0 \\implies y[0] = x[0 \\bmod 4] = x[0] = 1$",
-      "$n = 1 \\implies y[1] = x[1 \\bmod 4] = x[1] = 2$",
-      "$n = 2 \\implies y[2] = x[2 \\bmod 4] = x[2] = -1$",
-      "$n = 3 \\implies y[3] = x[3 \\bmod 4] = x[3] = 1$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Positive wrapped samples:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = 4 \\implies y[4] = x[4 \\bmod 4] = x[0] = 1$",
-      "$n = 5 \\implies y[5] = x[5 \\bmod 4] = x[1] = 2$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Negative wrapped samples:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = -1 \\implies y[-1] = x[-1 \\bmod 4] = x[4 - 1] = x[3] = 1$",
-      "$n = -2 \\implies y[-2] = x[-2 \\bmod 4] = x[4 - 2] = x[2] = -1$",
-      "$n = -3 \\implies y[-3] = x[-3 \\bmod 4] = x[4 - 3] = x[1] = 2$",
-      "$n = -4 \\implies y[-4] = x[-4 \\bmod 4] = x[0] = 1$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Consolidated Periodic Sequence:**"
-    },
-    {
-     "t": "math",
-     "tex": "(x[n])_4 = \\{ \\dots, 1, 2, -1, 1, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, 2, -1, 1, 1, 2, \\dots \\}, \\quad N_0 = 4"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 2 (Slides 099\u2013100): Modulo 5 of 4-Point Sequence (Zero-Padding)"
-    },
-    {
-     "t": "p",
-     "text": "Given the 4-point sequence $x[n] = \\{ \\underset{\\uparrow}{1}, 2, 3, 4 \\}$.\nFind $(x[n])_5 = x[n \\bmod 5]$."
-    },
-    {
-     "t": "p",
-     "text": "**Mathematical Analysis:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "The original sequence has length $L_x = 4$ ($n=0, 1, 2, 3$).",
-      "The requested modulo period is $N = 5 > L_x$.",
-      "By the zero-padding rule for periodic extension, any index $n$ such that $L_x \\le (n \\bmod 5) < N$ must be assigned 0:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[4] = 0"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Evaluating samples over one fundamental period $n = 0, 1, 2, 3, 4$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[0] = x[0] = 1, \\quad y[1] = x[1] = 2, \\quad y[2] = x[2] = 3, \\quad y[3] = x[3] = 4, \\quad y[4] = x[4] = 0"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Evaluating negative indices:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[-1] = x[-1 \\bmod 5] = x[4] = 0, \\quad y[-2] = x[-2 \\bmod 5] = x[3] = 4"
-    },
-    {
-     "t": "p",
-     "text": "**Final Boxed Sequence:**"
-    },
-    {
-     "t": "math",
-     "tex": "(x[n])_5 = \\{ \\dots, 1, 2, 3, 4, 0, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, 2, 3, 4, 0, 1, 2, 3, 4, 0, \\dots \\}, \\quad N_0 = 5"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 3 (Slides 101\u2013103): Linear vs. Circular Operations"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\{ \\underset{\\uparrow}{1}, 2, 3, 4 \\}$ ($N = 4$)."
-    },
-    {
-     "t": "p",
-     "text": "**Part A: Linear Operations (Slide 101)**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Advance by 1:** $y[n] = x[n+1]$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[-1] = x[0] = 1, \\quad y[0] = x[1] = 2, \\quad y[1] = x[2] = 3, \\quad y[2] = x[3] = 4"
-    },
-    {
-     "t": "math",
-     "tex": "x[n+1] = \\{ 1, \\underset{\\uparrow}{2}, 3, 4 \\}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Delay by 1:** $y[n] = x[n-1]$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[0] = x[-1] = 0, \\quad y[1] = x[0] = 1, \\quad y[2] = x[1] = 2, \\quad y[3] = x[2] = 3, \\quad y[4] = x[3] = 4"
-    },
-    {
-     "t": "math",
-     "tex": "x[n-1] = \\{ \\underset{\\uparrow}{0}, 1, 2, 3, 4 \\}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Linear Reflection:** $y[n] = x[-n]$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[-3] = x[3] = 4, \\quad y[-2] = x[2] = 3, \\quad y[-1] = x[1] = 2, \\quad y[0] = x[0] = 1"
-    },
-    {
-     "t": "math",
-     "tex": "x[-n] = \\{ 4, 3, 2, \\underset{\\uparrow}{1} \\}"
-    },
-    {
-     "t": "p",
-     "text": "**Part B: Circular Operations (Slides 102\u2013103)**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Circular Advance:** $(x[n+1])_4 = x[(n+1) \\bmod 4]$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $n=0$: $x[1 \\bmod 4] = x[1] = 2$",
-      "At $n=1$: $x[2 \\bmod 4] = x[2] = 3$",
-      "At $n=2$: $x[3 \\bmod 4] = x[3] = 4$",
-      "At $n=3$: $x[4 \\bmod 4] = x[0] = 1$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{4-point } x[n+1] = \\{ \\underset{\\uparrow}{2}, 3, 4, 1 \\}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Circular Delay:** $(x[n-1])_4 = x[(n-1) \\bmod 4]$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $n=0$: $x[-1 \\bmod 4] = x[3] = 4$",
-      "At $n=1$: $x[0 \\bmod 4] = x[0] = 1$",
-      "At $n=2$: $x[1 \\bmod 4] = x[1] = 2$",
-      "At $n=3$: $x[2 \\bmod 4] = x[2] = 3$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{4-point } x[n-1] = \\{ \\underset{\\uparrow}{4}, 1, 2, 3 \\}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Circular Reflection:** $(x[-n])_4 = x[(-n) \\bmod 4]$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At $n=0$: $x[0 \\bmod 4] = x[0] = 1$",
-      "At $n=1$: $x[-1 \\bmod 4] = x[3] = 4$",
-      "At $n=2$: $x[-2 \\bmod 4] = x[2] = 3$",
-      "At $n=3$: $x[-3 \\bmod 4] = x[1] = 2$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{4-point } x[-n] = \\{ \\underset{\\uparrow}{1}, 4, 3, 2 \\}"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 4 (Slide 103): Circular Reflection Drill"
-    },
-    {
-     "t": "p",
-     "text": "Given 4-point sequence $x[n] = \\{ \\underset{\\uparrow}{-2}, 1, -1, 3 \\}$. Find 4-point $x[-n]$."
-    },
-    {
-     "t": "p",
-     "text": "**Using Circular Reversal Rule:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$y[0] = x[0] = -2$ (origin remains invariant)",
-      "$y[1] = x[(4-1)] = x[3] = 3$",
-      "$y[2] = x[(4-2)] = x[2] = -1$",
-      "$y[3] = x[(4-3)] = x[1] = 1$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{4-point } x[-n] = \\{ \\underset{\\uparrow}{-2}, 3, -1, 1 \\}"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Pitfall (Linear vs. Circular Reflection):**\nA common mistake is assuming circular reflection $x[-n]$ is simply the reversed vector $\\{3, -1, 1, -2\\}$.\nIn circular reflection, **the sample at $n = 0$ NEVER moves**!\nThe reversal applies strictly to the remaining $N-1$ samples: $y[k] = x[N-k]$ for $1 \\le k \\le N-1$.\nOnly if $x[0]$ was also mirrored about a non-zero center would the origin shift."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 097 to 103  Modulo Extensions &amp  Circular Operations /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem 1 (Slides 097\u2013098): 4-Point Periodic Extension"
+      },
+      {
+       "t": "p",
+       "text": "Given the 4-point sequence $x[n] = \\{ \\underset{\\uparrow}{1}, 2, -1, 1 \\}$ for $n=0, 1, 2, 3$.\nConstruct and evaluate $y[n] = (x[n])_4 = x[n \\bmod 4]$ for $-4 \\le n \\le 5$."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Evaluation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Base samples:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = 0 \\implies y[0] = x[0 \\bmod 4] = x[0] = 1$",
+        "$n = 1 \\implies y[1] = x[1 \\bmod 4] = x[1] = 2$",
+        "$n = 2 \\implies y[2] = x[2 \\bmod 4] = x[2] = -1$",
+        "$n = 3 \\implies y[3] = x[3 \\bmod 4] = x[3] = 1$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Positive wrapped samples:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = 4 \\implies y[4] = x[4 \\bmod 4] = x[0] = 1$",
+        "$n = 5 \\implies y[5] = x[5 \\bmod 4] = x[1] = 2$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Negative wrapped samples:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = -1 \\implies y[-1] = x[-1 \\bmod 4] = x[4 - 1] = x[3] = 1$",
+        "$n = -2 \\implies y[-2] = x[-2 \\bmod 4] = x[4 - 2] = x[2] = -1$",
+        "$n = -3 \\implies y[-3] = x[-3 \\bmod 4] = x[4 - 3] = x[1] = 2$",
+        "$n = -4 \\implies y[-4] = x[-4 \\bmod 4] = x[0] = 1$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Consolidated Periodic Sequence:**"
+      },
+      {
+       "t": "math",
+       "tex": "(x[n])_4 = \\{ \\dots, 1, 2, -1, 1, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, 2, -1, 1, 1, 2, \\dots \\}, \\quad N_0 = 4"
+      },
+      {
+       "t": "h4",
+       "text": "Problem 2 (Slides 099\u2013100): Modulo 5 of 4-Point Sequence (Zero-Padding)"
+      },
+      {
+       "t": "p",
+       "text": "Given the 4-point sequence $x[n] = \\{ \\underset{\\uparrow}{1}, 2, 3, 4 \\}$.\nFind $(x[n])_5 = x[n \\bmod 5]$."
+      },
+      {
+       "t": "p",
+       "text": "**Mathematical Analysis:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "The original sequence has length $L_x = 4$ ($n=0, 1, 2, 3$).",
+        "The requested modulo period is $N = 5 > L_x$.",
+        "By the zero-padding rule for periodic extension, any index $n$ such that $L_x \\le (n \\bmod 5) < N$ must be assigned 0:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[4] = 0"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Evaluating samples over one fundamental period $n = 0, 1, 2, 3, 4$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[0] = x[0] = 1, \\quad y[1] = x[1] = 2, \\quad y[2] = x[2] = 3, \\quad y[3] = x[3] = 4, \\quad y[4] = x[4] = 0"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Evaluating negative indices:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[-1] = x[-1 \\bmod 5] = x[4] = 0, \\quad y[-2] = x[-2 \\bmod 5] = x[3] = 4"
+      },
+      {
+       "t": "p",
+       "text": "**Final Boxed Sequence:**"
+      },
+      {
+       "t": "math",
+       "tex": "(x[n])_5 = \\{ \\dots, 1, 2, 3, 4, 0, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, 2, 3, 4, 0, 1, 2, 3, 4, 0, \\dots \\}, \\quad N_0 = 5"
+      },
+      {
+       "t": "h4",
+       "text": "Problem 3 (Slides 101\u2013103): Linear vs. Circular Operations"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\{ \\underset{\\uparrow}{1}, 2, 3, 4 \\}$ ($N = 4$)."
+      },
+      {
+       "t": "p",
+       "text": "**Part A: Linear Operations (Slide 101)**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Advance by 1:** $y[n] = x[n+1]$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[-1] = x[0] = 1, \\quad y[0] = x[1] = 2, \\quad y[1] = x[2] = 3, \\quad y[2] = x[3] = 4"
+      },
+      {
+       "t": "math",
+       "tex": "x[n+1] = \\{ 1, \\underset{\\uparrow}{2}, 3, 4 \\}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Delay by 1:** $y[n] = x[n-1]$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[0] = x[-1] = 0, \\quad y[1] = x[0] = 1, \\quad y[2] = x[1] = 2, \\quad y[3] = x[2] = 3, \\quad y[4] = x[3] = 4"
+      },
+      {
+       "t": "math",
+       "tex": "x[n-1] = \\{ \\underset{\\uparrow}{0}, 1, 2, 3, 4 \\}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Linear Reflection:** $y[n] = x[-n]$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[-3] = x[3] = 4, \\quad y[-2] = x[2] = 3, \\quad y[-1] = x[1] = 2, \\quad y[0] = x[0] = 1"
+      },
+      {
+       "t": "math",
+       "tex": "x[-n] = \\{ 4, 3, 2, \\underset{\\uparrow}{1} \\}"
+      },
+      {
+       "t": "p",
+       "text": "**Part B: Circular Operations (Slides 102\u2013103)**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Circular Advance:** $(x[n+1])_4 = x[(n+1) \\bmod 4]$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $n=0$: $x[1 \\bmod 4] = x[1] = 2$",
+        "At $n=1$: $x[2 \\bmod 4] = x[2] = 3$",
+        "At $n=2$: $x[3 \\bmod 4] = x[3] = 4$",
+        "At $n=3$: $x[4 \\bmod 4] = x[0] = 1$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{4-point } x[n+1] = \\{ \\underset{\\uparrow}{2}, 3, 4, 1 \\}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Circular Delay:** $(x[n-1])_4 = x[(n-1) \\bmod 4]$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $n=0$: $x[-1 \\bmod 4] = x[3] = 4$",
+        "At $n=1$: $x[0 \\bmod 4] = x[0] = 1$",
+        "At $n=2$: $x[1 \\bmod 4] = x[1] = 2$",
+        "At $n=3$: $x[2 \\bmod 4] = x[2] = 3$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{4-point } x[n-1] = \\{ \\underset{\\uparrow}{4}, 1, 2, 3 \\}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Circular Reflection:** $(x[-n])_4 = x[(-n) \\bmod 4]$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At $n=0$: $x[0 \\bmod 4] = x[0] = 1$",
+        "At $n=1$: $x[-1 \\bmod 4] = x[3] = 4$",
+        "At $n=2$: $x[-2 \\bmod 4] = x[2] = 3$",
+        "At $n=3$: $x[-3 \\bmod 4] = x[1] = 2$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{4-point } x[-n] = \\{ \\underset{\\uparrow}{1}, 4, 3, 2 \\}"
+      },
+      {
+       "t": "h4",
+       "text": "Problem 4 (Slide 103): Circular Reflection Drill"
+      },
+      {
+       "t": "p",
+       "text": "Given 4-point sequence $x[n] = \\{ \\underset{\\uparrow}{-2}, 1, -1, 3 \\}$. Find 4-point $x[-n]$."
+      },
+      {
+       "t": "p",
+       "text": "**Using Circular Reversal Rule:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$y[0] = x[0] = -2$ (origin remains invariant)",
+        "$y[1] = x[(4-1)] = x[3] = 3$",
+        "$y[2] = x[(4-2)] = x[2] = -1$",
+        "$y[3] = x[(4-3)] = x[1] = 1$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{4-point } x[-n] = \\{ \\underset{\\uparrow}{-2}, 3, -1, 1 \\}"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Pitfall (Linear vs. Circular Reflection):**\nA common mistake is assuming circular reflection $x[-n]$ is simply the reversed vector $\\{3, -1, 1, -2\\}$.\nIn circular reflection, **the sample at $n = 0$ NEVER moves**!\nThe reversal applies strictly to the remaining $N-1$ samples: $y[k] = x[N-k]$ for $1 \\le k \\le N-1$.\nOnly if $x[0]$ was also mirrored about a non-zero center would the origin shift."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -8202,304 +8182,303 @@ export default {
      "text": "3.4 Worked Derivations & Diagnostic Drills: Linear & Circular Convolutions"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 1 (Slides 104\u2013106): Linear vs. Circular Convolution ($N=3$)"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\{ \\underset{\\uparrow}{1}, 2, 3 \\}$ ($N_1 = 3$) and $h[n] = \\{ \\underset{\\uparrow}{4}, 5, 6 \\}$ ($N_2 = 3$)."
-    },
-    {
-     "t": "p",
-     "text": "**Part A: Linear Convolution (Slide 104)**\nTotal length: $L = 3 + 3 - 1 = 5$ samples (indices $n = 0, 1, 2, 3, 4$).\nConstructing tabular multiplication grid:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{array}{c|ccc}\n* & 1 & 2 & 3 \\\\\n\\hline\n4 & 4 & 8 & 12 \\\\\n5 & 5 & 10 & 15 \\\\\n6 & 6 & 12 & 18\n\\end{array}"
-    },
-    {
-     "t": "p",
-     "text": "Summing along anti-diagonals:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = 0: 4$",
-      "$n = 1: 8 + 5 = 13$",
-      "$n = 2: 12 + 10 + 6 = 28$",
-      "$n = 3: 15 + 12 = 27$",
-      "$n = 4: 18$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{lin}}[n] = \\{ \\underset{\\substack{\\uparrow \\\\ n=0}}{4}, 13, 28, 27, \\underset{\\substack{\\uparrow \\\\ n=4}}{18} \\}"
-    },
-    {
-     "t": "p",
-     "text": "**Part B: 3-Point Circular Convolution via Circulant Matrix (Slide 105)**\nCirculant matrix $\\mathbf{C}_x$ of size $3 \\times 3$:\nFirst column: $[1, 2, 3]^T$.\nSecond column (downward circular shift): $[3, 1, 2]^T$.\nThird column (downward circular shift): $[2, 3, 1]^T$."
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} y[0] \\\\ y[1] \\\\ y[2] \\end{bmatrix} = \\begin{bmatrix} 1 & 3 & 2 \\\\ 2 & 1 & 3 \\\\ 3 & 2 & 1 \\end{bmatrix} \\begin{bmatrix} 4 \\\\ 5 \\\\ 6 \\end{bmatrix} = \\begin{bmatrix} 1(4) + 3(5) + 2(6) \\\\ 2(4) + 1(5) + 3(6) \\\\ 3(4) + 2(5) + 1(6) \\end{bmatrix} = \\begin{bmatrix} 4 + 15 + 12 \\\\ 8 + 5 + 18 \\\\ 12 + 10 + 6 \\end{bmatrix} = \\begin{bmatrix} 31 \\\\ 31 \\\\ 28 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{circ}}[n] = \\{ \\underset{\\uparrow}{31}, 31, 28 \\}"
-    },
-    {
-     "t": "p",
-     "text": "**Part C: Verification via Time-Domain Aliasing (Slide 106)**\nWrap linear convolution samples modulo 3:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = 0: y_{\\text{lin}}[0] + y_{\\text{lin}}[0+3] = 4 + 27 = 31$",
-      "$n = 1: y_{\\text{lin}}[1] + y_{\\text{lin}}[1+3] = 13 + 18 = 31$",
-      "$n = 2: y_{\\text{lin}}[2] + y_{\\text{lin}}[2+3] = 28 + 0 = 28$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{circ}}[n] = \\{ 31, 31, 28 \\} \\quad \\text{(Exact match!)}"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 2 (Slides 107\u2013109): Multi-Length Circular Convolution"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\{ \\underset{\\uparrow}{1}, 2 \\}$ ($N_1 = 2$) and $h[n] = \\{ \\underset{\\uparrow}{3}, 4, 5 \\}$ ($N_2 = 3$)."
-    },
-    {
-     "t": "p",
-     "text": "**1. Linear Convolution:**"
-    },
-    {
-     "t": "math",
-     "tex": "L = 2 + 3 - 1 = 4 \\text{ samples}"
-    },
-    {
-     "t": "p",
-     "text": "Tabular computation:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n=0: 1 \\times 3 = 3$",
-      "$n=1: 1 \\times 4 + 2 \\times 3 = 10$",
-      "$n=2: 1 \\times 5 + 2 \\times 4 = 13$",
-      "$n=3: 2 \\times 5 = 10$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_{\\text{lin}}[n] = \\{ \\underset{\\substack{\\uparrow \\\\ n=0}}{3}, 10, 13, \\underset{\\substack{\\uparrow \\\\ n=3}}{10} \\}"
-    },
-    {
-     "t": "p",
-     "text": "**2. 3-Point Circular Convolution (Slide 108):**\nZero-pad $x[n]$ to 3 points: $x[n] = \\{1, 2, 0\\}$.\nCirculant matrix of $h[n] = \\{3, 4, 5\\}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{C}_h = \\begin{bmatrix} 3 & 5 & 4 \\\\ 4 & 3 & 5 \\\\ 5 & 4 & 3 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y} = \\begin{bmatrix} 3 & 5 & 4 \\\\ 4 & 3 & 5 \\\\ 5 & 4 & 3 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 3(1) + 5(2) + 0 \\\\ 4(1) + 3(2) + 0 \\\\ 5(1) + 4(2) + 0 \\end{bmatrix} = \\begin{bmatrix} 13 \\\\ 10 \\\\ 13 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "*Aliasing Check:* Wrap linear tail $y_{\\text{lin}}[3] = 10$ into index $0$: $3 + 10 = 13 \\implies \\{13, 10, 13\\}$."
-    },
-    {
-     "t": "p",
-     "text": "**3. 4-Point Circular Convolution (Slide 109):**\nPad both sequences to $N = 4$:\n$x[n] = \\{1, 2, 0, 0\\}$, $h[n] = \\{3, 4, 5, 0\\}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{C}_h = \\begin{bmatrix} 3 & 0 & 5 & 4 \\\\ 4 & 3 & 0 & 5 \\\\ 5 & 4 & 3 & 0 \\\\ 0 & 5 & 4 & 3 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y} = \\begin{bmatrix} 3 & 0 & 5 & 4 \\\\ 4 & 3 & 0 & 5 \\\\ 5 & 4 & 3 & 0 \\\\ 0 & 5 & 4 & 3 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 3(1) + 0 \\\\ 4(1) + 3(2) \\\\ 5(1) + 4(2) \\\\ 0(1) + 5(2) \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ 10 \\\\ 13 \\\\ 10 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Since $N = 4 = N_1 + N_2 - 1$, circular convolution is **IDENTICAL** to linear convolution!"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 3 (Slide 110): Matrix Circular Convolution Drill"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\{ 1, -1, 3 \\}$ ($N_1 = 3$) and $h[n] = \\{ 1, 2 \\}$ ($N_2 = 2$).\nFind the 3-point circular convolution $x[n] \\circledast h[n]$."
-    },
-    {
-     "t": "p",
-     "text": "**Solution:**\nPad $h[n]$ with one zero to match length $N = 3$: $\\mathbf{h} = [1, 2, 0]^T$.\nConstruct circulant matrix $\\mathbf{C}_x$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Column 1: $[1, -1, 3]^T$",
-      "Column 2: $[3, 1, -1]^T$",
-      "Column 3: $[-1, 3, 1]^T$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y} = \\begin{bmatrix} 1 & 3 & -1 \\\\ -1 & 1 & 3 \\\\ 3 & -1 & 1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 1(1) + 3(2) - 1(0) \\\\ -1(1) + 1(2) + 3(0) \\\\ 3(1) - 1(2) + 1(0) \\end{bmatrix} = \\begin{bmatrix} 7 \\\\ 1 \\\\ 1 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y} = \\{ \\underset{\\uparrow}{7}, 1, 1 \\}"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 4 (Slides 113\u2013114): Comprehensive GATE Problem (Length & Aliasing)"
-    },
-    {
-     "t": "p",
-     "text": "Consider a 13-point sequence $x[n]$ ($N_1 = 13$) and a 9-point sequence $h[n]$ ($N_2 = 9$).\nLet $z[n] = x[n] * h[n]$ denote their linear convolution."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Let $y[n]$ be the $N$-point circular convolution of $x[n]$ and $h[n]$. If $y[n] = z[n]$, find $N$.",
-      "How many zeros must be padded to $x[n]$ and $h[n]$ to achieve $y[n] = z[n]$?",
-      "If a 13-point circular convolution $g[n] = x[n] \\circledast h[n]$ is computed, find the index $k$ for which $g[k] = z[k]$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Mathematical Analysis:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Length for Alias-Free Circular Convolution:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "N = N_1 + N_2 - 1 = 13 + 9 - 1 = 21"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{N = 21}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Zero-Padding Counts:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Zeros added to $x[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P_x = N - N_1 = 21 - 13 = 8 \\text{ zeros}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Zeros added to $h[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P_h = N - N_2 = 21 - 9 = 12 \\text{ zeros}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Uncorrupted Index Analysis for 13-Point Circular Convolution:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Linear convolution $z[n]$ has 21 samples (indices $n = 0, 1, \\dots, 20$).",
-      "In a 13-point circular convolution, indices wrap modulo 13:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g[n] = z[n] + z[n + 13], \\qquad n = 0, 1, \\dots, 12"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The tail samples that wrap around are $z[13], z[14], \\dots, z[20]$ (8 samples).",
-      "These wrap into indices $n = 0, 1, \\dots, 7$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g[0] = z[0] + z[13]"
-    },
-    {
-     "t": "math",
-     "tex": "g[1] = z[1] + z[14]"
-    },
-    {
-     "t": "math",
-     "tex": "\\vdots"
-    },
-    {
-     "t": "math",
-     "tex": "g[7] = z[7] + z[20]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For indices $n = 8, 9, 10, 11, 12$, the term $z[n+13]$ corresponds to indices $\\ge 21$, where $z[n] = 0$!",
-      "Therefore, indices $n \\in \\{8, 9, 10, 11, 12\\}$ are **completely uncorrupted**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g[n] = z[n] \\quad \\text{for } n \\in \\{8, 9, 10, 11, 12\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The $13^{\\text{th}}$ sample corresponds to index $k = 12$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g[12] = z[12]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Thus, $k = 12$ (or any $k \\in \\{8, 9, 10, 11, 12\\}$) satisfies $g[k] = z[k]$."
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "IMPORTANT",
-     "title": null,
-     "text": "**GATE Exam Takeaway (Uncorrupted Circular Samples):**\nWhen performing an $N$-point circular convolution of sequences of length $N_1$ and $N_2$ (with $N_1 \\ge N_2$ and $N = N_1$):\n- The number of aliased (corrupted) samples is $N_2 - 1$, spanning indices $0 \\le n \\le N_2 - 2$.\n- The number of uncorrupted samples is $N_1 - (N_2 - 1) = N_1 - N_2 + 1$, spanning indices $N_2 - 1 \\le n \\le N_1 - 1$.\n- For $N_1 = 13$ and $N_2 = 9$: corrupted range is $0 \\le n \\le 7$; uncorrupted range is $8 \\le n \\le 12$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 104 to 114  Convolution &amp  Aliasing /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem 1 (Slides 104\u2013106): Linear vs. Circular Convolution ($N=3$)"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\{ \\underset{\\uparrow}{1}, 2, 3 \\}$ ($N_1 = 3$) and $h[n] = \\{ \\underset{\\uparrow}{4}, 5, 6 \\}$ ($N_2 = 3$)."
+      },
+      {
+       "t": "p",
+       "text": "**Part A: Linear Convolution (Slide 104)**\nTotal length: $L = 3 + 3 - 1 = 5$ samples (indices $n = 0, 1, 2, 3, 4$).\nConstructing tabular multiplication grid:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{array}{c|ccc}\n* & 1 & 2 & 3 \\\\\n\\hline\n4 & 4 & 8 & 12 \\\\\n5 & 5 & 10 & 15 \\\\\n6 & 6 & 12 & 18\n\\end{array}"
+      },
+      {
+       "t": "p",
+       "text": "Summing along anti-diagonals:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = 0: 4$",
+        "$n = 1: 8 + 5 = 13$",
+        "$n = 2: 12 + 10 + 6 = 28$",
+        "$n = 3: 15 + 12 = 27$",
+        "$n = 4: 18$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{lin}}[n] = \\{ \\underset{\\substack{\\uparrow \\\\ n=0}}{4}, 13, 28, 27, \\underset{\\substack{\\uparrow \\\\ n=4}}{18} \\}"
+      },
+      {
+       "t": "p",
+       "text": "**Part B: 3-Point Circular Convolution via Circulant Matrix (Slide 105)**\nCirculant matrix $\\mathbf{C}_x$ of size $3 \\times 3$:\nFirst column: $[1, 2, 3]^T$.\nSecond column (downward circular shift): $[3, 1, 2]^T$.\nThird column (downward circular shift): $[2, 3, 1]^T$."
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} y[0] \\\\ y[1] \\\\ y[2] \\end{bmatrix} = \\begin{bmatrix} 1 & 3 & 2 \\\\ 2 & 1 & 3 \\\\ 3 & 2 & 1 \\end{bmatrix} \\begin{bmatrix} 4 \\\\ 5 \\\\ 6 \\end{bmatrix} = \\begin{bmatrix} 1(4) + 3(5) + 2(6) \\\\ 2(4) + 1(5) + 3(6) \\\\ 3(4) + 2(5) + 1(6) \\end{bmatrix} = \\begin{bmatrix} 4 + 15 + 12 \\\\ 8 + 5 + 18 \\\\ 12 + 10 + 6 \\end{bmatrix} = \\begin{bmatrix} 31 \\\\ 31 \\\\ 28 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{circ}}[n] = \\{ \\underset{\\uparrow}{31}, 31, 28 \\}"
+      },
+      {
+       "t": "p",
+       "text": "**Part C: Verification via Time-Domain Aliasing (Slide 106)**\nWrap linear convolution samples modulo 3:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = 0: y_{\\text{lin}}[0] + y_{\\text{lin}}[0+3] = 4 + 27 = 31$",
+        "$n = 1: y_{\\text{lin}}[1] + y_{\\text{lin}}[1+3] = 13 + 18 = 31$",
+        "$n = 2: y_{\\text{lin}}[2] + y_{\\text{lin}}[2+3] = 28 + 0 = 28$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{circ}}[n] = \\{ 31, 31, 28 \\} \\quad \\text{(Exact match!)}"
+      },
+      {
+       "t": "h4",
+       "text": "Problem 2 (Slides 107\u2013109): Multi-Length Circular Convolution"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\{ \\underset{\\uparrow}{1}, 2 \\}$ ($N_1 = 2$) and $h[n] = \\{ \\underset{\\uparrow}{3}, 4, 5 \\}$ ($N_2 = 3$)."
+      },
+      {
+       "t": "p",
+       "text": "**1. Linear Convolution:**"
+      },
+      {
+       "t": "math",
+       "tex": "L = 2 + 3 - 1 = 4 \\text{ samples}"
+      },
+      {
+       "t": "p",
+       "text": "Tabular computation:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n=0: 1 \\times 3 = 3$",
+        "$n=1: 1 \\times 4 + 2 \\times 3 = 10$",
+        "$n=2: 1 \\times 5 + 2 \\times 4 = 13$",
+        "$n=3: 2 \\times 5 = 10$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_{\\text{lin}}[n] = \\{ \\underset{\\substack{\\uparrow \\\\ n=0}}{3}, 10, 13, \\underset{\\substack{\\uparrow \\\\ n=3}}{10} \\}"
+      },
+      {
+       "t": "p",
+       "text": "**2. 3-Point Circular Convolution (Slide 108):**\nZero-pad $x[n]$ to 3 points: $x[n] = \\{1, 2, 0\\}$.\nCirculant matrix of $h[n] = \\{3, 4, 5\\}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{C}_h = \\begin{bmatrix} 3 & 5 & 4 \\\\ 4 & 3 & 5 \\\\ 5 & 4 & 3 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y} = \\begin{bmatrix} 3 & 5 & 4 \\\\ 4 & 3 & 5 \\\\ 5 & 4 & 3 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 3(1) + 5(2) + 0 \\\\ 4(1) + 3(2) + 0 \\\\ 5(1) + 4(2) + 0 \\end{bmatrix} = \\begin{bmatrix} 13 \\\\ 10 \\\\ 13 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "*Aliasing Check:* Wrap linear tail $y_{\\text{lin}}[3] = 10$ into index $0$: $3 + 10 = 13 \\implies \\{13, 10, 13\\}$."
+      },
+      {
+       "t": "p",
+       "text": "**3. 4-Point Circular Convolution (Slide 109):**\nPad both sequences to $N = 4$:\n$x[n] = \\{1, 2, 0, 0\\}$, $h[n] = \\{3, 4, 5, 0\\}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{C}_h = \\begin{bmatrix} 3 & 0 & 5 & 4 \\\\ 4 & 3 & 0 & 5 \\\\ 5 & 4 & 3 & 0 \\\\ 0 & 5 & 4 & 3 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y} = \\begin{bmatrix} 3 & 0 & 5 & 4 \\\\ 4 & 3 & 0 & 5 \\\\ 5 & 4 & 3 & 0 \\\\ 0 & 5 & 4 & 3 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 3(1) + 0 \\\\ 4(1) + 3(2) \\\\ 5(1) + 4(2) \\\\ 0(1) + 5(2) \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ 10 \\\\ 13 \\\\ 10 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Since $N = 4 = N_1 + N_2 - 1$, circular convolution is **IDENTICAL** to linear convolution!"
+      },
+      {
+       "t": "h4",
+       "text": "Problem 3 (Slide 110): Matrix Circular Convolution Drill"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\{ 1, -1, 3 \\}$ ($N_1 = 3$) and $h[n] = \\{ 1, 2 \\}$ ($N_2 = 2$).\nFind the 3-point circular convolution $x[n] \\circledast h[n]$."
+      },
+      {
+       "t": "p",
+       "text": "**Solution:**\nPad $h[n]$ with one zero to match length $N = 3$: $\\mathbf{h} = [1, 2, 0]^T$.\nConstruct circulant matrix $\\mathbf{C}_x$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Column 1: $[1, -1, 3]^T$",
+        "Column 2: $[3, 1, -1]^T$",
+        "Column 3: $[-1, 3, 1]^T$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y} = \\begin{bmatrix} 1 & 3 & -1 \\\\ -1 & 1 & 3 \\\\ 3 & -1 & 1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 1(1) + 3(2) - 1(0) \\\\ -1(1) + 1(2) + 3(0) \\\\ 3(1) - 1(2) + 1(0) \\end{bmatrix} = \\begin{bmatrix} 7 \\\\ 1 \\\\ 1 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y} = \\{ \\underset{\\uparrow}{7}, 1, 1 \\}"
+      },
+      {
+       "t": "h4",
+       "text": "Problem 4 (Slides 113\u2013114): Comprehensive GATE Problem (Length & Aliasing)"
+      },
+      {
+       "t": "p",
+       "text": "Consider a 13-point sequence $x[n]$ ($N_1 = 13$) and a 9-point sequence $h[n]$ ($N_2 = 9$).\nLet $z[n] = x[n] * h[n]$ denote their linear convolution."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Let $y[n]$ be the $N$-point circular convolution of $x[n]$ and $h[n]$. If $y[n] = z[n]$, find $N$.",
+        "How many zeros must be padded to $x[n]$ and $h[n]$ to achieve $y[n] = z[n]$?",
+        "If a 13-point circular convolution $g[n] = x[n] \\circledast h[n]$ is computed, find the index $k$ for which $g[k] = z[k]$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Mathematical Analysis:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Length for Alias-Free Circular Convolution:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "N = N_1 + N_2 - 1 = 13 + 9 - 1 = 21"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{N = 21}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Zero-Padding Counts:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Zeros added to $x[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P_x = N - N_1 = 21 - 13 = 8 \\text{ zeros}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Zeros added to $h[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P_h = N - N_2 = 21 - 9 = 12 \\text{ zeros}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Uncorrupted Index Analysis for 13-Point Circular Convolution:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Linear convolution $z[n]$ has 21 samples (indices $n = 0, 1, \\dots, 20$).",
+        "In a 13-point circular convolution, indices wrap modulo 13:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g[n] = z[n] + z[n + 13], \\qquad n = 0, 1, \\dots, 12"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The tail samples that wrap around are $z[13], z[14], \\dots, z[20]$ (8 samples).",
+        "These wrap into indices $n = 0, 1, \\dots, 7$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g[0] = z[0] + z[13]"
+      },
+      {
+       "t": "math",
+       "tex": "g[1] = z[1] + z[14]"
+      },
+      {
+       "t": "math",
+       "tex": "\\vdots"
+      },
+      {
+       "t": "math",
+       "tex": "g[7] = z[7] + z[20]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For indices $n = 8, 9, 10, 11, 12$, the term $z[n+13]$ corresponds to indices $\\ge 21$, where $z[n] = 0$!",
+        "Therefore, indices $n \\in \\{8, 9, 10, 11, 12\\}$ are **completely uncorrupted**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g[n] = z[n] \\quad \\text{for } n \\in \\{8, 9, 10, 11, 12\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The $13^{\\text{th}}$ sample corresponds to index $k = 12$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g[12] = z[12]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Thus, $k = 12$ (or any $k \\in \\{8, 9, 10, 11, 12\\}$) satisfies $g[k] = z[k]$."
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "IMPORTANT",
+       "title": null,
+       "text": "**GATE Exam Takeaway (Uncorrupted Circular Samples):**\nWhen performing an $N$-point circular convolution of sequences of length $N_1$ and $N_2$ (with $N_1 \\ge N_2$ and $N = N_1$):\n- The number of aliased (corrupted) samples is $N_2 - 1$, spanning indices $0 \\le n \\le N_2 - 2$.\n- The number of uncorrupted samples is $N_1 - (N_2 - 1) = N_1 - N_2 + 1$, spanning indices $N_2 - 1 \\le n \\le N_1 - 1$.\n- For $N_1 = 13$ and $N_2 = 9$: corrupted range is $0 \\le n \\le 7$; uncorrupted range is $8 \\le n \\le 12$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -8767,345 +8746,344 @@ export default {
      "text": "5.3 Worked Derivations & Diagnostic Drills: DTFS Aliasing"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 1 (Slides 116\u2013118): Single Frequency Aliasing & High-Index Coefficients"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = 2 + 3\\sin\\left(\\frac{\\pi}{3} n\\right) + 2\\cos\\left(\\frac{5\\pi}{3} n\\right)$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Find fundamental frequency $\\omega_0$ and fundamental period $N_0$.",
-      "Determine all distinct DTFS coefficients $c_k$.",
-      "Evaluate $c_{13}$ and $c_{-11}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Derivation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Period Determination:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Component angular frequencies: $\\omega_1 = \\pi/3$, $\\omega_2 = 5\\pi/3$."
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\gcd\\left(\\frac{\\pi}{3}, \\frac{5\\pi}{3}\\right) = \\frac{\\pi}{3}"
-    },
-    {
-     "t": "math",
-     "tex": "N_0 = \\frac{2\\pi}{\\omega_0} = \\frac{2\\pi}{\\pi/3} = 6"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Angle Reduction:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\cos\\left(\\frac{5\\pi}{3} n\\right) = \\cos\\left(2\\pi n - \\frac{\\pi}{3} n\\right) = \\cos\\left(\\frac{\\pi}{3} n\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 2 + 3\\sin\\left(\\frac{\\pi}{3} n\\right) + 2\\cos\\left(\\frac{\\pi}{3} n\\right)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Harmonic Grouping:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 2 + \\left(1 + \\frac{3}{2j}\\right) e^{j\\omega_0 n} + \\left(1 - \\frac{3}{2j}\\right) e^{-j\\omega_0 n}"
-    },
-    {
-     "t": "math",
-     "tex": "c_0 = 2, \\quad c_1 = 1 + \\frac{3}{2j} = 1 - j 1.5, \\quad c_{-1} = 1 - \\frac{3}{2j} = 1 + j 1.5"
-    },
-    {
-     "t": "math",
-     "tex": "c_2 = c_3 = c_4 = 0"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**High-Index Modulo Evaluation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $c_k$ is periodic with period $N_0 = 6$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_m = c_{m \\bmod 6}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $c_{13}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "13 \\bmod 6 = 1 \\implies c_{13} = c_1 = 1 + \\frac{3}{2j}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $c_{-11}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "-11 = -2(6) + 1 \\implies -11 \\equiv 1 \\pmod 6"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-11} = c_1 = 1 + \\frac{3}{2j}"
-    },
-    {
-     "t": "math",
-     "tex": "c_{13} = c_{-11} = c_1 = 1 + \\frac{3}{2j}"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 2 (Slides 119\u2013120): Multiple Aliased Trigonometric Components"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = 2 + 3\\sin\\left(\\frac{\\pi}{3} n\\right) + 2\\cos\\left(\\frac{4\\pi}{3} n\\right) - \\cos\\left(\\frac{7\\pi}{3} n\\right)$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Find DTFS coefficients $c_k$.",
-      "Evaluate $c_{13}$ and $c_{-11}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Derivation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Trigonometric Frequency Reductions:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "First check $\\frac{7\\pi}{3}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{7\\pi}{3} n = 2\\pi n + \\frac{\\pi}{3} n \\implies \\cos\\left(\\frac{7\\pi}{3} n\\right) = \\cos\\left(\\frac{\\pi}{3} n\\right)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Next check $\\frac{4\\pi}{3}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{4\\pi}{3} = 4\\left(\\frac{\\pi}{3}\\right) = 4\\omega_0"
-    },
-    {
-     "t": "p",
-     "text": "Note: $4\\omega_0 = 2\\pi - 2\\omega_0$, so $\\cos(4\\omega_0 n) = \\cos(2\\omega_0 n)$.\n     However, keeping it as $4\\omega_0$ is equally valid because in DTFS with $N_0 = 6$, $k = 4$ corresponds to $k = 4 - 6 = -2$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Signal Consolidation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 2 + 3\\sin(\\omega_0 n) + 2\\cos(4\\omega_0 n) - \\cos(\\omega_0 n)"
-    },
-    {
-     "t": "p",
-     "text": "with $\\omega_0 = \\pi/3$ and $N_0 = 6$."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Euler Expansion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\n   x[n] &= 2 + 3\\left[\\frac{e^{j\\omega_0 n} - e^{-j\\omega_0 n}}{2j}\\right] + 2\\left[\\frac{e^{j 4\\omega_0 n} + e^{-j 4\\omega_0 n}}{2}\\right] - \\left[\\frac{e^{j\\omega_0 n} + e^{-j\\omega_0 n}}{2}\\right] \\\\\n   &= 2 + \\left( \\frac{3}{2j} - \\frac{1}{2} \\right) e^{j\\omega_0 n} + \\left( -\\frac{3}{2j} - \\frac{1}{2} \\right) e^{-j\\omega_0 n} + e^{j 4\\omega_0 n} + e^{-j 4\\omega_0 n}\n\\end{aligned}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Coefficient Extraction ($N_0 = 6$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Constant term: $c_0 = 2$",
-      "$k = 1$: $c_1 = -\\frac{1}{2} + \\frac{3}{2j} = -0.5 - j 1.5$",
-      "$k = -1$: $c_{-1} = -\\frac{1}{2} - \\frac{3}{2j} = -0.5 + j 1.5$ (note $c_5 = c_{-1}$)",
-      "$k = 4$: $c_4 = 1 \\implies c_{-2} = c_{4-6} = 1$",
-      "$k = -4$: $c_{-4} = 1 \\implies c_2 = c_{-4+6} = 1$",
-      "$k = 3$: $c_3 = 0$"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Evaluation of $c_{13}$ and $c_{-11}$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "13 \\bmod 6 = 1 \\implies c_{13} = c_1 = \\frac{3}{2j} - \\frac{1}{2} = -0.5 - j 1.5"
-    },
-    {
-     "t": "math",
-     "tex": "-11 \\bmod 6 = 1 \\implies c_{-11} = c_1 = \\frac{3}{2j} - \\frac{1}{2} = -0.5 - j 1.5"
-    },
-    {
-     "t": "math",
-     "tex": "c_{13} = c_{-11} = c_1 = -\\frac{1}{2} - j\\frac{3}{2}"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 3 (Slide 121): GATE Problem on Non-Zero DTFS Coefficient Grid"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\sin\\left(\\frac{n\\pi}{5}\\right)$.\nLet $c_k$ denote its Exponential Fourier Series Coefficients (EFSC).\nGiven that $c_k \\ne 0$ if and only if $k = B m \\pm 1$, where $m \\in \\mathbb{Z}$.\nFind the value of $B$."
-    },
-    {
-     "t": "p",
-     "text": "**Mathematical Derivation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Fundamental angular frequency:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{\\pi}{5}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Fundamental period:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "N_0 = \\frac{2\\pi}{\\omega_0} \\cdot m_0 = \\frac{2\\pi}{\\pi/5} \\cdot 1 = 10"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Expanding via Euler's identity:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\sin(\\omega_0 n) = \\frac{1}{2j} e^{j(1)\\omega_0 n} - \\frac{1}{2j} e^{j(-1)\\omega_0 n}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Within the primary fundamental period $k \\in \\{-4, -3, -2, -1, 0, 1, 2, 3, 4, 5\\}$, non-zero coefficients occur strictly at:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "k = 1 \\implies c_1 = \\frac{1}{2j}"
-    },
-    {
-     "t": "math",
-     "tex": "k = -1 \\implies c_{-1} = -\\frac{1}{2j}"
-    },
-    {
-     "t": "p",
-     "text": "All other coefficients in the fundamental period are zero: $c_0 = c_{\\pm 2} = c_{\\pm 3} = c_{\\pm 4} = c_5 = 0$."
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Applying the Periodicity Theorem of DTFS coefficients ($c_{k + N_0} = c_k$ with $N_0 = 10$):"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The non-zero coefficients repeat at:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "k = 1 + 10m \\quad \\text{and} \\quad k = -1 + 10m, \\qquad m \\in \\mathbb{Z}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Combining these gives:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "k = 10m \\pm 1, \\qquad m \\in \\mathbb{Z}"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "Comparing directly with the given form $k = B m \\pm 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{B = 10}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 116 to 121  DTFS Calculations &amp  Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem 1 (Slides 116\u2013118): Single Frequency Aliasing & High-Index Coefficients"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = 2 + 3\\sin\\left(\\frac{\\pi}{3} n\\right) + 2\\cos\\left(\\frac{5\\pi}{3} n\\right)$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Find fundamental frequency $\\omega_0$ and fundamental period $N_0$.",
+        "Determine all distinct DTFS coefficients $c_k$.",
+        "Evaluate $c_{13}$ and $c_{-11}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Derivation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Period Determination:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Component angular frequencies: $\\omega_1 = \\pi/3$, $\\omega_2 = 5\\pi/3$."
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\gcd\\left(\\frac{\\pi}{3}, \\frac{5\\pi}{3}\\right) = \\frac{\\pi}{3}"
+      },
+      {
+       "t": "math",
+       "tex": "N_0 = \\frac{2\\pi}{\\omega_0} = \\frac{2\\pi}{\\pi/3} = 6"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Angle Reduction:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\cos\\left(\\frac{5\\pi}{3} n\\right) = \\cos\\left(2\\pi n - \\frac{\\pi}{3} n\\right) = \\cos\\left(\\frac{\\pi}{3} n\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 2 + 3\\sin\\left(\\frac{\\pi}{3} n\\right) + 2\\cos\\left(\\frac{\\pi}{3} n\\right)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Harmonic Grouping:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 2 + \\left(1 + \\frac{3}{2j}\\right) e^{j\\omega_0 n} + \\left(1 - \\frac{3}{2j}\\right) e^{-j\\omega_0 n}"
+      },
+      {
+       "t": "math",
+       "tex": "c_0 = 2, \\quad c_1 = 1 + \\frac{3}{2j} = 1 - j 1.5, \\quad c_{-1} = 1 - \\frac{3}{2j} = 1 + j 1.5"
+      },
+      {
+       "t": "math",
+       "tex": "c_2 = c_3 = c_4 = 0"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**High-Index Modulo Evaluation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $c_k$ is periodic with period $N_0 = 6$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_m = c_{m \\bmod 6}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $c_{13}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "13 \\bmod 6 = 1 \\implies c_{13} = c_1 = 1 + \\frac{3}{2j}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $c_{-11}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "-11 = -2(6) + 1 \\implies -11 \\equiv 1 \\pmod 6"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-11} = c_1 = 1 + \\frac{3}{2j}"
+      },
+      {
+       "t": "math",
+       "tex": "c_{13} = c_{-11} = c_1 = 1 + \\frac{3}{2j}"
+      },
+      {
+       "t": "h4",
+       "text": "Problem 2 (Slides 119\u2013120): Multiple Aliased Trigonometric Components"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = 2 + 3\\sin\\left(\\frac{\\pi}{3} n\\right) + 2\\cos\\left(\\frac{4\\pi}{3} n\\right) - \\cos\\left(\\frac{7\\pi}{3} n\\right)$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Find DTFS coefficients $c_k$.",
+        "Evaluate $c_{13}$ and $c_{-11}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Derivation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Trigonometric Frequency Reductions:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "First check $\\frac{7\\pi}{3}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{7\\pi}{3} n = 2\\pi n + \\frac{\\pi}{3} n \\implies \\cos\\left(\\frac{7\\pi}{3} n\\right) = \\cos\\left(\\frac{\\pi}{3} n\\right)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Next check $\\frac{4\\pi}{3}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{4\\pi}{3} = 4\\left(\\frac{\\pi}{3}\\right) = 4\\omega_0"
+      },
+      {
+       "t": "p",
+       "text": "Note: $4\\omega_0 = 2\\pi - 2\\omega_0$, so $\\cos(4\\omega_0 n) = \\cos(2\\omega_0 n)$.\n     However, keeping it as $4\\omega_0$ is equally valid because in DTFS with $N_0 = 6$, $k = 4$ corresponds to $k = 4 - 6 = -2$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Signal Consolidation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 2 + 3\\sin(\\omega_0 n) + 2\\cos(4\\omega_0 n) - \\cos(\\omega_0 n)"
+      },
+      {
+       "t": "p",
+       "text": "with $\\omega_0 = \\pi/3$ and $N_0 = 6$."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Euler Expansion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\n   x[n] &= 2 + 3\\left[\\frac{e^{j\\omega_0 n} - e^{-j\\omega_0 n}}{2j}\\right] + 2\\left[\\frac{e^{j 4\\omega_0 n} + e^{-j 4\\omega_0 n}}{2}\\right] - \\left[\\frac{e^{j\\omega_0 n} + e^{-j\\omega_0 n}}{2}\\right] \\\\\n   &= 2 + \\left( \\frac{3}{2j} - \\frac{1}{2} \\right) e^{j\\omega_0 n} + \\left( -\\frac{3}{2j} - \\frac{1}{2} \\right) e^{-j\\omega_0 n} + e^{j 4\\omega_0 n} + e^{-j 4\\omega_0 n}\n\\end{aligned}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Coefficient Extraction ($N_0 = 6$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Constant term: $c_0 = 2$",
+        "$k = 1$: $c_1 = -\\frac{1}{2} + \\frac{3}{2j} = -0.5 - j 1.5$",
+        "$k = -1$: $c_{-1} = -\\frac{1}{2} - \\frac{3}{2j} = -0.5 + j 1.5$ (note $c_5 = c_{-1}$)",
+        "$k = 4$: $c_4 = 1 \\implies c_{-2} = c_{4-6} = 1$",
+        "$k = -4$: $c_{-4} = 1 \\implies c_2 = c_{-4+6} = 1$",
+        "$k = 3$: $c_3 = 0$"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Evaluation of $c_{13}$ and $c_{-11}$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "13 \\bmod 6 = 1 \\implies c_{13} = c_1 = \\frac{3}{2j} - \\frac{1}{2} = -0.5 - j 1.5"
+      },
+      {
+       "t": "math",
+       "tex": "-11 \\bmod 6 = 1 \\implies c_{-11} = c_1 = \\frac{3}{2j} - \\frac{1}{2} = -0.5 - j 1.5"
+      },
+      {
+       "t": "math",
+       "tex": "c_{13} = c_{-11} = c_1 = -\\frac{1}{2} - j\\frac{3}{2}"
+      },
+      {
+       "t": "h4",
+       "text": "Problem 3 (Slide 121): GATE Problem on Non-Zero DTFS Coefficient Grid"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\sin\\left(\\frac{n\\pi}{5}\\right)$.\nLet $c_k$ denote its Exponential Fourier Series Coefficients (EFSC).\nGiven that $c_k \\ne 0$ if and only if $k = B m \\pm 1$, where $m \\in \\mathbb{Z}$.\nFind the value of $B$."
+      },
+      {
+       "t": "p",
+       "text": "**Mathematical Derivation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Fundamental angular frequency:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{\\pi}{5}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Fundamental period:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "N_0 = \\frac{2\\pi}{\\omega_0} \\cdot m_0 = \\frac{2\\pi}{\\pi/5} \\cdot 1 = 10"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Expanding via Euler's identity:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\sin(\\omega_0 n) = \\frac{1}{2j} e^{j(1)\\omega_0 n} - \\frac{1}{2j} e^{j(-1)\\omega_0 n}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Within the primary fundamental period $k \\in \\{-4, -3, -2, -1, 0, 1, 2, 3, 4, 5\\}$, non-zero coefficients occur strictly at:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "k = 1 \\implies c_1 = \\frac{1}{2j}"
+      },
+      {
+       "t": "math",
+       "tex": "k = -1 \\implies c_{-1} = -\\frac{1}{2j}"
+      },
+      {
+       "t": "p",
+       "text": "All other coefficients in the fundamental period are zero: $c_0 = c_{\\pm 2} = c_{\\pm 3} = c_{\\pm 4} = c_5 = 0$."
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Applying the Periodicity Theorem of DTFS coefficients ($c_{k + N_0} = c_k$ with $N_0 = 10$):"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The non-zero coefficients repeat at:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "k = 1 + 10m \\quad \\text{and} \\quad k = -1 + 10m, \\qquad m \\in \\mathbb{Z}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Combining these gives:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "k = 10m \\pm 1, \\qquad m \\in \\mathbb{Z}"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "Comparing directly with the given form $k = B m \\pm 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{B = 10}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -9174,120 +9152,119 @@ export default {
      "text": "6.2 Worked Application: Periodic Rectangular Pulse Train"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem (Slide 123): Periodic Pulse Train DTFS via DTFT Sampling"
-    },
-    {
-     "t": "p",
-     "text": "A periodic discrete-time signal $x[n]$ with period $N_0 = 8$ has one period centered at the origin consisting of 5 pulses of amplitude 1:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\begin{cases} 1, & -2 \\le n \\le 2 \\\\ 0, & n = 3, 4, 5 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "and $x[n+8] = x[n]$.\nFind the DTFS coefficient $c_{-31}$."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Derivation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**DTFT of Aperiodic Rectangular Pulse:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $x_0[n] = 1$ for $-M \\le n \\le M$, where $M = 2$ (total width $2M+1 = 5$)."
-    },
-    {
-     "t": "math",
-     "tex": "X_0(e^{j\\omega}) = \\sum_{n=-2}^2 e^{-j\\omega n} = e^{j2\\omega} + e^{j\\omega} + 1 + e^{-j\\omega} + e^{-j2\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "This is a finite geometric progression with ratio $e^{-j\\omega}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_0(e^{j\\omega}) = e^{j2\\omega} \\frac{1 - e^{-j5\\omega}}{1 - e^{-j\\omega}} = \\frac{e^{-j5\\omega/2} (e^{j5\\omega/2} - e^{-j5\\omega/2})}{e^{-j\\omega/2} (e^{j\\omega/2} - e^{-j\\omega/2})} = \\frac{\\sin\\left(\\frac{5\\omega}{2}\\right)}{\\sin\\left(\\frac{\\omega}{2}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "This is the well-known **Dirichlet kernel** (or discrete periodic sinc)."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**DTFS Sampling Formula:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Fundamental period $N_0 = 8 \\implies \\omega_0 = \\frac{2\\pi}{8} = \\frac{\\pi}{4}$.\n   Applying the bridge formula:"
-    },
-    {
-     "t": "math",
-     "tex": "c_k = \\frac{1}{N_0} X_0(e^{j k \\omega_0}) = \\frac{1}{8} \\frac{\\sin\\left( \\frac{5 k \\omega_0}{2} \\right)}{\\sin\\left( \\frac{k \\omega_0}{2} \\right)} = \\frac{1}{8} \\frac{\\sin\\left( \\frac{5\\pi k}{8} \\right)}{\\sin\\left( \\frac{\\pi k}{8} \\right)}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Modulo Reduction for Index $k = -31$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $c_k$ has period $N_0 = 8$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{k + 8m} = c_k, \\qquad m \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "Choosing $m = 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "-31 + 8 \\times 4 = -31 + 32 = 1 \\implies c_{-31} = c_1"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Evaluating at $k = 1$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_{-31} = c_1 = \\frac{1}{8} \\frac{\\sin\\left( \\frac{5\\pi}{8} \\right)}{\\sin\\left( \\frac{\\pi}{8} \\right)}"
-    },
-    {
-     "t": "p",
-     "text": "*Numerical Verification:*"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin\\left(\\frac{5\\pi}{8}\\right) = \\sin\\left(\\pi - \\frac{3\\pi}{8}\\right) = \\cos\\left(\\frac{\\pi}{8}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 = \\frac{1}{8} \\frac{\\cos(\\pi/8)}{\\sin(\\pi/8)} = \\frac{1}{8} \\cot\\left(\\frac{\\pi}{8}\\right) = \\frac{1}{8} (\\sqrt{2} + 1) \\approx 0.3018"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 122 to 123  DTFT Sampling &amp  Dirichlet Kernel /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem (Slide 123): Periodic Pulse Train DTFS via DTFT Sampling"
+      },
+      {
+       "t": "p",
+       "text": "A periodic discrete-time signal $x[n]$ with period $N_0 = 8$ has one period centered at the origin consisting of 5 pulses of amplitude 1:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\begin{cases} 1, & -2 \\le n \\le 2 \\\\ 0, & n = 3, 4, 5 \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "and $x[n+8] = x[n]$.\nFind the DTFS coefficient $c_{-31}$."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-Step Derivation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**DTFT of Aperiodic Rectangular Pulse:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $x_0[n] = 1$ for $-M \\le n \\le M$, where $M = 2$ (total width $2M+1 = 5$)."
+      },
+      {
+       "t": "math",
+       "tex": "X_0(e^{j\\omega}) = \\sum_{n=-2}^2 e^{-j\\omega n} = e^{j2\\omega} + e^{j\\omega} + 1 + e^{-j\\omega} + e^{-j2\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "This is a finite geometric progression with ratio $e^{-j\\omega}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_0(e^{j\\omega}) = e^{j2\\omega} \\frac{1 - e^{-j5\\omega}}{1 - e^{-j\\omega}} = \\frac{e^{-j5\\omega/2} (e^{j5\\omega/2} - e^{-j5\\omega/2})}{e^{-j\\omega/2} (e^{j\\omega/2} - e^{-j\\omega/2})} = \\frac{\\sin\\left(\\frac{5\\omega}{2}\\right)}{\\sin\\left(\\frac{\\omega}{2}\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "This is the well-known **Dirichlet kernel** (or discrete periodic sinc)."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**DTFS Sampling Formula:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Fundamental period $N_0 = 8 \\implies \\omega_0 = \\frac{2\\pi}{8} = \\frac{\\pi}{4}$.\n   Applying the bridge formula:"
+      },
+      {
+       "t": "math",
+       "tex": "c_k = \\frac{1}{N_0} X_0(e^{j k \\omega_0}) = \\frac{1}{8} \\frac{\\sin\\left( \\frac{5 k \\omega_0}{2} \\right)}{\\sin\\left( \\frac{k \\omega_0}{2} \\right)} = \\frac{1}{8} \\frac{\\sin\\left( \\frac{5\\pi k}{8} \\right)}{\\sin\\left( \\frac{\\pi k}{8} \\right)}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Modulo Reduction for Index $k = -31$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $c_k$ has period $N_0 = 8$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{k + 8m} = c_k, \\qquad m \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "Choosing $m = 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "-31 + 8 \\times 4 = -31 + 32 = 1 \\implies c_{-31} = c_1"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Evaluating at $k = 1$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_{-31} = c_1 = \\frac{1}{8} \\frac{\\sin\\left( \\frac{5\\pi}{8} \\right)}{\\sin\\left( \\frac{\\pi}{8} \\right)}"
+      },
+      {
+       "t": "p",
+       "text": "*Numerical Verification:*"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin\\left(\\frac{5\\pi}{8}\\right) = \\sin\\left(\\pi - \\frac{3\\pi}{8}\\right) = \\cos\\left(\\frac{\\pi}{8}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 = \\frac{1}{8} \\frac{\\cos(\\pi/8)}{\\sin(\\pi/8)} = \\frac{1}{8} \\cot\\left(\\frac{\\pi}{8}\\right) = \\frac{1}{8} (\\sqrt{2} + 1) \\approx 0.3018"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -9460,207 +9437,206 @@ export default {
      "text": "7.3 Worked Derivations & Diagnostic Drills: Time Expansion"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem 1 (Slides 124\u2013126): Step-by-Step Expansion for $\\alpha = 2$ and $\\alpha = 3$"
-    },
-    {
-     "t": "p",
-     "text": "Given base periodic sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\{ \\dots, 1, 2, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, 2, 1, 2, 1, 2 \\dots \\}, \\quad N_0 = 2"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Find DTFS coefficients $c_k$.",
-      "Find DTFS coefficients $d_k$ for $y[n] = x[n/2]$ (upsampled by 2).",
-      "Find DTFS coefficients $g_k$ for $g[n] = x[n/3]$ (upsampled by 3)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Part A: Base Sequence Coefficients $c_k$ (Slide 124)**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Period $N_0 = 2 \\implies \\omega_0 = 2\\pi/2 = \\pi$.",
-      "One period: $x[0] = 1, x[1] = 2$.",
-      "DTFS formula:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_k = \\frac{1}{2} \\sum_{n=0}^1 x[n] e^{-j k \\pi n} = \\frac{1}{2} [x[0] + x[1] e^{-j k \\pi}] = \\frac{1 + 2(-1)^k}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Evaluating:",
-      "$k = 0 \\implies c_0 = \\frac{1 + 2(1)}{2} = \\frac{3}{2}$",
-      "$k = 1 \\implies c_1 = \\frac{1 + 2(-1)}{2} = -\\frac{1}{2}$",
-      "Periodic coefficient sequence:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_k = \\{ \\dots, \\frac{3}{2}, -\\frac{1}{2}, \\underset{\\substack{\\uparrow \\\\ k=0}}{\\frac{3}{2}}, -\\frac{1}{2}, \\frac{3}{2}, -\\frac{1}{2} \\dots \\}"
-    },
-    {
-     "t": "p",
-     "text": "**Part B: Expansion by $\\alpha = 2$ (Slide 125)**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Sequence with zeros inserted:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n/2] = \\{ \\dots, 1, 0, 2, 0, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, 0, 2, 0, 1, 0, 2, 0 \\dots \\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "New period $N_{02} = 2 \\times 2 = 4$.",
-      "New fundamental frequency: $\\omega_{02} = \\frac{2\\pi}{4} = \\frac{\\pi}{2}$.",
-      "DTFS coefficients $d_k$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "d_k = \\frac{1}{4} \\sum_{n=0}^3 y[n] e^{-j k (\\pi/2) n} = \\frac{1}{4} [y[0] + y[1]e^{-j k \\pi/2} + y[2]e^{-j k \\pi} + y[3]e^{-j 3k\\pi/2}]"
-    },
-    {
-     "t": "p",
-     "text": "Since $y[1] = y[3] = 0$ and $y[0]=1, y[2]=2$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_k = \\frac{1 + 2 e^{-j k \\pi}}{4} = \\frac{1 + 2(-1)^k}{4} = \\frac{1}{2} c_k"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Evaluating over 4-point period $k = 0, 1, 2, 3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "d_0 = \\frac{3}{4}, \\quad d_1 = -\\frac{1}{4}, \\quad d_2 = \\frac{3}{4}, \\quad d_3 = -\\frac{1}{4}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice: $d_k = \\frac{1}{2} c_k$. Period is 4, but minimum period is 2."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Part C: Expansion by $\\alpha = 3$ (Slide 126)**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Sequence with two zeros inserted:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g[n] = x[n/3] = \\{ \\dots, 1, 0, 0, 2, 0, 0, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, 0, 0, 2, 0, 0 \\dots \\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "New period $N_{03} = 2 \\times 3 = 6$.",
-      "New frequency $\\omega_{03} = \\frac{2\\pi}{6} = \\frac{\\pi}{3}$.",
-      "DTFS coefficients $g_k$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Non-zero samples are at $n = 0$ ($g[0]=1$) and $n = 3$ ($g[3]=2$):"
-    },
-    {
-     "t": "math",
-     "tex": "g_k = \\frac{1}{6} [1 + 2 e^{-j k (\\pi/3) 3}] = \\frac{1 + 2 e^{-j k \\pi}}{6} = \\frac{1 + 2(-1)^k}{6} = \\frac{1}{3} c_k"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Evaluating over 6-point period $k = 0, 1, 2, 3, 4, 5$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "g_0 = \\frac{3}{6} = \\frac{1}{2}, \\quad g_1 = -\\frac{1}{6}, \\quad g_2 = \\frac{1}{2}, \\quad g_3 = -\\frac{1}{6}, \\quad g_4 = \\frac{1}{2}, \\quad g_5 = -\\frac{1}{6}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice: $g_k = \\frac{1}{3} c_k$. Minimum period remains 2."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Problem 2 (Slide 128): General Time-Expansion Rapid Drill"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\{ \\dots, 1, -2j, 0, 3, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, -2j, 0, 3 \\dots \\} \\longleftrightarrow c_k$ with period $N_0 = 4$.\nFind the period and Fourier coefficients of $y[n] = x[n/4]$."
-    },
-    {
-     "t": "p",
-     "text": "**Direct Application of Master Rule:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Expansion factor: $\\alpha = 4$.",
-      "New fundamental period:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "N_{\\text{new}} = \\alpha N_0 = 4 \\times 4 = 16"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "New Fourier series coefficients:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "d_k = \\frac{1}{\\alpha} c_k = \\frac{1}{4} c_k"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Periodicity of $d_k$:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Apparent period is 16.",
-      "Minimum period is $N_0 = 4$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 124 to 128  Discrete Expansion &amp  Spectra /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem 1 (Slides 124\u2013126): Step-by-Step Expansion for $\\alpha = 2$ and $\\alpha = 3$"
+      },
+      {
+       "t": "p",
+       "text": "Given base periodic sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\{ \\dots, 1, 2, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, 2, 1, 2, 1, 2 \\dots \\}, \\quad N_0 = 2"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Find DTFS coefficients $c_k$.",
+        "Find DTFS coefficients $d_k$ for $y[n] = x[n/2]$ (upsampled by 2).",
+        "Find DTFS coefficients $g_k$ for $g[n] = x[n/3]$ (upsampled by 3)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Part A: Base Sequence Coefficients $c_k$ (Slide 124)**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Period $N_0 = 2 \\implies \\omega_0 = 2\\pi/2 = \\pi$.",
+        "One period: $x[0] = 1, x[1] = 2$.",
+        "DTFS formula:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_k = \\frac{1}{2} \\sum_{n=0}^1 x[n] e^{-j k \\pi n} = \\frac{1}{2} [x[0] + x[1] e^{-j k \\pi}] = \\frac{1 + 2(-1)^k}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Evaluating:",
+        "$k = 0 \\implies c_0 = \\frac{1 + 2(1)}{2} = \\frac{3}{2}$",
+        "$k = 1 \\implies c_1 = \\frac{1 + 2(-1)}{2} = -\\frac{1}{2}$",
+        "Periodic coefficient sequence:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_k = \\{ \\dots, \\frac{3}{2}, -\\frac{1}{2}, \\underset{\\substack{\\uparrow \\\\ k=0}}{\\frac{3}{2}}, -\\frac{1}{2}, \\frac{3}{2}, -\\frac{1}{2} \\dots \\}"
+      },
+      {
+       "t": "p",
+       "text": "**Part B: Expansion by $\\alpha = 2$ (Slide 125)**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Sequence with zeros inserted:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n/2] = \\{ \\dots, 1, 0, 2, 0, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, 0, 2, 0, 1, 0, 2, 0 \\dots \\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "New period $N_{02} = 2 \\times 2 = 4$.",
+        "New fundamental frequency: $\\omega_{02} = \\frac{2\\pi}{4} = \\frac{\\pi}{2}$.",
+        "DTFS coefficients $d_k$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "d_k = \\frac{1}{4} \\sum_{n=0}^3 y[n] e^{-j k (\\pi/2) n} = \\frac{1}{4} [y[0] + y[1]e^{-j k \\pi/2} + y[2]e^{-j k \\pi} + y[3]e^{-j 3k\\pi/2}]"
+      },
+      {
+       "t": "p",
+       "text": "Since $y[1] = y[3] = 0$ and $y[0]=1, y[2]=2$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_k = \\frac{1 + 2 e^{-j k \\pi}}{4} = \\frac{1 + 2(-1)^k}{4} = \\frac{1}{2} c_k"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Evaluating over 4-point period $k = 0, 1, 2, 3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "d_0 = \\frac{3}{4}, \\quad d_1 = -\\frac{1}{4}, \\quad d_2 = \\frac{3}{4}, \\quad d_3 = -\\frac{1}{4}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Notice: $d_k = \\frac{1}{2} c_k$. Period is 4, but minimum period is 2."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Part C: Expansion by $\\alpha = 3$ (Slide 126)**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Sequence with two zeros inserted:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g[n] = x[n/3] = \\{ \\dots, 1, 0, 0, 2, 0, 0, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, 0, 0, 2, 0, 0 \\dots \\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "New period $N_{03} = 2 \\times 3 = 6$.",
+        "New frequency $\\omega_{03} = \\frac{2\\pi}{6} = \\frac{\\pi}{3}$.",
+        "DTFS coefficients $g_k$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Non-zero samples are at $n = 0$ ($g[0]=1$) and $n = 3$ ($g[3]=2$):"
+      },
+      {
+       "t": "math",
+       "tex": "g_k = \\frac{1}{6} [1 + 2 e^{-j k (\\pi/3) 3}] = \\frac{1 + 2 e^{-j k \\pi}}{6} = \\frac{1 + 2(-1)^k}{6} = \\frac{1}{3} c_k"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Evaluating over 6-point period $k = 0, 1, 2, 3, 4, 5$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "g_0 = \\frac{3}{6} = \\frac{1}{2}, \\quad g_1 = -\\frac{1}{6}, \\quad g_2 = \\frac{1}{2}, \\quad g_3 = -\\frac{1}{6}, \\quad g_4 = \\frac{1}{2}, \\quad g_5 = -\\frac{1}{6}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Notice: $g_k = \\frac{1}{3} c_k$. Minimum period remains 2."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Problem 2 (Slide 128): General Time-Expansion Rapid Drill"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\{ \\dots, 1, -2j, 0, 3, \\underset{\\substack{\\uparrow \\\\ n=0}}{1}, -2j, 0, 3 \\dots \\} \\longleftrightarrow c_k$ with period $N_0 = 4$.\nFind the period and Fourier coefficients of $y[n] = x[n/4]$."
+      },
+      {
+       "t": "p",
+       "text": "**Direct Application of Master Rule:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Expansion factor: $\\alpha = 4$.",
+        "New fundamental period:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "N_{\\text{new}} = \\alpha N_0 = 4 \\times 4 = 16"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "New Fourier series coefficients:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "d_k = \\frac{1}{\\alpha} c_k = \\frac{1}{4} c_k"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Periodicity of $d_k$:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Apparent period is 16.",
+        "Minimum period is $N_0 = 4$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -10082,93 +10058,92 @@ export default {
      "tex": "y[n] = \\{\\underset{\\uparrow (n=0)}{1}, 0, 0, 0, \\underset{(n=4)}{-2j}, 0, 0, 0, \\underset{(n=8)}{0}, 0, 0, 0, \\underset{(n=12)}{3}, 0, 0, 0\\}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Solution to Part (a) via Periodicity"
-    },
-    {
-     "t": "p",
-     "text": "The sequence $d_k$ is periodic with period $N = 16$."
-    },
-    {
-     "t": "math",
-     "tex": "37 \\pmod{16} = 5 \\implies d_{37} = d_5"
-    },
-    {
-     "t": "p",
-     "text": "Furthermore, because $c_k$ has period $N_0 = 4$, $d_k = \\frac{c_k}{4}$ also repeats every 4 harmonic indices:"
-    },
-    {
-     "t": "math",
-     "tex": "37 \\pmod 4 = 1 \\implies d_{37} = d_5 = d_1"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Evaluation using the Analytical Expression"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating $d_k$ at $k = 5$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_5 = \\frac{1 - 2j e^{-j 5\\pi/2} + 3e^{-j 15\\pi/2}}{16}"
-    },
-    {
-     "t": "p",
-     "text": "Computing the complex exponentials:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$e^{-j 5\\pi/2} = e^{-j(2\\pi + \\pi/2)} = e^{-j\\pi/2} = -j$",
-      "$e^{-j 15\\pi/2} = e^{-j(8\\pi - \\pi/2)} = e^{j\\pi/2} = +j$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Substitute these values into $d_5$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_5 = \\frac{1 - 2j(-j) + 3(j)}{16} = \\frac{1 - 2 + 3j}{16} = \\frac{-1 + 3j}{16}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Verification via Method 2 (First Principles)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the summation directly for $k = 5$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_5 = \\frac{1}{16}\\left[ y[0] e^0 + y[4] e^{-j 5 \\frac{\\pi}{8}(4)} + y[8] e^{-j 5 \\frac{\\pi}{8}(8)} + y[12] e^{-j 5 \\frac{\\pi}{8}(12)} \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "d_5 = \\frac{1}{16}\\left[ 1 + (-2j)e^{-j \\frac{5\\pi}{2}} + 0 + 3e^{-j \\frac{15\\pi}{2}} \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "d_5 = \\frac{1}{16}\\left[ 1 - 2j(-j) + 3j \\right] = \\frac{-1 + 3j}{16}"
-    },
-    {
-     "t": "p",
-     "text": "Both methods produce identical results."
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap on Harmonic Periodicity:**\nWhen a signal is upsampled in time by factor $M$ ($y[n] = x[n/M]$), its time period expands by $M$ ($N = M N_0$). Consequently, its fundamental angular frequency becomes $M$ times smaller ($\\omega_0' = \\omega_0 / M$). The DTFS coefficients satisfy $d_k = \\frac{1}{M} c_k$. Even though $d_k$ is defined over an extended period $N = M N_0$, it possesses a sub-periodicity equal to $N_0$. Do not mistakenly compute $d_{37}$ as $\\frac{1}{16}\\sum_{n=0}^3 x[n]$; you must use the correct harmonic index modulo $N$ (or modulo $N_0$)."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 129 130 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Solution to Part (a) via Periodicity"
+      },
+      {
+       "t": "p",
+       "text": "The sequence $d_k$ is periodic with period $N = 16$."
+      },
+      {
+       "t": "math",
+       "tex": "37 \\pmod{16} = 5 \\implies d_{37} = d_5"
+      },
+      {
+       "t": "p",
+       "text": "Furthermore, because $c_k$ has period $N_0 = 4$, $d_k = \\frac{c_k}{4}$ also repeats every 4 harmonic indices:"
+      },
+      {
+       "t": "math",
+       "tex": "37 \\pmod 4 = 1 \\implies d_{37} = d_5 = d_1"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Evaluation using the Analytical Expression"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating $d_k$ at $k = 5$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_5 = \\frac{1 - 2j e^{-j 5\\pi/2} + 3e^{-j 15\\pi/2}}{16}"
+      },
+      {
+       "t": "p",
+       "text": "Computing the complex exponentials:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$e^{-j 5\\pi/2} = e^{-j(2\\pi + \\pi/2)} = e^{-j\\pi/2} = -j$",
+        "$e^{-j 15\\pi/2} = e^{-j(8\\pi - \\pi/2)} = e^{j\\pi/2} = +j$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Substitute these values into $d_5$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_5 = \\frac{1 - 2j(-j) + 3(j)}{16} = \\frac{1 - 2 + 3j}{16} = \\frac{-1 + 3j}{16}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Verification via Method 2 (First Principles)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the summation directly for $k = 5$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_5 = \\frac{1}{16}\\left[ y[0] e^0 + y[4] e^{-j 5 \\frac{\\pi}{8}(4)} + y[8] e^{-j 5 \\frac{\\pi}{8}(8)} + y[12] e^{-j 5 \\frac{\\pi}{8}(12)} \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "d_5 = \\frac{1}{16}\\left[ 1 + (-2j)e^{-j \\frac{5\\pi}{2}} + 0 + 3e^{-j \\frac{15\\pi}{2}} \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "d_5 = \\frac{1}{16}\\left[ 1 - 2j(-j) + 3j \\right] = \\frac{-1 + 3j}{16}"
+      },
+      {
+       "t": "p",
+       "text": "Both methods produce identical results."
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap on Harmonic Periodicity:**\nWhen a signal is upsampled in time by factor $M$ ($y[n] = x[n/M]$), its time period expands by $M$ ($N = M N_0$). Consequently, its fundamental angular frequency becomes $M$ times smaller ($\\omega_0' = \\omega_0 / M$). The DTFS coefficients satisfy $d_k = \\frac{1}{M} c_k$. Even though $d_k$ is defined over an extended period $N = M N_0$, it possesses a sub-periodicity equal to $N_0$. Do not mistakenly compute $d_{37}$ as $\\frac{1}{16}\\sum_{n=0}^3 x[n]$; you must use the correct harmonic index modulo $N$ (or modulo $N_0$)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10210,38 +10185,37 @@ export default {
      "tex": "120 \\pmod{16} = 8 \\implies d_{120} = d_8 = \\frac{c_8}{4}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Evaluation of $d_8$:"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $k = 8$ into the closed-form expression for $d_k$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_8 = \\frac{1 - 2j e^{-j 8\\pi/2} + 3e^{-j 3(8)\\pi/2}}{16} = \\frac{1 - 2j e^{-j 4\\pi} + 3e^{-j 12\\pi}}{16}"
-    },
-    {
-     "t": "p",
-     "text": "Since $e^{-j 4\\pi} = 1$ and $e^{-j 12\\pi} = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_8 = \\frac{1 - 2j(1) + 3(1)}{16} = \\frac{4 - 2j}{16} = \\frac{2 - j}{8}"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Alternative using Sub-Periodicity:**\nSince $c_k$ has period $N_0 = 4$:\n$$8 \\pmod 4 = 0 \\implies c_8 = c_0$$\nEvaluating $c_0$:\n$$c_0 = \\frac{1 - 2j(1) + 3(1)}{4} = \\frac{4 - 2j}{4} = 1 - \\frac{1}{2}j$$\nTherefore:\n$$d_8 = \\frac{c_0}{4} = \\frac{1 - \\frac{1}{2}j}{4} = \\frac{2 - j}{8}$$"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 131 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step-by-Step Evaluation of $d_8$:"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $k = 8$ into the closed-form expression for $d_k$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_8 = \\frac{1 - 2j e^{-j 8\\pi/2} + 3e^{-j 3(8)\\pi/2}}{16} = \\frac{1 - 2j e^{-j 4\\pi} + 3e^{-j 12\\pi}}{16}"
+      },
+      {
+       "t": "p",
+       "text": "Since $e^{-j 4\\pi} = 1$ and $e^{-j 12\\pi} = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_8 = \\frac{1 - 2j(1) + 3(1)}{16} = \\frac{4 - 2j}{16} = \\frac{2 - j}{8}"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Alternative using Sub-Periodicity:**\nSince $c_k$ has period $N_0 = 4$:\n$$8 \\pmod 4 = 0 \\implies c_8 = c_0$$\nEvaluating $c_0$:\n$$c_0 = \\frac{1 - 2j(1) + 3(1)}{4} = \\frac{4 - 2j}{4} = 1 - \\frac{1}{2}j$$\nTherefore:\n$$d_8 = \\frac{c_0}{4} = \\frac{1 - \\frac{1}{2}j}{4} = \\frac{2 - j}{8}$$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10402,122 +10376,121 @@ export default {
      "text": "**Derivation of the 4-Fold Operator Identity & Final Computation**"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Sequential Action of Operator $F = \\text{EFSC}\\{\\cdot\\}$"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "First application:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "F\\{x[n]\\} = d_k"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Second application (Duality):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "F^2\\{x[n]\\} = F\\{d_k\\} = \\frac{1}{N} x[-n]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Third application:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "F^3\\{x[n]\\} = F\\left\\{\\frac{1}{N} x[-n]\\right\\} = \\frac{1}{N} F\\{x[-n]\\} = \\frac{1}{N} d_{-k}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Fourth application:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "F^4\\{x[n]\\} = F\\left\\{\\frac{1}{N} d_{-k}\\right\\} = \\frac{1}{N} F\\{d_{-k}\\}"
-    },
-    {
-     "t": "p",
-     "text": "Since $d_k \\xrightarrow{\\text{EFSC}} \\frac{1}{N} x[-n]$, applying time-reversal gives $d_{-k} \\xrightarrow{\\text{EFSC}} \\frac{1}{N} x[n]$."
-    },
-    {
-     "t": "math",
-     "tex": "F^4\\{x[n]\\} = \\frac{1}{N} \\left( \\frac{1}{N} x[n] \\right) = \\frac{1}{N^2} x[n]"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Evaluating the Target Signal $C(k)$"
-    },
-    {
-     "t": "p",
-     "text": "For period $N = 4$, $N^2 = 16$. Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "C(k) = \\frac{1}{16} x[k] = \\left\\{\\dots, \\underset{\\uparrow (k=0)}{\\frac{3}{16}}, \\frac{2}{16}, \\frac{-2j}{16}, \\frac{1}{16}, \\dots\\right\\}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Numerical Computation of $\\vert C(11) + C(2)\\vert$"
-    },
-    {
-     "t": "p",
-     "text": "Using the periodicity of $C(k)$ ($N = 4$):"
-    },
-    {
-     "t": "math",
-     "tex": "11 \\pmod 4 = 3 \\implies C(11) = C(3) = \\frac{1}{16}"
-    },
-    {
-     "t": "p",
-     "text": "From the sequence values:"
-    },
-    {
-     "t": "math",
-     "tex": "C(2) = \\frac{-2j}{16}"
-    },
-    {
-     "t": "p",
-     "text": "Summing the terms:"
-    },
-    {
-     "t": "math",
-     "tex": "C(11) + C(2) = \\frac{1}{16} - \\frac{2j}{16} = \\frac{1 - 2j}{16}"
-    },
-    {
-     "t": "p",
-     "text": "Taking the magnitude:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert C(11) + C(2)\\vert = \\left\\vert \\frac{1 - 2j}{16} \\right\\vert = \\frac{\\sqrt{1^2 + (-2)^2}}{16} = \\frac{\\sqrt{5}}{16}"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**Key Examination Insight:**\nThe DTFS operator acts as a 4-cycle operator in the spatial domain (analogous to the Fourier transform operator having eigenvalues $\\lambda \\in \\{1, -1, j, -j\\}$). Applying it 4 times scales the original signal by $\\frac{1}{N^2}$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 134 135 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Sequential Action of Operator $F = \\text{EFSC}\\{\\cdot\\}$"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "First application:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "F\\{x[n]\\} = d_k"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Second application (Duality):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "F^2\\{x[n]\\} = F\\{d_k\\} = \\frac{1}{N} x[-n]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Third application:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "F^3\\{x[n]\\} = F\\left\\{\\frac{1}{N} x[-n]\\right\\} = \\frac{1}{N} F\\{x[-n]\\} = \\frac{1}{N} d_{-k}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Fourth application:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "F^4\\{x[n]\\} = F\\left\\{\\frac{1}{N} d_{-k}\\right\\} = \\frac{1}{N} F\\{d_{-k}\\}"
+      },
+      {
+       "t": "p",
+       "text": "Since $d_k \\xrightarrow{\\text{EFSC}} \\frac{1}{N} x[-n]$, applying time-reversal gives $d_{-k} \\xrightarrow{\\text{EFSC}} \\frac{1}{N} x[n]$."
+      },
+      {
+       "t": "math",
+       "tex": "F^4\\{x[n]\\} = \\frac{1}{N} \\left( \\frac{1}{N} x[n] \\right) = \\frac{1}{N^2} x[n]"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Evaluating the Target Signal $C(k)$"
+      },
+      {
+       "t": "p",
+       "text": "For period $N = 4$, $N^2 = 16$. Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "C(k) = \\frac{1}{16} x[k] = \\left\\{\\dots, \\underset{\\uparrow (k=0)}{\\frac{3}{16}}, \\frac{2}{16}, \\frac{-2j}{16}, \\frac{1}{16}, \\dots\\right\\}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Numerical Computation of $\\vert C(11) + C(2)\\vert$"
+      },
+      {
+       "t": "p",
+       "text": "Using the periodicity of $C(k)$ ($N = 4$):"
+      },
+      {
+       "t": "math",
+       "tex": "11 \\pmod 4 = 3 \\implies C(11) = C(3) = \\frac{1}{16}"
+      },
+      {
+       "t": "p",
+       "text": "From the sequence values:"
+      },
+      {
+       "t": "math",
+       "tex": "C(2) = \\frac{-2j}{16}"
+      },
+      {
+       "t": "p",
+       "text": "Summing the terms:"
+      },
+      {
+       "t": "math",
+       "tex": "C(11) + C(2) = \\frac{1}{16} - \\frac{2j}{16} = \\frac{1 - 2j}{16}"
+      },
+      {
+       "t": "p",
+       "text": "Taking the magnitude:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert C(11) + C(2)\\vert = \\left\\vert \\frac{1 - 2j}{16} \\right\\vert = \\frac{\\sqrt{1^2 + (-2)^2}}{16} = \\frac{\\sqrt{5}}{16}"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**Key Examination Insight:**\nThe DTFS operator acts as a 4-cycle operator in the spatial domain (analogous to the Fourier transform operator having eigenvalues $\\lambda \\in \\{1, -1, j, -j\\}$). Applying it 4 times scales the original signal by $\\frac{1}{N^2}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10675,74 +10648,73 @@ export default {
      "text": "**Method 2: Duality and Physical Interpretation of Frequency Upsampling**"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Theoretical Duality Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "We recall the time-upsampling property:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n/M] \\xrightarrow{\\text{EFSC}} \\frac{1}{M} c_k"
-    },
-    {
-     "t": "p",
-     "text": "What signal produces $c_{k/M}$ (zeros inserted in frequency)?\nApplying the duality relations:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] \\leftrightarrow c_k \\implies c_n \\leftrightarrow \\frac{1}{N} x[-k]"
-    },
-    {
-     "t": "p",
-     "text": "When $c_n$ is upsampled in the time domain ($c_{n/M}$), its DTFS becomes:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{n/M} \\xrightarrow{\\text{EFSC}} \\frac{1}{M} \\cdot \\frac{1}{N} x[-k] = \\frac{1}{MN} x[-k]"
-    },
-    {
-     "t": "p",
-     "text": "Reversing duality back into the standard representation proves that **upsampling in frequency ($c_{k/M}$) corresponds to repeating the time-domain sequence $M$ times within the fundamental period $MN$!**"
-    },
-    {
-     "t": "h4",
-     "text": "Construction of $g[n]$:"
-    },
-    {
-     "t": "p",
-     "text": "Here $M = 3$ and $N_0 = 4$. Therefore, $g[n]$ has period $N = 12$ and consists of $x[n]$ repeated 3 times:"
-    },
-    {
-     "t": "math",
-     "tex": "g[n] = \\{\\dots, \\underset{\\uparrow (n=0)}{10}, -2+2j, \\mathbf{-2}, -2-2j, \\ 10, -2+2j, -2, -2-2j, \\ 10, -2+2j, -2, -2-2j, \\dots\\}"
-    },
-    {
-     "t": "p",
-     "text": "By direct inspection:"
-    },
-    {
-     "t": "math",
-     "tex": "g[2] = x[2] = -2"
-    },
-    {
-     "t": "p",
-     "text": "No synthesis summation is required."
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Shortcut:**\nZero-insertion in one domain always creates periodic repetition (replication) in the conjugate domain:\n- Upsampling in time by $M$ $\\iff$ $M$-fold replication of DTFT spectrum in $[0, 2\\pi)$.\n- Upsampling in frequency by $M$ $\\iff$ $M$-fold repetition of the time-domain period."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 137 139 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Theoretical Duality Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "We recall the time-upsampling property:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n/M] \\xrightarrow{\\text{EFSC}} \\frac{1}{M} c_k"
+      },
+      {
+       "t": "p",
+       "text": "What signal produces $c_{k/M}$ (zeros inserted in frequency)?\nApplying the duality relations:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] \\leftrightarrow c_k \\implies c_n \\leftrightarrow \\frac{1}{N} x[-k]"
+      },
+      {
+       "t": "p",
+       "text": "When $c_n$ is upsampled in the time domain ($c_{n/M}$), its DTFS becomes:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{n/M} \\xrightarrow{\\text{EFSC}} \\frac{1}{M} \\cdot \\frac{1}{N} x[-k] = \\frac{1}{MN} x[-k]"
+      },
+      {
+       "t": "p",
+       "text": "Reversing duality back into the standard representation proves that **upsampling in frequency ($c_{k/M}$) corresponds to repeating the time-domain sequence $M$ times within the fundamental period $MN$!**"
+      },
+      {
+       "t": "h4",
+       "text": "Construction of $g[n]$:"
+      },
+      {
+       "t": "p",
+       "text": "Here $M = 3$ and $N_0 = 4$. Therefore, $g[n]$ has period $N = 12$ and consists of $x[n]$ repeated 3 times:"
+      },
+      {
+       "t": "math",
+       "tex": "g[n] = \\{\\dots, \\underset{\\uparrow (n=0)}{10}, -2+2j, \\mathbf{-2}, -2-2j, \\ 10, -2+2j, -2, -2-2j, \\ 10, -2+2j, -2, -2-2j, \\dots\\}"
+      },
+      {
+       "t": "p",
+       "text": "By direct inspection:"
+      },
+      {
+       "t": "math",
+       "tex": "g[2] = x[2] = -2"
+      },
+      {
+       "t": "p",
+       "text": "No synthesis summation is required."
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Shortcut:**\nZero-insertion in one domain always creates periodic repetition (replication) in the conjugate domain:\n- Upsampling in time by $M$ $\\iff$ $M$-fold replication of DTFT spectrum in $[0, 2\\pi)$.\n- Upsampling in frequency by $M$ $\\iff$ $M$-fold repetition of the time-domain period."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -10900,121 +10872,124 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "The Severe Examination Trap:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "The fundamental period of $x[n] = \\cos\\left(\\frac{2\\pi}{3} n\\right)$ is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "N_0 = \\frac{2\\pi}{2\\pi/3} = 3"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "A student ignoring the summation bounds would write:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\cos\\left(\\frac{2\\pi}{3} n\\right) = \\frac{1}{2} e^{j (1) \\frac{2\\pi}{3} n} + \\frac{1}{2} e^{-j (1) \\frac{2\\pi}{3} n}"
-    },
-    {
-     "t": "p",
-     "text": "and conclude that non-zero harmonics occur at $k = \\pm 1$. **THIS IS COMPLETELY WRONG!**"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "The formula provided in the question explicitly sets the period to $N = 9$ (an observation window of 3 periods). The fundamental frequency of the representation is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{2\\pi}{9}\\text{ rad/sample}"
-    },
-    {
-     "t": "h4",
-     "text": "Correct Mathematical Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "Express $x[n]$ in terms of the harmonics of $\\omega_0 = \\frac{2\\pi}{9}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\cos\\left(\\frac{2\\pi}{3} n\\right) = \\cos\\left(3 \\cdot \\frac{2\\pi}{9} n\\right) = \\frac{1}{2} e^{j 3 \\left(\\frac{2\\pi}{9}\\right) n} + \\frac{1}{2} e^{-j 3 \\left(\\frac{2\\pi}{9}\\right) n}"
-    },
-    {
-     "t": "p",
-     "text": "Comparing with the synthesis formula:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\sum_{k} d_k e^{j k \\frac{2\\pi}{9} n}"
-    },
-    {
-     "t": "p",
-     "text": "The non-zero coefficients occur precisely at:"
-    },
-    {
-     "t": "math",
-     "tex": "k = +3 \\implies d_3 = \\frac{1}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "k = -3 \\implies d_{-3} = \\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Modulo 9, $d_{-3} \\equiv d_6 = \\frac{1}{2}$. All other coefficients in $k \\in \\{0, 1, \\dots, 8\\}$ are zero!"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2 via Rate Conversion (Slide 144):"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For fundamental period $N_0 = 3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "c_k = \\{\\dots, \\underset{k=-1}{\\frac{1}{2}}, \\underset{\\uparrow (k=0)}{0}, \\underset{k=1}{\\frac{1}{2}}, \\dots\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "When evaluated over $N = 9 = 3 \\times 3$, we have an $M = 3$ periodic extension:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "d_k = c_{k/3}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "d_{\\pm 3} = c_{\\pm 3/3} = c_{\\pm 1} = \\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "All other $d_k$ (where $k$ is not a multiple of 3) are zero.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 143 144 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "The Severe Examination Trap:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "The fundamental period of $x[n] = \\cos\\left(\\frac{2\\pi}{3} n\\right)$ is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "N_0 = \\frac{2\\pi}{2\\pi/3} = 3"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "A student ignoring the summation bounds would write:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\cos\\left(\\frac{2\\pi}{3} n\\right) = \\frac{1}{2} e^{j (1) \\frac{2\\pi}{3} n} + \\frac{1}{2} e^{-j (1) \\frac{2\\pi}{3} n}"
+      },
+      {
+       "t": "p",
+       "text": "and conclude that non-zero harmonics occur at $k = \\pm 1$. **THIS IS COMPLETELY WRONG!**"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "The formula provided in the question explicitly sets the period to $N = 9$ (an observation window of 3 periods). The fundamental frequency of the representation is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{2\\pi}{9}\\text{ rad/sample}"
+      },
+      {
+       "t": "h4",
+       "text": "Correct Mathematical Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "Express $x[n]$ in terms of the harmonics of $\\omega_0 = \\frac{2\\pi}{9}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\cos\\left(\\frac{2\\pi}{3} n\\right) = \\cos\\left(3 \\cdot \\frac{2\\pi}{9} n\\right) = \\frac{1}{2} e^{j 3 \\left(\\frac{2\\pi}{9}\\right) n} + \\frac{1}{2} e^{-j 3 \\left(\\frac{2\\pi}{9}\\right) n}"
+      },
+      {
+       "t": "p",
+       "text": "Comparing with the synthesis formula:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\sum_{k} d_k e^{j k \\frac{2\\pi}{9} n}"
+      },
+      {
+       "t": "p",
+       "text": "The non-zero coefficients occur precisely at:"
+      },
+      {
+       "t": "math",
+       "tex": "k = +3 \\implies d_3 = \\frac{1}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "k = -3 \\implies d_{-3} = \\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Modulo 9, $d_{-3} \\equiv d_6 = \\frac{1}{2}$. All other coefficients in $k \\in \\{0, 1, \\dots, 8\\}$ are zero!"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2 via Rate Conversion (Slide 144):"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For fundamental period $N_0 = 3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "c_k = \\{\\dots, \\underset{k=-1}{\\frac{1}{2}}, \\underset{\\uparrow (k=0)}{0}, \\underset{k=1}{\\frac{1}{2}}, \\dots\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "When evaluated over $N = 9 = 3 \\times 3$, we have an $M = 3$ periodic extension:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "d_k = c_{k/3}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "d_{\\pm 3} = c_{\\pm 3/3} = c_{\\pm 1} = \\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "All other $d_k$ (where $k$ is not a multiple of 3) are zero."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11169,62 +11144,61 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Apply Time Shifting"
-    },
-    {
-     "t": "p",
-     "text": "Let $g[n] = x[n+2]$. Using the time-advance property:"
-    },
-    {
-     "t": "math",
-     "tex": "g[n] = x[n+2] \\xrightarrow{\\text{EFSC}} g_k = e^{j k \\omega_0 (2)} c_k = e^{j k \\frac{4\\pi}{3}} c_k"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Apply Frequency Shifting"
-    },
-    {
-     "t": "p",
-     "text": "Now $y[n] = e^{j \\frac{4\\pi}{3} n} g[n]$. Notice:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{4\\pi}{3} = 2 \\left(\\frac{2\\pi}{3}\\right) = k_0 \\omega_0 \\implies k_0 = 2"
-    },
-    {
-     "t": "p",
-     "text": "Using the frequency-shift property:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = e^{j k_0 \\omega_0 n} g[n] \\xrightarrow{\\text{EFSC}} d_k = g_{k - k_0} = g_{k-2}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Combine Results"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $k - 2$ in place of the index in the expression for $g_k$:"
-    },
-    {
-     "t": "math",
-     "tex": "d_k = e^{j (k-2) \\frac{4\\pi}{3}} c_{k-2}"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**Exam Trap:** Do not evaluate $g_{k-2}$ as $e^{j k \\frac{4\\pi}{3}} c_{k-2}$. The shift $k \\to k-2$ MUST be applied to **every** occurrence of $k$ in the expression of $g_k$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 147 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Apply Time Shifting"
+      },
+      {
+       "t": "p",
+       "text": "Let $g[n] = x[n+2]$. Using the time-advance property:"
+      },
+      {
+       "t": "math",
+       "tex": "g[n] = x[n+2] \\xrightarrow{\\text{EFSC}} g_k = e^{j k \\omega_0 (2)} c_k = e^{j k \\frac{4\\pi}{3}} c_k"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Apply Frequency Shifting"
+      },
+      {
+       "t": "p",
+       "text": "Now $y[n] = e^{j \\frac{4\\pi}{3} n} g[n]$. Notice:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{4\\pi}{3} = 2 \\left(\\frac{2\\pi}{3}\\right) = k_0 \\omega_0 \\implies k_0 = 2"
+      },
+      {
+       "t": "p",
+       "text": "Using the frequency-shift property:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = e^{j k_0 \\omega_0 n} g[n] \\xrightarrow{\\text{EFSC}} d_k = g_{k - k_0} = g_{k-2}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Combine Results"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $k - 2$ in place of the index in the expression for $g_k$:"
+      },
+      {
+       "t": "math",
+       "tex": "d_k = e^{j (k-2) \\frac{4\\pi}{3}} c_{k-2}"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**Exam Trap:** Do not evaluate $g_{k-2}$ as $e^{j k \\frac{4\\pi}{3}} c_{k-2}$. The shift $k \\to k-2$ MUST be applied to **every** occurrence of $k$ in the expression of $g_k$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11268,96 +11242,99 @@ export default {
      "text": "**Completion of Projection Drill via DTFS Analysis Match**"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Expand the Sinusoid using Euler's Identity"
-    },
-    {
-     "t": "math",
-     "tex": "\\sin\\left(\\frac{4\\pi n}{5}\\right) = \\frac{e^{j \\frac{4\\pi n}{5}} - e^{-j \\frac{4\\pi n}{5}}}{2j}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute into $A$:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\sum_{n=0}^4 x[n] \\left[ \\frac{e^{j \\frac{4\\pi n}{5}} - e^{-j \\frac{4\\pi n}{5}}}{2j} \\right] = \\frac{1}{2j} \\sum_{n=0}^4 x[n] e^{j \\frac{4\\pi n}{5}} - \\frac{1}{2j} \\sum_{n=0}^4 x[n] e^{-j \\frac{4\\pi n}{5}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Relate to the DTFS Analysis Equation"
-    },
-    {
-     "t": "p",
-     "text": "The definition of DTFS coefficients for $N = 5$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "a_k = \\frac{1}{5}\\sum_{n=0}^4 x[n] e^{-j k \\frac{2\\pi}{5} n} \\implies 5 a_k = \\sum_{n=0}^4 x[n] e^{-j k \\frac{2\\pi}{5} n}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For the first term:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "e^{j \\frac{4\\pi n}{5}} = e^{-j (-2) \\frac{2\\pi}{5} n} \\implies \\sum_{n=0}^4 x[n] e^{j \\frac{4\\pi n}{5}} = 5 a_{-2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For the second term:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j \\frac{4\\pi n}{5}} = e^{-j (2) \\frac{2\\pi}{5} n} \\implies \\sum_{n=0}^4 x[n] e^{-j \\frac{4\\pi n}{5}} = 5 a_2"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\frac{5}{2j} \\left[ a_{-2} - a_2 \\right]"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Exploit Periodicity of $a_k$"
-    },
-    {
-     "t": "p",
-     "text": "Because $a_k$ has period $N = 5$:"
-    },
-    {
-     "t": "math",
-     "tex": "a_{-2} = a_{-2 + 5} = a_3"
-    },
-    {
-     "t": "p",
-     "text": "Given $a_3 = -2j$ and $a_2 = 2j$:"
-    },
-    {
-     "t": "math",
-     "tex": "a_{-2} - a_2 = -2j - (2j) = -4j"
-    },
-    {
-     "t": "p",
-     "text": "Substitute back into $A$:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\frac{5}{2j} (-4j) = 5 \\times (-2) = -10"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** $A = -10$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 148 149 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Expand the Sinusoid using Euler's Identity"
+      },
+      {
+       "t": "math",
+       "tex": "\\sin\\left(\\frac{4\\pi n}{5}\\right) = \\frac{e^{j \\frac{4\\pi n}{5}} - e^{-j \\frac{4\\pi n}{5}}}{2j}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute into $A$:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\sum_{n=0}^4 x[n] \\left[ \\frac{e^{j \\frac{4\\pi n}{5}} - e^{-j \\frac{4\\pi n}{5}}}{2j} \\right] = \\frac{1}{2j} \\sum_{n=0}^4 x[n] e^{j \\frac{4\\pi n}{5}} - \\frac{1}{2j} \\sum_{n=0}^4 x[n] e^{-j \\frac{4\\pi n}{5}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Relate to the DTFS Analysis Equation"
+      },
+      {
+       "t": "p",
+       "text": "The definition of DTFS coefficients for $N = 5$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "a_k = \\frac{1}{5}\\sum_{n=0}^4 x[n] e^{-j k \\frac{2\\pi}{5} n} \\implies 5 a_k = \\sum_{n=0}^4 x[n] e^{-j k \\frac{2\\pi}{5} n}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For the first term:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "e^{j \\frac{4\\pi n}{5}} = e^{-j (-2) \\frac{2\\pi}{5} n} \\implies \\sum_{n=0}^4 x[n] e^{j \\frac{4\\pi n}{5}} = 5 a_{-2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For the second term:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j \\frac{4\\pi n}{5}} = e^{-j (2) \\frac{2\\pi}{5} n} \\implies \\sum_{n=0}^4 x[n] e^{-j \\frac{4\\pi n}{5}} = 5 a_2"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\frac{5}{2j} \\left[ a_{-2} - a_2 \\right]"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Exploit Periodicity of $a_k$"
+      },
+      {
+       "t": "p",
+       "text": "Because $a_k$ has period $N = 5$:"
+      },
+      {
+       "t": "math",
+       "tex": "a_{-2} = a_{-2 + 5} = a_3"
+      },
+      {
+       "t": "p",
+       "text": "Given $a_3 = -2j$ and $a_2 = 2j$:"
+      },
+      {
+       "t": "math",
+       "tex": "a_{-2} - a_2 = -2j - (2j) = -4j"
+      },
+      {
+       "t": "p",
+       "text": "Substitute back into $A$:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\frac{5}{2j} (-4j) = 5 \\times (-2) = -10"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** $A = -10$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11479,87 +11456,90 @@ export default {
      "text": "**Mathematical Criteria & Rigorous Solution**"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Test 1: Real vs. Imaginary Signal"
-    },
-    {
-     "t": "p",
-     "text": "A periodic discrete-time signal $x[n]$ is **purely real** if and only if its DTFS coefficients exhibit conjugate symmetry:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-k} = c_k^* \\iff \\vert c_{-k}\\vert = \\vert c_k\\vert \\quad \\text{and} \\quad \\angle c_k + \\angle c_{-k} = 2m\\pi, \\quad m \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "A signal is **purely imaginary** if and only if:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{-k} = -c_k^* \\iff \\vert c_{-k}\\vert = \\vert c_k\\vert \\quad \\text{and} \\quad \\angle c_k + \\angle c_{-k} = (2m+1)\\pi"
-    },
-    {
-     "t": "p",
-     "text": "**Checking the Given Data:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $k = 1$: $\\angle c_1 + \\angle c_{-1} = \\frac{\\pi}{2} + \\left(-\\frac{\\pi}{2}\\right) = 0 = 2(0)\\pi$",
-      "For $k = 2$: $\\angle c_2 + \\angle c_{-2} = \\pi + (-\\pi) = 0 = 2(0)\\pi$",
-      "For $k = 0$: $2 \\angle c_0 = 0$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since the phase sum is an even multiple of $\\pi$ for all $k$, **$x[n]$ is REAL** (Option (a) is correct; Option (b) and (f) are eliminated)."
-    },
-    {
-     "t": "h4",
-     "text": "Test 2: Even vs. Odd vs. NENO"
-    },
-    {
-     "t": "p",
-     "text": "For a real signal $x[n]$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[n]$ is **Even** $\\iff c_k$ is purely real and even:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\angle c_k \\in \\{0, \\pi\\} \\implies \\angle c_k - \\angle c_{-k} = 2m\\pi \\quad (\\text{even multiple of } \\pi)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[n]$ is **Odd** $\\iff c_k$ is purely imaginary and odd:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\angle c_k \\in \\{\\pm \\pi/2\\} \\implies \\angle c_k - \\angle c_{-k} = (2m+1)\\pi \\quad (\\text{odd multiple of } \\pi)"
-    },
-    {
-     "t": "p",
-     "text": "**Checking the Phase Differences:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $k = 1$: $\\angle c_1 - \\angle c_{-1} = \\frac{\\pi}{2} - \\left(-\\frac{\\pi}{2}\\right) = \\pi$ (Odd multiple of $\\pi \\implies$ behaves as Odd)",
-      "For $k = 2$: $\\angle c_2 - \\angle c_{-2} = \\pi - (-\\pi) = 2\\pi$ (Even multiple of $\\pi \\implies$ behaves as Even)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since the symmetry condition is mixed (the $k=1$ harmonic is odd while the $k=2$ harmonic is even), the signal contains both even and odd components.\nTherefore, **$x[n]$ is NENO (Neither Even Nor Odd)** (Option (e) is correct; Options (c) and (d) are eliminated).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 151 152 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Test 1: Real vs. Imaginary Signal"
+      },
+      {
+       "t": "p",
+       "text": "A periodic discrete-time signal $x[n]$ is **purely real** if and only if its DTFS coefficients exhibit conjugate symmetry:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-k} = c_k^* \\iff \\vert c_{-k}\\vert = \\vert c_k\\vert \\quad \\text{and} \\quad \\angle c_k + \\angle c_{-k} = 2m\\pi, \\quad m \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "A signal is **purely imaginary** if and only if:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{-k} = -c_k^* \\iff \\vert c_{-k}\\vert = \\vert c_k\\vert \\quad \\text{and} \\quad \\angle c_k + \\angle c_{-k} = (2m+1)\\pi"
+      },
+      {
+       "t": "p",
+       "text": "**Checking the Given Data:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $k = 1$: $\\angle c_1 + \\angle c_{-1} = \\frac{\\pi}{2} + \\left(-\\frac{\\pi}{2}\\right) = 0 = 2(0)\\pi$",
+        "For $k = 2$: $\\angle c_2 + \\angle c_{-2} = \\pi + (-\\pi) = 0 = 2(0)\\pi$",
+        "For $k = 0$: $2 \\angle c_0 = 0$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since the phase sum is an even multiple of $\\pi$ for all $k$, **$x[n]$ is REAL** (Option (a) is correct; Option (b) and (f) are eliminated)."
+      },
+      {
+       "t": "h4",
+       "text": "Test 2: Even vs. Odd vs. NENO"
+      },
+      {
+       "t": "p",
+       "text": "For a real signal $x[n]$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[n]$ is **Even** $\\iff c_k$ is purely real and even:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\angle c_k \\in \\{0, \\pi\\} \\implies \\angle c_k - \\angle c_{-k} = 2m\\pi \\quad (\\text{even multiple of } \\pi)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[n]$ is **Odd** $\\iff c_k$ is purely imaginary and odd:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\angle c_k \\in \\{\\pm \\pi/2\\} \\implies \\angle c_k - \\angle c_{-k} = (2m+1)\\pi \\quad (\\text{odd multiple of } \\pi)"
+      },
+      {
+       "t": "p",
+       "text": "**Checking the Phase Differences:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $k = 1$: $\\angle c_1 - \\angle c_{-1} = \\frac{\\pi}{2} - \\left(-\\frac{\\pi}{2}\\right) = \\pi$ (Odd multiple of $\\pi \\implies$ behaves as Odd)",
+        "For $k = 2$: $\\angle c_2 - \\angle c_{-2} = \\pi - (-\\pi) = 2\\pi$ (Even multiple of $\\pi \\implies$ behaves as Even)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since the symmetry condition is mixed (the $k=1$ harmonic is odd while the $k=2$ harmonic is even), the signal contains both even and odd components.\nTherefore, **$x[n]$ is NENO (Neither Even Nor Odd)** (Option (e) is correct; Options (c) and (d) are eliminated)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "code",
@@ -11649,118 +11629,121 @@ export default {
      "text": "**Method 2: Geometric Progression & Closed-Form Dirichlet Kernel Formulation**"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Write the Series in Geometric Form"
-    },
-    {
-     "t": "p",
-     "text": "Express each coefficient in exponential form:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = e^{-j\\pi} e^{-j 2\\omega_0 n} + e^{-j \\pi/2} e^{-j \\omega_0 n} + 1 + e^{j \\pi/2} e^{j \\omega_0 n} + e^{j\\pi} e^{j 2\\omega_0 n}"
-    },
-    {
-     "t": "p",
-     "text": "Notice the phases form an arithmetic progression. Define:"
-    },
-    {
-     "t": "math",
-     "tex": "\\theta = \\frac{\\pi}{2} + \\omega_0 n"
-    },
-    {
-     "t": "p",
-     "text": "Then:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $k = -2$: Phase is $-\\pi - 2\\omega_0 n = -2\\theta \\implies e^{-j 2\\theta}$",
-      "For $k = -1$: Phase is $-\\frac{\\pi}{2} - \\omega_0 n = -\\theta \\implies e^{-j \\theta}$",
-      "For $k = 0$: Phase is $0 \\implies 1 = e^{j 0}$",
-      "For $k = 1$: Phase is $\\frac{\\pi}{2} + \\omega_0 n = \\theta \\implies e^{j \\theta}$",
-      "For $k = 2$: Phase is $\\pi + 2\\omega_0 n = 2\\theta \\implies e^{j 2\\theta}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The signal simplifies to a symmetric finite sum:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = e^{-j 2\\theta} + e^{-j \\theta} + 1 + e^{j \\theta} + e^{j 2\\theta} = \\sum_{m=-2}^2 e^{j m \\theta}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Sum the Geometric Series"
-    },
-    {
-     "t": "p",
-     "text": "This is a geometric progression of $M = 5$ terms with first term $a = e^{-j 2\\theta}$ and common ratio $r = e^{j \\theta}$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = a \\frac{r^5 - 1}{r - 1} = e^{-j 2\\theta} \\frac{e^{j 5\\theta} - 1}{e^{j \\theta} - 1}"
-    },
-    {
-     "t": "p",
-     "text": "Factoring half-angles from the numerator and denominator:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = e^{-j 2\\theta} \\cdot \\frac{e^{j \\frac{5}{2}\\theta} \\left( e^{j \\frac{5}{2}\\theta} - e^{-j \\frac{5}{2}\\theta} \\right)}{e^{j \\frac{1}{2}\\theta} \\left( e^{j \\frac{1}{2}\\theta} - e^{-j \\frac{1}{2}\\theta} \\right)}"
-    },
-    {
-     "t": "p",
-     "text": "Notice the phase factors cancel:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j 2\\theta} \\cdot \\frac{e^{j \\frac{5}{2}\\theta}}{e^{j \\frac{1}{2}\\theta}} = e^{-j 2\\theta} \\cdot e^{j 2\\theta} = e^{j 0} = 1"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{2j \\sin\\left(\\frac{5}{2}\\theta\\right)}{2j \\sin\\left(\\frac{1}{2}\\theta\\right)} = \\frac{\\sin\\left(\\frac{5}{2}\\theta\\right)}{\\sin\\left(\\frac{1}{2}\\theta\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Substitute $\\theta = \\frac{\\pi}{2} + \\omega_0 n$ (Slide 156)"
-    },
-    {
-     "t": "p",
-     "text": "With $\\omega_0 = \\frac{2\\pi}{7}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{5}{2}\\theta = \\frac{5}{2}\\left( \\frac{\\pi}{2} + \\frac{2\\pi}{7}n \\right) = \\frac{5\\pi}{4} + \\frac{5\\pi}{7}n"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{2}\\theta = \\frac{1}{2}\\left( \\frac{\\pi}{2} + \\frac{2\\pi}{7}n \\right) = \\frac{\\pi}{4} + \\frac{\\pi}{7}n"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{\\sin\\left(\\frac{5\\pi}{4} + \\frac{5\\pi}{7}n\\right)}{\\sin\\left(\\frac{\\pi}{4} + \\frac{\\pi}{7}n\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "This proves that **Option (a) is also correct**."
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:** Both expressions are algebraically identical. The correct choice is **(c) Both**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slides 155 156 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Write the Series in Geometric Form"
+      },
+      {
+       "t": "p",
+       "text": "Express each coefficient in exponential form:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = e^{-j\\pi} e^{-j 2\\omega_0 n} + e^{-j \\pi/2} e^{-j \\omega_0 n} + 1 + e^{j \\pi/2} e^{j \\omega_0 n} + e^{j\\pi} e^{j 2\\omega_0 n}"
+      },
+      {
+       "t": "p",
+       "text": "Notice the phases form an arithmetic progression. Define:"
+      },
+      {
+       "t": "math",
+       "tex": "\\theta = \\frac{\\pi}{2} + \\omega_0 n"
+      },
+      {
+       "t": "p",
+       "text": "Then:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $k = -2$: Phase is $-\\pi - 2\\omega_0 n = -2\\theta \\implies e^{-j 2\\theta}$",
+        "For $k = -1$: Phase is $-\\frac{\\pi}{2} - \\omega_0 n = -\\theta \\implies e^{-j \\theta}$",
+        "For $k = 0$: Phase is $0 \\implies 1 = e^{j 0}$",
+        "For $k = 1$: Phase is $\\frac{\\pi}{2} + \\omega_0 n = \\theta \\implies e^{j \\theta}$",
+        "For $k = 2$: Phase is $\\pi + 2\\omega_0 n = 2\\theta \\implies e^{j 2\\theta}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The signal simplifies to a symmetric finite sum:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = e^{-j 2\\theta} + e^{-j \\theta} + 1 + e^{j \\theta} + e^{j 2\\theta} = \\sum_{m=-2}^2 e^{j m \\theta}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Sum the Geometric Series"
+      },
+      {
+       "t": "p",
+       "text": "This is a geometric progression of $M = 5$ terms with first term $a = e^{-j 2\\theta}$ and common ratio $r = e^{j \\theta}$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = a \\frac{r^5 - 1}{r - 1} = e^{-j 2\\theta} \\frac{e^{j 5\\theta} - 1}{e^{j \\theta} - 1}"
+      },
+      {
+       "t": "p",
+       "text": "Factoring half-angles from the numerator and denominator:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = e^{-j 2\\theta} \\cdot \\frac{e^{j \\frac{5}{2}\\theta} \\left( e^{j \\frac{5}{2}\\theta} - e^{-j \\frac{5}{2}\\theta} \\right)}{e^{j \\frac{1}{2}\\theta} \\left( e^{j \\frac{1}{2}\\theta} - e^{-j \\frac{1}{2}\\theta} \\right)}"
+      },
+      {
+       "t": "p",
+       "text": "Notice the phase factors cancel:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j 2\\theta} \\cdot \\frac{e^{j \\frac{5}{2}\\theta}}{e^{j \\frac{1}{2}\\theta}} = e^{-j 2\\theta} \\cdot e^{j 2\\theta} = e^{j 0} = 1"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{2j \\sin\\left(\\frac{5}{2}\\theta\\right)}{2j \\sin\\left(\\frac{1}{2}\\theta\\right)} = \\frac{\\sin\\left(\\frac{5}{2}\\theta\\right)}{\\sin\\left(\\frac{1}{2}\\theta\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Substitute $\\theta = \\frac{\\pi}{2} + \\omega_0 n$ (Slide 156)"
+      },
+      {
+       "t": "p",
+       "text": "With $\\omega_0 = \\frac{2\\pi}{7}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{5}{2}\\theta = \\frac{5}{2}\\left( \\frac{\\pi}{2} + \\frac{2\\pi}{7}n \\right) = \\frac{5\\pi}{4} + \\frac{5\\pi}{7}n"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{2}\\theta = \\frac{1}{2}\\left( \\frac{\\pi}{2} + \\frac{2\\pi}{7}n \\right) = \\frac{\\pi}{4} + \\frac{\\pi}{7}n"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{\\sin\\left(\\frac{5\\pi}{4} + \\frac{5\\pi}{7}n\\right)}{\\sin\\left(\\frac{\\pi}{4} + \\frac{\\pi}{7}n\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "This proves that **Option (a) is also correct**."
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:** Both expressions are algebraically identical. The correct choice is **(c) Both**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11967,112 +11950,115 @@ export default {
      "text": "**Algebraic Properties of the Twiddle Factor $W_N$**\nThe chalkboard lists the following properties of $W_N = e^{-j \\frac{2\\pi}{N}}$:"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Algebraic Proofs of the Twiddle Factor Properties:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Zero-Power (Unity):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^0 = \\left(e^{-j 2\\pi/N}\\right)^0 = e^0 = 1"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Half-Period Inversion / Symmetry:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{N/2} = \\left(e^{-j 2\\pi/N}\\right)^{N/2} = e^{-j\\pi} = -1"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies W_N^{k + N/2} = W_N^k \\cdot W_N^{N/2} = -W_N^k"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Quarter-Period Value:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{N/4} = \\left(e^{-j 2\\pi/N}\\right)^{N/4} = e^{-j \\pi/2} = -j"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Full-Period Identity:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^N = \\left(e^{-j 2\\pi/N}\\right)^N = e^{-j 2\\pi} = 1"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Periodicity:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{k + N} = W_N^k \\cdot W_N^N = W_N^k \\cdot 1 = W_N^k"
-    },
-    {
-     "t": "p",
-     "text": "In general, for any integer $m$: $W_N^{k + mN} = W_N^k$."
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "**Conjugate Inverse:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{-1} = \\left(e^{-j 2\\pi/N}\\right)^{-1} = e^{j 2\\pi/N} = W_N^*"
-    },
-    {
-     "t": "ol",
-     "start": 7,
-     "items": [
-      "**Negative Full-Period:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{-N} = \\left(e^{-j 2\\pi/N}\\right)^{-N} = e^{j 2\\pi} = 1"
-    },
-    {
-     "t": "ol",
-     "start": 8,
-     "items": [
-      "**Reduction / Index-Halving Property (FFT Basis):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{2k} = \\left(e^{-j \\frac{2\\pi}{N}}\\right)^{2k} = e^{-j \\frac{2\\pi}{N/2} k} = W_{N/2}^k"
-    },
-    {
-     "t": "p",
-     "text": "More generally: $W_N^{mk} = W_{N/m}^k$ when $N$ is divisible by $m$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Slide 160 /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Algebraic Proofs of the Twiddle Factor Properties:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Zero-Power (Unity):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^0 = \\left(e^{-j 2\\pi/N}\\right)^0 = e^0 = 1"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Half-Period Inversion / Symmetry:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{N/2} = \\left(e^{-j 2\\pi/N}\\right)^{N/2} = e^{-j\\pi} = -1"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies W_N^{k + N/2} = W_N^k \\cdot W_N^{N/2} = -W_N^k"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Quarter-Period Value:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{N/4} = \\left(e^{-j 2\\pi/N}\\right)^{N/4} = e^{-j \\pi/2} = -j"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Full-Period Identity:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^N = \\left(e^{-j 2\\pi/N}\\right)^N = e^{-j 2\\pi} = 1"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Periodicity:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{k + N} = W_N^k \\cdot W_N^N = W_N^k \\cdot 1 = W_N^k"
+      },
+      {
+       "t": "p",
+       "text": "In general, for any integer $m$: $W_N^{k + mN} = W_N^k$."
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "**Conjugate Inverse:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{-1} = \\left(e^{-j 2\\pi/N}\\right)^{-1} = e^{j 2\\pi/N} = W_N^*"
+      },
+      {
+       "t": "ol",
+       "start": 7,
+       "items": [
+        "**Negative Full-Period:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{-N} = \\left(e^{-j 2\\pi/N}\\right)^{-N} = e^{j 2\\pi} = 1"
+      },
+      {
+       "t": "ol",
+       "start": 8,
+       "items": [
+        "**Reduction / Index-Halving Property (FFT Basis):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{2k} = \\left(e^{-j \\frac{2\\pi}{N}}\\right)^{2k} = e^{-j \\frac{2\\pi}{N/2} k} = W_{N/2}^k"
+      },
+      {
+       "t": "p",
+       "text": "More generally: $W_N^{mk} = W_{N/m}^k$ when $N$ is divisible by $m$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -12292,16 +12278,19 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>` cards with exam traps."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "\u2713 Markdown table pipes inside mathematical delimiters replaced with `\\vert` throughout.",
-      "\u2713 Complete derivation of the DFT from DTFT via uniform frequency sampling $\\Omega_k = \\frac{2\\pi k}{N}$ documented.",
-      "\u2713 Full twiddle factor algebra, DFT matrix structure ($F_4$), basis orthogonality, and Parseval's energy theorem rigorously derived."
-     ]
+     "t": "details",
+     "summary": "Solution",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "\u2713 Markdown table pipes inside mathematical delimiters replaced with `\\vert` throughout.",
+        "\u2713 Complete derivation of the DFT from DTFT via uniform frequency sampling $\\Omega_k = \\frac{2\\pi k}{N}$ documented.",
+        "\u2713 Full twiddle factor algebra, DFT matrix structure ($F_4$), basis orthogonality, and Parseval's energy theorem rigorously derived."
+       ]
+      }
+     ],
+     "open": true
     }
    ]
   },
@@ -12322,5152 +12311,5155 @@ export default {
      "text": "All mathematical formulations, continuous/discrete frequency sampling equations, Twiddle factor algebra, $N \\times N$ DFT/IDFT matrix representations, modulo-N circular indexing, circular time-reversal, time and frequency domain expansion/upsampling properties, conjugate symmetry conditions, multi-domain transform duality, and iterated DFT/IDFT operator dynamics have been transcribed into rigorous publication-grade KaTeX ($...$ for inline, $$...$$ for display). All table math pipe characters have been sanitized to `\\vert` to preserve GFM compliance. In accordance with publication instructions, zero chalkboard photographs are included; all derivations, step-by-step proofs, and exam drills are encased in interactive disclosure blocks (`"
     },
     {
-     "t": "p",
-     "text": "<details open><summary>...</summary>...</details>"
-    },
-    {
-     "t": "p",
-     "text": "`)."
-    },
-    {
-     "t": "h3",
-     "text": "Comprehensive 32-Slide Audit Matrix"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Slide Number",
-      "Source Page & Quadrant",
-      "Chalkboard Topic / Title",
-      "Mathematical Summary & Analytical Expressions",
-      "Key Pedagogical Takeaways & Exam Pitfalls"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "`)."
+      },
+      {
+       "t": "h3",
+       "text": "Comprehensive 32-Slide Audit Matrix"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Slide Number",
+        "Source Page & Quadrant",
+        "Chalkboard Topic / Title",
+        "Mathematical Summary & Analytical Expressions",
+        "Key Pedagogical Takeaways & Exam Pitfalls"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---",
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**Slide 161**",
+         "`page_0041.png` [Top-Left]",
+         "2-Point DFT & DTFT Frequency Sampling",
+         "$x[n] = \\{1, 2\\}$, $N=2$. Frequency sampling of DTFT $X(e^{j\\omega}) = 1 + 2e^{-j\\omega}$ at $\\omega_k = \\frac{2\\pi}{2}k = \\pi k$. DFT values: $X(0) = 3$, $X(1) = -1 \\implies X(k) = \\{3, -1\\}$. IDFT reconstructs periodic discrete sequence $\\tilde{x}[n] = \\{\\dots, 1, 2, \\underset{\\uparrow}{1}, 2, \\dots\\}$.",
+         "DFT is fundamentally a set of samples of the continuous DTFT taken at $N$ equidistant frequency points $\\omega_k = \\frac{2\\pi}{N}k$. IDFT yields the periodic continuation $\\tilde{x}[n] = x[((n))_N]$."
+        ],
+        [
+         "**Slide 162**",
+         "`page_0041.png` [Top-Right]",
+         "3-Point DFT via DTFT Sampling & Periodic Sequence",
+         "$x[n] = \\{1, 2, 3\\}$, $N=3$. DTFT: $X(e^{j\\omega}) = 1 + 2e^{-j\\omega} + 3e^{-j2\\omega}$. Sampling at $\\omega_k = \\frac{2\\pi}{3}k \\implies X(k) = 1 + 2e^{-j\\frac{2\\pi}{3}k} + 3e^{-j\\frac{4\\pi}{3}k}$. Evaluates to $X(0) = 6$, $X(1) = -1.5 + j\\frac{\\sqrt{3}}{2}$, $X(2) = -1.5 - j\\frac{\\sqrt{3}}{2}$.",
+         "Notice conjugate symmetry $X(2) = X^*(1)$ holds because $x[n]$ is real-valued. IDFT produces periodic discrete sequence with fundamental period $N=3$."
+        ],
+        [
+         "**Slide 163**",
+         "`page_0041.png` [Bottom-Left]",
+         "4-Point DFT of Ramp Sequence $\\{1, 2, 3, 4\\}$",
+         "$x[n] = \\{1, 2, 3, 4\\}$, $N=4$. DTFT sampled at $\\omega_k = \\frac{2\\pi}{4}k = \\frac{\\pi}{2}k$. Analytical sum: $X(k) = 1 + 2(-j)^k + 3(-1)^k + 4(j)^k$. DFT sequence: $X(k) = \\{10, -2+2j, -2, -2-2j\\}$. Periodic sequence $\\tilde{X}(k)$ with period 4.",
+         "DC component $X(0) = \\sum x[n] = 10$. Middle component $X(N/2) = X(2) = \\sum (-1)^n x[n] = -2$ is strictly real. $X(3) = X^*(1)$."
+        ],
+        [
+         "**Slide 164**",
+         "`page_0041.png` [Bottom-Right]",
+         "Twiddle Factor Definition & DFT Matrix Formulation",
+         "Definition of Twiddle Factor $W_N \\triangleq e^{-j\\frac{2\\pi}{N}}$. Analysis formula: $X(k) = \\sum_{n=0}^{N-1} x[n] W_N^{kn}$. Matrix formulation: $\\mathbf{X}_{N \\times 1} = \\mathbf{W}_{N \\times N} \\mathbf{x}_{N \\times 1}$. Matrix elements: $(\\mathbf{W}_N)_{k,n} = W_N^{kn}$.",
+         "The DFT transformation matrix $\\mathbf{W}_N$ is symmetric and Vandermonde. Its rows and columns form an orthogonal basis for $\\mathbb{C}^N$."
+        ],
+        [
+         "**Slide 165**",
+         "`page_0042.png` [Top-Left]",
+         "Inverse DFT (IDFT) & Inverse Matrix Formulation",
+         "IDFT formula: $x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N}kn} = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) W_N^{-kn}$. Matrix formulation: $\\mathbf{x} = \\frac{1}{N} \\mathbf{W}_N^* \\mathbf{X} = \\frac{1}{N} \\mathbf{W}_N^H \\mathbf{X}$. Inverse twiddle factor: $W_N^{-1} = W_N^* = e^{j\\frac{2\\pi}{N}}$.",
+         "Crucial scale factor $\\frac{1}{N}$ sits exclusively in the synthesis (IDFT) equation in standard engineering definition. $\\mathbf{W}_N^{-1} = \\frac{1}{N} \\mathbf{W}_N^*$."
+        ],
+        [
+         "**Slide 166**",
+         "`page_0042.png` [Top-Right]",
+         "2-Point DFT via Matrix Method",
+         "$x[n] = \\{1, 2\\}, N=2$. Twiddle factor $W_2 = e^{-j\\pi} = -1$. Matrix: $\\begin{bmatrix} X(0) \\\\ X(1) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix} \\implies X(k) = \\{3, -1\\}$.",
+         "The 2-point DFT matrix $\\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$ is identical to the Hadamard matrix $H_2$, computing sum and difference directly."
+        ],
+        [
+         "**Slide 167**",
+         "`page_0042.png` [Bottom-Left]",
+         "2-Point IDFT Matrix Computation",
+         "Inverse matrix evaluation for $X(k) = \\{3, -1\\}$: $W_2^{-1} = -1$. $\\begin{bmatrix} x(0) \\\\ x(1) \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 2 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}$.",
+         "Matrix IDFT requires pre-multiplying by the normalizing scalar $\\frac{1}{2}$. Reconstructs original 2-point sequence $x[n] = \\{1, 2\\}$."
+        ],
+        [
+         "**Slide 168**",
+         "`page_0042.png` [Bottom-Right]",
+         "4-Point DFT & IDFT Matrix Algebra & Powers of $W_4$",
+         "$N=4$. Twiddle factor $W_4 = e^{-j\\frac{2\\pi}{4}} = e^{-j\\pi/2} = -j$. Powers: $W_4^0 = 1, W_4^1 = -j, W_4^2 = -1, W_4^3 = j, W_4^4 = 1, W_4^6 = -1$. Structural setup of $4 \\times 4$ DFT and IDFT matrices.",
+         "Memorize the 4-point twiddle powers: $W_4^0 = 1, W_4^1 = -j, W_4^2 = -1, W_4^3 = j$. Note $W_4^{-1} = +j$."
+        ],
+        [
+         "**Slide 169**",
+         "`page_0043.png` [Top-Left]",
+         "4-Point DFT & IDFT Numerical Computation for $\\{1, 2, 3, 4\\}$",
+         "Full matrix multiplication: $\\mathbf{X} = \\mathbf{W}_4 [1, 2, 3, 4]^T = [10, -2+2j, -2, -2-2j]^T$. Inverse matrix computation: $\\mathbf{x} = \\frac{1}{4} \\mathbf{W}_4^* [10, -2+2j, -2, -2-2j]^T = \\frac{1}{4} [4, 8, 12, 16]^T = [1, 2, 3, 4]^T$.",
+         "Cross-verification confirms perfect reconstruction. IDFT matrix contains complex conjugates $+j$ in place of $-j$."
+        ],
+        [
+         "**Slide 170**",
+         "`page_0043.png` [Top-Right]",
+         "3-Point DFT of $\\{1, 2, -1\\}$ via $W_3$ Matrix",
+         "$N=3, W_3 = e^{-j\\frac{2\\pi}{3}}$. Powers: $W_3^1 = e^{-j 2\\pi/3}$, $W_3^2 = e^{j 2\\pi/3}$, $W_3^4 = W_3^1$. Matrix multiplication yields: $X(0) = 2$, $X(1) = 1 + 2e^{-j 2\\pi/3} - e^{j 2\\pi/3}$, $X(2) = 1 + 2e^{j 2\\pi/3} - e^{-j 2\\pi/3} = X^*(1)$.",
+         "For $N=3$, twiddle powers simplify via modular reduction: $W_3^4 = W_3^{4 \\bmod 3} = W_3^1$."
+        ],
+        [
+         "**Slide 171**",
+         "`page_0043.png` [Bottom-Left]",
+         "Periodic Discrete Sequences & 4-Point DFT",
+         "Given periodic discrete sequence $\\tilde{x}[n] = \\{\\dots, 1, 2, 3, 4, \\underset{n=0}{1}, 2, 3, 4, \\dots\\}$ with period $N=4$. Taking 4-point DFT over fundamental interval $n \\in [0, 3]$ yields $X(k) = \\{10, -2+2j, -2, -2-2j\\}$.",
+         "DFT of one fundamental period of a periodic discrete-time sequence corresponds exactly to its Discrete Fourier Series (DFS) spectral coefficients scaled by $N$ (or DFS harmonic amplitudes)."
+        ],
+        [
+         "**Slide 172**",
+         "`page_0043.png` [Bottom-Right]",
+         "4-Point DFT of Cosine Sequence $\\cos(\\frac{\\pi}{2}n)$ via Synthesis Matching",
+         "$x[n] = \\cos(\\frac{\\pi}{2}n), N=4$. Express via Euler's identity: $\\frac{1}{2}e^{j\\frac{\\pi}{2}n} + \\frac{1}{2}e^{-j\\frac{\\pi}{2}n}$. Comparison with IDFT synthesis $x[n] = \\frac{1}{4}\\sum_{k=0}^3 X(k)e^{j\\frac{2\\pi}{4}kn}$ yields $k=1 \\implies \\frac{X(1)}{4} = \\frac{1}{2} \\implies X(1)=2$; $k=-1 \\equiv 3 \\pmod 4 \\implies X(3)=2$. DFT: $X(k) = \\{0, 2, 0, 2\\}$.",
+         "Avoid computing the direct summation sum; match complex exponential frequencies directly into IDFT synthesis bins!"
+        ],
+        [
+         "**Slide 173**",
+         "`page_0044.png` [Top-Left]",
+         "Zero-Padding in Time Domain: 4-Point DFT of 2-Point Sequence",
+         "$x[n] = \\{1, 2\\}$, zero-padded to length 4: $x_{zp}[n] = \\{1, 2, 0, 0\\}$. Matrix multiplication with $\\mathbf{W}_4$ gives: $X(k) = \\{3, 1-2j, -1, 1+2j\\}$.",
+         "Zero-padding in time does NOT increase physical frequency resolution; it merely densifies the sampling grid of the continuous DTFT $X(e^{j\\omega})$."
+        ],
+        [
+         "**Slide 174**",
+         "`page_0044.png` [Top-Right]",
+         "IDFT of Zero-Padded Spectrum & Discrete Periodic Nature",
+         "IDFT of $X(k) = \\{3, 1-2j, -1, 1+2j\\}$ evaluated via $\\frac{1}{4}\\mathbf{W}_4^* \\mathbf{X}$ yields $\\frac{1}{4}[4, 8, 0, 0]^T = [1, 2, 0, 0]^T$. Periodic extension: $\\tilde{x}[n] = \\{\\dots, 1, 2, 0, 0, \\underset{\\uparrow}{1}, 2, 0, 0, \\dots\\}$.",
+         "The periodic extension replicates the padded zeros as well as the active samples with period $N=4$."
+        ],
+        [
+         "**Slide 175**",
+         "`page_0044.png` [Bottom-Left]",
+         "12-Point DFT of $\\cos(\\frac{\\pi}{2}n)$ ($N=12$)",
+         "Period $P=4$. For $N=12$, fundamental frequency bin spacing is $\\Delta\\omega = \\frac{2\\pi}{12} = \\frac{\\pi}{6}$. Signal frequency $\\omega_0 = \\frac{\\pi}{2} = 3\\Delta\\omega \\implies k=3$; negative frequency $-\\frac{\\pi}{2} \\equiv -3 \\equiv 9 \\pmod{12}$. Matching amplitudes: $\\frac{X(3)}{12} = \\frac{1}{2} \\implies X(3) = 6, X(9) = 6$. All other $X(k) = 0$.",
+         "When sequence length $N$ is an integer multiple of the sinusoidal period $P$, no spectral leakage occurs; energy concentrates entirely into discrete bins $k_0$ and $N-k_0$."
+        ],
+        [
+         "**Slide 176**",
+         "`page_0044.png` [Bottom-Right]",
+         "Periodic Modulo Sequence Generation & 4-Point DFT Setup",
+         "3-point sequence $x[n] = \\{1, 2, 3\\}$. Periodic sequence $y[n] = x[n \\bmod 3] = (x[n])_3 = \\{\\dots, 1, 2, 3, \\underset{n=0}{1}, 2, 3, 1, 2, 3, \\dots\\}$. 4-point sequence extracted: $y[n] = \\{1, 2, 3, 1\\}$ for $n=0, 1, 2, 3$. Setup for 4-point DFT $Y(k)$ and IDFT.",
+         "Taking $N$ points from a periodic sequence with period $M$ where $N \\neq M$ results in sample wrap-around across periods (here $y[3] = x[0] = 1$)."
+        ],
+        [
+         "**Slide 177**",
+         "`page_0045.png` [Top-Left]",
+         "4-Point DFT & IDFT of $\\{1, 2, 3, 1\\}$",
+         "Matrix calculation: $\\mathbf{Y} = \\mathbf{W}_4 [1, 2, 3, 1]^T = [7, -2-j, 1, -2+j]^T$. 4-point DFT: $Y(k) = \\{7, -2-j, 1, -2+j\\}$. IDFT recovers periodic sequence with period 4: $\\tilde{y}[n] = \\{\\dots, 1, 2, 3, 1, \\underset{\\uparrow}{1}, 2, 3, 1, \\dots\\}$.",
+         "Real sequence property verified: $Y(0)=7$ (sum of samples), $Y(2)=1$ (alternating sum $1-2+3-1=1$), and $Y(3) = Y^*(1) = -2+j$."
+        ],
+        [
+         "**Slide 178**",
+         "`page_0045.png` [Top-Right]",
+         "Constructing Periodic Extension with Period 5 from 3-Point Sequence",
+         "Given 3-point sequence $x[n] = \\{1, 2, -1\\}$. Target periodic sequence $y[n]$ has period 5: $\\{\\dots, 1, 2, -1, 1, 2, \\underset{\\uparrow}{1}, 2, -1, 1, 2, \\dots\\}$. Process: Extract 5-point sequence $y[n] = \\{1, 2, -1, 1, 2\\}$, compute 5-point DFT, and apply 5-point IDFT to generate periodic continuation.",
+         "A periodic discrete signal of period $N_0$ requires an $N_0$-point DFT/IDFT pair. Mismatching transform length alters the period of the time-domain continuation."
+        ],
+        [
+         "**Slide 179**",
+         "`page_0045.png` [Bottom-Left]",
+         "Modulo-2 Periodic Sequence Generation from 3-Point Sequence",
+         "Given 3-point sequence $x[n] = \\{1, 2, 3\\}$. Modulo-2 periodic sequence $y[n] = x[n \\bmod 2] = (x[n])_2 = \\{\\dots, 1, 2, \\underset{n=0}{1}, 2, 1, 2, \\dots\\}$. Only the first 2 samples $x[0]=1, x[1]=2$ are periodically replicated; $x[2]=3$ is dropped entirely!",
+         "Modulo-$M$ indexing selects only the first $M$ samples ($n=0, 1, \\dots, M-1$). Any original samples at $n \\ge M$ are excluded from the modulo-reduced periodic signal."
+        ],
+        [
+         "**Slide 180**",
+         "`page_0045.png` [Bottom-Right]",
+         "8-Point DFT Property Problem: Even-Index Sample Sum",
+         "$X(k)$ is 8-point DFT of $x[n]$, with $X(k) = k + 1$ for $0 \\le k \\le 7$. Find $A = \\sum_{n=0}^3 x[2n] = x[0] + x[2] + x[4] + x[6]$. Using analysis equation: $X(0) = \\sum_{n=0}^7 x[n] = 0 + 1 = 1$; $X(4) = \\sum_{n=0}^7 x[n] (-1)^n = 4 + 1 = 5$.",
+         "Fast evaluation trick: Evaluating DFT at $k=0$ and $k=N/2$ directly decouples even-indexed and odd-indexed time samples without inverting the DFT!"
+        ],
+        [
+         "**Slide 181**",
+         "`page_0046.png` [Top-Left]",
+         "Even-Index Sample Sum Solution & GATE Trap Analysis",
+         "Summing equations: $X(0) + X(4) = 2[x[0] + x[2] + x[4] + x[6]] = 2A \\implies A = \\frac{X(0) + X(4)}{2} = \\frac{1 + 5}{2} = 3$. GATE trap analysis and generalization for odd-index sum $\\sum x[2n+1] = \\frac{X(0) - X(4)}{2} = \\frac{1 - 5}{2} = -2$.",
+         "Always remember the factor of 2! In general, $\\sum_{n=0}^{\\frac{N}{2}-1} x[2n] = \\frac{X(0) + X(N/2)}{2}$."
+        ],
+        [
+         "**Slide 182**",
+         "`page_0046.png` [Top-Right]",
+         "Time Expansion / Upsampling Property in DFT Domain",
+         "If $x[n]$ ($N$-point) $\\leftrightarrow X(k)$ ($N$-point), upsampling by $M=3$ (inserting 2 zeros between samples) yields $3N$-point sequence $x[n/3]$. Its $3N$-point DFT is the periodic repetition of $X(k)$ repeated 3 times. Example: 4-pt $x[n]=\\{3, 2, 3, 4\\} \\to X(k)=\\{12, 2j, 0, -2j\\}$; 12-pt $x_1[n]=\\{3, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0\\} \\to X_1(k)$ repeats $X(k)$ 3 times.",
+         "Zero-insertion in the time domain causes spectral compression in DTFT, which maps to periodic repetition of DFT bins in discrete frequency."
+        ],
+        [
+         "**Slide 183**",
+         "`page_0046.png` [Bottom-Left]",
+         "Frequency Upsampling / Expansion Numerical Drill",
+         "2-point $x[n] = \\{1, 2\\} \\leftrightarrow X(k) = \\{3, -1\\}$. Zero-inserting in frequency by factor $M=2$ yields 4-point spectrum $Y(k) = X(k/2) = \\{3, 0, -1, 0\\}$. 4-point IDFT gives $y[n] = \\frac{1}{4}[2, 4, 2, 4]^T = \\frac{1}{2}\\{1, 2, 1, 2\\} = \\frac{1}{2}[x[n] \\text{ repeated 2 times}]$.",
+         "Frequency-domain zero-insertion corresponds to periodic time-domain repetition accompanied by a critical $\\frac{1}{M}$ amplitude scaling factor."
+        ],
+        [
+         "**Slide 184**",
+         "`page_0046.png` [Bottom-Right]",
+         "Frequency Expansion Property & IDFT Scaled Repetition",
+         "General theorem: $X(k/M)$ (with $M-1$ zeros inserted between frequency samples, length $MN$) has $MN$-point IDFT equal to $\\frac{1}{M} [x[n] \\text{ repeated } M \\text{ times}]$. Drill with $M=3, N=4$: 12-point $Y(k) = \\{12, 0, 0, 2j, 0, 0, 0, 0, 0, -2j, 0, 0\\} \\implies y[n] = \\frac{1}{3}\\{3, 2, 3, 4, 3, 2, 3, 4, 3, 2, 3, 4\\}$.",
+         "Note the duality: Time expansion $\\implies$ unscaled frequency repetition; Frequency expansion $\\implies$ frequency-scaled ($\\frac{1}{M}$) time repetition!"
+        ],
+        [
+         "**Slide 185**",
+         "`page_0047.png` [Top-Left]",
+         "Unified Comparison Matrix: DTFS vs DFT Expansion Properties",
+         "Exhaustive comparative chart between DTFS and DFT: DTFS time expansion $x[n/M]$ (period $MN$) $\\leftrightarrow \\frac{c_k}{M}$ (period $MN$, fundamental period $N$); DFT time expansion $x[n/M]$ ($MN$-point) $\\leftrightarrow X(k)$ repeated $M$ times ($MN$-point). DTFS frequency expansion $c_{k/M} \\leftrightarrow x[n]$ repeated; DFT frequency expansion $X(k/M) \\leftrightarrow \\frac{1}{M} x[n]$ repeated.",
+         "The factor $\\frac{1}{M}$ appears in the frequency domain for DTFS, but in the time domain for DFT, due to the $\\frac{1}{N}$ placement in their respective definition formulas!"
+        ],
+        [
+         "**Slide 186**",
+         "`page_0047.png` [Top-Right]",
+         "Circular Time Reversal, Conjugation & Symmetry Taxonomy",
+         "Circular reversal: $x[((-n))_N] \\leftrightarrow X(( -k ))_N = X[N-k]$. Conjugation: $x^*[n] \\leftrightarrow X^*(( -k ))_N = X^*[N-k]$. For real $x[n]$: $X(k) = X^*[N-k]$ (Conjugate Symmetry). Symmetry taxonomy: Real & Even $\\leftrightarrow$ Real & Even; Real & Odd $\\leftrightarrow$ Pure Imaginary & Odd; Pure Imaginary & Even $\\leftrightarrow$ Pure Imaginary & Even; Pure Imaginary & Odd $\\leftrightarrow$ Real & Odd.",
+         "Identical symmetry behavior as continuous CTFT and discrete DTFT, but linear index reflection $-n$ is strictly replaced by modulo-$N$ circular reflection $((-n))_N = N - n$."
+        ],
+        [
+         "**Slide 187**",
+         "`page_0047.png` [Bottom-Left]",
+         "Solved GATE Problem: Real Sequence Conjugate Symmetry",
+         "Real 8-point sequence $x[n] \\leftrightarrow X(k)$, period 8. Given $X(1) = 2+3j, X(2) = 1+2j, X(5) = 10$. Find $S = X(7) + X(-18) + X(27)$. Modulo reduction: $X(7) = X(-1) = X^*(1) = 2-3j$; $X(-18) = X(-2) = X^*(2) = 1-2j$; $X(27) = X(3) = X^*(-3) = X^*(5) = 10^* = 10$. Sum: $S = (2-3j) + (1-2j) + 10 = 13 - 5j$.",
+         "Modulo arithmetic: $X(k + mN) = X(k)$. Conjugate symmetry: $X(-k) = X^*(k) \\implies X(N-k) = X^*(k)$. Since $X(5) = 10$ is real, $X(3) = X^*(5) = 10$."
+        ],
+        [
+         "**Slide 188**",
+         "`page_0047.png` [Bottom-Right]",
+         "Duality Property of DFT & Unified Multi-Domain Transform Duality",
+         "DFT Duality Theorem: If $x[n] \\leftrightarrow X(k)$, then $\\text{DFT}\\{X(n)\\} = N x[((-k))_N] = N x[-k]$. Unified cross-domain duality comparison: CTFT duality ($x(t) \\leftrightarrow X(\\omega) \\implies X(t) \\leftrightarrow 2\\pi x(-\\omega)$), DTFS duality ($x[n] \\leftrightarrow c_k \\implies c_n \\leftrightarrow \\frac{1}{N} x[-k]$), CTFS $\\leftrightarrow$ DTFT cross-duality, and DFT circular duality.",
+         "The scale factor in DFT duality is $N$ (the sequence length), accompanied by a circular time-reversal $((-k))_N$."
+        ],
+        [
+         "**Slide 189**",
+         "`page_0048.png` [Top-Left]",
+         "Iterated DFT Operators & Problem Setup",
+         "4-point sequence $x[n] = \\{1, 2, -1, 4\\}$. Problem suite: (a) Find $\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = \\text{DFT}\\{X(k)\\} = N x[((-n))_N]$; (b) Find $y[n] = \\text{DFT}^4\\{x[n]\\}$; (c) For $Y(k) = \\text{DFT}\\{y[n]\\}$, find $Y(0) = \\left.Y(k)\\right\\vert_{k=0}$.",
+         "Applying DFT twice produces a scaled, circularly time-reversed version of the original sequence: $\\text{DFT}^2\\{x[n]\\} = N x[((-n))_N]$."
+        ],
+        [
+         "**Slide 190**",
+         "`page_0048.png` [Top-Right]",
+         "Circular Index Wheel & 4th Power of DFT Operator",
+         "Modulo-4 circular index wheel diagram: Clockwise direction is forward index $n = 0, 1, 2, 3$; counter-clockwise direction is circularly reversed index $((-n))_4 = \\{0, 3, 2, 1\\}$. Reversal gives $x[((-n))_4] = \\{1, 4, -1, 2\\} \\implies \\text{DFT}^2\\{x[n]\\} = 4\\{1, 4, -1, 2\\} = \\{4, 16, -4, 8\\}$. Iterating: $\\text{DFT}^4\\{x[n]\\} = N^2 x[n]$.",
+         "GATE Master Theorem: The 4th power of the DFT operator is a pure scalar dilation: $\\text{DFT}^4\\{x[n]\\} = N^2 x[n]$! The DFT operator has eigenvalues $\\{\\pm \\sqrt{N}, \\pm j\\sqrt{N}\\}$."
+        ],
+        [
+         "**Slide 191**",
+         "`page_0048.png` [Bottom-Left]",
+         "Evaluation of $y[n] = 16 x[n]$ & DC Component $Y(0)$",
+         "Part (b): $y[n] = 4^2 x[n] = 16\\{1, 2, -1, 4\\} = \\{16, 32, -16, 64\\}$. Part (c): $Y(0) = \\sum_{n=0}^3 y[n] = 16 + 32 - 16 + 64 = 96$. Alternative shortcut: $Y(0) = \\text{DFT}^5\\{x[n]\\}_{k=0} = N^2 X(0) = 16 \\times (1+2-1+4) = 16 \\times 6 = 96$.",
+         "You never need to calculate intermediate DFT vectors to find DC values of iterated transforms; use the DC summation property $X(0) = \\sum x[n]$!"
+        ],
+        [
+         "**Slide 192**",
+         "`page_0048.png` [Bottom-Right]",
+         "Repeated IDFT Operator Theorem & Inverse Duality",
+         "4-point sequence $y[n] = \\{1, 2, -1, 3\\}, Y(k) = \\text{DFT}\\{y[n]\\}$. Problem: Evaluate $\\text{IDFT}^4\\{Y(k)\\}$. Derivation: $\\text{IDFT}\\{Y(k)\\} = y[n]$; $\\text{IDFT}\\{y[n]\\} = \\frac{1}{N} Y[((-k))_N]$; $\\text{IDFT}^3 = \\frac{1}{N} y[((-n))_N]$; $\\text{IDFT}^4 = \\frac{1}{N^2} Y(k)$. Result: $\\text{IDFT}^4\\{Y(k)\\} = \\frac{Y(k)}{N^2} = \\frac{Y(k)}{16}$.",
+         "Master Dual Theorem: $\\text{DFT}^4 = N^2 \\cdot \\mathbf{I}$, whereas $\\text{IDFT}^4 = \\frac{1}{N^2} \\cdot \\mathbf{I}$. Applying IDFT four times scales the original spectrum by $\\frac{1}{N^2}$!"
+        ]
+       ]
+      },
+      {
+       "t": "h2",
+       "text": "2. Theoretical Foundations & Mathematical Deep-Dive"
+      },
+      {
+       "t": "h3",
+       "text": "2.1 The Discrete Fourier Transform (DFT) and Frequency Sampling of the DTFT"
+      },
+      {
+       "t": "p",
+       "text": "The Discrete Fourier Transform (DFT) is the cornerstone of modern Digital Signal Processing (DSP). While the Discrete-Time Fourier Transform (DTFT) provides a complete frequency representation for discrete-time signals, the DTFT is fundamentally a continuous function of the normalized radian frequency $\\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\omega n}"
+      },
+      {
+       "t": "p",
+       "text": "Continuous functions cannot be stored, processed, or manipulated directly by finite-memory digital microprocessors, DSP chips, or computers. To perform numerical frequency analysis, the continuous frequency variable $\\omega$ must be sampled at a finite number of discrete points."
+      },
+      {
+       "t": "h4",
+       "text": "Uniform Sampling of the DTFT"
+      },
+      {
+       "t": "p",
+       "text": "Let $x[n]$ be a finite-duration discrete-time sequence of length $N$, non-zero strictly in the range $0 \\le n \\le N-1$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 0 \\quad \\text{for } n < 0 \\text{ and } n \\ge N"
+      },
+      {
+       "t": "p",
+       "text": "Its DTFT simplifies to a finite summation:"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\sum_{n=0}^{N-1} x[n] e^{-j\\omega n}"
+      },
+      {
+       "t": "p",
+       "text": "We sample the continuous frequency interval $\\omega \\in [0, 2\\pi)$ at $N$ equally spaced discrete frequency bins:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_k = \\frac{2\\pi}{N} k, \\quad k = 0, 1, 2, \\dots, N-1"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $\\omega = \\omega_k$ into the DTFT formula yields the **Discrete Fourier Transform (DFT) Analysis Equation**:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) \\triangleq \\left. X(e^{j\\omega}) \\right|_{\\omega = \\frac{2\\pi}{N}k} = \\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N} k n}, \\quad k = 0, 1, \\dots, N-1}"
+      },
+      {
+       "t": "h4",
+       "text": "The Inverse Discrete Fourier Transform (IDFT)"
+      },
+      {
+       "t": "p",
+       "text": "The time-domain sequence $x[n]$ is uniquely reconstructed from its $N$ frequency samples $X(k)$ via the **Inverse Discrete Fourier Transform (IDFT) Synthesis Equation**:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N} k n}, \\quad n = 0, 1, \\dots, N-1}"
+      },
+      {
+       "t": "h4",
+       "text": "Periodic Continuation (The DFS Connection)"
+      },
+      {
+       "t": "p",
+       "text": "Because the complex exponentials $e^{-j\\frac{2\\pi}{N} k n}$ and $e^{j\\frac{2\\pi}{N} k n}$ are periodic in both $n$ and $k$ with period $N$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j\\frac{2\\pi}{N} (k+N) n} = e^{-j\\frac{2\\pi}{N} k n} e^{-j 2\\pi n} = e^{-j\\frac{2\\pi}{N} k n}"
+      },
+      {
+       "t": "p",
+       "text": "evaluating the DFT analysis or IDFT synthesis formulas outside the primary interval $[0, N-1]$ yields inherently periodic sequences:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{X}(k) = \\tilde{X}(k + mN), \\quad \\tilde{x}[n] = \\tilde{x}[n + mN], \\quad m \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the $N$-point DFT of a finite-duration sequence $x[n]$ is mathematically identical to the Discrete Fourier Series (DFS) coefficients $\\tilde{X}[k]$ of its periodic extension $\\tilde{x}[n] = \\sum_{m=-\\infty}^{\\infty} x[n - mN]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{x}[n] = x[((n))_N]"
+      },
+      {
+       "t": "h3",
+       "text": "2.2 The Twiddle Factor $W_N$: Fundamental Algebra & Orthogonality"
+      },
+      {
+       "t": "p",
+       "text": "To simplify the algebraic manipulation of DFT algorithms and matrix representations, Heinrich Barkhausen and subsequent DSP pioneers introduced the **Twiddle Factor** (or phase factor) $W_N$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{W_N \\triangleq e^{-j\\frac{2\\pi}{N}} = \\cos\\left(\\frac{2\\pi}{N}\\right) - j\\sin\\left(\\frac{2\\pi}{N}\\right)}"
+      },
+      {
+       "t": "p",
+       "text": "In terms of the twiddle factor, the DFT analysis and synthesis pair are compactly expressed as:"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = \\sum_{n=0}^{N-1} x[n] W_N^{kn}, \\quad k = 0, 1, \\dots, N-1"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) W_N^{-kn}, \\quad n = 0, 1, \\dots, N-1"
+      },
+      {
+       "t": "h4",
+       "text": "Fundamental Properties of the Twiddle Factor"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Complex Conjugate / Inversion Property:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{-1} = (e^{-j\\frac{2\\pi}{N}})^{-1} = e^{j\\frac{2\\pi}{N}} = W_N^*"
+      },
+      {
+       "t": "math",
+       "tex": "(W_N^{kn})^{-1} = W_N^{-kn} = (W_N^{kn})^*"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Periodicity Property:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{k + N} = W_N^k \\cdot W_N^N = W_N^k \\cdot e^{-j 2\\pi} = W_N^k"
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{kn} = W_N^{(kn) \\bmod N}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Half-Period Anti-Symmetry Property (for even $N$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{k + \\frac{N}{2}} = W_N^k \\cdot W_N^{\\frac{N}{2}} = W_N^k \\cdot e^{-j\\pi} = -W_N^k"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Index Reduction / Scaling Property:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{2k} = e^{-j\\frac{2\\pi}{N}(2k)} = e^{-j\\frac{2\\pi}{N/2}k} = W_{N/2}^k"
+      },
+      {
+       "t": "math",
+       "tex": "W_{MN}^{Mk} = W_N^k"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Orthogonality Property of Twiddle Harmonics:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=0}^{N-1} W_N^{kn} = \\sum_{n=0}^{N-1} e^{-j\\frac{2\\pi}{N}kn} = \\begin{cases} N, & k = 0, \\pm N, \\pm 2N, \\dots \\\\ 0, & \\text{otherwise} \\end{cases} = N \\sum_{r=-\\infty}^{\\infty} \\delta[k - rN]"
+      },
+      {
+       "t": "h3",
+       "text": "2.3 Matrix Formulation of DFT and IDFT"
+      },
+      {
+       "t": "p",
+       "text": "The DFT and IDFT are linear transformations operating on vectors in $\\mathbb{C}^N$. They can be cast as matrix-vector multiplications:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X} = \\mathbf{W}_N \\mathbf{x}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x} = \\frac{1}{N} \\mathbf{W}_N^* \\mathbf{X} = \\mathbf{W}_N^{-1} \\mathbf{X}"
+      },
+      {
+       "t": "p",
+       "text": "where:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x} = \\begin{bmatrix} x[0] \\\\ x[1] \\\\ x[2] \\\\ \\vdots \\\\ x[N-1] \\end{bmatrix}_{N \\times 1}, \\quad \\mathbf{X} = \\begin{bmatrix} X[0] \\\\ X[1] \\\\ X[2] \\\\ \\vdots \\\\ X[N-1] \\end{bmatrix}_{N \\times 1}"
+      },
+      {
+       "t": "p",
+       "text": "and the $N \\times N$ **DFT Transformation Matrix** $\\mathbf{W}_N$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{W}_N = \\begin{bmatrix}\nW_N^0 & W_N^0 & W_N^0 & \\dots & W_N^0 \\\\\nW_N^0 & W_N^1 & W_N^2 & \\dots & W_N^{N-1} \\\\\nW_N^0 & W_N^2 & W_N^4 & \\dots & W_N^{2(N-1)} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\nW_N^0 & W_N^{N-1} & W_N^{2(N-1)} & \\dots & W_N^{(N-1)(N-1)}\n\\end{bmatrix}_{N \\times N}"
+      },
+      {
+       "t": "h4",
+       "text": "Structural Properties of $\\mathbf{W}_N$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Symmetry:** $\\mathbf{W}_N^T = \\mathbf{W}_N$ (since $W_N^{kn} = W_N^{nk}$).",
+        "**Hermitian Property:** $\\mathbf{W}_N^H = \\mathbf{W}_N^*$ where $(\\mathbf{W}_N^*)_{k,n} = W_N^{-kn}$.",
+        "**Orthogonality of Columns / Rows:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{W}_N^H \\mathbf{W}_N = \\mathbf{W}_N \\mathbf{W}_N^H = N \\cdot \\mathbf{I}_N"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies \\mathbf{W}_N^{-1} = \\frac{1}{N} \\mathbf{W}_N^H = \\frac{1}{N} \\mathbf{W}_N^*"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Unitary Matrix Normalization:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Defining $\\mathbf{F}_N \\triangleq \\frac{1}{\\sqrt{N}} \\mathbf{W}_N$, we have:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{F}_N^H \\mathbf{F}_N = \\mathbf{I}_N"
+      },
+      {
+       "t": "p",
+       "text": "making $\\mathbf{F}_N$ a strictly unitary matrix preserving Euclidean norms (Parseval's theorem in vector form)."
+      },
+      {
+       "t": "h4",
+       "text": "Explicit Matrices for Low Dimensions:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**For $N = 2$ ($W_2 = e^{-j\\pi} = -1$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{W}_2 = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}, \\quad \\mathbf{W}_2^{-1} = \\frac{1}{2} \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**For $N = 3$ ($W_3 = e^{-j\\frac{2\\pi}{3}} = -\\frac{1}{2} - j\\frac{\\sqrt{3}}{2}$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{W}_3 = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & W_3^1 & W_3^2 \\\\ 1 & W_3^2 & W_3^1 \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & e^{-j\\frac{2\\pi}{3}} & e^{j\\frac{2\\pi}{3}} \\\\ 1 & e^{j\\frac{2\\pi}{3}} & e^{-j\\frac{2\\pi}{3}} \\end{bmatrix}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**For $N = 4$ ($W_4 = e^{-j\\frac{\\pi}{2}} = -j$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{W}_4 = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix}, \\quad \\mathbf{W}_4^{-1} = \\frac{1}{4} \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & j & -1 & -j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -j & -1 & j \\end{bmatrix}"
+      },
+      {
+       "t": "h3",
+       "text": "2.4 Zero-Padding: Spectral Resolution vs Spectral Interpolation"
+      },
+      {
+       "t": "p",
+       "text": "A universal practical technique in DSP is **Zero-Padding**, in which an $N_1$-point signal $x[n]$ is appended with $L - N_1$ trailing zeros to create an $L$-point sequence $x_{zp}[n]$ ($L > N_1$):"
+      },
+      {
+       "t": "math",
+       "tex": "x_{zp}[n] = \\begin{cases} x[n], & 0 \\le n \\le N_1 - 1 \\\\ 0, & N_1 \\le n \\le L - 1 \\end{cases}"
+      },
+      {
+       "t": "h4",
+       "text": "Mathematical Analysis of Zero-Padding"
+      },
+      {
+       "t": "p",
+       "text": "The continuous DTFT of $x_{zp}[n]$ is identical to the DTFT of $x[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_{zp}(e^{j\\omega}) = \\sum_{n=0}^{L-1} x_{zp}[n] e^{-j\\omega n} = \\sum_{n=0}^{N_1 - 1} x[n] e^{-j\\omega n} = X(e^{j\\omega})"
+      },
+      {
+       "t": "p",
+       "text": "The $L$-point DFT evaluates this identical DTFT on a denser frequency grid:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_k = \\frac{2\\pi}{L} k, \\quad k = 0, 1, \\dots, L-1"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta \\omega_{grid} = \\frac{2\\pi}{L} < \\frac{2\\pi}{N_1}"
+      },
+      {
+       "t": "h4",
+       "text": "Crucial Conceptual Distinction for GATE:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Physical Frequency Resolution:** The ability to distinguish two closely spaced sinusoidal peaks separated by $\\Delta \\omega$ is determined strictly by the **physical observation time window length** $N_1 T_s$. The mainlobe width of a rectangular window of length $N_1$ is $\\Delta \\omega_{main} = \\frac{4\\pi}{N_1}$. Zero-padding does NOT narrow the mainlobe or reduce spectral leakage. Two sinusoids merged into a single peak by windowing cannot be resolved by zero-padding.",
+        "**Computational / Display Resolution (Spectral Interpolation):** Zero-padding evaluates the existing continuous DTFT at more points per radian, smoothing out the plotted spectrum and revealing the exact shape of sidelobes and peaks. It is an exact trigonometric sinc-interpolation of the original $N_1$-point DFT samples."
+       ]
+      },
+      {
+       "t": "h3",
+       "text": "2.5 Modulo Arithmetic, Circular Indexing & Circular Time Shift"
+      },
+      {
+       "t": "p",
+       "text": "Because the DFT assumes the underlying signal is periodically extended with period $N$, time shifts in the DFT domain are inherently **circular shifts** (cyclic permutations):"
+      },
+      {
+       "t": "h4",
+       "text": "Modulo Notation"
+      },
+      {
+       "t": "p",
+       "text": "For any integer $n \\in \\mathbb{Z}$ and positive modulus $N \\in \\mathbb{Z}^+$:"
+      },
+      {
+       "t": "math",
+       "tex": "((n))_N \\triangleq n \\bmod N = n - \\left\\lfloor \\frac{n}{N} \\right\\rfloor N \\in \\{0, 1, 2, \\dots, N-1\\}"
+      },
+      {
+       "t": "h4",
+       "text": "Circular Shift Property of DFT"
+      },
+      {
+       "t": "p",
+       "text": "If $x[n] \\xrightarrow{\\text{DFT}_N} X(k)$, then circularly shifting the sequence by $n_0$ samples yields:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[((n - n_0))_N] \\xrightarrow{\\text{DFT}_N} X(k) W_N^{k n_0} = X(k) e^{-j\\frac{2\\pi}{N} k n_0}}"
+      },
+      {
+       "t": "h4",
+       "text": "The Modulo Index Wheel:"
+      },
+      {
+       "t": "p",
+       "text": "Imagine the indices $n = 0, 1, \\dots, N-1$ arranged evenly on a circle:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Clockwise traversal:** Forward time indexing ($n$ increasing).",
+        "**Counter-Clockwise traversal:** Circular time-reversal ($((-n))_N$).",
+        "**Right Circular Shift (Delay by $n_0$):** Moving samples clockwise by $n_0$ slots:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_{delayed}[n] = x[((n - n_0))_N]"
+      },
+      {
+       "t": "p",
+       "text": "Samples shifted past index $N-1$ wrap around to reappear at indices $0, 1, \\dots$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Left Circular Shift (Advance by $n_0$):** Moving samples counter-clockwise by $n_0$ slots:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_{advanced}[n] = x[((n + n_0))_N]"
+      },
+      {
+       "t": "h3",
+       "text": "2.6 Circular Convolution Definition & DFT Convolution Theorem"
+      },
+      {
+       "t": "p",
+       "text": "In continuous-time and discrete-time LTI system theory, linear convolution governs the interaction between an input signal and the system impulse response. However, in the discrete frequency (DFT) domain, entry-wise multiplication of DFT spectra does **NOT** correspond to linear convolution in the time domain; rather, it corresponds strictly to **Circular Convolution** (cyclic convolution)."
+      },
+      {
+       "t": "h4",
+       "text": "Formal Definition of Circular Convolution"
+      },
+      {
+       "t": "p",
+       "text": "Let $x_1[n]$ and $x_2[n]$ be two finite-length discrete-time sequences of length $N$ defined on $0 \\le n \\le N-1$. Their $N$-point circular convolution, denoted by the circled asterisk operator $\\circledast$ (or $\\odot$), is defined as:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = x_1[n] \\circledast x_2[n] \\triangleq \\sum_{m=0}^{N-1} x_1[m] x_2[((n - m))_N], \\quad n = 0, 1, \\dots, N-1}"
+      },
+      {
+       "t": "p",
+       "text": "where $((n - m))_N$ denotes the modulo-$N$ circular shift of the second sequence."
+      },
+      {
+       "t": "h4",
+       "text": "The Circular Convolution Theorem in DFT Domain"
+      },
+      {
+       "t": "p",
+       "text": "The fundamental theorem uniting digital filtering and the DFT states:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x_1[n] \\circledast x_2[n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X_1(k) \\cdot X_2(k)}"
+      },
+      {
+       "t": "h4",
+       "text": "Rigorous Analytical Proof"
+      },
+      {
+       "t": "p",
+       "text": "Taking the $N$-point DFT of $y[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(k) = \\sum_{n=0}^{N-1} y[n] W_N^{kn} = \\sum_{n=0}^{N-1} \\left[ \\sum_{m=0}^{N-1} x_1[m] x_2[((n - m))_N] \\right] W_N^{kn}"
+      },
+      {
+       "t": "p",
+       "text": "Interchanging the orders of summation:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(k) = \\sum_{m=0}^{N-1} x_1[m] \\left[ \\sum_{n=0}^{N-1} x_2[((n - m))_N] W_N^{kn} \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Using the circular shift property of the DFT, the inner bracketed summation is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=0}^{N-1} x_2[((n - m))_N] W_N^{kn} = X_2(k) W_N^{km}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting this back into the outer summation:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(k) = \\sum_{m=0}^{N-1} x_1[m] X_2(k) W_N^{km} = X_2(k) \\left[ \\sum_{m=0}^{N-1} x_1[m] W_N^{km} \\right] = X_1(k) \\cdot X_2(k)"
+      },
+      {
+       "t": "p",
+       "text": "This completes the rigorous mathematical proof."
+      },
+      {
+       "t": "h3",
+       "text": "2.7 Circular Convolution Matrix & Circulant Matrices"
+      },
+      {
+       "t": "p",
+       "text": "Circular convolution of two $N$-point vectors $\\mathbf{x}_1$ and $\\mathbf{x}_2$ can be cast as a matrix-vector multiplication:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{y} = \\mathbf{C}_{x_2} \\mathbf{x}_1"
+      },
+      {
+       "t": "p",
+       "text": "where $\\mathbf{C}_{x_2}$ is an $N \\times N$ **Circulant Matrix** generated by the sequence $x_2[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{C}_{x_2} = \\begin{bmatrix}\nx_2[0] & x_2[N-1] & x_2[N-2] & \\dots & x_2[1] \\\\\nx_2[1] & x_2[0] & x_2[N-1] & \\dots & x_2[2] \\\\\nx_2[2] & x_2[1] & x_2[0] & \\dots & x_2[3] \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\nx_2[N-1] & x_2[N-2] & x_2[N-3] & \\dots & x_2[0]\n\\end{bmatrix}_{N \\times N}"
+      },
+      {
+       "t": "h4",
+       "text": "Deep Algebraic Properties of Circulant Matrices:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Row-Column Cyclic Shift:** Each row of a circulant matrix is obtained by circularly shifting the row above it to the right by one position.",
+        "**Universal Diagonalization by DFT Matrix:** Every circulant matrix $\\mathbf{C}$\u2014regardless of its generating vector\u2014is fundamentally diagonalized by the DFT matrix $\\mathbf{W}_N$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{C} = \\frac{1}{N} \\mathbf{W}_N^* \\mathbf{\\Lambda} \\mathbf{W}_N = \\mathbf{F}_N^H \\mathbf{\\Lambda} \\mathbf{F}_N"
+      },
+      {
+       "t": "p",
+       "text": "where $\\mathbf{\\Lambda} = \\text{diag}(X_2(0), X_2(1), \\dots, X_2(N-1))$ is a diagonal matrix containing the $N$-point DFT values of $x_2[n]$!"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Eigenvalues & Eigenvectors:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The eigenvectors of any $N \\times N$ circulant matrix are the columns of the DFT matrix $\\mathbf{W}_N^*$.",
+        "The eigenvalues of $\\mathbf{C}_{x_2}$ are precisely the DFT coefficients $X_2(k)$ for $k = 0, 1, \\dots, N-1$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Commutativity:** Because all circulant matrices share the exact same eigenvector basis (the Fourier basis), all circulant matrices commute under multiplication:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{C}_A \\mathbf{C}_B = \\mathbf{C}_B \\mathbf{C}_A"
+      },
+      {
+       "t": "h3",
+       "text": "2.8 Linear Convolution vs Circular Convolution & The Aliasing Condition"
+      },
+      {
+       "t": "p",
+       "text": "A central problem in digital signal processing and embedded DSP system design is computing **Linear Convolution** using the computationally efficient Fast Fourier Transform (FFT), which natively performs **Circular Convolution**."
+      },
+      {
+       "t": "h4",
+       "text": "Sequence Lengths & Time-Domain Aliasing"
+      },
+      {
+       "t": "p",
+       "text": "Consider two sequences:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x_1[n]$ of finite duration $N_1$ ($0 \\le n \\le N_1 - 1$)",
+        "$x_2[n]$ of finite duration $N_2$ ($0 \\le n \\le N_2 - 1$)"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Linear Convolution:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_{lin}[n] = x_1[n] * x_2[n] = \\sum_{m=0}^{N_1-1} x_1[m] x_2[n - m]"
+      },
+      {
+       "t": "p",
+       "text": "The length of the linear convolution output is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{L_{lin} = N_1 + N_2 - 1}"
+      },
+      {
+       "t": "p",
+       "text": "The non-zero samples lie strictly in the range $0 \\le n \\le N_1 + N_2 - 2$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**$N$-Point Circular Convolution:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If we compute the $N$-point circular convolution $y_{circ}[n] = x_1[n] \\circledast x_2[n]$, its length is strictly $N$."
+      },
+      {
+       "t": "h4",
+       "text": "The Aliasing Master Formula:"
+      },
+      {
+       "t": "p",
+       "text": "The circular convolution sequence is mathematically equal to the periodic time-domain aliasing (wrap-around) of the linear convolution sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y_{circ}[n] = \\sum_{r=-\\infty}^{\\infty} y_{lin}[n + rN], \\quad 0 \\le n \\le N-1}"
+      },
+      {
+       "t": "h4",
+       "text": "The Fundamental Condition for Linear Convolution via Circular Convolution:"
+      },
+      {
+       "t": "p",
+       "text": "To prevent the tail of $y_{lin}[n]$ from wrapping around and corrupting the earlier samples (i.e., to avoid time-domain aliasing), the circular convolution length $N$ must equal or exceed the total duration of the linear convolution:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{N \\ge N_1 + N_2 - 1}"
+      },
+      {
+       "t": "h4",
+       "text": "Zero-Padding Recipe for Fast Linear Filtering:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Pad $x_1[n]$ with trailing zeros to length $N \\ge N_1 + N_2 - 1$.",
+        "Pad $x_2[n]$ with trailing zeros to the same length $N$.",
+        "Compute $N$-point FFT: $X_1(k) = \\text{FFT}\\{x_{1,zp}[n]\\}$ and $X_2(k) = \\text{FFT}\\{x_{2,zp}[n]\\}$.",
+        "Multiply element-wise: $Y(k) = X_1(k) \\cdot X_2(k)$.",
+        "Compute $N$-point IFFT: $y[n] = \\text{IFFT}\\{Y(k)\\}$.",
+        "The resulting sequence $y[n]$ is identically equal to the exact linear convolution: $y[n] = y_{lin}[n]$ for all $0 \\le n \\le N_1 + N_2 - 2$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Block Convolution for Real-Time DSP (Streaming Signals):"
+      },
+      {
+       "t": "p",
+       "text": "When filtering an indefinitely long signal $x[n]$ with a finite impulse response (FIR) filter $h[n]$ of length $M$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Overlap-Add (OLA) Method:** Input is segmented into non-overlapping blocks of length $L$, each block is convolved with $h[n]$ (length $L+M-1$) via FFT, and the overlapping tails of length $M-1$ are added together.",
+        "**Overlap-Save (OLS) Method:** Input is segmented into overlapping blocks of length $N = L + M - 1$ (sharing $M-1$ points), circular convolution of length $N$ is performed via FFT, and the first $M-1$ aliased points of each output block are discarded while the remaining $L$ valid points are concatenated."
+       ]
+      },
+      {
+       "t": "h3",
+       "text": "2.9 Circular Correlation & Energy Conservation (Parseval's Relation)"
+      },
+      {
+       "t": "h4",
+       "text": "Circular Cross-Correlation"
+      },
+      {
+       "t": "p",
+       "text": "The circular cross-correlation between two $N$-point sequences $x_1[n]$ and $x_2[n]$ is defined as:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{r_{x_1 x_2}[n] \\triangleq \\sum_{m=0}^{N-1} x_1^*[m] x_2[((m + n))_N], \\quad 0 \\le n \\le N-1}"
+      },
+      {
+       "t": "p",
+       "text": "Taking the $N$-point DFT of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{r_{x_1 x_2}[n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} R_{x_1 x_2}(k) = X_1^*(k) \\cdot X_2(k)}"
+      },
+      {
+       "t": "h4",
+       "text": "Circular Auto-Correlation"
+      },
+      {
+       "t": "p",
+       "text": "Setting $x_1[n] = x_2[n] = x[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "r_{xx}[n] = \\sum_{m=0}^{N-1} x^*[m] x[((m + n))_N] \\overset{\\text{DFT}_N}{\\longleftrightarrow} \\vert X(k)\\vert^2"
+      },
+      {
+       "t": "p",
+       "text": "where $\\vert X(k)\\vert^2$ is the **Discrete Energy Spectral Density**."
+      },
+      {
+       "t": "h4",
+       "text": "Parseval's Energy Conservation Theorem in DFT Domain"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the auto-correlation sequence at the origin ($n = 0$):"
+      },
+      {
+       "t": "math",
+       "tex": "r_{xx}[0] = \\sum_{m=0}^{N-1} x^*[m] x[m] = \\sum_{n=0}^{N-1} \\vert x[n]\\vert^2"
+      },
+      {
+       "t": "p",
+       "text": "From the IDFT synthesis equation applied to $R_{xx}(k) = \\vert X(k)\\vert^2$:"
+      },
+      {
+       "t": "math",
+       "tex": "r_{xx}[0] = \\frac{1}{N} \\sum_{k=0}^{N-1} \\vert X(k)\\vert^2 W_N^0 = \\frac{1}{N} \\sum_{k=0}^{N-1} \\vert X(k)\\vert^2"
+      },
+      {
+       "t": "p",
+       "text": "Equating both expressions yields Parseval's Relation:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\sum_{n=0}^{N-1} \\vert x[n]\\vert^2 = \\frac{1}{N} \\sum_{k=0}^{N-1} \\vert X(k)\\vert^2}"
+      },
+      {
+       "t": "h3",
+       "text": "2.10 Time Expansion & Frequency Expansion (Upsampling) Properties in DFT vs DTFS"
+      },
+      {
+       "t": "p",
+       "text": "A frequent source of confusion in GATE is the distinction between upsampling properties in the Discrete Fourier Series (DTFS) versus the Discrete Fourier Transform (DFT)."
+      },
+      {
+       "t": "h4",
+       "text": "Property 1: Time Expansion / Upsampling (Zero-Insertion in Time)"
+      },
+      {
+       "t": "p",
+       "text": "Let $x[n]$ be an $N$-point sequence with $N$-point DFT $X(k)$. We create an $MN$-point sequence $x_1[n]$ by inserting $M-1$ zeros between each sample:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1[n] = x[n/M] = \\begin{cases} x[n/M], & n = 0, M, 2M, \\dots, (N-1)M \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "The $MN$-point DFT of $x_1[n]$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(k) = \\sum_{n=0}^{MN-1} x_1[n] W_{MN}^{kn} = \\sum_{m=0}^{N-1} x[m] W_{MN}^{k(mM)}"
+      },
+      {
+       "t": "p",
+       "text": "Since $W_{MN}^{M} = e^{-j\\frac{2\\pi}{MN}M} = e^{-j\\frac{2\\pi}{N}} = W_N$:"
+      },
+      {
+       "t": "math",
+       "tex": "X_1(k) = \\sum_{m=0}^{N-1} x[m] W_N^{km} = X(k \\bmod N)"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X_1(k) = X(k) \\text{ periodically repeated } M \\text{ times across } 0 \\le k \\le MN-1}"
+      },
+      {
+       "t": "p",
+       "text": "**Notice:** There is NO amplitude scaling factor (scale factor is $1$)."
+      },
+      {
+       "t": "h4",
+       "text": "Property 2: Frequency Expansion / Upsampling (Zero-Insertion in Frequency)"
+      },
+      {
+       "t": "p",
+       "text": "Let $X(k)$ be an $N$-point DFT spectrum. We form an $MN$-point frequency sequence $Y(k)$ by inserting $M-1$ zeros between each frequency sample:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(k) = \\begin{cases} X(k/M), & k = 0, M, 2M, \\dots, (N-1)M \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Taking the $MN$-point IDFT of $Y(k)$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\frac{1}{MN} \\sum_{k=0}^{MN-1} Y(k) W_{MN}^{-kn} = \\frac{1}{MN} \\sum_{m=0}^{N-1} X(m) W_{MN}^{-(mM)n} = \\frac{1}{M} \\left[ \\frac{1}{N} \\sum_{m=0}^{N-1} X(m) W_N^{-mn} \\right]"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = \\frac{1}{M} [x[n] \\text{ repeated } M \\text{ times across } 0 \\le n \\le MN-1]}"
+      },
+      {
+       "t": "p",
+       "text": "**Notice:** An amplitude attenuation factor of $\\frac{1}{M}$ is strictly attached!"
+      },
+      {
+       "t": "h4",
+       "text": "Master Comparison Matrix: DTFS vs DFT Expansion"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Operation",
+        "Discrete Fourier Series (DTFS)",
+        "Discrete Fourier Transform (DFT)"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**Base Transform Pair**",
+         "$x[n]$ (period $N$) $\\longleftrightarrow c_k$ (period $N$)",
+         "$x[n]$ ($N$-point) $\\longleftrightarrow X(k)$ ($N$-point)"
+        ],
+        [
+         "**Time Upsampling by $M$**",
+         "$x[n/M]$ (period $MN$) $\\longleftrightarrow \\frac{1}{M} c_k$ (period $MN$, fundamental $N$)",
+         "$x[n/M]$ ($MN$-point) $\\longleftrightarrow X(k)$ repeated $M$ times ($MN$-point)"
+        ],
+        [
+         "**Frequency Upsampling by $M$**",
+         "$c_{k/M}$ (period $MN$) $\\longleftrightarrow x[n]$ repeated $M$ times (period $MN$)",
+         "$X(k/M)$ ($MN$-point) $\\longleftrightarrow \\frac{1}{M} x[n]$ repeated $M$ times ($MN$-point)"
+        ],
+        [
+         "**Why the Difference?**",
+         "DTFS defines $c_k = \\frac{1}{N}\\sum x[n]e^{-j\\omega_0 kn}$ (scale factor $\\frac{1}{N}$ in forward analysis).",
+         "DFT defines $X(k) = \\sum x[n]e^{-j\\frac{2\\pi}{N}kn}$ (scale factor $\\frac{1}{N}$ in inverse synthesis)."
+        ]
+       ]
+      },
+      {
+       "t": "h3",
+       "text": "2.11 Symmetry Properties of DFT for Real and Imaginary Signals"
+      },
+      {
+       "t": "p",
+       "text": "Because discrete time is bounded to $0 \\le n \\le N-1$, classical time reversal $x[-n]$ maps outside the primary interval. In the DFT domain, time-reversal is replaced by **Circular Time Reversal**:"
+      },
+      {
+       "t": "math",
+       "tex": "x[((-n))_N] = x[(N - n) \\bmod N] = \\begin{cases} x[0], & n = 0 \\\\ x[N - n], & 1 \\le n \\le N-1 \\end{cases}"
+      },
+      {
+       "t": "h4",
+       "text": "Symmetry Theorems for Real-Valued Sequences"
+      },
+      {
+       "t": "p",
+       "text": "When $x[n] \\in \\mathbb{R}$ for all $0 \\le n \\le N-1$ ($x[n] = x^*[n]$):"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Conjugate Symmetry (Hermitian Symmetry):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) = X^*(( -k ))_N = X^*[N - k], \\quad 0 \\le k \\le N-1}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Component Symmetry:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Magnitude Spectrum:** $\\vert X(k)\\vert = \\vert X[N - k]\\vert$ (Circularly Even)",
+        "**Phase Spectrum:** $\\angle X(k) = -\\angle X[N - k]$ (Circularly Odd)",
+        "**Real Part:** $\\text{Re}\\{X(k)\\} = \\text{Re}\\{X[N - k]\\}$ (Circularly Even)",
+        "**Imaginary Part:** $\\text{Im}\\{X(k)\\} = -\\text{Im}\\{X[N - k]\\}$ (Circularly Odd)"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Boundary Values:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "At DC ($k = 0$): $X(0) = X^*(0) \\implies \\text{Im}\\{X(0)\\} = 0$ (Strictly Real).",
+        "At the Half-Sampling / Nyquist Bin ($k = N/2$ for even $N$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(N/2) = X^*(N - N/2) = X^*(N/2) \\implies \\text{Im}\\{X(N/2)\\} = 0 \\quad (\\text{Strictly Real})"
+      },
+      {
+       "t": "h4",
+       "text": "Master Symmetry Classification Matrix:"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Time Sequence $x[n]$",
+        "DFT Spectrum $X(k)$"
+       ],
+       "align": [
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**Real & Circularly Even** ($x[n] = x[N-n]$)",
+         "**Real & Circularly Even** ($X(k) = X[N-k] \\in \\mathbb{R}$)"
+        ],
+        [
+         "**Real & Circularly Odd** ($x[n] = -x[N-n]$)",
+         "**Purely Imaginary & Circularly Odd** ($X(k) = -X[N-k] \\in j\\mathbb{R}$)"
+        ],
+        [
+         "**Purely Imaginary & Circularly Even**",
+         "**Purely Imaginary & Circularly Even**"
+        ],
+        [
+         "**Purely Imaginary & Circularly Odd**",
+         "**Real & Circularly Odd**"
+        ]
+       ]
+      },
+      {
+       "t": "h3",
+       "text": "2.12 Duality Property of DFT & Multi-Domain Duality Matrix"
+      },
+      {
+       "t": "h4",
+       "text": "The DFT Duality Theorem"
+      },
+      {
+       "t": "p",
+       "text": "If an $N$-point sequence $x[n]$ has an $N$-point DFT $X(k)$:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X(k)"
+      },
+      {
+       "t": "p",
+       "text": "then taking the $N$-point DFT of the sequence $X(n)$ (substituting time index $n$ for frequency index $k$) yields:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{DFT}_N\\{X(n)\\} = N \\cdot x[((-k))_N] = N \\cdot x[-k]}"
+      },
+      {
+       "t": "h4",
+       "text": "Proof of DFT Duality:"
+      },
+      {
+       "t": "p",
+       "text": "Recall the IDFT synthesis equation:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) W_N^{-kn}"
+      },
+      {
+       "t": "p",
+       "text": "Multiply both sides by $N$:"
+      },
+      {
+       "t": "math",
+       "tex": "N x[n] = \\sum_{k=0}^{N-1} X(k) W_N^{-kn}"
+      },
+      {
+       "t": "p",
+       "text": "Swap the variable names $n \\leftrightarrow k$:"
+      },
+      {
+       "t": "math",
+       "tex": "N x[k] = \\sum_{n=0}^{N-1} X(n) W_N^{-kn}"
+      },
+      {
+       "t": "p",
+       "text": "Now replace $k$ with $-k$:"
+      },
+      {
+       "t": "math",
+       "tex": "N x[-k] = N x[((-k))_N] = \\sum_{n=0}^{N-1} X(n) W_N^{kn} = \\text{DFT}_N\\{X(n)\\}"
+      },
+      {
+       "t": "p",
+       "text": "This proves the duality formula."
+      },
+      {
+       "t": "h4",
+       "text": "Master Multi-Domain Duality Comparison"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Transform Domain",
+        "Time Domain Function",
+        "Frequency Domain Function",
+        "Forward Transform",
+        "Duality Theorem"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---",
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**CTFT**",
+         "$x(t)$ (Cont., Aperiodic)",
+         "$X(\\omega)$ (Cont., Aperiodic)",
+         "$X(\\omega) = \\int_{-\\infty}^\\infty x(t)e^{-j\\omega t}dt$",
+         "$X(t) \\longleftrightarrow 2\\pi x(-\\omega)$"
+        ],
+        [
+         "**DTFS**",
+         "$x[n]$ (Disc., Periodic $N$)",
+         "$c_k$ (Disc., Periodic $N$)",
+         "$c_k = \\frac{1}{N}\\sum_{n=0}^{N-1} x[n]e^{-j\\frac{2\\pi}{N}kn}$",
+         "$c_n \\longleftrightarrow \\frac{1}{N} x[-k]$"
+        ],
+        [
+         "**CTFS $\\leftrightarrow$ DTFT**",
+         "$x(t)$ (Cont., Periodic $T$)",
+         "$c_n$ (Disc., Aperiodic)",
+         "$c_n = \\frac{1}{T}\\int_0^T x(t)e^{-jn\\omega_0 t}dt$",
+         "$c_n \\overset{\\text{DTFT}}{\\longleftrightarrow} X(-\\omega)$ (Cont., Periodic)"
+        ],
+        [
+         "**DFT**",
+         "$x[n]$ (Disc., Periodic $N$)",
+         "$X(k)$ (Disc., Periodic $N$)",
+         "$X(k) = \\sum_{n=0}^{N-1} x[n]e^{-j\\frac{2\\pi}{N}kn}$",
+         "$X(n) \\overset{\\text{DFT}_N}{\\longleftrightarrow} N x[((-k))_N]$"
+        ]
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Iterated DFT & IDFT Operators ($\\text{DFT}^4 = N^2 \\cdot \\mathbf{I}$)"
+      },
+      {
+       "t": "p",
+       "text": "Applying the DFT operator $\\mathcal{F}$ repeatedly to an $N$-point sequence $x[n]$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$\\mathcal{F}^1\\{x[n]\\} = X(k)$",
+        "$\\mathcal{F}^2\\{x[n]\\} = \\mathcal{F}\\{X(n)\\} = N x[((-n))_N]$",
+        "$\\mathcal{F}^3\\{x[n]\\} = \\mathcal{F}\\{N x[((-n))_N]\\} = N X(( -k ))_N = N X[N-k]$",
+        "$\\mathcal{F}^4\\{x[n]\\} = \\mathcal{F}\\{N X(( -n ))_N\\} = N \\cdot N x[((-(-n)))_N] = N^2 x[n]$!"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{DFT}^4\\{x[n]\\} = N^2 \\cdot x[n]}"
+      },
+      {
+       "t": "h4",
+       "text": "Corresponding Inverse Operator Iteration ($\\text{IDFT}^4 = \\frac{1}{N^2} \\cdot \\mathbf{I}$):"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$\\mathcal{F}^{-1}\\{Y(k)\\} = y[n]$",
+        "$\\mathcal{F}^{-2}\\{Y(k)\\} = \\mathcal{F}^{-1}\\{y[n]\\} = \\frac{1}{N} Y(( -k ))_N$",
+        "$\\mathcal{F}^{-3}\\{Y(k)\\} = \\mathcal{F}^{-1}\\{\\frac{1}{N} Y(( -k ))_N\\} = \\frac{1}{N} y[((-n))_N]$",
+        "$\\mathcal{F}^{-4}\\{Y(k)\\} = \\frac{1}{N^2} Y(k)$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{IDFT}^4\\{Y(k)\\} = \\frac{1}{N^2} \\cdot Y(k)}"
+      },
+      {
+       "t": "h2",
+       "text": "3. Comprehensive Slide-by-Slide Mathematical Transcription"
+      },
+      {
+       "t": "h3",
+       "text": "Slide 161 (Page 41, Top-Left) \u2014 2-Point DFT & DTFT Frequency Sampling"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "p",
+       "text": "The chalkboard is divided into two conceptual branches:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "A problem statement at the top: given a 2-point sequence $x[n] = \\{1, 2\\}$ with $N=2$, find its 2-point DFT $X(k)$ and its inverse $\\text{IDFT}\\{X(k)\\}$.",
+        "A horizontal signal flow diagram illustrating the relationship:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\{1, 2\\} \\xrightarrow{\\text{D.T.F.T.}} X(e^{j\\omega}) = 1 + 2e^{-j\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "followed by frequency sampling $\\omega = \\frac{2\\pi}{N}k = \\frac{2\\pi}{2}k = \\pi k$, leading down to the discrete frequency sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = 1 + 2e^{-j\\pi k}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "A circular/periodic continuation showing that the IDFT reconstructs a periodic discrete sequence $\\tilde{x}[n]$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let the discrete-time sequence be:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\begin{cases} 1, & n = 0 \\\\ 2, & n = 1 \\\\ 0, & \\text{otherwise} \\end{cases} \\quad \\implies x[n] = \\{\\underset{\\uparrow}{1}, 2\\}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Continuous DTFT Evaluation"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\omega n} = x[0] + x[1]e^{-j\\omega} = 1 + 2e^{-j\\omega}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Frequency Sampling at $N = 2$ Points"
+      },
+      {
+       "t": "p",
+       "text": "The continuous frequency interval $\\omega \\in [0, 2\\pi)$ is sampled at spacing:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_k = \\frac{2\\pi}{N} k = \\frac{2\\pi}{2} k = \\pi k, \\quad k \\in \\{0, 1\\}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $\\omega = \\pi k$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = \\left. X(e^{j\\omega}) \\right|_{\\omega = \\pi k} = 1 + 2e^{-j\\pi k} = 1 + 2(-1)^k"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating for $k = 0$ and $k = 1$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $k = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = 1 + 2(-1)^0 = 1 + 2 = 3"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $k = 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = 1 + 2(-1)^1 = 1 - 2 = -1"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the 2-point DFT sequence is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) = \\{\\underset{k=0}{3}, -1\\}, \\quad 0 \\le k \\le 1}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Periodic Extension & IDFT Reconstruction"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating $X(k)$ for all $k \\in \\mathbb{Z}$ yields a periodic spectrum of period $N=2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{X}(k) = \\{\\dots, 3, -1, \\underset{k=0}{3}, -1, 3, -1, \\dots\\}"
+      },
+      {
+       "t": "p",
+       "text": "Applying the 2-point IDFT synthesis formula:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{2} \\sum_{k=0}^{1} X(k) e^{j\\pi kn} = \\frac{1}{2} [X(0) + X(1)e^{j\\pi n}] = \\frac{1}{2} [3 + (-1)(-1)^n]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 0$: $x[0] = \\frac{1}{2}[3 - 1] = 1$",
+        "For $n = 1$: $x[1] = \\frac{1}{2}[3 - (-1)] = \\frac{4}{2} = 2$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Reconstructed 2-point sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\{\\underset{\\uparrow}{1}, 2\\}}"
+      },
+      {
+       "t": "p",
+       "text": "The periodic continuation of the IDFT is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{x}[n] = \\{\\dots, 1, 2, \\underset{\\uparrow}{1}, 2, 1, 2, \\dots\\}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Core Derivation Principle:** Sampling the DTFT at $\\omega_k = \\frac{2\\pi k}{N}$ produces the $N$-point DFT. The IDFT mathematically produces an infinitely periodic discrete-time signal $\\tilde{x}[n] = \\sum_{r=-\\infty}^\\infty x[n - rN]$.",
+          "**GATE Exam Trap:** Do not confuse the finite-duration sequence $x[n]$ with its periodic extension $\\tilde{x}[n]$. The DFT is formally defined on the finite index set $n \\in \\{0, 1, \\dots, N-1\\}$, but implicit periodic replication governs every arithmetic operation (circular shifting, circular convolution)."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 162 (Page 41, Top-Right) \u2014 3-Point DFT via DTFT Sampling & Periodic Sequence"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Problem statement: Given a 3-point sequence $x[n] = \\{1, 2, 3\\}, N=3$. Find its 3-point DFT $X(k)$ and IDFT.",
+        "Flow diagram tracking the mapping:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\{1, 2, 3\\} \\xrightarrow{\\text{DTFT}} X(e^{j\\omega}) = 1 + 2e^{-j\\omega} + 3e^{-j2\\omega}"
+      },
+      {
+       "t": "math",
+       "tex": "\\xrightarrow{\\omega = \\frac{2\\pi}{3}k} X(k) = 1 + 2e^{-j\\frac{2\\pi}{3}k} + 3e^{-j\\frac{4\\pi}{3}k}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Inverse arrow leading back to the periodic discrete sequence:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{x}[n] = \\{\\dots, 1, 2, 3, \\underset{\\uparrow}{1}, 2, 3, \\dots\\}"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\{\\underset{\\uparrow}{1}, 2, 3\\}, N=3$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: DTFT Calculation"
+      },
+      {
+       "t": "math",
+       "tex": "X(e^{j\\omega}) = \\sum_{n=0}^{2} x[n]e^{-j\\omega n} = 1 + 2e^{-j\\omega} + 3e^{-j2\\omega}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Frequency Sampling"
+      },
+      {
+       "t": "p",
+       "text": "Sampling at $\\omega_k = \\frac{2\\pi}{3}k$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = 1 + 2e^{-j\\frac{2\\pi}{3}k} + 3e^{-j\\frac{4\\pi}{3}k}, \\quad k \\in \\{0, 1, 2\\}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Explicit Evaluation for Each Bin"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Bin $k = 0$ (DC Component):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = 1 + 2(1) + 3(1) = 6"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Bin $k = 1$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = 1 + 2e^{-j\\frac{2\\pi}{3}} + 3e^{-j\\frac{4\\pi}{3}}"
+      },
+      {
+       "t": "p",
+       "text": "Recall Euler identities:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j\\frac{2\\pi}{3}} = \\cos\\left(\\frac{2\\pi}{3}\\right) - j\\sin\\left(\\frac{2\\pi}{3}\\right) = -\\frac{1}{2} - j\\frac{\\sqrt{3}}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j\\frac{4\\pi}{3}} = \\cos\\left(\\frac{4\\pi}{3}\\right) - j\\sin\\left(\\frac{4\\pi}{3}\\right) = -\\frac{1}{2} + j\\frac{\\sqrt{3}}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting these values:"
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = 1 + 2\\left(-\\frac{1}{2} - j\\frac{\\sqrt{3}}{2}\\right) + 3\\left(-\\frac{1}{2} + j\\frac{\\sqrt{3}}{2}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = 1 - 1 - j\\sqrt{3} - \\frac{3}{2} + j\\frac{3\\sqrt{3}}{2} = -\\frac{3}{2} + j\\frac{\\sqrt{3}}{2} = -1.5 + j 0.866"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Bin $k = 2$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $x[n]$ is real-valued, $X(2) = X^*(3-2) = X^*(1)$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(2) = -\\frac{3}{2} - j\\frac{\\sqrt{3}}{2} = -1.5 - j 0.866"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the 3-point DFT is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) = \\left\\{ 6, \\; -\\frac{3}{2} + j\\frac{\\sqrt{3}}{2}, \\; -\\frac{3}{2} - j\\frac{\\sqrt{3}}{2} \\right\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Conjugate Symmetry Verification:** Because $x[n] \\in \\mathbb{R}$, $X(N-k) = X^*(k)$. For $N=3$, $X(2) = X^*(1)$. The real parts are identical ($-1.5$), while the imaginary parts are equal and opposite ($\\pm \\frac{\\sqrt{3}}{2}$).",
+          "**Exam Trap:** Never compute $X(2)$ from scratch if $x[n]$ is real. Evaluate $X(1)$ and immediately take the complex conjugate to save time!"
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 163 (Page 41, Bottom-Left) \u2014 4-Point DFT of Ramp Sequence $\\{1, 2, 3, 4\\}$"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: 4-point sequence $x[n] = \\{1, 2, 3, 4\\}, N=4$. Find 4-point DFT $X(k)$ and IDFT.",
+        "Analytical derivation via DTFT sampling:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\{1, 2, 3, 4\\} \\xrightarrow{\\text{DTFT}} X(e^{j\\omega}) = 1 + 2e^{-j\\omega} + 3e^{-j2\\omega} + 4e^{-j3\\omega}"
+      },
+      {
+       "t": "math",
+       "tex": "\\xrightarrow{\\omega = \\frac{2\\pi}{4}k = \\frac{\\pi}{2}k} X(k) = 1 + 2e^{-j\\frac{\\pi}{2}k} + 3e^{-j\\pi k} + 4e^{-j\\frac{3\\pi}{2}k}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Final boxed DFT sequence: $X(k) = \\{10, -2+2j, -2, -2-2j\\}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\{\\underset{\\uparrow}{1}, 2, 3, 4\\}, N=4$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Sampling Continuous DTFT"
+      },
+      {
+       "t": "p",
+       "text": "With $\\omega = \\frac{\\pi}{2} k$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = 1 + 2(-j)^k + 3(-1)^k + 4(j)^k, \\quad k \\in \\{0, 1, 2, 3\\}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Term-by-Term Evaluation"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For $k = 0$ (DC Bin):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = 1 + 2 + 3 + 4 = 10"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For $k = 1$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = 1 + 2(-j)^1 + 3(-1)^1 + 4(j)^1 = 1 - 2j - 3 + 4j = -2 + 2j"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For $k = 2$ (Nyquist Bin $N/2$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(2) = 1 + 2(-j)^2 + 3(-1)^2 + 4(j)^2 = 1 + 2(-1) + 3(1) + 4(-1) = 1 - 2 + 3 - 4 = -2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For $k = 3$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(3) = X^*(4-1) = X^*(1) = (-2 + 2j)^* = -2 - 2j"
+      },
+      {
+       "t": "p",
+       "text": "Direct verification:"
+      },
+      {
+       "t": "math",
+       "tex": "X(3) = 1 + 2(-j)^3 + 3(-1)^3 + 4(j)^3 = 1 + 2(j) - 3 - 4j = -2 - 2j"
+      },
+      {
+       "t": "p",
+       "text": "Hence:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) = \\{\\underset{k=0}{10}, \\; -2+2j, \\; -2, \\; -2-2j\\}}"
+      },
+      {
+       "t": "p",
+       "text": "The periodic continuation $\\tilde{x}[n]$ reconstructed via IDFT is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{x}[n] = \\{\\dots, 1, 2, 3, 4, \\underset{\\uparrow}{1}, 2, 3, 4, 1, 2, 3, 4, \\dots\\}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Real Sequence Properties Confirmed:**"
+         ]
+        },
+        {
+         "t": "ol",
+         "start": 1,
+         "items": [
+          "$X(0) = \\sum_{n=0}^3 x[n] = 10 \\in \\mathbb{R}$.",
+          "$X(2) = \\sum_{n=0}^3 (-1)^n x[n] = 1 - 2 + 3 - 4 = -2 \\in \\mathbb{R}$.",
+          "$X(3) = X^*(1) = -2 - 2j$."
+         ]
+        },
+        {
+         "t": "ul",
+         "items": [
+          "**Exam Trap:** Notice that at the half-sampling frequency bin $k = N/2 = 2$, the value MUST be strictly real for any real-valued sequence! If your $X(N/2)$ has an imaginary part, you made an arithmetic error."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 164 (Page 41, Bottom-Right) \u2014 Twiddle Factor Definition & DFT Matrix Formulation"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Header: *Calculating DFT and IDFT with Twiddle factor:*",
+        "Definition: $W_N = e^{-j 2\\pi / N}$.",
+        "Analysis equation written in twiddle factor summation form:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = \\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N}kn} = \\sum_{n=0}^{N-1} x[n] W_N^{kn}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Large $N \\times N$ matrix-vector equation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ \\vdots \\\\ X(N-1) \\end{bmatrix}_{N \\times 1} = \\begin{bmatrix} W_N^0 & W_N^0 & \\dots & W_N^0 \\\\ W_N^0 & W_N^1 & W_N^2 & \\dots \\\\ W_N^0 & W_N^2 & W_N^4 & \\dots \\\\ \\vdots & \\vdots & \\vdots & \\ddots \\\\ W_N^0 & \\dots & \\dots & \\dots \\end{bmatrix}_{N \\times N} \\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ \\vdots \\\\ x(N-1) \\end{bmatrix}_{N \\times 1}"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{W_N \\triangleq e^{-j\\frac{2\\pi}{N}}}"
+      },
+      {
+       "t": "p",
+       "text": "The forward $N$-point DFT is cast in matrix notation as:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X} = \\mathbf{W}_N \\mathbf{x}"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\nX(0) \\\\\nX(1) \\\\\nX(2) \\\\\n\\vdots \\\\\nX(N-1)\n\\end{bmatrix} = \\begin{bmatrix}\nW_N^0 & W_N^0 & W_N^0 & \\dots & W_N^0 \\\\\nW_N^0 & W_N^1 & W_N^2 & \\dots & W_N^{N-1} \\\\\nW_N^0 & W_N^2 & W_N^4 & \\dots & W_N^{2(N-1)} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\nW_N^0 & W_N^{N-1} & W_N^{2(N-1)} & \\dots & W_N^{(N-1)(N-1)}\n\\end{bmatrix} \\begin{bmatrix}\nx(0) \\\\\nx(1) \\\\\nx(2) \\\\\n\\vdots \\\\\nx(N-1)\n\\end{bmatrix}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Symmetry of $\\mathbf{W}_N$:** The $(k,n)$-th entry of $\\mathbf{W}_N$ is $W_N^{kn}$. Since $kn = nk$, the DFT matrix is strictly symmetric: $\\mathbf{W}_N = \\mathbf{W}_N^T$.",
+          "**Complexity Trap:** Direct computation of $\\mathbf{W}_N \\mathbf{x}$ requires $N^2$ complex multiplications and $N(N-1)$ complex additions. The Fast Fourier Transform (FFT) reduces this to $\\frac{N}{2}\\log_2 N$ multiplications."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 165 (Page 42, Top-Left) \u2014 Inverse DFT (IDFT) & Inverse Matrix Formulation"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Header: *IDFT:*",
+        "Analysis synthesis formula:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N}kn} = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) W_N^{-kn}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Matrix form of IDFT:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ \\vdots \\\\ x(N-1) \\end{bmatrix} = \\frac{1}{N} \\begin{bmatrix} 1 & 1 & 1 & \\dots & 1 \\\\ 1 & W_N^{-1} & W_N^{-2} & \\dots \\\\ 1 & W_N^{-2} & W_N^{-4} & \\dots \\\\ \\vdots & \\vdots & \\vdots & \\ddots \\end{bmatrix} \\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ \\vdots \\\\ X(N-1) \\end{bmatrix}"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) W_N^{-kn}, \\quad n = 0, 1, \\dots, N-1}"
+      },
+      {
+       "t": "p",
+       "text": "Since $W_N^{-kn} = (W_N^{kn})^*$, the IDFT matrix is the scaled complex conjugate (Hermitian transpose) of the DFT matrix:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x} = \\frac{1}{N} \\mathbf{W}_N^* \\mathbf{X} = \\mathbf{W}_N^{-1} \\mathbf{X}"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\nx(0) \\\\\nx(1) \\\\\nx(2) \\\\\n\\vdots \\\\\nx(N-1)\n\\end{bmatrix} = \\frac{1}{N} \\begin{bmatrix}\n1 & 1 & 1 & \\dots & 1 \\\\\n1 & W_N^{-1} & W_N^{-2} & \\dots & W_N^{-(N-1)} \\\\\n1 & W_N^{-2} & W_N^{-4} & \\dots & W_N^{-2(N-1)} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\n1 & W_N^{-(N-1)} & W_N^{-2(N-1)} & \\dots & W_N^{-(N-1)(N-1)}\n\\end{bmatrix} \\begin{bmatrix}\nX(0) \\\\\nX(1) \\\\\nX(2) \\\\\n\\vdots \\\\\nX(N-1)\n\\end{bmatrix}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Scale Factor Trap:** Forgetting the factor $\\frac{1}{N}$ in the IDFT matrix is the most common student error in GATE! Always verify that $\\mathbf{W}_N^{-1} = \\frac{1}{N}\\mathbf{W}_N^*$."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 166 (Page 42, Top-Right) \u2014 2-Point DFT via Matrix Method"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Problem statement: 2-point sequence $x[n] = \\{1, 2\\}, N=2$. Find 2-point DFT $X(k)$ and IDFT via matrix.",
+        "Evaluation of twiddle factor: $W_N = W_2 = e^{-j\\frac{2\\pi}{2}} = e^{-j\\pi} = -1$.",
+        "Matrix setup and evaluation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 1 & W_2^1 \\end{bmatrix} \\begin{bmatrix} x(0) \\\\ x(1) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = x(0) + x(1) = 1 + 2 = 3"
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = x(0) - x(1) = 1 - 2 = -1"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = \\{3, -1\\}"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "For $N = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "W_2 = e^{-j\\pi} = -1, \\quad W_2^0 = 1, \\quad W_2^1 = -1"
+      },
+      {
+       "t": "p",
+       "text": "Matrix formulation:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} = \\begin{bmatrix} 1(1) + 1(2) \\\\ 1(1) - 1(2) \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) = \\{3, -1\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "The 2-point DFT computes the sum and difference of the input samples. This basic $2\\times 2$ block forms the butterfly unit in the Cooley-Tukey Radix-2 Decimation-in-Time (DIT) FFT algorithm."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 167 (Page 42, Bottom-Left) \u2014 2-Point IDFT Matrix Computation"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Inverse twiddle factor calculation: $W_N^{-1} = W_2^{-1} = [e^{-j\\pi}]^{-1} = e^{j\\pi} = -1$.",
+        "IDFT matrix formulation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} x(0) \\\\ x(1) \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 1 & 1 \\\\ 1 & W_2^{-1} \\end{bmatrix} \\begin{bmatrix} X(0) \\\\ X(1) \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} X(0) \\\\ X(1) \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Scalar evaluation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x(0) = \\frac{1}{2}[X(0) + X(1)] = \\frac{1}{2}[3 - 1] = 1"
+      },
+      {
+       "t": "math",
+       "tex": "x(1) = \\frac{1}{2}[X(0) - X(1)] = \\frac{1}{2}[3 - (-1)] = \\frac{1}{2}[4] = 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies x[n] = \\{1, 2\\}"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} x(0) \\\\ x(1) \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 3 + (-1) \\\\ 3 - (-1) \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 2 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\{1, 2\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "Perfectly inverts the forward transform and confirms algebraic self-consistency."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 168 (Page 42, Bottom-Right) \u2014 4-Point DFT & IDFT Matrix Algebra & Powers of $W_4$"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: 4-point $x[n] = \\{1, 2, 3, 4\\}$. Calculate 4-point DFT $X(k)$ and inverse DFT.",
+        "Complete table of powers of $W_4$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_N = W_4 = e^{-j 2\\pi / 4} = e^{-j\\pi / 2} = -j"
+      },
+      {
+       "t": "math",
+       "tex": "W_4^1 = -j"
+      },
+      {
+       "t": "math",
+       "tex": "W_4^2 = (-j)^2 = -1"
+      },
+      {
+       "t": "math",
+       "tex": "W_4^3 = (-j)^3 = j"
+      },
+      {
+       "t": "math",
+       "tex": "W_4^4 = W_4^0 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "W_4^6 = W_4^2 = -1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Side-by-side matrices set up for DFT and IDFT."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Twiddle factor powers for $N = 4$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$W_4^0 = 1$",
+        "$W_4^1 = e^{-j\\frac{\\pi}{2}} = -j$",
+        "$W_4^2 = e^{-j\\pi} = -1$",
+        "$W_4^3 = e^{-j\\frac{3\\pi}{2}} = j$",
+        "$W_4^4 = e^{-j 2\\pi} = 1$",
+        "$W_4^5 = W_4^1 = -j$",
+        "$W_4^6 = W_4^2 = -1$",
+        "$W_4^9 = W_4^{9 \\bmod 4} = W_4^1 = -j$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Matrix Setup:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT:} \\quad \\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & W_4^1 & W_4^2 & W_4^3 \\\\ 1 & W_4^2 & W_4^4 & W_4^6 \\\\ 1 & W_4^3 & W_4^6 & W_4^9 \\end{bmatrix} \\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ x(3) \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{IDFT:} \\quad \\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ x(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & W_4^{-1} & W_4^{-2} & W_4^{-3} \\\\ 1 & W_4^{-2} & W_4^{-4} & W_4^{-6} \\\\ 1 & W_4^{-3} & W_4^{-6} & W_4^{-9} \\end{bmatrix} \\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "Notice that $W_4^{-1} = (W_4^1)^* = (-j)^* = +j$, $W_4^{-2} = (-1)^* = -1$, and $W_4^{-3} = (j)^* = -j$."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 169 (Page 43, Top-Left) \u2014 4-Point DFT & IDFT Numerical Computation for $\\{1, 2, 3, 4\\}$"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Forward matrix multiplication:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 10 \\\\ -2+2j \\\\ -2 \\\\ -2-2j \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Inverse matrix computation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ x(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & j & -1 & -j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -j & -1 & j \\end{bmatrix} \\begin{bmatrix} 10 \\\\ -2+2j \\\\ -2 \\\\ -2-2j \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 4 \\\\ 8 \\\\ 12 \\\\ 16 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{bmatrix}"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{W}_4 = \\begin{bmatrix}\n1 & 1 & 1 & 1 \\\\\n1 & -j & -1 & j \\\\\n1 & -1 & 1 & -1 \\\\\n1 & j & -1 & -j\n\\end{bmatrix}"
+      },
+      {
+       "t": "h4",
+       "text": "Forward Calculation:"
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = 1 + 2 + 3 + 4 = 10"
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = 1(1) + (-j)(2) + (-1)(3) + (j)(4) = 1 - 2j - 3 + 4j = -2 + 2j"
+      },
+      {
+       "t": "math",
+       "tex": "X(2) = 1(1) + (-1)(2) + 1(3) + (-1)(4) = 1 - 2 + 3 - 4 = -2"
+      },
+      {
+       "t": "math",
+       "tex": "X(3) = 1(1) + (j)(2) + (-1)(3) + (-j)(4) = 1 + 2j - 3 - 4j = -2 - 2j"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) = \\{10, -2+2j, -2, -2-2j\\}}"
+      },
+      {
+       "t": "h4",
+       "text": "Inverse IDFT Verification:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\nx(0) &= \\frac{1}{4}[10 + (-2+2j) + (-2) + (-2-2j)] = \\frac{1}{4}[10 - 6] = \\frac{4}{4} = 1 \\\\\nx(1) &= \\frac{1}{4}[10 + j(-2+2j) - (-2) - j(-2-2j)] \\\\\n     &= \\frac{1}{4}[10 - 2j - 2 + 2 + 2j - 2] = \\frac{1}{4}[8] = 2 \\\\\nx(2) &= \\frac{1}{4}[10 - (-2+2j) + (-2) - (-2-2j)] = \\frac{1}{4}[10 + 2 - 2 + 2] = \\frac{12}{4} = 3 \\\\\nx(3) &= \\frac{1}{4}[10 - j(-2+2j) - (-2) + j(-2-2j)] \\\\\n     &= \\frac{1}{4}[10 + 2j + 2 + 2 - 2j + 2] = \\frac{16}{4} = 4\n\\end{aligned}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] = \\{1, 2, 3, 4\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Identity Check:** Multiplying $\\mathbf{W}_4$ by $\\mathbf{W}_4^*$ yields $4\\mathbf{I}_4$. This proves the matrix is orthogonal and inverts perfectly."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 170 (Page 43, Top-Right) \u2014 3-Point DFT of $\\{1, 2, -1\\}$ via $W_3$ Matrix"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: 3-point sequence $x[n] = \\{1, 2, -1\\}$. Find 3-point $X(k)$.",
+        "Twiddle relationships:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "W_3 = e^{-j 2\\pi/3}, \\quad W_3^1 = e^{-j 2\\pi/3}"
+      },
+      {
+       "t": "math",
+       "tex": "W_3^2 = W_3^{3-1} = W_3^3 W_3^{-1} = W_3^{-1} = e^{j 2\\pi/3}"
+      },
+      {
+       "t": "math",
+       "tex": "W_3^4 = W_3^{3+1} = W_3^3 W_3^1 = W_3^1 = e^{-j 2\\pi/3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Matrix computation and analytical results:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = 1 + 2 - 1 = 2"
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = 1 + 2e^{-j 2\\pi/3} - e^{j 2\\pi/3}"
+      },
+      {
+       "t": "math",
+       "tex": "X(2) = 1 + 2e^{j 2\\pi/3} - e^{-j 2\\pi/3} = X^*(1)"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "For $N = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{W}_3 = \\begin{bmatrix}\n1 & 1 & 1 \\\\\n1 & W_3^1 & W_3^2 \\\\\n1 & W_3^2 & W_3^4\n\\end{bmatrix} = \\begin{bmatrix}\n1 & 1 & 1 \\\\\n1 & e^{-j\\frac{2\\pi}{3}} & e^{j\\frac{2\\pi}{3}} \\\\\n1 & e^{j\\frac{2\\pi}{3}} & e^{-j\\frac{2\\pi}{3}}\n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Matrix multiplication:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\end{bmatrix} = \\begin{bmatrix}\n1 & 1 & 1 \\\\\n1 & e^{-j\\frac{2\\pi}{3}} & e^{j\\frac{2\\pi}{3}} \\\\\n1 & e^{j\\frac{2\\pi}{3}} & e^{-j\\frac{2\\pi}{3}}\n\\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ -1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Expanding each row:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(0) = 1(1) + 1(2) + 1(-1) = 2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(1) = 1 + 2e^{-j\\frac{2\\pi}{3}} - e^{j\\frac{2\\pi}{3}}}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(2) = 1 + 2e^{j\\frac{2\\pi}{3}} - e^{-j\\frac{2\\pi}{3}} = X^*(1)}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating Cartesian components:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{-j\\frac{2\\pi}{3}} = -\\frac{1}{2} - j\\frac{\\sqrt{3}}{2}, \\quad e^{j\\frac{2\\pi}{3}} = -\\frac{1}{2} + j\\frac{\\sqrt{3}}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = 1 + 2\\left(-\\frac{1}{2} - j\\frac{\\sqrt{3}}{2}\\right) - \\left(-\\frac{1}{2} + j\\frac{\\sqrt{3}}{2}\\right) = 1 - 1 - j\\sqrt{3} + \\frac{1}{2} - j\\frac{\\sqrt{3}}{2} = \\frac{1}{2} - j\\frac{3\\sqrt{3}}{2}"
+      },
+      {
+       "t": "math",
+       "tex": "X(2) = \\frac{1}{2} + j\\frac{3\\sqrt{3}}{2}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "Notice again that $X(2) = X^*(1)$ because $x[n]$ is real-valued."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 171 (Page 43, Bottom-Left) \u2014 Periodic Discrete Sequences & 4-Point DFT"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: Given periodic sequence $x[n] = \\{\\dots, 1, 2, 3, 4, \\underset{\\uparrow}{1}, 2, 3, 4, 1, 2, 3, 4, \\dots\\}$ with period $N=4$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Find its 4-point DFT $X(k)$ and IDFT."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Analytical derivation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = \\sum_{n=0}^{3} x[n] e^{-j\\frac{2\\pi}{4}kn} = x[0] + x[1]e^{-j\\frac{\\pi}{2}k} + x[2]e^{-j\\pi k} + x[3]e^{-j\\frac{3\\pi}{2}k}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Diagram connecting periodic $x[n]$ to 4-point $x[n] = \\{1, 2, 3, 4\\}$.",
+        "Answer: $X(k) = \\{10, -2+2j, -2, -2-2j\\}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "A periodic discrete-time sequence with fundamental period $N=4$ has DFS expansion:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{x}[n] = \\sum_{k=0}^{3} c_k e^{j\\frac{2\\pi}{4}kn}, \\quad c_k = \\frac{1}{4} \\sum_{n=0}^{3} \\tilde{x}[n] e^{-j\\frac{2\\pi}{4}kn}"
+      },
+      {
+       "t": "p",
+       "text": "The 4-point DFT of the sequence extracted over one fundamental period $n \\in [0, 3]$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = 4 c_k = \\sum_{n=0}^3 x[n] e^{-j\\frac{\\pi}{2}kn}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating over the fundamental period $x[0]=1, x[1]=2, x[2]=3, x[3]=4$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) = \\{10, -2+2j, -2, -2-2j\\}}"
+      },
+      {
+       "t": "p",
+       "text": "Applying the IDFT reproduces the periodic sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{x}[n] = \\{\\dots, 1, 2, 3, 4, \\underset{\\uparrow}{1}, 2, 3, 4, \\dots\\}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Pedagogical Takeaway:** The DFT of one period of a periodic discrete-time sequence produces samples proportional to the Discrete Fourier Series (DFS) coefficients: $X(k) = N c_k$."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 172 (Page 43, Bottom-Right) \u2014 4-Point DFT of Cosine Sequence $\\cos( rac{\\pi}{2}n)$ via Synthesis Matching"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: $x[n] = \\cos(\\frac{\\pi}{2} n), N=4$. Find 4-point DFT $X(k)$.",
+        "Derivation via IDFT synthesis equation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N}kn} = \\frac{1}{4} \\sum_{k=0}^3 X(k) e^{j\\frac{\\pi}{2}kn}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Euler expansion:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{e^{j\\frac{\\pi}{2}n} + e^{-j\\frac{\\pi}{2}n}}{2} = \\frac{1}{4} \\sum_{k=-2}^{1} X(k) e^{j\\frac{\\pi}{2}kn} = \\frac{1}{4}[X(-1)e^{-j\\frac{\\pi}{2}n} + X(0) + X(1)e^{j\\frac{\\pi}{2}n} + \\dots]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Identification of coefficients:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{X(1)}{4} = \\frac{1}{2} \\implies X(1) = 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{X(-1)}{4} = \\frac{1}{2} \\implies X(-1) = 2 \\implies X(3) = 2"
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = 0, \\quad X(2) = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boxed result: 4-point $X(k) = \\{0, 2, 0, 2\\}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\cos\\left(\\frac{\\pi}{2} n\\right)$ for $N = 4$."
+      },
+      {
+       "t": "h4",
+       "text": "Method: Direct Frequency Matching via IDFT Synthesis"
+      },
+      {
+       "t": "p",
+       "text": "Using Euler's identity:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{2} e^{j\\frac{\\pi}{2}n} + \\frac{1}{2} e^{-j\\frac{\\pi}{2}n}"
+      },
+      {
+       "t": "p",
+       "text": "The 4-point IDFT synthesis equation is:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{4} \\sum_{k=0}^3 X(k) e^{j\\frac{2\\pi}{4}kn} = \\frac{1}{4} X(0) + \\frac{1}{4} X(1) e^{j\\frac{\\pi}{2}n} + \\frac{1}{4} X(2) e^{j\\pi n} + \\frac{1}{4} X(3) e^{j\\frac{3\\pi}{2}n}"
+      },
+      {
+       "t": "p",
+       "text": "Note that:"
+      },
+      {
+       "t": "math",
+       "tex": "e^{j\\frac{3\\pi}{2}n} = e^{-j\\frac{\\pi}{2}n} \\quad (\\text{since } 3 \\equiv -1 \\pmod 4)"
+      },
+      {
+       "t": "p",
+       "text": "Matching coefficients of corresponding complex exponential harmonics:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Coefficient of $e^{j\\frac{\\pi}{2}n}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{4} X(1) = \\frac{1}{2} \\implies X(1) = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Coefficient of $e^{-j\\frac{\\pi}{2}n} = e^{j\\frac{3\\pi}{2}n}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{4} X(3) = \\frac{1}{2} \\implies X(3) = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Unmatched components:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = 0, \\quad X(2) = 0"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the 4-point DFT is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) = \\{\\underset{k=0}{0}, \\; \\underset{k=1}{2}, \\; \\underset{k=2}{0}, \\; \\underset{k=3}{2}\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Alternative Time-Domain Sample Verification:**"
+         ]
+        },
+        {
+         "t": "p",
+         "text": "$x[0] = \\cos(0) = 1$\n  $x[1] = \\cos(\\pi/2) = 0$\n  $x[2] = \\cos(\\pi) = -1$\n  $x[3] = \\cos(3\\pi/2) = 0$\n  Sequence: $x[n] = \\{1, 0, -1, 0\\}$.\n  Applying DFT matrix $\\mathbf{W}_4$:"
+        },
+        {
+         "t": "math",
+         "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 1 - 1 \\\\ 1 - (-1) \\\\ 1 - 1 \\\\ 1 - (-1) \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 2 \\\\ 0 \\\\ 2 \\end{bmatrix}"
+        },
+        {
+         "t": "p",
+         "text": "Matches the IDFT synthesis matching result."
+        },
+        {
+         "t": "ul",
+         "items": [
+          "**Exam Trap:** When the signal is a pure sinusoid whose frequency falls exactly on a DFT bin (here $\\omega_0 = \\frac{\\pi}{2} = \\frac{2\\pi}{4}(1)$), never evaluate summations! Directly match into bins $k_0$ and $N - k_0$."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 173 (Page 44, Top-Left) \u2014 Zero-Padding in Time Domain: 4-Point DFT of 2-Point Sequence"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: 2-point sequence $x[n] = \\{1, 2\\}$. Find its 4-point DFT $X(k)$ and IDFT.",
+        "Zero-padding procedure: pad with zeros to $N=4$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{4-point } x[n] = \\{1, 2, 0, 0\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Matrix computation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ 1-2j \\\\ -1 \\\\ 1+2j \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boxed result: 4-point $X(k) = \\{3, 1-2j, -1, 1+2j\\}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let the 2-point sequence $x[n] = \\{1, 2\\}$ be zero-padded to length $N = 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_{zp}[n] = \\{\\underset{\\uparrow}{1}, 2, 0, 0\\}"
+      },
+      {
+       "t": "p",
+       "text": "Using the 4-point DFT matrix $\\mathbf{W}_4$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix}\n1 & 1 & 1 & 1 \\\\\n1 & -j & -1 & j \\\\\n1 & -1 & 1 & -1 \\\\\n1 & j & -1 & -j\n\\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating each row:"
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = 1(1) + 1(2) + 0 + 0 = 3"
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = 1(1) + (-j)(2) + 0 + 0 = 1 - 2j"
+      },
+      {
+       "t": "math",
+       "tex": "X(2) = 1(1) + (-1)(2) + 0 + 0 = 1 - 2 = -1"
+      },
+      {
+       "t": "math",
+       "tex": "X(3) = 1(1) + (j)(2) + 0 + 0 = 1 + 2j"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) = \\{\\underset{k=0}{3}, \\; 1-2j, \\; -1, \\; 1+2j\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Comparison with 2-Point DFT:**"
+         ]
+        },
+        {
+         "t": "p",
+         "text": "Recall from Slide 161 that the 2-point DFT of $\\{1, 2\\}$ was $X_2(k) = \\{3, -1\\}$.\n  Notice that the even bins of the 4-point zero-padded DFT are:"
+        },
+        {
+         "t": "math",
+         "tex": "X_4(0) = 3 = X_2(0), \\quad X_4(2) = -1 = X_2(1)"
+        },
+        {
+         "t": "p",
+         "text": "The odd bins ($k=1, 3$) represent interpolated samples of the continuous DTFT $X(e^{j\\omega})$ evaluated at $\\omega = \\frac{\\pi}{2}$ and $\\frac{3\\pi}{2}$!"
+        },
+        {
+         "t": "math",
+         "tex": "X(e^{j\\pi/2}) = 1 + 2e^{-j\\pi/2} = 1 - 2j = X_4(1)"
+        },
+        {
+         "t": "math",
+         "tex": "X(e^{j 3\\pi/2}) = 1 + 2e^{-j 3\\pi/2} = 1 + 2j = X_4(3)"
+        },
+        {
+         "t": "p",
+         "text": "This proves that zero-padding evaluates the underlying continuous DTFT at intermediate frequency locations."
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 174 (Page 44, Top-Right) \u2014 IDFT of Zero-Padded Spectrum & Discrete Periodic Nature"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Frequency sequence: $X(k) = \\{\\dots, 3, 1-2j, -1, 1+2j, \\underset{\\uparrow}{3}, 1-2j, \\dots\\}$.",
+        "IDFT leads to periodic discrete sequence:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{IDFT}\\{X(k)\\} \\to \\tilde{x}[n] = \\{\\dots, 1, 2, 0, 0, \\underset{\\uparrow}{1}, 2, 0, 0, 1, 2, 0, 0, \\dots\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Matrix IDFT calculation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ x(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & j & -1 & -j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -j & -1 & j \\end{bmatrix} \\begin{bmatrix} 3 \\\\ 1-2j \\\\ -1 \\\\ 1+2j \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 4 \\\\ 8 \\\\ 0 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the IDFT of $X(k) = [3, 1-2j, -1, 1+2j]^T$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\nx(0) &= \\frac{1}{4}[3 + (1-2j) + (-1) + (1+2j)] = \\frac{1}{4}[4] = 1 \\\\\nx(1) &= \\frac{1}{4}[3(1) + j(1-2j) - (-1) - j(1+2j)] \\\\\n     &= \\frac{1}{4}[3 + j + 2 + 1 - j + 2] = \\frac{1}{4}[8] = 2 \\\\\nx(2) &= \\frac{1}{4}[3 - (1-2j) + (-1) - (1+2j)] \\\\\n     &= \\frac{1}{4}[3 - 1 + 2j - 1 - 1 - 2j] = \\frac{1}{4}[0] = 0 \\\\\nx(3) &= \\frac{1}{4}[3(1) - j(1-2j) - (-1) + j(1+2j)] \\\\\n     &= \\frac{1}{4}[3 - j - 2 + 1 + j - 2] = \\frac{1}{4}[0] = 0\n\\end{aligned}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x_{zp}[n] = \\{\\underset{\\uparrow}{1}, 2, 0, 0\\}}"
+      },
+      {
+       "t": "p",
+       "text": "The periodic discrete extension $\\tilde{x}[n]$ has fundamental period $N = 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{x}[n] = \\{\\dots, 1, 2, 0, 0, \\underset{\\uparrow}{1}, 2, 0, 0, 1, 2, 0, 0, \\dots\\}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "Notice that the zero-padded samples ($n=2, 3$) are reconstructed as zeros. The period of the underlying periodic signal $\\tilde{x}[n]$ has changed from $2$ to $4$."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 175 (Page 44, Bottom-Left) \u2014 12-Point DFT of $\\cos( rac{\\pi}{2}n)$ ($N=12$)"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: $x[n] = \\cos(\\frac{\\pi}{2} n)$. Find 12-point DFT ($N=12$).",
+        "Period calculation: $P = \\frac{2\\pi}{\\pi/2} = 4$.",
+        "IDFT synthesis expansion:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{12} \\sum_{k=0}^{11} X(k) e^{j\\frac{2\\pi}{12}kn} = \\frac{1}{12} \\sum_{k=0}^{11} X(k) e^{j\\frac{\\pi}{6}kn}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Rewriting cosine and matching frequencies:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{e^{j\\frac{\\pi}{2}n} + e^{-j\\frac{\\pi}{2}n}}{2} = \\frac{1}{12} [X(-3)e^{-j\\frac{\\pi}{2}n} + X(3)e^{j\\frac{\\pi}{2}n} + \\dots]"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\pi}{2}n = \\frac{\\pi}{6}kn \\implies k = 3"
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{\\pi}{2}n = \\frac{\\pi}{6}kn \\implies k = -3 \\equiv 9 \\pmod{12}"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{X(3)}{12} = \\frac{1}{2} \\implies X(3) = 6"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{X(-3)}{12} = \\frac{1}{2} \\implies X(-3) = 6 \\implies X(9) = 6"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boxed 12-point sequence:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = \\{\\underset{k=0}{0}, 0, 0, \\underset{k=3}{6}, 0, 0, 0, 0, 0, \\underset{k=9}{6}, 0, 0\\}"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\cos\\left(\\frac{\\pi}{2} n\\right)$, with transform length $N = 12$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Harmonic Bin Spacing"
+      },
+      {
+       "t": "p",
+       "text": "The fundamental frequency spacing for $N = 12$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta \\omega = \\frac{2\\pi}{12} = \\frac{\\pi}{6} \\text{ rad/sample}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Harmonic Matching"
+      },
+      {
+       "t": "p",
+       "text": "The input signal angular frequency is $\\omega_0 = \\frac{\\pi}{2}$.\nSetting $\\omega_0 = k_0 \\Delta \\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\pi}{2} = k_0 \\left(\\frac{\\pi}{6}\\right) \\implies k_0 = 3"
+      },
+      {
+       "t": "p",
+       "text": "The negative frequency component is:"
+      },
+      {
+       "t": "math",
+       "tex": "-\\omega_0 = -\\frac{\\pi}{2} \\implies k = -3"
+      },
+      {
+       "t": "p",
+       "text": "In modulo-12 indexing:"
+      },
+      {
+       "t": "math",
+       "tex": "((-3))_{12} = -3 + 12 = 9"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Synthesis Matching"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{2} e^{j\\frac{\\pi}{2}n} + \\frac{1}{2} e^{-j\\frac{\\pi}{2}n} = \\frac{1}{12} X(3) e^{j\\frac{\\pi}{6}(3)n} + \\frac{1}{12} X(9) e^{j\\frac{\\pi}{6}(9)n}"
+      },
+      {
+       "t": "p",
+       "text": "Equating coefficients:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{X(3)}{12} = \\frac{1}{2} \\implies X(3) = 6"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{X(9)}{12} = \\frac{1}{2} \\implies X(9) = 6"
+      },
+      {
+       "t": "p",
+       "text": "All remaining 10 bins are zero:"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = 0 \\quad \\text{for } k \\in \\{0, 1, 2, 4, 5, 6, 7, 8, 10, 11\\}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(k) = \\{\\underset{k=0}{0}, 0, 0, \\underset{k=3}{6}, 0, 0, 0, 0, 0, \\underset{k=9}{6}, 0, 0\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Spectral Leakage Principle:** Because $N = 12$ is an exact integer multiple of the signal's fundamental period $P = 4$ ($12 = 3 \\times 4$), exactly three full cycles fit within the DFT observation window. Therefore, there is **zero spectral leakage**, and all energy concentrates into single bins $k=3$ and $k=9$.",
+          "**General Formula for Sinusoids:** For $x[n] = A\\cos\\left(\\frac{2\\pi k_0}{N} n + \\phi\\right)$:"
+         ]
+        },
+        {
+         "t": "math",
+         "tex": "X(k_0) = \\frac{A N}{2} e^{j\\phi}, \\quad X(N - k_0) = \\frac{A N}{2} e^{-j\\phi}"
+        },
+        {
+         "t": "p",
+         "text": "Here $A=1, N=12, \\phi=0 \\implies X(3) = X(9) = \\frac{1(12)}{2} = 6$."
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 176 (Page 44, Bottom-Right) \u2014 Periodic Modulo Sequence Generation & 4-Point DFT Setup"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: 3-point sequence $x[n] = \\{1, 2, 3\\}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Define $y[n] = x[n \\bmod 3] = (x[n])_3$.\n  (a) Find 4-point DFT of $y[n] \\to Y(k)$.\n  (b) If 4-point DFT of $y[n]$ is $Y(k)$, find $\\text{IDFT}\\{Y(k)\\}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Periodic sequence generated:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = (x[n])_3 = \\{\\dots, 1, 2, 3, \\underset{n=0}{1}, 2, 3, 1, 2, 3, \\dots\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "4-point sequence extracted:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\{1, 2, 3, 1\\} \\quad \\text{for } n = 0, 1, 2, 3"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Setup for computing 4-point $Y(k)$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let the 3-point sequence be:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\{1, 2, 3\\} \\quad \\text{for } n = 0, 1, 2"
+      },
+      {
+       "t": "p",
+       "text": "The modulo-3 periodic sequence $y[n] = (x[n])_3$ is defined by:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n \\bmod 3] \\quad \\forall n \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating samples:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\ny[0] &= x[0 \\bmod 3] = x[0] = 1 \\\\\ny[1] &= x[1 \\bmod 3] = x[1] = 2 \\\\\ny[2] &= x[2 \\bmod 3] = x[2] = 3 \\\\\ny[3] &= x[3 \\bmod 3] = x[0] = 1 \\\\\ny[4] &= x[4 \\bmod 3] = x[1] = 2\n\\end{aligned}"
+      },
+      {
+       "t": "p",
+       "text": "Writing the full sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\{\\dots, 1, 2, 3, \\underset{n=0}{1}, 2, 3, 1, 2, 3, \\dots\\}"
+      },
+      {
+       "t": "p",
+       "text": "To compute the **4-point DFT** of $y[n]$, we extract the primary window of length $N=4$ ($n = 0, 1, 2, 3$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{4-point } y[n] = \\{\\underset{\\uparrow}{1}, 2, 3, 1\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Period Mismatch Wrap-Around:** The original signal has period $3$, but we are computing a 4-point DFT. The 4th sample $y[3]$ wraps around to take the value of $x[0] = 1$. The 4-point sequence is NOT $\\{1, 2, 3, 0\\}$, but $\\{1, 2, 3, 1\\}$.",
+          "**GATE Exam Trap:** Do not confuse zero-padding with sampling a periodic modulo signal! Zero-padding appends zeros; modulo indexing wraps around to earlier samples!"
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 177 (Page 45, Top-Left) \u2014 4-Point DFT & IDFT of $\\{1, 2, 3, 1\\}$"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Forward matrix multiplication:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} Y(0) \\\\ Y(1) \\\\ Y(2) \\\\ Y(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 7 \\\\ -2-j \\\\ 1 \\\\ -2+j \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boxed 4-point DFT: $Y(k) = \\{7, -2-j, 1, -2+j\\}$.",
+        "Periodic spectrum: $Y(k) = \\{\\dots, 7, -2-j, 1, -2+j, \\underset{k=0}{7}, -2-j, 1, -2+j, \\dots\\}$.",
+        "IDFT leading back to periodic discrete time sequence:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\{\\dots, 1, 2, 3, 1, \\underset{\\uparrow}{1}, 2, 3, 1, 1, 2, 3, 1, \\dots\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boxed 4-point $y[n] = \\{1, 2, 3, 1\\}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let the 4-point sequence be $y[n] = [1, 2, 3, 1]^T$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Forward Matrix DFT Computation"
+      },
+      {
+       "t": "p",
+       "text": "Using the $4 \\times 4$ DFT matrix $\\mathbf{W}_4$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} Y(0) \\\\ Y(1) \\\\ Y(2) \\\\ Y(3) \\end{bmatrix} = \\begin{bmatrix}\n1 & 1 & 1 & 1 \\\\\n1 & -j & -1 & j \\\\\n1 & -1 & 1 & -1 \\\\\n1 & j & -1 & -j\n\\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating each frequency bin:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\nY(0) &= 1(1) + 1(2) + 1(3) + 1(1) = 7 \\\\\nY(1) &= 1(1) + (-j)(2) + (-1)(3) + (j)(1) = 1 - 2j - 3 + j = -2 - j \\\\\nY(2) &= 1(1) + (-1)(2) + 1(3) + (-1)(1) = 1 - 2 + 3 - 1 = 1 \\\\\nY(3) &= 1(1) + (j)(2) + (-1)(3) + (-j)(1) = 1 + 2j - 3 - j = -2 + j = Y^*(1)\n\\end{aligned}"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{Y(k) = \\{\\underset{k=0}{7}, \\; -2-j, \\; 1, \\; -2+j\\}}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Inverse DFT Synthesis"
+      },
+      {
+       "t": "p",
+       "text": "Applying the $4 \\times 4$ IDFT matrix:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} y(0) \\\\ y(1) \\\\ y(2) \\\\ y(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix}\n1 & 1 & 1 & 1 \\\\\n1 & j & -1 & -j \\\\\n1 & -1 & 1 & -1 \\\\\n1 & -j & -1 & j\n\\end{bmatrix} \\begin{bmatrix} 7 \\\\ -2-j \\\\ 1 \\\\ -2+j \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 4 \\\\ 8 \\\\ 12 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 1 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = \\{\\underset{\\uparrow}{1}, 2, 3, 1\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Real Signal Checks:**"
+         ]
+        },
+        {
+         "t": "ol",
+         "start": 1,
+         "items": [
+          "$Y(0) = \\sum y[n] = 1 + 2 + 3 + 1 = 7 \\in \\mathbb{R}$.",
+          "$Y(2) = \\sum (-1)^n y[n] = 1 - 2 + 3 - 1 = 1 \\in \\mathbb{R}$.",
+          "$Y(3) = Y^*(1) = -2 + j$."
+         ]
+        },
+        {
+         "t": "p",
+         "text": "All conjugate symmetry conditions are satisfied."
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 178 (Page 45, Top-Right) \u2014 Constructing Periodic Extension with Period 5 from 3-Point Sequence"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: Aperiodic 3-point sequence $x[n] = \\{1, 2, -1\\}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Target periodic sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\{\\dots, 1, 2, -1, 1, 2, \\underset{\\uparrow}{1}, 2, -1, 1, 2, 1, 2, -1, 1, 2, \\dots\\}"
+      },
+      {
+       "t": "p",
+       "text": "Question: For creating $x[n]$ from $y[n]$ (or generating $y[n]$ from $x[n]$), what process will you follow?"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Flowchart and sequence relations:",
+        "5-point sequence $y[n] = \\{1, 2, -1, 1, 2\\}$.",
+        "Forward 5-point DFT leading to periodic discrete spectrum.",
+        "Inverse 5-point IDFT producing periodic discrete sequence $\\tilde{y}[n]$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let the starting aperiodic sequence be $x[n] = \\{1, 2, -1\\}$.\nThe desired periodic sequence $y[n]$ has fundamental period $N = 5$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\{\\dots, 1, 2, -1, 1, 2, \\underset{n=0}{1}, 2, -1, 1, 2, \\dots\\}"
+      },
+      {
+       "t": "h4",
+       "text": "Analytical Procedure:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Extract one full period of length $N = 5$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y_5[n] = \\begin{cases} x[n], & n = 0, 1, 2 \\\\ x[n-3], & n = 3, 4 \\end{cases} \\implies y_5[n] = \\{\\underset{\\uparrow}{1}, 2, -1, 1, 2\\}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Compute the **5-point DFT** of $y_5[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y_5(k) = \\sum_{n=0}^4 y_5[n] W_5^{kn}, \\quad k = 0, 1, 2, 3, 4"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Taking the 5-point IDFT reconstructs the periodic discrete sequence with exact period 5:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\tilde{y}[n] = \\frac{1}{5} \\sum_{k=0}^4 Y_5(k) W_5^{-kn} = \\sum_{m=-\\infty}^\\infty y_5[n - 5m]"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**GATE Trap on Transform Length:** If you apply a 3-point DFT to $x[n]$, the IDFT will reconstruct a periodic sequence with period $3$: $\\{\\dots, 1, 2, -1, 1, 2, -1, \\dots\\}$. To obtain a periodic sequence of period $5$, the DFT size MUST be set to $N=5$, requiring 5 samples over the intended period."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 179 (Page 45, Bottom-Left) \u2014 Modulo-2 Periodic Sequence Generation from 3-Point Sequence"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: 3-point sequence $x[n] = \\{1, 2, 3\\}$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n \\bmod 2] = (x[n])_2"
+      },
+      {
+       "t": "p",
+       "text": "Question: How will you make $y[n]$ from $x[n]$?"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Sequence analysis:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = (x[n])_2 = \\{\\dots, 1, 2, \\underset{n=0}{1}, 2, \\underset{n=2}{1}, 2, \\dots\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Arrow showing 2-point $x[n] = \\{1, 2\\} \\xrightarrow{\\text{2-point DFT}} \\xrightarrow{\\text{IDFT}} \\{\\dots, 1, 2, \\underset{\\uparrow}{1}, 2, 1, 2, \\dots\\}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Given $x[n] = \\{1, 2, 3\\}$.\nThe modulo-2 sequence $y[n]$ is defined as:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = x[n \\bmod 2]"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating for all integers $n$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n$ even ($n \\bmod 2 = 0$): $y[n] = x[0] = 1$.",
+        "For $n$ odd ($n \\bmod 2 = 1$): $y[n] = x[1] = 2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Notice that the sample $x[2] = 3$ is **NEVER** accessed because $n \\bmod 2 \\in \\{0, 1\\}$ for all $n \\in \\mathbb{Z}$!"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\{\\dots, 1, 2, \\underset{n=0}{1}, 2, 1, 2, \\dots\\}"
+      },
+      {
+       "t": "h4",
+       "text": "Generation Method:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Truncate $x[n]$ to its first 2 samples: $x_2[n] = \\{\\underset{\\uparrow}{1}, 2\\}$.",
+        "Compute 2-point DFT: $X_2(k) = \\{3, -1\\}$.",
+        "The 2-point IDFT automatically generates the periodic discrete sequence $y[n]$ of period 2."
+       ]
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Sample Dropping Trap:** Modulo-$M$ indexing on a sequence of length $N > M$ completely discards all samples with indices $n \\ge M$. Here $x[2]=3$ is completely eliminated."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 180 (Page 45, Bottom-Right) \u2014 8-Point DFT Property Problem: Even-Index Sample Sum"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Problem Statement: 8-point DFT of $x[n]$ is $X(k)$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given: $X(k) = k + 1$ for $0 \\le k \\le 7$.\n  Find:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\sum_{n=0}^3 x[2n] = x[0] + x[2] + x[4] + x[6] = ?"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Mathematical analysis using DFT definition:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = \\sum_{n=0}^7 x[n] e^{-j\\frac{2\\pi}{8}kn} = \\sum_{n=0}^7 x[n] e^{-j\\frac{\\pi}{4}kn}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Evaluation at $k = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = \\sum_{n=0}^7 x[n] = x(0) + x(1) + x(2) + x(3) + x(4) + x(5) + x(6) + x(7) = 0 + 1 = 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Evaluation at $k = 4$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(4) = \\sum_{n=0}^7 x[n] e^{-j\\frac{\\pi}{4}(4)n} = \\sum_{n=0}^7 x[n] (-1)^n = x(0) - x(1) + x(2) - x(3) + x(4) - x(5) + x(6) - x(7) = 4 + 1 = 5"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let $x[n]$ be an 8-point sequence with 8-point DFT:"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = k + 1, \\quad 0 \\le k \\le 7"
+      },
+      {
+       "t": "p",
+       "text": "We wish to evaluate:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\triangleq \\sum_{n=0}^3 x[2n] = x[0] + x[2] + x[4] + x[6]"
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Forward DFT Analysis Formula"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = \\sum_{n=0}^7 x[n] W_8^{kn} = \\sum_{n=0}^7 x[n] e^{-j\\frac{\\pi}{4}kn}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Evaluation at $k = 0$"
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = \\sum_{n=0}^7 x[n] = x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7]"
+      },
+      {
+       "t": "p",
+       "text": "From the problem specification:"
+      },
+      {
+       "t": "math",
+       "tex": "X(0) = 0 + 1 = 1 \\quad \\implies \\sum_{n=0}^7 x[n] = 1 \\quad \\text{--- (Equation 1)}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Evaluation at $k = 4$ ($N/2$ Bin)"
+      },
+      {
+       "t": "math",
+       "tex": "X(4) = \\sum_{n=0}^7 x[n] e^{-j\\pi n} = \\sum_{n=0}^7 x[n] (-1)^n"
+      },
+      {
+       "t": "math",
+       "tex": "X(4) = x[0] - x[1] + x[2] - x[3] + x[4] - x[5] + x[6] - x[7]"
+      },
+      {
+       "t": "p",
+       "text": "From the problem specification:"
+      },
+      {
+       "t": "math",
+       "tex": "X(4) = 4 + 1 = 5 \\quad \\implies \\sum_{n=0}^7 (-1)^n x[n] = 5 \\quad \\text{--- (Equation 2)}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "See Slide 181 for the algebraic combination and final solution."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 181 (Page 46, Top-Left) \u2014 Even-Index Sample Sum Solution & GATE Trap Analysis"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Summing equations:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left. X(k) \\right|_{k=0} + \\left. X(k) \\right|_{k=4} = 2[x(0) + x(2) + x(4) + x(6)]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Formula for $A$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A = \\frac{\\left. X(k) \\right|_{k=0} + \\left. X(k) \\right|_{k=4}}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Numerical substitution:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A = \\frac{1 + 5}{2} = 3"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boxed final answer: $\\mathbf{Ans = 3}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Adding Equation 1 and Equation 2:"
+      },
+      {
+       "t": "math",
+       "tex": "X(0) + X(4) = [x[0] + x[1] + \\dots + x[7]] + [x[0] - x[1] + \\dots - x[7]]"
+      },
+      {
+       "t": "p",
+       "text": "The odd-indexed samples $+x[1], -x[1], +x[3], -x[3], \\dots$ cancel identically:"
+      },
+      {
+       "t": "math",
+       "tex": "X(0) + X(4) = 2[x[0] + x[2] + x[4] + x[6]] = 2A"
+      },
+      {
+       "t": "p",
+       "text": "Solving for $A$:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\frac{X(0) + X(4)}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting the given values $X(0) = 1$ and $X(4) = 5$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A = \\sum_{n=0}^3 x[2n] = \\frac{1 + 5}{2} = 3}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Odd-Indexed Sample Sum Generalization:**"
+         ]
+        },
+        {
+         "t": "p",
+         "text": "Subtracting Equation 2 from Equation 1:"
+        },
+        {
+         "t": "math",
+         "tex": "X(0) - X(4) = 2[x[1] + x[3] + x[5] + x[7]]"
+        },
+        {
+         "t": "math",
+         "tex": "\\sum_{n=0}^3 x[2n+1] = \\frac{X(0) - X(4)}{2} = \\frac{1 - 5}{2} = -2"
+        },
+        {
+         "t": "ul",
+         "items": [
+          "**GATE Master Formula:** For any even transform length $N$:"
+         ]
+        },
+        {
+         "t": "math",
+         "tex": "\\boxed{\\sum_{m=0}^{\\frac{N}{2}-1} x[2m] = \\frac{X(0) + X(N/2)}{2}}"
+        },
+        {
+         "t": "math",
+         "tex": "\\boxed{\\sum_{m=0}^{\\frac{N}{2}-1} x[2m+1] = \\frac{X(0) - X(N/2)}{2}}"
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 182 (Page 46, Top-Right) \u2014 Time Expansion / Upsampling Property in DFT Domain"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Header: *Some properties:-*",
+        "Property (1): Time expansion / upsampling:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] \\xrightarrow[\\text{DFT}]{N\\text{-point}} X(k)"
+      },
+      {
+       "t": "math",
+       "tex": "x\\left[\\frac{n}{3}\\right] \\xrightarrow[\\text{DFT}]{3N\\text{-point}} X(k) \\text{ repeated 3 times}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: 4-point $x[n] = \\{3, 2, 3, 4\\} \\xrightarrow[\\text{DFT}]{\\text{4-point}} X(k) = \\{12, 2j, 0, -2j\\}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "12-point $x_1[n] = \\{3, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0\\}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Arrow down: $\\xrightarrow{\\text{12-point DFT}} X_1(k)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X_1(k) = \\{12, 2j, 0, -2j, \\; 12, 2j, 0, -2j, \\; 12, 2j, 0, -2j\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Side notes showing relation to DFS: $x[n] \\to c_k \\implies x[n/3] \\to \\frac{c_k}{3}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let $x[n]$ be an $N$-point sequence with $N$-point DFT $X(k)$.\nDefine the time-expanded (upsampled by factor $M$) sequence of length $M N$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_M[n] = \\begin{cases} x[n/M], & n = 0, M, 2M, \\dots, (N-1)M \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "h4",
+       "text": "General Theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x\\left[\\frac{n}{M}\\right] \\overset{\\text{DFT}_{MN}}{\\longleftrightarrow} X_M(k) = X(k \\bmod N), \\quad 0 \\le k \\le MN-1}"
+      },
+      {
+       "t": "p",
+       "text": "That is, the $MN$-point DFT consists of the $N$-point DFT $X(k)$ **periodically repeated $M$ times**."
+      },
+      {
+       "t": "h4",
+       "text": "Demonstration with $M = 3, N = 4$:"
+      },
+      {
+       "t": "p",
+       "text": "Given 4-point sequence $x[n] = \\{3, 2, 3, 4\\}$ with 4-point DFT:"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = \\{12, 2j, 0, -2j\\}"
+      },
+      {
+       "t": "p",
+       "text": "Inserting $M-1 = 2$ zeros between each sample yields the 12-point sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1[n] = \\{3, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0\\}"
+      },
+      {
+       "t": "p",
+       "text": "Its 12-point DFT is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X_1(k) = \\{12, 2j, 0, -2j, \\; 12, 2j, 0, -2j, \\; 12, 2j, 0, -2j\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Why No Scaling Factor?**"
+         ]
+        },
+        {
+         "t": "p",
+         "text": "Evaluating the 12-point DFT definition:"
+        },
+        {
+         "t": "math",
+         "tex": "X_1(k) = \\sum_{n=0}^{11} x_1[n] W_{12}^{kn} = x_1[0] + x_1[3]W_{12}^{3k} + x_1[6]W_{12}^{6k} + x_1[9]W_{12}^{9k}"
+        },
+        {
+         "t": "p",
+         "text": "Since $W_{12}^{3} = e^{-j\\frac{2\\pi}{12}\\cdot 3} = e^{-j\\frac{2\\pi}{4}} = W_4$:"
+        },
+        {
+         "t": "math",
+         "tex": "X_1(k) = x[0] + x[1]W_4^k + x[2]W_4^{2k} + x[3]W_4^{3k} = X(k \\bmod 4)"
+        },
+        {
+         "t": "p",
+         "text": "The amplitude of each bin is completely unscaled!"
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 183 (Page 46, Bottom-Left) \u2014 Frequency Upsampling / Expansion Numerical Drill"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: 2-point $x[n] = \\{1, 2\\}$, 2-point $X(k) = \\{3, -1\\}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Now 4-point $Y(k) = X(k/2) = \\{3, 0, -1, 0\\}$ (upsampled in frequency by 2).\n  Find 4-point $y[n] = \\text{IDFT}\\{Y(k)\\}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "IDFT matrix formulation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} y(0) \\\\ y(1) \\\\ y(2) \\\\ y(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & j & -1 & -j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -j & -1 & j \\end{bmatrix} \\begin{bmatrix} 3 \\\\ 0 \\\\ -1 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Matrix evaluation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\frac{1}{4} \\{2, 4, 2, 4\\} = \\frac{1}{2} \\{1, 2, 1, 2\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boxed answer: 4-point $y[n] = \\frac{1}{2}\\{1, 2, 1, 2\\}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Given $X(k) = \\{3, -1\\}$ ($N = 2$).\nThe frequency sequence is expanded by inserting zeros (factor $M = 2$):"
+      },
+      {
+       "t": "math",
+       "tex": "Y(k) = \\begin{cases} X(k/2), & k = 0, 2 \\\\ 0, & k = 1, 3 \\end{cases} \\implies Y(k) = \\{\\underset{k=0}{3}, 0, -1, 0\\}"
+      },
+      {
+       "t": "p",
+       "text": "Applying the 4-point IDFT matrix:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} y(0) \\\\ y(1) \\\\ y(2) \\\\ y(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix}\n1 & 1 & 1 & 1 \\\\\n1 & j & -1 & -j \\\\\n1 & -1 & 1 & -1 \\\\\n1 & -j & -1 & j\n\\end{bmatrix} \\begin{bmatrix} 3 \\\\ 0 \\\\ -1 \\\\ 0 \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 3(1) - 1(1) \\\\ 3(1) - (-1)(1) \\\\ 3(1) - 1(1) \\\\ 3(1) - (-1)(1) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 2 \\\\ 4 \\\\ 2 \\\\ 4 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Simplifying:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = \\frac{1}{2} \\{\\underset{\\uparrow}{1}, 2, 1, 2\\} = \\frac{1}{2} [x[n] \\text{ repeated 2 times}]}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "Notice that $y[n]$ is the original sequence $x[n] = \\{1, 2\\}$ repeated twice, **scaled by $\\frac{1}{2}$**."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 184 (Page 46, Bottom-Right) \u2014 Frequency Expansion Property & IDFT Scaled Repetition"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Header: Property (2) Frequency Expansion:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] \\xrightarrow{N\\text{-point}} X(k)"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{x[n]}{3} \\text{ repeated } 3 \\text{ times } \\xleftarrow{\\text{IDFT}} X\\left(\\frac{k}{3}\\right) \\quad (3N\\text{-points})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Example: 4-point $x[n] = \\{3, 2, 3, 4\\} \\xrightarrow{\\text{4-point DFT}} X(k) = \\{12, 2j, 0, -2j\\}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "12-point $Y(k) = X(k/3) = \\{12, 0, 0, 2j, 0, 0, 0, 0, 0, -2j, 0, 0\\}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "IDFT result:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{12-point } y[n] = \\frac{1}{3} \\{3, 2, 3, 4, \\; 3, 2, 3, 4, \\; 3, 2, 3, 4\\}"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let $x[n]$ be an $N$-point sequence with $N$-point DFT $X(k)$.\nDefine the frequency-expanded sequence $Y(k)$ of length $MN$ obtained by inserting $M-1$ zeros between each frequency sample:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(k) = \\begin{cases} X(k/M), & k = 0, M, 2M, \\dots, (N-1)M \\\\ 0, & \\text{otherwise} \\end{cases}"
+      },
+      {
+       "t": "h4",
+       "text": "General Theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{Y(k) = X\\left(\\frac{k}{M}\\right) \\overset{\\text{IDFT}_{MN}}{\\longleftrightarrow} y[n] = \\frac{1}{M} [x[n] \\text{ repeated } M \\text{ times across } 0 \\le n \\le MN-1]}"
+      },
+      {
+       "t": "h4",
+       "text": "Numerical Demonstration ($M=3, N=4$):"
+      },
+      {
+       "t": "p",
+       "text": "Given 4-point sequence $x[n] = \\{3, 2, 3, 4\\} \\leftrightarrow X(k) = \\{12, 2j, 0, -2j\\}$.\nForming 12-point frequency sequence with 2 zeros inserted between each bin:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(k) = \\{12, 0, 0, 2j, 0, 0, 0, 0, 0, -2j, 0, 0\\}"
+      },
+      {
+       "t": "p",
+       "text": "Its 12-point IDFT is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = \\frac{1}{3} \\{\\underset{\\uparrow}{3}, 2, 3, 4, \\; 3, 2, 3, 4, \\; 3, 2, 3, 4\\}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**GATE Duality Trap:**",
+          "Time expansion by $M$ $\\implies$ Frequency repetition **WITHOUT** scaling ($1 \\times X(k)$).",
+          "Frequency expansion by $M$ $\\implies$ Time repetition **WITH** scaling by $\\frac{1}{M}$!"
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 185 (Page 47, Top-Left) \u2014 Unified Comparison Matrix: DTFS vs DFT Expansion Properties"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Two-column comparative layout separated by a dashed vertical line:",
+        "Left Column: **DTFS**",
+        "$x[n]$ (Period = $N$) $\\to c_k$ (Period = $N$)",
+        "$x[n/3]$ (Period = $3N$) $\\to \\frac{c_k}{3}$ (Period = $3N$, fundamental period = $N$)",
+        "$x[n]$ (Period = $3N$) $\\leftarrow c_{k/3}$ (Period = $3N$)",
+        "Right Column: **DFT**",
+        "$x[n]$ ($N$-point) $\\to X(k)$ ($N$-point)",
+        "$x[n/3]$ ($3N$-point) $\\to X(k)$ repeated 3 times ($3N$-point)",
+        "$\\frac{1}{3} x[n]$ repeated 3 times ($3N$-points) $\\leftarrow X(k/3)$ ($3N$-points)"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "A systematic comparison reveals how scale factor placement in forward vs inverse transform definitions controls expansion behavior:"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Characteristic / Property",
+        "Discrete Fourier Series (DTFS)",
+        "Discrete Fourier Transform (DFT)"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**Analysis Formula**",
+         "$c_k = \\frac{1}{N} \\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N}kn}$",
+         "$X(k) = \\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N}kn}$"
+        ],
+        [
+         "**Synthesis Formula**",
+         "$x[n] = \\sum_{k=0}^{N-1} c_k e^{j\\frac{2\\pi}{N}kn}$",
+         "$x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N}kn}$"
+        ],
+        [
+         "**Time Expansion: $x[n/M]$**",
+         "$c_k^{\\text{new}} = \\frac{1}{M} c_k$ (Attenuated by $\\frac{1}{M}$)",
+         "$X_{\\text{new}}(k) = X(k)$ repeated (Unscaled)"
+        ],
+        [
+         "**Frequency Expansion: $c_{k/M}$ / $X(k/M)$**",
+         "$x_{\\text{new}}[n] = x[n]$ repeated (Unscaled)",
+         "$x_{\\text{new}}[n] = \\frac{1}{M} x[n]$ repeated (Attenuated by $\\frac{1}{M}$)"
+        ]
+       ]
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Mathematical Rationale:**"
+         ]
+        },
+        {
+         "t": "p",
+         "text": "Because DTFS places the $\\frac{1}{N}$ factor in the forward analysis equation, time expansion dilates the period from $N$ to $MN$, causing the analysis factor to become $\\frac{1}{MN} = \\frac{1}{M} \\cdot \\frac{1}{N}$, directly attenuating the coefficients by $\\frac{1}{M}$.\n  In DFT, the $\\frac{1}{N}$ factor resides in the synthesis equation, so the $\\frac{1}{M}$ attenuation appears when performing inverse DFT on an expanded frequency spectrum!"
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 186 (Page 47, Top-Right) \u2014 Circular Time Reversal, Conjugation & Symmetry Taxonomy"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "List of fundamental transform pairs:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] \\longrightarrow X(k)"
+      },
+      {
+       "t": "math",
+       "tex": "x[-n] \\longrightarrow X(-k)"
+      },
+      {
+       "t": "math",
+       "tex": "x^*[n] \\longrightarrow X^*(-k)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Header: *predicting the nature of $x[n]$ with the help of $X(k)$:-*",
+        "Branching note: *Same as EFSC, DTFT and CTFT (D and C)!*",
+        "Table mapping time symmetry to frequency symmetry."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let $x[n]$ be an $N$-point sequence with $N$-point DFT $X(k)$."
+      },
+      {
+       "t": "h4",
+       "text": "Fundamental Properties:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Circular Time Reversal:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[((-n))_N] = x[N - n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X(( -k ))_N = X[N - k]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Complex Conjugation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x^*[n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X^*(( -k ))_N = X^*[N - k]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Conjugate Reversal:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x^*[((-n))_N] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X^*(k)"
+      },
+      {
+       "t": "h4",
+       "text": "Symmetry Classification for DFT:"
+      },
+      {
+       "t": "p",
+       "text": "When $x[n] \\in \\mathbb{R}$ ($x[n] = x^*[n]$):"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) = X^*[N - k] \\quad \\text{(Hermitian / Conjugate Symmetric)}"
+      },
+      {
+       "t": "p",
+       "text": "Decomposing into real/imaginary and even/odd parts:"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Time Domain Sequence $x[n]$",
+        "DFT Domain Spectrum $X(k)$"
+       ],
+       "align": [
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**Real & Circularly Even**",
+         "**Real & Circularly Even**"
+        ],
+        [
+         "**Real & Circularly Odd**",
+         "**Purely Imaginary & Circularly Odd**"
+        ],
+        [
+         "**Purely Imaginary & Circularly Even**",
+         "**Purely Imaginary & Circularly Even**"
+        ],
+        [
+         "**Purely Imaginary & Circularly Odd**",
+         "**Real & Circularly Odd**"
+        ]
+       ]
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**GATE Rule of Thumb:** The symmetry taxonomy is invariant across all four Fourier transforms (CTFS, CTFT, DTFS, DTFT, DFT). Real $\\leftrightarrow$ Conjugate Symmetric; Even $\\leftrightarrow$ Even; Odd $\\leftrightarrow$ Odd; Real + Odd $\\leftrightarrow$ Imaginary + Odd!"
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 187 (Page 47, Bottom-Left) \u2014 Solved GATE Problem: Real Sequence Conjugate Symmetry"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Question: 8-point real-valued sequence $x[n] \\xrightarrow[\\text{DFT}]{\\text{8-point}} X(k)$ (periodically extended)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "X(1) = 2 + 3j, \\quad X(2) = 1 + 2j, \\quad X(5) = 10"
+      },
+      {
+       "t": "p",
+       "text": "Find out:"
+      },
+      {
+       "t": "math",
+       "tex": "X(7) + X(-18) + X(27) = ?"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Step-by-step reduction using modulo 8 and conjugate symmetry:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(7) = X(7 - 8) = X(-1)"
+      },
+      {
+       "t": "math",
+       "tex": "X(-18) = X(-18 + 16) = X(-2)"
+      },
+      {
+       "t": "math",
+       "tex": "X(27) = X(27 - 24) = X(3)"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = x^*[n] \\implies X(k) = X^*(-k)"
+      },
+      {
+       "t": "math",
+       "tex": "X(-1) = X^*(1) = 2 - 3j"
+      },
+      {
+       "t": "math",
+       "tex": "X(-2) = X^*(2) = 1 - 2j"
+      },
+      {
+       "t": "math",
+       "tex": "X(3) = 10"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Summation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "= 2 - 3j + 1 - 2j + 10 = 13 - 5j"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boxed final answer: $\\mathbf{Ans = 13 - 5j}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$N = 8$, $x[n] \\in \\mathbb{R}$.",
+        "$X(1) = 2 + 3j$",
+        "$X(2) = 1 + 2j$",
+        "$X(5) = 10$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "We evaluate:"
+      },
+      {
+       "t": "math",
+       "tex": "S = X(7) + X(-18) + X(27)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Modulo-8 Reduction"
+      },
+      {
+       "t": "p",
+       "text": "Because $X(k)$ is periodic with period $N = 8$ ($X(k + 8m) = X(k)$):"
+      },
+      {
+       "t": "math",
+       "tex": "X(7) = X(7 - 8) = X(-1)"
+      },
+      {
+       "t": "math",
+       "tex": "X(-18) = X(-18 + 2 \\times 8) = X(-18 + 16) = X(-2)"
+      },
+      {
+       "t": "math",
+       "tex": "X(27) = X(27 - 3 \\times 8) = X(27 - 24) = X(3)"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "S = X(-1) + X(-2) + X(3)"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Applying Conjugate Symmetry"
+      },
+      {
+       "t": "p",
+       "text": "For any real sequence $x[n]$, $X(-k) = X^*(k)$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $k = 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(-1) = X^*(1) = (2 + 3j)^* = 2 - 3j"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $k = 2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X(-2) = X^*(2) = (1 + 2j)^* = 1 - 2j"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $k = 3$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Notice that in modulo 8:"
+      },
+      {
+       "t": "math",
+       "tex": "X(3) = X(3 - 8) = X(-5)"
+      },
+      {
+       "t": "p",
+       "text": "By conjugate symmetry:"
+      },
+      {
+       "t": "math",
+       "tex": "X(-5) = X^*(5)"
+      },
+      {
+       "t": "p",
+       "text": "Since $X(5) = 10 \\in \\mathbb{R}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X(3) = X^*(5) = (10)^* = 10"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Total Summation"
+      },
+      {
+       "t": "math",
+       "tex": "S = (2 - 3j) + (1 - 2j) + 10 = (2 + 1 + 10) + j(-3 - 2) = 13 - 5j"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{X(7) + X(-18) + X(27) = 13 - 5j}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**GATE Trap with $X(5)$:** Students often get stuck trying to find $X(3)$ because $X(3)$ is not given explicitly. Recognizing that $3 \\equiv -5 \\pmod 8 \\implies X(3) = X^*(-(-5)) = X^*(5)$ is the critical breakthrough!"
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 188 (Page 47, Bottom-Right) \u2014 Duality Property of DFT & Unified Multi-Domain Transform Duality"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Title: *Duality property:-*",
+        "Transformation flow:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] \\xrightarrow[\\text{DFT}]{N\\text{-point}} X(k) \\quad (\\text{D} + \\text{P})"
+      },
+      {
+       "t": "math",
+       "tex": "X(k) \\xrightarrow[\\text{DFT}]{N\\text{-point}} N x[-n] \\quad (\\text{P} + \\text{D})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Comparative sub-blocks:",
+        "*Duality in CTFT:* $x(t) \\leftrightarrow X(\\omega) \\implies X(t) \\leftrightarrow 2\\pi x(-\\omega)$",
+        "*Duality in DTFS:* $x[n] \\leftrightarrow c_k \\implies c_n \\leftrightarrow \\frac{1}{N} x[-k]$",
+        "*Duality b/w CTFS and DTFT:* $x(t) \\leftrightarrow c_n \\iff c_n \\leftrightarrow X(-\\omega)$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "h4",
+       "text": "The DFT Duality Theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X(k) \\implies X(n) \\overset{\\text{DFT}_N}{\\longleftrightarrow} N \\cdot x[((-k))_N] = N \\cdot x[-k]}"
+      },
+      {
+       "t": "h4",
+       "text": "Unified Cross-Domain Duality Matrix:"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Transform",
+        "Signal Domain",
+        "Transform Domain",
+        "Forward Transform",
+        "Duality Relation"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---",
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**CTFT**",
+         "Continuous, Aperiodic",
+         "Continuous, Aperiodic",
+         "$\\int x(t)e^{-j\\omega t}dt$",
+         "$X(t) \\leftrightarrow 2\\pi x(-\\omega)$"
+        ],
+        [
+         "**DTFS**",
+         "Discrete, Periodic ($N$)",
+         "Discrete, Periodic ($N$)",
+         "$\\frac{1}{N}\\sum x[n]e^{-j\\omega_0 kn}$",
+         "$c_n \\leftrightarrow \\frac{1}{N} x[-k]$"
+        ],
+        [
+         "**CTFS / DTFT**",
+         "Cont., Periodic / Disc., Aperiodic",
+         "Disc., Aperiodic / Cont., Periodic",
+         "Cross-Domain Pair",
+         "$x(t) \\leftrightarrow c_n \\iff c_n \\leftrightarrow X(-\\omega)$"
+        ],
+        [
+         "**DFT**",
+         "Discrete, Periodic ($N$)",
+         "Discrete, Periodic ($N$)",
+         "$\\sum x[n]e^{-j\\frac{2\\pi}{N}kn}$",
+         "$X(n) \\leftrightarrow N x[((-k))_N]$"
+        ]
+       ]
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "Notice the duality multiplier for DFT is $+N$, while for DTFS it is $\\frac{1}{N}$, and for CTFT it is $2\\pi$."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 189 (Page 48, Top-Left) \u2014 Iterated DFT Operators & Problem Setup"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Problem Statement: 4-point sequence $x[n] = \\{1, 2, -1, 4\\}$. DFT denotes 4-point DFT."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "(a) Find $\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\}$.\n  (b) $\\text{DFT}\\{\\text{DFT}\\{\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\}\\}\\} = y[n]$; find $y[n]$.\n  (c) $\\text{DFT}\\{y[n]\\} = Y(k)$. Find $Y(0) = \\left. Y(k) \\right|_{k=0} = ?$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Formula box:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = \\text{DFT}\\{X(k)\\} = N x[-n]"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let $x[n] = \\{\\underset{\\uparrow}{1}, 2, -1, 4\\}$ with $N = 4$."
+      },
+      {
+       "t": "h4",
+       "text": "Part (a) Formulation:"
+      },
+      {
+       "t": "p",
+       "text": "By DFT duality:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT}\\{x[n]\\} = X(k)"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = \\text{DFT}\\{X(k)\\} = N \\cdot x[((-n))_N]"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "See Slide 190 for the circular index evaluation and calculation."
+         ]
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 190 (Page 48, Top-Right) \u2014 Circular Index Wheel & 4th Power of DFT Operator"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Periodic discrete sequences:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(x(n))_4 = \\{\\dots, 1, 2, -1, 4, \\underset{\\uparrow}{1}, 2, -1, 4, 1, 2, -1, 4\\}"
+      },
+      {
+       "t": "math",
+       "tex": "(x(-n))_4 = \\{\\dots, 1, 4, -1, 2, \\underset{\\uparrow}{1}, 4, -1, 2, 1\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Diagram of modulo-4 circle:",
+        "Circle with 4 points labeled $0, 1, 2, 3$.",
+        "Clockwise arrow labeled $x[n]$: values at $0 \\to 1, 1 \\to 2, 2 \\to -1, 3 \\to 4$.",
+        "Counter-clockwise arrow labeled $x[-n]$: values traversed as $1, 4, -1, 2$.",
+        "4-point $x[-n] = \\{1, 4, -1, 2\\}$.",
+        "Evaluation of (a):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "N x[-n] = 4 x[-n] = \\{4, 16, -4, 8\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Derivation for (b):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT}\\{\\text{DFT}\\{\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\}\\}\\}"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] \\to X(k) \\to N x[-n] \\to N X(-k) \\to N^2 x[n]"
+      },
+      {
+       "t": "math",
+       "tex": "= N^2 x[n]"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "h4",
+       "text": "Circular Time Reversal via Modulo-4 Wheel:"
+      },
+      {
+       "t": "p",
+       "text": "For $N = 4$, circular time reversal is defined as:"
+      },
+      {
+       "t": "math",
+       "tex": "x[((-n))_4] = x[(4 - n) \\bmod 4]"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating for each index $n \\in \\{0, 1, 2, 3\\}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 0$: $x[((0))_4] = x[0] = 1$",
+        "For $n = 1$: $x[((-1))_4] = x[3] = 4$",
+        "For $n = 2$: $x[((-2))_4] = x[2] = -1$",
+        "For $n = 3$: $x[((-3))_4] = x[1] = 2$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x[((-n))_4] = \\{\\underset{\\uparrow}{1}, 4, -1, 2\\}}"
+      },
+      {
+       "t": "h4",
+       "text": "Solution to Part (a):"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT}^2\\{x[n]\\} = N \\cdot x[((-n))_N] = 4 \\cdot \\{\\underset{\\uparrow}{1}, 4, -1, 2\\} = \\boxed{\\{\\underset{\\uparrow}{4}, 16, -4, 8\\}}"
+      },
+      {
+       "t": "h4",
+       "text": "Derivation of Part (b) Operator Identity:"
+      },
+      {
+       "t": "p",
+       "text": "Let $\\mathcal{F}$ denote the $N$-point DFT operator:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$\\mathcal{F}^1\\{x[n]\\} = X(k)$",
+        "$\\mathcal{F}^2\\{x[n]\\} = \\mathcal{F}\\{X(k)\\} = N x[((-n))_N]$",
+        "$\\mathcal{F}^3\\{x[n]\\} = \\mathcal{F}\\{N x[((-n))_N]\\} = N \\mathcal{F}\\{x[((-n))_N]\\} = N X(( -k ))_N$",
+        "$\\mathcal{F}^4\\{x[n]\\} = \\mathcal{F}\\{N X(( -k ))_N\\} = N [N x[((-(-n)))_N]] = N^2 x[n]$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{DFT}^4\\{x[n]\\} = N^2 x[n]}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Eigenvalues of DFT Matrix:** The fact that $\\mathcal{F}^4 = N^2 \\mathbf{I}$ implies that the normalized DFT operator $\\mathbf{F}_N = \\frac{1}{\\sqrt{N}}\\mathbf{W}_N$ satisfies:"
+         ]
+        },
+        {
+         "t": "math",
+         "tex": "\\mathbf{F}_N^4 = \\mathbf{I}"
+        },
+        {
+         "t": "p",
+         "text": "Therefore, the eigenvalues of the normalized DFT matrix can ONLY take values from the set of fourth roots of unity:"
+        },
+        {
+         "t": "math",
+         "tex": "\\lambda \\in \\{+1, -1, +j, -j\\}"
+        },
+        {
+         "t": "p",
+         "text": "For the unnormalized DFT matrix $\\mathbf{W}_N$, the eigenvalues are $\\{\\pm \\sqrt{N}, \\pm j\\sqrt{N}\\}$."
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 191 (Page 48, Bottom-Left) \u2014 Evaluation of $y[n] = 16 x[n]$ & DC Component $Y(0)$"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Completion of part (b):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "= 16\\{1, 2, -1, 4\\} = \\{16, 32, -16, 64\\} = y[n]"
+      },
+      {
+       "t": "p",
+       "text": "Boxed result: $y[n] = \\{16, 32, -16, 64\\}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Solution to part (c):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT}\\{y[n]\\} = Y(k), \\quad \\left. Y(k) \\right|_{k=0} = ?"
+      },
+      {
+       "t": "math",
+       "tex": "Y(k) = \\sum_{n=0}^3 y[n] e^{-j\\frac{2\\pi}{N}kn}"
+      },
+      {
+       "t": "math",
+       "tex": "Y(0) = \\sum_{n=0}^3 y[n] = 16 + 32 - 16 + 64 = 96"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Boxed answer: $\\mathbf{Ans = 96}$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "h4",
+       "text": "Solution to Part (b):"
+      },
+      {
+       "t": "p",
+       "text": "With $N = 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "N^2 = 4^2 = 16"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\text{DFT}^4\\{x[n]\\} = 16 x[n] = 16 \\cdot \\{\\underset{\\uparrow}{1}, 2, -1, 4\\}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = \\{\\underset{\\uparrow}{16}, 32, -16, 64\\}}"
+      },
+      {
+       "t": "h4",
+       "text": "Solution to Part (c):"
+      },
+      {
+       "t": "p",
+       "text": "By the DC summation property of the DFT:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(0) = \\left. Y(k) \\right|_{k=0} = \\sum_{n=0}^{N-1} y[n] W_N^0 = \\sum_{n=0}^3 y[n]"
+      },
+      {
+       "t": "p",
+       "text": "Substituting the values of $y[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(0) = 16 + 32 - 16 + 64 = 96"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{Y(0) = 96}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Alternative Ultra-Fast Check:**"
+         ]
+        },
+        {
+         "t": "p",
+         "text": "Notice that $Y(k) = \\text{DFT}\\{y[n]\\} = \\text{DFT}\\{\\text{DFT}^4\\{x[n]\\}\\} = \\text{DFT}^5\\{x[n]\\}$.\n  Since $\\text{DFT}^4 = N^2 \\mathbf{I}$:"
+        },
+        {
+         "t": "math",
+         "tex": "\\text{DFT}^5\\{x[n]\\} = N^2 \\text{DFT}\\{x[n]\\} = N^2 X(k) = 16 X(k)"
+        },
+        {
+         "t": "p",
+         "text": "Evaluating at $k = 0$:"
+        },
+        {
+         "t": "math",
+         "tex": "Y(0) = 16 X(0) = 16 \\sum_{n=0}^3 x[n] = 16 (1 + 2 - 1 + 4) = 16 (6) = 96"
+        },
+        {
+         "t": "p",
+         "text": "The answer is identical and takes 5 seconds!"
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h3",
+       "text": "Slide 192 (Page 48, Bottom-Right) \u2014 Repeated IDFT Operator Theorem & Inverse Duality"
+      },
+      {
+       "t": "h4",
+       "text": "1. Chalkboard Visual Layout & Structure"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Problem Statement: 4-point sequence $y[n] = \\{1, 2, -1, 3\\}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "4-point DFT of $y[n]$ is 4-point $Y(k)$.\n  Function \"IDFT\" is defined over 4-point sequence.\n  Find:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{IDFT}\\{\\text{IDFT}\\{\\text{IDFT}\\{\\text{IDFT}\\{Y(k)\\}\\}\\}\\} = \\frac{Y(k)}{N^2} = \\frac{Y(k)}{16}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Derivation steps using inverse duality:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{IDFT}\\{y[n]\\} = \\frac{Y(-k)}{N}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{IDFT}\\left\\{\\frac{Y(-k)}{N}\\right\\} = \\frac{y[-n]}{N}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{IDFT}\\left\\{\\frac{y[-n]}{N}\\right\\} = \\frac{1}{N} \\frac{Y(k)}{N} = \\frac{Y(k)}{N^2}"
+      },
+      {
+       "t": "h4",
+       "text": "2. Complete Mathematical Transcription"
+      },
+      {
+       "t": "p",
+       "text": "Let $y[n] = \\{\\underset{\\uparrow}{1}, 2, -1, 3\\}$ with $N = 4$, and $Y(k) = \\text{DFT}_4\\{y[n]\\}$.\nLet $\\mathcal{F}^{-1}$ denote the $N$-point IDFT operator."
+      },
+      {
+       "t": "p",
+       "text": "We evaluate the fourth application of the IDFT operator to $Y(k)$:"
+      },
+      {
+       "t": "math",
+       "tex": "S(k) = \\mathcal{F}^{-4}\\{Y(k)\\}"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Operator Evaluation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**First Application:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}^{-1}\\{Y(k)\\} = y[n]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Second Application:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall that $\\text{DFT}_N\\{y[n]\\} = Y(k)$. By duality applied to the IDFT:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}^{-1}\\{y[n]\\} = \\frac{1}{N} Y(( -k ))_N"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Third Application:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}^{-1}\\left\\{ \\frac{1}{N} Y(( -k ))_N \\right\\} = \\frac{1}{N} \\mathcal{F}^{-1}\\{Y(( -k ))_N\\} = \\frac{1}{N} y[((-n))_N]"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Fourth Application:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathcal{F}^{-1}\\left\\{ \\frac{1}{N} y[((-n))_N] \\right\\} = \\frac{1}{N} \\left[ \\frac{1}{N} Y(( -(-k) ))_N \\right] = \\frac{1}{N^2} Y(k)"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $N = 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{IDFT}^4\\{Y(k)\\} = \\frac{Y(k)}{N^2} = \\frac{Y(k)}{16}}"
+      },
+      {
+       "t": "details",
+       "summary": "Solution",
+       "blocks": [
+        {
+         "t": "ul",
+         "items": [
+          "**Grand Summary of Iterated Transforms:**"
+         ]
+        },
+        {
+         "t": "math",
+         "tex": "\\boxed{\\text{DFT}^4 = N^2 \\cdot \\mathbf{I}}"
+        },
+        {
+         "t": "math",
+         "tex": "\\boxed{\\text{IDFT}^4 = \\frac{1}{N^2} \\cdot \\mathbf{I}}"
+        },
+        {
+         "t": "p",
+         "text": "The forward DFT operator scales the signal by $N^2$ after 4 cycles, while the inverse DFT operator attenuates the signal by $\\frac{1}{N^2}$ after 4 cycles!"
+        }
+       ],
+       "open": true
+      },
+      {
+       "t": "h2",
+       "text": "4. Synthesis, Comparative Tables & High-Yield Summary"
+      },
+      {
+       "t": "h3",
+       "text": "4.1 Master Comparison: Transform Properties Across Domains"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Property",
+        "Continuous-Time FT (CTFT)",
+        "Discrete-Time FT (DTFT)",
+        "Discrete Fourier Series (DTFS)",
+        "Discrete Fourier Transform (DFT)"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---",
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**Time Domain**",
+         "Continuous, Aperiodic",
+         "Discrete, Aperiodic",
+         "Discrete, Periodic ($N$)",
+         "Discrete, Finite / Periodic ($N$)"
+        ],
+        [
+         "**Frequency Domain**",
+         "Continuous, Aperiodic",
+         "Continuous, Periodic ($2\\pi$)",
+         "Discrete, Periodic ($N$)",
+         "Discrete, Finite / Periodic ($N$)"
+        ],
+        [
+         "**Forward Transform**",
+         "$\\int_{-\\infty}^\\infty x(t) e^{-j\\omega t} dt$",
+         "$\\sum_{n=-\\infty}^\\infty x[n] e^{-j\\omega n}$",
+         "$\\frac{1}{N} \\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N}kn}$",
+         "$\\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N}kn}$"
+        ],
+        [
+         "**Inverse Transform**",
+         "$\\frac{1}{2\\pi} \\int_{-\\infty}^\\infty X(\\omega) e^{j\\omega t} d\\omega$",
+         "$\\frac{1}{2\\pi} \\int_{2\\pi} X(e^{j\\omega}) e^{j\\omega n} d\\omega$",
+         "$\\sum_{k=0}^{N-1} c_k e^{j\\frac{2\\pi}{N}kn}$",
+         "$\\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N}kn}$"
+        ],
+        [
+         "**Time Shift**",
+         "$x(t-t_0) \\leftrightarrow e^{-j\\omega t_0} X(\\omega)$",
+         "$x[n-n_0] \\leftrightarrow e^{-j\\omega n_0} X(e^{j\\omega})$",
+         "$x[n-n_0] \\leftrightarrow e^{-j\\frac{2\\pi}{N}kn_0} c_k$",
+         "$x[((n-n_0))_N] \\leftrightarrow W_N^{kn_0} X(k)$"
+        ],
+        [
+         "**Convolution**",
+         "Linear: $x(t)*h(t) \\leftrightarrow X(\\omega)H(\\omega)$",
+         "Linear: $x[n]*h[n] \\leftrightarrow X(e^{j\\omega})H(e^{j\\omega})$",
+         "Periodic: $x[n]*h[n] \\leftrightarrow N c_k d_k$",
+         "Circular: $x_1 \\circledast x_2 \\leftrightarrow X_1(k)X_2(k)$"
+        ],
+        [
+         "**Duality Multiplier**",
+         "$2\\pi$",
+         "Cross-domain with CTFS",
+         "$\\frac{1}{N}$",
+         "$N$"
+        ],
+        [
+         "**4th Operator Power**",
+         "$(2\\pi)^2 \\mathbf{I} = 4\\pi^2 \\mathbf{I}$",
+         "N/A (Cross-domain)",
+         "$\\frac{1}{N^2} \\mathbf{I}$",
+         "$N^2 \\mathbf{I}$"
+        ]
+       ]
+      },
+      {
+       "t": "h3",
+       "text": "4.2 Linear Convolution vs Circular Convolution Master Matrix"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Parameter / Feature",
+        "Linear Convolution",
+        "Circular Convolution"
+       ],
+       "align": [
+        ":---",
+        ":---",
+        ":---"
+       ],
+       "rows": [
+        [
+         "**Symbolic Notation**",
+         "$y[n] = x_1[n] * x_2[n]$",
+         "$y[n] = x_1[n] \\circledast x_2[n]$"
+        ],
+        [
+         "**Time-Domain Operation**",
+         "Aperiodic sum: $\\sum x_1[m] x_2[n-m]$",
+         "Modulo sum: $\\sum x_1[m] x_2[((n-m))_N]$"
+        ],
+        [
+         "**Input Durations**",
+         "Lengths $N_1$ and $N_2$",
+         "Length $N$ for both (or zero-padded to $N$)"
+        ],
+        [
+         "**Output Duration**",
+         "$L = N_1 + N_2 - 1$",
+         "Strictly $N$"
+        ],
+        [
+         "**Frequency Theorem**",
+         "$Y(e^{j\\omega}) = X_1(e^{j\\omega}) X_2(e^{j\\omega})$ (DTFT)",
+         "$Y(k) = X_1(k) X_2(k)$ ($N$-point DFT)"
+        ],
+        [
+         "**Matrix Formulation**",
+         "Toeplitz matrix multiplication",
+         "Circulant matrix multiplication"
+        ],
+        [
+         "**Equivalence Condition**",
+         "Identical if $N \\ge N_1 + N_2 - 1$",
+         "Aliased wrap-around if $N < N_1 + N_2 - 1$"
+        ]
+       ]
+      },
+      {
+       "t": "h3",
+       "text": "4.3 Master GATE Exam Pitfalls & Trap Avoidance Guide"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**The Scale Factor Trap in IDFT:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Always remember that the forward DFT matrix $\\mathbf{W}_N$ has NO scale factor, but the inverse DFT matrix has $\\frac{1}{N}$.",
+        "Forgetting $\\frac{1}{N}$ causes the reconstructed sequence to be $N$ times too large!"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Linear vs Circular Convolution Length:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If GATE asks for the circular convolution of a 4-point sequence and a 3-point sequence without specifying $N$, the natural circular convolution cannot be computed unless $N$ is defined. If they state \"linear convolution computed via DFT\", the minimum DFT size is $N = 4 + 3 - 1 = 6$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Strictly Real Values at DC and Half-Sampling ($N/2$):**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For real sequences, $X(0) = \\sum x[n]$ is real.",
+        "For even $N$, $X(N/2) = \\sum (-1)^n x[n]$ is real.",
+        "Any imaginary part in $X(0)$ or $X(N/2)$ indicates an algebraic blunder."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Time vs Frequency Expansion Factor:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Zero insertion in time: $x[n/M] \\longleftrightarrow X(k)$ repeated $M$ times (factor of $1$).",
+        "Zero insertion in frequency: $X(k/M) \\longleftrightarrow \\frac{1}{M} x[n]$ repeated $M$ times (factor of $\\frac{1}{M}$)."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Repeated DFT Operator Powers:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\text{DFT}^2\\{x[n]\\} = N x[((-n))_N]$ (Reversal + scaling by $N$).",
+        "$\\text{DFT}^4\\{x[n]\\} = N^2 x[n]$ (Pure scaling by $N^2$).",
+        "$\\text{IDFT}^4\\{Y(k)\\} = \\frac{1}{N^2} Y(k)$ (Pure scaling by $\\frac{1}{N^2}$)."
+       ]
+      }
      ],
-     "align": [
-      ":---",
-      ":---",
-      ":---",
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**Slide 161**",
-       "`page_0041.png` [Top-Left]",
-       "2-Point DFT & DTFT Frequency Sampling",
-       "$x[n] = \\{1, 2\\}$, $N=2$. Frequency sampling of DTFT $X(e^{j\\omega}) = 1 + 2e^{-j\\omega}$ at $\\omega_k = \\frac{2\\pi}{2}k = \\pi k$. DFT values: $X(0) = 3$, $X(1) = -1 \\implies X(k) = \\{3, -1\\}$. IDFT reconstructs periodic discrete sequence $\\tilde{x}[n] = \\{\\dots, 1, 2, \\underset{\\uparrow}{1}, 2, \\dots\\}$.",
-       "DFT is fundamentally a set of samples of the continuous DTFT taken at $N$ equidistant frequency points $\\omega_k = \\frac{2\\pi}{N}k$. IDFT yields the periodic continuation $\\tilde{x}[n] = x[((n))_N]$."
-      ],
-      [
-       "**Slide 162**",
-       "`page_0041.png` [Top-Right]",
-       "3-Point DFT via DTFT Sampling & Periodic Sequence",
-       "$x[n] = \\{1, 2, 3\\}$, $N=3$. DTFT: $X(e^{j\\omega}) = 1 + 2e^{-j\\omega} + 3e^{-j2\\omega}$. Sampling at $\\omega_k = \\frac{2\\pi}{3}k \\implies X(k) = 1 + 2e^{-j\\frac{2\\pi}{3}k} + 3e^{-j\\frac{4\\pi}{3}k}$. Evaluates to $X(0) = 6$, $X(1) = -1.5 + j\\frac{\\sqrt{3}}{2}$, $X(2) = -1.5 - j\\frac{\\sqrt{3}}{2}$.",
-       "Notice conjugate symmetry $X(2) = X^*(1)$ holds because $x[n]$ is real-valued. IDFT produces periodic discrete sequence with fundamental period $N=3$."
-      ],
-      [
-       "**Slide 163**",
-       "`page_0041.png` [Bottom-Left]",
-       "4-Point DFT of Ramp Sequence $\\{1, 2, 3, 4\\}$",
-       "$x[n] = \\{1, 2, 3, 4\\}$, $N=4$. DTFT sampled at $\\omega_k = \\frac{2\\pi}{4}k = \\frac{\\pi}{2}k$. Analytical sum: $X(k) = 1 + 2(-j)^k + 3(-1)^k + 4(j)^k$. DFT sequence: $X(k) = \\{10, -2+2j, -2, -2-2j\\}$. Periodic sequence $\\tilde{X}(k)$ with period 4.",
-       "DC component $X(0) = \\sum x[n] = 10$. Middle component $X(N/2) = X(2) = \\sum (-1)^n x[n] = -2$ is strictly real. $X(3) = X^*(1)$."
-      ],
-      [
-       "**Slide 164**",
-       "`page_0041.png` [Bottom-Right]",
-       "Twiddle Factor Definition & DFT Matrix Formulation",
-       "Definition of Twiddle Factor $W_N \\triangleq e^{-j\\frac{2\\pi}{N}}$. Analysis formula: $X(k) = \\sum_{n=0}^{N-1} x[n] W_N^{kn}$. Matrix formulation: $\\mathbf{X}_{N \\times 1} = \\mathbf{W}_{N \\times N} \\mathbf{x}_{N \\times 1}$. Matrix elements: $(\\mathbf{W}_N)_{k,n} = W_N^{kn}$.",
-       "The DFT transformation matrix $\\mathbf{W}_N$ is symmetric and Vandermonde. Its rows and columns form an orthogonal basis for $\\mathbb{C}^N$."
-      ],
-      [
-       "**Slide 165**",
-       "`page_0042.png` [Top-Left]",
-       "Inverse DFT (IDFT) & Inverse Matrix Formulation",
-       "IDFT formula: $x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N}kn} = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) W_N^{-kn}$. Matrix formulation: $\\mathbf{x} = \\frac{1}{N} \\mathbf{W}_N^* \\mathbf{X} = \\frac{1}{N} \\mathbf{W}_N^H \\mathbf{X}$. Inverse twiddle factor: $W_N^{-1} = W_N^* = e^{j\\frac{2\\pi}{N}}$.",
-       "Crucial scale factor $\\frac{1}{N}$ sits exclusively in the synthesis (IDFT) equation in standard engineering definition. $\\mathbf{W}_N^{-1} = \\frac{1}{N} \\mathbf{W}_N^*$."
-      ],
-      [
-       "**Slide 166**",
-       "`page_0042.png` [Top-Right]",
-       "2-Point DFT via Matrix Method",
-       "$x[n] = \\{1, 2\\}, N=2$. Twiddle factor $W_2 = e^{-j\\pi} = -1$. Matrix: $\\begin{bmatrix} X(0) \\\\ X(1) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix} \\implies X(k) = \\{3, -1\\}$.",
-       "The 2-point DFT matrix $\\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$ is identical to the Hadamard matrix $H_2$, computing sum and difference directly."
-      ],
-      [
-       "**Slide 167**",
-       "`page_0042.png` [Bottom-Left]",
-       "2-Point IDFT Matrix Computation",
-       "Inverse matrix evaluation for $X(k) = \\{3, -1\\}$: $W_2^{-1} = -1$. $\\begin{bmatrix} x(0) \\\\ x(1) \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 2 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}$.",
-       "Matrix IDFT requires pre-multiplying by the normalizing scalar $\\frac{1}{2}$. Reconstructs original 2-point sequence $x[n] = \\{1, 2\\}$."
-      ],
-      [
-       "**Slide 168**",
-       "`page_0042.png` [Bottom-Right]",
-       "4-Point DFT & IDFT Matrix Algebra & Powers of $W_4$",
-       "$N=4$. Twiddle factor $W_4 = e^{-j\\frac{2\\pi}{4}} = e^{-j\\pi/2} = -j$. Powers: $W_4^0 = 1, W_4^1 = -j, W_4^2 = -1, W_4^3 = j, W_4^4 = 1, W_4^6 = -1$. Structural setup of $4 \\times 4$ DFT and IDFT matrices.",
-       "Memorize the 4-point twiddle powers: $W_4^0 = 1, W_4^1 = -j, W_4^2 = -1, W_4^3 = j$. Note $W_4^{-1} = +j$."
-      ],
-      [
-       "**Slide 169**",
-       "`page_0043.png` [Top-Left]",
-       "4-Point DFT & IDFT Numerical Computation for $\\{1, 2, 3, 4\\}$",
-       "Full matrix multiplication: $\\mathbf{X} = \\mathbf{W}_4 [1, 2, 3, 4]^T = [10, -2+2j, -2, -2-2j]^T$. Inverse matrix computation: $\\mathbf{x} = \\frac{1}{4} \\mathbf{W}_4^* [10, -2+2j, -2, -2-2j]^T = \\frac{1}{4} [4, 8, 12, 16]^T = [1, 2, 3, 4]^T$.",
-       "Cross-verification confirms perfect reconstruction. IDFT matrix contains complex conjugates $+j$ in place of $-j$."
-      ],
-      [
-       "**Slide 170**",
-       "`page_0043.png` [Top-Right]",
-       "3-Point DFT of $\\{1, 2, -1\\}$ via $W_3$ Matrix",
-       "$N=3, W_3 = e^{-j\\frac{2\\pi}{3}}$. Powers: $W_3^1 = e^{-j 2\\pi/3}$, $W_3^2 = e^{j 2\\pi/3}$, $W_3^4 = W_3^1$. Matrix multiplication yields: $X(0) = 2$, $X(1) = 1 + 2e^{-j 2\\pi/3} - e^{j 2\\pi/3}$, $X(2) = 1 + 2e^{j 2\\pi/3} - e^{-j 2\\pi/3} = X^*(1)$.",
-       "For $N=3$, twiddle powers simplify via modular reduction: $W_3^4 = W_3^{4 \\bmod 3} = W_3^1$."
-      ],
-      [
-       "**Slide 171**",
-       "`page_0043.png` [Bottom-Left]",
-       "Periodic Discrete Sequences & 4-Point DFT",
-       "Given periodic discrete sequence $\\tilde{x}[n] = \\{\\dots, 1, 2, 3, 4, \\underset{n=0}{1}, 2, 3, 4, \\dots\\}$ with period $N=4$. Taking 4-point DFT over fundamental interval $n \\in [0, 3]$ yields $X(k) = \\{10, -2+2j, -2, -2-2j\\}$.",
-       "DFT of one fundamental period of a periodic discrete-time sequence corresponds exactly to its Discrete Fourier Series (DFS) spectral coefficients scaled by $N$ (or DFS harmonic amplitudes)."
-      ],
-      [
-       "**Slide 172**",
-       "`page_0043.png` [Bottom-Right]",
-       "4-Point DFT of Cosine Sequence $\\cos(\\frac{\\pi}{2}n)$ via Synthesis Matching",
-       "$x[n] = \\cos(\\frac{\\pi}{2}n), N=4$. Express via Euler's identity: $\\frac{1}{2}e^{j\\frac{\\pi}{2}n} + \\frac{1}{2}e^{-j\\frac{\\pi}{2}n}$. Comparison with IDFT synthesis $x[n] = \\frac{1}{4}\\sum_{k=0}^3 X(k)e^{j\\frac{2\\pi}{4}kn}$ yields $k=1 \\implies \\frac{X(1)}{4} = \\frac{1}{2} \\implies X(1)=2$; $k=-1 \\equiv 3 \\pmod 4 \\implies X(3)=2$. DFT: $X(k) = \\{0, 2, 0, 2\\}$.",
-       "Avoid computing the direct summation sum; match complex exponential frequencies directly into IDFT synthesis bins!"
-      ],
-      [
-       "**Slide 173**",
-       "`page_0044.png` [Top-Left]",
-       "Zero-Padding in Time Domain: 4-Point DFT of 2-Point Sequence",
-       "$x[n] = \\{1, 2\\}$, zero-padded to length 4: $x_{zp}[n] = \\{1, 2, 0, 0\\}$. Matrix multiplication with $\\mathbf{W}_4$ gives: $X(k) = \\{3, 1-2j, -1, 1+2j\\}$.",
-       "Zero-padding in time does NOT increase physical frequency resolution; it merely densifies the sampling grid of the continuous DTFT $X(e^{j\\omega})$."
-      ],
-      [
-       "**Slide 174**",
-       "`page_0044.png` [Top-Right]",
-       "IDFT of Zero-Padded Spectrum & Discrete Periodic Nature",
-       "IDFT of $X(k) = \\{3, 1-2j, -1, 1+2j\\}$ evaluated via $\\frac{1}{4}\\mathbf{W}_4^* \\mathbf{X}$ yields $\\frac{1}{4}[4, 8, 0, 0]^T = [1, 2, 0, 0]^T$. Periodic extension: $\\tilde{x}[n] = \\{\\dots, 1, 2, 0, 0, \\underset{\\uparrow}{1}, 2, 0, 0, \\dots\\}$.",
-       "The periodic extension replicates the padded zeros as well as the active samples with period $N=4$."
-      ],
-      [
-       "**Slide 175**",
-       "`page_0044.png` [Bottom-Left]",
-       "12-Point DFT of $\\cos(\\frac{\\pi}{2}n)$ ($N=12$)",
-       "Period $P=4$. For $N=12$, fundamental frequency bin spacing is $\\Delta\\omega = \\frac{2\\pi}{12} = \\frac{\\pi}{6}$. Signal frequency $\\omega_0 = \\frac{\\pi}{2} = 3\\Delta\\omega \\implies k=3$; negative frequency $-\\frac{\\pi}{2} \\equiv -3 \\equiv 9 \\pmod{12}$. Matching amplitudes: $\\frac{X(3)}{12} = \\frac{1}{2} \\implies X(3) = 6, X(9) = 6$. All other $X(k) = 0$.",
-       "When sequence length $N$ is an integer multiple of the sinusoidal period $P$, no spectral leakage occurs; energy concentrates entirely into discrete bins $k_0$ and $N-k_0$."
-      ],
-      [
-       "**Slide 176**",
-       "`page_0044.png` [Bottom-Right]",
-       "Periodic Modulo Sequence Generation & 4-Point DFT Setup",
-       "3-point sequence $x[n] = \\{1, 2, 3\\}$. Periodic sequence $y[n] = x[n \\bmod 3] = (x[n])_3 = \\{\\dots, 1, 2, 3, \\underset{n=0}{1}, 2, 3, 1, 2, 3, \\dots\\}$. 4-point sequence extracted: $y[n] = \\{1, 2, 3, 1\\}$ for $n=0, 1, 2, 3$. Setup for 4-point DFT $Y(k)$ and IDFT.",
-       "Taking $N$ points from a periodic sequence with period $M$ where $N \\neq M$ results in sample wrap-around across periods (here $y[3] = x[0] = 1$)."
-      ],
-      [
-       "**Slide 177**",
-       "`page_0045.png` [Top-Left]",
-       "4-Point DFT & IDFT of $\\{1, 2, 3, 1\\}$",
-       "Matrix calculation: $\\mathbf{Y} = \\mathbf{W}_4 [1, 2, 3, 1]^T = [7, -2-j, 1, -2+j]^T$. 4-point DFT: $Y(k) = \\{7, -2-j, 1, -2+j\\}$. IDFT recovers periodic sequence with period 4: $\\tilde{y}[n] = \\{\\dots, 1, 2, 3, 1, \\underset{\\uparrow}{1}, 2, 3, 1, \\dots\\}$.",
-       "Real sequence property verified: $Y(0)=7$ (sum of samples), $Y(2)=1$ (alternating sum $1-2+3-1=1$), and $Y(3) = Y^*(1) = -2+j$."
-      ],
-      [
-       "**Slide 178**",
-       "`page_0045.png` [Top-Right]",
-       "Constructing Periodic Extension with Period 5 from 3-Point Sequence",
-       "Given 3-point sequence $x[n] = \\{1, 2, -1\\}$. Target periodic sequence $y[n]$ has period 5: $\\{\\dots, 1, 2, -1, 1, 2, \\underset{\\uparrow}{1}, 2, -1, 1, 2, \\dots\\}$. Process: Extract 5-point sequence $y[n] = \\{1, 2, -1, 1, 2\\}$, compute 5-point DFT, and apply 5-point IDFT to generate periodic continuation.",
-       "A periodic discrete signal of period $N_0$ requires an $N_0$-point DFT/IDFT pair. Mismatching transform length alters the period of the time-domain continuation."
-      ],
-      [
-       "**Slide 179**",
-       "`page_0045.png` [Bottom-Left]",
-       "Modulo-2 Periodic Sequence Generation from 3-Point Sequence",
-       "Given 3-point sequence $x[n] = \\{1, 2, 3\\}$. Modulo-2 periodic sequence $y[n] = x[n \\bmod 2] = (x[n])_2 = \\{\\dots, 1, 2, \\underset{n=0}{1}, 2, 1, 2, \\dots\\}$. Only the first 2 samples $x[0]=1, x[1]=2$ are periodically replicated; $x[2]=3$ is dropped entirely!",
-       "Modulo-$M$ indexing selects only the first $M$ samples ($n=0, 1, \\dots, M-1$). Any original samples at $n \\ge M$ are excluded from the modulo-reduced periodic signal."
-      ],
-      [
-       "**Slide 180**",
-       "`page_0045.png` [Bottom-Right]",
-       "8-Point DFT Property Problem: Even-Index Sample Sum",
-       "$X(k)$ is 8-point DFT of $x[n]$, with $X(k) = k + 1$ for $0 \\le k \\le 7$. Find $A = \\sum_{n=0}^3 x[2n] = x[0] + x[2] + x[4] + x[6]$. Using analysis equation: $X(0) = \\sum_{n=0}^7 x[n] = 0 + 1 = 1$; $X(4) = \\sum_{n=0}^7 x[n] (-1)^n = 4 + 1 = 5$.",
-       "Fast evaluation trick: Evaluating DFT at $k=0$ and $k=N/2$ directly decouples even-indexed and odd-indexed time samples without inverting the DFT!"
-      ],
-      [
-       "**Slide 181**",
-       "`page_0046.png` [Top-Left]",
-       "Even-Index Sample Sum Solution & GATE Trap Analysis",
-       "Summing equations: $X(0) + X(4) = 2[x[0] + x[2] + x[4] + x[6]] = 2A \\implies A = \\frac{X(0) + X(4)}{2} = \\frac{1 + 5}{2} = 3$. GATE trap analysis and generalization for odd-index sum $\\sum x[2n+1] = \\frac{X(0) - X(4)}{2} = \\frac{1 - 5}{2} = -2$.",
-       "Always remember the factor of 2! In general, $\\sum_{n=0}^{\\frac{N}{2}-1} x[2n] = \\frac{X(0) + X(N/2)}{2}$."
-      ],
-      [
-       "**Slide 182**",
-       "`page_0046.png` [Top-Right]",
-       "Time Expansion / Upsampling Property in DFT Domain",
-       "If $x[n]$ ($N$-point) $\\leftrightarrow X(k)$ ($N$-point), upsampling by $M=3$ (inserting 2 zeros between samples) yields $3N$-point sequence $x[n/3]$. Its $3N$-point DFT is the periodic repetition of $X(k)$ repeated 3 times. Example: 4-pt $x[n]=\\{3, 2, 3, 4\\} \\to X(k)=\\{12, 2j, 0, -2j\\}$; 12-pt $x_1[n]=\\{3, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0\\} \\to X_1(k)$ repeats $X(k)$ 3 times.",
-       "Zero-insertion in the time domain causes spectral compression in DTFT, which maps to periodic repetition of DFT bins in discrete frequency."
-      ],
-      [
-       "**Slide 183**",
-       "`page_0046.png` [Bottom-Left]",
-       "Frequency Upsampling / Expansion Numerical Drill",
-       "2-point $x[n] = \\{1, 2\\} \\leftrightarrow X(k) = \\{3, -1\\}$. Zero-inserting in frequency by factor $M=2$ yields 4-point spectrum $Y(k) = X(k/2) = \\{3, 0, -1, 0\\}$. 4-point IDFT gives $y[n] = \\frac{1}{4}[2, 4, 2, 4]^T = \\frac{1}{2}\\{1, 2, 1, 2\\} = \\frac{1}{2}[x[n] \\text{ repeated 2 times}]$.",
-       "Frequency-domain zero-insertion corresponds to periodic time-domain repetition accompanied by a critical $\\frac{1}{M}$ amplitude scaling factor."
-      ],
-      [
-       "**Slide 184**",
-       "`page_0046.png` [Bottom-Right]",
-       "Frequency Expansion Property & IDFT Scaled Repetition",
-       "General theorem: $X(k/M)$ (with $M-1$ zeros inserted between frequency samples, length $MN$) has $MN$-point IDFT equal to $\\frac{1}{M} [x[n] \\text{ repeated } M \\text{ times}]$. Drill with $M=3, N=4$: 12-point $Y(k) = \\{12, 0, 0, 2j, 0, 0, 0, 0, 0, -2j, 0, 0\\} \\implies y[n] = \\frac{1}{3}\\{3, 2, 3, 4, 3, 2, 3, 4, 3, 2, 3, 4\\}$.",
-       "Note the duality: Time expansion $\\implies$ unscaled frequency repetition; Frequency expansion $\\implies$ frequency-scaled ($\\frac{1}{M}$) time repetition!"
-      ],
-      [
-       "**Slide 185**",
-       "`page_0047.png` [Top-Left]",
-       "Unified Comparison Matrix: DTFS vs DFT Expansion Properties",
-       "Exhaustive comparative chart between DTFS and DFT: DTFS time expansion $x[n/M]$ (period $MN$) $\\leftrightarrow \\frac{c_k}{M}$ (period $MN$, fundamental period $N$); DFT time expansion $x[n/M]$ ($MN$-point) $\\leftrightarrow X(k)$ repeated $M$ times ($MN$-point). DTFS frequency expansion $c_{k/M} \\leftrightarrow x[n]$ repeated; DFT frequency expansion $X(k/M) \\leftrightarrow \\frac{1}{M} x[n]$ repeated.",
-       "The factor $\\frac{1}{M}$ appears in the frequency domain for DTFS, but in the time domain for DFT, due to the $\\frac{1}{N}$ placement in their respective definition formulas!"
-      ],
-      [
-       "**Slide 186**",
-       "`page_0047.png` [Top-Right]",
-       "Circular Time Reversal, Conjugation & Symmetry Taxonomy",
-       "Circular reversal: $x[((-n))_N] \\leftrightarrow X(( -k ))_N = X[N-k]$. Conjugation: $x^*[n] \\leftrightarrow X^*(( -k ))_N = X^*[N-k]$. For real $x[n]$: $X(k) = X^*[N-k]$ (Conjugate Symmetry). Symmetry taxonomy: Real & Even $\\leftrightarrow$ Real & Even; Real & Odd $\\leftrightarrow$ Pure Imaginary & Odd; Pure Imaginary & Even $\\leftrightarrow$ Pure Imaginary & Even; Pure Imaginary & Odd $\\leftrightarrow$ Real & Odd.",
-       "Identical symmetry behavior as continuous CTFT and discrete DTFT, but linear index reflection $-n$ is strictly replaced by modulo-$N$ circular reflection $((-n))_N = N - n$."
-      ],
-      [
-       "**Slide 187**",
-       "`page_0047.png` [Bottom-Left]",
-       "Solved GATE Problem: Real Sequence Conjugate Symmetry",
-       "Real 8-point sequence $x[n] \\leftrightarrow X(k)$, period 8. Given $X(1) = 2+3j, X(2) = 1+2j, X(5) = 10$. Find $S = X(7) + X(-18) + X(27)$. Modulo reduction: $X(7) = X(-1) = X^*(1) = 2-3j$; $X(-18) = X(-2) = X^*(2) = 1-2j$; $X(27) = X(3) = X^*(-3) = X^*(5) = 10^* = 10$. Sum: $S = (2-3j) + (1-2j) + 10 = 13 - 5j$.",
-       "Modulo arithmetic: $X(k + mN) = X(k)$. Conjugate symmetry: $X(-k) = X^*(k) \\implies X(N-k) = X^*(k)$. Since $X(5) = 10$ is real, $X(3) = X^*(5) = 10$."
-      ],
-      [
-       "**Slide 188**",
-       "`page_0047.png` [Bottom-Right]",
-       "Duality Property of DFT & Unified Multi-Domain Transform Duality",
-       "DFT Duality Theorem: If $x[n] \\leftrightarrow X(k)$, then $\\text{DFT}\\{X(n)\\} = N x[((-k))_N] = N x[-k]$. Unified cross-domain duality comparison: CTFT duality ($x(t) \\leftrightarrow X(\\omega) \\implies X(t) \\leftrightarrow 2\\pi x(-\\omega)$), DTFS duality ($x[n] \\leftrightarrow c_k \\implies c_n \\leftrightarrow \\frac{1}{N} x[-k]$), CTFS $\\leftrightarrow$ DTFT cross-duality, and DFT circular duality.",
-       "The scale factor in DFT duality is $N$ (the sequence length), accompanied by a circular time-reversal $((-k))_N$."
-      ],
-      [
-       "**Slide 189**",
-       "`page_0048.png` [Top-Left]",
-       "Iterated DFT Operators & Problem Setup",
-       "4-point sequence $x[n] = \\{1, 2, -1, 4\\}$. Problem suite: (a) Find $\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = \\text{DFT}\\{X(k)\\} = N x[((-n))_N]$; (b) Find $y[n] = \\text{DFT}^4\\{x[n]\\}$; (c) For $Y(k) = \\text{DFT}\\{y[n]\\}$, find $Y(0) = \\left.Y(k)\\right\\vert_{k=0}$.",
-       "Applying DFT twice produces a scaled, circularly time-reversed version of the original sequence: $\\text{DFT}^2\\{x[n]\\} = N x[((-n))_N]$."
-      ],
-      [
-       "**Slide 190**",
-       "`page_0048.png` [Top-Right]",
-       "Circular Index Wheel & 4th Power of DFT Operator",
-       "Modulo-4 circular index wheel diagram: Clockwise direction is forward index $n = 0, 1, 2, 3$; counter-clockwise direction is circularly reversed index $((-n))_4 = \\{0, 3, 2, 1\\}$. Reversal gives $x[((-n))_4] = \\{1, 4, -1, 2\\} \\implies \\text{DFT}^2\\{x[n]\\} = 4\\{1, 4, -1, 2\\} = \\{4, 16, -4, 8\\}$. Iterating: $\\text{DFT}^4\\{x[n]\\} = N^2 x[n]$.",
-       "GATE Master Theorem: The 4th power of the DFT operator is a pure scalar dilation: $\\text{DFT}^4\\{x[n]\\} = N^2 x[n]$! The DFT operator has eigenvalues $\\{\\pm \\sqrt{N}, \\pm j\\sqrt{N}\\}$."
-      ],
-      [
-       "**Slide 191**",
-       "`page_0048.png` [Bottom-Left]",
-       "Evaluation of $y[n] = 16 x[n]$ & DC Component $Y(0)$",
-       "Part (b): $y[n] = 4^2 x[n] = 16\\{1, 2, -1, 4\\} = \\{16, 32, -16, 64\\}$. Part (c): $Y(0) = \\sum_{n=0}^3 y[n] = 16 + 32 - 16 + 64 = 96$. Alternative shortcut: $Y(0) = \\text{DFT}^5\\{x[n]\\}_{k=0} = N^2 X(0) = 16 \\times (1+2-1+4) = 16 \\times 6 = 96$.",
-       "You never need to calculate intermediate DFT vectors to find DC values of iterated transforms; use the DC summation property $X(0) = \\sum x[n]$!"
-      ],
-      [
-       "**Slide 192**",
-       "`page_0048.png` [Bottom-Right]",
-       "Repeated IDFT Operator Theorem & Inverse Duality",
-       "4-point sequence $y[n] = \\{1, 2, -1, 3\\}, Y(k) = \\text{DFT}\\{y[n]\\}$. Problem: Evaluate $\\text{IDFT}^4\\{Y(k)\\}$. Derivation: $\\text{IDFT}\\{Y(k)\\} = y[n]$; $\\text{IDFT}\\{y[n]\\} = \\frac{1}{N} Y[((-k))_N]$; $\\text{IDFT}^3 = \\frac{1}{N} y[((-n))_N]$; $\\text{IDFT}^4 = \\frac{1}{N^2} Y(k)$. Result: $\\text{IDFT}^4\\{Y(k)\\} = \\frac{Y(k)}{N^2} = \\frac{Y(k)}{16}$.",
-       "Master Dual Theorem: $\\text{DFT}^4 = N^2 \\cdot \\mathbf{I}$, whereas $\\text{IDFT}^4 = \\frac{1}{N^2} \\cdot \\mathbf{I}$. Applying IDFT four times scales the original spectrum by $\\frac{1}{N^2}$!"
-      ]
-     ]
-    },
-    {
-     "t": "h2",
-     "text": "2. Theoretical Foundations & Mathematical Deep-Dive"
-    },
-    {
-     "t": "h3",
-     "text": "2.1 The Discrete Fourier Transform (DFT) and Frequency Sampling of the DTFT"
-    },
-    {
-     "t": "p",
-     "text": "The Discrete Fourier Transform (DFT) is the cornerstone of modern Digital Signal Processing (DSP). While the Discrete-Time Fourier Transform (DTFT) provides a complete frequency representation for discrete-time signals, the DTFT is fundamentally a continuous function of the normalized radian frequency $\\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\omega n}"
-    },
-    {
-     "t": "p",
-     "text": "Continuous functions cannot be stored, processed, or manipulated directly by finite-memory digital microprocessors, DSP chips, or computers. To perform numerical frequency analysis, the continuous frequency variable $\\omega$ must be sampled at a finite number of discrete points."
-    },
-    {
-     "t": "h4",
-     "text": "Uniform Sampling of the DTFT"
-    },
-    {
-     "t": "p",
-     "text": "Let $x[n]$ be a finite-duration discrete-time sequence of length $N$, non-zero strictly in the range $0 \\le n \\le N-1$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 0 \\quad \\text{for } n < 0 \\text{ and } n \\ge N"
-    },
-    {
-     "t": "p",
-     "text": "Its DTFT simplifies to a finite summation:"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\sum_{n=0}^{N-1} x[n] e^{-j\\omega n}"
-    },
-    {
-     "t": "p",
-     "text": "We sample the continuous frequency interval $\\omega \\in [0, 2\\pi)$ at $N$ equally spaced discrete frequency bins:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_k = \\frac{2\\pi}{N} k, \\quad k = 0, 1, 2, \\dots, N-1"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $\\omega = \\omega_k$ into the DTFT formula yields the **Discrete Fourier Transform (DFT) Analysis Equation**:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) \\triangleq \\left. X(e^{j\\omega}) \\right|_{\\omega = \\frac{2\\pi}{N}k} = \\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N} k n}, \\quad k = 0, 1, \\dots, N-1}"
-    },
-    {
-     "t": "h4",
-     "text": "The Inverse Discrete Fourier Transform (IDFT)"
-    },
-    {
-     "t": "p",
-     "text": "The time-domain sequence $x[n]$ is uniquely reconstructed from its $N$ frequency samples $X(k)$ via the **Inverse Discrete Fourier Transform (IDFT) Synthesis Equation**:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N} k n}, \\quad n = 0, 1, \\dots, N-1}"
-    },
-    {
-     "t": "h4",
-     "text": "Periodic Continuation (The DFS Connection)"
-    },
-    {
-     "t": "p",
-     "text": "Because the complex exponentials $e^{-j\\frac{2\\pi}{N} k n}$ and $e^{j\\frac{2\\pi}{N} k n}$ are periodic in both $n$ and $k$ with period $N$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j\\frac{2\\pi}{N} (k+N) n} = e^{-j\\frac{2\\pi}{N} k n} e^{-j 2\\pi n} = e^{-j\\frac{2\\pi}{N} k n}"
-    },
-    {
-     "t": "p",
-     "text": "evaluating the DFT analysis or IDFT synthesis formulas outside the primary interval $[0, N-1]$ yields inherently periodic sequences:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{X}(k) = \\tilde{X}(k + mN), \\quad \\tilde{x}[n] = \\tilde{x}[n + mN], \\quad m \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the $N$-point DFT of a finite-duration sequence $x[n]$ is mathematically identical to the Discrete Fourier Series (DFS) coefficients $\\tilde{X}[k]$ of its periodic extension $\\tilde{x}[n] = \\sum_{m=-\\infty}^{\\infty} x[n - mN]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{x}[n] = x[((n))_N]"
-    },
-    {
-     "t": "h3",
-     "text": "2.2 The Twiddle Factor $W_N$: Fundamental Algebra & Orthogonality"
-    },
-    {
-     "t": "p",
-     "text": "To simplify the algebraic manipulation of DFT algorithms and matrix representations, Heinrich Barkhausen and subsequent DSP pioneers introduced the **Twiddle Factor** (or phase factor) $W_N$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{W_N \\triangleq e^{-j\\frac{2\\pi}{N}} = \\cos\\left(\\frac{2\\pi}{N}\\right) - j\\sin\\left(\\frac{2\\pi}{N}\\right)}"
-    },
-    {
-     "t": "p",
-     "text": "In terms of the twiddle factor, the DFT analysis and synthesis pair are compactly expressed as:"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = \\sum_{n=0}^{N-1} x[n] W_N^{kn}, \\quad k = 0, 1, \\dots, N-1"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) W_N^{-kn}, \\quad n = 0, 1, \\dots, N-1"
-    },
-    {
-     "t": "h4",
-     "text": "Fundamental Properties of the Twiddle Factor"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Complex Conjugate / Inversion Property:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{-1} = (e^{-j\\frac{2\\pi}{N}})^{-1} = e^{j\\frac{2\\pi}{N}} = W_N^*"
-    },
-    {
-     "t": "math",
-     "tex": "(W_N^{kn})^{-1} = W_N^{-kn} = (W_N^{kn})^*"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Periodicity Property:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{k + N} = W_N^k \\cdot W_N^N = W_N^k \\cdot e^{-j 2\\pi} = W_N^k"
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{kn} = W_N^{(kn) \\bmod N}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Half-Period Anti-Symmetry Property (for even $N$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{k + \\frac{N}{2}} = W_N^k \\cdot W_N^{\\frac{N}{2}} = W_N^k \\cdot e^{-j\\pi} = -W_N^k"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Index Reduction / Scaling Property:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{2k} = e^{-j\\frac{2\\pi}{N}(2k)} = e^{-j\\frac{2\\pi}{N/2}k} = W_{N/2}^k"
-    },
-    {
-     "t": "math",
-     "tex": "W_{MN}^{Mk} = W_N^k"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Orthogonality Property of Twiddle Harmonics:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=0}^{N-1} W_N^{kn} = \\sum_{n=0}^{N-1} e^{-j\\frac{2\\pi}{N}kn} = \\begin{cases} N, & k = 0, \\pm N, \\pm 2N, \\dots \\\\ 0, & \\text{otherwise} \\end{cases} = N \\sum_{r=-\\infty}^{\\infty} \\delta[k - rN]"
-    },
-    {
-     "t": "h3",
-     "text": "2.3 Matrix Formulation of DFT and IDFT"
-    },
-    {
-     "t": "p",
-     "text": "The DFT and IDFT are linear transformations operating on vectors in $\\mathbb{C}^N$. They can be cast as matrix-vector multiplications:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X} = \\mathbf{W}_N \\mathbf{x}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x} = \\frac{1}{N} \\mathbf{W}_N^* \\mathbf{X} = \\mathbf{W}_N^{-1} \\mathbf{X}"
-    },
-    {
-     "t": "p",
-     "text": "where:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x} = \\begin{bmatrix} x[0] \\\\ x[1] \\\\ x[2] \\\\ \\vdots \\\\ x[N-1] \\end{bmatrix}_{N \\times 1}, \\quad \\mathbf{X} = \\begin{bmatrix} X[0] \\\\ X[1] \\\\ X[2] \\\\ \\vdots \\\\ X[N-1] \\end{bmatrix}_{N \\times 1}"
-    },
-    {
-     "t": "p",
-     "text": "and the $N \\times N$ **DFT Transformation Matrix** $\\mathbf{W}_N$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{W}_N = \\begin{bmatrix}\nW_N^0 & W_N^0 & W_N^0 & \\dots & W_N^0 \\\\\nW_N^0 & W_N^1 & W_N^2 & \\dots & W_N^{N-1} \\\\\nW_N^0 & W_N^2 & W_N^4 & \\dots & W_N^{2(N-1)} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\nW_N^0 & W_N^{N-1} & W_N^{2(N-1)} & \\dots & W_N^{(N-1)(N-1)}\n\\end{bmatrix}_{N \\times N}"
-    },
-    {
-     "t": "h4",
-     "text": "Structural Properties of $\\mathbf{W}_N$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Symmetry:** $\\mathbf{W}_N^T = \\mathbf{W}_N$ (since $W_N^{kn} = W_N^{nk}$).",
-      "**Hermitian Property:** $\\mathbf{W}_N^H = \\mathbf{W}_N^*$ where $(\\mathbf{W}_N^*)_{k,n} = W_N^{-kn}$.",
-      "**Orthogonality of Columns / Rows:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{W}_N^H \\mathbf{W}_N = \\mathbf{W}_N \\mathbf{W}_N^H = N \\cdot \\mathbf{I}_N"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies \\mathbf{W}_N^{-1} = \\frac{1}{N} \\mathbf{W}_N^H = \\frac{1}{N} \\mathbf{W}_N^*"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Unitary Matrix Normalization:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Defining $\\mathbf{F}_N \\triangleq \\frac{1}{\\sqrt{N}} \\mathbf{W}_N$, we have:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{F}_N^H \\mathbf{F}_N = \\mathbf{I}_N"
-    },
-    {
-     "t": "p",
-     "text": "making $\\mathbf{F}_N$ a strictly unitary matrix preserving Euclidean norms (Parseval's theorem in vector form)."
-    },
-    {
-     "t": "h4",
-     "text": "Explicit Matrices for Low Dimensions:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**For $N = 2$ ($W_2 = e^{-j\\pi} = -1$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{W}_2 = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}, \\quad \\mathbf{W}_2^{-1} = \\frac{1}{2} \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**For $N = 3$ ($W_3 = e^{-j\\frac{2\\pi}{3}} = -\\frac{1}{2} - j\\frac{\\sqrt{3}}{2}$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{W}_3 = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & W_3^1 & W_3^2 \\\\ 1 & W_3^2 & W_3^1 \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & e^{-j\\frac{2\\pi}{3}} & e^{j\\frac{2\\pi}{3}} \\\\ 1 & e^{j\\frac{2\\pi}{3}} & e^{-j\\frac{2\\pi}{3}} \\end{bmatrix}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**For $N = 4$ ($W_4 = e^{-j\\frac{\\pi}{2}} = -j$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{W}_4 = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix}, \\quad \\mathbf{W}_4^{-1} = \\frac{1}{4} \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & j & -1 & -j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -j & -1 & j \\end{bmatrix}"
-    },
-    {
-     "t": "h3",
-     "text": "2.4 Zero-Padding: Spectral Resolution vs Spectral Interpolation"
-    },
-    {
-     "t": "p",
-     "text": "A universal practical technique in DSP is **Zero-Padding**, in which an $N_1$-point signal $x[n]$ is appended with $L - N_1$ trailing zeros to create an $L$-point sequence $x_{zp}[n]$ ($L > N_1$):"
-    },
-    {
-     "t": "math",
-     "tex": "x_{zp}[n] = \\begin{cases} x[n], & 0 \\le n \\le N_1 - 1 \\\\ 0, & N_1 \\le n \\le L - 1 \\end{cases}"
-    },
-    {
-     "t": "h4",
-     "text": "Mathematical Analysis of Zero-Padding"
-    },
-    {
-     "t": "p",
-     "text": "The continuous DTFT of $x_{zp}[n]$ is identical to the DTFT of $x[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_{zp}(e^{j\\omega}) = \\sum_{n=0}^{L-1} x_{zp}[n] e^{-j\\omega n} = \\sum_{n=0}^{N_1 - 1} x[n] e^{-j\\omega n} = X(e^{j\\omega})"
-    },
-    {
-     "t": "p",
-     "text": "The $L$-point DFT evaluates this identical DTFT on a denser frequency grid:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_k = \\frac{2\\pi}{L} k, \\quad k = 0, 1, \\dots, L-1"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta \\omega_{grid} = \\frac{2\\pi}{L} < \\frac{2\\pi}{N_1}"
-    },
-    {
-     "t": "h4",
-     "text": "Crucial Conceptual Distinction for GATE:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Physical Frequency Resolution:** The ability to distinguish two closely spaced sinusoidal peaks separated by $\\Delta \\omega$ is determined strictly by the **physical observation time window length** $N_1 T_s$. The mainlobe width of a rectangular window of length $N_1$ is $\\Delta \\omega_{main} = \\frac{4\\pi}{N_1}$. Zero-padding does NOT narrow the mainlobe or reduce spectral leakage. Two sinusoids merged into a single peak by windowing cannot be resolved by zero-padding.",
-      "**Computational / Display Resolution (Spectral Interpolation):** Zero-padding evaluates the existing continuous DTFT at more points per radian, smoothing out the plotted spectrum and revealing the exact shape of sidelobes and peaks. It is an exact trigonometric sinc-interpolation of the original $N_1$-point DFT samples."
-     ]
-    },
-    {
-     "t": "h3",
-     "text": "2.5 Modulo Arithmetic, Circular Indexing & Circular Time Shift"
-    },
-    {
-     "t": "p",
-     "text": "Because the DFT assumes the underlying signal is periodically extended with period $N$, time shifts in the DFT domain are inherently **circular shifts** (cyclic permutations):"
-    },
-    {
-     "t": "h4",
-     "text": "Modulo Notation"
-    },
-    {
-     "t": "p",
-     "text": "For any integer $n \\in \\mathbb{Z}$ and positive modulus $N \\in \\mathbb{Z}^+$:"
-    },
-    {
-     "t": "math",
-     "tex": "((n))_N \\triangleq n \\bmod N = n - \\left\\lfloor \\frac{n}{N} \\right\\rfloor N \\in \\{0, 1, 2, \\dots, N-1\\}"
-    },
-    {
-     "t": "h4",
-     "text": "Circular Shift Property of DFT"
-    },
-    {
-     "t": "p",
-     "text": "If $x[n] \\xrightarrow{\\text{DFT}_N} X(k)$, then circularly shifting the sequence by $n_0$ samples yields:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[((n - n_0))_N] \\xrightarrow{\\text{DFT}_N} X(k) W_N^{k n_0} = X(k) e^{-j\\frac{2\\pi}{N} k n_0}}"
-    },
-    {
-     "t": "h4",
-     "text": "The Modulo Index Wheel:"
-    },
-    {
-     "t": "p",
-     "text": "Imagine the indices $n = 0, 1, \\dots, N-1$ arranged evenly on a circle:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Clockwise traversal:** Forward time indexing ($n$ increasing).",
-      "**Counter-Clockwise traversal:** Circular time-reversal ($((-n))_N$).",
-      "**Right Circular Shift (Delay by $n_0$):** Moving samples clockwise by $n_0$ slots:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_{delayed}[n] = x[((n - n_0))_N]"
-    },
-    {
-     "t": "p",
-     "text": "Samples shifted past index $N-1$ wrap around to reappear at indices $0, 1, \\dots$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Left Circular Shift (Advance by $n_0$):** Moving samples counter-clockwise by $n_0$ slots:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_{advanced}[n] = x[((n + n_0))_N]"
-    },
-    {
-     "t": "h3",
-     "text": "2.6 Circular Convolution Definition & DFT Convolution Theorem"
-    },
-    {
-     "t": "p",
-     "text": "In continuous-time and discrete-time LTI system theory, linear convolution governs the interaction between an input signal and the system impulse response. However, in the discrete frequency (DFT) domain, entry-wise multiplication of DFT spectra does **NOT** correspond to linear convolution in the time domain; rather, it corresponds strictly to **Circular Convolution** (cyclic convolution)."
-    },
-    {
-     "t": "h4",
-     "text": "Formal Definition of Circular Convolution"
-    },
-    {
-     "t": "p",
-     "text": "Let $x_1[n]$ and $x_2[n]$ be two finite-length discrete-time sequences of length $N$ defined on $0 \\le n \\le N-1$. Their $N$-point circular convolution, denoted by the circled asterisk operator $\\circledast$ (or $\\odot$), is defined as:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = x_1[n] \\circledast x_2[n] \\triangleq \\sum_{m=0}^{N-1} x_1[m] x_2[((n - m))_N], \\quad n = 0, 1, \\dots, N-1}"
-    },
-    {
-     "t": "p",
-     "text": "where $((n - m))_N$ denotes the modulo-$N$ circular shift of the second sequence."
-    },
-    {
-     "t": "h4",
-     "text": "The Circular Convolution Theorem in DFT Domain"
-    },
-    {
-     "t": "p",
-     "text": "The fundamental theorem uniting digital filtering and the DFT states:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x_1[n] \\circledast x_2[n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X_1(k) \\cdot X_2(k)}"
-    },
-    {
-     "t": "h4",
-     "text": "Rigorous Analytical Proof"
-    },
-    {
-     "t": "p",
-     "text": "Taking the $N$-point DFT of $y[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(k) = \\sum_{n=0}^{N-1} y[n] W_N^{kn} = \\sum_{n=0}^{N-1} \\left[ \\sum_{m=0}^{N-1} x_1[m] x_2[((n - m))_N] \\right] W_N^{kn}"
-    },
-    {
-     "t": "p",
-     "text": "Interchanging the orders of summation:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(k) = \\sum_{m=0}^{N-1} x_1[m] \\left[ \\sum_{n=0}^{N-1} x_2[((n - m))_N] W_N^{kn} \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Using the circular shift property of the DFT, the inner bracketed summation is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=0}^{N-1} x_2[((n - m))_N] W_N^{kn} = X_2(k) W_N^{km}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting this back into the outer summation:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(k) = \\sum_{m=0}^{N-1} x_1[m] X_2(k) W_N^{km} = X_2(k) \\left[ \\sum_{m=0}^{N-1} x_1[m] W_N^{km} \\right] = X_1(k) \\cdot X_2(k)"
-    },
-    {
-     "t": "p",
-     "text": "This completes the rigorous mathematical proof."
-    },
-    {
-     "t": "h3",
-     "text": "2.7 Circular Convolution Matrix & Circulant Matrices"
-    },
-    {
-     "t": "p",
-     "text": "Circular convolution of two $N$-point vectors $\\mathbf{x}_1$ and $\\mathbf{x}_2$ can be cast as a matrix-vector multiplication:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{y} = \\mathbf{C}_{x_2} \\mathbf{x}_1"
-    },
-    {
-     "t": "p",
-     "text": "where $\\mathbf{C}_{x_2}$ is an $N \\times N$ **Circulant Matrix** generated by the sequence $x_2[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{C}_{x_2} = \\begin{bmatrix}\nx_2[0] & x_2[N-1] & x_2[N-2] & \\dots & x_2[1] \\\\\nx_2[1] & x_2[0] & x_2[N-1] & \\dots & x_2[2] \\\\\nx_2[2] & x_2[1] & x_2[0] & \\dots & x_2[3] \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\nx_2[N-1] & x_2[N-2] & x_2[N-3] & \\dots & x_2[0]\n\\end{bmatrix}_{N \\times N}"
-    },
-    {
-     "t": "h4",
-     "text": "Deep Algebraic Properties of Circulant Matrices:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Row-Column Cyclic Shift:** Each row of a circulant matrix is obtained by circularly shifting the row above it to the right by one position.",
-      "**Universal Diagonalization by DFT Matrix:** Every circulant matrix $\\mathbf{C}$\u2014regardless of its generating vector\u2014is fundamentally diagonalized by the DFT matrix $\\mathbf{W}_N$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{C} = \\frac{1}{N} \\mathbf{W}_N^* \\mathbf{\\Lambda} \\mathbf{W}_N = \\mathbf{F}_N^H \\mathbf{\\Lambda} \\mathbf{F}_N"
-    },
-    {
-     "t": "p",
-     "text": "where $\\mathbf{\\Lambda} = \\text{diag}(X_2(0), X_2(1), \\dots, X_2(N-1))$ is a diagonal matrix containing the $N$-point DFT values of $x_2[n]$!"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Eigenvalues & Eigenvectors:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The eigenvectors of any $N \\times N$ circulant matrix are the columns of the DFT matrix $\\mathbf{W}_N^*$.",
-      "The eigenvalues of $\\mathbf{C}_{x_2}$ are precisely the DFT coefficients $X_2(k)$ for $k = 0, 1, \\dots, N-1$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Commutativity:** Because all circulant matrices share the exact same eigenvector basis (the Fourier basis), all circulant matrices commute under multiplication:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{C}_A \\mathbf{C}_B = \\mathbf{C}_B \\mathbf{C}_A"
-    },
-    {
-     "t": "h3",
-     "text": "2.8 Linear Convolution vs Circular Convolution & The Aliasing Condition"
-    },
-    {
-     "t": "p",
-     "text": "A central problem in digital signal processing and embedded DSP system design is computing **Linear Convolution** using the computationally efficient Fast Fourier Transform (FFT), which natively performs **Circular Convolution**."
-    },
-    {
-     "t": "h4",
-     "text": "Sequence Lengths & Time-Domain Aliasing"
-    },
-    {
-     "t": "p",
-     "text": "Consider two sequences:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x_1[n]$ of finite duration $N_1$ ($0 \\le n \\le N_1 - 1$)",
-      "$x_2[n]$ of finite duration $N_2$ ($0 \\le n \\le N_2 - 1$)"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Linear Convolution:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_{lin}[n] = x_1[n] * x_2[n] = \\sum_{m=0}^{N_1-1} x_1[m] x_2[n - m]"
-    },
-    {
-     "t": "p",
-     "text": "The length of the linear convolution output is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{L_{lin} = N_1 + N_2 - 1}"
-    },
-    {
-     "t": "p",
-     "text": "The non-zero samples lie strictly in the range $0 \\le n \\le N_1 + N_2 - 2$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**$N$-Point Circular Convolution:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If we compute the $N$-point circular convolution $y_{circ}[n] = x_1[n] \\circledast x_2[n]$, its length is strictly $N$."
-    },
-    {
-     "t": "h4",
-     "text": "The Aliasing Master Formula:"
-    },
-    {
-     "t": "p",
-     "text": "The circular convolution sequence is mathematically equal to the periodic time-domain aliasing (wrap-around) of the linear convolution sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y_{circ}[n] = \\sum_{r=-\\infty}^{\\infty} y_{lin}[n + rN], \\quad 0 \\le n \\le N-1}"
-    },
-    {
-     "t": "h4",
-     "text": "The Fundamental Condition for Linear Convolution via Circular Convolution:"
-    },
-    {
-     "t": "p",
-     "text": "To prevent the tail of $y_{lin}[n]$ from wrapping around and corrupting the earlier samples (i.e., to avoid time-domain aliasing), the circular convolution length $N$ must equal or exceed the total duration of the linear convolution:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{N \\ge N_1 + N_2 - 1}"
-    },
-    {
-     "t": "h4",
-     "text": "Zero-Padding Recipe for Fast Linear Filtering:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Pad $x_1[n]$ with trailing zeros to length $N \\ge N_1 + N_2 - 1$.",
-      "Pad $x_2[n]$ with trailing zeros to the same length $N$.",
-      "Compute $N$-point FFT: $X_1(k) = \\text{FFT}\\{x_{1,zp}[n]\\}$ and $X_2(k) = \\text{FFT}\\{x_{2,zp}[n]\\}$.",
-      "Multiply element-wise: $Y(k) = X_1(k) \\cdot X_2(k)$.",
-      "Compute $N$-point IFFT: $y[n] = \\text{IFFT}\\{Y(k)\\}$.",
-      "The resulting sequence $y[n]$ is identically equal to the exact linear convolution: $y[n] = y_{lin}[n]$ for all $0 \\le n \\le N_1 + N_2 - 2$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Block Convolution for Real-Time DSP (Streaming Signals):"
-    },
-    {
-     "t": "p",
-     "text": "When filtering an indefinitely long signal $x[n]$ with a finite impulse response (FIR) filter $h[n]$ of length $M$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Overlap-Add (OLA) Method:** Input is segmented into non-overlapping blocks of length $L$, each block is convolved with $h[n]$ (length $L+M-1$) via FFT, and the overlapping tails of length $M-1$ are added together.",
-      "**Overlap-Save (OLS) Method:** Input is segmented into overlapping blocks of length $N = L + M - 1$ (sharing $M-1$ points), circular convolution of length $N$ is performed via FFT, and the first $M-1$ aliased points of each output block are discarded while the remaining $L$ valid points are concatenated."
-     ]
-    },
-    {
-     "t": "h3",
-     "text": "2.9 Circular Correlation & Energy Conservation (Parseval's Relation)"
-    },
-    {
-     "t": "h4",
-     "text": "Circular Cross-Correlation"
-    },
-    {
-     "t": "p",
-     "text": "The circular cross-correlation between two $N$-point sequences $x_1[n]$ and $x_2[n]$ is defined as:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{r_{x_1 x_2}[n] \\triangleq \\sum_{m=0}^{N-1} x_1^*[m] x_2[((m + n))_N], \\quad 0 \\le n \\le N-1}"
-    },
-    {
-     "t": "p",
-     "text": "Taking the $N$-point DFT of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{r_{x_1 x_2}[n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} R_{x_1 x_2}(k) = X_1^*(k) \\cdot X_2(k)}"
-    },
-    {
-     "t": "h4",
-     "text": "Circular Auto-Correlation"
-    },
-    {
-     "t": "p",
-     "text": "Setting $x_1[n] = x_2[n] = x[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "r_{xx}[n] = \\sum_{m=0}^{N-1} x^*[m] x[((m + n))_N] \\overset{\\text{DFT}_N}{\\longleftrightarrow} \\vert X(k)\\vert^2"
-    },
-    {
-     "t": "p",
-     "text": "where $\\vert X(k)\\vert^2$ is the **Discrete Energy Spectral Density**."
-    },
-    {
-     "t": "h4",
-     "text": "Parseval's Energy Conservation Theorem in DFT Domain"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the auto-correlation sequence at the origin ($n = 0$):"
-    },
-    {
-     "t": "math",
-     "tex": "r_{xx}[0] = \\sum_{m=0}^{N-1} x^*[m] x[m] = \\sum_{n=0}^{N-1} \\vert x[n]\\vert^2"
-    },
-    {
-     "t": "p",
-     "text": "From the IDFT synthesis equation applied to $R_{xx}(k) = \\vert X(k)\\vert^2$:"
-    },
-    {
-     "t": "math",
-     "tex": "r_{xx}[0] = \\frac{1}{N} \\sum_{k=0}^{N-1} \\vert X(k)\\vert^2 W_N^0 = \\frac{1}{N} \\sum_{k=0}^{N-1} \\vert X(k)\\vert^2"
-    },
-    {
-     "t": "p",
-     "text": "Equating both expressions yields Parseval's Relation:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\sum_{n=0}^{N-1} \\vert x[n]\\vert^2 = \\frac{1}{N} \\sum_{k=0}^{N-1} \\vert X(k)\\vert^2}"
-    },
-    {
-     "t": "h3",
-     "text": "2.10 Time Expansion & Frequency Expansion (Upsampling) Properties in DFT vs DTFS"
-    },
-    {
-     "t": "p",
-     "text": "A frequent source of confusion in GATE is the distinction between upsampling properties in the Discrete Fourier Series (DTFS) versus the Discrete Fourier Transform (DFT)."
-    },
-    {
-     "t": "h4",
-     "text": "Property 1: Time Expansion / Upsampling (Zero-Insertion in Time)"
-    },
-    {
-     "t": "p",
-     "text": "Let $x[n]$ be an $N$-point sequence with $N$-point DFT $X(k)$. We create an $MN$-point sequence $x_1[n]$ by inserting $M-1$ zeros between each sample:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1[n] = x[n/M] = \\begin{cases} x[n/M], & n = 0, M, 2M, \\dots, (N-1)M \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "The $MN$-point DFT of $x_1[n]$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(k) = \\sum_{n=0}^{MN-1} x_1[n] W_{MN}^{kn} = \\sum_{m=0}^{N-1} x[m] W_{MN}^{k(mM)}"
-    },
-    {
-     "t": "p",
-     "text": "Since $W_{MN}^{M} = e^{-j\\frac{2\\pi}{MN}M} = e^{-j\\frac{2\\pi}{N}} = W_N$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(k) = \\sum_{m=0}^{N-1} x[m] W_N^{km} = X(k \\bmod N)"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X_1(k) = X(k) \\text{ periodically repeated } M \\text{ times across } 0 \\le k \\le MN-1}"
-    },
-    {
-     "t": "p",
-     "text": "**Notice:** There is NO amplitude scaling factor (scale factor is $1$)."
-    },
-    {
-     "t": "h4",
-     "text": "Property 2: Frequency Expansion / Upsampling (Zero-Insertion in Frequency)"
-    },
-    {
-     "t": "p",
-     "text": "Let $X(k)$ be an $N$-point DFT spectrum. We form an $MN$-point frequency sequence $Y(k)$ by inserting $M-1$ zeros between each frequency sample:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(k) = \\begin{cases} X(k/M), & k = 0, M, 2M, \\dots, (N-1)M \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Taking the $MN$-point IDFT of $Y(k)$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\frac{1}{MN} \\sum_{k=0}^{MN-1} Y(k) W_{MN}^{-kn} = \\frac{1}{MN} \\sum_{m=0}^{N-1} X(m) W_{MN}^{-(mM)n} = \\frac{1}{M} \\left[ \\frac{1}{N} \\sum_{m=0}^{N-1} X(m) W_N^{-mn} \\right]"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = \\frac{1}{M} [x[n] \\text{ repeated } M \\text{ times across } 0 \\le n \\le MN-1]}"
-    },
-    {
-     "t": "p",
-     "text": "**Notice:** An amplitude attenuation factor of $\\frac{1}{M}$ is strictly attached!"
-    },
-    {
-     "t": "h4",
-     "text": "Master Comparison Matrix: DTFS vs DFT Expansion"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Operation",
-      "Discrete Fourier Series (DTFS)",
-      "Discrete Fourier Transform (DFT)"
-     ],
-     "align": [
-      ":---",
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**Base Transform Pair**",
-       "$x[n]$ (period $N$) $\\longleftrightarrow c_k$ (period $N$)",
-       "$x[n]$ ($N$-point) $\\longleftrightarrow X(k)$ ($N$-point)"
-      ],
-      [
-       "**Time Upsampling by $M$**",
-       "$x[n/M]$ (period $MN$) $\\longleftrightarrow \\frac{1}{M} c_k$ (period $MN$, fundamental $N$)",
-       "$x[n/M]$ ($MN$-point) $\\longleftrightarrow X(k)$ repeated $M$ times ($MN$-point)"
-      ],
-      [
-       "**Frequency Upsampling by $M$**",
-       "$c_{k/M}$ (period $MN$) $\\longleftrightarrow x[n]$ repeated $M$ times (period $MN$)",
-       "$X(k/M)$ ($MN$-point) $\\longleftrightarrow \\frac{1}{M} x[n]$ repeated $M$ times ($MN$-point)"
-      ],
-      [
-       "**Why the Difference?**",
-       "DTFS defines $c_k = \\frac{1}{N}\\sum x[n]e^{-j\\omega_0 kn}$ (scale factor $\\frac{1}{N}$ in forward analysis).",
-       "DFT defines $X(k) = \\sum x[n]e^{-j\\frac{2\\pi}{N}kn}$ (scale factor $\\frac{1}{N}$ in inverse synthesis)."
-      ]
-     ]
-    },
-    {
-     "t": "h3",
-     "text": "2.11 Symmetry Properties of DFT for Real and Imaginary Signals"
-    },
-    {
-     "t": "p",
-     "text": "Because discrete time is bounded to $0 \\le n \\le N-1$, classical time reversal $x[-n]$ maps outside the primary interval. In the DFT domain, time-reversal is replaced by **Circular Time Reversal**:"
-    },
-    {
-     "t": "math",
-     "tex": "x[((-n))_N] = x[(N - n) \\bmod N] = \\begin{cases} x[0], & n = 0 \\\\ x[N - n], & 1 \\le n \\le N-1 \\end{cases}"
-    },
-    {
-     "t": "h4",
-     "text": "Symmetry Theorems for Real-Valued Sequences"
-    },
-    {
-     "t": "p",
-     "text": "When $x[n] \\in \\mathbb{R}$ for all $0 \\le n \\le N-1$ ($x[n] = x^*[n]$):"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Conjugate Symmetry (Hermitian Symmetry):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) = X^*(( -k ))_N = X^*[N - k], \\quad 0 \\le k \\le N-1}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Component Symmetry:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Magnitude Spectrum:** $\\vert X(k)\\vert = \\vert X[N - k]\\vert$ (Circularly Even)",
-      "**Phase Spectrum:** $\\angle X(k) = -\\angle X[N - k]$ (Circularly Odd)",
-      "**Real Part:** $\\text{Re}\\{X(k)\\} = \\text{Re}\\{X[N - k]\\}$ (Circularly Even)",
-      "**Imaginary Part:** $\\text{Im}\\{X(k)\\} = -\\text{Im}\\{X[N - k]\\}$ (Circularly Odd)"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Boundary Values:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "At DC ($k = 0$): $X(0) = X^*(0) \\implies \\text{Im}\\{X(0)\\} = 0$ (Strictly Real).",
-      "At the Half-Sampling / Nyquist Bin ($k = N/2$ for even $N$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(N/2) = X^*(N - N/2) = X^*(N/2) \\implies \\text{Im}\\{X(N/2)\\} = 0 \\quad (\\text{Strictly Real})"
-    },
-    {
-     "t": "h4",
-     "text": "Master Symmetry Classification Matrix:"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Time Sequence $x[n]$",
-      "DFT Spectrum $X(k)$"
-     ],
-     "align": [
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**Real & Circularly Even** ($x[n] = x[N-n]$)",
-       "**Real & Circularly Even** ($X(k) = X[N-k] \\in \\mathbb{R}$)"
-      ],
-      [
-       "**Real & Circularly Odd** ($x[n] = -x[N-n]$)",
-       "**Purely Imaginary & Circularly Odd** ($X(k) = -X[N-k] \\in j\\mathbb{R}$)"
-      ],
-      [
-       "**Purely Imaginary & Circularly Even**",
-       "**Purely Imaginary & Circularly Even**"
-      ],
-      [
-       "**Purely Imaginary & Circularly Odd**",
-       "**Real & Circularly Odd**"
-      ]
-     ]
-    },
-    {
-     "t": "h3",
-     "text": "2.12 Duality Property of DFT & Multi-Domain Duality Matrix"
-    },
-    {
-     "t": "h4",
-     "text": "The DFT Duality Theorem"
-    },
-    {
-     "t": "p",
-     "text": "If an $N$-point sequence $x[n]$ has an $N$-point DFT $X(k)$:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X(k)"
-    },
-    {
-     "t": "p",
-     "text": "then taking the $N$-point DFT of the sequence $X(n)$ (substituting time index $n$ for frequency index $k$) yields:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{DFT}_N\\{X(n)\\} = N \\cdot x[((-k))_N] = N \\cdot x[-k]}"
-    },
-    {
-     "t": "h4",
-     "text": "Proof of DFT Duality:"
-    },
-    {
-     "t": "p",
-     "text": "Recall the IDFT synthesis equation:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) W_N^{-kn}"
-    },
-    {
-     "t": "p",
-     "text": "Multiply both sides by $N$:"
-    },
-    {
-     "t": "math",
-     "tex": "N x[n] = \\sum_{k=0}^{N-1} X(k) W_N^{-kn}"
-    },
-    {
-     "t": "p",
-     "text": "Swap the variable names $n \\leftrightarrow k$:"
-    },
-    {
-     "t": "math",
-     "tex": "N x[k] = \\sum_{n=0}^{N-1} X(n) W_N^{-kn}"
-    },
-    {
-     "t": "p",
-     "text": "Now replace $k$ with $-k$:"
-    },
-    {
-     "t": "math",
-     "tex": "N x[-k] = N x[((-k))_N] = \\sum_{n=0}^{N-1} X(n) W_N^{kn} = \\text{DFT}_N\\{X(n)\\}"
-    },
-    {
-     "t": "p",
-     "text": "This proves the duality formula."
-    },
-    {
-     "t": "h4",
-     "text": "Master Multi-Domain Duality Comparison"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Transform Domain",
-      "Time Domain Function",
-      "Frequency Domain Function",
-      "Forward Transform",
-      "Duality Theorem"
-     ],
-     "align": [
-      ":---",
-      ":---",
-      ":---",
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**CTFT**",
-       "$x(t)$ (Cont., Aperiodic)",
-       "$X(\\omega)$ (Cont., Aperiodic)",
-       "$X(\\omega) = \\int_{-\\infty}^\\infty x(t)e^{-j\\omega t}dt$",
-       "$X(t) \\longleftrightarrow 2\\pi x(-\\omega)$"
-      ],
-      [
-       "**DTFS**",
-       "$x[n]$ (Disc., Periodic $N$)",
-       "$c_k$ (Disc., Periodic $N$)",
-       "$c_k = \\frac{1}{N}\\sum_{n=0}^{N-1} x[n]e^{-j\\frac{2\\pi}{N}kn}$",
-       "$c_n \\longleftrightarrow \\frac{1}{N} x[-k]$"
-      ],
-      [
-       "**CTFS $\\leftrightarrow$ DTFT**",
-       "$x(t)$ (Cont., Periodic $T$)",
-       "$c_n$ (Disc., Aperiodic)",
-       "$c_n = \\frac{1}{T}\\int_0^T x(t)e^{-jn\\omega_0 t}dt$",
-       "$c_n \\overset{\\text{DTFT}}{\\longleftrightarrow} X(-\\omega)$ (Cont., Periodic)"
-      ],
-      [
-       "**DFT**",
-       "$x[n]$ (Disc., Periodic $N$)",
-       "$X(k)$ (Disc., Periodic $N$)",
-       "$X(k) = \\sum_{n=0}^{N-1} x[n]e^{-j\\frac{2\\pi}{N}kn}$",
-       "$X(n) \\overset{\\text{DFT}_N}{\\longleftrightarrow} N x[((-k))_N]$"
-      ]
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Iterated DFT & IDFT Operators ($\\text{DFT}^4 = N^2 \\cdot \\mathbf{I}$)"
-    },
-    {
-     "t": "p",
-     "text": "Applying the DFT operator $\\mathcal{F}$ repeatedly to an $N$-point sequence $x[n]$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$\\mathcal{F}^1\\{x[n]\\} = X(k)$",
-      "$\\mathcal{F}^2\\{x[n]\\} = \\mathcal{F}\\{X(n)\\} = N x[((-n))_N]$",
-      "$\\mathcal{F}^3\\{x[n]\\} = \\mathcal{F}\\{N x[((-n))_N]\\} = N X(( -k ))_N = N X[N-k]$",
-      "$\\mathcal{F}^4\\{x[n]\\} = \\mathcal{F}\\{N X(( -n ))_N\\} = N \\cdot N x[((-(-n)))_N] = N^2 x[n]$!"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{DFT}^4\\{x[n]\\} = N^2 \\cdot x[n]}"
-    },
-    {
-     "t": "h4",
-     "text": "Corresponding Inverse Operator Iteration ($\\text{IDFT}^4 = \\frac{1}{N^2} \\cdot \\mathbf{I}$):"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$\\mathcal{F}^{-1}\\{Y(k)\\} = y[n]$",
-      "$\\mathcal{F}^{-2}\\{Y(k)\\} = \\mathcal{F}^{-1}\\{y[n]\\} = \\frac{1}{N} Y(( -k ))_N$",
-      "$\\mathcal{F}^{-3}\\{Y(k)\\} = \\mathcal{F}^{-1}\\{\\frac{1}{N} Y(( -k ))_N\\} = \\frac{1}{N} y[((-n))_N]$",
-      "$\\mathcal{F}^{-4}\\{Y(k)\\} = \\frac{1}{N^2} Y(k)$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{IDFT}^4\\{Y(k)\\} = \\frac{1}{N^2} \\cdot Y(k)}"
-    },
-    {
-     "t": "h2",
-     "text": "3. Comprehensive Slide-by-Slide Mathematical Transcription"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 161 (Page 41, Top-Left) \u2014 2-Point DFT & DTFT Frequency Sampling"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "p",
-     "text": "The chalkboard is divided into two conceptual branches:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "A problem statement at the top: given a 2-point sequence $x[n] = \\{1, 2\\}$ with $N=2$, find its 2-point DFT $X(k)$ and its inverse $\\text{IDFT}\\{X(k)\\}$.",
-      "A horizontal signal flow diagram illustrating the relationship:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\{1, 2\\} \\xrightarrow{\\text{D.T.F.T.}} X(e^{j\\omega}) = 1 + 2e^{-j\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "followed by frequency sampling $\\omega = \\frac{2\\pi}{N}k = \\frac{2\\pi}{2}k = \\pi k$, leading down to the discrete frequency sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = 1 + 2e^{-j\\pi k}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "A circular/periodic continuation showing that the IDFT reconstructs a periodic discrete sequence $\\tilde{x}[n]$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let the discrete-time sequence be:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\begin{cases} 1, & n = 0 \\\\ 2, & n = 1 \\\\ 0, & \\text{otherwise} \\end{cases} \\quad \\implies x[n] = \\{\\underset{\\uparrow}{1}, 2\\}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Continuous DTFT Evaluation"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\sum_{n=-\\infty}^{\\infty} x[n] e^{-j\\omega n} = x[0] + x[1]e^{-j\\omega} = 1 + 2e^{-j\\omega}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Frequency Sampling at $N = 2$ Points"
-    },
-    {
-     "t": "p",
-     "text": "The continuous frequency interval $\\omega \\in [0, 2\\pi)$ is sampled at spacing:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_k = \\frac{2\\pi}{N} k = \\frac{2\\pi}{2} k = \\pi k, \\quad k \\in \\{0, 1\\}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $\\omega = \\pi k$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = \\left. X(e^{j\\omega}) \\right|_{\\omega = \\pi k} = 1 + 2e^{-j\\pi k} = 1 + 2(-1)^k"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating for $k = 0$ and $k = 1$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $k = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = 1 + 2(-1)^0 = 1 + 2 = 3"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $k = 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = 1 + 2(-1)^1 = 1 - 2 = -1"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the 2-point DFT sequence is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) = \\{\\underset{k=0}{3}, -1\\}, \\quad 0 \\le k \\le 1}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Periodic Extension & IDFT Reconstruction"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating $X(k)$ for all $k \\in \\mathbb{Z}$ yields a periodic spectrum of period $N=2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{X}(k) = \\{\\dots, 3, -1, \\underset{k=0}{3}, -1, 3, -1, \\dots\\}"
-    },
-    {
-     "t": "p",
-     "text": "Applying the 2-point IDFT synthesis formula:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{2} \\sum_{k=0}^{1} X(k) e^{j\\pi kn} = \\frac{1}{2} [X(0) + X(1)e^{j\\pi n}] = \\frac{1}{2} [3 + (-1)(-1)^n]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 0$: $x[0] = \\frac{1}{2}[3 - 1] = 1$",
-      "For $n = 1$: $x[1] = \\frac{1}{2}[3 - (-1)] = \\frac{4}{2} = 2$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Reconstructed 2-point sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\{\\underset{\\uparrow}{1}, 2\\}}"
-    },
-    {
-     "t": "p",
-     "text": "The periodic continuation of the IDFT is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{x}[n] = \\{\\dots, 1, 2, \\underset{\\uparrow}{1}, 2, 1, 2, \\dots\\}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Core Derivation Principle:** Sampling the DTFT at $\\omega_k = \\frac{2\\pi k}{N}$ produces the $N$-point DFT. The IDFT mathematically produces an infinitely periodic discrete-time signal $\\tilde{x}[n] = \\sum_{r=-\\infty}^\\infty x[n - rN]$.",
-      "**GATE Exam Trap:** Do not confuse the finite-duration sequence $x[n]$ with its periodic extension $\\tilde{x}[n]$. The DFT is formally defined on the finite index set $n \\in \\{0, 1, \\dots, N-1\\}$, but implicit periodic replication governs every arithmetic operation (circular shifting, circular convolution)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 162 (Page 41, Top-Right) \u2014 3-Point DFT via DTFT Sampling & Periodic Sequence"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Problem statement: Given a 3-point sequence $x[n] = \\{1, 2, 3\\}, N=3$. Find its 3-point DFT $X(k)$ and IDFT.",
-      "Flow diagram tracking the mapping:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\{1, 2, 3\\} \\xrightarrow{\\text{DTFT}} X(e^{j\\omega}) = 1 + 2e^{-j\\omega} + 3e^{-j2\\omega}"
-    },
-    {
-     "t": "math",
-     "tex": "\\xrightarrow{\\omega = \\frac{2\\pi}{3}k} X(k) = 1 + 2e^{-j\\frac{2\\pi}{3}k} + 3e^{-j\\frac{4\\pi}{3}k}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Inverse arrow leading back to the periodic discrete sequence:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{x}[n] = \\{\\dots, 1, 2, 3, \\underset{\\uparrow}{1}, 2, 3, \\dots\\}"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\{\\underset{\\uparrow}{1}, 2, 3\\}, N=3$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: DTFT Calculation"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\omega}) = \\sum_{n=0}^{2} x[n]e^{-j\\omega n} = 1 + 2e^{-j\\omega} + 3e^{-j2\\omega}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Frequency Sampling"
-    },
-    {
-     "t": "p",
-     "text": "Sampling at $\\omega_k = \\frac{2\\pi}{3}k$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = 1 + 2e^{-j\\frac{2\\pi}{3}k} + 3e^{-j\\frac{4\\pi}{3}k}, \\quad k \\in \\{0, 1, 2\\}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Explicit Evaluation for Each Bin"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Bin $k = 0$ (DC Component):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = 1 + 2(1) + 3(1) = 6"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Bin $k = 1$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = 1 + 2e^{-j\\frac{2\\pi}{3}} + 3e^{-j\\frac{4\\pi}{3}}"
-    },
-    {
-     "t": "p",
-     "text": "Recall Euler identities:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j\\frac{2\\pi}{3}} = \\cos\\left(\\frac{2\\pi}{3}\\right) - j\\sin\\left(\\frac{2\\pi}{3}\\right) = -\\frac{1}{2} - j\\frac{\\sqrt{3}}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j\\frac{4\\pi}{3}} = \\cos\\left(\\frac{4\\pi}{3}\\right) - j\\sin\\left(\\frac{4\\pi}{3}\\right) = -\\frac{1}{2} + j\\frac{\\sqrt{3}}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting these values:"
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = 1 + 2\\left(-\\frac{1}{2} - j\\frac{\\sqrt{3}}{2}\\right) + 3\\left(-\\frac{1}{2} + j\\frac{\\sqrt{3}}{2}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = 1 - 1 - j\\sqrt{3} - \\frac{3}{2} + j\\frac{3\\sqrt{3}}{2} = -\\frac{3}{2} + j\\frac{\\sqrt{3}}{2} = -1.5 + j 0.866"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Bin $k = 2$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $x[n]$ is real-valued, $X(2) = X^*(3-2) = X^*(1)$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(2) = -\\frac{3}{2} - j\\frac{\\sqrt{3}}{2} = -1.5 - j 0.866"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the 3-point DFT is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) = \\left\\{ 6, \\; -\\frac{3}{2} + j\\frac{\\sqrt{3}}{2}, \\; -\\frac{3}{2} - j\\frac{\\sqrt{3}}{2} \\right\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conjugate Symmetry Verification:** Because $x[n] \\in \\mathbb{R}$, $X(N-k) = X^*(k)$. For $N=3$, $X(2) = X^*(1)$. The real parts are identical ($-1.5$), while the imaginary parts are equal and opposite ($\\pm \\frac{\\sqrt{3}}{2}$).",
-      "**Exam Trap:** Never compute $X(2)$ from scratch if $x[n]$ is real. Evaluate $X(1)$ and immediately take the complex conjugate to save time!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 163 (Page 41, Bottom-Left) \u2014 4-Point DFT of Ramp Sequence $\\{1, 2, 3, 4\\}$"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: 4-point sequence $x[n] = \\{1, 2, 3, 4\\}, N=4$. Find 4-point DFT $X(k)$ and IDFT.",
-      "Analytical derivation via DTFT sampling:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\{1, 2, 3, 4\\} \\xrightarrow{\\text{DTFT}} X(e^{j\\omega}) = 1 + 2e^{-j\\omega} + 3e^{-j2\\omega} + 4e^{-j3\\omega}"
-    },
-    {
-     "t": "math",
-     "tex": "\\xrightarrow{\\omega = \\frac{2\\pi}{4}k = \\frac{\\pi}{2}k} X(k) = 1 + 2e^{-j\\frac{\\pi}{2}k} + 3e^{-j\\pi k} + 4e^{-j\\frac{3\\pi}{2}k}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Final boxed DFT sequence: $X(k) = \\{10, -2+2j, -2, -2-2j\\}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\{\\underset{\\uparrow}{1}, 2, 3, 4\\}, N=4$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Sampling Continuous DTFT"
-    },
-    {
-     "t": "p",
-     "text": "With $\\omega = \\frac{\\pi}{2} k$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = 1 + 2(-j)^k + 3(-1)^k + 4(j)^k, \\quad k \\in \\{0, 1, 2, 3\\}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Term-by-Term Evaluation"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For $k = 0$ (DC Bin):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = 1 + 2 + 3 + 4 = 10"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For $k = 1$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = 1 + 2(-j)^1 + 3(-1)^1 + 4(j)^1 = 1 - 2j - 3 + 4j = -2 + 2j"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For $k = 2$ (Nyquist Bin $N/2$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(2) = 1 + 2(-j)^2 + 3(-1)^2 + 4(j)^2 = 1 + 2(-1) + 3(1) + 4(-1) = 1 - 2 + 3 - 4 = -2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For $k = 3$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(3) = X^*(4-1) = X^*(1) = (-2 + 2j)^* = -2 - 2j"
-    },
-    {
-     "t": "p",
-     "text": "Direct verification:"
-    },
-    {
-     "t": "math",
-     "tex": "X(3) = 1 + 2(-j)^3 + 3(-1)^3 + 4(j)^3 = 1 + 2(j) - 3 - 4j = -2 - 2j"
-    },
-    {
-     "t": "p",
-     "text": "Hence:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) = \\{\\underset{k=0}{10}, \\; -2+2j, \\; -2, \\; -2-2j\\}}"
-    },
-    {
-     "t": "p",
-     "text": "The periodic continuation $\\tilde{x}[n]$ reconstructed via IDFT is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{x}[n] = \\{\\dots, 1, 2, 3, 4, \\underset{\\uparrow}{1}, 2, 3, 4, 1, 2, 3, 4, \\dots\\}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Real Sequence Properties Confirmed:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$X(0) = \\sum_{n=0}^3 x[n] = 10 \\in \\mathbb{R}$.",
-      "$X(2) = \\sum_{n=0}^3 (-1)^n x[n] = 1 - 2 + 3 - 4 = -2 \\in \\mathbb{R}$.",
-      "$X(3) = X^*(1) = -2 - 2j$."
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Exam Trap:** Notice that at the half-sampling frequency bin $k = N/2 = 2$, the value MUST be strictly real for any real-valued sequence! If your $X(N/2)$ has an imaginary part, you made an arithmetic error."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 164 (Page 41, Bottom-Right) \u2014 Twiddle Factor Definition & DFT Matrix Formulation"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Header: *Calculating DFT and IDFT with Twiddle factor:*",
-      "Definition: $W_N = e^{-j 2\\pi / N}$.",
-      "Analysis equation written in twiddle factor summation form:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = \\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N}kn} = \\sum_{n=0}^{N-1} x[n] W_N^{kn}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Large $N \\times N$ matrix-vector equation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ \\vdots \\\\ X(N-1) \\end{bmatrix}_{N \\times 1} = \\begin{bmatrix} W_N^0 & W_N^0 & \\dots & W_N^0 \\\\ W_N^0 & W_N^1 & W_N^2 & \\dots \\\\ W_N^0 & W_N^2 & W_N^4 & \\dots \\\\ \\vdots & \\vdots & \\vdots & \\ddots \\\\ W_N^0 & \\dots & \\dots & \\dots \\end{bmatrix}_{N \\times N} \\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ \\vdots \\\\ x(N-1) \\end{bmatrix}_{N \\times 1}"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{W_N \\triangleq e^{-j\\frac{2\\pi}{N}}}"
-    },
-    {
-     "t": "p",
-     "text": "The forward $N$-point DFT is cast in matrix notation as:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X} = \\mathbf{W}_N \\mathbf{x}"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\nX(0) \\\\\nX(1) \\\\\nX(2) \\\\\n\\vdots \\\\\nX(N-1)\n\\end{bmatrix} = \\begin{bmatrix}\nW_N^0 & W_N^0 & W_N^0 & \\dots & W_N^0 \\\\\nW_N^0 & W_N^1 & W_N^2 & \\dots & W_N^{N-1} \\\\\nW_N^0 & W_N^2 & W_N^4 & \\dots & W_N^{2(N-1)} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\nW_N^0 & W_N^{N-1} & W_N^{2(N-1)} & \\dots & W_N^{(N-1)(N-1)}\n\\end{bmatrix} \\begin{bmatrix}\nx(0) \\\\\nx(1) \\\\\nx(2) \\\\\n\\vdots \\\\\nx(N-1)\n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Symmetry of $\\mathbf{W}_N$:** The $(k,n)$-th entry of $\\mathbf{W}_N$ is $W_N^{kn}$. Since $kn = nk$, the DFT matrix is strictly symmetric: $\\mathbf{W}_N = \\mathbf{W}_N^T$.",
-      "**Complexity Trap:** Direct computation of $\\mathbf{W}_N \\mathbf{x}$ requires $N^2$ complex multiplications and $N(N-1)$ complex additions. The Fast Fourier Transform (FFT) reduces this to $\\frac{N}{2}\\log_2 N$ multiplications."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 165 (Page 42, Top-Left) \u2014 Inverse DFT (IDFT) & Inverse Matrix Formulation"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Header: *IDFT:*",
-      "Analysis synthesis formula:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N}kn} = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) W_N^{-kn}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Matrix form of IDFT:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ \\vdots \\\\ x(N-1) \\end{bmatrix} = \\frac{1}{N} \\begin{bmatrix} 1 & 1 & 1 & \\dots & 1 \\\\ 1 & W_N^{-1} & W_N^{-2} & \\dots \\\\ 1 & W_N^{-2} & W_N^{-4} & \\dots \\\\ \\vdots & \\vdots & \\vdots & \\ddots \\end{bmatrix} \\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ \\vdots \\\\ X(N-1) \\end{bmatrix}"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) W_N^{-kn}, \\quad n = 0, 1, \\dots, N-1}"
-    },
-    {
-     "t": "p",
-     "text": "Since $W_N^{-kn} = (W_N^{kn})^*$, the IDFT matrix is the scaled complex conjugate (Hermitian transpose) of the DFT matrix:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x} = \\frac{1}{N} \\mathbf{W}_N^* \\mathbf{X} = \\mathbf{W}_N^{-1} \\mathbf{X}"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\nx(0) \\\\\nx(1) \\\\\nx(2) \\\\\n\\vdots \\\\\nx(N-1)\n\\end{bmatrix} = \\frac{1}{N} \\begin{bmatrix}\n1 & 1 & 1 & \\dots & 1 \\\\\n1 & W_N^{-1} & W_N^{-2} & \\dots & W_N^{-(N-1)} \\\\\n1 & W_N^{-2} & W_N^{-4} & \\dots & W_N^{-2(N-1)} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\n1 & W_N^{-(N-1)} & W_N^{-2(N-1)} & \\dots & W_N^{-(N-1)(N-1)}\n\\end{bmatrix} \\begin{bmatrix}\nX(0) \\\\\nX(1) \\\\\nX(2) \\\\\n\\vdots \\\\\nX(N-1)\n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Scale Factor Trap:** Forgetting the factor $\\frac{1}{N}$ in the IDFT matrix is the most common student error in GATE! Always verify that $\\mathbf{W}_N^{-1} = \\frac{1}{N}\\mathbf{W}_N^*$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 166 (Page 42, Top-Right) \u2014 2-Point DFT via Matrix Method"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Problem statement: 2-point sequence $x[n] = \\{1, 2\\}, N=2$. Find 2-point DFT $X(k)$ and IDFT via matrix.",
-      "Evaluation of twiddle factor: $W_N = W_2 = e^{-j\\frac{2\\pi}{2}} = e^{-j\\pi} = -1$.",
-      "Matrix setup and evaluation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 1 & W_2^1 \\end{bmatrix} \\begin{bmatrix} x(0) \\\\ x(1) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = x(0) + x(1) = 1 + 2 = 3"
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = x(0) - x(1) = 1 - 2 = -1"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = \\{3, -1\\}"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "For $N = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "W_2 = e^{-j\\pi} = -1, \\quad W_2^0 = 1, \\quad W_2^1 = -1"
-    },
-    {
-     "t": "p",
-     "text": "Matrix formulation:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} = \\begin{bmatrix} 1(1) + 1(2) \\\\ 1(1) - 1(2) \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) = \\{3, -1\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The 2-point DFT computes the sum and difference of the input samples. This basic $2\\times 2$ block forms the butterfly unit in the Cooley-Tukey Radix-2 Decimation-in-Time (DIT) FFT algorithm."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 167 (Page 42, Bottom-Left) \u2014 2-Point IDFT Matrix Computation"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Inverse twiddle factor calculation: $W_N^{-1} = W_2^{-1} = [e^{-j\\pi}]^{-1} = e^{j\\pi} = -1$.",
-      "IDFT matrix formulation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} x(0) \\\\ x(1) \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 1 & 1 \\\\ 1 & W_2^{-1} \\end{bmatrix} \\begin{bmatrix} X(0) \\\\ X(1) \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} X(0) \\\\ X(1) \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Scalar evaluation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x(0) = \\frac{1}{2}[X(0) + X(1)] = \\frac{1}{2}[3 - 1] = 1"
-    },
-    {
-     "t": "math",
-     "tex": "x(1) = \\frac{1}{2}[X(0) - X(1)] = \\frac{1}{2}[3 - (-1)] = \\frac{1}{2}[4] = 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies x[n] = \\{1, 2\\}"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} x(0) \\\\ x(1) \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 3 + (-1) \\\\ 3 - (-1) \\end{bmatrix} = \\frac{1}{2} \\begin{bmatrix} 2 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\{1, 2\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Perfectly inverts the forward transform and confirms algebraic self-consistency."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 168 (Page 42, Bottom-Right) \u2014 4-Point DFT & IDFT Matrix Algebra & Powers of $W_4$"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: 4-point $x[n] = \\{1, 2, 3, 4\\}$. Calculate 4-point DFT $X(k)$ and inverse DFT.",
-      "Complete table of powers of $W_4$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_N = W_4 = e^{-j 2\\pi / 4} = e^{-j\\pi / 2} = -j"
-    },
-    {
-     "t": "math",
-     "tex": "W_4^1 = -j"
-    },
-    {
-     "t": "math",
-     "tex": "W_4^2 = (-j)^2 = -1"
-    },
-    {
-     "t": "math",
-     "tex": "W_4^3 = (-j)^3 = j"
-    },
-    {
-     "t": "math",
-     "tex": "W_4^4 = W_4^0 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "W_4^6 = W_4^2 = -1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Side-by-side matrices set up for DFT and IDFT."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Twiddle factor powers for $N = 4$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$W_4^0 = 1$",
-      "$W_4^1 = e^{-j\\frac{\\pi}{2}} = -j$",
-      "$W_4^2 = e^{-j\\pi} = -1$",
-      "$W_4^3 = e^{-j\\frac{3\\pi}{2}} = j$",
-      "$W_4^4 = e^{-j 2\\pi} = 1$",
-      "$W_4^5 = W_4^1 = -j$",
-      "$W_4^6 = W_4^2 = -1$",
-      "$W_4^9 = W_4^{9 \\bmod 4} = W_4^1 = -j$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Matrix Setup:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT:} \\quad \\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & W_4^1 & W_4^2 & W_4^3 \\\\ 1 & W_4^2 & W_4^4 & W_4^6 \\\\ 1 & W_4^3 & W_4^6 & W_4^9 \\end{bmatrix} \\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ x(3) \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{IDFT:} \\quad \\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ x(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & W_4^{-1} & W_4^{-2} & W_4^{-3} \\\\ 1 & W_4^{-2} & W_4^{-4} & W_4^{-6} \\\\ 1 & W_4^{-3} & W_4^{-6} & W_4^{-9} \\end{bmatrix} \\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice that $W_4^{-1} = (W_4^1)^* = (-j)^* = +j$, $W_4^{-2} = (-1)^* = -1$, and $W_4^{-3} = (j)^* = -j$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 169 (Page 43, Top-Left) \u2014 4-Point DFT & IDFT Numerical Computation for $\\{1, 2, 3, 4\\}$"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Forward matrix multiplication:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 10 \\\\ -2+2j \\\\ -2 \\\\ -2-2j \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Inverse matrix computation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ x(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & j & -1 & -j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -j & -1 & j \\end{bmatrix} \\begin{bmatrix} 10 \\\\ -2+2j \\\\ -2 \\\\ -2-2j \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 4 \\\\ 8 \\\\ 12 \\\\ 16 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{bmatrix}"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{W}_4 = \\begin{bmatrix}\n1 & 1 & 1 & 1 \\\\\n1 & -j & -1 & j \\\\\n1 & -1 & 1 & -1 \\\\\n1 & j & -1 & -j\n\\end{bmatrix}"
-    },
-    {
-     "t": "h4",
-     "text": "Forward Calculation:"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = 1 + 2 + 3 + 4 = 10"
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = 1(1) + (-j)(2) + (-1)(3) + (j)(4) = 1 - 2j - 3 + 4j = -2 + 2j"
-    },
-    {
-     "t": "math",
-     "tex": "X(2) = 1(1) + (-1)(2) + 1(3) + (-1)(4) = 1 - 2 + 3 - 4 = -2"
-    },
-    {
-     "t": "math",
-     "tex": "X(3) = 1(1) + (j)(2) + (-1)(3) + (-j)(4) = 1 + 2j - 3 - 4j = -2 - 2j"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) = \\{10, -2+2j, -2, -2-2j\\}}"
-    },
-    {
-     "t": "h4",
-     "text": "Inverse IDFT Verification:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\nx(0) &= \\frac{1}{4}[10 + (-2+2j) + (-2) + (-2-2j)] = \\frac{1}{4}[10 - 6] = \\frac{4}{4} = 1 \\\\\nx(1) &= \\frac{1}{4}[10 + j(-2+2j) - (-2) - j(-2-2j)] \\\\\n     &= \\frac{1}{4}[10 - 2j - 2 + 2 + 2j - 2] = \\frac{1}{4}[8] = 2 \\\\\nx(2) &= \\frac{1}{4}[10 - (-2+2j) + (-2) - (-2-2j)] = \\frac{1}{4}[10 + 2 - 2 + 2] = \\frac{12}{4} = 3 \\\\\nx(3) &= \\frac{1}{4}[10 - j(-2+2j) - (-2) + j(-2-2j)] \\\\\n     &= \\frac{1}{4}[10 + 2j + 2 + 2 - 2j + 2] = \\frac{16}{4} = 4\n\\end{aligned}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] = \\{1, 2, 3, 4\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Identity Check:** Multiplying $\\mathbf{W}_4$ by $\\mathbf{W}_4^*$ yields $4\\mathbf{I}_4$. This proves the matrix is orthogonal and inverts perfectly."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 170 (Page 43, Top-Right) \u2014 3-Point DFT of $\\{1, 2, -1\\}$ via $W_3$ Matrix"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: 3-point sequence $x[n] = \\{1, 2, -1\\}$. Find 3-point $X(k)$.",
-      "Twiddle relationships:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "W_3 = e^{-j 2\\pi/3}, \\quad W_3^1 = e^{-j 2\\pi/3}"
-    },
-    {
-     "t": "math",
-     "tex": "W_3^2 = W_3^{3-1} = W_3^3 W_3^{-1} = W_3^{-1} = e^{j 2\\pi/3}"
-    },
-    {
-     "t": "math",
-     "tex": "W_3^4 = W_3^{3+1} = W_3^3 W_3^1 = W_3^1 = e^{-j 2\\pi/3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Matrix computation and analytical results:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = 1 + 2 - 1 = 2"
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = 1 + 2e^{-j 2\\pi/3} - e^{j 2\\pi/3}"
-    },
-    {
-     "t": "math",
-     "tex": "X(2) = 1 + 2e^{j 2\\pi/3} - e^{-j 2\\pi/3} = X^*(1)"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "For $N = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{W}_3 = \\begin{bmatrix}\n1 & 1 & 1 \\\\\n1 & W_3^1 & W_3^2 \\\\\n1 & W_3^2 & W_3^4\n\\end{bmatrix} = \\begin{bmatrix}\n1 & 1 & 1 \\\\\n1 & e^{-j\\frac{2\\pi}{3}} & e^{j\\frac{2\\pi}{3}} \\\\\n1 & e^{j\\frac{2\\pi}{3}} & e^{-j\\frac{2\\pi}{3}}\n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Matrix multiplication:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\end{bmatrix} = \\begin{bmatrix}\n1 & 1 & 1 \\\\\n1 & e^{-j\\frac{2\\pi}{3}} & e^{j\\frac{2\\pi}{3}} \\\\\n1 & e^{j\\frac{2\\pi}{3}} & e^{-j\\frac{2\\pi}{3}}\n\\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ -1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Expanding each row:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(0) = 1(1) + 1(2) + 1(-1) = 2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(1) = 1 + 2e^{-j\\frac{2\\pi}{3}} - e^{j\\frac{2\\pi}{3}}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(2) = 1 + 2e^{j\\frac{2\\pi}{3}} - e^{-j\\frac{2\\pi}{3}} = X^*(1)}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating Cartesian components:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{-j\\frac{2\\pi}{3}} = -\\frac{1}{2} - j\\frac{\\sqrt{3}}{2}, \\quad e^{j\\frac{2\\pi}{3}} = -\\frac{1}{2} + j\\frac{\\sqrt{3}}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = 1 + 2\\left(-\\frac{1}{2} - j\\frac{\\sqrt{3}}{2}\\right) - \\left(-\\frac{1}{2} + j\\frac{\\sqrt{3}}{2}\\right) = 1 - 1 - j\\sqrt{3} + \\frac{1}{2} - j\\frac{\\sqrt{3}}{2} = \\frac{1}{2} - j\\frac{3\\sqrt{3}}{2}"
-    },
-    {
-     "t": "math",
-     "tex": "X(2) = \\frac{1}{2} + j\\frac{3\\sqrt{3}}{2}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice again that $X(2) = X^*(1)$ because $x[n]$ is real-valued."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 171 (Page 43, Bottom-Left) \u2014 Periodic Discrete Sequences & 4-Point DFT"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: Given periodic sequence $x[n] = \\{\\dots, 1, 2, 3, 4, \\underset{\\uparrow}{1}, 2, 3, 4, 1, 2, 3, 4, \\dots\\}$ with period $N=4$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Find its 4-point DFT $X(k)$ and IDFT."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Analytical derivation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = \\sum_{n=0}^{3} x[n] e^{-j\\frac{2\\pi}{4}kn} = x[0] + x[1]e^{-j\\frac{\\pi}{2}k} + x[2]e^{-j\\pi k} + x[3]e^{-j\\frac{3\\pi}{2}k}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Diagram connecting periodic $x[n]$ to 4-point $x[n] = \\{1, 2, 3, 4\\}$.",
-      "Answer: $X(k) = \\{10, -2+2j, -2, -2-2j\\}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "A periodic discrete-time sequence with fundamental period $N=4$ has DFS expansion:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{x}[n] = \\sum_{k=0}^{3} c_k e^{j\\frac{2\\pi}{4}kn}, \\quad c_k = \\frac{1}{4} \\sum_{n=0}^{3} \\tilde{x}[n] e^{-j\\frac{2\\pi}{4}kn}"
-    },
-    {
-     "t": "p",
-     "text": "The 4-point DFT of the sequence extracted over one fundamental period $n \\in [0, 3]$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = 4 c_k = \\sum_{n=0}^3 x[n] e^{-j\\frac{\\pi}{2}kn}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating over the fundamental period $x[0]=1, x[1]=2, x[2]=3, x[3]=4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) = \\{10, -2+2j, -2, -2-2j\\}}"
-    },
-    {
-     "t": "p",
-     "text": "Applying the IDFT reproduces the periodic sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{x}[n] = \\{\\dots, 1, 2, 3, 4, \\underset{\\uparrow}{1}, 2, 3, 4, \\dots\\}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Pedagogical Takeaway:** The DFT of one period of a periodic discrete-time sequence produces samples proportional to the Discrete Fourier Series (DFS) coefficients: $X(k) = N c_k$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 172 (Page 43, Bottom-Right) \u2014 4-Point DFT of Cosine Sequence $\\cos( rac{\\pi}{2}n)$ via Synthesis Matching"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: $x[n] = \\cos(\\frac{\\pi}{2} n), N=4$. Find 4-point DFT $X(k)$.",
-      "Derivation via IDFT synthesis equation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N}kn} = \\frac{1}{4} \\sum_{k=0}^3 X(k) e^{j\\frac{\\pi}{2}kn}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Euler expansion:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{e^{j\\frac{\\pi}{2}n} + e^{-j\\frac{\\pi}{2}n}}{2} = \\frac{1}{4} \\sum_{k=-2}^{1} X(k) e^{j\\frac{\\pi}{2}kn} = \\frac{1}{4}[X(-1)e^{-j\\frac{\\pi}{2}n} + X(0) + X(1)e^{j\\frac{\\pi}{2}n} + \\dots]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Identification of coefficients:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{X(1)}{4} = \\frac{1}{2} \\implies X(1) = 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{X(-1)}{4} = \\frac{1}{2} \\implies X(-1) = 2 \\implies X(3) = 2"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = 0, \\quad X(2) = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boxed result: 4-point $X(k) = \\{0, 2, 0, 2\\}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\cos\\left(\\frac{\\pi}{2} n\\right)$ for $N = 4$."
-    },
-    {
-     "t": "h4",
-     "text": "Method: Direct Frequency Matching via IDFT Synthesis"
-    },
-    {
-     "t": "p",
-     "text": "Using Euler's identity:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{2} e^{j\\frac{\\pi}{2}n} + \\frac{1}{2} e^{-j\\frac{\\pi}{2}n}"
-    },
-    {
-     "t": "p",
-     "text": "The 4-point IDFT synthesis equation is:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{4} \\sum_{k=0}^3 X(k) e^{j\\frac{2\\pi}{4}kn} = \\frac{1}{4} X(0) + \\frac{1}{4} X(1) e^{j\\frac{\\pi}{2}n} + \\frac{1}{4} X(2) e^{j\\pi n} + \\frac{1}{4} X(3) e^{j\\frac{3\\pi}{2}n}"
-    },
-    {
-     "t": "p",
-     "text": "Note that:"
-    },
-    {
-     "t": "math",
-     "tex": "e^{j\\frac{3\\pi}{2}n} = e^{-j\\frac{\\pi}{2}n} \\quad (\\text{since } 3 \\equiv -1 \\pmod 4)"
-    },
-    {
-     "t": "p",
-     "text": "Matching coefficients of corresponding complex exponential harmonics:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Coefficient of $e^{j\\frac{\\pi}{2}n}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{4} X(1) = \\frac{1}{2} \\implies X(1) = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Coefficient of $e^{-j\\frac{\\pi}{2}n} = e^{j\\frac{3\\pi}{2}n}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{4} X(3) = \\frac{1}{2} \\implies X(3) = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Unmatched components:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = 0, \\quad X(2) = 0"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the 4-point DFT is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) = \\{\\underset{k=0}{0}, \\; \\underset{k=1}{2}, \\; \\underset{k=2}{0}, \\; \\underset{k=3}{2}\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Alternative Time-Domain Sample Verification:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$x[0] = \\cos(0) = 1$\n  $x[1] = \\cos(\\pi/2) = 0$\n  $x[2] = \\cos(\\pi) = -1$\n  $x[3] = \\cos(3\\pi/2) = 0$\n  Sequence: $x[n] = \\{1, 0, -1, 0\\}$.\n  Applying DFT matrix $\\mathbf{W}_4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 1 - 1 \\\\ 1 - (-1) \\\\ 1 - 1 \\\\ 1 - (-1) \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 2 \\\\ 0 \\\\ 2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Matches the IDFT synthesis matching result."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Exam Trap:** When the signal is a pure sinusoid whose frequency falls exactly on a DFT bin (here $\\omega_0 = \\frac{\\pi}{2} = \\frac{2\\pi}{4}(1)$), never evaluate summations! Directly match into bins $k_0$ and $N - k_0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 173 (Page 44, Top-Left) \u2014 Zero-Padding in Time Domain: 4-Point DFT of 2-Point Sequence"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: 2-point sequence $x[n] = \\{1, 2\\}$. Find its 4-point DFT $X(k)$ and IDFT.",
-      "Zero-padding procedure: pad with zeros to $N=4$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{4-point } x[n] = \\{1, 2, 0, 0\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Matrix computation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ 1-2j \\\\ -1 \\\\ 1+2j \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boxed result: 4-point $X(k) = \\{3, 1-2j, -1, 1+2j\\}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let the 2-point sequence $x[n] = \\{1, 2\\}$ be zero-padded to length $N = 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_{zp}[n] = \\{\\underset{\\uparrow}{1}, 2, 0, 0\\}"
-    },
-    {
-     "t": "p",
-     "text": "Using the 4-point DFT matrix $\\mathbf{W}_4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix}\n1 & 1 & 1 & 1 \\\\\n1 & -j & -1 & j \\\\\n1 & -1 & 1 & -1 \\\\\n1 & j & -1 & -j\n\\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating each row:"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = 1(1) + 1(2) + 0 + 0 = 3"
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = 1(1) + (-j)(2) + 0 + 0 = 1 - 2j"
-    },
-    {
-     "t": "math",
-     "tex": "X(2) = 1(1) + (-1)(2) + 0 + 0 = 1 - 2 = -1"
-    },
-    {
-     "t": "math",
-     "tex": "X(3) = 1(1) + (j)(2) + 0 + 0 = 1 + 2j"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) = \\{\\underset{k=0}{3}, \\; 1-2j, \\; -1, \\; 1+2j\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Comparison with 2-Point DFT:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall from Slide 161 that the 2-point DFT of $\\{1, 2\\}$ was $X_2(k) = \\{3, -1\\}$.\n  Notice that the even bins of the 4-point zero-padded DFT are:"
-    },
-    {
-     "t": "math",
-     "tex": "X_4(0) = 3 = X_2(0), \\quad X_4(2) = -1 = X_2(1)"
-    },
-    {
-     "t": "p",
-     "text": "The odd bins ($k=1, 3$) represent interpolated samples of the continuous DTFT $X(e^{j\\omega})$ evaluated at $\\omega = \\frac{\\pi}{2}$ and $\\frac{3\\pi}{2}$!"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j\\pi/2}) = 1 + 2e^{-j\\pi/2} = 1 - 2j = X_4(1)"
-    },
-    {
-     "t": "math",
-     "tex": "X(e^{j 3\\pi/2}) = 1 + 2e^{-j 3\\pi/2} = 1 + 2j = X_4(3)"
-    },
-    {
-     "t": "p",
-     "text": "This proves that zero-padding evaluates the underlying continuous DTFT at intermediate frequency locations.\n</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 174 (Page 44, Top-Right) \u2014 IDFT of Zero-Padded Spectrum & Discrete Periodic Nature"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Frequency sequence: $X(k) = \\{\\dots, 3, 1-2j, -1, 1+2j, \\underset{\\uparrow}{3}, 1-2j, \\dots\\}$.",
-      "IDFT leads to periodic discrete sequence:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{IDFT}\\{X(k)\\} \\to \\tilde{x}[n] = \\{\\dots, 1, 2, 0, 0, \\underset{\\uparrow}{1}, 2, 0, 0, 1, 2, 0, 0, \\dots\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Matrix IDFT calculation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} x(0) \\\\ x(1) \\\\ x(2) \\\\ x(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & j & -1 & -j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -j & -1 & j \\end{bmatrix} \\begin{bmatrix} 3 \\\\ 1-2j \\\\ -1 \\\\ 1+2j \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 4 \\\\ 8 \\\\ 0 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 0 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the IDFT of $X(k) = [3, 1-2j, -1, 1+2j]^T$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\nx(0) &= \\frac{1}{4}[3 + (1-2j) + (-1) + (1+2j)] = \\frac{1}{4}[4] = 1 \\\\\nx(1) &= \\frac{1}{4}[3(1) + j(1-2j) - (-1) - j(1+2j)] \\\\\n     &= \\frac{1}{4}[3 + j + 2 + 1 - j + 2] = \\frac{1}{4}[8] = 2 \\\\\nx(2) &= \\frac{1}{4}[3 - (1-2j) + (-1) - (1+2j)] \\\\\n     &= \\frac{1}{4}[3 - 1 + 2j - 1 - 1 - 2j] = \\frac{1}{4}[0] = 0 \\\\\nx(3) &= \\frac{1}{4}[3(1) - j(1-2j) - (-1) + j(1+2j)] \\\\\n     &= \\frac{1}{4}[3 - j - 2 + 1 + j - 2] = \\frac{1}{4}[0] = 0\n\\end{aligned}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x_{zp}[n] = \\{\\underset{\\uparrow}{1}, 2, 0, 0\\}}"
-    },
-    {
-     "t": "p",
-     "text": "The periodic discrete extension $\\tilde{x}[n]$ has fundamental period $N = 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{x}[n] = \\{\\dots, 1, 2, 0, 0, \\underset{\\uparrow}{1}, 2, 0, 0, 1, 2, 0, 0, \\dots\\}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice that the zero-padded samples ($n=2, 3$) are reconstructed as zeros. The period of the underlying periodic signal $\\tilde{x}[n]$ has changed from $2$ to $4$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 175 (Page 44, Bottom-Left) \u2014 12-Point DFT of $\\cos( rac{\\pi}{2}n)$ ($N=12$)"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: $x[n] = \\cos(\\frac{\\pi}{2} n)$. Find 12-point DFT ($N=12$).",
-      "Period calculation: $P = \\frac{2\\pi}{\\pi/2} = 4$.",
-      "IDFT synthesis expansion:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{12} \\sum_{k=0}^{11} X(k) e^{j\\frac{2\\pi}{12}kn} = \\frac{1}{12} \\sum_{k=0}^{11} X(k) e^{j\\frac{\\pi}{6}kn}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Rewriting cosine and matching frequencies:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{e^{j\\frac{\\pi}{2}n} + e^{-j\\frac{\\pi}{2}n}}{2} = \\frac{1}{12} [X(-3)e^{-j\\frac{\\pi}{2}n} + X(3)e^{j\\frac{\\pi}{2}n} + \\dots]"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\pi}{2}n = \\frac{\\pi}{6}kn \\implies k = 3"
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{\\pi}{2}n = \\frac{\\pi}{6}kn \\implies k = -3 \\equiv 9 \\pmod{12}"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{X(3)}{12} = \\frac{1}{2} \\implies X(3) = 6"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{X(-3)}{12} = \\frac{1}{2} \\implies X(-3) = 6 \\implies X(9) = 6"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boxed 12-point sequence:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = \\{\\underset{k=0}{0}, 0, 0, \\underset{k=3}{6}, 0, 0, 0, 0, 0, \\underset{k=9}{6}, 0, 0\\}"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\cos\\left(\\frac{\\pi}{2} n\\right)$, with transform length $N = 12$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Harmonic Bin Spacing"
-    },
-    {
-     "t": "p",
-     "text": "The fundamental frequency spacing for $N = 12$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta \\omega = \\frac{2\\pi}{12} = \\frac{\\pi}{6} \\text{ rad/sample}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Harmonic Matching"
-    },
-    {
-     "t": "p",
-     "text": "The input signal angular frequency is $\\omega_0 = \\frac{\\pi}{2}$.\nSetting $\\omega_0 = k_0 \\Delta \\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\pi}{2} = k_0 \\left(\\frac{\\pi}{6}\\right) \\implies k_0 = 3"
-    },
-    {
-     "t": "p",
-     "text": "The negative frequency component is:"
-    },
-    {
-     "t": "math",
-     "tex": "-\\omega_0 = -\\frac{\\pi}{2} \\implies k = -3"
-    },
-    {
-     "t": "p",
-     "text": "In modulo-12 indexing:"
-    },
-    {
-     "t": "math",
-     "tex": "((-3))_{12} = -3 + 12 = 9"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Synthesis Matching"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{2} e^{j\\frac{\\pi}{2}n} + \\frac{1}{2} e^{-j\\frac{\\pi}{2}n} = \\frac{1}{12} X(3) e^{j\\frac{\\pi}{6}(3)n} + \\frac{1}{12} X(9) e^{j\\frac{\\pi}{6}(9)n}"
-    },
-    {
-     "t": "p",
-     "text": "Equating coefficients:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{X(3)}{12} = \\frac{1}{2} \\implies X(3) = 6"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{X(9)}{12} = \\frac{1}{2} \\implies X(9) = 6"
-    },
-    {
-     "t": "p",
-     "text": "All remaining 10 bins are zero:"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = 0 \\quad \\text{for } k \\in \\{0, 1, 2, 4, 5, 6, 7, 8, 10, 11\\}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(k) = \\{\\underset{k=0}{0}, 0, 0, \\underset{k=3}{6}, 0, 0, 0, 0, 0, \\underset{k=9}{6}, 0, 0\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Spectral Leakage Principle:** Because $N = 12$ is an exact integer multiple of the signal's fundamental period $P = 4$ ($12 = 3 \\times 4$), exactly three full cycles fit within the DFT observation window. Therefore, there is **zero spectral leakage**, and all energy concentrates into single bins $k=3$ and $k=9$.",
-      "**General Formula for Sinusoids:** For $x[n] = A\\cos\\left(\\frac{2\\pi k_0}{N} n + \\phi\\right)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(k_0) = \\frac{A N}{2} e^{j\\phi}, \\quad X(N - k_0) = \\frac{A N}{2} e^{-j\\phi}"
-    },
-    {
-     "t": "p",
-     "text": "Here $A=1, N=12, \\phi=0 \\implies X(3) = X(9) = \\frac{1(12)}{2} = 6$.\n</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 176 (Page 44, Bottom-Right) \u2014 Periodic Modulo Sequence Generation & 4-Point DFT Setup"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: 3-point sequence $x[n] = \\{1, 2, 3\\}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Define $y[n] = x[n \\bmod 3] = (x[n])_3$.\n  (a) Find 4-point DFT of $y[n] \\to Y(k)$.\n  (b) If 4-point DFT of $y[n]$ is $Y(k)$, find $\\text{IDFT}\\{Y(k)\\}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Periodic sequence generated:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = (x[n])_3 = \\{\\dots, 1, 2, 3, \\underset{n=0}{1}, 2, 3, 1, 2, 3, \\dots\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "4-point sequence extracted:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\{1, 2, 3, 1\\} \\quad \\text{for } n = 0, 1, 2, 3"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Setup for computing 4-point $Y(k)$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let the 3-point sequence be:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\{1, 2, 3\\} \\quad \\text{for } n = 0, 1, 2"
-    },
-    {
-     "t": "p",
-     "text": "The modulo-3 periodic sequence $y[n] = (x[n])_3$ is defined by:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n \\bmod 3] \\quad \\forall n \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating samples:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\ny[0] &= x[0 \\bmod 3] = x[0] = 1 \\\\\ny[1] &= x[1 \\bmod 3] = x[1] = 2 \\\\\ny[2] &= x[2 \\bmod 3] = x[2] = 3 \\\\\ny[3] &= x[3 \\bmod 3] = x[0] = 1 \\\\\ny[4] &= x[4 \\bmod 3] = x[1] = 2\n\\end{aligned}"
-    },
-    {
-     "t": "p",
-     "text": "Writing the full sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\{\\dots, 1, 2, 3, \\underset{n=0}{1}, 2, 3, 1, 2, 3, \\dots\\}"
-    },
-    {
-     "t": "p",
-     "text": "To compute the **4-point DFT** of $y[n]$, we extract the primary window of length $N=4$ ($n = 0, 1, 2, 3$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{4-point } y[n] = \\{\\underset{\\uparrow}{1}, 2, 3, 1\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Period Mismatch Wrap-Around:** The original signal has period $3$, but we are computing a 4-point DFT. The 4th sample $y[3]$ wraps around to take the value of $x[0] = 1$. The 4-point sequence is NOT $\\{1, 2, 3, 0\\}$, but $\\{1, 2, 3, 1\\}$.",
-      "**GATE Exam Trap:** Do not confuse zero-padding with sampling a periodic modulo signal! Zero-padding appends zeros; modulo indexing wraps around to earlier samples!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 177 (Page 45, Top-Left) \u2014 4-Point DFT & IDFT of $\\{1, 2, 3, 1\\}$"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Forward matrix multiplication:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} Y(0) \\\\ Y(1) \\\\ Y(2) \\\\ Y(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 7 \\\\ -2-j \\\\ 1 \\\\ -2+j \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boxed 4-point DFT: $Y(k) = \\{7, -2-j, 1, -2+j\\}$.",
-      "Periodic spectrum: $Y(k) = \\{\\dots, 7, -2-j, 1, -2+j, \\underset{k=0}{7}, -2-j, 1, -2+j, \\dots\\}$.",
-      "IDFT leading back to periodic discrete time sequence:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\{\\dots, 1, 2, 3, 1, \\underset{\\uparrow}{1}, 2, 3, 1, 1, 2, 3, 1, \\dots\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boxed 4-point $y[n] = \\{1, 2, 3, 1\\}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let the 4-point sequence be $y[n] = [1, 2, 3, 1]^T$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Forward Matrix DFT Computation"
-    },
-    {
-     "t": "p",
-     "text": "Using the $4 \\times 4$ DFT matrix $\\mathbf{W}_4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} Y(0) \\\\ Y(1) \\\\ Y(2) \\\\ Y(3) \\end{bmatrix} = \\begin{bmatrix}\n1 & 1 & 1 & 1 \\\\\n1 & -j & -1 & j \\\\\n1 & -1 & 1 & -1 \\\\\n1 & j & -1 & -j\n\\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating each frequency bin:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\nY(0) &= 1(1) + 1(2) + 1(3) + 1(1) = 7 \\\\\nY(1) &= 1(1) + (-j)(2) + (-1)(3) + (j)(1) = 1 - 2j - 3 + j = -2 - j \\\\\nY(2) &= 1(1) + (-1)(2) + 1(3) + (-1)(1) = 1 - 2 + 3 - 1 = 1 \\\\\nY(3) &= 1(1) + (j)(2) + (-1)(3) + (-j)(1) = 1 + 2j - 3 - j = -2 + j = Y^*(1)\n\\end{aligned}"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{Y(k) = \\{\\underset{k=0}{7}, \\; -2-j, \\; 1, \\; -2+j\\}}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Inverse DFT Synthesis"
-    },
-    {
-     "t": "p",
-     "text": "Applying the $4 \\times 4$ IDFT matrix:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} y(0) \\\\ y(1) \\\\ y(2) \\\\ y(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix}\n1 & 1 & 1 & 1 \\\\\n1 & j & -1 & -j \\\\\n1 & -1 & 1 & -1 \\\\\n1 & -j & -1 & j\n\\end{bmatrix} \\begin{bmatrix} 7 \\\\ -2-j \\\\ 1 \\\\ -2+j \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 4 \\\\ 8 \\\\ 12 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 1 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = \\{\\underset{\\uparrow}{1}, 2, 3, 1\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Real Signal Checks:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$Y(0) = \\sum y[n] = 1 + 2 + 3 + 1 = 7 \\in \\mathbb{R}$.",
-      "$Y(2) = \\sum (-1)^n y[n] = 1 - 2 + 3 - 1 = 1 \\in \\mathbb{R}$.",
-      "$Y(3) = Y^*(1) = -2 + j$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "All conjugate symmetry conditions are satisfied.\n</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 178 (Page 45, Top-Right) \u2014 Constructing Periodic Extension with Period 5 from 3-Point Sequence"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: Aperiodic 3-point sequence $x[n] = \\{1, 2, -1\\}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Target periodic sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\{\\dots, 1, 2, -1, 1, 2, \\underset{\\uparrow}{1}, 2, -1, 1, 2, 1, 2, -1, 1, 2, \\dots\\}"
-    },
-    {
-     "t": "p",
-     "text": "Question: For creating $x[n]$ from $y[n]$ (or generating $y[n]$ from $x[n]$), what process will you follow?"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Flowchart and sequence relations:",
-      "5-point sequence $y[n] = \\{1, 2, -1, 1, 2\\}$.",
-      "Forward 5-point DFT leading to periodic discrete spectrum.",
-      "Inverse 5-point IDFT producing periodic discrete sequence $\\tilde{y}[n]$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let the starting aperiodic sequence be $x[n] = \\{1, 2, -1\\}$.\nThe desired periodic sequence $y[n]$ has fundamental period $N = 5$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\{\\dots, 1, 2, -1, 1, 2, \\underset{n=0}{1}, 2, -1, 1, 2, \\dots\\}"
-    },
-    {
-     "t": "h4",
-     "text": "Analytical Procedure:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Extract one full period of length $N = 5$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y_5[n] = \\begin{cases} x[n], & n = 0, 1, 2 \\\\ x[n-3], & n = 3, 4 \\end{cases} \\implies y_5[n] = \\{\\underset{\\uparrow}{1}, 2, -1, 1, 2\\}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Compute the **5-point DFT** of $y_5[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y_5(k) = \\sum_{n=0}^4 y_5[n] W_5^{kn}, \\quad k = 0, 1, 2, 3, 4"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Taking the 5-point IDFT reconstructs the periodic discrete sequence with exact period 5:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\tilde{y}[n] = \\frac{1}{5} \\sum_{k=0}^4 Y_5(k) W_5^{-kn} = \\sum_{m=-\\infty}^\\infty y_5[n - 5m]"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**GATE Trap on Transform Length:** If you apply a 3-point DFT to $x[n]$, the IDFT will reconstruct a periodic sequence with period $3$: $\\{\\dots, 1, 2, -1, 1, 2, -1, \\dots\\}$. To obtain a periodic sequence of period $5$, the DFT size MUST be set to $N=5$, requiring 5 samples over the intended period."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 179 (Page 45, Bottom-Left) \u2014 Modulo-2 Periodic Sequence Generation from 3-Point Sequence"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: 3-point sequence $x[n] = \\{1, 2, 3\\}$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n \\bmod 2] = (x[n])_2"
-    },
-    {
-     "t": "p",
-     "text": "Question: How will you make $y[n]$ from $x[n]$?"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Sequence analysis:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = (x[n])_2 = \\{\\dots, 1, 2, \\underset{n=0}{1}, 2, \\underset{n=2}{1}, 2, \\dots\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Arrow showing 2-point $x[n] = \\{1, 2\\} \\xrightarrow{\\text{2-point DFT}} \\xrightarrow{\\text{IDFT}} \\{\\dots, 1, 2, \\underset{\\uparrow}{1}, 2, 1, 2, \\dots\\}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Given $x[n] = \\{1, 2, 3\\}$.\nThe modulo-2 sequence $y[n]$ is defined as:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = x[n \\bmod 2]"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating for all integers $n$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n$ even ($n \\bmod 2 = 0$): $y[n] = x[0] = 1$.",
-      "For $n$ odd ($n \\bmod 2 = 1$): $y[n] = x[1] = 2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Notice that the sample $x[2] = 3$ is **NEVER** accessed because $n \\bmod 2 \\in \\{0, 1\\}$ for all $n \\in \\mathbb{Z}$!"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\{\\dots, 1, 2, \\underset{n=0}{1}, 2, 1, 2, \\dots\\}"
-    },
-    {
-     "t": "h4",
-     "text": "Generation Method:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Truncate $x[n]$ to its first 2 samples: $x_2[n] = \\{\\underset{\\uparrow}{1}, 2\\}$.",
-      "Compute 2-point DFT: $X_2(k) = \\{3, -1\\}$.",
-      "The 2-point IDFT automatically generates the periodic discrete sequence $y[n]$ of period 2."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Sample Dropping Trap:** Modulo-$M$ indexing on a sequence of length $N > M$ completely discards all samples with indices $n \\ge M$. Here $x[2]=3$ is completely eliminated."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 180 (Page 45, Bottom-Right) \u2014 8-Point DFT Property Problem: Even-Index Sample Sum"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Problem Statement: 8-point DFT of $x[n]$ is $X(k)$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given: $X(k) = k + 1$ for $0 \\le k \\le 7$.\n  Find:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\sum_{n=0}^3 x[2n] = x[0] + x[2] + x[4] + x[6] = ?"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Mathematical analysis using DFT definition:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = \\sum_{n=0}^7 x[n] e^{-j\\frac{2\\pi}{8}kn} = \\sum_{n=0}^7 x[n] e^{-j\\frac{\\pi}{4}kn}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Evaluation at $k = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = \\sum_{n=0}^7 x[n] = x(0) + x(1) + x(2) + x(3) + x(4) + x(5) + x(6) + x(7) = 0 + 1 = 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Evaluation at $k = 4$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(4) = \\sum_{n=0}^7 x[n] e^{-j\\frac{\\pi}{4}(4)n} = \\sum_{n=0}^7 x[n] (-1)^n = x(0) - x(1) + x(2) - x(3) + x(4) - x(5) + x(6) - x(7) = 4 + 1 = 5"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let $x[n]$ be an 8-point sequence with 8-point DFT:"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = k + 1, \\quad 0 \\le k \\le 7"
-    },
-    {
-     "t": "p",
-     "text": "We wish to evaluate:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\triangleq \\sum_{n=0}^3 x[2n] = x[0] + x[2] + x[4] + x[6]"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Forward DFT Analysis Formula"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = \\sum_{n=0}^7 x[n] W_8^{kn} = \\sum_{n=0}^7 x[n] e^{-j\\frac{\\pi}{4}kn}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Evaluation at $k = 0$"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = \\sum_{n=0}^7 x[n] = x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7]"
-    },
-    {
-     "t": "p",
-     "text": "From the problem specification:"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) = 0 + 1 = 1 \\quad \\implies \\sum_{n=0}^7 x[n] = 1 \\quad \\text{--- (Equation 1)}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Evaluation at $k = 4$ ($N/2$ Bin)"
-    },
-    {
-     "t": "math",
-     "tex": "X(4) = \\sum_{n=0}^7 x[n] e^{-j\\pi n} = \\sum_{n=0}^7 x[n] (-1)^n"
-    },
-    {
-     "t": "math",
-     "tex": "X(4) = x[0] - x[1] + x[2] - x[3] + x[4] - x[5] + x[6] - x[7]"
-    },
-    {
-     "t": "p",
-     "text": "From the problem specification:"
-    },
-    {
-     "t": "math",
-     "tex": "X(4) = 4 + 1 = 5 \\quad \\implies \\sum_{n=0}^7 (-1)^n x[n] = 5 \\quad \\text{--- (Equation 2)}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "See Slide 181 for the algebraic combination and final solution."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 181 (Page 46, Top-Left) \u2014 Even-Index Sample Sum Solution & GATE Trap Analysis"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Summing equations:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left. X(k) \\right|_{k=0} + \\left. X(k) \\right|_{k=4} = 2[x(0) + x(2) + x(4) + x(6)]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Formula for $A$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A = \\frac{\\left. X(k) \\right|_{k=0} + \\left. X(k) \\right|_{k=4}}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Numerical substitution:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A = \\frac{1 + 5}{2} = 3"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boxed final answer: $\\mathbf{Ans = 3}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Adding Equation 1 and Equation 2:"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) + X(4) = [x[0] + x[1] + \\dots + x[7]] + [x[0] - x[1] + \\dots - x[7]]"
-    },
-    {
-     "t": "p",
-     "text": "The odd-indexed samples $+x[1], -x[1], +x[3], -x[3], \\dots$ cancel identically:"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) + X(4) = 2[x[0] + x[2] + x[4] + x[6]] = 2A"
-    },
-    {
-     "t": "p",
-     "text": "Solving for $A$:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\frac{X(0) + X(4)}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting the given values $X(0) = 1$ and $X(4) = 5$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A = \\sum_{n=0}^3 x[2n] = \\frac{1 + 5}{2} = 3}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Odd-Indexed Sample Sum Generalization:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Subtracting Equation 2 from Equation 1:"
-    },
-    {
-     "t": "math",
-     "tex": "X(0) - X(4) = 2[x[1] + x[3] + x[5] + x[7]]"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=0}^3 x[2n+1] = \\frac{X(0) - X(4)}{2} = \\frac{1 - 5}{2} = -2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**GATE Master Formula:** For any even transform length $N$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\sum_{m=0}^{\\frac{N}{2}-1} x[2m] = \\frac{X(0) + X(N/2)}{2}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\sum_{m=0}^{\\frac{N}{2}-1} x[2m+1] = \\frac{X(0) - X(N/2)}{2}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 182 (Page 46, Top-Right) \u2014 Time Expansion / Upsampling Property in DFT Domain"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Header: *Some properties:-*",
-      "Property (1): Time expansion / upsampling:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] \\xrightarrow[\\text{DFT}]{N\\text{-point}} X(k)"
-    },
-    {
-     "t": "math",
-     "tex": "x\\left[\\frac{n}{3}\\right] \\xrightarrow[\\text{DFT}]{3N\\text{-point}} X(k) \\text{ repeated 3 times}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: 4-point $x[n] = \\{3, 2, 3, 4\\} \\xrightarrow[\\text{DFT}]{\\text{4-point}} X(k) = \\{12, 2j, 0, -2j\\}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "12-point $x_1[n] = \\{3, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0\\}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Arrow down: $\\xrightarrow{\\text{12-point DFT}} X_1(k)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X_1(k) = \\{12, 2j, 0, -2j, \\; 12, 2j, 0, -2j, \\; 12, 2j, 0, -2j\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Side notes showing relation to DFS: $x[n] \\to c_k \\implies x[n/3] \\to \\frac{c_k}{3}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let $x[n]$ be an $N$-point sequence with $N$-point DFT $X(k)$.\nDefine the time-expanded (upsampled by factor $M$) sequence of length $M N$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_M[n] = \\begin{cases} x[n/M], & n = 0, M, 2M, \\dots, (N-1)M \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "h4",
-     "text": "General Theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x\\left[\\frac{n}{M}\\right] \\overset{\\text{DFT}_{MN}}{\\longleftrightarrow} X_M(k) = X(k \\bmod N), \\quad 0 \\le k \\le MN-1}"
-    },
-    {
-     "t": "p",
-     "text": "That is, the $MN$-point DFT consists of the $N$-point DFT $X(k)$ **periodically repeated $M$ times**."
-    },
-    {
-     "t": "h4",
-     "text": "Demonstration with $M = 3, N = 4$:"
-    },
-    {
-     "t": "p",
-     "text": "Given 4-point sequence $x[n] = \\{3, 2, 3, 4\\}$ with 4-point DFT:"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = \\{12, 2j, 0, -2j\\}"
-    },
-    {
-     "t": "p",
-     "text": "Inserting $M-1 = 2$ zeros between each sample yields the 12-point sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1[n] = \\{3, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0\\}"
-    },
-    {
-     "t": "p",
-     "text": "Its 12-point DFT is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X_1(k) = \\{12, 2j, 0, -2j, \\; 12, 2j, 0, -2j, \\; 12, 2j, 0, -2j\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Why No Scaling Factor?**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the 12-point DFT definition:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(k) = \\sum_{n=0}^{11} x_1[n] W_{12}^{kn} = x_1[0] + x_1[3]W_{12}^{3k} + x_1[6]W_{12}^{6k} + x_1[9]W_{12}^{9k}"
-    },
-    {
-     "t": "p",
-     "text": "Since $W_{12}^{3} = e^{-j\\frac{2\\pi}{12}\\cdot 3} = e^{-j\\frac{2\\pi}{4}} = W_4$:"
-    },
-    {
-     "t": "math",
-     "tex": "X_1(k) = x[0] + x[1]W_4^k + x[2]W_4^{2k} + x[3]W_4^{3k} = X(k \\bmod 4)"
-    },
-    {
-     "t": "p",
-     "text": "The amplitude of each bin is completely unscaled!\n</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 183 (Page 46, Bottom-Left) \u2014 Frequency Upsampling / Expansion Numerical Drill"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: 2-point $x[n] = \\{1, 2\\}$, 2-point $X(k) = \\{3, -1\\}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Now 4-point $Y(k) = X(k/2) = \\{3, 0, -1, 0\\}$ (upsampled in frequency by 2).\n  Find 4-point $y[n] = \\text{IDFT}\\{Y(k)\\}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "IDFT matrix formulation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} y(0) \\\\ y(1) \\\\ y(2) \\\\ y(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & j & -1 & -j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -j & -1 & j \\end{bmatrix} \\begin{bmatrix} 3 \\\\ 0 \\\\ -1 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Matrix evaluation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\frac{1}{4} \\{2, 4, 2, 4\\} = \\frac{1}{2} \\{1, 2, 1, 2\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boxed answer: 4-point $y[n] = \\frac{1}{2}\\{1, 2, 1, 2\\}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Given $X(k) = \\{3, -1\\}$ ($N = 2$).\nThe frequency sequence is expanded by inserting zeros (factor $M = 2$):"
-    },
-    {
-     "t": "math",
-     "tex": "Y(k) = \\begin{cases} X(k/2), & k = 0, 2 \\\\ 0, & k = 1, 3 \\end{cases} \\implies Y(k) = \\{\\underset{k=0}{3}, 0, -1, 0\\}"
-    },
-    {
-     "t": "p",
-     "text": "Applying the 4-point IDFT matrix:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} y(0) \\\\ y(1) \\\\ y(2) \\\\ y(3) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix}\n1 & 1 & 1 & 1 \\\\\n1 & j & -1 & -j \\\\\n1 & -1 & 1 & -1 \\\\\n1 & -j & -1 & j\n\\end{bmatrix} \\begin{bmatrix} 3 \\\\ 0 \\\\ -1 \\\\ 0 \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 3(1) - 1(1) \\\\ 3(1) - (-1)(1) \\\\ 3(1) - 1(1) \\\\ 3(1) - (-1)(1) \\end{bmatrix} = \\frac{1}{4} \\begin{bmatrix} 2 \\\\ 4 \\\\ 2 \\\\ 4 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Simplifying:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = \\frac{1}{2} \\{\\underset{\\uparrow}{1}, 2, 1, 2\\} = \\frac{1}{2} [x[n] \\text{ repeated 2 times}]}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice that $y[n]$ is the original sequence $x[n] = \\{1, 2\\}$ repeated twice, **scaled by $\\frac{1}{2}$**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 184 (Page 46, Bottom-Right) \u2014 Frequency Expansion Property & IDFT Scaled Repetition"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Header: Property (2) Frequency Expansion:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] \\xrightarrow{N\\text{-point}} X(k)"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{x[n]}{3} \\text{ repeated } 3 \\text{ times } \\xleftarrow{\\text{IDFT}} X\\left(\\frac{k}{3}\\right) \\quad (3N\\text{-points})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Example: 4-point $x[n] = \\{3, 2, 3, 4\\} \\xrightarrow{\\text{4-point DFT}} X(k) = \\{12, 2j, 0, -2j\\}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "12-point $Y(k) = X(k/3) = \\{12, 0, 0, 2j, 0, 0, 0, 0, 0, -2j, 0, 0\\}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "IDFT result:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{12-point } y[n] = \\frac{1}{3} \\{3, 2, 3, 4, \\; 3, 2, 3, 4, \\; 3, 2, 3, 4\\}"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let $x[n]$ be an $N$-point sequence with $N$-point DFT $X(k)$.\nDefine the frequency-expanded sequence $Y(k)$ of length $MN$ obtained by inserting $M-1$ zeros between each frequency sample:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(k) = \\begin{cases} X(k/M), & k = 0, M, 2M, \\dots, (N-1)M \\\\ 0, & \\text{otherwise} \\end{cases}"
-    },
-    {
-     "t": "h4",
-     "text": "General Theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{Y(k) = X\\left(\\frac{k}{M}\\right) \\overset{\\text{IDFT}_{MN}}{\\longleftrightarrow} y[n] = \\frac{1}{M} [x[n] \\text{ repeated } M \\text{ times across } 0 \\le n \\le MN-1]}"
-    },
-    {
-     "t": "h4",
-     "text": "Numerical Demonstration ($M=3, N=4$):"
-    },
-    {
-     "t": "p",
-     "text": "Given 4-point sequence $x[n] = \\{3, 2, 3, 4\\} \\leftrightarrow X(k) = \\{12, 2j, 0, -2j\\}$.\nForming 12-point frequency sequence with 2 zeros inserted between each bin:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(k) = \\{12, 0, 0, 2j, 0, 0, 0, 0, 0, -2j, 0, 0\\}"
-    },
-    {
-     "t": "p",
-     "text": "Its 12-point IDFT is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = \\frac{1}{3} \\{\\underset{\\uparrow}{3}, 2, 3, 4, \\; 3, 2, 3, 4, \\; 3, 2, 3, 4\\}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**GATE Duality Trap:**",
-      "Time expansion by $M$ $\\implies$ Frequency repetition **WITHOUT** scaling ($1 \\times X(k)$).",
-      "Frequency expansion by $M$ $\\implies$ Time repetition **WITH** scaling by $\\frac{1}{M}$!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 185 (Page 47, Top-Left) \u2014 Unified Comparison Matrix: DTFS vs DFT Expansion Properties"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Two-column comparative layout separated by a dashed vertical line:",
-      "Left Column: **DTFS**",
-      "$x[n]$ (Period = $N$) $\\to c_k$ (Period = $N$)",
-      "$x[n/3]$ (Period = $3N$) $\\to \\frac{c_k}{3}$ (Period = $3N$, fundamental period = $N$)",
-      "$x[n]$ (Period = $3N$) $\\leftarrow c_{k/3}$ (Period = $3N$)",
-      "Right Column: **DFT**",
-      "$x[n]$ ($N$-point) $\\to X(k)$ ($N$-point)",
-      "$x[n/3]$ ($3N$-point) $\\to X(k)$ repeated 3 times ($3N$-point)",
-      "$\\frac{1}{3} x[n]$ repeated 3 times ($3N$-points) $\\leftarrow X(k/3)$ ($3N$-points)"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "A systematic comparison reveals how scale factor placement in forward vs inverse transform definitions controls expansion behavior:"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Characteristic / Property",
-      "Discrete Fourier Series (DTFS)",
-      "Discrete Fourier Transform (DFT)"
-     ],
-     "align": [
-      ":---",
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**Analysis Formula**",
-       "$c_k = \\frac{1}{N} \\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N}kn}$",
-       "$X(k) = \\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N}kn}$"
-      ],
-      [
-       "**Synthesis Formula**",
-       "$x[n] = \\sum_{k=0}^{N-1} c_k e^{j\\frac{2\\pi}{N}kn}$",
-       "$x[n] = \\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N}kn}$"
-      ],
-      [
-       "**Time Expansion: $x[n/M]$**",
-       "$c_k^{\\text{new}} = \\frac{1}{M} c_k$ (Attenuated by $\\frac{1}{M}$)",
-       "$X_{\\text{new}}(k) = X(k)$ repeated (Unscaled)"
-      ],
-      [
-       "**Frequency Expansion: $c_{k/M}$ / $X(k/M)$**",
-       "$x_{\\text{new}}[n] = x[n]$ repeated (Unscaled)",
-       "$x_{\\text{new}}[n] = \\frac{1}{M} x[n]$ repeated (Attenuated by $\\frac{1}{M}$)"
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Mathematical Rationale:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Because DTFS places the $\\frac{1}{N}$ factor in the forward analysis equation, time expansion dilates the period from $N$ to $MN$, causing the analysis factor to become $\\frac{1}{MN} = \\frac{1}{M} \\cdot \\frac{1}{N}$, directly attenuating the coefficients by $\\frac{1}{M}$.\n  In DFT, the $\\frac{1}{N}$ factor resides in the synthesis equation, so the $\\frac{1}{M}$ attenuation appears when performing inverse DFT on an expanded frequency spectrum!\n</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 186 (Page 47, Top-Right) \u2014 Circular Time Reversal, Conjugation & Symmetry Taxonomy"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "List of fundamental transform pairs:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] \\longrightarrow X(k)"
-    },
-    {
-     "t": "math",
-     "tex": "x[-n] \\longrightarrow X(-k)"
-    },
-    {
-     "t": "math",
-     "tex": "x^*[n] \\longrightarrow X^*(-k)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Header: *predicting the nature of $x[n]$ with the help of $X(k)$:-*",
-      "Branching note: *Same as EFSC, DTFT and CTFT (D and C)!*",
-      "Table mapping time symmetry to frequency symmetry."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let $x[n]$ be an $N$-point sequence with $N$-point DFT $X(k)$."
-    },
-    {
-     "t": "h4",
-     "text": "Fundamental Properties:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Circular Time Reversal:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[((-n))_N] = x[N - n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X(( -k ))_N = X[N - k]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Complex Conjugation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x^*[n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X^*(( -k ))_N = X^*[N - k]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Conjugate Reversal:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x^*[((-n))_N] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X^*(k)"
-    },
-    {
-     "t": "h4",
-     "text": "Symmetry Classification for DFT:"
-    },
-    {
-     "t": "p",
-     "text": "When $x[n] \\in \\mathbb{R}$ ($x[n] = x^*[n]$):"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) = X^*[N - k] \\quad \\text{(Hermitian / Conjugate Symmetric)}"
-    },
-    {
-     "t": "p",
-     "text": "Decomposing into real/imaginary and even/odd parts:"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Time Domain Sequence $x[n]$",
-      "DFT Domain Spectrum $X(k)$"
-     ],
-     "align": [
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**Real & Circularly Even**",
-       "**Real & Circularly Even**"
-      ],
-      [
-       "**Real & Circularly Odd**",
-       "**Purely Imaginary & Circularly Odd**"
-      ],
-      [
-       "**Purely Imaginary & Circularly Even**",
-       "**Purely Imaginary & Circularly Even**"
-      ],
-      [
-       "**Purely Imaginary & Circularly Odd**",
-       "**Real & Circularly Odd**"
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**GATE Rule of Thumb:** The symmetry taxonomy is invariant across all four Fourier transforms (CTFS, CTFT, DTFS, DTFT, DFT). Real $\\leftrightarrow$ Conjugate Symmetric; Even $\\leftrightarrow$ Even; Odd $\\leftrightarrow$ Odd; Real + Odd $\\leftrightarrow$ Imaginary + Odd!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 187 (Page 47, Bottom-Left) \u2014 Solved GATE Problem: Real Sequence Conjugate Symmetry"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Question: 8-point real-valued sequence $x[n] \\xrightarrow[\\text{DFT}]{\\text{8-point}} X(k)$ (periodically extended)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "X(1) = 2 + 3j, \\quad X(2) = 1 + 2j, \\quad X(5) = 10"
-    },
-    {
-     "t": "p",
-     "text": "Find out:"
-    },
-    {
-     "t": "math",
-     "tex": "X(7) + X(-18) + X(27) = ?"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Step-by-step reduction using modulo 8 and conjugate symmetry:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(7) = X(7 - 8) = X(-1)"
-    },
-    {
-     "t": "math",
-     "tex": "X(-18) = X(-18 + 16) = X(-2)"
-    },
-    {
-     "t": "math",
-     "tex": "X(27) = X(27 - 24) = X(3)"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = x^*[n] \\implies X(k) = X^*(-k)"
-    },
-    {
-     "t": "math",
-     "tex": "X(-1) = X^*(1) = 2 - 3j"
-    },
-    {
-     "t": "math",
-     "tex": "X(-2) = X^*(2) = 1 - 2j"
-    },
-    {
-     "t": "math",
-     "tex": "X(3) = 10"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Summation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "= 2 - 3j + 1 - 2j + 10 = 13 - 5j"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boxed final answer: $\\mathbf{Ans = 13 - 5j}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$N = 8$, $x[n] \\in \\mathbb{R}$.",
-      "$X(1) = 2 + 3j$",
-      "$X(2) = 1 + 2j$",
-      "$X(5) = 10$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "We evaluate:"
-    },
-    {
-     "t": "math",
-     "tex": "S = X(7) + X(-18) + X(27)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Modulo-8 Reduction"
-    },
-    {
-     "t": "p",
-     "text": "Because $X(k)$ is periodic with period $N = 8$ ($X(k + 8m) = X(k)$):"
-    },
-    {
-     "t": "math",
-     "tex": "X(7) = X(7 - 8) = X(-1)"
-    },
-    {
-     "t": "math",
-     "tex": "X(-18) = X(-18 + 2 \\times 8) = X(-18 + 16) = X(-2)"
-    },
-    {
-     "t": "math",
-     "tex": "X(27) = X(27 - 3 \\times 8) = X(27 - 24) = X(3)"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "S = X(-1) + X(-2) + X(3)"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Applying Conjugate Symmetry"
-    },
-    {
-     "t": "p",
-     "text": "For any real sequence $x[n]$, $X(-k) = X^*(k)$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $k = 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(-1) = X^*(1) = (2 + 3j)^* = 2 - 3j"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $k = 2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X(-2) = X^*(2) = (1 + 2j)^* = 1 - 2j"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $k = 3$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Notice that in modulo 8:"
-    },
-    {
-     "t": "math",
-     "tex": "X(3) = X(3 - 8) = X(-5)"
-    },
-    {
-     "t": "p",
-     "text": "By conjugate symmetry:"
-    },
-    {
-     "t": "math",
-     "tex": "X(-5) = X^*(5)"
-    },
-    {
-     "t": "p",
-     "text": "Since $X(5) = 10 \\in \\mathbb{R}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X(3) = X^*(5) = (10)^* = 10"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Total Summation"
-    },
-    {
-     "t": "math",
-     "tex": "S = (2 - 3j) + (1 - 2j) + 10 = (2 + 1 + 10) + j(-3 - 2) = 13 - 5j"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{X(7) + X(-18) + X(27) = 13 - 5j}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**GATE Trap with $X(5)$:** Students often get stuck trying to find $X(3)$ because $X(3)$ is not given explicitly. Recognizing that $3 \\equiv -5 \\pmod 8 \\implies X(3) = X^*(-(-5)) = X^*(5)$ is the critical breakthrough!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 188 (Page 47, Bottom-Right) \u2014 Duality Property of DFT & Unified Multi-Domain Transform Duality"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Title: *Duality property:-*",
-      "Transformation flow:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] \\xrightarrow[\\text{DFT}]{N\\text{-point}} X(k) \\quad (\\text{D} + \\text{P})"
-    },
-    {
-     "t": "math",
-     "tex": "X(k) \\xrightarrow[\\text{DFT}]{N\\text{-point}} N x[-n] \\quad (\\text{P} + \\text{D})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Comparative sub-blocks:",
-      "*Duality in CTFT:* $x(t) \\leftrightarrow X(\\omega) \\implies X(t) \\leftrightarrow 2\\pi x(-\\omega)$",
-      "*Duality in DTFS:* $x[n] \\leftrightarrow c_k \\implies c_n \\leftrightarrow \\frac{1}{N} x[-k]$",
-      "*Duality b/w CTFS and DTFT:* $x(t) \\leftrightarrow c_n \\iff c_n \\leftrightarrow X(-\\omega)$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "h4",
-     "text": "The DFT Duality Theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[n] \\overset{\\text{DFT}_N}{\\longleftrightarrow} X(k) \\implies X(n) \\overset{\\text{DFT}_N}{\\longleftrightarrow} N \\cdot x[((-k))_N] = N \\cdot x[-k]}"
-    },
-    {
-     "t": "h4",
-     "text": "Unified Cross-Domain Duality Matrix:"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Transform",
-      "Signal Domain",
-      "Transform Domain",
-      "Forward Transform",
-      "Duality Relation"
-     ],
-     "align": [
-      ":---",
-      ":---",
-      ":---",
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**CTFT**",
-       "Continuous, Aperiodic",
-       "Continuous, Aperiodic",
-       "$\\int x(t)e^{-j\\omega t}dt$",
-       "$X(t) \\leftrightarrow 2\\pi x(-\\omega)$"
-      ],
-      [
-       "**DTFS**",
-       "Discrete, Periodic ($N$)",
-       "Discrete, Periodic ($N$)",
-       "$\\frac{1}{N}\\sum x[n]e^{-j\\omega_0 kn}$",
-       "$c_n \\leftrightarrow \\frac{1}{N} x[-k]$"
-      ],
-      [
-       "**CTFS / DTFT**",
-       "Cont., Periodic / Disc., Aperiodic",
-       "Disc., Aperiodic / Cont., Periodic",
-       "Cross-Domain Pair",
-       "$x(t) \\leftrightarrow c_n \\iff c_n \\leftrightarrow X(-\\omega)$"
-      ],
-      [
-       "**DFT**",
-       "Discrete, Periodic ($N$)",
-       "Discrete, Periodic ($N$)",
-       "$\\sum x[n]e^{-j\\frac{2\\pi}{N}kn}$",
-       "$X(n) \\leftrightarrow N x[((-k))_N]$"
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice the duality multiplier for DFT is $+N$, while for DTFS it is $\\frac{1}{N}$, and for CTFT it is $2\\pi$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 189 (Page 48, Top-Left) \u2014 Iterated DFT Operators & Problem Setup"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Problem Statement: 4-point sequence $x[n] = \\{1, 2, -1, 4\\}$. DFT denotes 4-point DFT."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "(a) Find $\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\}$.\n  (b) $\\text{DFT}\\{\\text{DFT}\\{\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\}\\}\\} = y[n]$; find $y[n]$.\n  (c) $\\text{DFT}\\{y[n]\\} = Y(k)$. Find $Y(0) = \\left. Y(k) \\right|_{k=0} = ?$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Formula box:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = \\text{DFT}\\{X(k)\\} = N x[-n]"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let $x[n] = \\{\\underset{\\uparrow}{1}, 2, -1, 4\\}$ with $N = 4$."
-    },
-    {
-     "t": "h4",
-     "text": "Part (a) Formulation:"
-    },
-    {
-     "t": "p",
-     "text": "By DFT duality:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}\\{x[n]\\} = X(k)"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = \\text{DFT}\\{X(k)\\} = N \\cdot x[((-n))_N]"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "See Slide 190 for the circular index evaluation and calculation."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 190 (Page 48, Top-Right) \u2014 Circular Index Wheel & 4th Power of DFT Operator"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Periodic discrete sequences:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(x(n))_4 = \\{\\dots, 1, 2, -1, 4, \\underset{\\uparrow}{1}, 2, -1, 4, 1, 2, -1, 4\\}"
-    },
-    {
-     "t": "math",
-     "tex": "(x(-n))_4 = \\{\\dots, 1, 4, -1, 2, \\underset{\\uparrow}{1}, 4, -1, 2, 1\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Diagram of modulo-4 circle:",
-      "Circle with 4 points labeled $0, 1, 2, 3$.",
-      "Clockwise arrow labeled $x[n]$: values at $0 \\to 1, 1 \\to 2, 2 \\to -1, 3 \\to 4$.",
-      "Counter-clockwise arrow labeled $x[-n]$: values traversed as $1, 4, -1, 2$.",
-      "4-point $x[-n] = \\{1, 4, -1, 2\\}$.",
-      "Evaluation of (a):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "N x[-n] = 4 x[-n] = \\{4, 16, -4, 8\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Derivation for (b):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}\\{\\text{DFT}\\{\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\}\\}\\}"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] \\to X(k) \\to N x[-n] \\to N X(-k) \\to N^2 x[n]"
-    },
-    {
-     "t": "math",
-     "tex": "= N^2 x[n]"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "h4",
-     "text": "Circular Time Reversal via Modulo-4 Wheel:"
-    },
-    {
-     "t": "p",
-     "text": "For $N = 4$, circular time reversal is defined as:"
-    },
-    {
-     "t": "math",
-     "tex": "x[((-n))_4] = x[(4 - n) \\bmod 4]"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating for each index $n \\in \\{0, 1, 2, 3\\}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 0$: $x[((0))_4] = x[0] = 1$",
-      "For $n = 1$: $x[((-1))_4] = x[3] = 4$",
-      "For $n = 2$: $x[((-2))_4] = x[2] = -1$",
-      "For $n = 3$: $x[((-3))_4] = x[1] = 2$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x[((-n))_4] = \\{\\underset{\\uparrow}{1}, 4, -1, 2\\}}"
-    },
-    {
-     "t": "h4",
-     "text": "Solution to Part (a):"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}^2\\{x[n]\\} = N \\cdot x[((-n))_N] = 4 \\cdot \\{\\underset{\\uparrow}{1}, 4, -1, 2\\} = \\boxed{\\{\\underset{\\uparrow}{4}, 16, -4, 8\\}}"
-    },
-    {
-     "t": "h4",
-     "text": "Derivation of Part (b) Operator Identity:"
-    },
-    {
-     "t": "p",
-     "text": "Let $\\mathcal{F}$ denote the $N$-point DFT operator:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$\\mathcal{F}^1\\{x[n]\\} = X(k)$",
-      "$\\mathcal{F}^2\\{x[n]\\} = \\mathcal{F}\\{X(k)\\} = N x[((-n))_N]$",
-      "$\\mathcal{F}^3\\{x[n]\\} = \\mathcal{F}\\{N x[((-n))_N]\\} = N \\mathcal{F}\\{x[((-n))_N]\\} = N X(( -k ))_N$",
-      "$\\mathcal{F}^4\\{x[n]\\} = \\mathcal{F}\\{N X(( -k ))_N\\} = N [N x[((-(-n)))_N]] = N^2 x[n]$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{DFT}^4\\{x[n]\\} = N^2 x[n]}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Eigenvalues of DFT Matrix:** The fact that $\\mathcal{F}^4 = N^2 \\mathbf{I}$ implies that the normalized DFT operator $\\mathbf{F}_N = \\frac{1}{\\sqrt{N}}\\mathbf{W}_N$ satisfies:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{F}_N^4 = \\mathbf{I}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, the eigenvalues of the normalized DFT matrix can ONLY take values from the set of fourth roots of unity:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda \\in \\{+1, -1, +j, -j\\}"
-    },
-    {
-     "t": "p",
-     "text": "For the unnormalized DFT matrix $\\mathbf{W}_N$, the eigenvalues are $\\{\\pm \\sqrt{N}, \\pm j\\sqrt{N}\\}$.\n</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 191 (Page 48, Bottom-Left) \u2014 Evaluation of $y[n] = 16 x[n]$ & DC Component $Y(0)$"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Completion of part (b):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "= 16\\{1, 2, -1, 4\\} = \\{16, 32, -16, 64\\} = y[n]"
-    },
-    {
-     "t": "p",
-     "text": "Boxed result: $y[n] = \\{16, 32, -16, 64\\}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Solution to part (c):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}\\{y[n]\\} = Y(k), \\quad \\left. Y(k) \\right|_{k=0} = ?"
-    },
-    {
-     "t": "math",
-     "tex": "Y(k) = \\sum_{n=0}^3 y[n] e^{-j\\frac{2\\pi}{N}kn}"
-    },
-    {
-     "t": "math",
-     "tex": "Y(0) = \\sum_{n=0}^3 y[n] = 16 + 32 - 16 + 64 = 96"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Boxed answer: $\\mathbf{Ans = 96}$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "h4",
-     "text": "Solution to Part (b):"
-    },
-    {
-     "t": "p",
-     "text": "With $N = 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "N^2 = 4^2 = 16"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\text{DFT}^4\\{x[n]\\} = 16 x[n] = 16 \\cdot \\{\\underset{\\uparrow}{1}, 2, -1, 4\\}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = \\{\\underset{\\uparrow}{16}, 32, -16, 64\\}}"
-    },
-    {
-     "t": "h4",
-     "text": "Solution to Part (c):"
-    },
-    {
-     "t": "p",
-     "text": "By the DC summation property of the DFT:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(0) = \\left. Y(k) \\right|_{k=0} = \\sum_{n=0}^{N-1} y[n] W_N^0 = \\sum_{n=0}^3 y[n]"
-    },
-    {
-     "t": "p",
-     "text": "Substituting the values of $y[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(0) = 16 + 32 - 16 + 64 = 96"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{Y(0) = 96}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Alternative Ultra-Fast Check:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Notice that $Y(k) = \\text{DFT}\\{y[n]\\} = \\text{DFT}\\{\\text{DFT}^4\\{x[n]\\}\\} = \\text{DFT}^5\\{x[n]\\}$.\n  Since $\\text{DFT}^4 = N^2 \\mathbf{I}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}^5\\{x[n]\\} = N^2 \\text{DFT}\\{x[n]\\} = N^2 X(k) = 16 X(k)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating at $k = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(0) = 16 X(0) = 16 \\sum_{n=0}^3 x[n] = 16 (1 + 2 - 1 + 4) = 16 (6) = 96"
-    },
-    {
-     "t": "p",
-     "text": "The answer is identical and takes 5 seconds!\n</details>"
-    },
-    {
-     "t": "h3",
-     "text": "Slide 192 (Page 48, Bottom-Right) \u2014 Repeated IDFT Operator Theorem & Inverse Duality"
-    },
-    {
-     "t": "h4",
-     "text": "1. Chalkboard Visual Layout & Structure"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Problem Statement: 4-point sequence $y[n] = \\{1, 2, -1, 3\\}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "4-point DFT of $y[n]$ is 4-point $Y(k)$.\n  Function \"IDFT\" is defined over 4-point sequence.\n  Find:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{IDFT}\\{\\text{IDFT}\\{\\text{IDFT}\\{\\text{IDFT}\\{Y(k)\\}\\}\\}\\} = \\frac{Y(k)}{N^2} = \\frac{Y(k)}{16}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Derivation steps using inverse duality:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{IDFT}\\{y[n]\\} = \\frac{Y(-k)}{N}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{IDFT}\\left\\{\\frac{Y(-k)}{N}\\right\\} = \\frac{y[-n]}{N}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{IDFT}\\left\\{\\frac{y[-n]}{N}\\right\\} = \\frac{1}{N} \\frac{Y(k)}{N} = \\frac{Y(k)}{N^2}"
-    },
-    {
-     "t": "h4",
-     "text": "2. Complete Mathematical Transcription"
-    },
-    {
-     "t": "p",
-     "text": "Let $y[n] = \\{\\underset{\\uparrow}{1}, 2, -1, 3\\}$ with $N = 4$, and $Y(k) = \\text{DFT}_4\\{y[n]\\}$.\nLet $\\mathcal{F}^{-1}$ denote the $N$-point IDFT operator."
-    },
-    {
-     "t": "p",
-     "text": "We evaluate the fourth application of the IDFT operator to $Y(k)$:"
-    },
-    {
-     "t": "math",
-     "tex": "S(k) = \\mathcal{F}^{-4}\\{Y(k)\\}"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Operator Evaluation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**First Application:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}^{-1}\\{Y(k)\\} = y[n]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Second Application:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall that $\\text{DFT}_N\\{y[n]\\} = Y(k)$. By duality applied to the IDFT:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}^{-1}\\{y[n]\\} = \\frac{1}{N} Y(( -k ))_N"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Third Application:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}^{-1}\\left\\{ \\frac{1}{N} Y(( -k ))_N \\right\\} = \\frac{1}{N} \\mathcal{F}^{-1}\\{Y(( -k ))_N\\} = \\frac{1}{N} y[((-n))_N]"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Fourth Application:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathcal{F}^{-1}\\left\\{ \\frac{1}{N} y[((-n))_N] \\right\\} = \\frac{1}{N} \\left[ \\frac{1}{N} Y(( -(-k) ))_N \\right] = \\frac{1}{N^2} Y(k)"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $N = 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{IDFT}^4\\{Y(k)\\} = \\frac{Y(k)}{N^2} = \\frac{Y(k)}{16}}"
-    },
-    {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Grand Summary of Iterated Transforms:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{DFT}^4 = N^2 \\cdot \\mathbf{I}}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{IDFT}^4 = \\frac{1}{N^2} \\cdot \\mathbf{I}}"
-    },
-    {
-     "t": "p",
-     "text": "The forward DFT operator scales the signal by $N^2$ after 4 cycles, while the inverse DFT operator attenuates the signal by $\\frac{1}{N^2}$ after 4 cycles!\n</details>"
-    },
-    {
-     "t": "h2",
-     "text": "4. Synthesis, Comparative Tables & High-Yield Summary"
-    },
-    {
-     "t": "h3",
-     "text": "4.1 Master Comparison: Transform Properties Across Domains"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Property",
-      "Continuous-Time FT (CTFT)",
-      "Discrete-Time FT (DTFT)",
-      "Discrete Fourier Series (DTFS)",
-      "Discrete Fourier Transform (DFT)"
-     ],
-     "align": [
-      ":---",
-      ":---",
-      ":---",
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**Time Domain**",
-       "Continuous, Aperiodic",
-       "Discrete, Aperiodic",
-       "Discrete, Periodic ($N$)",
-       "Discrete, Finite / Periodic ($N$)"
-      ],
-      [
-       "**Frequency Domain**",
-       "Continuous, Aperiodic",
-       "Continuous, Periodic ($2\\pi$)",
-       "Discrete, Periodic ($N$)",
-       "Discrete, Finite / Periodic ($N$)"
-      ],
-      [
-       "**Forward Transform**",
-       "$\\int_{-\\infty}^\\infty x(t) e^{-j\\omega t} dt$",
-       "$\\sum_{n=-\\infty}^\\infty x[n] e^{-j\\omega n}$",
-       "$\\frac{1}{N} \\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N}kn}$",
-       "$\\sum_{n=0}^{N-1} x[n] e^{-j\\frac{2\\pi}{N}kn}$"
-      ],
-      [
-       "**Inverse Transform**",
-       "$\\frac{1}{2\\pi} \\int_{-\\infty}^\\infty X(\\omega) e^{j\\omega t} d\\omega$",
-       "$\\frac{1}{2\\pi} \\int_{2\\pi} X(e^{j\\omega}) e^{j\\omega n} d\\omega$",
-       "$\\sum_{k=0}^{N-1} c_k e^{j\\frac{2\\pi}{N}kn}$",
-       "$\\frac{1}{N} \\sum_{k=0}^{N-1} X(k) e^{j\\frac{2\\pi}{N}kn}$"
-      ],
-      [
-       "**Time Shift**",
-       "$x(t-t_0) \\leftrightarrow e^{-j\\omega t_0} X(\\omega)$",
-       "$x[n-n_0] \\leftrightarrow e^{-j\\omega n_0} X(e^{j\\omega})$",
-       "$x[n-n_0] \\leftrightarrow e^{-j\\frac{2\\pi}{N}kn_0} c_k$",
-       "$x[((n-n_0))_N] \\leftrightarrow W_N^{kn_0} X(k)$"
-      ],
-      [
-       "**Convolution**",
-       "Linear: $x(t)*h(t) \\leftrightarrow X(\\omega)H(\\omega)$",
-       "Linear: $x[n]*h[n] \\leftrightarrow X(e^{j\\omega})H(e^{j\\omega})$",
-       "Periodic: $x[n]*h[n] \\leftrightarrow N c_k d_k$",
-       "Circular: $x_1 \\circledast x_2 \\leftrightarrow X_1(k)X_2(k)$"
-      ],
-      [
-       "**Duality Multiplier**",
-       "$2\\pi$",
-       "Cross-domain with CTFS",
-       "$\\frac{1}{N}$",
-       "$N$"
-      ],
-      [
-       "**4th Operator Power**",
-       "$(2\\pi)^2 \\mathbf{I} = 4\\pi^2 \\mathbf{I}$",
-       "N/A (Cross-domain)",
-       "$\\frac{1}{N^2} \\mathbf{I}$",
-       "$N^2 \\mathbf{I}$"
-      ]
-     ]
-    },
-    {
-     "t": "h3",
-     "text": "4.2 Linear Convolution vs Circular Convolution Master Matrix"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Parameter / Feature",
-      "Linear Convolution",
-      "Circular Convolution"
-     ],
-     "align": [
-      ":---",
-      ":---",
-      ":---"
-     ],
-     "rows": [
-      [
-       "**Symbolic Notation**",
-       "$y[n] = x_1[n] * x_2[n]$",
-       "$y[n] = x_1[n] \\circledast x_2[n]$"
-      ],
-      [
-       "**Time-Domain Operation**",
-       "Aperiodic sum: $\\sum x_1[m] x_2[n-m]$",
-       "Modulo sum: $\\sum x_1[m] x_2[((n-m))_N]$"
-      ],
-      [
-       "**Input Durations**",
-       "Lengths $N_1$ and $N_2$",
-       "Length $N$ for both (or zero-padded to $N$)"
-      ],
-      [
-       "**Output Duration**",
-       "$L = N_1 + N_2 - 1$",
-       "Strictly $N$"
-      ],
-      [
-       "**Frequency Theorem**",
-       "$Y(e^{j\\omega}) = X_1(e^{j\\omega}) X_2(e^{j\\omega})$ (DTFT)",
-       "$Y(k) = X_1(k) X_2(k)$ ($N$-point DFT)"
-      ],
-      [
-       "**Matrix Formulation**",
-       "Toeplitz matrix multiplication",
-       "Circulant matrix multiplication"
-      ],
-      [
-       "**Equivalence Condition**",
-       "Identical if $N \\ge N_1 + N_2 - 1$",
-       "Aliased wrap-around if $N < N_1 + N_2 - 1$"
-      ]
-     ]
-    },
-    {
-     "t": "h3",
-     "text": "4.3 Master GATE Exam Pitfalls & Trap Avoidance Guide"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**The Scale Factor Trap in IDFT:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Always remember that the forward DFT matrix $\\mathbf{W}_N$ has NO scale factor, but the inverse DFT matrix has $\\frac{1}{N}$.",
-      "Forgetting $\\frac{1}{N}$ causes the reconstructed sequence to be $N$ times too large!"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Linear vs Circular Convolution Length:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If GATE asks for the circular convolution of a 4-point sequence and a 3-point sequence without specifying $N$, the natural circular convolution cannot be computed unless $N$ is defined. If they state \"linear convolution computed via DFT\", the minimum DFT size is $N = 4 + 3 - 1 = 6$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Strictly Real Values at DC and Half-Sampling ($N/2$):**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For real sequences, $X(0) = \\sum x[n]$ is real.",
-      "For even $N$, $X(N/2) = \\sum (-1)^n x[n]$ is real.",
-      "Any imaginary part in $X(0)$ or $X(N/2)$ indicates an algebraic blunder."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Time vs Frequency Expansion Factor:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Zero insertion in time: $x[n/M] \\longleftrightarrow X(k)$ repeated $M$ times (factor of $1$).",
-      "Zero insertion in frequency: $X(k/M) \\longleftrightarrow \\frac{1}{M} x[n]$ repeated $M$ times (factor of $\\frac{1}{M}$)."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Repeated DFT Operator Powers:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\text{DFT}^2\\{x[n]\\} = N x[((-n))_N]$ (Reversal + scaling by $N$).",
-      "$\\text{DFT}^4\\{x[n]\\} = N^2 x[n]$ (Pure scaling by $N^2$).",
-      "$\\text{IDFT}^4\\{Y(k)\\} = \\frac{1}{N^2} Y(k)$ (Pure scaling by $\\frac{1}{N^2}$)."
-     ]
+     "open": true
     }
    ]
   },
@@ -17605,98 +17597,101 @@ export default {
      "text": "**GATE 2014 Question:**\nThe $N$-point DFT of a sequence $x[n]$ is given by:\n$$X(k) = \\frac{1}{\\sqrt{N}} \\sum_{n=0}^{N-1} x[n] e^{-j k \\frac{2\\pi}{N} n}$$\nDenote this operation as $\\text{DFT}\\{x[n]\\} = X(k)$. Take $N = 4$.\nIf:\n$$\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = x[n]$$\nthen find $x[n]$ among the following choices:\n- (A) $x[n] = \\{1, 2, 3, 4\\} \\implies X[-n] = \\{1, 4, 3, 2\\}$\n- (B) $x[n] = \\{1, 2, 3, 2\\} \\implies x[-n] = \\{1, 2, 3, 2\\}$\n- (C) $x[n] = \\{1, 3, 2, 2\\} \\implies X[-n] = \\{1, 2, 2, 3\\}$\n- (D) $x[n] = \\{1, 2, 2, 3\\} \\implies X[-n] = \\{1, 3, 2, 2\\}$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Theoretical Foundation & Analytical Trap:**\nStandard unnormalized DFT satisfies the duality property:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = N x[(-n)_N]"
-    },
-    {
-     "t": "p",
-     "text": "However, here the examiner has explicitly defined a **unitary (normalized) DFT** with an upfront scale factor of $\\frac{1}{\\sqrt{N}}$!\nLet $\\mathbf{F}_N = \\frac{1}{\\sqrt{N}} \\mathbf{W}_N$ be the unitary DFT matrix. Applying this transformation twice yields:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{F}_N^2 = \\left(\\frac{1}{\\sqrt{N}} \\mathbf{W}_N\\right) \\left(\\frac{1}{\\sqrt{N}} \\mathbf{W}_N\\right) = \\frac{1}{N} \\mathbf{W}_N^2"
-    },
-    {
-     "t": "p",
-     "text": "Since the standard DFT matrix squared is known to be the circular time-reversal permutation matrix multiplied by $N$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{W}_N^2 = N \\mathbf{P}_{\\text{rev}} \\implies \\mathbf{F}_N^2 = \\mathbf{P}_{\\text{rev}}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = x[(-n)_N]"
-    },
-    {
-     "t": "p",
-     "text": "The problem stipulates $\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = x[n]$. Equating the two expressions:"
-    },
-    {
-     "t": "math",
-     "tex": "x[(-n)_N] = x[n]"
-    },
-    {
-     "t": "p",
-     "text": "Thus, $x[n]$ must be a **circularly even (circularly symmetric)** sequence!"
-    },
-    {
-     "t": "p",
-     "text": "**Evaluation for $N = 4$:**\nFor a 4-point sequence $x[n] = \\{a, b, c, d\\}$ where $x[0]=a, x[1]=b, x[2]=c, x[3]=d$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[(-0)_4] = x[0] = a$",
-      "$x[(-1)_4] = x[3] = d$",
-      "$x[(-2)_4] = x[2] = c$",
-      "$x[(-3)_4] = x[1] = b$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Circular time-reversal gives:"
-    },
-    {
-     "t": "math",
-     "tex": "x[(-n)_4] = \\{a, d, c, b\\}"
-    },
-    {
-     "t": "p",
-     "text": "For $x[(-n)_4] = x[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\{a, d, c, b\\} = \\{a, b, c, d\\} \\implies d = b"
-    },
-    {
-     "t": "p",
-     "text": "**Option Verification:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Option (A): $\\{1, 2, 3, 4\\} \\implies b=2, d=4$ ($b \\neq d$). Circular reversal is $\\{1, 4, 3, 2\\} \\neq x[n]$.",
-      "Option (B): $\\{1, 2, 3, 2\\} \\implies b=2, d=2$ ($b = d$). Circular reversal is $\\{1, 2, 3, 2\\} = x[n]$. **(Correct)**",
-      "Option (C): $\\{1, 3, 2, 2\\} \\implies b=3, d=2$ ($b \\neq d$).",
-      "Option (D): $\\{1, 2, 2, 3\\} \\implies b=2, d=3$ ($b \\neq d$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:** Correct Choice is **(B)**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Theoretical Foundation & Analytical Trap:**\nStandard unnormalized DFT satisfies the duality property:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = N x[(-n)_N]"
+      },
+      {
+       "t": "p",
+       "text": "However, here the examiner has explicitly defined a **unitary (normalized) DFT** with an upfront scale factor of $\\frac{1}{\\sqrt{N}}$!\nLet $\\mathbf{F}_N = \\frac{1}{\\sqrt{N}} \\mathbf{W}_N$ be the unitary DFT matrix. Applying this transformation twice yields:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{F}_N^2 = \\left(\\frac{1}{\\sqrt{N}} \\mathbf{W}_N\\right) \\left(\\frac{1}{\\sqrt{N}} \\mathbf{W}_N\\right) = \\frac{1}{N} \\mathbf{W}_N^2"
+      },
+      {
+       "t": "p",
+       "text": "Since the standard DFT matrix squared is known to be the circular time-reversal permutation matrix multiplied by $N$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{W}_N^2 = N \\mathbf{P}_{\\text{rev}} \\implies \\mathbf{F}_N^2 = \\mathbf{P}_{\\text{rev}}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = x[(-n)_N]"
+      },
+      {
+       "t": "p",
+       "text": "The problem stipulates $\\text{DFT}\\{\\text{DFT}\\{x[n]\\}\\} = x[n]$. Equating the two expressions:"
+      },
+      {
+       "t": "math",
+       "tex": "x[(-n)_N] = x[n]"
+      },
+      {
+       "t": "p",
+       "text": "Thus, $x[n]$ must be a **circularly even (circularly symmetric)** sequence!"
+      },
+      {
+       "t": "p",
+       "text": "**Evaluation for $N = 4$:**\nFor a 4-point sequence $x[n] = \\{a, b, c, d\\}$ where $x[0]=a, x[1]=b, x[2]=c, x[3]=d$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[(-0)_4] = x[0] = a$",
+        "$x[(-1)_4] = x[3] = d$",
+        "$x[(-2)_4] = x[2] = c$",
+        "$x[(-3)_4] = x[1] = b$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Circular time-reversal gives:"
+      },
+      {
+       "t": "math",
+       "tex": "x[(-n)_4] = \\{a, d, c, b\\}"
+      },
+      {
+       "t": "p",
+       "text": "For $x[(-n)_4] = x[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\{a, d, c, b\\} = \\{a, b, c, d\\} \\implies d = b"
+      },
+      {
+       "t": "p",
+       "text": "**Option Verification:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Option (A): $\\{1, 2, 3, 4\\} \\implies b=2, d=4$ ($b \\neq d$). Circular reversal is $\\{1, 4, 3, 2\\} \\neq x[n]$.",
+        "Option (B): $\\{1, 2, 3, 2\\} \\implies b=2, d=2$ ($b = d$). Circular reversal is $\\{1, 2, 3, 2\\} = x[n]$. **(Correct)**",
+        "Option (C): $\\{1, 3, 2, 2\\} \\implies b=3, d=2$ ($b \\neq d$).",
+        "Option (D): $\\{1, 2, 2, 3\\} \\implies b=2, d=3$ ($b \\neq d$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:** Correct Choice is **(B)**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -17895,62 +17890,65 @@ export default {
      "text": "**Problem:**\nLet $\\text{DFT}\\{[a, b, c, d]\\} = \\{\\alpha, \\beta, \\gamma, \\delta\\}$.\nSequence $[p, q, r, s]$ is defined via vector-matrix multiplication:\n$$[p \\quad q \\quad r \\quad s] = [a \\quad b \\quad c \\quad d] \\begin{bmatrix} a & b & c & d \\\\ d & a & b & c \\\\ c & d & a & b \\\\ b & c & d & a \\end{bmatrix}$$\nThe DFT of $\\{p, q, r, s\\}$ is a scaled version of:\n- (a) $[\\alpha^2, \\beta^2, \\gamma^2, \\delta^2]$\n- (b) $[\\sqrt{\\alpha}, \\sqrt{\\beta}, \\sqrt{\\gamma}, \\sqrt{\\delta}]$\n- (c) $[\\alpha+\\beta, \\beta+\\gamma, \\delta+\\gamma, \\gamma+\\alpha]$\n- (d) $[\\alpha, \\beta, \\gamma, \\delta]$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Identifying the Circulant Matrix Structure:**\nConsider the product of $[a, b, c, d]$ with the given matrix column-by-column:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Column 0: $p = a \\cdot a + b \\cdot d + c \\cdot c + d \\cdot b = a^2 + c^2 + 2bd$",
-      "Column 1: $q = a \\cdot b + b \\cdot a + c \\cdot d + d \\cdot c = 2ab + 2cd$",
-      "Column 2: $r = a \\cdot c + b \\cdot b + c \\cdot a + d \\cdot d = 2ac + b^2 + d^2$",
-      "Column 3: $s = a \\cdot d + b \\cdot c + c \\cdot b + d \\cdot a = 2ad + 2bc$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Equivalence to Circular Convolution:**\nLet $x[n] = \\{a, b, c, d\\}$ and $y[n] = x[n] \\circledast x[n]$.\nEvaluating $y[n]$ for $n = 0, 1, 2, 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\sum_{k=0}^3 x[k] x[(-k+n) \\bmod 4]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$y[0] = x[0]x[0] + x[1]x[3] + x[2]x[2] + x[3]x[1] = a \\cdot a + b \\cdot d + c \\cdot c + d \\cdot b = p$",
-      "$y[1] = x[0]x[1] + x[1]x[0] + x[2]x[3] + x[3]x[2] = a \\cdot b + b \\cdot a + c \\cdot d + d \\cdot c = q$",
-      "$y[2] = x[0]x[2] + x[1]x[1] + x[2]x[0] + x[3]x[3] = a \\cdot c + b \\cdot b + c \\cdot a + d \\cdot d = r$",
-      "$y[3] = x[0]x[3] + x[1]x[2] + x[2]x[1] + x[3]x[0] = a \\cdot d + b \\cdot c + c \\cdot b + d \\cdot a = s$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Thus, $\\{p, q, r, s\\}$ is precisely $x[n] \\circledast x[n]$!"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Transforming to Frequency Domain:**\nBy the circular convolution property:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}\\{y[n]\\} = Y(k) = X(k) \\cdot X(k) = [X(k)]^2"
-    },
-    {
-     "t": "p",
-     "text": "Since $X(k) = \\{\\alpha, \\beta, \\gamma, \\delta\\}$:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(k) = \\{\\alpha^2, \\beta^2, \\gamma^2, \\delta^2\\}"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:** Correct Choice is **(a)**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Identifying the Circulant Matrix Structure:**\nConsider the product of $[a, b, c, d]$ with the given matrix column-by-column:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Column 0: $p = a \\cdot a + b \\cdot d + c \\cdot c + d \\cdot b = a^2 + c^2 + 2bd$",
+        "Column 1: $q = a \\cdot b + b \\cdot a + c \\cdot d + d \\cdot c = 2ab + 2cd$",
+        "Column 2: $r = a \\cdot c + b \\cdot b + c \\cdot a + d \\cdot d = 2ac + b^2 + d^2$",
+        "Column 3: $s = a \\cdot d + b \\cdot c + c \\cdot b + d \\cdot a = 2ad + 2bc$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Equivalence to Circular Convolution:**\nLet $x[n] = \\{a, b, c, d\\}$ and $y[n] = x[n] \\circledast x[n]$.\nEvaluating $y[n]$ for $n = 0, 1, 2, 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\sum_{k=0}^3 x[k] x[(-k+n) \\bmod 4]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$y[0] = x[0]x[0] + x[1]x[3] + x[2]x[2] + x[3]x[1] = a \\cdot a + b \\cdot d + c \\cdot c + d \\cdot b = p$",
+        "$y[1] = x[0]x[1] + x[1]x[0] + x[2]x[3] + x[3]x[2] = a \\cdot b + b \\cdot a + c \\cdot d + d \\cdot c = q$",
+        "$y[2] = x[0]x[2] + x[1]x[1] + x[2]x[0] + x[3]x[3] = a \\cdot c + b \\cdot b + c \\cdot a + d \\cdot d = r$",
+        "$y[3] = x[0]x[3] + x[1]x[2] + x[2]x[1] + x[3]x[0] = a \\cdot d + b \\cdot c + c \\cdot b + d \\cdot a = s$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Thus, $\\{p, q, r, s\\}$ is precisely $x[n] \\circledast x[n]$!"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Transforming to Frequency Domain:**\nBy the circular convolution property:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT}\\{y[n]\\} = Y(k) = X(k) \\cdot X(k) = [X(k)]^2"
+      },
+      {
+       "t": "p",
+       "text": "Since $X(k) = \\{\\alpha, \\beta, \\gamma, \\delta\\}$:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(k) = \\{\\alpha^2, \\beta^2, \\gamma^2, \\delta^2\\}"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:** Correct Choice is **(a)**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18056,75 +18054,78 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Method I: Explicit Matrix Multiplication (Slides 203\u2013204):**\nRecall that the 3-point IDFT matrix is given by:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{W}_3^{-1} = \\frac{1}{3} \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & w_3^1 & w_3^2 \\\\ 1 & w_3^2 & w_3^4 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Hence, the IDFT reconstruction of $x[n]$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} a \\\\ b \\\\ c \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & w_3^1 & w_3^2 \\\\ 1 & w_3^2 & w_3^4 \\end{bmatrix} \\begin{bmatrix} A/3 \\\\ B/3 \\\\ C/3 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Now evaluate the matrix product for $[p, q, r]^T$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{M} = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & w_3^1 & w_3^2 \\\\ 1 & w_3^2 & w_3^4 \\end{bmatrix} \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & w_3^2 & 0 \\\\ 0 & 0 & w_3^4 \\end{bmatrix} = \\begin{bmatrix} 1 & w_3^2 & w_3^4 \\\\ 1 & w_3^3 & w_3^6 \\\\ 1 & w_3^4 & w_3^8 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Since $w_3 = e^{j 2\\pi/3}$, powers of $w_3$ wrap modulo 3:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$w_3^3 = 1, \\; w_3^6 = 1$",
-      "$w_3^4 = w_3^1, \\; w_3^8 = w_3^2$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Thus, matrix $\\mathbf{M}$ simplifies to:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{M} = \\begin{bmatrix} 1 & w_3^2 & w_3^4 \\\\ 1 & 1 & 1 \\\\ 1 & w_3^1 & w_3^2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying by $\\begin{bmatrix} A/3 \\\\ B/3 \\\\ C/3 \\end{bmatrix}$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Row 1: $p = \\frac{1}{3} (A + w_3^2 B + w_3^4 C) = c$",
-      "Row 2: $q = \\frac{1}{3} (A + B + C) = a$",
-      "Row 3: $r = \\frac{1}{3} (A + w_3^1 B + w_3^2 C) = b$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "\\{p, q, r\\} = \\{c, a, b\\}"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:** Correct Choice is **(c)**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Method I: Explicit Matrix Multiplication (Slides 203\u2013204):**\nRecall that the 3-point IDFT matrix is given by:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{W}_3^{-1} = \\frac{1}{3} \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & w_3^1 & w_3^2 \\\\ 1 & w_3^2 & w_3^4 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Hence, the IDFT reconstruction of $x[n]$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} a \\\\ b \\\\ c \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & w_3^1 & w_3^2 \\\\ 1 & w_3^2 & w_3^4 \\end{bmatrix} \\begin{bmatrix} A/3 \\\\ B/3 \\\\ C/3 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Now evaluate the matrix product for $[p, q, r]^T$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{M} = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & w_3^1 & w_3^2 \\\\ 1 & w_3^2 & w_3^4 \\end{bmatrix} \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & w_3^2 & 0 \\\\ 0 & 0 & w_3^4 \\end{bmatrix} = \\begin{bmatrix} 1 & w_3^2 & w_3^4 \\\\ 1 & w_3^3 & w_3^6 \\\\ 1 & w_3^4 & w_3^8 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Since $w_3 = e^{j 2\\pi/3}$, powers of $w_3$ wrap modulo 3:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$w_3^3 = 1, \\; w_3^6 = 1$",
+        "$w_3^4 = w_3^1, \\; w_3^8 = w_3^2$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Thus, matrix $\\mathbf{M}$ simplifies to:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{M} = \\begin{bmatrix} 1 & w_3^2 & w_3^4 \\\\ 1 & 1 & 1 \\\\ 1 & w_3^1 & w_3^2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying by $\\begin{bmatrix} A/3 \\\\ B/3 \\\\ C/3 \\end{bmatrix}$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Row 1: $p = \\frac{1}{3} (A + w_3^2 B + w_3^4 C) = c$",
+        "Row 2: $q = \\frac{1}{3} (A + B + C) = a$",
+        "Row 3: $r = \\frac{1}{3} (A + w_3^1 B + w_3^2 C) = b$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "\\{p, q, r\\} = \\{c, a, b\\}"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:** Correct Choice is **(c)**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18231,72 +18232,71 @@ export default {
      "text": "**Problem:**\nGiven a periodic sequence $x[n] = \\{\\dots, 1, 2, 3, 4, \\underset{\\uparrow}{1}, 2, 3, 4, \\dots\\}$ with fundamental period $N = 4$.\nFind its Exponential Fourier Series Coefficients (EFSC) $c_k$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Analytical Link Between DTFS and DFT:**\nBy definition of the Discrete-Time Fourier Series (DTFS):"
-    },
-    {
-     "t": "math",
-     "tex": "c_k = \\frac{1}{N} \\sum_{n=0}^{N-1} x[n] e^{-j k \\omega_0 n}, \\quad \\text{where } \\omega_0 = \\frac{2\\pi}{N}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $\\omega_0 = \\frac{2\\pi}{N}$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_k = \\frac{1}{N} \\sum_{n=0}^{N-1} x[n] e^{-j k \\frac{2\\pi}{N} n}"
-    },
-    {
-     "t": "p",
-     "text": "Notice that the summation is identical to the $N$-point DFT of one fundamental period of $x[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum_{n=0}^{N-1} x[n] e^{-j k \\frac{2\\pi}{N} n} = X(k) = \\text{DFT}_N\\{x_0[n]\\}"
-    },
-    {
-     "t": "p",
-     "text": "where $x_0[n] = x[n]$ for $n \\in [0, N-1]$."
-    },
-    {
-     "t": "p",
-     "text": "**General Universal Theorem:**"
-    },
-    {
-     "t": "math",
-     "tex": "c_k = \\frac{1}{N} X(k) = \\frac{N\\text{-point DFT of one period of } x[n]}{N}"
-    },
-    {
-     "t": "p",
-     "text": "**Numerical Calculation (Slide 208):**\nHere $N = 4$, and one period is $x_0[n] = \\{1, 2, 3, 4\\}$.\nThe 4-point DFT $X(k)$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 1+2+3+4 \\\\ 1-2j-3+4j \\\\ 1-2+3-4 \\\\ 1+2j-3-4j \\end{bmatrix} = \\begin{bmatrix} 10 \\\\ -2+2j \\\\ -2 \\\\ -2-2j \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Dividing by $N = 4$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_k = \\frac{X(k)}{4} = \\left\\{ \\frac{10}{4}, \\; \\frac{-2+2j}{4}, \\; \\frac{-2}{4}, \\; \\frac{-2-2j}{4} \\right\\} = \\left\\{ 2.5, \\; -0.5+0.5j, \\; -0.5, \\; -0.5-0.5j \\right\\}"
-    },
-    {
-     "t": "p",
-     "text": "Extending periodically:"
-    },
-    {
-     "t": "math",
-     "tex": "c_k = \\left\\{ \\dots, \\frac{10}{4}, \\frac{-2-2j}{4}, \\frac{-2}{4}, \\frac{-2+2j}{4}, \\underset{\\uparrow (k=0)}{\\frac{10}{4}}, \\frac{-2-2j}{4}, \\frac{-2}{4}, \\frac{-2+2j}{4}, \\dots \\right\\}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Analytical Link Between DTFS and DFT:**\nBy definition of the Discrete-Time Fourier Series (DTFS):"
+      },
+      {
+       "t": "math",
+       "tex": "c_k = \\frac{1}{N} \\sum_{n=0}^{N-1} x[n] e^{-j k \\omega_0 n}, \\quad \\text{where } \\omega_0 = \\frac{2\\pi}{N}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $\\omega_0 = \\frac{2\\pi}{N}$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_k = \\frac{1}{N} \\sum_{n=0}^{N-1} x[n] e^{-j k \\frac{2\\pi}{N} n}"
+      },
+      {
+       "t": "p",
+       "text": "Notice that the summation is identical to the $N$-point DFT of one fundamental period of $x[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum_{n=0}^{N-1} x[n] e^{-j k \\frac{2\\pi}{N} n} = X(k) = \\text{DFT}_N\\{x_0[n]\\}"
+      },
+      {
+       "t": "p",
+       "text": "where $x_0[n] = x[n]$ for $n \\in [0, N-1]$."
+      },
+      {
+       "t": "p",
+       "text": "**General Universal Theorem:**"
+      },
+      {
+       "t": "math",
+       "tex": "c_k = \\frac{1}{N} X(k) = \\frac{N\\text{-point DFT of one period of } x[n]}{N}"
+      },
+      {
+       "t": "p",
+       "text": "**Numerical Calculation (Slide 208):**\nHere $N = 4$, and one period is $x_0[n] = \\{1, 2, 3, 4\\}$.\nThe 4-point DFT $X(k)$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} X(0) \\\\ X(1) \\\\ X(2) \\\\ X(3) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 1+2+3+4 \\\\ 1-2j-3+4j \\\\ 1-2+3-4 \\\\ 1+2j-3-4j \\end{bmatrix} = \\begin{bmatrix} 10 \\\\ -2+2j \\\\ -2 \\\\ -2-2j \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Dividing by $N = 4$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_k = \\frac{X(k)}{4} = \\left\\{ \\frac{10}{4}, \\; \\frac{-2+2j}{4}, \\; \\frac{-2}{4}, \\; \\frac{-2-2j}{4} \\right\\} = \\left\\{ 2.5, \\; -0.5+0.5j, \\; -0.5, \\; -0.5-0.5j \\right\\}"
+      },
+      {
+       "t": "p",
+       "text": "Extending periodically:"
+      },
+      {
+       "t": "math",
+       "tex": "c_k = \\left\\{ \\dots, \\frac{10}{4}, \\frac{-2-2j}{4}, \\frac{-2}{4}, \\frac{-2+2j}{4}, \\underset{\\uparrow (k=0)}{\\frac{10}{4}}, \\frac{-2-2j}{4}, \\frac{-2}{4}, \\frac{-2+2j}{4}, \\dots \\right\\}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -18648,63 +18648,66 @@ export default {
      "text": "**GATE 2025 Question (Q.48):**\nLet $f(t)$ and $g(t)$ represent continuous-time real-valued signals. If $h(t)$ denotes the cross-correlation between $f(t)$ and $g(-t)$, its continuous-time Fourier transform $H(j\\omega)$ equals:\n*(Note: $F(j\\omega)$ and $G(j\\omega)$ denote the continuous-time Fourier transforms of $f(t)$ and $g(t)$, respectively).*\n- (A) $F(j\\omega) G(j\\omega)$\n- (B) $F(-j\\omega) G(j\\omega)$\n- (C) $F(j\\omega) G(-j\\omega)$\n- (D) $-F(j\\omega) G(-j\\omega)$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Set Up Using the Convolution Property of Correlation:**\nFor any two signals $x(t)$ and $y(t)$, the cross-correlation is:"
-    },
-    {
-     "t": "math",
-     "tex": "R_{xy}(t) = x(t) * y^*(-t)"
-    },
-    {
-     "t": "p",
-     "text": "Here:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "First signal: $x(t) = f(t)$",
-      "Second signal: $y(t) = g(-t)$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Evaluate Conjugated Time-Reversal of the Second Signal:**\nLet $v(t) = y^*(-t)$.\nSubstituting $y(t) = g(-t)$:"
-    },
-    {
-     "t": "math",
-     "tex": "v(t) = [g(-(-t))]^* = g^*(t)"
-    },
-    {
-     "t": "p",
-     "text": "Because $g(t)$ is explicitly given as **real-valued**:"
-    },
-    {
-     "t": "math",
-     "tex": "g^*(t) = g(t) \\implies v(t) = g(t)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Compute Convolution and Fourier Transform:**\nTherefore, the cross-correlation $h(t)$ reduces to standard linear convolution:"
-    },
-    {
-     "t": "math",
-     "tex": "h(t) = f(t) * g(t)"
-    },
-    {
-     "t": "p",
-     "text": "Taking the continuous-time Fourier transform on both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "H(j\\omega) = \\mathcal{F}\\{f(t) * g(t)\\} = F(j\\omega) \\cdot G(j\\omega)"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:** Correct Choice is **(A)**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Set Up Using the Convolution Property of Correlation:**\nFor any two signals $x(t)$ and $y(t)$, the cross-correlation is:"
+      },
+      {
+       "t": "math",
+       "tex": "R_{xy}(t) = x(t) * y^*(-t)"
+      },
+      {
+       "t": "p",
+       "text": "Here:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "First signal: $x(t) = f(t)$",
+        "Second signal: $y(t) = g(-t)$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Evaluate Conjugated Time-Reversal of the Second Signal:**\nLet $v(t) = y^*(-t)$.\nSubstituting $y(t) = g(-t)$:"
+      },
+      {
+       "t": "math",
+       "tex": "v(t) = [g(-(-t))]^* = g^*(t)"
+      },
+      {
+       "t": "p",
+       "text": "Because $g(t)$ is explicitly given as **real-valued**:"
+      },
+      {
+       "t": "math",
+       "tex": "g^*(t) = g(t) \\implies v(t) = g(t)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Compute Convolution and Fourier Transform:**\nTherefore, the cross-correlation $h(t)$ reduces to standard linear convolution:"
+      },
+      {
+       "t": "math",
+       "tex": "h(t) = f(t) * g(t)"
+      },
+      {
+       "t": "p",
+       "text": "Taking the continuous-time Fourier transform on both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "H(j\\omega) = \\mathcal{F}\\{f(t) * g(t)\\} = F(j\\omega) \\cdot G(j\\omega)"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:** Correct Choice is **(A)**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -18721,64 +18724,67 @@ export default {
      "text": "**Problem:**\nLet $x[n]$ be a real-valued periodic sequence with fundamental period $N$.\nIts $N$-point DFT is $X(k)$.\nThe circular autocorrelation sequence is defined as:\n$$y[n] = \\frac{1}{N} \\sum_{r=0}^{N-1} x[r] x[(n+r)_N]$$\nFind $\\text{DFT}\\{y[n]\\} = Y(k)$ in terms of $X(k)$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Reformulating as Circular Convolution:**\nSince $x[n]$ is real-valued, $x^*[n] = x[n]$.\nFrom Slide 216, the circular autocorrelation is:"
-    },
-    {
-     "t": "math",
-     "tex": "R_{xx}[n] = \\sum_{r=0}^{N-1} x[r] x[(n+r)_N] = x[n] \\circledast x^*[-n]"
-    },
-    {
-     "t": "p",
-     "text": "Hence:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = \\frac{1}{N} \\left[ x[n] \\circledast x^*[-n] \\right]"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Transform of the Component Signals:**\nBy standard DFT transform pairs:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[n] \\overset{\\text{DFT}}{\\longleftrightarrow} X(k)$",
-      "Complex conjugation property: $x^*[n] \\overset{\\text{DFT}}{\\longleftrightarrow} X^*((-k)_N)$",
-      "Circular time-reversal property: $x[-n] \\overset{\\text{DFT}}{\\longleftrightarrow} X((-k)_N)$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Combining both:"
-    },
-    {
-     "t": "math",
-     "tex": "x^*[-n] \\overset{\\text{DFT}}{\\longleftrightarrow} X^*(-(-k)) = X^*(k)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Applying Circular Convolution Theorem:**\nThe circular convolution in time maps to point-wise multiplication in the DFT domain:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{DFT}\\{x[n] \\circledast x^*[-n]\\} = X(k) \\cdot X^*(k) = \\vert X(k)\\vert^2"
-    },
-    {
-     "t": "p",
-     "text": "Accounting for the $\\frac{1}{N}$ scaling factor:"
-    },
-    {
-     "t": "math",
-     "tex": "Y(k) = \\text{DFT}\\{y[n]\\} = \\frac{1}{N} \\vert X(k)\\vert^2"
-    },
-    {
-     "t": "p",
-     "text": "This is the exact discrete circular counterpart to the **Wiener\u2013Khinchin Theorem** (the power spectral density of a sequence is the Fourier transform of its autocorrelation function).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Reformulating as Circular Convolution:**\nSince $x[n]$ is real-valued, $x^*[n] = x[n]$.\nFrom Slide 216, the circular autocorrelation is:"
+      },
+      {
+       "t": "math",
+       "tex": "R_{xx}[n] = \\sum_{r=0}^{N-1} x[r] x[(n+r)_N] = x[n] \\circledast x^*[-n]"
+      },
+      {
+       "t": "p",
+       "text": "Hence:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = \\frac{1}{N} \\left[ x[n] \\circledast x^*[-n] \\right]"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Transform of the Component Signals:**\nBy standard DFT transform pairs:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[n] \\overset{\\text{DFT}}{\\longleftrightarrow} X(k)$",
+        "Complex conjugation property: $x^*[n] \\overset{\\text{DFT}}{\\longleftrightarrow} X^*((-k)_N)$",
+        "Circular time-reversal property: $x[-n] \\overset{\\text{DFT}}{\\longleftrightarrow} X((-k)_N)$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Combining both:"
+      },
+      {
+       "t": "math",
+       "tex": "x^*[-n] \\overset{\\text{DFT}}{\\longleftrightarrow} X^*(-(-k)) = X^*(k)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Applying Circular Convolution Theorem:**\nThe circular convolution in time maps to point-wise multiplication in the DFT domain:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{DFT}\\{x[n] \\circledast x^*[-n]\\} = X(k) \\cdot X^*(k) = \\vert X(k)\\vert^2"
+      },
+      {
+       "t": "p",
+       "text": "Accounting for the $\\frac{1}{N}$ scaling factor:"
+      },
+      {
+       "t": "math",
+       "tex": "Y(k) = \\text{DFT}\\{y[n]\\} = \\frac{1}{N} \\vert X(k)\\vert^2"
+      },
+      {
+       "t": "p",
+       "text": "This is the exact discrete circular counterpart to the **Wiener\u2013Khinchin Theorem** (the power spectral density of a sequence is the Fourier transform of its autocorrelation function)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -20421,167 +20427,170 @@ export default {
      "text": "Slides 226 and 227 solve a classic examination problem requiring the recovery of the output sequence from specified magnitude, DC phase, and group delay characteristics."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 226)"
-    },
-    {
-     "t": "p",
-     "text": "An LTI system possesses a real impulse response $h[n]$. The frequency response satisfies:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$\\vert H(e^{j\\pi/2})\\vert = 2$",
-      "$\\angle H(e^{j0}) = \\frac{\\pi}{2}$",
-      "Group delay is constant for all frequencies: $\\tau_g(\\omega) = 2$ samples."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Determine the steady-state output $y[n]$ when the input is:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 3 \\sin\\left(\\frac{9\\pi}{2}n + \\frac{\\pi}{6}\\right)"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Solution"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Input Frequency Reduction & Digital Aliasing Check**\nDiscrete-time sinusoidal signals are $2\\pi$-periodic in frequency. Examining the argument:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{9\\pi}{2} = 4\\pi + \\frac{\\pi}{2} \\equiv \\frac{\\pi}{2} \\pmod{2\\pi}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the effective fundamental digital frequency is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_0 = \\frac{\\pi}{2} \\text{ rad/sample}"
-    },
-    {
-     "t": "p",
-     "text": "The input simplifies to:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = 3 \\sin\\left(\\frac{\\pi}{2}n + \\frac{\\pi}{6}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Differential Reconstruction of the Phase Function**\nBy definition, the group delay is the negative derivative of phase:"
-    },
-    {
-     "t": "math",
-     "tex": "\\tau_g(\\omega) = -\\frac{d}{d\\omega} \\angle H(e^{j\\omega}) = 2"
-    },
-    {
-     "t": "p",
-     "text": "Integrating both sides with respect to $\\omega$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{d}{d\\omega} \\angle H(e^{j\\omega}) = -2 \\implies \\angle H(e^{j\\omega}) = \\int (-2) \\, d\\omega = -2\\omega + C"
-    },
-    {
-     "t": "p",
-     "text": "where $C$ is an arbitrary constant of integration."
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Boundary Condition Evaluation at DC ($\\omega = 0$)**\nWe are given that $\\angle H(e^{j0}) = \\frac{\\pi}{2}$. Substituting $\\omega = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left.\\angle H(e^{j\\omega})\\right\\vert_{\\omega=0} = -2(0) + C = \\frac{\\pi}{2} \\implies C = \\frac{\\pi}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, the exact continuous phase response of the system is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\angle H(e^{j\\omega}) = -2\\omega + \\frac{\\pi}{2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: System Response at the Operating Frequency $\\omega_0 = \\pi/2$**\nEvaluating the phase at $\\omega = \\frac{\\pi}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left.\\angle H(e^{j\\omega})\\right\\vert_{\\omega=\\pi/2} = -2\\left(\\frac{\\pi}{2}\\right) + \\frac{\\pi}{2} = -\\pi + \\frac{\\pi}{2} = -\\frac{\\pi}{2}"
-    },
-    {
-     "t": "p",
-     "text": "The magnitude at this frequency is given directly as:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert H(e^{j\\pi/2})\\vert = 2"
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Output Synthesis via LTI Eigenfunction Property**\nFor an input $x[n] = A \\sin(\\omega_0 n + \\phi)$, the output of an LTI system is:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = A \\vert H(e^{j\\omega_0})\\vert \\sin(\\omega_0 n + \\phi + \\angle H(e^{j\\omega_0}))"
-    },
-    {
-     "t": "p",
-     "text": "Substituting $A = 3$, $\\omega_0 = \\frac{\\pi}{2}$, $\\phi = \\frac{\\pi}{6}$, $\\vert H(e^{j\\pi/2})\\vert = 2$, and $\\angle H(e^{j\\pi/2}) = -\\frac{\\pi}{2}$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = 3 \\times 2 \\, \\sin\\left(\\frac{\\pi}{2}n + \\frac{\\pi}{6} - \\frac{\\pi}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the net phase angle:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{\\pi}{6} - \\frac{\\pi}{2} = \\frac{\\pi - 3\\pi}{6} = -\\frac{2\\pi}{6} = -\\frac{\\pi}{3}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = 6 \\sin\\left(\\frac{\\pi}{2}n - \\frac{\\pi}{3}\\right)}"
-    },
-    {
-     "t": "h4",
-     "text": "Critical Exam Traps & Conceptual Vulnerabilities"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**The Pure-Delay Fallacy:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Many students observe $\\tau_g = 2$ and erroneously assume the output is simply a delayed version of the input: $y[n] \\overset{?}{=} 2 x[n - 2] = 6 \\sin\\left(\\frac{\\pi}{2}(n-2) + \\frac{\\pi}{6}\\right) = 6 \\sin\\left(\\frac{\\pi}{2}n - \\pi + \\frac{\\pi}{6}\\right) = 6 \\sin\\left(\\frac{\\pi}{2}n - \\frac{5\\pi}{6}\\right)$.\n   *Why this fails:* A pure time shift $x[n - n_0]$ requires $\\angle H(0) = 0$. Because $\\angle H(0) = \\pi/2 \\neq 0$, the phase response is **generalized linear phase** ($\\theta(\\omega) = -\\alpha\\omega + \\beta$) rather than strictly linear phase. The constant phase offset $\\beta = \\pi/2$ must be included!"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Frequency Aliasing Omission:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Failing to reduce $\\frac{9\\pi}{2}$ to $\\frac{\\pi}{2}$ results in computing $\\angle H(e^{j 9\\pi/2}) = -2(9\\pi/2) + \\pi/2 = -9\\pi + \\pi/2 = -\\frac{17\\pi}{2} \\equiv -\\frac{\\pi}{2} \\pmod{2\\pi}$. While the final angle happens to match here due to periodicity, substituting unreduced frequencies into non-periodic intermediate expressions leads to severe arithmetic errors.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 226)"
+      },
+      {
+       "t": "p",
+       "text": "An LTI system possesses a real impulse response $h[n]$. The frequency response satisfies:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$\\vert H(e^{j\\pi/2})\\vert = 2$",
+        "$\\angle H(e^{j0}) = \\frac{\\pi}{2}$",
+        "Group delay is constant for all frequencies: $\\tau_g(\\omega) = 2$ samples."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Determine the steady-state output $y[n]$ when the input is:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 3 \\sin\\left(\\frac{9\\pi}{2}n + \\frac{\\pi}{6}\\right)"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Solution"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Input Frequency Reduction & Digital Aliasing Check**\nDiscrete-time sinusoidal signals are $2\\pi$-periodic in frequency. Examining the argument:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{9\\pi}{2} = 4\\pi + \\frac{\\pi}{2} \\equiv \\frac{\\pi}{2} \\pmod{2\\pi}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the effective fundamental digital frequency is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_0 = \\frac{\\pi}{2} \\text{ rad/sample}"
+      },
+      {
+       "t": "p",
+       "text": "The input simplifies to:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = 3 \\sin\\left(\\frac{\\pi}{2}n + \\frac{\\pi}{6}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Differential Reconstruction of the Phase Function**\nBy definition, the group delay is the negative derivative of phase:"
+      },
+      {
+       "t": "math",
+       "tex": "\\tau_g(\\omega) = -\\frac{d}{d\\omega} \\angle H(e^{j\\omega}) = 2"
+      },
+      {
+       "t": "p",
+       "text": "Integrating both sides with respect to $\\omega$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{d}{d\\omega} \\angle H(e^{j\\omega}) = -2 \\implies \\angle H(e^{j\\omega}) = \\int (-2) \\, d\\omega = -2\\omega + C"
+      },
+      {
+       "t": "p",
+       "text": "where $C$ is an arbitrary constant of integration."
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Boundary Condition Evaluation at DC ($\\omega = 0$)**\nWe are given that $\\angle H(e^{j0}) = \\frac{\\pi}{2}$. Substituting $\\omega = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left.\\angle H(e^{j\\omega})\\right\\vert_{\\omega=0} = -2(0) + C = \\frac{\\pi}{2} \\implies C = \\frac{\\pi}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, the exact continuous phase response of the system is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\angle H(e^{j\\omega}) = -2\\omega + \\frac{\\pi}{2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: System Response at the Operating Frequency $\\omega_0 = \\pi/2$**\nEvaluating the phase at $\\omega = \\frac{\\pi}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left.\\angle H(e^{j\\omega})\\right\\vert_{\\omega=\\pi/2} = -2\\left(\\frac{\\pi}{2}\\right) + \\frac{\\pi}{2} = -\\pi + \\frac{\\pi}{2} = -\\frac{\\pi}{2}"
+      },
+      {
+       "t": "p",
+       "text": "The magnitude at this frequency is given directly as:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert H(e^{j\\pi/2})\\vert = 2"
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Output Synthesis via LTI Eigenfunction Property**\nFor an input $x[n] = A \\sin(\\omega_0 n + \\phi)$, the output of an LTI system is:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = A \\vert H(e^{j\\omega_0})\\vert \\sin(\\omega_0 n + \\phi + \\angle H(e^{j\\omega_0}))"
+      },
+      {
+       "t": "p",
+       "text": "Substituting $A = 3$, $\\omega_0 = \\frac{\\pi}{2}$, $\\phi = \\frac{\\pi}{6}$, $\\vert H(e^{j\\pi/2})\\vert = 2$, and $\\angle H(e^{j\\pi/2}) = -\\frac{\\pi}{2}$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = 3 \\times 2 \\, \\sin\\left(\\frac{\\pi}{2}n + \\frac{\\pi}{6} - \\frac{\\pi}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the net phase angle:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{\\pi}{6} - \\frac{\\pi}{2} = \\frac{\\pi - 3\\pi}{6} = -\\frac{2\\pi}{6} = -\\frac{\\pi}{3}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = 6 \\sin\\left(\\frac{\\pi}{2}n - \\frac{\\pi}{3}\\right)}"
+      },
+      {
+       "t": "h4",
+       "text": "Critical Exam Traps & Conceptual Vulnerabilities"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**The Pure-Delay Fallacy:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Many students observe $\\tau_g = 2$ and erroneously assume the output is simply a delayed version of the input: $y[n] \\overset{?}{=} 2 x[n - 2] = 6 \\sin\\left(\\frac{\\pi}{2}(n-2) + \\frac{\\pi}{6}\\right) = 6 \\sin\\left(\\frac{\\pi}{2}n - \\pi + \\frac{\\pi}{6}\\right) = 6 \\sin\\left(\\frac{\\pi}{2}n - \\frac{5\\pi}{6}\\right)$.\n   *Why this fails:* A pure time shift $x[n - n_0]$ requires $\\angle H(0) = 0$. Because $\\angle H(0) = \\pi/2 \\neq 0$, the phase response is **generalized linear phase** ($\\theta(\\omega) = -\\alpha\\omega + \\beta$) rather than strictly linear phase. The constant phase offset $\\beta = \\pi/2$ must be included!"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Frequency Aliasing Omission:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Failing to reduce $\\frac{9\\pi}{2}$ to $\\frac{\\pi}{2}$ results in computing $\\angle H(e^{j 9\\pi/2}) = -2(9\\pi/2) + \\pi/2 = -9\\pi + \\pi/2 = -\\frac{17\\pi}{2} \\equiv -\\frac{\\pi}{2} \\pmod{2\\pi}$. While the final angle happens to match here due to periodicity, substituting unreduced frequencies into non-periodic intermediate expressions leads to severe arithmetic errors."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20592,199 +20601,198 @@ export default {
      "text": "Slides 228 and 229 evaluate the group delay of a symmetric 5-tap FIR filter using two independent methods."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 228)"
-    },
-    {
-     "t": "p",
-     "text": "An FIR LTI system has the impulse response:"
-    },
-    {
-     "t": "math",
-     "tex": "h[n] = \\{4, 5, 6, 5, 4\\} = 4\\delta[n] + 5\\delta[n-1] + 6\\delta[n-2] + 5\\delta[n-3] + 4\\delta[n-4]"
-    },
-    {
-     "t": "p",
-     "text": "where the origin $n=0$ is at the first sample $h[0] = 4$. Determine the group delay $\\tau_g(\\omega)$ of the filter."
-    },
-    {
-     "t": "h4",
-     "text": "Method I: Direct DTFT Algebraic Expansion (Slide 228)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Formulate the DTFT:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{j\\omega}) = \\sum_{n=-\\infty}^\\infty h[n] e^{-j\\omega n} = 4 + 5e^{-j\\omega} + 6e^{-j2\\omega} + 5e^{-j3\\omega} + 4e^{-j4\\omega}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Factor out the Center-of-Symmetry Phase Factor:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The filter length is $N = 5$, and its geometric center of symmetry lies at $n = \\frac{N-1}{2} = \\frac{5-1}{2} = 2$.\n   Factoring $e^{-j2\\omega}$ from all terms:"
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{j\\omega}) = e^{-j2\\omega} \\left[ 4e^{j2\\omega} + 5e^{j\\omega} + 6 + 5e^{-j\\omega} + 4e^{-j2\\omega} \\right]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Combine Complex Conjugate Exponentials into Real Cosines:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Group symmetric pairs:"
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{j\\omega}) = e^{-j2\\omega} \\left[ 6 + 5(e^{j\\omega} + e^{-j\\omega}) + 4(e^{j2\\omega} + e^{-j2\\omega}) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Using Euler's identity $e^{jk\\omega} + e^{-jk\\omega} = 2\\cos(k\\omega)$:"
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{j\\omega}) = e^{-j2\\omega} \\left[ 6 + 10\\cos(\\omega) + 8\\cos(2\\omega) \\right]"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Identify Amplitude and Phase Functions:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $A(\\omega) = 6 + 10\\cos(\\omega) + 8\\cos(2\\omega)$.\n   Notice that $A(\\omega)$ is a purely real-valued trigonometric polynomial.\n   For all $\\omega$ where $A(\\omega) > 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert H(e^{j\\omega})\\vert = \\vert A(\\omega)\\vert, \\quad \\angle H(e^{j\\omega}) = -2\\omega \\pm 2k\\pi"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Differentiate to Obtain Group Delay:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\tau_g(\\omega) = -\\frac{d}{d\\omega} \\angle H(e^{j\\omega}) = -\\frac{d}{d\\omega}(-2\\omega) = \\boxed{2 \\text{ samples}}"
-    },
-    {
-     "t": "h4",
-     "text": "Method II: Symmetrical Pre-Shift via Even/Odd Duality (Slide 229)"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Define a Shifted Auxiliary Sequence:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Shift $h[n]$ to the left by 2 samples to center its symmetry exactly at the time origin $n=0$:"
-    },
-    {
-     "t": "math",
-     "tex": "y[n] \\triangleq h[n+2] = \\{4, 5, \\underset{\\uparrow}{6}, 5, 4\\}"
-    },
-    {
-     "t": "p",
-     "text": "where the arrow designates the sample at $n = 0$, so $y[0] = 6, y[\\pm 1] = 5, y[\\pm 2] = 4$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Apply Symmetry Properties of the DTFT:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $y[n]$ is **real and even** ($y[-n] = y[n]$ for all $n$):"
-    },
-    {
-     "t": "math",
-     "tex": "Y(e^{j\\omega}) \\text{ must be purely REAL and EVEN}"
-    },
-    {
-     "t": "p",
-     "text": "The phase of any purely real-valued function is restricted to integer multiples of $\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\angle Y(e^{j\\omega}) = 2k\\pi \\quad (\\text{or } (2k+1)\\pi \\text{ if } Y(e^{j\\omega}) < 0)"
-    },
-    {
-     "t": "p",
-     "text": "Focusing on the passband where the spectrum is positive: $\\angle Y(e^{j\\omega}) = 2k\\pi$."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Relate $Y(e^{j\\omega})$ to $H(e^{j\\omega})$ via Time-Shifting:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "y[n] = h[n+2] \\overset{\\mathcal{F}}{\\longleftrightarrow} Y(e^{j\\omega}) = H(e^{j\\omega}) e^{j2\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Expressing both transforms in polar form:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert Y(e^{j\\omega})\\vert e^{j\\angle Y(e^{j\\omega})} = \\vert H(e^{j\\omega})\\vert e^{j\\angle H(e^{j\\omega})} e^{j2\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "Equating phase angles on both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "\\angle Y(e^{j\\omega}) = \\angle H(e^{j\\omega}) + 2\\omega"
-    },
-    {
-     "t": "math",
-     "tex": "\\angle H(e^{j\\omega}) = \\angle Y(e^{j\\omega}) - 2\\omega = 2k\\pi - 2\\omega"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Compute Group Delay:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\tau_g(\\omega) = -\\frac{d}{d\\omega}\\angle H(e^{j\\omega}) = -\\frac{d}{d\\omega}(-2\\omega) = \\boxed{2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 228)"
+      },
+      {
+       "t": "p",
+       "text": "An FIR LTI system has the impulse response:"
+      },
+      {
+       "t": "math",
+       "tex": "h[n] = \\{4, 5, 6, 5, 4\\} = 4\\delta[n] + 5\\delta[n-1] + 6\\delta[n-2] + 5\\delta[n-3] + 4\\delta[n-4]"
+      },
+      {
+       "t": "p",
+       "text": "where the origin $n=0$ is at the first sample $h[0] = 4$. Determine the group delay $\\tau_g(\\omega)$ of the filter."
+      },
+      {
+       "t": "h4",
+       "text": "Method I: Direct DTFT Algebraic Expansion (Slide 228)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Formulate the DTFT:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{j\\omega}) = \\sum_{n=-\\infty}^\\infty h[n] e^{-j\\omega n} = 4 + 5e^{-j\\omega} + 6e^{-j2\\omega} + 5e^{-j3\\omega} + 4e^{-j4\\omega}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Factor out the Center-of-Symmetry Phase Factor:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The filter length is $N = 5$, and its geometric center of symmetry lies at $n = \\frac{N-1}{2} = \\frac{5-1}{2} = 2$.\n   Factoring $e^{-j2\\omega}$ from all terms:"
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{j\\omega}) = e^{-j2\\omega} \\left[ 4e^{j2\\omega} + 5e^{j\\omega} + 6 + 5e^{-j\\omega} + 4e^{-j2\\omega} \\right]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Combine Complex Conjugate Exponentials into Real Cosines:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Group symmetric pairs:"
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{j\\omega}) = e^{-j2\\omega} \\left[ 6 + 5(e^{j\\omega} + e^{-j\\omega}) + 4(e^{j2\\omega} + e^{-j2\\omega}) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Using Euler's identity $e^{jk\\omega} + e^{-jk\\omega} = 2\\cos(k\\omega)$:"
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{j\\omega}) = e^{-j2\\omega} \\left[ 6 + 10\\cos(\\omega) + 8\\cos(2\\omega) \\right]"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Identify Amplitude and Phase Functions:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $A(\\omega) = 6 + 10\\cos(\\omega) + 8\\cos(2\\omega)$.\n   Notice that $A(\\omega)$ is a purely real-valued trigonometric polynomial.\n   For all $\\omega$ where $A(\\omega) > 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert H(e^{j\\omega})\\vert = \\vert A(\\omega)\\vert, \\quad \\angle H(e^{j\\omega}) = -2\\omega \\pm 2k\\pi"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Differentiate to Obtain Group Delay:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\tau_g(\\omega) = -\\frac{d}{d\\omega} \\angle H(e^{j\\omega}) = -\\frac{d}{d\\omega}(-2\\omega) = \\boxed{2 \\text{ samples}}"
+      },
+      {
+       "t": "h4",
+       "text": "Method II: Symmetrical Pre-Shift via Even/Odd Duality (Slide 229)"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Define a Shifted Auxiliary Sequence:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Shift $h[n]$ to the left by 2 samples to center its symmetry exactly at the time origin $n=0$:"
+      },
+      {
+       "t": "math",
+       "tex": "y[n] \\triangleq h[n+2] = \\{4, 5, \\underset{\\uparrow}{6}, 5, 4\\}"
+      },
+      {
+       "t": "p",
+       "text": "where the arrow designates the sample at $n = 0$, so $y[0] = 6, y[\\pm 1] = 5, y[\\pm 2] = 4$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Apply Symmetry Properties of the DTFT:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $y[n]$ is **real and even** ($y[-n] = y[n]$ for all $n$):"
+      },
+      {
+       "t": "math",
+       "tex": "Y(e^{j\\omega}) \\text{ must be purely REAL and EVEN}"
+      },
+      {
+       "t": "p",
+       "text": "The phase of any purely real-valued function is restricted to integer multiples of $\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\angle Y(e^{j\\omega}) = 2k\\pi \\quad (\\text{or } (2k+1)\\pi \\text{ if } Y(e^{j\\omega}) < 0)"
+      },
+      {
+       "t": "p",
+       "text": "Focusing on the passband where the spectrum is positive: $\\angle Y(e^{j\\omega}) = 2k\\pi$."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Relate $Y(e^{j\\omega})$ to $H(e^{j\\omega})$ via Time-Shifting:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "y[n] = h[n+2] \\overset{\\mathcal{F}}{\\longleftrightarrow} Y(e^{j\\omega}) = H(e^{j\\omega}) e^{j2\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Expressing both transforms in polar form:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert Y(e^{j\\omega})\\vert e^{j\\angle Y(e^{j\\omega})} = \\vert H(e^{j\\omega})\\vert e^{j\\angle H(e^{j\\omega})} e^{j2\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "Equating phase angles on both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "\\angle Y(e^{j\\omega}) = \\angle H(e^{j\\omega}) + 2\\omega"
+      },
+      {
+       "t": "math",
+       "tex": "\\angle H(e^{j\\omega}) = \\angle Y(e^{j\\omega}) - 2\\omega = 2k\\pi - 2\\omega"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Compute Group Delay:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\tau_g(\\omega) = -\\frac{d}{d\\omega}\\angle H(e^{j\\omega}) = -\\frac{d}{d\\omega}(-2\\omega) = \\boxed{2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20882,179 +20890,178 @@ export default {
      "text": "Slides 230 to 232 dissect an outstanding GATE multiple-choice question testing the mathematical constraints imposed by real-valued impulse responses on phase ambiguity."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 230)"
-    },
-    {
-     "t": "p",
-     "text": "An LTI system possesses a **real-valued** impulse response $h[n]$. The system has:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Constant group delay: $\\tau_g(\\omega) = 5$ samples.",
-      "Ideal low-pass magnitude response:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vert H(e^{j\\omega})\\vert = \\begin{cases} 1, & \\vert\\omega\\vert \\le \\frac{\\pi}{4} \\\\ 0, & \\frac{\\pi}{4} < \\vert\\omega\\vert \\le \\pi \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "The impulse response $h[n]$ is:\n(a) $\\frac{\\sin\\left(\\frac{\\pi}{4}(n-5)\\right)}{\\pi(n-5)}$\n(b) $-\\frac{\\sin\\left(\\frac{\\pi}{4}(n-5)\\right)}{\\pi(n-5)}$\n(c) Both (a) and (b)\n(d) None of the above"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Proof (Slides 231\u2013232)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: General Phase Profile from Constant Group Delay**\nGiven $\\tau_g(\\omega) = 5$:"
-    },
-    {
-     "t": "math",
-     "tex": "-\\frac{d}{d\\omega} \\angle H(e^{j\\omega}) = 5 \\implies \\angle H(e^{j\\omega}) = -5\\omega + c"
-    },
-    {
-     "t": "p",
-     "text": "where $c$ is a constant phase offset."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Constraint Imposed by Reality of $h[n]$**\nFor any real-valued discrete sequence $h[n] \\in \\mathbb{R}$, its DTFT satisfies Hermitian (conjugate) symmetry:"
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{-j\\omega}) = H^*(e^{j\\omega})"
-    },
-    {
-     "t": "p",
-     "text": "Taking the phase of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "\\angle H(e^{-j\\omega}) = -\\angle H(e^{j\\omega}) + 2k\\pi, \\quad k \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "Substituting our linear phase profile $\\angle H(e^{j\\omega}) = -5\\omega + c$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{LHS: } \\angle H(e^{-j\\omega}) = -5(-\\omega) + c = 5\\omega + c"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{RHS: } -\\angle H(e^{j\\omega}) + 2k\\pi = -(-5\\omega + c) + 2k\\pi = 5\\omega - c + 2k\\pi"
-    },
-    {
-     "t": "p",
-     "text": "Equating LHS and RHS:"
-    },
-    {
-     "t": "math",
-     "tex": "5\\omega + c = 5\\omega - c + 2k\\pi \\implies 2c = 2k\\pi \\implies c = k\\pi, \\quad k \\in \\mathbb{Z}"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the phase constant $c$ cannot be arbitrary; it is strictly constrained to integer multiples of $\\pi$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{c \\in \\{0, \\pm \\pi, \\pm 2\\pi, \\dots\\}}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Transfer Function Formulation for Even vs. Odd $k$**\nThe frequency response over the fundamental interval $[-\\pi, \\pi]$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{j\\omega}) = \\vert H(e^{j\\omega})\\vert e^{j(-5\\omega + k\\pi)} = \\vert H(e^{j\\omega})\\vert e^{-j 5\\omega} e^{jk\\pi} = (-1)^k \\vert H(e^{j\\omega})\\vert e^{-j 5\\omega}"
-    },
-    {
-     "t": "p",
-     "text": "We define the prototype zero-delay ideal low-pass filter:"
-    },
-    {
-     "t": "math",
-     "tex": "G(e^{j\\omega}) = \\vert H(e^{j\\omega})\\vert = \\begin{cases} 1, & \\vert\\omega\\vert \\le \\frac{\\pi}{4} \\\\ 0, & \\frac{\\pi}{4} < \\vert\\omega\\vert \\le \\pi \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "Its inverse DTFT is the standard sinc function:"
-    },
-    {
-     "t": "math",
-     "tex": "g[n] = \\frac{1}{2\\pi} \\int_{-\\pi/4}^{\\pi/4} 1 \\cdot e^{j\\omega n} d\\omega = \\frac{\\sin\\left(\\frac{\\pi}{4}n\\right)}{\\pi n}"
-    },
-    {
-     "t": "p",
-     "text": "Applying the time-shifting property:"
-    },
-    {
-     "t": "math",
-     "tex": "g[n-5] \\overset{\\mathcal{F}}{\\longleftrightarrow} G(e^{j\\omega}) e^{-j 5\\omega} = \\vert H(e^{j\\omega})\\vert e^{-j 5\\omega} = \\frac{\\sin\\left(\\frac{\\pi}{4}(n-5)\\right)}{\\pi(n-5)}"
-    },
-    {
-     "t": "p",
-     "text": "Now evaluate the two distinct parity classes of $k$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 1: $k$ is Even ($k = 0, \\pm 2, \\dots \\implies e^{jk\\pi} = +1$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{j\\omega}) = + \\vert H(e^{j\\omega})\\vert e^{-j 5\\omega} \\implies h[n] = +g[n-5] = \\frac{\\sin\\left(\\frac{\\pi}{4}(n-5)\\right)}{\\pi(n-5)}"
-    },
-    {
-     "t": "p",
-     "text": "This corresponds to option (a)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 2: $k$ is Odd ($k = \\pm 1, \\pm 3, \\dots \\implies e^{jk\\pi} = -1$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H(e^{j\\omega}) = - \\vert H(e^{j\\omega})\\vert e^{-j 5\\omega} \\implies h[n] = -g[n-5] = -\\frac{\\sin\\left(\\frac{\\pi}{4}(n-5)\\right)}{\\pi(n-5)}"
-    },
-    {
-     "t": "p",
-     "text": "This corresponds to option (b)."
-    },
-    {
-     "t": "p",
-     "text": "Both impulse responses are purely real, possess exactly the required rectangular magnitude response, and have identical constant group delay $\\tau_g = 5$."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Correct Answer: Option (c) Both}}"
-    },
-    {
-     "t": "h4",
-     "text": "Pedagogical Traps & Common Exam Errors"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**The Zero-Phase Assumption Trap:** Most candidates automatically set $c = 0$ upon integrating, forgetting that the constant of integration for a real signal can be any $k\\pi$. Setting $c=0$ yields only option (a), causing candidates to lose marks.",
-      "**The Phase Discontinuity Trap:** At $\\omega = 0$, $H(e^{j0}) = e^{jk\\pi} = \\pm 1$. Both $+1$ and $-1$ are real numbers! Since $h[n]$ is real, $\\sum_{n=-\\infty}^\\infty h[n] = H(e^{j0})$ must be real, which is satisfied by both $+1$ and $-1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 230)"
+      },
+      {
+       "t": "p",
+       "text": "An LTI system possesses a **real-valued** impulse response $h[n]$. The system has:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Constant group delay: $\\tau_g(\\omega) = 5$ samples.",
+        "Ideal low-pass magnitude response:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vert H(e^{j\\omega})\\vert = \\begin{cases} 1, & \\vert\\omega\\vert \\le \\frac{\\pi}{4} \\\\ 0, & \\frac{\\pi}{4} < \\vert\\omega\\vert \\le \\pi \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "The impulse response $h[n]$ is:\n(a) $\\frac{\\sin\\left(\\frac{\\pi}{4}(n-5)\\right)}{\\pi(n-5)}$\n(b) $-\\frac{\\sin\\left(\\frac{\\pi}{4}(n-5)\\right)}{\\pi(n-5)}$\n(c) Both (a) and (b)\n(d) None of the above"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Proof (Slides 231\u2013232)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: General Phase Profile from Constant Group Delay**\nGiven $\\tau_g(\\omega) = 5$:"
+      },
+      {
+       "t": "math",
+       "tex": "-\\frac{d}{d\\omega} \\angle H(e^{j\\omega}) = 5 \\implies \\angle H(e^{j\\omega}) = -5\\omega + c"
+      },
+      {
+       "t": "p",
+       "text": "where $c$ is a constant phase offset."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Constraint Imposed by Reality of $h[n]$**\nFor any real-valued discrete sequence $h[n] \\in \\mathbb{R}$, its DTFT satisfies Hermitian (conjugate) symmetry:"
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{-j\\omega}) = H^*(e^{j\\omega})"
+      },
+      {
+       "t": "p",
+       "text": "Taking the phase of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "\\angle H(e^{-j\\omega}) = -\\angle H(e^{j\\omega}) + 2k\\pi, \\quad k \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "Substituting our linear phase profile $\\angle H(e^{j\\omega}) = -5\\omega + c$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{LHS: } \\angle H(e^{-j\\omega}) = -5(-\\omega) + c = 5\\omega + c"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{RHS: } -\\angle H(e^{j\\omega}) + 2k\\pi = -(-5\\omega + c) + 2k\\pi = 5\\omega - c + 2k\\pi"
+      },
+      {
+       "t": "p",
+       "text": "Equating LHS and RHS:"
+      },
+      {
+       "t": "math",
+       "tex": "5\\omega + c = 5\\omega - c + 2k\\pi \\implies 2c = 2k\\pi \\implies c = k\\pi, \\quad k \\in \\mathbb{Z}"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the phase constant $c$ cannot be arbitrary; it is strictly constrained to integer multiples of $\\pi$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{c \\in \\{0, \\pm \\pi, \\pm 2\\pi, \\dots\\}}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Transfer Function Formulation for Even vs. Odd $k$**\nThe frequency response over the fundamental interval $[-\\pi, \\pi]$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{j\\omega}) = \\vert H(e^{j\\omega})\\vert e^{j(-5\\omega + k\\pi)} = \\vert H(e^{j\\omega})\\vert e^{-j 5\\omega} e^{jk\\pi} = (-1)^k \\vert H(e^{j\\omega})\\vert e^{-j 5\\omega}"
+      },
+      {
+       "t": "p",
+       "text": "We define the prototype zero-delay ideal low-pass filter:"
+      },
+      {
+       "t": "math",
+       "tex": "G(e^{j\\omega}) = \\vert H(e^{j\\omega})\\vert = \\begin{cases} 1, & \\vert\\omega\\vert \\le \\frac{\\pi}{4} \\\\ 0, & \\frac{\\pi}{4} < \\vert\\omega\\vert \\le \\pi \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "Its inverse DTFT is the standard sinc function:"
+      },
+      {
+       "t": "math",
+       "tex": "g[n] = \\frac{1}{2\\pi} \\int_{-\\pi/4}^{\\pi/4} 1 \\cdot e^{j\\omega n} d\\omega = \\frac{\\sin\\left(\\frac{\\pi}{4}n\\right)}{\\pi n}"
+      },
+      {
+       "t": "p",
+       "text": "Applying the time-shifting property:"
+      },
+      {
+       "t": "math",
+       "tex": "g[n-5] \\overset{\\mathcal{F}}{\\longleftrightarrow} G(e^{j\\omega}) e^{-j 5\\omega} = \\vert H(e^{j\\omega})\\vert e^{-j 5\\omega} = \\frac{\\sin\\left(\\frac{\\pi}{4}(n-5)\\right)}{\\pi(n-5)}"
+      },
+      {
+       "t": "p",
+       "text": "Now evaluate the two distinct parity classes of $k$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 1: $k$ is Even ($k = 0, \\pm 2, \\dots \\implies e^{jk\\pi} = +1$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{j\\omega}) = + \\vert H(e^{j\\omega})\\vert e^{-j 5\\omega} \\implies h[n] = +g[n-5] = \\frac{\\sin\\left(\\frac{\\pi}{4}(n-5)\\right)}{\\pi(n-5)}"
+      },
+      {
+       "t": "p",
+       "text": "This corresponds to option (a)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 2: $k$ is Odd ($k = \\pm 1, \\pm 3, \\dots \\implies e^{jk\\pi} = -1$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H(e^{j\\omega}) = - \\vert H(e^{j\\omega})\\vert e^{-j 5\\omega} \\implies h[n] = -g[n-5] = -\\frac{\\sin\\left(\\frac{\\pi}{4}(n-5)\\right)}{\\pi(n-5)}"
+      },
+      {
+       "t": "p",
+       "text": "This corresponds to option (b)."
+      },
+      {
+       "t": "p",
+       "text": "Both impulse responses are purely real, possess exactly the required rectangular magnitude response, and have identical constant group delay $\\tau_g = 5$."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Correct Answer: Option (c) Both}}"
+      },
+      {
+       "t": "h4",
+       "text": "Pedagogical Traps & Common Exam Errors"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**The Zero-Phase Assumption Trap:** Most candidates automatically set $c = 0$ upon integrating, forgetting that the constant of integration for a real signal can be any $k\\pi$. Setting $c=0$ yields only option (a), causing candidates to lose marks.",
+        "**The Phase Discontinuity Trap:** At $\\omega = 0$, $H(e^{j0}) = e^{jk\\pi} = \\pm 1$. Both $+1$ and $-1$ are real numbers! Since $h[n]$ is real, $\\sum_{n=-\\infty}^\\infty h[n] = H(e^{j0})$ must be real, which is satisfied by both $+1$ and $-1$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -21095,56 +21102,55 @@ export default {
      "text": "Any algorithm implementing an $N$-point FFT produces the identical numerical output vector as the direct $N$-point DFT definition."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Introductory Drill: 4-Point FFT of a Casual Sequence (Slide 233)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the 4-point FFT of $x[n] = \\{1, 2, 3, 4\\}$."
-    },
-    {
-     "t": "p",
-     "text": "**Solution via Direct DFT Formula:**\nFor $N = 4$, $W_4 = e^{-j 2\\pi / 4} = e^{-j \\pi / 2} = -j$.\nThe DFT matrix is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{W}_4 = \\begin{bmatrix} W_4^0 & W_4^0 & W_4^0 & W_4^0 \\\\ W_4^0 & W_4^1 & W_4^2 & W_4^3 \\\\ W_4^0 & W_4^2 & W_4^4 & W_4^6 \\\\ W_4^0 & W_4^3 & W_4^6 & W_4^9 \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying by the column vector $\\mathbf{x} = [1, 2, 3, 4]^T$:"
-    },
-    {
-     "t": "math",
-     "tex": "X[0] = 1(1) + 1(2) + 1(3) + 1(4) = 10"
-    },
-    {
-     "t": "math",
-     "tex": "X[1] = 1(1) - j(2) - 1(3) + j(4) = (1 - 3) + j(4 - 2) = -2 + 2j"
-    },
-    {
-     "t": "math",
-     "tex": "X[2] = 1(1) - 1(2) + 1(3) - 1(4) = (1 + 3) - (2 + 4) = 4 - 6 = -2"
-    },
-    {
-     "t": "math",
-     "tex": "X[3] = 1(1) + j(2) - 1(3) - j(4) = (1 - 3) + j(2 - 4) = -2 - 2j"
-    },
-    {
-     "t": "p",
-     "text": "Thus, the 4-point FFT yields identically:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{X} = \\{10, -2+2j, -2, -2-2j\\}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Introductory Drill: 4-Point FFT of a Casual Sequence (Slide 233)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the 4-point FFT of $x[n] = \\{1, 2, 3, 4\\}$."
+      },
+      {
+       "t": "p",
+       "text": "**Solution via Direct DFT Formula:**\nFor $N = 4$, $W_4 = e^{-j 2\\pi / 4} = e^{-j \\pi / 2} = -j$.\nThe DFT matrix is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{W}_4 = \\begin{bmatrix} W_4^0 & W_4^0 & W_4^0 & W_4^0 \\\\ W_4^0 & W_4^1 & W_4^2 & W_4^3 \\\\ W_4^0 & W_4^2 & W_4^4 & W_4^6 \\\\ W_4^0 & W_4^3 & W_4^6 & W_4^9 \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 & 1 \\\\ 1 & -j & -1 & j \\\\ 1 & -1 & 1 & -1 \\\\ 1 & j & -1 & -j \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying by the column vector $\\mathbf{x} = [1, 2, 3, 4]^T$:"
+      },
+      {
+       "t": "math",
+       "tex": "X[0] = 1(1) + 1(2) + 1(3) + 1(4) = 10"
+      },
+      {
+       "t": "math",
+       "tex": "X[1] = 1(1) - j(2) - 1(3) + j(4) = (1 - 3) + j(4 - 2) = -2 + 2j"
+      },
+      {
+       "t": "math",
+       "tex": "X[2] = 1(1) - 1(2) + 1(3) - 1(4) = (1 + 3) - (2 + 4) = 4 - 6 = -2"
+      },
+      {
+       "t": "math",
+       "tex": "X[3] = 1(1) + j(2) - 1(3) - j(4) = (1 - 3) + j(2 - 4) = -2 - 2j"
+      },
+      {
+       "t": "p",
+       "text": "Thus, the 4-point FFT yields identically:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{X} = \\{10, -2+2j, -2, -2-2j\\}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21719,120 +21725,119 @@ export default {
      "text": "Slides 234 to 236 audit a famous GATE PYQ testing signal flow graph interpretation and twiddle factor algebra in non-power-of-two decompositions."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 234)"
-    },
-    {
-     "t": "p",
-     "text": "Consider a 6-point decimation-in-time FFT algorithm where the signal-flow graph corresponding to $X[1]$ is shown. Let $W_6 = \\exp\\left(-j \\frac{2\\pi}{6}\\right)$. In the figure:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x[0]$ and $x[3]$ are combined via a 2-point butterfly with subtraction branch $-1$ to produce intermediate node $A = x[0] - x[3]$.",
-      "$x[1]$ and $x[4]$ are combined via a 2-point butterfly to produce intermediate node $B = x[1] - x[4]$.",
-      "$x[2]$ and $x[5]$ are combined via a 2-point butterfly to produce intermediate node $C = x[2] - x[5]$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "From these three nodes, weighted branches $a_1, a_2, a_3$ sum directly into frequency bin $X[1]$:"
-    },
-    {
-     "t": "math",
-     "tex": "X[1] = a_1 [x[0] - x[3]] + a_2 [x[1] - x[4]] + a_3 [x[2] - x[5]]"
-    },
-    {
-     "t": "p",
-     "text": "Determine the values of the coefficients $(a_1, a_2, a_3)$:\n(A) $a_1 = -1, \\; a_2 = W_6, \\; a_3 = W_6^2$\n(B) $a_1 = 1, \\; a_2 = W_6^2, \\; a_3 = W_6$\n(C) $a_1 = 1, \\; a_2 = W_6, \\; a_3 = W_6^2$\n(D) $a_1 = -1, \\; a_2 = W_6^2, \\; a_3 = W_6$"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation (Slides 235\u2013236)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Expand $X[1]$ using the Exact 6-Point DFT Definition**\nFor $N = 6$ and $k = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "X[1] = \\sum_{n=0}^5 x[n] W_6^{1 \\cdot n} = x[0] + x[1] W_6^1 + x[2] W_6^2 + x[3] W_6^3 + x[4] W_6^4 + x[5] W_6^5"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Simplify Higher-Order Twiddle Factors**\nRecall the fundamental twiddle factor half-period anti-symmetry:"
-    },
-    {
-     "t": "math",
-     "tex": "W_N^{n + N/2} = -W_N^n"
-    },
-    {
-     "t": "p",
-     "text": "For $N = 6$, $N/2 = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "W_6^3 = e^{-j \\frac{2\\pi}{6} \\times 3} = e^{-j\\pi} = -1"
-    },
-    {
-     "t": "math",
-     "tex": "W_6^4 = W_6^3 \\cdot W_6^1 = (-1) \\cdot W_6^1 = -W_6^1"
-    },
-    {
-     "t": "math",
-     "tex": "W_6^5 = W_6^3 \\cdot W_6^2 = (-1) \\cdot W_6^2 = -W_6^2"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Factor and Group Difference Terms**\nSubstitute these simplifications back into the expression for $X[1]$:"
-    },
-    {
-     "t": "math",
-     "tex": "X[1] = x[0] + x[1] W_6^1 + x[2] W_6^2 + x[3] (-1) + x[4] (-W_6^1) + x[5] (-W_6^2)"
-    },
-    {
-     "t": "p",
-     "text": "Grouping corresponding paired terms:"
-    },
-    {
-     "t": "math",
-     "tex": "X[1] = (x[0] - x[3]) + (x[1] - x[4]) W_6^1 + (x[2] - x[5]) W_6^2"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Match Directly with the Signal Flow Graph Equation**\nComparing this rigorous algebraic expression with the flow graph formula:"
-    },
-    {
-     "t": "math",
-     "tex": "X[1] = a_1 (x[0] - x[3]) + a_2 (x[1] - x[4]) + a_3 (x[2] - x[5])"
-    },
-    {
-     "t": "p",
-     "text": "Equating coefficients directly term-by-term:"
-    },
-    {
-     "t": "math",
-     "tex": "a_1 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "a_2 = W_6^1 = W_6"
-    },
-    {
-     "t": "math",
-     "tex": "a_3 = W_6^2"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Correct Answer: Option (C)} \\quad (a_1 = 1, \\; a_2 = W_6, \\; a_3 = W_6^2)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 234)"
+      },
+      {
+       "t": "p",
+       "text": "Consider a 6-point decimation-in-time FFT algorithm where the signal-flow graph corresponding to $X[1]$ is shown. Let $W_6 = \\exp\\left(-j \\frac{2\\pi}{6}\\right)$. In the figure:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x[0]$ and $x[3]$ are combined via a 2-point butterfly with subtraction branch $-1$ to produce intermediate node $A = x[0] - x[3]$.",
+        "$x[1]$ and $x[4]$ are combined via a 2-point butterfly to produce intermediate node $B = x[1] - x[4]$.",
+        "$x[2]$ and $x[5]$ are combined via a 2-point butterfly to produce intermediate node $C = x[2] - x[5]$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "From these three nodes, weighted branches $a_1, a_2, a_3$ sum directly into frequency bin $X[1]$:"
+      },
+      {
+       "t": "math",
+       "tex": "X[1] = a_1 [x[0] - x[3]] + a_2 [x[1] - x[4]] + a_3 [x[2] - x[5]]"
+      },
+      {
+       "t": "p",
+       "text": "Determine the values of the coefficients $(a_1, a_2, a_3)$:\n(A) $a_1 = -1, \\; a_2 = W_6, \\; a_3 = W_6^2$\n(B) $a_1 = 1, \\; a_2 = W_6^2, \\; a_3 = W_6$\n(C) $a_1 = 1, \\; a_2 = W_6, \\; a_3 = W_6^2$\n(D) $a_1 = -1, \\; a_2 = W_6^2, \\; a_3 = W_6$"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation (Slides 235\u2013236)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Expand $X[1]$ using the Exact 6-Point DFT Definition**\nFor $N = 6$ and $k = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "X[1] = \\sum_{n=0}^5 x[n] W_6^{1 \\cdot n} = x[0] + x[1] W_6^1 + x[2] W_6^2 + x[3] W_6^3 + x[4] W_6^4 + x[5] W_6^5"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Simplify Higher-Order Twiddle Factors**\nRecall the fundamental twiddle factor half-period anti-symmetry:"
+      },
+      {
+       "t": "math",
+       "tex": "W_N^{n + N/2} = -W_N^n"
+      },
+      {
+       "t": "p",
+       "text": "For $N = 6$, $N/2 = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "W_6^3 = e^{-j \\frac{2\\pi}{6} \\times 3} = e^{-j\\pi} = -1"
+      },
+      {
+       "t": "math",
+       "tex": "W_6^4 = W_6^3 \\cdot W_6^1 = (-1) \\cdot W_6^1 = -W_6^1"
+      },
+      {
+       "t": "math",
+       "tex": "W_6^5 = W_6^3 \\cdot W_6^2 = (-1) \\cdot W_6^2 = -W_6^2"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Factor and Group Difference Terms**\nSubstitute these simplifications back into the expression for $X[1]$:"
+      },
+      {
+       "t": "math",
+       "tex": "X[1] = x[0] + x[1] W_6^1 + x[2] W_6^2 + x[3] (-1) + x[4] (-W_6^1) + x[5] (-W_6^2)"
+      },
+      {
+       "t": "p",
+       "text": "Grouping corresponding paired terms:"
+      },
+      {
+       "t": "math",
+       "tex": "X[1] = (x[0] - x[3]) + (x[1] - x[4]) W_6^1 + (x[2] - x[5]) W_6^2"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Match Directly with the Signal Flow Graph Equation**\nComparing this rigorous algebraic expression with the flow graph formula:"
+      },
+      {
+       "t": "math",
+       "tex": "X[1] = a_1 (x[0] - x[3]) + a_2 (x[1] - x[4]) + a_3 (x[2] - x[5])"
+      },
+      {
+       "t": "p",
+       "text": "Equating coefficients directly term-by-term:"
+      },
+      {
+       "t": "math",
+       "tex": "a_1 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "a_2 = W_6^1 = W_6"
+      },
+      {
+       "t": "math",
+       "tex": "a_3 = W_6^2"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Correct Answer: Option (C)} \\quad (a_1 = 1, \\; a_2 = W_6, \\; a_3 = W_6^2)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21992,160 +21997,163 @@ export default {
      "text": "5.2 Mathematical Audit of Slides 251\u2013252: Master GATE PYQ on Real-Time FFT Processor Throughput"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement (Slide 251)"
-    },
-    {
-     "t": "p",
-     "text": "A continuous-time speech signal $x_a(t)$ is sampled at a rate of $8\\text{ kHz}$ and the samples are subsequently grouped in blocks, each of size $N$. The DFT of each block is to be computed in real time using the **radix-2 decimation-in-frequency (DIF)** FFT algorithm. If the processor performs all operations sequentially, and takes $20\\,\\mu\\text{s}$ for computing each complex multiplication (including multiplications by $1$ and $-1$) and the time required for addition/subtraction is negligible, then the **maximum value of $N$** is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Maximum } N = \\_\\_\\_\\_\\_\\_\\_\\_"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation (Slide 252)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Extract Given Parameters & Compute Sampling Interval**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Sampling frequency: $f_s = 8\\text{ kHz} = 8 \\times 10^3\\text{ Hz}$",
-      "Sampling period:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "T_s = \\frac{1}{f_s} = \\frac{1}{8000} \\text{ s} = 125 \\times 10^{-6} \\text{ s} = 125\\,\\mu\\text{s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Execution time per complex multiplication:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "t_{\\text{mult}} = 20\\,\\mu\\text{s}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Algorithm: Radix-2 DIF FFT $\\implies N = 2^m$, where $m \\in \\mathbb{Z}^+$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Calculate Block Collection Duration**\nA block of $N$ samples requires:"
-    },
-    {
-     "t": "math",
-     "tex": "T_{\\text{block}} = N \\cdot T_s = N \\times 125\\,\\mu\\text{s}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Calculate Processor Computation Time**\nFor a Radix-2 DIF FFT of length $N$, the total number of complex multiplications is:"
-    },
-    {
-     "t": "math",
-     "tex": "M_{\\text{mult}} = \\frac{N}{2} \\log_2 N"
-    },
-    {
-     "t": "p",
-     "text": "Total processor computation time:"
-    },
-    {
-     "t": "math",
-     "tex": "T_{\\text{comp}} = M_{\\text{mult}} \\times t_{\\text{mult}} = \\left(\\frac{N}{2} \\log_2 N\\right) \\times 20\\,\\mu\\text{s} = 10 N \\log_2 N\\,\\mu\\text{s}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Impose the Real-Time Streaming Constraint**\nFor real-time non-blocking execution:"
-    },
-    {
-     "t": "math",
-     "tex": "T_{\\text{comp}} \\le T_{\\text{block}}"
-    },
-    {
-     "t": "math",
-     "tex": "10 N \\log_2 N\\,\\mu\\text{s} \\le 125 N\\,\\mu\\text{s}"
-    },
-    {
-     "t": "p",
-     "text": "Dividing both sides by $10N$ (since $N \\ge 2 > 0$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\log_2 N \\le \\frac{125}{10} = 12.5"
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Solve for Maximum Valid Integer Power-of-Two**\nExponentiating both sides base-2:"
-    },
-    {
-     "t": "math",
-     "tex": "N \\le 2^{12.5} = 2^{12} \\times 2^{0.5} = 4096 \\times \\sqrt{2} \\approx 4096 \\times 1.41421 \\approx 5792.61"
-    },
-    {
-     "t": "p",
-     "text": "Since the algorithm is strictly **Radix-2**, the block size must satisfy $N = 2^m$ where $m$ is an integer:"
-    },
-    {
-     "t": "math",
-     "tex": "m = \\log_2 N \\le 12.5 \\implies m_{\\max} = \\lfloor 12.5 \\rfloor = 12"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating $N_{\\max}$:"
-    },
-    {
-     "t": "math",
-     "tex": "N_{\\max} = 2^{12} = \\boxed{4096}"
-    },
-    {
-     "t": "h4",
-     "text": "Critical Exam Traps & Examiner Pitfalls"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**The Single-Sample Latency Trap:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "A common mistake is setting $T_{\\text{comp}} \\le T_s$ instead of $N T_s$:\n   $\\frac{N}{2}\\log_2 N \\times 20\\,\\mu\\text{s} \\le 125\\,\\mu\\text{s} \\implies N \\log_2 N \\le 12.5 \\implies N = 4$.\n   *Why this is flawed:* New blocks of size $N$ only arrive every $N T_s$ seconds, not every $T_s$ seconds!"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**The Ceiling Rounding Trap:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Rounding $m = 12.5$ up to $m = 13$ gives $N = 2^{13} = 8192$.\n   Checking throughput for $N = 8192$:\n   $T_{\\text{comp}} = 10 \\times 8192 \\times 13 = 1,064,960\\,\\mu\\text{s} \\approx 1.065\\text{ s}$.\n   $T_{\\text{block}} = 8192 \\times 125\\,\\mu\\text{s} = 1,024,000\\,\\mu\\text{s} \\approx 1.024\\text{ s}$.\n   Since $T_{\\text{comp}} > T_{\\text{block}}$, the processor cannot keep up, resulting in buffer overflow and dropped speech data! The floor function $\\lfloor 12.5 \\rfloor = 12$ must be used."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**The Non-Power-of-Two Trap:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Rounding to the nearest integer $\\lfloor 5792.61 \\rfloor = 5792$. This violates the explicit Radix-2 specification of the algorithm.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement (Slide 251)"
+      },
+      {
+       "t": "p",
+       "text": "A continuous-time speech signal $x_a(t)$ is sampled at a rate of $8\\text{ kHz}$ and the samples are subsequently grouped in blocks, each of size $N$. The DFT of each block is to be computed in real time using the **radix-2 decimation-in-frequency (DIF)** FFT algorithm. If the processor performs all operations sequentially, and takes $20\\,\\mu\\text{s}$ for computing each complex multiplication (including multiplications by $1$ and $-1$) and the time required for addition/subtraction is negligible, then the **maximum value of $N$** is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Maximum } N = \\_\\_\\_\\_\\_\\_\\_\\_"
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation (Slide 252)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Extract Given Parameters & Compute Sampling Interval**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Sampling frequency: $f_s = 8\\text{ kHz} = 8 \\times 10^3\\text{ Hz}$",
+        "Sampling period:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "T_s = \\frac{1}{f_s} = \\frac{1}{8000} \\text{ s} = 125 \\times 10^{-6} \\text{ s} = 125\\,\\mu\\text{s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Execution time per complex multiplication:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "t_{\\text{mult}} = 20\\,\\mu\\text{s}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Algorithm: Radix-2 DIF FFT $\\implies N = 2^m$, where $m \\in \\mathbb{Z}^+$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Calculate Block Collection Duration**\nA block of $N$ samples requires:"
+      },
+      {
+       "t": "math",
+       "tex": "T_{\\text{block}} = N \\cdot T_s = N \\times 125\\,\\mu\\text{s}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Calculate Processor Computation Time**\nFor a Radix-2 DIF FFT of length $N$, the total number of complex multiplications is:"
+      },
+      {
+       "t": "math",
+       "tex": "M_{\\text{mult}} = \\frac{N}{2} \\log_2 N"
+      },
+      {
+       "t": "p",
+       "text": "Total processor computation time:"
+      },
+      {
+       "t": "math",
+       "tex": "T_{\\text{comp}} = M_{\\text{mult}} \\times t_{\\text{mult}} = \\left(\\frac{N}{2} \\log_2 N\\right) \\times 20\\,\\mu\\text{s} = 10 N \\log_2 N\\,\\mu\\text{s}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Impose the Real-Time Streaming Constraint**\nFor real-time non-blocking execution:"
+      },
+      {
+       "t": "math",
+       "tex": "T_{\\text{comp}} \\le T_{\\text{block}}"
+      },
+      {
+       "t": "math",
+       "tex": "10 N \\log_2 N\\,\\mu\\text{s} \\le 125 N\\,\\mu\\text{s}"
+      },
+      {
+       "t": "p",
+       "text": "Dividing both sides by $10N$ (since $N \\ge 2 > 0$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\log_2 N \\le \\frac{125}{10} = 12.5"
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Solve for Maximum Valid Integer Power-of-Two**\nExponentiating both sides base-2:"
+      },
+      {
+       "t": "math",
+       "tex": "N \\le 2^{12.5} = 2^{12} \\times 2^{0.5} = 4096 \\times \\sqrt{2} \\approx 4096 \\times 1.41421 \\approx 5792.61"
+      },
+      {
+       "t": "p",
+       "text": "Since the algorithm is strictly **Radix-2**, the block size must satisfy $N = 2^m$ where $m$ is an integer:"
+      },
+      {
+       "t": "math",
+       "tex": "m = \\log_2 N \\le 12.5 \\implies m_{\\max} = \\lfloor 12.5 \\rfloor = 12"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating $N_{\\max}$:"
+      },
+      {
+       "t": "math",
+       "tex": "N_{\\max} = 2^{12} = \\boxed{4096}"
+      },
+      {
+       "t": "h4",
+       "text": "Critical Exam Traps & Examiner Pitfalls"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**The Single-Sample Latency Trap:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A common mistake is setting $T_{\\text{comp}} \\le T_s$ instead of $N T_s$:\n   $\\frac{N}{2}\\log_2 N \\times 20\\,\\mu\\text{s} \\le 125\\,\\mu\\text{s} \\implies N \\log_2 N \\le 12.5 \\implies N = 4$.\n   *Why this is flawed:* New blocks of size $N$ only arrive every $N T_s$ seconds, not every $T_s$ seconds!"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**The Ceiling Rounding Trap:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Rounding $m = 12.5$ up to $m = 13$ gives $N = 2^{13} = 8192$.\n   Checking throughput for $N = 8192$:\n   $T_{\\text{comp}} = 10 \\times 8192 \\times 13 = 1,064,960\\,\\mu\\text{s} \\approx 1.065\\text{ s}$.\n   $T_{\\text{block}} = 8192 \\times 125\\,\\mu\\text{s} = 1,024,000\\,\\mu\\text{s} \\approx 1.024\\text{ s}$.\n   Since $T_{\\text{comp}} > T_{\\text{block}}$, the processor cannot keep up, resulting in buffer overflow and dropped speech data! The floor function $\\lfloor 12.5 \\rfloor = 12$ must be used."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**The Non-Power-of-Two Trap:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Rounding to the nearest integer $\\lfloor 5792.61 \\rfloor = 5792$. This violates the explicit Radix-2 specification of the algorithm."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -22209,80 +22217,79 @@ export default {
      "text": "6.2 Inverse DTFT Derivation of the Discrete Hilbert Impulse Response"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Derivation of $h_d[n]$"
-    },
-    {
-     "t": "p",
-     "text": "By the Inverse Discrete-Time Fourier Transform (IDTFT):"
-    },
-    {
-     "t": "math",
-     "tex": "h_d[n] = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi H_d(e^{j\\Omega}) e^{j\\Omega n} d\\Omega"
-    },
-    {
-     "t": "p",
-     "text": "Splitting the integral into negative and positive frequency intervals:"
-    },
-    {
-     "t": "math",
-     "tex": "h_d[n] = \\frac{1}{2\\pi} \\left[ \\int_{-\\pi}^0 (+j) e^{j\\Omega n} d\\Omega + \\int_0^\\pi (-j) e^{j\\Omega n} d\\Omega \\right]"
-    },
-    {
-     "t": "p",
-     "text": "For $n = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "h_d[0] = \\frac{j}{2\\pi} \\left[ \\int_{-\\pi}^0 1 \\, d\\Omega - \\int_0^\\pi 1 \\, d\\Omega \\right] = \\frac{j}{2\\pi} [\\pi - \\pi] = 0"
-    },
-    {
-     "t": "p",
-     "text": "For $n \\neq 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "h_d[n] = \\frac{j}{2\\pi} \\left[ \\left. \\frac{e^{j\\Omega n}}{j n} \\right\\vert_{-\\pi}^0 \\right] - \\frac{j}{2\\pi} \\left[ \\left. \\frac{e^{j\\Omega n}}{j n} \\right\\vert_0^\\pi \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Canceling the factor of $j$:"
-    },
-    {
-     "t": "math",
-     "tex": "h_d[n] = \\frac{1}{2\\pi n} \\left[ (1 - e^{-j\\pi n}) - (e^{j\\pi n} - 1) \\right] = \\frac{1}{2\\pi n} \\left[ 2 - (e^{j\\pi n} + e^{-j\\pi n}) \\right]"
-    },
-    {
-     "t": "p",
-     "text": "Using Euler's identity $e^{j\\pi n} + e^{-j\\pi n} = 2\\cos(\\pi n)$:"
-    },
-    {
-     "t": "math",
-     "tex": "h_d[n] = \\frac{1}{2\\pi n} [2 - 2\\cos(\\pi n)] = \\frac{1 - \\cos(\\pi n)}{\\pi n}"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\cos(\\pi n) = (-1)^n$ for all integers $n$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{h_d[n] = \\frac{1 - (-1)^n}{\\pi n} = \\begin{cases} \\frac{2}{\\pi n}, & n \\text{ is odd} \\\\ 0, & n \\text{ is even} \\end{cases}}"
-    },
-    {
-     "t": "p",
-     "text": "Explicit sample values:"
-    },
-    {
-     "t": "math",
-     "tex": "\\dots, h_d[-3] = -\\frac{2}{3\\pi}, \\; h_d[-2] = 0, \\; h_d[-1] = -\\frac{2}{\\pi}, \\; h_d[0] = 0, \\; h_d[1] = \\frac{2}{\\pi}, \\; h_d[2] = 0, \\; h_d[3] = \\frac{2}{3\\pi}, \\dots"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step-by-Step Derivation of $h_d[n]$"
+      },
+      {
+       "t": "p",
+       "text": "By the Inverse Discrete-Time Fourier Transform (IDTFT):"
+      },
+      {
+       "t": "math",
+       "tex": "h_d[n] = \\frac{1}{2\\pi} \\int_{-\\pi}^\\pi H_d(e^{j\\Omega}) e^{j\\Omega n} d\\Omega"
+      },
+      {
+       "t": "p",
+       "text": "Splitting the integral into negative and positive frequency intervals:"
+      },
+      {
+       "t": "math",
+       "tex": "h_d[n] = \\frac{1}{2\\pi} \\left[ \\int_{-\\pi}^0 (+j) e^{j\\Omega n} d\\Omega + \\int_0^\\pi (-j) e^{j\\Omega n} d\\Omega \\right]"
+      },
+      {
+       "t": "p",
+       "text": "For $n = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "h_d[0] = \\frac{j}{2\\pi} \\left[ \\int_{-\\pi}^0 1 \\, d\\Omega - \\int_0^\\pi 1 \\, d\\Omega \\right] = \\frac{j}{2\\pi} [\\pi - \\pi] = 0"
+      },
+      {
+       "t": "p",
+       "text": "For $n \\neq 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "h_d[n] = \\frac{j}{2\\pi} \\left[ \\left. \\frac{e^{j\\Omega n}}{j n} \\right\\vert_{-\\pi}^0 \\right] - \\frac{j}{2\\pi} \\left[ \\left. \\frac{e^{j\\Omega n}}{j n} \\right\\vert_0^\\pi \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Canceling the factor of $j$:"
+      },
+      {
+       "t": "math",
+       "tex": "h_d[n] = \\frac{1}{2\\pi n} \\left[ (1 - e^{-j\\pi n}) - (e^{j\\pi n} - 1) \\right] = \\frac{1}{2\\pi n} \\left[ 2 - (e^{j\\pi n} + e^{-j\\pi n}) \\right]"
+      },
+      {
+       "t": "p",
+       "text": "Using Euler's identity $e^{j\\pi n} + e^{-j\\pi n} = 2\\cos(\\pi n)$:"
+      },
+      {
+       "t": "math",
+       "tex": "h_d[n] = \\frac{1}{2\\pi n} [2 - 2\\cos(\\pi n)] = \\frac{1 - \\cos(\\pi n)}{\\pi n}"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\cos(\\pi n) = (-1)^n$ for all integers $n$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{h_d[n] = \\frac{1 - (-1)^n}{\\pi n} = \\begin{cases} \\frac{2}{\\pi n}, & n \\text{ is odd} \\\\ 0, & n \\text{ is even} \\end{cases}}"
+      },
+      {
+       "t": "p",
+       "text": "Explicit sample values:"
+      },
+      {
+       "t": "math",
+       "tex": "\\dots, h_d[-3] = -\\frac{2}{3\\pi}, \\; h_d[-2] = 0, \\; h_d[-1] = -\\frac{2}{\\pi}, \\; h_d[0] = 0, \\; h_d[1] = \\frac{2}{\\pi}, \\; h_d[2] = 0, \\; h_d[3] = \\frac{2}{3\\pi}, \\dots"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -22995,425 +23002,422 @@ export default {
      "text": "9.1 Synthesis Drill 1: Hilbert Transform of Elementary Signals & Analytic Signal Construction"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Determine the Discrete Hilbert Transform $\\hat{x}[n]$ and the corresponding analytic signal $x_a[n]$ for the discrete-time cosine sequence:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\cos(\\omega_0 n), \\quad 0 < \\omega_0 < \\pi"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Determine the Discrete Hilbert Transform of the unit impulse sequence $x[n] = \\delta[n]$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Derivation"
-    },
-    {
-     "t": "p",
-     "text": "**Part 1: Response to $x[n] = \\cos(\\omega_0 n)$**\nRecall Euler's identity:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\frac{1}{2} e^{j\\omega_0 n} + \\frac{1}{2} e^{-j\\omega_0 n}"
-    },
-    {
-     "t": "p",
-     "text": "The frequency response of the ideal discrete Hilbert transformer is:"
-    },
-    {
-     "t": "math",
-     "tex": "H_d(e^{j\\Omega}) = -j \\operatorname{sgn}(\\Omega)"
-    },
-    {
-     "t": "p",
-     "text": "Applying the LTI eigenfunction property to each exponential component:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For the positive frequency $\\Omega = +\\omega_0 > 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_d(e^{j\\omega_0}) = -j \\operatorname{sgn}(\\omega_0) = -j = e^{-j\\pi/2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For the negative frequency $\\Omega = -\\omega_0 < 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "H_d(e^{-j\\omega_0}) = -j \\operatorname{sgn}(-\\omega_0) = -j(-1) = +j = e^{+j\\pi/2}"
-    },
-    {
-     "t": "p",
-     "text": "The steady-state Hilbert transform $\\hat{x}[n]$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\hat{x}[n] = \\frac{1}{2} (-j) e^{j\\omega_0 n} + \\frac{1}{2} (+j) e^{-j\\omega_0 n} = \\frac{e^{j\\omega_0 n} - e^{-j\\omega_0 n}}{2j} = \\sin(\\omega_0 n)"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\mathcal{H}\\{\\cos(\\omega_0 n)\\} = \\sin(\\omega_0 n)}"
-    },
-    {
-     "t": "p",
-     "text": "Now formulate the analytic signal $x_a[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_a[n] = x[n] + j \\hat{x}[n] = \\cos(\\omega_0 n) + j \\sin(\\omega_0 n) = \\boxed{e^{j\\omega_0 n}}"
-    },
-    {
-     "t": "p",
-     "text": "*Verification:* The spectrum of $e^{j\\omega_0 n}$ contains only a single positive frequency component at $\\Omega = \\omega_0$. All negative frequencies are completely eliminated!"
-    },
-    {
-     "t": "p",
-     "text": "**Part 2: Response to $x[n] = \\delta[n]$**\nBy definition of the impulse response:"
-    },
-    {
-     "t": "math",
-     "tex": "\\hat{x}[n] = x[n] * h_d[n] = \\delta[n] * h_d[n] = h_d[n]"
-    },
-    {
-     "t": "p",
-     "text": "Substituting the impulse response derived in Section 6.2:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\hat{x}[n] = \\frac{1 - (-1)^n}{\\pi n} = \\begin{cases} \\frac{2}{\\pi n}, & n \\text{ is odd} \\\\ 0, & n \\text{ is even} \\end{cases}}"
-    },
-    {
-     "t": "p",
-     "text": "The analytic signal of an impulse is:"
-    },
-    {
-     "t": "math",
-     "tex": "x_a[n] = \\delta[n] + j h_d[n] = \\begin{cases} 1, & n = 0 \\\\ j \\frac{2}{\\pi n}, & n \\text{ is odd} \\\\ 0, & n \\text{ is even}, n \\neq 0 \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Determine the Discrete Hilbert Transform $\\hat{x}[n]$ and the corresponding analytic signal $x_a[n]$ for the discrete-time cosine sequence:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\cos(\\omega_0 n), \\quad 0 < \\omega_0 < \\pi"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Determine the Discrete Hilbert Transform of the unit impulse sequence $x[n] = \\delta[n]$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Derivation"
+      },
+      {
+       "t": "p",
+       "text": "**Part 1: Response to $x[n] = \\cos(\\omega_0 n)$**\nRecall Euler's identity:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\frac{1}{2} e^{j\\omega_0 n} + \\frac{1}{2} e^{-j\\omega_0 n}"
+      },
+      {
+       "t": "p",
+       "text": "The frequency response of the ideal discrete Hilbert transformer is:"
+      },
+      {
+       "t": "math",
+       "tex": "H_d(e^{j\\Omega}) = -j \\operatorname{sgn}(\\Omega)"
+      },
+      {
+       "t": "p",
+       "text": "Applying the LTI eigenfunction property to each exponential component:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For the positive frequency $\\Omega = +\\omega_0 > 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_d(e^{j\\omega_0}) = -j \\operatorname{sgn}(\\omega_0) = -j = e^{-j\\pi/2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For the negative frequency $\\Omega = -\\omega_0 < 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "H_d(e^{-j\\omega_0}) = -j \\operatorname{sgn}(-\\omega_0) = -j(-1) = +j = e^{+j\\pi/2}"
+      },
+      {
+       "t": "p",
+       "text": "The steady-state Hilbert transform $\\hat{x}[n]$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\hat{x}[n] = \\frac{1}{2} (-j) e^{j\\omega_0 n} + \\frac{1}{2} (+j) e^{-j\\omega_0 n} = \\frac{e^{j\\omega_0 n} - e^{-j\\omega_0 n}}{2j} = \\sin(\\omega_0 n)"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\mathcal{H}\\{\\cos(\\omega_0 n)\\} = \\sin(\\omega_0 n)}"
+      },
+      {
+       "t": "p",
+       "text": "Now formulate the analytic signal $x_a[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_a[n] = x[n] + j \\hat{x}[n] = \\cos(\\omega_0 n) + j \\sin(\\omega_0 n) = \\boxed{e^{j\\omega_0 n}}"
+      },
+      {
+       "t": "p",
+       "text": "*Verification:* The spectrum of $e^{j\\omega_0 n}$ contains only a single positive frequency component at $\\Omega = \\omega_0$. All negative frequencies are completely eliminated!"
+      },
+      {
+       "t": "p",
+       "text": "**Part 2: Response to $x[n] = \\delta[n]$**\nBy definition of the impulse response:"
+      },
+      {
+       "t": "math",
+       "tex": "\\hat{x}[n] = x[n] * h_d[n] = \\delta[n] * h_d[n] = h_d[n]"
+      },
+      {
+       "t": "p",
+       "text": "Substituting the impulse response derived in Section 6.2:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\hat{x}[n] = \\frac{1 - (-1)^n}{\\pi n} = \\begin{cases} \\frac{2}{\\pi n}, & n \\text{ is odd} \\\\ 0, & n \\text{ is even} \\end{cases}}"
+      },
+      {
+       "t": "p",
+       "text": "The analytic signal of an impulse is:"
+      },
+      {
+       "t": "math",
+       "tex": "x_a[n] = \\delta[n] + j h_d[n] = \\begin{cases} 1, & n = 0 \\\\ j \\frac{2}{\\pi n}, & n \\text{ is odd} \\\\ 0, & n \\text{ is even}, n \\neq 0 \\end{cases}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "9.2 Synthesis Drill 2: Optimal Window Selection for Dual-Tone Spectral Analysis"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "A continuous-time signal consisting of two sinusoidal tones:"
-    },
-    {
-     "t": "math",
-     "tex": "x_a(t) = 1.0 \\cos(2\\pi \\cdot 1000 \\, t) + 0.01 \\cos(2\\pi \\cdot 1050 \\, t)"
-    },
-    {
-     "t": "p",
-     "text": "is sampled at a rate of $f_s = 10\\text{ kHz}$. A digital window of length $N$ is applied prior to computing the DFT."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Which classical window function (Rectangular, Bartlett, Hann, Hamming, or Blackman) must be selected to ensure that the sidelobes of the strong $1000\\text{ Hz}$ tone do not mask the weak $1050\\text{ Hz}$ tone?",
-      "Calculate the minimum window length $N$ required to unambiguously resolve both spectral peaks."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Solution"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute Dynamic Range / Sidelobe Attenuation Requirement**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Strong tone amplitude: $A_1 = 1.0\\text{ V} \\implies \\text{Power} \\propto 1.0^2$",
-      "Weak tone amplitude: $A_2 = 0.01\\text{ V} \\implies \\text{Power} \\propto 0.01^2$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The relative power ratio between the strong tone and the weak tone in decibels is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta P = 20 \\log_{10}\\left(\\frac{A_1}{A_2}\\right) = 20 \\log_{10}\\left(\\frac{1.0}{0.01}\\right) = 20 \\log_{10}(100) = 40 \\text{ dB}"
-    },
-    {
-     "t": "p",
-     "text": "To prevent the sidelobes of the strong $1000\\text{ Hz}$ tone from burying the main lobe of the weak $1050\\text{ Hz}$ tone, the peak sidelobe level of the window must be **at least $40\\text{ dB}$ below the main lobe**:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert \\text{Peak Side-Lobe Level}\\vert \\ge 40 \\text{ dB}"
-    },
-    {
-     "t": "p",
-     "text": "Consulting the Master Window Taxonomy Table (Section 7.3):"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Rectangular: $-13\\text{ dB}$ (Insufficient! Leakage is $27\\text{ dB}$ above the weak signal!)",
-      "Bartlett: $-25\\text{ dB}$ (Insufficient!)",
-      "Hann: $-31\\text{ dB}$ (Insufficient!)",
-      "**Hamming:** $-41\\text{ dB}$ ($\\ge 40\\text{ dB}$ \u2014 **Acceptable!**)",
-      "**Blackman:** $-57\\text{ dB}$ ($\\ge 40\\text{ dB}$ \u2014 **Acceptable, with extra margin**)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "To achieve the narrowest possible main lobe while satisfying the $40\\text{ dB}$ leakage constraint, the **Hamming window** is the optimal choice."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Calculate Digital Frequency Separation**\nConvert analog frequencies to normalized discrete angular frequencies:"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_1 = \\frac{2\\pi f_1}{f_s} = \\frac{2\\pi (1000)}{10000} = 0.2\\pi \\text{ rad/sample}"
-    },
-    {
-     "t": "math",
-     "tex": "\\omega_2 = \\frac{2\\pi f_2}{f_s} = \\frac{2\\pi (1050)}{10000} = 0.21\\pi \\text{ rad/sample}"
-    },
-    {
-     "t": "p",
-     "text": "The digital frequency separation between the two tones is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta\\omega = \\omega_2 - \\omega_1 = 0.21\\pi - 0.2\\pi = 0.01\\pi \\text{ rad/sample}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Impose Main-Lobe Resolution Condition**\nTo resolve two distinct spectral peaks, the frequency separation $\\Delta\\omega$ must be at least greater than or equal to the main-lobe width of the window. For a Hamming window, the main-lobe null-to-null width is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta\\Omega_{\\text{main}} = \\frac{8\\pi}{N}"
-    },
-    {
-     "t": "p",
-     "text": "Setting $\\Delta\\omega \\ge \\frac{8\\pi}{N}$:"
-    },
-    {
-     "t": "math",
-     "tex": "0.01\\pi \\ge \\frac{8\\pi}{N} \\implies N \\ge \\frac{8\\pi}{0.01\\pi} = \\frac{8}{0.01} = 800"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Minimum Window Length } N_{\\min} = 800 \\text{ samples}}"
-    },
-    {
-     "t": "p",
-     "text": "At $f_s = 10\\text{ kHz}$, this corresponds to an observation duration of:"
-    },
-    {
-     "t": "math",
-     "tex": "T_{\\text{obs}} = \\frac{N}{f_s} = \\frac{800}{10000} = 0.08 \\text{ s} = 80\\text{ ms}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "A continuous-time signal consisting of two sinusoidal tones:"
+      },
+      {
+       "t": "math",
+       "tex": "x_a(t) = 1.0 \\cos(2\\pi \\cdot 1000 \\, t) + 0.01 \\cos(2\\pi \\cdot 1050 \\, t)"
+      },
+      {
+       "t": "p",
+       "text": "is sampled at a rate of $f_s = 10\\text{ kHz}$. A digital window of length $N$ is applied prior to computing the DFT."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Which classical window function (Rectangular, Bartlett, Hann, Hamming, or Blackman) must be selected to ensure that the sidelobes of the strong $1000\\text{ Hz}$ tone do not mask the weak $1050\\text{ Hz}$ tone?",
+        "Calculate the minimum window length $N$ required to unambiguously resolve both spectral peaks."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Solution"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Compute Dynamic Range / Sidelobe Attenuation Requirement**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Strong tone amplitude: $A_1 = 1.0\\text{ V} \\implies \\text{Power} \\propto 1.0^2$",
+        "Weak tone amplitude: $A_2 = 0.01\\text{ V} \\implies \\text{Power} \\propto 0.01^2$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The relative power ratio between the strong tone and the weak tone in decibels is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta P = 20 \\log_{10}\\left(\\frac{A_1}{A_2}\\right) = 20 \\log_{10}\\left(\\frac{1.0}{0.01}\\right) = 20 \\log_{10}(100) = 40 \\text{ dB}"
+      },
+      {
+       "t": "p",
+       "text": "To prevent the sidelobes of the strong $1000\\text{ Hz}$ tone from burying the main lobe of the weak $1050\\text{ Hz}$ tone, the peak sidelobe level of the window must be **at least $40\\text{ dB}$ below the main lobe**:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert \\text{Peak Side-Lobe Level}\\vert \\ge 40 \\text{ dB}"
+      },
+      {
+       "t": "p",
+       "text": "Consulting the Master Window Taxonomy Table (Section 7.3):"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Rectangular: $-13\\text{ dB}$ (Insufficient! Leakage is $27\\text{ dB}$ above the weak signal!)",
+        "Bartlett: $-25\\text{ dB}$ (Insufficient!)",
+        "Hann: $-31\\text{ dB}$ (Insufficient!)",
+        "**Hamming:** $-41\\text{ dB}$ ($\\ge 40\\text{ dB}$ \u2014 **Acceptable!**)",
+        "**Blackman:** $-57\\text{ dB}$ ($\\ge 40\\text{ dB}$ \u2014 **Acceptable, with extra margin**)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "To achieve the narrowest possible main lobe while satisfying the $40\\text{ dB}$ leakage constraint, the **Hamming window** is the optimal choice."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Calculate Digital Frequency Separation**\nConvert analog frequencies to normalized discrete angular frequencies:"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_1 = \\frac{2\\pi f_1}{f_s} = \\frac{2\\pi (1000)}{10000} = 0.2\\pi \\text{ rad/sample}"
+      },
+      {
+       "t": "math",
+       "tex": "\\omega_2 = \\frac{2\\pi f_2}{f_s} = \\frac{2\\pi (1050)}{10000} = 0.21\\pi \\text{ rad/sample}"
+      },
+      {
+       "t": "p",
+       "text": "The digital frequency separation between the two tones is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta\\omega = \\omega_2 - \\omega_1 = 0.21\\pi - 0.2\\pi = 0.01\\pi \\text{ rad/sample}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Impose Main-Lobe Resolution Condition**\nTo resolve two distinct spectral peaks, the frequency separation $\\Delta\\omega$ must be at least greater than or equal to the main-lobe width of the window. For a Hamming window, the main-lobe null-to-null width is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta\\Omega_{\\text{main}} = \\frac{8\\pi}{N}"
+      },
+      {
+       "t": "p",
+       "text": "Setting $\\Delta\\omega \\ge \\frac{8\\pi}{N}$:"
+      },
+      {
+       "t": "math",
+       "tex": "0.01\\pi \\ge \\frac{8\\pi}{N} \\implies N \\ge \\frac{8\\pi}{0.01\\pi} = \\frac{8}{0.01} = 800"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Minimum Window Length } N_{\\min} = 800 \\text{ samples}}"
+      },
+      {
+       "t": "p",
+       "text": "At $f_s = 10\\text{ kHz}$, this corresponds to an observation duration of:"
+      },
+      {
+       "t": "math",
+       "tex": "T_{\\text{obs}} = \\frac{N}{f_s} = \\frac{800}{10000} = 0.08 \\text{ s} = 80\\text{ ms}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
      "text": "9.3 Synthesis Drill 3: Numerical Walk-Through of Overlap-Save vs. Linear Convolution"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Problem Statement"
-    },
-    {
-     "t": "p",
-     "text": "Given an input sequence:"
-    },
-    {
-     "t": "math",
-     "tex": "x[n] = \\{1, 2, -1, 3, 0, 1, 4, -2\\}"
-    },
-    {
-     "t": "p",
-     "text": "and an FIR filter impulse response:"
-    },
-    {
-     "t": "math",
-     "tex": "h[n] = \\{1, -1, 2\\}"
-    },
-    {
-     "t": "p",
-     "text": "Perform block convolution using the **Overlap-Save (OLS)** method with an FFT size of $N = 6$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Identify the filter length $M$, overlap length, and number of valid points $L_s$ per block.",
-      "Formulate the segmented input blocks $x_0[n]$ and $x_1[n]$.",
-      "Compute the 6-point circular convolution outputs, discard the corrupted samples, and reconstruct the final linear convolution sequence $y[n]$. Verify against direct convolution."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step-by-Step Mathematical Solution"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: System Parameters**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Filter length: $M = 3$ (since $h[0]=1, h[1]=-1, h[2]=2$)",
-      "FFT block size: $N = 6$",
-      "Number of overlapping samples: $M - 1 = 3 - 1 = 2$ samples.",
-      "Number of valid linear output samples per block:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "L_s = N - M + 1 = 6 - 3 + 1 = 4 \\text{ samples}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Construct Input Blocks**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Block 0 ($r = 0$):** Prepend $M - 1 = 2$ zeros followed by the first $L_s = 4$ samples of $x[n]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_0[n] = [\\underbrace{0, 0}_{M-1 \\text{ zeros}}, \\; \\underbrace{1, 2, -1, 3}_{x[0] \\dots x[3]}] = [0, 0, 1, 2, -1, 3]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Block 1 ($r = 1$):** Formed by taking the last $M - 1 = 2$ samples of block 0 ($x[2]=-1, x[3]=3$) followed by the next $L_s = 4$ samples ($x[4]=0, x[5]=1, x[6]=4, x[7]=-2$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x_1[n] = [\\underbrace{-1, 3}_{\\text{overlap}}, \\; \\underbrace{0, 1, 4, -2}_{x[4] \\dots x[7]}] = [-1, 3, 0, 1, 4, -2]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Zero-padded filter:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "h[n] = [1, -1, 2, 0, 0, 0]"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: 6-Point Circular Convolution of Block 0**\nUsing the circular convolution formula $y_{0,\\text{circ}}[n] = \\sum_{k=0}^5 x_0[k] h[(n-k)_6]$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = 0$: $x_0[0]h[0] + x_0[1]h[5] + x_0[2]h[4] + x_0[3]h[3] + x_0[4]h[2] + x_0[5]h[1] = 0(1) + 0(0) + 1(0) + 2(0) + (-1)(2) + 3(-1) = -2 - 3 = -5$ **(CORRUPTED)**",
-      "$n = 1$: $x_0[0]h[1] + x_0[1]h[0] + x_0[2]h[5] + x_0[3]h[4] + x_0[4]h[3] + x_0[5]h[2] = 0(-1) + 0(1) + 1(0) + 2(0) + (-1)(0) + 3(2) = 6$ **(CORRUPTED)**",
-      "$n = 2$: $x_0[2]h[0] + x_0[1]h[1] + x_0[0]h[2] = 1(1) + 0 + 0 = \\mathbf{1}$ **(VALID: $y[0]$)**",
-      "$n = 3$: $x_0[3]h[0] + x_0[2]h[1] + x_0[1]h[2] = 2(1) + 1(-1) + 0 = 2 - 1 = \\mathbf{1}$ **(VALID: $y[1]$)**",
-      "$n = 4$: $x_0[4]h[0] + x_0[3]h[1] + x_0[2]h[2] = -1(1) + 2(-1) + 1(2) = -1 - 2 + 2 = \\mathbf{-1}$ **(VALID: $y[2]$)**",
-      "$n = 5$: $x_0[5]h[0] + x_0[4]h[1] + x_0[3]h[2] = 3(1) + (-1)(-1) + 2(2) = 3 + 1 + 4 = \\mathbf{8}$ **(VALID: $y[3]$)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Discarding the first $M-1 = 2$ samples, the saved vector for Block 0 is:"
-    },
-    {
-     "t": "math",
-     "tex": "y_{0,\\text{saved}} = [1, 1, -1, 8]"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: 6-Point Circular Convolution of Block 1**\nEvaluating $y_{1,\\text{circ}}[n]$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$n = 0$: Corrupted by circular wrap-around $\\implies$ **DISCARD**",
-      "$n = 1$: Corrupted by circular wrap-around $\\implies$ **DISCARD**",
-      "$n = 2$: $x_1[2]h[0] + x_1[1]h[1] + x_1[0]h[2] = 0(1) + 3(-1) + (-1)(2) = -3 - 2 = \\mathbf{-5}$ **(VALID: $y[4]$)**",
-      "$n = 3$: $x_1[3]h[0] + x_1[2]h[1] + x_1[1]h[2] = 1(1) + 0(-1) + 3(2) = 1 + 6 = \\mathbf{7}$ **(VALID: $y[5]$)**",
-      "$n = 4$: $x_1[4]h[0] + x_1[3]h[1] + x_1[2]h[2] = 4(1) + 1(-1) + 0(2) = 4 - 1 = \\mathbf{3}$ **(VALID: $y[6]$)**",
-      "$n = 5$: $x_1[5]h[0] + x_1[4]h[1] + x_1[3]h[2] = -2(1) + 4(-1) + 1(2) = -2 - 4 + 2 = \\mathbf{-4}$ **(VALID: $y[7]$)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The saved vector for Block 1 is:"
-    },
-    {
-     "t": "math",
-     "tex": "y_{1,\\text{saved}} = [-5, 7, 3, -4]"
-    },
-    {
-     "t": "p",
-     "text": "To flush the remaining filter tail, a final block $x_2[n] = [4, -2, 0, 0, 0, 0]$ yields valid samples $y[8] = 4(2) + (-2)(-1) = 8 + 2 = 10$ and $y[9] = -2(2) = -4$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Direct Verification via Polynomial Multiplication**\nConvolving $x[n] * h[n]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{array}{rrrrrrrrrr}\n& 1 & 2 & -1 & 3 & 0 & 1 & 4 & -2 & \\\\\n\\times & 1 & -1 & 2 & & & & & & \\\\\n\\hline\n& 1 & 2 & -1 & 3 & 0 & 1 & 4 & -2 & \\\\\n& & -1 & -2 & 1 & -3 & 0 & -1 & -4 & 2 \\\\\n& & & 2 & 4 & -2 & 6 & 0 & 2 & 8 & -4 \\\\\n\\hline\ny[n] = & \\mathbf{1} & \\mathbf{1} & \\mathbf{-1} & \\mathbf{8} & \\mathbf{-5} & \\mathbf{7} & \\mathbf{3} & \\mathbf{-4} & \\mathbf{10} & \\mathbf{-4}\n\\end{array}"
-    },
-    {
-     "t": "p",
-     "text": "The concatenation of $y_{0,\\text{saved}}$ and $y_{1,\\text{saved}}$ matches the direct linear convolution identically!"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{y[n] = \\{1, 1, -1, 8, -5, 7, 3, -4, 10, -4\\}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Problem Statement"
+      },
+      {
+       "t": "p",
+       "text": "Given an input sequence:"
+      },
+      {
+       "t": "math",
+       "tex": "x[n] = \\{1, 2, -1, 3, 0, 1, 4, -2\\}"
+      },
+      {
+       "t": "p",
+       "text": "and an FIR filter impulse response:"
+      },
+      {
+       "t": "math",
+       "tex": "h[n] = \\{1, -1, 2\\}"
+      },
+      {
+       "t": "p",
+       "text": "Perform block convolution using the **Overlap-Save (OLS)** method with an FFT size of $N = 6$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Identify the filter length $M$, overlap length, and number of valid points $L_s$ per block.",
+        "Formulate the segmented input blocks $x_0[n]$ and $x_1[n]$.",
+        "Compute the 6-point circular convolution outputs, discard the corrupted samples, and reconstruct the final linear convolution sequence $y[n]$. Verify against direct convolution."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step-by-Step Mathematical Solution"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: System Parameters**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Filter length: $M = 3$ (since $h[0]=1, h[1]=-1, h[2]=2$)",
+        "FFT block size: $N = 6$",
+        "Number of overlapping samples: $M - 1 = 3 - 1 = 2$ samples.",
+        "Number of valid linear output samples per block:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "L_s = N - M + 1 = 6 - 3 + 1 = 4 \\text{ samples}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Construct Input Blocks**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Block 0 ($r = 0$):** Prepend $M - 1 = 2$ zeros followed by the first $L_s = 4$ samples of $x[n]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_0[n] = [\\underbrace{0, 0}_{M-1 \\text{ zeros}}, \\; \\underbrace{1, 2, -1, 3}_{x[0] \\dots x[3]}] = [0, 0, 1, 2, -1, 3]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Block 1 ($r = 1$):** Formed by taking the last $M - 1 = 2$ samples of block 0 ($x[2]=-1, x[3]=3$) followed by the next $L_s = 4$ samples ($x[4]=0, x[5]=1, x[6]=4, x[7]=-2$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x_1[n] = [\\underbrace{-1, 3}_{\\text{overlap}}, \\; \\underbrace{0, 1, 4, -2}_{x[4] \\dots x[7]}] = [-1, 3, 0, 1, 4, -2]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Zero-padded filter:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "h[n] = [1, -1, 2, 0, 0, 0]"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: 6-Point Circular Convolution of Block 0**\nUsing the circular convolution formula $y_{0,\\text{circ}}[n] = \\sum_{k=0}^5 x_0[k] h[(n-k)_6]$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = 0$: $x_0[0]h[0] + x_0[1]h[5] + x_0[2]h[4] + x_0[3]h[3] + x_0[4]h[2] + x_0[5]h[1] = 0(1) + 0(0) + 1(0) + 2(0) + (-1)(2) + 3(-1) = -2 - 3 = -5$ **(CORRUPTED)**",
+        "$n = 1$: $x_0[0]h[1] + x_0[1]h[0] + x_0[2]h[5] + x_0[3]h[4] + x_0[4]h[3] + x_0[5]h[2] = 0(-1) + 0(1) + 1(0) + 2(0) + (-1)(0) + 3(2) = 6$ **(CORRUPTED)**",
+        "$n = 2$: $x_0[2]h[0] + x_0[1]h[1] + x_0[0]h[2] = 1(1) + 0 + 0 = \\mathbf{1}$ **(VALID: $y[0]$)**",
+        "$n = 3$: $x_0[3]h[0] + x_0[2]h[1] + x_0[1]h[2] = 2(1) + 1(-1) + 0 = 2 - 1 = \\mathbf{1}$ **(VALID: $y[1]$)**",
+        "$n = 4$: $x_0[4]h[0] + x_0[3]h[1] + x_0[2]h[2] = -1(1) + 2(-1) + 1(2) = -1 - 2 + 2 = \\mathbf{-1}$ **(VALID: $y[2]$)**",
+        "$n = 5$: $x_0[5]h[0] + x_0[4]h[1] + x_0[3]h[2] = 3(1) + (-1)(-1) + 2(2) = 3 + 1 + 4 = \\mathbf{8}$ **(VALID: $y[3]$)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Discarding the first $M-1 = 2$ samples, the saved vector for Block 0 is:"
+      },
+      {
+       "t": "math",
+       "tex": "y_{0,\\text{saved}} = [1, 1, -1, 8]"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: 6-Point Circular Convolution of Block 1**\nEvaluating $y_{1,\\text{circ}}[n]$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$n = 0$: Corrupted by circular wrap-around $\\implies$ **DISCARD**",
+        "$n = 1$: Corrupted by circular wrap-around $\\implies$ **DISCARD**",
+        "$n = 2$: $x_1[2]h[0] + x_1[1]h[1] + x_1[0]h[2] = 0(1) + 3(-1) + (-1)(2) = -3 - 2 = \\mathbf{-5}$ **(VALID: $y[4]$)**",
+        "$n = 3$: $x_1[3]h[0] + x_1[2]h[1] + x_1[1]h[2] = 1(1) + 0(-1) + 3(2) = 1 + 6 = \\mathbf{7}$ **(VALID: $y[5]$)**",
+        "$n = 4$: $x_1[4]h[0] + x_1[3]h[1] + x_1[2]h[2] = 4(1) + 1(-1) + 0(2) = 4 - 1 = \\mathbf{3}$ **(VALID: $y[6]$)**",
+        "$n = 5$: $x_1[5]h[0] + x_1[4]h[1] + x_1[3]h[2] = -2(1) + 4(-1) + 1(2) = -2 - 4 + 2 = \\mathbf{-4}$ **(VALID: $y[7]$)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The saved vector for Block 1 is:"
+      },
+      {
+       "t": "math",
+       "tex": "y_{1,\\text{saved}} = [-5, 7, 3, -4]"
+      },
+      {
+       "t": "p",
+       "text": "To flush the remaining filter tail, a final block $x_2[n] = [4, -2, 0, 0, 0, 0]$ yields valid samples $y[8] = 4(2) + (-2)(-1) = 8 + 2 = 10$ and $y[9] = -2(2) = -4$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Direct Verification via Polynomial Multiplication**\nConvolving $x[n] * h[n]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{array}{rrrrrrrrrr}\n& 1 & 2 & -1 & 3 & 0 & 1 & 4 & -2 & \\\\\n\\times & 1 & -1 & 2 & & & & & & \\\\\n\\hline\n& 1 & 2 & -1 & 3 & 0 & 1 & 4 & -2 & \\\\\n& & -1 & -2 & 1 & -3 & 0 & -1 & -4 & 2 \\\\\n& & & 2 & 4 & -2 & 6 & 0 & 2 & 8 & -4 \\\\\n\\hline\ny[n] = & \\mathbf{1} & \\mathbf{1} & \\mathbf{-1} & \\mathbf{8} & \\mathbf{-5} & \\mathbf{7} & \\mathbf{3} & \\mathbf{-4} & \\mathbf{10} & \\mathbf{-4}\n\\end{array}"
+      },
+      {
+       "t": "p",
+       "text": "The concatenation of $y_{0,\\text{saved}}$ and $y_{1,\\text{saved}}$ matches the direct linear convolution identically!"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{y[n] = \\{1, 1, -1, 8, -5, 7, 3, -4, 10, -4\\}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",

@@ -36,6 +36,7 @@ function leafIssues(ctx, blockType, s) {
   if (s.includes('**') && (s.match(/\*\*/g) || []).length % 2 === 1)
     warn('low', `${ctx}: odd ** count (bold may leak) in ${blockType}: ${JSON.stringify(s.slice(0, 60))}`);
   if (s.includes('`' + '`' + '`')) warn('low', `${ctx}: stray fence markers inside ${blockType}`);
+  if (/<details\b|<\/details>/.test(s)) warn('low', `${ctx}: literal <details> markup in ${blockType}: ${JSON.stringify(s.slice(0, 60))}`);
   if (/!\[[^\]]*\]\(http/.test(s) && blockType !== 'img') warn('med', `${ctx}: remote image URL in ${blockType}`);
   if (/\bTBD\b|\bTODO\b|lorem ipsum/i.test(s)) warn('low', `${ctx}: placeholder text`);
 }

@@ -110,3 +110,13 @@ Then commit/push to `studyassistglobal/gate-prep` (gh account: switch to `studya
 - **Overflow nets**: `.math-inline-wrap { max-width:100%; overflow-x:auto }` (wide inline KaTeX scrolls, not the page); `overflow-wrap: break-word` on prose; `body { overflow-x: clip }`; `.gp-tabs` scrollable; 44px targets on tabs/subject rows.
 - Misc: 404 `.nf-title/.nf-sub` styled, `.nf-screen` min-height uses `calc(100dvh - 190px)` (no fold overshoot), Tests teaser padding reduced on phones, `prefers-reduced-motion` kills animations.
 - Verified at 390×844 and 360×740 (both themes) + 1280×800 desktop regression: zero horizontal overflow anywhere, drawer/nav/Escape/scroll-lock all exercised, 4/4 wide tables scroll, desktop sidebar intact.
+
+## 21. Big-section hang fix (2026-10-01)
+
+- **Root cause:** the reader mounted the whole active section in one commit (em-ch1 Part II: 832 blocks/~1,210 math spans; worst ss-ch1 module-11: 1,764 blocks/2,337 spans), and every math span ran a synchronous `katex.render` into the live DOM — multi-second main-thread block = "browser hanging".
+- **Fixes:**
+  1. **Progressive mounting** in `Chapter.jsx`: render the first `INITIAL_BLOCKS` (15) blocks, then mount the rest in `BLOCK_CHUNK` (15) batches via `requestIdleCallback` (timeout 120 ms; setTimeout 40 ms fallback), reset on section change. Full section still present within ~2-15 s depending on size; no frame is ever blocked long. Cancels cleanly on section change.
+  2. **KaTeX cache + single write** in `MathText.jsx`: module-level Map keyed `displayMode+math`, `katex.renderToString` once per unique formula, one `innerHTML` write per span (replaces per-node appendChild on the attached tree; repeated formulas become Map hits). Content is pipeline-generated — no untrusted HTML.
+  3. **`memo(NoteBlock)`** — mark-read/TOC state changes no longer re-render every block of a huge section.
+  4. **`<details open>` support** in build_notes.py (opener regex `<details\b[^>]*>`, `open` flag → NoteBlock default-open): em-ch1 dropped 5,915 → 3,345 top blocks (204 drill cards now collapsible; ss-ch4/ch6/de-ch2 also restructured). `inline_clean` strips stray `<details>/<summary>` tags the sources mention in prose; audit gained a LOW check for literal `<details>` leakage.
+- **Measured after:** reported URL worst long-task 392 ms (was multi-second); module-11 worst 458 ms with the full 1,766-block section mounted. Verify + audit unchanged green (28 chapters, HIGH 0 · MED 0 · LOW 7).

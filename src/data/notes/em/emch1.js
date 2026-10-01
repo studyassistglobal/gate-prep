@@ -162,52 +162,51 @@ export default {
      "text": "**Question:** Construct an arbitrary $3 \\times 4$ matrix where every entry is an odd number, and identify specific element addresses."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Constructed Matrix:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & 3 & 7 & 9 \\\\ 11 & 5 & 21 & 17 \\\\ 13 & 19 & 27 & 15 \\end{bmatrix}_{3 \\times 4}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Number of Rows $= 3$",
-      "Number of Columns $= 4$",
-      "Total elements $= 3 \\times 4 = 12$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Address Mapping:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Element $1$: $1^{\\text{st}}\\text{ Row and } 1^{\\text{st}}\\text{ Column} \\implies a_{11} = 1$",
-      "Element $21$: $2^{\\text{nd}}\\text{ Row and } 3^{\\text{rd}}\\text{ Column} \\implies a_{23} = 21$",
-      "Element $19$: $3^{\\text{rd}}\\text{ Row and } 2^{\\text{nd}}\\text{ Column} \\implies a_{32} = 19$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**General Algebraic Template:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} a_{11} & a_{12} & a_{13} & a_{14} \\\\ a_{21} & a_{22} & a_{23} & a_{24} \\\\ a_{31} & a_{32} & a_{33} & a_{34} \\end{bmatrix}_{3 \\times 4}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Trap:** Never interchange the row index $i$ and column index $j$. In matrix terminology, $a_{23}$ is entirely distinct from $a_{32}$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Constructed Matrix:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & 3 & 7 & 9 \\\\ 11 & 5 & 21 & 17 \\\\ 13 & 19 & 27 & 15 \\end{bmatrix}_{3 \\times 4}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Number of Rows $= 3$",
+        "Number of Columns $= 4$",
+        "Total elements $= 3 \\times 4 = 12$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Address Mapping:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Element $1$: $1^{\\text{st}}\\text{ Row and } 1^{\\text{st}}\\text{ Column} \\implies a_{11} = 1$",
+        "Element $21$: $2^{\\text{nd}}\\text{ Row and } 3^{\\text{rd}}\\text{ Column} \\implies a_{23} = 21$",
+        "Element $19$: $3^{\\text{rd}}\\text{ Row and } 2^{\\text{nd}}\\text{ Column} \\implies a_{32} = 19$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**General Algebraic Template:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} a_{11} & a_{12} & a_{13} & a_{14} \\\\ a_{21} & a_{22} & a_{23} & a_{24} \\\\ a_{31} & a_{32} & a_{33} & a_{34} \\end{bmatrix}_{3 \\times 4}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Trap:** Never interchange the row index $i$ and column index $j$. In matrix terminology, $a_{23}$ is entirely distinct from $a_{32}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -254,99 +253,98 @@ export default {
      "tex": "a_{ij} = \\frac{1}{2} \\vert i - 3j \\vert"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Determine Dimensions and Skeleton Matrix**\nThe matrix has order $3 \\times 2$ ($m = 3$ rows, $n = 2$ columns):"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\\\ a_{31} & a_{32} \\end{bmatrix}_{3 \\times 2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Evaluate Each Entry Systematically**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Row 1 ($i = 1$):**",
-      "For $j = 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_{11} = \\frac{1}{2} \\vert 1 - 3(1) \\vert = \\frac{1}{2} \\vert -2 \\vert = \\frac{1}{2}(2) = 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $j = 2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_{12} = \\frac{1}{2} \\vert 1 - 3(2) \\vert = \\frac{1}{2} \\vert 1 - 6 \\vert = \\frac{1}{2} \\vert -5 \\vert = \\frac{5}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Row 2 ($i = 2$):**",
-      "For $j = 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_{21} = \\frac{1}{2} \\vert 2 - 3(1) \\vert = \\frac{1}{2} \\vert -1 \\vert = \\frac{1}{2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $j = 2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_{22} = \\frac{1}{2} \\vert 2 - 3(2) \\vert = \\frac{1}{2} \\vert 2 - 6 \\vert = \\frac{1}{2} \\vert -4 \\vert = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Row 3 ($i = 3$):**",
-      "For $j = 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_{31} = \\frac{1}{2} \\vert 3 - 3(1) \\vert = \\frac{1}{2} \\vert 0 \\vert = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $j = 2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a_{32} = \\frac{1}{2} \\vert 3 - 3(2) \\vert = \\frac{1}{2} \\vert 3 - 6 \\vert = \\frac{1}{2} \\vert -3 \\vert = \\frac{3}{2}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Assemble the Final Matrix**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & \\frac{5}{2} \\\\ \\frac{1}{2} & 2 \\\\ 0 & \\frac{3}{2} \\end{bmatrix}_{3 \\times 2}"
-    },
-    {
-     "t": "p",
-     "text": "**Common Pitfall:** Forgetting the absolute value operator $\\vert \\cdot \\vert$ leading to negative entries."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Determine Dimensions and Skeleton Matrix**\nThe matrix has order $3 \\times 2$ ($m = 3$ rows, $n = 2$ columns):"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\\\ a_{31} & a_{32} \\end{bmatrix}_{3 \\times 2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Evaluate Each Entry Systematically**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Row 1 ($i = 1$):**",
+        "For $j = 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_{11} = \\frac{1}{2} \\vert 1 - 3(1) \\vert = \\frac{1}{2} \\vert -2 \\vert = \\frac{1}{2}(2) = 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $j = 2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_{12} = \\frac{1}{2} \\vert 1 - 3(2) \\vert = \\frac{1}{2} \\vert 1 - 6 \\vert = \\frac{1}{2} \\vert -5 \\vert = \\frac{5}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Row 2 ($i = 2$):**",
+        "For $j = 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_{21} = \\frac{1}{2} \\vert 2 - 3(1) \\vert = \\frac{1}{2} \\vert -1 \\vert = \\frac{1}{2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $j = 2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_{22} = \\frac{1}{2} \\vert 2 - 3(2) \\vert = \\frac{1}{2} \\vert 2 - 6 \\vert = \\frac{1}{2} \\vert -4 \\vert = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Row 3 ($i = 3$):**",
+        "For $j = 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_{31} = \\frac{1}{2} \\vert 3 - 3(1) \\vert = \\frac{1}{2} \\vert 0 \\vert = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $j = 2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a_{32} = \\frac{1}{2} \\vert 3 - 3(2) \\vert = \\frac{1}{2} \\vert 3 - 6 \\vert = \\frac{1}{2} \\vert -3 \\vert = \\frac{3}{2}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Assemble the Final Matrix**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & \\frac{5}{2} \\\\ \\frac{1}{2} & 2 \\\\ 0 & \\frac{3}{2} \\end{bmatrix}_{3 \\times 2}"
+      },
+      {
+       "t": "p",
+       "text": "**Common Pitfall:** Forgetting the absolute value operator $\\vert \\cdot \\vert$ leading to negative entries."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -681,25 +679,28 @@ export default {
      "text": "**Question:** If $A = \\begin{bmatrix} x & 2 \\\\ 3 & y \\end{bmatrix}$ and $B = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$ with $A = B$, find $x$ and $y$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Comparing corresponding components:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$a_{11} = b_{11} \\implies x = 1$",
-      "$a_{12} = b_{12} \\implies 2 = 2$ (consistent)",
-      "$a_{21} = b_{21} \\implies 3 = 3$ (consistent)",
-      "$a_{22} = b_{22} \\implies y = 4$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Result:** $x = 1, \\quad y = 4$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Comparing corresponding components:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$a_{11} = b_{11} \\implies x = 1$",
+        "$a_{12} = b_{12} \\implies 2 = 2$ (consistent)",
+        "$a_{21} = b_{21} \\implies 3 = 3$ (consistent)",
+        "$a_{22} = b_{22} \\implies y = 4$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Result:** $x = 1, \\quad y = 4$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -718,65 +719,64 @@ export default {
      "text": "Find the values of $x, y,$ and $z$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Equating corresponding entries:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$x + y = 5$  --- (Equation 1)",
-      "$y - z = 1 \\implies z = y - 1$  --- (Equation 2)",
-      "$x - z = 2$  --- (Equation 3)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Substitute $z = y - 1$ into Equation 3:"
-    },
-    {
-     "t": "math",
-     "tex": "x - (y - 1) = 2 \\implies x - y + 1 = 2 \\implies x - y = 1 \\quad \\text{--- (Equation 4)}"
-    },
-    {
-     "t": "p",
-     "text": "Now solve Equations 1 and 4 simultaneously:"
-    },
-    {
-     "t": "math",
-     "tex": "(x + y) + (x - y) = 5 + 1 \\implies 2x = 6 \\implies x = 3"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $x = 3$ into Equation 1:"
-    },
-    {
-     "t": "math",
-     "tex": "3 + y = 5 \\implies y = 2"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $y = 2$ into Equation 2:"
-    },
-    {
-     "t": "math",
-     "tex": "z = 2 - 1 \\implies z = 1"
-    },
-    {
-     "t": "p",
-     "text": "**Final Solution:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{x = 3, \\quad y = 2, \\quad z = 1}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Equating corresponding entries:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$x + y = 5$  --- (Equation 1)",
+        "$y - z = 1 \\implies z = y - 1$  --- (Equation 2)",
+        "$x - z = 2$  --- (Equation 3)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Substitute $z = y - 1$ into Equation 3:"
+      },
+      {
+       "t": "math",
+       "tex": "x - (y - 1) = 2 \\implies x - y + 1 = 2 \\implies x - y = 1 \\quad \\text{--- (Equation 4)}"
+      },
+      {
+       "t": "p",
+       "text": "Now solve Equations 1 and 4 simultaneously:"
+      },
+      {
+       "t": "math",
+       "tex": "(x + y) + (x - y) = 5 + 1 \\implies 2x = 6 \\implies x = 3"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $x = 3$ into Equation 1:"
+      },
+      {
+       "t": "math",
+       "tex": "3 + y = 5 \\implies y = 2"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $y = 2$ into Equation 2:"
+      },
+      {
+       "t": "math",
+       "tex": "z = 2 - 1 \\implies z = 1"
+      },
+      {
+       "t": "p",
+       "text": "**Final Solution:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{x = 3, \\quad y = 2, \\quad z = 1}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -810,36 +810,35 @@ export default {
      "text": "Find $x, y,$ and $z$, and verify $A + B = B + A$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Equating corresponding entries:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x + 1 = 5 \\implies x = 4$",
-      "$2 + z = 7 \\implies z = 5$",
-      "$y + 5 = 9 \\implies y = 4$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Verification of Commutativity:"
-    },
-    {
-     "t": "math",
-     "tex": "B + A = \\begin{bmatrix} 1+x & z+2 \\\\ 4+3 & 5+y \\end{bmatrix} = \\begin{bmatrix} 1+4 & 5+2 \\\\ 7 & 5+4 \\end{bmatrix} = \\begin{bmatrix} 5 & 7 \\\\ 7 & 9 \\end{bmatrix} = A + B"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore A + B = B + A"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Equating corresponding entries:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x + 1 = 5 \\implies x = 4$",
+        "$2 + z = 7 \\implies z = 5$",
+        "$y + 5 = 9 \\implies y = 4$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Verification of Commutativity:"
+      },
+      {
+       "t": "math",
+       "tex": "B + A = \\begin{bmatrix} 1+x & z+2 \\\\ 4+3 & 5+y \\end{bmatrix} = \\begin{bmatrix} 1+4 & 5+2 \\\\ 7 & 5+4 \\end{bmatrix} = \\begin{bmatrix} 5 & 7 \\\\ 7 & 9 \\end{bmatrix} = A + B"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore A + B = B + A"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -858,40 +857,39 @@ export default {
      "text": "Find $x, y, z$ and compute $B - A$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Equating entries:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$x - 1 = 2 \\implies x = 3$",
-      "$y - 3 = 2 \\implies y = 5$",
-      "$z - 4 = 3 \\implies z = 7$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Evaluating $B - A$:"
-    },
-    {
-     "t": "math",
-     "tex": "B - A = \\begin{bmatrix} 1-x & -1 \\\\ -1 & 3-y \\\\ 4-z & -4 \\end{bmatrix} = \\begin{bmatrix} 1-3 & -1 \\\\ -1 & 3-5 \\\\ 4-7 & -4 \\end{bmatrix} = \\begin{bmatrix} -2 & -1 \\\\ -1 & -2 \\\\ -3 & -4 \\end{bmatrix} = -(A - B)"
-    },
-    {
-     "t": "p",
-     "text": "**Fundamental Property:** Matrix subtraction is **anti-commutative**:"
-    },
-    {
-     "t": "math",
-     "tex": "A - B = -(B - A)"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Equating entries:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$x - 1 = 2 \\implies x = 3$",
+        "$y - 3 = 2 \\implies y = 5$",
+        "$z - 4 = 3 \\implies z = 7$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Evaluating $B - A$:"
+      },
+      {
+       "t": "math",
+       "tex": "B - A = \\begin{bmatrix} 1-x & -1 \\\\ -1 & 3-y \\\\ 4-z & -4 \\end{bmatrix} = \\begin{bmatrix} 1-3 & -1 \\\\ -1 & 3-5 \\\\ 4-7 & -4 \\end{bmatrix} = \\begin{bmatrix} -2 & -1 \\\\ -1 & -2 \\\\ -3 & -4 \\end{bmatrix} = -(A - B)"
+      },
+      {
+       "t": "p",
+       "text": "**Fundamental Property:** Matrix subtraction is **anti-commutative**:"
+      },
+      {
+       "t": "math",
+       "tex": "A - B = -(B - A)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -982,51 +980,60 @@ export default {
     },
     {
      "t": "p",
-     "text": "**Drill 1 (Slide 017):** If $\\operatorname{Tr}(A) = -2$, find $\\operatorname{Tr}(B)$ where $B = 4A$.\n<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
+     "text": "**Drill 1 (Slide 017):** If $\\operatorname{Tr}(A) = -2$, find $\\operatorname{Tr}(B)$ where $B = 4A$."
+    },
+    {
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Let $A = \\begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{bmatrix}$. Then $\\operatorname{Tr}(A) = a_{11} + a_{22} = -2$."
+      },
+      {
+       "t": "math",
+       "tex": "B = 4A = \\begin{bmatrix} 4a_{11} & 4a_{12} \\\\ 4a_{21} & 4a_{22} \\end{bmatrix} \\implies \\operatorname{Tr}(B) = 4a_{11} + 4a_{22} = 4(a_{11} + a_{22}) = 4(-2) = -8"
+      }
+     ],
+     "open": true
     },
     {
      "t": "p",
-     "text": "Let $A = \\begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{bmatrix}$. Then $\\operatorname{Tr}(A) = a_{11} + a_{22} = -2$."
+     "text": "**Drill 2 (Slide 017):** If $\\operatorname{Tr}(A) = 3$ and $\\operatorname{Tr}(B) = -4$, find $\\operatorname{Tr}(A + B)$."
     },
     {
-     "t": "math",
-     "tex": "B = 4A = \\begin{bmatrix} 4a_{11} & 4a_{12} \\\\ 4a_{21} & 4a_{22} \\end{bmatrix} \\implies \\operatorname{Tr}(B) = 4a_{11} + 4a_{22} = 4(a_{11} + a_{22}) = 4(-2) = -8"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
-    },
-    {
-     "t": "p",
-     "text": "**Drill 2 (Slide 017):** If $\\operatorname{Tr}(A) = 3$ and $\\operatorname{Tr}(B) = -4$, find $\\operatorname{Tr}(A + B)$.\n<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}(A + B) = \\operatorname{Tr}(A) + \\operatorname{Tr}(B) = 3 + (-4) = -1"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}(A + B) = \\operatorname{Tr}(A) + \\operatorname{Tr}(B) = 3 + (-4) = -1"
+      }
+     ],
+     "open": true
     },
     {
      "t": "p",
-     "text": "</details>"
+     "text": "**Drill 3 (Slide 018):** Given $\\operatorname{Tr}(A) = -1$ and $\\operatorname{Tr}(B) = 3$. Determine $\\operatorname{Tr}(2A - 3B)$."
     },
     {
-     "t": "p",
-     "text": "**Drill 3 (Slide 018):** Given $\\operatorname{Tr}(A) = -1$ and $\\operatorname{Tr}(B) = 3$. Determine $\\operatorname{Tr}(2A - 3B)$.\n<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Let $X = 2A$ and $Y = 3B$."
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}(2A - 3B) = \\operatorname{Tr}(X - Y) = \\operatorname{Tr}(X) - \\operatorname{Tr}(Y) = 2\\operatorname{Tr}(A) - 3\\operatorname{Tr}(B)"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}(2A - 3B) = 2(-1) - 3(3) = -2 - 9 = \\mathbf{-11}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Let $X = 2A$ and $Y = 3B$."
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}(2A - 3B) = \\operatorname{Tr}(X - Y) = \\operatorname{Tr}(X) - \\operatorname{Tr}(Y) = 2\\operatorname{Tr}(A) - 3\\operatorname{Tr}(B)"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}(2A - 3B) = 2(-1) - 3(3) = -2 - 9 = \\mathbf{-11}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1061,42 +1068,41 @@ export default {
      "text": "Compute $Y = AB$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Expanding all $9$ inner products explicitly:"
-    },
-    {
-     "t": "math",
-     "tex": "Y = \\begin{bmatrix}\n(3)(1) + (2)(2) + (-1)(0) & (3)(2) + (2)(-1) + (-1)(1) & (3)(1) + (2)(0) + (-1)(-2) \\\\\n(0)(1) + (1)(2) + (-1)(0) & (0)(2) + (1)(-1) + (-1)(1) & (0)(1) + (1)(0) + (-1)(-2) \\\\\n(2)(1) + (0)(2) + (1)(0)  & (2)(2) + (0)(-1) + (1)(1)  & (2)(1) + (0)(0) + (1)(-2)\n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating each entry:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$y_{11} = 3 + 4 + 0 = 7$",
-      "$y_{12} = 6 - 2 - 1 = 3$",
-      "$y_{13} = 3 + 0 + 2 = 5$",
-      "$y_{21} = 0 + 2 + 0 = 2$",
-      "$y_{22} = 0 - 1 - 1 = -2$",
-      "$y_{23} = 0 + 0 + 2 = 2$",
-      "$y_{31} = 2 + 0 + 0 = 2$",
-      "$y_{32} = 4 + 0 + 1 = 5$",
-      "$y_{33} = 2 + 0 - 2 = 0$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "Y = AB = \\begin{bmatrix} 7 & 3 & 5 \\\\ 2 & -2 & 2 \\\\ 2 & 5 & 0 \\end{bmatrix}_{3 \\times 3}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Expanding all $9$ inner products explicitly:"
+      },
+      {
+       "t": "math",
+       "tex": "Y = \\begin{bmatrix}\n(3)(1) + (2)(2) + (-1)(0) & (3)(2) + (2)(-1) + (-1)(1) & (3)(1) + (2)(0) + (-1)(-2) \\\\\n(0)(1) + (1)(2) + (-1)(0) & (0)(2) + (1)(-1) + (-1)(1) & (0)(1) + (1)(0) + (-1)(-2) \\\\\n(2)(1) + (0)(2) + (1)(0)  & (2)(2) + (0)(-1) + (1)(1)  & (2)(1) + (0)(0) + (1)(-2)\n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating each entry:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$y_{11} = 3 + 4 + 0 = 7$",
+        "$y_{12} = 6 - 2 - 1 = 3$",
+        "$y_{13} = 3 + 0 + 2 = 5$",
+        "$y_{21} = 0 + 2 + 0 = 2$",
+        "$y_{22} = 0 - 1 - 1 = -2$",
+        "$y_{23} = 0 + 0 + 2 = 2$",
+        "$y_{31} = 2 + 0 + 0 = 2$",
+        "$y_{32} = 4 + 0 + 1 = 5$",
+        "$y_{33} = 2 + 0 - 2 = 0$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "Y = AB = \\begin{bmatrix} 7 & 3 & 5 \\\\ 2 & -2 & 2 \\\\ 2 & 5 & 0 \\end{bmatrix}_{3 \\times 3}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1107,56 +1113,55 @@ export default {
      "text": "Now computing $Z = BA$ for the same matrices:"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "math",
-     "tex": "Z = BA = \\begin{bmatrix} 1 & 2 & 1 \\\\ 2 & -1 & 0 \\\\ 0 & 1 & -2 \\end{bmatrix} \\begin{bmatrix} 3 & 2 & -1 \\\\ 0 & 1 & -1 \\\\ 2 & 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 5 & 4 & -2 \\\\ 6 & 3 & -1 \\\\ -4 & 1 & -3 \\end{bmatrix}_{3 \\times 3}"
-    },
-    {
-     "t": "p",
-     "text": "**Observation 1 (Non-Commutativity):**"
-    },
-    {
-     "t": "math",
-     "tex": "AB = \\begin{bmatrix} 7 & 3 & 5 \\\\ 2 & -2 & 2 \\\\ 2 & 5 & 0 \\end{bmatrix} \\ne \\begin{bmatrix} 5 & 4 & -2 \\\\ 6 & 3 & -1 \\\\ -4 & 1 & -3 \\end{bmatrix} = BA \\implies \\mathbf{AB \\ne BA}"
-    },
-    {
-     "t": "p",
-     "text": "Matrix addition is commutative ($A + B = B + A$), but **matrix multiplication is generally NOT commutative**."
-    },
-    {
-     "t": "p",
-     "text": "**Observation 2 (Trace Invariance):**"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}(AB) = 7 + (-2) + 0 = 5"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}(BA) = 5 + 3 + (-3) = 5"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\operatorname{Tr}(AB) = \\operatorname{Tr}(BA)}"
-    },
-    {
-     "t": "p",
-     "text": "**Observation 3 (Fatal Fallacy):**\nNotice $\\operatorname{Tr}(A) = 3 + 1 + 1 = 5$ and $\\operatorname{Tr}(B) = 1 + (-1) + (-2) = -2$."
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}(A) \\cdot \\operatorname{Tr}(B) = (5)(-2) = -10 \\ne 5"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\operatorname{Tr}(AB) \\ne \\operatorname{Tr}(A) \\cdot \\operatorname{Tr}(B)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "math",
+       "tex": "Z = BA = \\begin{bmatrix} 1 & 2 & 1 \\\\ 2 & -1 & 0 \\\\ 0 & 1 & -2 \\end{bmatrix} \\begin{bmatrix} 3 & 2 & -1 \\\\ 0 & 1 & -1 \\\\ 2 & 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 5 & 4 & -2 \\\\ 6 & 3 & -1 \\\\ -4 & 1 & -3 \\end{bmatrix}_{3 \\times 3}"
+      },
+      {
+       "t": "p",
+       "text": "**Observation 1 (Non-Commutativity):**"
+      },
+      {
+       "t": "math",
+       "tex": "AB = \\begin{bmatrix} 7 & 3 & 5 \\\\ 2 & -2 & 2 \\\\ 2 & 5 & 0 \\end{bmatrix} \\ne \\begin{bmatrix} 5 & 4 & -2 \\\\ 6 & 3 & -1 \\\\ -4 & 1 & -3 \\end{bmatrix} = BA \\implies \\mathbf{AB \\ne BA}"
+      },
+      {
+       "t": "p",
+       "text": "Matrix addition is commutative ($A + B = B + A$), but **matrix multiplication is generally NOT commutative**."
+      },
+      {
+       "t": "p",
+       "text": "**Observation 2 (Trace Invariance):**"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}(AB) = 7 + (-2) + 0 = 5"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}(BA) = 5 + 3 + (-3) = 5"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\operatorname{Tr}(AB) = \\operatorname{Tr}(BA)}"
+      },
+      {
+       "t": "p",
+       "text": "**Observation 3 (Fatal Fallacy):**\nNotice $\\operatorname{Tr}(A) = 3 + 1 + 1 = 5$ and $\\operatorname{Tr}(B) = 1 + (-1) + (-2) = -2$."
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}(A) \\cdot \\operatorname{Tr}(B) = (5)(-2) = -10 \\ne 5"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\operatorname{Tr}(AB) \\ne \\operatorname{Tr}(A) \\cdot \\operatorname{Tr}(B)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1191,57 +1196,56 @@ export default {
      "text": "Find $AB$ and $BA$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Existence of $AB$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{dim}(A) = 3 \\times 4, \\quad \\operatorname{dim}(B) = 4 \\times 2 \\implies \\text{Inner dimensions match } (4 = 4) \\implies [AB]_{3 \\times 2}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Row 1 $\\cdot$ Col 1: $3(1) + 2(2) + (-1)(0) + 0(1) = 3 + 4 + 0 + 0 = 7$",
-      "Row 1 $\\cdot$ Col 2: $3(2) + 2(-1) + (-1)(1) + 0(-1) = 6 - 2 - 1 + 0 = 3$",
-      "Row 2 $\\cdot$ Col 1: $0(1) + 1(2) + (-1)(0) + 1(1) = 0 + 2 + 0 + 1 = 3$",
-      "Row 2 $\\cdot$ Col 2: $0(2) + 1(-1) + (-1)(1) + 1(-1) = 0 - 1 - 1 - 1 = -3$",
-      "Row 3 $\\cdot$ Col 1: $2(1) + 0(2) + 1(0) + 2(1) = 2 + 0 + 0 + 2 = 4$",
-      "Row 3 $\\cdot$ Col 2: $2(2) + 0(-1) + 1(1) + 2(-1) = 4 + 0 + 1 - 2 = 3$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "AB = \\begin{bmatrix} 7 & 3 \\\\ 3 & -3 \\\\ 4 & 3 \\end{bmatrix}_{3 \\times 2}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Existence of $BA$ (Slide 022):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{dim}(B) = 4 \\times 2, \\quad \\operatorname{dim}(A) = 3 \\times 4"
-    },
-    {
-     "t": "p",
-     "text": "Inner dimensions: $\\text{Columns of } B = 2 \\ne \\text{Rows of } A = 3$."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{BA \\text{ is UNDEFINED (No multiplication possible)}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Existence of $AB$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{dim}(A) = 3 \\times 4, \\quad \\operatorname{dim}(B) = 4 \\times 2 \\implies \\text{Inner dimensions match } (4 = 4) \\implies [AB]_{3 \\times 2}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Row 1 $\\cdot$ Col 1: $3(1) + 2(2) + (-1)(0) + 0(1) = 3 + 4 + 0 + 0 = 7$",
+        "Row 1 $\\cdot$ Col 2: $3(2) + 2(-1) + (-1)(1) + 0(-1) = 6 - 2 - 1 + 0 = 3$",
+        "Row 2 $\\cdot$ Col 1: $0(1) + 1(2) + (-1)(0) + 1(1) = 0 + 2 + 0 + 1 = 3$",
+        "Row 2 $\\cdot$ Col 2: $0(2) + 1(-1) + (-1)(1) + 1(-1) = 0 - 1 - 1 - 1 = -3$",
+        "Row 3 $\\cdot$ Col 1: $2(1) + 0(2) + 1(0) + 2(1) = 2 + 0 + 0 + 2 = 4$",
+        "Row 3 $\\cdot$ Col 2: $2(2) + 0(-1) + 1(1) + 2(-1) = 4 + 0 + 1 - 2 = 3$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "AB = \\begin{bmatrix} 7 & 3 \\\\ 3 & -3 \\\\ 4 & 3 \\end{bmatrix}_{3 \\times 2}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Existence of $BA$ (Slide 022):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{dim}(B) = 4 \\times 2, \\quad \\operatorname{dim}(A) = 3 \\times 4"
+      },
+      {
+       "t": "p",
+       "text": "Inner dimensions: $\\text{Columns of } B = 2 \\ne \\text{Rows of } A = 3$."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{BA \\text{ is UNDEFINED (No multiplication possible)}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -1367,47 +1371,46 @@ export default {
      "text": "**Question:** If $A = \\begin{bmatrix} 2 & 1 & 3 \\\\ 1 & -1 & 1 \\\\ 0 & -2 & 1 \\end{bmatrix}$, compute $A^2$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**The Fatal Blunder Highlighted on Chalkboard:**\n$$A^2 \\ne \\begin{bmatrix} 2^2 & 1^2 & 3^2 \\\\ 1^2 & (-1)^2 & 1^2 \\\\ 0^2 & (-2)^2 & 1^2 \\end{bmatrix} = \\begin{bmatrix} 4 & 1 & 9 \\\\ 1 & 1 & 1 \\\\ 0 & 4 & 1 \\end{bmatrix} \\quad \\mathbf{[COMPLETELY\\ WRONG!]}$$\nNever square individual matrix elements!"
-    },
-    {
-     "t": "p",
-     "text": "**Correct Algebraic Computation ($A^2 = A \\cdot A$):**"
-    },
-    {
-     "t": "math",
-     "tex": "A^2 = \\begin{bmatrix} 2 & 1 & 3 \\\\ 1 & -1 & 1 \\\\ 0 & -2 & 1 \\end{bmatrix} \\begin{bmatrix} 2 & 1 & 3 \\\\ 1 & -1 & 1 \\\\ 0 & -2 & 1 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Row 1:**",
-      "$c_{11} = 2(2) + 1(1) + 3(0) = 4 + 1 + 0 = 5$",
-      "$c_{12} = 2(1) + 1(-1) + 3(-2) = 2 - 1 - 6 = -5$",
-      "$c_{13} = 2(3) + 1(1) + 3(1) = 6 + 1 + 3 = 10$",
-      "**Row 2:**",
-      "$c_{21} = 1(2) + (-1)(1) + 1(0) = 2 - 1 + 0 = 1$",
-      "$c_{22} = 1(1) + (-1)(-1) + 1(-2) = 1 + 1 - 2 = 0$",
-      "$c_{23} = 1(3) + (-1)(1) + 1(1) = 3 - 1 + 1 = 3$",
-      "**Row 3:**",
-      "$c_{31} = 0(2) + (-2)(1) + 1(0) = -2$",
-      "$c_{32} = 0(1) + (-2)(-1) + 1(-2) = 2 - 2 = 0$",
-      "$c_{33} = 0(3) + (-2)(1) + 1(1) = -2 + 1 = -1$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^2 = \\begin{bmatrix} 5 & -5 & 10 \\\\ 1 & 0 & 3 \\\\ -2 & 0 & -1 \\end{bmatrix}_{3 \\times 3}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**The Fatal Blunder Highlighted on Chalkboard:**\n$$A^2 \\ne \\begin{bmatrix} 2^2 & 1^2 & 3^2 \\\\ 1^2 & (-1)^2 & 1^2 \\\\ 0^2 & (-2)^2 & 1^2 \\end{bmatrix} = \\begin{bmatrix} 4 & 1 & 9 \\\\ 1 & 1 & 1 \\\\ 0 & 4 & 1 \\end{bmatrix} \\quad \\mathbf{[COMPLETELY\\ WRONG!]}$$\nNever square individual matrix elements!"
+      },
+      {
+       "t": "p",
+       "text": "**Correct Algebraic Computation ($A^2 = A \\cdot A$):**"
+      },
+      {
+       "t": "math",
+       "tex": "A^2 = \\begin{bmatrix} 2 & 1 & 3 \\\\ 1 & -1 & 1 \\\\ 0 & -2 & 1 \\end{bmatrix} \\begin{bmatrix} 2 & 1 & 3 \\\\ 1 & -1 & 1 \\\\ 0 & -2 & 1 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Row 1:**",
+        "$c_{11} = 2(2) + 1(1) + 3(0) = 4 + 1 + 0 = 5$",
+        "$c_{12} = 2(1) + 1(-1) + 3(-2) = 2 - 1 - 6 = -5$",
+        "$c_{13} = 2(3) + 1(1) + 3(1) = 6 + 1 + 3 = 10$",
+        "**Row 2:**",
+        "$c_{21} = 1(2) + (-1)(1) + 1(0) = 2 - 1 + 0 = 1$",
+        "$c_{22} = 1(1) + (-1)(-1) + 1(-2) = 1 + 1 - 2 = 0$",
+        "$c_{23} = 1(3) + (-1)(1) + 1(1) = 3 - 1 + 1 = 3$",
+        "**Row 3:**",
+        "$c_{31} = 0(2) + (-2)(1) + 1(0) = -2$",
+        "$c_{32} = 0(1) + (-2)(-1) + 1(-2) = 2 - 2 = 0$",
+        "$c_{33} = 0(3) + (-2)(1) + 1(1) = -2 + 1 = -1$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^2 = \\begin{bmatrix} 5 & -5 & 10 \\\\ 1 & 0 & 3 \\\\ -2 & 0 & -1 \\end{bmatrix}_{3 \\times 3}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1432,66 +1435,65 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (a): $\\mathbf{A^3 = A^2 \\cdot A}$ [TRUE]**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^3 = A \\cdot A \\cdot A = (A \\cdot A) \\cdot A = A^2 \\cdot A"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (b): $\\mathbf{A^4 = A^3 \\cdot A = A^2 \\cdot A^2 = A \\cdot A^3}$ [TRUE]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "By associativity of powers of a single matrix."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (c): $\\mathbf{(AB)^2 = A^2 B^2}$ [FALSE in general]**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(AB)^2 = (AB)(AB) = A(BA)B"
-    },
-    {
-     "t": "p",
-     "text": "Because $BA \\ne AB$ in general, $A(BA)B \\ne A(AB)B = A^2 B^2$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (d): $\\mathbf{(AB)^2 = A(BA)B}$ [TRUE]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Follows directly from expanding the definition: $(AB)^2 = (AB)(AB) = A(BA)B$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (e): $\\mathbf{\\text{If } AB = BA \\implies (AB)^2 = A^2 B^2}$ [TRUE]**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(AB)^2 = A(BA)B = A(AB)B = (AA)(BB) = A^2 B^2"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (a): $\\mathbf{A^3 = A^2 \\cdot A}$ [TRUE]**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^3 = A \\cdot A \\cdot A = (A \\cdot A) \\cdot A = A^2 \\cdot A"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (b): $\\mathbf{A^4 = A^3 \\cdot A = A^2 \\cdot A^2 = A \\cdot A^3}$ [TRUE]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "By associativity of powers of a single matrix."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (c): $\\mathbf{(AB)^2 = A^2 B^2}$ [FALSE in general]**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(AB)^2 = (AB)(AB) = A(BA)B"
+      },
+      {
+       "t": "p",
+       "text": "Because $BA \\ne AB$ in general, $A(BA)B \\ne A(AB)B = A^2 B^2$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (d): $\\mathbf{(AB)^2 = A(BA)B}$ [TRUE]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Follows directly from expanding the definition: $(AB)^2 = (AB)(AB) = A(BA)B$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (e): $\\mathbf{\\text{If } AB = BA \\implies (AB)^2 = A^2 B^2}$ [TRUE]**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(AB)^2 = A(BA)B = A(AB)B = (AA)(BB) = A^2 B^2"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1550,44 +1552,43 @@ export default {
      "text": "**Question:** If $A = \\begin{bmatrix} -3 & 0 & 0 \\\\ 0 & -2 & 0 \\\\ 0 & 0 & 2 \\end{bmatrix}$, find $\\operatorname{Tr}(A^7)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "For a diagonal matrix $D = \\operatorname{diag}(d_1, d_2, \\dots, d_n)$, the power is obtained by raising each diagonal entry to the power:"
-    },
-    {
-     "t": "math",
-     "tex": "D^k = \\operatorname{diag}(d_1^k, d_2^k, \\dots, d_n^k)"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "A^7 = \\begin{bmatrix} (-3)^7 & 0 & 0 \\\\ 0 & (-2)^7 & 0 \\\\ 0 & 0 & 2^7 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating trace:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}(A^7) = (-3)^7 + (-2)^7 + 2^7"
-    },
-    {
-     "t": "p",
-     "text": "Notice that $(-2)^7 + 2^7 = -128 + 128 = 0$."
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}(A^7) = (-3)^7 = -(3^7) = \\mathbf{-2187}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "For a diagonal matrix $D = \\operatorname{diag}(d_1, d_2, \\dots, d_n)$, the power is obtained by raising each diagonal entry to the power:"
+      },
+      {
+       "t": "math",
+       "tex": "D^k = \\operatorname{diag}(d_1^k, d_2^k, \\dots, d_n^k)"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "A^7 = \\begin{bmatrix} (-3)^7 & 0 & 0 \\\\ 0 & (-2)^7 & 0 \\\\ 0 & 0 & 2^7 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating trace:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}(A^7) = (-3)^7 + (-2)^7 + 2^7"
+      },
+      {
+       "t": "p",
+       "text": "Notice that $(-2)^7 + 2^7 = -128 + 128 = 0$."
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}(A^7) = (-3)^7 = -(3^7) = \\mathbf{-2187}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -1599,17 +1600,20 @@ export default {
     },
     {
      "t": "p",
-     "text": "**Question:** If $\\operatorname{Tr}(A) = 3$ and $\\operatorname{Tr}(B) = 2$, what is $\\operatorname{Tr}(AB)$?\n<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
+     "text": "**Question:** If $\\operatorname{Tr}(A) = 3$ and $\\operatorname{Tr}(B) = 2$, what is $\\operatorname{Tr}(AB)$?"
     },
     {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Trap:** $\\operatorname{Tr}(AB) \\ne \\operatorname{Tr}(A) \\cdot \\operatorname{Tr}(B) = 3 \\times 2 = 6$.\n**Answer:** **CANNOT BE DETERMINED** from the given data alone. To find $\\operatorname{Tr}(AB)$, either the entries of $A$ and $B$ or their full eigenspectrum must be known."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Trap:** $\\operatorname{Tr}(AB) \\ne \\operatorname{Tr}(A) \\cdot \\operatorname{Tr}(B) = 3 \\times 2 = 6$.\n**Answer:** **CANNOT BE DETERMINED** from the given data alone. To find $\\operatorname{Tr}(AB)$, either the entries of $A$ and $B$ or their full eigenspectrum must be known."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -1628,66 +1632,65 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**General Complexity Formulas for $[A]_{m \\times n} \\times [B]_{n \\times p}$:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The resulting matrix has size $m \\times p$ ($m \\cdot p$ total entries).",
-      "Each single entry requires a dot product of two $n$-dimensional vectors:",
-      "Multiplications per entry $= n$",
-      "Additions per entry $= n - 1$",
-      "Total Multiplications:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\#\\text{Multiplications} = m \\cdot n \\cdot p}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Total Additions:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\#\\text{Additions} = m \\cdot (n - 1) \\cdot p}"
-    },
-    {
-     "t": "p",
-     "text": "**Substituting Given Values ($m = 3, n = 4, p = 5$):**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Multiplications:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "3 \\times 4 \\times 5 = \\mathbf{60}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Additions:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "3 \\times (4 - 1) \\times 5 = 3 \\times 3 \\times 5 = \\mathbf{45}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**General Complexity Formulas for $[A]_{m \\times n} \\times [B]_{n \\times p}$:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The resulting matrix has size $m \\times p$ ($m \\cdot p$ total entries).",
+        "Each single entry requires a dot product of two $n$-dimensional vectors:",
+        "Multiplications per entry $= n$",
+        "Additions per entry $= n - 1$",
+        "Total Multiplications:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\#\\text{Multiplications} = m \\cdot n \\cdot p}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Total Additions:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\#\\text{Additions} = m \\cdot (n - 1) \\cdot p}"
+      },
+      {
+       "t": "p",
+       "text": "**Substituting Given Values ($m = 3, n = 4, p = 5$):**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Multiplications:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "3 \\times 4 \\times 5 = \\mathbf{60}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Additions:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "3 \\times (4 - 1) \\times 5 = 3 \\times 3 \\times 5 = \\mathbf{45}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -1742,52 +1745,51 @@ export default {
      "text": "Let $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$ and $B = \\begin{bmatrix} 5 & 6 \\\\ 7 & 8 \\end{bmatrix}$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute $(AB)^T$**"
-    },
-    {
-     "t": "math",
-     "tex": "AB = \\begin{bmatrix} 1(5)+2(7) & 1(6)+2(8) \\\\ 3(5)+4(7) & 3(6)+4(8) \\end{bmatrix} = \\begin{bmatrix} 5+14 & 6+16 \\\\ 15+28 & 18+32 \\end{bmatrix} = \\begin{bmatrix} 19 & 22 \\\\ 43 & 50 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "(AB)^T = \\begin{bmatrix} 19 & 43 \\\\ 22 & 50 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Compute $B^T A^T$**"
-    },
-    {
-     "t": "math",
-     "tex": "B^T = \\begin{bmatrix} 5 & 7 \\\\ 6 & 8 \\end{bmatrix}, \\qquad A^T = \\begin{bmatrix} 1 & 3 \\\\ 2 & 4 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "B^T A^T = \\begin{bmatrix} 5(1)+7(2) & 5(3)+7(4) \\\\ 6(1)+8(2) & 6(3)+8(4) \\end{bmatrix} = \\begin{bmatrix} 5+14 & 15+28 \\\\ 6+16 & 18+32 \\end{bmatrix} = \\begin{bmatrix} 19 & 43 \\\\ 22 & 50 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore (AB)^T = B^T A^T"
-    },
-    {
-     "t": "p",
-     "text": "**Generalized Chain Rule (Slide 031):**"
-    },
-    {
-     "t": "math",
-     "tex": "(ABC)^T = C^T B^T A^T"
-    },
-    {
-     "t": "math",
-     "tex": "(A B C D \\cdots Z)^T = Z^T \\cdots D^T C^T B^T A^T"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Compute $(AB)^T$**"
+      },
+      {
+       "t": "math",
+       "tex": "AB = \\begin{bmatrix} 1(5)+2(7) & 1(6)+2(8) \\\\ 3(5)+4(7) & 3(6)+4(8) \\end{bmatrix} = \\begin{bmatrix} 5+14 & 6+16 \\\\ 15+28 & 18+32 \\end{bmatrix} = \\begin{bmatrix} 19 & 22 \\\\ 43 & 50 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "(AB)^T = \\begin{bmatrix} 19 & 43 \\\\ 22 & 50 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Compute $B^T A^T$**"
+      },
+      {
+       "t": "math",
+       "tex": "B^T = \\begin{bmatrix} 5 & 7 \\\\ 6 & 8 \\end{bmatrix}, \\qquad A^T = \\begin{bmatrix} 1 & 3 \\\\ 2 & 4 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "B^T A^T = \\begin{bmatrix} 5(1)+7(2) & 5(3)+7(4) \\\\ 6(1)+8(2) & 6(3)+8(4) \\end{bmatrix} = \\begin{bmatrix} 5+14 & 15+28 \\\\ 6+16 & 18+32 \\end{bmatrix} = \\begin{bmatrix} 19 & 43 \\\\ 22 & 50 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore (AB)^T = B^T A^T"
+      },
+      {
+       "t": "p",
+       "text": "**Generalized Chain Rule (Slide 031):**"
+      },
+      {
+       "t": "math",
+       "tex": "(ABC)^T = C^T B^T A^T"
+      },
+      {
+       "t": "math",
+       "tex": "(A B C D \\cdots Z)^T = Z^T \\cdots D^T C^T B^T A^T"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -1833,42 +1835,41 @@ export default {
      "text": "Show that $A$ is orthogonal."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Taking transpose:"
-    },
-    {
-     "t": "math",
-     "tex": "A^T = \\begin{bmatrix} 2/3 & -2/3 & 1/3 \\\\ 1/3 & 2/3 & 2/3 \\\\ 2/3 & 1/3 & -2/3 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Multiplying $A A^T$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Entry $(1, 1)$: $\\left(\\frac{2}{3}\\right)^2 + \\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{2}{3}\\right)^2 = \\frac{4}{9} + \\frac{1}{9} + \\frac{4}{9} = \\frac{9}{9} = 1$",
-      "Entry $(1, 2)$: $\\left(\\frac{2}{3}\\right)\\left(-\\frac{2}{3}\\right) + \\left(\\frac{1}{3}\\right)\\left(\\frac{2}{3}\\right) + \\left(\\frac{2}{3}\\right)\\left(\\frac{1}{3}\\right) = -\\frac{4}{9} + \\frac{2}{9} + \\frac{2}{9} = 0$",
-      "Entry $(1, 3)$: $\\left(\\frac{2}{3}\\right)\\left(\\frac{1}{3}\\right) + \\left(\\frac{1}{3}\\right)\\left(\\frac{2}{3}\\right) + \\left(\\frac{2}{3}\\right)\\left(-\\frac{2}{3}\\right) = \\frac{2}{9} + \\frac{2}{9} - \\frac{4}{9} = 0$",
-      "Entry $(2, 2)$: $\\left(-\\frac{2}{3}\\right)^2 + \\left(\\frac{2}{3}\\right)^2 + \\left(\\frac{1}{3}\\right)^2 = \\frac{4+4+1}{9} = 1$",
-      "Entry $(3, 3)$: $\\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{2}{3}\\right)^2 + \\left(-\\frac{2}{3}\\right)^2 = \\frac{1+4+4}{9} = 1$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A A^T = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix} = I"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore A \\text{ is an orthogonal matrix.}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Taking transpose:"
+      },
+      {
+       "t": "math",
+       "tex": "A^T = \\begin{bmatrix} 2/3 & -2/3 & 1/3 \\\\ 1/3 & 2/3 & 2/3 \\\\ 2/3 & 1/3 & -2/3 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Multiplying $A A^T$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Entry $(1, 1)$: $\\left(\\frac{2}{3}\\right)^2 + \\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{2}{3}\\right)^2 = \\frac{4}{9} + \\frac{1}{9} + \\frac{4}{9} = \\frac{9}{9} = 1$",
+        "Entry $(1, 2)$: $\\left(\\frac{2}{3}\\right)\\left(-\\frac{2}{3}\\right) + \\left(\\frac{1}{3}\\right)\\left(\\frac{2}{3}\\right) + \\left(\\frac{2}{3}\\right)\\left(\\frac{1}{3}\\right) = -\\frac{4}{9} + \\frac{2}{9} + \\frac{2}{9} = 0$",
+        "Entry $(1, 3)$: $\\left(\\frac{2}{3}\\right)\\left(\\frac{1}{3}\\right) + \\left(\\frac{1}{3}\\right)\\left(\\frac{2}{3}\\right) + \\left(\\frac{2}{3}\\right)\\left(-\\frac{2}{3}\\right) = \\frac{2}{9} + \\frac{2}{9} - \\frac{4}{9} = 0$",
+        "Entry $(2, 2)$: $\\left(-\\frac{2}{3}\\right)^2 + \\left(\\frac{2}{3}\\right)^2 + \\left(\\frac{1}{3}\\right)^2 = \\frac{4+4+1}{9} = 1$",
+        "Entry $(3, 3)$: $\\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{2}{3}\\right)^2 + \\left(-\\frac{2}{3}\\right)^2 = \\frac{1+4+4}{9} = 1$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A A^T = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix} = I"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore A \\text{ is an orthogonal matrix.}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -1942,77 +1943,80 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Apply Row Normality Conditions**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "From Row 1:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left(\\frac{1}{\\sqrt{2}}\\right)^2 + a^2 + 0^2 = 1 \\implies \\frac{1}{2} + a^2 = 1 \\implies a^2 = \\frac{1}{2} \\implies a = \\pm \\frac{1}{\\sqrt{2}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "From Row 2:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left(\\frac{1}{\\sqrt{2}}\\right)^2 + b^2 + 0^2 = 1 \\implies \\frac{1}{2} + b^2 = 1 \\implies b^2 = \\frac{1}{2} \\implies b = \\pm \\frac{1}{\\sqrt{2}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "From Row 3:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "0^2 + 0^2 + c^2 = 1 \\implies c^2 = 1 \\implies c = \\pm 1"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Apply Mutual Orthogonality Condition ($R_1 \\cdot R_2 = 0$)**"
-    },
-    {
-     "t": "math",
-     "tex": "R_1 \\cdot R_2 = \\left(\\frac{1}{\\sqrt{2}}\\right)\\left(\\frac{1}{\\sqrt{2}}\\right) + a \\cdot b + 0 \\cdot 0 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{2} + ab = 0 \\implies ab = -\\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "This requires $a$ and $b$ to have **opposite signs**:"
-    },
-    {
-     "t": "math",
-     "tex": "a = -b"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Conclude the Parameter Sets**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $a = \\frac{1}{\\sqrt{2}} \\implies b = -\\frac{1}{\\sqrt{2}}$ and $c = \\pm 1$  **(Option A)**",
-      "If $a = -\\frac{1}{\\sqrt{2}} \\implies b = \\frac{1}{\\sqrt{2}}$ and $c = \\pm 1$  **(Option B)**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Choices:** Both (A) and (B) represent valid configurations (MSQ format).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Apply Row Normality Conditions**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "From Row 1:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left(\\frac{1}{\\sqrt{2}}\\right)^2 + a^2 + 0^2 = 1 \\implies \\frac{1}{2} + a^2 = 1 \\implies a^2 = \\frac{1}{2} \\implies a = \\pm \\frac{1}{\\sqrt{2}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "From Row 2:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left(\\frac{1}{\\sqrt{2}}\\right)^2 + b^2 + 0^2 = 1 \\implies \\frac{1}{2} + b^2 = 1 \\implies b^2 = \\frac{1}{2} \\implies b = \\pm \\frac{1}{\\sqrt{2}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "From Row 3:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "0^2 + 0^2 + c^2 = 1 \\implies c^2 = 1 \\implies c = \\pm 1"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Apply Mutual Orthogonality Condition ($R_1 \\cdot R_2 = 0$)**"
+      },
+      {
+       "t": "math",
+       "tex": "R_1 \\cdot R_2 = \\left(\\frac{1}{\\sqrt{2}}\\right)\\left(\\frac{1}{\\sqrt{2}}\\right) + a \\cdot b + 0 \\cdot 0 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{2} + ab = 0 \\implies ab = -\\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "This requires $a$ and $b$ to have **opposite signs**:"
+      },
+      {
+       "t": "math",
+       "tex": "a = -b"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Conclude the Parameter Sets**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $a = \\frac{1}{\\sqrt{2}} \\implies b = -\\frac{1}{\\sqrt{2}}$ and $c = \\pm 1$  **(Option A)**",
+        "If $a = -\\frac{1}{\\sqrt{2}} \\implies b = \\frac{1}{\\sqrt{2}}$ and $c = \\pm 1$  **(Option B)**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Choices:** Both (A) and (B) represent valid configurations (MSQ format)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -2023,36 +2027,35 @@ export default {
      "text": "**Question:** Two vectors (matrices) $A = \\begin{bmatrix} 1 \\\\ 2 \\\\ \\alpha \\end{bmatrix}$ and $B = \\begin{bmatrix} -1 \\\\ \\alpha \\\\ 3 \\end{bmatrix}$ are orthogonal to each other. Find the value of $\\alpha$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Condition (Slide 037 Note):** Two column matrices $A$ and $B$ are orthogonal to each other iff:"
-    },
-    {
-     "t": "math",
-     "tex": "A^T B = B^T A = [0]"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating $A^T B$:"
-    },
-    {
-     "t": "math",
-     "tex": "A^T B = \\begin{bmatrix} 1 & 2 & \\alpha \\end{bmatrix}_{1 \\times 3} \\begin{bmatrix} -1 \\\\ \\alpha \\\\ 3 \\end{bmatrix}_{3 \\times 1} = [ (1)(-1) + (2)(\\alpha) + (\\alpha)(3) ] = [-1 + 5\\alpha]"
-    },
-    {
-     "t": "p",
-     "text": "Set this scalar equal to $0$:"
-    },
-    {
-     "t": "math",
-     "tex": "-1 + 5\\alpha = 0 \\implies 5\\alpha = 1 \\implies \\mathbf{\\alpha = \\frac{1}{5} = 0.2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Condition (Slide 037 Note):** Two column matrices $A$ and $B$ are orthogonal to each other iff:"
+      },
+      {
+       "t": "math",
+       "tex": "A^T B = B^T A = [0]"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating $A^T B$:"
+      },
+      {
+       "t": "math",
+       "tex": "A^T B = \\begin{bmatrix} 1 & 2 & \\alpha \\end{bmatrix}_{1 \\times 3} \\begin{bmatrix} -1 \\\\ \\alpha \\\\ 3 \\end{bmatrix}_{3 \\times 1} = [ (1)(-1) + (2)(\\alpha) + (\\alpha)(3) ] = [-1 + 5\\alpha]"
+      },
+      {
+       "t": "p",
+       "text": "Set this scalar equal to $0$:"
+      },
+      {
+       "t": "math",
+       "tex": "-1 + 5\\alpha = 0 \\implies 5\\alpha = 1 \\implies \\mathbf{\\alpha = \\frac{1}{5} = 0.2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -2129,107 +2132,110 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (A): $A A^T$ is always symmetric [Slide 039]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $B = A A^T$."
-    },
-    {
-     "t": "math",
-     "tex": "B^T = (A A^T)^T = (A^T)^T A^T = A A^T = B"
-    },
-    {
-     "t": "p",
-     "text": "Since $B^T = B$, $A A^T$ is symmetric. $\\mathbf{[\\checkmark\\ TRUE]}$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (B): $A + A^T$ is always symmetric [Slide 040]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $B = A + A^T$."
-    },
-    {
-     "t": "math",
-     "tex": "B^T = (A + A^T)^T = A^T + (A^T)^T = A^T + A = A + A^T = B \\implies \\mathbf{[\\checkmark\\ TRUE]}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (C): $A - A^T$ is always skew-symmetric [Slide 040]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $B = A - A^T$."
-    },
-    {
-     "t": "math",
-     "tex": "B^T = (A - A^T)^T = A^T - (A^T)^T = A^T - A = -(A - A^T) = -B \\implies \\mathbf{[\\checkmark\\ TRUE]}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (D): $A \\pm B$ are symmetric if $A, B$ are symmetric [Slide 040]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $Y = A + B$. $Y^T = (A + B)^T = A^T + B^T = A + B = Y \\implies$ Symmetric.\n  Let $Z = A - B$. $Z^T = (A - B)^T = A^T - B^T = A - B = Z \\implies$ Symmetric. $\\mathbf{[\\checkmark\\ TRUE]}$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (E) & (F): Product of symmetric matrices [Slide 041]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given $A^T = A, B^T = B$.\n  Let $Y = AB$."
-    },
-    {
-     "t": "math",
-     "tex": "Y^T = (AB)^T = B^T A^T = BA"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $AB = BA$, then $Y^T = Y \\implies AB$ is symmetric.",
-      "If $AB \\ne BA$, then $Y^T \\ne Y \\implies AB$ is not symmetric."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Hence $AB$ may or may not be symmetric, and is symmetric **if and only if** $AB = BA$. $\\mathbf{[\\checkmark\\ BOTH\\ TRUE]}$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (G): Product of skew-symmetric matrices [Slide 041]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given $A^T = -A, B^T = -B$.\n  Let $Y = AB$."
-    },
-    {
-     "t": "math",
-     "tex": "Y^T = (AB)^T = B^T A^T = (-B)(-A) = (-1)(-1) BA = BA"
-    },
-    {
-     "t": "p",
-     "text": "Now test symmetry: $Y$ is symmetric $\\iff Y^T = Y \\iff BA = AB$.\n  Therefore, $AB$ is symmetric if and only if $AB = BA$. $\\mathbf{[\\checkmark\\ TRUE]}$\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (A): $A A^T$ is always symmetric [Slide 039]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $B = A A^T$."
+      },
+      {
+       "t": "math",
+       "tex": "B^T = (A A^T)^T = (A^T)^T A^T = A A^T = B"
+      },
+      {
+       "t": "p",
+       "text": "Since $B^T = B$, $A A^T$ is symmetric. $\\mathbf{[\\checkmark\\ TRUE]}$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (B): $A + A^T$ is always symmetric [Slide 040]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $B = A + A^T$."
+      },
+      {
+       "t": "math",
+       "tex": "B^T = (A + A^T)^T = A^T + (A^T)^T = A^T + A = A + A^T = B \\implies \\mathbf{[\\checkmark\\ TRUE]}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (C): $A - A^T$ is always skew-symmetric [Slide 040]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $B = A - A^T$."
+      },
+      {
+       "t": "math",
+       "tex": "B^T = (A - A^T)^T = A^T - (A^T)^T = A^T - A = -(A - A^T) = -B \\implies \\mathbf{[\\checkmark\\ TRUE]}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (D): $A \\pm B$ are symmetric if $A, B$ are symmetric [Slide 040]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $Y = A + B$. $Y^T = (A + B)^T = A^T + B^T = A + B = Y \\implies$ Symmetric.\n  Let $Z = A - B$. $Z^T = (A - B)^T = A^T - B^T = A - B = Z \\implies$ Symmetric. $\\mathbf{[\\checkmark\\ TRUE]}$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (E) & (F): Product of symmetric matrices [Slide 041]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given $A^T = A, B^T = B$.\n  Let $Y = AB$."
+      },
+      {
+       "t": "math",
+       "tex": "Y^T = (AB)^T = B^T A^T = BA"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $AB = BA$, then $Y^T = Y \\implies AB$ is symmetric.",
+        "If $AB \\ne BA$, then $Y^T \\ne Y \\implies AB$ is not symmetric."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Hence $AB$ may or may not be symmetric, and is symmetric **if and only if** $AB = BA$. $\\mathbf{[\\checkmark\\ BOTH\\ TRUE]}$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (G): Product of skew-symmetric matrices [Slide 041]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given $A^T = -A, B^T = -B$.\n  Let $Y = AB$."
+      },
+      {
+       "t": "math",
+       "tex": "Y^T = (AB)^T = B^T A^T = (-B)(-A) = (-1)(-1) BA = BA"
+      },
+      {
+       "t": "p",
+       "text": "Now test symmetry: $Y$ is symmetric $\\iff Y^T = Y \\iff BA = AB$.\n  Therefore, $AB$ is symmetric if and only if $AB = BA$. $\\mathbf{[\\checkmark\\ TRUE]}$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -2253,103 +2259,102 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Key Tool (Slide 042 Boxed Theorem):**\n$$\\boxed{(A^m)^T = (A^T)^m}$$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (A) & (B):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(A^m)^T = (A^T)^m = A^m"
-    },
-    {
-     "t": "p",
-     "text": "Holds for all integer powers $m \\ge 1$ (even and odd). $\\mathbf{[\\checkmark\\ TRUE]}$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (C) & (D):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given $A^T = -A$."
-    },
-    {
-     "t": "math",
-     "tex": "(A^m)^T = (A^T)^m = (-A)^m = (-1)^m A^m"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $m$ is odd: $(-1)^m = -1 \\implies (A^m)^T = -A^m \\implies \\mathbf{A^m \\text{ is Skew-Symmetric}}$.",
-      "If $m$ is even: $(-1)^m = +1 \\implies (A^m)^T = A^m \\implies \\mathbf{A^m \\text{ is Symmetric}}$. $\\mathbf{[\\checkmark\\ TRUE]}$"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (E): $A^T B A$ for symmetric $A, B$ [Slide 043]**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(A^T B A)^T = A^T B^T (A^T)^T = A^T B A \\implies \\mathbf{Symmetric\\ [\\checkmark\\ TRUE]}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (F): $A B^T A$ for skew-symmetric $A, B$ [Slide 043]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given $A^T = -A$ and $B^T = -B \\implies B = -B^T$."
-    },
-    {
-     "t": "math",
-     "tex": "(A B^T A)^T = A^T (B^T)^T A^T = A^T B A^T = (-A)(-B^T)(-A) = (-1)^3 (A B^T A) = -(A B^T A)"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore \\mathbf{A B^T A \\text{ is Skew-Symmetric\\ [\\checkmark\\ TRUE]}}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (G): $A^2 \\pm B^2$ for symmetric $A, B$ [Slide 044]**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(A^2 \\pm B^2)^T = (A^T)^2 \\pm (B^T)^2 = A^2 \\pm B^2 \\implies \\mathbf{Symmetric\\ [\\checkmark\\ TRUE]}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof of (H): $A^2 - B^2$ for skew-symmetric $A, B$ [Slide 044]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given $A^T = -A$ and $B^T = -B$."
-    },
-    {
-     "t": "math",
-     "tex": "(A^2 - B^2)^T = (A^T)^2 - (B^T)^2 = (-A)^2 - (-B)^2 = A^2 - B^2 \\implies \\mathbf{Symmetric\\ [\\checkmark\\ TRUE]}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Key Tool (Slide 042 Boxed Theorem):**\n$$\\boxed{(A^m)^T = (A^T)^m}$$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (A) & (B):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(A^m)^T = (A^T)^m = A^m"
+      },
+      {
+       "t": "p",
+       "text": "Holds for all integer powers $m \\ge 1$ (even and odd). $\\mathbf{[\\checkmark\\ TRUE]}$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (C) & (D):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given $A^T = -A$."
+      },
+      {
+       "t": "math",
+       "tex": "(A^m)^T = (A^T)^m = (-A)^m = (-1)^m A^m"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $m$ is odd: $(-1)^m = -1 \\implies (A^m)^T = -A^m \\implies \\mathbf{A^m \\text{ is Skew-Symmetric}}$.",
+        "If $m$ is even: $(-1)^m = +1 \\implies (A^m)^T = A^m \\implies \\mathbf{A^m \\text{ is Symmetric}}$. $\\mathbf{[\\checkmark\\ TRUE]}$"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (E): $A^T B A$ for symmetric $A, B$ [Slide 043]**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(A^T B A)^T = A^T B^T (A^T)^T = A^T B A \\implies \\mathbf{Symmetric\\ [\\checkmark\\ TRUE]}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (F): $A B^T A$ for skew-symmetric $A, B$ [Slide 043]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given $A^T = -A$ and $B^T = -B \\implies B = -B^T$."
+      },
+      {
+       "t": "math",
+       "tex": "(A B^T A)^T = A^T (B^T)^T A^T = A^T B A^T = (-A)(-B^T)(-A) = (-1)^3 (A B^T A) = -(A B^T A)"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore \\mathbf{A B^T A \\text{ is Skew-Symmetric\\ [\\checkmark\\ TRUE]}}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (G): $A^2 \\pm B^2$ for symmetric $A, B$ [Slide 044]**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(A^2 \\pm B^2)^T = (A^T)^2 \\pm (B^T)^2 = A^2 \\pm B^2 \\implies \\mathbf{Symmetric\\ [\\checkmark\\ TRUE]}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Proof of (H): $A^2 - B^2$ for skew-symmetric $A, B$ [Slide 044]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given $A^T = -A$ and $B^T = -B$."
+      },
+      {
+       "t": "math",
+       "tex": "(A^2 - B^2)^T = (A^T)^2 - (B^T)^2 = (-A)^2 - (-B)^2 = A^2 - B^2 \\implies \\mathbf{Symmetric\\ [\\checkmark\\ TRUE]}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -2530,60 +2535,59 @@ export default {
      "text": "7.3 Proof of Scalar Transjugate Property: $(kA)^\\theta = k^* A^\\theta$ (Slide 049)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Let $A = \\begin{bmatrix} 2+j & -1 \\\\ -j & 3+j \\end{bmatrix}$ and scalar $k = 1+j \\implies k^* = 1-j$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute $B = kA$**"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\begin{bmatrix} (2+j)(1+j) & -(1+j) \\\\ -j(1+j) & (3+j)(1+j) \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Take Conjugate $B^*$**\nConjugating every entry (replacing $j$ with $-j$):"
-    },
-    {
-     "t": "math",
-     "tex": "B^* = \\begin{bmatrix} (2-j)(1-j) & -(1-j) \\\\ j(1-j) & (3-j)(1-j) \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Transpose $B^*$ to form $B^\\theta$**"
-    },
-    {
-     "t": "math",
-     "tex": "B^\\theta = (B^*)^T = \\begin{bmatrix} (2-j)(1-j) & j(1-j) \\\\ -(1-j) & (3-j)(1-j) \\end{bmatrix} = (1-j) \\begin{bmatrix} 2-j & j \\\\ -1 & 3-j \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Compute $A^\\theta$**"
-    },
-    {
-     "t": "math",
-     "tex": "A^* = \\begin{bmatrix} 2-j & -1 \\\\ j & 3-j \\end{bmatrix} \\implies A^\\theta = (A^*)^T = \\begin{bmatrix} 2-j & j \\\\ -1 & 3-j \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Compare**"
-    },
-    {
-     "t": "math",
-     "tex": "B^\\theta = (1-j) A^\\theta = k^* A^\\theta"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore \\mathbf{(kA)^\\theta = k^* A^\\theta}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Let $A = \\begin{bmatrix} 2+j & -1 \\\\ -j & 3+j \\end{bmatrix}$ and scalar $k = 1+j \\implies k^* = 1-j$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Compute $B = kA$**"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\begin{bmatrix} (2+j)(1+j) & -(1+j) \\\\ -j(1+j) & (3+j)(1+j) \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Take Conjugate $B^*$**\nConjugating every entry (replacing $j$ with $-j$):"
+      },
+      {
+       "t": "math",
+       "tex": "B^* = \\begin{bmatrix} (2-j)(1-j) & -(1-j) \\\\ j(1-j) & (3-j)(1-j) \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Transpose $B^*$ to form $B^\\theta$**"
+      },
+      {
+       "t": "math",
+       "tex": "B^\\theta = (B^*)^T = \\begin{bmatrix} (2-j)(1-j) & j(1-j) \\\\ -(1-j) & (3-j)(1-j) \\end{bmatrix} = (1-j) \\begin{bmatrix} 2-j & j \\\\ -1 & 3-j \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Compute $A^\\theta$**"
+      },
+      {
+       "t": "math",
+       "tex": "A^* = \\begin{bmatrix} 2-j & -1 \\\\ j & 3-j \\end{bmatrix} \\implies A^\\theta = (A^*)^T = \\begin{bmatrix} 2-j & j \\\\ -1 & 3-j \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Compare**"
+      },
+      {
+       "t": "math",
+       "tex": "B^\\theta = (1-j) A^\\theta = k^* A^\\theta"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore \\mathbf{(kA)^\\theta = k^* A^\\theta}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -2610,92 +2614,91 @@ export default {
      "tex": "A = \\begin{bmatrix} \\frac{1+i}{2} & \\frac{-1+i}{2} \\\\ \\frac{1+i}{2} & \\frac{1-i}{2} \\end{bmatrix}_{2 \\times 2}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Compute $A^*$ and $A^\\theta$**"
-    },
-    {
-     "t": "math",
-     "tex": "A^* = \\begin{bmatrix} \\frac{1-i}{2} & \\frac{-1-i}{2} \\\\ \\frac{1-i}{2} & \\frac{1+i}{2} \\end{bmatrix} \\implies A^\\theta = (A^*)^T = \\begin{bmatrix} \\frac{1-i}{2} & \\frac{1-i}{2} \\\\ \\frac{-1-i}{2} & \\frac{1+i}{2} \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Compute Product $A A^\\theta$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Entry $(1, 1)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left(\\frac{1+i}{2}\\right)\\left(\\frac{1-i}{2}\\right) + \\left(\\frac{-1+i}{2}\\right)\\left(\\frac{-1-i}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Using $(1+i)(1-i) = 1 - i^2 = 1 - (-1) = 2$ and $(-1+i)(-1-i) = (-1)^2 - i^2 = 1 - (-1) = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{11} = \\frac{2}{4} + \\frac{2}{4} = \\frac{4}{4} = 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Entry $(1, 2)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left(\\frac{1+i}{2}\\right)\\left(\\frac{1-i}{2}\\right) + \\left(\\frac{-1+i}{2}\\right)\\left(\\frac{1+i}{2}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Here $(-1+i)(1+i) = i^2 - 1^2 = -1 - 1 = -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_{12} = \\frac{2}{4} + \\frac{-2}{4} = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Entry $(2, 1)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left(\\frac{1+i}{2}\\right)\\left(\\frac{1-i}{2}\\right) + \\left(\\frac{1-i}{2}\\right)\\left(\\frac{-1-i}{2}\\right)"
-    },
-    {
-     "t": "math",
-     "tex": "(1-i)(-1-i) = -(1-i)(1+i) = -2 \\implies c_{21} = \\frac{2}{4} - \\frac{2}{4} = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Entry $(2, 2)$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left(\\frac{1+i}{2}\\right)\\left(\\frac{1-i}{2}\\right) + \\left(\\frac{1-i}{2}\\right)\\left(\\frac{1+i}{2}\\right) = \\frac{2}{4} + \\frac{2}{4} = 1"
-    },
-    {
-     "t": "math",
-     "tex": "A A^\\theta = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} = I"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore A \\text{ is a Unitary Matrix.}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Compute $A^*$ and $A^\\theta$**"
+      },
+      {
+       "t": "math",
+       "tex": "A^* = \\begin{bmatrix} \\frac{1-i}{2} & \\frac{-1-i}{2} \\\\ \\frac{1-i}{2} & \\frac{1+i}{2} \\end{bmatrix} \\implies A^\\theta = (A^*)^T = \\begin{bmatrix} \\frac{1-i}{2} & \\frac{1-i}{2} \\\\ \\frac{-1-i}{2} & \\frac{1+i}{2} \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Compute Product $A A^\\theta$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Entry $(1, 1)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left(\\frac{1+i}{2}\\right)\\left(\\frac{1-i}{2}\\right) + \\left(\\frac{-1+i}{2}\\right)\\left(\\frac{-1-i}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Using $(1+i)(1-i) = 1 - i^2 = 1 - (-1) = 2$ and $(-1+i)(-1-i) = (-1)^2 - i^2 = 1 - (-1) = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{11} = \\frac{2}{4} + \\frac{2}{4} = \\frac{4}{4} = 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Entry $(1, 2)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left(\\frac{1+i}{2}\\right)\\left(\\frac{1-i}{2}\\right) + \\left(\\frac{-1+i}{2}\\right)\\left(\\frac{1+i}{2}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Here $(-1+i)(1+i) = i^2 - 1^2 = -1 - 1 = -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_{12} = \\frac{2}{4} + \\frac{-2}{4} = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Entry $(2, 1)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left(\\frac{1+i}{2}\\right)\\left(\\frac{1-i}{2}\\right) + \\left(\\frac{1-i}{2}\\right)\\left(\\frac{-1-i}{2}\\right)"
+      },
+      {
+       "t": "math",
+       "tex": "(1-i)(-1-i) = -(1-i)(1+i) = -2 \\implies c_{21} = \\frac{2}{4} - \\frac{2}{4} = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Entry $(2, 2)$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left(\\frac{1+i}{2}\\right)\\left(\\frac{1-i}{2}\\right) + \\left(\\frac{1-i}{2}\\right)\\left(\\frac{1+i}{2}\\right) = \\frac{2}{4} + \\frac{2}{4} = 1"
+      },
+      {
+       "t": "math",
+       "tex": "A A^\\theta = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} = I"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore A \\text{ is a Unitary Matrix.}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -2821,54 +2824,53 @@ export default {
      "text": "**Question:** Given $A = \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix}$, compute $B = e^A$ and find the sum of all elements of $B$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Identify Nilpotency**"
-    },
-    {
-     "t": "math",
-     "tex": "A^2 = \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = O"
-    },
-    {
-     "t": "p",
-     "text": "$A$ is nilpotent with index $k = 2$. Therefore, $A^m = O$ for all $m \\ge 2$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Expand the Matrix Exponential Power Series**"
-    },
-    {
-     "t": "math",
-     "tex": "e^A = I + A + \\frac{A^2}{2!} + \\frac{A^3}{3!} + \\cdots"
-    },
-    {
-     "t": "p",
-     "text": "Since $A^2 = A^3 = \\cdots = O$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^A = I + A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} + \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Fatal Blunder:** $e^A \\ne \\begin{bmatrix} e^0 & e^1 \\\\ e^0 & e^0 \\end{bmatrix} = \\begin{bmatrix} 1 & e \\\\ 1 & 1 \\end{bmatrix}$!"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Sum of All Elements**"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sum} = 1 + 1 + 0 + 1 = \\mathbf{3}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Identify Nilpotency**"
+      },
+      {
+       "t": "math",
+       "tex": "A^2 = \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = O"
+      },
+      {
+       "t": "p",
+       "text": "$A$ is nilpotent with index $k = 2$. Therefore, $A^m = O$ for all $m \\ge 2$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Expand the Matrix Exponential Power Series**"
+      },
+      {
+       "t": "math",
+       "tex": "e^A = I + A + \\frac{A^2}{2!} + \\frac{A^3}{3!} + \\cdots"
+      },
+      {
+       "t": "p",
+       "text": "Since $A^2 = A^3 = \\cdots = O$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^A = I + A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} + \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Fatal Blunder:** $e^A \\ne \\begin{bmatrix} e^0 & e^1 \\\\ e^0 & e^0 \\end{bmatrix} = \\begin{bmatrix} 1 & e \\\\ 1 & 1 \\end{bmatrix}$!"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Sum of All Elements**"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sum} = 1 + 1 + 0 + 1 = \\mathbf{3}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3570,88 +3572,87 @@ export default {
      "text": "**Question:** Given matrix $A = \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix}_{2 \\times 2}$ and matrix $B = e^A$.  \nFind the summation of all the elements of Matrix $B$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Compute Successive Matrix Powers"
-    },
-    {
-     "t": "p",
-     "text": "Calculate the square of matrix $A$:"
-    },
-    {
-     "t": "math",
-     "tex": "A^2 = A \\cdot A = \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} = \\begin{bmatrix} 0\\cdot 0 + 1\\cdot 0 & 0\\cdot 1 + 1\\cdot 0 \\\\ 0\\cdot 0 + 0\\cdot 0 & 0\\cdot 1 + 0\\cdot 0 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = \\mathbf{0}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Establish Nilpotency"
-    },
-    {
-     "t": "p",
-     "text": "Because $A^2 = \\mathbf{0}$, the matrix $A$ is **nilpotent** with index of nilpotency $k = 2$.\nHigher powers vanish trivially:"
-    },
-    {
-     "t": "math",
-     "tex": "A^3 = A \\cdot A^2 = A \\cdot \\mathbf{0} = \\mathbf{0}"
-    },
-    {
-     "t": "math",
-     "tex": "A^4 = A \\cdot A^3 = A \\cdot \\mathbf{0} = \\mathbf{0}"
-    },
-    {
-     "t": "math",
-     "tex": "A^m = \\mathbf{0} \\quad \\forall m \\ge 2"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Evaluate the Matrix Exponential Series"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the powers into the Taylor expansion:"
-    },
-    {
-     "t": "math",
-     "tex": "e^A = I_2 + A + \\frac{A^2}{2!} + \\frac{A^3}{3!} + \\dots = I_2 + A + \\mathbf{0} + \\mathbf{0} + \\dots"
-    },
-    {
-     "t": "math",
-     "tex": "e^A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} + \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} = \\begin{bmatrix} 1+0 & 0+1 \\\\ 0+0 & 1+0 \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Calculate Sum of All Entries"
-    },
-    {
-     "t": "p",
-     "text": "Matrix $B = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Summation of all elements} = b_{11} + b_{12} + b_{21} + b_{22} = 1 + 1 + 0 + 1 = 3"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** $\\mathbf{3}$"
-    },
-    {
-     "t": "h4",
-     "text": "Diagnostic Exam Traps & Warnings:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**The Entrywise Fallacy Trap:** Computing $\\begin{bmatrix} e^0 & e^1 \\\\ e^0 & e^0 \\end{bmatrix} = \\begin{bmatrix} 1 & e \\\\ 1 & 1 \\end{bmatrix}$ yields a sum of $3 + e \\approx 5.718$, which is completely incorrect.",
-      "**Nilpotent Series Truncation:** For any nilpotent matrix of index $k$, the infinite series $e^A$ truncates cleanly to a finite polynomial of degree $k-1$: $\\sum_{m=0}^{k-1} \\frac{A^m}{m!}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Compute Successive Matrix Powers"
+      },
+      {
+       "t": "p",
+       "text": "Calculate the square of matrix $A$:"
+      },
+      {
+       "t": "math",
+       "tex": "A^2 = A \\cdot A = \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} = \\begin{bmatrix} 0\\cdot 0 + 1\\cdot 0 & 0\\cdot 1 + 1\\cdot 0 \\\\ 0\\cdot 0 + 0\\cdot 0 & 0\\cdot 1 + 0\\cdot 0 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = \\mathbf{0}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Establish Nilpotency"
+      },
+      {
+       "t": "p",
+       "text": "Because $A^2 = \\mathbf{0}$, the matrix $A$ is **nilpotent** with index of nilpotency $k = 2$.\nHigher powers vanish trivially:"
+      },
+      {
+       "t": "math",
+       "tex": "A^3 = A \\cdot A^2 = A \\cdot \\mathbf{0} = \\mathbf{0}"
+      },
+      {
+       "t": "math",
+       "tex": "A^4 = A \\cdot A^3 = A \\cdot \\mathbf{0} = \\mathbf{0}"
+      },
+      {
+       "t": "math",
+       "tex": "A^m = \\mathbf{0} \\quad \\forall m \\ge 2"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Evaluate the Matrix Exponential Series"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the powers into the Taylor expansion:"
+      },
+      {
+       "t": "math",
+       "tex": "e^A = I_2 + A + \\frac{A^2}{2!} + \\frac{A^3}{3!} + \\dots = I_2 + A + \\mathbf{0} + \\mathbf{0} + \\dots"
+      },
+      {
+       "t": "math",
+       "tex": "e^A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} + \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} = \\begin{bmatrix} 1+0 & 0+1 \\\\ 0+0 & 1+0 \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Calculate Sum of All Entries"
+      },
+      {
+       "t": "p",
+       "text": "Matrix $B = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Summation of all elements} = b_{11} + b_{12} + b_{21} + b_{22} = 1 + 1 + 0 + 1 = 3"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** $\\mathbf{3}$"
+      },
+      {
+       "t": "h4",
+       "text": "Diagnostic Exam Traps & Warnings:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**The Entrywise Fallacy Trap:** Computing $\\begin{bmatrix} e^0 & e^1 \\\\ e^0 & e^0 \\end{bmatrix} = \\begin{bmatrix} 1 & e \\\\ 1 & 1 \\end{bmatrix}$ yields a sum of $3 + e \\approx 5.718$, which is completely incorrect.",
+        "**Nilpotent Series Truncation:** For any nilpotent matrix of index $k$, the infinite series $e^A$ truncates cleanly to a finite polynomial of degree $k-1$: $\\sum_{m=0}^{k-1} \\frac{A^m}{m!}$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -3675,240 +3676,239 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Chalkboard Definition of \"iff\" (Slide 056):"
-    },
-    {
-     "t": "p",
-     "text": "$\\text{iff} \\equiv \\text{If and only If}$.  \n\"$X \\text{ is True iff } Y \\text{ is True}$\" requires bidirectional equivalence:  \n1. $\\text{If } X \\text{ is True} \\implies Y \\text{ is True}$  \n2. $\\text{If } Y \\text{ is True} \\implies X \\text{ is True}$"
-    },
-    {
-     "t": "h4",
-     "text": "Comprehensive Proof of Option A (Slides 056\u2013057):"
-    },
-    {
-     "t": "p",
-     "text": "Let $B = iA$."
-    },
-    {
-     "t": "h4",
-     "text": "Forward Direction ($\\implies$): Given $A$ is skew-Hermitian ($A^\\theta = -A$)"
-    },
-    {
-     "t": "p",
-     "text": "Compute $B^\\theta$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^\\theta = (iA)^\\theta = i^* A^\\theta = (-i) A^\\theta"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $A^\\theta = -A$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^\\theta = (-i)(-A) = iA = B"
-    },
-    {
-     "t": "p",
-     "text": "Since $B^\\theta = B$, $B = iA$ is **Hermitian**. $\\checkmark$"
-    },
-    {
-     "t": "h4",
-     "text": "Reverse Direction ($\\impliedby$): Given $iA$ is Hermitian ($(iA)^\\theta = iA$)"
-    },
-    {
-     "t": "p",
-     "text": "Expand the left-hand side:"
-    },
-    {
-     "t": "math",
-     "tex": "(iA)^\\theta = i^* A^\\theta = -i A^\\theta"
-    },
-    {
-     "t": "p",
-     "text": "Equate to the right-hand side:"
-    },
-    {
-     "t": "math",
-     "tex": "-i A^\\theta = i A"
-    },
-    {
-     "t": "p",
-     "text": "Divide both sides by $i$ (or multiply by $-i$):"
-    },
-    {
-     "t": "math",
-     "tex": "-A^\\theta = A \\implies A^\\theta = -A"
-    },
-    {
-     "t": "p",
-     "text": "Thus, $A$ is **skew-Hermitian**. $\\checkmark$"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion for Option A:** TRUE ($\\mathbf{A \\text{ is valid}}$)."
-    },
-    {
-     "t": "h4",
-     "text": "Comprehensive Proof of Option B (Assigned as Chalk Homework on Slide 057):"
-    },
-    {
-     "t": "p",
-     "text": "Let $B = iA$."
-    },
-    {
-     "t": "h4",
-     "text": "Forward Direction ($\\implies$): Given $A$ is Hermitian ($A^\\theta = A$)"
-    },
-    {
-     "t": "p",
-     "text": "Compute $B^\\theta$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^\\theta = (iA)^\\theta = i^* A^\\theta = (-i) A = -(iA) = -B"
-    },
-    {
-     "t": "p",
-     "text": "Since $B^\\theta = -B$, $B = iA$ is **skew-Hermitian**. $\\checkmark$"
-    },
-    {
-     "t": "h4",
-     "text": "Reverse Direction ($\\impliedby$): Given $iA$ is skew-Hermitian ($(iA)^\\theta = -(iA)$)"
-    },
-    {
-     "t": "math",
-     "tex": "(iA)^\\theta = -i A^\\theta"
-    },
-    {
-     "t": "p",
-     "text": "Equating:"
-    },
-    {
-     "t": "math",
-     "tex": "-i A^\\theta = -i A \\implies A^\\theta = A"
-    },
-    {
-     "t": "p",
-     "text": "Thus, $A$ is **Hermitian**. $\\checkmark$"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion for Option B:** TRUE ($\\mathbf{B \\text{ is valid}}$)."
-    },
-    {
-     "t": "h4",
-     "text": "Comprehensive Proof of Option C (Slides 057\u2013058):"
-    },
-    {
-     "t": "h4",
-     "text": "Given: $A$ is skew-Hermitian ($A^\\theta = -A$). Let $B = e^A$."
-    },
-    {
-     "t": "p",
-     "text": "Test the condition for unitarity: $B B^\\theta = I$.\nExpress $B = e^A$ as a power series:"
-    },
-    {
-     "t": "math",
-     "tex": "B = e^A = I + A + \\frac{A^2}{2!} + \\frac{A^3}{3!} + \\frac{A^4}{4!} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Take the conjugate transpose $B^\\theta$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^\\theta = (e^A)^\\theta = I^\\theta + A^\\theta + \\frac{(A^2)^\\theta}{2!} + \\frac{(A^3)^\\theta}{3!} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Using the algebraic identities $(X + Y)^\\theta = X^\\theta + Y^\\theta$ and $(A^n)^\\theta = (A^\\theta)^n$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^\\theta = I + A^\\theta + \\frac{(A^\\theta)^2}{2!} + \\frac{(A^\\theta)^3}{3!} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the skew-Hermitian condition $A^\\theta = -A$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^\\theta = I + (-A) + \\frac{(-A)^2}{2!} + \\frac{(-A)^3}{3!} + \\frac{(-A)^4}{4!} + \\dots = e^{-A}"
-    },
-    {
-     "t": "p",
-     "text": "Now multiply $B$ and $B^\\theta$:"
-    },
-    {
-     "t": "math",
-     "tex": "B \\cdot B^\\theta = e^A \\cdot e^{-A}"
-    },
-    {
-     "t": "p",
-     "text": "Since $A$ and $-A$ commute ($A(-A) = (-A)A = -A^2$), the exponential addition law $e^X e^Y = e^{X+Y}$ holds strictly:"
-    },
-    {
-     "t": "math",
-     "tex": "B \\cdot B^\\theta = e^{A - A} = e^{\\mathbf{0}} = I_n"
-    },
-    {
-     "t": "p",
-     "text": "Because $B \\cdot B^\\theta = I$, $B = e^A$ is **Unitary**. $\\checkmark$"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion for Option C:** TRUE ($\\mathbf{C \\text{ is valid}}$)."
-    },
-    {
-     "t": "h4",
-     "text": "Comprehensive Disproof of Option D (Slides 058\u2013059):"
-    },
-    {
-     "t": "h4",
-     "text": "Given: $A$ is Hermitian ($A^\\theta = A$). Let $B = e^A$."
-    },
-    {
-     "t": "p",
-     "text": "Take the conjugate transpose:"
-    },
-    {
-     "t": "math",
-     "tex": "B^\\theta = (e^A)^\\theta = e^{A^\\theta} = e^A"
-    },
-    {
-     "t": "p",
-     "text": "Now multiply $B$ and $B^\\theta$:"
-    },
-    {
-     "t": "math",
-     "tex": "B \\cdot B^\\theta = e^A \\cdot e^A = e^{2A}"
-    },
-    {
-     "t": "p",
-     "text": "For $B$ to be unitary, we require $B B^\\theta = I \\iff e^{2A} = I$.  \nHowever, $e^{2A} \\neq I$ for general Hermitian matrices $A$ (it equals $I$ if and only if $A = \\mathbf{0}$).  \nInstead, because $(e^A)^\\theta = e^A$, $e^A$ is **Hermitian** (and positive definite), **NOT unitary**. $\\times$"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion for Option D:** FALSE ($\\mathbf{D \\text{ is incorrect}}$)."
-    },
-    {
-     "t": "h4",
-     "text": "Final Options Verdict:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{Options \\; A, \\; B, \\; and \\; C \\; are \\; TRUE.}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Chalkboard Definition of \"iff\" (Slide 056):"
+      },
+      {
+       "t": "p",
+       "text": "$\\text{iff} \\equiv \\text{If and only If}$.  \n\"$X \\text{ is True iff } Y \\text{ is True}$\" requires bidirectional equivalence:  \n1. $\\text{If } X \\text{ is True} \\implies Y \\text{ is True}$  \n2. $\\text{If } Y \\text{ is True} \\implies X \\text{ is True}$"
+      },
+      {
+       "t": "h4",
+       "text": "Comprehensive Proof of Option A (Slides 056\u2013057):"
+      },
+      {
+       "t": "p",
+       "text": "Let $B = iA$."
+      },
+      {
+       "t": "h4",
+       "text": "Forward Direction ($\\implies$): Given $A$ is skew-Hermitian ($A^\\theta = -A$)"
+      },
+      {
+       "t": "p",
+       "text": "Compute $B^\\theta$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^\\theta = (iA)^\\theta = i^* A^\\theta = (-i) A^\\theta"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $A^\\theta = -A$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^\\theta = (-i)(-A) = iA = B"
+      },
+      {
+       "t": "p",
+       "text": "Since $B^\\theta = B$, $B = iA$ is **Hermitian**. $\\checkmark$"
+      },
+      {
+       "t": "h4",
+       "text": "Reverse Direction ($\\impliedby$): Given $iA$ is Hermitian ($(iA)^\\theta = iA$)"
+      },
+      {
+       "t": "p",
+       "text": "Expand the left-hand side:"
+      },
+      {
+       "t": "math",
+       "tex": "(iA)^\\theta = i^* A^\\theta = -i A^\\theta"
+      },
+      {
+       "t": "p",
+       "text": "Equate to the right-hand side:"
+      },
+      {
+       "t": "math",
+       "tex": "-i A^\\theta = i A"
+      },
+      {
+       "t": "p",
+       "text": "Divide both sides by $i$ (or multiply by $-i$):"
+      },
+      {
+       "t": "math",
+       "tex": "-A^\\theta = A \\implies A^\\theta = -A"
+      },
+      {
+       "t": "p",
+       "text": "Thus, $A$ is **skew-Hermitian**. $\\checkmark$"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion for Option A:** TRUE ($\\mathbf{A \\text{ is valid}}$)."
+      },
+      {
+       "t": "h4",
+       "text": "Comprehensive Proof of Option B (Assigned as Chalk Homework on Slide 057):"
+      },
+      {
+       "t": "p",
+       "text": "Let $B = iA$."
+      },
+      {
+       "t": "h4",
+       "text": "Forward Direction ($\\implies$): Given $A$ is Hermitian ($A^\\theta = A$)"
+      },
+      {
+       "t": "p",
+       "text": "Compute $B^\\theta$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^\\theta = (iA)^\\theta = i^* A^\\theta = (-i) A = -(iA) = -B"
+      },
+      {
+       "t": "p",
+       "text": "Since $B^\\theta = -B$, $B = iA$ is **skew-Hermitian**. $\\checkmark$"
+      },
+      {
+       "t": "h4",
+       "text": "Reverse Direction ($\\impliedby$): Given $iA$ is skew-Hermitian ($(iA)^\\theta = -(iA)$)"
+      },
+      {
+       "t": "math",
+       "tex": "(iA)^\\theta = -i A^\\theta"
+      },
+      {
+       "t": "p",
+       "text": "Equating:"
+      },
+      {
+       "t": "math",
+       "tex": "-i A^\\theta = -i A \\implies A^\\theta = A"
+      },
+      {
+       "t": "p",
+       "text": "Thus, $A$ is **Hermitian**. $\\checkmark$"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion for Option B:** TRUE ($\\mathbf{B \\text{ is valid}}$)."
+      },
+      {
+       "t": "h4",
+       "text": "Comprehensive Proof of Option C (Slides 057\u2013058):"
+      },
+      {
+       "t": "h4",
+       "text": "Given: $A$ is skew-Hermitian ($A^\\theta = -A$). Let $B = e^A$."
+      },
+      {
+       "t": "p",
+       "text": "Test the condition for unitarity: $B B^\\theta = I$.\nExpress $B = e^A$ as a power series:"
+      },
+      {
+       "t": "math",
+       "tex": "B = e^A = I + A + \\frac{A^2}{2!} + \\frac{A^3}{3!} + \\frac{A^4}{4!} + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Take the conjugate transpose $B^\\theta$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^\\theta = (e^A)^\\theta = I^\\theta + A^\\theta + \\frac{(A^2)^\\theta}{2!} + \\frac{(A^3)^\\theta}{3!} + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Using the algebraic identities $(X + Y)^\\theta = X^\\theta + Y^\\theta$ and $(A^n)^\\theta = (A^\\theta)^n$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^\\theta = I + A^\\theta + \\frac{(A^\\theta)^2}{2!} + \\frac{(A^\\theta)^3}{3!} + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the skew-Hermitian condition $A^\\theta = -A$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^\\theta = I + (-A) + \\frac{(-A)^2}{2!} + \\frac{(-A)^3}{3!} + \\frac{(-A)^4}{4!} + \\dots = e^{-A}"
+      },
+      {
+       "t": "p",
+       "text": "Now multiply $B$ and $B^\\theta$:"
+      },
+      {
+       "t": "math",
+       "tex": "B \\cdot B^\\theta = e^A \\cdot e^{-A}"
+      },
+      {
+       "t": "p",
+       "text": "Since $A$ and $-A$ commute ($A(-A) = (-A)A = -A^2$), the exponential addition law $e^X e^Y = e^{X+Y}$ holds strictly:"
+      },
+      {
+       "t": "math",
+       "tex": "B \\cdot B^\\theta = e^{A - A} = e^{\\mathbf{0}} = I_n"
+      },
+      {
+       "t": "p",
+       "text": "Because $B \\cdot B^\\theta = I$, $B = e^A$ is **Unitary**. $\\checkmark$"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion for Option C:** TRUE ($\\mathbf{C \\text{ is valid}}$)."
+      },
+      {
+       "t": "h4",
+       "text": "Comprehensive Disproof of Option D (Slides 058\u2013059):"
+      },
+      {
+       "t": "h4",
+       "text": "Given: $A$ is Hermitian ($A^\\theta = A$). Let $B = e^A$."
+      },
+      {
+       "t": "p",
+       "text": "Take the conjugate transpose:"
+      },
+      {
+       "t": "math",
+       "tex": "B^\\theta = (e^A)^\\theta = e^{A^\\theta} = e^A"
+      },
+      {
+       "t": "p",
+       "text": "Now multiply $B$ and $B^\\theta$:"
+      },
+      {
+       "t": "math",
+       "tex": "B \\cdot B^\\theta = e^A \\cdot e^A = e^{2A}"
+      },
+      {
+       "t": "p",
+       "text": "For $B$ to be unitary, we require $B B^\\theta = I \\iff e^{2A} = I$.  \nHowever, $e^{2A} \\neq I$ for general Hermitian matrices $A$ (it equals $I$ if and only if $A = \\mathbf{0}$).  \nInstead, because $(e^A)^\\theta = e^A$, $e^A$ is **Hermitian** (and positive definite), **NOT unitary**. $\\times$"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion for Option D:** FALSE ($\\mathbf{D \\text{ is incorrect}}$)."
+      },
+      {
+       "t": "h4",
+       "text": "Final Options Verdict:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{Options \\; A, \\; B, \\; and \\; C \\; are \\; TRUE.}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -4244,32 +4244,35 @@ export default {
      "text": "**Problem:** Evaluate the determinant of $A = \\begin{bmatrix} 2 & -1 \\\\ -3 & 1 \\end{bmatrix}$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Apply the $2 \\times 2$ cross-multiplication formula:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = \\begin{vmatrix} 2 & -1 \\\\ -3 & 1 \\end{vmatrix} = (2)(1) - (-1)(-3)"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 2 - (+3) = 2 - 3 = -1"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** $\\mathbf{-1}$"
-    },
-    {
-     "t": "h4",
-     "text": "Diagnostic Exam Trap:"
-    },
-    {
-     "t": "p",
-     "text": "Pay careful attention to double negative signs: $(-1) \\times (-3) = +3$, subtracted from 2 gives $2 - 3 = -1$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Apply the $2 \\times 2$ cross-multiplication formula:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = \\begin{vmatrix} 2 & -1 \\\\ -3 & 1 \\end{vmatrix} = (2)(1) - (-1)(-3)"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 2 - (+3) = 2 - 3 = -1"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** $\\mathbf{-1}$"
+      },
+      {
+       "t": "h4",
+       "text": "Diagnostic Exam Trap:"
+      },
+      {
+       "t": "p",
+       "text": "Pay careful attention to double negative signs: $(-1) \\times (-3) = +3$, subtracted from 2 gives $2 - 3 = -1$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -4353,48 +4356,51 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Part 1: Minor of element 3"
-    },
-    {
-     "t": "p",
-     "text": "Element $3$ is located at position $(2, 3)$ (Row 2, Column 3).  \nDelete Row 2 and Column 3:"
-    },
-    {
-     "t": "math",
-     "tex": "M_{23} = \\begin{vmatrix} 2 & 5 \\\\ -3 & -2 \\end{vmatrix} = (2)(-2) - (5)(-3) = -4 - (-15) = -4 + 15 = 11"
-    },
-    {
-     "t": "h4",
-     "text": "Part 2: Minor of element 0"
-    },
-    {
-     "t": "p",
-     "text": "Element $0$ is located at position $(1, 3)$ (Row 1, Column 3).  \nDelete Row 1 and Column 3:"
-    },
-    {
-     "t": "math",
-     "tex": "M_{13} = \\begin{vmatrix} -1 & 1 \\\\ -3 & -2 \\end{vmatrix} = (-1)(-2) - (1)(-3) = 2 - (-3) = 2 + 3 = 5"
-    },
-    {
-     "t": "h4",
-     "text": "Part 3: Minor of element 2"
-    },
-    {
-     "t": "p",
-     "text": "Element $2$ is located at position $(1, 1)$ (Row 1, Column 1).  \nDelete Row 1 and Column 1:"
-    },
-    {
-     "t": "math",
-     "tex": "M_{11} = \\begin{vmatrix} 1 & 3 \\\\ -2 & 4 \\end{vmatrix} = (1)(4) - (3)(-2) = 4 - (-6) = 4 + 6 = 10"
-    },
-    {
-     "t": "p",
-     "text": "**Summary of Answers:** $M_{23} = 11, \\quad M_{13} = 5, \\quad M_{11} = 10$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part 1: Minor of element 3"
+      },
+      {
+       "t": "p",
+       "text": "Element $3$ is located at position $(2, 3)$ (Row 2, Column 3).  \nDelete Row 2 and Column 3:"
+      },
+      {
+       "t": "math",
+       "tex": "M_{23} = \\begin{vmatrix} 2 & 5 \\\\ -3 & -2 \\end{vmatrix} = (2)(-2) - (5)(-3) = -4 - (-15) = -4 + 15 = 11"
+      },
+      {
+       "t": "h4",
+       "text": "Part 2: Minor of element 0"
+      },
+      {
+       "t": "p",
+       "text": "Element $0$ is located at position $(1, 3)$ (Row 1, Column 3).  \nDelete Row 1 and Column 3:"
+      },
+      {
+       "t": "math",
+       "tex": "M_{13} = \\begin{vmatrix} -1 & 1 \\\\ -3 & -2 \\end{vmatrix} = (-1)(-2) - (1)(-3) = 2 - (-3) = 2 + 3 = 5"
+      },
+      {
+       "t": "h4",
+       "text": "Part 3: Minor of element 2"
+      },
+      {
+       "t": "p",
+       "text": "Element $2$ is located at position $(1, 1)$ (Row 1, Column 1).  \nDelete Row 1 and Column 1:"
+      },
+      {
+       "t": "math",
+       "tex": "M_{11} = \\begin{vmatrix} 1 & 3 \\\\ -2 & 4 \\end{vmatrix} = (1)(4) - (3)(-2) = 4 - (-6) = 4 + 6 = 10"
+      },
+      {
+       "t": "p",
+       "text": "**Summary of Answers:** $M_{23} = 11, \\quad M_{13} = 5, \\quad M_{11} = 10$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4585,64 +4591,67 @@ export default {
      "tex": "A = \\begin{bmatrix} 2 & -1 & 0 \\\\ 1 & 3 & 1 \\\\ -1 & 2 & 4 \\end{bmatrix}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Sign checkerboard matrix: $\\begin{bmatrix} + & - & + \\\\ - & + & - \\\\ + & - & + \\end{bmatrix}$"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Expansion along Row 1 ($R_1$)"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = +2 \\begin{vmatrix} 3 & 1 \\\\ 2 & 4 \\end{vmatrix} - (-1) \\begin{vmatrix} 1 & 1 \\\\ -1 & 4 \\end{vmatrix} + 0 \\begin{vmatrix} 1 & 3 \\\\ -1 & 2 \\end{vmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 2[(3)(4) - (1)(2)] + 1[(1)(4) - (1)(-1)] + 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 2[12 - 2] + 1[4 + 1] = 2(10) + 1(5) = 20 + 5 = 25"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Expansion along Column 2 ($C_2$)"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = -(-1) \\begin{vmatrix} 1 & 1 \\\\ -1 & 4 \\end{vmatrix} + 3 \\begin{vmatrix} 2 & 0 \\\\ -1 & 4 \\end{vmatrix} - 2 \\begin{vmatrix} 2 & 0 \\\\ 1 & 1 \\end{vmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 1[4 - (-1)] + 3[8 - 0] - 2[2 - 0]"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 1(5) + 3(8) - 2(2) = 5 + 24 - 4 = 25"
-    },
-    {
-     "t": "h4",
-     "text": "Method 3: Expansion along Column 3 ($C_3$)"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = +0 \\begin{vmatrix} 1 & 3 \\\\ -1 & 2 \\end{vmatrix} - 1 \\begin{vmatrix} 2 & -1 \\\\ -1 & 2 \\end{vmatrix} + 4 \\begin{vmatrix} 2 & -1 \\\\ 1 & 3 \\end{vmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 0 - 1[(2)(2) - (-1)(-1)] + 4[(2)(3) - (-1)(1)]"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = -1[4 - 1] + 4[6 + 1] = -1(3) + 4(7) = -3 + 28 = 25"
-    },
-    {
-     "t": "p",
-     "text": "All three expansion routes produce identically $\\mathbf{25}$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Sign checkerboard matrix: $\\begin{bmatrix} + & - & + \\\\ - & + & - \\\\ + & - & + \\end{bmatrix}$"
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Expansion along Row 1 ($R_1$)"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = +2 \\begin{vmatrix} 3 & 1 \\\\ 2 & 4 \\end{vmatrix} - (-1) \\begin{vmatrix} 1 & 1 \\\\ -1 & 4 \\end{vmatrix} + 0 \\begin{vmatrix} 1 & 3 \\\\ -1 & 2 \\end{vmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 2[(3)(4) - (1)(2)] + 1[(1)(4) - (1)(-1)] + 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 2[12 - 2] + 1[4 + 1] = 2(10) + 1(5) = 20 + 5 = 25"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Expansion along Column 2 ($C_2$)"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = -(-1) \\begin{vmatrix} 1 & 1 \\\\ -1 & 4 \\end{vmatrix} + 3 \\begin{vmatrix} 2 & 0 \\\\ -1 & 4 \\end{vmatrix} - 2 \\begin{vmatrix} 2 & 0 \\\\ 1 & 1 \\end{vmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 1[4 - (-1)] + 3[8 - 0] - 2[2 - 0]"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 1(5) + 3(8) - 2(2) = 5 + 24 - 4 = 25"
+      },
+      {
+       "t": "h4",
+       "text": "Method 3: Expansion along Column 3 ($C_3$)"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = +0 \\begin{vmatrix} 1 & 3 \\\\ -1 & 2 \\end{vmatrix} - 1 \\begin{vmatrix} 2 & -1 \\\\ -1 & 2 \\end{vmatrix} + 4 \\begin{vmatrix} 2 & -1 \\\\ 1 & 3 \\end{vmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 0 - 1[(2)(2) - (-1)(-1)] + 4[(2)(3) - (-1)(1)]"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = -1[4 - 1] + 4[6 + 1] = -1(3) + 4(7) = -3 + 28 = 25"
+      },
+      {
+       "t": "p",
+       "text": "All three expansion routes produce identically $\\mathbf{25}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4661,66 +4670,65 @@ export default {
      "tex": "A = \\begin{bmatrix} 17 & 3 & -99 \\\\ 7 & 0 & 3 \\\\ 2 & 0 & 4 \\end{bmatrix}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Tactical Observation"
-    },
-    {
-     "t": "p",
-     "text": "Notice that Column 2 ($C_2$) contains entries $[3, 0, 0]^T$. Two out of the three entries are zero! Expanding along $C_2$ eliminates two $2 \\times 2$ determinants immediately."
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Expansion along Column 2 ($C_2$)"
-    },
-    {
-     "t": "p",
-     "text": "Sign of position $(1, 2)$ is $(-1)^{1+2} = -$."
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = -3 \\begin{vmatrix} 7 & 3 \\\\ 2 & 4 \\end{vmatrix} + 0 - 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = -3[(7)(4) - (3)(2)] = -3[28 - 6] = -3(22) = -66"
-    },
-    {
-     "t": "p",
-     "text": "Calculation completed in 5 seconds!"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Verification along Row 3 ($R_3$)"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = +2 \\begin{vmatrix} 3 & -99 \\\\ 0 & 3 \\end{vmatrix} - 0 + 4 \\begin{vmatrix} 17 & 3 \\\\ 7 & 0 \\end{vmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 2[(3)(3) - 0] + 4[0 - (3)(7)]"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 2(9) + 4(-21) = 18 - 84 = -66"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** $\\mathbf{-66}$"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE Speed Optimization Strategy:**  \nAlways scan the matrix for rows or columns with the highest density of zeros before starting Laplace expansion."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Tactical Observation"
+      },
+      {
+       "t": "p",
+       "text": "Notice that Column 2 ($C_2$) contains entries $[3, 0, 0]^T$. Two out of the three entries are zero! Expanding along $C_2$ eliminates two $2 \\times 2$ determinants immediately."
+      },
+      {
+       "t": "h4",
+       "text": "Method 1: Expansion along Column 2 ($C_2$)"
+      },
+      {
+       "t": "p",
+       "text": "Sign of position $(1, 2)$ is $(-1)^{1+2} = -$."
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = -3 \\begin{vmatrix} 7 & 3 \\\\ 2 & 4 \\end{vmatrix} + 0 - 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = -3[(7)(4) - (3)(2)] = -3[28 - 6] = -3(22) = -66"
+      },
+      {
+       "t": "p",
+       "text": "Calculation completed in 5 seconds!"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Verification along Row 3 ($R_3$)"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = +2 \\begin{vmatrix} 3 & -99 \\\\ 0 & 3 \\end{vmatrix} - 0 + 4 \\begin{vmatrix} 17 & 3 \\\\ 7 & 0 \\end{vmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 2[(3)(3) - 0] + 4[0 - (3)(7)]"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 2(9) + 4(-21) = 18 - 84 = -66"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** $\\mathbf{-66}$"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE Speed Optimization Strategy:**  \nAlways scan the matrix for rows or columns with the highest density of zeros before starting Laplace expansion."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -4752,112 +4760,111 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Expand $\\det(M)$ Symbolically"
-    },
-    {
-     "t": "p",
-     "text": "To exploit the zero entry in row 2, expand along Column 3 ($C_3$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert M \\vert = \\begin{vmatrix} 2 & 1 & 1 \\\\ 1 & 3 & 0 \\\\ -1 & a & b \\end{vmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Signs for $C_3$: $(+1, -0, +b)$."
-    },
-    {
-     "t": "math",
-     "tex": "\\vert M \\vert = +1 \\begin{vmatrix} 1 & 3 \\\\ -1 & a \\end{vmatrix} - 0 \\begin{vmatrix} 2 & 1 \\\\ -1 & a \\end{vmatrix} + b \\begin{vmatrix} 2 & 1 \\\\ 1 & 3 \\end{vmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert M \\vert = 1[(1)(a) - (3)(-1)] + b[(2)(3) - (1)(1)]"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert M \\vert = 1(a + 3) + b(6 - 1) = a + 3 + 5b"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Establish the Non-Singularity Condition"
-    },
-    {
-     "t": "p",
-     "text": "The problem stipulates $\\det(M) \\neq 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "a + 5b + 3 \\neq 0"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Test Each Option"
-    },
-    {
-     "t": "h4",
-     "text": "Test Option (A): $a = -1/2, b = -1/2$"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Expression} = -\\frac{1}{2} + 3 + 5\\left(-\\frac{1}{2}\\right) = -0.5 + 3 - 2.5 = 2.5 - 2.5 = 0"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\det(M) = 0$, condition $\\det(M) \\neq 0$ is violated! $\\times$ **(Option A is FALSE)**"
-    },
-    {
-     "t": "h4",
-     "text": "Test Option (B): $a = 1/2, b = 1/2$"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Expression} = \\frac{1}{2} + 3 + 5\\left(\\frac{1}{2}\\right) = 0.5 + 3 + 2.5 = 6 \\neq 0"
-    },
-    {
-     "t": "p",
-     "text": "Condition $\\det(M) \\neq 0$ is satisfied! $\\checkmark$ **(Option B is TRUE)**"
-    },
-    {
-     "t": "h4",
-     "text": "Test Option (C): $a = -3, b = 0$"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Expression} = -3 + 3 + 5(0) = 0"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\det(M) = 0$, condition is violated! $\\times$ **(Option C is FALSE)**"
-    },
-    {
-     "t": "h4",
-     "text": "Test Option (D): $a = 1/2, b = -3$"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Expression} = \\frac{1}{2} + 3 + 5(-3) = 0.5 + 3 - 15 = 3.5 - 15 = -11.5 \\neq 0"
-    },
-    {
-     "t": "p",
-     "text": "Condition $\\det(M) \\neq 0$ is satisfied! $\\checkmark$ **(Option D is TRUE)**"
-    },
-    {
-     "t": "h4",
-     "text": "Final Answer:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{Options \\; (B) \\; and \\; (D) \\; are \\; TRUE \\; (Multi\\text{-}Select \\; Question \\; MSQ)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Expand $\\det(M)$ Symbolically"
+      },
+      {
+       "t": "p",
+       "text": "To exploit the zero entry in row 2, expand along Column 3 ($C_3$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert M \\vert = \\begin{vmatrix} 2 & 1 & 1 \\\\ 1 & 3 & 0 \\\\ -1 & a & b \\end{vmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Signs for $C_3$: $(+1, -0, +b)$."
+      },
+      {
+       "t": "math",
+       "tex": "\\vert M \\vert = +1 \\begin{vmatrix} 1 & 3 \\\\ -1 & a \\end{vmatrix} - 0 \\begin{vmatrix} 2 & 1 \\\\ -1 & a \\end{vmatrix} + b \\begin{vmatrix} 2 & 1 \\\\ 1 & 3 \\end{vmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert M \\vert = 1[(1)(a) - (3)(-1)] + b[(2)(3) - (1)(1)]"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert M \\vert = 1(a + 3) + b(6 - 1) = a + 3 + 5b"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Establish the Non-Singularity Condition"
+      },
+      {
+       "t": "p",
+       "text": "The problem stipulates $\\det(M) \\neq 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "a + 5b + 3 \\neq 0"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Test Each Option"
+      },
+      {
+       "t": "h4",
+       "text": "Test Option (A): $a = -1/2, b = -1/2$"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Expression} = -\\frac{1}{2} + 3 + 5\\left(-\\frac{1}{2}\\right) = -0.5 + 3 - 2.5 = 2.5 - 2.5 = 0"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\det(M) = 0$, condition $\\det(M) \\neq 0$ is violated! $\\times$ **(Option A is FALSE)**"
+      },
+      {
+       "t": "h4",
+       "text": "Test Option (B): $a = 1/2, b = 1/2$"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Expression} = \\frac{1}{2} + 3 + 5\\left(\\frac{1}{2}\\right) = 0.5 + 3 + 2.5 = 6 \\neq 0"
+      },
+      {
+       "t": "p",
+       "text": "Condition $\\det(M) \\neq 0$ is satisfied! $\\checkmark$ **(Option B is TRUE)**"
+      },
+      {
+       "t": "h4",
+       "text": "Test Option (C): $a = -3, b = 0$"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Expression} = -3 + 3 + 5(0) = 0"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\det(M) = 0$, condition is violated! $\\times$ **(Option C is FALSE)**"
+      },
+      {
+       "t": "h4",
+       "text": "Test Option (D): $a = 1/2, b = -3$"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Expression} = \\frac{1}{2} + 3 + 5(-3) = 0.5 + 3 - 15 = 3.5 - 15 = -11.5 \\neq 0"
+      },
+      {
+       "t": "p",
+       "text": "Condition $\\det(M) \\neq 0$ is satisfied! $\\checkmark$ **(Option D is TRUE)**"
+      },
+      {
+       "t": "h4",
+       "text": "Final Answer:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{Options \\; (B) \\; and \\; (D) \\; are \\; TRUE \\; (Multi\\text{-}Select \\; Question \\; MSQ)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -5050,48 +5057,51 @@ export default {
      "text": "**Question:** Given $A = \\begin{bmatrix} 1 & -1 & 0 \\\\ 2 & 1 & -1 \\\\ 0 & 2 & 1 \\end{bmatrix}$ and $B = -2A$. Find $\\det(A)$ and $\\det(B)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Compute $\\det(A)$"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 1[(1)(1) - (-1)(2)] - (-1)[(2)(1) - (-1)(0)] + 0 = 1(1 + 2) + 1(2) = 3 + 2 = 5"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Compute by Direct Entry Scaling"
-    },
-    {
-     "t": "math",
-     "tex": "B = -2 A = \\begin{bmatrix} -2 & 2 & 0 \\\\ -4 & -2 & 2 \\\\ 0 & -4 & -2 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert B \\vert = -2[(-2)(-2) - (2)(-4)] - 2[(-4)(-2) - (2)(0)] + 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert B \\vert = -2[4 + 8] - 2[8 - 0] = -2(12) - 2(8) = -24 - 16 = -40"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Compute via Master Property"
-    },
-    {
-     "t": "p",
-     "text": "Matrix size $n = 3$, scalar $k = -2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert B \\vert = \\vert -2A \\vert = (-2)^3 \\vert A \\vert = -8(5) = -40"
-    },
-    {
-     "t": "p",
-     "text": "Both methods match.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Compute $\\det(A)$"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 1[(1)(1) - (-1)(2)] - (-1)[(2)(1) - (-1)(0)] + 0 = 1(1 + 2) + 1(2) = 3 + 2 = 5"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Compute by Direct Entry Scaling"
+      },
+      {
+       "t": "math",
+       "tex": "B = -2 A = \\begin{bmatrix} -2 & 2 & 0 \\\\ -4 & -2 & 2 \\\\ 0 & -4 & -2 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert B \\vert = -2[(-2)(-2) - (2)(-4)] - 2[(-4)(-2) - (2)(0)] + 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert B \\vert = -2[4 + 8] - 2[8 - 0] = -2(12) - 2(8) = -24 - 16 = -40"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Compute via Master Property"
+      },
+      {
+       "t": "p",
+       "text": "Matrix size $n = 3$, scalar $k = -2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert B \\vert = \\vert -2A \\vert = (-2)^3 \\vert A \\vert = -8(5) = -40"
+      },
+      {
+       "t": "p",
+       "text": "Both methods match."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5155,32 +5165,35 @@ export default {
      "text": "**Question:** Matrix $B = 4 I_3$, where $I_3$ is the identity matrix of 3rd order. Find $\\vert B \\vert$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "math",
-     "tex": "B = 4 I_3 = \\begin{bmatrix} 4 & 0 & 0 \\\\ 0 & 4 & 0 \\\\ 0 & 0 & 4 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Using the diagonal product rule:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert B \\vert = (4)(4)(4) = 4^3 = 64"
-    },
-    {
-     "t": "p",
-     "text": "Using scalar formula $\\vert k A \\vert = k^n \\vert A \\vert$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert 4 I_3 \\vert = 4^3 \\vert I_3 \\vert = 64(1) = 64"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** $\\mathbf{64}$\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "math",
+       "tex": "B = 4 I_3 = \\begin{bmatrix} 4 & 0 & 0 \\\\ 0 & 4 & 0 \\\\ 0 & 0 & 4 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Using the diagonal product rule:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert B \\vert = (4)(4)(4) = 4^3 = 64"
+      },
+      {
+       "t": "p",
+       "text": "Using scalar formula $\\vert k A \\vert = k^n \\vert A \\vert$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert 4 I_3 \\vert = 4^3 \\vert I_3 \\vert = 64(1) = 64"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** $\\mathbf{64}$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5483,44 +5496,43 @@ export default {
      "text": "**Question:** Evaluate $\\vert A \\vert = \\begin{vmatrix} 1 & 2 & -1 \\\\ 3 & 1 & 2 \\\\ 1 & -3 & 4 \\end{vmatrix}$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Apply the elementary row operation $R_2 \\to R_2 - 2 R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\text{ becomes: } [3 - 2(1), \\; 1 - 2(2), \\; 2 - 2(-1)] = [1, \\; -3, \\; 4]"
-    },
-    {
-     "t": "p",
-     "text": "The determinant transforms to:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = \\begin{vmatrix} 1 & 2 & -1 \\\\ 1 & -3 & 4 \\\\ 1 & -3 & 4 \\end{vmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Notice that Row 2 and Row 3 are now identical ($R_2 = R_3$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore \\vert A \\vert = 0"
-    },
-    {
-     "t": "p",
-     "text": "Further applying $R_3 \\to R_3 - R_2$ gives a row of pure zeros:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} 1 & 2 & -1 \\\\ 1 & -3 & 4 \\\\ 0 & 0 & 0 \\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Apply the elementary row operation $R_2 \\to R_2 - 2 R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\text{ becomes: } [3 - 2(1), \\; 1 - 2(2), \\; 2 - 2(-1)] = [1, \\; -3, \\; 4]"
+      },
+      {
+       "t": "p",
+       "text": "The determinant transforms to:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = \\begin{vmatrix} 1 & 2 & -1 \\\\ 1 & -3 & 4 \\\\ 1 & -3 & 4 \\end{vmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Notice that Row 2 and Row 3 are now identical ($R_2 = R_3$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore \\vert A \\vert = 0"
+      },
+      {
+       "t": "p",
+       "text": "Further applying $R_3 \\to R_3 - R_2$ gives a row of pure zeros:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} 1 & 2 & -1 \\\\ 1 & -3 & 4 \\\\ 0 & 0 & 0 \\end{vmatrix} = 0"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5553,44 +5565,47 @@ export default {
      "text": "Given $A = \\begin{bmatrix} 2 & 1 \\\\ 4 & 6 \\end{bmatrix} \\implies \\vert A \\vert = 12 - 4 = 8$.  \nPerform operation $R_2 \\to 2 R_2 - 3 R_1$ to get matrix $B$. Find $\\det(B)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Execute the Operation"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\text{ new} = 2[4, 6] - 3[2, 1] = [8 - 6, 12 - 3] = [2, 9]"
-    },
-    {
-     "t": "math",
-     "tex": "B = \\begin{bmatrix} 2 & 1 \\\\ 2 & 9 \\end{bmatrix}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Evaluate $\\det(B)$"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert B \\vert = (2)(9) - (1)(2) = 18 - 2 = 16"
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Compare with $\\det(A)$"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert B \\vert = 16 = 2 \\times 8 = 2 \\vert A \\vert"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore \\vert B \\vert = 2 \\vert A \\vert"
-    },
-    {
-     "t": "p",
-     "text": "The pre-multiplier of $R_2$ was $2$, which scaled the entire determinant by a factor of 2.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Execute the Operation"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\text{ new} = 2[4, 6] - 3[2, 1] = [8 - 6, 12 - 3] = [2, 9]"
+      },
+      {
+       "t": "math",
+       "tex": "B = \\begin{bmatrix} 2 & 1 \\\\ 2 & 9 \\end{bmatrix}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Evaluate $\\det(B)$"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert B \\vert = (2)(9) - (1)(2) = 18 - 2 = 16"
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Compare with $\\det(A)$"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert B \\vert = 16 = 2 \\times 8 = 2 \\vert A \\vert"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore \\vert B \\vert = 2 \\vert A \\vert"
+      },
+      {
+       "t": "p",
+       "text": "The pre-multiplier of $R_2$ was $2$, which scaled the entire determinant by a factor of 2."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5623,96 +5638,99 @@ export default {
      "tex": "\\vert B \\vert + \\vert C \\vert + \\vert D \\vert + \\vert E \\vert + \\vert F \\vert + \\vert G \\vert"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Given: Order $n = 3$, $\\vert A \\vert = -3$."
-    },
-    {
-     "t": "h4",
-     "text": "1. Evaluation of $\\vert B \\vert$:"
-    },
-    {
-     "t": "math",
-     "tex": "B = 2A \\implies \\vert B \\vert = \\vert 2A \\vert = (2)^n \\vert A \\vert = 2^3 (-3) = 8(-3) = -24"
-    },
-    {
-     "t": "h4",
-     "text": "2. Evaluation of $\\vert C \\vert$:"
-    },
-    {
-     "t": "math",
-     "tex": "C = A^3 \\implies \\vert C \\vert = (\\vert A \\vert)^3 = (-3)^3 = -27"
-    },
-    {
-     "t": "h4",
-     "text": "3. Evaluation of $\\vert D \\vert$:"
-    },
-    {
-     "t": "p",
-     "text": "Operation $R_3 \\leftrightarrow R_2$ is a single row swap:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert D \\vert = -\\vert A \\vert = -(-3) = +3"
-    },
-    {
-     "t": "h4",
-     "text": "4. Evaluation of $\\vert E \\vert$:"
-    },
-    {
-     "t": "p",
-     "text": "Operation $C_1 \\leftrightarrow C_2$ is a single column swap applied to $D$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert E \\vert = -\\vert D \\vert = -(3) = -3"
-    },
-    {
-     "t": "h4",
-     "text": "5. Evaluation of $\\vert F \\vert$:"
-    },
-    {
-     "t": "p",
-     "text": "Operation $R_3 \\to R_3 + 2 R_1$ is an elementary addition with unit leading coefficient:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert F \\vert = \\vert E \\vert = -3"
-    },
-    {
-     "t": "h4",
-     "text": "6. Evaluation of $\\vert G \\vert$:"
-    },
-    {
-     "t": "p",
-     "text": "Operation $C_1 \\to 3 C_1 - 2 C_2$ replaces $C_1$ with a linear combination where $C_1$ is pre-multiplied by $3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert G \\vert = 3 \\vert F \\vert = 3(-3) = -9"
-    },
-    {
-     "t": "h4",
-     "text": "7. Summation of All Determinants:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sum} = \\vert B \\vert + \\vert C \\vert + \\vert D \\vert + \\vert E \\vert + \\vert F \\vert + \\vert G \\vert"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sum} = (-24) + (-27) + 3 + (-3) + (-3) + (-9)"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sum} = -51 + 0 - 12 = -63"
-    },
-    {
-     "t": "p",
-     "text": "**Final Boxed Chalkboard Answer:** $\\mathbf{-63}$\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Given: Order $n = 3$, $\\vert A \\vert = -3$."
+      },
+      {
+       "t": "h4",
+       "text": "1. Evaluation of $\\vert B \\vert$:"
+      },
+      {
+       "t": "math",
+       "tex": "B = 2A \\implies \\vert B \\vert = \\vert 2A \\vert = (2)^n \\vert A \\vert = 2^3 (-3) = 8(-3) = -24"
+      },
+      {
+       "t": "h4",
+       "text": "2. Evaluation of $\\vert C \\vert$:"
+      },
+      {
+       "t": "math",
+       "tex": "C = A^3 \\implies \\vert C \\vert = (\\vert A \\vert)^3 = (-3)^3 = -27"
+      },
+      {
+       "t": "h4",
+       "text": "3. Evaluation of $\\vert D \\vert$:"
+      },
+      {
+       "t": "p",
+       "text": "Operation $R_3 \\leftrightarrow R_2$ is a single row swap:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert D \\vert = -\\vert A \\vert = -(-3) = +3"
+      },
+      {
+       "t": "h4",
+       "text": "4. Evaluation of $\\vert E \\vert$:"
+      },
+      {
+       "t": "p",
+       "text": "Operation $C_1 \\leftrightarrow C_2$ is a single column swap applied to $D$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert E \\vert = -\\vert D \\vert = -(3) = -3"
+      },
+      {
+       "t": "h4",
+       "text": "5. Evaluation of $\\vert F \\vert$:"
+      },
+      {
+       "t": "p",
+       "text": "Operation $R_3 \\to R_3 + 2 R_1$ is an elementary addition with unit leading coefficient:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert F \\vert = \\vert E \\vert = -3"
+      },
+      {
+       "t": "h4",
+       "text": "6. Evaluation of $\\vert G \\vert$:"
+      },
+      {
+       "t": "p",
+       "text": "Operation $C_1 \\to 3 C_1 - 2 C_2$ replaces $C_1$ with a linear combination where $C_1$ is pre-multiplied by $3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert G \\vert = 3 \\vert F \\vert = 3(-3) = -9"
+      },
+      {
+       "t": "h4",
+       "text": "7. Summation of All Determinants:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sum} = \\vert B \\vert + \\vert C \\vert + \\vert D \\vert + \\vert E \\vert + \\vert F \\vert + \\vert G \\vert"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sum} = (-24) + (-27) + 3 + (-3) + (-3) + (-9)"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sum} = -51 + 0 - 12 = -63"
+      },
+      {
+       "t": "p",
+       "text": "**Final Boxed Chalkboard Answer:** $\\mathbf{-63}$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5795,63 +5813,66 @@ export default {
      "tex": "\\Delta = \\begin{vmatrix} a & b & c \\\\ a+2x & b+2y & c+2z \\\\ x & y & z \\end{vmatrix}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Row Operation (Slide 092)"
-    },
-    {
-     "t": "p",
-     "text": "Apply $R_1 \\to R_1 + 2 R_3$:"
-    },
-    {
-     "t": "math",
-     "tex": "R_1 \\text{ becomes: } [a + 2x, \\; b + 2y, \\; c + 2z]"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = \\begin{vmatrix} a+2x & b+2y & c+2z \\\\ a+2x & b+2y & c+2z \\\\ x & y & z \\end{vmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Since Row 1 and Row 2 are identical ($R_1 = R_2$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = 0"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Splitting Row 2 (Slide 093)"
-    },
-    {
-     "t": "p",
-     "text": "Split Row 2 into $[a, b, c] + [2x, 2y, 2z]$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = \\begin{vmatrix} a & b & c \\\\ a & b & c \\\\ x & y & z \\end{vmatrix} + \\begin{vmatrix} a & b & c \\\\ 2x & 2y & 2z \\\\ x & y & z \\end{vmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The first determinant has $R_1 = R_2 \\implies 0$.",
-      "In the second determinant, apply $R_2 \\to R_2 - 2 R_3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} a & b & c \\\\ 0 & 0 & 0 \\\\ x & y & z \\end{vmatrix} = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = 0 + 0 = 0"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** $\\mathbf{0}$\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Method 1: Row Operation (Slide 092)"
+      },
+      {
+       "t": "p",
+       "text": "Apply $R_1 \\to R_1 + 2 R_3$:"
+      },
+      {
+       "t": "math",
+       "tex": "R_1 \\text{ becomes: } [a + 2x, \\; b + 2y, \\; c + 2z]"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = \\begin{vmatrix} a+2x & b+2y & c+2z \\\\ a+2x & b+2y & c+2z \\\\ x & y & z \\end{vmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Since Row 1 and Row 2 are identical ($R_1 = R_2$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = 0"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Splitting Row 2 (Slide 093)"
+      },
+      {
+       "t": "p",
+       "text": "Split Row 2 into $[a, b, c] + [2x, 2y, 2z]$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = \\begin{vmatrix} a & b & c \\\\ a & b & c \\\\ x & y & z \\end{vmatrix} + \\begin{vmatrix} a & b & c \\\\ 2x & 2y & 2z \\\\ x & y & z \\end{vmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The first determinant has $R_1 = R_2 \\implies 0$.",
+        "In the second determinant, apply $R_2 \\to R_2 - 2 R_3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} a & b & c \\\\ 0 & 0 & 0 \\\\ x & y & z \\end{vmatrix} = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = 0 + 0 = 0"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** $\\mathbf{0}$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5870,60 +5891,59 @@ export default {
      "tex": "\\Delta = \\begin{vmatrix} 1 & a & bc \\\\ 1 & b & ca \\\\ 1 & c & ab \\end{vmatrix}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Perform Simultaneous Row Reductions"
-    },
-    {
-     "t": "p",
-     "text": "Apply $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = \\begin{vmatrix} 1 & a & bc \\\\ 1-1 & b-a & ca - bc \\\\ 1-1 & c-a & ab - bc \\end{vmatrix} = \\begin{vmatrix} 1 & a & bc \\\\ 0 & b-a & c(a-b) \\\\ 0 & c-a & b(a-c) \\end{vmatrix}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Expand along Column 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = 1 \\cdot \\begin{vmatrix} b-a & c(a-b) \\\\ c-a & b(a-c) \\end{vmatrix} - 0 + 0"
-    },
-    {
-     "t": "p",
-     "text": "Factor $(b-a) = -(a-b)$ and $(c-a) = -(a-c)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = (b-a) \\cdot b(a-c) - c(a-b) \\cdot (c-a)"
-    },
-    {
-     "t": "p",
-     "text": "Factor out $(a-b)(c-a)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = -(a-b) \\cdot [-b(c-a)] - c(a-b)(c-a)"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = (a-b)(c-a)[b - c] = -(a-b)(c-a)(b-c) = (a-b)(b-c)(c-a)"
-    },
-    {
-     "t": "p",
-     "text": "**Final Factorized Form:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{(a-b)(b-c)(c-a)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Perform Simultaneous Row Reductions"
+      },
+      {
+       "t": "p",
+       "text": "Apply $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = \\begin{vmatrix} 1 & a & bc \\\\ 1-1 & b-a & ca - bc \\\\ 1-1 & c-a & ab - bc \\end{vmatrix} = \\begin{vmatrix} 1 & a & bc \\\\ 0 & b-a & c(a-b) \\\\ 0 & c-a & b(a-c) \\end{vmatrix}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Expand along Column 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = 1 \\cdot \\begin{vmatrix} b-a & c(a-b) \\\\ c-a & b(a-c) \\end{vmatrix} - 0 + 0"
+      },
+      {
+       "t": "p",
+       "text": "Factor $(b-a) = -(a-b)$ and $(c-a) = -(a-c)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = (b-a) \\cdot b(a-c) - c(a-b) \\cdot (c-a)"
+      },
+      {
+       "t": "p",
+       "text": "Factor out $(a-b)(c-a)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = -(a-b) \\cdot [-b(c-a)] - c(a-b)(c-a)"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = (a-b)(c-a)[b - c] = -(a-b)(c-a)(b-c) = (a-b)(b-c)(c-a)"
+      },
+      {
+       "t": "p",
+       "text": "**Final Factorized Form:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{(a-b)(b-c)(c-a)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -5975,172 +5995,175 @@ export default {
      "text": "Find the value of the product $x y z$, given that $x, y, z$ are non-zero and mutually distinct ($x \\neq y \\neq z \\neq 0$)."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Method 1: Trial Substitution Method (Chalkboard Slides 096\u2013097)"
-    },
-    {
-     "t": "p",
-     "text": "Because the relationship holds for all distinct non-zero values, test simple values:"
-    },
-    {
-     "t": "h4",
-     "text": "Attempt 1 (Slide 096): Choose $x = 1, y = -1$"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} 1 & 1 & 2 \\\\ -1 & 1 & 0 \\\\ z & z^2 & 1+z^3 \\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Expand along $R_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "-(-1)\\begin{vmatrix} 1 & 2 \\\\ z^2 & 1+z^3 \\end{vmatrix} + 1\\begin{vmatrix} 1 & 2 \\\\ z & 1+z^3 \\end{vmatrix} = 0"
-    },
-    {
-     "t": "math",
-     "tex": "(1+z^3 - 2z^2) + (1+z^3 - 2z) = 0 \\implies 2z^3 - 2z^2 - 2z + 2 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "z^3 - z^2 - z + 1 = 0 \\implies z^2(z-1) - 1(z-1) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "(z-1)(z^2 - 1) = (z-1)^2(z+1) = 0 \\implies z = 1, -1"
-    },
-    {
-     "t": "p",
-     "text": "**Constraint Trap:** We are given $x \\neq y \\neq z$. But $z = 1 = x$ and $z = -1 = y$. Thus, $x = 1, y = -1$ forces duplicate values and is **not acceptable**."
-    },
-    {
-     "t": "h4",
-     "text": "Attempt 2 (Slide 097): Choose $x = 1, y = -2$"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} 1 & 1 & 2 \\\\ -2 & 4 & -7 \\\\ z & z^2 & 1+z^3 \\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Apply $R_2 \\to R_2 + 2 R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} 1 & 1 & 2 \\\\ 0 & 6 & -3 \\\\ z & z^2 & 1+z^3 \\end{vmatrix} = 3 \\begin{vmatrix} 1 & 1 & 2 \\\\ 0 & 2 & -1 \\\\ z & z^2 & 1+z^3 \\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Expand:"
-    },
-    {
-     "t": "math",
-     "tex": "2z^3 + z^2 - 5z + 2 = 0"
-    },
-    {
-     "t": "p",
-     "text": "Factoring:"
-    },
-    {
-     "t": "math",
-     "tex": "(z-1)(2z^2 + 3z - 2) = (z-1)(z+2)(2z-1) = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$z = 1 = x$ (REJECT)",
-      "$z = -2 = y$ (REJECT)",
-      "$z = \\frac{1}{2}$ (ACCEPTABLE, distinct!)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Now compute product $x y z$:"
-    },
-    {
-     "t": "math",
-     "tex": "x y z = (1)(-2)\\left(\\frac{1}{2}\\right) = -1"
-    },
-    {
-     "t": "h4",
-     "text": "Method 2: Rigorous Analytical Proof via Determinant Splitting & Vandermonde Factoring"
-    },
-    {
-     "t": "p",
-     "text": "Split Column 3 into $[1, 1, 1]^T + [x^3, y^3, z^3]^T$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} x & x^2 & 1 \\\\ y & y^2 & 1 \\\\ z & z^2 & 1 \\end{vmatrix} + \\begin{vmatrix} x & x^2 & x^3 \\\\ y & y^2 & y^3 \\\\ z & z^2 & z^3 \\end{vmatrix} = 0"
-    },
-    {
-     "t": "h4",
-     "text": "In the First Determinant:"
-    },
-    {
-     "t": "p",
-     "text": "Perform two successive column interchanges to shift the column of 1s to the first position:"
-    },
-    {
-     "t": "math",
-     "tex": "C_3 \\leftrightarrow C_2 \\implies (-1), \\quad \\text{then } C_2 \\leftrightarrow C_1 \\implies (-1)^2 = +1"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} x & x^2 & 1 \\\\ y & y^2 & 1 \\\\ z & z^2 & 1 \\end{vmatrix} = \\begin{vmatrix} 1 & x & x^2 \\\\ 1 & y & y^2 \\\\ 1 & z & z^2 \\end{vmatrix}"
-    },
-    {
-     "t": "h4",
-     "text": "In the Second Determinant:"
-    },
-    {
-     "t": "p",
-     "text": "Factor $x$ from Row 1, $y$ from Row 2, and $z$ from Row 3:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} x & x^2 & x^3 \\\\ y & y^2 & y^3 \\\\ z & z^2 & z^3 \\end{vmatrix} = x y z \\begin{vmatrix} 1 & x & x^2 \\\\ 1 & y & y^2 \\\\ 1 & z & z^2 \\end{vmatrix}"
-    },
-    {
-     "t": "h4",
-     "text": "Combine:"
-    },
-    {
-     "t": "math",
-     "tex": "(1 + x y z) \\begin{vmatrix} 1 & x & x^2 \\\\ 1 & y & y^2 \\\\ 1 & z & z^2 \\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "The determinant is the classic Vandermonde determinant:"
-    },
-    {
-     "t": "math",
-     "tex": "V(x, y, z) = (y - x)(z - x)(z - y)"
-    },
-    {
-     "t": "p",
-     "text": "Since $x, y, z$ are mutually distinct ($x \\neq y \\neq z$):"
-    },
-    {
-     "t": "math",
-     "tex": "V(x, y, z) \\neq 0"
-    },
-    {
-     "t": "p",
-     "text": "Dividing by $V(x, y, z)$:"
-    },
-    {
-     "t": "math",
-     "tex": "1 + x y z = 0 \\implies x y z = -1"
-    },
-    {
-     "t": "p",
-     "text": "**Final Boxed Answer:** $\\mathbf{xyz = -1}$\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Method 1: Trial Substitution Method (Chalkboard Slides 096\u2013097)"
+      },
+      {
+       "t": "p",
+       "text": "Because the relationship holds for all distinct non-zero values, test simple values:"
+      },
+      {
+       "t": "h4",
+       "text": "Attempt 1 (Slide 096): Choose $x = 1, y = -1$"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} 1 & 1 & 2 \\\\ -1 & 1 & 0 \\\\ z & z^2 & 1+z^3 \\end{vmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Expand along $R_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "-(-1)\\begin{vmatrix} 1 & 2 \\\\ z^2 & 1+z^3 \\end{vmatrix} + 1\\begin{vmatrix} 1 & 2 \\\\ z & 1+z^3 \\end{vmatrix} = 0"
+      },
+      {
+       "t": "math",
+       "tex": "(1+z^3 - 2z^2) + (1+z^3 - 2z) = 0 \\implies 2z^3 - 2z^2 - 2z + 2 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "z^3 - z^2 - z + 1 = 0 \\implies z^2(z-1) - 1(z-1) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "(z-1)(z^2 - 1) = (z-1)^2(z+1) = 0 \\implies z = 1, -1"
+      },
+      {
+       "t": "p",
+       "text": "**Constraint Trap:** We are given $x \\neq y \\neq z$. But $z = 1 = x$ and $z = -1 = y$. Thus, $x = 1, y = -1$ forces duplicate values and is **not acceptable**."
+      },
+      {
+       "t": "h4",
+       "text": "Attempt 2 (Slide 097): Choose $x = 1, y = -2$"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} 1 & 1 & 2 \\\\ -2 & 4 & -7 \\\\ z & z^2 & 1+z^3 \\end{vmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Apply $R_2 \\to R_2 + 2 R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} 1 & 1 & 2 \\\\ 0 & 6 & -3 \\\\ z & z^2 & 1+z^3 \\end{vmatrix} = 3 \\begin{vmatrix} 1 & 1 & 2 \\\\ 0 & 2 & -1 \\\\ z & z^2 & 1+z^3 \\end{vmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Expand:"
+      },
+      {
+       "t": "math",
+       "tex": "2z^3 + z^2 - 5z + 2 = 0"
+      },
+      {
+       "t": "p",
+       "text": "Factoring:"
+      },
+      {
+       "t": "math",
+       "tex": "(z-1)(2z^2 + 3z - 2) = (z-1)(z+2)(2z-1) = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$z = 1 = x$ (REJECT)",
+        "$z = -2 = y$ (REJECT)",
+        "$z = \\frac{1}{2}$ (ACCEPTABLE, distinct!)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Now compute product $x y z$:"
+      },
+      {
+       "t": "math",
+       "tex": "x y z = (1)(-2)\\left(\\frac{1}{2}\\right) = -1"
+      },
+      {
+       "t": "h4",
+       "text": "Method 2: Rigorous Analytical Proof via Determinant Splitting & Vandermonde Factoring"
+      },
+      {
+       "t": "p",
+       "text": "Split Column 3 into $[1, 1, 1]^T + [x^3, y^3, z^3]^T$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} x & x^2 & 1 \\\\ y & y^2 & 1 \\\\ z & z^2 & 1 \\end{vmatrix} + \\begin{vmatrix} x & x^2 & x^3 \\\\ y & y^2 & y^3 \\\\ z & z^2 & z^3 \\end{vmatrix} = 0"
+      },
+      {
+       "t": "h4",
+       "text": "In the First Determinant:"
+      },
+      {
+       "t": "p",
+       "text": "Perform two successive column interchanges to shift the column of 1s to the first position:"
+      },
+      {
+       "t": "math",
+       "tex": "C_3 \\leftrightarrow C_2 \\implies (-1), \\quad \\text{then } C_2 \\leftrightarrow C_1 \\implies (-1)^2 = +1"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} x & x^2 & 1 \\\\ y & y^2 & 1 \\\\ z & z^2 & 1 \\end{vmatrix} = \\begin{vmatrix} 1 & x & x^2 \\\\ 1 & y & y^2 \\\\ 1 & z & z^2 \\end{vmatrix}"
+      },
+      {
+       "t": "h4",
+       "text": "In the Second Determinant:"
+      },
+      {
+       "t": "p",
+       "text": "Factor $x$ from Row 1, $y$ from Row 2, and $z$ from Row 3:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} x & x^2 & x^3 \\\\ y & y^2 & y^3 \\\\ z & z^2 & z^3 \\end{vmatrix} = x y z \\begin{vmatrix} 1 & x & x^2 \\\\ 1 & y & y^2 \\\\ 1 & z & z^2 \\end{vmatrix}"
+      },
+      {
+       "t": "h4",
+       "text": "Combine:"
+      },
+      {
+       "t": "math",
+       "tex": "(1 + x y z) \\begin{vmatrix} 1 & x & x^2 \\\\ 1 & y & y^2 \\\\ 1 & z & z^2 \\end{vmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "The determinant is the classic Vandermonde determinant:"
+      },
+      {
+       "t": "math",
+       "tex": "V(x, y, z) = (y - x)(z - x)(z - y)"
+      },
+      {
+       "t": "p",
+       "text": "Since $x, y, z$ are mutually distinct ($x \\neq y \\neq z$):"
+      },
+      {
+       "t": "math",
+       "tex": "V(x, y, z) \\neq 0"
+      },
+      {
+       "t": "p",
+       "text": "Dividing by $V(x, y, z)$:"
+      },
+      {
+       "t": "math",
+       "tex": "1 + x y z = 0 \\implies x y z = -1"
+      },
+      {
+       "t": "p",
+       "text": "**Final Boxed Answer:** $\\mathbf{xyz = -1}$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6175,56 +6198,55 @@ export default {
      "text": "**Question:** Find the area of the triangle whose vertices are $(3, 8), (-4, 2),$ and $(5, 1)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Set up the determinant:"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = \\frac{1}{2} \\begin{vmatrix} 3 & 8 & 1 \\\\ -4 & 2 & 1 \\\\ 5 & 1 & 1 \\end{vmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Apply row reductions $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\text{ new} = [-4 - 3, \\; 2 - 8, \\; 1 - 1] = [-7, \\; -6, \\; 0]"
-    },
-    {
-     "t": "math",
-     "tex": "R_3 \\text{ new} = [5 - 3, \\; 1 - 8, \\; 1 - 1] = [2, \\; -7, \\; 0]"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = \\frac{1}{2} \\begin{vmatrix} 3 & 8 & 1 \\\\ -7 & -6 & 0 \\\\ 2 & -7 & 0 \\end{vmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Expand along Column 3 ($C_3$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = \\frac{1}{2} \\cdot \\left( +1 \\begin{vmatrix} -7 & -6 \\\\ 2 & -7 \\end{vmatrix} - 0 + 0 \\right)"
-    },
-    {
-     "t": "math",
-     "tex": "\\Delta = \\frac{1}{2} [(-7)(-7) - (-6)(2)] = \\frac{1}{2} [49 - (-12)] = \\frac{1}{2} [49 + 12] = \\frac{61}{2}"
-    },
-    {
-     "t": "p",
-     "text": "**Final Boxed Chalkboard Answer:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\frac{61}{2} \\; \\text{unit}^2 \\quad (= 30.5 \\; \\text{sq units})}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Set up the determinant:"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = \\frac{1}{2} \\begin{vmatrix} 3 & 8 & 1 \\\\ -4 & 2 & 1 \\\\ 5 & 1 & 1 \\end{vmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Apply row reductions $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\text{ new} = [-4 - 3, \\; 2 - 8, \\; 1 - 1] = [-7, \\; -6, \\; 0]"
+      },
+      {
+       "t": "math",
+       "tex": "R_3 \\text{ new} = [5 - 3, \\; 1 - 8, \\; 1 - 1] = [2, \\; -7, \\; 0]"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = \\frac{1}{2} \\begin{vmatrix} 3 & 8 & 1 \\\\ -7 & -6 & 0 \\\\ 2 & -7 & 0 \\end{vmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Expand along Column 3 ($C_3$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = \\frac{1}{2} \\cdot \\left( +1 \\begin{vmatrix} -7 & -6 \\\\ 2 & -7 \\end{vmatrix} - 0 + 0 \\right)"
+      },
+      {
+       "t": "math",
+       "tex": "\\Delta = \\frac{1}{2} [(-7)(-7) - (-6)(2)] = \\frac{1}{2} [49 - (-12)] = \\frac{1}{2} [49 + 12] = \\frac{61}{2}"
+      },
+      {
+       "t": "p",
+       "text": "**Final Boxed Chalkboard Answer:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\frac{61}{2} \\; \\text{unit}^2 \\quad (= 30.5 \\; \\text{sq units})}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6255,40 +6277,43 @@ export default {
      "text": "**Question:** Find the value of $k$ such that the points $(2, 1), (4, -1),$ and $(k, 0)$ are collinear."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "Set the collinearity determinant to zero:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{2} \\begin{vmatrix} 2 & 1 & 1 \\\\ 4 & -1 & 1 \\\\ k & 0 & 1 \\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Expand along Row 3 ($R_3$) to take advantage of the zero entry:"
-    },
-    {
-     "t": "math",
-     "tex": "k \\begin{vmatrix} 1 & 1 \\\\ -1 & 1 \\end{vmatrix} - 0 \\begin{vmatrix} 2 & 1 \\\\ 4 & 1 \\end{vmatrix} + 1 \\begin{vmatrix} 2 & 1 \\\\ 4 & -1 \\end{vmatrix} = 0"
-    },
-    {
-     "t": "math",
-     "tex": "k[(1)(1) - (1)(-1)] + 1[(2)(-1) - (1)(4)] = 0"
-    },
-    {
-     "t": "math",
-     "tex": "k[1 + 1] + 1[-2 - 4] = 0"
-    },
-    {
-     "t": "math",
-     "tex": "2k - 6 = 0 \\implies 2k = 6 \\implies k = 3"
-    },
-    {
-     "t": "p",
-     "text": "**Final Boxed Chalkboard Answer:** $\\mathbf{k = 3}$\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Set the collinearity determinant to zero:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{2} \\begin{vmatrix} 2 & 1 & 1 \\\\ 4 & -1 & 1 \\\\ k & 0 & 1 \\end{vmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Expand along Row 3 ($R_3$) to take advantage of the zero entry:"
+      },
+      {
+       "t": "math",
+       "tex": "k \\begin{vmatrix} 1 & 1 \\\\ -1 & 1 \\end{vmatrix} - 0 \\begin{vmatrix} 2 & 1 \\\\ 4 & 1 \\end{vmatrix} + 1 \\begin{vmatrix} 2 & 1 \\\\ 4 & -1 \\end{vmatrix} = 0"
+      },
+      {
+       "t": "math",
+       "tex": "k[(1)(1) - (1)(-1)] + 1[(2)(-1) - (1)(4)] = 0"
+      },
+      {
+       "t": "math",
+       "tex": "k[1 + 1] + 1[-2 - 4] = 0"
+      },
+      {
+       "t": "math",
+       "tex": "2k - 6 = 0 \\implies 2k = 6 \\implies k = 3"
+      },
+      {
+       "t": "p",
+       "text": "**Final Boxed Chalkboard Answer:** $\\mathbf{k = 3}$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -6319,95 +6344,94 @@ export default {
      "tex": "A = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 0 \\\\ 1 & 0 & -1 \\end{bmatrix}_{3 \\times 3}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Compute $\\det(A)$"
-    },
-    {
-     "t": "p",
-     "text": "Expand along Row 3 ($R_3$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = +1 \\begin{vmatrix} 2 & -1 \\\\ 1 & 0 \\end{vmatrix} - 0 + (-1) \\begin{vmatrix} 1 & 2 \\\\ 2 & 1 \\end{vmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 1[0 - (-1)] - 1[1 - 4] = 1(1) - 1(-3) = 1 + 3 = 4"
-    },
-    {
-     "t": "p",
-     "text": "Boxed on slide: $\\mathbf{\\vert A \\vert = 4}$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Compute All 9 Cofactors $C_{ij} = (-1)^{i+j} M_{ij}$"
-    },
-    {
-     "t": "p",
-     "text": "Sign pattern: $\\begin{bmatrix} + & - & + \\\\ - & + & - \\\\ + & - & + \\end{bmatrix}$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$C_{11} = +\\begin{vmatrix} 1 & 0 \\\\ 0 & -1 \\end{vmatrix} = -1 - 0 = -1$",
-      "$C_{12} = -\\begin{vmatrix} 2 & 0 \\\\ 1 & -1 \\end{vmatrix} = -(-2 - 0) = +2$",
-      "$C_{13} = +\\begin{vmatrix} 2 & 1 \\\\ 1 & 0 \\end{vmatrix} = 0 - 1 = -1$",
-      "$C_{21} = -\\begin{vmatrix} 2 & -1 \\\\ 0 & -1 \\end{vmatrix} = -(-2 - 0) = +2$",
-      "$C_{22} = +\\begin{vmatrix} 1 & -1 \\\\ 1 & -1 \\end{vmatrix} = -1 - (-1) = 0$",
-      "$C_{23} = -\\begin{vmatrix} 1 & 2 \\\\ 1 & 0 \\end{vmatrix} = -(0 - 2) = +2$",
-      "$C_{31} = +\\begin{vmatrix} 2 & -1 \\\\ 1 & 0 \\end{vmatrix} = 0 - (-1) = +1$",
-      "$C_{32} = -\\begin{vmatrix} 1 & -1 \\\\ 2 & 0 \\end{vmatrix} = -(0 - (-2)) = -2$",
-      "$C_{33} = +\\begin{vmatrix} 1 & 2 \\\\ 2 & 1 \\end{vmatrix} = 1 - 4 = -3$"
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Step 3: Form the Cofactor Matrix"
-    },
-    {
-     "t": "math",
-     "tex": "C = \\begin{bmatrix} C_{11} & C_{12} & C_{13} \\\\ C_{21} & C_{22} & C_{23} \\\\ C_{31} & C_{32} & C_{33} \\end{bmatrix} = \\begin{bmatrix} -1 & 2 & -1 \\\\ 2 & 0 & 2 \\\\ 1 & -2 & -3 \\end{bmatrix}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 4: Transpose the Cofactor Matrix to obtain $\\operatorname{Adj}(A)$"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Adj}(A) = C^T = \\begin{bmatrix} -1 & 2 & -1 \\\\ 2 & 0 & 2 \\\\ 1 & -2 & -3 \\end{bmatrix}^T = \\begin{bmatrix} -1 & 2 & 1 \\\\ 2 & 0 & -2 \\\\ -1 & 2 & -3 \\end{bmatrix}_{3 \\times 3}"
-    },
-    {
-     "t": "h4",
-     "text": "Step 5: Verification using Fundamental Identity"
-    },
-    {
-     "t": "math",
-     "tex": "A \\cdot \\operatorname{Adj}(A) = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 0 \\\\ 1 & 0 & -1 \\end{bmatrix} \\begin{bmatrix} -1 & 2 & 1 \\\\ 2 & 0 & -2 \\\\ -1 & 2 & -3 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Entry } (1,1) = 1(-1) + 2(2) + (-1)(-1) = -1 + 4 + 1 = 4 = \\det(A)"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Entry } (1,2) = 1(2) + 2(0) + (-1)(2) = 2 + 0 - 2 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Entry } (2,2) = 2(2) + 1(0) + 0(-2) = 4 = \\det(A)"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore A \\cdot \\operatorname{Adj}(A) = 4 I_3 = \\det(A) I_3 \\quad \\checkmark"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Step 1: Compute $\\det(A)$"
+      },
+      {
+       "t": "p",
+       "text": "Expand along Row 3 ($R_3$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = +1 \\begin{vmatrix} 2 & -1 \\\\ 1 & 0 \\end{vmatrix} - 0 + (-1) \\begin{vmatrix} 1 & 2 \\\\ 2 & 1 \\end{vmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 1[0 - (-1)] - 1[1 - 4] = 1(1) - 1(-3) = 1 + 3 = 4"
+      },
+      {
+       "t": "p",
+       "text": "Boxed on slide: $\\mathbf{\\vert A \\vert = 4}$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Compute All 9 Cofactors $C_{ij} = (-1)^{i+j} M_{ij}$"
+      },
+      {
+       "t": "p",
+       "text": "Sign pattern: $\\begin{bmatrix} + & - & + \\\\ - & + & - \\\\ + & - & + \\end{bmatrix}$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$C_{11} = +\\begin{vmatrix} 1 & 0 \\\\ 0 & -1 \\end{vmatrix} = -1 - 0 = -1$",
+        "$C_{12} = -\\begin{vmatrix} 2 & 0 \\\\ 1 & -1 \\end{vmatrix} = -(-2 - 0) = +2$",
+        "$C_{13} = +\\begin{vmatrix} 2 & 1 \\\\ 1 & 0 \\end{vmatrix} = 0 - 1 = -1$",
+        "$C_{21} = -\\begin{vmatrix} 2 & -1 \\\\ 0 & -1 \\end{vmatrix} = -(-2 - 0) = +2$",
+        "$C_{22} = +\\begin{vmatrix} 1 & -1 \\\\ 1 & -1 \\end{vmatrix} = -1 - (-1) = 0$",
+        "$C_{23} = -\\begin{vmatrix} 1 & 2 \\\\ 1 & 0 \\end{vmatrix} = -(0 - 2) = +2$",
+        "$C_{31} = +\\begin{vmatrix} 2 & -1 \\\\ 1 & 0 \\end{vmatrix} = 0 - (-1) = +1$",
+        "$C_{32} = -\\begin{vmatrix} 1 & -1 \\\\ 2 & 0 \\end{vmatrix} = -(0 - (-2)) = -2$",
+        "$C_{33} = +\\begin{vmatrix} 1 & 2 \\\\ 2 & 1 \\end{vmatrix} = 1 - 4 = -3$"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Step 3: Form the Cofactor Matrix"
+      },
+      {
+       "t": "math",
+       "tex": "C = \\begin{bmatrix} C_{11} & C_{12} & C_{13} \\\\ C_{21} & C_{22} & C_{23} \\\\ C_{31} & C_{32} & C_{33} \\end{bmatrix} = \\begin{bmatrix} -1 & 2 & -1 \\\\ 2 & 0 & 2 \\\\ 1 & -2 & -3 \\end{bmatrix}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 4: Transpose the Cofactor Matrix to obtain $\\operatorname{Adj}(A)$"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Adj}(A) = C^T = \\begin{bmatrix} -1 & 2 & -1 \\\\ 2 & 0 & 2 \\\\ 1 & -2 & -3 \\end{bmatrix}^T = \\begin{bmatrix} -1 & 2 & 1 \\\\ 2 & 0 & -2 \\\\ -1 & 2 & -3 \\end{bmatrix}_{3 \\times 3}"
+      },
+      {
+       "t": "h4",
+       "text": "Step 5: Verification using Fundamental Identity"
+      },
+      {
+       "t": "math",
+       "tex": "A \\cdot \\operatorname{Adj}(A) = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 0 \\\\ 1 & 0 & -1 \\end{bmatrix} \\begin{bmatrix} -1 & 2 & 1 \\\\ 2 & 0 & -2 \\\\ -1 & 2 & -3 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Entry } (1,1) = 1(-1) + 2(2) + (-1)(-1) = -1 + 4 + 1 = 4 = \\det(A)"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Entry } (1,2) = 1(2) + 2(0) + (-1)(2) = 2 + 0 - 2 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Entry } (2,2) = 2(2) + 1(0) + 0(-2) = 4 = \\det(A)"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore A \\cdot \\operatorname{Adj}(A) = 4 I_3 = \\det(A) I_3 \\quad \\checkmark"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -7021,63 +7045,62 @@ export default {
      "text": "Since $AB = BA = I_2$, $B = A^{-1}$ and $A = B^{-1}$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Derivation of the Matrix Inverse Formula</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1:** Recall the fundamental adjoint identity:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\cdot \\text{adj}(A) = \\vert A \\vert I_n"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2:** Pre-multiply both sides of the identity by $A^{-1}$ (assuming $A^{-1}$ exists):"
-    },
-    {
-     "t": "math",
-     "tex": "A^{-1} \\cdot \\big(A \\cdot \\text{adj}(A)\\big) = A^{-1} \\cdot \\big(\\vert A \\vert I_n\\big)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3:** Apply matrix associativity on the left and scalar linearity on the right:"
-    },
-    {
-     "t": "math",
-     "tex": "(A^{-1} A) \\cdot \\text{adj}(A) = \\vert A \\vert \\big(A^{-1} I_n\\big)"
-    },
-    {
-     "t": "math",
-     "tex": "I_n \\cdot \\text{adj}(A) = \\vert A \\vert A^{-1}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}(A) = \\vert A \\vert A^{-1}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4:** Divide both sides by the scalar determinant $\\vert A \\vert$ (valid since $\\vert A \\vert \\neq 0$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A^{-1} = \\frac{\\text{adj}(A)}{\\vert A \\vert} = \\frac{1}{\\vert A \\vert} \\text{adj}(A)}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Pitfall & Diagnostic Alert:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $\\vert A \\vert = 0$, division by zero is undefined. Thus, a singular matrix **cannot have an inverse**.",
-      "Notice the duality: $\\text{adj}(A) = \\vert A \\vert A^{-1}$. Whenever an exam question asks for $\\text{adj}(A)$ of an invertible matrix, computing $\\vert A \\vert A^{-1}$ is often 5 times faster than computing all $n^2$ cofactors!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Derivation of the Matrix Inverse Formula /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1:** Recall the fundamental adjoint identity:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\cdot \\text{adj}(A) = \\vert A \\vert I_n"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2:** Pre-multiply both sides of the identity by $A^{-1}$ (assuming $A^{-1}$ exists):"
+      },
+      {
+       "t": "math",
+       "tex": "A^{-1} \\cdot \\big(A \\cdot \\text{adj}(A)\\big) = A^{-1} \\cdot \\big(\\vert A \\vert I_n\\big)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3:** Apply matrix associativity on the left and scalar linearity on the right:"
+      },
+      {
+       "t": "math",
+       "tex": "(A^{-1} A) \\cdot \\text{adj}(A) = \\vert A \\vert \\big(A^{-1} I_n\\big)"
+      },
+      {
+       "t": "math",
+       "tex": "I_n \\cdot \\text{adj}(A) = \\vert A \\vert A^{-1}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}(A) = \\vert A \\vert A^{-1}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4:** Divide both sides by the scalar determinant $\\vert A \\vert$ (valid since $\\vert A \\vert \\neq 0$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A^{-1} = \\frac{\\text{adj}(A)}{\\vert A \\vert} = \\frac{1}{\\vert A \\vert} \\text{adj}(A)}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Pitfall & Diagnostic Alert:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $\\vert A \\vert = 0$, division by zero is undefined. Thus, a singular matrix **cannot have an inverse**.",
+        "Notice the duality: $\\text{adj}(A) = \\vert A \\vert A^{-1}$. Whenever an exam question asks for $\\text{adj}(A)$ of an invertible matrix, computing $\\vert A \\vert A^{-1}$ is often 5 times faster than computing all $n^2$ cofactors!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7119,61 +7142,64 @@ export default {
      "tex": "\\boxed{A^{-1} = \\frac{1}{ad - bc} \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Worked $2 \\times 2$ Example</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question (Slide 105):**  \nGiven $A = \\begin{bmatrix} 1 & 1 \\\\ -3 & 2 \\end{bmatrix}_{2 \\times 2}$. Find $A^{-1}$."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-step Solution:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Calculate determinant:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = (1)(2) - (1)(-3) = 2 + 3 = 5"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\vert A \\vert = 5 \\neq 0$, the inverse exists."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Sign pattern of cofactors for $2 \\times 2$: $\\begin{bmatrix} + & - \\\\ - & + \\end{bmatrix}$.",
-      "Minors: $M_{11} = 2, M_{12} = -3, M_{21} = 1, M_{22} = 1$.",
-      "Cofactors: $C_{11} = 2, C_{12} = -(-3) = 3, C_{21} = -1, C_{22} = 1$.",
-      "Cofactor matrix: $C = \\begin{bmatrix} 2 & 3 \\\\ -1 & 1 \\end{bmatrix}$.",
-      "Adjoint matrix (Transpose of $C$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}(A) = C^T = \\begin{bmatrix} 2 & -1 \\\\ 3 & 1 \\end{bmatrix}"
-    },
-    {
-     "t": "ol",
-     "start": 7,
-     "items": [
-      "Compute Inverse:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^{-1} = \\frac{1}{\\vert A \\vert} \\text{adj}(A) = \\frac{1}{5} \\begin{bmatrix} 2 & -1 \\\\ 3 & 1 \\end{bmatrix} = \\begin{bmatrix} 2/5 & -1/5 \\\\ 3/5 & 1/5 \\end{bmatrix} = \\begin{bmatrix} 0.4 & -0.2 \\\\ 0.6 & 0.2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Matches matrix $B$ from Slide 103!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Worked  2  times 2  Example /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question (Slide 105):**  \nGiven $A = \\begin{bmatrix} 1 & 1 \\\\ -3 & 2 \\end{bmatrix}_{2 \\times 2}$. Find $A^{-1}$."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-step Solution:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Calculate determinant:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = (1)(2) - (1)(-3) = 2 + 3 = 5"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\vert A \\vert = 5 \\neq 0$, the inverse exists."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Sign pattern of cofactors for $2 \\times 2$: $\\begin{bmatrix} + & - \\\\ - & + \\end{bmatrix}$.",
+        "Minors: $M_{11} = 2, M_{12} = -3, M_{21} = 1, M_{22} = 1$.",
+        "Cofactors: $C_{11} = 2, C_{12} = -(-3) = 3, C_{21} = -1, C_{22} = 1$.",
+        "Cofactor matrix: $C = \\begin{bmatrix} 2 & 3 \\\\ -1 & 1 \\end{bmatrix}$.",
+        "Adjoint matrix (Transpose of $C$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}(A) = C^T = \\begin{bmatrix} 2 & -1 \\\\ 3 & 1 \\end{bmatrix}"
+      },
+      {
+       "t": "ol",
+       "start": 7,
+       "items": [
+        "Compute Inverse:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^{-1} = \\frac{1}{\\vert A \\vert} \\text{adj}(A) = \\frac{1}{5} \\begin{bmatrix} 2 & -1 \\\\ 3 & 1 \\end{bmatrix} = \\begin{bmatrix} 2/5 & -1/5 \\\\ 3/5 & 1/5 \\end{bmatrix} = \\begin{bmatrix} 0.4 & -0.2 \\\\ 0.6 & 0.2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Matches matrix $B$ from Slide 103!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -7184,51 +7210,54 @@ export default {
      "text": "*(Covered in Slide 106)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: $3 \\times 3$ Inversion &amp; Transpose Invariance</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Problem:**  \nGiven $A = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 0 \\\\ 1 & 0 & -1 \\end{bmatrix}$. Find $A^{-1}$. If $B = A^T$, verify $(A^T)^{-1} = (A^{-1})^T$."
-    },
-    {
-     "t": "p",
-     "text": "**Solution:**\nFrom Slide 101:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\vert A \\vert = 4$.",
-      "$\\text{adj}(A) = \\begin{bmatrix} -1 & 2 & 1 \\\\ 2 & 0 & -2 \\\\ -1 & 2 & -3 \\end{bmatrix}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "C = A^{-1} = \\frac{1}{4} \\begin{bmatrix} -1 & 2 & 1 \\\\ 2 & 0 & -2 \\\\ -1 & 2 & -3 \\end{bmatrix}_{3 \\times 3}"
-    },
-    {
-     "t": "p",
-     "text": "Now consider $B = A^T = \\begin{bmatrix} 1 & 2 & 1 \\\\ 2 & 1 & 0 \\\\ -1 & 0 & -1 \\end{bmatrix}$.\nSince $\\vert A^T \\vert = \\vert A \\vert = 4$, and $\\text{adj}(A^T) = (\\text{adj}(A))^T$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^{-1} = (A^T)^{-1} = \\frac{1}{4} \\begin{bmatrix} -1 & 2 & 1 \\\\ 2 & 0 & -2 \\\\ -1 & 2 & -3 \\end{bmatrix}^T = \\frac{1}{4} \\begin{bmatrix} -1 & 2 & -1 \\\\ 2 & 0 & 2 \\\\ 1 & -2 & -3 \\end{bmatrix} = (A^{-1})^T = C^T"
-    },
-    {
-     "t": "p",
-     "text": "This confirms:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{(A^T)^{-1} = (A^{-1})^T}"
-    },
-    {
-     "t": "p",
-     "text": "The inverse operation and transpose operation commute seamlessly.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps   3  times 3  Inversion &amp  Transpose Invariance /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Problem:**  \nGiven $A = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 0 \\\\ 1 & 0 & -1 \\end{bmatrix}$. Find $A^{-1}$. If $B = A^T$, verify $(A^T)^{-1} = (A^{-1})^T$."
+      },
+      {
+       "t": "p",
+       "text": "**Solution:**\nFrom Slide 101:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\vert A \\vert = 4$.",
+        "$\\text{adj}(A) = \\begin{bmatrix} -1 & 2 & 1 \\\\ 2 & 0 & -2 \\\\ -1 & 2 & -3 \\end{bmatrix}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "C = A^{-1} = \\frac{1}{4} \\begin{bmatrix} -1 & 2 & 1 \\\\ 2 & 0 & -2 \\\\ -1 & 2 & -3 \\end{bmatrix}_{3 \\times 3}"
+      },
+      {
+       "t": "p",
+       "text": "Now consider $B = A^T = \\begin{bmatrix} 1 & 2 & 1 \\\\ 2 & 1 & 0 \\\\ -1 & 0 & -1 \\end{bmatrix}$.\nSince $\\vert A^T \\vert = \\vert A \\vert = 4$, and $\\text{adj}(A^T) = (\\text{adj}(A))^T$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^{-1} = (A^T)^{-1} = \\frac{1}{4} \\begin{bmatrix} -1 & 2 & 1 \\\\ 2 & 0 & -2 \\\\ -1 & 2 & -3 \\end{bmatrix}^T = \\frac{1}{4} \\begin{bmatrix} -1 & 2 & -1 \\\\ 2 & 0 & 2 \\\\ 1 & -2 & -3 \\end{bmatrix} = (A^{-1})^T = C^T"
+      },
+      {
+       "t": "p",
+       "text": "This confirms:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{(A^T)^{-1} = (A^{-1})^T}"
+      },
+      {
+       "t": "p",
+       "text": "The inverse operation and transpose operation commute seamlessly."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7360,84 +7389,83 @@ export default {
      "text": "*(Covered in Slide 108)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Proof of Identity (a)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Objective:** Prove $\\text{adj}(\\text{adj}(A)) = \\vert A \\vert^{n-2} A$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 1:** Define the intermediate matrix $B = \\text{adj}(A)$.  \nThen the expression becomes:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}[\\text{adj}(A)] = \\text{adj}(B)"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2:** From the fundamental adjoint identity applied to matrix $B$:"
-    },
-    {
-     "t": "math",
-     "tex": "B \\cdot \\text{adj}(B) = \\vert B \\vert I_n \\implies \\text{adj}(B) = \\vert B \\vert B^{-1}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3:** Express $\\vert B \\vert$ and $B^{-1}$ in terms of matrix $A$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "From identity (b) (proved below in Section 2.3):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vert B \\vert = \\vert \\text{adj}(A) \\vert = \\vert A \\vert^{n-1}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $B^{-1} = (\\text{adj}(A))^{-1}$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Recall that $\\text{adj}(A) = \\vert A \\vert A^{-1}$. Taking the inverse of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "(\\text{adj}(A))^{-1} = (\\vert A \\vert A^{-1})^{-1} = \\frac{1}{\\vert A \\vert} (A^{-1})^{-1} = \\frac{1}{\\vert A \\vert} A"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4:** Substitute both results back into the expression for $\\text{adj}(B)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}[\\text{adj}(A)] = \\vert B \\vert B^{-1} = \\vert A \\vert^{n-1} \\cdot \\left(\\frac{1}{\\vert A \\vert} A\\right) = \\vert A \\vert^{n-1 - 1} A = \\vert A \\vert^{n-2} A"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{adj}(\\text{adj}(A)) = \\vert A \\vert^{n-2} A}"
-    },
-    {
-     "t": "p",
-     "text": "**Critical Special Cases:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $n = 1$: $\\vert A \\vert^{-1} A$, not practically defined for scalars in standard matrix algebra.",
-      "For $n = 2$: $\\text{adj}(\\text{adj}(A)) = \\vert A \\vert^{2-2} A = \\vert A \\vert^0 A = A$. (The double adjoint of any $2 \\times 2$ matrix returns the original matrix $A$ directly!).",
-      "For $n = 3$: $\\text{adj}(\\text{adj}(A)) = \\vert A \\vert^{3-2} A = \\vert A \\vert A$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Proof of Identity  a /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Objective:** Prove $\\text{adj}(\\text{adj}(A)) = \\vert A \\vert^{n-2} A$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 1:** Define the intermediate matrix $B = \\text{adj}(A)$.  \nThen the expression becomes:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}[\\text{adj}(A)] = \\text{adj}(B)"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2:** From the fundamental adjoint identity applied to matrix $B$:"
+      },
+      {
+       "t": "math",
+       "tex": "B \\cdot \\text{adj}(B) = \\vert B \\vert I_n \\implies \\text{adj}(B) = \\vert B \\vert B^{-1}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3:** Express $\\vert B \\vert$ and $B^{-1}$ in terms of matrix $A$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "From identity (b) (proved below in Section 2.3):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vert B \\vert = \\vert \\text{adj}(A) \\vert = \\vert A \\vert^{n-1}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $B^{-1} = (\\text{adj}(A))^{-1}$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Recall that $\\text{adj}(A) = \\vert A \\vert A^{-1}$. Taking the inverse of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "(\\text{adj}(A))^{-1} = (\\vert A \\vert A^{-1})^{-1} = \\frac{1}{\\vert A \\vert} (A^{-1})^{-1} = \\frac{1}{\\vert A \\vert} A"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4:** Substitute both results back into the expression for $\\text{adj}(B)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}[\\text{adj}(A)] = \\vert B \\vert B^{-1} = \\vert A \\vert^{n-1} \\cdot \\left(\\frac{1}{\\vert A \\vert} A\\right) = \\vert A \\vert^{n-1 - 1} A = \\vert A \\vert^{n-2} A"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{adj}(\\text{adj}(A)) = \\vert A \\vert^{n-2} A}"
+      },
+      {
+       "t": "p",
+       "text": "**Critical Special Cases:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $n = 1$: $\\vert A \\vert^{-1} A$, not practically defined for scalars in standard matrix algebra.",
+        "For $n = 2$: $\\text{adj}(\\text{adj}(A)) = \\vert A \\vert^{2-2} A = \\vert A \\vert^0 A = A$. (The double adjoint of any $2 \\times 2$ matrix returns the original matrix $A$ directly!).",
+        "For $n = 3$: $\\text{adj}(\\text{adj}(A)) = \\vert A \\vert^{3-2} A = \\vert A \\vert A$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7448,71 +7476,74 @@ export default {
      "text": "*(Covered in Slide 109)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Proof of Identity (b)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Objective:** Prove $\\vert \\text{adj}(A) \\vert = \\vert A \\vert^{n-1}$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 1:** Start from the fundamental adjoint relation:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\cdot \\text{adj}(A) = \\vert A \\vert I_n"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2:** Let $k = \\vert A \\vert$ be a scalar. Then:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\cdot \\text{adj}(A) = k I_n"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3:** Take the determinant of both sides:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\cdot \\text{adj}(A) \\vert = \\vert k I_n \\vert"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4:** Apply determinant properties:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Determinant of product: $\\vert A \\cdot \\text{adj}(A) \\vert = \\vert A \\vert \\cdot \\vert \\text{adj}(A) \\vert$.",
-      "Scalar multiplication of an $n \\times n$ matrix: $\\vert k I_n \\vert = k^n \\vert I_n \\vert = k^n (1) = \\vert A \\vert^n$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 5:** Equate both expressions:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert \\cdot \\vert \\text{adj}(A) \\vert = \\vert A \\vert^n"
-    },
-    {
-     "t": "p",
-     "text": "**Step 6:** Divide both sides by $\\vert A \\vert$ (for $\\vert A \\vert \\neq 0$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert \\text{adj}(A) \\vert = \\frac{\\vert A \\vert^n}{\\vert A \\vert} = \\vert A \\vert^{n-1}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\vert \\text{adj}(A) \\vert = (\\vert A \\vert)^{n-1}}"
-    },
-    {
-     "t": "p",
-     "text": "*(Note: By continuity and polynomial density, this identity holds even when $\\vert A \\vert = 0$.)*\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Proof of Identity  b /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Objective:** Prove $\\vert \\text{adj}(A) \\vert = \\vert A \\vert^{n-1}$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 1:** Start from the fundamental adjoint relation:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\cdot \\text{adj}(A) = \\vert A \\vert I_n"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2:** Let $k = \\vert A \\vert$ be a scalar. Then:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\cdot \\text{adj}(A) = k I_n"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3:** Take the determinant of both sides:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\cdot \\text{adj}(A) \\vert = \\vert k I_n \\vert"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4:** Apply determinant properties:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Determinant of product: $\\vert A \\cdot \\text{adj}(A) \\vert = \\vert A \\vert \\cdot \\vert \\text{adj}(A) \\vert$.",
+        "Scalar multiplication of an $n \\times n$ matrix: $\\vert k I_n \\vert = k^n \\vert I_n \\vert = k^n (1) = \\vert A \\vert^n$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 5:** Equate both expressions:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert \\cdot \\vert \\text{adj}(A) \\vert = \\vert A \\vert^n"
+      },
+      {
+       "t": "p",
+       "text": "**Step 6:** Divide both sides by $\\vert A \\vert$ (for $\\vert A \\vert \\neq 0$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert \\text{adj}(A) \\vert = \\frac{\\vert A \\vert^n}{\\vert A \\vert} = \\vert A \\vert^{n-1}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\vert \\text{adj}(A) \\vert = (\\vert A \\vert)^{n-1}}"
+      },
+      {
+       "t": "p",
+       "text": "*(Note: By continuity and polynomial density, this identity holds even when $\\vert A \\vert = 0$.)*"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7523,52 +7554,55 @@ export default {
      "text": "*(Covered in Slide 110)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Proof of Identity (c) &amp; $m$-Nested Adjoints</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Objective:** Derive $\\vert \\text{adj}(\\text{adj}(A)) \\vert = \\vert A \\vert^{(n-1)^2}$ and generalize to $m$ iterations."
-    },
-    {
-     "t": "p",
-     "text": "**Step 1:** Let $B = \\text{adj}(A)$.  \nApplying identity (b) to matrix $B$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert \\text{adj}(B) \\vert = \\vert B \\vert^{n-1}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2:** Substitute $\\vert B \\vert = \\vert \\text{adj}(A) \\vert = \\vert A \\vert^{n-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert \\text{adj}[\\text{adj}(A)] \\vert = \\big(\\vert A \\vert^{n-1}\\big)^{n-1} = \\vert A \\vert^{(n-1)(n-1)} = \\vert A \\vert^{(n-1)^2}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\vert \\text{adj}(\\text{adj}(A)) \\vert = (\\vert A \\vert)^{(n-1)^2}}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Triple-Nested Adjoint:**\nLet $C = \\text{adj}[\\text{adj}(A)]$. Then:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert \\text{adj}(C) \\vert = \\vert C \\vert^{n-1} = \\Big(\\vert A \\vert^{(n-1)^2}\\Big)^{n-1} = \\vert A \\vert^{(n-1)^3}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Inductive Generalization to $m$ Nested Adjoints:**\nFor any positive integer $m$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\Big\\vert \\underbrace{\\text{adj}[\\text{adj}[\\cdots \\text{adj}(A) \\cdots]]}_{m \\text{ times}} \\Big\\vert = (\\vert A \\vert)^{(n-1)^m}}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Trap Alert:**\nExaminers frequently test $n = 3, m = 3$. Students mistakenly calculate $n-1 = 2$, then compute $2 \\times 3 = 6$ instead of $2^3 = 8$!  \nRemember: The exponent is $(n-1)^m$, **NOT** $m(n-1)$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Proof of Identity  c  &amp   m -Nested Adjoints /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Objective:** Derive $\\vert \\text{adj}(\\text{adj}(A)) \\vert = \\vert A \\vert^{(n-1)^2}$ and generalize to $m$ iterations."
+      },
+      {
+       "t": "p",
+       "text": "**Step 1:** Let $B = \\text{adj}(A)$.  \nApplying identity (b) to matrix $B$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert \\text{adj}(B) \\vert = \\vert B \\vert^{n-1}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2:** Substitute $\\vert B \\vert = \\vert \\text{adj}(A) \\vert = \\vert A \\vert^{n-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert \\text{adj}[\\text{adj}(A)] \\vert = \\big(\\vert A \\vert^{n-1}\\big)^{n-1} = \\vert A \\vert^{(n-1)(n-1)} = \\vert A \\vert^{(n-1)^2}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\vert \\text{adj}(\\text{adj}(A)) \\vert = (\\vert A \\vert)^{(n-1)^2}}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Triple-Nested Adjoint:**\nLet $C = \\text{adj}[\\text{adj}(A)]$. Then:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert \\text{adj}(C) \\vert = \\vert C \\vert^{n-1} = \\Big(\\vert A \\vert^{(n-1)^2}\\Big)^{n-1} = \\vert A \\vert^{(n-1)^3}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Inductive Generalization to $m$ Nested Adjoints:**\nFor any positive integer $m$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\Big\\vert \\underbrace{\\text{adj}[\\text{adj}[\\cdots \\text{adj}(A) \\cdots]]}_{m \\text{ times}} \\Big\\vert = (\\vert A \\vert)^{(n-1)^m}}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Trap Alert:**\nExaminers frequently test $n = 3, m = 3$. Students mistakenly calculate $n-1 = 2$, then compute $2 \\times 3 = 6$ instead of $2^3 = 8$!  \nRemember: The exponent is $(n-1)^m$, **NOT** $m(n-1)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7579,107 +7613,106 @@ export default {
      "text": "*(Covered in Slides 111 & 113)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Proof of Identity (d) &amp; Sign Inversion</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Objective:** Prove $\\text{adj}(kA) = k^{n-1} \\text{adj}(A)$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 1:** From the adjoint-inverse relation $\\text{adj}(M) = \\vert M \\vert M^{-1}$, substitute $M = kA$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}(kA) = \\vert kA \\vert (kA)^{-1}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2:** Apply scalar properties of determinants and inverses:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For an $n \\times n$ matrix: $\\vert kA \\vert = k^n \\vert A \\vert$.",
-      "For matrix inverse: $(kA)^{-1} = \\frac{1}{k} A^{-1} = k^{-1} A^{-1}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3:** Multiply together:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}(kA) = \\big(k^n \\vert A \\vert\\big) \\big(k^{-1} A^{-1}\\big) = k^{n-1} \\vert A \\vert A^{-1}"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\vert A \\vert A^{-1} = \\text{adj}(A)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{adj}(kA) = k^{n-1} \\text{adj}(A)}"
-    },
-    {
-     "t": "h4",
-     "text": "Special Case: Negative Scalar ($k = -1$)"
-    },
-    {
-     "t": "p",
-     "text": "*(Covered in Slides 111 & 113)*\nSetting $k = -1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}(-A) = (-1)^{n-1} \\text{adj}(A)"
-    },
-    {
-     "t": "p",
-     "text": "Chalkboard Slide 113 provides an alternative direct proof:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}(-A) = \\vert -A \\vert (-A)^{-1} = \\big((-1)^n \\vert A \\vert\\big) \\big(-A^{-1}\\big) = (-1)^{n+1} \\vert A \\vert A^{-1} = (-1)^{n+1} \\text{adj}(A)"
-    },
-    {
-     "t": "p",
-     "text": "Since $(-1)^{n+1} = (-1)^{n-1} \\cdot (-1)^2 = (-1)^{n-1}$, both forms are identical."
-    },
-    {
-     "t": "p",
-     "text": "**Parity Analysis Rule:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**If $n$ is EVEN:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$n - 1$ is ODD $\\implies (-1)^{n-1} = -1$."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{n = \\text{Even} \\implies \\text{adj}(-A) = -\\text{adj}(A)}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**If $n$ is ODD:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$n - 1$ is EVEN $\\implies (-1)^{n-1} = +1$."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{n = \\text{Odd} \\implies \\text{adj}(-A) = +\\text{adj}(A)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Proof of Identity  d  &amp  Sign Inversion /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Objective:** Prove $\\text{adj}(kA) = k^{n-1} \\text{adj}(A)$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 1:** From the adjoint-inverse relation $\\text{adj}(M) = \\vert M \\vert M^{-1}$, substitute $M = kA$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}(kA) = \\vert kA \\vert (kA)^{-1}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2:** Apply scalar properties of determinants and inverses:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For an $n \\times n$ matrix: $\\vert kA \\vert = k^n \\vert A \\vert$.",
+        "For matrix inverse: $(kA)^{-1} = \\frac{1}{k} A^{-1} = k^{-1} A^{-1}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3:** Multiply together:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}(kA) = \\big(k^n \\vert A \\vert\\big) \\big(k^{-1} A^{-1}\\big) = k^{n-1} \\vert A \\vert A^{-1}"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\vert A \\vert A^{-1} = \\text{adj}(A)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{adj}(kA) = k^{n-1} \\text{adj}(A)}"
+      },
+      {
+       "t": "h4",
+       "text": "Special Case: Negative Scalar ($k = -1$)"
+      },
+      {
+       "t": "p",
+       "text": "*(Covered in Slides 111 & 113)*\nSetting $k = -1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}(-A) = (-1)^{n-1} \\text{adj}(A)"
+      },
+      {
+       "t": "p",
+       "text": "Chalkboard Slide 113 provides an alternative direct proof:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}(-A) = \\vert -A \\vert (-A)^{-1} = \\big((-1)^n \\vert A \\vert\\big) \\big(-A^{-1}\\big) = (-1)^{n+1} \\vert A \\vert A^{-1} = (-1)^{n+1} \\text{adj}(A)"
+      },
+      {
+       "t": "p",
+       "text": "Since $(-1)^{n+1} = (-1)^{n-1} \\cdot (-1)^2 = (-1)^{n-1}$, both forms are identical."
+      },
+      {
+       "t": "p",
+       "text": "**Parity Analysis Rule:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**If $n$ is EVEN:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$n - 1$ is ODD $\\implies (-1)^{n-1} = -1$."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{n = \\text{Even} \\implies \\text{adj}(-A) = -\\text{adj}(A)}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**If $n$ is ODD:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$n - 1$ is EVEN $\\implies (-1)^{n-1} = +1$."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{n = \\text{Odd} \\implies \\text{adj}(-A) = +\\text{adj}(A)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -7698,126 +7731,125 @@ export default {
      "text": "**Question (Slide 112):** Let $A$ be a square matrix of order $n \\times n$. Which of the following statements are true?  \n(A) If $A$ is symmetric, then $\\text{adj}(A)$ is always symmetric.  \n(B) If $A$ is skew-symmetric, then $\\text{adj}(A)$ is skew-symmetric if $n$ is even.  \n(C) If $A$ is skew-symmetric, then $\\text{adj}(A)$ is symmetric if $n$ is odd.  \n(D) All of the above.  \n**Answer:** **(D) All of the above.**"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Proofs of Adjoint Symmetries</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Proof of (A): When $A$ is Symmetric ($A^T = A$):**\nLet $B = \\text{adj}(A)$. We test the transpose of $B$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^T = [\\text{adj}(A)]^T"
-    },
-    {
-     "t": "p",
-     "text": "From the basic property $\\text{adj}(M^T) = [\\text{adj}(M)]^T$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^T = \\text{adj}(A^T)"
-    },
-    {
-     "t": "p",
-     "text": "Since $A^T = A$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^T = \\text{adj}(A) = B"
-    },
-    {
-     "t": "p",
-     "text": "Since $B^T = B$, **$\\text{adj}(A)$ is always symmetric**, regardless of whether $n$ is even or odd! $\\checkmark$"
-    },
-    {
-     "t": "p",
-     "text": "**Proof of (B) & (C): When $A$ is Skew-Symmetric ($A^T = -A$):**\nLet $B = \\text{adj}(A)$. Taking transpose:"
-    },
-    {
-     "t": "math",
-     "tex": "B^T = [\\text{adj}(A)]^T = \\text{adj}(A^T) = \\text{adj}(-A)"
-    },
-    {
-     "t": "p",
-     "text": "Now apply the scalar scaling formula $\\text{adj}(-A) = (-1)^{n-1} \\text{adj}(A)$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^T = (-1)^{n-1} B"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 1: $n$ is EVEN:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$n - 1$ is odd $\\implies (-1)^{n-1} = -1$."
-    },
-    {
-     "t": "math",
-     "tex": "B^T = -B"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, **$\\text{adj}(A)$ is Skew-Symmetric** when $n$ is even! $\\checkmark$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 2: $n$ is ODD:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$n - 1$ is even $\\implies (-1)^{n-1} = +1$."
-    },
-    {
-     "t": "math",
-     "tex": "B^T = +B"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, **$\\text{adj}(A)$ is Symmetric** when $n$ is odd! $\\checkmark$"
-    },
-    {
-     "t": "p",
-     "text": "**Summary Matrix Symmetry Table under Adjoint:**"
-    },
-    {
-     "t": "table",
-     "header": [
-      "Nature of $A$",
-      "Order $n$",
-      "Nature of $\\text{adj}(A)$"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Proofs of Adjoint Symmetries /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Proof of (A): When $A$ is Symmetric ($A^T = A$):**\nLet $B = \\text{adj}(A)$. We test the transpose of $B$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^T = [\\text{adj}(A)]^T"
+      },
+      {
+       "t": "p",
+       "text": "From the basic property $\\text{adj}(M^T) = [\\text{adj}(M)]^T$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^T = \\text{adj}(A^T)"
+      },
+      {
+       "t": "p",
+       "text": "Since $A^T = A$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^T = \\text{adj}(A) = B"
+      },
+      {
+       "t": "p",
+       "text": "Since $B^T = B$, **$\\text{adj}(A)$ is always symmetric**, regardless of whether $n$ is even or odd! $\\checkmark$"
+      },
+      {
+       "t": "p",
+       "text": "**Proof of (B) & (C): When $A$ is Skew-Symmetric ($A^T = -A$):**\nLet $B = \\text{adj}(A)$. Taking transpose:"
+      },
+      {
+       "t": "math",
+       "tex": "B^T = [\\text{adj}(A)]^T = \\text{adj}(A^T) = \\text{adj}(-A)"
+      },
+      {
+       "t": "p",
+       "text": "Now apply the scalar scaling formula $\\text{adj}(-A) = (-1)^{n-1} \\text{adj}(A)$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^T = (-1)^{n-1} B"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 1: $n$ is EVEN:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$n - 1$ is odd $\\implies (-1)^{n-1} = -1$."
+      },
+      {
+       "t": "math",
+       "tex": "B^T = -B"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, **$\\text{adj}(A)$ is Skew-Symmetric** when $n$ is even! $\\checkmark$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 2: $n$ is ODD:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$n - 1$ is even $\\implies (-1)^{n-1} = +1$."
+      },
+      {
+       "t": "math",
+       "tex": "B^T = +B"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, **$\\text{adj}(A)$ is Symmetric** when $n$ is odd! $\\checkmark$"
+      },
+      {
+       "t": "p",
+       "text": "**Summary Matrix Symmetry Table under Adjoint:**"
+      },
+      {
+       "t": "table",
+       "header": [
+        "Nature of $A$",
+        "Order $n$",
+        "Nature of $\\text{adj}(A)$"
+       ],
+       "align": [
+        ":---:",
+        ":---:",
+        ":---:"
+       ],
+       "rows": [
+        [
+         "Symmetric ($A^T = A$)",
+         "Any $n$",
+         "**Symmetric**"
+        ],
+        [
+         "Skew-Symmetric ($A^T = -A$)",
+         "$n$ is Even",
+         "**Skew-Symmetric**"
+        ],
+        [
+         "Skew-Symmetric ($A^T = -A$)",
+         "$n$ is Odd",
+         "**Symmetric**"
+        ]
+       ]
+      }
      ],
-     "align": [
-      ":---:",
-      ":---:",
-      ":---:"
-     ],
-     "rows": [
-      [
-       "Symmetric ($A^T = A$)",
-       "Any $n$",
-       "**Symmetric**"
-      ],
-      [
-       "Skew-Symmetric ($A^T = -A$)",
-       "$n$ is Even",
-       "**Skew-Symmetric**"
-      ],
-      [
-       "Skew-Symmetric ($A^T = -A$)",
-       "$n$ is Odd",
-       "**Symmetric**"
-      ]
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "open": true
     },
     {
      "t": "h2",
@@ -7921,72 +7953,75 @@ export default {
      "text": "Since $a_{ji} = -a_{ij}$ for all $i, j$, **the matrix $A$ is strictly Skew-Symmetric ($A^T = -A$)**."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Determinant of $a_{ij} = i^2 - j^2$ for $3 \\times 3$ and $2 \\times 2$</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question (Slide 115):**  \nGiven $[A] = [a_{ij}]$ with $a_{ij} = i^2 - j^2$. Comment on $[A]$. Find $\\det(A)$ for:  \n(a) Order $3 \\times 3$.  \n(b) Order $2 \\times 2$."
-    },
-    {
-     "t": "p",
-     "text": "**Analysis & Solution:**\nSince $a_{ji} = j^2 - i^2 = -a_{ij}$ and $a_{ii} = 0$, $[A]$ is a **skew-symmetric matrix**."
-    },
-    {
-     "t": "p",
-     "text": "**(a) For order $3 \\times 3$ ($n = 3$, ODD):**  \nConstructing the matrix explicitly:"
-    },
-    {
-     "t": "math",
-     "tex": "[A]_{3 \\times 3} = \\begin{bmatrix} 1^2-1^2 & 1^2-2^2 & 1^2-3^2 \\\\ 2^2-1^2 & 2^2-2^2 & 2^2-3^2 \\\\ 3^2-1^2 & 3^2-2^2 & 3^2-3^2 \\end{bmatrix} = \\begin{bmatrix} 0 & -3 & -8 \\\\ 3 & 0 & -5 \\\\ 8 & 5 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Theorem:** The determinant of any skew-symmetric matrix of odd order is identically zero:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = \\vert A^T \\vert = \\vert -A \\vert = (-1)^n \\vert A \\vert = -\\vert A \\vert \\implies 2\\vert A \\vert = 0 \\implies \\vert A \\vert = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Verification via direct expansion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = 0 - (-3)[(3)(0) - (-5)(8)] + (-8)[(3)(5) - (0)(8)] = 3(40) - 8(15) = 120 - 120 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\vert A \\vert_{3 \\times 3} = 0}"
-    },
-    {
-     "t": "p",
-     "text": "**(b) For order $2 \\times 2$ ($n = 2$, EVEN):**  \nConstructing the matrix explicitly:"
-    },
-    {
-     "t": "math",
-     "tex": "[A]_{2 \\times 2} = \\begin{bmatrix} 1^2-1^2 & 1^2-2^2 \\\\ 2^2-1^2 & 2^2-2^2 \\end{bmatrix} = \\begin{bmatrix} 0 & -3 \\\\ 3 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating the determinant:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vert A \\vert = (0)(0) - (-3)(3) = 0 - (-9) = +9"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\vert A \\vert_{2 \\times 2} = 9}"
-    },
-    {
-     "t": "p",
-     "text": "*(Notice: 9 is a perfect square $3^2$, conforming to Jacobi's theorem that the determinant of an even-order skew-symmetric matrix is always the square of its Pfaffian: $\\det(A) = (\\text{Pf}(A))^2$.)*\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Determinant of  a ij    i 2 - j 2  for  3  times 3  and  2  times 2 /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question (Slide 115):**  \nGiven $[A] = [a_{ij}]$ with $a_{ij} = i^2 - j^2$. Comment on $[A]$. Find $\\det(A)$ for:  \n(a) Order $3 \\times 3$.  \n(b) Order $2 \\times 2$."
+      },
+      {
+       "t": "p",
+       "text": "**Analysis & Solution:**\nSince $a_{ji} = j^2 - i^2 = -a_{ij}$ and $a_{ii} = 0$, $[A]$ is a **skew-symmetric matrix**."
+      },
+      {
+       "t": "p",
+       "text": "**(a) For order $3 \\times 3$ ($n = 3$, ODD):**  \nConstructing the matrix explicitly:"
+      },
+      {
+       "t": "math",
+       "tex": "[A]_{3 \\times 3} = \\begin{bmatrix} 1^2-1^2 & 1^2-2^2 & 1^2-3^2 \\\\ 2^2-1^2 & 2^2-2^2 & 2^2-3^2 \\\\ 3^2-1^2 & 3^2-2^2 & 3^2-3^2 \\end{bmatrix} = \\begin{bmatrix} 0 & -3 & -8 \\\\ 3 & 0 & -5 \\\\ 8 & 5 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Theorem:** The determinant of any skew-symmetric matrix of odd order is identically zero:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = \\vert A^T \\vert = \\vert -A \\vert = (-1)^n \\vert A \\vert = -\\vert A \\vert \\implies 2\\vert A \\vert = 0 \\implies \\vert A \\vert = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Verification via direct expansion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = 0 - (-3)[(3)(0) - (-5)(8)] + (-8)[(3)(5) - (0)(8)] = 3(40) - 8(15) = 120 - 120 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\vert A \\vert_{3 \\times 3} = 0}"
+      },
+      {
+       "t": "p",
+       "text": "**(b) For order $2 \\times 2$ ($n = 2$, EVEN):**  \nConstructing the matrix explicitly:"
+      },
+      {
+       "t": "math",
+       "tex": "[A]_{2 \\times 2} = \\begin{bmatrix} 1^2-1^2 & 1^2-2^2 \\\\ 2^2-1^2 & 2^2-2^2 \\end{bmatrix} = \\begin{bmatrix} 0 & -3 \\\\ 3 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating the determinant:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vert A \\vert = (0)(0) - (-3)(3) = 0 - (-9) = +9"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\vert A \\vert_{2 \\times 2} = 9}"
+      },
+      {
+       "t": "p",
+       "text": "*(Notice: 9 is a perfect square $3^2$, conforming to Jacobi's theorem that the determinant of an even-order skew-symmetric matrix is always the square of its Pfaffian: $\\det(A) = (\\text{Pf}(A))^2$.)*"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -8049,75 +8084,78 @@ export default {
      "text": "**Question (Slides 117 \u2013 118):**  \nLet $[A] = [a_{ij}]_{n \\times n} = i^6 - j^6$.  \nLet $[B] = [A]^m = [b_{ij}]_{n \\times n}$, where $m \\in \\mathbb{Z}^+$.  \nLet $\\sum_j \\sum_i a_{ij}$ denote the sum of all elements of Matrix $[A]$.  \nWhich of the following statements are correct?  \n(a) $A^{-1}$ doesn't exist if $n = \\text{odd}$  \n(b) $B^{-1}$ doesn't exist if $n = 113$  \n(c) $\\sum_i \\sum_j a_{ij} = 0 = \\sum_i \\sum_j b_{ij}$, if $m = \\text{odd}$  \n(d) $\\vert B \\vert = 0$ if $m = 27$ and $n = 45$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Analysis of Options for Matrix Powers</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Structural Classification of Matrix $A$:**"
-    },
-    {
-     "t": "math",
-     "tex": "a_{ij} = i^6 - j^6 \\implies a_{ji} = j^6 - i^6 = -a_{ij}, \\quad a_{ii} = 0 \\implies A^T = -A \\text{ (Skew-Symmetric)}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Structural Behavior of Powers Matrix $B = A^m$:**\nTake the transpose of $B$:"
-    },
-    {
-     "t": "math",
-     "tex": "B^T = (A^m)^T = (A^T)^m = (-A)^m = (-1)^m A^m = (-1)^m B"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $m$ is **EVEN**: $B^T = (+1) B \\implies B$ is **Symmetric**.",
-      "If $m$ is **ODD**: $B^T = (-1) B \\implies B$ is **Skew-Symmetric**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Rigorous Evaluation of Each Statement:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (a): $A^{-1}$ doesn't exist if $n = \\text{odd}$ [CORRECT $\\checkmark$]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Matrix $A$ is skew-symmetric. If $n$ is odd, $\\vert A \\vert = 0$. Since $\\vert A \\vert = 0$, $A$ is singular, and $A^{-1}$ does not exist."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (b): $B^{-1}$ doesn't exist if $n = 113$ [CHALKBOARD INSIGHT]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "*Instructor's Chalkboard Derivation (Slide 118):*  \n  The slide notes: \"$n = 113 : \\text{odd} \\implies [B]$ has odd order $\\implies \\vert B \\vert = 0 \\to \\text{NO!}$ [Only when $B$ is skew-symmetric]. Thus, $|B| = 0$ or $B^{-1} \\text{ D.N.E.}$ holds if $m = \\text{odd}$ and $n = \\text{odd}$.\"  \n  *Exam Trap Explanation:* The instructor highlights that merely knowing that the matrix order is odd ($n = 113$) does not guarantee zero determinant unless you ALSO know the symmetry type of the matrix. If someone considers $B$ independently without referencing $A$, odd order does not imply singularity. However, since $B = A^m$ and $A$ is an odd-order skew-symmetric matrix, $\\vert A \\vert = 0$, so $\\vert B \\vert = \\vert A \\vert^m = 0^m = 0$. The chalkboard marks this option false to test whether students mistakenly think *any* odd-order matrix has determinant 0 without checking skew-symmetry of $B$!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (c): $\\sum_i \\sum_j a_{ij} = 0 = \\sum_i \\sum_j b_{ij}$, if $m = \\text{odd}$ [CORRECT $\\checkmark$]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $A$ is skew-symmetric, the sum of all elements of $A$ is 0. If $m$ is odd, $B = A^m$ is also skew-symmetric. Therefore, the sum of all elements of $B$ is also 0. Both double sums evaluate to 0 identically!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (d): $\\vert B \\vert = 0$ if $m = 27$ and $n = 45$ [CORRECT $\\checkmark$]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Here $m = 27$ is ODD $\\implies B = A^{27}$ is skew-symmetric.  \n  $n = 45$ is ODD $\\implies B$ is a skew-symmetric matrix of odd order.  \n  Therefore, $\\vert B \\vert = 0$ identically!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Analysis of Options for Matrix Powers /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Structural Classification of Matrix $A$:**"
+      },
+      {
+       "t": "math",
+       "tex": "a_{ij} = i^6 - j^6 \\implies a_{ji} = j^6 - i^6 = -a_{ij}, \\quad a_{ii} = 0 \\implies A^T = -A \\text{ (Skew-Symmetric)}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Structural Behavior of Powers Matrix $B = A^m$:**\nTake the transpose of $B$:"
+      },
+      {
+       "t": "math",
+       "tex": "B^T = (A^m)^T = (A^T)^m = (-A)^m = (-1)^m A^m = (-1)^m B"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $m$ is **EVEN**: $B^T = (+1) B \\implies B$ is **Symmetric**.",
+        "If $m$ is **ODD**: $B^T = (-1) B \\implies B$ is **Skew-Symmetric**."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Rigorous Evaluation of Each Statement:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (a): $A^{-1}$ doesn't exist if $n = \\text{odd}$ [CORRECT $\\checkmark$]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Matrix $A$ is skew-symmetric. If $n$ is odd, $\\vert A \\vert = 0$. Since $\\vert A \\vert = 0$, $A$ is singular, and $A^{-1}$ does not exist."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (b): $B^{-1}$ doesn't exist if $n = 113$ [CHALKBOARD INSIGHT]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "*Instructor's Chalkboard Derivation (Slide 118):*  \n  The slide notes: \"$n = 113 : \\text{odd} \\implies [B]$ has odd order $\\implies \\vert B \\vert = 0 \\to \\text{NO!}$ [Only when $B$ is skew-symmetric]. Thus, $|B| = 0$ or $B^{-1} \\text{ D.N.E.}$ holds if $m = \\text{odd}$ and $n = \\text{odd}$.\"  \n  *Exam Trap Explanation:* The instructor highlights that merely knowing that the matrix order is odd ($n = 113$) does not guarantee zero determinant unless you ALSO know the symmetry type of the matrix. If someone considers $B$ independently without referencing $A$, odd order does not imply singularity. However, since $B = A^m$ and $A$ is an odd-order skew-symmetric matrix, $\\vert A \\vert = 0$, so $\\vert B \\vert = \\vert A \\vert^m = 0^m = 0$. The chalkboard marks this option false to test whether students mistakenly think *any* odd-order matrix has determinant 0 without checking skew-symmetry of $B$!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (c): $\\sum_i \\sum_j a_{ij} = 0 = \\sum_i \\sum_j b_{ij}$, if $m = \\text{odd}$ [CORRECT $\\checkmark$]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $A$ is skew-symmetric, the sum of all elements of $A$ is 0. If $m$ is odd, $B = A^m$ is also skew-symmetric. Therefore, the sum of all elements of $B$ is also 0. Both double sums evaluate to 0 identically!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (d): $\\vert B \\vert = 0$ if $m = 27$ and $n = 45$ [CORRECT $\\checkmark$]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Here $m = 27$ is ODD $\\implies B = A^{27}$ is skew-symmetric.  \n  $n = 45$ is ODD $\\implies B$ is a skew-symmetric matrix of odd order.  \n  Therefore, $\\vert B \\vert = 0$ identically!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8128,135 +8166,138 @@ export default {
      "text": "*(Covered in Slide 119)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Orthogonality Problem</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question (Slide 119):**  \nGiven:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & 2 & 2 \\\\ 2 & 1 & -2 \\\\ a & 2 & b \\end{bmatrix}, \\quad \\text{such that } AA^T = 9 I_3"
-    },
-    {
-     "t": "p",
-     "text": "Find the values of $a$ and $b$."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-step Mathematical Derivation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "The relation $AA^T = 9 I_3$ represents a scaled orthogonal matrix:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\left(\\frac{1}{3} A\\right) \\left(\\frac{1}{3} A\\right)^T = I_3"
-    },
-    {
-     "t": "p",
-     "text": "For any matrix where $AA^T = k I$, it is also true that $A^T A = k I$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "This establishes two fundamental geometric conditions on the column vectors $C_1, C_2, C_3$:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Norm Condition:** The squared Euclidean norm of every column is 9:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\Vert C_1 \\Vert^2 = 9, \\quad \\Vert C_2 \\Vert^2 = 9, \\quad \\Vert C_3 \\Vert^2 = 9"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Orthogonality Condition:** Distinct columns are mutually orthogonal:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "C_1 \\cdot C_2 = 0, \\quad C_2 \\cdot C_3 = 0, \\quad C_1 \\cdot C_3 = 0"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Write the column vectors:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "C_1 = \\begin{bmatrix} 1 \\\\ 2 \\\\ a \\end{bmatrix}, \\quad C_2 = \\begin{bmatrix} 2 \\\\ 1 \\\\ 2 \\end{bmatrix}, \\quad C_3 = \\begin{bmatrix} 2 \\\\ -2 \\\\ b \\end{bmatrix}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Orthogonality of Column 1 and Column 2 ($C_1 \\cdot C_2 = 0$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(1)(2) + (2)(1) + (a)(2) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "2 + 2 + 2a = 0"
-    },
-    {
-     "t": "math",
-     "tex": "4 + 2a = 0 \\implies \\boxed{a = -2}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Orthogonality of Column 2 and Column 3 ($C_2 \\cdot C_3 = 0$):**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(2)(2) + (1)(-2) + (2)(b) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "4 - 2 + 2b = 0"
-    },
-    {
-     "t": "math",
-     "tex": "2 + 2b = 0 \\implies \\boxed{b = -1}"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "**Full Verification:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Check $C_1 \\cdot C_3$: $(1)(2) + (2)(-2) + (-2)(-1) = 2 - 4 + 2 = 0$ $\\checkmark$",
-      "Check $\\Vert C_1 \\Vert^2$: $1^2 + 2^2 + (-2)^2 = 1 + 4 + 4 = 9$ $\\checkmark$",
-      "Check $\\Vert C_2 \\Vert^2$: $2^2 + 1^2 + 2^2 = 4 + 1 + 4 = 9$ $\\checkmark$",
-      "Check $\\Vert C_3 \\Vert^2$: $2^2 + (-2)^2 + (-1)^2 = 4 + 4 + 1 = 9$ $\\checkmark$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Final Result:** $a = -2, \\quad b = -1$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Orthogonality Problem /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question (Slide 119):**  \nGiven:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & 2 & 2 \\\\ 2 & 1 & -2 \\\\ a & 2 & b \\end{bmatrix}, \\quad \\text{such that } AA^T = 9 I_3"
+      },
+      {
+       "t": "p",
+       "text": "Find the values of $a$ and $b$."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-step Mathematical Derivation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "The relation $AA^T = 9 I_3$ represents a scaled orthogonal matrix:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\left(\\frac{1}{3} A\\right) \\left(\\frac{1}{3} A\\right)^T = I_3"
+      },
+      {
+       "t": "p",
+       "text": "For any matrix where $AA^T = k I$, it is also true that $A^T A = k I$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "This establishes two fundamental geometric conditions on the column vectors $C_1, C_2, C_3$:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Norm Condition:** The squared Euclidean norm of every column is 9:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\Vert C_1 \\Vert^2 = 9, \\quad \\Vert C_2 \\Vert^2 = 9, \\quad \\Vert C_3 \\Vert^2 = 9"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Orthogonality Condition:** Distinct columns are mutually orthogonal:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "C_1 \\cdot C_2 = 0, \\quad C_2 \\cdot C_3 = 0, \\quad C_1 \\cdot C_3 = 0"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Write the column vectors:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "C_1 = \\begin{bmatrix} 1 \\\\ 2 \\\\ a \\end{bmatrix}, \\quad C_2 = \\begin{bmatrix} 2 \\\\ 1 \\\\ 2 \\end{bmatrix}, \\quad C_3 = \\begin{bmatrix} 2 \\\\ -2 \\\\ b \\end{bmatrix}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Orthogonality of Column 1 and Column 2 ($C_1 \\cdot C_2 = 0$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(1)(2) + (2)(1) + (a)(2) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "2 + 2 + 2a = 0"
+      },
+      {
+       "t": "math",
+       "tex": "4 + 2a = 0 \\implies \\boxed{a = -2}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Orthogonality of Column 2 and Column 3 ($C_2 \\cdot C_3 = 0$):**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(2)(2) + (1)(-2) + (2)(b) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "4 - 2 + 2b = 0"
+      },
+      {
+       "t": "math",
+       "tex": "2 + 2b = 0 \\implies \\boxed{b = -1}"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "**Full Verification:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Check $C_1 \\cdot C_3$: $(1)(2) + (2)(-2) + (-2)(-1) = 2 - 4 + 2 = 0$ $\\checkmark$",
+        "Check $\\Vert C_1 \\Vert^2$: $1^2 + 2^2 + (-2)^2 = 1 + 4 + 4 = 9$ $\\checkmark$",
+        "Check $\\Vert C_2 \\Vert^2$: $2^2 + 1^2 + 2^2 = 4 + 1 + 4 = 9$ $\\checkmark$",
+        "Check $\\Vert C_3 \\Vert^2$: $2^2 + (-2)^2 + (-1)^2 = 4 + 4 + 1 = 9$ $\\checkmark$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Final Result:** $a = -2, \\quad b = -1$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8267,117 +8308,120 @@ export default {
      "text": "*(Covered in Slide 120)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Problem from Slide 120</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question (Slide 120):**  \nLet $A$ and $B$ be two singular matrices such that:"
-    },
-    {
-     "t": "math",
-     "tex": "AB = B \\quad \\text{and} \\quad BA = A"
-    },
-    {
-     "t": "p",
-     "text": "Then, $A^2 + B^2$ is equal to:  \n(A) $A + B$  \n(B) $AB$  \n(C) $BA$  \n(D) $2(A + B)$"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-step Derivation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Express $A^2$ by splitting the product:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^2 = A \\cdot A"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Substitute the given identity $A = BA$ for the second $A$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^2 = A(BA)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "By the associative property of matrix multiplication:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^2 = (AB)A"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Substitute the given identity $AB = B$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^2 = BA"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Finally, substitute $BA = A$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A^2 = A}"
-    },
-    {
-     "t": "p",
-     "text": "*(Thus, $A$ is an idempotent matrix!)*"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "Similarly, for $B^2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "B^2 = B \\cdot B = B(AB) = (BA)B = AB = B"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{B^2 = B}"
-    },
-    {
-     "t": "p",
-     "text": "*(Thus, $B$ is also an idempotent matrix!)*"
-    },
-    {
-     "t": "ol",
-     "start": 7,
-     "items": [
-      "Adding both equations together:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^2 + B^2 = A + B"
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **(A) $A + B$.**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem from Slide 120 /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question (Slide 120):**  \nLet $A$ and $B$ be two singular matrices such that:"
+      },
+      {
+       "t": "math",
+       "tex": "AB = B \\quad \\text{and} \\quad BA = A"
+      },
+      {
+       "t": "p",
+       "text": "Then, $A^2 + B^2$ is equal to:  \n(A) $A + B$  \n(B) $AB$  \n(C) $BA$  \n(D) $2(A + B)$"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-step Derivation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Express $A^2$ by splitting the product:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^2 = A \\cdot A"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Substitute the given identity $A = BA$ for the second $A$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^2 = A(BA)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "By the associative property of matrix multiplication:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^2 = (AB)A"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Substitute the given identity $AB = B$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^2 = BA"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Finally, substitute $BA = A$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A^2 = A}"
+      },
+      {
+       "t": "p",
+       "text": "*(Thus, $A$ is an idempotent matrix!)*"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "Similarly, for $B^2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "B^2 = B \\cdot B = B(AB) = (BA)B = AB = B"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{B^2 = B}"
+      },
+      {
+       "t": "p",
+       "text": "*(Thus, $B$ is also an idempotent matrix!)*"
+      },
+      {
+       "t": "ol",
+       "start": 7,
+       "items": [
+        "Adding both equations together:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^2 + B^2 = A + B"
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **(A) $A + B$.**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -8446,54 +8490,53 @@ export default {
      "tex": "\\boxed{\\text{Total Skew-Symmetric Matrices} = k^{\\frac{n(n-1)}{2}}}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Worked Example from Slide 121</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question (Slide 121):**  \nFind the number of different symmetric $4 \\times 4$ matrices in which each element is either 2 or 3."
-    },
-    {
-     "t": "p",
-     "text": "**Solution:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Matrix dimension: $n = 4$.",
-      "Allowed entry choices: $\\{2, 3\\} \\implies k = 2$ choices.",
-      "Number of independent positions:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{n(n+1)}{2} = \\frac{4(4+1)}{2} = \\frac{20}{2} = 10"
-    },
-    {
-     "t": "p",
-     "text": "As drawn on Slide 121, the 10 independent entries are:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} a & e & f & h \\\\ e & b & g & i \\\\ f & g & c & j \\\\ h & i & j & d \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "where the 10 variables are $a, b, c, d$ (diagonal) and $e, f, g, h, i, j$ (upper triangular)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Each variable can independently take 2 values:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Total Matrices} = 2^{10} = 1024"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Worked Example from Slide 121 /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question (Slide 121):**  \nFind the number of different symmetric $4 \\times 4$ matrices in which each element is either 2 or 3."
+      },
+      {
+       "t": "p",
+       "text": "**Solution:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Matrix dimension: $n = 4$.",
+        "Allowed entry choices: $\\{2, 3\\} \\implies k = 2$ choices.",
+        "Number of independent positions:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{n(n+1)}{2} = \\frac{4(4+1)}{2} = \\frac{20}{2} = 10"
+      },
+      {
+       "t": "p",
+       "text": "As drawn on Slide 121, the 10 independent entries are:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} a & e & f & h \\\\ e & b & g & i \\\\ f & g & c & j \\\\ h & i & j & d \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "where the 10 variables are $a, b, c, d$ (diagonal) and $e, f, g, h, i, j$ (upper triangular)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Each variable can independently take 2 values:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Total Matrices} = 2^{10} = 1024"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8504,67 +8547,70 @@ export default {
      "text": "*(Covered in Slides 122 & 123)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Permutation Matrix Counting</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question (Slides 122 \u2013 123):**  \nLet $S$ be the set of all $6 \\times 6$ matrices $A = [a_{ij}]$ such that:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$a_{ij} \\in \\{0, 1\\}$ for all $i, j$ (every entry is either 0 or 1).",
-      "For each column $j$: $\\sum_{i=1}^6 a_{ij} = 1$ (sum of elements in each column is 1).",
-      "For each row $i$: $\\sum_{j=1}^6 a_{ij} = 1$ (sum of elements in each row is 1)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Find the number of elements in the set $S$."
-    },
-    {
-     "t": "p",
-     "text": "**Mathematical Derivation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "A matrix satisfying these three properties is known as a **Permutation Matrix**.",
-      "Because each row sum is 1 and each column sum is 1, every row and every column must contain **exactly one 1** and **five 0s**.",
-      "Let us construct such a matrix row by row:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Row 1:** There are 6 available columns where the single '1' can be placed $\\implies 6$ choices.",
-      "**Row 2:** The single '1' cannot be placed in the column already occupied in Row 1 (otherwise that column sum would exceed 1). Hence, there are $6 - 1 = 5$ choices.",
-      "**Row 3:** The '1' cannot be in the 2 previously occupied columns $\\implies 4$ choices.",
-      "**Row 4:** $3$ choices remaining.",
-      "**Row 5:** $2$ choices remaining.",
-      "**Row 6:** Only $1$ column remaining $\\implies 1$ choice."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Total number of matrices in set $S$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vert S \\vert = 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = 6! = 720"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\vert S \\vert = 720}"
-    },
-    {
-     "t": "p",
-     "text": "**Generalization:** For any $n \\times n$ permutation matrix set, $\\vert S \\vert = n!$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Permutation Matrix Counting /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question (Slides 122 \u2013 123):**  \nLet $S$ be the set of all $6 \\times 6$ matrices $A = [a_{ij}]$ such that:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$a_{ij} \\in \\{0, 1\\}$ for all $i, j$ (every entry is either 0 or 1).",
+        "For each column $j$: $\\sum_{i=1}^6 a_{ij} = 1$ (sum of elements in each column is 1).",
+        "For each row $i$: $\\sum_{j=1}^6 a_{ij} = 1$ (sum of elements in each row is 1)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Find the number of elements in the set $S$."
+      },
+      {
+       "t": "p",
+       "text": "**Mathematical Derivation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "A matrix satisfying these three properties is known as a **Permutation Matrix**.",
+        "Because each row sum is 1 and each column sum is 1, every row and every column must contain **exactly one 1** and **five 0s**.",
+        "Let us construct such a matrix row by row:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Row 1:** There are 6 available columns where the single '1' can be placed $\\implies 6$ choices.",
+        "**Row 2:** The single '1' cannot be placed in the column already occupied in Row 1 (otherwise that column sum would exceed 1). Hence, there are $6 - 1 = 5$ choices.",
+        "**Row 3:** The '1' cannot be in the 2 previously occupied columns $\\implies 4$ choices.",
+        "**Row 4:** $3$ choices remaining.",
+        "**Row 5:** $2$ choices remaining.",
+        "**Row 6:** Only $1$ column remaining $\\implies 1$ choice."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Total number of matrices in set $S$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vert S \\vert = 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = 6! = 720"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\vert S \\vert = 720}"
+      },
+      {
+       "t": "p",
+       "text": "**Generalization:** For any $n \\times n$ permutation matrix set, $\\vert S \\vert = n!$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8575,79 +8621,82 @@ export default {
      "text": "*(Covered in Slide 124)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Determinant Evaluation Drill</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question (Slide 124):**  \nLet $A$ be a $3 \\times 3$ matrix such that $\\det(A) = -2$. Define $B = \\text{adj}(A)$.  \nFind the value of $\\det(AB + 4I)$, where $I$ is the identity matrix of order 3."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-step Solution:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Recall the fundamental adjoint identity:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A \\cdot \\text{adj}(A) = \\vert A \\vert I_3"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Since $B = \\text{adj}(A)$ and $\\vert A \\vert = -2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "AB = -2 I_3"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Substitute $AB = -2 I_3$ into the target expression:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "AB + 4I = (-2 I_3) + 4 I_3 = (-2 + 4) I_3 = 2 I_3"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Compute the determinant:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(AB + 4I) = \\det(2 I_3)"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Apply scalar determinant scaling $\\det(k M_{n \\times n}) = k^n \\det(M)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(2 I_3) = 2^3 \\det(I_3) = 8 \\times 1 = 8"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\det(AB + 4I) = 8}"
-    },
-    {
-     "t": "p",
-     "text": "**Exam Pitfall:**  \nA frequent student mistake is writing $\\det(2 I_3) = 2 \\times 1 = 2$, forgetting that the scalar 2 pulls out from all $n = 3$ rows, producing $2^3 = 8$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Determinant Evaluation Drill /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question (Slide 124):**  \nLet $A$ be a $3 \\times 3$ matrix such that $\\det(A) = -2$. Define $B = \\text{adj}(A)$.  \nFind the value of $\\det(AB + 4I)$, where $I$ is the identity matrix of order 3."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-step Solution:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Recall the fundamental adjoint identity:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A \\cdot \\text{adj}(A) = \\vert A \\vert I_3"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Since $B = \\text{adj}(A)$ and $\\vert A \\vert = -2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "AB = -2 I_3"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Substitute $AB = -2 I_3$ into the target expression:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "AB + 4I = (-2 I_3) + 4 I_3 = (-2 + 4) I_3 = 2 I_3"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Compute the determinant:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(AB + 4I) = \\det(2 I_3)"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Apply scalar determinant scaling $\\det(k M_{n \\times n}) = k^n \\det(M)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(2 I_3) = 2^3 \\det(I_3) = 8 \\times 1 = 8"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\det(AB + 4I) = 8}"
+      },
+      {
+       "t": "p",
+       "text": "**Exam Pitfall:**  \nA frequent student mistake is writing $\\det(2 I_3) = 2 \\times 1 = 2$, forgetting that the scalar 2 pulls out from all $n = 3$ rows, producing $2^3 = 8$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8662,91 +8711,94 @@ export default {
      "text": "When a matrix satisfies an algebraic polynomial equation $P(A) = 0$ (such as the Cayley-Hamilton characteristic polynomial), finding $A^{-1}$ does **not** require cofactors."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Annihilating Polynomial Inversion</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question (Slide 125):**  \nGiven $A = \\begin{bmatrix} 2 & -1 \\\\ 1 & 4 \\end{bmatrix}$ and $A^2 - 6A + 9 I_2 = [0]$.  \nFind $A^{-1}$."
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-step Solution:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Start with the given matrix polynomial:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^2 - 6A + 9 I_2 = [0]"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Pre-multiply the entire equation by $A^{-1}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^{-1}\\big(A^2 - 6A + 9 I_2\\big) = A^{-1} [0]"
-    },
-    {
-     "t": "math",
-     "tex": "(A^{-1} A) A - 6 (A^{-1} A) + 9 (A^{-1} I_2) = [0]"
-    },
-    {
-     "t": "math",
-     "tex": "I A - 6 I + 9 A^{-1} = [0]"
-    },
-    {
-     "t": "math",
-     "tex": "A - 6I + 9 A^{-1} = [0]"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Isolate $A^{-1}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "9 A^{-1} = 6I - A"
-    },
-    {
-     "t": "math",
-     "tex": "A^{-1} = \\frac{1}{9} (6I - A)"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Compute $6I - A$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "6I - A = 6 \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} - \\begin{bmatrix} 2 & -1 \\\\ 1 & 4 \\end{bmatrix} = \\begin{bmatrix} 6 & 0 \\\\ 0 & 6 \\end{bmatrix} - \\begin{bmatrix} 2 & -1 \\\\ 1 & 4 \\end{bmatrix} = \\begin{bmatrix} 6 - 2 & 0 - (-1) \\\\ 0 - 1 & 6 - 4 \\end{bmatrix} = \\begin{bmatrix} 4 & 1 \\\\ -1 & 2 \\end{bmatrix}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Divide by 9:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A^{-1} = \\frac{1}{9} \\begin{bmatrix} 4 & 1 \\\\ -1 & 2 \\end{bmatrix}}"
-    },
-    {
-     "t": "p",
-     "text": "**Verification via $2 \\times 2$ Shortcut:**  \n$\\vert A \\vert = (2)(4) - (-1)(1) = 8 + 1 = 9$.  \n$\\text{adj}(A) = \\begin{bmatrix} 4 & 1 \\\\ -1 & 2 \\end{bmatrix}$.  \n$A^{-1} = \\frac{1}{\\vert A \\vert} \\text{adj}(A) = \\frac{1}{9} \\begin{bmatrix} 4 & 1 \\\\ -1 & 2 \\end{bmatrix}$. Perfect match!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Annihilating Polynomial Inversion /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question (Slide 125):**  \nGiven $A = \\begin{bmatrix} 2 & -1 \\\\ 1 & 4 \\end{bmatrix}$ and $A^2 - 6A + 9 I_2 = [0]$.  \nFind $A^{-1}$."
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-step Solution:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Start with the given matrix polynomial:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^2 - 6A + 9 I_2 = [0]"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Pre-multiply the entire equation by $A^{-1}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^{-1}\\big(A^2 - 6A + 9 I_2\\big) = A^{-1} [0]"
+      },
+      {
+       "t": "math",
+       "tex": "(A^{-1} A) A - 6 (A^{-1} A) + 9 (A^{-1} I_2) = [0]"
+      },
+      {
+       "t": "math",
+       "tex": "I A - 6 I + 9 A^{-1} = [0]"
+      },
+      {
+       "t": "math",
+       "tex": "A - 6I + 9 A^{-1} = [0]"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Isolate $A^{-1}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "9 A^{-1} = 6I - A"
+      },
+      {
+       "t": "math",
+       "tex": "A^{-1} = \\frac{1}{9} (6I - A)"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Compute $6I - A$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "6I - A = 6 \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} - \\begin{bmatrix} 2 & -1 \\\\ 1 & 4 \\end{bmatrix} = \\begin{bmatrix} 6 & 0 \\\\ 0 & 6 \\end{bmatrix} - \\begin{bmatrix} 2 & -1 \\\\ 1 & 4 \\end{bmatrix} = \\begin{bmatrix} 6 - 2 & 0 - (-1) \\\\ 0 - 1 & 6 - 4 \\end{bmatrix} = \\begin{bmatrix} 4 & 1 \\\\ -1 & 2 \\end{bmatrix}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Divide by 9:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A^{-1} = \\frac{1}{9} \\begin{bmatrix} 4 & 1 \\\\ -1 & 2 \\end{bmatrix}}"
+      },
+      {
+       "t": "p",
+       "text": "**Verification via $2 \\times 2$ Shortcut:**  \n$\\vert A \\vert = (2)(4) - (-1)(1) = 8 + 1 = 9$.  \n$\\text{adj}(A) = \\begin{bmatrix} 4 & 1 \\\\ -1 & 2 \\end{bmatrix}$.  \n$A^{-1} = \\frac{1}{\\vert A \\vert} \\text{adj}(A) = \\frac{1}{9} \\begin{bmatrix} 4 & 1 \\\\ -1 & 2 \\end{bmatrix}$. Perfect match!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -8765,149 +8817,148 @@ export default {
      "text": "**Problem Statement:**  \nMatrix $A$ is of order $3 \\times 3$ ($n = 3$) with $\\vert A \\vert = -2$. Find:  \n(a) $\\alpha$, where $\\text{Adj}[\\text{Adj}(A)] = \\alpha A$  \n(b) $\\beta$, where $\\vert \\text{Adj}[\\text{Adj}[\\text{Adj}(A)]] \\vert = \\beta$  \n(c) $\\gamma$, where $\\text{Adj}(-3A) = \\gamma \\text{Adj}(A)$  \n(d) $\\eta$, where $\\text{Adj}[\\text{Adj}(-3A)] = \\eta \\text{Adj}[\\text{Adj}(A)]$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Complete 4-Part Adjoint Drill</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Part (a): Finding $\\alpha$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Formula: $\\text{adj}(\\text{adj}(A)) = \\vert A \\vert^{n-2} A$.",
-      "Here $n = 3, \\vert A \\vert = -2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}(\\text{adj}(A)) = (-2)^{3-2} A = (-2)^1 A = -2A"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\text{adj}(\\text{adj}(A)) = \\alpha A$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\alpha = -2}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (b): Finding $\\beta$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Formula: $\\vert \\underbrace{\\text{adj}[\\text{adj}[\\cdots \\text{adj}(A) \\cdots]]}_{m \\text{ times}} \\vert = \\vert A \\vert^{(n-1)^m}$.",
-      "Here $n = 3$, nested depth $m = 3$, $\\vert A \\vert = -2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Exponent} = (n-1)^m = (3-1)^3 = 2^3 = 8"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Therefore:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\beta = \\vert A \\vert^8 = (-2)^8 = 256"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\beta = 256}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (c): Finding $\\gamma$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Formula: $\\text{adj}(kA) = k^{n-1} \\text{adj}(A)$.",
-      "Here $k = -3, n = 3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\gamma = k^{n-1} = (-3)^{3-1} = (-3)^2 = 9"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Therefore:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}(-3A) = 9 \\text{adj}(A) \\implies \\boxed{\\gamma = 9}"
-    },
-    {
-     "t": "h4",
-     "text": "Part (d): Finding $\\eta$"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Chalkboard Derivation from Slide 128:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $k = -3$. First apply the scalar rule to the inner adjoint:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}(kA) = k^{n-1} \\text{adj}(A) = (-3)^{3-1} \\text{adj}(A) = 9 \\text{adj}(A)"
-    },
-    {
-     "t": "p",
-     "text": "Now take the outer adjoint:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}[\\text{adj}(kA)] = \\text{adj}[9 \\text{adj}(A)]"
-    },
-    {
-     "t": "p",
-     "text": "Let $C = \\text{adj}(A)$. The expression is $\\text{adj}(9 C)$.\n  Applying the scalar rule again with scalar 9 to matrix $C$ of order $n = 3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}(9 C) = 9^{n-1} \\text{adj}(C) = 9^{3-1} \\text{adj}(\\text{adj}(A)) = 9^2 \\text{adj}(\\text{adj}(A)) = 81 \\text{adj}(\\text{adj}(A))"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "General formula:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{adj}[\\text{adj}(kA)] = \\big(k^{n-1}\\big)^{n-1} \\text{adj}[\\text{adj}(A)] = k^{(n-1)^2} \\text{adj}[\\text{adj}(A)]"
-    },
-    {
-     "t": "p",
-     "text": "Here: $k^{(n-1)^2} = (-3)^{(3-1)^2} = (-3)^{2^2} = (-3)^4 = 81$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $\\text{adj}[\\text{adj}(-3A)] = \\eta \\text{adj}[\\text{adj}(A)]$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\eta = 81}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Complete 4-Part Adjoint Drill /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Part (a): Finding $\\alpha$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Formula: $\\text{adj}(\\text{adj}(A)) = \\vert A \\vert^{n-2} A$.",
+        "Here $n = 3, \\vert A \\vert = -2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}(\\text{adj}(A)) = (-2)^{3-2} A = (-2)^1 A = -2A"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\text{adj}(\\text{adj}(A)) = \\alpha A$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\alpha = -2}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (b): Finding $\\beta$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Formula: $\\vert \\underbrace{\\text{adj}[\\text{adj}[\\cdots \\text{adj}(A) \\cdots]]}_{m \\text{ times}} \\vert = \\vert A \\vert^{(n-1)^m}$.",
+        "Here $n = 3$, nested depth $m = 3$, $\\vert A \\vert = -2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Exponent} = (n-1)^m = (3-1)^3 = 2^3 = 8"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Therefore:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\beta = \\vert A \\vert^8 = (-2)^8 = 256"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\beta = 256}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (c): Finding $\\gamma$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Formula: $\\text{adj}(kA) = k^{n-1} \\text{adj}(A)$.",
+        "Here $k = -3, n = 3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\gamma = k^{n-1} = (-3)^{3-1} = (-3)^2 = 9"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Therefore:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}(-3A) = 9 \\text{adj}(A) \\implies \\boxed{\\gamma = 9}"
+      },
+      {
+       "t": "h4",
+       "text": "Part (d): Finding $\\eta$"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Chalkboard Derivation from Slide 128:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $k = -3$. First apply the scalar rule to the inner adjoint:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}(kA) = k^{n-1} \\text{adj}(A) = (-3)^{3-1} \\text{adj}(A) = 9 \\text{adj}(A)"
+      },
+      {
+       "t": "p",
+       "text": "Now take the outer adjoint:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}[\\text{adj}(kA)] = \\text{adj}[9 \\text{adj}(A)]"
+      },
+      {
+       "t": "p",
+       "text": "Let $C = \\text{adj}(A)$. The expression is $\\text{adj}(9 C)$.\n  Applying the scalar rule again with scalar 9 to matrix $C$ of order $n = 3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}(9 C) = 9^{n-1} \\text{adj}(C) = 9^{3-1} \\text{adj}(\\text{adj}(A)) = 9^2 \\text{adj}(\\text{adj}(A)) = 81 \\text{adj}(\\text{adj}(A))"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "General formula:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{adj}[\\text{adj}(kA)] = \\big(k^{n-1}\\big)^{n-1} \\text{adj}[\\text{adj}(A)] = k^{(n-1)^2} \\text{adj}[\\text{adj}(A)]"
+      },
+      {
+       "t": "p",
+       "text": "Here: $k^{(n-1)^2} = (-3)^{(3-1)^2} = (-3)^{2^2} = (-3)^4 = 81$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $\\text{adj}[\\text{adj}(-3A)] = \\eta \\text{adj}[\\text{adj}(A)]$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\eta = 81}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -9061,32 +9112,31 @@ export default {
      "tex": "[1], [2], [3], [4], [5], [6], [7], [8], [9], [0], [-1], [-2]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Submatrix Counting Drill from Slide 131</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question (Slide 131):**  \nFrom a $4 \\times 5$ matrix, how many square submatrices can you make of each possible order?"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-step Counting:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Dimension: $m = 4, n = 5$. Maximum square submatrix order is $\\min(4, 5) = 4$.",
-      "**$5 \\times 5$ Submatrices:** $0$ (impossible since only 4 rows exist).",
-      "**$4 \\times 4$ Submatrices:** $\\text{ }^4C_4 \\times \\text{ }^5C_4 = 1 \\times 5 = 5$.",
-      "**$3 \\times 3$ Submatrices:** $\\text{ }^4C_3 \\times \\text{ }^5C_3 = 4 \\times 10 = 40$.",
-      "**$2 \\times 2$ Submatrices:** $\\text{ }^4C_2 \\times \\text{ }^5C_2 = 6 \\times 10 = 60$.",
-      "**$1 \\times 1$ Submatrices:** $\\text{ }^4C_1 \\times \\text{ }^5C_1 = 4 \\times 5 = 20$.",
-      "**Grand Total of all square submatrices:** $5 + 40 + 60 + 20 = 125$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Submatrix Counting Drill from Slide 131 /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question (Slide 131):**  \nFrom a $4 \\times 5$ matrix, how many square submatrices can you make of each possible order?"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-step Counting:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Dimension: $m = 4, n = 5$. Maximum square submatrix order is $\\min(4, 5) = 4$.",
+        "**$5 \\times 5$ Submatrices:** $0$ (impossible since only 4 rows exist).",
+        "**$4 \\times 4$ Submatrices:** $\\text{ }^4C_4 \\times \\text{ }^5C_4 = 1 \\times 5 = 5$.",
+        "**$3 \\times 3$ Submatrices:** $\\text{ }^4C_3 \\times \\text{ }^5C_3 = 4 \\times 10 = 40$.",
+        "**$2 \\times 2$ Submatrices:** $\\text{ }^4C_2 \\times \\text{ }^5C_2 = 6 \\times 10 = 60$.",
+        "**$1 \\times 1$ Submatrices:** $\\text{ }^4C_1 \\times \\text{ }^5C_1 = 4 \\times 5 = 20$.",
+        "**Grand Total of all square submatrices:** $5 + 40 + 60 + 20 = 125$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9271,75 +9321,78 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: The Vanishing Minor Theorem (Slide 137)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question (Slide 137):**  \nLet $A$ be an $m \\times n$ matrix with $m < n$, and $A \\neq 0$ (Non-null matrix).  \nAll minors of order $m, (m-1), (m-2)$, and $(m-3)$ are zero, and at least one minor of order $(m-4)$ is non-zero. If the rank of $A$ is $r$, which of the following statements are true?  \n(A) $r = m - 4$  \n(B) $m \\neq 4$  \n(C) $m \\ge 5, \\quad m \\in \\mathbb{Z}$  \n(D) All of the above"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-step Mathematical Deduction:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Rank Determination:** By definition of rank, if all minors of order $\\ge m - 3$ are zero and at least one minor of order $(m - 4)$ is non-zero, then the largest non-zero minor has order $m - 4$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "r = m - 4 \\quad \\implies \\text{Statement (A) is TRUE.}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Positivity of Rank:** Since $A$ is a non-null matrix ($A \\neq 0$), its rank must be strictly positive:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "r > 0 \\implies m - 4 > 0 \\implies m > 4"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Integer Matrix Dimensions:** Since the number of rows $m$ must be a positive integer ($m \\in \\mathbb{Z}^+$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "m > 4 \\implies m \\ge 5 \\quad \\implies \\text{Statement (C) is TRUE.}"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Exclusion of Boundary Value:** Since $m \\ge 5$, it immediately follows that:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "m \\neq 4 \\quad \\implies \\text{Statement (B) is TRUE.}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "**Conclusion:** Statements (A), (B), and (C) are all rigorously established."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Choice:** **(D) All of the above.**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  The Vanishing Minor Theorem  Slide 137 /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question (Slide 137):**  \nLet $A$ be an $m \\times n$ matrix with $m < n$, and $A \\neq 0$ (Non-null matrix).  \nAll minors of order $m, (m-1), (m-2)$, and $(m-3)$ are zero, and at least one minor of order $(m-4)$ is non-zero. If the rank of $A$ is $r$, which of the following statements are true?  \n(A) $r = m - 4$  \n(B) $m \\neq 4$  \n(C) $m \\ge 5, \\quad m \\in \\mathbb{Z}$  \n(D) All of the above"
+      },
+      {
+       "t": "p",
+       "text": "**Step-by-step Mathematical Deduction:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Rank Determination:** By definition of rank, if all minors of order $\\ge m - 3$ are zero and at least one minor of order $(m - 4)$ is non-zero, then the largest non-zero minor has order $m - 4$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "r = m - 4 \\quad \\implies \\text{Statement (A) is TRUE.}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Positivity of Rank:** Since $A$ is a non-null matrix ($A \\neq 0$), its rank must be strictly positive:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "r > 0 \\implies m - 4 > 0 \\implies m > 4"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Integer Matrix Dimensions:** Since the number of rows $m$ must be a positive integer ($m \\in \\mathbb{Z}^+$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "m > 4 \\implies m \\ge 5 \\quad \\implies \\text{Statement (C) is TRUE.}"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Exclusion of Boundary Value:** Since $m \\ge 5$, it immediately follows that:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "m \\neq 4 \\quad \\implies \\text{Statement (B) is TRUE.}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "**Conclusion:** Statements (A), (B), and (C) are all rigorously established."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Choice:** **(D) All of the above.**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -9658,61 +9711,60 @@ export default {
      "text": "*(Covered in Slide 143)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Problem (a)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Initial Matrix:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 5 & 0 & 0 & 0 \\\\ 0 & 5 & 5 & 0 \\\\ 0 & 0 & 2 & 1 \\\\ 0 & 0 & 3 & 1 \\end{bmatrix}_{4 \\times 4}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Leading Zero Profile:**",
-      "Row 1: $0$ leading zeros (pivot is 5 at $a_{11}$)",
-      "Row 2: $1$ leading zero (pivot is 5 at $a_{22}$)",
-      "Row 3: $2$ leading zeros (pivot is 2 at $a_{33}$)",
-      "Row 4: $2$ leading zeros (entry is 3 at $a_{43}$)",
-      "**Diagnosis:** Not in REF because Rows 3 and 4 have an equal count of leading zeros ($2 = 2$).",
-      "**Elementary Row Operation:** Use $R_3$ to eliminate the third column entry in $R_4$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "R_4 \\to 2R_4 - 3R_3"
-    },
-    {
-     "t": "math",
-     "tex": "2[0, 0, 3, 1] - 3[0, 0, 2, 1] = [0, 0, 6 - 6, 2 - 3] = [0, 0, 0, -1]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Resulting Matrix:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 5 & 0 & 0 & 0 \\\\ 0 & 5 & 5 & 0 \\\\ 0 & 0 & 2 & 1 \\\\ 0 & 0 & 0 & -1 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Leading Zero Profile:** $0, 1, 2, 3$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
-      "**Non-zero rows:** 4."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\rho(A) = 4}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  a /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Initial Matrix:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 5 & 0 & 0 & 0 \\\\ 0 & 5 & 5 & 0 \\\\ 0 & 0 & 2 & 1 \\\\ 0 & 0 & 3 & 1 \\end{bmatrix}_{4 \\times 4}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Leading Zero Profile:**",
+        "Row 1: $0$ leading zeros (pivot is 5 at $a_{11}$)",
+        "Row 2: $1$ leading zero (pivot is 5 at $a_{22}$)",
+        "Row 3: $2$ leading zeros (pivot is 2 at $a_{33}$)",
+        "Row 4: $2$ leading zeros (entry is 3 at $a_{43}$)",
+        "**Diagnosis:** Not in REF because Rows 3 and 4 have an equal count of leading zeros ($2 = 2$).",
+        "**Elementary Row Operation:** Use $R_3$ to eliminate the third column entry in $R_4$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "R_4 \\to 2R_4 - 3R_3"
+      },
+      {
+       "t": "math",
+       "tex": "2[0, 0, 3, 1] - 3[0, 0, 2, 1] = [0, 0, 6 - 6, 2 - 3] = [0, 0, 0, -1]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Resulting Matrix:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 5 & 0 & 0 & 0 \\\\ 0 & 5 & 5 & 0 \\\\ 0 & 0 & 2 & 1 \\\\ 0 & 0 & 0 & -1 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Leading Zero Profile:** $0, 1, 2, 3$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
+        "**Non-zero rows:** 4."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\rho(A) = 4}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -9723,56 +9775,55 @@ export default {
      "text": "*(Covered in Slide 143)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Problem (b)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Initial Matrix:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 0 & 2 & 1 & 3 \\\\ 0 & 0 & 0 & 0 \\\\ 1 & 0 & 3 & 4 \\end{bmatrix}_{3 \\times 4}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Leading Zero Profile:** Row 1 has 1; Row 2 is all-zero; Row 3 has 0. (Not in REF).",
-      "**Elementary Row Operations:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Swap Row 1 and Row 3: $R_1 \\leftrightarrow R_3$.",
-      "Swap Row 2 and Row 3 (move all-zero row to bottom): $R_2 \\leftrightarrow R_3$."
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Resulting Matrix:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 0 & 3 & 4 \\\\ 0 & 2 & 1 & 3 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Leading Zero Profile:** $0, 1, \\text{all zero}$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
-      "**Non-zero rows:** 2."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\rho(A) = 2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  b /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Initial Matrix:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 0 & 2 & 1 & 3 \\\\ 0 & 0 & 0 & 0 \\\\ 1 & 0 & 3 & 4 \\end{bmatrix}_{3 \\times 4}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Leading Zero Profile:** Row 1 has 1; Row 2 is all-zero; Row 3 has 0. (Not in REF).",
+        "**Elementary Row Operations:**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Swap Row 1 and Row 3: $R_1 \\leftrightarrow R_3$.",
+        "Swap Row 2 and Row 3 (move all-zero row to bottom): $R_2 \\leftrightarrow R_3$."
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Resulting Matrix:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 0 & 3 & 4 \\\\ 0 & 2 & 1 & 3 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Leading Zero Profile:** $0, 1, \\text{all zero}$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
+        "**Non-zero rows:** 2."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\rho(A) = 2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -9783,105 +9834,104 @@ export default {
      "text": "*(Covered in Slide 144)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Problem (c)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Initial Matrix:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & 3 & -1 & 4 \\\\ 2 & 4 & 2 & 6 \\\\ 1 & 5 & 0 & 2 \\\\ 3 & 6 & 3 & 3 \\end{bmatrix}_{4 \\times 4}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Eliminate Column 1 entries below pivot $a_{11} = 1$:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_2 \\to R_2 - 2R_1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[2, 4, 2, 6] - 2[1, 3, -1, 4] = [0, 4 - 6, 2 - (-2), 6 - 8] = [0, -2, 4, -2]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_3 \\to R_3 - R_1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[1, 5, 0, 2] - [1, 3, -1, 4] = [0, 5 - 3, 0 - (-1), 2 - 4] = [0, 2, 1, -2]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_4 \\to R_4 - 3R_1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[3, 6, 3, 3] - 3[1, 3, -1, 4] = [0, 6 - 9, 3 - (-3), 3 - 12] = [0, -3, 6, -9]"
-    },
-    {
-     "t": "p",
-     "text": "Matrix after Step 1:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 3 & -1 & 4 \\\\ 0 & -2 & 4 & -2 \\\\ 0 & 2 & 1 & -2 \\\\ 0 & -3 & 6 & -9 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Eliminate Column 2 entries below pivot $a_{22} = -2$:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_3 \\to R_3 + R_2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[0, 2, 1, -2] + [0, -2, 4, -2] = [0, 0, 5, -4]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_4 \\to 2R_4 - 3R_2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2[0, -3, 6, -9] - 3[0, -2, 4, -2] = [0, -6, 12, -18] - [0, -6, 12, -6] = [0, 0, 0, -12]"
-    },
-    {
-     "t": "p",
-     "text": "Matrix after Step 2:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 3 & -1 & 4 \\\\ 0 & -2 & 4 & -2 \\\\ 0 & 0 & 5 & -4 \\\\ 0 & 0 & 0 & -12 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Leading Zero Profile:** $0, 1, 2, 3$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
-      "**Non-zero rows:** 4."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\rho(A) = 4}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  c /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Initial Matrix:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & 3 & -1 & 4 \\\\ 2 & 4 & 2 & 6 \\\\ 1 & 5 & 0 & 2 \\\\ 3 & 6 & 3 & 3 \\end{bmatrix}_{4 \\times 4}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Eliminate Column 1 entries below pivot $a_{11} = 1$:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_2 \\to R_2 - 2R_1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[2, 4, 2, 6] - 2[1, 3, -1, 4] = [0, 4 - 6, 2 - (-2), 6 - 8] = [0, -2, 4, -2]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_3 \\to R_3 - R_1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[1, 5, 0, 2] - [1, 3, -1, 4] = [0, 5 - 3, 0 - (-1), 2 - 4] = [0, 2, 1, -2]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_4 \\to R_4 - 3R_1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[3, 6, 3, 3] - 3[1, 3, -1, 4] = [0, 6 - 9, 3 - (-3), 3 - 12] = [0, -3, 6, -9]"
+      },
+      {
+       "t": "p",
+       "text": "Matrix after Step 1:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 3 & -1 & 4 \\\\ 0 & -2 & 4 & -2 \\\\ 0 & 2 & 1 & -2 \\\\ 0 & -3 & 6 & -9 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Eliminate Column 2 entries below pivot $a_{22} = -2$:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_3 \\to R_3 + R_2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[0, 2, 1, -2] + [0, -2, 4, -2] = [0, 0, 5, -4]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_4 \\to 2R_4 - 3R_2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2[0, -3, 6, -9] - 3[0, -2, 4, -2] = [0, -6, 12, -18] - [0, -6, 12, -6] = [0, 0, 0, -12]"
+      },
+      {
+       "t": "p",
+       "text": "Matrix after Step 2:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 3 & -1 & 4 \\\\ 0 & -2 & 4 & -2 \\\\ 0 & 0 & 5 & -4 \\\\ 0 & 0 & 0 & -12 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Leading Zero Profile:** $0, 1, 2, 3$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
+        "**Non-zero rows:** 4."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\rho(A) = 4}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -9892,71 +9942,70 @@ export default {
      "text": "*(Covered in Slide 145)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Problem (d)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Initial Matrix:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 0 & 1 & 2 & -1 \\\\ 1 & 0 & 3 & 2 \\\\ 3 & 0 & 9 & 6 \\\\ 0 & 3/4 & 3/2 & -3/4 \\end{bmatrix}_{4 \\times 4}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Row Reordering:**\nSwap Row 1 and Row 2 to bring the leading pivot to column 1:"
-    },
-    {
-     "t": "math",
-     "tex": "R_1 \\leftrightarrow R_2 \\implies \\begin{bmatrix} 1 & 0 & 3 & 2 \\\\ 0 & 1 & 2 & -1 \\\\ 3 & 0 & 9 & 6 \\\\ 0 & 3/4 & 3/2 & -3/4 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Eliminate dependent rows:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice that Row 3 is an exact scalar multiple of Row 1: $R_3 = 3 R_1$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "R_3 \\to R_3 - 3R_1 = [3 - 3, 0 - 0, 9 - 9, 6 - 6] = [0, 0, 0, 0]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice that Row 4 is an exact scalar multiple of Row 2: $R_4 = \\frac{3}{4} R_2$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "R_4 \\to R_4 - \\frac{3}{4} R_2 = [0, 3/4 - 3/4, 3/2 - 3/2, -3/4 - (-3/4)] = [0, 0, 0, 0]"
-    },
-    {
-     "t": "p",
-     "text": "Intermediate Matrix:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 0 & 3 & 2 \\\\ 0 & 1 & 2 & -1 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Leading Zero Profile:** $0, 1, \\text{all zero}, \\text{all zero}$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
-      "**Non-zero rows:** 2."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\rho(A) = 2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  d /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Initial Matrix:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 0 & 1 & 2 & -1 \\\\ 1 & 0 & 3 & 2 \\\\ 3 & 0 & 9 & 6 \\\\ 0 & 3/4 & 3/2 & -3/4 \\end{bmatrix}_{4 \\times 4}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Row Reordering:**\nSwap Row 1 and Row 2 to bring the leading pivot to column 1:"
+      },
+      {
+       "t": "math",
+       "tex": "R_1 \\leftrightarrow R_2 \\implies \\begin{bmatrix} 1 & 0 & 3 & 2 \\\\ 0 & 1 & 2 & -1 \\\\ 3 & 0 & 9 & 6 \\\\ 0 & 3/4 & 3/2 & -3/4 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Eliminate dependent rows:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Notice that Row 3 is an exact scalar multiple of Row 1: $R_3 = 3 R_1$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "R_3 \\to R_3 - 3R_1 = [3 - 3, 0 - 0, 9 - 9, 6 - 6] = [0, 0, 0, 0]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Notice that Row 4 is an exact scalar multiple of Row 2: $R_4 = \\frac{3}{4} R_2$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "R_4 \\to R_4 - \\frac{3}{4} R_2 = [0, 3/4 - 3/4, 3/2 - 3/2, -3/4 - (-3/4)] = [0, 0, 0, 0]"
+      },
+      {
+       "t": "p",
+       "text": "Intermediate Matrix:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 0 & 3 & 2 \\\\ 0 & 1 & 2 & -1 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Leading Zero Profile:** $0, 1, \\text{all zero}, \\text{all zero}$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
+        "**Non-zero rows:** 2."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\rho(A) = 2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -9967,84 +10016,83 @@ export default {
      "text": "*(Covered in Slide 146)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Problem (e)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Initial Matrix:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & 2 & 4 & 7 \\\\ 3 & 2 & 1 & 5 \\\\ 4 & 4 & 5 & 12 \\\\ 7 & 6 & 6 & 17 \\end{bmatrix}_{4 \\times 4}"
-    },
-    {
-     "t": "p",
-     "text": "**Inspection of Linear Dependencies:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Row 3 is the direct sum of Row 1 and Row 2:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "R_1 + R_2 = [1+3, 2+2, 4+1, 7+5] = [4, 4, 5, 12] = R_3"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Row 4 is the direct sum of Row 2 and Row 3:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "R_2 + R_3 = [3+4, 2+4, 1+5, 5+12] = [7, 6, 6, 17] = R_4"
-    },
-    {
-     "t": "p",
-     "text": "**Elementary Row Operations:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_2 \\to R_2 - 3R_1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[3, 2, 1, 5] - 3[1, 2, 4, 7] = [0, 2 - 6, 1 - 12, 5 - 21] = [0, -4, -11, -16]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_3 \\to R_3 - (R_1 + R_2) = [0, 0, 0, 0]$",
-      "$R_4 \\to R_4 - (R_2 + R_3) = [0, 0, 0, 0]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Resulting Matrix in REF:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 2 & 4 & 7 \\\\ 0 & -4 & -11 & -16 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Leading Zero Profile:** $0, 1, \\text{all zero}, \\text{all zero}$ (REF $\\checkmark$).",
-      "**Non-zero rows:** 2."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\rho(A) = 2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  e /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Initial Matrix:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & 2 & 4 & 7 \\\\ 3 & 2 & 1 & 5 \\\\ 4 & 4 & 5 & 12 \\\\ 7 & 6 & 6 & 17 \\end{bmatrix}_{4 \\times 4}"
+      },
+      {
+       "t": "p",
+       "text": "**Inspection of Linear Dependencies:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Row 3 is the direct sum of Row 1 and Row 2:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "R_1 + R_2 = [1+3, 2+2, 4+1, 7+5] = [4, 4, 5, 12] = R_3"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Row 4 is the direct sum of Row 2 and Row 3:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "R_2 + R_3 = [3+4, 2+4, 1+5, 5+12] = [7, 6, 6, 17] = R_4"
+      },
+      {
+       "t": "p",
+       "text": "**Elementary Row Operations:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_2 \\to R_2 - 3R_1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[3, 2, 1, 5] - 3[1, 2, 4, 7] = [0, 2 - 6, 1 - 12, 5 - 21] = [0, -4, -11, -16]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_3 \\to R_3 - (R_1 + R_2) = [0, 0, 0, 0]$",
+        "$R_4 \\to R_4 - (R_2 + R_3) = [0, 0, 0, 0]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Resulting Matrix in REF:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 2 & 4 & 7 \\\\ 0 & -4 & -11 & -16 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Leading Zero Profile:** $0, 1, \\text{all zero}, \\text{all zero}$ (REF $\\checkmark$).",
+        "**Non-zero rows:** 2."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\rho(A) = 2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -10055,106 +10103,105 @@ export default {
      "text": "*(Covered in Slide 147)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Problem (f)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Initial Matrix:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 0 & 0 & 2 & -1 \\\\ 0 & 0 & 3 & 4 \\\\ 0 & 0 & 6 & -3 \\\\ 0 & 0 & 3/2 & 2 \\end{bmatrix}_{4 \\times 4}"
-    },
-    {
-     "t": "p",
-     "text": "**Dual Analytical Verification:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Method 1: Minors / Subspace Analysis:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Both Column 1 and Column 2 are completely filled with zeros.",
-      "Any $4 \\times 4$ submatrix has two columns of zeros $\\implies \\det(A) = 0 \\implies \\rho(A) < 4$.",
-      "Any $3 \\times 3$ submatrix must choose at least one column from the first two columns, so it contains at least one zero column $\\implies \\text{all } 3 \\times 3 \\text{ minors} = 0 \\implies \\rho(A) < 3$.",
-      "For $2 \\times 2$, extract columns 3 & 4 and rows 1 & 2:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} 2 & -1 \\\\ 3 & 4 \\end{vmatrix} = (2)(4) - (-1)(3) = 8 + 3 = 11 \\neq 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since a non-zero $2 \\times 2$ minor exists: $\\rho(A) = 2$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Method 2: Row Echelon Reduction:**"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_3 \\to R_3 - 3R_1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[0, 0, 6, -3] - 3[0, 0, 2, -1] = [0, 0, 0, 0]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_4 \\to R_4 - \\frac{1}{2} R_2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[0, 0, 3/2, 2] - \\frac{1}{2}[0, 0, 3, 4] = [0, 0, 0, 0]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_2 \\to 2R_2 - 3R_1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2[0, 0, 3, 4] - 3[0, 0, 2, -1] = [0, 0, 0, 8 - (-3)] = [0, 0, 0, 11]"
-    },
-    {
-     "t": "p",
-     "text": "Resulting Matrix:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 0 & 0 & 2 & -1 \\\\ 0 & 0 & 0 & 11 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Leading zeros: $2, 3, \\text{all zero}, \\text{all zero}$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
-      "Non-zero rows: 2."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\rho(A) = 2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  f /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Initial Matrix:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 0 & 0 & 2 & -1 \\\\ 0 & 0 & 3 & 4 \\\\ 0 & 0 & 6 & -3 \\\\ 0 & 0 & 3/2 & 2 \\end{bmatrix}_{4 \\times 4}"
+      },
+      {
+       "t": "p",
+       "text": "**Dual Analytical Verification:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Method 1: Minors / Subspace Analysis:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Both Column 1 and Column 2 are completely filled with zeros.",
+        "Any $4 \\times 4$ submatrix has two columns of zeros $\\implies \\det(A) = 0 \\implies \\rho(A) < 4$.",
+        "Any $3 \\times 3$ submatrix must choose at least one column from the first two columns, so it contains at least one zero column $\\implies \\text{all } 3 \\times 3 \\text{ minors} = 0 \\implies \\rho(A) < 3$.",
+        "For $2 \\times 2$, extract columns 3 & 4 and rows 1 & 2:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} 2 & -1 \\\\ 3 & 4 \\end{vmatrix} = (2)(4) - (-1)(3) = 8 + 3 = 11 \\neq 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since a non-zero $2 \\times 2$ minor exists: $\\rho(A) = 2$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Method 2: Row Echelon Reduction:**"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_3 \\to R_3 - 3R_1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[0, 0, 6, -3] - 3[0, 0, 2, -1] = [0, 0, 0, 0]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_4 \\to R_4 - \\frac{1}{2} R_2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[0, 0, 3/2, 2] - \\frac{1}{2}[0, 0, 3, 4] = [0, 0, 0, 0]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_2 \\to 2R_2 - 3R_1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2[0, 0, 3, 4] - 3[0, 0, 2, -1] = [0, 0, 0, 8 - (-3)] = [0, 0, 0, 11]"
+      },
+      {
+       "t": "p",
+       "text": "Resulting Matrix:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 0 & 0 & 2 & -1 \\\\ 0 & 0 & 0 & 11 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Leading zeros: $2, 3, \\text{all zero}, \\text{all zero}$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
+        "Non-zero rows: 2."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\rho(A) = 2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -10165,96 +10212,95 @@ export default {
      "text": "*(Covered in Slide 148)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Problem (g)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Initial Matrix:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 4 & 2 & 1 & 3 \\\\ 6 & 3 & 4 & 7 \\\\ 2 & 1 & 0 & 1 \\end{bmatrix}_{3 \\times 4}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Elementary Row Operations:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_2 \\to R_2 - (R_1 + R_3)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[6, 3, 4, 7] - \\big([4, 2, 1, 3] + [2, 1, 0, 1]\\big) = [6, 3, 4, 7] - [6, 3, 1, 4] = [0, 0, 3, 3]"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_1 \\to R_1 - 2R_3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[4, 2, 1, 3] - 2[2, 1, 0, 1] = [4 - 4, 2 - 2, 1 - 0, 3 - 2] = [0, 0, 1, 1]"
-    },
-    {
-     "t": "p",
-     "text": "Intermediate Matrix:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 0 & 0 & 1 & 1 \\\\ 0 & 0 & 3 & 3 \\\\ 2 & 1 & 0 & 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Reorder Rows ($R_1 \\leftrightarrow R_3$):**"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 2 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 3 & 3 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Eliminate Row 3:**"
-    },
-    {
-     "t": "math",
-     "tex": "R_3 \\to R_3 - 3R_2 = [0, 0, 3 - 3, 3 - 3] = [0, 0, 0, 0]"
-    },
-    {
-     "t": "p",
-     "text": "Final Matrix in REF:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 2 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Leading Zero Profile:** $0, 2, \\text{all zero}$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
-      "**Non-zero rows:** 2 $\\implies \\boxed{\\rho(A) = 2}$.",
-      "**Nullity Calculation (Slide 148):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "By the Rank-Nullity Theorem, for an $m \\times n$ matrix ($n = 4$ columns):"
-    },
-    {
-     "t": "math",
-     "tex": "\\eta(A) = n - \\rho(A) = 4 - 2 = 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\eta(A) = 2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  g /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Initial Matrix:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 4 & 2 & 1 & 3 \\\\ 6 & 3 & 4 & 7 \\\\ 2 & 1 & 0 & 1 \\end{bmatrix}_{3 \\times 4}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: Elementary Row Operations:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_2 \\to R_2 - (R_1 + R_3)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[6, 3, 4, 7] - \\big([4, 2, 1, 3] + [2, 1, 0, 1]\\big) = [6, 3, 4, 7] - [6, 3, 1, 4] = [0, 0, 3, 3]"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_1 \\to R_1 - 2R_3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[4, 2, 1, 3] - 2[2, 1, 0, 1] = [4 - 4, 2 - 2, 1 - 0, 3 - 2] = [0, 0, 1, 1]"
+      },
+      {
+       "t": "p",
+       "text": "Intermediate Matrix:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 0 & 0 & 1 & 1 \\\\ 0 & 0 & 3 & 3 \\\\ 2 & 1 & 0 & 1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Reorder Rows ($R_1 \\leftrightarrow R_3$):**"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 2 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 3 & 3 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Eliminate Row 3:**"
+      },
+      {
+       "t": "math",
+       "tex": "R_3 \\to R_3 - 3R_2 = [0, 0, 3 - 3, 3 - 3] = [0, 0, 0, 0]"
+      },
+      {
+       "t": "p",
+       "text": "Final Matrix in REF:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 2 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Leading Zero Profile:** $0, 2, \\text{all zero}$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
+        "**Non-zero rows:** 2 $\\implies \\boxed{\\rho(A) = 2}$.",
+        "**Nullity Calculation (Slide 148):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "By the Rank-Nullity Theorem, for an $m \\times n$ matrix ($n = 4$ columns):"
+      },
+      {
+       "t": "math",
+       "tex": "\\eta(A) = n - \\rho(A) = 4 - 2 = 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\eta(A) = 2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -10265,100 +10311,99 @@ export default {
      "text": "*(Covered in Slide 149)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Problem (h)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Initial Matrix:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & 4 & 9 & 16 \\\\ 4 & 9 & 16 & 25 \\\\ 9 & 16 & 25 & 36 \\\\ 16 & 25 & 36 & 49 \\end{bmatrix}_{4 \\times 4}"
-    },
-    {
-     "t": "p",
-     "text": "Notice that entries are perfect squares of consecutive integers: $a_{ij} = (i + j - 1)^2$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: First Successive Differences:**\nSubtract each row from the row below it:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_2 \\to R_2 - R_1 = [4-1, 9-4, 16-9, 25-16] = [3, 5, 7, 9]$",
-      "$R_3 \\to R_3 - R_2 = [9-4, 16-9, 25-16, 36-25] = [5, 7, 9, 11]$",
-      "$R_4 \\to R_4 - R_3 = [16-9, 25-16, 36-25, 49-36] = [7, 9, 11, 13]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Equivalent Matrix:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 4 & 9 & 16 \\\\ 3 & 5 & 7 & 9 \\\\ 5 & 7 & 9 & 11 \\\\ 7 & 9 & 11 & 13 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Second Successive Differences (Constant Differences):**\nBecause the first differences form arithmetic progressions with common difference 2:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_3 \\to R_3 - R_2 = [5-3, 7-5, 9-7, 11-9] = [2, 2, 2, 2]$",
-      "$R_4 \\to R_4 - R_3 = [7-5, 9-7, 11-9, 13-11] = [2, 2, 2, 2]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Now Rows 3 and 4 are identical!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_4 \\to R_4 - R_3 = [0, 0, 0, 0]$",
-      "$R_2 \\to R_2 - 3R_1 = [3, 5, 7, 9] - 3[1, 4, 9, 16] = [0, -7, -20, -39]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Resulting Matrix on Slide 149:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 4 & 9 & 16 \\\\ 0 & -7 & -20 & -39 \\\\ 0 & -6 & -16 & -30 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}_{4 \\times 4}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Minor Evaluation:** Evaluate the upper-left $3 \\times 3$ submatrix:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} 1 & 4 & 9 \\\\ 0 & -7 & -20 \\\\ 0 & -6 & -16 \\end{vmatrix} = 1 \\big((-7)(-16) - (-20)(-6)\\big) = 1(112 - 120) = -8 \\neq 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since there exists a non-zero minor of order 3 and Row 4 is all zeros:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\rho(A) = 3}"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**Examiner Trap Warning (Slide 149):**  \nDo NOT write $R_3 \\to R_3 - R_4$ and $R_4 \\to R_4 - R_3$ simultaneously!  \nThis circular simultaneous replacement destroys the valid row space by creating two identical rows of zeros, falsely reducing the rank from 3 down to 2!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  h /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Initial Matrix:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & 4 & 9 & 16 \\\\ 4 & 9 & 16 & 25 \\\\ 9 & 16 & 25 & 36 \\\\ 16 & 25 & 36 & 49 \\end{bmatrix}_{4 \\times 4}"
+      },
+      {
+       "t": "p",
+       "text": "Notice that entries are perfect squares of consecutive integers: $a_{ij} = (i + j - 1)^2$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: First Successive Differences:**\nSubtract each row from the row below it:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_2 \\to R_2 - R_1 = [4-1, 9-4, 16-9, 25-16] = [3, 5, 7, 9]$",
+        "$R_3 \\to R_3 - R_2 = [9-4, 16-9, 25-16, 36-25] = [5, 7, 9, 11]$",
+        "$R_4 \\to R_4 - R_3 = [16-9, 25-16, 36-25, 49-36] = [7, 9, 11, 13]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Equivalent Matrix:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 4 & 9 & 16 \\\\ 3 & 5 & 7 & 9 \\\\ 5 & 7 & 9 & 11 \\\\ 7 & 9 & 11 & 13 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Second Successive Differences (Constant Differences):**\nBecause the first differences form arithmetic progressions with common difference 2:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_3 \\to R_3 - R_2 = [5-3, 7-5, 9-7, 11-9] = [2, 2, 2, 2]$",
+        "$R_4 \\to R_4 - R_3 = [7-5, 9-7, 11-9, 13-11] = [2, 2, 2, 2]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Now Rows 3 and 4 are identical!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_4 \\to R_4 - R_3 = [0, 0, 0, 0]$",
+        "$R_2 \\to R_2 - 3R_1 = [3, 5, 7, 9] - 3[1, 4, 9, 16] = [0, -7, -20, -39]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Resulting Matrix on Slide 149:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 4 & 9 & 16 \\\\ 0 & -7 & -20 & -39 \\\\ 0 & -6 & -16 & -30 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}_{4 \\times 4}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Minor Evaluation:** Evaluate the upper-left $3 \\times 3$ submatrix:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} 1 & 4 & 9 \\\\ 0 & -7 & -20 \\\\ 0 & -6 & -16 \\end{vmatrix} = 1 \\big((-7)(-16) - (-20)(-6)\\big) = 1(112 - 120) = -8 \\neq 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since there exists a non-zero minor of order 3 and Row 4 is all zeros:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\rho(A) = 3}"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**Examiner Trap Warning (Slide 149):**  \nDo NOT write $R_3 \\to R_3 - R_4$ and $R_4 \\to R_4 - R_3$ simultaneously!  \nThis circular simultaneous replacement destroys the valid row space by creating two identical rows of zeros, falsely reducing the rank from 3 down to 2!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -10369,99 +10414,98 @@ export default {
      "text": "*(Covered in Slide 150)*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps: Problem (i)</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Initial Matrix:**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & 2 & 4 & 5 \\\\ 2 & 4 & 5 & 6 \\\\ 4 & 5 & 6 & 7 \\end{bmatrix}_{3 \\times 4}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: First Differences:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_2 \\to R_2 - R_1 = [2-1, 4-2, 5-4, 6-5] = [1, 2, 1, 1]$",
-      "$R_3 \\to R_3 - R_2 = [4-2, 5-4, 6-5, 7-6] = [2, 1, 1, 1]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Intermediate Matrix:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 2 & 4 & 5 \\\\ 1 & 2 & 1 & 1 \\\\ 2 & 1 & 1 & 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Eliminate Column 1 entries below $R_1$:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_2 \\to R_2 - R_1 = [0, 0, 1 - 4, 1 - 5] = [0, 0, -3, -4]$",
-      "$R_3 \\to R_3 - 2R_2$ (using $R_2 = [1, 2, 1, 1]$):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[2, 1, 1, 1] - 2[1, 2, 1, 1] = [0, 1 - 4, 1 - 2, 1 - 2] = [0, -3, -1, -1]"
-    },
-    {
-     "t": "p",
-     "text": "Matrix after elimination:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 2 & 4 & 5 \\\\ 0 & 0 & -3 & -4 \\\\ 0 & -3 & -1 & -1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Interchange $R_2 \\leftrightarrow R_3$ to restore strict echelon ordering:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 2 & 4 & 5 \\\\ 0 & -3 & -1 & -1 \\\\ 0 & 0 & -3 & -4 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Leading Zero Profile:** $0, 1, 2$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
-      "**Non-zero rows:** 3."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\rho(A) = 3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Nullity Calculation (Slide 150):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "By the Rank-Nullity Theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "\\eta(A) = n - \\rho(A) = 4 - 3 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\eta(A) = 1}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps  Problem  i /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Initial Matrix:**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & 2 & 4 & 5 \\\\ 2 & 4 & 5 & 6 \\\\ 4 & 5 & 6 & 7 \\end{bmatrix}_{3 \\times 4}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 1: First Differences:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_2 \\to R_2 - R_1 = [2-1, 4-2, 5-4, 6-5] = [1, 2, 1, 1]$",
+        "$R_3 \\to R_3 - R_2 = [4-2, 5-4, 6-5, 7-6] = [2, 1, 1, 1]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Intermediate Matrix:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 2 & 4 & 5 \\\\ 1 & 2 & 1 & 1 \\\\ 2 & 1 & 1 & 1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Eliminate Column 1 entries below $R_1$:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_2 \\to R_2 - R_1 = [0, 0, 1 - 4, 1 - 5] = [0, 0, -3, -4]$",
+        "$R_3 \\to R_3 - 2R_2$ (using $R_2 = [1, 2, 1, 1]$):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[2, 1, 1, 1] - 2[1, 2, 1, 1] = [0, 1 - 4, 1 - 2, 1 - 2] = [0, -3, -1, -1]"
+      },
+      {
+       "t": "p",
+       "text": "Matrix after elimination:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 2 & 4 & 5 \\\\ 0 & 0 & -3 & -4 \\\\ 0 & -3 & -1 & -1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Interchange $R_2 \\leftrightarrow R_3$ to restore strict echelon ordering:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 2 & 4 & 5 \\\\ 0 & -3 & -1 & -1 \\\\ 0 & 0 & -3 & -4 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Leading Zero Profile:** $0, 1, 2$ (Strictly increasing $\\implies$ REF $\\checkmark$).",
+        "**Non-zero rows:** 3."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\rho(A) = 3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Nullity Calculation (Slide 150):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "By the Rank-Nullity Theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "\\eta(A) = n - \\rho(A) = 4 - 3 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\eta(A) = 1}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -10678,130 +10722,129 @@ export default {
      "tex": "A = \\begin{bmatrix} 1 & 3 & 6 & 10 \\\\ 3 & 6 & 10 & 15 \\\\ 6 & 10 & 15 & 21 \\\\ 10 & 15 & 21 & 28 \\end{bmatrix}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: First Round of Adjacent Row Subtractions**  \nTo rapidly reduce entries without inflating arithmetic magnitudes, apply upward adjacent row operations simultaneously:"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\to R_2 - R_1, \\quad R_3 \\to R_3 - R_2, \\quad R_4 \\to R_4 - R_3"
-    },
-    {
-     "t": "p",
-     "text": "Computing individual rows:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_2 - R_1 = [3-1, \\; 6-3, \\; 10-6, \\; 15-10] = [2, \\; 3, \\; 4, \\; 5]$",
-      "$R_3 - R_2 = [6-3, \\; 10-6, \\; 15-10, \\; 21-15] = [3, \\; 4, \\; 5, \\; 6]$",
-      "$R_4 - R_3 = [10-6, \\; 15-10, \\; 21-15, \\; 28-21] = [4, \\; 5, \\; 6, \\; 7]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The matrix becomes:"
-    },
-    {
-     "t": "math",
-     "tex": "A^{(1)} = \\begin{bmatrix} 1 & 3 & 6 & 10 \\\\ 2 & 3 & 4 & 5 \\\\ 3 & 4 & 5 & 6 \\\\ 4 & 5 & 6 & 7 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Second Round of Adjacent Row Subtractions**  \nNotice that the lower three rows form an arithmetic progression across corresponding entries. Apply adjacent row operations again:"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\to R_2 - R_1, \\quad R_3 \\to R_3 - R_2, \\quad R_4 \\to R_4 - R_3"
-    },
-    {
-     "t": "p",
-     "text": "Computing:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_2 - R_1 = [2-1, \\; 3-3, \\; 4-6, \\; 5-10] = [1, \\; 0, \\; -2, \\; -5]$",
-      "$R_3 - R_2 = [3-2, \\; 4-3, \\; 5-4, \\; 6-5] = [1, \\; 1, \\; 1, \\; 1]$",
-      "$R_4 - R_3 = [4-3, \\; 5-4, \\; 6-5, \\; 7-6] = [1, \\; 1, \\; 1, \\; 1]$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The matrix becomes:"
-    },
-    {
-     "t": "math",
-     "tex": "A^{(2)} = \\begin{bmatrix} 1 & 3 & 6 & 10 \\\\ 1 & 0 & -2 & -5 \\\\ 1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Third Round of Row Transformations & Zero Row Identification**  \nRows 3 and 4 are identical ($R_3 = R_4$). Applying $R_4 \\to R_4 - R_3$ produces a complete zero row:"
-    },
-    {
-     "t": "math",
-     "tex": "R_4 \\to R_4 - R_3 \\implies R_4 = [0, \\; 0, \\; 0, \\; 0]"
-    },
-    {
-     "t": "p",
-     "text": "Eliminating leading entries in $R_2$ and $R_3$ using $R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\to R_2 - R_1 = [1-1, \\; 0-3, \\; -2-6, \\; -5-10] = [0, \\; -3, \\; -8, \\; -15]"
-    },
-    {
-     "t": "math",
-     "tex": "R_3 \\to R_3 - R_2^{(2)} \\implies \\text{or directly reducing against pivot to obtain:}"
-    },
-    {
-     "t": "math",
-     "tex": "A^{(3)} = \\begin{bmatrix} 1 & 3 & 6 & 10 \\\\ 0 & -3 & -8 & -15 \\\\ 0 & 1 & 3 & 6 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Non-Zero Minor Test ($3 \\times 3$ Submatrix)**  \nExamine the leading principal $3 \\times 3$ submatrix circled in the chalkboard notes:"
-    },
-    {
-     "t": "math",
-     "tex": "M_{3 \\times 3} = \\begin{bmatrix} 1 & 3 & 6 \\\\ 0 & -3 & -8 \\\\ 0 & 1 & 3 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating its determinant by expanding along the first column:"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(M_{3 \\times 3}) = 1 \\cdot \\begin{vmatrix} -3 & -8 \\\\ 1 & 3 \\end{vmatrix} - 0 + 0 = 1 \\cdot [(-3)(3) - (-8)(1)] = -9 + 8 = -1 \\neq 0"
-    },
-    {
-     "t": "p",
-     "text": "Since there exists at least one non-zero minor of order 3, and all $4 \\times 4$ minors vanish (due to the fourth row of zeros):"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = 3"
-    },
-    {
-     "t": "p",
-     "text": "**Step 5: Nullity Calculation via Rank-Nullity Theorem**  \nThe matrix $A$ is of order $n \\times n = 4 \\times 4$, so the number of columns (dimension of the domain space) is $n = 4$."
-    },
-    {
-     "t": "math",
-     "tex": "\\eta(A) = n - \\rho(A) = 4 - 3 = 1"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap:** Do not assume that because entries increase quadratically or triangularly ($1, 3, 6, 10$ are triangular numbers $T_n = \\frac{n(n+1)}{2}$) the matrix has full rank 4! Triangular number differences are linear, and second differences are constant. Thus, taking successive differences rapidly drives rows to zero, guaranteeing rank deficiency $\\rho(A) < 4$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: First Round of Adjacent Row Subtractions**  \nTo rapidly reduce entries without inflating arithmetic magnitudes, apply upward adjacent row operations simultaneously:"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\to R_2 - R_1, \\quad R_3 \\to R_3 - R_2, \\quad R_4 \\to R_4 - R_3"
+      },
+      {
+       "t": "p",
+       "text": "Computing individual rows:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_2 - R_1 = [3-1, \\; 6-3, \\; 10-6, \\; 15-10] = [2, \\; 3, \\; 4, \\; 5]$",
+        "$R_3 - R_2 = [6-3, \\; 10-6, \\; 15-10, \\; 21-15] = [3, \\; 4, \\; 5, \\; 6]$",
+        "$R_4 - R_3 = [10-6, \\; 15-10, \\; 21-15, \\; 28-21] = [4, \\; 5, \\; 6, \\; 7]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The matrix becomes:"
+      },
+      {
+       "t": "math",
+       "tex": "A^{(1)} = \\begin{bmatrix} 1 & 3 & 6 & 10 \\\\ 2 & 3 & 4 & 5 \\\\ 3 & 4 & 5 & 6 \\\\ 4 & 5 & 6 & 7 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Second Round of Adjacent Row Subtractions**  \nNotice that the lower three rows form an arithmetic progression across corresponding entries. Apply adjacent row operations again:"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\to R_2 - R_1, \\quad R_3 \\to R_3 - R_2, \\quad R_4 \\to R_4 - R_3"
+      },
+      {
+       "t": "p",
+       "text": "Computing:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_2 - R_1 = [2-1, \\; 3-3, \\; 4-6, \\; 5-10] = [1, \\; 0, \\; -2, \\; -5]$",
+        "$R_3 - R_2 = [3-2, \\; 4-3, \\; 5-4, \\; 6-5] = [1, \\; 1, \\; 1, \\; 1]$",
+        "$R_4 - R_3 = [4-3, \\; 5-4, \\; 6-5, \\; 7-6] = [1, \\; 1, \\; 1, \\; 1]$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The matrix becomes:"
+      },
+      {
+       "t": "math",
+       "tex": "A^{(2)} = \\begin{bmatrix} 1 & 3 & 6 & 10 \\\\ 1 & 0 & -2 & -5 \\\\ 1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 & 1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Third Round of Row Transformations & Zero Row Identification**  \nRows 3 and 4 are identical ($R_3 = R_4$). Applying $R_4 \\to R_4 - R_3$ produces a complete zero row:"
+      },
+      {
+       "t": "math",
+       "tex": "R_4 \\to R_4 - R_3 \\implies R_4 = [0, \\; 0, \\; 0, \\; 0]"
+      },
+      {
+       "t": "p",
+       "text": "Eliminating leading entries in $R_2$ and $R_3$ using $R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\to R_2 - R_1 = [1-1, \\; 0-3, \\; -2-6, \\; -5-10] = [0, \\; -3, \\; -8, \\; -15]"
+      },
+      {
+       "t": "math",
+       "tex": "R_3 \\to R_3 - R_2^{(2)} \\implies \\text{or directly reducing against pivot to obtain:}"
+      },
+      {
+       "t": "math",
+       "tex": "A^{(3)} = \\begin{bmatrix} 1 & 3 & 6 & 10 \\\\ 0 & -3 & -8 & -15 \\\\ 0 & 1 & 3 & 6 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Non-Zero Minor Test ($3 \\times 3$ Submatrix)**  \nExamine the leading principal $3 \\times 3$ submatrix circled in the chalkboard notes:"
+      },
+      {
+       "t": "math",
+       "tex": "M_{3 \\times 3} = \\begin{bmatrix} 1 & 3 & 6 \\\\ 0 & -3 & -8 \\\\ 0 & 1 & 3 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating its determinant by expanding along the first column:"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(M_{3 \\times 3}) = 1 \\cdot \\begin{vmatrix} -3 & -8 \\\\ 1 & 3 \\end{vmatrix} - 0 + 0 = 1 \\cdot [(-3)(3) - (-8)(1)] = -9 + 8 = -1 \\neq 0"
+      },
+      {
+       "t": "p",
+       "text": "Since there exists at least one non-zero minor of order 3, and all $4 \\times 4$ minors vanish (due to the fourth row of zeros):"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = 3"
+      },
+      {
+       "t": "p",
+       "text": "**Step 5: Nullity Calculation via Rank-Nullity Theorem**  \nThe matrix $A$ is of order $n \\times n = 4 \\times 4$, so the number of columns (dimension of the domain space) is $n = 4$."
+      },
+      {
+       "t": "math",
+       "tex": "\\eta(A) = n - \\rho(A) = 4 - 3 = 1"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap:** Do not assume that because entries increase quadratically or triangularly ($1, 3, 6, 10$ are triangular numbers $T_n = \\frac{n(n+1)}{2}$) the matrix has full rank 4! Triangular number differences are linear, and second differences are constant. Thus, taking successive differences rapidly drives rows to zero, guaranteeing rank deficiency $\\rho(A) < 4$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -10970,194 +11013,193 @@ export default {
      "text": "Problem Set: Classifying Sets as Linearly Dependent (L.D.) or Linearly Independent (L.I.)"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "h4",
-     "text": "Drill (a) [Slide 154]"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = 2\\hat{i} + 3\\hat{j} - 4\\hat{k}, \\quad \\vec{B} = \\hat{i} + 1.5\\hat{j} - 2\\hat{k}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis:** Notice the ratio of corresponding coefficients:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2}{1} = \\frac{3}{1.5} = \\frac{-4}{-2} = 2 \\implies \\vec{A} = 2\\vec{B} \\quad \\text{or} \\quad \\vec{B} = \\frac{1}{2}\\vec{A}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Linear Combination:** $1\\vec{A} - 2\\vec{B} = \\vec{0}$, where scalar weights $(1, -2) \\neq (0, 0)$.",
-      "**Count:** $1$ Linearly Independent vector, $1$ Linearly Dependent vector.",
-      "**Classification of the Set:** **Set of Linearly Dependent vectors**."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Drill (b) [Slide 154]"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = 2\\hat{i} + 3\\hat{j} - 4\\hat{k}, \\quad \\vec{B} = 4\\hat{i} + 6\\hat{j} - 6\\hat{k}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis:** Compare component ratios:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{2}{4} = \\frac{1}{2}, \\quad \\frac{3}{6} = \\frac{1}{2}, \\quad \\text{but} \\quad \\frac{-4}{-6} = \\frac{2}{3} \\neq \\frac{1}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, $\\vec{A} \\neq \\alpha \\vec{B}$ for any scalar $\\alpha$. Neither vector can be written as a multiple of the other."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Count:** $2$ Linearly Independent vectors, $0$ Linearly Dependent vectors.",
-      "**Classification of the Set:** **Set of Linearly Independent vectors**."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Drill (c) [Slide 155]"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = 2\\hat{i} + \\hat{j} - \\hat{k}, \\quad \\vec{B} = 3\\hat{i} + \\hat{j} - 3\\hat{k}, \\quad \\vec{C} = 5\\hat{i} + 2\\hat{j} - 4\\hat{k}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis:** Inspect linear combinations by addition:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} + \\vec{B} = (2+3)\\hat{i} + (1+1)\\hat{j} + (-1-3)\\hat{k} = 5\\hat{i} + 2\\hat{j} - 4\\hat{k} = \\vec{C}"
-    },
-    {
-     "t": "p",
-     "text": "Equivalently:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{C} - \\vec{B} = \\vec{A}, \\quad \\vec{C} - \\vec{A} = \\vec{B}, \\quad \\vec{A} + \\vec{B} - \\vec{C} = \\vec{0}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Count:** $2$ Linearly Independent vectors, $1$ Linearly Dependent vector.",
-      "**Classification of the Set:** **Set of Linearly Dependent vectors**."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Drill (d) [Slide 155]"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = 2\\hat{i} + \\hat{j} - \\hat{k}, \\quad \\vec{B} = 3\\hat{i} + \\hat{j} - 3\\hat{k}, \\quad \\vec{C} = 4\\hat{i} + 2\\hat{j} - 4\\hat{k}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis:** Testing if $\\vec{C} = \\alpha\\vec{A} + \\beta\\vec{B}$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Component equations:"
-    },
-    {
-     "t": "math",
-     "tex": "2\\alpha + 3\\beta = 4 \\quad (1)"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha + \\beta = 2 \\implies \\alpha = 2 - \\beta \\quad (2)"
-    },
-    {
-     "t": "p",
-     "text": "Substituting (2) into (1): $2(2 - \\beta) + 3\\beta = 4 \\implies 4 - 2\\beta + 3\\beta = 4 \\implies \\beta = 0 \\implies \\alpha = 2$.\n  Check the third component ($\\hat{k}$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha(-1) + \\beta(-3) = 2(-1) + 0 = -2 \\neq -4"
-    },
-    {
-     "t": "p",
-     "text": "The system is inconsistent; no scalars $\\alpha, \\beta$ satisfy $\\alpha\\vec{A} + \\beta\\vec{B} = \\vec{C}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Count:** $3$ Linearly Independent vectors, $0$ Linearly Dependent vectors.",
-      "**Classification of the Set:** **Set of Linearly Independent vectors**."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Drill (e) [Slide 156]"
-    },
-    {
-     "t": "p",
-     "text": "Given:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = 2\\hat{i} + 4\\hat{j} - 3\\hat{k}, \\quad \\vec{B} = \\hat{i} + 2\\hat{j} - 1.5\\hat{k}, \\quad \\vec{C} = 4\\hat{i} + 8\\hat{j} - 6\\hat{k}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = 2\\vec{B}, \\quad \\vec{B} = \\frac{1}{4}\\vec{C}, \\quad \\vec{C} = 2\\vec{A} = 4\\vec{B}"
-    },
-    {
-     "t": "p",
-     "text": "All three vectors lie along the identical line in $\\mathbb{R}^3$. Only 1 vector defines the directional span."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Count:** $1$ Linearly Independent vector, $2$ Linearly Dependent vectors.",
-      "**Classification of the Set:** **Set of Linearly Dependent vectors**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Drill (a) [Slide 154]"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = 2\\hat{i} + 3\\hat{j} - 4\\hat{k}, \\quad \\vec{B} = \\hat{i} + 1.5\\hat{j} - 2\\hat{k}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis:** Notice the ratio of corresponding coefficients:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2}{1} = \\frac{3}{1.5} = \\frac{-4}{-2} = 2 \\implies \\vec{A} = 2\\vec{B} \\quad \\text{or} \\quad \\vec{B} = \\frac{1}{2}\\vec{A}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Linear Combination:** $1\\vec{A} - 2\\vec{B} = \\vec{0}$, where scalar weights $(1, -2) \\neq (0, 0)$.",
+        "**Count:** $1$ Linearly Independent vector, $1$ Linearly Dependent vector.",
+        "**Classification of the Set:** **Set of Linearly Dependent vectors**."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Drill (b) [Slide 154]"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = 2\\hat{i} + 3\\hat{j} - 4\\hat{k}, \\quad \\vec{B} = 4\\hat{i} + 6\\hat{j} - 6\\hat{k}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis:** Compare component ratios:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{2}{4} = \\frac{1}{2}, \\quad \\frac{3}{6} = \\frac{1}{2}, \\quad \\text{but} \\quad \\frac{-4}{-6} = \\frac{2}{3} \\neq \\frac{1}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, $\\vec{A} \\neq \\alpha \\vec{B}$ for any scalar $\\alpha$. Neither vector can be written as a multiple of the other."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Count:** $2$ Linearly Independent vectors, $0$ Linearly Dependent vectors.",
+        "**Classification of the Set:** **Set of Linearly Independent vectors**."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Drill (c) [Slide 155]"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = 2\\hat{i} + \\hat{j} - \\hat{k}, \\quad \\vec{B} = 3\\hat{i} + \\hat{j} - 3\\hat{k}, \\quad \\vec{C} = 5\\hat{i} + 2\\hat{j} - 4\\hat{k}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis:** Inspect linear combinations by addition:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} + \\vec{B} = (2+3)\\hat{i} + (1+1)\\hat{j} + (-1-3)\\hat{k} = 5\\hat{i} + 2\\hat{j} - 4\\hat{k} = \\vec{C}"
+      },
+      {
+       "t": "p",
+       "text": "Equivalently:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{C} - \\vec{B} = \\vec{A}, \\quad \\vec{C} - \\vec{A} = \\vec{B}, \\quad \\vec{A} + \\vec{B} - \\vec{C} = \\vec{0}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Count:** $2$ Linearly Independent vectors, $1$ Linearly Dependent vector.",
+        "**Classification of the Set:** **Set of Linearly Dependent vectors**."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Drill (d) [Slide 155]"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = 2\\hat{i} + \\hat{j} - \\hat{k}, \\quad \\vec{B} = 3\\hat{i} + \\hat{j} - 3\\hat{k}, \\quad \\vec{C} = 4\\hat{i} + 2\\hat{j} - 4\\hat{k}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis:** Testing if $\\vec{C} = \\alpha\\vec{A} + \\beta\\vec{B}$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Component equations:"
+      },
+      {
+       "t": "math",
+       "tex": "2\\alpha + 3\\beta = 4 \\quad (1)"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha + \\beta = 2 \\implies \\alpha = 2 - \\beta \\quad (2)"
+      },
+      {
+       "t": "p",
+       "text": "Substituting (2) into (1): $2(2 - \\beta) + 3\\beta = 4 \\implies 4 - 2\\beta + 3\\beta = 4 \\implies \\beta = 0 \\implies \\alpha = 2$.\n  Check the third component ($\\hat{k}$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha(-1) + \\beta(-3) = 2(-1) + 0 = -2 \\neq -4"
+      },
+      {
+       "t": "p",
+       "text": "The system is inconsistent; no scalars $\\alpha, \\beta$ satisfy $\\alpha\\vec{A} + \\beta\\vec{B} = \\vec{C}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Count:** $3$ Linearly Independent vectors, $0$ Linearly Dependent vectors.",
+        "**Classification of the Set:** **Set of Linearly Independent vectors**."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Drill (e) [Slide 156]"
+      },
+      {
+       "t": "p",
+       "text": "Given:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = 2\\hat{i} + 4\\hat{j} - 3\\hat{k}, \\quad \\vec{B} = \\hat{i} + 2\\hat{j} - 1.5\\hat{k}, \\quad \\vec{C} = 4\\hat{i} + 8\\hat{j} - 6\\hat{k}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = 2\\vec{B}, \\quad \\vec{B} = \\frac{1}{4}\\vec{C}, \\quad \\vec{C} = 2\\vec{A} = 4\\vec{B}"
+      },
+      {
+       "t": "p",
+       "text": "All three vectors lie along the identical line in $\\mathbb{R}^3$. Only 1 vector defines the directional span."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Count:** $1$ Linearly Independent vector, $2$ Linearly Dependent vectors.",
+        "**Classification of the Set:** **Set of Linearly Dependent vectors**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11324,83 +11366,82 @@ export default {
      "tex": "X_1 = \\begin{bmatrix} 1 \\\\ 2 \\\\ \\lambda \\end{bmatrix}, \\quad X_2 = \\begin{bmatrix} -2 \\\\ 4 \\\\ 3 \\end{bmatrix}, \\quad X_3 = \\begin{bmatrix} 3 \\\\ 4 \\\\ 2\\lambda \\end{bmatrix}"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Construct the Matrix of Vectors**  \nForm the $3 \\times 3$ matrix $X$ using the vectors as columns:"
-    },
-    {
-     "t": "math",
-     "tex": "X = \\begin{bmatrix} X_1 & X_2 & X_3 \\end{bmatrix} = \\begin{bmatrix} 1 & -2 & 3 \\\\ 2 & 4 & 4 \\\\ \\lambda & 3 & 2\\lambda \\end{bmatrix}_{3 \\times 3}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Condition for Linear Dependence**  \nFor 3 vectors in $\\mathbb{R}^3$ to be linearly dependent, the rank must be strictly less than the number of vectors:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(X) < 3 \\iff \\rho(X) \\le 2 \\iff \\det(X) = 0"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Evaluate the Determinant [Slide 163]**  \nExpand along the first row:"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(X) = \\begin{vmatrix} 1 & -2 & 3 \\\\ 2 & 4 & 4 \\\\ \\lambda & 3 & 2\\lambda \\end{vmatrix} = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies 1 \\cdot [(4)(2\\lambda) - (4)(3)] - (-2) \\cdot [(2)(2\\lambda) - (4)(\\lambda)] + 3 \\cdot [(2)(3) - (4)(\\lambda)] = 0"
-    },
-    {
-     "t": "p",
-     "text": "Simplify each term:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$1 \\cdot (8\\lambda - 12) = 8\\lambda - 12$",
-      "$+2 \\cdot (4\\lambda - 4\\lambda) = +2 \\cdot (0) = 0$",
-      "$+3 \\cdot (6 - 4\\lambda) = 18 - 12\\lambda$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Combine and solve:"
-    },
-    {
-     "t": "math",
-     "tex": "(8\\lambda - 12) + 0 + (18 - 12\\lambda) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "(8\\lambda - 12\\lambda) + (18 - 12) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "-4\\lambda + 6 = 0 \\implies 4\\lambda = 6 \\implies \\lambda = \\frac{6}{4} = 1.5"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda = 1.5"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "Notice how the middle term $-(-2)(4\\lambda - 4\\lambda)$ vanished identically! Recognizing that minor column entries $(2, 4)$ and $(\\lambda, 2\\lambda)$ are proportional ($C_3 = 2 C_1$ in that submatrix) instantly eliminates this expansion term, saving critical calculation time during GATE."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Construct the Matrix of Vectors**  \nForm the $3 \\times 3$ matrix $X$ using the vectors as columns:"
+      },
+      {
+       "t": "math",
+       "tex": "X = \\begin{bmatrix} X_1 & X_2 & X_3 \\end{bmatrix} = \\begin{bmatrix} 1 & -2 & 3 \\\\ 2 & 4 & 4 \\\\ \\lambda & 3 & 2\\lambda \\end{bmatrix}_{3 \\times 3}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Condition for Linear Dependence**  \nFor 3 vectors in $\\mathbb{R}^3$ to be linearly dependent, the rank must be strictly less than the number of vectors:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(X) < 3 \\iff \\rho(X) \\le 2 \\iff \\det(X) = 0"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Evaluate the Determinant [Slide 163]**  \nExpand along the first row:"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(X) = \\begin{vmatrix} 1 & -2 & 3 \\\\ 2 & 4 & 4 \\\\ \\lambda & 3 & 2\\lambda \\end{vmatrix} = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies 1 \\cdot [(4)(2\\lambda) - (4)(3)] - (-2) \\cdot [(2)(2\\lambda) - (4)(\\lambda)] + 3 \\cdot [(2)(3) - (4)(\\lambda)] = 0"
+      },
+      {
+       "t": "p",
+       "text": "Simplify each term:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$1 \\cdot (8\\lambda - 12) = 8\\lambda - 12$",
+        "$+2 \\cdot (4\\lambda - 4\\lambda) = +2 \\cdot (0) = 0$",
+        "$+3 \\cdot (6 - 4\\lambda) = 18 - 12\\lambda$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Combine and solve:"
+      },
+      {
+       "t": "math",
+       "tex": "(8\\lambda - 12) + 0 + (18 - 12\\lambda) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "(8\\lambda - 12\\lambda) + (18 - 12) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "-4\\lambda + 6 = 0 \\implies 4\\lambda = 6 \\implies \\lambda = \\frac{6}{4} = 1.5"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda = 1.5"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "Notice how the middle term $-(-2)(4\\lambda - 4\\lambda)$ vanished identically! Recognizing that minor column entries $(2, 4)$ and $(\\lambda, 2\\lambda)$ are proportional ($C_3 = 2 C_1$ in that submatrix) instantly eliminates this expansion term, saving critical calculation time during GATE."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -11624,75 +11665,74 @@ export default {
      "text": "**Question:** Let $A$ be an $n \\times n$ singular, non-null matrix such that $\\rho(A) = \\rho(\\text{adj } A)$. Find the value of $n$."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Parse the Given Hypotheses**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$A$ is $n \\times n$.",
-      "$A$ is **singular** $\\implies \\det(A) = 0 \\implies \\rho(A) < n$.",
-      "$A$ is **non-null** $\\implies A \\neq O \\implies \\rho(A) \\ge 1$.",
-      "$\\rho(A) = \\rho(\\text{adj } A)$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Test the Three Rank Regimes of Adjoint**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $\\rho(A) \\le n - 2$, then $\\rho(\\text{adj } A) = 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Equating gives $\\rho(A) = 0$, which contradicts the condition that $A$ is non-null ($\\rho(A) \\neq 0$). Thus, $\\rho(A) \\le n - 2$ is impossible."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $\\rho(A) = n$, $A$ would be non-singular, contradicting singularity.",
-      "Therefore, we must have $\\rho(A) = n - 1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Solve for $n$**  \nWhen $\\rho(A) = n - 1$, the theorem dictates:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(\\text{adj } A) = 1"
-    },
-    {
-     "t": "p",
-     "text": "We are given $\\rho(A) = \\rho(\\text{adj } A)$:"
-    },
-    {
-     "t": "math",
-     "tex": "n - 1 = 1 \\implies n = 2"
-    },
-    {
-     "t": "p",
-     "text": "**Verification:**  \nFor $n = 2$: Let $A = \\begin{bmatrix} 1 & 2 \\\\ 2 & 4 \\end{bmatrix}$. $\\rho(A) = 1$.  \n$\\text{adj}(A) = \\begin{bmatrix} 4 & -2 \\\\ -2 & 1 \\end{bmatrix}$. Here $\\rho(\\text{adj } A) = 1$.  \nIndeed, $\\rho(A) = \\rho(\\text{adj } A) = 1$."
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:**"
-    },
-    {
-     "t": "math",
-     "tex": "n = 2"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Parse the Given Hypotheses**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$A$ is $n \\times n$.",
+        "$A$ is **singular** $\\implies \\det(A) = 0 \\implies \\rho(A) < n$.",
+        "$A$ is **non-null** $\\implies A \\neq O \\implies \\rho(A) \\ge 1$.",
+        "$\\rho(A) = \\rho(\\text{adj } A)$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Test the Three Rank Regimes of Adjoint**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $\\rho(A) \\le n - 2$, then $\\rho(\\text{adj } A) = 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Equating gives $\\rho(A) = 0$, which contradicts the condition that $A$ is non-null ($\\rho(A) \\neq 0$). Thus, $\\rho(A) \\le n - 2$ is impossible."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $\\rho(A) = n$, $A$ would be non-singular, contradicting singularity.",
+        "Therefore, we must have $\\rho(A) = n - 1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Solve for $n$**  \nWhen $\\rho(A) = n - 1$, the theorem dictates:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(\\text{adj } A) = 1"
+      },
+      {
+       "t": "p",
+       "text": "We are given $\\rho(A) = \\rho(\\text{adj } A)$:"
+      },
+      {
+       "t": "math",
+       "tex": "n - 1 = 1 \\implies n = 2"
+      },
+      {
+       "t": "p",
+       "text": "**Verification:**  \nFor $n = 2$: Let $A = \\begin{bmatrix} 1 & 2 \\\\ 2 & 4 \\end{bmatrix}$. $\\rho(A) = 1$.  \n$\\text{adj}(A) = \\begin{bmatrix} 4 & -2 \\\\ -2 & 1 \\end{bmatrix}$. Here $\\rho(\\text{adj } A) = 1$.  \nIndeed, $\\rho(A) = \\rho(\\text{adj } A) = 1$."
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:**"
+      },
+      {
+       "t": "math",
+       "tex": "n = 2"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -11703,43 +11743,46 @@ export default {
      "text": "**Question:** Let $A$ be an $n \\times n$ non-null matrix with $\\rho(A) = n - 4$. Which of the following statements are correct?  \n(a) $n \\ge 5$  \n(b) $\\text{adj}(A)$ is a null matrix  \n(c) $\\text{adj}(\\text{adj } A)$ could be a non-null matrix  \n(d) $\\rho[\\text{adj}(\\text{adj } A)] = 0$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Analysis of Statements:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (a):** $A$ is a non-null matrix $\\implies \\rho(A) > 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Given $\\rho(A) = n - 4 > 0 \\implies n > 4$. Since $n \\in \\mathbb{Z}^+$, $n \\ge 5$. **[CORRECT]**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (b):** For any matrix with $\\rho(A) \\le n - 2$, its adjoint is the null matrix."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Here $\\rho(A) = n - 4$. Since $n - 4 \\le n - 2$ holds for all $n$, $\\text{adj}(A)$ is identically the NULL matrix. **[CORRECT]**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (c):** Since $\\text{adj}(A) = O$, its adjoint $\\text{adj}(O) = O$. It can never be non-null. **[INCORRECT]**",
-      "**Statement (d):** $\\text{adj}(\\text{adj } A) = O \\implies \\rho[\\text{adj}(\\text{adj } A)] = 0$. **[CORRECT]**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Options:** (a), (b), (d).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Analysis of Statements:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (a):** $A$ is a non-null matrix $\\implies \\rho(A) > 0$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Given $\\rho(A) = n - 4 > 0 \\implies n > 4$. Since $n \\in \\mathbb{Z}^+$, $n \\ge 5$. **[CORRECT]**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (b):** For any matrix with $\\rho(A) \\le n - 2$, its adjoint is the null matrix."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Here $\\rho(A) = n - 4$. Since $n - 4 \\le n - 2$ holds for all $n$, $\\text{adj}(A)$ is identically the NULL matrix. **[CORRECT]**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (c):** Since $\\text{adj}(A) = O$, its adjoint $\\text{adj}(O) = O$. It can never be non-null. **[INCORRECT]**",
+        "**Statement (d):** $\\text{adj}(\\text{adj } A) = O \\implies \\rho[\\text{adj}(\\text{adj } A)] = 0$. **[CORRECT]**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Options:** (a), (b), (d)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -11841,70 +11884,69 @@ export default {
      "text": "**Question (MSQ):** Let $[A]_{4 \\times 3}$ with $\\rho(A) = 2$ and $[B]_{5 \\times 4}$ with $\\rho(B) = 4$.  \nWhat are the possible values of $\\rho(BA)$?  \n(a) 1  \n(b) 2  \n(c) 3  \n(d) 4"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Check Order and Common Inner Dimension**  \nThe product requested is $BA$:"
-    },
-    {
-     "t": "math",
-     "tex": "[B]_{5 \\times 4} \\cdot [A]_{4 \\times 3} = [BA]_{5 \\times 3}"
-    },
-    {
-     "t": "p",
-     "text": "The common inner dimension is $n = 4$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Apply Sylvester's Inequality to $BA$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Upper Bound:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(BA) \\le \\min\\{\\rho(B), \\rho(A)\\} = \\min\\{4, 2\\} = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Lower Bound:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(BA) \\ge \\rho(B) + \\rho(A) - n = 4 + 2 - 4 = 2"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Reconcile Bounds**"
-    },
-    {
-     "t": "math",
-     "tex": "2 \\le \\rho(BA) \\le 2 \\implies \\mathbf{\\rho(BA) = 2}"
-    },
-    {
-     "t": "p",
-     "text": "The rank of $BA$ is strictly constrained to 2!"
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **(b) 2 only**."
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap:** Do not accidentally evaluate $AB$! $A$ is $4 \\times 3$ and $B$ is $5 \\times 4$. The matrix product $A \\cdot B$ is **not even defined** because the inner dimensions ($3 \\neq 5$) do not match!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Check Order and Common Inner Dimension**  \nThe product requested is $BA$:"
+      },
+      {
+       "t": "math",
+       "tex": "[B]_{5 \\times 4} \\cdot [A]_{4 \\times 3} = [BA]_{5 \\times 3}"
+      },
+      {
+       "t": "p",
+       "text": "The common inner dimension is $n = 4$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Apply Sylvester's Inequality to $BA$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Upper Bound:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(BA) \\le \\min\\{\\rho(B), \\rho(A)\\} = \\min\\{4, 2\\} = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Lower Bound:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(BA) \\ge \\rho(B) + \\rho(A) - n = 4 + 2 - 4 = 2"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Reconcile Bounds**"
+      },
+      {
+       "t": "math",
+       "tex": "2 \\le \\rho(BA) \\le 2 \\implies \\mathbf{\\rho(BA) = 2}"
+      },
+      {
+       "t": "p",
+       "text": "The rank of $BA$ is strictly constrained to 2!"
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **(b) 2 only**."
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap:** Do not accidentally evaluate $AB$! $A$ is $4 \\times 3$ and $B$ is $5 \\times 4$. The matrix product $A \\cdot B$ is **not even defined** because the inner dimensions ($3 \\neq 5$) do not match!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -12049,92 +12091,91 @@ export default {
      "tex": "(3) \\quad x_1 + 2x_2 + 3x_3 = 14"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Augmented Matrix Setup [Slide 181]**"
-    },
-    {
-     "t": "math",
-     "tex": "[A \\vert B] = \\begin{bmatrix} 1 & 1 & 1 & : & 6 \\\\ 2 & 3 & 1 & : & 11 \\\\ 1 & 2 & 3 & : & 14 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Gaussian Row Reduction to Row Echelon Form [Slide 182]**\nApply row transformations:"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\to R_2 - 2R_1 \\implies [2-2, \\; 3-2, \\; 1-2, \\; : \\; 11-12] = [0, \\; 1, \\; -1, \\; : \\; -1]"
-    },
-    {
-     "t": "math",
-     "tex": "R_3 \\to R_3 - R_1 \\implies [1-1, \\; 2-1, \\; 3-1, \\; : \\; 14-6] = [0, \\; 1, \\; 2, \\; : \\; 8]"
-    },
-    {
-     "t": "p",
-     "text": "The augmented matrix becomes:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 1 & 1 & : & 6 \\\\ 0 & 1 & -1 & : & -1 \\\\ 0 & 1 & 2 & : & 8 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Eliminate the leading entry in row 3:"
-    },
-    {
-     "t": "math",
-     "tex": "R_3 \\to R_3 - R_2 \\implies [0-0, \\; 1-1, \\; 2-(-1), \\; : \\; 8-(-1)] = [0, \\; 0, \\; 3, \\; : \\; 9]"
-    },
-    {
-     "t": "p",
-     "text": "Row Echelon Form (REF):"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 1 & 1 & : & 6 \\\\ 0 & 1 & -1 & : & -1 \\\\ 0 & 0 & 3 & : & 9 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Rank Comparison**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Coefficient matrix $A$ has 3 non-zero rows $\\implies \\rho(A) = 3$.",
-      "Augmented matrix $[A \\vert B]$ has 3 non-zero rows $\\implies \\rho(A \\vert B) = 3$.",
-      "Number of unknowns $n = 3$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\rho(A) = \\rho(A \\vert B) = n = 3 \\implies \\text{UNIQUE SOLUTION}}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Back Substitution [Slide 183]**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "From Row 3: $3x_3 = 9 \\implies \\mathbf{x_3 = 3}$",
-      "From Row 2: $x_2 - x_3 = -1 \\implies x_2 - 3 = -1 \\implies \\mathbf{x_2 = 2}$",
-      "From Row 1: $x_1 + x_2 + x_3 = 6 \\implies x_1 + 2 + 3 = 6 \\implies \\mathbf{x_1 = 1}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Solution Vector:"
-    },
-    {
-     "t": "math",
-     "tex": "X = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Augmented Matrix Setup [Slide 181]**"
+      },
+      {
+       "t": "math",
+       "tex": "[A \\vert B] = \\begin{bmatrix} 1 & 1 & 1 & : & 6 \\\\ 2 & 3 & 1 & : & 11 \\\\ 1 & 2 & 3 & : & 14 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Gaussian Row Reduction to Row Echelon Form [Slide 182]**\nApply row transformations:"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\to R_2 - 2R_1 \\implies [2-2, \\; 3-2, \\; 1-2, \\; : \\; 11-12] = [0, \\; 1, \\; -1, \\; : \\; -1]"
+      },
+      {
+       "t": "math",
+       "tex": "R_3 \\to R_3 - R_1 \\implies [1-1, \\; 2-1, \\; 3-1, \\; : \\; 14-6] = [0, \\; 1, \\; 2, \\; : \\; 8]"
+      },
+      {
+       "t": "p",
+       "text": "The augmented matrix becomes:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 1 & 1 & : & 6 \\\\ 0 & 1 & -1 & : & -1 \\\\ 0 & 1 & 2 & : & 8 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Eliminate the leading entry in row 3:"
+      },
+      {
+       "t": "math",
+       "tex": "R_3 \\to R_3 - R_2 \\implies [0-0, \\; 1-1, \\; 2-(-1), \\; : \\; 8-(-1)] = [0, \\; 0, \\; 3, \\; : \\; 9]"
+      },
+      {
+       "t": "p",
+       "text": "Row Echelon Form (REF):"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 1 & 1 & : & 6 \\\\ 0 & 1 & -1 & : & -1 \\\\ 0 & 0 & 3 & : & 9 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Rank Comparison**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Coefficient matrix $A$ has 3 non-zero rows $\\implies \\rho(A) = 3$.",
+        "Augmented matrix $[A \\vert B]$ has 3 non-zero rows $\\implies \\rho(A \\vert B) = 3$.",
+        "Number of unknowns $n = 3$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\rho(A) = \\rho(A \\vert B) = n = 3 \\implies \\text{UNIQUE SOLUTION}}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Back Substitution [Slide 183]**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "From Row 3: $3x_3 = 9 \\implies \\mathbf{x_3 = 3}$",
+        "From Row 2: $x_2 - x_3 = -1 \\implies x_2 - 3 = -1 \\implies \\mathbf{x_2 = 2}$",
+        "From Row 1: $x_1 + x_2 + x_3 = 6 \\implies x_1 + 2 + 3 = 6 \\implies \\mathbf{x_1 = 1}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Solution Vector:"
+      },
+      {
+       "t": "math",
+       "tex": "X = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -12157,77 +12198,80 @@ export default {
      "tex": "(3) \\quad x_1 - x_2 + x_3 = 1"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Identify Dependency [Slide 184]**\nNotice that Equation (2) is simply $2 \\times \\text{Equation (1)}$.  \nSubtracting $R_2 - 2R_1$ gives the trivial identity $0 = 0$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Augmented Matrix Row Reduction [Slide 185]**"
-    },
-    {
-     "t": "math",
-     "tex": "[A \\vert B] = \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 2 & 2 & 2 & : & 6 \\\\ 1 & -1 & 1 & : & 1 \\end{bmatrix} \\xrightarrow{\\substack{R_2 \\to R_2 - 2R_1 \\\\ R_3 \\to R_3 - R_1}} \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 0 & 0 & 0 & : & 0 \\\\ 0 & -2 & 0 & : & -2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Interchanging $R_2 \\leftrightarrow R_3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 0 & -2 & 0 & : & -2 \\\\ 0 & 0 & 0 & : & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Rank Comparison & Degree of Freedom**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\rho(A) = 2$",
-      "$\\rho(A \\vert B) = 2$",
-      "Number of variables $n = 3$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\rho(A) = \\rho(A \\vert B) = 2 < 3 \\implies \\text{INFINITELY MANY SOLUTIONS}}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Parametric Representation of Solution Space [Slide 184]**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "From Row 2: $-2x_2 = -2 \\implies \\mathbf{x_2 = 1}$ (Fixed Variable).",
-      "From Row 1: $x_1 + 1 + x_3 = 3 \\implies x_1 + x_3 = 2 \\implies \\mathbf{x_1 = 2 - x_3}$.",
-      "Let $x_3 = t \\in \\mathbb{R}$ be the **Free Parameter**."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "X = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 2 - t \\\\ 1 \\\\ t \\end{bmatrix} = \\begin{bmatrix} 2 \\\\ 1 \\\\ 0 \\end{bmatrix} + t \\begin{bmatrix} -1 \\\\ 0 \\\\ 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Sample solutions generated:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$t = 1 \\implies [1, \\; 1, \\; 1]^T$",
-      "$t = 2 \\implies [0, \\; 1, \\; 2]^T$",
-      "$t = 0 \\implies [2, \\; 1, \\; 0]^T$",
-      "$t = 3 \\implies [-1, \\; 1, \\; 3]^T$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Number of free variables (Degrees of Freedom) $= n - \\rho(A) = 3 - 2 = 1$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Identify Dependency [Slide 184]**\nNotice that Equation (2) is simply $2 \\times \\text{Equation (1)}$.  \nSubtracting $R_2 - 2R_1$ gives the trivial identity $0 = 0$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Augmented Matrix Row Reduction [Slide 185]**"
+      },
+      {
+       "t": "math",
+       "tex": "[A \\vert B] = \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 2 & 2 & 2 & : & 6 \\\\ 1 & -1 & 1 & : & 1 \\end{bmatrix} \\xrightarrow{\\substack{R_2 \\to R_2 - 2R_1 \\\\ R_3 \\to R_3 - R_1}} \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 0 & 0 & 0 & : & 0 \\\\ 0 & -2 & 0 & : & -2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Interchanging $R_2 \\leftrightarrow R_3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 0 & -2 & 0 & : & -2 \\\\ 0 & 0 & 0 & : & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Rank Comparison & Degree of Freedom**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\rho(A) = 2$",
+        "$\\rho(A \\vert B) = 2$",
+        "Number of variables $n = 3$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\rho(A) = \\rho(A \\vert B) = 2 < 3 \\implies \\text{INFINITELY MANY SOLUTIONS}}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Parametric Representation of Solution Space [Slide 184]**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "From Row 2: $-2x_2 = -2 \\implies \\mathbf{x_2 = 1}$ (Fixed Variable).",
+        "From Row 1: $x_1 + 1 + x_3 = 3 \\implies x_1 + x_3 = 2 \\implies \\mathbf{x_1 = 2 - x_3}$.",
+        "Let $x_3 = t \\in \\mathbb{R}$ be the **Free Parameter**."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "X = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 2 - t \\\\ 1 \\\\ t \\end{bmatrix} = \\begin{bmatrix} 2 \\\\ 1 \\\\ 0 \\end{bmatrix} + t \\begin{bmatrix} -1 \\\\ 0 \\\\ 1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Sample solutions generated:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$t = 1 \\implies [1, \\; 1, \\; 1]^T$",
+        "$t = 2 \\implies [0, \\; 1, \\; 2]^T$",
+        "$t = 0 \\implies [2, \\; 1, \\; 0]^T$",
+        "$t = 3 \\implies [-1, \\; 1, \\; 3]^T$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Number of free variables (Degrees of Freedom) $= n - \\rho(A) = 3 - 2 = 1$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -12250,56 +12294,55 @@ export default {
      "tex": "(3) \\quad x_1 - x_2 + x_3 = 1"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Algebraic Contradiction [Slide 186]**\nFrom (1): $x_1 + x_2 + x_3 = 3$.  \nDividing (2) by 2 gives: $x_1 + x_2 + x_3 = 3.5$.  \nSubtracting yields:"
-    },
-    {
-     "t": "math",
-     "tex": "(x_1 + x_2 + x_3) - (x_1 + x_2 + x_3) = 3.5 - 3 \\implies \\mathbf{0 = 0.5 \\quad (\\text{IMPOSSIBLE!})}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Augmented Matrix Row Reduction [Slide 187]**"
-    },
-    {
-     "t": "math",
-     "tex": "[A \\vert B] = \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 2 & 2 & 2 & : & 7 \\\\ 1 & -1 & 1 & : & 1 \\end{bmatrix} \\xrightarrow{\\substack{R_2 \\to R_2 - 2R_1 \\\\ R_3 \\to R_3 - R_1}} \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 0 & 0 & 0 & : & 1 \\\\ 0 & -2 & 0 & : & -2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Interchanging $R_2 \\leftrightarrow R_3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 0 & -2 & 0 & : & -2 \\\\ 0 & 0 & 0 & : & 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Rank Comparison**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Covering the augmented column gives matrix $A$: Row 3 is all zeros $\\implies \\rho(A) = 2$.",
-      "Looking at the full augmented matrix $[A \\vert B]$: Row 3 has a non-zero pivot ($1$) $\\implies \\rho(A \\vert B) = 3$.",
-      "Row 3 corresponds to the equation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "0\\cdot x_1 + 0\\cdot x_2 + 0\\cdot x_3 = 1 \\implies 0 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\rho(A) \\neq \\rho(A \\vert B) \\iff \\rho(A) < \\rho(A \\vert B) \\implies \\text{NO SOLUTION (INCONSISTENT)}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Algebraic Contradiction [Slide 186]**\nFrom (1): $x_1 + x_2 + x_3 = 3$.  \nDividing (2) by 2 gives: $x_1 + x_2 + x_3 = 3.5$.  \nSubtracting yields:"
+      },
+      {
+       "t": "math",
+       "tex": "(x_1 + x_2 + x_3) - (x_1 + x_2 + x_3) = 3.5 - 3 \\implies \\mathbf{0 = 0.5 \\quad (\\text{IMPOSSIBLE!})}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Augmented Matrix Row Reduction [Slide 187]**"
+      },
+      {
+       "t": "math",
+       "tex": "[A \\vert B] = \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 2 & 2 & 2 & : & 7 \\\\ 1 & -1 & 1 & : & 1 \\end{bmatrix} \\xrightarrow{\\substack{R_2 \\to R_2 - 2R_1 \\\\ R_3 \\to R_3 - R_1}} \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 0 & 0 & 0 & : & 1 \\\\ 0 & -2 & 0 & : & -2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Interchanging $R_2 \\leftrightarrow R_3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 0 & -2 & 0 & : & -2 \\\\ 0 & 0 & 0 & : & 1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Rank Comparison**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Covering the augmented column gives matrix $A$: Row 3 is all zeros $\\implies \\rho(A) = 2$.",
+        "Looking at the full augmented matrix $[A \\vert B]$: Row 3 has a non-zero pivot ($1$) $\\implies \\rho(A \\vert B) = 3$.",
+        "Row 3 corresponds to the equation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "0\\cdot x_1 + 0\\cdot x_2 + 0\\cdot x_3 = 1 \\implies 0 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\rho(A) \\neq \\rho(A \\vert B) \\iff \\rho(A) < \\rho(A \\vert B) \\implies \\text{NO SOLUTION (INCONSISTENT)}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -12338,76 +12381,75 @@ export default {
      "tex": "(3) \\quad 3x_1 + 3x_2 + 3x_3 = 9"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Effective Equations**  \nEquations (2) and (3) are exact scalar multiples of Equation (1):"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Eq (2)} = 2 \\times \\text{Eq (1)}, \\quad \\text{Eq (3)} = 3 \\times \\text{Eq (1)}"
-    },
-    {
-     "t": "p",
-     "text": "There is only **1 effective equation**: $x_1 + x_2 + x_3 = 3$ (representing a 2D plane in $\\mathbb{R}^3$)."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Augmented Matrix Row Reduction [Slide 190]**"
-    },
-    {
-     "t": "math",
-     "tex": "[A \\vert B] = \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 2 & 2 & 2 & : & 6 \\\\ 3 & 3 & 3 & : & 9 \\end{bmatrix} \\xrightarrow{\\substack{R_2 \\to R_2 - 2R_1 \\\\ R_3 \\to R_3 - 3R_1}} \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 0 & 0 & 0 & : & 0 \\\\ 0 & 0 & 0 & : & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\rho(A) = 1$",
-      "$\\rho(A \\vert B) = 1$",
-      "Number of variables $n = 3$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = \\rho(A \\vert B) = 1 < 3 \\implies \\text{INFINITELY MANY SOLUTIONS}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Free Variables & Degrees of Freedom**"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Number of Free Variables } = n - \\rho(A) = 3 - 1 = 2"
-    },
-    {
-     "t": "p",
-     "text": "Assign arbitrary real parameters to two free variables:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1 = c_1, \\quad x_2 = c_2"
-    },
-    {
-     "t": "p",
-     "text": "Then the dependent variable is:"
-    },
-    {
-     "t": "math",
-     "tex": "x_3 = 3 - c_1 - c_2"
-    },
-    {
-     "t": "p",
-     "text": "The solution vector is:"
-    },
-    {
-     "t": "math",
-     "tex": "X = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} c_1 \\\\ c_2 \\\\ 3 - c_1 - c_2 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 3 \\end{bmatrix} + c_1 \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\end{bmatrix} + c_2 \\begin{bmatrix} 0 \\\\ 1 \\\\ -1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Effective Equations**  \nEquations (2) and (3) are exact scalar multiples of Equation (1):"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Eq (2)} = 2 \\times \\text{Eq (1)}, \\quad \\text{Eq (3)} = 3 \\times \\text{Eq (1)}"
+      },
+      {
+       "t": "p",
+       "text": "There is only **1 effective equation**: $x_1 + x_2 + x_3 = 3$ (representing a 2D plane in $\\mathbb{R}^3$)."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Augmented Matrix Row Reduction [Slide 190]**"
+      },
+      {
+       "t": "math",
+       "tex": "[A \\vert B] = \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 2 & 2 & 2 & : & 6 \\\\ 3 & 3 & 3 & : & 9 \\end{bmatrix} \\xrightarrow{\\substack{R_2 \\to R_2 - 2R_1 \\\\ R_3 \\to R_3 - 3R_1}} \\begin{bmatrix} 1 & 1 & 1 & : & 3 \\\\ 0 & 0 & 0 & : & 0 \\\\ 0 & 0 & 0 & : & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\rho(A) = 1$",
+        "$\\rho(A \\vert B) = 1$",
+        "Number of variables $n = 3$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = \\rho(A \\vert B) = 1 < 3 \\implies \\text{INFINITELY MANY SOLUTIONS}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Free Variables & Degrees of Freedom**"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Number of Free Variables } = n - \\rho(A) = 3 - 1 = 2"
+      },
+      {
+       "t": "p",
+       "text": "Assign arbitrary real parameters to two free variables:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1 = c_1, \\quad x_2 = c_2"
+      },
+      {
+       "t": "p",
+       "text": "Then the dependent variable is:"
+      },
+      {
+       "t": "math",
+       "tex": "x_3 = 3 - c_1 - c_2"
+      },
+      {
+       "t": "p",
+       "text": "The solution vector is:"
+      },
+      {
+       "t": "math",
+       "tex": "X = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} c_1 \\\\ c_2 \\\\ 3 - c_1 - c_2 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 3 \\end{bmatrix} + c_1 \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\end{bmatrix} + c_2 \\begin{bmatrix} 0 \\\\ 1 \\\\ -1 \\end{bmatrix}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -12428,56 +12470,59 @@ export default {
      "text": "**Question:** Find the number of free variables for the system:\n$$2x + 3y - z = 1$$\n$$3x - 2y + z = 2$$"
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Matrix Formulation**  \nVariables: $n = 3$ ($x, y, z$). Number of equations: $m = 2$."
-    },
-    {
-     "t": "math",
-     "tex": "[A \\vert B] = \\begin{bmatrix} 2 & 3 & -1 & : & 1 \\\\ 3 & -2 & 1 & : & 2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Row Reduction to Echelon Form**"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\to 2R_2 - 3R_1 \\implies [2(3)-3(2), \\; 2(-2)-3(3), \\; 2(1)-3(-1), \\; : \\; 2(2)-3(1)]"
-    },
-    {
-     "t": "math",
-     "tex": "= [0, \\; -4 - 9, \\; 2 + 3, \\; : \\; 4 - 3] = [0, \\; -13, \\; 5, \\; : \\; 1]"
-    },
-    {
-     "t": "p",
-     "text": "Row Echelon Form:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 2 & 3 & -1 & : & 1 \\\\ 0 & -13 & 5 & : & 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Determine Ranks and Free Variables**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\rho(A) = 2$",
-      "$\\rho(A \\vert B) = 2$",
-      "Since $\\rho(A) = \\rho(A \\vert B) = 2 < 3$, the system is consistent with infinitely many solutions."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Number of Free Variables } = n - \\rho(A) = 3 - 2 = 1"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** **1 free variable**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Matrix Formulation**  \nVariables: $n = 3$ ($x, y, z$). Number of equations: $m = 2$."
+      },
+      {
+       "t": "math",
+       "tex": "[A \\vert B] = \\begin{bmatrix} 2 & 3 & -1 & : & 1 \\\\ 3 & -2 & 1 & : & 2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Row Reduction to Echelon Form**"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\to 2R_2 - 3R_1 \\implies [2(3)-3(2), \\; 2(-2)-3(3), \\; 2(1)-3(-1), \\; : \\; 2(2)-3(1)]"
+      },
+      {
+       "t": "math",
+       "tex": "= [0, \\; -4 - 9, \\; 2 + 3, \\; : \\; 4 - 3] = [0, \\; -13, \\; 5, \\; : \\; 1]"
+      },
+      {
+       "t": "p",
+       "text": "Row Echelon Form:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 2 & 3 & -1 & : & 1 \\\\ 0 & -13 & 5 & : & 1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Determine Ranks and Free Variables**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\rho(A) = 2$",
+        "$\\rho(A \\vert B) = 2$",
+        "Since $\\rho(A) = \\rho(A \\vert B) = 2 < 3$, the system is consistent with infinitely many solutions."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Number of Free Variables } = n - \\rho(A) = 3 - 2 = 1"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** **1 free variable**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -12702,164 +12747,163 @@ export default {
      "text": "has **infinitely many solutions**."
     },
     {
-     "t": "p",
-     "text": "<details open>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Set Up the Augmented Matrix**"
-    },
-    {
-     "t": "math",
-     "tex": "[A \\vert B] = \\begin{bmatrix} 1 & 1 & 1 & : & 5 \\\\ 1 & 3 & 3 & : & 9 \\\\ 1 & 2 & \\alpha & : & \\beta \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Gaussian Row Reduction**\nPerform row operations to eliminate entries in column 1:"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\to R_2 - R_1 \\implies [1-1, \\; 3-1, \\; 3-1, \\; : \\; 9-5] = [0, \\; 2, \\; 2, \\; : \\; 4]"
-    },
-    {
-     "t": "math",
-     "tex": "R_3 \\to R_3 - R_1 \\implies [1-1, \\; 2-1, \\; \\alpha-1, \\; : \\; \\beta-5] = [0, \\; 1, \\; \\alpha-1, \\; : \\; \\beta-5]"
-    },
-    {
-     "t": "p",
-     "text": "The matrix becomes:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 1 & 1 & : & 5 \\\\ 0 & 2 & 2 & : & 4 \\\\ 0 & 1 & \\alpha - 1 & : & \\beta - 5 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Eliminate the leading entry in row 3 using row 2:"
-    },
-    {
-     "t": "math",
-     "tex": "R_3 \\to R_3 - \\frac{1}{2} R_2"
-    },
-    {
-     "t": "p",
-     "text": "Computing the entries of $R_3$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Entry $(3, 1)$: $0 - 0 = 0$",
-      "Entry $(3, 2)$: $1 - \\frac{1}{2}(2) = 1 - 1 = 0$",
-      "Entry $(3, 3)$: $(\\alpha - 1) - \\frac{1}{2}(2) = \\alpha - 1 - 1 = \\mathbf{\\alpha - 2}$",
-      "Augmented entry $(3, 4)$: $(\\beta - 5) - \\frac{1}{2}(4) = \\beta - 5 - 2 = \\mathbf{\\beta - 7}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Resulting Upper Triangular Row Echelon Form:"
-    },
-    {
-     "t": "math",
-     "tex": "[A \\vert B] \\sim \\begin{bmatrix} 1 & 1 & 1 & : & 5 \\\\ 0 & 2 & 2 & : & 4 \\\\ 0 & 0 & \\alpha - 2 & : & \\beta - 7 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Apply the Rouche-Capelli Condition for Infinite Solutions**\nFor infinitely many solutions:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = \\rho(A \\vert B) < n = 3 \\implies \\rho(A) = \\rho(A \\vert B) = 2"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "For $\\rho(A) = 2$, the third row of $A$ must be all zeros:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha - 2 = 0 \\implies \\mathbf{\\alpha = 2}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "For $\\rho(A \\vert B) = 2$, the third row of $[A \\vert B]$ must also be all zeros:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\beta - 7 = 0 \\implies \\mathbf{\\beta = 7}"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:**"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\alpha = 2, \\quad \\beta = 7}"
-    },
-    {
-     "t": "h3",
-     "text": "Exhaustive Follow-up Solvability Analysis (GATE Extension)"
-    },
-    {
-     "t": "p",
-     "text": "From the Row Echelon Form:"
-    },
-    {
-     "t": "math",
-     "tex": "[A \\vert B] \\sim \\begin{bmatrix} 1 & 1 & 1 & : & 5 \\\\ 0 & 2 & 2 & : & 4 \\\\ 0 & 0 & \\alpha - 2 & : & \\beta - 7 \\end{bmatrix}"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Condition for UNIQUE SOLUTION:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "We require $\\rho(A) = \\rho(A \\vert B) = 3$.  \n   This requires the diagonal pivot $\\alpha - 2 \\neq 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\alpha \\neq 2, \\quad \\beta \\in \\mathbb{R} \\text{ (any real number)}}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Condition for NO SOLUTION (INCONSISTENT):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "We require $\\rho(A) < \\rho(A \\vert B)$, meaning $\\rho(A) = 2$ and $\\rho(A \\vert B) = 3$.  \n   This requires row 3 of $A$ to vanish while the augmented entry remains non-zero:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha - 2 = 0 \\quad \\text{and} \\quad \\beta - 7 \\neq 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\alpha = 2, \\quad \\beta \\neq 7}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Condition for INFINITELY MANY SOLUTIONS:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\alpha = 2, \\quad \\beta = 7}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Set Up the Augmented Matrix**"
+      },
+      {
+       "t": "math",
+       "tex": "[A \\vert B] = \\begin{bmatrix} 1 & 1 & 1 & : & 5 \\\\ 1 & 3 & 3 & : & 9 \\\\ 1 & 2 & \\alpha & : & \\beta \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Gaussian Row Reduction**\nPerform row operations to eliminate entries in column 1:"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\to R_2 - R_1 \\implies [1-1, \\; 3-1, \\; 3-1, \\; : \\; 9-5] = [0, \\; 2, \\; 2, \\; : \\; 4]"
+      },
+      {
+       "t": "math",
+       "tex": "R_3 \\to R_3 - R_1 \\implies [1-1, \\; 2-1, \\; \\alpha-1, \\; : \\; \\beta-5] = [0, \\; 1, \\; \\alpha-1, \\; : \\; \\beta-5]"
+      },
+      {
+       "t": "p",
+       "text": "The matrix becomes:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 1 & 1 & : & 5 \\\\ 0 & 2 & 2 & : & 4 \\\\ 0 & 1 & \\alpha - 1 & : & \\beta - 5 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Eliminate the leading entry in row 3 using row 2:"
+      },
+      {
+       "t": "math",
+       "tex": "R_3 \\to R_3 - \\frac{1}{2} R_2"
+      },
+      {
+       "t": "p",
+       "text": "Computing the entries of $R_3$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Entry $(3, 1)$: $0 - 0 = 0$",
+        "Entry $(3, 2)$: $1 - \\frac{1}{2}(2) = 1 - 1 = 0$",
+        "Entry $(3, 3)$: $(\\alpha - 1) - \\frac{1}{2}(2) = \\alpha - 1 - 1 = \\mathbf{\\alpha - 2}$",
+        "Augmented entry $(3, 4)$: $(\\beta - 5) - \\frac{1}{2}(4) = \\beta - 5 - 2 = \\mathbf{\\beta - 7}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Resulting Upper Triangular Row Echelon Form:"
+      },
+      {
+       "t": "math",
+       "tex": "[A \\vert B] \\sim \\begin{bmatrix} 1 & 1 & 1 & : & 5 \\\\ 0 & 2 & 2 & : & 4 \\\\ 0 & 0 & \\alpha - 2 & : & \\beta - 7 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Apply the Rouche-Capelli Condition for Infinite Solutions**\nFor infinitely many solutions:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = \\rho(A \\vert B) < n = 3 \\implies \\rho(A) = \\rho(A \\vert B) = 2"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "For $\\rho(A) = 2$, the third row of $A$ must be all zeros:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha - 2 = 0 \\implies \\mathbf{\\alpha = 2}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "For $\\rho(A \\vert B) = 2$, the third row of $[A \\vert B]$ must also be all zeros:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\beta - 7 = 0 \\implies \\mathbf{\\beta = 7}"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:**"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\alpha = 2, \\quad \\beta = 7}"
+      },
+      {
+       "t": "h3",
+       "text": "Exhaustive Follow-up Solvability Analysis (GATE Extension)"
+      },
+      {
+       "t": "p",
+       "text": "From the Row Echelon Form:"
+      },
+      {
+       "t": "math",
+       "tex": "[A \\vert B] \\sim \\begin{bmatrix} 1 & 1 & 1 & : & 5 \\\\ 0 & 2 & 2 & : & 4 \\\\ 0 & 0 & \\alpha - 2 & : & \\beta - 7 \\end{bmatrix}"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Condition for UNIQUE SOLUTION:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "We require $\\rho(A) = \\rho(A \\vert B) = 3$.  \n   This requires the diagonal pivot $\\alpha - 2 \\neq 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\alpha \\neq 2, \\quad \\beta \\in \\mathbb{R} \\text{ (any real number)}}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Condition for NO SOLUTION (INCONSISTENT):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "We require $\\rho(A) < \\rho(A \\vert B)$, meaning $\\rho(A) = 2$ and $\\rho(A \\vert B) = 3$.  \n   This requires row 3 of $A$ to vanish while the augmented entry remains non-zero:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha - 2 = 0 \\quad \\text{and} \\quad \\beta - 7 \\neq 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\alpha = 2, \\quad \\beta \\neq 7}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Condition for INFINITELY MANY SOLUTIONS:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\alpha = 2, \\quad \\beta = 7}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13022,94 +13066,93 @@ export default {
      "text": "The system will **not** have a unique solution for $k =$\n(a) $6$  \n(b) $5$  \n(c) $7$  \n(d) $-2$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Form the Augmented Matrix $[A : B]$**"
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] = \\begin{bmatrix}\n1 & 1 & 1 & : & 3 \\\\ \n1 & 2 & 3 & : & 4 \\\\ \n1 & 4 & k & : & 6 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Forward Elimination (Row Echelon Form)**\nApply row operations $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 1 & 1 & : & 3 \\\\ \n0 & 1 & 2 & : & 1 \\\\ \n0 & 3 & k-1 & : & 3 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Apply row operation $R_3 \\to R_3 - 3R_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 1 & 1 & : & 3 \\\\ \n0 & 1 & 2 & : & 1 \\\\ \n0 & 0 & (k - 1) - 3(2) & : & 3 - 3(1) \n\\end{bmatrix} = \\begin{bmatrix} \n1 & 1 & 1 & : & 3 \\\\ \n0 & 1 & 2 & : & 1 \\\\ \n0 & 0 & k - 7 & : & 0 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Analyze the Rank Under Cases**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 1: $k = 7$**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The third row becomes $\\begin{bmatrix} 0 & 0 & 0 & : & 0 \\end{bmatrix}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = 2, \\quad \\rho(A : B) = 2"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\rho(A) = \\rho(A : B) = 2 < 3$ (number of variables), the system has **infinitely many solutions**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 2: $k \\ne 7$**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The third row has a non-zero pivot $(k - 7 \\ne 0)$."
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = 3, \\quad \\rho(A : B) = 3 = n"
-    },
-    {
-     "t": "p",
-     "text": "The system has a **unique solution**."
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:**\nThe question asks for which value of $k$ the system will **NOT** have a unique solution:"
-    },
-    {
-     "t": "math",
-     "tex": "k = 7"
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **(c)**"
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**Exam Trap:** Notice that the right-hand side of row 3 is $0$. Therefore, it is impossible for this system to have \"No Solution\" for any value of $k$. Students who blindly set $\\det(A) = 0$ might forget to check whether the system becomes inconsistent or infinitely solvable. Here, when $k=7$, the system is consistent with infinite solutions!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Form the Augmented Matrix $[A : B]$**"
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] = \\begin{bmatrix}\n1 & 1 & 1 & : & 3 \\\\ \n1 & 2 & 3 & : & 4 \\\\ \n1 & 4 & k & : & 6 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Forward Elimination (Row Echelon Form)**\nApply row operations $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 1 & 1 & : & 3 \\\\ \n0 & 1 & 2 & : & 1 \\\\ \n0 & 3 & k-1 & : & 3 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Apply row operation $R_3 \\to R_3 - 3R_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 1 & 1 & : & 3 \\\\ \n0 & 1 & 2 & : & 1 \\\\ \n0 & 0 & (k - 1) - 3(2) & : & 3 - 3(1) \n\\end{bmatrix} = \\begin{bmatrix} \n1 & 1 & 1 & : & 3 \\\\ \n0 & 1 & 2 & : & 1 \\\\ \n0 & 0 & k - 7 & : & 0 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Analyze the Rank Under Cases**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 1: $k = 7$**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The third row becomes $\\begin{bmatrix} 0 & 0 & 0 & : & 0 \\end{bmatrix}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = 2, \\quad \\rho(A : B) = 2"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\rho(A) = \\rho(A : B) = 2 < 3$ (number of variables), the system has **infinitely many solutions**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 2: $k \\ne 7$**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The third row has a non-zero pivot $(k - 7 \\ne 0)$."
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = 3, \\quad \\rho(A : B) = 3 = n"
+      },
+      {
+       "t": "p",
+       "text": "The system has a **unique solution**."
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:**\nThe question asks for which value of $k$ the system will **NOT** have a unique solution:"
+      },
+      {
+       "t": "math",
+       "tex": "k = 7"
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **(c)**"
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**Exam Trap:** Notice that the right-hand side of row 3 is $0$. Therefore, it is impossible for this system to have \"No Solution\" for any value of $k$. Students who blindly set $\\det(A) = 0$ might forget to check whether the system becomes inconsistent or infinitely solvable. Here, when $k=7$, the system is consistent with infinite solutions!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13128,70 +13171,69 @@ export default {
      "text": "The system will have a **unique solution** for $a =$\n(a) $1$  \n(b) $-2$  \n(c) $5$  \n(d) $-5$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Set up the Augmented Matrix $[A : B]$**"
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] = \\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n1 & 2 & 3 & : & 2 \\\\ \n1 & 4 & a & : & 4 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Gaussian Elimination to Row Echelon Form**\nApply $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 3 & a - 2 & : & 3 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Apply $R_3 \\to R_3 - 3R_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 0 & (a - 2) - 3(1) & : & 3 - 3(1) \n\\end{bmatrix} = \\begin{bmatrix} \n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 0 & a - 5 & : & 0 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Analyze Solvability Criteria**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $a = 5$: $\\rho(A) = \\rho(A : B) = 2 < 3 \\implies$ **Infinite solutions**.",
-      "If $a \\ne 5$: $\\rho(A) = \\rho(A : B) = 3 = n \\implies$ **Unique solution**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Check Given MSQ Options**\nAny value of $a$ such that $a \\ne 5$ yields a unique solution:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Option (a): $a = 1 \\ne 5$ $\\implies$ **Valid**",
-      "Option (b): $a = -2 \\ne 5$ $\\implies$ **Valid**",
-      "Option (c): $a = 5$ $\\implies$ Gives infinite solutions (Invalid)",
-      "Option (d): $a = -5 \\ne 5$ $\\implies$ **Valid**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Options:** **(a), (b), (d)**"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**GATE MSQ Strategy:** In multiple-select questions (MSQ), always identify the exclusion condition. Here the exclusion condition is $a = 5$. Thus all options except $5$ must be selected."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Set up the Augmented Matrix $[A : B]$**"
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] = \\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n1 & 2 & 3 & : & 2 \\\\ \n1 & 4 & a & : & 4 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Gaussian Elimination to Row Echelon Form**\nApply $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 3 & a - 2 & : & 3 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Apply $R_3 \\to R_3 - 3R_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 0 & (a - 2) - 3(1) & : & 3 - 3(1) \n\\end{bmatrix} = \\begin{bmatrix} \n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 0 & a - 5 & : & 0 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Analyze Solvability Criteria**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $a = 5$: $\\rho(A) = \\rho(A : B) = 2 < 3 \\implies$ **Infinite solutions**.",
+        "If $a \\ne 5$: $\\rho(A) = \\rho(A : B) = 3 = n \\implies$ **Unique solution**."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Check Given MSQ Options**\nAny value of $a$ such that $a \\ne 5$ yields a unique solution:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Option (a): $a = 1 \\ne 5$ $\\implies$ **Valid**",
+        "Option (b): $a = -2 \\ne 5$ $\\implies$ **Valid**",
+        "Option (c): $a = 5$ $\\implies$ Gives infinite solutions (Invalid)",
+        "Option (d): $a = -5 \\ne 5$ $\\implies$ **Valid**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Options:** **(a), (b), (d)**"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**GATE MSQ Strategy:** In multiple-select questions (MSQ), always identify the exclusion condition. Here the exclusion condition is $a = 5$. Thus all options except $5$ must be selected."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13210,78 +13252,77 @@ export default {
      "text": "The system will have **No solution** for $a =$\n(a) $1$  \n(b) $-2$  \n(c) $5$  \n(d) $-5$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Set up Augmented Matrix $[A : B]$**"
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] = \\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n1 & 2 & 3 & : & 2 \\\\ \n1 & 4 & a & : & 5 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Row Reductions**\nApply $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 3 & a - 2 & : & 4 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Apply $R_3 \\to R_3 - 3R_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 0 & (a - 2) - 3 & : & 4 - 3(1) \n\\end{bmatrix} = \\begin{bmatrix} \n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 0 & a - 5 & : & 1 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Analyze Solvability Conditions**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $a = 5$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The bottom row of $A$ is $\\begin{bmatrix} 0 & 0 & 0 \\end{bmatrix}$, but the bottom row of $[A : B]$ is $\\begin{bmatrix} 0 & 0 & 0 & : & 1 \\end{bmatrix}$."
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = 2, \\quad \\rho(A : B) = 3"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\rho(A) \\ne \\rho(A : B)$, the system is **inconsistent (No solution)**!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $a \\ne 5$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = 3, \\quad \\rho(A : B) = 3 = n \\implies \\text{Unique solution}"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:**\nNo solution exists precisely when $a = 5$.  \n**Correct Option:** **(c)**"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Comparison Between Slides 202 and 203:**\nIn Slide 202, the third equation was $x_1 + 4x_2 + ax_3 = 4$, which gave $3 - 3 = 0$ on the RHS, resulting in infinite solutions for $a = 5$.  \nIn Slide 203, the RHS is $5$, giving $4 - 3 = 1 \\ne 0$ on the RHS, transforming the singular case into **inconsistent (No solution)**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Set up Augmented Matrix $[A : B]$**"
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] = \\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n1 & 2 & 3 & : & 2 \\\\ \n1 & 4 & a & : & 5 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Row Reductions**\nApply $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 3 & a - 2 & : & 4 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Apply $R_3 \\to R_3 - 3R_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 0 & (a - 2) - 3 & : & 4 - 3(1) \n\\end{bmatrix} = \\begin{bmatrix} \n1 & 1 & 2 & : & 1 \\\\ \n0 & 1 & 1 & : & 1 \\\\ \n0 & 0 & a - 5 & : & 1 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Analyze Solvability Conditions**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $a = 5$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The bottom row of $A$ is $\\begin{bmatrix} 0 & 0 & 0 \\end{bmatrix}$, but the bottom row of $[A : B]$ is $\\begin{bmatrix} 0 & 0 & 0 & : & 1 \\end{bmatrix}$."
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = 2, \\quad \\rho(A : B) = 3"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\rho(A) \\ne \\rho(A : B)$, the system is **inconsistent (No solution)**!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $a \\ne 5$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = 3, \\quad \\rho(A : B) = 3 = n \\implies \\text{Unique solution}"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:**\nNo solution exists precisely when $a = 5$.  \n**Correct Option:** **(c)**"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Comparison Between Slides 202 and 203:**\nIn Slide 202, the third equation was $x_1 + 4x_2 + ax_3 = 4$, which gave $3 - 3 = 0$ on the RHS, resulting in infinite solutions for $a = 5$.  \nIn Slide 203, the RHS is $5$, giving $4 - 3 = 1 \\ne 0$ on the RHS, transforming the singular case into **inconsistent (No solution)**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13300,44 +13341,47 @@ export default {
      "text": "The value of $q$ for a **non-trivial solution** is:\n(a) $7$  \n(b) $6$  \n(c) $9$  \n(d) $2$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Mathematical Foundation:**\nA homogeneous system $AX = 0$ always possesses the trivial solution $X = 0$.\nA non-trivial solution exists if and only if:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) < n \\iff \\det(A) = 0 \\quad (\\text{for a square } n \\times n \\text{ matrix})"
-    },
-    {
-     "t": "p",
-     "text": "**Method 1: Row Operations**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 2 & 3 \\\\ 6 & q \\end{bmatrix} \\xrightarrow{R_2 \\to R_2 - 3R_1} \\begin{bmatrix} 2 & 3 \\\\ 0 & q - 9 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "For non-trivial solution, rank must be strictly less than $2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) < 2 \\implies q - 9 = 0 \\implies q = 9"
-    },
-    {
-     "t": "p",
-     "text": "**Method 2: Determinant Condition**"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = \\begin{vmatrix} 2 & 3 \\\\ 6 & q \\end{vmatrix} = 2q - 18 = 0 \\implies 2q = 18 \\implies q = 9"
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **(c)**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Mathematical Foundation:**\nA homogeneous system $AX = 0$ always possesses the trivial solution $X = 0$.\nA non-trivial solution exists if and only if:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) < n \\iff \\det(A) = 0 \\quad (\\text{for a square } n \\times n \\text{ matrix})"
+      },
+      {
+       "t": "p",
+       "text": "**Method 1: Row Operations**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 2 & 3 \\\\ 6 & q \\end{bmatrix} \\xrightarrow{R_2 \\to R_2 - 3R_1} \\begin{bmatrix} 2 & 3 \\\\ 0 & q - 9 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "For non-trivial solution, rank must be strictly less than $2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) < 2 \\implies q - 9 = 0 \\implies q = 9"
+      },
+      {
+       "t": "p",
+       "text": "**Method 2: Determinant Condition**"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = \\begin{vmatrix} 2 & 3 \\\\ 6 & q \\end{vmatrix} = 2q - 18 = 0 \\implies 2q = 18 \\implies q = 9"
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **(c)**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13352,44 +13396,47 @@ export default {
      "text": "Nature of solution:\n(a) Consistent  \n(b) Inconsistent  \n(c) Trivial  \n(d) Non-Trivial  \nFree variables $= ?$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Set up Augmented Matrix**"
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] = \\begin{bmatrix} 1 & 2 & 3 & 4 & : & 7 \\\\ 2 & 4 & 6 & 8 & : & 14 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Gaussian Elimination**\nApply $R_2 \\to R_2 - 2R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 1 & 2 & 3 & 4 & : & 7 \\\\ 0 & 0 & 0 & 0 & : & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Evaluate Rank and Degrees of Freedom**"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = 1, \\quad \\rho(A : B) = 1, \\quad n = 4"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\rho(A) = \\rho(A : B) = 1 < 4$, the system is **consistent** with **infinitely many solutions (non-trivial)**.\nThe number of free variables (dimension of the affine solution manifold) is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Free Variables} = n - \\rho(A) = 4 - 1 = 3"
-    },
-    {
-     "t": "p",
-     "text": "**Correct Options:** **(a), (d)** (Slide marks Non-Trivial solution with $3$ free variables).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Set up Augmented Matrix**"
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] = \\begin{bmatrix} 1 & 2 & 3 & 4 & : & 7 \\\\ 2 & 4 & 6 & 8 & : & 14 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Gaussian Elimination**\nApply $R_2 \\to R_2 - 2R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 1 & 2 & 3 & 4 & : & 7 \\\\ 0 & 0 & 0 & 0 & : & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Evaluate Rank and Degrees of Freedom**"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = 1, \\quad \\rho(A : B) = 1, \\quad n = 4"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\rho(A) = \\rho(A : B) = 1 < 4$, the system is **consistent** with **infinitely many solutions (non-trivial)**.\nThe number of free variables (dimension of the affine solution manifold) is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Free Variables} = n - \\rho(A) = 4 - 1 = 3"
+      },
+      {
+       "t": "p",
+       "text": "**Correct Options:** **(a), (d)** (Slide marks Non-Trivial solution with $3$ free variables)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13408,62 +13455,61 @@ export default {
      "text": "The system is consistent if:\n(a) $7a - b - c = 0$  \n(b) $3a + b - c = 0$  \n(c) $3a - b + c = 0$  \n(d) $7a - b + c = 0$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Construct Augmented Matrix $[A : B]$**"
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] = \\begin{bmatrix}\n1 & 2 & -3 & : & a \\\\ \n2 & 3 & 3 & : & b \\\\ \n5 & 9 & -6 & : & c \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Forward Elimination**\nApply $R_2 \\to R_2 - 2R_1$ and $R_3 \\to R_3 - 5R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 2 & -3 & : & a \\\\ \n0 & -1 & 9 & : & b - 2a \\\\ \n0 & -1 & 9 & : & c - 5a \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Apply $R_3 \\to R_3 - R_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 2 & -3 & : & a \\\\ \n0 & -1 & 9 & : & b - 2a \\\\ \n0 & 0 & 0 & : & (c - 5a) - (b - 2a) \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Simplify the third entry in the augmented column:"
-    },
-    {
-     "t": "math",
-     "tex": "(c - 5a) - (b - 2a) = c - 5a - b + 2a = c - b - 3a"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Condition for Consistency**\nNotice that the third row of matrix $A$ is entirely zero, so $\\rho(A) = 2$.\nFor the system to be consistent, we must have $\\rho(A : B) = \\rho(A) = 2$.\nTherefore, the RHS of row 3 must vanish:"
-    },
-    {
-     "t": "math",
-     "tex": "c - b - 3a = 0 \\iff 3a + b - c = 0"
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **(b)**"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Linear Combination of Rows:**\nNotice that Row 3 of $A$ is obtained as:\n$$3 R_1 + R_2 = 3[1, 2, -3] + [2, 3, 3] = [3+2, 6+3, -9+3] = [5, 9, -6] = R_3$$\nThus, for the linear combination to hold for the augmented matrix, we must have:\n$$3a + b = c \\iff 3a + b - c = 0$$"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Construct Augmented Matrix $[A : B]$**"
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] = \\begin{bmatrix}\n1 & 2 & -3 & : & a \\\\ \n2 & 3 & 3 & : & b \\\\ \n5 & 9 & -6 & : & c \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Forward Elimination**\nApply $R_2 \\to R_2 - 2R_1$ and $R_3 \\to R_3 - 5R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 2 & -3 & : & a \\\\ \n0 & -1 & 9 & : & b - 2a \\\\ \n0 & -1 & 9 & : & c - 5a \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Apply $R_3 \\to R_3 - R_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 2 & -3 & : & a \\\\ \n0 & -1 & 9 & : & b - 2a \\\\ \n0 & 0 & 0 & : & (c - 5a) - (b - 2a) \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Simplify the third entry in the augmented column:"
+      },
+      {
+       "t": "math",
+       "tex": "(c - 5a) - (b - 2a) = c - 5a - b + 2a = c - b - 3a"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Condition for Consistency**\nNotice that the third row of matrix $A$ is entirely zero, so $\\rho(A) = 2$.\nFor the system to be consistent, we must have $\\rho(A : B) = \\rho(A) = 2$.\nTherefore, the RHS of row 3 must vanish:"
+      },
+      {
+       "t": "math",
+       "tex": "c - b - 3a = 0 \\iff 3a + b - c = 0"
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **(b)**"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Linear Combination of Rows:**\nNotice that Row 3 of $A$ is obtained as:\n$$3 R_1 + R_2 = 3[1, 2, -3] + [2, 3, 3] = [3+2, 6+3, -9+3] = [5, 9, -6] = R_3$$\nThus, for the linear combination to hold for the augmented matrix, we must have:\n$$3a + b = c \\iff 3a + b - c = 0$$"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13482,72 +13528,71 @@ export default {
      "tex": "\\begin{aligned}\n(3k - 8)x + 3y + 3z &= 0 \\\\\n3x + (3k - 8)y + 3z &= 0 \\\\\n3x + 3y + (3k - 8)z &= 0\n\\end{aligned}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Express System in Matrix Form**"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix}\n3k - 8 & 3 & 3 \\\\ \n3 & 3k - 8 & 3 \\\\ \n3 & 3 & 3k - 8 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Since the system is homogeneous, a non-trivial solution exists if and only if $\\det(A) = 0$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Determinant Evaluation via Row Operations**\nApply row operation $R_1 \\to R_1 + R_2 + R_3$:\nThe sum of elements in each column of $R_1$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "(3k - 8) + 3 + 3 = 3k - 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = \\begin{vmatrix}\n3k - 2 & 3k - 2 & 3k - 2 \\\\ \n3 & 3k - 8 & 3 \\\\ \n3 & 3 & 3k - 8 \n\\end{vmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Factor out $(3k - 2)$ from the first row:"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = (3k - 2) \\begin{vmatrix}\n1 & 1 & 1 \\\\ \n3 & 3k - 8 & 3 \\\\ \n3 & 3 & 3k - 8 \n\\end{vmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Column Operations to Create Zeros (Slide 207)**\nApply $C_2 \\to C_2 - C_1$ and $C_3 \\to C_3 - C_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = (3k - 2) \\begin{vmatrix}\n1 & 0 & 0 \\\\ \n3 & (3k - 8) - 3 & 3 - 3 \\\\ \n3 & 3 - 3 & (3k - 8) - 3 \n\\end{vmatrix} = (3k - 2) \\begin{vmatrix} \n1 & 0 & 0 \\\\ \n3 & 3k - 11 & 0 \\\\ \n3 & 0 & 3k - 11 \n\\end{vmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Triangular Determinant Evaluation**\nSince the matrix is triangular:"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = (3k - 2) \\cdot 1 \\cdot (3k - 11) \\cdot (3k - 11) = (3k - 2)(3k - 11)^2"
-    },
-    {
-     "t": "p",
-     "text": "Setting $\\det(A) = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "(3k - 2)(3k - 11) = 0 \\implies k = \\frac{2}{3} \\quad \\text{or} \\quad k = \\frac{11}{3}"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{k = \\frac{2}{3} \\quad \\text{or} \\quad k = \\frac{11}{3}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Express System in Matrix Form**"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix}\n3k - 8 & 3 & 3 \\\\ \n3 & 3k - 8 & 3 \\\\ \n3 & 3 & 3k - 8 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Since the system is homogeneous, a non-trivial solution exists if and only if $\\det(A) = 0$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Determinant Evaluation via Row Operations**\nApply row operation $R_1 \\to R_1 + R_2 + R_3$:\nThe sum of elements in each column of $R_1$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "(3k - 8) + 3 + 3 = 3k - 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = \\begin{vmatrix}\n3k - 2 & 3k - 2 & 3k - 2 \\\\ \n3 & 3k - 8 & 3 \\\\ \n3 & 3 & 3k - 8 \n\\end{vmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Factor out $(3k - 2)$ from the first row:"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = (3k - 2) \\begin{vmatrix}\n1 & 1 & 1 \\\\ \n3 & 3k - 8 & 3 \\\\ \n3 & 3 & 3k - 8 \n\\end{vmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Column Operations to Create Zeros (Slide 207)**\nApply $C_2 \\to C_2 - C_1$ and $C_3 \\to C_3 - C_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = (3k - 2) \\begin{vmatrix}\n1 & 0 & 0 \\\\ \n3 & (3k - 8) - 3 & 3 - 3 \\\\ \n3 & 3 - 3 & (3k - 8) - 3 \n\\end{vmatrix} = (3k - 2) \\begin{vmatrix} \n1 & 0 & 0 \\\\ \n3 & 3k - 11 & 0 \\\\ \n3 & 0 & 3k - 11 \n\\end{vmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Triangular Determinant Evaluation**\nSince the matrix is triangular:"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = (3k - 2) \\cdot 1 \\cdot (3k - 11) \\cdot (3k - 11) = (3k - 2)(3k - 11)^2"
+      },
+      {
+       "t": "p",
+       "text": "Setting $\\det(A) = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "(3k - 2)(3k - 11) = 0 \\implies k = \\frac{2}{3} \\quad \\text{or} \\quad k = \\frac{11}{3}"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{k = \\frac{2}{3} \\quad \\text{or} \\quad k = \\frac{11}{3}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -13566,122 +13611,125 @@ export default {
      "text": "has a **non-trivial solution**, then which of the following are true?  \n**Options:**  \nA. $P - Q + R = 0$ or $P = Q = -R$  \nB. $P + Q - R = 0$ or $P = -Q = -R$  \nC. $P + Q + R = 0$ or $P = Q = R$  \nD. $P - Q + R = 0$ or $P = -Q = -R$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Determinant of Circulant Matrix**\nFor non-trivial solution, $\\rho(A) < 3 \\iff \\det(A) = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = \\begin{vmatrix}\nP & Q & R \\\\ \nQ & R & P \\\\ \nR & P & Q \n\\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Expanding along the first row:"
-    },
-    {
-     "t": "math",
-     "tex": "P(RQ - P^2) - Q(Q^2 - PR) + R(QP - R^2) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "PQR - P^3 - Q^3 + PQR + PQR - R^3 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "-(P^3 + Q^3 + R^3 - 3PQR) = 0 \\implies \\boxed{P^3 + Q^3 + R^3 - 3PQR = 0}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: The Classical Algebraic Factorization (Slide 209)**\nRecall the algebraic identity:"
-    },
-    {
-     "t": "math",
-     "tex": "a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)"
-    },
-    {
-     "t": "p",
-     "text": "Rewrite the second quadratic factor:"
-    },
-    {
-     "t": "math",
-     "tex": "a^2 + b^2 + c^2 - ab - bc - ca = \\frac{1}{2}\\left[(a - b)^2 + (b - c)^2 + (c - a)^2\\right]"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "P^3 + Q^3 + R^3 - 3PQR = \\frac{1}{2}(P + Q + R)\\left[(P - Q)^2 + (Q - R)^2 + (R - P)^2\\right] = 0"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Analyze the Two Factors**\nFor the product to be zero, at least one of the two factors must vanish:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Factor 1:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P + Q + R = 0"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Factor 2:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(P - Q)^2 + (Q - R)^2 + (R - P)^2 = 0"
-    },
-    {
-     "t": "p",
-     "text": "Since $P, Q, R \\in \\mathbb{R}$, each squared term is non-negative:"
-    },
-    {
-     "t": "math",
-     "tex": "(P - Q)^2 \\ge 0, \\quad (Q - R)^2 \\ge 0, \\quad (R - P)^2 \\ge 0"
-    },
-    {
-     "t": "p",
-     "text": "A sum of non-negative real numbers can only equal zero if every term is identically zero:"
-    },
-    {
-     "t": "math",
-     "tex": "P - Q = 0 \\implies P = Q"
-    },
-    {
-     "t": "math",
-     "tex": "Q - R = 0 \\implies Q = R"
-    },
-    {
-     "t": "math",
-     "tex": "R - P = 0 \\implies R = P"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies P = Q = R"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:**\nThe system possesses a non-trivial solution if and only if:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{P + Q + R = 0 \\quad \\text{or} \\quad P = Q = R}"
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **C**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Determinant of Circulant Matrix**\nFor non-trivial solution, $\\rho(A) < 3 \\iff \\det(A) = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = \\begin{vmatrix}\nP & Q & R \\\\ \nQ & R & P \\\\ \nR & P & Q \n\\end{vmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Expanding along the first row:"
+      },
+      {
+       "t": "math",
+       "tex": "P(RQ - P^2) - Q(Q^2 - PR) + R(QP - R^2) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "PQR - P^3 - Q^3 + PQR + PQR - R^3 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "-(P^3 + Q^3 + R^3 - 3PQR) = 0 \\implies \\boxed{P^3 + Q^3 + R^3 - 3PQR = 0}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: The Classical Algebraic Factorization (Slide 209)**\nRecall the algebraic identity:"
+      },
+      {
+       "t": "math",
+       "tex": "a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)"
+      },
+      {
+       "t": "p",
+       "text": "Rewrite the second quadratic factor:"
+      },
+      {
+       "t": "math",
+       "tex": "a^2 + b^2 + c^2 - ab - bc - ca = \\frac{1}{2}\\left[(a - b)^2 + (b - c)^2 + (c - a)^2\\right]"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "P^3 + Q^3 + R^3 - 3PQR = \\frac{1}{2}(P + Q + R)\\left[(P - Q)^2 + (Q - R)^2 + (R - P)^2\\right] = 0"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Analyze the Two Factors**\nFor the product to be zero, at least one of the two factors must vanish:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Factor 1:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P + Q + R = 0"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Factor 2:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(P - Q)^2 + (Q - R)^2 + (R - P)^2 = 0"
+      },
+      {
+       "t": "p",
+       "text": "Since $P, Q, R \\in \\mathbb{R}$, each squared term is non-negative:"
+      },
+      {
+       "t": "math",
+       "tex": "(P - Q)^2 \\ge 0, \\quad (Q - R)^2 \\ge 0, \\quad (R - P)^2 \\ge 0"
+      },
+      {
+       "t": "p",
+       "text": "A sum of non-negative real numbers can only equal zero if every term is identically zero:"
+      },
+      {
+       "t": "math",
+       "tex": "P - Q = 0 \\implies P = Q"
+      },
+      {
+       "t": "math",
+       "tex": "Q - R = 0 \\implies Q = R"
+      },
+      {
+       "t": "math",
+       "tex": "R - P = 0 \\implies R = P"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies P = Q = R"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:**\nThe system possesses a non-trivial solution if and only if:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{P + Q + R = 0 \\quad \\text{or} \\quad P = Q = R}"
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **C**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13700,96 +13748,95 @@ export default {
      "text": "Which of the following statements are true?  \n**Options:**  \nA. The system has a unique solution  \nB. The system has one independent solution  \nC. The system has two independent solutions  \nD. The system has three independent solutions"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Structural Dimension Analysis**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Number of variables: $n = 3$ ($x, y, z$).",
-      "Number of equations: $m = 4$.",
-      "This is an **over-determined system** ($m > n$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Solve by Direct Inspection / Elimination**\nSubtract equation (1) from each subsequent equation:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Eq (2) $-$ Eq (1):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(2x + y + z) - (x + y + z) = 7 - 6 \\implies x = 1"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Eq (3) $-$ Eq (1):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(x + 2y + z) - (x + y + z) = 8 - 6 \\implies y = 2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Eq (4) $-$ Eq (1):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(x + y + 2z) - (x + y + z) = 9 - 6 \\implies z = 3"
-    },
-    {
-     "t": "p",
-     "text": "Check consistency with equation (1):"
-    },
-    {
-     "t": "math",
-     "tex": "x + y + z = 1 + 2 + 3 = 6 \\quad (\\text{Satisfied!})"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Matrix Rank Formulation**"
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] = \\begin{bmatrix}\n1 & 1 & 1 & : & 6 \\\\ \n2 & 1 & 1 & : & 7 \\\\ \n1 & 2 & 1 & : & 8 \\\\ \n1 & 1 & 2 & : & 9 \n\\end{bmatrix} \\xrightarrow{\\text{Row Echelon}} \\begin{bmatrix} \n1 & 1 & 1 & : & 6 \\\\ \n0 & -1 & -1 & : & -5 \\\\ \n0 & 0 & 1 & : & 3 \\\\ \n0 & 0 & 0 & : & 0 \n\\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = 3, \\quad \\rho(A : B) = 3, \\quad n = 3"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\rho(A) = \\rho(A : B) = 3 = n$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Free Variables} = n - \\rho(A) = 3 - 3 = 0"
-    },
-    {
-     "t": "p",
-     "text": "The system has a **unique solution**: $\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}$."
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Pitfall \u2014 \"Unique Solution\" vs. \"Independent Solutions\":**\nStudents often confuse the terminology:\n- \"Linearly independent solutions\" refers to the basis vectors of the **null space** (homogeneous system).\n- For a non-homogeneous system $AX = B$ with a unique solution, the solution set is a single point in $\\mathbb{R}^3$, NOT a vector subspace. It has $0$ free variables. Options B, C, D are therefore false!\n\n**Correct Option:** **A**"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Structural Dimension Analysis**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Number of variables: $n = 3$ ($x, y, z$).",
+        "Number of equations: $m = 4$.",
+        "This is an **over-determined system** ($m > n$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Solve by Direct Inspection / Elimination**\nSubtract equation (1) from each subsequent equation:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Eq (2) $-$ Eq (1):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(2x + y + z) - (x + y + z) = 7 - 6 \\implies x = 1"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Eq (3) $-$ Eq (1):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(x + 2y + z) - (x + y + z) = 8 - 6 \\implies y = 2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Eq (4) $-$ Eq (1):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(x + y + 2z) - (x + y + z) = 9 - 6 \\implies z = 3"
+      },
+      {
+       "t": "p",
+       "text": "Check consistency with equation (1):"
+      },
+      {
+       "t": "math",
+       "tex": "x + y + z = 1 + 2 + 3 = 6 \\quad (\\text{Satisfied!})"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Matrix Rank Formulation**"
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] = \\begin{bmatrix}\n1 & 1 & 1 & : & 6 \\\\ \n2 & 1 & 1 & : & 7 \\\\ \n1 & 2 & 1 & : & 8 \\\\ \n1 & 1 & 2 & : & 9 \n\\end{bmatrix} \\xrightarrow{\\text{Row Echelon}} \\begin{bmatrix} \n1 & 1 & 1 & : & 6 \\\\ \n0 & -1 & -1 & : & -5 \\\\ \n0 & 0 & 1 & : & 3 \\\\ \n0 & 0 & 0 & : & 0 \n\\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = 3, \\quad \\rho(A : B) = 3, \\quad n = 3"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\rho(A) = \\rho(A : B) = 3 = n$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Free Variables} = n - \\rho(A) = 3 - 3 = 0"
+      },
+      {
+       "t": "p",
+       "text": "The system has a **unique solution**: $\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}$."
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Pitfall \u2014 \"Unique Solution\" vs. \"Independent Solutions\":**\nStudents often confuse the terminology:\n- \"Linearly independent solutions\" refers to the basis vectors of the **null space** (homogeneous system).\n- For a non-homogeneous system $AX = B$ with a unique solution, the solution set is a single point in $\\mathbb{R}^3$, NOT a vector subspace. It has $0$ free variables. Options B, C, D are therefore false!\n\n**Correct Option:** **A**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13808,60 +13855,63 @@ export default {
      "text": "**Question (Slide 212):**\nA set of linear equations is represented by the matrix equation $AX = B$.  \nThe necessary condition for the existence of a solution for this system is:  \n**Options:**  \nA. $A$ must be invertible  \nB. $B$ must be linearly dependent on the columns of $A$  \nC. $B$ must be linearly independent of the columns of $A$  \nD. None of the above"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Column Representation of Matrix Multiplication**\nLet $A = \\begin{bmatrix} C_1 & C_2 & \\dots & C_n \\end{bmatrix}$ where each $C_j$ is the $j$-th column vector of $A$, and $X = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_n \\end{bmatrix}$.\nThen:"
-    },
-    {
-     "t": "math",
-     "tex": "AX = x_1 C_1 + x_2 C_2 + \\dots + x_n C_n"
-    },
-    {
-     "t": "p",
-     "text": "The matrix equation $AX = B$ is equivalent to:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1 C_1 + x_2 C_2 + \\dots + x_n C_n = B"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Linear Combination and Linear Dependence**\nA solution $X = \\begin{bmatrix} x_1 & x_2 & \\dots & x_n \\end{bmatrix}^T$ exists if and only if vector $B$ can be expressed as a linear combination of the column vectors of $A$:"
-    },
-    {
-     "t": "math",
-     "tex": "B \\in \\operatorname{span}\\{C_1, C_2, \\dots, C_n\\} = \\operatorname{Col}(A)"
-    },
-    {
-     "t": "p",
-     "text": "This means the augmented set of vectors $\\{C_1, C_2, \\dots, C_n, B\\}$ does NOT increase the dimension:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho([A : B]) = \\rho(A)"
-    },
-    {
-     "t": "p",
-     "text": "In the language of linear algebra, $B$ is **linearly dependent** on the columns of $A$."
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Why Option A is False (Counterexample from Slide 213)**\nConsider the system:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\n2x + 3y + 5z &= 4 \\\\\n3x + 2y + 4z &= 5 \\\\\n2x + 4y - 6z &= 7\n\\end{aligned}"
-    },
-    {
-     "t": "p",
-     "text": "If $\\rho(A) = 2$ and $\\rho(A : B) = 2$, the system has infinitely many solutions (a solution exists!), even though $A$ is singular ($|A| = 0$, so $A$ is **NOT invertible**).\nHence, invertibility of $A$ is NOT a necessary condition for existence of a solution."
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:**\nFor a solution to exist, $B$ must lie in the column space of $A$, which means $B$ is linearly dependent on the columns of $A$.  \n**Correct Option:** **B**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Column Representation of Matrix Multiplication**\nLet $A = \\begin{bmatrix} C_1 & C_2 & \\dots & C_n \\end{bmatrix}$ where each $C_j$ is the $j$-th column vector of $A$, and $X = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_n \\end{bmatrix}$.\nThen:"
+      },
+      {
+       "t": "math",
+       "tex": "AX = x_1 C_1 + x_2 C_2 + \\dots + x_n C_n"
+      },
+      {
+       "t": "p",
+       "text": "The matrix equation $AX = B$ is equivalent to:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1 C_1 + x_2 C_2 + \\dots + x_n C_n = B"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Linear Combination and Linear Dependence**\nA solution $X = \\begin{bmatrix} x_1 & x_2 & \\dots & x_n \\end{bmatrix}^T$ exists if and only if vector $B$ can be expressed as a linear combination of the column vectors of $A$:"
+      },
+      {
+       "t": "math",
+       "tex": "B \\in \\operatorname{span}\\{C_1, C_2, \\dots, C_n\\} = \\operatorname{Col}(A)"
+      },
+      {
+       "t": "p",
+       "text": "This means the augmented set of vectors $\\{C_1, C_2, \\dots, C_n, B\\}$ does NOT increase the dimension:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho([A : B]) = \\rho(A)"
+      },
+      {
+       "t": "p",
+       "text": "In the language of linear algebra, $B$ is **linearly dependent** on the columns of $A$."
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Why Option A is False (Counterexample from Slide 213)**\nConsider the system:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\n2x + 3y + 5z &= 4 \\\\\n3x + 2y + 4z &= 5 \\\\\n2x + 4y - 6z &= 7\n\\end{aligned}"
+      },
+      {
+       "t": "p",
+       "text": "If $\\rho(A) = 2$ and $\\rho(A : B) = 2$, the system has infinitely many solutions (a solution exists!), even though $A$ is singular ($|A| = 0$, so $A$ is **NOT invertible**).\nHence, invertibility of $A$ is NOT a necessary condition for existence of a solution."
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:**\nFor a solution to exist, $B$ must lie in the column space of $A$, which means $B$ is linearly dependent on the columns of $A$.  \n**Correct Option:** **B**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13872,66 +13922,69 @@ export default {
      "text": "**Question (Slide 214):**\nLet $A$ be a $4 \\times 4$ matrix with $\\operatorname{rank}(A) = 2$.  \nIt is given that the system of equations $AX = B$ is **consistent**.  \nWhich of the following statements are true?  \n**Options:**  \nA. $\\operatorname{rank}([A \\mid B]) = 2$  \nB. The system has a unique solution  \nC. The system has infinite solutions  \nD. The system has two independent solutions  \nE. The system has three independent solutions"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Consistency Implications**\nGiven:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Size of $A$: $4 \\times 4 \\implies n = 4$ unknowns.",
-      "$\\rho(A) = 2$.",
-      "$AX = B$ is consistent $\\implies \\rho([A \\mid B]) = \\rho(A) = 2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Therefore, **Statement A is TRUE**."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Uniqueness vs. Infinite Solutions**\nSince $\\rho(A) = 2 < 4 = n$, the rank is strictly less than the number of unknowns.\nA consistent system with $\\rho(A) < n$ has **infinitely many solutions**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement B is FALSE.**",
-      "**Statement C is TRUE.**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Rank-Nullity Theorem & Number of Independent Solutions**\nBy the Rank-Nullity Theorem applied to $A$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Nullity } \\eta(A) = n - \\rho(A) = 4 - 2 = 2"
-    },
-    {
-     "t": "p",
-     "text": "The associated homogeneous system $AX = 0$ has exactly $\\eta(A) = 2$ linearly independent solutions that form the basis for the null space $\\operatorname{Null}(A)$.\nAny solution to $AX = B$ is given by:"
-    },
-    {
-     "t": "math",
-     "tex": "X = X_p + c_1 X_{h1} + c_2 X_{h2}"
-    },
-    {
-     "t": "p",
-     "text": "where $X_{h1}, X_{h2}$ are the $2$ linearly independent solutions of $AX = 0$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement D is TRUE.**",
-      "**Statement E is FALSE.**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Options:** **A, C, D**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Consistency Implications**\nGiven:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Size of $A$: $4 \\times 4 \\implies n = 4$ unknowns.",
+        "$\\rho(A) = 2$.",
+        "$AX = B$ is consistent $\\implies \\rho([A \\mid B]) = \\rho(A) = 2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Therefore, **Statement A is TRUE**."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Uniqueness vs. Infinite Solutions**\nSince $\\rho(A) = 2 < 4 = n$, the rank is strictly less than the number of unknowns.\nA consistent system with $\\rho(A) < n$ has **infinitely many solutions**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement B is FALSE.**",
+        "**Statement C is TRUE.**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Rank-Nullity Theorem & Number of Independent Solutions**\nBy the Rank-Nullity Theorem applied to $A$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Nullity } \\eta(A) = n - \\rho(A) = 4 - 2 = 2"
+      },
+      {
+       "t": "p",
+       "text": "The associated homogeneous system $AX = 0$ has exactly $\\eta(A) = 2$ linearly independent solutions that form the basis for the null space $\\operatorname{Null}(A)$.\nAny solution to $AX = B$ is given by:"
+      },
+      {
+       "t": "math",
+       "tex": "X = X_p + c_1 X_{h1} + c_2 X_{h2}"
+      },
+      {
+       "t": "p",
+       "text": "where $X_{h1}, X_{h2}$ are the $2$ linearly independent solutions of $AX = 0$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement D is TRUE.**",
+        "**Statement E is FALSE.**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Options:** **A, C, D**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -13950,76 +14003,79 @@ export default {
      "text": "Which of the following conditions ensure that a solution exists for the above system?  \n**Options:**  \nA. $b_2 = 2b_1$ and $3b_1 - 6b_3 + b_4 = 0$  \nB. $b_3 = 2b_1$ and $3b_1 - 6b_3 + b_4 = 0$  \nC. $b_2 = 2b_1$ and $6b_1 - 3b_3 + b_4 = 0$  \nD. None of the above"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Set up Augmented Matrix $[A : B]$**"
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] = \\begin{bmatrix}\n1 & 2 & : & b_1 \\\\ \n2 & 4 & : & b_2 \\\\ \n3 & 7 & : & b_3 \\\\ \n3 & 9 & : & b_4 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: First Round of Row Eliminations (Slide 215)**\nApply:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$R_2 \\to R_2 - 2R_1$",
-      "$R_3 \\to R_3 - 3R_1$",
-      "$R_4 \\to R_4 - 3R_1$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] \\sim \\begin{bmatrix}\n1 & 2 & : & b_1 \\\\ \n0 & 0 & : & b_2 - 2b_1 \\\\ \n0 & 1 & : & b_3 - 3b_1 \\\\ \n0 & 3 & : & b_4 - 3b_1 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Permutation and Final Elimination (Slide 216)**\nSwap rows $R_2 \\leftrightarrow R_3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 2 & : & b_1 \\\\ \n0 & 1 & : & b_3 - 3b_1 \\\\ \n0 & 0 & : & b_2 - 2b_1 \\\\ \n0 & 3 & : & b_4 - 3b_1 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Apply $R_4 \\to R_4 - 3R_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 2 & : & b_1 \\\\ \n0 & 1 & : & b_3 - 3b_1 \\\\ \n0 & 0 & : & b_2 - 2b_1 \\\\ \n0 & 0 & : & (b_4 - 3b_1) - 3(b_3 - 3b_1) \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Simplify the fourth entry:"
-    },
-    {
-     "t": "math",
-     "tex": "(b_4 - 3b_1) - 3(b_3 - 3b_1) = b_4 - 3b_1 - 3b_3 + 9b_1 = 6b_1 - 3b_3 + b_4"
-    },
-    {
-     "t": "p",
-     "text": "The row echelon form of $[A : B]$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 2 & : & b_1 \\\\ \n0 & 1 & : & b_3 - 3b_1 \\\\ \n0 & 0 & : & b_2 - 2b_1 \\\\ \n0 & 0 & : & 6b_1 - 3b_3 + b_4 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Consistency Condition**\nThe coefficient matrix $A$ has $\\rho(A) = 2$ (rows 3 and 4 are zero rows).\nFor a solution to exist, the augmented matrix must also have $\\rho([A : B]) = 2$.\nTherefore, both zero rows in $A$ must produce zeros in the augmented column:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{cases}\nb_2 - 2b_1 = 0 \\implies b_2 = 2b_1 \\\\\n6b_1 - 3b_3 + b_4 = 0\n\\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **C**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Set up Augmented Matrix $[A : B]$**"
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] = \\begin{bmatrix}\n1 & 2 & : & b_1 \\\\ \n2 & 4 & : & b_2 \\\\ \n3 & 7 & : & b_3 \\\\ \n3 & 9 & : & b_4 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: First Round of Row Eliminations (Slide 215)**\nApply:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$R_2 \\to R_2 - 2R_1$",
+        "$R_3 \\to R_3 - 3R_1$",
+        "$R_4 \\to R_4 - 3R_1$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] \\sim \\begin{bmatrix}\n1 & 2 & : & b_1 \\\\ \n0 & 0 & : & b_2 - 2b_1 \\\\ \n0 & 1 & : & b_3 - 3b_1 \\\\ \n0 & 3 & : & b_4 - 3b_1 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Permutation and Final Elimination (Slide 216)**\nSwap rows $R_2 \\leftrightarrow R_3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 2 & : & b_1 \\\\ \n0 & 1 & : & b_3 - 3b_1 \\\\ \n0 & 0 & : & b_2 - 2b_1 \\\\ \n0 & 3 & : & b_4 - 3b_1 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Apply $R_4 \\to R_4 - 3R_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 2 & : & b_1 \\\\ \n0 & 1 & : & b_3 - 3b_1 \\\\ \n0 & 0 & : & b_2 - 2b_1 \\\\ \n0 & 0 & : & (b_4 - 3b_1) - 3(b_3 - 3b_1) \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Simplify the fourth entry:"
+      },
+      {
+       "t": "math",
+       "tex": "(b_4 - 3b_1) - 3(b_3 - 3b_1) = b_4 - 3b_1 - 3b_3 + 9b_1 = 6b_1 - 3b_3 + b_4"
+      },
+      {
+       "t": "p",
+       "text": "The row echelon form of $[A : B]$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 2 & : & b_1 \\\\ \n0 & 1 & : & b_3 - 3b_1 \\\\ \n0 & 0 & : & b_2 - 2b_1 \\\\ \n0 & 0 & : & 6b_1 - 3b_3 + b_4 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Consistency Condition**\nThe coefficient matrix $A$ has $\\rho(A) = 2$ (rows 3 and 4 are zero rows).\nFor a solution to exist, the augmented matrix must also have $\\rho([A : B]) = 2$.\nTherefore, both zero rows in $A$ must produce zeros in the augmented column:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{cases}\nb_2 - 2b_1 = 0 \\implies b_2 = 2b_1 \\\\\n6b_1 - 3b_3 + b_4 = 0\n\\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **C**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -14030,82 +14086,81 @@ export default {
      "text": "**Question (Slide 217):**\nLet $\\mathbf{a} = \\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix}$ and $\\mathbf{b} = \\begin{bmatrix} 2 \\\\ 0 \\\\ 3 \\end{bmatrix}$.  \nLet $P$ be the matrix whose columns are $\\mathbf{a}$, $\\mathbf{b}$, $(3\\mathbf{a} - \\mathbf{b})$, $(\\mathbf{a} - 3\\mathbf{b})$ in that order.  \nThe number of linearly independent solutions of the homogeneous system $PX = 0$ is: [ ___ ]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Construct Matrix $P$**\nMatrix $P$ has $3$ rows and $4$ columns:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\begin{bmatrix} \\mathbf{a} & \\mathbf{b} & (3\\mathbf{a} - \\mathbf{b}) & (\\mathbf{a} - 3\\mathbf{b}) \\end{bmatrix} \\in \\mathbb{R}^{3 \\times 4}"
-    },
-    {
-     "t": "p",
-     "text": "Number of variables in $PX = 0$ is $n = 4$."
-    },
-    {
-     "t": "p",
-     "text": "Compute the columns explicitly:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$C_1 = \\mathbf{a} = \\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix}$",
-      "$C_2 = \\mathbf{b} = \\begin{bmatrix} 2 \\\\ 0 \\\\ 3 \\end{bmatrix}$",
-      "$C_3 = 3\\mathbf{a} - \\mathbf{b} = 3\\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix} - \\begin{bmatrix} 2 \\\\ 0 \\\\ 3 \\end{bmatrix} = \\begin{bmatrix} 6 - 2 \\\\ 9 - 0 \\\\ 0 - 3 \\end{bmatrix} = \\begin{bmatrix} 4 \\\\ 9 \\\\ -3 \\end{bmatrix}$",
-      "$C_4 = \\mathbf{a} - 3\\mathbf{b} = \\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix} - 3\\begin{bmatrix} 2 \\\\ 0 \\\\ 3 \\end{bmatrix} = \\begin{bmatrix} 2 - 6 \\\\ 3 - 0 \\\\ 0 - 9 \\end{bmatrix} = \\begin{bmatrix} -4 \\\\ 3 \\\\ -9 \\end{bmatrix}$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\begin{bmatrix}\n2 & 2 & 4 & -4 \\\\ \n3 & 0 & 9 & 3 \\\\ \n0 & 3 & -3 & -9 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Determine $\\operatorname{rank}(P)$ by Column Inspection**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$C_1$ and $C_2$ are linearly independent because neither is a scalar multiple of the other:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha \\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix} + \\beta \\begin{bmatrix} 2 \\\\ 0 \\\\ 3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix} \\implies \\alpha = 0, \\beta = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$C_3 = 3C_1 - C_2$ is explicitly dependent on $C_1$ and $C_2$.",
-      "$C_4 = C_1 - 3C_2$ is explicitly dependent on $C_1$ and $C_2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Thus, the maximum number of linearly independent columns is $2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(P) = 2"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Calculate the Number of Linearly Independent Solutions**\nThe number of linearly independent solutions to $PX = 0$ is the nullity $\\eta(P)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\eta(P) = n - \\rho(P) = 4 - 2 = 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Construct Matrix $P$**\nMatrix $P$ has $3$ rows and $4$ columns:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\begin{bmatrix} \\mathbf{a} & \\mathbf{b} & (3\\mathbf{a} - \\mathbf{b}) & (\\mathbf{a} - 3\\mathbf{b}) \\end{bmatrix} \\in \\mathbb{R}^{3 \\times 4}"
+      },
+      {
+       "t": "p",
+       "text": "Number of variables in $PX = 0$ is $n = 4$."
+      },
+      {
+       "t": "p",
+       "text": "Compute the columns explicitly:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$C_1 = \\mathbf{a} = \\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix}$",
+        "$C_2 = \\mathbf{b} = \\begin{bmatrix} 2 \\\\ 0 \\\\ 3 \\end{bmatrix}$",
+        "$C_3 = 3\\mathbf{a} - \\mathbf{b} = 3\\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix} - \\begin{bmatrix} 2 \\\\ 0 \\\\ 3 \\end{bmatrix} = \\begin{bmatrix} 6 - 2 \\\\ 9 - 0 \\\\ 0 - 3 \\end{bmatrix} = \\begin{bmatrix} 4 \\\\ 9 \\\\ -3 \\end{bmatrix}$",
+        "$C_4 = \\mathbf{a} - 3\\mathbf{b} = \\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix} - 3\\begin{bmatrix} 2 \\\\ 0 \\\\ 3 \\end{bmatrix} = \\begin{bmatrix} 2 - 6 \\\\ 3 - 0 \\\\ 0 - 9 \\end{bmatrix} = \\begin{bmatrix} -4 \\\\ 3 \\\\ -9 \\end{bmatrix}$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\begin{bmatrix}\n2 & 2 & 4 & -4 \\\\ \n3 & 0 & 9 & 3 \\\\ \n0 & 3 & -3 & -9 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Determine $\\operatorname{rank}(P)$ by Column Inspection**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$C_1$ and $C_2$ are linearly independent because neither is a scalar multiple of the other:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha \\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix} + \\beta \\begin{bmatrix} 2 \\\\ 0 \\\\ 3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix} \\implies \\alpha = 0, \\beta = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$C_3 = 3C_1 - C_2$ is explicitly dependent on $C_1$ and $C_2$.",
+        "$C_4 = C_1 - 3C_2$ is explicitly dependent on $C_1$ and $C_2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Thus, the maximum number of linearly independent columns is $2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(P) = 2"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Calculate the Number of Linearly Independent Solutions**\nThe number of linearly independent solutions to $PX = 0$ is the nullity $\\eta(P)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\eta(P) = n - \\rho(P) = 4 - 2 = 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -14124,52 +14179,51 @@ export default {
      "text": "be a $6 \\times 6$ square matrix.  \nThe number of linearly independent solutions of the homogeneous system $AX = 0$ is: [ ___ ]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Determine the Rank of $A$**\nAll $6$ rows of $A$ are identical:"
-    },
-    {
-     "t": "math",
-     "tex": "R_1 = R_2 = R_3 = R_4 = R_5 = R_6"
-    },
-    {
-     "t": "p",
-     "text": "Apply row operations:"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\to R_2 - R_1, \\quad R_3 \\to R_3 - R_1, \\quad R_4 \\to R_4 - R_1, \\quad R_5 \\to R_5 - R_1, \\quad R_6 \\to R_6 - R_1"
-    },
-    {
-     "t": "p",
-     "text": "The reduced row echelon form has exactly $1$ non-zero row:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\sim \\begin{bmatrix}\n1 & b & b^2 & b^3 & b^4 & b^5 \\\\ \n0 & 0 & 0 & 0 & 0 & 0 \\\\ \n0 & 0 & 0 & 0 & 0 & 0 \\\\ \n0 & 0 & 0 & 0 & 0 & 0 \\\\ \n0 & 0 & 0 & 0 & 0 & 0 \\\\ \n0 & 0 & 0 & 0 & 0 & 0 \n\\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = 1"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Apply the Rank-Nullity Theorem**\nNumber of unknowns: $n = 6$.\nThe number of linearly independent solutions to $AX = 0$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\eta(A) = n - \\rho(A) = 6 - 1 = 5"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{5}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Determine the Rank of $A$**\nAll $6$ rows of $A$ are identical:"
+      },
+      {
+       "t": "math",
+       "tex": "R_1 = R_2 = R_3 = R_4 = R_5 = R_6"
+      },
+      {
+       "t": "p",
+       "text": "Apply row operations:"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\to R_2 - R_1, \\quad R_3 \\to R_3 - R_1, \\quad R_4 \\to R_4 - R_1, \\quad R_5 \\to R_5 - R_1, \\quad R_6 \\to R_6 - R_1"
+      },
+      {
+       "t": "p",
+       "text": "The reduced row echelon form has exactly $1$ non-zero row:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\sim \\begin{bmatrix}\n1 & b & b^2 & b^3 & b^4 & b^5 \\\\ \n0 & 0 & 0 & 0 & 0 & 0 \\\\ \n0 & 0 & 0 & 0 & 0 & 0 \\\\ \n0 & 0 & 0 & 0 & 0 & 0 \\\\ \n0 & 0 & 0 & 0 & 0 & 0 \\\\ \n0 & 0 & 0 & 0 & 0 & 0 \n\\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = 1"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Apply the Rank-Nullity Theorem**\nNumber of unknowns: $n = 6$.\nThe number of linearly independent solutions to $AX = 0$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\eta(A) = n - \\rho(A) = 6 - 1 = 5"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{5}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -14196,121 +14250,120 @@ export default {
      "text": "is: [ ___ ]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Method 1: The Chalkboard Substitution Shortcut (Slide 220)"
-    },
-    {
-     "t": "p",
-     "text": "Since the question asks for a fixed numerical value independent of $A, B, C$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Condition for non-trivial solution:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det\\begin{bmatrix} A & 1 & 1 \\\\ 1 & B & 1 \\\\ 1 & 1 & C \\end{bmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Expanding:"
-    },
-    {
-     "t": "math",
-     "tex": "A(BC - 1) - 1(C - 1) + 1(1 - B) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "ABC - A - C + 1 + 1 - B = 0 \\implies \\boxed{ABC - (A + B + C) + 2 = 0}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Choose test values satisfying $A \\ne 1, B \\ne 1, C \\ne 1$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $A = -1, B = 2$:"
-    },
-    {
-     "t": "math",
-     "tex": "(-1)(2)C - (-1 + 2 + C) + 2 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "-2C - (1 + C) + 2 = 0 \\implies -3C + 1 = 0 \\implies C = \\frac{1}{3}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Evaluate the target expression:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{1 - (-1)} + \\frac{1}{1 - 2} + \\frac{1}{1 - \\frac{1}{3}} = \\frac{1}{2} + \\frac{1}{-1} + \\frac{1}{2/3} = \\frac{1}{2} - 1 + \\frac{3}{2} = 2 - 1 = 1"
-    },
-    {
-     "t": "h3",
-     "text": "Method 2: Rigorous Analytical Derivation"
-    },
-    {
-     "t": "p",
-     "text": "We are given:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} A & 1 & 1 \\\\ 1 & B & 1 \\\\ 1 & 1 & C \\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Apply $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix}\nA & 1 & 1 \\\\ \n1 - A & B - 1 & 0 \\\\ \n1 - A & 0 & C - 1 \n\\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Rewrite as:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix}\nA & 1 & 1 \\\\ \n-(A - 1) & -(1 - B) & 0 \\\\ \n-(A - 1) & 0 & -(1 - C) \n\\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Factor out $(1 - A)$ from row 2 (or divide columns):\nExpanding along row 3:"
-    },
-    {
-     "t": "math",
-     "tex": "(1 - A)[0 - (B - 1)] + (C - 1)[A(B - 1) - (1 - A)] = 0"
-    },
-    {
-     "t": "p",
-     "text": "Dividing the entire equation by $(1 - A)(1 - B)(1 - C)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\frac{1}{1 - A} + \\frac{1}{1 - B} + \\frac{1}{1 - C} = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{1}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Method 1: The Chalkboard Substitution Shortcut (Slide 220)"
+      },
+      {
+       "t": "p",
+       "text": "Since the question asks for a fixed numerical value independent of $A, B, C$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Condition for non-trivial solution:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det\\begin{bmatrix} A & 1 & 1 \\\\ 1 & B & 1 \\\\ 1 & 1 & C \\end{bmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Expanding:"
+      },
+      {
+       "t": "math",
+       "tex": "A(BC - 1) - 1(C - 1) + 1(1 - B) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "ABC - A - C + 1 + 1 - B = 0 \\implies \\boxed{ABC - (A + B + C) + 2 = 0}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Choose test values satisfying $A \\ne 1, B \\ne 1, C \\ne 1$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $A = -1, B = 2$:"
+      },
+      {
+       "t": "math",
+       "tex": "(-1)(2)C - (-1 + 2 + C) + 2 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "-2C - (1 + C) + 2 = 0 \\implies -3C + 1 = 0 \\implies C = \\frac{1}{3}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Evaluate the target expression:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{1 - (-1)} + \\frac{1}{1 - 2} + \\frac{1}{1 - \\frac{1}{3}} = \\frac{1}{2} + \\frac{1}{-1} + \\frac{1}{2/3} = \\frac{1}{2} - 1 + \\frac{3}{2} = 2 - 1 = 1"
+      },
+      {
+       "t": "h3",
+       "text": "Method 2: Rigorous Analytical Derivation"
+      },
+      {
+       "t": "p",
+       "text": "We are given:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} A & 1 & 1 \\\\ 1 & B & 1 \\\\ 1 & 1 & C \\end{vmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Apply $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix}\nA & 1 & 1 \\\\ \n1 - A & B - 1 & 0 \\\\ \n1 - A & 0 & C - 1 \n\\end{vmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Rewrite as:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix}\nA & 1 & 1 \\\\ \n-(A - 1) & -(1 - B) & 0 \\\\ \n-(A - 1) & 0 & -(1 - C) \n\\end{vmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Factor out $(1 - A)$ from row 2 (or divide columns):\nExpanding along row 3:"
+      },
+      {
+       "t": "math",
+       "tex": "(1 - A)[0 - (B - 1)] + (C - 1)[A(B - 1) - (1 - A)] = 0"
+      },
+      {
+       "t": "p",
+       "text": "Dividing the entire equation by $(1 - A)(1 - B)(1 - C)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\frac{1}{1 - A} + \\frac{1}{1 - B} + \\frac{1}{1 - C} = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{1}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -14321,60 +14374,63 @@ export default {
      "text": "**Question (Slide 221):**\nLet $A$ be an $n \\times n$ real matrix such that $A^2 = I$, and let $Y$ be an $n$-dimensional vector.  \nThe system $AX = Y$ has:  \n**Options:**  \nA. No solution  \nB. Unique solution  \nC. Infinitely many solutions  \nD. Cannot be determined"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Invertibility of Involutory Matrix**\nGiven $A^2 = I$:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\cdot A = I"
-    },
-    {
-     "t": "p",
-     "text": "By definition of matrix inverse, $A^{-1}$ exists and:"
-    },
-    {
-     "t": "math",
-     "tex": "A^{-1} = A"
-    },
-    {
-     "t": "p",
-     "text": "Since $A^{-1}$ exists, $A$ is non-singular:"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) \\ne 0 \\implies \\rho(A) = n"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Rank Analysis of Augmented System**\nFor any $n$-dimensional vector $Y$:"
-    },
-    {
-     "t": "math",
-     "tex": "n = \\rho(A) \\le \\rho([A : Y]) \\le n \\implies \\rho([A : Y]) = n"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\rho(A) = \\rho([A : Y]) = n$ (number of unknowns), the system has a **unique solution**."
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Direct Algebraic Solution**\nPre-multiply $AX = Y$ by $A^{-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "X = A^{-1} Y = A Y"
-    },
-    {
-     "t": "p",
-     "text": "Since matrix multiplication produces a single, uniquely determined vector $AY$, the solution is guaranteed to exist and is unique."
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **B**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Invertibility of Involutory Matrix**\nGiven $A^2 = I$:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\cdot A = I"
+      },
+      {
+       "t": "p",
+       "text": "By definition of matrix inverse, $A^{-1}$ exists and:"
+      },
+      {
+       "t": "math",
+       "tex": "A^{-1} = A"
+      },
+      {
+       "t": "p",
+       "text": "Since $A^{-1}$ exists, $A$ is non-singular:"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) \\ne 0 \\implies \\rho(A) = n"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Rank Analysis of Augmented System**\nFor any $n$-dimensional vector $Y$:"
+      },
+      {
+       "t": "math",
+       "tex": "n = \\rho(A) \\le \\rho([A : Y]) \\le n \\implies \\rho([A : Y]) = n"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\rho(A) = \\rho([A : Y]) = n$ (number of unknowns), the system has a **unique solution**."
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Direct Algebraic Solution**\nPre-multiply $AX = Y$ by $A^{-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "X = A^{-1} Y = A Y"
+      },
+      {
+       "t": "p",
+       "text": "Since matrix multiplication produces a single, uniquely determined vector $AY$, the solution is guaranteed to exist and is unique."
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **B**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -14389,29 +14445,32 @@ export default {
      "text": "**Question (Slide 222):**\nIf the vectors $x_1, x_2, x_3, x_4$ are linearly dependent and $A$ is the coefficient matrix of the homogeneous system $AX = 0$ whose columns are $x_1, x_2, x_3, x_4$, then the system has:  \n(A) Unique solution  \n(B) Infinitely many solutions  \n(C) Only zero solution  \n(D) No solution"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Analysis:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Matrix $A = \\begin{bmatrix} x_1 & x_2 & x_3 & x_4 \\end{bmatrix}_{m \\times 4}$.",
-      "Number of unknowns: $n = 4$.",
-      "The columns are linearly dependent $\\implies \\rho(A) < 4$.",
-      "For any homogeneous system $AX = 0$:",
-      "$X = 0$ (trivial solution) is ALWAYS a valid solution $\\implies$ \"No solution\" is impossible!",
-      "If $\\rho(A) = n$, the trivial solution is the only solution.",
-      "If $\\rho(A) < n$, non-trivial solutions exist, yielding **infinitely many solutions**.",
-      "Here $\\rho(A) < 4 = n \\implies$ **Infinitely many solutions**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **(B)**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Analysis:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Matrix $A = \\begin{bmatrix} x_1 & x_2 & x_3 & x_4 \\end{bmatrix}_{m \\times 4}$.",
+        "Number of unknowns: $n = 4$.",
+        "The columns are linearly dependent $\\implies \\rho(A) < 4$.",
+        "For any homogeneous system $AX = 0$:",
+        "$X = 0$ (trivial solution) is ALWAYS a valid solution $\\implies$ \"No solution\" is impossible!",
+        "If $\\rho(A) = n$, the trivial solution is the only solution.",
+        "If $\\rho(A) < n$, non-trivial solutions exist, yielding **infinitely many solutions**.",
+        "Here $\\rho(A) < 4 = n \\implies$ **Infinitely many solutions**."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **(B)**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14422,34 +14481,37 @@ export default {
      "text": "**Question (Slide 223):**\nIf the vectors $x_1, x_2, x_3, x_4$ are linearly dependent and $A$ is the coefficient matrix of the non-homogeneous system $AX = B$ whose columns are $x_1, x_2, x_3, x_4$, then the system **may have**:  \n(A) Unique solution  \n(B) Infinitely many solutions  \n(C) Only zero solution  \n(D) No solution"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Analysis:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Number of variables: $n = 4$.",
-      "Linearly dependent columns $\\implies \\rho(A) < 4$.",
-      "For a **unique solution**, we require $\\rho(A) = 4$. Since $\\rho(A) < 4$, a unique solution is **IMPOSSIBLE**. (Option A is ruled out).",
-      "For a non-homogeneous system ($B \\ne 0$), $X = 0$ gives $A(0) = 0 \\ne B$, so $X = 0$ is never a solution. Thus \"Only zero solution\" is **IMPOSSIBLE**. (Option C is ruled out).",
-      "**Two Possibilities Remain:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "If $B \\notin \\operatorname{Col}(A) \\implies \\rho([A : B]) > \\rho(A) \\implies$ **No solution** (Option D).",
-      "If $B \\in \\operatorname{Col}(A) \\implies \\rho([A : B]) = \\rho(A) < 4 \\implies$ **Infinitely many solutions** (Option B)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Options:** **(B) and (D)**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Analysis:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Number of variables: $n = 4$.",
+        "Linearly dependent columns $\\implies \\rho(A) < 4$.",
+        "For a **unique solution**, we require $\\rho(A) = 4$. Since $\\rho(A) < 4$, a unique solution is **IMPOSSIBLE**. (Option A is ruled out).",
+        "For a non-homogeneous system ($B \\ne 0$), $X = 0$ gives $A(0) = 0 \\ne B$, so $X = 0$ is never a solution. Thus \"Only zero solution\" is **IMPOSSIBLE**. (Option C is ruled out).",
+        "**Two Possibilities Remain:**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "If $B \\notin \\operatorname{Col}(A) \\implies \\rho([A : B]) > \\rho(A) \\implies$ **No solution** (Option D).",
+        "If $B \\in \\operatorname{Col}(A) \\implies \\rho([A : B]) = \\rho(A) < 4 \\implies$ **Infinitely many solutions** (Option B)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Options:** **(B) and (D)**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -14464,38 +14526,37 @@ export default {
      "text": "$$\\boxed{\\text{A system of Non-Homogeneous linear equations } (AX = B, B \\ne 0) \\text{ can NEVER have a zero solution } (X = 0).}$$"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Chalkboard Proof:**\nConsider the non-homogeneous system:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\n2x_1 + 3x_2 + 4x_3 &= 7 \\quad \\text{--- (1)} \\\\\n2x_1 + 4x_2 + 3x_3 &= 0 \\quad \\text{--- (2)} \\\\\n-4x_1 + 2x_2 + x_3 &= 0 \\quad \\text{--- (3)}\n\\end{aligned}"
-    },
-    {
-     "t": "p",
-     "text": "If we test the \"zero solution\" $x_1 = 0, x_2 = 0, x_3 = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{LHS of (1)} = 2(0) + 3(0) + 4(0) = 0 \\ne 7"
-    },
-    {
-     "t": "p",
-     "text": "Equation (1) is violated."
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Semantic Exam Distinction:**\n- **Zero Solution ($X = 0$):** Every variable is zero. (Only possible if $B = 0$).\n- **No Solution:** No vector $X$ exists that satisfies the system (inconsistent equations).\n- $\\text{Zero Solution} \\ne \\text{No Solution}$. Never confuse the two terms!"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Chalkboard Proof:**\nConsider the non-homogeneous system:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\n2x_1 + 3x_2 + 4x_3 &= 7 \\quad \\text{--- (1)} \\\\\n2x_1 + 4x_2 + 3x_3 &= 0 \\quad \\text{--- (2)} \\\\\n-4x_1 + 2x_2 + x_3 &= 0 \\quad \\text{--- (3)}\n\\end{aligned}"
+      },
+      {
+       "t": "p",
+       "text": "If we test the \"zero solution\" $x_1 = 0, x_2 = 0, x_3 = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{LHS of (1)} = 2(0) + 3(0) + 4(0) = 0 \\ne 7"
+      },
+      {
+       "t": "p",
+       "text": "Equation (1) is violated."
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Semantic Exam Distinction:**\n- **Zero Solution ($X = 0$):** Every variable is zero. (Only possible if $B = 0$).\n- **No Solution:** No vector $X$ exists that satisfies the system (inconsistent equations).\n- $\\text{Zero Solution} \\ne \\text{No Solution}$. Never confuse the two terms!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -14706,95 +14767,98 @@ export default {
      "text": "Which of the following statements are true?  \n(A) The vectors $u_1, u_2, u_3$ are linearly independent.  \n(B) The vectors $u_1, u_2, u_3$ form an orthogonal set.  \n(C) The vectors $u_1, u_2, u_3$ form an orthonormal set.  \n(D) If a matrix $A$ is formed with $u_1, u_2, u_3$ as its rows, then $A$ is invertible."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Check Lengths (Norms)**"
-    },
-    {
-     "t": "math",
-     "tex": "\\|u_1\\| = \\sqrt{\\left(\\frac{1}{\\sqrt{2}}\\right)^2 + \\left(\\frac{1}{\\sqrt{2}}\\right)^2 + 0^2} = \\sqrt{\\frac{1}{2} + \\frac{1}{2} + 0} = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\|u_2\\| = \\sqrt{\\left(\\frac{1}{\\sqrt{2}}\\right)^2 + \\left(-\\frac{1}{\\sqrt{2}}\\right)^2 + 0^2} = \\sqrt{\\frac{1}{2} + \\frac{1}{2} + 0} = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\|u_3\\| = \\sqrt{0^2 + 0^2 + 1^2} = 1"
-    },
-    {
-     "t": "p",
-     "text": "All vectors are unit vectors!"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Check Pairwise Dot Products**"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{u}_1 \\cdot \\vec{u}_2 = \\left(\\frac{1}{\\sqrt{2}}\\right)\\left(\\frac{1}{\\sqrt{2}}\\right) + \\left(\\frac{1}{\\sqrt{2}}\\right)\\left(-\\frac{1}{\\sqrt{2}}\\right) + (0)(0) = \\frac{1}{2} - \\frac{1}{2} + 0 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{u}_2 \\cdot \\vec{u}_3 = \\left(\\frac{1}{\\sqrt{2}}\\right)(0) + \\left(-\\frac{1}{\\sqrt{2}}\\right)(0) + (0)(1) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{u}_1 \\cdot \\vec{u}_3 = \\left(\\frac{1}{\\sqrt{2}}\\right)(0) + \\left(\\frac{1}{\\sqrt{2}}\\right)(0) + (0)(1) = 0"
-    },
-    {
-     "t": "p",
-     "text": "The vectors are mutually perpendicular."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Statement (B) is TRUE (orthogonal set).",
-      "Statement (C) is TRUE (orthonormal set)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Linear Independence of Orthogonal Sets**\nAny set of non-zero mutually orthogonal vectors is automatically linearly independent."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Statement (A) is TRUE."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 4: Matrix Invertibility**\nForm matrix $A$ with $u_1, u_2, u_3$ as rows:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix}\n1/\\sqrt{2} & 1/\\sqrt{2} & 0 \\\\ \n1/\\sqrt{2} & -1/\\sqrt{2} & 0 \\\\ \n0 & 0 & 1 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Expand $\\det(A)$ along the third row:"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = 1 \\cdot \\begin{vmatrix} 1/\\sqrt{2} & 1/\\sqrt{2} \\\\ 1/\\sqrt{2} & -1/\\sqrt{2} \\end{vmatrix} = 1 \\left( -\\frac{1}{2} - \\frac{1}{2} \\right) = -1 \\ne 0"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\det(A) \\ne 0$, matrix $A$ is **invertible**.\nIn fact, $A A^T = I$, so $A$ is an **orthogonal matrix** ($A^{-1} = A^T$)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Statement (D) is TRUE."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Options:** **(A), (B), (C), (D)** (All statements are true!)\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Check Lengths (Norms)**"
+      },
+      {
+       "t": "math",
+       "tex": "\\|u_1\\| = \\sqrt{\\left(\\frac{1}{\\sqrt{2}}\\right)^2 + \\left(\\frac{1}{\\sqrt{2}}\\right)^2 + 0^2} = \\sqrt{\\frac{1}{2} + \\frac{1}{2} + 0} = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\|u_2\\| = \\sqrt{\\left(\\frac{1}{\\sqrt{2}}\\right)^2 + \\left(-\\frac{1}{\\sqrt{2}}\\right)^2 + 0^2} = \\sqrt{\\frac{1}{2} + \\frac{1}{2} + 0} = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\|u_3\\| = \\sqrt{0^2 + 0^2 + 1^2} = 1"
+      },
+      {
+       "t": "p",
+       "text": "All vectors are unit vectors!"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Check Pairwise Dot Products**"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{u}_1 \\cdot \\vec{u}_2 = \\left(\\frac{1}{\\sqrt{2}}\\right)\\left(\\frac{1}{\\sqrt{2}}\\right) + \\left(\\frac{1}{\\sqrt{2}}\\right)\\left(-\\frac{1}{\\sqrt{2}}\\right) + (0)(0) = \\frac{1}{2} - \\frac{1}{2} + 0 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{u}_2 \\cdot \\vec{u}_3 = \\left(\\frac{1}{\\sqrt{2}}\\right)(0) + \\left(-\\frac{1}{\\sqrt{2}}\\right)(0) + (0)(1) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{u}_1 \\cdot \\vec{u}_3 = \\left(\\frac{1}{\\sqrt{2}}\\right)(0) + \\left(\\frac{1}{\\sqrt{2}}\\right)(0) + (0)(1) = 0"
+      },
+      {
+       "t": "p",
+       "text": "The vectors are mutually perpendicular."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Statement (B) is TRUE (orthogonal set).",
+        "Statement (C) is TRUE (orthonormal set)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Linear Independence of Orthogonal Sets**\nAny set of non-zero mutually orthogonal vectors is automatically linearly independent."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Statement (A) is TRUE."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 4: Matrix Invertibility**\nForm matrix $A$ with $u_1, u_2, u_3$ as rows:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix}\n1/\\sqrt{2} & 1/\\sqrt{2} & 0 \\\\ \n1/\\sqrt{2} & -1/\\sqrt{2} & 0 \\\\ \n0 & 0 & 1 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Expand $\\det(A)$ along the third row:"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = 1 \\cdot \\begin{vmatrix} 1/\\sqrt{2} & 1/\\sqrt{2} \\\\ 1/\\sqrt{2} & -1/\\sqrt{2} \\end{vmatrix} = 1 \\left( -\\frac{1}{2} - \\frac{1}{2} \\right) = -1 \\ne 0"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\det(A) \\ne 0$, matrix $A$ is **invertible**.\nIn fact, $A A^T = I$, so $A$ is an **orthogonal matrix** ($A^{-1} = A^T$)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Statement (D) is TRUE."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Options:** **(A), (B), (C), (D)** (All statements are true!)"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -14805,48 +14869,51 @@ export default {
      "tex": "\\boxed{\\text{Orthogonal non-zero vectors are always Linearly Independent of each other.}}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Formal Mathematical Proof:**\nLet $\\{v_1, v_2, \\dots, v_k\\}$ be a set of non-zero mutually orthogonal vectors ($v_i \\cdot v_j = 0$ for $i \\ne j$, and $\\|v_i\\| \\ne 0$).\nConsider the linear combination:"
-    },
-    {
-     "t": "math",
-     "tex": "c_1 v_1 + c_2 v_2 + \\dots + c_k v_k = 0"
-    },
-    {
-     "t": "p",
-     "text": "Take the inner product of both sides with $v_i$:"
-    },
-    {
-     "t": "math",
-     "tex": "(c_1 v_1 + c_2 v_2 + \\dots + c_k v_k) \\cdot v_i = 0 \\cdot v_i"
-    },
-    {
-     "t": "math",
-     "tex": "c_1(v_1 \\cdot v_i) + \\dots + c_i(v_i \\cdot v_i) + \\dots + c_k(v_k \\cdot v_i) = 0"
-    },
-    {
-     "t": "p",
-     "text": "Since $v_j \\cdot v_i = 0$ for all $j \\ne i$:"
-    },
-    {
-     "t": "math",
-     "tex": "c_i(v_i \\cdot v_i) = 0 \\implies c_i \\|v_i\\|^2 = 0"
-    },
-    {
-     "t": "p",
-     "text": "Since $v_i \\ne 0 \\implies \\|v_i\\|^2 \\ne 0$, it follows that:"
-    },
-    {
-     "t": "math",
-     "tex": "c_i = 0"
-    },
-    {
-     "t": "p",
-     "text": "This holds for every $i \\in \\{1, 2, \\dots, k\\}$.\nThus, $c_1 = c_2 = \\dots = c_k = 0$, proving linear independence!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Formal Mathematical Proof:**\nLet $\\{v_1, v_2, \\dots, v_k\\}$ be a set of non-zero mutually orthogonal vectors ($v_i \\cdot v_j = 0$ for $i \\ne j$, and $\\|v_i\\| \\ne 0$).\nConsider the linear combination:"
+      },
+      {
+       "t": "math",
+       "tex": "c_1 v_1 + c_2 v_2 + \\dots + c_k v_k = 0"
+      },
+      {
+       "t": "p",
+       "text": "Take the inner product of both sides with $v_i$:"
+      },
+      {
+       "t": "math",
+       "tex": "(c_1 v_1 + c_2 v_2 + \\dots + c_k v_k) \\cdot v_i = 0 \\cdot v_i"
+      },
+      {
+       "t": "math",
+       "tex": "c_1(v_1 \\cdot v_i) + \\dots + c_i(v_i \\cdot v_i) + \\dots + c_k(v_k \\cdot v_i) = 0"
+      },
+      {
+       "t": "p",
+       "text": "Since $v_j \\cdot v_i = 0$ for all $j \\ne i$:"
+      },
+      {
+       "t": "math",
+       "tex": "c_i(v_i \\cdot v_i) = 0 \\implies c_i \\|v_i\\|^2 = 0"
+      },
+      {
+       "t": "p",
+       "text": "Since $v_i \\ne 0 \\implies \\|v_i\\|^2 \\ne 0$, it follows that:"
+      },
+      {
+       "t": "math",
+       "tex": "c_i = 0"
+      },
+      {
+       "t": "p",
+       "text": "This holds for every $i \\in \\{1, 2, \\dots, k\\}$.\nThus, $c_1 = c_2 = \\dots = c_k = 0$, proving linear independence!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -14857,32 +14924,31 @@ export default {
      "text": "**Question (Slide 232):**\nLet $\\mathbf{x}$ be a $5 \\times 1$ real column vector such that $\\|\\mathbf{x}\\| = 5$.  \nDefine the matrix $A = \\mathbf{x}\\mathbf{x}^T$.  \nThen, the trace of matrix $A$ is: [ ___ ]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Apply Trace Outer Product Identity**\nFrom the chalkboard theorem on Slide 226:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}(A) = \\operatorname{Tr}(\\mathbf{x}\\mathbf{x}^T) = \\|\\mathbf{x}\\|^2"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Substitute Given Norm**\nGiven $\\|\\mathbf{x}\\| = 5$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}(A) = 5^2 = 25"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{25}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Apply Trace Outer Product Identity**\nFrom the chalkboard theorem on Slide 226:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}(A) = \\operatorname{Tr}(\\mathbf{x}\\mathbf{x}^T) = \\|\\mathbf{x}\\|^2"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Substitute Given Norm**\nGiven $\\|\\mathbf{x}\\| = 5$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}(A) = 5^2 = 25"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{25}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -15051,28 +15117,31 @@ export default {
      "tex": "\\boxed{\\text{Span} = \\text{1-D (Line)}}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Algebraic Proof of Impossibility:**\nCan $\\vec{A}$ and $\\vec{B}$ span any vector outside their common line, say $3\\hat{i}$?\nSet up the linear combination:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha \\vec{A} + \\beta \\vec{B} = 3\\hat{i} \\implies (2\\alpha + 6\\beta)\\hat{i} + (3\\alpha + 9\\beta)\\hat{j} = 3\\hat{i} + 0\\hat{j}"
-    },
-    {
-     "t": "p",
-     "text": "Equating components:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{cases}\n2\\alpha + 6\\beta = 3 \\implies \\alpha + 3\\beta = 1.5 \\\\\n3\\alpha + 9\\beta = 0 \\implies \\alpha + 3\\beta = 0\n\\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "This yields $1.5 = 0$, a blatant contradiction!\nThe system has **No Solution**. Thus, dependent vectors cannot leave their 1-D trajectory.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Algebraic Proof of Impossibility:**\nCan $\\vec{A}$ and $\\vec{B}$ span any vector outside their common line, say $3\\hat{i}$?\nSet up the linear combination:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha \\vec{A} + \\beta \\vec{B} = 3\\hat{i} \\implies (2\\alpha + 6\\beta)\\hat{i} + (3\\alpha + 9\\beta)\\hat{j} = 3\\hat{i} + 0\\hat{j}"
+      },
+      {
+       "t": "p",
+       "text": "Equating components:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{cases}\n2\\alpha + 6\\beta = 3 \\implies \\alpha + 3\\beta = 1.5 \\\\\n3\\alpha + 9\\beta = 0 \\implies \\alpha + 3\\beta = 0\n\\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "This yields $1.5 = 0$, a blatant contradiction!\nThe system has **No Solution**. Thus, dependent vectors cannot leave their 1-D trajectory."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15191,52 +15260,51 @@ export default {
      "text": "**Question (Slide 245):**\n\"Using a set of 1-dimensional vectors, try creating a 2-D span. You can use any number of 1-dimensional vectors.\""
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Chalkboard Proof:**\nConsider any collection of 1-D vectors:"
-    },
-    {
-     "t": "math",
-     "tex": "S = \\{ [1], [-1], [2/3], [7/5], [-3], \\dots \\} \\subset \\mathbb{R}^1"
-    },
-    {
-     "t": "p",
-     "text": "Even if we select $1000$ such vectors, say $\\vec{A} = 2\\hat{i}, \\vec{B} = 3\\hat{i}, \\dots$:\nThe matrix formed with these vectors as columns (or rows) has dimensions:"
-    },
-    {
-     "t": "math",
-     "tex": "F = \\begin{bmatrix} 2 & 3 & -2 & \\dots \\end{bmatrix}_{1 \\times 1000}"
-    },
-    {
-     "t": "p",
-     "text": "By the fundamental property of matrix rank:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{rank}(F) \\le \\min(\\text{rows}, \\text{columns}) = \\min(1, 1000) = 1"
-    },
-    {
-     "t": "p",
-     "text": "Since the rank can never exceed $1$, the dimension of the span can never exceed $1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{dim}(\\operatorname{span}(S)) \\le 1"
-    },
-    {
-     "t": "p",
-     "text": "It is mathematically **impossible** to create a 2-D span from 1-D vectors!"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Span is strictly 1-D}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Chalkboard Proof:**\nConsider any collection of 1-D vectors:"
+      },
+      {
+       "t": "math",
+       "tex": "S = \\{ [1], [-1], [2/3], [7/5], [-3], \\dots \\} \\subset \\mathbb{R}^1"
+      },
+      {
+       "t": "p",
+       "text": "Even if we select $1000$ such vectors, say $\\vec{A} = 2\\hat{i}, \\vec{B} = 3\\hat{i}, \\dots$:\nThe matrix formed with these vectors as columns (or rows) has dimensions:"
+      },
+      {
+       "t": "math",
+       "tex": "F = \\begin{bmatrix} 2 & 3 & -2 & \\dots \\end{bmatrix}_{1 \\times 1000}"
+      },
+      {
+       "t": "p",
+       "text": "By the fundamental property of matrix rank:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{rank}(F) \\le \\min(\\text{rows}, \\text{columns}) = \\min(1, 1000) = 1"
+      },
+      {
+       "t": "p",
+       "text": "Since the rank can never exceed $1$, the dimension of the span can never exceed $1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{dim}(\\operatorname{span}(S)) \\le 1"
+      },
+      {
+       "t": "p",
+       "text": "It is mathematically **impossible** to create a 2-D span from 1-D vectors!"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Span is strictly 1-D}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15247,44 +15315,43 @@ export default {
      "text": "**Question (Slide 246):**\n\"Using a set of 2-dimensional vectors, try creating a 3-D span. You can use any number of 2-dimensional vectors.\""
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Chalkboard Proof:**\nConsider any set of 2-D vectors:"
-    },
-    {
-     "t": "math",
-     "tex": "S = \\left\\{ \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}, \\begin{bmatrix} -2 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 3 \\\\ 2 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 0 \\end{bmatrix}, \\dots \\right\\} \\subset \\mathbb{R}^2"
-    },
-    {
-     "t": "p",
-     "text": "Select any $n$ such vectors to form matrix $M$:"
-    },
-    {
-     "t": "math",
-     "tex": "M = \\begin{bmatrix} a & c & e & \\dots \\\\ b & d & f & \\dots \\end{bmatrix}_{2 \\times n}"
-    },
-    {
-     "t": "p",
-     "text": "The rank of this matrix is strictly bounded:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{rank}(M) \\le \\min(2, n) = 2"
-    },
-    {
-     "t": "p",
-     "text": "To achieve a 3-D span, the matrix would require $\\operatorname{rank}(M) = 3$, which is impossible because $M$ has only $2$ rows!\nTherefore, vectors residing in $\\mathbb{R}^2$ can **NEVER** span $\\mathbb{R}^3$."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\operatorname{Max Rank} = 2 \\implies \\text{Span} \\le \\text{2-D}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Chalkboard Proof:**\nConsider any set of 2-D vectors:"
+      },
+      {
+       "t": "math",
+       "tex": "S = \\left\\{ \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}, \\begin{bmatrix} -2 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 3 \\\\ 2 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 0 \\end{bmatrix}, \\dots \\right\\} \\subset \\mathbb{R}^2"
+      },
+      {
+       "t": "p",
+       "text": "Select any $n$ such vectors to form matrix $M$:"
+      },
+      {
+       "t": "math",
+       "tex": "M = \\begin{bmatrix} a & c & e & \\dots \\\\ b & d & f & \\dots \\end{bmatrix}_{2 \\times n}"
+      },
+      {
+       "t": "p",
+       "text": "The rank of this matrix is strictly bounded:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{rank}(M) \\le \\min(2, n) = 2"
+      },
+      {
+       "t": "p",
+       "text": "To achieve a 3-D span, the matrix would require $\\operatorname{rank}(M) = 3$, which is impossible because $M$ has only $2$ rows!\nTherefore, vectors residing in $\\mathbb{R}^2$ can **NEVER** span $\\mathbb{R}^3$."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\operatorname{Max Rank} = 2 \\implies \\text{Span} \\le \\text{2-D}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -15347,40 +15414,39 @@ export default {
      "text": "(a) Write some elements of this set.  \n(b) Find the number of independent vectors from this set."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Analysis:**\nThe set $V$ contains every possible 3-D vector with unconstrained coordinates:"
-    },
-    {
-     "t": "math",
-     "tex": "V = \\mathbb{R}^3"
-    },
-    {
-     "t": "p",
-     "text": "Forming a matrix $D$ with arbitrary elements from $V$ as columns:"
-    },
-    {
-     "t": "math",
-     "tex": "D = \\begin{bmatrix}\n1 & 2 & -1 & 2 & \\alpha & a & \\dots \\\\ \n2 & 3 & -2 & 4 & \\beta & b & \\dots \\\\ \n3 & 1 & 3 & 7 & \\gamma & c & \\dots \n\\end{bmatrix}_{3 \\times n}"
-    },
-    {
-     "t": "p",
-     "text": "The maximum rank is bounded by the number of rows: $\\rho(D) \\le 3$.\nSince the canonical basis $\\{e_1, e_2, e_3\\}$ belongs to $V$, the maximum number of linearly independent vectors is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(D) = 3"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Number of independent vectors} = 3 \\implies \\text{3-D Span}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Analysis:**\nThe set $V$ contains every possible 3-D vector with unconstrained coordinates:"
+      },
+      {
+       "t": "math",
+       "tex": "V = \\mathbb{R}^3"
+      },
+      {
+       "t": "p",
+       "text": "Forming a matrix $D$ with arbitrary elements from $V$ as columns:"
+      },
+      {
+       "t": "math",
+       "tex": "D = \\begin{bmatrix}\n1 & 2 & -1 & 2 & \\alpha & a & \\dots \\\\ \n2 & 3 & -2 & 4 & \\beta & b & \\dots \\\\ \n3 & 1 & 3 & 7 & \\gamma & c & \\dots \n\\end{bmatrix}_{3 \\times n}"
+      },
+      {
+       "t": "p",
+       "text": "The maximum rank is bounded by the number of rows: $\\rho(D) \\le 3$.\nSince the canonical basis $\\{e_1, e_2, e_3\\}$ belongs to $V$, the maximum number of linearly independent vectors is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(D) = 3"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Number of independent vectors} = 3 \\implies \\text{3-D Span}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -15395,65 +15461,64 @@ export default {
      "text": "**Question (Slide 249):**\nLet $V = \\{(x, y, z) \\in \\mathbb{R}^3 \\mid y = 2x\\}$. Find the span of $V$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Understand the Constraint**\n$V$ contains only those 3-D vectors whose $y$-component is twice the $x$-component. This is a linear homogeneous constraint ($2x - y + 0z = 0$), defining a plane passing through the origin."
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Sample Elements of $V$**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $x = 1, z = -1 \\implies y = 2$: $v_1 = \\begin{bmatrix} 1 \\\\ 2 \\\\ -1 \\end{bmatrix}$",
-      "For $x = 0, z = 1 \\implies y = 0$: $v_2 = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}$",
-      "For $x = -1, z = 3 \\implies y = -2$: $v_3 = \\begin{bmatrix} -1 \\\\ -2 \\\\ 3 \\end{bmatrix}$",
-      "For $x = 3, z = 7 \\implies y = 6$: $v_4 = \\begin{bmatrix} 3 \\\\ 6 \\\\ 7 \\end{bmatrix}$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Construct Matrix $D$ and Compute Rank**\nPlace sample vectors into rows of $D$:"
-    },
-    {
-     "t": "math",
-     "tex": "D = \\begin{bmatrix}\n1 & 2 & -1 \\\\ \n0 & 0 & 1 \\\\ \n-1 & -2 & 3 \\\\ \n3 & 6 & 7 \n\\end{bmatrix}_{4 \\times 3}"
-    },
-    {
-     "t": "p",
-     "text": "Apply $R_3 \\to R_3 + R_1$ and $R_4 \\to R_4 - 3R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 2 & -1 \\\\ \n0 & 0 & 1 \\\\ \n0 & 0 & 2 \\\\ \n0 & 0 & 10 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Apply $R_3 \\to R_3 - 2R_2$ and $R_4 \\to R_4 - 10R_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix}\n1 & 2 & -1 \\\\ \n0 & 0 & 1 \\\\ \n0 & 0 & 0 \\\\ \n0 & 0 & 0 \n\\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "There are exactly $2$ non-zero rows $\\implies \\rho(D) = 2$."
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:**\nThere are exactly $2$ linearly independent vectors in any subset of $V$."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\operatorname{dim}(\\operatorname{span}(V)) = 2 \\implies \\text{2-D Span (Plane)}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Understand the Constraint**\n$V$ contains only those 3-D vectors whose $y$-component is twice the $x$-component. This is a linear homogeneous constraint ($2x - y + 0z = 0$), defining a plane passing through the origin."
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Sample Elements of $V$**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $x = 1, z = -1 \\implies y = 2$: $v_1 = \\begin{bmatrix} 1 \\\\ 2 \\\\ -1 \\end{bmatrix}$",
+        "For $x = 0, z = 1 \\implies y = 0$: $v_2 = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}$",
+        "For $x = -1, z = 3 \\implies y = -2$: $v_3 = \\begin{bmatrix} -1 \\\\ -2 \\\\ 3 \\end{bmatrix}$",
+        "For $x = 3, z = 7 \\implies y = 6$: $v_4 = \\begin{bmatrix} 3 \\\\ 6 \\\\ 7 \\end{bmatrix}$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Construct Matrix $D$ and Compute Rank**\nPlace sample vectors into rows of $D$:"
+      },
+      {
+       "t": "math",
+       "tex": "D = \\begin{bmatrix}\n1 & 2 & -1 \\\\ \n0 & 0 & 1 \\\\ \n-1 & -2 & 3 \\\\ \n3 & 6 & 7 \n\\end{bmatrix}_{4 \\times 3}"
+      },
+      {
+       "t": "p",
+       "text": "Apply $R_3 \\to R_3 + R_1$ and $R_4 \\to R_4 - 3R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 2 & -1 \\\\ \n0 & 0 & 1 \\\\ \n0 & 0 & 2 \\\\ \n0 & 0 & 10 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Apply $R_3 \\to R_3 - 2R_2$ and $R_4 \\to R_4 - 10R_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix}\n1 & 2 & -1 \\\\ \n0 & 0 & 1 \\\\ \n0 & 0 & 0 \\\\ \n0 & 0 & 0 \n\\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "There are exactly $2$ non-zero rows $\\implies \\rho(D) = 2$."
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:**\nThere are exactly $2$ linearly independent vectors in any subset of $V$."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\operatorname{dim}(\\operatorname{span}(V)) = 2 \\implies \\text{2-D Span (Plane)}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -15476,60 +15541,59 @@ export default {
      "tex": "\\vec{A} = x\\hat{i} + 2x\\hat{j} + z\\hat{k} = x(\\hat{i} + 2\\hat{j}) + z\\hat{k}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step 1: Normalize the In-Plane Direction**\nThe vector $\\hat{i} + 2\\hat{j}$ has Euclidean norm:"
-    },
-    {
-     "t": "math",
-     "tex": "\\|\\hat{i} + 2\\hat{j}\\| = \\sqrt{1^2 + 2^2} = \\sqrt{5}"
-    },
-    {
-     "t": "p",
-     "text": "Define the unit vector:"
-    },
-    {
-     "t": "math",
-     "tex": "\\hat{l} = \\frac{\\hat{i} + 2\\hat{j}}{\\sqrt{5}}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 2: Verify Mutual Orthogonality**\nCompute the dot product between $\\hat{l}$ and $\\hat{k}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\hat{l} \\cdot \\hat{k} = \\left(\\frac{\\hat{i} + 2\\hat{j}}{\\sqrt{5}}\\right) \\cdot \\hat{k} = \\frac{1}{\\sqrt{5}}(\\hat{i} \\cdot \\hat{k}) + \\frac{2}{\\sqrt{5}}(\\hat{j} \\cdot \\hat{k}) = 0 + 0 = 0"
-    },
-    {
-     "t": "p",
-     "text": "Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "\\hat{l} \\perp \\hat{k}"
-    },
-    {
-     "t": "p",
-     "text": "**Step 3: Reduced 2-Component Representation**\nExpress $\\vec{A}$ in terms of the orthonormal basis $\\{\\hat{l}, \\hat{k}\\}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = \\sqrt{5}x \\left[\\frac{\\hat{i} + 2\\hat{j}}{\\sqrt{5}}\\right] + z\\hat{k} = \\boxed{(\\sqrt{5}x)\\hat{l} + z\\hat{k}}"
-    },
-    {
-     "t": "p",
-     "text": "Because $\\vec{A}$ is completely parameterized by exactly two independent orthogonal components $(\\sqrt{5}x)$ and $z$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\vec{A} \\text{ is structurally a 2-Dimensional vector spanning a 2-D Plane in } \\mathbb{R}^3.}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step 1: Normalize the In-Plane Direction**\nThe vector $\\hat{i} + 2\\hat{j}$ has Euclidean norm:"
+      },
+      {
+       "t": "math",
+       "tex": "\\|\\hat{i} + 2\\hat{j}\\| = \\sqrt{1^2 + 2^2} = \\sqrt{5}"
+      },
+      {
+       "t": "p",
+       "text": "Define the unit vector:"
+      },
+      {
+       "t": "math",
+       "tex": "\\hat{l} = \\frac{\\hat{i} + 2\\hat{j}}{\\sqrt{5}}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 2: Verify Mutual Orthogonality**\nCompute the dot product between $\\hat{l}$ and $\\hat{k}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\hat{l} \\cdot \\hat{k} = \\left(\\frac{\\hat{i} + 2\\hat{j}}{\\sqrt{5}}\\right) \\cdot \\hat{k} = \\frac{1}{\\sqrt{5}}(\\hat{i} \\cdot \\hat{k}) + \\frac{2}{\\sqrt{5}}(\\hat{j} \\cdot \\hat{k}) = 0 + 0 = 0"
+      },
+      {
+       "t": "p",
+       "text": "Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "\\hat{l} \\perp \\hat{k}"
+      },
+      {
+       "t": "p",
+       "text": "**Step 3: Reduced 2-Component Representation**\nExpress $\\vec{A}$ in terms of the orthonormal basis $\\{\\hat{l}, \\hat{k}\\}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = \\sqrt{5}x \\left[\\frac{\\hat{i} + 2\\hat{j}}{\\sqrt{5}}\\right] + z\\hat{k} = \\boxed{(\\sqrt{5}x)\\hat{l} + z\\hat{k}}"
+      },
+      {
+       "t": "p",
+       "text": "Because $\\vec{A}$ is completely parameterized by exactly two independent orthogonal components $(\\sqrt{5}x)$ and $z$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\vec{A} \\text{ is structurally a 2-Dimensional vector spanning a 2-D Plane in } \\mathbb{R}^3.}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -16024,114 +16088,113 @@ export default {
      "text": "Determine the **span** (dimension of the subspace) of $V$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step 1: Parametric Constraint Reduction"
-    },
-    {
-     "t": "p",
-     "text": "Any arbitrary vector $\\vec{A} \\in V$ can be expressed in standard Cartesian basis components:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = x\\hat{i} + y\\hat{j} + z\\hat{k}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the first constraint $y = 2x$ into the second constraint $x + y + z = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "x + (2x) + z = 0 \\implies 3x + z = 0 \\implies z = -3x"
-    },
-    {
-     "t": "p",
-     "text": "Both dependent variables $y$ and $z$ are uniquely governed by a single free parameter $x$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\ny &= 2x \\\\\nz &= -3x\n\\end{aligned}"
-    },
-    {
-     "t": "h3",
-     "text": "Step 2: Vector Factorization"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $y = 2x$ and $z = -3x$ back into the vector expression:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = x\\hat{i} + 2x\\hat{j} - 3x\\hat{k} = x \\left(\\hat{i} + 2\\hat{j} - 3\\hat{k}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "Normalizing the directional vector:"
-    },
-    {
-     "t": "math",
-     "tex": "\\|\\hat{i} + 2\\hat{j} - 3\\hat{k}\\| = \\sqrt{1^2 + 2^2 + (-3)^2} = \\sqrt{1 + 4 + 9} = \\sqrt{14}"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = \\sqrt{14}x \\left[\\frac{\\hat{i} + 2\\hat{j} - 3\\hat{k}}{\\sqrt{14}}\\right] = \\sqrt{14}x\\,\\hat{l}"
-    },
-    {
-     "t": "p",
-     "text": "where $\\hat{l}$ is the unit direction vector of the line passing through the origin."
-    },
-    {
-     "t": "h3",
-     "text": "Step 3: Set Interpretation and Matrix Rank Verification"
-    },
-    {
-     "t": "p",
-     "text": "The set $V$ is **not** the set of all possible 3D vectors; it contains only those vectors collinear with $[1, 2, -3]^T$:"
-    },
-    {
-     "t": "math",
-     "tex": "V = \\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ -3 \\end{bmatrix}, \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}, \\begin{bmatrix} -1 \\\\ -2 \\\\ 3 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ -6 \\end{bmatrix}, \\dots \\right\\}"
-    },
-    {
-     "t": "p",
-     "text": "Construct a matrix $D$ by stacking sample row vectors from $V$:"
-    },
-    {
-     "t": "math",
-     "tex": "D = \\begin{bmatrix} 1 & 2 & -3 \\\\ 0 & 0 & 0 \\\\ -1 & -2 & 3 \\\\ 2 & 4 & -6 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Apply elementary row operations:"
-    },
-    {
-     "t": "math",
-     "tex": "R_3 \\to R_3 + R_1, \\quad R_4 \\to R_4 - 2R_1"
-    },
-    {
-     "t": "math",
-     "tex": "D \\sim \\begin{bmatrix} 1 & 2 & -3 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Since there is exactly **1 non-zero row** in row echelon form:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(D) = 1 \\implies \\mathbf{1\\text{-D Span}}"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Geometric Insight:** The intersection of two distinct planes passing through the origin in $\\mathbb{R}^3$ ($y - 2x = 0$ and $x + y + z = 0$) forms a 1-dimensional line passing through the origin. A line through the origin is a 1-dimensional subspace."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step 1: Parametric Constraint Reduction"
+      },
+      {
+       "t": "p",
+       "text": "Any arbitrary vector $\\vec{A} \\in V$ can be expressed in standard Cartesian basis components:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = x\\hat{i} + y\\hat{j} + z\\hat{k}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the first constraint $y = 2x$ into the second constraint $x + y + z = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "x + (2x) + z = 0 \\implies 3x + z = 0 \\implies z = -3x"
+      },
+      {
+       "t": "p",
+       "text": "Both dependent variables $y$ and $z$ are uniquely governed by a single free parameter $x$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\ny &= 2x \\\\\nz &= -3x\n\\end{aligned}"
+      },
+      {
+       "t": "h3",
+       "text": "Step 2: Vector Factorization"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $y = 2x$ and $z = -3x$ back into the vector expression:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = x\\hat{i} + 2x\\hat{j} - 3x\\hat{k} = x \\left(\\hat{i} + 2\\hat{j} - 3\\hat{k}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "Normalizing the directional vector:"
+      },
+      {
+       "t": "math",
+       "tex": "\\|\\hat{i} + 2\\hat{j} - 3\\hat{k}\\| = \\sqrt{1^2 + 2^2 + (-3)^2} = \\sqrt{1 + 4 + 9} = \\sqrt{14}"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = \\sqrt{14}x \\left[\\frac{\\hat{i} + 2\\hat{j} - 3\\hat{k}}{\\sqrt{14}}\\right] = \\sqrt{14}x\\,\\hat{l}"
+      },
+      {
+       "t": "p",
+       "text": "where $\\hat{l}$ is the unit direction vector of the line passing through the origin."
+      },
+      {
+       "t": "h3",
+       "text": "Step 3: Set Interpretation and Matrix Rank Verification"
+      },
+      {
+       "t": "p",
+       "text": "The set $V$ is **not** the set of all possible 3D vectors; it contains only those vectors collinear with $[1, 2, -3]^T$:"
+      },
+      {
+       "t": "math",
+       "tex": "V = \\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ -3 \\end{bmatrix}, \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}, \\begin{bmatrix} -1 \\\\ -2 \\\\ 3 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ -6 \\end{bmatrix}, \\dots \\right\\}"
+      },
+      {
+       "t": "p",
+       "text": "Construct a matrix $D$ by stacking sample row vectors from $V$:"
+      },
+      {
+       "t": "math",
+       "tex": "D = \\begin{bmatrix} 1 & 2 & -3 \\\\ 0 & 0 & 0 \\\\ -1 & -2 & 3 \\\\ 2 & 4 & -6 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Apply elementary row operations:"
+      },
+      {
+       "t": "math",
+       "tex": "R_3 \\to R_3 + R_1, \\quad R_4 \\to R_4 - 2R_1"
+      },
+      {
+       "t": "math",
+       "tex": "D \\sim \\begin{bmatrix} 1 & 2 & -3 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Since there is exactly **1 non-zero row** in row echelon form:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(D) = 1 \\implies \\mathbf{1\\text{-D Span}}"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Geometric Insight:** The intersection of two distinct planes passing through the origin in $\\mathbb{R}^3$ ($y - 2x = 0$ and $x + y + z = 0$) forms a 1-dimensional line passing through the origin. A line through the origin is a 1-dimensional subspace."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -16214,96 +16277,95 @@ export default {
      "text": "Determine the dimension of the span of $V$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step 1: Constraint Identification"
-    },
-    {
-     "t": "p",
-     "text": "The ambient space is $\\mathbb{R}^4$ (ambient dimension $n = 4$). We are given 2 independent linear constraints:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$a + b + c = 0 \\implies c = -(a + b)$",
-      "$d = 3a$"
-     ]
-    },
-    {
-     "t": "h3",
-     "text": "Step 2: Degrees of Freedom & Free Variables"
-    },
-    {
-     "t": "p",
-     "text": "Select free and dependent variables:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $a$ and $b$ be **free variables**.",
-      "Then $c$ is **dependent** on $a$ and $b$ ($c = -a - b$).",
-      "$d$ is **dependent** on $a$ ($d = 3a$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Alternatively, one could choose $b$ and $c$ as free variables, leaving $a$ and $d$ dependent. In all cases:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Number of independent variables} = \\text{Total variables} - \\text{Number of independent constraints} = 4 - 2 = 2"
-    },
-    {
-     "t": "h3",
-     "text": "Step 3: Basis Vector Construction"
-    },
-    {
-     "t": "p",
-     "text": "Express any vector $\\vec{X} \\in V$ parametrically:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{X} = \\begin{bmatrix} a \\\\ b \\\\ c \\\\ d \\end{bmatrix} = \\begin{bmatrix} a \\\\ b \\\\ -a - b \\\\ 3a \\end{bmatrix} = a \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\\\ 3 \\end{bmatrix} + b \\begin{bmatrix} 0 \\\\ 1 \\\\ -1 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Sample vectors evaluated on the slide:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Setting $a = 1, b = 2 \\implies c = -3, d = 3$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{A} = \\begin{bmatrix} 1 \\\\ 2 \\\\ -3 \\\\ 3 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Setting $a = 2, b = -6 \\implies c = 4, d = 6$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{B} = \\begin{bmatrix} 2 \\\\ -6 \\\\ 4 \\\\ 6 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Vectors $\\vec{A}$ and $\\vec{B}$ are linearly independent and satisfy both constraints. Thus:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{Span} = 2\\text{-D} \\implies 2\\text{ Independent Vectors}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step 1: Constraint Identification"
+      },
+      {
+       "t": "p",
+       "text": "The ambient space is $\\mathbb{R}^4$ (ambient dimension $n = 4$). We are given 2 independent linear constraints:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$a + b + c = 0 \\implies c = -(a + b)$",
+        "$d = 3a$"
+       ]
+      },
+      {
+       "t": "h3",
+       "text": "Step 2: Degrees of Freedom & Free Variables"
+      },
+      {
+       "t": "p",
+       "text": "Select free and dependent variables:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $a$ and $b$ be **free variables**.",
+        "Then $c$ is **dependent** on $a$ and $b$ ($c = -a - b$).",
+        "$d$ is **dependent** on $a$ ($d = 3a$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Alternatively, one could choose $b$ and $c$ as free variables, leaving $a$ and $d$ dependent. In all cases:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Number of independent variables} = \\text{Total variables} - \\text{Number of independent constraints} = 4 - 2 = 2"
+      },
+      {
+       "t": "h3",
+       "text": "Step 3: Basis Vector Construction"
+      },
+      {
+       "t": "p",
+       "text": "Express any vector $\\vec{X} \\in V$ parametrically:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{X} = \\begin{bmatrix} a \\\\ b \\\\ c \\\\ d \\end{bmatrix} = \\begin{bmatrix} a \\\\ b \\\\ -a - b \\\\ 3a \\end{bmatrix} = a \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\\\ 3 \\end{bmatrix} + b \\begin{bmatrix} 0 \\\\ 1 \\\\ -1 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Sample vectors evaluated on the slide:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Setting $a = 1, b = 2 \\implies c = -3, d = 3$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{A} = \\begin{bmatrix} 1 \\\\ 2 \\\\ -3 \\\\ 3 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Setting $a = 2, b = -6 \\implies c = 4, d = 6$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{B} = \\begin{bmatrix} 2 \\\\ -6 \\\\ 4 \\\\ 6 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Vectors $\\vec{A}$ and $\\vec{B}$ are linearly independent and satisfy both constraints. Thus:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{Span} = 2\\text{-D} \\implies 2\\text{ Independent Vectors}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -16339,80 +16401,79 @@ export default {
      "text": "*(Note: $\\alpha$ and $\\beta$ can simultaneously be zero, generating the zero vector).*"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step-by-Step Algebraic Solution (Slide 255)"
-    },
-    {
-     "t": "p",
-     "text": "Set up the vector equation:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha \\begin{bmatrix} 1 & 3 \\end{bmatrix} + \\beta \\begin{bmatrix} -1 & 2 \\end{bmatrix} = \\begin{bmatrix} 2 & 4 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha(\\hat{i} + 3\\hat{j}) + \\beta(-\\hat{i} + 2\\hat{j}) = 2\\hat{i} + 4\\hat{j}"
-    },
-    {
-     "t": "p",
-     "text": "Equate corresponding components:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\n\\alpha - \\beta &= 2 \\quad &\\text{--- (1)} \\\\\n3\\alpha + 2\\beta &= 4 \\quad &\\text{--- (2)}\n\\end{aligned}"
-    },
-    {
-     "t": "h3",
-     "text": "Matrix Form & Consistency Test:"
-    },
-    {
-     "t": "p",
-     "text": "Express the system as an augmented matrix $[A : B]$:"
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] = \\begin{bmatrix} 1 & -1 & : & 2 \\\\ 3 & 2 & : & 4 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Apply the row operation $R_2 \\to R_2 - 3R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] \\sim \\begin{bmatrix} 1 & -1 & : & 2 \\\\ 0 & 5 & : & -2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate ranks:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = 2, \\quad \\rho(A : B) = 2"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\rho(A) = \\rho(A : B) = n = 2$, the system is **consistent** with a **unique solution**:"
-    },
-    {
-     "t": "math",
-     "tex": "5\\beta = -2 \\implies \\beta = -\\frac{2}{5} = -0.4"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha = 2 + \\beta = 2 - 0.4 = 1.6"
-    },
-    {
-     "t": "p",
-     "text": "**Conclusion:** The scalars exist ($\\alpha = 1.6, \\beta = -0.4$), so vector $[2, 4]$ **belongs to the linear span** of $[1, 3]$ and $[-1, 2]$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step-by-Step Algebraic Solution (Slide 255)"
+      },
+      {
+       "t": "p",
+       "text": "Set up the vector equation:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha \\begin{bmatrix} 1 & 3 \\end{bmatrix} + \\beta \\begin{bmatrix} -1 & 2 \\end{bmatrix} = \\begin{bmatrix} 2 & 4 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha(\\hat{i} + 3\\hat{j}) + \\beta(-\\hat{i} + 2\\hat{j}) = 2\\hat{i} + 4\\hat{j}"
+      },
+      {
+       "t": "p",
+       "text": "Equate corresponding components:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\n\\alpha - \\beta &= 2 \\quad &\\text{--- (1)} \\\\\n3\\alpha + 2\\beta &= 4 \\quad &\\text{--- (2)}\n\\end{aligned}"
+      },
+      {
+       "t": "h3",
+       "text": "Matrix Form & Consistency Test:"
+      },
+      {
+       "t": "p",
+       "text": "Express the system as an augmented matrix $[A : B]$:"
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] = \\begin{bmatrix} 1 & -1 & : & 2 \\\\ 3 & 2 & : & 4 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Apply the row operation $R_2 \\to R_2 - 3R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] \\sim \\begin{bmatrix} 1 & -1 & : & 2 \\\\ 0 & 5 & : & -2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate ranks:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = 2, \\quad \\rho(A : B) = 2"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\rho(A) = \\rho(A : B) = n = 2$, the system is **consistent** with a **unique solution**:"
+      },
+      {
+       "t": "math",
+       "tex": "5\\beta = -2 \\implies \\beta = -\\frac{2}{5} = -0.4"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha = 2 + \\beta = 2 - 0.4 = 1.6"
+      },
+      {
+       "t": "p",
+       "text": "**Conclusion:** The scalars exist ($\\alpha = 1.6, \\beta = -0.4$), so vector $[2, 4]$ **belongs to the linear span** of $[1, 3]$ and $[-1, 2]$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -16452,45 +16513,44 @@ export default {
      "text": "Comparative Case Study (Slide 257)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h4",
-     "text": "Case 1: Check if $[1, 3]$ and $[-1, 2]$ span $\\mathbb{R}^2$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\text{Number of independent vectors} = 2$.",
-      "$\\text{Span dimension} = 2\\text{-D}$.",
-      "$\\text{Target space} = \\mathbb{R}^2$ (dimension 2).",
-      "**Answer:** **YES**, they span $\\mathbb{R}^2$."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Case 2: Check if $[1, 3]$ and $[2, 6]$ span $\\mathbb{R}^2$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $\\vec{A} = [1, 3]$ and $\\vec{B} = [2, 6]$.",
-      "Observe that $\\vec{B} = 2\\vec{A}$.",
-      "The vectors are collinear (linearly dependent).",
-      "$\\text{Number of independent vectors} = 1 \\implies 1\\text{-D Span}$ (a single line through the origin).",
-      "**Answer:** **NO**, they do not span $\\mathbb{R}^2$."
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**GATE Exam Trap:** Two vectors in $\\mathbb{R}^2$ span $\\mathbb{R}^2$ **if and only if** they are linearly independent. If their determinant is zero, their span collapses to a 1D line or the origin."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h4",
+       "text": "Case 1: Check if $[1, 3]$ and $[-1, 2]$ span $\\mathbb{R}^2$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\text{Number of independent vectors} = 2$.",
+        "$\\text{Span dimension} = 2\\text{-D}$.",
+        "$\\text{Target space} = \\mathbb{R}^2$ (dimension 2).",
+        "**Answer:** **YES**, they span $\\mathbb{R}^2$."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Case 2: Check if $[1, 3]$ and $[2, 6]$ span $\\mathbb{R}^2$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $\\vec{A} = [1, 3]$ and $\\vec{B} = [2, 6]$.",
+        "Observe that $\\vec{B} = 2\\vec{A}$.",
+        "The vectors are collinear (linearly dependent).",
+        "$\\text{Number of independent vectors} = 1 \\implies 1\\text{-D Span}$ (a single line through the origin).",
+        "**Answer:** **NO**, they do not span $\\mathbb{R}^2$."
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**GATE Exam Trap:** Two vectors in $\\mathbb{R}^2$ span $\\mathbb{R}^2$ **if and only if** they are linearly independent. If their determinant is zero, their span collapses to a 1D line or the origin."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -16514,92 +16574,91 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Detailed Analysis of Each Option:"
-    },
-    {
-     "t": "h4",
-     "text": "Option (a):"
-    },
-    {
-     "t": "math",
-     "tex": "M_a = \\begin{bmatrix} 1 & -1 \\\\ 2 & 2 \\end{bmatrix} \\implies \\det(M_a) = 2 - (-2) = 4 \\neq 0"
-    },
-    {
-     "t": "p",
-     "text": "$\\rho(M_a) = 2 \\implies 2$ linearly independent vectors in $\\mathbb{R}^2$.\n**Result:** **Spans $\\mathbb{R}^2$** ($\\checkmark$)."
-    },
-    {
-     "t": "h4",
-     "text": "Option (b):"
-    },
-    {
-     "t": "math",
-     "tex": "M_b = \\begin{bmatrix} 1 & 0.5 \\\\ 2 & 1 \\end{bmatrix} \\implies v_2 = 0.5\\,v_1"
-    },
-    {
-     "t": "p",
-     "text": "$\\rho(M_b) = 1 \\implies$ only 1 independent vector $\\implies$ 1-D span.\n**Result:** **Does NOT span $\\mathbb{R}^2$** ($\\times$)."
-    },
-    {
-     "t": "h4",
-     "text": "Option (c):"
-    },
-    {
-     "t": "p",
-     "text": "Form matrix with vectors as columns:"
-    },
-    {
-     "t": "math",
-     "tex": "M_c = \\begin{bmatrix} 1 & 0.5 & 3 \\\\ 2 & 1 & -1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Row reduction $R_2 \\to R_2 - 2R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "M_c \\sim \\begin{bmatrix} 1 & 0.5 & 3 \\\\ 0 & 0 & -7 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "The matrix has 2 non-zero rows $\\implies \\rho(M_c) = 2$.\nAlthough the set contains 3 vectors (and is therefore linearly dependent), it contains a subset of 2 linearly independent vectors ($v_1$ and $v_3$).\n**Result:** **Spans $\\mathbb{R}^2$** ($\\checkmark$)."
-    },
-    {
-     "t": "h4",
-     "text": "Option (d):"
-    },
-    {
-     "t": "p",
-     "text": "Observe the scalar multiples:"
-    },
-    {
-     "t": "math",
-     "tex": "v_2 = 2v_1, \\quad v_3 = 4v_1, \\quad v_4 = 8v_1"
-    },
-    {
-     "t": "p",
-     "text": "Form matrix $M_d$:"
-    },
-    {
-     "t": "math",
-     "tex": "M_d = \\begin{bmatrix} 2 & 4 & 8 & 16 \\\\ 3 & 6 & 12 & 24 \\end{bmatrix} \\xrightarrow{R_2 \\to 2R_2 - 3R_1} \\begin{bmatrix} 2 & 4 & 8 & 16 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "$\\rho(M_d) = 1 \\implies$ only 1 independent vector $\\implies$ 1-D span.\n**Result:** **Does NOT span $\\mathbb{R}^2$** ($\\times$)."
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** Options **(a)** and **(c)** span $\\mathbb{R}^2$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Detailed Analysis of Each Option:"
+      },
+      {
+       "t": "h4",
+       "text": "Option (a):"
+      },
+      {
+       "t": "math",
+       "tex": "M_a = \\begin{bmatrix} 1 & -1 \\\\ 2 & 2 \\end{bmatrix} \\implies \\det(M_a) = 2 - (-2) = 4 \\neq 0"
+      },
+      {
+       "t": "p",
+       "text": "$\\rho(M_a) = 2 \\implies 2$ linearly independent vectors in $\\mathbb{R}^2$.\n**Result:** **Spans $\\mathbb{R}^2$** ($\\checkmark$)."
+      },
+      {
+       "t": "h4",
+       "text": "Option (b):"
+      },
+      {
+       "t": "math",
+       "tex": "M_b = \\begin{bmatrix} 1 & 0.5 \\\\ 2 & 1 \\end{bmatrix} \\implies v_2 = 0.5\\,v_1"
+      },
+      {
+       "t": "p",
+       "text": "$\\rho(M_b) = 1 \\implies$ only 1 independent vector $\\implies$ 1-D span.\n**Result:** **Does NOT span $\\mathbb{R}^2$** ($\\times$)."
+      },
+      {
+       "t": "h4",
+       "text": "Option (c):"
+      },
+      {
+       "t": "p",
+       "text": "Form matrix with vectors as columns:"
+      },
+      {
+       "t": "math",
+       "tex": "M_c = \\begin{bmatrix} 1 & 0.5 & 3 \\\\ 2 & 1 & -1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Row reduction $R_2 \\to R_2 - 2R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "M_c \\sim \\begin{bmatrix} 1 & 0.5 & 3 \\\\ 0 & 0 & -7 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "The matrix has 2 non-zero rows $\\implies \\rho(M_c) = 2$.\nAlthough the set contains 3 vectors (and is therefore linearly dependent), it contains a subset of 2 linearly independent vectors ($v_1$ and $v_3$).\n**Result:** **Spans $\\mathbb{R}^2$** ($\\checkmark$)."
+      },
+      {
+       "t": "h4",
+       "text": "Option (d):"
+      },
+      {
+       "t": "p",
+       "text": "Observe the scalar multiples:"
+      },
+      {
+       "t": "math",
+       "tex": "v_2 = 2v_1, \\quad v_3 = 4v_1, \\quad v_4 = 8v_1"
+      },
+      {
+       "t": "p",
+       "text": "Form matrix $M_d$:"
+      },
+      {
+       "t": "math",
+       "tex": "M_d = \\begin{bmatrix} 2 & 4 & 8 & 16 \\\\ 3 & 6 & 12 & 24 \\end{bmatrix} \\xrightarrow{R_2 \\to 2R_2 - 3R_1} \\begin{bmatrix} 2 & 4 & 8 & 16 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "$\\rho(M_d) = 1 \\implies$ only 1 independent vector $\\implies$ 1-D span.\n**Result:** **Does NOT span $\\mathbb{R}^2$** ($\\times$)."
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** Options **(a)** and **(c)** span $\\mathbb{R}^2$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -16700,126 +16759,125 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Verification of Options:"
-    },
-    {
-     "t": "h4",
-     "text": "Option (a) (Slide 260):"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ 5 \\end{bmatrix} \\right\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Condition check: $v_1$: $y = 2(1) = 2$ ($\\checkmark$); $v_2$: $y = 2(2) = 4$ ($\\checkmark$). Both belong to $V$.",
-      "Independence check: $\\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix} \\neq c \\begin{bmatrix} 2 \\\\ 4 \\\\ 5 \\end{bmatrix}$ because $3/5 \\neq 1/2$.",
-      "Result: 2 independent vectors satisfying condition $\\implies$ **Spans $V$** ($\\checkmark$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Option (b) (Slide 260):"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ 5 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 3 \\\\ 7 \\end{bmatrix} \\right\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Condition check: For $v_2$, $x = 2, y = 3 \\implies y \\neq 2x$ ($3 \\neq 4$).",
-      "Result: Vector does not belong to the subspace $\\implies$ **Does NOT span $V$** ($\\times$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Option (c) (Slide 260):"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ 8 \\end{bmatrix}, \\begin{bmatrix} 6 \\\\ 12 \\\\ 24 \\end{bmatrix} \\right\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Condition check: All satisfy $y = 2x$.",
-      "Independence check: $v_2 = 2v_1, v_3 = 6v_1 \\implies$ Only 1 linearly independent vector (1-D span).",
-      "Result: **Does NOT span $V$** ($\\times$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Option (d) (Slide 260):"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ 8 \\end{bmatrix}, \\begin{bmatrix} 3 \\\\ 6 \\\\ 7 \\end{bmatrix} \\right\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Condition check: All vectors satisfy $y = 2x$.",
-      "Independence check: $v_2 = 2v_1$, but $v_3$ is independent of $v_1$ ($7 \\neq 4 \\times 3 = 12$).",
-      "Result: Contains 2 linearly independent vectors satisfying condition $\\implies$ **Spans $V$** ($\\checkmark$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Option (e) (Slide 261):"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\{ \\begin{bmatrix} 2 \\\\ 4 \\\\ 1 \\end{bmatrix}, \\begin{bmatrix} 3 \\\\ 5 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 4 \\\\ 8 \\\\ -3 \\end{bmatrix} \\right\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Vector 1: $[2, 4, 1]^T$ satisfies $y = 2x$ ($\\checkmark$).",
-      "Vector 2: $[3, 5, 4]^T$ fails $y = 2x$ ($5 \\neq 6$) ($\\times$).",
-      "Vector 3: $[4, 8, -3]^T$ satisfies $y = 2x$ ($\\checkmark$).",
-      "Vectors 1 and 3 are independent: $1/(-3) \\neq 2/4$.",
-      "Linear combination: Setting the scalar coefficient of vector 2 to zero:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{X} = \\alpha \\begin{bmatrix} 2 \\\\ 4 \\\\ 1 \\end{bmatrix} + 0 \\begin{bmatrix} 3 \\\\ 5 \\\\ 4 \\end{bmatrix} + \\gamma \\begin{bmatrix} 4 \\\\ 8 \\\\ -3 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "This spans all of $V$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Result: The set contains a spanning subset for $V$ $\\implies$ **Spans $V$** ($\\checkmark$)."
-     ]
-    },
-    {
-     "t": "h4",
-     "text": "Option (f) (Slide 261):"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\{ \\begin{bmatrix} 2 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 1 \\\\ 3 \\end{bmatrix}, \\begin{bmatrix} 4 \\\\ 7 \\end{bmatrix} \\right\\}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Dimensionality check: Vectors are 2-dimensional ($2 \\times 1$), whereas $V \\subset \\mathbb{R}^3$ ($3 \\times 1$).",
-      "Result: Dimensionality mismatch $\\implies$ **Does NOT span $V$** ($\\times$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Verification of Options:"
+      },
+      {
+       "t": "h4",
+       "text": "Option (a) (Slide 260):"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ 5 \\end{bmatrix} \\right\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Condition check: $v_1$: $y = 2(1) = 2$ ($\\checkmark$); $v_2$: $y = 2(2) = 4$ ($\\checkmark$). Both belong to $V$.",
+        "Independence check: $\\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix} \\neq c \\begin{bmatrix} 2 \\\\ 4 \\\\ 5 \\end{bmatrix}$ because $3/5 \\neq 1/2$.",
+        "Result: 2 independent vectors satisfying condition $\\implies$ **Spans $V$** ($\\checkmark$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Option (b) (Slide 260):"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ 5 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 3 \\\\ 7 \\end{bmatrix} \\right\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Condition check: For $v_2$, $x = 2, y = 3 \\implies y \\neq 2x$ ($3 \\neq 4$).",
+        "Result: Vector does not belong to the subspace $\\implies$ **Does NOT span $V$** ($\\times$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Option (c) (Slide 260):"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ 8 \\end{bmatrix}, \\begin{bmatrix} 6 \\\\ 12 \\\\ 24 \\end{bmatrix} \\right\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Condition check: All satisfy $y = 2x$.",
+        "Independence check: $v_2 = 2v_1, v_3 = 6v_1 \\implies$ Only 1 linearly independent vector (1-D span).",
+        "Result: **Does NOT span $V$** ($\\times$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Option (d) (Slide 260):"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ 8 \\end{bmatrix}, \\begin{bmatrix} 3 \\\\ 6 \\\\ 7 \\end{bmatrix} \\right\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Condition check: All vectors satisfy $y = 2x$.",
+        "Independence check: $v_2 = 2v_1$, but $v_3$ is independent of $v_1$ ($7 \\neq 4 \\times 3 = 12$).",
+        "Result: Contains 2 linearly independent vectors satisfying condition $\\implies$ **Spans $V$** ($\\checkmark$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Option (e) (Slide 261):"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\{ \\begin{bmatrix} 2 \\\\ 4 \\\\ 1 \\end{bmatrix}, \\begin{bmatrix} 3 \\\\ 5 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 4 \\\\ 8 \\\\ -3 \\end{bmatrix} \\right\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Vector 1: $[2, 4, 1]^T$ satisfies $y = 2x$ ($\\checkmark$).",
+        "Vector 2: $[3, 5, 4]^T$ fails $y = 2x$ ($5 \\neq 6$) ($\\times$).",
+        "Vector 3: $[4, 8, -3]^T$ satisfies $y = 2x$ ($\\checkmark$).",
+        "Vectors 1 and 3 are independent: $1/(-3) \\neq 2/4$.",
+        "Linear combination: Setting the scalar coefficient of vector 2 to zero:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{X} = \\alpha \\begin{bmatrix} 2 \\\\ 4 \\\\ 1 \\end{bmatrix} + 0 \\begin{bmatrix} 3 \\\\ 5 \\\\ 4 \\end{bmatrix} + \\gamma \\begin{bmatrix} 4 \\\\ 8 \\\\ -3 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "This spans all of $V$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Result: The set contains a spanning subset for $V$ $\\implies$ **Spans $V$** ($\\checkmark$)."
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Option (f) (Slide 261):"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\{ \\begin{bmatrix} 2 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 1 \\\\ 3 \\end{bmatrix}, \\begin{bmatrix} 4 \\\\ 7 \\end{bmatrix} \\right\\}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Dimensionality check: Vectors are 2-dimensional ($2 \\times 1$), whereas $V \\subset \\mathbb{R}^3$ ($3 \\times 1$).",
+        "Result: Dimensionality mismatch $\\implies$ **Does NOT span $V$** ($\\times$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -16846,25 +16904,24 @@ export default {
      "text": "As established in Slide 251, $y = 2x$ and $z = -3x$. Any vector in $V$ must be a scalar multiple of $\\begin{bmatrix} 1 \\\\ 2 \\\\ -3 \\end{bmatrix}$. Thus, $\\dim(V) = 1$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Verification of Options:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**(a)** $\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ -3 \\end{bmatrix} \\right\\}$: Satisfies both conditions, has 1 independent vector $\\implies$ **Spans $V$** ($\\checkmark$).",
-      "**(b)** $\\left\\{ \\begin{bmatrix} 2 \\\\ 4 \\\\ -6 \\end{bmatrix}, \\begin{bmatrix} 4 \\\\ 8 \\\\ -12 \\end{bmatrix}, \\begin{bmatrix} 6 \\\\ 12 \\\\ -18 \\end{bmatrix} \\right\\}$: All satisfy both conditions, collinear multiples $\\implies$ 1-D span $\\implies$ **Spans $V$** ($\\checkmark$).",
-      "**(c)** $\\left\\{ \\begin{bmatrix} 3 \\\\ 6 \\\\ -9 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ 8 \\end{bmatrix} \\right\\}$: First vector satisfies both conditions ($3, 6, -9$). Second vector fails $x+y+z=0$ ($2+4+8 = 14 \\neq 0$). However, taking scalar $0$ for the second vector allows the set to span $V$ $\\implies$ **Spans $V$** ($\\checkmark$).",
-      "**(d)** $\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ 8 \\end{bmatrix}, \\begin{bmatrix} 3 \\\\ 6 \\\\ 7 \\end{bmatrix} \\right\\}$: None of these vectors satisfy $x+y+z=0$ ($1+2+4=7 \\neq 0$, $2+4+8=14 \\neq 0$, $3+6+7=16 \\neq 0$). Thus, no vector in $V$ (other than $\\vec{0}$) can be formed $\\implies$ **Does NOT span $V$** ($\\times$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Verification of Options:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**(a)** $\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ -3 \\end{bmatrix} \\right\\}$: Satisfies both conditions, has 1 independent vector $\\implies$ **Spans $V$** ($\\checkmark$).",
+        "**(b)** $\\left\\{ \\begin{bmatrix} 2 \\\\ 4 \\\\ -6 \\end{bmatrix}, \\begin{bmatrix} 4 \\\\ 8 \\\\ -12 \\end{bmatrix}, \\begin{bmatrix} 6 \\\\ 12 \\\\ -18 \\end{bmatrix} \\right\\}$: All satisfy both conditions, collinear multiples $\\implies$ 1-D span $\\implies$ **Spans $V$** ($\\checkmark$).",
+        "**(c)** $\\left\\{ \\begin{bmatrix} 3 \\\\ 6 \\\\ -9 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ 8 \\end{bmatrix} \\right\\}$: First vector satisfies both conditions ($3, 6, -9$). Second vector fails $x+y+z=0$ ($2+4+8 = 14 \\neq 0$). However, taking scalar $0$ for the second vector allows the set to span $V$ $\\implies$ **Spans $V$** ($\\checkmark$).",
+        "**(d)** $\\left\\{ \\begin{bmatrix} 1 \\\\ 2 \\\\ 4 \\end{bmatrix}, \\begin{bmatrix} 2 \\\\ 4 \\\\ 8 \\end{bmatrix}, \\begin{bmatrix} 3 \\\\ 6 \\\\ 7 \\end{bmatrix} \\right\\}$: None of these vectors satisfy $x+y+z=0$ ($1+2+4=7 \\neq 0$, $2+4+8=14 \\neq 0$, $3+6+7=16 \\neq 0$). Thus, no vector in $V$ (other than $\\vec{0}$) can be formed $\\implies$ **Does NOT span $V$** ($\\times$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -16888,64 +16945,63 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Mathematical Proofs:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Statement (A) is TRUE:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $S = \\{v_1, v_2, \\dots, v_n\\} \\subset \\mathbb{R}^n$ be linearly independent. Construct $A = [v_1\\; v_2\\; \\dots\\; v_n]$. Since the columns are independent, $\\rho(A) = n$. By the fundamental theorem of linear algebra, $\\operatorname{Col}(A) = \\mathbb{R}^n$, so $S$ spans $\\mathbb{R}^n$."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Statement (B) is TRUE:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If a set $S$ contains $k < n$ linearly independent vectors, $\\dim(\\operatorname{Span}(S)) = k < n = \\dim(\\mathbb{R}^n)$. A $k$-dimensional subspace cannot equal an $n$-dimensional space."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Statement (C) is TRUE:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $S = \\{v_1, \\dots, v_m\\}$ with $m > n$ in $\\mathbb{R}^n$. Construct $A_{n \\times m}$. The homogeneous system $Ax = 0$ has $m$ variables and $n$ equations. Since $m > n$, the number of free variables is $m - \\rho(A) \\ge m - n > 0$. Thus, non-trivial solutions exist, proving linear dependence."
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Statement (D) is TRUE:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$\\operatorname{Span}(S) = \\mathbb{R}^n \\iff \\dim(\\operatorname{Span}(S)) = n \\iff \\rho(S) = n \\iff S$ contains at least $n$ linearly independent vectors."
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** Statements **(A), (B), (C), and (D)** are all **TRUE**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Mathematical Proofs:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Statement (A) is TRUE:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $S = \\{v_1, v_2, \\dots, v_n\\} \\subset \\mathbb{R}^n$ be linearly independent. Construct $A = [v_1\\; v_2\\; \\dots\\; v_n]$. Since the columns are independent, $\\rho(A) = n$. By the fundamental theorem of linear algebra, $\\operatorname{Col}(A) = \\mathbb{R}^n$, so $S$ spans $\\mathbb{R}^n$."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Statement (B) is TRUE:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If a set $S$ contains $k < n$ linearly independent vectors, $\\dim(\\operatorname{Span}(S)) = k < n = \\dim(\\mathbb{R}^n)$. A $k$-dimensional subspace cannot equal an $n$-dimensional space."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Statement (C) is TRUE:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $S = \\{v_1, \\dots, v_m\\}$ with $m > n$ in $\\mathbb{R}^n$. Construct $A_{n \\times m}$. The homogeneous system $Ax = 0$ has $m$ variables and $n$ equations. Since $m > n$, the number of free variables is $m - \\rho(A) \\ge m - n > 0$. Thus, non-trivial solutions exist, proving linear dependence."
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Statement (D) is TRUE:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$\\operatorname{Span}(S) = \\mathbb{R}^n \\iff \\dim(\\operatorname{Span}(S)) = n \\iff \\rho(S) = n \\iff S$ contains at least $n$ linearly independent vectors."
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** Statements **(A), (B), (C), and (D)** are all **TRUE**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -16977,98 +17033,97 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step 1: Matrix Setup and Determinant Evaluation (Slide 265)"
-    },
-    {
-     "t": "p",
-     "text": "Construct the matrix $D$ with $v_1, v_2, v_3$ as rows:"
-    },
-    {
-     "t": "math",
-     "tex": "D = \\begin{bmatrix} 2 & -1 & 3 \\\\ 1 & 4 & -2 \\\\ \\lambda & 5 & 1 \\end{bmatrix}_{3 \\times 3}"
-    },
-    {
-     "t": "p",
-     "text": "Compute $\\det(D)$ by expanding along Row 1:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\n\\det(D) &= 2 \\begin{vmatrix} 4 & -2 \\\\ 5 & 1 \\end{vmatrix} - (-1) \\begin{vmatrix} 1 & -2 \\\\ \\lambda & 1 \\end{vmatrix} + 3 \\begin{vmatrix} 1 & 4 \\\\ \\lambda & 5 \\end{vmatrix} \\\\\n&= 2(4(1) - (-2)(5)) + 1(1(1) - (-2)\\lambda) + 3(1(5) - 4\\lambda) \\\\\n&= 2(4 + 10) + 1(1 + 2\\lambda) + 3(5 - 4\\lambda) \\\\\n&= 2(14) + (1 + 2\\lambda) + (15 - 12\\lambda) \\\\\n&= 28 + 1 + 15 + 2\\lambda - 12\\lambda \\\\\n&= 44 - 10\\lambda\n\\end{aligned}"
-    },
-    {
-     "t": "h3",
-     "text": "Step 2: Critical Value & Rank Bifurcation"
-    },
-    {
-     "t": "p",
-     "text": "Set $\\det(D) = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "44 - 10\\lambda = 0 \\implies 10\\lambda = 44 \\implies \\lambda = \\frac{44}{10} = \\frac{22}{5}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 1: $\\lambda \\neq \\frac{22}{5}$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(D) \\neq 0 \\implies \\rho(D) = 3"
-    },
-    {
-     "t": "p",
-     "text": "The three vectors are linearly independent.\n  They span $\\mathbb{R}^3$ and form a **basis of $\\mathbb{R}^3$**.\n  $\\implies$ **Statement (A) is TRUE.**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Case 2: $\\lambda = \\frac{22}{5}$**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(D) = 0 \\implies \\rho(D) < 3"
-    },
-    {
-     "t": "p",
-     "text": "The vectors are **linearly dependent**.\n  $\\implies$ **Statement (B) is TRUE.**"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate the rank of the submatrix formed by $v_1$ and $v_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} 2 & -1 \\\\ 1 & 4 \\end{vmatrix} = 8 - (-1) = 9 \\neq 0 \\implies \\rho(D) = 2"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\rho(D) = 2$, exactly 2 vectors are linearly independent.\n  A 2-dimensional subspace in $\\mathbb{R}^3$ is geometrically a **plane passing through the origin**.\n  $\\implies$ **Statement (D) is TRUE.**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Evaluation of Statement (C):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "When $\\lambda = \\frac{22}{5}$, $\\dim(\\operatorname{Span}\\{v_1, v_2, v_3\\}) = 2 \\neq 3$.\n  $\\implies$ **Statement (C) is FALSE.**"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** Statements **(A), (B), and (D)** are **TRUE**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step 1: Matrix Setup and Determinant Evaluation (Slide 265)"
+      },
+      {
+       "t": "p",
+       "text": "Construct the matrix $D$ with $v_1, v_2, v_3$ as rows:"
+      },
+      {
+       "t": "math",
+       "tex": "D = \\begin{bmatrix} 2 & -1 & 3 \\\\ 1 & 4 & -2 \\\\ \\lambda & 5 & 1 \\end{bmatrix}_{3 \\times 3}"
+      },
+      {
+       "t": "p",
+       "text": "Compute $\\det(D)$ by expanding along Row 1:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\n\\det(D) &= 2 \\begin{vmatrix} 4 & -2 \\\\ 5 & 1 \\end{vmatrix} - (-1) \\begin{vmatrix} 1 & -2 \\\\ \\lambda & 1 \\end{vmatrix} + 3 \\begin{vmatrix} 1 & 4 \\\\ \\lambda & 5 \\end{vmatrix} \\\\\n&= 2(4(1) - (-2)(5)) + 1(1(1) - (-2)\\lambda) + 3(1(5) - 4\\lambda) \\\\\n&= 2(4 + 10) + 1(1 + 2\\lambda) + 3(5 - 4\\lambda) \\\\\n&= 2(14) + (1 + 2\\lambda) + (15 - 12\\lambda) \\\\\n&= 28 + 1 + 15 + 2\\lambda - 12\\lambda \\\\\n&= 44 - 10\\lambda\n\\end{aligned}"
+      },
+      {
+       "t": "h3",
+       "text": "Step 2: Critical Value & Rank Bifurcation"
+      },
+      {
+       "t": "p",
+       "text": "Set $\\det(D) = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "44 - 10\\lambda = 0 \\implies 10\\lambda = 44 \\implies \\lambda = \\frac{44}{10} = \\frac{22}{5}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 1: $\\lambda \\neq \\frac{22}{5}$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(D) \\neq 0 \\implies \\rho(D) = 3"
+      },
+      {
+       "t": "p",
+       "text": "The three vectors are linearly independent.\n  They span $\\mathbb{R}^3$ and form a **basis of $\\mathbb{R}^3$**.\n  $\\implies$ **Statement (A) is TRUE.**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Case 2: $\\lambda = \\frac{22}{5}$**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(D) = 0 \\implies \\rho(D) < 3"
+      },
+      {
+       "t": "p",
+       "text": "The vectors are **linearly dependent**.\n  $\\implies$ **Statement (B) is TRUE.**"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate the rank of the submatrix formed by $v_1$ and $v_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} 2 & -1 \\\\ 1 & 4 \\end{vmatrix} = 8 - (-1) = 9 \\neq 0 \\implies \\rho(D) = 2"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\rho(D) = 2$, exactly 2 vectors are linearly independent.\n  A 2-dimensional subspace in $\\mathbb{R}^3$ is geometrically a **plane passing through the origin**.\n  $\\implies$ **Statement (D) is TRUE.**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Evaluation of Statement (C):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "When $\\lambda = \\frac{22}{5}$, $\\dim(\\operatorname{Span}\\{v_1, v_2, v_3\\}) = 2 \\neq 3$.\n  $\\implies$ **Statement (C) is FALSE.**"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** Statements **(A), (B), and (D)** are **TRUE**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17112,112 +17167,111 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step-by-Step Mathematical Justification:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Redundancy of Opposite Vectors:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Each reflected vector $-x_i$ is linearly dependent on $x_i$:"
-    },
-    {
-     "t": "math",
-     "tex": "-x_i = (-1) x_i"
-    },
-    {
-     "t": "p",
-     "text": "The span of a set of vectors is invariant under adding scalar multiples of existing vectors:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Span}\\{x_1, \\dots, x_m, -x_1, \\dots, -x_m\\} = \\operatorname{Span}\\{x_1, \\dots, x_m\\}"
-    },
-    {
-     "t": "p",
-     "text": "Therefore:"
-    },
-    {
-     "t": "math",
-     "tex": "d = \\dim(\\operatorname{Span}(S)) = \\dim(\\operatorname{Span}\\{x_1, \\dots, x_m\\})"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies$ **Statement (D) is TRUE.**"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Proof for Statement (B):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If $\\{x_1, \\dots, x_m\\}$ are linearly independent, then by definition of dimension, the subspace they span has dimension equal to the number of vectors:"
-    },
-    {
-     "t": "math",
-     "tex": "d = m"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies$ **Statement (B) is TRUE.**"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "**Proof for Statement (A):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Orthogonality Lemma:** Any set of non-zero, mutually orthogonal vectors is strictly linearly independent.\n   *Proof:* Suppose $\\sum_{i=1}^m c_i x_i = 0$. Take the inner product with $x_k$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\left\\langle x_k, \\sum_{i=1}^m c_i x_i \\right\\rangle = \\sum_{i=1}^m c_i \\langle x_k, x_i \\rangle = c_k \\|x_k\\|^2 = 0"
-    },
-    {
-     "t": "p",
-     "text": "Since $x_k \\neq 0 \\implies \\|x_k\\|^2 > 0 \\implies c_k = 0$ for all $k$.\n   Because the vectors are linearly independent, by Statement (B), $d = m$.\n   $\\implies$ **Statement (A) is TRUE.**"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "**Proof for Statement (C):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If $\\{x_1, \\dots, x_m\\}$ are linearly dependent, the maximal number of linearly independent vectors among them is strictly less than $m$. Hence:"
-    },
-    {
-     "t": "math",
-     "tex": "d = \\rho([x_1\\; \\dots\\; x_m]) < m"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies$ **Statement (C) is TRUE.**"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** Statements **(A), (B), (C), and (D)** are all **TRUE**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step-by-Step Mathematical Justification:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Redundancy of Opposite Vectors:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Each reflected vector $-x_i$ is linearly dependent on $x_i$:"
+      },
+      {
+       "t": "math",
+       "tex": "-x_i = (-1) x_i"
+      },
+      {
+       "t": "p",
+       "text": "The span of a set of vectors is invariant under adding scalar multiples of existing vectors:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Span}\\{x_1, \\dots, x_m, -x_1, \\dots, -x_m\\} = \\operatorname{Span}\\{x_1, \\dots, x_m\\}"
+      },
+      {
+       "t": "p",
+       "text": "Therefore:"
+      },
+      {
+       "t": "math",
+       "tex": "d = \\dim(\\operatorname{Span}(S)) = \\dim(\\operatorname{Span}\\{x_1, \\dots, x_m\\})"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies$ **Statement (D) is TRUE.**"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Proof for Statement (B):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If $\\{x_1, \\dots, x_m\\}$ are linearly independent, then by definition of dimension, the subspace they span has dimension equal to the number of vectors:"
+      },
+      {
+       "t": "math",
+       "tex": "d = m"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies$ **Statement (B) is TRUE.**"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "**Proof for Statement (A):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Orthogonality Lemma:** Any set of non-zero, mutually orthogonal vectors is strictly linearly independent.\n   *Proof:* Suppose $\\sum_{i=1}^m c_i x_i = 0$. Take the inner product with $x_k$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\left\\langle x_k, \\sum_{i=1}^m c_i x_i \\right\\rangle = \\sum_{i=1}^m c_i \\langle x_k, x_i \\rangle = c_k \\|x_k\\|^2 = 0"
+      },
+      {
+       "t": "p",
+       "text": "Since $x_k \\neq 0 \\implies \\|x_k\\|^2 > 0 \\implies c_k = 0$ for all $k$.\n   Because the vectors are linearly independent, by Statement (B), $d = m$.\n   $\\implies$ **Statement (A) is TRUE.**"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "**Proof for Statement (C):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If $\\{x_1, \\dots, x_m\\}$ are linearly dependent, the maximal number of linearly independent vectors among them is strictly less than $m$. Hence:"
+      },
+      {
+       "t": "math",
+       "tex": "d = \\rho([x_1\\; \\dots\\; x_m]) < m"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies$ **Statement (C) is TRUE.**"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** Statements **(A), (B), (C), and (D)** are all **TRUE**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17261,58 +17315,57 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Exhaustive Mathematical Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "Consider the homogeneous linear system $Ax = 0$:"
-    },
-    {
-     "t": "code",
-     "text": "                             Ax = 0\n                               |\n        +----------------------+----------------------+\n        |                                             |\n   Unique Solution                           Infinite Solutions\n     (Trivial: x = 0)                       (Non-Trivial: x \u2260 0)\n        |                                             |\n    \u03c1(A) = n                                      \u03c1(A) < n\n    |A| \u2260 0                                       |A| = 0\n    A is invertible                               A is non-invertible\n    \u03b7(A) = 0                                      \u03b7(A) = n - \u03c1(A) \u2265 1"
-    },
-    {
-     "t": "p",
-     "text": "Given that $x \\neq 0$ satisfies $Ax = 0$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Statement (C):** A non-zero vector $x$ satisfying $Ax = 0$ is by definition a **non-trivial solution** $\\implies$ **TRUE**.",
-      "**Statement (A):** Non-trivial solutions exist if and only if $\\operatorname{rank}(A) < n \\implies$ **TRUE**.",
-      "**Statement (B):** $\\operatorname{rank}(A) < n \\iff \\det(A) = 0 \\iff A$ is singular / **not invertible** $\\implies$ **TRUE**.",
-      "**Statement (D):** By the **Rank-Nullity Theorem**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n \\implies \\eta(A) = n - \\rho(A)"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\rho(A) < n$, $\\rho(A) \\le n - 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\eta(A) \\ge n - (n - 1) = 1"
-    },
-    {
-     "t": "p",
-     "text": "The nullity is at least 1 $\\implies$ **TRUE**."
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** Statements **(A), (B), (C), and (D)** are all **TRUE**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Exhaustive Mathematical Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "Consider the homogeneous linear system $Ax = 0$:"
+      },
+      {
+       "t": "code",
+       "text": "                             Ax = 0\n                               |\n        +----------------------+----------------------+\n        |                                             |\n   Unique Solution                           Infinite Solutions\n     (Trivial: x = 0)                       (Non-Trivial: x \u2260 0)\n        |                                             |\n    \u03c1(A) = n                                      \u03c1(A) < n\n    |A| \u2260 0                                       |A| = 0\n    A is invertible                               A is non-invertible\n    \u03b7(A) = 0                                      \u03b7(A) = n - \u03c1(A) \u2265 1"
+      },
+      {
+       "t": "p",
+       "text": "Given that $x \\neq 0$ satisfies $Ax = 0$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Statement (C):** A non-zero vector $x$ satisfying $Ax = 0$ is by definition a **non-trivial solution** $\\implies$ **TRUE**.",
+        "**Statement (A):** Non-trivial solutions exist if and only if $\\operatorname{rank}(A) < n \\implies$ **TRUE**.",
+        "**Statement (B):** $\\operatorname{rank}(A) < n \\iff \\det(A) = 0 \\iff A$ is singular / **not invertible** $\\implies$ **TRUE**.",
+        "**Statement (D):** By the **Rank-Nullity Theorem**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n \\implies \\eta(A) = n - \\rho(A)"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\rho(A) < n$, $\\rho(A) \\le n - 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\eta(A) \\ge n - (n - 1) = 1"
+      },
+      {
+       "t": "p",
+       "text": "The nullity is at least 1 $\\implies$ **TRUE**."
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** Statements **(A), (B), (C), and (D)** are all **TRUE**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17452,74 +17505,73 @@ export default {
      "text": "Show that $v_1 = \\begin{bmatrix} -2 \\\\ 1 \\\\ 0 \\end{bmatrix}$ and $v_2 = \\begin{bmatrix} -3 \\\\ 0 \\\\ 1 \\end{bmatrix}$ belong to $\\operatorname{Null}(A)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Multiplication Checks:"
-    },
-    {
-     "t": "math",
-     "tex": "Av_1 = \\begin{bmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{bmatrix} \\begin{bmatrix} -2 \\\\ 1 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 1(-2) + 2(1) + 3(0) \\\\ 2(-2) + 4(1) + 6(0) \\\\ 3(-2) + 6(1) + 9(0) \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix} \\implies v_1 \\in \\operatorname{Null}(A)"
-    },
-    {
-     "t": "math",
-     "tex": "Av_2 = \\begin{bmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{bmatrix} \\begin{bmatrix} -3 \\\\ 0 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 1(-3) + 2(0) + 3(1) \\\\ 2(-3) + 4(0) + 6(1) \\\\ 3(-3) + 6(0) + 9(1) \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix} \\implies v_2 \\in \\operatorname{Null}(A)"
-    },
-    {
-     "t": "h3",
-     "text": "Linearity Proof (Slide 274):"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Scalar multiplication closure:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A(\\alpha v_1) = \\alpha(A v_1) = \\alpha(\\mathbf{0}) = \\mathbf{0} \\implies \\alpha v_1 \\in \\operatorname{Null}(A)"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Vector addition closure:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A(\\alpha v_1 + \\beta v_2) = \\alpha A v_1 + \\beta A v_2 = \\alpha(\\mathbf{0}) + \\beta(\\mathbf{0}) = \\mathbf{0}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{A[\\alpha v_1 + \\beta v_2] = 0 \\implies (\\alpha v_1 + \\beta v_2) \\in \\operatorname{Null}(A)}"
-    },
-    {
-     "t": "h3",
-     "text": "Subspace Structure (Slide 275):"
-    },
-    {
-     "t": "p",
-     "text": "The null space contains infinitely many vectors generated by linear combinations of $v_1$ and $v_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Null}(A) = \\left\\{ c_1 \\begin{bmatrix} -2 \\\\ 1 \\\\ 0 \\end{bmatrix} + c_2 \\begin{bmatrix} -3 \\\\ 0 \\\\ 1 \\end{bmatrix} \\;\\middle|\\; c_1, c_2 \\in \\mathbb{R} \\right\\}"
-    },
-    {
-     "t": "p",
-     "text": "Since $v_1$ and $v_2$ are linearly independent, they form a basis for $\\operatorname{Null}(A)$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\dim(\\operatorname{Null}(A)) = 2 \\implies 2\\text{-D Span}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Multiplication Checks:"
+      },
+      {
+       "t": "math",
+       "tex": "Av_1 = \\begin{bmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{bmatrix} \\begin{bmatrix} -2 \\\\ 1 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 1(-2) + 2(1) + 3(0) \\\\ 2(-2) + 4(1) + 6(0) \\\\ 3(-2) + 6(1) + 9(0) \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix} \\implies v_1 \\in \\operatorname{Null}(A)"
+      },
+      {
+       "t": "math",
+       "tex": "Av_2 = \\begin{bmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{bmatrix} \\begin{bmatrix} -3 \\\\ 0 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 1(-3) + 2(0) + 3(1) \\\\ 2(-3) + 4(0) + 6(1) \\\\ 3(-3) + 6(0) + 9(1) \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix} \\implies v_2 \\in \\operatorname{Null}(A)"
+      },
+      {
+       "t": "h3",
+       "text": "Linearity Proof (Slide 274):"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Scalar multiplication closure:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A(\\alpha v_1) = \\alpha(A v_1) = \\alpha(\\mathbf{0}) = \\mathbf{0} \\implies \\alpha v_1 \\in \\operatorname{Null}(A)"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Vector addition closure:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A(\\alpha v_1 + \\beta v_2) = \\alpha A v_1 + \\beta A v_2 = \\alpha(\\mathbf{0}) + \\beta(\\mathbf{0}) = \\mathbf{0}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{A[\\alpha v_1 + \\beta v_2] = 0 \\implies (\\alpha v_1 + \\beta v_2) \\in \\operatorname{Null}(A)}"
+      },
+      {
+       "t": "h3",
+       "text": "Subspace Structure (Slide 275):"
+      },
+      {
+       "t": "p",
+       "text": "The null space contains infinitely many vectors generated by linear combinations of $v_1$ and $v_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Null}(A) = \\left\\{ c_1 \\begin{bmatrix} -2 \\\\ 1 \\\\ 0 \\end{bmatrix} + c_2 \\begin{bmatrix} -3 \\\\ 0 \\\\ 1 \\end{bmatrix} \\;\\middle|\\; c_1, c_2 \\in \\mathbb{R} \\right\\}"
+      },
+      {
+       "t": "p",
+       "text": "Since $v_1$ and $v_2$ are linearly independent, they form a basis for $\\operatorname{Null}(A)$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\dim(\\operatorname{Null}(A)) = 2 \\implies 2\\text{-D Span}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17555,96 +17607,95 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step 1: Rank and Nullity Determination (Slide 277)"
-    },
-    {
-     "t": "p",
-     "text": "Observe that $R_2 = 2R_1$ and $R_3 = 3R_1$.\nApplying row operations $R_2 \\to R_2 - 2R_1$ and $R_3 \\to R_3 - 3R_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\sim \\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix} \\implies \\rho(A) = 1"
-    },
-    {
-     "t": "p",
-     "text": "By the Rank-Nullity Theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "\\eta(A) = n - \\rho(A) = 3 - 1 = 2"
-    },
-    {
-     "t": "p",
-     "text": "Thus, there are **2 linearly independent vectors** in $\\operatorname{Null}(A)$, and the span is **2-dimensional**."
-    },
-    {
-     "t": "h3",
-     "text": "Step 2: System Equations (Slide 277)"
-    },
-    {
-     "t": "math",
-     "tex": "Ax = 0 \\implies \\begin{bmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "All three rows reduce to the single linear equation:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1 + 2x_2 + 3x_3 = 0"
-    },
-    {
-     "t": "h3",
-     "text": "Step 3: Parametric Solution & Basis Extraction (Slide 278)"
-    },
-    {
-     "t": "p",
-     "text": "We have 3 variables and 1 equation $\\implies 3 - 1 = 2$ free variables.\nAssign parameters:"
-    },
-    {
-     "t": "math",
-     "tex": "x_3 = c_1, \\quad x_2 = c_2"
-    },
-    {
-     "t": "p",
-     "text": "Express $x_1$ in terms of $c_1$ and $c_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1 = -2x_2 - 3x_3 = -2c_2 - 3c_1"
-    },
-    {
-     "t": "p",
-     "text": "Write the solution vector in vector form:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} -3c_1 - 2c_2 \\\\ c_2 \\\\ c_1 \\end{bmatrix} = c_1 \\begin{bmatrix} -3 \\\\ 0 \\\\ 1 \\end{bmatrix} + c_2 \\begin{bmatrix} -2 \\\\ 1 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "The vectors:"
-    },
-    {
-     "t": "math",
-     "tex": "v_1 = \\begin{bmatrix} -2 \\\\ 1 \\\\ 0 \\end{bmatrix}, \\quad v_2 = \\begin{bmatrix} -3 \\\\ 0 \\\\ 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "form a basis of $\\operatorname{Null}(A)$."
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\text{Span of Null Space} = 2\\text{-D}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step 1: Rank and Nullity Determination (Slide 277)"
+      },
+      {
+       "t": "p",
+       "text": "Observe that $R_2 = 2R_1$ and $R_3 = 3R_1$.\nApplying row operations $R_2 \\to R_2 - 2R_1$ and $R_3 \\to R_3 - 3R_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\sim \\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix} \\implies \\rho(A) = 1"
+      },
+      {
+       "t": "p",
+       "text": "By the Rank-Nullity Theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "\\eta(A) = n - \\rho(A) = 3 - 1 = 2"
+      },
+      {
+       "t": "p",
+       "text": "Thus, there are **2 linearly independent vectors** in $\\operatorname{Null}(A)$, and the span is **2-dimensional**."
+      },
+      {
+       "t": "h3",
+       "text": "Step 2: System Equations (Slide 277)"
+      },
+      {
+       "t": "math",
+       "tex": "Ax = 0 \\implies \\begin{bmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "All three rows reduce to the single linear equation:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1 + 2x_2 + 3x_3 = 0"
+      },
+      {
+       "t": "h3",
+       "text": "Step 3: Parametric Solution & Basis Extraction (Slide 278)"
+      },
+      {
+       "t": "p",
+       "text": "We have 3 variables and 1 equation $\\implies 3 - 1 = 2$ free variables.\nAssign parameters:"
+      },
+      {
+       "t": "math",
+       "tex": "x_3 = c_1, \\quad x_2 = c_2"
+      },
+      {
+       "t": "p",
+       "text": "Express $x_1$ in terms of $c_1$ and $c_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1 = -2x_2 - 3x_3 = -2c_2 - 3c_1"
+      },
+      {
+       "t": "p",
+       "text": "Write the solution vector in vector form:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} -3c_1 - 2c_2 \\\\ c_2 \\\\ c_1 \\end{bmatrix} = c_1 \\begin{bmatrix} -3 \\\\ 0 \\\\ 1 \\end{bmatrix} + c_2 \\begin{bmatrix} -2 \\\\ 1 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "The vectors:"
+      },
+      {
+       "t": "math",
+       "tex": "v_1 = \\begin{bmatrix} -2 \\\\ 1 \\\\ 0 \\end{bmatrix}, \\quad v_2 = \\begin{bmatrix} -3 \\\\ 0 \\\\ 1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "form a basis of $\\operatorname{Null}(A)$."
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\text{Span of Null Space} = 2\\text{-D}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17675,68 +17726,67 @@ export default {
      "tex": "A = \\begin{bmatrix} 2 & 4 \\\\ -1 & -2 \\end{bmatrix}_{2 \\times 2}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step 1: Rank and Nullity Evaluation"
-    },
-    {
-     "t": "p",
-     "text": "Observe that $R_1 = -2 R_2 \\implies \\rho(A) = 1$."
-    },
-    {
-     "t": "math",
-     "tex": "\\eta(A) = n - \\rho(A) = 2 - 1 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\dim(\\operatorname{Null}(A)) = 1 \\implies 1\\text{-D Span}}"
-    },
-    {
-     "t": "h3",
-     "text": "Step 2: Parametric Solution"
-    },
-    {
-     "t": "math",
-     "tex": "Ax = 0 \\implies \\begin{bmatrix} 2 & 4 \\\\ -1 & -2 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Both rows yield:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1 + 2x_2 = 0"
-    },
-    {
-     "t": "p",
-     "text": "Assign the free variable $x_2 = c_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "x_1 = -2c_1"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = c_1 \\begin{bmatrix} -2 \\\\ 1 \\end{bmatrix}"
-    },
-    {
-     "t": "h3",
-     "text": "Basis and Null Space:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Null}(A) = \\left\\{ c_1 \\begin{bmatrix} -2 \\\\ 1 \\end{bmatrix} \\;\\middle|\\; c_1 \\in \\mathbb{R} \\right\\} = \\left\\{ \\dots, \\begin{bmatrix} -2 \\\\ 1 \\end{bmatrix}, \\begin{bmatrix} -1 \\\\ 0.5 \\end{bmatrix}, \\begin{bmatrix} -3 \\\\ 1.5 \\end{bmatrix}, \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}, \\dots \\right\\}"
-    },
-    {
-     "t": "p",
-     "text": "Spanned by $1$ linearly independent vector $\\implies \\mathbf{1\\text{-D Span}}$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step 1: Rank and Nullity Evaluation"
+      },
+      {
+       "t": "p",
+       "text": "Observe that $R_1 = -2 R_2 \\implies \\rho(A) = 1$."
+      },
+      {
+       "t": "math",
+       "tex": "\\eta(A) = n - \\rho(A) = 2 - 1 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\dim(\\operatorname{Null}(A)) = 1 \\implies 1\\text{-D Span}}"
+      },
+      {
+       "t": "h3",
+       "text": "Step 2: Parametric Solution"
+      },
+      {
+       "t": "math",
+       "tex": "Ax = 0 \\implies \\begin{bmatrix} 2 & 4 \\\\ -1 & -2 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Both rows yield:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1 + 2x_2 = 0"
+      },
+      {
+       "t": "p",
+       "text": "Assign the free variable $x_2 = c_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "x_1 = -2c_1"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = c_1 \\begin{bmatrix} -2 \\\\ 1 \\end{bmatrix}"
+      },
+      {
+       "t": "h3",
+       "text": "Basis and Null Space:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Null}(A) = \\left\\{ c_1 \\begin{bmatrix} -2 \\\\ 1 \\end{bmatrix} \\;\\middle|\\; c_1 \\in \\mathbb{R} \\right\\} = \\left\\{ \\dots, \\begin{bmatrix} -2 \\\\ 1 \\end{bmatrix}, \\begin{bmatrix} -1 \\\\ 0.5 \\end{bmatrix}, \\begin{bmatrix} -3 \\\\ 1.5 \\end{bmatrix}, \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}, \\dots \\right\\}"
+      },
+      {
+       "t": "p",
+       "text": "Spanned by $1$ linearly independent vector $\\implies \\mathbf{1\\text{-D Span}}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17755,54 +17805,53 @@ export default {
      "tex": "A = \\begin{bmatrix} 1 & 2 & 1 \\\\ 3 & 5 & 1 \\\\ 2 & 4 & 1 \\end{bmatrix}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step 1: Row Echelon Reduction"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & 2 & 1 \\\\ 3 & 5 & 1 \\\\ 2 & 4 & 1 \\end{bmatrix} \\xrightarrow{\\substack{R_2 \\to R_2 - 3R_1 \\\\ R_3 \\to R_3 - 2R_1}} \\begin{bmatrix} 1 & 2 & 1 \\\\ 0 & -1 & -2 \\\\ 0 & 0 & -1 \\end{bmatrix}"
-    },
-    {
-     "t": "h3",
-     "text": "Step 2: Rank & Nullity Calculation"
-    },
-    {
-     "t": "p",
-     "text": "The matrix has 3 non-zero rows $\\implies \\rho(A) = 3$."
-    },
-    {
-     "t": "math",
-     "tex": "\\eta(A) = n - \\rho(A) = 3 - 3 = 0"
-    },
-    {
-     "t": "h3",
-     "text": "Step 3: Null Space Identification"
-    },
-    {
-     "t": "p",
-     "text": "Because $\\rho(A) = n = 3$, $Ax = 0$ has only the **unique trivial solution**:"
-    },
-    {
-     "t": "math",
-     "tex": "x = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\operatorname{Null}(A) = \\left\\{ \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix} \\right\\}}"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "The null space of a non-singular (full-rank) matrix contains only the zero vector. Its dimension is $0$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step 1: Row Echelon Reduction"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & 2 & 1 \\\\ 3 & 5 & 1 \\\\ 2 & 4 & 1 \\end{bmatrix} \\xrightarrow{\\substack{R_2 \\to R_2 - 3R_1 \\\\ R_3 \\to R_3 - 2R_1}} \\begin{bmatrix} 1 & 2 & 1 \\\\ 0 & -1 & -2 \\\\ 0 & 0 & -1 \\end{bmatrix}"
+      },
+      {
+       "t": "h3",
+       "text": "Step 2: Rank & Nullity Calculation"
+      },
+      {
+       "t": "p",
+       "text": "The matrix has 3 non-zero rows $\\implies \\rho(A) = 3$."
+      },
+      {
+       "t": "math",
+       "tex": "\\eta(A) = n - \\rho(A) = 3 - 3 = 0"
+      },
+      {
+       "t": "h3",
+       "text": "Step 3: Null Space Identification"
+      },
+      {
+       "t": "p",
+       "text": "Because $\\rho(A) = n = 3$, $Ax = 0$ has only the **unique trivial solution**:"
+      },
+      {
+       "t": "math",
+       "tex": "x = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\operatorname{Null}(A) = \\left\\{ \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix} \\right\\}}"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "The null space of a non-singular (full-rank) matrix contains only the zero vector. Its dimension is $0$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17821,96 +17870,95 @@ export default {
      "tex": "A = \\begin{bmatrix} 2 & 3 & 4 & 1 \\\\ 4 & 6 & 2 & 1 \\\\ 6 & 9 & 12 & 1 \\end{bmatrix}_{3 \\times 4}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step 1: Row Operations to Echelon Form (Slide 282)"
-    },
-    {
-     "t": "p",
-     "text": "Apply row operations:"
-    },
-    {
-     "t": "math",
-     "tex": "R_2 \\to R_2 - 2R_1: \\quad [4-4,\\; 6-6,\\; 2-8,\\; 1-2] = [0,\\; 0,\\; -6,\\; -1]"
-    },
-    {
-     "t": "math",
-     "tex": "R_3 \\to R_3 - 3R_1: \\quad [6-6,\\; 9-9,\\; 12-12,\\; 1-3] = [0,\\; 0,\\; 0,\\; -2]"
-    },
-    {
-     "t": "math",
-     "tex": "A \\sim \\begin{bmatrix} 2 & 3 & 4 & 1 \\\\ 0 & 0 & -6 & -1 \\\\ 0 & 0 & 0 & -2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "There are 3 non-zero rows with 3 pivots $\\implies \\rho(A) = 3$.\nNumber of columns (variables) $n = 4$."
-    },
-    {
-     "t": "h3",
-     "text": "Step 2: Nullity Calculation (Slide 282)"
-    },
-    {
-     "t": "math",
-     "tex": "\\eta(A) = n - \\rho(A) = 4 - 3 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\dim(\\operatorname{Null}(A)) = 1 \\implies 1\\text{-D Span}}"
-    },
-    {
-     "t": "h3",
-     "text": "Step 3: Explicit Null Vector Determination (Slide 283)"
-    },
-    {
-     "t": "p",
-     "text": "Set up $Ax = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 2 & 3 & 4 & 1 \\\\ 0 & 0 & -6 & -1 \\\\ 0 & 0 & 0 & -2 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\\\ x_4 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "From Row 3:"
-    },
-    {
-     "t": "math",
-     "tex": "-2x_4 = 0 \\implies x_4 = 0"
-    },
-    {
-     "t": "p",
-     "text": "From Row 2:"
-    },
-    {
-     "t": "math",
-     "tex": "-6x_3 - x_4 = 0 \\implies -6x_3 = 0 \\implies x_3 = 0"
-    },
-    {
-     "t": "p",
-     "text": "From Row 1:"
-    },
-    {
-     "t": "math",
-     "tex": "2x_1 + 3x_2 + 4x_3 + x_4 = 0 \\implies 2x_1 + 3x_2 = 0 \\implies x_2 = -\\frac{2}{3}x_1"
-    },
-    {
-     "t": "p",
-     "text": "Assign parameter $x_1 = c_1$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\\\ x_4 \\end{bmatrix} = \\begin{bmatrix} c_1 \\\\ -\\frac{2}{3}c_1 \\\\ 0 \\\\ 0 \\end{bmatrix} = c_1 \\begin{bmatrix} 1 \\\\ -\\frac{2}{3} \\\\ 0 \\\\ 0 \\end{bmatrix} \\quad \\left(\\text{or } c_1' \\begin{bmatrix} 3 \\\\ -2 \\\\ 0 \\\\ 0 \\end{bmatrix}\\right)"
-    },
-    {
-     "t": "p",
-     "text": "This is **1 linearly independent vector** spanning a 1-D space."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step 1: Row Operations to Echelon Form (Slide 282)"
+      },
+      {
+       "t": "p",
+       "text": "Apply row operations:"
+      },
+      {
+       "t": "math",
+       "tex": "R_2 \\to R_2 - 2R_1: \\quad [4-4,\\; 6-6,\\; 2-8,\\; 1-2] = [0,\\; 0,\\; -6,\\; -1]"
+      },
+      {
+       "t": "math",
+       "tex": "R_3 \\to R_3 - 3R_1: \\quad [6-6,\\; 9-9,\\; 12-12,\\; 1-3] = [0,\\; 0,\\; 0,\\; -2]"
+      },
+      {
+       "t": "math",
+       "tex": "A \\sim \\begin{bmatrix} 2 & 3 & 4 & 1 \\\\ 0 & 0 & -6 & -1 \\\\ 0 & 0 & 0 & -2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "There are 3 non-zero rows with 3 pivots $\\implies \\rho(A) = 3$.\nNumber of columns (variables) $n = 4$."
+      },
+      {
+       "t": "h3",
+       "text": "Step 2: Nullity Calculation (Slide 282)"
+      },
+      {
+       "t": "math",
+       "tex": "\\eta(A) = n - \\rho(A) = 4 - 3 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\dim(\\operatorname{Null}(A)) = 1 \\implies 1\\text{-D Span}}"
+      },
+      {
+       "t": "h3",
+       "text": "Step 3: Explicit Null Vector Determination (Slide 283)"
+      },
+      {
+       "t": "p",
+       "text": "Set up $Ax = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 2 & 3 & 4 & 1 \\\\ 0 & 0 & -6 & -1 \\\\ 0 & 0 & 0 & -2 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\\\ x_4 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "From Row 3:"
+      },
+      {
+       "t": "math",
+       "tex": "-2x_4 = 0 \\implies x_4 = 0"
+      },
+      {
+       "t": "p",
+       "text": "From Row 2:"
+      },
+      {
+       "t": "math",
+       "tex": "-6x_3 - x_4 = 0 \\implies -6x_3 = 0 \\implies x_3 = 0"
+      },
+      {
+       "t": "p",
+       "text": "From Row 1:"
+      },
+      {
+       "t": "math",
+       "tex": "2x_1 + 3x_2 + 4x_3 + x_4 = 0 \\implies 2x_1 + 3x_2 = 0 \\implies x_2 = -\\frac{2}{3}x_1"
+      },
+      {
+       "t": "p",
+       "text": "Assign parameter $x_1 = c_1$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\\\ x_4 \\end{bmatrix} = \\begin{bmatrix} c_1 \\\\ -\\frac{2}{3}c_1 \\\\ 0 \\\\ 0 \\end{bmatrix} = c_1 \\begin{bmatrix} 1 \\\\ -\\frac{2}{3} \\\\ 0 \\\\ 0 \\end{bmatrix} \\quad \\left(\\text{or } c_1' \\begin{bmatrix} 3 \\\\ -2 \\\\ 0 \\\\ 0 \\end{bmatrix}\\right)"
+      },
+      {
+       "t": "p",
+       "text": "This is **1 linearly independent vector** spanning a 1-D space."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17925,63 +17973,62 @@ export default {
      "text": "The chalkboard presents two contrasting matrix multiplication drills:"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Drill 1: Singular Matrices with Non-Zero Product:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & 1 \\\\ -1 & -1 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 1 & 1 \\\\ 0 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Determinants: $\\det(A) = -1 - (-1) = 0$; $\\det(B) = 0 - 0 = 0$.",
-      "Matrix Product:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "AB = \\begin{bmatrix} 1(1) + 1(0) & 1(1) + 1(0) \\\\ -1(1) + (-1)(0) & -1(1) + (-1)(0) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ -1 & -1 \\end{bmatrix} \\neq \\mathbf{0}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Takeaway:** $\\det(A) = 0$ and $\\det(B) = 0$ **does NOT imply** $AB = 0$."
-     ]
-    },
-    {
-     "t": "h3",
-     "text": "Drill 2: Non-Zero Matrices with Zero Product:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & -1 \\\\ 1 & -1 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 1 & 2 \\\\ 1 & 2 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Both matrices are non-zero: $A \\neq \\mathbf{0}, B \\neq \\mathbf{0}$.",
-      "Determinants: $\\det(A) = 0, \\det(B) = 0$.",
-      "Matrix Product:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "AB = \\begin{bmatrix} 1(1) + (-1)(1) & 1(2) + (-1)(2) \\\\ 1(1) + (-1)(1) & 1(2) + (-1)(2) \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = \\mathbf{0}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Takeaway:** Two non-zero matrices can multiply to give the null matrix."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Drill 1: Singular Matrices with Non-Zero Product:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & 1 \\\\ -1 & -1 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 1 & 1 \\\\ 0 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Determinants: $\\det(A) = -1 - (-1) = 0$; $\\det(B) = 0 - 0 = 0$.",
+        "Matrix Product:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "AB = \\begin{bmatrix} 1(1) + 1(0) & 1(1) + 1(0) \\\\ -1(1) + (-1)(0) & -1(1) + (-1)(0) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 \\\\ -1 & -1 \\end{bmatrix} \\neq \\mathbf{0}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Takeaway:** $\\det(A) = 0$ and $\\det(B) = 0$ **does NOT imply** $AB = 0$."
+       ]
+      },
+      {
+       "t": "h3",
+       "text": "Drill 2: Non-Zero Matrices with Zero Product:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & -1 \\\\ 1 & -1 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 1 & 2 \\\\ 1 & 2 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Both matrices are non-zero: $A \\neq \\mathbf{0}, B \\neq \\mathbf{0}$.",
+        "Determinants: $\\det(A) = 0, \\det(B) = 0$.",
+        "Matrix Product:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "AB = \\begin{bmatrix} 1(1) + (-1)(1) & 1(2) + (-1)(2) \\\\ 1(1) + (-1)(1) & 1(2) + (-1)(2) \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = \\mathbf{0}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Takeaway:** Two non-zero matrices can multiply to give the null matrix."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -17996,64 +18043,63 @@ export default {
      "text": "                          [A][B] = [0]\n                               |\n       +---------------+-------+-------+---------------+\n       |               |               |               |\n    Case 1          Case 2          Case 3          Case 4\n   A = 0, B = 0    A = 0, B \u2260 0    A \u2260 0, B = 0    A \u2260 0, B \u2260 0\n   (Both Null)     (Trivial Zero)  (Trivial Zero)  (Non-Zero Singular)\n                                                   |A| = 0 AND |B| = 0"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Rigorous Contradiction Proof for Case 4 (Slides 286 \u2013 287):"
-    },
-    {
-     "t": "p",
-     "text": "Suppose $A \\neq \\mathbf{0}$ and $B \\neq \\mathbf{0}$, but $AB = \\mathbf{0}$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 1: Proof that $\\det(A) = 0$ (Slide 286)"
-    },
-    {
-     "t": "p",
-     "text": "Suppose by contradiction that $A$ is invertible ($A^{-1}$ exists, so $\\det(A) \\neq 0$).\nPre-multiply both sides of $AB = \\mathbf{0}$ by $A^{-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "A^{-1}(AB) = A^{-1}(\\mathbf{0}) \\implies (A^{-1}A)B = \\mathbf{0} \\implies IB = \\mathbf{0} \\implies B = \\mathbf{0}"
-    },
-    {
-     "t": "p",
-     "text": "This directly contradicts the given condition that $B \\neq \\mathbf{0}$.\nTherefore, $A^{-1}$ cannot exist $\\implies \\mathbf{\\det(A) = 0}$."
-    },
-    {
-     "t": "h4",
-     "text": "Step 2: Proof that $\\det(B) = 0$ (Slide 287)"
-    },
-    {
-     "t": "p",
-     "text": "Suppose by contradiction that $B$ is invertible ($B^{-1}$ exists, so $\\det(B) \\neq 0$).\nPost-multiply both sides of $AB = \\mathbf{0}$ by $B^{-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "(AB)B^{-1} = \\mathbf{0}\\,B^{-1} \\implies A(BB^{-1}) = \\mathbf{0} \\implies AI = \\mathbf{0} \\implies A = \\mathbf{0}"
-    },
-    {
-     "t": "p",
-     "text": "This directly contradicts the given condition that $A \\neq \\mathbf{0}$.\nTherefore, $B^{-1}$ cannot exist $\\implies \\mathbf{\\det(B) = 0}$."
-    },
-    {
-     "t": "h3",
-     "text": "Master Theorem (Slide 287):"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{A \\neq 0, \\; B \\neq 0, \\; AB = 0 \\implies \\det(A) = 0 \\;\\text{ AND }\\; \\det(B) = 0}"
-    },
-    {
-     "t": "p",
-     "text": "Both matrices **must be singular (non-invertible)**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Rigorous Contradiction Proof for Case 4 (Slides 286 \u2013 287):"
+      },
+      {
+       "t": "p",
+       "text": "Suppose $A \\neq \\mathbf{0}$ and $B \\neq \\mathbf{0}$, but $AB = \\mathbf{0}$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 1: Proof that $\\det(A) = 0$ (Slide 286)"
+      },
+      {
+       "t": "p",
+       "text": "Suppose by contradiction that $A$ is invertible ($A^{-1}$ exists, so $\\det(A) \\neq 0$).\nPre-multiply both sides of $AB = \\mathbf{0}$ by $A^{-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "A^{-1}(AB) = A^{-1}(\\mathbf{0}) \\implies (A^{-1}A)B = \\mathbf{0} \\implies IB = \\mathbf{0} \\implies B = \\mathbf{0}"
+      },
+      {
+       "t": "p",
+       "text": "This directly contradicts the given condition that $B \\neq \\mathbf{0}$.\nTherefore, $A^{-1}$ cannot exist $\\implies \\mathbf{\\det(A) = 0}$."
+      },
+      {
+       "t": "h4",
+       "text": "Step 2: Proof that $\\det(B) = 0$ (Slide 287)"
+      },
+      {
+       "t": "p",
+       "text": "Suppose by contradiction that $B$ is invertible ($B^{-1}$ exists, so $\\det(B) \\neq 0$).\nPost-multiply both sides of $AB = \\mathbf{0}$ by $B^{-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "(AB)B^{-1} = \\mathbf{0}\\,B^{-1} \\implies A(BB^{-1}) = \\mathbf{0} \\implies AI = \\mathbf{0} \\implies A = \\mathbf{0}"
+      },
+      {
+       "t": "p",
+       "text": "This directly contradicts the given condition that $A \\neq \\mathbf{0}$.\nTherefore, $B^{-1}$ cannot exist $\\implies \\mathbf{\\det(B) = 0}$."
+      },
+      {
+       "t": "h3",
+       "text": "Master Theorem (Slide 287):"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{A \\neq 0, \\; B \\neq 0, \\; AB = 0 \\implies \\det(A) = 0 \\;\\text{ AND }\\; \\det(B) = 0}"
+      },
+      {
+       "t": "p",
+       "text": "Both matrices **must be singular (non-invertible)**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18077,38 +18123,37 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Mathematical Analysis:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (A) is TRUE:** Proven rigorously in Slides 286\u2013287. Both matrices must have zero determinants.",
-      "**Statement (B) is FALSE:** Disproven by Drill 1 on Slide 284:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} 1 & 1 \\\\ -1 & -1 \\end{bmatrix}, B = \\begin{bmatrix} 1 & 1 \\\\ 0 & 0 \\end{bmatrix} \\implies \\det(A)=0, \\det(B)=0, \\text{ but } AB \\neq 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Statement (C) Exam Trap:** The chalkboard explicitly crosses out \"or\" and writes **\"AND\"**. While in formal mathematical logic $P \\land Q \\implies P \\lor Q$, in GATE multiple choice questions, option (C) is a deliberate trap designed to test whether the student knows both must be zero rather than merely one. Statement (A) is the exact, sharp condition.",
-      "**Statement (D) is FALSE:** It is impossible for only one determinant to be zero when $A \\neq 0$ and $B \\neq 0$. If one were non-zero, its inverse would force the other matrix to be zero."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** Statement **(A)** is **TRUE**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Mathematical Analysis:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (A) is TRUE:** Proven rigorously in Slides 286\u2013287. Both matrices must have zero determinants.",
+        "**Statement (B) is FALSE:** Disproven by Drill 1 on Slide 284:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} 1 & 1 \\\\ -1 & -1 \\end{bmatrix}, B = \\begin{bmatrix} 1 & 1 \\\\ 0 & 0 \\end{bmatrix} \\implies \\det(A)=0, \\det(B)=0, \\text{ but } AB \\neq 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Statement (C) Exam Trap:** The chalkboard explicitly crosses out \"or\" and writes **\"AND\"**. While in formal mathematical logic $P \\land Q \\implies P \\lor Q$, in GATE multiple choice questions, option (C) is a deliberate trap designed to test whether the student knows both must be zero rather than merely one. Statement (A) is the exact, sharp condition.",
+        "**Statement (D) is FALSE:** It is impossible for only one determinant to be zero when $A \\neq 0$ and $B \\neq 0$. If one were non-zero, its inverse would force the other matrix to be zero."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** Statement **(A)** is **TRUE**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18140,61 +18185,60 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Mathematical Derivation:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$A$ has size $m \\times n$. By definition of rank:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{rank}(A) \\le \\min(m, n) = n \\quad (\\text{since } m > n)"
-    },
-    {
-     "t": "p",
-     "text": "This makes (B) generically true for any $m \\times n$ matrix."
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Now incorporate the condition $AB = 0$ with $B \\neq 0$:"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$B$ is an $n \\times 1$ non-zero vector satisfying $Ax = 0$.\n   This means the homogeneous system $Ax = 0$ possesses a **non-trivial solution**."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Recall that a homogeneous system $Ax = 0$ with $n$ variables has a non-trivial solution **if and only if**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{rank}(A) < n"
-    },
-    {
-     "t": "p",
-     "text": "If $\\operatorname{rank}(A) = n$, the columns would be linearly independent, forcing $B = \\mathbf{0}$, which contradicts the premise $B \\neq \\mathbf{0}$."
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** Statement **(D)** is the sharp deducible truth ($\\checkmark$). Statement **(B)** is also technically valid as an upper bound."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Mathematical Derivation:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$A$ has size $m \\times n$. By definition of rank:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{rank}(A) \\le \\min(m, n) = n \\quad (\\text{since } m > n)"
+      },
+      {
+       "t": "p",
+       "text": "This makes (B) generically true for any $m \\times n$ matrix."
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Now incorporate the condition $AB = 0$ with $B \\neq 0$:"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$B$ is an $n \\times 1$ non-zero vector satisfying $Ax = 0$.\n   This means the homogeneous system $Ax = 0$ possesses a **non-trivial solution**."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Recall that a homogeneous system $Ax = 0$ with $n$ variables has a non-trivial solution **if and only if**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{rank}(A) < n"
+      },
+      {
+       "t": "p",
+       "text": "If $\\operatorname{rank}(A) = n$, the columns would be linearly independent, forcing $B = \\mathbf{0}$, which contradicts the premise $B \\neq \\mathbf{0}$."
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** Statement **(D)** is the sharp deducible truth ($\\checkmark$). Statement **(B)** is also technically valid as an upper bound."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18234,93 +18278,92 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step 1: Linear Dependence of Columns (Slide 290)"
-    },
-    {
-     "t": "p",
-     "text": "The condition $\\sum_{i=1}^n c_i a_i = 0$ with scalars not all zero is the definition of **linear dependence** of the vector set $\\{a_1, a_2, \\dots, a_n\\}$.\nSince the columns of $A$ are linearly dependent:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) < n \\implies \\det(A) = 0"
-    },
-    {
-     "t": "p",
-     "text": "A unique solution is **impossible** (eliminating Option A)."
-    },
-    {
-     "t": "h3",
-     "text": "Step 2: Analysis of the Right-Hand Side Vector $B$ (Slide 291)"
-    },
-    {
-     "t": "p",
-     "text": "The vector $B$ is defined as:"
-    },
-    {
-     "t": "math",
-     "tex": "B = a_1 + a_2 + \\dots + a_n = 1 \\cdot a_1 + 1 \\cdot a_2 + \\dots + 1 \\cdot a_n"
-    },
-    {
-     "t": "p",
-     "text": "This is an explicit linear combination of the column vectors of $A$ with weights $x_1 = 1, x_2 = 1, \\dots, x_n = 1$.\nTherefore:"
-    },
-    {
-     "t": "math",
-     "tex": "B \\in \\operatorname{Col}(A) \\quad (\\text{the column space of } A)"
-    },
-    {
-     "t": "h3",
-     "text": "Step 3: Augmented Matrix Consistency Test (Slide 292)"
-    },
-    {
-     "t": "p",
-     "text": "Construct the augmented matrix $[A : B]$:"
-    },
-    {
-     "t": "math",
-     "tex": "[A : B] = [a_1\\; a_2\\; \\dots\\; a_n\\; :\\; a_1 + a_2 + \\dots + a_n]"
-    },
-    {
-     "t": "p",
-     "text": "Since column $B$ is a linear combination of the columns $a_1, \\dots, a_n$, appending $B$ introduces **no new linearly independent column**:"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A : B) = \\rho(A)"
-    },
-    {
-     "t": "h3",
-     "text": "Step 4: Solution Characterization"
-    },
-    {
-     "t": "math",
-     "tex": "\\rho(A) = \\rho(A : B) = r < n"
-    },
-    {
-     "t": "p",
-     "text": "By Rouch\u00e9-Capelli theorem:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The system is **consistent** (eliminating Option B: No solution).",
-      "The rank is strictly less than the number of variables $n$.",
-      "Number of free variables $= n - r \\ge 1$.",
-      "Therefore, the system possesses **infinitely many solutions**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** **(C) Infinitely many solutions**."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step 1: Linear Dependence of Columns (Slide 290)"
+      },
+      {
+       "t": "p",
+       "text": "The condition $\\sum_{i=1}^n c_i a_i = 0$ with scalars not all zero is the definition of **linear dependence** of the vector set $\\{a_1, a_2, \\dots, a_n\\}$.\nSince the columns of $A$ are linearly dependent:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) < n \\implies \\det(A) = 0"
+      },
+      {
+       "t": "p",
+       "text": "A unique solution is **impossible** (eliminating Option A)."
+      },
+      {
+       "t": "h3",
+       "text": "Step 2: Analysis of the Right-Hand Side Vector $B$ (Slide 291)"
+      },
+      {
+       "t": "p",
+       "text": "The vector $B$ is defined as:"
+      },
+      {
+       "t": "math",
+       "tex": "B = a_1 + a_2 + \\dots + a_n = 1 \\cdot a_1 + 1 \\cdot a_2 + \\dots + 1 \\cdot a_n"
+      },
+      {
+       "t": "p",
+       "text": "This is an explicit linear combination of the column vectors of $A$ with weights $x_1 = 1, x_2 = 1, \\dots, x_n = 1$.\nTherefore:"
+      },
+      {
+       "t": "math",
+       "tex": "B \\in \\operatorname{Col}(A) \\quad (\\text{the column space of } A)"
+      },
+      {
+       "t": "h3",
+       "text": "Step 3: Augmented Matrix Consistency Test (Slide 292)"
+      },
+      {
+       "t": "p",
+       "text": "Construct the augmented matrix $[A : B]$:"
+      },
+      {
+       "t": "math",
+       "tex": "[A : B] = [a_1\\; a_2\\; \\dots\\; a_n\\; :\\; a_1 + a_2 + \\dots + a_n]"
+      },
+      {
+       "t": "p",
+       "text": "Since column $B$ is a linear combination of the columns $a_1, \\dots, a_n$, appending $B$ introduces **no new linearly independent column**:"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A : B) = \\rho(A)"
+      },
+      {
+       "t": "h3",
+       "text": "Step 4: Solution Characterization"
+      },
+      {
+       "t": "math",
+       "tex": "\\rho(A) = \\rho(A : B) = r < n"
+      },
+      {
+       "t": "p",
+       "text": "By Rouch\u00e9-Capelli theorem:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The system is **consistent** (eliminating Option B: No solution).",
+        "The rank is strictly less than the number of variables $n$.",
+        "Number of free variables $= n - r \\ge 1$.",
+        "Therefore, the system possesses **infinitely many solutions**."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** **(C) Infinitely many solutions**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18375,86 +18418,85 @@ export default {
      "text": "Let $u$ and $v$ be two vectors in $\\mathbb{R}^2$ such that $\\|u\\| = 2\\|v\\|$. If the vector $w = u + \\alpha v$ bisects the angle between $u$ and $v$, find the value of $\\alpha$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Method 1: General Coordinate-Free Unit Vector Proof"
-    },
-    {
-     "t": "p",
-     "text": "The unit vector along $u$ is $\\hat{u} = \\frac{u}{\\|u\\|}$.\nThe unit vector along $v$ is $\\hat{v} = \\frac{v}{\\|v\\|}$."
-    },
-    {
-     "t": "p",
-     "text": "By the geometry of parallelograms/rhombuses, the vector that bisects the angle between two non-zero vectors lies along the sum of their unit vectors:"
-    },
-    {
-     "t": "math",
-     "tex": "w_{\\text{bisector}} \\propto \\hat{u} + \\hat{v} = \\frac{u}{\\|u\\|} + \\frac{v}{\\|v\\|}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the given relation $\\|u\\| = 2\\|v\\|$:"
-    },
-    {
-     "t": "math",
-     "tex": "w_{\\text{bisector}} \\propto \\frac{u}{2\\|v\\|} + \\frac{v}{\\|v\\|} = \\frac{1}{2\\|v\\|} \\left( u + 2v \\right)"
-    },
-    {
-     "t": "p",
-     "text": "Comparing this direction with the given form $w = u + \\alpha v$:"
-    },
-    {
-     "t": "math",
-     "tex": "u + \\alpha v \\propto u + 2v \\implies \\mathbf{\\alpha = 2}"
-    },
-    {
-     "t": "h3",
-     "text": "Method 2: Chalkboard Geometric Construction (Slides 294 \u2013 295)"
-    },
-    {
-     "t": "p",
-     "text": "Choose sample vectors in $\\mathbb{R}^2$ that satisfy the condition:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $v = \\hat{i} + \\hat{j} \\implies \\|v\\| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$.",
-      "Let $u = -2(\\hat{i} + \\hat{j}) = -2\\hat{i} - 2\\hat{j} \\implies \\|u\\| = 2\\sqrt{2} = 2\\|v\\|$.",
-      "The angle between $u$ (pointing at $225^\\circ$) and $v$ (pointing at $45^\\circ$) is $180^\\circ$.",
-      "The angle bisector must form an angle of $90^\\circ$ with both vectors.",
-      "Therefore, $w$ is orthogonal to $u$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{w} \\cdot \\vec{u} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Compute $w$:"
-    },
-    {
-     "t": "math",
-     "tex": "w = u + \\alpha v = (-2\\hat{i} - 2\\hat{j}) + \\alpha(\\hat{i} + \\hat{j}) = (\\alpha - 2)\\hat{i} + (\\alpha - 2)\\hat{j}"
-    },
-    {
-     "t": "p",
-     "text": "Compute the dot product with $\\vec{u}_{\\text{dir}} = \\hat{i} + \\hat{j}$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\vec{w} \\cdot (\\hat{i} + \\hat{j}) = (\\alpha - 2)(1) + (\\alpha - 2)(1) = 2(\\alpha - 2) = 0 \\implies \\mathbf{\\alpha = 2}"
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** $\\mathbf{\\alpha = 2}$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Method 1: General Coordinate-Free Unit Vector Proof"
+      },
+      {
+       "t": "p",
+       "text": "The unit vector along $u$ is $\\hat{u} = \\frac{u}{\\|u\\|}$.\nThe unit vector along $v$ is $\\hat{v} = \\frac{v}{\\|v\\|}$."
+      },
+      {
+       "t": "p",
+       "text": "By the geometry of parallelograms/rhombuses, the vector that bisects the angle between two non-zero vectors lies along the sum of their unit vectors:"
+      },
+      {
+       "t": "math",
+       "tex": "w_{\\text{bisector}} \\propto \\hat{u} + \\hat{v} = \\frac{u}{\\|u\\|} + \\frac{v}{\\|v\\|}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the given relation $\\|u\\| = 2\\|v\\|$:"
+      },
+      {
+       "t": "math",
+       "tex": "w_{\\text{bisector}} \\propto \\frac{u}{2\\|v\\|} + \\frac{v}{\\|v\\|} = \\frac{1}{2\\|v\\|} \\left( u + 2v \\right)"
+      },
+      {
+       "t": "p",
+       "text": "Comparing this direction with the given form $w = u + \\alpha v$:"
+      },
+      {
+       "t": "math",
+       "tex": "u + \\alpha v \\propto u + 2v \\implies \\mathbf{\\alpha = 2}"
+      },
+      {
+       "t": "h3",
+       "text": "Method 2: Chalkboard Geometric Construction (Slides 294 \u2013 295)"
+      },
+      {
+       "t": "p",
+       "text": "Choose sample vectors in $\\mathbb{R}^2$ that satisfy the condition:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $v = \\hat{i} + \\hat{j} \\implies \\|v\\| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$.",
+        "Let $u = -2(\\hat{i} + \\hat{j}) = -2\\hat{i} - 2\\hat{j} \\implies \\|u\\| = 2\\sqrt{2} = 2\\|v\\|$.",
+        "The angle between $u$ (pointing at $225^\\circ$) and $v$ (pointing at $45^\\circ$) is $180^\\circ$.",
+        "The angle bisector must form an angle of $90^\\circ$ with both vectors.",
+        "Therefore, $w$ is orthogonal to $u$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{w} \\cdot \\vec{u} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Compute $w$:"
+      },
+      {
+       "t": "math",
+       "tex": "w = u + \\alpha v = (-2\\hat{i} - 2\\hat{j}) + \\alpha(\\hat{i} + \\hat{j}) = (\\alpha - 2)\\hat{i} + (\\alpha - 2)\\hat{j}"
+      },
+      {
+       "t": "p",
+       "text": "Compute the dot product with $\\vec{u}_{\\text{dir}} = \\hat{i} + \\hat{j}$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\vec{w} \\cdot (\\hat{i} + \\hat{j}) = (\\alpha - 2)(1) + (\\alpha - 2)(1) = 2(\\alpha - 2) = 0 \\implies \\mathbf{\\alpha = 2}"
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** $\\mathbf{\\alpha = 2}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18486,110 +18528,109 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Step-by-Step Algebraic Derivation:"
-    },
-    {
-     "t": "p",
-     "text": "Let $\\|A\\| = \\alpha$ and $\\|B\\| = \\beta$.\nThen:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\cdot A = \\|A\\|^2 = \\alpha^2"
-    },
-    {
-     "t": "math",
-     "tex": "B \\cdot B = \\|B\\|^2 = \\beta^2"
-    },
-    {
-     "t": "math",
-     "tex": "A \\cdot B = B \\cdot A = \\|A\\| \\|B\\| \\cos\\theta = \\alpha\\beta\\cos\\theta"
-    },
-    {
-     "t": "p",
-     "text": "Substitute into the determinant $\\eta$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\eta = \\begin{vmatrix} \\alpha^2 & \\alpha\\beta\\cos\\theta \\\\ \\alpha\\beta\\cos\\theta & \\beta^2 \\end{vmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\eta = (\\alpha^2)(\\beta^2) - (\\alpha\\beta\\cos\\theta)^2 = \\alpha^2\\beta^2 - \\alpha^2\\beta^2\\cos^2\\theta = \\alpha^2\\beta^2(1 - \\cos^2\\theta)"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\eta = \\alpha^2\\beta^2 \\sin^2\\theta}"
-    },
-    {
-     "t": "h3",
-     "text": "Analysis of Cases:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Case 1: $A$ and $B$ are Linearly Dependent:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If $A$ and $B$ are linearly dependent, one is a scalar multiple of the other ($A = \\gamma B$ or one is zero).\n   The angle between them is $\\theta = 0$ or $\\theta = \\pi$."
-    },
-    {
-     "t": "math",
-     "tex": "\\sin\\theta = 0 \\implies \\sin^2\\theta = 0 \\implies \\mathbf{\\eta = 0}"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies$ **Statement (A) is TRUE.**"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "**Case 2: $A$ and $B$ are Linearly Independent:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If $A$ and $B$ are linearly independent, neither vector is zero ($\\alpha > 0, \\beta > 0$), and they are not collinear ($\\theta \\neq 0, \\pi$)."
-    },
-    {
-     "t": "math",
-     "tex": "\\sin^2\\theta > 0 \\implies \\mathbf{\\eta > 0}"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies$ **Statement (B) is TRUE.**"
-    },
-    {
-     "t": "h3",
-     "text": "Geometric Area Connection:"
-    },
-    {
-     "t": "p",
-     "text": "Notice that:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sqrt{\\eta} = \\alpha\\beta\\sin\\theta = \\|A\\| \\|B\\| \\sin\\theta = \\|A \\times B\\| = \\text{Area of Parallelogram formed by } A \\text{ and } B"
-    },
-    {
-     "t": "p",
-     "text": "Thus, $\\eta = (\\text{Area})^2 \\ge 0$, which is zero if and only if the parallelogram collapses (collinear vectors)."
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** **(C) Both (A) and (B) are true.**"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Step-by-Step Algebraic Derivation:"
+      },
+      {
+       "t": "p",
+       "text": "Let $\\|A\\| = \\alpha$ and $\\|B\\| = \\beta$.\nThen:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\cdot A = \\|A\\|^2 = \\alpha^2"
+      },
+      {
+       "t": "math",
+       "tex": "B \\cdot B = \\|B\\|^2 = \\beta^2"
+      },
+      {
+       "t": "math",
+       "tex": "A \\cdot B = B \\cdot A = \\|A\\| \\|B\\| \\cos\\theta = \\alpha\\beta\\cos\\theta"
+      },
+      {
+       "t": "p",
+       "text": "Substitute into the determinant $\\eta$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\eta = \\begin{vmatrix} \\alpha^2 & \\alpha\\beta\\cos\\theta \\\\ \\alpha\\beta\\cos\\theta & \\beta^2 \\end{vmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\eta = (\\alpha^2)(\\beta^2) - (\\alpha\\beta\\cos\\theta)^2 = \\alpha^2\\beta^2 - \\alpha^2\\beta^2\\cos^2\\theta = \\alpha^2\\beta^2(1 - \\cos^2\\theta)"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\eta = \\alpha^2\\beta^2 \\sin^2\\theta}"
+      },
+      {
+       "t": "h3",
+       "text": "Analysis of Cases:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Case 1: $A$ and $B$ are Linearly Dependent:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If $A$ and $B$ are linearly dependent, one is a scalar multiple of the other ($A = \\gamma B$ or one is zero).\n   The angle between them is $\\theta = 0$ or $\\theta = \\pi$."
+      },
+      {
+       "t": "math",
+       "tex": "\\sin\\theta = 0 \\implies \\sin^2\\theta = 0 \\implies \\mathbf{\\eta = 0}"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies$ **Statement (A) is TRUE.**"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "**Case 2: $A$ and $B$ are Linearly Independent:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If $A$ and $B$ are linearly independent, neither vector is zero ($\\alpha > 0, \\beta > 0$), and they are not collinear ($\\theta \\neq 0, \\pi$)."
+      },
+      {
+       "t": "math",
+       "tex": "\\sin^2\\theta > 0 \\implies \\mathbf{\\eta > 0}"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies$ **Statement (B) is TRUE.**"
+      },
+      {
+       "t": "h3",
+       "text": "Geometric Area Connection:"
+      },
+      {
+       "t": "p",
+       "text": "Notice that:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sqrt{\\eta} = \\alpha\\beta\\sin\\theta = \\|A\\| \\|B\\| \\sin\\theta = \\|A \\times B\\| = \\text{Area of Parallelogram formed by } A \\text{ and } B"
+      },
+      {
+       "t": "p",
+       "text": "Thus, $\\eta = (\\text{Area})^2 \\ge 0$, which is zero if and only if the parallelogram collapses (collinear vectors)."
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** **(C) Both (A) and (B) are true.**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18604,90 +18645,89 @@ export default {
      "text": "Let $A$ be a $2 \\times 2$ real orthogonal matrix ($A^T A = I$) and $x = \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix}$ be a real column vector. Find the relation between $\\|Ax\\|$ and $\\|x\\|$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Method 1: Component-Wise Expansion (Slide 297)"
-    },
-    {
-     "t": "p",
-     "text": "Let $A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}_{2 \\times 2}$.\nSince $A$ is orthogonal, $A A^T = I$ and $A^T A = I$, which gives:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\na^2 + b^2 &= 1, \\quad &c^2 + d^2 &= 1, \\quad &ab + cd &= 0 \\\\\na^2 + c^2 &= 1, \\quad &b^2 + d^2 &= 1, \\quad &ac + bd &= 0\n\\end{aligned}"
-    },
-    {
-     "t": "p",
-     "text": "Compute $Ax$:"
-    },
-    {
-     "t": "math",
-     "tex": "Ax = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} ax_1 + bx_2 \\\\ cx_1 + dx_2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Compute the Euclidean norm $\\|Ax\\|$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\n\\|Ax\\| &= \\sqrt{(ax_1 + bx_2)^2 + (cx_1 + dx_2)^2} \\\\\n&= \\sqrt{(a^2 x_1^2 + b^2 x_2^2 + 2ab x_1 x_2) + (c^2 x_1^2 + d^2 x_2^2 + 2cd x_1 x_2)} \\\\\n&= \\sqrt{(a^2 + c^2)x_1^2 + (b^2 + d^2)x_2^2 + 2(ab + cd)x_1 x_2}\n\\end{aligned}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the orthogonality conditions:"
-    },
-    {
-     "t": "math",
-     "tex": "\\|Ax\\| = \\sqrt{1 \\cdot x_1^2 + 1 \\cdot x_2^2 + 2(0)x_1 x_2} = \\sqrt{x_1^2 + x_2^2} = \\|x\\|"
-    },
-    {
-     "t": "h3",
-     "text": "Method 2: Matrix Algebraic Proof (Slide 298)"
-    },
-    {
-     "t": "p",
-     "text": "For any real vector $v$, $\\|v\\|^2 = v^T v$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\|Ax\\|^2 = (Ax)^T (Ax) = x^T (A^T A) x"
-    },
-    {
-     "t": "p",
-     "text": "Since $A$ is an orthogonal matrix, $A^T A = I$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\|Ax\\|^2 = x^T I x = x^T x = \\|x\\|^2"
-    },
-    {
-     "t": "p",
-     "text": "Taking the principal square root:"
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{\\|Ax\\| = \\|x\\|}"
-    },
-    {
-     "t": "alert",
-     "type": "NOTE",
-     "title": null,
-     "text": "**Isometry Theorem:** Multiplication by an orthogonal matrix represents a rigid geometric transformation (rotation and/or reflection). It preserves lengths, Euclidean norms, and inner products."
-    },
-    {
-     "t": "p",
-     "text": "Slide 298 also notes the matrix Frobenius norm identity:"
-    },
-    {
-     "t": "math",
-     "tex": "\\operatorname{Tr}[B B^T] = \\|B\\|^2"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Method 1: Component-Wise Expansion (Slide 297)"
+      },
+      {
+       "t": "p",
+       "text": "Let $A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}_{2 \\times 2}$.\nSince $A$ is orthogonal, $A A^T = I$ and $A^T A = I$, which gives:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\na^2 + b^2 &= 1, \\quad &c^2 + d^2 &= 1, \\quad &ab + cd &= 0 \\\\\na^2 + c^2 &= 1, \\quad &b^2 + d^2 &= 1, \\quad &ac + bd &= 0\n\\end{aligned}"
+      },
+      {
+       "t": "p",
+       "text": "Compute $Ax$:"
+      },
+      {
+       "t": "math",
+       "tex": "Ax = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} ax_1 + bx_2 \\\\ cx_1 + dx_2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Compute the Euclidean norm $\\|Ax\\|$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\n\\|Ax\\| &= \\sqrt{(ax_1 + bx_2)^2 + (cx_1 + dx_2)^2} \\\\\n&= \\sqrt{(a^2 x_1^2 + b^2 x_2^2 + 2ab x_1 x_2) + (c^2 x_1^2 + d^2 x_2^2 + 2cd x_1 x_2)} \\\\\n&= \\sqrt{(a^2 + c^2)x_1^2 + (b^2 + d^2)x_2^2 + 2(ab + cd)x_1 x_2}\n\\end{aligned}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the orthogonality conditions:"
+      },
+      {
+       "t": "math",
+       "tex": "\\|Ax\\| = \\sqrt{1 \\cdot x_1^2 + 1 \\cdot x_2^2 + 2(0)x_1 x_2} = \\sqrt{x_1^2 + x_2^2} = \\|x\\|"
+      },
+      {
+       "t": "h3",
+       "text": "Method 2: Matrix Algebraic Proof (Slide 298)"
+      },
+      {
+       "t": "p",
+       "text": "For any real vector $v$, $\\|v\\|^2 = v^T v$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\|Ax\\|^2 = (Ax)^T (Ax) = x^T (A^T A) x"
+      },
+      {
+       "t": "p",
+       "text": "Since $A$ is an orthogonal matrix, $A^T A = I$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\|Ax\\|^2 = x^T I x = x^T x = \\|x\\|^2"
+      },
+      {
+       "t": "p",
+       "text": "Taking the principal square root:"
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{\\|Ax\\| = \\|x\\|}"
+      },
+      {
+       "t": "alert",
+       "type": "NOTE",
+       "title": null,
+       "text": "**Isometry Theorem:** Multiplication by an orthogonal matrix represents a rigid geometric transformation (rotation and/or reflection). It preserves lengths, Euclidean norms, and inner products."
+      },
+      {
+       "t": "p",
+       "text": "Slide 298 also notes the matrix Frobenius norm identity:"
+      },
+      {
+       "t": "math",
+       "tex": "\\operatorname{Tr}[B B^T] = \\|B\\|^2"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -18719,110 +18759,109 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "h3",
-     "text": "Method 1: Block Matrix Multiplication Proof (Slide 299)"
-    },
-    {
-     "t": "p",
-     "text": "By definition of the matrix inverse:"
-    },
-    {
-     "t": "math",
-     "tex": "P^{-1} P = I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}_{2 \\times 2}"
-    },
-    {
-     "t": "p",
-     "text": "Substitute the partitioned block forms:"
-    },
-    {
-     "t": "math",
-     "tex": "P^{-1} P = \\begin{bmatrix} b_1^T \\\\ b_2^T \\end{bmatrix}_{2 \\times 1 \\text{ blocks}} [a_1\\; a_2]_{1 \\times 2 \\text{ blocks}} = \\begin{bmatrix} b_1^T a_1 & b_1^T a_2 \\\\ b_2^T a_1 & b_2^T a_2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Equating this directly to the identity matrix $I$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} b_1^T a_1 & b_1^T a_2 \\\\ b_2^T a_1 & b_2^T a_2 \\end{bmatrix} = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Equating entries:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{aligned}\nb_1^T a_1 &= 1 \\quad &\\implies \\text{Statement (A) is TRUE} \\\\\nb_2^T a_2 &= 1 \\quad &\\implies \\text{Statement (B) is TRUE} \\\\\nb_1^T a_2 &= 0 \\quad &\\implies \\text{Statement (C) is TRUE} \\\\\nb_2^T a_1 &= 0 \\quad &\\implies \\text{Statement (D) is TRUE}\n\\end{aligned}"
-    },
-    {
-     "t": "p",
-     "text": "**General Form:**"
-    },
-    {
-     "t": "math",
-     "tex": "b_i^T a_j = \\delta_{ij} = \\begin{cases} 1, & i = j \\\\ 0, & i \\neq j \\end{cases}"
-    },
-    {
-     "t": "p",
-     "text": "*(The Kronecker delta biorthogonality relation).*"
-    },
-    {
-     "t": "h3",
-     "text": "Method 2: Numerical Verification (Slide 300)"
-    },
-    {
-     "t": "p",
-     "text": "Let:"
-    },
-    {
-     "t": "math",
-     "tex": "P = \\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(P) = 2(2) - 1(3) = 4 - 3 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "P^{-1} = \\frac{1}{\\det(P)} \\operatorname{adj}(P) = \\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Extract column and row vectors:"
-    },
-    {
-     "t": "math",
-     "tex": "a_1 = \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}, \\quad a_2 = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "b_1^T = \\begin{bmatrix} 2 & -1 \\end{bmatrix}, \\quad b_2^T = \\begin{bmatrix} -3 & 2 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Evaluate all four inner products:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$b_1^T a_1 = [2\\; -1] \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix} = 2(2) + (-1)(3) = 4 - 3 = \\mathbf{1}$ ($\\checkmark$)",
-      "$b_2^T a_2 = [-3\\; 2] \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} = -3(1) + 2(2) = -3 + 4 = \\mathbf{1}$ ($\\checkmark$)",
-      "$b_1^T a_2 = [2\\; -1] \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} = 2(1) + (-1)(2) = 2 - 2 = \\mathbf{0}$ ($\\checkmark$)",
-      "$b_2^T a_1 = [-3\\; 2] \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix} = -3(2) + 2(3) = -6 + 6 = \\mathbf{0}$ ($\\checkmark$)"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Final Answer:** **All four statements (A, B, C, D) are correct.**"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "h3",
+       "text": "Method 1: Block Matrix Multiplication Proof (Slide 299)"
+      },
+      {
+       "t": "p",
+       "text": "By definition of the matrix inverse:"
+      },
+      {
+       "t": "math",
+       "tex": "P^{-1} P = I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}_{2 \\times 2}"
+      },
+      {
+       "t": "p",
+       "text": "Substitute the partitioned block forms:"
+      },
+      {
+       "t": "math",
+       "tex": "P^{-1} P = \\begin{bmatrix} b_1^T \\\\ b_2^T \\end{bmatrix}_{2 \\times 1 \\text{ blocks}} [a_1\\; a_2]_{1 \\times 2 \\text{ blocks}} = \\begin{bmatrix} b_1^T a_1 & b_1^T a_2 \\\\ b_2^T a_1 & b_2^T a_2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Equating this directly to the identity matrix $I$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} b_1^T a_1 & b_1^T a_2 \\\\ b_2^T a_1 & b_2^T a_2 \\end{bmatrix} = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Equating entries:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{aligned}\nb_1^T a_1 &= 1 \\quad &\\implies \\text{Statement (A) is TRUE} \\\\\nb_2^T a_2 &= 1 \\quad &\\implies \\text{Statement (B) is TRUE} \\\\\nb_1^T a_2 &= 0 \\quad &\\implies \\text{Statement (C) is TRUE} \\\\\nb_2^T a_1 &= 0 \\quad &\\implies \\text{Statement (D) is TRUE}\n\\end{aligned}"
+      },
+      {
+       "t": "p",
+       "text": "**General Form:**"
+      },
+      {
+       "t": "math",
+       "tex": "b_i^T a_j = \\delta_{ij} = \\begin{cases} 1, & i = j \\\\ 0, & i \\neq j \\end{cases}"
+      },
+      {
+       "t": "p",
+       "text": "*(The Kronecker delta biorthogonality relation).*"
+      },
+      {
+       "t": "h3",
+       "text": "Method 2: Numerical Verification (Slide 300)"
+      },
+      {
+       "t": "p",
+       "text": "Let:"
+      },
+      {
+       "t": "math",
+       "tex": "P = \\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(P) = 2(2) - 1(3) = 4 - 3 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "P^{-1} = \\frac{1}{\\det(P)} \\operatorname{adj}(P) = \\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Extract column and row vectors:"
+      },
+      {
+       "t": "math",
+       "tex": "a_1 = \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}, \\quad a_2 = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "b_1^T = \\begin{bmatrix} 2 & -1 \\end{bmatrix}, \\quad b_2^T = \\begin{bmatrix} -3 & 2 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Evaluate all four inner products:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$b_1^T a_1 = [2\\; -1] \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix} = 2(2) + (-1)(3) = 4 - 3 = \\mathbf{1}$ ($\\checkmark$)",
+        "$b_2^T a_2 = [-3\\; 2] \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} = -3(1) + 2(2) = -3 + 4 = \\mathbf{1}$ ($\\checkmark$)",
+        "$b_1^T a_2 = [2\\; -1] \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} = 2(1) + (-1)(2) = 2 - 2 = \\mathbf{0}$ ($\\checkmark$)",
+        "$b_2^T a_1 = [-3\\; 2] \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix} = -3(2) + 2(3) = -6 + 6 = \\mathbf{0}$ ($\\checkmark$)"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Final Answer:** **All four statements (A, B, C, D) are correct.**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -19331,64 +19370,63 @@ export default {
      "tex": "[A]_{4 \\times 4} = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 2 & 4 & 6 & 8 \\\\ 3 & 6 & 9 & 12 \\\\ 4 & 8 & 12 & 16 \\end{bmatrix} \\implies \\rho(A) = 1"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Step-by-Step Analytical Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Express matrix $A$ in outer product (dyadic) form:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{u} = \\begin{bmatrix} 1 \\\\ 2 \\\\ \\vdots \\\\ n \\end{bmatrix}, \\quad \\mathbf{v} = \\begin{bmatrix} 1 \\\\ 2 \\\\ \\vdots \\\\ n \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Then the $(i, j)$-th entry is precisely:"
-    },
-    {
-     "t": "math",
-     "tex": "A_{ij} = \\mathbf{u}_i \\mathbf{v}_j = i \\cdot j \\implies A = \\mathbf{u} \\mathbf{v}^T"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "By the rank inequality for matrix products:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{rank}(A) = \\text{rank}(\\mathbf{u} \\mathbf{v}^T) \\le \\min\\left(\\text{rank}(\\mathbf{u}), \\text{rank}(\\mathbf{v}^T)\\right) = \\min(1, 1) = 1"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Since $A \\ne \\mathbf{O}$ (e.g., $a_{11} = 1 \\ne 0$), $\\text{rank}(A) \\ge 1$.",
-      "Combining inequalities yields $\\text{rank}(A) = 1$ identically for all $n \\ge 1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **(B) 1**"
-    },
-    {
-     "t": "alert",
-     "type": "TIP",
-     "title": null,
-     "text": "**Exam Shortcut:** Whenever the entries of an $n \\times n$ matrix can be factored as $a_{ij} = f(i) \\cdot g(j)$ for non-zero functions $f$ and $g$, the matrix is the outer product of $\\mathbf{u} = [f(1), \\dots, f(n)]^T$ and $\\mathbf{v} = [g(1), \\dots, g(n)]^T$. Its rank is **always 1**, its determinant is **always 0** (for $n \\ge 2$), and its trace is $\\sum_{i=1}^n f(i)g(i)$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Step-by-Step Analytical Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Express matrix $A$ in outer product (dyadic) form:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{u} = \\begin{bmatrix} 1 \\\\ 2 \\\\ \\vdots \\\\ n \\end{bmatrix}, \\quad \\mathbf{v} = \\begin{bmatrix} 1 \\\\ 2 \\\\ \\vdots \\\\ n \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Then the $(i, j)$-th entry is precisely:"
+      },
+      {
+       "t": "math",
+       "tex": "A_{ij} = \\mathbf{u}_i \\mathbf{v}_j = i \\cdot j \\implies A = \\mathbf{u} \\mathbf{v}^T"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "By the rank inequality for matrix products:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{rank}(A) = \\text{rank}(\\mathbf{u} \\mathbf{v}^T) \\le \\min\\left(\\text{rank}(\\mathbf{u}), \\text{rank}(\\mathbf{v}^T)\\right) = \\min(1, 1) = 1"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Since $A \\ne \\mathbf{O}$ (e.g., $a_{11} = 1 \\ne 0$), $\\text{rank}(A) \\ge 1$.",
+        "Combining inequalities yields $\\text{rank}(A) = 1$ identically for all $n \\ge 1$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **(B) 1**"
+      },
+      {
+       "t": "alert",
+       "type": "TIP",
+       "title": null,
+       "text": "**Exam Shortcut:** Whenever the entries of an $n \\times n$ matrix can be factored as $a_{ij} = f(i) \\cdot g(j)$ for non-zero functions $f$ and $g$, the matrix is the outer product of $\\mathbf{u} = [f(1), \\dots, f(n)]^T$ and $\\mathbf{v} = [g(1), \\dots, g(n)]^T$. Its rank is **always 1**, its determinant is **always 0** (for $n \\ge 2$), and its trace is $\\sum_{i=1}^n f(i)g(i)$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19500,64 +19538,63 @@ export default {
      "tex": "\\rho(AB) \\ge 2 + 2 - 2 = 2 \\quad \\text{and} \\quad \\rho(AB) \\le \\min(2, 2) = 2 \\implies 2 \\le \\rho(AB) \\le 2 \\implies \\boxed{\\rho(C) = 2}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Mathematical Proof of Gramian Rank Invariance:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Consider the null spaces: if $\\mathbf{x} \\in \\text{Null}(A^T A)$, then $A^T A \\mathbf{x} = \\mathbf{0}$.",
-      "Pre-multiplying by $\\mathbf{x}^T$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\mathbf{x}^T A^T A \\mathbf{x} = 0 \\implies \\|A\\mathbf{x}\\|^2 = 0 \\implies A\\mathbf{x} = \\mathbf{0}"
-    },
-    {
-     "t": "p",
-     "text": "Thus $\\text{Null}(A^T A) = \\text{Null}(A)$."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "By the Rank-Nullity Theorem:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{rank}(A^T A) = n - \\text{nullity}(A^T A) = n - \\text{nullity}(A) = \\text{rank}(A)"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Replacing $A$ by $A^T$ gives $\\text{rank}(A A^T) = \\text{rank}(A^T) = \\text{rank}(A)$.",
-      "For $B = A A^T$, since $\\text{rank}(A) = 2$, $\\text{rank}(B) = 2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Application of Sylvester's Inequality:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $C = A_{3 \\times 2} B_{2 \\times 3}$:",
-      "Lower bound: $\\rho(A) + \\rho(B) - 2 = 2 + 2 - 2 = 2$.",
-      "Upper bound: $\\min(\\rho(A), \\rho(B)) = \\min(2, 2) = 2$.",
-      "Squeeze gives $\\text{rank}(C) = 2$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Mathematical Proof of Gramian Rank Invariance:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Consider the null spaces: if $\\mathbf{x} \\in \\text{Null}(A^T A)$, then $A^T A \\mathbf{x} = \\mathbf{0}$.",
+        "Pre-multiplying by $\\mathbf{x}^T$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\mathbf{x}^T A^T A \\mathbf{x} = 0 \\implies \\|A\\mathbf{x}\\|^2 = 0 \\implies A\\mathbf{x} = \\mathbf{0}"
+      },
+      {
+       "t": "p",
+       "text": "Thus $\\text{Null}(A^T A) = \\text{Null}(A)$."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "By the Rank-Nullity Theorem:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{rank}(A^T A) = n - \\text{nullity}(A^T A) = n - \\text{nullity}(A) = \\text{rank}(A)"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Replacing $A$ by $A^T$ gives $\\text{rank}(A A^T) = \\text{rank}(A^T) = \\text{rank}(A)$.",
+        "For $B = A A^T$, since $\\text{rank}(A) = 2$, $\\text{rank}(B) = 2$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Application of Sylvester's Inequality:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $C = A_{3 \\times 2} B_{2 \\times 3}$:",
+        "Lower bound: $\\rho(A) + \\rho(B) - 2 = 2 + 2 - 2 = 2$.",
+        "Upper bound: $\\min(\\rho(A), \\rho(B)) = \\min(2, 2) = 2$.",
+        "Squeeze gives $\\text{rank}(C) = 2$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19665,57 +19702,56 @@ export default {
      "tex": "B = \\begin{bmatrix} 5 & 0 \\\\ 0 & 5 \\end{bmatrix} \\implies \\rho(B) = 2 = N"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Question 1 Derivation:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $M^4 = I$, the matrix satisfies the polynomial equation $x^4 - 1 = 0$.",
-      "In modular arithmetic of matrix exponents: $M^{4k} = (M^4)^k = I^k = I$.",
-      "Multiplying by $M^{-1}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "M^{-1} = M^{-1} \\cdot I = M^{-1} \\cdot M^{4(k+1)} = M^{4k + 4 - 1} = M^{4k+3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Option:** **(C) $M^{4k+3}$**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Question 2 Derivation:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Notice the explicit multiplication:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "[A A^T]_{11} = p^2 + q^2, \\quad [A A^T]_{12} = pr + qs, \\quad [A A^T]_{21} = pr + qs, \\quad [A A^T]_{22} = r^2 + s^2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Exactly matches matrix $B$.",
-      "Over the field of real numbers $\\mathbb{R}$, $\\text{rank}(A A^T) = \\text{rank}(A)$ universally.",
-      "Therefore, $\\text{rank}(B) = N$.",
-      "**Correct Option:** **(C) $N$**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Question 1 Derivation:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $M^4 = I$, the matrix satisfies the polynomial equation $x^4 - 1 = 0$.",
+        "In modular arithmetic of matrix exponents: $M^{4k} = (M^4)^k = I^k = I$.",
+        "Multiplying by $M^{-1}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "M^{-1} = M^{-1} \\cdot I = M^{-1} \\cdot M^{4(k+1)} = M^{4k + 4 - 1} = M^{4k+3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Option:** **(C) $M^{4k+3}$**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Question 2 Derivation:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Notice the explicit multiplication:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "[A A^T]_{11} = p^2 + q^2, \\quad [A A^T]_{12} = pr + qs, \\quad [A A^T]_{21} = pr + qs, \\quad [A A^T]_{22} = r^2 + s^2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Exactly matches matrix $B$.",
+        "Over the field of real numbers $\\mathbb{R}$, $\\text{rank}(A A^T) = \\text{rank}(A)$ universally.",
+        "Therefore, $\\text{rank}(B) = N$.",
+        "**Correct Option:** **(C) $N$**"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19795,25 +19831,24 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Determinant of Dyadic Matrix:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For any column vectors $\\mathbf{u}, \\mathbf{v} \\in \\mathbb{R}^n$ with $n \\ge 2$, the outer product matrix $A = \\mathbf{u} \\mathbf{v}^T$ has rank at most 1.",
-      "Because $\\text{rank}(A) \\le 1 < n$, the nullity is at least $n - 1 \\ge 1$.",
-      "Hence, $A$ has at least $n - 1$ zero eigenvalues, making $\\det(A) = \\prod \\lambda_i = 0$.",
-      "In this specific case, $R_2 = -2R_1$ and $R_3 = 3.5R_1$, proving row collinearity."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Determinant of Dyadic Matrix:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For any column vectors $\\mathbf{u}, \\mathbf{v} \\in \\mathbb{R}^n$ with $n \\ge 2$, the outer product matrix $A = \\mathbf{u} \\mathbf{v}^T$ has rank at most 1.",
+        "Because $\\text{rank}(A) \\le 1 < n$, the nullity is at least $n - 1 \\ge 1$.",
+        "Hence, $A$ has at least $n - 1$ zero eigenvalues, making $\\det(A) = \\prod \\lambda_i = 0$.",
+        "In this specific case, $R_2 = -2R_1$ and $R_3 = 3.5R_1$, proving row collinearity."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19847,32 +19882,31 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Formal Mathematical Evaluation:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Given dimensions: $d_0 = 4, d_1 = 2, d_2 = 4, d_3 = 1$.",
-      "Cost function $C((PQ)R) = d_0 d_1 d_2 + d_0 d_2 d_3 = 4\\cdot 2\\cdot 4 + 4\\cdot 4\\cdot 1 = 32 + 16 = 48$.",
-      "Cost function $C(P(QR)) = d_1 d_2 d_3 + d_0 d_1 d_3 = 2\\cdot 4\\cdot 1 + 4\\cdot 2\\cdot 1 = 8 + 8 = 16$.",
-      "$\\min(48, 16) = 16$."
-     ]
-    },
-    {
-     "t": "alert",
-     "type": "WARNING",
-     "title": null,
-     "text": "**Exam Trap:** Standard matrix multiplication is associative ($A(BC) = (AB)C$), but the **computational complexity** varies dramatically. Always multiply intermediate matrices with smaller resulting dimensions first (here, vector column $R$ collapses the inner dimension to 1 immediately)."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Formal Mathematical Evaluation:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Given dimensions: $d_0 = 4, d_1 = 2, d_2 = 4, d_3 = 1$.",
+        "Cost function $C((PQ)R) = d_0 d_1 d_2 + d_0 d_2 d_3 = 4\\cdot 2\\cdot 4 + 4\\cdot 4\\cdot 1 = 32 + 16 = 48$.",
+        "Cost function $C(P(QR)) = d_1 d_2 d_3 + d_0 d_1 d_3 = 2\\cdot 4\\cdot 1 + 4\\cdot 2\\cdot 1 = 8 + 8 = 16$.",
+        "$\\min(48, 16) = 16$."
+       ]
+      },
+      {
+       "t": "alert",
+       "type": "WARNING",
+       "title": null,
+       "text": "**Exam Trap:** Standard matrix multiplication is associative ($A(BC) = (AB)C$), but the **computational complexity** varies dramatically. Always multiply intermediate matrices with smaller resulting dimensions first (here, vector column $R$ collapses the inner dimension to 1 immediately)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -19948,59 +19982,58 @@ export default {
      "tex": "\\boxed{B^{-1} = CDA}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Alternative Direct Inversion Method:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Group $ABCD = I$ around matrix $B$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A (B C D) = I \\implies BCD = A^{-1}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Re-arrange cyclically:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "ABCD = I \\iff B(CDA) = I"
-    },
-    {
-     "t": "p",
-     "text": "*(by associativity and post-multiplying $ABCD=I$ by $A$ then pre-multiplying by $A^{-1}$)*."
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Since $B (CDA) = I$ and matrices are square/invertible, the unique inverse of $B$ is the right factor:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "B^{-1} = CDA"
-    },
-    {
-     "t": "alert",
-     "type": "CAUTION",
-     "title": null,
-     "text": "**Order Reversal Trap:** A common student mistake is writing $B^{-1} = A D C$. Matrix multiplication is non-commutative. Each inversion reverses the sequence of factors: $(X Y Z)^{-1} = Z^{-1} Y^{-1} X^{-1}$."
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Alternative Direct Inversion Method:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Group $ABCD = I$ around matrix $B$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A (B C D) = I \\implies BCD = A^{-1}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Re-arrange cyclically:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "ABCD = I \\iff B(CDA) = I"
+      },
+      {
+       "t": "p",
+       "text": "*(by associativity and post-multiplying $ABCD=I$ by $A$ then pre-multiplying by $A^{-1}$)*."
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Since $B (CDA) = I$ and matrices are square/invertible, the unique inverse of $B$ is the right factor:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "B^{-1} = CDA"
+      },
+      {
+       "t": "alert",
+       "type": "CAUTION",
+       "title": null,
+       "text": "**Order Reversal Trap:** A common student mistake is writing $B^{-1} = A D C$. Matrix multiplication is non-commutative. Each inversion reverses the sequence of factors: $(X Y Z)^{-1} = Z^{-1} Y^{-1} X^{-1}$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20071,25 +20104,24 @@ export default {
      "text": "**Definition:** Let $A$ be a square matrix. If there exists a **non-zero vector** $X$ and a scalar $\\lambda$ such that\n$$AX = \\lambda X,$$\nthen:\n- $X$ is called an **eigenvector** of the matrix $A$.\n- $\\lambda$ is called the **eigenvalue** of $A$ corresponding to the eigenvector $X$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Geometric & Conceptual Insight:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "A matrix $A$ acts as a linear transformation mapping vectors in $\\mathbb{R}^n$ to $\\mathbb{R}^n$. In general, $AX$ rotates and stretches $X$.",
-      "An **eigenvector** represents a direction in space that undergoes **pure scaling** (stretching, shrinking, or reflection) without any rotation.",
-      "The **eigenvalue $\\lambda$** is the scalar scaling factor along that invariant 1D subspace.",
-      "**The Non-Zero Constraint:** $X \\ne \\mathbf{0}$ is strictly mandatory. If $X = \\mathbf{0}$, $A\\mathbf{0} = \\lambda \\mathbf{0}$ holds trivially for *every* scalar $\\lambda \\in \\mathbb{C}$, which would make the eigenvalue undefined."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Geometric & Conceptual Insight:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "A matrix $A$ acts as a linear transformation mapping vectors in $\\mathbb{R}^n$ to $\\mathbb{R}^n$. In general, $AX$ rotates and stretches $X$.",
+        "An **eigenvector** represents a direction in space that undergoes **pure scaling** (stretching, shrinking, or reflection) without any rotation.",
+        "The **eigenvalue $\\lambda$** is the scalar scaling factor along that invariant 1D subspace.",
+        "**The Non-Zero Constraint:** $X \\ne \\mathbf{0}$ is strictly mandatory. If $X = \\mathbf{0}$, $A\\mathbf{0} = \\lambda \\mathbf{0}$ holds trivially for *every* scalar $\\lambda \\in \\mathbb{C}$, which would make the eigenvalue undefined."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20293,26 +20325,25 @@ export default {
      "tex": "\\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix} \\begin{bmatrix} 5 \\\\ 5 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} 10 \\\\ 10 \\\\ 12 \\end{bmatrix} = 2 \\begin{bmatrix} 5 \\\\ 5 \\\\ 6 \\end{bmatrix} \\ne \\lambda \\begin{bmatrix} 5 \\\\ 5 \\\\ 4 \\end{bmatrix} \\implies \\text{NOT an eigenvector}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Theoretical Synthesis of Slides 308--311:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "**Scalar Invariance:** If $X$ is an eigenvector with eigenvalue $\\lambda$, then any non-zero scalar multiple $c X$ ($c \\ne 0$) is also an eigenvector for the same $\\lambda$.",
-      "**Subspace Closure:** The set $E_\\lambda = \\{X \\in \\mathbb{R}^n \\mid AX = \\lambda X\\} = \\text{Null}(A - \\lambda I)$ forms a vector subspace called the **eigenspace**.",
-      "**Linear Combinations across Eigenspaces:** If $X \\in E_{\\lambda_1}$ and $Y \\in E_{\\lambda_2}$ with $\\lambda_1 \\ne \\lambda_2$, then $A(X + Y) = \\lambda_1 X + \\lambda_2 Y$. For this to equal $\\lambda(X + Y)$, we would need $(\\lambda_1 - \\lambda)X + (\\lambda_2 - \\lambda)Y = \\mathbf{0}$. Since eigenvectors of distinct eigenvalues are linearly independent, this forces $\\lambda = \\lambda_1 = \\lambda_2$, a contradiction.",
-      "Hence, the sum of eigenvectors from different eigenvalues is **never** an eigenvector."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Theoretical Synthesis of Slides 308--311:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "**Scalar Invariance:** If $X$ is an eigenvector with eigenvalue $\\lambda$, then any non-zero scalar multiple $c X$ ($c \\ne 0$) is also an eigenvector for the same $\\lambda$.",
+        "**Subspace Closure:** The set $E_\\lambda = \\{X \\in \\mathbb{R}^n \\mid AX = \\lambda X\\} = \\text{Null}(A - \\lambda I)$ forms a vector subspace called the **eigenspace**.",
+        "**Linear Combinations across Eigenspaces:** If $X \\in E_{\\lambda_1}$ and $Y \\in E_{\\lambda_2}$ with $\\lambda_1 \\ne \\lambda_2$, then $A(X + Y) = \\lambda_1 X + \\lambda_2 Y$. For this to equal $\\lambda(X + Y)$, we would need $(\\lambda_1 - \\lambda)X + (\\lambda_2 - \\lambda)Y = \\mathbf{0}$. Since eigenvectors of distinct eigenvalues are linearly independent, this forces $\\lambda = \\lambda_1 = \\lambda_2$, a contradiction.",
+        "Hence, the sum of eigenvectors from different eigenvalues is **never** an eigenvector."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20434,23 +20465,26 @@ export default {
      "tex": "\\begin{bmatrix} -4 & 2 \\\\ 4 & 3 \\end{bmatrix} \\begin{bmatrix} -1 \\\\ 2 \\end{bmatrix} = \\begin{bmatrix} 4 + 4 \\\\ -4 + 6 \\end{bmatrix} = \\begin{bmatrix} 8 \\\\ 2 \\end{bmatrix} \\ne \\lambda \\begin{bmatrix} -1 \\\\ 2 \\end{bmatrix} \\quad [\\text{False}]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Analysis & Speed Strategy:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "In an objective GATE examination, testing candidate vectors directly using $AX = \\lambda X$ takes under 15 seconds per option and is far faster than computing the characteristic polynomial, finding the roots, and solving the linear systems.",
-      "Notice: $\\begin{bmatrix} -10 \\\\ 5 \\end{bmatrix} = -5 \\begin{bmatrix} 2 \\\\ -1 \\end{bmatrix}$. Since the scalar ratio between the resulting components is identical $(-10 / 2 = 5 / -1 = -5)$, Option (C) is the guaranteed eigenvector."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Option:** **(C)**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Analysis & Speed Strategy:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "In an objective GATE examination, testing candidate vectors directly using $AX = \\lambda X$ takes under 15 seconds per option and is far faster than computing the characteristic polynomial, finding the roots, and solving the linear systems.",
+        "Notice: $\\begin{bmatrix} -10 \\\\ 5 \\end{bmatrix} = -5 \\begin{bmatrix} 2 \\\\ -1 \\end{bmatrix}$. Since the scalar ratio between the resulting components is identical $(-10 / 2 = 5 / -1 = -5)$, Option (C) is the guaranteed eigenvector."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Option:** **(C)**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20511,29 +20545,28 @@ export default {
      "tex": "\\boxed{\\vert A - \\lambda I \\vert = 0}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Theoretical Rigor:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "A homogeneous linear system $C X = \\mathbf{0}$ always has at least the trivial solution $X = \\mathbf{0}$.",
-      "By the Rank-Nullity Theorem, non-trivial solutions exist if and only if the nullity $\\eta(C) \\ge 1$, which requires $\\text{rank}(C) < n$.",
-      "For an $n \\times n$ matrix $C$, $\\text{rank}(C) < n$ if and only if its determinant vanishes: $\\det(C) = 0$.",
-      "Substituting $C = A - \\lambda I$ establishes the **Characteristic Equation**:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A - \\lambda I) = 0"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Theoretical Rigor:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "A homogeneous linear system $C X = \\mathbf{0}$ always has at least the trivial solution $X = \\mathbf{0}$.",
+        "By the Rank-Nullity Theorem, non-trivial solutions exist if and only if the nullity $\\eta(C) \\ge 1$, which requires $\\text{rank}(C) < n$.",
+        "For an $n \\times n$ matrix $C$, $\\text{rank}(C) < n$ if and only if its determinant vanishes: $\\det(C) = 0$.",
+        "Substituting $C = A - \\lambda I$ establishes the **Characteristic Equation**:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A - \\lambda I) = 0"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -20990,34 +21023,33 @@ export default {
      "text": "**$\\eta[A - \\lambda_1 I]$:** The number of independent eigenvectors with respect to eigenvalue $\\lambda = \\lambda_1$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Complete Solution to 5-Part Exercise (Slides 315--322):**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Part (A):**",
-      "Characteristic Polynomial: $P(\\lambda) = \\det(A - \\lambda I) = (2-\\lambda)^2 (5-\\lambda)$.",
-      "Characteristic Equation: $(2-\\lambda)^2(5-\\lambda) = 0 \\iff (\\lambda-2)^2(\\lambda-5) = 0$.",
-      "**Part (B):** Eigenvalues are the roots: $\\lambda = 2, 2, 5$.",
-      "**Part (C):**",
-      "For $\\lambda = 2$: $\\text{span}\\left(\\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}, \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}\\right)$.",
-      "For $\\lambda = 5$: $\\text{span}\\left(\\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}\\right)$.",
-      "**Part (D):**",
-      "$\\lambda = 2$: $\\text{AM} = 2$, $\\text{GM} = 2$.",
-      "$\\lambda = 5$: $\\text{AM} = 1$, $\\text{GM} = 1$.",
-      "**Part (E):**",
-      "$\\eta(A - 2I) = 3 - \\text{rank}(A - 2I) = 3 - 1 = 2 = \\text{GM}(2)$. Represents the dimension of the eigenspace $E_2$.",
-      "$\\eta(A - 5I) = 3 - \\text{rank}(A - 5I) = 3 - 2 = 1 = \\text{GM}(5)$. Represents the dimension of the eigenspace $E_5$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Complete Solution to 5-Part Exercise (Slides 315--322):**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Part (A):**",
+        "Characteristic Polynomial: $P(\\lambda) = \\det(A - \\lambda I) = (2-\\lambda)^2 (5-\\lambda)$.",
+        "Characteristic Equation: $(2-\\lambda)^2(5-\\lambda) = 0 \\iff (\\lambda-2)^2(\\lambda-5) = 0$.",
+        "**Part (B):** Eigenvalues are the roots: $\\lambda = 2, 2, 5$.",
+        "**Part (C):**",
+        "For $\\lambda = 2$: $\\text{span}\\left(\\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}, \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}\\right)$.",
+        "For $\\lambda = 5$: $\\text{span}\\left(\\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}\\right)$.",
+        "**Part (D):**",
+        "$\\lambda = 2$: $\\text{AM} = 2$, $\\text{GM} = 2$.",
+        "$\\lambda = 5$: $\\text{AM} = 1$, $\\text{GM} = 1$.",
+        "**Part (E):**",
+        "$\\eta(A - 2I) = 3 - \\text{rank}(A - 2I) = 3 - 1 = 2 = \\text{GM}(2)$. Represents the dimension of the eigenspace $E_2$.",
+        "$\\eta(A - 5I) = 3 - \\text{rank}(A - 5I) = 3 - 2 = 1 = \\text{GM}(5)$. Represents the dimension of the eigenspace $E_5$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21312,26 +21344,25 @@ export default {
      "tex": "\\text{A.M.}[\\lambda_4] = 3 \\implies \\text{G.M.} \\in \\{1, 2, 3\\}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Key Takeaways from the Deficient Matrix Drill:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Whenever $\\text{AM}(\\lambda) = 1$, the geometric multiplicity is forced to be 1 ($1 \\le \\text{GM} \\le 1 \\implies \\text{GM} = 1$). A simple eigenvalue can **never** be defective.",
-      "Defect can only occur when an eigenvalue is repeated ($\\text{AM} \\ge 2$).",
-      "The geometric multiplicity $\\text{GM}(\\lambda)$ can take any integer value in the closed range $[1, \\text{AM}(\\lambda)]$.",
-      "Matrix $A$ is diagonalizable if and only if the total number of independent eigenvectors equals the order $n$. Here, $\\text{Total} = 3 < 4$, proving that $A$ **cannot be diagonalized**."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Key Takeaways from the Deficient Matrix Drill:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Whenever $\\text{AM}(\\lambda) = 1$, the geometric multiplicity is forced to be 1 ($1 \\le \\text{GM} \\le 1 \\implies \\text{GM} = 1$). A simple eigenvalue can **never** be defective.",
+        "Defect can only occur when an eigenvalue is repeated ($\\text{AM} \\ge 2$).",
+        "The geometric multiplicity $\\text{GM}(\\lambda)$ can take any integer value in the closed range $[1, \\text{AM}(\\lambda)]$.",
+        "Matrix $A$ is diagonalizable if and only if the total number of independent eigenvectors equals the order $n$. Here, $\\text{Total} = 3 < 4$, proving that $A$ **cannot be diagonalized**."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21447,28 +21478,31 @@ export default {
      "tex": "\\vert A \\vert = \\lambda_1 \\cdot \\lambda_2 \\cdot \\lambda_3 \\cdot 0 \\implies \\boxed{\\vert A \\vert = 0}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Rigorous Proof:**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "By the Rank-Nullity Theorem: $\\text{nullity}(A) = n - \\text{rank}(A)$.",
-      "If $\\text{nullity}(A) = k \\ge 1$, then $\\text{dim}(\\text{Null}(A)) = k$.",
-      "Since $\\text{Null}(A) = \\text{Null}(A - 0I) = E_0$, the dimension of the eigenspace corresponding to $\\lambda = 0$ is exactly $k$.",
-      "By definition, $\\text{GM}(\\lambda = 0) = k$.",
-      "Because $\\text{AM}(\\lambda) \\ge \\text{GM}(\\lambda)$ for every eigenvalue, we have $\\text{AM}(\\lambda = 0) \\ge k$.",
-      "This means 0 is a root of the characteristic polynomial with multiplicity of at least $k$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Options for Slide 327:** **(A), (B), and (D)**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Rigorous Proof:**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "By the Rank-Nullity Theorem: $\\text{nullity}(A) = n - \\text{rank}(A)$.",
+        "If $\\text{nullity}(A) = k \\ge 1$, then $\\text{dim}(\\text{Null}(A)) = k$.",
+        "Since $\\text{Null}(A) = \\text{Null}(A - 0I) = E_0$, the dimension of the eigenspace corresponding to $\\lambda = 0$ is exactly $k$.",
+        "By definition, $\\text{GM}(\\lambda = 0) = k$.",
+        "Because $\\text{AM}(\\lambda) \\ge \\text{GM}(\\lambda)$ for every eigenvalue, we have $\\text{AM}(\\lambda = 0) \\ge k$.",
+        "This means 0 is a root of the characteristic polynomial with multiplicity of at least $k$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Options for Slide 327:** **(A), (B), and (D)**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21506,33 +21540,32 @@ export default {
      "text": "**Theorem:** In a triangular or diagonal matrix, the eigenvalues are simply the elements on the main diagonal."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Proof:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For any upper or lower triangular matrix $T$, the shifted matrix $T - \\lambda I$ is also triangular, with diagonal elements $(t_{11} - \\lambda), (t_{22} - \\lambda), \\dots, (t_{nn} - \\lambda)$.",
-      "The determinant of any triangular matrix is the product of its diagonal entries:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(T - \\lambda I) = (t_{11} - \\lambda)(t_{22} - \\lambda)\\dots(t_{nn} - \\lambda) = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "The roots are evidently $\\lambda_i = t_{ii}$ for $i = 1, \\dots, n$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Proof:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For any upper or lower triangular matrix $T$, the shifted matrix $T - \\lambda I$ is also triangular, with diagonal elements $(t_{11} - \\lambda), (t_{22} - \\lambda), \\dots, (t_{nn} - \\lambda)$.",
+        "The determinant of any triangular matrix is the product of its diagonal entries:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(T - \\lambda I) = (t_{11} - \\lambda)(t_{22} - \\lambda)\\dots(t_{nn} - \\lambda) = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "The roots are evidently $\\lambda_i = t_{ii}$ for $i = 1, \\dots, n$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -21991,33 +22024,32 @@ export default {
      "tex": "\\vert B \\vert = \\lambda_{B, 1} \\cdot \\lambda_{B, 2} \\cdot \\lambda_{B, 3} = 32 \\times 32 \\times 59 = 1024 \\times 59 = \\boxed{60416}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Spectral Mapping Theorem for Polynomials:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "If $f(x)$ is a scalar polynomial and $A$ has eigenvalues $\\lambda_1, \\dots, \\lambda_n$, then the matrix polynomial $f(A)$ has eigenvalues $f(\\lambda_1), \\dots, f(\\lambda_n)$.",
-      "Since the determinant of any matrix is the product of its eigenvalues:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(f(A)) = \\prod_{i=1}^n f(\\lambda_i)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Calculation: $32^2 = 1024$. Then $1024 \\times 59 = 1024 \\times (60 - 1) = 61440 - 1024 = 60416$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Spectral Mapping Theorem for Polynomials:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "If $f(x)$ is a scalar polynomial and $A$ has eigenvalues $\\lambda_1, \\dots, \\lambda_n$, then the matrix polynomial $f(A)$ has eigenvalues $f(\\lambda_1), \\dots, f(\\lambda_n)$.",
+        "Since the determinant of any matrix is the product of its eigenvalues:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(f(A)) = \\prod_{i=1}^n f(\\lambda_i)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Calculation: $32^2 = 1024$. Then $1024 \\times 59 = 1024 \\times (60 - 1) = 61440 - 1024 = 60416$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -22102,33 +22134,32 @@ export default {
      "tex": "\\boxed{\\alpha_1 \\alpha_2 \\dots \\alpha_n = \\begin{cases} +\\frac{d}{a}, & n \\text{ is even} \\\\ -\\frac{d}{a}, & n \\text{ is odd} \\end{cases}}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Connection to Matrix Spectra:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For an $n \\times n$ matrix $A$, the characteristic polynomial is:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P(\\lambda) = \\det(\\lambda I - A) = \\lambda^n - \\text{Tr}(A)\\lambda^{n-1} + \\dots + (-1)^n \\det(A) = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "In monic form, the coefficient of $\\lambda^{n-1}$ is always $-\\text{Tr}(A)$, so $\\sum \\lambda_i = -(-\\text{Tr}(A)) = \\text{Tr}(A)$.",
-      "The constant term is $(-1)^n \\det(A)$, ensuring $\\prod \\lambda_i = \\det(A)$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Connection to Matrix Spectra:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For an $n \\times n$ matrix $A$, the characteristic polynomial is:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P(\\lambda) = \\det(\\lambda I - A) = \\lambda^n - \\text{Tr}(A)\\lambda^{n-1} + \\dots + (-1)^n \\det(A) = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "In monic form, the coefficient of $\\lambda^{n-1}$ is always $-\\text{Tr}(A)$, so $\\sum \\lambda_i = -(-\\text{Tr}(A)) = \\text{Tr}(A)$.",
+        "The constant term is $(-1)^n \\det(A)$, ensuring $\\prod \\lambda_i = \\det(A)$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -22408,57 +22439,56 @@ export default {
      "tex": "\\boxed{A^{99} \\ne c_1 A + c_2 I \\quad (\\text{For } 5 \\times 5 \\text{ matrix!})}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Euclidean Polynomial Division Proof:**"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Let $P(\\lambda)$ be the characteristic polynomial of $A$, with $\\deg(P) = n$.",
-      "By polynomial division of $\\lambda^k$ by $P(\\lambda)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda^k = Q(\\lambda) P(\\lambda) + R(\\lambda)"
-    },
-    {
-     "t": "p",
-     "text": "where $\\deg(R) \\le n - 1$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Substituting matrix $A$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^k = Q(A) P(A) + R(A)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Since $P(A) = O$ by the Cayley-Hamilton Theorem:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^k = Q(A) \\cdot O + R(A) = R(A) = \\sum_{j=0}^{n-1} c_j A^j"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "This guarantees that **any power of an $n \\times n$ matrix** can be represented as a polynomial in $A$ of degree at most $n - 1$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Euclidean Polynomial Division Proof:**"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Let $P(\\lambda)$ be the characteristic polynomial of $A$, with $\\deg(P) = n$.",
+        "By polynomial division of $\\lambda^k$ by $P(\\lambda)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda^k = Q(\\lambda) P(\\lambda) + R(\\lambda)"
+      },
+      {
+       "t": "p",
+       "text": "where $\\deg(R) \\le n - 1$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Substituting matrix $A$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^k = Q(A) P(A) + R(A)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Since $P(A) = O$ by the Cayley-Hamilton Theorem:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^k = Q(A) \\cdot O + R(A) = R(A) = \\sum_{j=0}^{n-1} c_j A^j"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "This guarantees that **any power of an $n \\times n$ matrix** can be represented as a polynomial in $A$ of degree at most $n - 1$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -23119,124 +23149,127 @@ export default {
      "tex": "\\text{Multiplying by } A^{-1}: \\quad 2A^3 + A + A^{-1} = O \\implies \\boxed{A^{-1} = -2A^3 - A} \\implies [\\text{Option C is TRUE}]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "p",
-     "text": "**Complete Derivation of Matrix $B$ and Verification of Statement (D):**"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "By the Cayley-Hamilton Theorem:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2A^4 + A^2 + I = O"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Group terms in $B$ to exploit this annihilating identity:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "B = 2A^8 + A^6 + 2A^5 + A^4 + A^3 + 4A + 3I"
-    },
-    {
-     "t": "math",
-     "tex": "= A^4(2A^4 + A^2 + I) + A(2A^4 + A^2 + 4I) + 3I"
-    },
-    {
-     "t": "math",
-     "tex": "= A^4(2A^4 + A^2 + I) + A(2A^4 + A^2 + I + 3I) + 3I"
-    },
-    {
-     "t": "math",
-     "tex": "= A^4(O) + A(O + 3I) + 3I"
-    },
-    {
-     "t": "math",
-     "tex": "= 3A + 3I = 3(A + I)"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Determinant of scalar multiple of an $n \\times n$ matrix:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(B) = \\det(3(A + I)) = 3^4 \\det(A + I) = 81 \\det(A + I)"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "To evaluate $\\det(A + I)$, consider the characteristic polynomial $P(\\lambda)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P(\\lambda) = 2 \\prod_{i=1}^4 (\\lambda - \\lambda_i)"
-    },
-    {
-     "t": "p",
-     "text": "Evaluating at $\\lambda = -1$:"
-    },
-    {
-     "t": "math",
-     "tex": "P(-1) = 2 \\prod_{i=1}^4 (-1 - \\lambda_i) = 2 (-1)^4 \\prod_{i=1}^4 (1 + \\lambda_i) = 2 \\prod_{i=1}^4 (\\lambda_i + 1) = 2 \\det(A + I)"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "From the explicit formula $P(\\lambda) = 2\\lambda^4 + \\lambda^2 + 1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P(-1) = 2(-1)^4 + (-1)^2 + 1 = 2(1) + 1 + 1 = 4"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "Equating the two expressions:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2 \\det(A + I) = 4 \\implies \\det(A + I) = 2"
-    },
-    {
-     "t": "ol",
-     "start": 7,
-     "items": [
-      "Substituting into $\\det(B)$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(B) = 81 \\times 2 = \\mathbf{162}"
-    },
-    {
-     "t": "ol",
-     "start": 8,
-     "items": [
-      "Since statement (D) asserts $\\det(B) = 324$, **Statement (D) is FALSE** (324 corresponds to the error of forgetting to divide by the leading coefficient $k=2$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "**Correct Statements:** **(A), (B), and (C)**\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Complete Derivation of Matrix $B$ and Verification of Statement (D):**"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "By the Cayley-Hamilton Theorem:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2A^4 + A^2 + I = O"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Group terms in $B$ to exploit this annihilating identity:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "B = 2A^8 + A^6 + 2A^5 + A^4 + A^3 + 4A + 3I"
+      },
+      {
+       "t": "math",
+       "tex": "= A^4(2A^4 + A^2 + I) + A(2A^4 + A^2 + 4I) + 3I"
+      },
+      {
+       "t": "math",
+       "tex": "= A^4(2A^4 + A^2 + I) + A(2A^4 + A^2 + I + 3I) + 3I"
+      },
+      {
+       "t": "math",
+       "tex": "= A^4(O) + A(O + 3I) + 3I"
+      },
+      {
+       "t": "math",
+       "tex": "= 3A + 3I = 3(A + I)"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Determinant of scalar multiple of an $n \\times n$ matrix:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(B) = \\det(3(A + I)) = 3^4 \\det(A + I) = 81 \\det(A + I)"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "To evaluate $\\det(A + I)$, consider the characteristic polynomial $P(\\lambda)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P(\\lambda) = 2 \\prod_{i=1}^4 (\\lambda - \\lambda_i)"
+      },
+      {
+       "t": "p",
+       "text": "Evaluating at $\\lambda = -1$:"
+      },
+      {
+       "t": "math",
+       "tex": "P(-1) = 2 \\prod_{i=1}^4 (-1 - \\lambda_i) = 2 (-1)^4 \\prod_{i=1}^4 (1 + \\lambda_i) = 2 \\prod_{i=1}^4 (\\lambda_i + 1) = 2 \\det(A + I)"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "From the explicit formula $P(\\lambda) = 2\\lambda^4 + \\lambda^2 + 1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P(-1) = 2(-1)^4 + (-1)^2 + 1 = 2(1) + 1 + 1 = 4"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "Equating the two expressions:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2 \\det(A + I) = 4 \\implies \\det(A + I) = 2"
+      },
+      {
+       "t": "ol",
+       "start": 7,
+       "items": [
+        "Substituting into $\\det(B)$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(B) = 81 \\times 2 = \\mathbf{162}"
+      },
+      {
+       "t": "ol",
+       "start": 8,
+       "items": [
+        "Since statement (D) asserts $\\det(B) = 324$, **Statement (D) is FALSE** (324 corresponds to the error of forgetting to divide by the leading coefficient $k=2$)."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "**Correct Statements:** **(A), (B), and (C)**"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h2",
@@ -24296,19 +24329,18 @@ export default {
      "tex": "\\lambda_C = \\lambda_i + 1 \\implies \\det(A + I) = (\\lambda_1 + 1)(\\lambda_2 + 1)(\\lambda_3 + 1)(\\lambda_4 + 1)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Target Formula:** $\\det(B) = 81 \\prod_{i=1}^4 (\\lambda_i + 1)$.",
-      "**Exam Trap:** Many candidates factor out scalar $3$ as $3 \\cdot \\det(A+I)$ instead of $3^4 \\cdot \\det(A+I)$. Always apply $\\det(k C) = k^n \\det(C)$ where $n$ is matrix dimension!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Target Formula:** $\\det(B) = 81 \\prod_{i=1}^4 (\\lambda_i + 1)$.",
+        "**Exam Trap:** Many candidates factor out scalar $3$ as $3 \\cdot \\det(A+I)$ instead of $3^4 \\cdot \\det(A+I)$. Always apply $\\det(k C) = k^n \\det(C)$ where $n$ is matrix dimension!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -24391,19 +24423,18 @@ export default {
      "tex": "\\therefore P(-1) = 2 (\\lambda_1 + 1)(\\lambda_2 + 1)(\\lambda_3 + 1)(\\lambda_4 + 1)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Critical Step:** For odd dimension $n$, $(-1)^n = -1$, but here $n = 4$ (even), so $(-1)^4 = +1$.",
-      "**Exam Trap:** Forgetting the leading coefficient $K = 2$ and assuming $P(\\lambda)$ is monic causes an immediate factor-of-2 error!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Critical Step:** For odd dimension $n$, $(-1)^n = -1$, but here $n = 4$ (even), so $(-1)^4 = +1$.",
+        "**Exam Trap:** Forgetting the leading coefficient $K = 2$ and assuming $P(\\lambda)$ is monic causes an immediate factor-of-2 error!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -24466,19 +24497,18 @@ export default {
      "tex": "\\lambda_1 = 1 + j, \\quad \\lambda_2 = 1 - j = \\lambda_1^* \\quad (\\text{Complex Conjugate Pair})"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Result:** $\\det(B) = 162$.",
-      "**Theorem:** If $A$ is real, characteristic polynomial coefficients are all real, so complex roots **must** occur in conjugate pairs ($a \\pm ib$)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Result:** $\\det(B) = 162$.",
+        "**Theorem:** If $A$ is real, characteristic polynomial coefficients are all real, so complex roots **must** occur in conjugate pairs ($a \\pm ib$)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -24523,20 +24553,19 @@ export default {
      "text": "                                Matrices\n                               /        \\\n                             /            \\\n                       REAL                  COMPLEX\n                      /                      /\n      Eigenvalues: Real or Complex      Eigenvalues: Real or Complex\n                     |                                 |\n                 (MUST be in conjugate pairs)      (NOT necessary conjugate)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Rule:**",
-      "Real Matrix $\\implies$ complex eigenvalues occur in conjugate pairs ($a \\pm i b$).",
-      "Complex Matrix $\\implies$ complex eigenvalues can be arbitrary; conjugacy is not required."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Rule:**",
+        "Real Matrix $\\implies$ complex eigenvalues occur in conjugate pairs ($a \\pm i b$).",
+        "Complex Matrix $\\implies$ complex eigenvalues can be arbitrary; conjugacy is not required."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -24579,62 +24608,61 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Mathematical Analysis:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$A$ is real and $3 \\times 3$, so it has 3 eigenvalues: $\\lambda_1, \\lambda_2, \\lambda_3$.",
-      "$\\lambda_1 = 4 + 3i$. Conjugate theorem dictates $\\lambda_2 = 4 - 3i$.",
-      "Since complex roots must be paired, the remaining eigenvalue $\\lambda_3$ must be **purely real**: $\\lambda_3 \\in \\mathbb{R}$. $\\implies$ **(A) is TRUE**.",
-      "Compare the three values: $\\lambda_1 = 4+3i$, $\\lambda_2 = 4-3i$, $\\lambda_3 \\in \\mathbb{R}$. All three eigenvalues are strictly distinct:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "4 + 3i \\ne 4 - 3i \\ne \\lambda_3"
-    },
-    {
-     "t": "p",
-     "text": "Since distinct eigenvalues always produce linearly independent eigenvectors, $A$ will surely have 3 linearly independent eigenvectors. $\\implies$ **(B) is TRUE**."
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Since all three eigenvalues are distinct, repeating eigenvalues are impossible. $\\implies$ **(C) is FALSE**.",
-      "Determinant equation:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = \\lambda_1 \\lambda_2 \\lambda_3 = (4 + 3i)(4 - 3i)\\lambda_3 = (4^2 + 3^2)\\lambda_3 = 25\\lambda_3"
-    },
-    {
-     "t": "math",
-     "tex": "25\\lambda_3 = 21 \\implies \\lambda_3 = \\frac{21}{25} \\ne 3"
-    },
-    {
-     "t": "p",
-     "text": "$\\implies$ **(D) is FALSE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Statements:** (A) and (B)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Mathematical Analysis:**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$A$ is real and $3 \\times 3$, so it has 3 eigenvalues: $\\lambda_1, \\lambda_2, \\lambda_3$.",
+        "$\\lambda_1 = 4 + 3i$. Conjugate theorem dictates $\\lambda_2 = 4 - 3i$.",
+        "Since complex roots must be paired, the remaining eigenvalue $\\lambda_3$ must be **purely real**: $\\lambda_3 \\in \\mathbb{R}$. $\\implies$ **(A) is TRUE**.",
+        "Compare the three values: $\\lambda_1 = 4+3i$, $\\lambda_2 = 4-3i$, $\\lambda_3 \\in \\mathbb{R}$. All three eigenvalues are strictly distinct:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "4 + 3i \\ne 4 - 3i \\ne \\lambda_3"
+      },
+      {
+       "t": "p",
+       "text": "Since distinct eigenvalues always produce linearly independent eigenvectors, $A$ will surely have 3 linearly independent eigenvectors. $\\implies$ **(B) is TRUE**."
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Since all three eigenvalues are distinct, repeating eigenvalues are impossible. $\\implies$ **(C) is FALSE**.",
+        "Determinant equation:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = \\lambda_1 \\lambda_2 \\lambda_3 = (4 + 3i)(4 - 3i)\\lambda_3 = (4^2 + 3^2)\\lambda_3 = 25\\lambda_3"
+      },
+      {
+       "t": "math",
+       "tex": "25\\lambda_3 = 21 \\implies \\lambda_3 = \\frac{21}{25} \\ne 3"
+      },
+      {
+       "t": "p",
+       "text": "$\\implies$ **(D) is FALSE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Statements:** (A) and (B)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -24656,65 +24684,64 @@ export default {
      "text": "**Problem:** Let $A$ be a real $5 \\times 5$ matrix. Two of its eigenvalues are $4 + 3i$ and $2 - 4i$. It is given that $\\text{rank}(A) = 4$. Find $\\text{tr}(A)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Derivation:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$A$ is real $5 \\times 5$, so complex eigenvalues come in conjugate pairs:"
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$\\lambda_1 = 4 + 3i \\implies \\lambda_2 = 4 - 3i$.",
-      "$\\lambda_3 = 2 - 4i \\implies \\lambda_4 = 2 + 4i$."
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "Matrix rank is $\\rho(A) = 4 < 5$. Therefore, $\\det(A) = 0$.",
-      "Since $\\det(A) = \\prod_{i=1}^5 \\lambda_i = 0$, at least one eigenvalue must be 0."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda_5 = 0"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Matrix trace is the sum of all eigenvalues:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(A) = \\lambda_1 + \\lambda_2 + \\lambda_3 + \\lambda_4 + \\lambda_5"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(A) = (4 + 3i) + (4 - 3i) + (2 - 4i) + (2 + 4i) + 0 = 8 + 4 + 0 = 12"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** $\\text{tr}(A) = 12$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Derivation:**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$A$ is real $5 \\times 5$, so complex eigenvalues come in conjugate pairs:"
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$\\lambda_1 = 4 + 3i \\implies \\lambda_2 = 4 - 3i$.",
+        "$\\lambda_3 = 2 - 4i \\implies \\lambda_4 = 2 + 4i$."
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "Matrix rank is $\\rho(A) = 4 < 5$. Therefore, $\\det(A) = 0$.",
+        "Since $\\det(A) = \\prod_{i=1}^5 \\lambda_i = 0$, at least one eigenvalue must be 0."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda_5 = 0"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Matrix trace is the sum of all eigenvalues:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(A) = \\lambda_1 + \\lambda_2 + \\lambda_3 + \\lambda_4 + \\lambda_5"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(A) = (4 + 3i) + (4 - 3i) + (2 - 4i) + (2 + 4i) + 0 = 8 + 4 + 0 = 12"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** $\\text{tr}(A) = 12$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -24732,56 +24759,55 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Multiplicity Analysis:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{array}{lcccc}\n  \\text{Eigenvalue } \\lambda: & 1 & 2 & 3 & 4 \\\\\n  \\text{Algebraic Multiplicity (A.M.):} & 3 & 2 & 1 & 1 \\\\\n  \\text{Geometric Multiplicity (G.M.) range:} & 1 \\le \\text{G.M.} \\le 3 & 1 \\le \\text{G.M.} \\le 2 & 1 & 1\n\\end{array}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Minimum L.I. Eigenvectors:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Occurs when every distinct eigenvalue achieves its minimum possible G.M. ($= 1$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Min} = 1 + 1 + 1 + 1 = 4"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Maximum L.I. Eigenvectors:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Occurs when every eigenvalue achieves its maximum possible G.M. ($= \\text{A.M.}$):"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Max} = 3 + 2 + 1 + 1 = 7"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answers:** (A) 4, (B) 7."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Multiplicity Analysis:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{array}{lcccc}\n  \\text{Eigenvalue } \\lambda: & 1 & 2 & 3 & 4 \\\\\n  \\text{Algebraic Multiplicity (A.M.):} & 3 & 2 & 1 & 1 \\\\\n  \\text{Geometric Multiplicity (G.M.) range:} & 1 \\le \\text{G.M.} \\le 3 & 1 \\le \\text{G.M.} \\le 2 & 1 & 1\n\\end{array}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Minimum L.I. Eigenvectors:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Occurs when every distinct eigenvalue achieves its minimum possible G.M. ($= 1$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Min} = 1 + 1 + 1 + 1 = 4"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Maximum L.I. Eigenvectors:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Occurs when every eigenvalue achieves its maximum possible G.M. ($= \\text{A.M.}$):"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Max} = 3 + 2 + 1 + 1 = 7"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answers:** (A) 4, (B) 7."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -24824,58 +24850,57 @@ export default {
      "text": "   Chalkboard Inspection:\n   Row 1 sum: 1 + 2 + 5 + 7 = 15\n   Row 2 sum: 2 + 5 + 7 + 1 = 15\n   Row 3 sum: 5 + 7 + 1 + 2 = 15\n   Row 4 sum: 7 + 1 + 2 + 5 = 15\n   Column sums also all equal 15."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method 1: Constant Row Sum Property:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If every row sum of matrix $A$ equals a constant $S$, then $\\lambda = S$ is guaranteed to be an eigenvalue of $A$, with corresponding eigenvector $v = [1, 1, 1, 1]^T$:"
-    },
-    {
-     "t": "math",
-     "tex": "A \\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 15 \\\\ 15 \\\\ 15 \\\\ 15 \\end{bmatrix} = 15 \\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\end{bmatrix} \\implies \\lambda = 15"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method 2: Determinant Row Operation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "In the characteristic determinant $|A - \\lambda I| = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} 1 - \\lambda & 2 & 5 & 7 \\\\ 2 & 5 - \\lambda & 7 & 1 \\\\ 5 & 7 & 1 - \\lambda & 2 \\\\ 7 & 1 & 2 & 5 - \\lambda \\end{vmatrix} = 0"
-    },
-    {
-     "t": "p",
-     "text": "Apply row operation $R_1 \\to R_1 + R_2 + R_3 + R_4$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{vmatrix} 15 - \\lambda & 15 - \\lambda & 15 - \\lambda & 15 - \\lambda \\\\ 2 & 5 - \\lambda & 7 & 1 \\\\ 5 & 7 & 1 - \\lambda & 2 \\\\ 7 & 1 & 2 & 5 - \\lambda \\end{vmatrix} = (15 - \\lambda) \\begin{vmatrix} 1 & 1 & 1 & 1 \\\\ 2 & 5 - \\lambda & 7 & 1 \\\\ 5 & 7 & 1 - \\lambda & 2 \\\\ 7 & 1 & 2 & 5 - \\lambda \\end{vmatrix} = 0"
-    },
-    {
-     "t": "math",
-     "tex": "(15 - \\lambda) \\cdot (\\dots) = 0 \\implies \\lambda = 15"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Option:** (A) 15."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Method 1: Constant Row Sum Property:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If every row sum of matrix $A$ equals a constant $S$, then $\\lambda = S$ is guaranteed to be an eigenvalue of $A$, with corresponding eigenvector $v = [1, 1, 1, 1]^T$:"
+      },
+      {
+       "t": "math",
+       "tex": "A \\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 15 \\\\ 15 \\\\ 15 \\\\ 15 \\end{bmatrix} = 15 \\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\end{bmatrix} \\implies \\lambda = 15"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Method 2: Determinant Row Operation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "In the characteristic determinant $|A - \\lambda I| = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} 1 - \\lambda & 2 & 5 & 7 \\\\ 2 & 5 - \\lambda & 7 & 1 \\\\ 5 & 7 & 1 - \\lambda & 2 \\\\ 7 & 1 & 2 & 5 - \\lambda \\end{vmatrix} = 0"
+      },
+      {
+       "t": "p",
+       "text": "Apply row operation $R_1 \\to R_1 + R_2 + R_3 + R_4$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{vmatrix} 15 - \\lambda & 15 - \\lambda & 15 - \\lambda & 15 - \\lambda \\\\ 2 & 5 - \\lambda & 7 & 1 \\\\ 5 & 7 & 1 - \\lambda & 2 \\\\ 7 & 1 & 2 & 5 - \\lambda \\end{vmatrix} = (15 - \\lambda) \\begin{vmatrix} 1 & 1 & 1 & 1 \\\\ 2 & 5 - \\lambda & 7 & 1 \\\\ 5 & 7 & 1 - \\lambda & 2 \\\\ 7 & 1 & 2 & 5 - \\lambda \\end{vmatrix} = 0"
+      },
+      {
+       "t": "math",
+       "tex": "(15 - \\lambda) \\cdot (\\dots) = 0 \\implies \\lambda = 15"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Option:** (A) 15."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -24905,58 +24930,57 @@ export default {
      "text": "where $X$ is unknown. If the eigenvalues of matrix $A$ are $\\sigma + j\\omega$ and $\\sigma - j\\omega$, then find the value of $X$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trace Analysis:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(A) = \\sigma + \\sigma = 2\\sigma"
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda_1 + \\lambda_2 = (\\sigma + j\\omega) + (\\sigma - j\\omega) = 2\\sigma \\quad (\\text{Consistent})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Determinant Analysis:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = \\sigma^2 - \\omega X"
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda_1 \\lambda_2 = (\\sigma + j\\omega)(\\sigma - j\\omega) = \\sigma^2 - (j\\omega)^2 = \\sigma^2 + \\omega^2"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\det(A) = \\lambda_1 \\lambda_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\sigma^2 - \\omega X = \\sigma^2 + \\omega^2"
-    },
-    {
-     "t": "math",
-     "tex": "-\\omega X = \\omega^2 \\implies X = -\\omega"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** $X = -\\omega$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Trace Analysis:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(A) = \\sigma + \\sigma = 2\\sigma"
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda_1 + \\lambda_2 = (\\sigma + j\\omega) + (\\sigma - j\\omega) = 2\\sigma \\quad (\\text{Consistent})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Determinant Analysis:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = \\sigma^2 - \\omega X"
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda_1 \\lambda_2 = (\\sigma + j\\omega)(\\sigma - j\\omega) = \\sigma^2 - (j\\omega)^2 = \\sigma^2 + \\omega^2"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\det(A) = \\lambda_1 \\lambda_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\sigma^2 - \\omega X = \\sigma^2 + \\omega^2"
+      },
+      {
+       "t": "math",
+       "tex": "-\\omega X = \\omega^2 \\implies X = -\\omega"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** $X = -\\omega$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -24995,48 +25019,47 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Matrix is upper triangular, so diagonal entries are eigenvalues: $\\lambda \\in \\{3, -2, 1\\}$.\n  For an eigenvector $v$ corresponding to $\\lambda = -2$, we must satisfy $A v = -2 v$:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Test Option 1:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 3 & -2 & 2 \\\\ 0 & -2 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix} \\begin{bmatrix} 3 \\\\ -2 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 9 + 4 + 2 \\\\ 0 + 4 + 1 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 15 \\\\ 5 \\\\ 1 \\end{bmatrix} \\ne -2 \\begin{bmatrix} 3 \\\\ -2 \\\\ 1 \\end{bmatrix} \\quad (\\text{Incorrect})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Test Option 4:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} 3 & -2 & 2 \\\\ 0 & -2 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix} \\begin{bmatrix} 2 \\\\ 5 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 3(2) - 2(5) + 0 \\\\ 0(2) - 2(5) + 0 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} -4 \\\\ -10 \\\\ 0 \\end{bmatrix} = -2 \\begin{bmatrix} 2 \\\\ 5 \\\\ 0 \\end{bmatrix} \\quad (\\text{Matches!})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Option:** $\\begin{bmatrix} 2 \\\\ 5 \\\\ 0 \\end{bmatrix}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Matrix is upper triangular, so diagonal entries are eigenvalues: $\\lambda \\in \\{3, -2, 1\\}$.\n  For an eigenvector $v$ corresponding to $\\lambda = -2$, we must satisfy $A v = -2 v$:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Test Option 1:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 3 & -2 & 2 \\\\ 0 & -2 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix} \\begin{bmatrix} 3 \\\\ -2 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 9 + 4 + 2 \\\\ 0 + 4 + 1 \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} 15 \\\\ 5 \\\\ 1 \\end{bmatrix} \\ne -2 \\begin{bmatrix} 3 \\\\ -2 \\\\ 1 \\end{bmatrix} \\quad (\\text{Incorrect})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Test Option 4:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} 3 & -2 & 2 \\\\ 0 & -2 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix} \\begin{bmatrix} 2 \\\\ 5 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 3(2) - 2(5) + 0 \\\\ 0(2) - 2(5) + 0 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} -4 \\\\ -10 \\\\ 0 \\end{bmatrix} = -2 \\begin{bmatrix} 2 \\\\ 5 \\\\ 0 \\end{bmatrix} \\quad (\\text{Matches!})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Option:** $\\begin{bmatrix} 2 \\\\ 5 \\\\ 0 \\end{bmatrix}$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25066,90 +25089,89 @@ export default {
      "text": "Given that $|A - 3I| = 0$. Find all eigenvalues."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 1: Identifying the Known Eigenvalue:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|A - \\lambda I| = 0 \\iff \\lambda \\text{ is an eigenvalue}"
-    },
-    {
-     "t": "math",
-     "tex": "|A - 3I| = 0 \\implies \\lambda_1 = 3"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 2: Trace Relation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(A) = 2 + (-1) + 0 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda_1 + \\lambda_2 + \\lambda_3 = 1 \\implies 3 + \\lambda_2 + \\lambda_3 = 1 \\implies \\lambda_2 + \\lambda_3 = -2"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 3: Determinant Relation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = 2(0 - 12) - (-2)(0 - 6) + 3(-4 - (-1))"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = 2(-12) + 2(-6) + 3(-3) = -24 - 12 - 9 = -45"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = \\lambda_1 \\lambda_2 \\lambda_3 = 3 \\lambda_2 \\lambda_3 = -45 \\implies \\lambda_2 \\lambda_3 = -15"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 4: Quadratic Equation for Unknown Roots:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Two numbers with sum $S = -2$ and product $P = -15$:"
-    },
-    {
-     "t": "math",
-     "tex": "t^2 - S t + P = 0 \\implies t^2 + 2t - 15 = 0 \\implies (t + 5)(t - 3) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "t = -5 \\quad \\text{or} \\quad t = 3"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The three eigenvalues are:"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\lambda_1 = -5, \\quad \\lambda_2 = 3, \\quad \\lambda_3 = 3}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Step 1: Identifying the Known Eigenvalue:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|A - \\lambda I| = 0 \\iff \\lambda \\text{ is an eigenvalue}"
+      },
+      {
+       "t": "math",
+       "tex": "|A - 3I| = 0 \\implies \\lambda_1 = 3"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Step 2: Trace Relation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(A) = 2 + (-1) + 0 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda_1 + \\lambda_2 + \\lambda_3 = 1 \\implies 3 + \\lambda_2 + \\lambda_3 = 1 \\implies \\lambda_2 + \\lambda_3 = -2"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Step 3: Determinant Relation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = 2(0 - 12) - (-2)(0 - 6) + 3(-4 - (-1))"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = 2(-12) + 2(-6) + 3(-3) = -24 - 12 - 9 = -45"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = \\lambda_1 \\lambda_2 \\lambda_3 = 3 \\lambda_2 \\lambda_3 = -45 \\implies \\lambda_2 \\lambda_3 = -15"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Step 4: Quadratic Equation for Unknown Roots:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Two numbers with sum $S = -2$ and product $P = -15$:"
+      },
+      {
+       "t": "math",
+       "tex": "t^2 - S t + P = 0 \\implies t^2 + 2t - 15 = 0 \\implies (t + 5)(t - 3) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "t = -5 \\quad \\text{or} \\quad t = 3"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The three eigenvalues are:"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\lambda_1 = -5, \\quad \\lambda_2 = 3, \\quad \\lambda_3 = 3}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25188,94 +25210,93 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method 1: Direct Linear System Formulation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$."
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$A v_1 = \\lambda_1 v_1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix} = 8 \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix} \\implies \\begin{cases} a + b = 8 & \\text{--- (1)} \\\\ c + d = 8 & \\text{--- (2)} \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "$A v_2 = \\lambda_2 v_2$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} \\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix} = 4 \\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix} \\implies \\begin{cases} a - b = 4 & \\text{--- (3)} \\\\ c - d = -4 & \\text{--- (4)} \\end{cases}"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Solving (1) & (3):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2a = 12 \\implies a = 6, \\quad b = 8 - 6 = 2"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Solving (2) & (4):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "2c = 4 \\implies c = 2, \\quad d = 8 - 2 = 6"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore A = \\begin{bmatrix} 6 & 2 \\\\ 2 & 6 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method 2: Rapid Trace & Determinant Elimination:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(A) = \\lambda_1 + \\lambda_2 = 8 + 4 = 12"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = \\lambda_1 \\lambda_2 = 8 \\times 4 = 32"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Option (A): $\\text{tr} = 6 + 6 = 12$, $\\det = 36 - 4 = 32$.",
-      "Option (B): $\\text{tr} = 4 + 4 = 8 \\ne 12$.",
-      "Option (C): $\\text{tr} = 2 + 2 = 4 \\ne 12$.",
-      "Option (D): $\\text{tr} = 4 + 4 = 8 \\ne 12$.",
-      "**Correct Option:** (A)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Method 1: Direct Linear System Formulation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$."
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$A v_1 = \\lambda_1 v_1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix} = 8 \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix} \\implies \\begin{cases} a + b = 8 & \\text{--- (1)} \\\\ c + d = 8 & \\text{--- (2)} \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "$A v_2 = \\lambda_2 v_2$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} \\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix} = 4 \\begin{bmatrix} 1 \\\\ -1 \\end{bmatrix} \\implies \\begin{cases} a - b = 4 & \\text{--- (3)} \\\\ c - d = -4 & \\text{--- (4)} \\end{cases}"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Solving (1) & (3):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2a = 12 \\implies a = 6, \\quad b = 8 - 6 = 2"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Solving (2) & (4):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "2c = 4 \\implies c = 2, \\quad d = 8 - 2 = 6"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore A = \\begin{bmatrix} 6 & 2 \\\\ 2 & 6 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Method 2: Rapid Trace & Determinant Elimination:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(A) = \\lambda_1 + \\lambda_2 = 8 + 4 = 12"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = \\lambda_1 \\lambda_2 = 8 \\times 4 = 32"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Option (A): $\\text{tr} = 6 + 6 = 12$, $\\det = 36 - 4 = 32$.",
+        "Option (B): $\\text{tr} = 4 + 4 = 8 \\ne 12$.",
+        "Option (C): $\\text{tr} = 2 + 2 = 4 \\ne 12$.",
+        "Option (D): $\\text{tr} = 4 + 4 = 8 \\ne 12$.",
+        "**Correct Option:** (A)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25297,69 +25318,68 @@ export default {
      "text": "**Problem:** The eigenvectors of the matrix $A = \\begin{bmatrix} 1 & 2 \\\\ 0 & 2 \\end{bmatrix}$ are of the form $\\begin{bmatrix} 1 \\\\ a \\end{bmatrix}$ and $\\begin{bmatrix} 1 \\\\ b \\end{bmatrix}$. Find the value of $a + b$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Eigenvalues:** Upper triangular matrix $\\implies \\lambda = 1, 2$.",
-      "**Eigenvector for $\\lambda = 1$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(A - 1I) x = 0 \\implies \\begin{bmatrix} 0 & 2 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix} \\implies 2x_2 = 0 \\implies x_2 = 0"
-    },
-    {
-     "t": "p",
-     "text": "$x_1$ is a free variable. Setting first component to 1:"
-    },
-    {
-     "t": "math",
-     "tex": "v_1 = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix} \\implies a = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Eigenvector for $\\lambda = 2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(A - 2I) x = 0 \\implies \\begin{bmatrix} -1 & 2 \\\\ 0 & 0 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix} \\implies -x_1 + 2x_2 = 0 \\implies x_1 = 2x_2"
-    },
-    {
-     "t": "p",
-     "text": "Setting first component $x_1 = 1$:"
-    },
-    {
-     "t": "math",
-     "tex": "1 = 2x_2 \\implies x_2 = \\frac{1}{2} = 0.5"
-    },
-    {
-     "t": "math",
-     "tex": "v_2 = \\begin{bmatrix} 1 \\\\ 0.5 \\end{bmatrix} \\implies b = 0.5"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Target Value:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a + b = 0 + 0.5 = 0.5"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** $a + b = 0.5$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Eigenvalues:** Upper triangular matrix $\\implies \\lambda = 1, 2$.",
+        "**Eigenvector for $\\lambda = 1$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(A - 1I) x = 0 \\implies \\begin{bmatrix} 0 & 2 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix} \\implies 2x_2 = 0 \\implies x_2 = 0"
+      },
+      {
+       "t": "p",
+       "text": "$x_1$ is a free variable. Setting first component to 1:"
+      },
+      {
+       "t": "math",
+       "tex": "v_1 = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix} \\implies a = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Eigenvector for $\\lambda = 2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(A - 2I) x = 0 \\implies \\begin{bmatrix} -1 & 2 \\\\ 0 & 0 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix} \\implies -x_1 + 2x_2 = 0 \\implies x_1 = 2x_2"
+      },
+      {
+       "t": "p",
+       "text": "Setting first component $x_1 = 1$:"
+      },
+      {
+       "t": "math",
+       "tex": "1 = 2x_2 \\implies x_2 = \\frac{1}{2} = 0.5"
+      },
+      {
+       "t": "math",
+       "tex": "v_2 = \\begin{bmatrix} 1 \\\\ 0.5 \\end{bmatrix} \\implies b = 0.5"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Target Value:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a + b = 0 + 0.5 = 0.5"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** $a + b = 0.5$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25385,52 +25405,51 @@ export default {
      "tex": "B = (A + I)(A + 3I)(A + 5I)^{-1}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Spectral Mapping Formula:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If $\\lambda_A$ is an eigenvalue of $A$, then the eigenvalue $\\lambda_B$ of $B = f(A)$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda_B = (\\lambda_A + 1)(\\lambda_A + 3)(\\lambda_A + 5)^{-1} = \\frac{(\\lambda_A + 1)(\\lambda_A + 3)}{\\lambda_A + 5}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For $\\lambda_{A,1} = -2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda_{B,1} = \\frac{(-2 + 1)(-2 + 3)}{-2 + 5} = \\frac{(-1)(1)}{3} = -\\frac{1}{3}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**For $\\lambda_{A,2} = -3$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda_{B,2} = \\frac{(-3 + 1)(-3 + 3)}{-3 + 5} = \\frac{(-2)(0)}{2} = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** The eigenvalues of $B$ are $-\\frac{1}{3}, \\; 0$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Spectral Mapping Formula:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If $\\lambda_A$ is an eigenvalue of $A$, then the eigenvalue $\\lambda_B$ of $B = f(A)$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda_B = (\\lambda_A + 1)(\\lambda_A + 3)(\\lambda_A + 5)^{-1} = \\frac{(\\lambda_A + 1)(\\lambda_A + 3)}{\\lambda_A + 5}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For $\\lambda_{A,1} = -2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda_{B,1} = \\frac{(-2 + 1)(-2 + 3)}{-2 + 5} = \\frac{(-1)(1)}{3} = -\\frac{1}{3}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**For $\\lambda_{A,2} = -3$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda_{B,2} = \\frac{(-3 + 1)(-3 + 3)}{-3 + 5} = \\frac{(-2)(0)}{2} = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** The eigenvalues of $B$ are $-\\frac{1}{3}, \\; 0$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25469,80 +25488,79 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method 1: Block Triangular Determinant Factoring:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Matrix is upper block triangular:"
-    },
-    {
-     "t": "math",
-     "tex": "A = \\begin{bmatrix} A_{11} & A_{12} \\\\ 0 & A_{22} \\end{bmatrix}, \\quad A_{11} = \\begin{bmatrix} -1 & 3 \\\\ -3 & -1 \\end{bmatrix}, \\quad A_{22} = [3]"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A - \\lambda I) = \\det(A_{11} - \\lambda I) \\cdot \\det(A_{22} - \\lambda I) = 0"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "From $A_{22}$: $\\lambda_1 = 3$.",
-      "From $A_{11}$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det\\begin{bmatrix} -1 - \\lambda & 3 \\\\ -3 & -1 - \\lambda \\end{bmatrix} = (-1 - \\lambda)^2 - (-9) = (\\lambda + 1)^2 + 9 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "(\\lambda + 1)^2 = -9 \\implies \\lambda + 1 = \\pm 3j \\implies \\lambda = -1 \\pm 3j"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Method 2: Invariant Check:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(A) = -1 - 1 + 3 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A) = 3 [(-1)(-1) - (3)(-3)] = 3(1 + 9) = 30"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Check Option (A):"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\sum \\lambda = 3 + (-1 + 3j) + (-1 - 3j) = 1 \\quad (\\text{Matches!})"
-    },
-    {
-     "t": "math",
-     "tex": "\\prod \\lambda = 3 [(-1)^2 - (3j)^2] = 3(1 + 9) = 30 \\quad (\\text{Matches!})"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Option:** (A)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Method 1: Block Triangular Determinant Factoring:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Matrix is upper block triangular:"
+      },
+      {
+       "t": "math",
+       "tex": "A = \\begin{bmatrix} A_{11} & A_{12} \\\\ 0 & A_{22} \\end{bmatrix}, \\quad A_{11} = \\begin{bmatrix} -1 & 3 \\\\ -3 & -1 \\end{bmatrix}, \\quad A_{22} = [3]"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A - \\lambda I) = \\det(A_{11} - \\lambda I) \\cdot \\det(A_{22} - \\lambda I) = 0"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "From $A_{22}$: $\\lambda_1 = 3$.",
+        "From $A_{11}$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det\\begin{bmatrix} -1 - \\lambda & 3 \\\\ -3 & -1 - \\lambda \\end{bmatrix} = (-1 - \\lambda)^2 - (-9) = (\\lambda + 1)^2 + 9 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "(\\lambda + 1)^2 = -9 \\implies \\lambda + 1 = \\pm 3j \\implies \\lambda = -1 \\pm 3j"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Method 2: Invariant Check:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(A) = -1 - 1 + 3 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A) = 3 [(-1)(-1) - (3)(-3)] = 3(1 + 9) = 30"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Check Option (A):"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\sum \\lambda = 3 + (-1 + 3j) + (-1 - 3j) = 1 \\quad (\\text{Matches!})"
+      },
+      {
+       "t": "math",
+       "tex": "\\prod \\lambda = 3 [(-1)^2 - (3j)^2] = 3(1 + 9) = 30 \\quad (\\text{Matches!})"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Option:** (A)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25581,44 +25599,43 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Fundamental Theorem:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "If $A x = \\lambda x$, then multiplying iteratively by $A$:"
-    },
-    {
-     "t": "math",
-     "tex": "A^2 x = A(Ax) = A(\\lambda x) = \\lambda (Ax) = \\lambda^2 x"
-    },
-    {
-     "t": "math",
-     "tex": "A^k x = \\lambda^k x"
-    },
-    {
-     "t": "p",
-     "text": "The eigenvalue scales to $\\lambda^k = 5^3 = 125$, but the **eigenvector remains completely identical**!"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore \\text{Eigenvector of } M^3 \\text{ is } \\begin{bmatrix} 1 \\\\ 2 \\\\ -1 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Option:** (B)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Fundamental Theorem:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "If $A x = \\lambda x$, then multiplying iteratively by $A$:"
+      },
+      {
+       "t": "math",
+       "tex": "A^2 x = A(Ax) = A(\\lambda x) = \\lambda (Ax) = \\lambda^2 x"
+      },
+      {
+       "t": "math",
+       "tex": "A^k x = \\lambda^k x"
+      },
+      {
+       "t": "p",
+       "text": "The eigenvalue scales to $\\lambda^k = 5^3 = 125$, but the **eigenvector remains completely identical**!"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore \\text{Eigenvector of } M^3 \\text{ is } \\begin{bmatrix} 1 \\\\ 2 \\\\ -1 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Option:** (B)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25656,78 +25673,77 @@ export default {
      "text": "Then find $P^4 \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix}$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 1: Identifying the Third Eigenvalue:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "From the given vector equation, $P v_3 = 3 v_3$, where $v_3 = [1, 0, -1]^T$."
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda_3 = 3"
-    },
-    {
-     "t": "p",
-     "text": "The three eigenvalues of $P$ are $\\lambda \\in \\{1, 2, 3\\}$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 2: Trace and Matrix Entry Identification:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(P) = 0 + 1 + b = 1 + b"
-    },
-    {
-     "t": "math",
-     "tex": "\\sum \\lambda_i = 1 + 2 + 3 = 6"
-    },
-    {
-     "t": "math",
-     "tex": "1 + b = 6 \\implies b = 5"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 3: Third Row Equation to Solve for $a$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "From $P v_3 = 3 v_3$:"
-    },
-    {
-     "t": "math",
-     "tex": "\\begin{bmatrix} a & 2 & b \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\end{bmatrix} = 3(-1) = -3"
-    },
-    {
-     "t": "math",
-     "tex": "a(1) + 2(0) + b(-1) = -3 \\implies a - b = -3"
-    },
-    {
-     "t": "p",
-     "text": "Substitute $b = 5$:"
-    },
-    {
-     "t": "math",
-     "tex": "a - 5 = -3 \\implies a = 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore P = \\begin{bmatrix} 0 & -2 & -3 \\\\ -1 & 1 & -1 \\\\ 2 & 2 & 5 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Step 1: Identifying the Third Eigenvalue:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "From the given vector equation, $P v_3 = 3 v_3$, where $v_3 = [1, 0, -1]^T$."
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda_3 = 3"
+      },
+      {
+       "t": "p",
+       "text": "The three eigenvalues of $P$ are $\\lambda \\in \\{1, 2, 3\\}$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Step 2: Trace and Matrix Entry Identification:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(P) = 0 + 1 + b = 1 + b"
+      },
+      {
+       "t": "math",
+       "tex": "\\sum \\lambda_i = 1 + 2 + 3 = 6"
+      },
+      {
+       "t": "math",
+       "tex": "1 + b = 6 \\implies b = 5"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Step 3: Third Row Equation to Solve for $a$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "From $P v_3 = 3 v_3$:"
+      },
+      {
+       "t": "math",
+       "tex": "\\begin{bmatrix} a & 2 & b \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\end{bmatrix} = 3(-1) = -3"
+      },
+      {
+       "t": "math",
+       "tex": "a(1) + 2(0) + b(-1) = -3 \\implies a - b = -3"
+      },
+      {
+       "t": "p",
+       "text": "Substitute $b = 5$:"
+      },
+      {
+       "t": "math",
+       "tex": "a - 5 = -3 \\implies a = 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore P = \\begin{bmatrix} 0 & -2 & -3 \\\\ -1 & 1 & -1 \\\\ 2 & 2 & 5 \\end{bmatrix}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25745,46 +25761,45 @@ export default {
      "text": "   Chalkboard Verification:\n   [ 0 -2 -3 ] [ 1 ]   [  2 ]       [ 1 ]\n   [-1  1 -1 ] [-1 ] = [ -2 ] = 2 * [-1 ]  ==> v_2 is eigenvector for lambda = 2!\n   [ 2  2  5 ] [ 0 ]   [  0 ]       [ 0 ]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Testing Vector Action:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Compute $P \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix}$:"
-    },
-    {
-     "t": "math",
-     "tex": "P \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 0(1) - 2(-1) - 3(0) \\\\ -1(1) + 1(-1) - 1(0) \\\\ 2(1) + 2(-1) + 5(0) \\end{bmatrix} = \\begin{bmatrix} 2 \\\\ -2 \\\\ 0 \\end{bmatrix} = 2 \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "This proves that $[1, -1, 0]^T$ is an eigenvector of $P$ corresponding to $\\lambda = 2$!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Evaluating Matrix Power Action:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P^4 x = \\lambda^4 x = (2)^4 \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix} = 16 \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 16 \\\\ -16 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** $\\begin{bmatrix} 16 \\\\ -16 \\\\ 0 \\end{bmatrix}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Testing Vector Action:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Compute $P \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix}$:"
+      },
+      {
+       "t": "math",
+       "tex": "P \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 0(1) - 2(-1) - 3(0) \\\\ -1(1) + 1(-1) - 1(0) \\\\ 2(1) + 2(-1) + 5(0) \\end{bmatrix} = \\begin{bmatrix} 2 \\\\ -2 \\\\ 0 \\end{bmatrix} = 2 \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "This proves that $[1, -1, 0]^T$ is an eigenvector of $P$ corresponding to $\\lambda = 2$!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Evaluating Matrix Power Action:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P^4 x = \\lambda^4 x = (2)^4 \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix} = 16 \\begin{bmatrix} 1 \\\\ -1 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 16 \\\\ -16 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** $\\begin{bmatrix} 16 \\\\ -16 \\\\ 0 \\end{bmatrix}$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25815,52 +25830,51 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Mathematical Proof via Power Series:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The matrix exponential is defined by the infinite Taylor series:"
-    },
-    {
-     "t": "math",
-     "tex": "B = e^A = I + A + \\frac{A^2}{2!} + \\frac{A^3}{3!} + \\frac{A^4}{4!} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Applying this operator to eigenvector $x$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^A x = I x + A x + \\frac{A^2 x}{2!} + \\frac{A^3 x}{3!} + \\dots"
-    },
-    {
-     "t": "p",
-     "text": "Since $A x = \\lambda x$, $A^2 x = \\lambda^2 x$, $\\dots$, $A^k x = \\lambda^k x$:"
-    },
-    {
-     "t": "math",
-     "tex": "e^A x = x + \\lambda x + \\frac{\\lambda^2}{2!} x + \\frac{\\lambda^3}{3!} x + \\dots = \\left( 1 + \\lambda + \\frac{\\lambda^2}{2!} + \\frac{\\lambda^3}{3!} + \\dots \\right) x = e^\\lambda x"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A \\to \\lambda, x \\implies e^A \\to e^\\lambda, x}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Option:** (C) Both (A) and (B) are correct."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Mathematical Proof via Power Series:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The matrix exponential is defined by the infinite Taylor series:"
+      },
+      {
+       "t": "math",
+       "tex": "B = e^A = I + A + \\frac{A^2}{2!} + \\frac{A^3}{3!} + \\frac{A^4}{4!} + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Applying this operator to eigenvector $x$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^A x = I x + A x + \\frac{A^2 x}{2!} + \\frac{A^3 x}{3!} + \\dots"
+      },
+      {
+       "t": "p",
+       "text": "Since $A x = \\lambda x$, $A^2 x = \\lambda^2 x$, $\\dots$, $A^k x = \\lambda^k x$:"
+      },
+      {
+       "t": "math",
+       "tex": "e^A x = x + \\lambda x + \\frac{\\lambda^2}{2!} x + \\frac{\\lambda^3}{3!} x + \\dots = \\left( 1 + \\lambda + \\frac{\\lambda^2}{2!} + \\frac{\\lambda^3}{3!} + \\dots \\right) x = e^\\lambda x"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A \\to \\lambda, x \\implies e^A \\to e^\\lambda, x}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Option:** (C) Both (A) and (B) are correct."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25891,55 +25905,54 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (A):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For any analytic function $f(z) = \\sum_{k=0}^\\infty c_k z^k$:"
-    },
-    {
-     "t": "math",
-     "tex": "f(A) x = \\sum c_k A^k x = \\left(\\sum c_k \\lambda^k\\right) x = f(\\lambda) x"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "$e^A x = e^\\lambda x$",
-      "$\\sin(A) x = \\left(A - \\frac{A^3}{3!} + \\frac{A^5}{5!} - \\dots\\right) x = \\sin(\\lambda) x$",
-      "$\\cos(A) x = \\left(I - \\frac{A^2}{2!} + \\frac{A^4}{4!} - \\dots\\right) x = \\cos(\\lambda) x$",
-      "$A^{-1} x = \\lambda^{-1} x$"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "In all cases, every eigenvector $x$ of $A$ is an eigenvector of $f(A)$. The eigenspaces are identical! $\\implies$ **(A) is TRUE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (B):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$A^T$ has the exact same eigenvalues as $A$ ($\\det(A^T - \\lambda I) = \\det(A - \\lambda I)$).\n  However, the eigenvectors of $A^T$ satisfy $A^T y = \\lambda y \\iff y^T A = \\lambda y^T$ (left eigenvectors of $A$).\n  In general, right eigenvectors $x \\ne y$. Unless $A$ is symmetric or normal, the eigenspaces of $A^T$ and $A$ are **different**! $\\implies$ **(B) is FALSE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Option:** (A)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (A):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For any analytic function $f(z) = \\sum_{k=0}^\\infty c_k z^k$:"
+      },
+      {
+       "t": "math",
+       "tex": "f(A) x = \\sum c_k A^k x = \\left(\\sum c_k \\lambda^k\\right) x = f(\\lambda) x"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "$e^A x = e^\\lambda x$",
+        "$\\sin(A) x = \\left(A - \\frac{A^3}{3!} + \\frac{A^5}{5!} - \\dots\\right) x = \\sin(\\lambda) x$",
+        "$\\cos(A) x = \\left(I - \\frac{A^2}{2!} + \\frac{A^4}{4!} - \\dots\\right) x = \\cos(\\lambda) x$",
+        "$A^{-1} x = \\lambda^{-1} x$"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "In all cases, every eigenvector $x$ of $A$ is an eigenvector of $f(A)$. The eigenspaces are identical! $\\implies$ **(A) is TRUE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (B):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$A^T$ has the exact same eigenvalues as $A$ ($\\det(A^T - \\lambda I) = \\det(A - \\lambda I)$).\n  However, the eigenvectors of $A^T$ satisfy $A^T y = \\lambda y \\iff y^T A = \\lambda y^T$ (left eigenvectors of $A$).\n  In general, right eigenvectors $x \\ne y$. Unless $A$ is symmetric or normal, the eigenspaces of $A^T$ and $A$ are **different**! $\\implies$ **(B) is FALSE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Option:** (A)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -25961,32 +25974,31 @@ export default {
      "text": "**Problem:** If the eigenvalues of a matrix $A$ are $1, 4, 3$, then find the determinant of $A^T$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Derivation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Eigenvalues of $A^T$ are identical to eigenvalues of $A$: $1, 4, 3$."
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A^T) = \\det(A) = \\prod_{i=1}^3 \\lambda_i = 1 \\times 4 \\times 3 = 12"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** 12."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Derivation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Eigenvalues of $A^T$ are identical to eigenvalues of $A$: $1, 4, 3$."
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A^T) = \\det(A) = \\prod_{i=1}^3 \\lambda_i = 1 \\times 4 \\times 3 = 12"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** 12."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -25997,41 +26009,40 @@ export default {
      "text": "**Problem:** If a matrix $A$ has eigenvalues $1, 2, -1$, find the value of $\\text{trace}(A^3 + 4A^2)$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Derivation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Let $B = A^3 + 4A^2$. The eigenvalues of $B$ are $\\lambda_B = \\lambda_i^3 + 4\\lambda_i^2$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "For $\\lambda_1 = 1$: $\\lambda_{B,1} = 1^3 + 4(1^2) = 1 + 4 = 5$.",
-      "For $\\lambda_2 = 2$: $\\lambda_{B,2} = 2^3 + 4(2^2) = 8 + 16 = 24$.",
-      "For $\\lambda_3 = -1$: $\\lambda_{B,3} = (-1)^3 + 4(-1)^2 = -1 + 4 = 3$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(B) = \\sum \\lambda_B = 5 + 24 + 3 = 32"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** 32."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Derivation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Let $B = A^3 + 4A^2$. The eigenvalues of $B$ are $\\lambda_B = \\lambda_i^3 + 4\\lambda_i^2$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "For $\\lambda_1 = 1$: $\\lambda_{B,1} = 1^3 + 4(1^2) = 1 + 4 = 5$.",
+        "For $\\lambda_2 = 2$: $\\lambda_{B,2} = 2^3 + 4(2^2) = 8 + 16 = 24$.",
+        "For $\\lambda_3 = -1$: $\\lambda_{B,3} = (-1)^3 + 4(-1)^2 = -1 + 4 = 3$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(B) = \\sum \\lambda_B = 5 + 24 + 3 = 32"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** 32."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26066,53 +26077,52 @@ export default {
      "text": "   Chalkboard Multiplicity Inequality:\n   nullity(A) = 3  ==>  G.M.(lambda = 0) = 3\n   Since A.M. >= G.M.\n   => A.M.(lambda = 0) >= 3\n   ==> 0 must appear as an eigenvalue AT LEAST 3 TIMES!"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Mathematical Proof:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$\\text{nullity}(A) = \\dim(\\text{Null}(A)) = \\dim(\\text{Null}(A - 0 I)) = \\text{G.M.}(\\lambda = 0)$.",
-      "Therefore, $\\text{G.M.}(\\lambda = 0) = 3$.",
-      "By the Fundamental Multiplicity Inequality:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{A.M.}(\\lambda) \\ge \\text{G.M.}(\\lambda) \\implies \\text{A.M.}(\\lambda = 0) \\ge 3"
-    },
-    {
-     "t": "p",
-     "text": "This guarantees that $\\lambda = 0$ must appear at least 3 times in the multiset of eigenvalues."
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Trace constraint: $\\sum_{i=1}^5 \\lambda_i = 5$."
-     ]
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Option Evaluation:**",
-      "**(A)** $\\{0, 0, 0, 1, 4\\}$: Count of zeros is $3 \\ge 3$, sum $= 0 + 0 + 0 + 1 + 4 = 5$. $\\implies$ **POSSIBLE**.",
-      "**(B)** $\\{0, 0, 0, 0, 5\\}$: Count of zeros is $4 \\ge 3$, sum $= 0 + 0 + 0 + 0 + 5 = 5$. $\\implies$ **POSSIBLE**.",
-      "**(C)** $\\{0, 0, 1, 1, 3\\}$: Count of zeros is $2 < 3$. Violates $\\text{A.M.} \\ge \\text{G.M.}$. $\\implies$ **IMPOSSIBLE**.",
-      "**(D)** $\\{0, 1, 1, 1, 2\\}$: Count of zeros is $1 < 3$. Violates $\\text{A.M.} \\ge \\text{G.M.}$. $\\implies$ **IMPOSSIBLE**.",
-      "**Correct Options:** (A) and (B)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Mathematical Proof:**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$\\text{nullity}(A) = \\dim(\\text{Null}(A)) = \\dim(\\text{Null}(A - 0 I)) = \\text{G.M.}(\\lambda = 0)$.",
+        "Therefore, $\\text{G.M.}(\\lambda = 0) = 3$.",
+        "By the Fundamental Multiplicity Inequality:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{A.M.}(\\lambda) \\ge \\text{G.M.}(\\lambda) \\implies \\text{A.M.}(\\lambda = 0) \\ge 3"
+      },
+      {
+       "t": "p",
+       "text": "This guarantees that $\\lambda = 0$ must appear at least 3 times in the multiset of eigenvalues."
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Trace constraint: $\\sum_{i=1}^5 \\lambda_i = 5$."
+       ]
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Option Evaluation:**",
+        "**(A)** $\\{0, 0, 0, 1, 4\\}$: Count of zeros is $3 \\ge 3$, sum $= 0 + 0 + 0 + 1 + 4 = 5$. $\\implies$ **POSSIBLE**.",
+        "**(B)** $\\{0, 0, 0, 0, 5\\}$: Count of zeros is $4 \\ge 3$, sum $= 0 + 0 + 0 + 0 + 5 = 5$. $\\implies$ **POSSIBLE**.",
+        "**(C)** $\\{0, 0, 1, 1, 3\\}$: Count of zeros is $2 < 3$. Violates $\\text{A.M.} \\ge \\text{G.M.}$. $\\implies$ **IMPOSSIBLE**.",
+        "**(D)** $\\{0, 1, 1, 1, 2\\}$: Count of zeros is $1 < 3$. Violates $\\text{A.M.} \\ge \\text{G.M.}$. $\\implies$ **IMPOSSIBLE**.",
+        "**Correct Options:** (A) and (B)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26150,95 +26160,94 @@ export default {
      "tex": "(a) \\; \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}_{3 \\times 3} \\qquad (b) \\; \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 0 & 0 & 0 \\end{bmatrix}_{3 \\times 3} \\qquad (c) \\; \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 2 \\end{bmatrix}_{3 \\times 3}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Matrix (a):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Eigenvalues are $\\lambda = 1, 2, 3$ (all distinct).\n  Since all $n$ eigenvalues are distinct, eigenvectors are guaranteed linearly independent ($3$ L.I. eigenvectors)."
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore \\text{Matrix (a) is DIAGONALIZABLE.}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Matrix (b):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Matrix is strictly upper triangular. Eigenvalues are $\\lambda = 0, 0, 0$ ($\\text{A.M.} = 3$)."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{rank}(B) = 2 \\implies \\eta(B) = 3 - 2 = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{G.M.}(\\lambda = 0) = \\eta(B - 0 I) = 1"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\text{G.M.} = 1 < \\text{A.M.} = 3$, matrix is **defective** (only 1 L.I. eigenvector)."
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore \\text{Matrix (b) is NOT DIAGONALIZABLE.}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Matrix (c):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Eigenvalues are $\\lambda = 1, 2, 2$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "For $\\lambda = 1$: $\\text{A.M.} = 1 \\implies \\text{G.M.} = 1$ (1 L.I. eigenvector).",
-      "For $\\lambda = 2$: $\\text{A.M.} = 2$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "C - 2I = \\begin{bmatrix} 1 - 2 & 0 & 0 \\\\ 0 & 2 - 2 & 0 \\\\ 0 & 0 & 2 - 2 \\end{bmatrix} = \\begin{bmatrix} -1 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{rank}(C - 2I) = 1 \\implies \\text{nullity} = 3 - 1 = 2"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{G.M.}(\\lambda = 2) = 2 = \\text{A.M.}(\\lambda = 2)"
-    },
-    {
-     "t": "p",
-     "text": "Total L.I. eigenvectors $= 1 + 2 = 3 = n$."
-    },
-    {
-     "t": "math",
-     "tex": "\\therefore \\text{Matrix (c) is DIAGONALIZABLE.}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Matrices:** (a) and (c)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Matrix (a):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Eigenvalues are $\\lambda = 1, 2, 3$ (all distinct).\n  Since all $n$ eigenvalues are distinct, eigenvectors are guaranteed linearly independent ($3$ L.I. eigenvectors)."
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore \\text{Matrix (a) is DIAGONALIZABLE.}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Matrix (b):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Matrix is strictly upper triangular. Eigenvalues are $\\lambda = 0, 0, 0$ ($\\text{A.M.} = 3$)."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{rank}(B) = 2 \\implies \\eta(B) = 3 - 2 = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{G.M.}(\\lambda = 0) = \\eta(B - 0 I) = 1"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\text{G.M.} = 1 < \\text{A.M.} = 3$, matrix is **defective** (only 1 L.I. eigenvector)."
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore \\text{Matrix (b) is NOT DIAGONALIZABLE.}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Matrix (c):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Eigenvalues are $\\lambda = 1, 2, 2$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "For $\\lambda = 1$: $\\text{A.M.} = 1 \\implies \\text{G.M.} = 1$ (1 L.I. eigenvector).",
+        "For $\\lambda = 2$: $\\text{A.M.} = 2$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "C - 2I = \\begin{bmatrix} 1 - 2 & 0 & 0 \\\\ 0 & 2 - 2 & 0 \\\\ 0 & 0 & 2 - 2 \\end{bmatrix} = \\begin{bmatrix} -1 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{rank}(C - 2I) = 1 \\implies \\text{nullity} = 3 - 1 = 2"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{G.M.}(\\lambda = 2) = 2 = \\text{A.M.}(\\lambda = 2)"
+      },
+      {
+       "t": "p",
+       "text": "Total L.I. eigenvectors $= 1 + 2 = 3 = n$."
+      },
+      {
+       "t": "math",
+       "tex": "\\therefore \\text{Matrix (c) is DIAGONALIZABLE.}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Matrices:** (a) and (c)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26264,56 +26273,55 @@ export default {
      "tex": "A = \\begin{bmatrix} 3 & 1 & 0 \\\\ 1 & 3 & 0 \\\\ 0 & 0 & 2 \\end{bmatrix}"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 1: Characteristic Equation & Eigenvalues:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\det(A - \\lambda I) = (2 - \\lambda) \\begin{vmatrix} 3 - \\lambda & 1 \\\\ 1 & 3 - \\lambda \\end{vmatrix} = (2 - \\lambda) [ (3 - \\lambda)^2 - 1 ] = 0"
-    },
-    {
-     "t": "math",
-     "tex": "(2 - \\lambda) (\\lambda^2 - 6\\lambda + 8) = (2 - \\lambda)(\\lambda - 2)(\\lambda - 4) = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Eigenvalues: } \\lambda = 2, 2, 4"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 2: Eigenvectors for $\\lambda = 2$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(A - 2I) X = 0 \\implies \\begin{bmatrix} 1 & 1 & 0 \\\\ 1 & 1 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Row 1: $x_1 + x_2 = 0 \\implies x_1 = -x_2$. $x_3$ is unconstrained.\n  Let $x_2 = c_1, \\; x_3 = c_2$:"
-    },
-    {
-     "t": "math",
-     "tex": "X = \\begin{bmatrix} -c_1 \\\\ c_1 \\\\ c_2 \\end{bmatrix} = c_1 \\begin{bmatrix} -1 \\\\ 1 \\\\ 0 \\end{bmatrix} + c_2 \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Two linearly independent eigenvectors:"
-    },
-    {
-     "t": "math",
-     "tex": "v_1 = \\begin{bmatrix} -1 \\\\ 1 \\\\ 0 \\end{bmatrix}, \\quad v_2 = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Step 1: Characteristic Equation & Eigenvalues:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\det(A - \\lambda I) = (2 - \\lambda) \\begin{vmatrix} 3 - \\lambda & 1 \\\\ 1 & 3 - \\lambda \\end{vmatrix} = (2 - \\lambda) [ (3 - \\lambda)^2 - 1 ] = 0"
+      },
+      {
+       "t": "math",
+       "tex": "(2 - \\lambda) (\\lambda^2 - 6\\lambda + 8) = (2 - \\lambda)(\\lambda - 2)(\\lambda - 4) = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Eigenvalues: } \\lambda = 2, 2, 4"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Step 2: Eigenvectors for $\\lambda = 2$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(A - 2I) X = 0 \\implies \\begin{bmatrix} 1 & 1 & 0 \\\\ 1 & 1 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Row 1: $x_1 + x_2 = 0 \\implies x_1 = -x_2$. $x_3$ is unconstrained.\n  Let $x_2 = c_1, \\; x_3 = c_2$:"
+      },
+      {
+       "t": "math",
+       "tex": "X = \\begin{bmatrix} -c_1 \\\\ c_1 \\\\ c_2 \\end{bmatrix} = c_1 \\begin{bmatrix} -1 \\\\ 1 \\\\ 0 \\end{bmatrix} + c_2 \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Two linearly independent eigenvectors:"
+      },
+      {
+       "t": "math",
+       "tex": "v_1 = \\begin{bmatrix} -1 \\\\ 1 \\\\ 0 \\end{bmatrix}, \\quad v_2 = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26327,59 +26335,58 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 3: Eigenvector for $\\lambda = 4$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(A - 4I) X = 0 \\implies \\begin{bmatrix} -1 & 1 & 0 \\\\ 1 & -1 & 0 \\\\ 0 & 0 & -2 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "From rows 1 & 2: $-x_1 + x_2 = 0 \\implies x_1 = x_2 = c_1$.",
-      "From row 3: $-2x_3 = 0 \\implies x_3 = 0$."
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "v_3 = \\begin{bmatrix} 1 \\\\ 1 \\\\ 0 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 4: Modal Matrix Assembly:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P = \\begin{bmatrix} v_1 & v_2 & v_3 \\end{bmatrix} = \\begin{bmatrix} -1 & 0 & 1 \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "p",
-     "text": "Column alignment:"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "Column 1 $\\to v_1 \\implies \\lambda = 2$",
-      "Column 2 $\\to v_2 \\implies \\lambda = 2$",
-      "Column 3 $\\to v_3 \\implies \\lambda = 4$"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "D = P^{-1} A P"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Step 3: Eigenvector for $\\lambda = 4$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(A - 4I) X = 0 \\implies \\begin{bmatrix} -1 & 1 & 0 \\\\ 1 & -1 & 0 \\\\ 0 & 0 & -2 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "From rows 1 & 2: $-x_1 + x_2 = 0 \\implies x_1 = x_2 = c_1$.",
+        "From row 3: $-2x_3 = 0 \\implies x_3 = 0$."
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "v_3 = \\begin{bmatrix} 1 \\\\ 1 \\\\ 0 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Step 4: Modal Matrix Assembly:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P = \\begin{bmatrix} v_1 & v_2 & v_3 \\end{bmatrix} = \\begin{bmatrix} -1 & 0 & 1 \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "p",
+       "text": "Column alignment:"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Column 1 $\\to v_1 \\implies \\lambda = 2$",
+        "Column 2 $\\to v_2 \\implies \\lambda = 2$",
+        "Column 3 $\\to v_3 \\implies \\lambda = 4$"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "D = P^{-1} A P"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26397,48 +26404,47 @@ export default {
      "text": "   Matrix Product Chain:\n   P^-1 = [ -1/2  1/2  0 ]\n          [    0    0  1 ]\n          [  1/2  1/2  0 ]\n\n   B = P^-1 * A * P = [ 2 0 0 ]\n                      [ 0 2 0 ]\n                      [ 0 0 4 ]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Explicit Calculation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "P^{-1} = \\frac{\\text{adj}(P)}{\\det(P)}, \\quad \\det(P) = -1(0 - 1) + 1(1 - 0) = 2"
-    },
-    {
-     "t": "math",
-     "tex": "P^{-1} = \\begin{bmatrix} -1/2 & 1/2 & 0 \\\\ 0 & 0 & 1 \\\\ 1/2 & 1/2 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "P^{-1} A = \\begin{bmatrix} -1/2 & 1/2 & 0 \\\\ 0 & 0 & 1 \\\\ 1/2 & 1/2 & 0 \\end{bmatrix} \\begin{bmatrix} 3 & 1 & 0 \\\\ 1 & 3 & 0 \\\\ 0 & 0 & 2 \\end{bmatrix} = \\begin{bmatrix} -1 & 1 & 0 \\\\ 0 & 0 & 2 \\\\ 2 & 2 & 0 \\end{bmatrix}"
-    },
-    {
-     "t": "math",
-     "tex": "(P^{-1} A) P = \\begin{bmatrix} -1 & 1 & 0 \\\\ 0 & 0 & 2 \\\\ 2 & 2 & 0 \\end{bmatrix} \\begin{bmatrix} -1 & 0 & 1 \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 0 \\end{bmatrix} = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 4 \\end{bmatrix}"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Key Takeaway:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The diagonal elements of $B$ are exactly the eigenvalues of $A$, in the precise order of eigenvectors chosen as columns of $P$."
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Eigenvalues of } [B] = \\text{Eigenvalues of } [A]}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Explicit Calculation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "P^{-1} = \\frac{\\text{adj}(P)}{\\det(P)}, \\quad \\det(P) = -1(0 - 1) + 1(1 - 0) = 2"
+      },
+      {
+       "t": "math",
+       "tex": "P^{-1} = \\begin{bmatrix} -1/2 & 1/2 & 0 \\\\ 0 & 0 & 1 \\\\ 1/2 & 1/2 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "P^{-1} A = \\begin{bmatrix} -1/2 & 1/2 & 0 \\\\ 0 & 0 & 1 \\\\ 1/2 & 1/2 & 0 \\end{bmatrix} \\begin{bmatrix} 3 & 1 & 0 \\\\ 1 & 3 & 0 \\\\ 0 & 0 & 2 \\end{bmatrix} = \\begin{bmatrix} -1 & 1 & 0 \\\\ 0 & 0 & 2 \\\\ 2 & 2 & 0 \\end{bmatrix}"
+      },
+      {
+       "t": "math",
+       "tex": "(P^{-1} A) P = \\begin{bmatrix} -1 & 1 & 0 \\\\ 0 & 0 & 2 \\\\ 2 & 2 & 0 \\end{bmatrix} \\begin{bmatrix} -1 & 0 & 1 \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 0 \\end{bmatrix} = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 4 \\end{bmatrix}"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Key Takeaway:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The diagonal elements of $B$ are exactly the eigenvalues of $A$, in the precise order of eigenvectors chosen as columns of $P$."
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Eigenvalues of } [B] = \\text{Eigenvalues of } [A]}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26456,34 +26462,33 @@ export default {
      "text": "   Similarity Transformations:\n   A: Given Matrix ,  B: Diagonal Matrix\n   A and B are Similar Matrices:\n       B = P^-1 A P\n       B^2 = P^-1 A^2 P\n       B^n = P^-1 A^n P\n\n   Inverting Relation:\n       P B = A P  (Pre-multiplication by P)\n       P B P^-1 = A  (Post-multiplication by P^-1)\n       => A = P B P^-1\n       => A^n = P B^n P^-1"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Power Proof for Diagonal Matrices:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $B = \\text{diag}(\\lambda_1, \\dots, \\lambda_n)$, computing $B^n$ is trivial:"
-    },
-    {
-     "t": "math",
-     "tex": "B^n = \\text{diag}(\\lambda_1^n, \\lambda_2^n, \\dots, \\lambda_n^n)"
-    },
-    {
-     "t": "p",
-     "text": "Then $A^n$ is computed in closed form without matrix powers:"
-    },
-    {
-     "t": "math",
-     "tex": "A^n = P B^n P^{-1}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Power Proof for Diagonal Matrices:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $B = \\text{diag}(\\lambda_1, \\dots, \\lambda_n)$, computing $B^n$ is trivial:"
+      },
+      {
+       "t": "math",
+       "tex": "B^n = \\text{diag}(\\lambda_1^n, \\lambda_2^n, \\dots, \\lambda_n^n)"
+      },
+      {
+       "t": "p",
+       "text": "Then $A^n$ is computed in closed form without matrix powers:"
+      },
+      {
+       "t": "math",
+       "tex": "A^n = P B^n P^{-1}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26505,56 +26510,55 @@ export default {
      "text": "**Problem:** Let $A$ be a square matrix such that $\\lambda$ is an eigenvalue of $A$ with corresponding eigenvector $x \\ne 0$ ($A x = \\lambda x$). Let $P$ be an invertible matrix, and define $B = P^{-1} A P$. Find the eigenvalues and corresponding eigenvectors of matrix $B$ in terms of $\\lambda, x$, and $P$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Chalkboard Derivation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A x = \\lambda x"
-    },
-    {
-     "t": "p",
-     "text": "From $B = P^{-1} A P$, express $A = P B P^{-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "(P B P^{-1}) x = \\lambda x"
-    },
-    {
-     "t": "p",
-     "text": "Pre-multiply both sides by $P^{-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "P^{-1} (P B P^{-1} x) = P^{-1} (\\lambda x)"
-    },
-    {
-     "t": "math",
-     "tex": "(P^{-1} P) B (P^{-1} x) = \\lambda (P^{-1} x)"
-    },
-    {
-     "t": "math",
-     "tex": "B (P^{-1} x) = \\lambda (P^{-1} x)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A \\to (\\lambda, x) \\implies P^{-1} A P \\to (\\lambda, P^{-1} x)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Chalkboard Derivation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A x = \\lambda x"
+      },
+      {
+       "t": "p",
+       "text": "From $B = P^{-1} A P$, express $A = P B P^{-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "(P B P^{-1}) x = \\lambda x"
+      },
+      {
+       "t": "p",
+       "text": "Pre-multiply both sides by $P^{-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "P^{-1} (P B P^{-1} x) = P^{-1} (\\lambda x)"
+      },
+      {
+       "t": "math",
+       "tex": "(P^{-1} P) B (P^{-1} x) = \\lambda (P^{-1} x)"
+      },
+      {
+       "t": "math",
+       "tex": "B (P^{-1} x) = \\lambda (P^{-1} x)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A \\to (\\lambda, x) \\implies P^{-1} A P \\to (\\lambda, P^{-1} x)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26576,48 +26580,47 @@ export default {
      "text": "**Problem:** Let $A$ be a square matrix such that $A x = \\lambda x$ ($x \\ne 0$). Let $P$ be an invertible matrix, and define $B = P A P^{-1}$. Find the eigenvalues and corresponding eigenvectors of matrix $B$ in terms of $\\lambda, x$, and $P$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Chalkboard Derivation:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "From $B = P A P^{-1}$, express $A = P^{-1} B P$:"
-    },
-    {
-     "t": "math",
-     "tex": "(P^{-1} B P) x = \\lambda x"
-    },
-    {
-     "t": "p",
-     "text": "Pre-multiply both sides by $P$:"
-    },
-    {
-     "t": "math",
-     "tex": "P (P^{-1} B P x) = P (\\lambda x)"
-    },
-    {
-     "t": "math",
-     "tex": "B (P x) = \\lambda (P x)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A \\to (\\lambda, x) \\implies P A P^{-1} \\to (\\lambda, P x)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Chalkboard Derivation:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "From $B = P A P^{-1}$, express $A = P^{-1} B P$:"
+      },
+      {
+       "t": "math",
+       "tex": "(P^{-1} B P) x = \\lambda x"
+      },
+      {
+       "t": "p",
+       "text": "Pre-multiply both sides by $P$:"
+      },
+      {
+       "t": "math",
+       "tex": "P (P^{-1} B P x) = P (\\lambda x)"
+      },
+      {
+       "t": "math",
+       "tex": "B (P x) = \\lambda (P x)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A \\to (\\lambda, x) \\implies P A P^{-1} \\to (\\lambda, P x)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26639,48 +26642,47 @@ export default {
      "text": "**Problem:** Let $A x = \\lambda x$. Let $P$ be an invertible matrix and define $B = P A^n P^{-1}$. Find the eigenvalues and corresponding eigenvectors of $B$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Chalkboard Derivation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A x = \\lambda x \\implies A^n x = \\lambda^n x"
-    },
-    {
-     "t": "p",
-     "text": "From $B = P A^n P^{-1} \\implies A^n = P^{-1} B P$:"
-    },
-    {
-     "t": "math",
-     "tex": "(P^{-1} B P) x = \\lambda^n x"
-    },
-    {
-     "t": "p",
-     "text": "Pre-multiply by $P$:"
-    },
-    {
-     "t": "math",
-     "tex": "B (P x) = \\lambda^n (P x)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A \\to (\\lambda, x) \\implies P A^n P^{-1} \\to (\\lambda^n, P x)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Chalkboard Derivation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A x = \\lambda x \\implies A^n x = \\lambda^n x"
+      },
+      {
+       "t": "p",
+       "text": "From $B = P A^n P^{-1} \\implies A^n = P^{-1} B P$:"
+      },
+      {
+       "t": "math",
+       "tex": "(P^{-1} B P) x = \\lambda^n x"
+      },
+      {
+       "t": "p",
+       "text": "Pre-multiply by $P$:"
+      },
+      {
+       "t": "math",
+       "tex": "B (P x) = \\lambda^n (P x)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A \\to (\\lambda, x) \\implies P A^n P^{-1} \\to (\\lambda^n, P x)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26702,48 +26704,47 @@ export default {
      "text": "**Problem:** Let $A x = \\lambda x$. Let $P$ be an invertible matrix and define $B = P^{-1} A^n P$. Find the eigenvalues and corresponding eigenvectors of $B$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Chalkboard Derivation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A^n x = \\lambda^n x"
-    },
-    {
-     "t": "p",
-     "text": "From $B = P^{-1} A^n P \\implies A^n = P B P^{-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "(P B P^{-1}) x = \\lambda^n x"
-    },
-    {
-     "t": "p",
-     "text": "Pre-multiply by $P^{-1}$:"
-    },
-    {
-     "t": "math",
-     "tex": "B (P^{-1} x) = \\lambda^n (P^{-1} x)"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Conclusion:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{A \\to (\\lambda, x) \\implies P^{-1} A^n P \\to (\\lambda^n, P^{-1} x)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Chalkboard Derivation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A^n x = \\lambda^n x"
+      },
+      {
+       "t": "p",
+       "text": "From $B = P^{-1} A^n P \\implies A^n = P B P^{-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "(P B P^{-1}) x = \\lambda^n x"
+      },
+      {
+       "t": "p",
+       "text": "Pre-multiply by $P^{-1}$:"
+      },
+      {
+       "t": "math",
+       "tex": "B (P^{-1} x) = \\lambda^n (P^{-1} x)"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Conclusion:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{A \\to (\\lambda, x) \\implies P^{-1} A^n P \\to (\\lambda^n, P^{-1} x)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26786,52 +26787,55 @@ export default {
      "text": "   Outer Product Geometry:\n   A is (2027 x 1) ==> rank(A) = 1\n   A^T is (1 x 2027)\n   B = A A^T is (2027 x 2027)\n\n   Rank Properties:\n   rank(A A^T) = rank(A) = 1  ==>  Statement (B) is TRUE.\n   nullity(B) = 2027 - rank(B) = 2027 - 1 = 2026.\n   ==> At least 2026 eigenvalues are ZERO!"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Dimension & Rank:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$B = A A^T$ is an outer product of size $2027 \\times 2027$.\n  Since $A \\ne 0$, its column space is 1-dimensional:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{rank}(B) = \\text{rank}(A A^T) = \\text{rank}(A) = 1"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies \\mathbf{(B) \\text{ is TRUE}}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Nullity & Zero Multiplicity:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "By Rank-Nullity Theorem:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{nullity}(B) = n - \\text{rank}(B) = 2027 - 1 = 2026"
-    },
-    {
-     "t": "p",
-     "text": "The geometric multiplicity of $\\lambda = 0$ is:"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{G.M.}(\\lambda = 0) = \\text{nullity}(B) = 2026"
-    },
-    {
-     "t": "p",
-     "text": "Therefore, $B$ has at least 2026 zero eigenvalues!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Dimension & Rank:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$B = A A^T$ is an outer product of size $2027 \\times 2027$.\n  Since $A \\ne 0$, its column space is 1-dimensional:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{rank}(B) = \\text{rank}(A A^T) = \\text{rank}(A) = 1"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies \\mathbf{(B) \\text{ is TRUE}}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Nullity & Zero Multiplicity:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "By Rank-Nullity Theorem:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{nullity}(B) = n - \\text{rank}(B) = 2027 - 1 = 2026"
+      },
+      {
+       "t": "p",
+       "text": "The geometric multiplicity of $\\lambda = 0$ is:"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{G.M.}(\\lambda = 0) = \\text{nullity}(B) = 2026"
+      },
+      {
+       "t": "p",
+       "text": "Therefore, $B$ has at least 2026 zero eigenvalues!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26849,56 +26853,55 @@ export default {
      "text": "   Chalkboard Derivation:\n   Tr(B) = Tr(A A^T) = ||A||^2 = lambda_1 + lambda_2 + ... + lambda_2027\n   Since lambda_1 = ... = lambda_2026 = 0:\n   ||A||^2 = lambda_2027\n   lambda_2027 = (2)^2 = 4   ==>  Statement (C) is TRUE, (D) is FALSE.\n\n   Eigenvector Count:\n   lambda = 0 has G.M. = 2026 L.I. eigenvectors\n   lambda = 4 has G.M. = 1    L.I. eigenvector\n   Total = 2026 + 1 = 2027 L.I. eigenvectors = n\n   ==> B is DIAGONALIZABLE!  ==>  Statement (A) is TRUE."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Trace Evaluation via Cyclic Invariance:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(A A^T) = \\text{tr}(A^T A) = A^T A = \\|A\\|^2"
-    },
-    {
-     "t": "p",
-     "text": "Given $\\|A\\| = 2 \\implies \\|A\\|^2 = 4$."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(B) = \\sum_{i=1}^{2027} \\lambda_i = 0 + 0 + \\dots + 0 + \\lambda_{2027} = 4 \\implies \\lambda_{2027} = 4"
-    },
-    {
-     "t": "math",
-     "tex": "\\implies \\mathbf{(C) \\text{ is TRUE}}, \\quad \\mathbf{(D) \\text{ is FALSE}}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Diagonalizability Verification:**",
-      "$\\lambda = 0$: $\\text{A.M.} = 2026$, $\\text{G.M.} = \\eta(B) = 2026 \\implies \\text{A.M.} = \\text{G.M.}$.",
-      "$\\lambda = 4$: $\\text{A.M.} = 1$, $\\text{G.M.} = 1 \\implies \\text{A.M.} = \\text{G.M.}$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Total L.I. eigenvectors $= 2026 + 1 = 2027 = n$."
-    },
-    {
-     "t": "math",
-     "tex": "\\implies \\mathbf{(A) \\text{ is TRUE}}."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Statements:** (A), (B), and (C)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Trace Evaluation via Cyclic Invariance:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(A A^T) = \\text{tr}(A^T A) = A^T A = \\|A\\|^2"
+      },
+      {
+       "t": "p",
+       "text": "Given $\\|A\\| = 2 \\implies \\|A\\|^2 = 4$."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(B) = \\sum_{i=1}^{2027} \\lambda_i = 0 + 0 + \\dots + 0 + \\lambda_{2027} = 4 \\implies \\lambda_{2027} = 4"
+      },
+      {
+       "t": "math",
+       "tex": "\\implies \\mathbf{(C) \\text{ is TRUE}}, \\quad \\mathbf{(D) \\text{ is FALSE}}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Diagonalizability Verification:**",
+        "$\\lambda = 0$: $\\text{A.M.} = 2026$, $\\text{G.M.} = \\eta(B) = 2026 \\implies \\text{A.M.} = \\text{G.M.}$.",
+        "$\\lambda = 4$: $\\text{A.M.} = 1$, $\\text{G.M.} = 1 \\implies \\text{A.M.} = \\text{G.M.}$."
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Total L.I. eigenvectors $= 2026 + 1 = 2027 = n$."
+      },
+      {
+       "t": "math",
+       "tex": "\\implies \\mathbf{(A) \\text{ is TRUE}}."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Statements:** (A), (B), and (C)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -26928,86 +26931,85 @@ export default {
      "text": "Let $P = [v_1, v_2, v_3]$ be an invertible matrix whose columns are linearly independent eigenvectors of $A$. Define $B = P^{-1} A P$. Find the sum of absolute values of all the elements of matrix $B$."
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Structure of $B$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $P$ is the modal matrix of eigenvectors, $B = \\text{diag}(\\lambda_1, \\lambda_2, \\lambda_3)$.\n  All off-diagonal elements are 0."
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sum of absolute values} = |\\lambda_1| + |\\lambda_2| + |\\lambda_3|"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Finding Eigenvalues of $A$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Matrix is block diagonal:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "From $1 \\times 1$ block: $\\lambda_3 = -5$.",
-      "From $2 \\times 2$ block:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda^2 - \\text{tr}\\lambda + \\det = \\lambda^2 - 5\\lambda + 5 = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda = \\frac{5 \\pm \\sqrt{25 - 20}}{2} = \\frac{5 \\pm \\sqrt{5}}{2}"
-    },
-    {
-     "t": "p",
-     "text": "Since $\\sqrt{5} \\approx 2.236 < 5$, both $\\lambda_1 = \\frac{5 + \\sqrt{5}}{2} > 0$ and $\\lambda_2 = \\frac{5 - \\sqrt{5}}{2} > 0$."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Sum of Absolute Values:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "|\\lambda_1| = \\frac{5 + \\sqrt{5}}{2}, \\quad |\\lambda_2| = \\frac{5 - \\sqrt{5}}{2}, \\quad |\\lambda_3| = |-5| = 5"
-    },
-    {
-     "t": "math",
-     "tex": "\\text{Sum} = \\frac{5 + \\sqrt{5}}{2} + \\frac{5 - \\sqrt{5}}{2} + 5 = \\frac{10}{2} + 5 = 5 + 5 = 10"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Exam Trap Warning:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "A student evaluating $\\text{tr}(A) = 2 + 3 - 5 = 0$ wrote $0$. This is completely wrong because the question asks for the sum of **absolute values** ($|\\lambda_i|$), not the algebraic sum!"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** 10."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Structure of $B$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $P$ is the modal matrix of eigenvectors, $B = \\text{diag}(\\lambda_1, \\lambda_2, \\lambda_3)$.\n  All off-diagonal elements are 0."
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sum of absolute values} = |\\lambda_1| + |\\lambda_2| + |\\lambda_3|"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Finding Eigenvalues of $A$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Matrix is block diagonal:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "From $1 \\times 1$ block: $\\lambda_3 = -5$.",
+        "From $2 \\times 2$ block:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda^2 - \\text{tr}\\lambda + \\det = \\lambda^2 - 5\\lambda + 5 = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda = \\frac{5 \\pm \\sqrt{25 - 20}}{2} = \\frac{5 \\pm \\sqrt{5}}{2}"
+      },
+      {
+       "t": "p",
+       "text": "Since $\\sqrt{5} \\approx 2.236 < 5$, both $\\lambda_1 = \\frac{5 + \\sqrt{5}}{2} > 0$ and $\\lambda_2 = \\frac{5 - \\sqrt{5}}{2} > 0$."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Sum of Absolute Values:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "|\\lambda_1| = \\frac{5 + \\sqrt{5}}{2}, \\quad |\\lambda_2| = \\frac{5 - \\sqrt{5}}{2}, \\quad |\\lambda_3| = |-5| = 5"
+      },
+      {
+       "t": "math",
+       "tex": "\\text{Sum} = \\frac{5 + \\sqrt{5}}{2} + \\frac{5 - \\sqrt{5}}{2} + 5 = \\frac{10}{2} + 5 = 5 + 5 = 10"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Exam Trap Warning:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "A student evaluating $\\text{tr}(A) = 2 + 3 - 5 = 0$ wrote $0$. This is completely wrong because the question asks for the sum of **absolute values** ($|\\lambda_i|$), not the algebraic sum!"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** 10."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -27025,77 +27027,76 @@ export default {
      "text": "   Chalkboard Proof Flow:\n   Real symmetric Matrix:  A^T = A  ;  A^theta = (A*)^T = A^T = A  ==>  A^theta = A\n   A x = lambda x  --- (1)\n   Take conjugate transpose:  (A x)^theta = (lambda x)^theta\n                              x^theta A^theta = lambda* x^theta\n                              x^theta A = lambda* x^theta  --- (2)\n   Pre-multiply eqn (1) by x^theta:  x^theta A x = lambda x^theta x\n   From eqn (2), substitute x^theta A:  lambda* x^theta x = lambda x^theta x\n   ==> (lambda* - lambda) x^theta x = 0\n   Since x != 0, x^theta x = ||x||^2 > 0:\n   ==> lambda* = lambda  ==>  lambda is REAL!"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof Walkthrough:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Let $A \\in \\mathbb{R}^{n \\times n}$ with $A^T = A$.",
-      "Because entries are real, $A^* = A$, so $A^\\theta = (A^*)^T = A^T = A$ (Hermitian property).",
-      "Let $A x = \\lambda x$ with $x \\ne 0$.",
-      "Taking conjugate transpose of both sides:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(A x)^\\theta = (\\lambda x)^\\theta \\implies x^\\theta A^\\theta = \\lambda^* x^\\theta"
-    },
-    {
-     "t": "p",
-     "text": "Since $A^\\theta = A$:"
-    },
-    {
-     "t": "math",
-     "tex": "x^\\theta A = \\lambda^* x^\\theta \\quad \\text{--- (Eq. 2)}"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Post-multiply Eq. 2 by $x$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x^\\theta A x = \\lambda^* x^\\theta x"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "Substitute $A x = \\lambda x$ into the LHS:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x^\\theta (\\lambda x) = \\lambda^* x^\\theta x \\implies \\lambda (x^\\theta x) = \\lambda^* (x^\\theta x)"
-    },
-    {
-     "t": "ol",
-     "start": 7,
-     "items": [
-      "Since $x$ is an eigenvector, $x \\ne 0$, so the complex inner product $x^\\theta x = \\sum |x_i|^2 > 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(\\lambda - \\lambda^*) \\|x\\|^2 = 0 \\implies \\lambda = \\lambda^*"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\lambda \\text{ is purely REAL}}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Proof Walkthrough:**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Let $A \\in \\mathbb{R}^{n \\times n}$ with $A^T = A$.",
+        "Because entries are real, $A^* = A$, so $A^\\theta = (A^*)^T = A^T = A$ (Hermitian property).",
+        "Let $A x = \\lambda x$ with $x \\ne 0$.",
+        "Taking conjugate transpose of both sides:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(A x)^\\theta = (\\lambda x)^\\theta \\implies x^\\theta A^\\theta = \\lambda^* x^\\theta"
+      },
+      {
+       "t": "p",
+       "text": "Since $A^\\theta = A$:"
+      },
+      {
+       "t": "math",
+       "tex": "x^\\theta A = \\lambda^* x^\\theta \\quad \\text{--- (Eq. 2)}"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Post-multiply Eq. 2 by $x$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x^\\theta A x = \\lambda^* x^\\theta x"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "Substitute $A x = \\lambda x$ into the LHS:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x^\\theta (\\lambda x) = \\lambda^* x^\\theta x \\implies \\lambda (x^\\theta x) = \\lambda^* (x^\\theta x)"
+      },
+      {
+       "t": "ol",
+       "start": 7,
+       "items": [
+        "Since $x$ is an eigenvector, $x \\ne 0$, so the complex inner product $x^\\theta x = \\sum |x_i|^2 > 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(\\lambda - \\lambda^*) \\|x\\|^2 = 0 \\implies \\lambda = \\lambda^*"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\lambda \\text{ is purely REAL}}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -27113,82 +27114,81 @@ export default {
      "text": "   Chalkboard Proof Flow:\n   To prove: v_1^T v_2 = v_2^T v_1 = 0\n   A v_1 = lambda_1 v_1  --- (1)        A v_2 = lambda_2 v_2  --- (2)\n   Pre-mult by v_2^T:                   Taking Transpose:\n   v_2^T A v_1 = lambda_1 v_2^T v_1      (A v_2)^T = (lambda_2 v_2)^T\n                                         v_2^T A^T = lambda_2 v_2^T\n                                         v_2^T A = lambda_2 v_2^T  --- (3)  [since A^T=A]\n   Substitute (3) into LHS:\n   (lambda_2 v_2^T) v_1 = lambda_1 v_2^T v_1\n   ==> (lambda_2 - lambda_1) v_2^T v_1 = 0\n   Since lambda_1 != lambda_2, (lambda_2 - lambda_1) != 0:\n   ==> v_2^T v_1 = 0  ==>  v_1 _|_ v_2!"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof Walkthrough:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Let $A = A^T$, with $A v_1 = \\lambda_1 v_1$ and $A v_2 = \\lambda_2 v_2$, where $\\lambda_1 \\ne \\lambda_2$.",
-      "Pre-multiply Eq. 1 by $v_2^T$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "v_2^T A v_1 = \\lambda_1 v_2^T v_1"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Transpose Eq. 2:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "(A v_2)^T = (\\lambda_2 v_2)^T \\implies v_2^T A^T = \\lambda_2 v_2^T"
-    },
-    {
-     "t": "p",
-     "text": "Since $A^T = A$:"
-    },
-    {
-     "t": "math",
-     "tex": "v_2^T A = \\lambda_2 v_2^T"
-    },
-    {
-     "t": "ol",
-     "start": 4,
-     "items": [
-      "Post-multiply this relation by $v_1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "v_2^T A v_1 = \\lambda_2 v_2^T v_1"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Equating the two expressions for $v_2^T A v_1$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda_1 v_2^T v_1 = \\lambda_2 v_2^T v_1 \\implies (\\lambda_2 - \\lambda_1) v_2^T v_1 = 0"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "Since $\\lambda_1 \\ne \\lambda_2$, the scalar $\\lambda_2 - \\lambda_1 \\ne 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{v_2^T v_1 = 0 \\iff v_1 \\perp v_2}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Proof Walkthrough:**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Let $A = A^T$, with $A v_1 = \\lambda_1 v_1$ and $A v_2 = \\lambda_2 v_2$, where $\\lambda_1 \\ne \\lambda_2$.",
+        "Pre-multiply Eq. 1 by $v_2^T$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "v_2^T A v_1 = \\lambda_1 v_2^T v_1"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Transpose Eq. 2:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "(A v_2)^T = (\\lambda_2 v_2)^T \\implies v_2^T A^T = \\lambda_2 v_2^T"
+      },
+      {
+       "t": "p",
+       "text": "Since $A^T = A$:"
+      },
+      {
+       "t": "math",
+       "tex": "v_2^T A = \\lambda_2 v_2^T"
+      },
+      {
+       "t": "ol",
+       "start": 4,
+       "items": [
+        "Post-multiply this relation by $v_1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "v_2^T A v_1 = \\lambda_2 v_2^T v_1"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Equating the two expressions for $v_2^T A v_1$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda_1 v_2^T v_1 = \\lambda_2 v_2^T v_1 \\implies (\\lambda_2 - \\lambda_1) v_2^T v_1 = 0"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "Since $\\lambda_1 \\ne \\lambda_2$, the scalar $\\lambda_2 - \\lambda_1 \\ne 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{v_2^T v_1 = 0 \\iff v_1 \\perp v_2}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -27223,20 +27223,19 @@ export default {
      "text": "   Orthogonality Audit:\n   Between same eigenvalue (lambda = 1):\n       v_1^T v_2 = 1(1) + (-1)(0) + 0(-1) = 1 != 0  ==>  NOT ORTHOGONAL!\n   Between different eigenvalues (lambda = 1 vs lambda = 4):\n       v_1^T v_3 = 1(1) + (-1)(1) + 0(1) = 0       ==>  ORTHOGONAL (YES!)\n       v_2^T v_3 = 1(1) + 0(1) + (-1)(1) = 0       ==>  ORTHOGONAL (YES!)"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Crucial Diagnostic Distinction:**",
-      "Eigenvectors corresponding to **different** eigenvalues are **guaranteed** to be orthogonal.",
-      "Eigenvectors corresponding to the **same** eigenvalue (repeating eigenvalue) are **not automatically** orthogonal, although an orthogonal basis for that eigenspace can always be constructed via Gram-Schmidt!"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Crucial Diagnostic Distinction:**",
+        "Eigenvectors corresponding to **different** eigenvalues are **guaranteed** to be orthogonal.",
+        "Eigenvectors corresponding to the **same** eigenvalue (repeating eigenvalue) are **not automatically** orthogonal, although an orthogonal basis for that eigenspace can always be constructed via Gram-Schmidt!"
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -27258,28 +27257,27 @@ export default {
      "text": "**Problem:** Are vectors $\\begin{bmatrix} 1 \\\\ 2 \\\\ 1 \\end{bmatrix}$ and $\\begin{bmatrix} -1 \\\\ 1 \\\\ -1 \\end{bmatrix}$ orthogonal over the Real plane?"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Inner Product:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "u^T v = 1(-1) + 2(1) + 1(-1) = -1 + 2 - 1 = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** YES, they are orthogonal."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Inner Product:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "u^T v = 1(-1) + 2(1) + 1(-1) = -1 + 2 - 1 = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** YES, they are orthogonal."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -27290,32 +27288,31 @@ export default {
      "text": "**Problem:** Are vectors $\\begin{bmatrix} i \\\\ -2 \\\\ -i \\end{bmatrix}$ and $\\begin{bmatrix} -1 \\\\ i \\\\ 1 \\end{bmatrix}$ orthogonal over the Complex plane?"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Complex Inner Product Definition:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\langle u, v \\rangle = u^\\theta v = [ -i, \\; -2, \\; i ] \\begin{bmatrix} -1 \\\\ i \\\\ 1 \\end{bmatrix} = (-i)(-1) + (-2)(i) + (i)(1) = i - 2i + i = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\langle v, u \\rangle = v^\\theta u = [ -1, \\; -i, \\; 1 ] \\begin{bmatrix} i \\\\ -2 \\\\ -i \\end{bmatrix} = -i + 2i - i = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** YES, they are orthogonal over the complex plane."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Complex Inner Product Definition:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\langle u, v \\rangle = u^\\theta v = [ -i, \\; -2, \\; i ] \\begin{bmatrix} -1 \\\\ i \\\\ 1 \\end{bmatrix} = (-i)(-1) + (-2)(i) + (i)(1) = i - 2i + i = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\langle v, u \\rangle = v^\\theta u = [ -1, \\; -i, \\; 1 ] \\begin{bmatrix} i \\\\ -2 \\\\ -i \\end{bmatrix} = -i + 2i - i = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** YES, they are orthogonal over the complex plane."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -27344,80 +27341,79 @@ export default {
      "text": "   Chalkboard Proof Flow:\n   Real skew-symmetric Matrix:  A^T = -A\n   A^theta = (A*)^T = (-A)^T = -A^T = -(-A) = A ... wait:\n   A is real ==> A* = A ==> A^theta = (A*)^T = A^T = -A  ==>  A^theta = -A (Skew-Hermitian)\n   A x = lambda x  --- (1)\n   (A x)^theta = (lambda x)^theta ==> x^theta A^theta = lambda* x^theta\n   Since A^theta = -A:  -x^theta A = lambda* x^theta ==> x^theta A = -lambda* x^theta  --- (2)\n   Pre-multiplication of x^theta on (1):\n   x^theta A x = lambda x^theta x\n   Substitute (2):  -lambda* x^theta x = lambda x^theta x\n   ==> (lambda + lambda*) x^theta x = 0\n   Since x != 0, x^theta x > 0:\n   ==> lambda* = -lambda!\n   Let lambda = a + ib:\n   (a - ib) = -(a + ib) = -a - ib  ==>  2a = 0  ==>  a = 0!\n   ==> lambda is purely Imaginary or Zero!"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Proof Walkthrough:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "Let $A \\in \\mathbb{R}^{n \\times n}$ with $A^T = -A$.",
-      "Because $A$ is real, $A^\\theta = A^T = -A$ (Skew-Hermitian).",
-      "Let $A x = \\lambda x$ with $x \\ne 0$.",
-      "Taking conjugate transpose:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x^\\theta A^\\theta = \\lambda^* x^\\theta \\implies x^\\theta (-A) = \\lambda^* x^\\theta \\implies x^\\theta A = -\\lambda^* x^\\theta"
-    },
-    {
-     "t": "ol",
-     "start": 5,
-     "items": [
-      "Post-multiplying by $x$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "x^\\theta A x = -\\lambda^* x^\\theta x"
-    },
-    {
-     "t": "ol",
-     "start": 6,
-     "items": [
-      "Substitute $A x = \\lambda x$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda (x^\\theta x) = -\\lambda^* (x^\\theta x) \\implies (\\lambda + \\lambda^*) \\|x\\|^2 = 0"
-    },
-    {
-     "t": "ol",
-     "start": 7,
-     "items": [
-      "Since $\\|x\\|^2 > 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda^* = -\\lambda"
-    },
-    {
-     "t": "ol",
-     "start": 8,
-     "items": [
-      "Decompose $\\lambda = a + ib$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "a - ib = -(a + ib) = -a - ib \\implies 2a = 0 \\implies a = 0"
-    },
-    {
-     "t": "math",
-     "tex": "\\boxed{\\text{Re}(\\lambda) = 0 \\iff \\lambda = ib \\quad (b \\ne 0 \\implies \\text{purely imaginary}; \\; b = 0 \\implies 0)}"
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Proof Walkthrough:**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "Let $A \\in \\mathbb{R}^{n \\times n}$ with $A^T = -A$.",
+        "Because $A$ is real, $A^\\theta = A^T = -A$ (Skew-Hermitian).",
+        "Let $A x = \\lambda x$ with $x \\ne 0$.",
+        "Taking conjugate transpose:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x^\\theta A^\\theta = \\lambda^* x^\\theta \\implies x^\\theta (-A) = \\lambda^* x^\\theta \\implies x^\\theta A = -\\lambda^* x^\\theta"
+      },
+      {
+       "t": "ol",
+       "start": 5,
+       "items": [
+        "Post-multiplying by $x$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "x^\\theta A x = -\\lambda^* x^\\theta x"
+      },
+      {
+       "t": "ol",
+       "start": 6,
+       "items": [
+        "Substitute $A x = \\lambda x$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda (x^\\theta x) = -\\lambda^* (x^\\theta x) \\implies (\\lambda + \\lambda^*) \\|x\\|^2 = 0"
+      },
+      {
+       "t": "ol",
+       "start": 7,
+       "items": [
+        "Since $\\|x\\|^2 > 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda^* = -\\lambda"
+      },
+      {
+       "t": "ol",
+       "start": 8,
+       "items": [
+        "Decompose $\\lambda = a + ib$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "a - ib = -(a + ib) = -a - ib \\implies 2a = 0 \\implies a = 0"
+      },
+      {
+       "t": "math",
+       "tex": "\\boxed{\\text{Re}(\\lambda) = 0 \\iff \\lambda = ib \\quad (b \\ne 0 \\implies \\text{purely imaginary}; \\; b = 0 \\implies 0)}"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -27658,22 +27654,25 @@ export default {
      "text": "   Chalkboard Proof Flow:\n   [A]: Orthogonal Matrix ==> A A^T = I = A^T A\n   (Unitary Matrix: A A^theta = I = A^theta A)\n   To prove: Magnitude of all possible eigenvalues is 1  (|lambda| = 1)\n   Let A x = lambda x\n   Take Euclidean norm:  ||A x|| = ||lambda x|| = |lambda| * ||x||\n   Compute ||A x||^2:\n       ||A x||^2 = (A x)^T (A x) = x^T A^T A x\n       Since A^T A = I:\n                 = x^T I x = x^T x = ||x||^2\n       ==> ||A x||^2 = ||x||^2  ==>  ||A x|| = ||x||\n   Substitute back:\n       ||x|| = |lambda| * ||x||\n   Since x != 0, ||x|| != 0:\n       ==> |lambda| = 1!"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Chalkboard Warning on False Proof:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{WRONG: } A A^T = I \\implies \\lambda \\cdot \\lambda = 1 \\implies \\lambda^2 = 1 \\implies \\lambda = \\pm 1"
-    },
-    {
-     "t": "p",
-     "text": "**Why is this wrong?** Because $A$ and $A^T$ have **different** eigenvectors in general! You cannot apply $A A^T$ to the same eigenvector $x$. The only correct method is through length preservation $\\|Ax\\| = \\|x\\|$, which yields $|\\lambda| = 1$ in the complex plane (e.g., $\\lambda = e^{i\\theta}$).\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Chalkboard Warning on False Proof:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{WRONG: } A A^T = I \\implies \\lambda \\cdot \\lambda = 1 \\implies \\lambda^2 = 1 \\implies \\lambda = \\pm 1"
+      },
+      {
+       "t": "p",
+       "text": "**Why is this wrong?** Because $A$ and $A^T$ have **different** eigenvectors in general! You cannot apply $A A^T$ to the same eigenvector $x$. The only correct method is through length preservation $\\|Ax\\| = \\|x\\|$, which yields $|\\lambda| = 1$ in the complex plane (e.g., $\\lambda = e^{i\\theta}$)."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -27899,128 +27898,131 @@ export default {
      "text": "   Statements Truth Table:\n   (A) For an involutory matrix, lambda = 1 will surely be one of the eigenvalues.       --> FALSE (e.g., -I)\n   (B) For an involutory matrix, lambda = -1 will surely be one of the eigenvalues.      --> FALSE (e.g., +I)\n   (C) For an idempotent matrix, lambda = 0 will surely be one of the eigenvalues.      --> FALSE (e.g., +I)\n   (D) For an idempotent matrix, lambda = 1 will surely be one of the eigenvalues.      --> FALSE (e.g., 0)\n   (E) For a nilpotent matrix of index k, all eigenvalues are zero.                     --> TRUE\n   (F) Nilpotent matrices are always non-invertible.                                    --> TRUE\n   (G) An involutory matrix is always invertible.                                       --> TRUE\n   (H) An idempotent matrix may or may not be invertible.                               --> TRUE\n   (I) If A and B are involutory matrices, then A + B is involutory.                   --> FALSE\n   (J) If AB + BA + I = 0, then A + B is involutory (given A, B involutory).           --> TRUE\n   (K) For a nilpotent matrix, the nullity is always >= 1.                              --> TRUE\n   (L) For an involutory matrix, the nullity is always 0.                               --> TRUE\n   (M) For an idempotent matrix, the nullity is always > 0.                             --> FALSE (e.g., I)\n   (N) For an idempotent matrix, the nullity can be any value from 0 to n.              --> TRUE"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statements (A) & (B):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Possible eigenvalues are $\\pm 1$. A matrix can have all eigenvalues equal to $+1$ ($A = I$) or all equal to $-1$ ($A = -I$). Neither value is individually guaranteed! $\\implies$ **FALSE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statements (C) & (D):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Possible eigenvalues are $0, 1$. For $A = I$, all eigenvalues are $1$ (no zero). For $A = 0$, all eigenvalues are $0$ (no one). $\\implies$ **FALSE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (E):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$A^k = 0 \\implies \\lambda^k = 0 \\implies \\lambda = 0$. $\\implies$ **TRUE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (F):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$\\det(A) = \\prod \\lambda_i = 0 \\times \\dots \\times 0 = 0$. Since $\\det(A) = 0$, it is non-invertible. $\\implies$ **TRUE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (G):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$A^2 = I \\implies A \\cdot A = I \\implies A^{-1} = A$. Determinant $|A|^2 = 1 \\implies |A| = \\pm 1 \\ne 0$. Always invertible! $\\implies$ **TRUE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (H):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$A = I \\implies |A| = 1$ (invertible). $A = 0 \\implies |A| = 0$ (singular). $\\implies$ **TRUE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (I):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$(A + B)^2 = A^2 + B^2 + AB + BA = I + I + AB + BA = 2I + AB + BA \\ne I$ in general. $\\implies$ **FALSE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (J):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "$(A + B)^2 = 2I + AB + BA$. If $AB + BA + I = 0 \\implies AB + BA = -I$.\n  Then $(A + B)^2 = 2I - I = I$. Thus $A+B$ is involutory! $\\implies$ **TRUE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (K):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $\\det(A) = 0$, $\\text{rank}(A) < n$. Therefore $\\text{nullity}(A) = n - \\text{rank}(A) \\ge 1$. $\\implies$ **TRUE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (L):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Since $|A| = \\pm 1 \\ne 0$, $\\text{rank}(A) = n$. Thus $\\text{nullity}(A) = n - n = 0$. $\\implies$ **TRUE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (M):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For $A = I$, $\\text{rank}(I) = n \\implies \\text{nullity}(I) = 0$. Not strictly $> 0$. $\\implies$ **FALSE**."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Statement (N):**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "For an idempotent projection matrix, $\\text{rank}(A) = r$ where $r \\in \\{0, 1, \\dots, n\\}$. Nullity $= n - r \\in \\{0, 1, \\dots, n\\}$. $\\implies$ **TRUE**.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statements (A) & (B):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Possible eigenvalues are $\\pm 1$. A matrix can have all eigenvalues equal to $+1$ ($A = I$) or all equal to $-1$ ($A = -I$). Neither value is individually guaranteed! $\\implies$ **FALSE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statements (C) & (D):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Possible eigenvalues are $0, 1$. For $A = I$, all eigenvalues are $1$ (no zero). For $A = 0$, all eigenvalues are $0$ (no one). $\\implies$ **FALSE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (E):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$A^k = 0 \\implies \\lambda^k = 0 \\implies \\lambda = 0$. $\\implies$ **TRUE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (F):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$\\det(A) = \\prod \\lambda_i = 0 \\times \\dots \\times 0 = 0$. Since $\\det(A) = 0$, it is non-invertible. $\\implies$ **TRUE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (G):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$A^2 = I \\implies A \\cdot A = I \\implies A^{-1} = A$. Determinant $|A|^2 = 1 \\implies |A| = \\pm 1 \\ne 0$. Always invertible! $\\implies$ **TRUE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (H):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$A = I \\implies |A| = 1$ (invertible). $A = 0 \\implies |A| = 0$ (singular). $\\implies$ **TRUE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (I):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$(A + B)^2 = A^2 + B^2 + AB + BA = I + I + AB + BA = 2I + AB + BA \\ne I$ in general. $\\implies$ **FALSE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (J):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "$(A + B)^2 = 2I + AB + BA$. If $AB + BA + I = 0 \\implies AB + BA = -I$.\n  Then $(A + B)^2 = 2I - I = I$. Thus $A+B$ is involutory! $\\implies$ **TRUE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (K):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $\\det(A) = 0$, $\\text{rank}(A) < n$. Therefore $\\text{nullity}(A) = n - \\text{rank}(A) \\ge 1$. $\\implies$ **TRUE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (L):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Since $|A| = \\pm 1 \\ne 0$, $\\text{rank}(A) = n$. Thus $\\text{nullity}(A) = n - n = 0$. $\\implies$ **TRUE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (M):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For $A = I$, $\\text{rank}(I) = n \\implies \\text{nullity}(I) = 0$. Not strictly $> 0$. $\\implies$ **FALSE**."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Statement (N):**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "For an idempotent projection matrix, $\\text{rank}(A) = r$ where $r \\in \\{0, 1, \\dots, n\\}$. Nullity $= n - r \\in \\{0, 1, \\dots, n\\}$. $\\implies$ **TRUE**."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -28134,86 +28136,85 @@ export default {
      "text": "   Chalkboard Derivation Tree:\n   M is Real Symmetric ==> Eigenvectors corresponding to DIFFERENT eigenvalues MUST be orthogonal!\n   Check dot product of v and w:\n       v . w = (-1)(1) + 2(1) + 0(1) = 1 != 0  ==>  v and w are NOT ORTHOGONAL!\n   ==> They CANNOT correspond to different eigenvalues!\n   ==> They MUST correspond to the SAME eigenvalue!\n   Since v corresponds to lambda = 2:\n   ==> alpha = 2!\n\n   Now distinct eigenvalue lambda = 0 must have eigenvector u _|_ v and u _|_ w:\n   u _|_ v:  4(-1) + 2*beta + 0*gamma = 0  ==>  -4 + 2*beta = 0  ==>  beta = 2\n   u _|_ w:  4(1) + 1*beta + 1*gamma = 0   ==>  4 + 2 + gamma = 0  ==>  gamma = -6\n\n   Target:  alpha + beta - gamma = 2 + 2 - (-6) = 10  [ANS]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 1: Dedication of $\\alpha$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "In a real symmetric matrix, eigenvectors corresponding to **distinct** eigenvalues must be orthogonal ($v_i^T v_j = 0$ for $\\lambda_i \\ne \\lambda_j$).\n  Evaluate the inner product of $v$ and $w$:"
-    },
-    {
-     "t": "math",
-     "tex": "v^T w = (-1)(1) + (2)(1) + (0)(1) = -1 + 2 + 0 = 1 \\ne 0"
-    },
-    {
-     "t": "p",
-     "text": "Since $v$ and $w$ are **not** orthogonal, they cannot belong to distinct eigenvalues.\n  Therefore, they must belong to the same eigenvalue:"
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha = 2"
-    },
-    {
-     "t": "p",
-     "text": "(Multiplicity of $\\lambda = 2$ is 2; multiplicity of $\\lambda = 0$ is 1)."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 2: Orthogonality with Eigenvector $u$:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The eigenvector $u$ corresponds to $\\lambda = 0$, which is distinct from $\\lambda = 2$. Therefore, $u$ must be strictly orthogonal to both $v$ and $w$:"
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$u^T v = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "4(-1) + \\beta(2) + \\gamma(0) = 0 \\implies -4 + 2\\beta = 0 \\implies \\beta = 2"
-    },
-    {
-     "t": "ol",
-     "start": 2,
-     "items": [
-      "$u^T w = 0$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "4(1) + \\beta(1) + \\gamma(1) = 0 \\implies 4 + 2 + \\gamma = 0 \\implies \\gamma = -6"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step 3: Target Evaluation:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\alpha + \\beta - \\gamma = 2 + 2 - (-6) = 2 + 2 + 6 = 10"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Answer:** 10."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Step 1: Dedication of $\\alpha$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "In a real symmetric matrix, eigenvectors corresponding to **distinct** eigenvalues must be orthogonal ($v_i^T v_j = 0$ for $\\lambda_i \\ne \\lambda_j$).\n  Evaluate the inner product of $v$ and $w$:"
+      },
+      {
+       "t": "math",
+       "tex": "v^T w = (-1)(1) + (2)(1) + (0)(1) = -1 + 2 + 0 = 1 \\ne 0"
+      },
+      {
+       "t": "p",
+       "text": "Since $v$ and $w$ are **not** orthogonal, they cannot belong to distinct eigenvalues.\n  Therefore, they must belong to the same eigenvalue:"
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha = 2"
+      },
+      {
+       "t": "p",
+       "text": "(Multiplicity of $\\lambda = 2$ is 2; multiplicity of $\\lambda = 0$ is 1)."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Step 2: Orthogonality with Eigenvector $u$:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The eigenvector $u$ corresponds to $\\lambda = 0$, which is distinct from $\\lambda = 2$. Therefore, $u$ must be strictly orthogonal to both $v$ and $w$:"
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$u^T v = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "4(-1) + \\beta(2) + \\gamma(0) = 0 \\implies -4 + 2\\beta = 0 \\implies \\beta = 2"
+      },
+      {
+       "t": "ol",
+       "start": 2,
+       "items": [
+        "$u^T w = 0$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "4(1) + \\beta(1) + \\gamma(1) = 0 \\implies 4 + 2 + \\gamma = 0 \\implies \\gamma = -6"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Step 3: Target Evaluation:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\alpha + \\beta - \\gamma = 2 + 2 - (-6) = 2 + 2 + 6 = 10"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Answer:** 10."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -28244,32 +28245,31 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The eigenvalues are purely imaginary or zero."
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Skew-symmetric matrix:** Eigenvalues must be purely imaginary or zero, and for real matrices, complex eigenvalues must appear in conjugate pairs ($2i, -2i$ and $6i, -6i$). All conditions are met! $\\implies$ **(A) is POSSIBLE**.",
-      "**Skew-Hermitian matrix:** Eigenvalues must be purely imaginary or zero. $\\implies$ **(B) is POSSIBLE**.",
-      "**Orthogonal matrix:** Requires $|\\lambda| = 1$. Here $|\\pm 2i| = 2 \\ne 1$ and $|0| = 0 \\ne 1$. $\\implies$ **(C) is IMPOSSIBLE**.",
-      "**Real symmetric matrix:** Requires all eigenvalues to be real. Here four eigenvalues are non-zero imaginary. $\\implies$ **(D) is IMPOSSIBLE**.",
-      "**Correct Options:** (A) and (B)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "The eigenvalues are purely imaginary or zero."
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Skew-symmetric matrix:** Eigenvalues must be purely imaginary or zero, and for real matrices, complex eigenvalues must appear in conjugate pairs ($2i, -2i$ and $6i, -6i$). All conditions are met! $\\implies$ **(A) is POSSIBLE**.",
+        "**Skew-Hermitian matrix:** Eigenvalues must be purely imaginary or zero. $\\implies$ **(B) is POSSIBLE**.",
+        "**Orthogonal matrix:** Requires $|\\lambda| = 1$. Here $|\\pm 2i| = 2 \\ne 1$ and $|0| = 0 \\ne 1$. $\\implies$ **(C) is IMPOSSIBLE**.",
+        "**Real symmetric matrix:** Requires all eigenvalues to be real. Here four eigenvalues are non-zero imaginary. $\\implies$ **(D) is IMPOSSIBLE**.",
+        "**Correct Options:** (A) and (B)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h4",
@@ -28289,23 +28289,22 @@ export default {
      ]
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Criterion:** For an orthogonal matrix, every eigenvalue must satisfy $|\\lambda| = 1$.",
-      "**(A)** $|i| = 1$. $\\implies$ **VALID**.",
-      "**(B)** $\\left|\\frac{2 + i}{\\sqrt{5}}\\right| = \\frac{\\sqrt{2^2 + 1^2}}{\\sqrt{5}} = \\frac{\\sqrt{5}}{\\sqrt{5}} = 1$. $\\implies$ **VALID**.",
-      "**(C)** $\\left|\\frac{3 - 4i}{5}\\right| = \\frac{\\sqrt{3^2 + (-4)^2}}{5} = \\frac{\\sqrt{25}}{5} = \\frac{5}{5} = 1$. $\\implies$ **VALID**.",
-      "**(D)** $\\left|\\frac{7 + 3i}{6}\\right| = \\frac{\\sqrt{7^2 + 3^2}}{6} = \\frac{\\sqrt{49 + 9}}{6} = \\frac{\\sqrt{58}}{6} \\ne 1$. $\\implies$ **INVALID**.",
-      "**Correct Options:** (A), (B), and (C)."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Criterion:** For an orthogonal matrix, every eigenvalue must satisfy $|\\lambda| = 1$.",
+        "**(A)** $|i| = 1$. $\\implies$ **VALID**.",
+        "**(B)** $\\left|\\frac{2 + i}{\\sqrt{5}}\\right| = \\frac{\\sqrt{2^2 + 1^2}}{\\sqrt{5}} = \\frac{\\sqrt{5}}{\\sqrt{5}} = 1$. $\\implies$ **VALID**.",
+        "**(C)** $\\left|\\frac{3 - 4i}{5}\\right| = \\frac{\\sqrt{3^2 + (-4)^2}}{5} = \\frac{\\sqrt{25}}{5} = \\frac{5}{5} = 1$. $\\implies$ **VALID**.",
+        "**(D)** $\\left|\\frac{7 + 3i}{6}\\right| = \\frac{\\sqrt{7^2 + 3^2}}{6} = \\frac{\\sqrt{49 + 9}}{6} = \\frac{\\sqrt{58}}{6} \\ne 1$. $\\implies$ **INVALID**.",
+        "**Correct Options:** (A), (B), and (C)."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -28356,30 +28355,33 @@ export default {
      "text": "   Chalkboard Method 1 (Operator Action):\n   A v_1 = (alpha v_1 v_1^T + beta v_2 v_2^T) v_1\n         = alpha v_1 (v_1^T v_1) + beta v_2 (v_2^T v_1)\n         = alpha v_1 (1) + beta v_2 (0)\n         = alpha v_1\n   ==> lambda_1 = alpha with eigenvector v_1!"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Analysis of Action on $v_1$:**"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "A v_1 = \\left(\\alpha v_1 v_1^T + \\beta v_2 v_2^T\\right) v_1 = \\alpha v_1 (v_1^T v_1) + \\beta v_2 (v_2^T v_1)"
-    },
-    {
-     "t": "p",
-     "text": "Using given conditions $v_1^T v_1 = 1$ and $v_2^T v_1 = 0$:"
-    },
-    {
-     "t": "math",
-     "tex": "A v_1 = \\alpha v_1(1) + \\beta v_2(0) = \\alpha v_1"
-    },
-    {
-     "t": "p",
-     "text": "This proves directly that $v_1$ is an eigenvector with eigenvalue $\\lambda_1 = \\alpha$.\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Analysis of Action on $v_1$:**"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "A v_1 = \\left(\\alpha v_1 v_1^T + \\beta v_2 v_2^T\\right) v_1 = \\alpha v_1 (v_1^T v_1) + \\beta v_2 (v_2^T v_1)"
+      },
+      {
+       "t": "p",
+       "text": "Using given conditions $v_1^T v_1 = 1$ and $v_2^T v_1 = 0$:"
+      },
+      {
+       "t": "math",
+       "tex": "A v_1 = \\alpha v_1(1) + \\beta v_2(0) = \\alpha v_1"
+      },
+      {
+       "t": "p",
+       "text": "This proves directly that $v_1$ is an eigenvector with eigenvalue $\\lambda_1 = \\alpha$."
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -28397,47 +28399,46 @@ export default {
      "text": "   Action on v_2:\n   A v_2 = alpha v_1 (v_1^T v_2) + beta v_2 (v_2^T v_2)\n         = alpha v_1 (0) + beta v_2 (1)\n         = beta v_2\n   ==> lambda_2 = beta with eigenvector v_2!\n\n   Trace Cyclic Property:\n   Tr(A) = alpha Tr(v_1 v_1^T) + beta Tr(v_2 v_2^T)\n   Tr(v_1 v_1^T) = Tr(v_1^T v_1) = ||v_1||^2 = 1\n   ==> Tr(A) = alpha(1) + beta(1) = alpha + beta\n\n   Sum of Eigenvalues:\n   lambda_1 + lambda_2 + lambda_3 = Tr(A)\n   alpha + beta + lambda_3 = alpha + beta\n   ==> lambda_3 = 0!\n   ==> Eigenvalues are 0, alpha, beta  [Option A]"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Step-by-Step Completion:**"
-     ]
-    },
-    {
-     "t": "ol",
-     "start": 1,
-     "items": [
-      "$A v_2 = \\beta v_2 \\implies \\lambda_2 = \\beta$.",
-      "By cyclic invariance of trace, $\\text{tr}(u v^T) = \\text{tr}(v^T u) = v^T u$:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\text{tr}(A) = \\alpha \\text{tr}(v_1 v_1^T) + \\beta \\text{tr}(v_2 v_2^T) = \\alpha (v_1^T v_1) + \\beta (v_2^T v_2) = \\alpha(1) + \\beta(1) = \\alpha + \\beta"
-    },
-    {
-     "t": "ol",
-     "start": 3,
-     "items": [
-      "Since trace equals sum of eigenvalues:"
-     ]
-    },
-    {
-     "t": "math",
-     "tex": "\\lambda_1 + \\lambda_2 + \\lambda_3 = \\alpha + \\beta \\implies \\alpha + \\beta + \\lambda_3 = \\alpha + \\beta \\implies \\lambda_3 = 0"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Correct Option:** (A) $0, \\alpha, \\beta$."
-     ]
-    },
-    {
-     "t": "p",
-     "text": "</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Step-by-Step Completion:**"
+       ]
+      },
+      {
+       "t": "ol",
+       "start": 1,
+       "items": [
+        "$A v_2 = \\beta v_2 \\implies \\lambda_2 = \\beta$.",
+        "By cyclic invariance of trace, $\\text{tr}(u v^T) = \\text{tr}(v^T u) = v^T u$:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\text{tr}(A) = \\alpha \\text{tr}(v_1 v_1^T) + \\beta \\text{tr}(v_2 v_2^T) = \\alpha (v_1^T v_1) + \\beta (v_2^T v_2) = \\alpha(1) + \\beta(1) = \\alpha + \\beta"
+      },
+      {
+       "t": "ol",
+       "start": 3,
+       "items": [
+        "Since trace equals sum of eigenvalues:"
+       ]
+      },
+      {
+       "t": "math",
+       "tex": "\\lambda_1 + \\lambda_2 + \\lambda_3 = \\alpha + \\beta \\implies \\alpha + \\beta + \\lambda_3 = \\alpha + \\beta \\implies \\lambda_3 = 0"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "**Correct Option:** (A) $0, \\alpha, \\beta$."
+       ]
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
@@ -28455,18 +28456,21 @@ export default {
      "text": "   Chalkboard Method 2 (Coordinate Choice):\n   Since relation holds for ANY orthonormal vectors in R^3, choose the standard unit vectors:\n       v_1 = [ 1 ]        v_2 = [ 0 ]\n             [ 0 ]              [ 1 ]\n             [ 0 ]              [ 0 ]\n   Clearly: v_1^T v_2 = 0,  ||v_1|| = 1,  ||v_2|| = 1.\n\n   Outer Products:\n   v_1 v_1^T = [ 1 0 0 ]           v_2 v_2^T = [ 0 0 0 ]\n               [ 0 0 0 ]                       [ 0 1 0 ]\n               [ 0 0 0 ]                       [ 0 0 0 ]\n\n   Matrix A:\n   A = alpha v_1 v_1^T + beta v_2 v_2^T = [ alpha   0    0 ]\n                                          [   0   beta   0 ]\n                                          [   0     0    0 ]\n\n   Diagonal matrix ==> Eigenvalues are immediately: alpha, beta, 0!  ==> Option (A)!"
     },
     {
-     "t": "p",
-     "text": "<details open><summary><b>Click to View Step-by-Step Mathematical Derivation &amp; Exam Traps</b></summary>"
-    },
-    {
-     "t": "ul",
-     "items": [
-      "**Why this method is invincible in GATE:**"
-     ]
-    },
-    {
-     "t": "p",
-     "text": "When a question begins with \"Let $v_1, v_2$ be any vectors such that $v_1^T v_2 = 0, \\|v_1\\|=\\|v_2\\|=1$\", picking the simplest canonical basis ($e_1, e_2$) instantly reduces a 3-minute abstract matrix operator into a trivial $3 \\times 3$ diagonal matrix that can be solved in 10 seconds!\n</details>"
+     "t": "details",
+     "summary": "b Click to View Step-by-Step Mathematical Derivation &amp  Exam Traps /b",
+     "blocks": [
+      {
+       "t": "ul",
+       "items": [
+        "**Why this method is invincible in GATE:**"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "When a question begins with \"Let $v_1, v_2$ be any vectors such that $v_1^T v_2 = 0, \\|v_1\\|=\\|v_2\\|=1$\", picking the simplest canonical basis ($e_1, e_2$) instantly reduces a 3-minute abstract matrix operator into a trivial $3 \\times 3$ diagonal matrix that can be solved in 10 seconds!"
+      }
+     ],
+     "open": true
     },
     {
      "t": "h3",
