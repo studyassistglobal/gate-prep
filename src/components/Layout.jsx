@@ -6,6 +6,7 @@ import Icon from './Icon.jsx';
 const NAV = [
   { to: '/', label: 'Home', end: true },
   { to: '/course/gate-2027-ece', label: 'GATE Course' },
+  { to: '/course/gate-2027-ece?tab=formulas', label: 'Formula Sheets' },
   { to: '/tests', label: 'Tests' },
 ];
 
@@ -13,6 +14,16 @@ export default function Layout() {
   const { isDark, toggle } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+
+  // "GATE Course" and "Formula Sheets" share a path — pick by ?tab=
+  const onFormulasTab = location.pathname === '/course/gate-2027-ece' && location.search.includes('tab=formulas');
+  const navActive = (n) => {
+    if (n.label === 'Home') return location.pathname === '/';
+    if (n.label === 'Tests') return location.pathname === '/tests';
+    if (n.label === 'Formula Sheets') return onFormulasTab;
+    return location.pathname.startsWith('/course') && !onFormulasTab;
+  };
+  const navClass = (n, base) => `${base}${navActive(n) ? ' active' : ''}`;
 
   // close the mobile nav whenever the route changes
   useEffect(() => {
@@ -37,7 +48,7 @@ export default function Layout() {
 
           <nav className="nav-links">
             {NAV.map((n) => (
-              <NavLink key={n.to} to={n.to} end={n.end} className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>
+              <NavLink key={n.to} to={n.to} end={n.end} className={() => navClass(n, 'nav-link')}>
                 {n.label}
               </NavLink>
             ))}
@@ -63,7 +74,7 @@ export default function Layout() {
                 key={n.to}
                 to={n.to}
                 end={n.end}
-                className={({ isActive }) => `mobile-nav-link${isActive ? ' active' : ''}`}
+                className={() => navClass(n, 'mobile-nav-link')}
                 onClick={() => setMenuOpen(false)}
               >
                 {n.label}

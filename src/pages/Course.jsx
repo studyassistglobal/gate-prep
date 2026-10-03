@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { getCourse, chapterLabel } from '../data/courses.js';
 import { NOTES_INDEX } from '../data/notes/index.js';
 import { chapterProgress } from '../lib/progress.js';
@@ -8,15 +8,29 @@ import NotFound from './NotFound.jsx';
 
 const TABS = [
   { key: 'content', label: 'Content', icon: 'menu_book' },
+  { key: 'formulas', label: 'Formula Sheets', icon: 'functions' },
   { key: 'tests', label: 'Tests', icon: 'quiz' },
 ];
 
 export default function Course() {
   const { courseId } = useParams();
   const course = getCourse(courseId);
-  const [tab, setTab] = useState('content');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const urlTab = searchParams.get('tab') === 'formulas' ? 'formulas' : searchParams.get('tab') === 'tests' ? 'tests' : 'content';
+  const [tab, setTabState] = useState(urlTab);
   const [openSubject, setOpenSubject] = useState(course?.subjects[0]?.id);
   const [query, setQuery] = useState('');
+
+  // deep links (header "Formula Sheets" nav item) may change the tab param
+  useEffect(() => { setTabState(urlTab); }, [urlTab]);
+
+  const setTab = (key) => {
+    setTabState(key);
+    if (key === 'content') setSearchParams({}, { replace: true });
+    else setSearchParams({ tab: key }, { replace: true });
+    if (key === 'formulas') setOpenSubject(course?.subjects.find((s) => s.kind === 'sheets')?.id);
+    if (key === 'content') setOpenSubject(course?.subjects.find((s) => s.kind !== 'sheets')?.id);
+  };
 
   const searchResults = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -69,7 +83,7 @@ export default function Course() {
             key={t.key}
             type="button"
             className={`gp-tab${tab === t.key ? ' active' : ''}`}
-            onClick={() => (t.key === 'tests' ? setTab('tests') : setTab('content'))}
+            onClick={() => setTab(t.key)}
           >
             <Icon name={t.icon} className="ic-sm" /> {t.label}
           </button>
@@ -114,7 +128,7 @@ export default function Course() {
             </div>
           ) : (
             <div className="gp-subjects">
-              {course.subjects.map((s) => {
+              {(tab === 'formulas' ? course.subjects.filter((s) => s.kind === 'sheets') : course.subjects.filter((s) => s.kind !== 'sheets')).map((s) => {
                 const open = openSubject === s.id || query;
                 return (
                   <div key={s.id} className="gp-subject-block">

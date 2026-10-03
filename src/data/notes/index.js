@@ -1880,5 +1880,797 @@ export const NOTES_INDEX = {
     "title": "14. Last-Minute Flash Formulas Table"
    }
   ]
+ },
+ "edc-ch1": {
+  "num": 1,
+  "title": "Electronic Devices & Circuits (EDC)",
+  "subject": "Electronic Devices & Circuits",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "part-i-semiconductor-crystals-bandgap-theory-carrier-statistics",
+    "title": "Part I: Semiconductor Crystals, Bandgap Theory & Carrier Statistics"
+   },
+   {
+    "id": "part-ii-equilibrium-fermi-statistics-drift-mechanics-hall-effect",
+    "title": "Part II: Equilibrium Fermi Statistics, Drift Mechanics & Hall Effect"
+   },
+   {
+    "id": "part-iii-carrier-diffusion-inhomogeneous-doping-continuity-dynamics",
+    "title": "Part III: Carrier Diffusion, Inhomogeneous Doping & Continuity Dynamics"
+   },
+   {
+    "id": "part-iv-p-n-junction-electrostatics-depletion-width-band-bending",
+    "title": "Part IV: P-N Junction Electrostatics, Depletion Width & Band Bending"
+   },
+   {
+    "id": "part-v-diode-kinetics-capacitive-storage-breakdown-dynamics",
+    "title": "Part V: Diode Kinetics, Capacitive Storage & Breakdown Dynamics"
+   },
+   {
+    "id": "part-vi-bjt-physical-dynamics-base-transport-early-effect",
+    "title": "Part VI: BJT Physical Dynamics, Base Transport & Early Effect"
+   },
+   {
+    "id": "part-vii-mos-capacitor-electrostatics-inversion-physics-c-v-dynamics",
+    "title": "Part VII: MOS Capacitor Electrostatics, Inversion Physics & C-V Dynamics"
+   },
+   {
+    "id": "part-viii-mosfet-physical-operation-short-channel-effects-optoelectronics",
+    "title": "Part VIII: MOSFET Physical Operation, Short-Channel Effects & Optoelectronics"
+   },
+   {
+    "id": "part-i-mosfet-dc-biasing-load-lines-region-verification-drills-slides-586-603",
+    "title": "Part I: MOSFET DC Biasing, Load Lines & Region Verification Drills (Slides 586 \u2013 603)"
+   },
+   {
+    "id": "part-ii-mosfet-small-signal-parameters-analytical-gain-formulations-slides-604-630",
+    "title": "Part II: MOSFET Small-Signal Parameters & Analytical Gain Formulations (Slides 604 \u2013 630)"
+   },
+   {
+    "id": "part-iii-subthreshold-weak-inversion-short-channel-effects-sce-slides-631-658",
+    "title": "Part III: Subthreshold Weak Inversion & Short-Channel Effects (SCE) (Slides 631 \u2013 658)"
+   },
+   {
+    "id": "part-iv-optoelectronic-devices-optical-physics-slides-659-690",
+    "title": "Part IV: Optoelectronic Devices & Optical Physics (Slides 659 \u2013 690)"
+   },
+   {
+    "id": "part-v-light-emitting-diodes-schottky-barrier-contacts-slides-691-714",
+    "title": "Part V: Light Emitting Diodes & Schottky Barrier Contacts (Slides 691 \u2013 714)"
+   },
+   {
+    "id": "part-ix-diagnostic-defense-systems-25-most-dangerous-gate-traps",
+    "title": "Part IX: Diagnostic Defense Systems & 25 Most Dangerous GATE Traps"
+   }
+  ]
+ },
+ "edcf-ch1": {
+  "num": 1,
+  "title": "EDC \u2014 Formula & Revision Sheet",
+  "subject": "Electronic Devices & Circuits",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "1-fundamental-physical-constants-material-parameters-at-300-k",
+    "title": "1. Fundamental Physical Constants & Material Parameters (at 300 K)"
+   },
+   {
+    "id": "2-semiconductor-crystal-energy-band-dynamics",
+    "title": "2. Semiconductor Crystal & Energy Band Dynamics"
+   },
+   {
+    "id": "3-equilibrium-carrier-statistics-fermi-levels",
+    "title": "3. Equilibrium Carrier Statistics & Fermi Levels"
+   },
+   {
+    "id": "4-carrier-transport-mechanics-drift-mobility-hall-effect",
+    "title": "4. Carrier Transport Mechanics: Drift, Mobility & Hall Effect"
+   },
+   {
+    "id": "5-diffusion-non-uniform-doping-continuity-dynamics",
+    "title": "5. Diffusion, Non-Uniform Doping & Continuity Dynamics"
+   },
+   {
+    "id": "6-p-n-junction-electrostatics-built-in-potential",
+    "title": "6. P-N Junction Electrostatics & Built-in Potential"
+   },
+   {
+    "id": "7-diode-kinetics-capacitance-breakdown-dynamics",
+    "title": "7. Diode Kinetics, Capacitance & Breakdown Dynamics"
+   },
+   {
+    "id": "8-bipolar-junction-transistor-bjt-physics",
+    "title": "8. Bipolar Junction Transistor (BJT) Physics"
+   },
+   {
+    "id": "9-mos-capacitor-electrostatics-inversion-physics",
+    "title": "9. MOS Capacitor Electrostatics & Inversion Physics"
+   },
+   {
+    "id": "10-mosfet-current-voltage-equations-short-channel-physics",
+    "title": "10. MOSFET Current-Voltage Equations & Short-Channel Physics"
+   },
+   {
+    "id": "11-optoelectronic-devices-metal-semiconductor-contacts",
+    "title": "11. Optoelectronic Devices & Metal-Semiconductor Contacts"
+   },
+   {
+    "id": "12-60-second-rapid-fire-diagnostic-decision-tree",
+    "title": "12. 60-Second Rapid-Fire Diagnostic Decision Tree"
+   },
+   {
+    "id": "13-25-most-dangerous-gate-exam-traps-diagnostic-safeguards",
+    "title": "13. 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards"
+   },
+   {
+    "id": "14-last-minute-high-yield-flash-formulas-table",
+    "title": "14. Last-Minute High-Yield Flash Formulas Table"
+   }
+  ]
+ },
+ "em-ch2": {
+  "num": 2,
+  "title": "Calculus",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "part-i-single-variable-functions-modulus-symmetries-elementary-graphs",
+    "title": "Part I: Single-Variable Functions, Modulus, Symmetries & Elementary Graphs"
+   },
+   {
+    "id": "part-ii-limits-indeterminate-forms-series-expansions-squeeze-engine",
+    "title": "Part II: Limits, Indeterminate Forms, Series Expansions & Squeeze Engine"
+   },
+   {
+    "id": "part-iii-continuity-criterion-differentiability-mean-value-theorems",
+    "title": "Part III: Continuity Criterion, Differentiability & Mean Value Theorems"
+   },
+   {
+    "id": "part-iv-single-variable-optimization-extrema-asymptotic-curve-sketching",
+    "title": "Part IV: Single-Variable Optimization, Extrema & Asymptotic Curve Sketching"
+   },
+   {
+    "id": "part-v-multivariable-calculus-partial-derivatives-euler-s-homogeneous-engine",
+    "title": "Part V: Multivariable Calculus, Partial Derivatives & Euler's Homogeneous Engine"
+   },
+   {
+    "id": "part-vi-single-variable-definite-integrals-symmetry-properties-reduction-formulas",
+    "title": "Part VI: Single-Variable Definite Integrals, Symmetry Properties & Reduction Formulas"
+   },
+   {
+    "id": "part-vii-leibniz-differentiation-under-integral-sign-special-beta-gamma-functions-arc-length",
+    "title": "Part VII: Leibniz Differentiation Under Integral Sign, Special Beta/Gamma Functions & Arc Length"
+   },
+   {
+    "id": "part-viii-multiple-integrals-change-of-order-polar-coordinates-jacobians",
+    "title": "Part VIII: Multiple Integrals, Change of Order, Polar Coordinates & Jacobians"
+   }
+  ]
+ },
+ "em-ch3": {
+  "num": 3,
+  "title": "Vector Calculus",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-1-vector-algebra-3d-coordinate-topology-analytic-geometry-slides-001-040-pages-001-010",
+    "title": "Module 1: Vector Algebra, 3D Coordinate Topology & Analytic Geometry (Slides 001\u2013040 | Pages 001\u2013010)"
+   },
+   {
+    "id": "module-2-domain-topology-curvilinear-coordinate-systems-differential-elements-slides-041-080-pages-011-020",
+    "title": "Module 2: Domain Topology, Curvilinear Coordinate Systems & Differential Elements (Slides 041\u2013080 | Pages 011\u2013020)"
+   },
+   {
+    "id": "module-3-differential-vector-calculus-gradient-directional-derivatives-level-surfaces-slides-081-120-pages-021-030",
+    "title": "Module 3: Differential Vector Calculus \u2014 Gradient, Directional Derivatives & Level Surfaces (Slides 081\u2013120 | Pages 021\u2013030)"
+   },
+   {
+    "id": "module-4-divergence-curl-vector-null-identities-line-integrals-slides-121-168-pages-031-042",
+    "title": "Module 4: Divergence, Curl, Vector Null Identities & Line Integrals (Slides 121\u2013168 | Pages 031\u2013042)"
+   },
+   {
+    "id": "module-5-surface-integrals-flux-green-s-stokes-theorems-slides-169-216-pages-043-054",
+    "title": "Module 5: Surface Integrals, Flux, Green's & Stokes' Theorems (Slides 169\u2013216 | Pages 043\u2013054)"
+   },
+   {
+    "id": "module-6-conservative-fields-gauss-s-divergence-theorem-surface-capping-slides-217-259-pages-055-065",
+    "title": "Module 6: Conservative Fields, Gauss's Divergence Theorem & Surface Capping (Slides 217\u2013259 | Pages 055\u2013065)"
+   }
+  ]
+ },
+ "em-ch4": {
+  "num": 4,
+  "title": "Complex Analysis",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-1-complex-arithmetic-polar-euler-geometry-argand-domain-topology-pages-01-10-slides-001-040",
+    "title": "Module 1: Complex Arithmetic, Polar/Euler Geometry & Argand Domain Topology (Pages 01\u201310 | Slides 001\u2013040)"
+   },
+   {
+    "id": "module-2-functions-of-complex-variables-geometric-mapping-limits-continuity-pages-11-20-slides-041-080",
+    "title": "Module 2: Functions of Complex Variables, Geometric Mapping, Limits & Continuity (Pages 11\u201320 | Slides 041\u2013080)"
+   },
+   {
+    "id": "module-3-complex-differentiability-cauchy-riemann-equations-analyticity-pages-21-30-slides-081-120",
+    "title": "Module 3: Complex Differentiability, Cauchy-Riemann Equations & Analyticity (Pages 21\u201330 | Slides 081\u2013120)"
+   },
+   {
+    "id": "module-4-harmonic-functions-orthogonal-trajectories-milne-thomson-construction-pages-31-40-slides-121-160",
+    "title": "Module 4: Harmonic Functions, Orthogonal Trajectories & Milne-Thomson Construction (Pages 31\u201340 | Slides 121\u2013160)"
+   },
+   {
+    "id": "module-5-conformal-mapping-bilinear-transformations-singularities-taxonomy-pages-41-50-slides-161-200",
+    "title": "Module 5: Conformal Mapping, Bilinear Transformations & Singularities Taxonomy (Pages 41\u201350 | Slides 161\u2013200)"
+   },
+   {
+    "id": "module-6-complex-integration-cauchy-s-integral-theorems-laurent-series-residue-calculus-pages-51-61-slides-201-244",
+    "title": "Module 6: Complex Integration, Cauchy's Integral Theorems, Laurent Series & Residue Calculus (Pages 51\u201361 | Slides 201\u2013244)"
+   }
+  ]
+ },
+ "em-ch5": {
+  "num": 5,
+  "title": "Differential Equations",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-1-differential-equations-foundations-order-degree-linearity-formation-of-odes-pages-01-10-slides-001-040",
+    "title": "Module 1: Differential Equations Foundations, Order, Degree, Linearity & Formation of ODEs (Pages 01\u201310 | Slides 001\u2013040)"
+   },
+   {
+    "id": "module-2-first-order-odes-separation-homogeneous-linear-bernoulli-equations-pages-11-20-slides-041-080",
+    "title": "Module 2: First-Order ODEs: Separation, Homogeneous, Linear & Bernoulli Equations (Pages 11\u201320 | Slides 041\u2013080)"
+   },
+   {
+    "id": "module-3-exact-differential-equations-integrating-factor-rules-orthogonal-trajectories-pages-21-30-slides-081-120",
+    "title": "Module 3: Exact Differential Equations, Integrating Factor Rules & Orthogonal Trajectories (Pages 21\u201330 | Slides 081\u2013120)"
+   },
+   {
+    "id": "module-4-higher-order-linear-odes-auxiliary-equations-cf-root-regimes-wronskian-independence-pages-31-40-slides-121-160",
+    "title": "Module 4: Higher-Order Linear ODEs: Auxiliary Equations, CF Root Regimes & Wronskian Independence (Pages 31\u201340 | Slides 121\u2013160)"
+   },
+   {
+    "id": "module-5-particular-integrals-operator-calculus-method-of-variation-of-parameters-pages-41-50-slides-161-200",
+    "title": "Module 5: Particular Integrals: Operator Calculus & Method of Variation of Parameters (Pages 41\u201350 | Slides 161\u2013200)"
+   },
+   {
+    "id": "module-6-cauchy-euler-legendre-systems-of-odes-pde-fundamentals-pages-51-60-slides-201-240",
+    "title": "Module 6: Cauchy-Euler, Legendre, Systems of ODEs & PDE Fundamentals (Pages 51\u201360 | Slides 201\u2013240)"
+   }
+  ]
+ },
+ "em-ch6": {
+  "num": 6,
+  "title": "Probability, Random Variables & Statistics",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-1-foundations-of-probability-random-experiments-kolmogorov-axioms-slides-001-060",
+    "title": "Module 1: Foundations of Probability, Random Experiments & Kolmogorov Axioms (Slides 001\u2013060)"
+   },
+   {
+    "id": "module-1-foundations-of-probability-random-experiments-slides-001-005",
+    "title": "Module 1: Foundations of Probability & Random Experiments (Slides 001\u2013005)"
+   },
+   {
+    "id": "module-2-event-typology-axiomatic-foundations-terminology-slides-006-008",
+    "title": "Module 2: Event Typology, Axiomatic Foundations & Terminology (Slides 006\u2013008)"
+   },
+   {
+    "id": "module-3-venn-diagram-algebra-two-event-addition-theorem-slides-009-014",
+    "title": "Module 3: Venn Diagram Algebra & Two-Event Addition Theorem (Slides 009\u2013014)"
+   },
+   {
+    "id": "module-4-multi-dice-sample-space-the-triangular-sum-distribution-slide-015",
+    "title": "Module 4: Multi-Dice Sample Space & The Triangular Sum Distribution (Slide 015)"
+   },
+   {
+    "id": "module-5-three-event-probability-extended-addition-theorems-slides-016-024",
+    "title": "Module 5: Three-Event Probability & Extended Addition Theorems (Slides 016\u2013024)"
+   },
+   {
+    "id": "module-6-taxonomy-of-event-relationships-mutually-exclusive-vs-mutually-exhaustive-slides-025-031",
+    "title": "Module 6: Taxonomy of Event Relationships: Mutually Exclusive vs Mutually Exhaustive (Slides 025\u2013031)"
+   },
+   {
+    "id": "module-7-conditional-probability-reciprocity-laws-slides-032-038",
+    "title": "Module 7: Conditional Probability & Reciprocity Laws (Slides 032\u2013038)"
+   },
+   {
+    "id": "module-8-the-multiplication-theorem-chain-rule-of-probability-slide-039",
+    "title": "Module 8: The Multiplication Theorem & Chain Rule of Probability (Slide 039)"
+   },
+   {
+    "id": "module-9-independent-events-vs-dependent-events-slides-040-047",
+    "title": "Module 9: Independent Events vs Dependent Events (Slides 040\u2013047)"
+   },
+   {
+    "id": "module-10-pairwise-independence-vs-mutual-independence-slides-048-050",
+    "title": "Module 10: Pairwise Independence vs Mutual Independence (Slides 048\u2013050)"
+   },
+   {
+    "id": "module-11-discrete-combinatorial-probability-models-slides-051-052",
+    "title": "Module 11: Discrete Combinatorial Probability Models (Slides 051\u2013052)"
+   },
+   {
+    "id": "module-12-comprehensive-deck-of-52-cards-taxonomy-multi-card-drawing-models-slides-053-060",
+    "title": "Module 12: Comprehensive Deck of 52 Cards Taxonomy & Multi-Card Drawing Models (Slides 053\u2013060)"
+   },
+   {
+    "id": "module-13-high-yield-gate-engineering-mathematics-probability-revision-matrix-exam-trap-diagnostic-slides-001-060-synthesis",
+    "title": "Module 13: High-Yield GATE Engineering Mathematics Probability Revision Matrix & Exam Trap Diagnostic (Slides 001\u2013060 Synthesis)"
+   },
+   {
+    "id": "module-2-advanced-combinatorics-total-probability-bayes-theorem-slides-061-140",
+    "title": "Module 2: Advanced Combinatorics, Total Probability & Bayes' Theorem (Slides 061\u2013140)"
+   },
+   {
+    "id": "module-1-combinatorial-counting-coin-ensembles-parity-algebra-slides-061-064",
+    "title": "Module 1: Combinatorial Counting, Coin Ensembles & Parity Algebra (Slides 061\u2013064)"
+   },
+   {
+    "id": "module-2-sampling-dynamics-multi-agent-problem-solving-probability-bounds-slides-065-073",
+    "title": "Module 2: Sampling Dynamics, Multi-Agent Problem Solving & Probability Bounds (Slides 065\u2013073)"
+   },
+   {
+    "id": "module-3-infinite-geometric-series-in-probability-multi-dice-geometry-slides-074-084",
+    "title": "Module 3: Infinite Geometric Series in Probability & Multi-Dice Geometry (Slides 074\u2013084)"
+   },
+   {
+    "id": "module-4-geometric-memorylessness-order-statistics-coin-asymmetries-slides-085-096",
+    "title": "Module 4: Geometric Memorylessness, Order Statistics & Coin Asymmetries (Slides 085\u2013096)"
+   },
+   {
+    "id": "module-5-sum-symmetries-tied-states-coin-experiment-termination-slides-097-108",
+    "title": "Module 5: Sum Symmetries, Tied States & Coin Experiment Termination (Slides 097\u2013108)"
+   },
+   {
+    "id": "module-6-joint-probability-distributions-channels-the-law-of-total-probability-slides-109-117",
+    "title": "Module 6: Joint Probability Distributions, Channels & The Law of Total Probability (Slides 109\u2013117)"
+   },
+   {
+    "id": "module-7-bayes-theorem-inverse-probability-framework-slides-118-126",
+    "title": "Module 7: Bayes' Theorem & Inverse Probability Framework (Slides 118\u2013126)"
+   },
+   {
+    "id": "module-8-classic-bayesian-paradoxes-transfer-urns-function-pre-requisites-slides-127-140",
+    "title": "Module 8: Classic Bayesian Paradoxes, Transfer Urns & Function Pre-requisites (Slides 127\u2013140)"
+   },
+   {
+    "id": "module-9-high-yield-master-revision-matrix-comprehensive-exam-diagnostics",
+    "title": "Module 9: High-Yield Master Revision Matrix & Comprehensive Exam Diagnostics"
+   },
+   {
+    "id": "module-3-mathematical-waveforms-random-variables-cdf-pdf-engine-slides-141-220",
+    "title": "Module 3: Mathematical Waveforms, Random Variables & CDF/PDF Engine (Slides 141\u2013220)"
+   },
+   {
+    "id": "module-1-mathematical-pre-requisites-for-continuous-random-variables-slides-141-164",
+    "title": "Module 1: Mathematical Pre-requisites for Continuous Random Variables (Slides 141 \u2013 164)"
+   },
+   {
+    "id": "module-2-ontological-foundations-of-random-variables-discrete-pmfs-slides-165-174",
+    "title": "Module 2: Ontological Foundations of Random Variables & Discrete PMFs (Slides 165 \u2013 174)"
+   },
+   {
+    "id": "module-3-cumulative-distribution-function-cdf-mechanics-discontinuity-topologies-slides-175-185",
+    "title": "Module 3: Cumulative Distribution Function (CDF) Mechanics & Discontinuity Topologies (Slides 175 \u2013 185)"
+   },
+   {
+    "id": "module-4-probability-density-functions-pdf-master-continuous-distributions-slides-186-201",
+    "title": "Module 4: Probability Density Functions (PDF) & Master Continuous Distributions (Slides 186 \u2013 201)"
+   },
+   {
+    "id": "module-5-symmetry-principles-conditional-probability-prerequisite-multivariable-integrals-slides-202-220",
+    "title": "Module 5: Symmetry Principles, Conditional Probability & Prerequisite Multivariable Integrals (Slides 202 \u2013 220)"
+   },
+   {
+    "id": "module-6-theoretical-synthesis-master-reference-tables-gate-traps-diagnostics",
+    "title": "Module 6: Theoretical Synthesis, Master Reference Tables & GATE Traps Diagnostics"
+   },
+   {
+    "id": "module-4-two-dimensional-random-variables-joint-distributions-covariance-slides-221-300",
+    "title": "Module 4: Two-Dimensional Random Variables, Joint Distributions & Covariance (Slides 221\u2013300)"
+   },
+   {
+    "id": "module-1-two-dimensional-joint-random-variables-cumulative-distribution-functions-slides-221-227",
+    "title": "Module 1: Two-Dimensional (Joint) Random Variables & Cumulative Distribution Functions (Slides 221\u2013227)"
+   },
+   {
+    "id": "module-2-continuous-bivariate-distributions-joint-probability-density-functions-slides-228-237",
+    "title": "Module 2: Continuous Bivariate Distributions & Joint Probability Density Functions (Slides 228\u2013237)"
+   },
+   {
+    "id": "module-3-conditional-distributions-statistical-independence-support-geometry-slides-238-256",
+    "title": "Module 3: Conditional Distributions, Statistical Independence & Support Geometry (Slides 238\u2013256)"
+   },
+   {
+    "id": "module-4-mathematical-expectation-moments-variance-of-single-random-variables-slides-257-276",
+    "title": "Module 4: Mathematical Expectation, Moments & Variance of Single Random Variables (Slides 257\u2013276)"
+   },
+   {
+    "id": "module-5-bivariate-joint-moments-covariance-correlation-slides-277-288",
+    "title": "Module 5: Bivariate Joint Moments, Covariance & Correlation (Slides 277\u2013288)"
+   },
+   {
+    "id": "module-6-advanced-bivariate-topologies-nonlinear-dependencies-gaussian-special-functions-slides-289-300",
+    "title": "Module 6: Advanced Bivariate Topologies, Nonlinear Dependencies & Gaussian Special Functions (Slides 289\u2013300)"
+   },
+   {
+    "id": "module-5-continuous-distributions-uniform-gaussian-bell-engine-slides-301-360",
+    "title": "Module 5: Continuous Distributions: Uniform & Gaussian Bell Engine (Slides 301\u2013360)"
+   },
+   {
+    "id": "module-1-standard-normal-q-function-error-functions-tail-probability-algebra-slides-301-303-with-foundational-grounding",
+    "title": "Module 1: Standard Normal Q-Function, Error Functions & Tail Probability Algebra (Slides 301\u2013303, with Foundational Grounding)"
+   },
+   {
+    "id": "module-2-continuous-uniform-distribution-geometry-cdf-ramp-first-principles-moments-slides-304-308",
+    "title": "Module 2: Continuous Uniform Distribution \u2014 Geometry, CDF Ramp & First-Principles Moments (Slides 304\u2013308)"
+   },
+   {
+    "id": "module-3-non-linear-function-of-uniform-rv-periodic-transformation-mechanics-slides-309-310",
+    "title": "Module 3: Non-Linear Function of Uniform RV & Periodic Transformation Mechanics (Slides 309\u2013310)"
+   },
+   {
+    "id": "module-4-gaussian-normal-distribution-bell-geometry-moments-advanced-integrals-slides-311-324",
+    "title": "Module 4: Gaussian / Normal Distribution \u2014 Bell Geometry, Moments & Advanced Integrals (Slides 311\u2013324)"
+   },
+   {
+    "id": "module-5-triangular-rayleigh-distributions-shape-calculus-gaussian-moments-slides-325-330",
+    "title": "Module 5: Triangular & Rayleigh Distributions \u2014 Shape Calculus & Gaussian Moments (Slides 325\u2013330)"
+   },
+   {
+    "id": "module-6-transformations-of-continuous-random-variables-linear-invariance-support-mapping-slides-334-341",
+    "title": "Module 6: Transformations of Continuous Random Variables \u2014 Linear Invariance & Support Mapping (Slides 334\u2013341)"
+   },
+   {
+    "id": "module-7-discrete-random-variable-transformations-digital-modulation-analysis-slides-342-348",
+    "title": "Module 7: Discrete Random Variable Transformations & Digital Modulation Analysis (Slides 342\u2013348)"
+   },
+   {
+    "id": "module-8-order-statistics-for-discrete-i-i-d-variables-min-max-joint-distributions-slides-349-352",
+    "title": "Module 8: Order Statistics for Discrete i.i.d. Variables \u2014 Min, Max & Joint Distributions (Slides 349\u2013352)"
+   },
+   {
+    "id": "module-9-continuous-to-discrete-quantization-thresholding-slicers-slides-353-356",
+    "title": "Module 9: Continuous-to-Discrete Quantization, Thresholding & Slicers (Slides 353\u2013356)"
+   },
+   {
+    "id": "module-10-piecewise-transformations-mixed-random-variables-gate-2023-ec-ee-deep-dive-slides-357-360",
+    "title": "Module 10: Piecewise Transformations & Mixed Random Variables \u2014 GATE 2023 EC/EE Deep Dive (Slides 357\u2013360)"
+   },
+   {
+    "id": "module-11-master-synthesis-high-yield-formula-matrix-comprehensive-gate-checklist",
+    "title": "Module 11: Master Synthesis, High-Yield Formula Matrix & Comprehensive GATE Checklist"
+   },
+   {
+    "id": "module-6-transformations-of-random-variables-jacobian-convolution-slides-361-408",
+    "title": "Module 6: Transformations of Random Variables, Jacobian & Convolution (Slides 361\u2013408)"
+   },
+   {
+    "id": "module-1-order-statistics-extremes-of-independent-identically-distributed-i-i-d-random-variables-slides-361-364",
+    "title": "Module 1: Order Statistics & Extremes of Independent Identically Distributed (i.i.d.) Random Variables (Slides 361\u2013364)"
+   },
+   {
+    "id": "module-2-algebra-of-extremum-random-variables-max-min-operations-slides-365-372",
+    "title": "Module 2: Algebra of Extremum Random Variables \u2014 Max & Min Operations (Slides 365\u2013372)"
+   },
+   {
+    "id": "module-3-sums-of-independent-random-variables-joint-integration-vs-graphical-convolution-slides-373-381",
+    "title": "Module 3: Sums of Independent Random Variables \u2014 Joint Integration vs. Graphical Convolution (Slides 373\u2013381)"
+   },
+   {
+    "id": "module-4-sums-and-linear-combinations-of-gaussian-random-variables-slides-382-385",
+    "title": "Module 4: Sums and Linear Combinations of Gaussian Random Variables (Slides 382\u2013385)"
+   },
+   {
+    "id": "module-5-sum-of-independent-exponential-variables-operational-laplace-methods-slides-386-388",
+    "title": "Module 5: Sum of Independent Exponential Variables & Operational Laplace Methods (Slides 386\u2013388)"
+   },
+   {
+    "id": "module-6-dimensionality-central-limit-theorem-clt-q-function-asymptotics-slides-389-392",
+    "title": "Module 6: Dimensionality, Central Limit Theorem (CLT) & Q-Function Asymptotics (Slides 389\u2013392)"
+   },
+   {
+    "id": "module-7-unified-summary-of-linear-operations-vs-independent-additions-slides-393-394",
+    "title": "Module 7: Unified Summary of Linear Operations vs. Independent Additions (Slides 393\u2013394)"
+   },
+   {
+    "id": "module-8-theory-of-continuous-random-variable-transformations-classical-case-studies-slides-395-400",
+    "title": "Module 8: Theory of Continuous Random Variable Transformations & Classical Case Studies (Slides 395\u2013400)"
+   },
+   {
+    "id": "module-9-comparative-cdf-inequalities-for-scaled-zero-mean-random-variables-slides-401-402",
+    "title": "Module 9: Comparative CDF Inequalities for Scaled Zero-Mean Random Variables (Slides 401\u2013402)"
+   },
+   {
+    "id": "module-10-high-dimensional-probability-geometry-in-the-unit-cube-gate-2014-benchmark-slides-403-408",
+    "title": "Module 10: High-Dimensional Probability Geometry in the Unit Cube \u2014 GATE 2014 Benchmark (Slides 403\u2013408)"
+   },
+   {
+    "id": "module-11-master-synthesis-comprehensive-formula-sheet-exam-diagnostic-checklist",
+    "title": "Module 11: Master Synthesis, Comprehensive Formula Sheet & Exam Diagnostic Checklist"
+   },
+   {
+    "id": "module-7-discrete-counting-models-lifetime-distributions-binomial-poisson-exponential-slides-409-444",
+    "title": "Module 7: Discrete Counting Models & Lifetime Distributions: Binomial, Poisson & Exponential (Slides 409\u2013444)"
+   },
+   {
+    "id": "module-1-foundations-of-discrete-continuous-distribution-taxonomy-slides-409-412",
+    "title": "Module 1: Foundations of Discrete & Continuous Distribution Taxonomy (Slides 409\u2013412)"
+   },
+   {
+    "id": "module-2-advanced-binomial-modeling-parameter-estimation-slides-413-418",
+    "title": "Module 2: Advanced Binomial Modeling & Parameter Estimation (Slides 413\u2013418)"
+   },
+   {
+    "id": "module-3-the-poisson-distribution-the-law-of-rare-events-slides-419-426",
+    "title": "Module 3: The Poisson Distribution & The Law of Rare Events (Slides 419\u2013426)"
+   },
+   {
+    "id": "module-4-temporal-rate-scaling-in-poisson-counting-processes-slides-427-430",
+    "title": "Module 4: Temporal Rate Scaling in Poisson Counting Processes (Slides 427\u2013430)"
+   },
+   {
+    "id": "module-5-the-exponential-distribution-continuous-inter-arrival-times-slides-431-434",
+    "title": "Module 5: The Exponential Distribution & Continuous Inter-Arrival Times (Slides 431\u2013434)"
+   },
+   {
+    "id": "module-6-competitive-exam-applications-real-world-queuing-processes-slides-435-444-445",
+    "title": "Module 6: Competitive Exam Applications & Real-World Queuing Processes (Slides 435\u2013444 + 445)"
+   },
+   {
+    "id": "module-7-high-yield-master-revision-matrix-comprehensive-exam-diagnostics",
+    "title": "Module 7: High-Yield Master Revision Matrix & Comprehensive Exam Diagnostics"
+   },
+   {
+    "id": "module-8-descriptive-statistics-skewness-ols-linear-regression-analysis-slides-445-485",
+    "title": "Module 8: Descriptive Statistics, Skewness & OLS Linear Regression Analysis (Slides 445\u2013485)"
+   },
+   {
+    "id": "module-1-poisson-tail-probability-mechanics-annual-expectation-slide-445",
+    "title": "Module 1: Poisson Tail Probability Mechanics & Annual Expectation (Slide 445)"
+   },
+   {
+    "id": "module-2-theoretical-bridge-random-variable-parameters-to-empirical-statistics-slide-446",
+    "title": "Module 2: Theoretical Bridge: Random Variable Parameters to Empirical Statistics (Slide 446)"
+   },
+   {
+    "id": "module-3-measures-of-central-tendency-for-discrete-grouped-distributions-slides-447-449",
+    "title": "Module 3: Measures of Central Tendency for Discrete & Grouped Distributions (Slides 447\u2013449)"
+   },
+   {
+    "id": "module-4-distribution-skewness-geometric-asymmetry-empirical-dynamics-slides-450-454",
+    "title": "Module 4: Distribution Skewness, Geometric Asymmetry & Empirical Dynamics (Slides 450\u2013454)"
+   },
+   {
+    "id": "module-5-bivariate-association-mathematical-theory-of-correlation-slides-455-460",
+    "title": "Module 5: Bivariate Association & Mathematical Theory of Correlation (Slides 455\u2013460)"
+   },
+   {
+    "id": "module-6-numerical-calculation-of-correlation-degenerate-variance-gate-drill-slides-461-463",
+    "title": "Module 6: Numerical Calculation of Correlation & Degenerate Variance GATE Drill (Slides 461\u2013463)"
+   },
+   {
+    "id": "module-7-foundations-of-ordinary-least-squares-ols-linear-regression-slides-464-470",
+    "title": "Module 7: Foundations of Ordinary Least Squares (OLS) Linear Regression (Slides 464\u2013470)"
+   },
+   {
+    "id": "module-8-analytical-properties-theorems-of-regression-lines-slides-471-472",
+    "title": "Module 8: Analytical Properties & Theorems of Regression Lines (Slides 471\u2013472)"
+   },
+   {
+    "id": "module-9-comprehensive-problem-solving-regression-line-disambiguation-slides-473-480",
+    "title": "Module 9: Comprehensive Problem Solving & Regression Line Disambiguation (Slides 473\u2013480)"
+   },
+   {
+    "id": "module-10-advanced-regression-gate-2023-ee-dual-residual-residual-analysis-slides-481-485",
+    "title": "Module 10: Advanced Regression & GATE 2023 EE Dual Residual Residual Analysis (Slides 481\u2013485)"
+   },
+   {
+    "id": "module-11-high-yield-revision-matrix-gate-exam-diagnostic-guide",
+    "title": "Module 11: High-Yield Revision Matrix & GATE Exam Diagnostic Guide"
+   }
+  ]
+ },
+ "emf-ch2": {
+  "num": 2,
+  "title": "Calculus \u2014 Formula & Revision Sheet",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "section-01-functions-modulus-symmetries-graph-transformations",
+    "title": "Section 01: Functions, Modulus, Symmetries & Graph Transformations"
+   },
+   {
+    "id": "section-02-limits-indeterminate-forms-series-expansions-squeeze-rules",
+    "title": "Section 02: Limits, Indeterminate Forms, Series Expansions & Squeeze Rules"
+   },
+   {
+    "id": "section-03-continuity-differentiability-mean-value-theorems",
+    "title": "Section 03: Continuity, Differentiability & Mean Value Theorems"
+   },
+   {
+    "id": "section-04-single-variable-optimization-extrema-asymptotes",
+    "title": "Section 04: Single-Variable Optimization, Extrema & Asymptotes"
+   },
+   {
+    "id": "section-05-multivariable-calculus-partial-derivatives-euler-s-theorems",
+    "title": "Section 05: Multivariable Calculus, Partial Derivatives & Euler's Theorems"
+   },
+   {
+    "id": "section-06-two-variable-extrema-saddle-points-lagrange-multipliers",
+    "title": "Section 06: Two-Variable Extrema, Saddle Points & Lagrange Multipliers"
+   },
+   {
+    "id": "section-07-single-variable-definite-integrals-king-queen-reduction",
+    "title": "Section 07: Single-Variable Definite Integrals, King/Queen & Reduction"
+   },
+   {
+    "id": "section-08-leibniz-differentiation-beta-gamma-arc-length",
+    "title": "Section 08: Leibniz Differentiation, Beta-Gamma & Arc Length"
+   },
+   {
+    "id": "section-09-multiple-integrals-change-of-order-polar-jacobians",
+    "title": "Section 09: Multiple Integrals, Change of Order, Polar & Jacobians"
+   }
+  ]
+ },
+ "emf-ch3": {
+  "num": 3,
+  "title": "Vector Calculus \u2014 Formula & Revision Sheet",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "1-60-second-rapid-fire-diagnostic-decision-tree-3-track-ascii-art",
+    "title": "1. 60-Second Rapid-Fire Diagnostic Decision Tree (3-Track ASCII Art)"
+   },
+   {
+    "id": "2-the-25-most-dangerous-gate-exam-traps-diagnostic-safeguards-table",
+    "title": "2. The 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards Table"
+   },
+   {
+    "id": "3-flash-formulas-table-complete-mathematical-arsenal",
+    "title": "3. Flash Formulas Table: Complete Mathematical Arsenal"
+   }
+  ]
+ },
+ "emf-ch4": {
+  "num": 4,
+  "title": "Complex Analysis \u2014 Formula & Revision Sheet",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "1-60-second-rapid-fire-diagnostic-decision-tree-3-track-ascii-art",
+    "title": "1. 60-Second Rapid-Fire Diagnostic Decision Tree (3-Track ASCII Art)"
+   },
+   {
+    "id": "2-the-25-most-dangerous-gate-exam-traps-diagnostic-safeguards-table",
+    "title": "2. The 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards Table"
+   },
+   {
+    "id": "3-flash-formulas-table-complete-mathematical-arsenal",
+    "title": "3. Flash Formulas Table: Complete Mathematical Arsenal"
+   }
+  ]
+ },
+ "emf-ch5": {
+  "num": 5,
+  "title": "Differential Equations \u2014 Formula & Revision Sheet",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "1-60-second-rapid-fire-diagnostic-decision-tree-3-track-ascii-art",
+    "title": "1. 60-Second Rapid-Fire Diagnostic Decision Tree (3-Track ASCII Art)"
+   },
+   {
+    "id": "2-the-25-most-dangerous-gate-exam-traps-diagnostic-safeguards-table",
+    "title": "2. The 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards Table"
+   },
+   {
+    "id": "3-flash-formulas-table-complete-mathematical-arsenal",
+    "title": "3. Flash Formulas Table: Complete Mathematical Arsenal"
+   }
+  ]
+ },
+ "emf-ch6": {
+  "num": 6,
+  "title": "Probability & Statistics \u2014 Formula & Revision Sheet",
+  "subject": "Engineering Mathematics",
+  "sections": [
+   {
+    "id": "comprehensive-formula-rapid-revision-sheet-standalone-examination-companion",
+    "title": "Comprehensive Formula & Rapid Revision Sheet (Standalone Examination Companion)"
+   },
+   {
+    "id": "1-visual-schematics-technical-architecture-directory",
+    "title": "1. Visual Schematics & Technical Architecture Directory"
+   },
+   {
+    "id": "2-foundations-of-probability-events-set-calculus",
+    "title": "2. Foundations of Probability, Events & Set Calculus"
+   },
+   {
+    "id": "3-conditional-probability-total-probability-bayesian-inference",
+    "title": "3. Conditional Probability, Total Probability & Bayesian Inference"
+   },
+   {
+    "id": "4-waveforms-random-variables-cdf-pdf-differential-engine",
+    "title": "4. Waveforms, Random Variables & CDF/PDF Differential Engine"
+   },
+   {
+    "id": "5-two-dimensional-random-variables-joint-distributions-covariance",
+    "title": "5. Two-Dimensional Random Variables, Joint Distributions & Covariance"
+   },
+   {
+    "id": "6-continuous-distributions-uniform-gaussian-bell-engine",
+    "title": "6. Continuous Distributions: Uniform & Gaussian Bell Engine"
+   },
+   {
+    "id": "7-transformations-of-random-variables-jacobian-engine",
+    "title": "7. Transformations of Random Variables & Jacobian Engine"
+   },
+   {
+    "id": "8-discrete-models-lifetime-distributions-binomial-poisson-exponential",
+    "title": "8. Discrete Models & Lifetime Distributions: Binomial, Poisson & Exponential"
+   },
+   {
+    "id": "9-descriptive-statistics-linear-regression-analysis",
+    "title": "9. Descriptive Statistics & Linear Regression Analysis"
+   },
+   {
+    "id": "10-the-25-most-dangerous-gate-exam-traps-diagnostic-safeguards-table",
+    "title": "10. The 25 Most Dangerous GATE Exam Traps & Diagnostic Safeguards Table"
+   },
+   {
+    "id": "11-60-second-rapid-fire-diagnostic-decision-tree-3-track-ascii-art",
+    "title": "11. 60-Second Rapid-Fire Diagnostic Decision Tree (3-Track ASCII Art)"
+   },
+   {
+    "id": "12-flash-formulas-quick-lookup-index",
+    "title": "12. Flash Formulas Quick-Lookup Index"
+   }
+  ]
  }
 };

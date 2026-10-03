@@ -39,6 +39,7 @@ export const COURSE = {
     },
     {
       id: 'ssf',
+      kind: 'sheets',
       name: 'S&S Formula Sheets',
       icon: 'functions',
       accent: 'math',
@@ -65,6 +66,7 @@ export const COURSE = {
     },
     {
       id: 'ntf',
+      kind: 'sheets',
       name: 'NT Revision Guides',
       icon: 'bolt',
       accent: 'chem',
@@ -82,15 +84,45 @@ export const COURSE = {
       accent: 'math',
       chapters: [
         { id: 'em-ch1', num: 1, title: 'Linear Algebra', status: 'live', file: 'emch1' },
+        { id: 'em-ch2', num: 2, title: 'Calculus', status: 'live', file: 'emch2' },
+        { id: 'em-ch3', num: 3, title: 'Vector Calculus', status: 'live', file: 'emch3' },
+        { id: 'em-ch4', num: 4, title: 'Complex Analysis', status: 'live', file: 'emch4' },
+        { id: 'em-ch5', num: 5, title: 'Differential Equations', status: 'live', file: 'emch5' },
+        { id: 'em-ch6', num: 6, title: 'Probability, Random Variables & Statistics', status: 'live', file: 'emch6' },
       ],
     },
     {
       id: 'emf',
+      kind: 'sheets',
       name: 'EM Formula Sheets',
       icon: 'calculate',
       accent: 'math',
       chapters: [
         { id: 'emf-ch1', num: 1, title: 'Linear Algebra — Formula & Revision Sheet', status: 'live', file: 'emfch1' },
+        { id: 'emf-ch2', num: 2, title: 'Calculus — Formula & Revision Sheet', status: 'live', file: 'emfch2' },
+        { id: 'emf-ch3', num: 3, title: 'Vector Calculus — Formula & Revision Sheet', status: 'live', file: 'emfch3' },
+        { id: 'emf-ch4', num: 4, title: 'Complex Analysis — Formula & Revision Sheet', status: 'live', file: 'emfch4' },
+        { id: 'emf-ch5', num: 5, title: 'Differential Equations — Formula & Revision Sheet', status: 'live', file: 'emfch5' },
+        { id: 'emf-ch6', num: 6, title: 'Probability & Statistics — Formula & Revision Sheet', status: 'live', file: 'emfch6' },
+      ],
+    },
+    {
+      id: 'edc',
+      name: 'Electronic Devices & Circuits',
+      icon: 'developer_board',
+      accent: 'chem',
+      chapters: [
+        { id: 'edc-ch1', num: 1, title: 'Electronic Devices & Circuits (EDC)', status: 'live', file: 'edcch1' },
+      ],
+    },
+    {
+      id: 'edcf',
+      kind: 'sheets',
+      name: 'EDC Formula Sheets',
+      icon: 'developer_board',
+      accent: 'chem',
+      chapters: [
+        { id: 'edcf-ch1', num: 1, title: 'EDC — Formula & Revision Sheet', status: 'live', file: 'edcfch1' },
       ],
     },
   ],
