@@ -67,14 +67,13 @@ export const COURSE = {
     {
       id: 'ntf',
       kind: 'sheets',
-      name: 'NT Revision Guides',
+      name: 'NT Formula Sheets',
       icon: 'bolt',
       accent: 'chem',
       chapters: [
-        { id: 'ntf-ch1', num: 1, title: 'Basics of Network — Revision Guide', status: 'live', file: 'ntf1' },
-        { id: 'ntf-ch2', num: 2, title: 'Network Theorems — Revision Guide', status: 'live', file: 'ntf2' },
-        { id: 'ntf-ch3', num: 3, title: 'Transient Analysis — Revision Guide', status: 'live', file: 'ntf3' },
-        { id: 'ntf-ch4', num: 4, title: 'Revision Capsule — All Chapters', status: 'live', file: 'ntf4' },
+        { id: 'ntf-ch1', num: 1, title: 'Basics of Network — Formula & Revision Sheet', status: 'live', file: 'ntf1' },
+        { id: 'ntf-ch2', num: 2, title: 'Network Theorems — Formula & Revision Sheet', status: 'live', file: 'ntf2' },
+        { id: 'ntf-ch3', num: 3, title: 'Transient Analysis — Formula & Revision Sheet', status: 'live', file: 'ntf3' },
       ],
     },
     {
@@ -123,6 +122,25 @@ export const COURSE = {
       accent: 'chem',
       chapters: [
         { id: 'edcf-ch1', num: 1, title: 'EDC — Formula & Revision Sheet', status: 'live', file: 'edcfch1' },
+      ],
+    },
+    {
+      id: 'ae',
+      name: 'Analog Electronics',
+      icon: 'tune',
+      accent: 'chem',
+      chapters: [
+        { id: 'ae-ch1', num: 1, title: 'Diode Circuits, Rectifiers & Filters', status: 'live', file: 'ae1' },
+      ],
+    },
+    {
+      id: 'aef',
+      kind: 'sheets',
+      name: 'Analog Electronics Formula Sheets',
+      icon: 'tune',
+      accent: 'chem',
+      chapters: [
+        { id: 'aef-ch1', num: 1, title: 'Diode Circuits & Rectifiers — Formula & Revision Sheet', status: 'live', file: 'aef1' },
       ],
     },
   ],

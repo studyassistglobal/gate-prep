@@ -282,68 +282,76 @@ CHAPTERS = [
     {
         "id": "nt-ch1",
         "unwrap": True,
+        "fig_links": True,
         "file": "nt1",
         "notes_sub": "nt",
         "num": 1,
         "title": "Basics of Network Analysis",
         "subject": "Network Theory",
-        "md": os.path.join(SRC_ROOT, "Network Theory", "01_Basics_of_Network.md"),
-        "figures_src": None,
-        "figures_dst": None,
-        "fig_prefix": "",
-        "web_prefix": "/notes/nt/",
+        "section_split": "h1",
+        "md": os.path.join(SRC_ROOT, "Network Theory", "Basics_of_Network_Master_Guide.md"),
+        "figures_src": os.path.join(SRC_ROOT, "Network Theory", "figures_network_basics"),
+        "figures_dst": "notes/nt/figures_network_basics",
+        "fig_prefix": "figures_network_basics/",
+        "web_prefix": "/notes/nt/figures_network_basics/",
     },
     {
         "id": "nt-ch2",
         "unwrap": True,
+        "fig_links": True,
         "file": "nt2",
         "notes_sub": "nt",
         "num": 2,
         "title": "Network Theorems & Circuit Equivalence",
         "subject": "Network Theory",
-        "md": os.path.join(SRC_ROOT, "Network Theory", "02_Network_Theorems.md"),
-        "figures_src": None,
-        "figures_dst": None,
-        "fig_prefix": "",
-        "web_prefix": "/notes/nt/",
+        "section_split": "h1",
+        "md": os.path.join(SRC_ROOT, "Network Theory", "Network_Theorems_Master_Guide.md"),
+        "figures_src": os.path.join(SRC_ROOT, "Network Theory", "figures_network_theorems"),
+        "figures_dst": "notes/nt/figures_network_theorems",
+        "fig_prefix": "figures_network_theorems/",
+        "web_prefix": "/notes/nt/figures_network_theorems/",
     },
     {
         "id": "nt-ch3",
         "unwrap": True,
+        "fig_links": True,
         "file": "nt3",
         "notes_sub": "nt",
         "num": 3,
         "title": "Transient Analysis",
         "subject": "Network Theory",
-        "md": os.path.join(SRC_ROOT, "Network Theory", "03_Transient_Analysis.md"),
-        "figures_src": None,
-        "figures_dst": None,
-        "fig_prefix": "",
-        "web_prefix": "/notes/nt/",
+        "section_split": "h1",
+        "md": os.path.join(SRC_ROOT, "Network Theory", "Transient_Analysis_Master_Guide.md"),
+        "figures_src": os.path.join(SRC_ROOT, "Network Theory", "figures_transient_analysis"),
+        "figures_dst": "notes/nt/figures_transient_analysis",
+        "fig_prefix": "figures_transient_analysis/",
+        "web_prefix": "/notes/nt/figures_transient_analysis/",
     },
     {
         "id": "ntf-ch1",
         "unwrap": True,
+        "fig_links": True,
         "file": "ntf1",
         "notes_sub": "ntf",
         "num": 1,
-        "title": "Basics of Network — Revision Guide",
+        "title": "Basics of Network — Formula & Revision Sheet",
         "subject": "Network Theory",
-        "md": os.path.join(SRC_ROOT, "Network Theory", "01_Basics_of_Network_Revision_Guide.md"),
+        "md": os.path.join(SRC_ROOT, "Network Theory", "Basics_of_Network_Formula_and_Revision_Sheet.md"),
         "figures_src": None,
         "figures_dst": None,
-        "fig_prefix": "",
-        "web_prefix": "/notes/ntf/",
+        "fig_prefix": "figures_network_basics/",
+        "web_prefix": "/notes/nt/figures_network_basics/",
     },
     {
         "id": "ntf-ch2",
         "unwrap": True,
+        "fig_links": True,
         "file": "ntf2",
         "notes_sub": "ntf",
         "num": 2,
-        "title": "Network Theorems — Revision Guide",
+        "title": "Network Theorems — Formula & Revision Sheet",
         "subject": "Network Theory",
-        "md": os.path.join(SRC_ROOT, "Network Theory", "02_Network_Theorems_Revision_Guide.md"),
+        "md": os.path.join(SRC_ROOT, "Network Theory", "Network_Theorems_Formula_and_Revision_Sheet.md"),
         "figures_src": None,
         "figures_dst": None,
         "fig_prefix": "",
@@ -352,30 +360,17 @@ CHAPTERS = [
     {
         "id": "ntf-ch3",
         "unwrap": True,
+        "fig_links": True,
         "file": "ntf3",
         "notes_sub": "ntf",
         "num": 3,
-        "title": "Transient Analysis — Revision Guide",
+        "title": "Transient Analysis — Formula & Revision Sheet",
         "subject": "Network Theory",
-        "md": os.path.join(SRC_ROOT, "Network Theory", "03_Transient_Analysis_Revision_Guide.md"),
+        "md": os.path.join(SRC_ROOT, "Network Theory", "Transient_Analysis_Formula_and_Revision_Sheet.md"),
         "figures_src": None,
         "figures_dst": None,
-        "fig_prefix": "",
-        "web_prefix": "/notes/ntf/",
-    },
-    {
-        "id": "ntf-ch4",
-        "unwrap": True,
-        "file": "ntf4",
-        "notes_sub": "ntf",
-        "num": 4,
-        "title": "Revision Capsule — All Chapters",
-        "subject": "Network Theory",
-        "md": os.path.join(SRC_ROOT, "Network Theory", "GATE_Network_Theory_Revision_Capsule.md"),
-        "figures_src": None,
-        "figures_dst": None,
-        "fig_prefix": "",
-        "web_prefix": "/notes/ntf/",
+        "fig_prefix": "figures_transient_analysis/",
+        "web_prefix": "/notes/nt/figures_transient_analysis/",
     },
     {
         "id": "em-ch1",
@@ -434,6 +429,37 @@ CHAPTERS = [
         "figures_dst": None,
         "fig_prefix": "",
         "web_prefix": "/notes/edcf/",
+    },
+    {
+        "id": "ae-ch1",
+        "unwrap": True,
+        "fig_links": True,
+        "file": "ae1",
+        "notes_sub": "ae",
+        "num": 1,
+        "title": "Diode Circuits, Rectifiers & Filters",
+        "subject": "Analog Electronics",
+        "section_split": "module",
+        "md": os.path.join(SRC_ROOT, "analog electronics", "Analog_Electronics_Diode_Circuits_and_Rectifiers_Master_Guide.md"),
+        "figures_src": os.path.join(SRC_ROOT, "analog electronics", "figures_analog_electronics"),
+        "figures_dst": "notes/ae/figures_analog_electronics",
+        "fig_prefix": "figures_analog_electronics/",
+        "web_prefix": "/notes/ae/figures_analog_electronics/",
+    },
+    {
+        "id": "aef-ch1",
+        "unwrap": True,
+        "fig_links": True,
+        "file": "aef1",
+        "notes_sub": "aef",
+        "num": 1,
+        "title": "Diode Circuits & Rectifiers — Formula & Revision Sheet",
+        "subject": "Analog Electronics",
+        "md": os.path.join(SRC_ROOT, "analog electronics", "Analog_Electronics_Diode_Circuits_and_Rectifiers_Formula_and_Revision_Sheet.md"),
+        "figures_src": None,
+        "figures_dst": None,
+        "fig_prefix": "figures_analog_electronics/",
+        "web_prefix": "/notes/ae/figures_analog_electronics/",
     },
     {
         "id": "em-ch2",
@@ -638,6 +664,105 @@ def rewrite_img_src(src, ch):
 IMG_RE = re.compile(r"^!\[([^\]]*)\]\(([^)]+)\)\s*$")
 
 STRUCT_START = re.compile(r"^\s*(?:#{1,6}\s|>|[-*]\s|\d+[.)]\s|```|~~~|\$\$|\||<|!\[)")
+
+# gallery figure links: the 4K blueprint galleries in the Network Theory /
+# Analog Electronics sources reference figures as `[text](file:///...)` or
+# `[text](figures_.../x.svg)` links — dead on the site. They are rewritten
+# into standalone `![caption](target)` figure blocks (see convert_fig_links).
+FIG_LINK = re.compile(r"\[([^\]]*)\]\(([^()\s]+?\.(?:jpg|jpeg|png|svg))\)", re.I)
+SEP_ROW = re.compile(r"^\s*\|?[\s:|-]+\|?\s*$")
+LIST_ITEM = re.compile(r"^\s*(?:[-*+]|\d+[.)])\s+(.*)$")
+
+
+def _fig_url(url):
+    # the vector .svg blueprints ship as their rasterized 4K .jpg twins (the
+    # figures copy only carries raster formats)
+    return re.sub(r"\.svg$", ".jpg", url, flags=re.I)
+
+
+def fig_block(caption, url, scope=""):
+    res = [f"![{caption}]({url})", ""]
+    if scope.strip():
+        res.extend([f"*Covers {scope.strip()}*", ""])
+    return res
+
+
+def gallery_table_to_figures(group):
+    """One figure block per linked row; the header/separator and any unlinked
+    rows are dropped — the captions carry the figure identity. The title comes
+    from a fully-bold cell when the gallery keeps it separate (4-col variant)
+    and falls back to the link text (sheet variant)."""
+    res = []
+    for row in group:
+        if SEP_ROW.match(row):
+            continue
+        m = FIG_LINK.search(row)
+        if not m:
+            continue
+        num, title, scope = "", "", []
+        for c in split_table_row(row):
+            cs = c.strip()
+            if m.group(0) in c:
+                continue
+            if not num and re.fullmatch(r"\*{0,2}\d{1,2}\*{0,2}", cs):
+                num = cs.strip("*")
+                continue
+            if not title and re.fullmatch(r"\*\*.+\*\*", cs):
+                title = cs.strip("*").strip()
+                continue
+            if cs:
+                scope.append(cs)
+        if not title:
+            title = re.sub(r"\*+", "", m.group(1)).strip()
+        caption = f"Fig {num} — {title}" if num else title
+        res.extend(fig_block(caption, _fig_url(m.group(2)), " ".join(scope)))
+    return res
+
+
+def list_item_to_figure(body):
+    m = FIG_LINK.search(body)
+    pre = re.sub(r"\*+", "", body[: m.start()]).strip().rstrip(":").strip()
+    title = re.sub(r"\*+", "", m.group(1)).strip()
+    caption = " — ".join(p for p in (pre, title) if p) or title or "Figure"
+    return fig_block(caption, _fig_url(m.group(2)))
+
+
+def convert_fig_links(raw):
+    lines = raw.split("\n")
+    out = []
+    i, n = 0, len(lines)
+    while i < n:
+        line = lines[i]
+        # dead local-viewer links (`file:///....html`) -> plain text
+        line = re.sub(r"\[([^\]]+)\]\(file:///[^)]*\.html?\)", r"\1", line)
+        if re.match(r"^\s*\|.*\|\s*$", line):
+            j = i
+            group = []
+            while j < n and re.match(r"^\s*\|.*\|\s*$", lines[j]):
+                group.append(lines[j])
+                j += 1
+            if any(FIG_LINK.search(g) for g in group):
+                out.extend(gallery_table_to_figures(group))
+            else:
+                out.extend(group)
+            i = j
+            continue
+        m = LIST_ITEM.match(line)
+        if m:
+            body = m.group(1)
+            if FIG_LINK.search(body) and not body.strip().startswith("!["):
+                out.extend(list_item_to_figure(body))
+                i += 1
+                continue
+        fm = FIG_LINK.search(line)
+        if fm and re.fullmatch(r"\s*\[([^\]]*)\]\([^)]+\)\s*", line):
+            out.extend(fig_block(re.sub(r"\*+", "", fm.group(1)).strip(),
+                                 _fig_url(fm.group(2))))
+            i += 1
+            continue
+        out.append(line)
+        i += 1
+    return "\n".join(out)
 
 
 def unwrap_lines(lines):
@@ -1018,7 +1143,7 @@ def build_chapter(ch):
     # variant heading (sheet-style TOCs in the Masters) is dropped as a line;
     # its entries fall to the anchor dropper below.
     raw = re.sub(r"^# Table of Contents\s*$", "", raw, flags=re.MULTILINE)
-    raw = re.sub(r"^## (?:Master )?Table of Contents\s*$.*?(?=^## |^# )",
+    raw = re.sub(r"^## [^#\n]*Table of Contents\s*$.*?(?=^## |^# )",
                  "", raw, flags=re.MULTILINE | re.DOTALL)
     # safety net: surviving internal-anchor link lines (TOC remnants), numbered
     # or bullet-prefixed
@@ -1029,11 +1154,20 @@ def build_chapter(ch):
     if ch.get("unwrap"):
         raw = "\n".join(unwrap_lines(raw.split("\n")))
 
+    # gallery tables / list items referencing the 4K blueprint JPGs as
+    # `[text](file:///...)` links are dead on the site — rewrite them into
+    # standalone figure blocks (Network Theory / Analog Electronics sources)
+    if ch.get("fig_links"):
+        raw = convert_fig_links(raw)
+
     # section splitting: generic chapters split at every `## `; module-split
     # chapters (audit-concatenated Masters) split only at Module headers at ANY
     # heading level (Ch1 uses `## Module N:`, Ch2 uses `# Module N:`) and keep
     # interior ## / # lines as divider blocks via parse_blocks; section-split
-    # chapters (Formula & Revision Sheets) split at `Section N:` headers.
+    # chapters (Formula & Revision Sheets) split at `Section N:` headers; the
+    # Network Theory Masters are H1-partitioned (title/subtitle, then one H1
+    # per part) — their file-top H1s are blanked so the metadata blockquote +
+    # blueprint gallery become the About section.
     mode = ch.get("section_split", "h2")
     if mode == "module":
         split_re = r"^#{1,6} (?=Module )"
@@ -1043,6 +1177,14 @@ def build_chapter(ch):
         # Roman-numeral parts only — drill sub-parts (`Part (a):`, `Part 1:`)
         # must not split
         split_re = r"^#{1,6} (?=Part (?:X|IX|VIII|VII|VI|V|IV|III|II|I)[:\s(])"
+    elif mode == "h1":
+        split_re = r"^# +"
+        head = raw.split("\n")
+        j = 0
+        while j < len(head) and head[j].startswith("# "):
+            head[j] = ""
+            j += 1
+        raw = "\n".join(head)
     else:
         split_re = r"^## +"
     parts = re.split(split_re, raw, flags=re.MULTILINE)

@@ -10,12 +10,13 @@ Live: **https://gate-prep.pages.dev** (project `gate-prep` on Cloudflare Pages)
 - **Signals & Systems** — Ch 1: Basics of Signals (17 modules, 509 slides audited) · Ch 2: Basics of Systems (12 modules, convolution → BIBO/stability → synthesis)
 - **Signals & Systems** — Ch 1–7: Signals · Systems · CTFS · Fourier Transform & Sampling · Laplace · Z-Transform · DTFT/DFT/FFT
 - **S&S Formula Sheets** — Ch 1–7 companion formula & revision sheets: shortcut engines, 25-trap diagnostic tables, rapid-fire decision trees
-- **Network Theory** — Ch 1: Basics of Network Analysis · Ch 2: Network Theorems & Circuit Equivalence · Ch 3: Transient Analysis
-- **NT Revision Guides** — per-chapter revision guides + the all-chapters high-yield Revision Capsule
+- **Network Theory** — Ch 1–3 rebuilt from the new Master Guides: Basics of Network Analysis · Network Theorems & Circuit Equivalence · Transient Analysis (each with seven 4K vector blueprint figures)
+- **NT Formula Sheets** — per-chapter Formula & Revision Sheets (decision trees, 25-trap tables, flash-formula matrices)
 - **Engineering Mathematics** — Ch 1–6: Linear Algebra · Calculus · Vector Calculus · Complex Analysis · Differential Equations · Probability & Statistics
 - **Electronic Devices & Circuits** — Ch 1: the full EDC master guide + its formula sheet
+- **Analog Electronics** — Ch 1: Diode Circuits, Rectifiers & Filters (master guide + formula sheet, blueprint figures)
 - Every subject also ships a **Formula & Revision Sheet** — open the dedicated **Formula Sheets** tab (or the header link) for quick revision
-- 90 sections / 10,000+ content blocks rendered from the Master Guide markdown sources, with KaTeX math, figures, alert callouts and collapsible worked solutions
+- 500+ sections / 76,000+ content blocks rendered from the Master Guide markdown sources, with KaTeX math, figures, alert callouts and collapsible worked solutions
 - Reading progress per section (localStorage, no account), course/section search, light & dark theme
 
 ## Architecture

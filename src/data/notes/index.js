@@ -173,48 +173,56 @@ export const NOTES_INDEX = {
     "title": "Positional Systems, Complement Arithmetic, Overflow Mechanics, Binary Codes & GATE Master Analysis"
    },
    {
-    "id": "module-1-positional-number-systems-base-radix-foundations",
-    "title": "Module 1: Positional Number Systems & Base/Radix Foundations"
+    "id": "chapter-1-positional-number-systems-foundations-base-constraints",
+    "title": "Chapter 1: Positional Number Systems Foundations & Base Constraints"
    },
    {
-    "id": "module-2-radix-conversions-power-of-2-shortcut-methods",
-    "title": "Module 2: Radix Conversions & Power-of-2 Shortcut Methods"
+    "id": "chapter-2-radix-conversions-power-of-2-highway-groupings",
+    "title": "Chapter 2: Radix Conversions & Power-of-2 Highway Groupings"
    },
    {
-    "id": "module-3-unknown-radix-equations-non-standard-base-systems",
-    "title": "Module 3: Unknown Radix Equations & Non-Standard Base Systems"
+    "id": "chapter-3-unknown-radix-equations-non-standard-base-systems",
+    "title": "Chapter 3: Unknown Radix Equations & Non-Standard Base Systems"
    },
    {
-    "id": "module-4-base-arithmetic-operations-binary-octal-hexadecimal",
-    "title": "Module 4: Base Arithmetic Operations (Binary, Octal, Hexadecimal)"
+    "id": "chapter-4-positional-base-arithmetic-cryptarithmetic",
+    "title": "Chapter 4: Positional Base Arithmetic & Cryptarithmetic"
    },
    {
-    "id": "module-5-binary-codes-code-arithmetic-bcd-excess-3-gray",
-    "title": "Module 5: Binary Codes & Code Arithmetic (BCD, Excess-3, Gray)"
+    "id": "chapter-5-binary-codes-bcd-addition-gray-mechanics",
+    "title": "Chapter 5: Binary Codes, BCD Addition & Gray Mechanics"
    },
    {
-    "id": "module-6-signed-number-representations-complement-systems",
-    "title": "Module 6: Signed Number Representations & Complement Systems"
+    "id": "chapter-6-signed-number-systems-complement-formulations",
+    "title": "Chapter 6: Signed Number Systems & Complement Formulations"
    },
    {
-    "id": "module-7-2-s-complement-arithmetic-subtraction-by-addition-sign-extension",
-    "title": "Module 7: 2's Complement Arithmetic, Subtraction by Addition & Sign Extension"
+    "id": "chapter-7-2-s-complement-subtraction-by-addition-sign-extension",
+    "title": "Chapter 7: 2's Complement Subtraction by Addition & Sign Extension"
    },
    {
-    "id": "module-8-overflow-detection-theory-hardware-logic-implementation",
-    "title": "Module 8: Overflow Detection Theory & Hardware Logic Implementation"
+    "id": "chapter-8-arithmetic-overflow-detection-theory-hardware-logic",
+    "title": "Chapter 8: Arithmetic Overflow Detection Theory & Hardware Logic"
    },
    {
-    "id": "module-9-bit-capacity-word-length-digit-scaling-laws",
-    "title": "Module 9: Bit-Capacity, Word Length & Digit Scaling Laws"
+    "id": "chapter-9-bit-capacity-word-length-digit-scaling-laws",
+    "title": "Chapter 9: Bit-Capacity, Word Length & Digit Scaling Laws"
    },
    {
-    "id": "module-10-fully-worked-gate-master-problem-capsules",
-    "title": "Module 10: Fully Worked GATE Master Problem Capsules"
+    "id": "chapter-10-ieee-754-floating-point-standard-architecture",
+    "title": "Chapter 10: IEEE-754 Floating-Point Standard Architecture"
    },
    {
-    "id": "module-11-high-yield-formula-sheet-revision-traps-for-gate-2027",
-    "title": "Module 11: High-Yield Formula Sheet & Revision Traps for GATE 2027"
+    "id": "chapter-11-master-classroom-drills-official-gate-pyqs",
+    "title": "Chapter 11: Master Classroom Drills & Official GATE PYQs"
+   },
+   {
+    "id": "chapter-12-the-25-dangerous-exam-traps-titan-safeguards",
+    "title": "Chapter 12: The 25 Dangerous Exam Traps & Titan Safeguards"
+   },
+   {
+    "id": "chapter-13-master-flash-formulas-compendium-60-second-exam-decision-tree",
+    "title": "Chapter 13: Master Flash Formulas Compendium & 60-Second Exam Decision Tree"
    }
   ]
  },
@@ -1116,204 +1124,32 @@ export const NOTES_INDEX = {
     "title": "About this chapter"
    },
    {
-    "id": "1-introduction-why-circuit-analysis",
-    "title": "1. Introduction: Why Circuit Analysis?"
+    "id": "gate-2027-network-theory-basics-of-network-analysis",
+    "title": "GATE 2027 Network Theory: Basics of Network Analysis"
    },
    {
-    "id": "2-fundamental-electrical-quantities",
-    "title": "2. Fundamental Electrical Quantities"
+    "id": "gate-2027-network-theory-module-1-basics-of-network-analysis",
+    "title": "GATE 2027 Network Theory: Module 1 \u2014 Basics of Network Analysis"
    },
    {
-    "id": "3-passive-sign-convention-psc",
-    "title": "3. Passive Sign Convention (PSC)"
+    "id": "network-theory-module-1-basics-of-network-analysis-part-1",
+    "title": "Network Theory \u2014 Module 1: Basics of Network Analysis (Part 1)"
    },
    {
-    "id": "4-tellegen-s-theorem-conservation-of-power",
-    "title": "4. Tellegen's Theorem & Conservation of Power"
+    "id": "module-1-basics-of-network-analysis-part-2",
+    "title": "Module 1: Basics of Network Analysis \u2014 Part 2"
    },
    {
-    "id": "5-solved-examples-gate-practice-problems-q-1-q-10",
-    "title": "5. Solved Examples & GATE Practice Problems (Q.1 \u2013 Q.10)"
+    "id": "gate-network-theory-revision-guide-part-3-advanced-network-reductions-symmetry-methods-infinite-lattices-foundational-circuit-laws",
+    "title": "GATE Network Theory Revision Guide \u2014 Part 3: Advanced Network Reductions, Symmetry Methods, Infinite Lattices & Foundational Circuit Laws"
    },
    {
-    "id": "6-circuit-topology-graph-fundamentals",
-    "title": "6. Circuit Topology & Graph Fundamentals"
+    "id": "module-1-basics-of-network-analysis-part-4-slides-136-180",
+    "title": "Module 1: Basics of Network Analysis \u2014 Part 4 (Slides 136\u2013180)"
    },
    {
-    "id": "7-kirchhoff-s-laws",
-    "title": "7. Kirchhoff's Laws"
-   },
-   {
-    "id": "8-comprehensive-classification-of-circuit-elements",
-    "title": "8. Comprehensive Classification of Circuit Elements"
-   },
-   {
-    "id": "9-passive-elements-resistor-conductance",
-    "title": "9. Passive Elements: Resistor (R) & Conductance (G)"
-   },
-   {
-    "id": "10-energy-storage-elements-capacitor-inductor",
-    "title": "10. Energy Storage Elements: Capacitor (C) & Inductor (L)"
-   },
-   {
-    "id": "11-quick-summary-table-fundamental-equations",
-    "title": "11. Quick Summary Table: R, L, C Fundamental Equations"
-   },
-   {
-    "id": "12-gate-exam-traps-common-faculty-insights",
-    "title": "12. GATE Exam Traps & Common Faculty Insights"
-   },
-   {
-    "id": "1-energy-storage-physics-inductors-capacitors",
-    "title": "1. Energy Storage Physics: Inductors & Capacitors"
-   },
-   {
-    "id": "2-taxonomy-mathematical-modeling-of-energy-sources",
-    "title": "2. Taxonomy & Mathematical Modeling of Energy Sources"
-   },
-   {
-    "id": "3-dependent-controlled-sources",
-    "title": "3. Dependent (Controlled) Sources"
-   },
-   {
-    "id": "4-master-problem-repository-pages-59-78",
-    "title": "4. Master Problem Repository (Pages 59\u201378)"
-   },
-   {
-    "id": "5-series-parallel-combinations-impedance-equivalences-pages-79-86",
-    "title": "5. Series & Parallel Combinations & Impedance Equivalences (Pages 79\u201386)"
-   },
-   {
-    "id": "6-star-delta-equivalence-transformations-pages-87-90",
-    "title": "6. Star-Delta (-) Equivalence Transformations (Pages 87\u201390)"
-   },
-   {
-    "id": "7-strategic-gate-exam-traps-faculty-checklist",
-    "title": "7. Strategic GATE Exam Traps & Faculty Checklist"
-   },
-   {
-    "id": "document-scope-roadmap",
-    "title": "Document Scope & Roadmap"
-   },
-   {
-    "id": "1-star-delta-transformations-for-reactive-elements",
-    "title": "1. Star-Delta Transformations for Reactive Elements"
-   },
-   {
-    "id": "2-advanced-network-reduction-problems-bridge-topologies",
-    "title": "2. Advanced Network Reduction Problems & Bridge Topologies"
-   },
-   {
-    "id": "3-wheatstone-bridge-theory-advanced-symmetry-techniques",
-    "title": "3. Wheatstone Bridge Theory & Advanced Symmetry Techniques"
-   },
-   {
-    "id": "4-highly-symmetric-geometric-lattices",
-    "title": "4. Highly Symmetric Geometric Lattices"
-   },
-   {
-    "id": "5-generalized-voltage-current-division-dualities",
-    "title": "5. Generalized Voltage & Current Division Dualities (R, L, C)"
-   },
-   {
-    "id": "6-rigorous-terminal-equivalent-resistance-superposition-injection-method",
-    "title": "6. Rigorous Terminal Equivalent Resistance & Superposition Injection Method"
-   },
-   {
-    "id": "7-infinite-grids-ladders-and-tree-networks",
-    "title": "7. Infinite Grids, Ladders, and Tree Networks"
-   },
-   {
-    "id": "8-solved-gate-previous-years-questions-pyqs",
-    "title": "8. Solved GATE Previous Years Questions (PYQs)"
-   },
-   {
-    "id": "9-foundations-of-systematic-circuit-analysis-page-135",
-    "title": "9. Foundations of Systematic Circuit Analysis (Page 135)"
-   },
-   {
-    "id": "10-high-yield-summary-cheat-sheet-exam-traps",
-    "title": "10. High-Yield Summary Cheat-Sheet & Exam Traps"
-   },
-   {
-    "id": "1-systematic-nodal-analysis-node-voltage-method",
-    "title": "1. Systematic Nodal Analysis (Node Voltage Method)"
-   },
-   {
-    "id": "2-the-supernode-technique",
-    "title": "2. The Supernode Technique"
-   },
-   {
-    "id": "3-mesh-analysis-mesh-current-method-the-supermesh",
-    "title": "3. Mesh Analysis (Mesh Current Method) & The Supermesh"
-   },
-   {
-    "id": "4-electrical-measuring-instruments-voltmeter-ammeter",
-    "title": "4. Electrical Measuring Instruments: Voltmeter & Ammeter"
-   },
-   {
-    "id": "5-electric-incandescent-bulb-problems",
-    "title": "5. Electric Incandescent Bulb Problems"
-   },
-   {
-    "id": "6-conductance-in-siemens-dual-network-laws",
-    "title": "6. Conductance (G in Siemens) & Dual Network Laws"
-   },
-   {
-    "id": "7-advanced-network-reduction-techniques",
-    "title": "7. Advanced Network Reduction Techniques"
-   },
-   {
-    "id": "8-source-transformation-star-delta-transformations",
-    "title": "8. Source Transformation & Star-Delta Transformations"
-   },
-   {
-    "id": "9-comprehensive-problem-compendium-slides-136-180",
-    "title": "9. Comprehensive Problem Compendium (Slides 136\u2013180)"
-   },
-   {
-    "id": "10-exam-traps-common-mistakes-faculty-pro-tips",
-    "title": "10. Exam Traps, Common Mistakes & Faculty Pro-Tips"
-   },
-   {
-    "id": "1-overview-pedagogical-scope",
-    "title": "1. Overview & Pedagogical Scope"
-   },
-   {
-    "id": "2-advanced-nodal-mesh-analysis-with-dependent-sources",
-    "title": "2. Advanced Nodal & Mesh Analysis with Dependent Sources"
-   },
-   {
-    "id": "3-energy-dynamics-state-function-vs-path-function",
-    "title": "3. Energy Dynamics: State Function vs. Path Function"
-   },
-   {
-    "id": "4-invariance-scaling-conservation-principles",
-    "title": "4. Invariance, Scaling & Conservation Principles"
-   },
-   {
-    "id": "5-topological-conservation-laws-the-master-grounding-trilogy",
-    "title": "5. Topological Conservation Laws & The Master Grounding Trilogy"
-   },
-   {
-    "id": "6-network-symmetry-techniques-infinite-topologies",
-    "title": "6. Network Symmetry Techniques & Infinite Topologies"
-   },
-   {
-    "id": "7-component-ratings-non-linear-load-lines-miller-multipliers",
-    "title": "7. Component Ratings, Non-Linear Load Lines & Miller Multipliers"
-   },
-   {
-    "id": "8-complete-problem-gate-pyq-compendium-pages-181-229",
-    "title": "8. Complete Problem & GATE PYQ Compendium (Pages 181\u2013229)"
-   },
-   {
-    "id": "9-comprehensive-pitfall-exam-trap-checklist",
-    "title": "9. Comprehensive Pitfall & Exam Trap Checklist"
-   },
-   {
-    "id": "10-summary-transition-to-network-theorems",
-    "title": "10. Summary & Transition to Network Theorems"
+    "id": "gate-2027-network-theory-comprehensive-revision-notes-part-5",
+    "title": "GATE 2027 Network Theory: Comprehensive Revision Notes (Part 5)"
    }
   ]
  },
@@ -1327,112 +1163,28 @@ export const NOTES_INDEX = {
     "title": "About this chapter"
    },
    {
-    "id": "module-2-network-theorems-part-1-slides-01-to-45",
-    "title": "Module 2: Network Theorems (Part 1 \u2014 Slides 01 to 45)"
+    "id": "gate-2027-network-theory-network-theorems",
+    "title": "GATE 2027 Network Theory: Network Theorems"
    },
    {
-    "id": "1-roadmap-of-network-theorems-slide-05",
-    "title": "1. Roadmap of Network Theorems (Slide 05)"
+    "id": "section-3-in-depth-faculty-compendium-complete-slide-solutions-slides-01-to-142",
+    "title": "\ud83d\udcd6 Section 3: In-Depth Faculty Compendium & Complete Slide Solutions (Slides 01 to 142)"
    },
    {
-    "id": "2-source-deactivation-killing-rules-slide-01",
-    "title": "2. Source Deactivation (Killing) Rules (Slide 01)"
+    "id": "network-theory-revision-in-depth-study-guide",
+    "title": "Network Theory \u2014 Revision & In-Depth Study Guide"
    },
    {
-    "id": "3-source-transformation-its-critical-limitations-slides-02-04",
-    "title": "3. Source Transformation & Its Critical Limitations (Slides 02\u201304)"
+    "id": "network-theory-chapter-2-network-theorems-part-2",
+    "title": "Network Theory \u2014 Chapter 2: Network Theorems (Part 2)"
    },
    {
-    "id": "4-superposition-theorem-slides-06-15",
-    "title": "4. Superposition Theorem (Slides 06\u201315)"
+    "id": "network-theorems-part-3-advanced-maximum-power-transfer-theorem-dc-ac-millman-s-theorem-multi-source-power-superposition-and-black-box-2-port-network-analysis",
+    "title": "Network Theorems \u2014 Part 3: Advanced Maximum Power Transfer Theorem (DC & AC), Millman's Theorem, Multi-Source Power Superposition, and Black-Box 2-Port Network Analysis"
    },
    {
-    "id": "5-power-superposition-derivation-formula-traps-slides-08-16-19",
-    "title": "5. Power Superposition: Derivation, Formula & Traps (Slides 08, 16\u201319)"
-   },
-   {
-    "id": "6-thevenin-s-theorem-slides-20-40",
-    "title": "6. Thevenin's Theorem (Slides 20\u201340)"
-   },
-   {
-    "id": "7-norton-s-theorem-network-duality-slides-41-45",
-    "title": "7. Norton's Theorem & Network Duality (Slides 41\u201345)"
-   },
-   {
-    "id": "8-summary-comparison-of-network-theorems-part-1",
-    "title": "8. Summary Comparison of Network Theorems (Part 1)"
-   },
-   {
-    "id": "9-high-yield-gate-traps-checklist",
-    "title": "9. High-Yield GATE Traps & Checklist"
-   },
-   {
-    "id": "1-advanced-thevenin-s-norton-s-theorems-dependent-sources-special-topologies",
-    "title": "1. Advanced Thevenin's & Norton's Theorems: Dependent Sources & Special Topologies"
-   },
-   {
-    "id": "2-linearity-network-properties-and-two-port-definitions",
-    "title": "2. Linearity, Network Properties, and Two-Port Definitions"
-   },
-   {
-    "id": "3-reciprocity-theorem-the-t-network-synthesis-shortcut",
-    "title": "3. Reciprocity Theorem & The T-Network Synthesis Shortcut"
-   },
-   {
-    "id": "4-maximum-power-transfer-theorem-mptt-the-variable-element-trap",
-    "title": "4. Maximum Power Transfer Theorem (MPTT) & The Variable Element Trap"
-   },
-   {
-    "id": "5-comprehensive-key-takeaways-formula-sheet",
-    "title": "5. Comprehensive Key Takeaways & Formula Sheet"
-   },
-   {
-    "id": "1-advanced-mptt-between-multi-element-active-sub-circuits-pages-096-102",
-    "title": "1. Advanced MPTT Between Multi-Element Active Sub-Circuits (Pages 096\u2013102)"
-   },
-   {
-    "id": "2-fundamentals-of-ac-circuits-ac-power-definitions-pages-103-107",
-    "title": "2. Fundamentals of AC Circuits & AC Power Definitions (Pages 103\u2013107)"
-   },
-   {
-    "id": "3-ac-maximum-power-transfer-theorem-rigorous-derivations-pages-108-115",
-    "title": "3. AC Maximum Power Transfer Theorem: Rigorous Derivations (Pages 108\u2013115)"
-   },
-   {
-    "id": "4-master-7-case-summary-table-for-ac-mptt-page-116",
-    "title": "4. Master 7-Case Summary Table for AC MPTT (Page 116)"
-   },
-   {
-    "id": "5-comprehensive-solved-examples-gate-pyqs-on-ac-mptt-pages-117-124",
-    "title": "5. Comprehensive Solved Examples & GATE PYQs on AC MPTT (Pages 117\u2013124)"
-   },
-   {
-    "id": "6-millman-s-theorem-dual-millman-s-theorem-pages-125-128",
-    "title": "6. Millman's Theorem & Dual Millman's Theorem (Pages 125\u2013128)"
-   },
-   {
-    "id": "7-ladder-networks-dependent-source-analysis-pages-129-132",
-    "title": "7. Ladder Networks & Dependent Source Analysis (Pages 129\u2013132)"
-   },
-   {
-    "id": "8-black-box-two-terminal-networks-linear-extraction-pages-133-137",
-    "title": "8. Black-Box Two-Terminal Networks & Linear Extraction (Pages 133\u2013137)"
-   },
-   {
-    "id": "9-maximum-power-absorbed-by-a-constant-current-load-pages-138-139",
-    "title": "9. Maximum Power Absorbed by a Constant Current Load (Pages 138\u2013139)"
-   },
-   {
-    "id": "10-superposition-of-power-in-resistive-networks-page-140",
-    "title": "10. Superposition of Power in Resistive Networks (Page 140)"
-   },
-   {
-    "id": "11-gate-pyq-2-port-network-characteristic-extraction-pages-141-142",
-    "title": "11. GATE PYQ: 2-Port Network V-I Characteristic Extraction (Pages 141\u2013142)"
-   },
-   {
-    "id": "12-high-yield-gate-traps-faculty-exam-tips-summary",
-    "title": "12. High-Yield GATE Traps & Faculty Exam Tips Summary"
+    "id": "end-of-master-guide-network-theory-network-theorems",
+    "title": "\ud83c\udfc1 End of Master Guide \u2014 Network Theory: Network Theorems"
    }
   ]
  },
@@ -1446,324 +1198,169 @@ export const NOTES_INDEX = {
     "title": "About this chapter"
    },
    {
-    "id": "part-1-physical-foundations-first-order-networks-boundary-equivalence-laplace-transform-framework-pages-1-to-110",
-    "title": "Part 1: Physical Foundations, First-Order Networks, Boundary Equivalence & Laplace Transform Framework (Pages 1 to 110)"
+    "id": "gate-2027-network-theory-transient-analysis",
+    "title": "GATE 2027 Network Theory: Transient Analysis"
    },
    {
-    "id": "1-physical-foundations-of-network-transients",
-    "title": "1. Physical Foundations of Network Transients"
+    "id": "section-3-in-depth-faculty-compendium-complete-slide-solutions-slides-01-to-458",
+    "title": "\ud83d\udcd6 Section 3: In-Depth Faculty Compendium & Complete Slide Solutions (Slides 01 to 458)"
    },
    {
-    "id": "2-time-constant-settling-dynamics-mathematical-signals",
-    "title": "2. Time Constant , Settling Dynamics & Mathematical Signals"
+    "id": "network-theory-chapter-3-transient-analysis",
+    "title": "Network Theory \u2014 Chapter 3: Transient Analysis"
    },
    {
-    "id": "3-classical-differential-equation-vs-master-formula-framework",
-    "title": "3. Classical Differential Equation vs Master Formula Framework"
+    "id": "network-theory-module-3-transient-analysis-part-2",
+    "title": "Network Theory \u2014 Module 3: Transient Analysis (Part 2)"
    },
    {
-    "id": "4-in-depth-analysis-of-capacitors-in-transients",
-    "title": "4. In-Depth Analysis of Capacitors in Transients"
+    "id": "1-theoretical-foundations-of-first-order-transients",
+    "title": "1. Theoretical Foundations of First-Order Transients"
    },
    {
-    "id": "5-laplace-transform-foundations-for-network-transients",
-    "title": "5. Laplace Transform Foundations for Network Transients"
+    "id": "2-determining-equivalent-thevenin-norton-parameters-across-energy-storage-elements",
+    "title": "2. Determining Equivalent Thevenin/Norton Parameters Across Energy Storage Elements"
    },
    {
-    "id": "6-comprehensive-repository-of-solved-problems-case-studies",
-    "title": "6. Comprehensive Repository of Solved Problems & Case Studies"
+    "id": "3-series-parallel-rl-circuits-under-dc-excitation",
+    "title": "3. Series & Parallel RL Circuits Under DC Excitation"
    },
    {
-    "id": "7-gate-traps-polarity-conventions-faculty-inspection-shortcuts",
-    "title": "7. GATE Traps, Polarity Conventions & Faculty Inspection Shortcuts"
+    "id": "4-series-parallel-rc-circuits-under-dc-excitation",
+    "title": "4. Series & Parallel RC Circuits Under DC Excitation"
    },
    {
-    "id": "first-order-rl-rc-dc-transients-impulsive-circuits-initial-slopes-sequential-switching-and-periodic-waveform-responses",
-    "title": "First-Order RL & RC DC Transients, Impulsive Circuits, Initial Slopes, Sequential Switching, and Periodic Waveform Responses"
+    "id": "5-initial-slopes-and-higher-order-derivatives-analysis-at-switching-instants",
+    "title": "5. Initial Slopes and Higher-Order Derivatives Analysis at Switching Instants"
    },
    {
-    "id": "1-periodic-pulse-excitation-on-rc-circuits-edge-dynamics-pages-226-233-247-250",
-    "title": "1. Periodic Pulse Excitation on RC Circuits & Edge Dynamics (Pages 226\u2013233, 247\u2013250)"
+    "id": "6-sequential-switching-and-multi-interval-transients",
+    "title": "6. Sequential Switching and Multi-Interval Transients"
    },
    {
-    "id": "2-mathematical-foundations-of-transients-initial-final-value-theorems-pages-234-241",
-    "title": "2. Mathematical Foundations of Transients: Initial & Final Value Theorems (Pages 234\u2013241)"
+    "id": "7-singular-impulsive-phenomena-charge-conservation-in-switched-capacitive-networks",
+    "title": "7. Singular Impulsive Phenomena & Charge Conservation in Switched Capacitive Networks"
    },
    {
-    "id": "3-advanced-rc-networks-multi-interval-time-varying-active-circuits-pages-242-246-251-257",
-    "title": "3. Advanced RC Networks: Multi-Interval, Time-Varying, & Active Circuits (Pages 242\u2013246, 251\u2013257)"
+    "id": "8-asymmetric-parallel-reactive-branches-under-current-step-excitation",
+    "title": "8. Asymmetric Parallel Reactive Branches Under Current Step Excitation"
    },
    {
-    "id": "4-inductor-fundamentals-boundary-conditions-pages-258-266",
-    "title": "4. Inductor Fundamentals & Boundary Conditions (Pages 258\u2013266)"
+    "id": "9-impulse-excitation-in-first-order-networks",
+    "title": "9. Impulse Excitation in First-Order Networks"
    },
    {
-    "id": "5-first-order-rl-circuit-transient-dynamics-pages-267-278",
-    "title": "5. First-Order RL Circuit Transient Dynamics (Pages 267\u2013278)"
+    "id": "10-rc-low-pass-filter-response-to-periodic-pulse-trains",
+    "title": "10. RC Low-Pass Filter Response to Periodic Pulse Trains"
    },
    {
-    "id": "6-singularity-functions-jump-discontinuities-under-impulse-excitation-pages-279-284-296-297",
-    "title": "6. Singularity Functions & Jump Discontinuities Under Impulse Excitation (Pages 279\u2013284, 296\u2013297)"
+    "id": "11-exhaustive-solved-examples-gate-pyq-compendium-pages-111-225",
+    "title": "11. Exhaustive Solved Examples & GATE PYQ Compendium (Pages 111\u2013225)"
    },
    {
-    "id": "7-the-canonical-inductor-switching-trio-conservation-of-flux-linkage-pages-285-295",
-    "title": "7. The Canonical Inductor Switching Trio & Conservation of Flux Linkage (Pages 285\u2013295)"
+    "id": "12-faculty-traps-common-errors-and-gate-exam-tactics",
+    "title": "12. Faculty Traps, Common Errors, and GATE Exam Tactics"
    },
    {
-    "id": "8-network-transfer-functions-and-circuit-order-determination-pages-298-316",
-    "title": "8. Network Transfer Functions and Circuit Order Determination (Pages 298\u2013316)"
+    "id": "13-quick-reference-formula-summary",
+    "title": "13. Quick-Reference Formula Summary"
    },
    {
-    "id": "9-comprehensive-problem-set-assignment-11-detailed-transcripts-solutions-pages-317-337",
-    "title": "9. Comprehensive Problem Set: Assignment 11 Detailed Transcripts & Solutions (Pages 317\u2013337)"
+    "id": "chapter-3-transient-analysis-part-3",
+    "title": "Chapter 3: Transient Analysis (Part 3)"
    },
    {
-    "id": "10-introduction-to-second-order-systems-damping-dynamics-pages-338-340",
-    "title": "10. Introduction to Second-Order Systems & Damping Dynamics (Pages 338\u2013340)"
+    "id": "transients-part-4-second-order-rlc-networks-lc-resonant-tank-switching-ac-transients-and-s-domain-analysis",
+    "title": "Transients Part 4: Second-Order RLC Networks, LC Resonant Tank Switching, AC Transients, and S-Domain Analysis"
    },
    {
-    "id": "11-quick-revision-formulas-exam-summary",
-    "title": "11. Quick Revision Formulas & Exam Summary"
-   },
-   {
-    "id": "executive-overview-pedagogical-roadmap",
-    "title": "Executive Overview & Pedagogical Roadmap"
-   },
-   {
-    "id": "1-second-order-rlc-circuits-rigorous-theoretical-foundations",
-    "title": "1. Second-Order RLC Circuits: Rigorous Theoretical Foundations"
-   },
-   {
-    "id": "2-the-four-damping-regimes",
-    "title": "2. The Four Damping Regimes"
-   },
-   {
-    "id": "3-pure-undamped-lc-circuits-and-faculty-s-intuitive-shortcuts",
-    "title": "3. Pure Undamped LC Circuits and Faculty's Intuitive Shortcuts"
-   },
-   {
-    "id": "4-resonant-diode-lc-switching-circuits",
-    "title": "4. Resonant Diode + LC Switching Circuits"
-   },
-   {
-    "id": "5-ac-transients-and-transient-free-switching",
-    "title": "5. AC Transients and Transient-Free Switching"
-   },
-   {
-    "id": "6-s-domain-laplace-analysis-and-singular-switching",
-    "title": "6. S-Domain (Laplace) Analysis and Singular Switching"
-   },
-   {
-    "id": "7-comprehensive-step-by-step-solved-questions-gate-pyqs",
-    "title": "7. Comprehensive Step-by-Step Solved Questions & GATE PYQs"
-   },
-   {
-    "id": "8-faculty-summary-traps-exam-cheat-sheet",
-    "title": "8. Faculty Summary, Traps & Exam Cheat Sheet"
+    "id": "end-of-master-guide-network-theory-transient-analysis",
+    "title": "\ud83c\udfc1 End of Master Guide \u2014 Network Theory: Transient Analysis"
    }
   ]
  },
  "ntf-ch1": {
   "num": 1,
-  "title": "Basics of Network \u2014 Revision Guide",
+  "title": "Basics of Network \u2014 Formula & Revision Sheet",
   "subject": "Network Theory",
   "sections": [
    {
-    "id": "about",
-    "title": "About this chapter"
+    "id": "ultra-dense-formula-revision-rapid-exam-decision-sheet",
+    "title": "Ultra-Dense Formula, Revision & Rapid Exam Decision Sheet"
    },
    {
-    "id": "1-physical-foundations-of-circuit-analysis",
-    "title": "1. Physical Foundations of Circuit Analysis"
+    "id": "1-the-60-second-4-track-rapid-exam-decision-tree",
+    "title": "1. The 60-Second 4-Track Rapid Exam Decision Tree"
    },
    {
-    "id": "2-fundamental-electrical-quantities-sign-conventions",
-    "title": "2. Fundamental Electrical Quantities & Sign Conventions"
+    "id": "2-the-25-dangerous-basics-of-network-exam-traps-titan-safeguards",
+    "title": "2. The 25 Dangerous Basics of Network Exam Traps & Titan Safeguards"
    },
    {
-    "id": "3-passive-elements-duality-relations",
-    "title": "3. Passive Elements (R, L, C) & Duality Relations"
+    "id": "3-35-high-yield-flash-formulas-matrix",
+    "title": "3. 35+ High-Yield Flash Formulas Matrix"
    },
    {
-    "id": "4-electrical-sources-classification",
-    "title": "4. Electrical Sources & Classification"
-   },
-   {
-    "id": "5-systematic-circuit-analysis-nodal-vs-mesh",
-    "title": "5. Systematic Circuit Analysis: Nodal vs. Mesh"
-   },
-   {
-    "id": "6-network-reductions-bridges-geometric-symmetry",
-    "title": "6. Network Reductions, Bridges & Geometric Symmetry"
-   },
-   {
-    "id": "7-electrical-instruments-incandescent-bulbs",
-    "title": "7. Electrical Instruments & Incandescent Bulbs"
-   },
-   {
-    "id": "8-solved-benchmark-gate-problems-module-1",
-    "title": "8. Solved Benchmark GATE Problems (Module 1)"
+    "id": "4-master-comparison-tables",
+    "title": "4. Master Comparison Tables"
    }
   ]
  },
  "ntf-ch2": {
   "num": 2,
-  "title": "Network Theorems \u2014 Revision Guide",
+  "title": "Network Theorems \u2014 Formula & Revision Sheet",
   "subject": "Network Theory",
   "sections": [
    {
-    "id": "about",
-    "title": "About this chapter"
+    "id": "high-yield-formula-rapid-revision-sheet-master-capsule",
+    "title": "High-Yield Formula & Rapid Revision Sheet (Master Capsule)"
    },
    {
-    "id": "1-source-deactivation-rules-linearity-foundations",
-    "title": "1. Source Deactivation Rules & Linearity Foundations"
+    "id": "1-the-60-second-4-track-rapid-exam-decision-tree",
+    "title": "\u26a1 1. The 60-Second 4-Track Rapid Exam Decision Tree"
    },
    {
-    "id": "2-superposition-theorem-the-power-fallacy",
-    "title": "2. Superposition Theorem & The Power Fallacy"
+    "id": "2-the-25-dangerous-network-theorems-exam-traps-titan-safeguards",
+    "title": "\u26a0\ufe0f 2. The 25 Dangerous Network Theorems Exam Traps & Titan Safeguards"
    },
    {
-    "id": "3-thevenin-s-norton-s-theorems",
-    "title": "3. Thevenin's & Norton's Theorems"
+    "id": "3-high-yield-flash-formulas-matrix",
+    "title": "\ud83d\udcd0 3. High-Yield Flash Formulas Matrix"
    },
    {
-    "id": "4-maximum-power-transfer-theorem-mptt",
-    "title": "4. Maximum Power Transfer Theorem (MPTT)"
+    "id": "4-master-comparison-tables",
+    "title": "\ud83d\udcca 4. Master Comparison Tables"
    },
    {
-    "id": "5-reciprocity-millman-s-auxiliary-theorems",
-    "title": "5. Reciprocity, Millman's & Auxiliary Theorems"
-   },
-   {
-    "id": "6-solved-benchmark-gate-problems-module-2",
-    "title": "6. Solved Benchmark GATE Problems (Module 2)"
+    "id": "5-rapid-self-audit-checklist-for-network-theorems",
+    "title": "\ud83c\udfaf 5. Rapid Self-Audit Checklist for Network Theorems"
    }
   ]
  },
  "ntf-ch3": {
   "num": 3,
-  "title": "Transient Analysis \u2014 Revision Guide",
+  "title": "Transient Analysis \u2014 Formula & Revision Sheet",
   "subject": "Network Theory",
   "sections": [
    {
-    "id": "about",
-    "title": "About this chapter"
+    "id": "high-yield-formula-rapid-revision-sheet-master-capsule",
+    "title": "High-Yield Formula & Rapid Revision Sheet (Master Capsule)"
    },
    {
-    "id": "1-physical-foundations-of-network-transients",
-    "title": "1. Physical Foundations of Network Transients"
+    "id": "1-the-60-second-4-track-rapid-exam-decision-tree",
+    "title": "\u26a1 1. The 60-Second 4-Track Rapid Exam Decision Tree"
    },
    {
-    "id": "2-boundary-state-equivalents-continuity-axioms",
-    "title": "2. Boundary State Equivalents & Continuity Axioms"
+    "id": "2-the-25-dangerous-transient-analysis-exam-traps-titan-safeguards",
+    "title": "\u26a0\ufe0f 2. The 25 Dangerous Transient Analysis Exam Traps & Titan Safeguards"
    },
    {
-    "id": "3-first-order-rl-and-rc-dc-transients",
-    "title": "3. First-Order RL and RC DC Transients"
+    "id": "3-high-yield-flash-formulas-matrix",
+    "title": "\ud83d\udcd0 3. High-Yield Flash Formulas Matrix"
    },
    {
-    "id": "4-singularity-inputs-degenerate-loops",
-    "title": "4. Singularity Inputs & Degenerate Loops"
-   },
-   {
-    "id": "5-second-order-rlc-circuits-series-vs-parallel-duality",
-    "title": "5. Second-Order RLC Circuits: Series vs. Parallel Duality"
-   },
-   {
-    "id": "6-specialized-lc-circuits-resonant-switching-ac-transients",
-    "title": "6. Specialized LC Circuits, Resonant Switching & AC Transients"
-   },
-   {
-    "id": "7-solved-benchmark-gate-problems-module-3",
-    "title": "7. Solved Benchmark GATE Problems (Module 3)"
-   }
-  ]
- },
- "ntf-ch4": {
-  "num": 4,
-  "title": "Revision Capsule \u2014 All Chapters",
-  "subject": "Network Theory",
-  "sections": [
-   {
-    "id": "about",
-    "title": "About this chapter"
-   },
-   {
-    "id": "1-1-fundamental-quantities-conventions",
-    "title": "1.1 Fundamental Quantities & Conventions"
-   },
-   {
-    "id": "1-2-passive-circuit-elements-master-duality-matrix",
-    "title": "1.2 Passive Circuit Elements & Master Duality Matrix"
-   },
-   {
-    "id": "1-3-sources-dependent-sources",
-    "title": "1.3 Sources & Dependent Sources"
-   },
-   {
-    "id": "1-4-systematic-circuit-analysis-nodal-vs-mesh",
-    "title": "1.4 Systematic Circuit Analysis: Nodal vs. Mesh"
-   },
-   {
-    "id": "1-5-network-reductions-bridges-symmetry-tricks",
-    "title": "1.5 Network Reductions, Bridges & Symmetry Tricks"
-   },
-   {
-    "id": "1-6-measuring-instruments-incandescent-bulb-circuits",
-    "title": "1.6 Measuring Instruments & Incandescent Bulb Circuits"
-   },
-   {
-    "id": "1-7-key-archetype-problems-module-1",
-    "title": "1.7 Key Archetype Problems (Module 1)"
-   },
-   {
-    "id": "2-1-thevenin-s-norton-s-theorems",
-    "title": "2.1 Thevenin's & Norton's Theorems"
-   },
-   {
-    "id": "2-2-maximum-power-transfer-theorem-mptt",
-    "title": "2.2 Maximum Power Transfer Theorem (MPTT)"
-   },
-   {
-    "id": "2-3-other-foundational-theorems",
-    "title": "2.3 Other Foundational Theorems"
-   },
-   {
-    "id": "2-4-key-archetype-problems-module-2",
-    "title": "2.4 Key Archetype Problems (Module 2)"
-   },
-   {
-    "id": "3-1-physical-basis-boundary-equivalence-models",
-    "title": "3.1 Physical Basis & Boundary Equivalence Models"
-   },
-   {
-    "id": "3-2-first-order-rl-and-rc-transients",
-    "title": "3.2 First-Order RL and RC Transients"
-   },
-   {
-    "id": "3-3-singularity-functions-degenerate-loop-jump-conditions",
-    "title": "3.3 Singularity Functions & Degenerate Loop Jump Conditions"
-   },
-   {
-    "id": "3-4-second-order-rlc-circuits-series-vs-parallel-duality",
-    "title": "3.4 Second-Order RLC Circuits: Series vs. Parallel Duality"
-   },
-   {
-    "id": "3-5-specialized-lc-circuits-ac-transients",
-    "title": "3.5 Specialized LC Circuits & AC Transients"
-   },
-   {
-    "id": "3-6-key-archetype-problems-module-3",
-    "title": "3.6 Key Archetype Problems (Module 3)"
-   },
-   {
-    "id": "4-1-the-top-10-high-frequency-gate-network-theory-traps",
-    "title": "4.1 The Top 10 High-Frequency GATE Network Theory Traps"
-   },
-   {
-    "id": "4-2-quick-fire-formula-lookup-sheet",
-    "title": "4.2 Quick-Fire Formula Lookup Sheet"
+    "id": "4-master-comparison-duality-tables",
+    "title": "\ud83d\udcca 4. Master Comparison & Duality Tables"
    }
   ]
  },
@@ -2012,6 +1609,68 @@ export const NOTES_INDEX = {
    {
     "id": "14-last-minute-high-yield-flash-formulas-table",
     "title": "14. Last-Minute High-Yield Flash Formulas Table"
+   }
+  ]
+ },
+ "ae-ch1": {
+  "num": 1,
+  "title": "Diode Circuits, Rectifiers & Filters",
+  "subject": "Analog Electronics",
+  "sections": [
+   {
+    "id": "about",
+    "title": "About this chapter"
+   },
+   {
+    "id": "module-1-semiconductor-physics-foundations-diode-models-dc-operating-point-analysis",
+    "title": "Module 1: Semiconductor Physics Foundations, Diode Models & DC Operating Point Analysis"
+   },
+   {
+    "id": "module-2-small-signal-ac-diode-analysis-zener-diode-voltage-regulators",
+    "title": "Module 2: Small-Signal AC Diode Analysis & Zener Diode Voltage Regulators"
+   },
+   {
+    "id": "module-3-rectifier-topologies-fourier-analysis-12-parameter-performance-matrix",
+    "title": "Module 3: Rectifier Topologies, Fourier Analysis & 12-Parameter Performance Matrix"
+   },
+   {
+    "id": "module-4-smoothing-filters-harmonic-attenuation-engine",
+    "title": "Module 4: Smoothing Filters & Harmonic Attenuation Engine"
+   },
+   {
+    "id": "module-5-diode-clipping-circuits-combinational-slicers-vtc-engine",
+    "title": "Module 5: Diode Clipping Circuits, Combinational Slicers & VTC Engine"
+   },
+   {
+    "id": "module-6-clamping-circuits-clamping-theorem-voltage-multipliers-comprehensive-gate-pyqs",
+    "title": "Module 6: Clamping Circuits, Clamping Theorem, Voltage Multipliers & Comprehensive GATE PYQs"
+   },
+   {
+    "id": "module-7-master-decision-engine-traps-exam-taxonomy",
+    "title": "Module 7: Master Decision Engine, Traps & Exam Taxonomy"
+   }
+  ]
+ },
+ "aef-ch1": {
+  "num": 1,
+  "title": "Diode Circuits & Rectifiers \u2014 Formula & Revision Sheet",
+  "subject": "Analog Electronics",
+  "sections": [
+   {
+    "id": "1-the-60-second-4-track-rapid-exam-decision-tree",
+    "title": "1. The 60-Second 4-Track Rapid Exam Decision Tree"
+   },
+   {
+    "id": "2-25-dangerous-exam-traps-titan-safeguards",
+    "title": "2. 25 Dangerous Exam Traps & Titan Safeguards"
+   },
+   {
+    "id": "3-master-flash-formulas-matrix-28-canonical-formulas",
+    "title": "3. Master Flash Formulas Matrix (28 Canonical Formulas)"
+   },
+   {
+    "id": "4-master-rectifier-filter-performance-comparison-tables",
+    "title": "4. Master Rectifier & Filter Performance Comparison Tables"
    }
   ]
  },
