@@ -1,0 +1,304 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIG 02: THÉVENIN &amp; NORTON EQUIVALENCE, 3-CASE MATRIX &amp; TEST-SOURCE ARCHITECTURE</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Open-Circuit Voltage Voc • Short-Circuit Current Isc • The 3 Calculation Regimes • Virtual Test Source Method • Negative Resistance Physics</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • NETWORK THEOREMS TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Fundamental Duals & Terminal Equivalence -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Thévenin &amp; Norton Duals</text>
+
+  <rect x="30" y="85" width="840" height="280" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">Thevenin &amp; Norton Equivalence Theorems</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">Any linear two-terminal active network can be completely replaced at its load</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">terminals A-B by either of two mutually dual canonical models:</text>
+  
+  <text x="50" y="240" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20" font-weight="800">1. Thévenin Equivalent: Voltage source V_th in SERIES with R_th</text>
+  <text x="50" y="275" fill="#34d399" font-family="'Fira Code', monospace" font-size="20" font-weight="800">2. Norton Equivalent:   Current source I_N in PARALLEL with R_N</text>
+  <text x="50" y="320" fill="#fbbf24" font-size="18" font-weight="700">Fundamental Identity: R_th ≡ R_N   and   V_th = I_N · R_th = I_sc · R_th</text>
+
+  <rect x="30" y="380" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="425" fill="#38bdf8" font-size="22" font-weight="800">Load Terminal Characteristic Equations</text>
+  
+  <text x="50" y="470" fill="#fbbf24" font-size="19" font-weight="700">Connecting External Load R_L across Terminals A-B:</text>
+  <text x="70" y="510" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="21" font-weight="800">I_L = V_th / (R_th + R_L) = I_N · [R_N / (R_N + R_L)]</text>
+  <text x="70" y="555" fill="#34d399" font-family="'Fira Code', monospace" font-size="21" font-weight="800">V_L = V_th · [R_L / (R_th + R_L)] = I_L · R_L</text>
+
+  <text x="50" y="610" fill="#fbbf24" font-size="19" font-weight="700">Linear V-I Terminal Characteristic Line:</text>
+  <text x="70" y="650" fill="#c084fc" font-family="'Fira Code', monospace" font-size="22" font-weight="800">V_terminal = V_oc - I_terminal · R_th</text>
+  <text x="50" y="695" fill="#e2e8f0" font-size="18">• Open-circuit condition: I = 0 A ⟹ V_terminal = V_oc = V_th (y-intercept)</text>
+  <text x="50" y="730" fill="#e2e8f0" font-size="18">• Short-circuit condition: V = 0 V ⟹ I_terminal = I_sc = I_N (x-intercept)</text>
+  <text x="50" y="765" fill="#38bdf8" font-size="18">• Negative slope: dV/dI = -R_th ⟹ Internal driving resistance.</text>
+
+  <rect x="30" y="820" width="840" height="480" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="865" fill="#34d399" font-size="22" font-weight="800">Ideal Transformer in Thevenin/Norton Analysis</text>
+  <text x="50" y="905" fill="#e2e8f0" font-size="18">Ideal transformer with turns ratio N₁ : N₂ = 1 : a (where a = N₂ / N₁):</text>
+  
+  <text x="50" y="955" fill="#fbbf24" font-size="19" font-weight="700">Impedance Reflection Law across Transformer:</text>
+  <text x="70" y="995" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Z_primary = Z_secondary / a²  = (N₁/N₂)² · Z_secondary</text>
+  <text x="70" y="1035" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Z_secondary = a² · Z_primary  = (N₂/N₁)² · Z_primary</text>
+
+  <text x="50" y="1085" fill="#fbbf24" font-size="19" font-weight="700">Voltage &amp; Current Scaling:</text>
+  <text x="70" y="1120" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="18">V₂ = a · V₁   and   I₂ = (1/a) · I₁   (Power S₁ = S₂ = V₁I₁*)</text>
+  <text x="50" y="1165" fill="#e2e8f0" font-size="18">• To find Thevenin equivalent looking into primary:</text>
+  <text x="70" y="1200" fill="#94a3b8" font-size="17">Reflect all secondary sources and impedances to primary: V_th = V₂/a, Z_th = Z₂/a².</text>
+  <text x="50" y="1245" fill="#fbbf24" font-size="18" font-weight="700">Exam Shortcut: Reduces coupled magnetic multi-mesh circuits into 1 loop!</text>
+
+  <rect x="30" y="1320" width="840" height="490" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1365" fill="#f43f5e" font-size="22" font-weight="800">Source Loading &amp; The Voltage Divider Penalty</text>
+  <text x="50" y="1410" fill="#e2e8f0" font-size="18">When a real non-ideal voltage source (V_th, R_th) drives an external load R_L:</text>
+  <text x="70" y="1455" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22" font-weight="800">V_L = V_th · [R_L / (R_th + R_L)] &lt; V_th</text>
+  <text x="50" y="1505" fill="#e2e8f0" font-size="18">• Loading Error Ratio: ε = (V_L - V_th) / V_th = -R_th / (R_th + R_L) &lt; 0.</text>
+  <text x="50" y="1550" fill="#e2e8f0" font-size="18">• To maintain terminal voltage regulation &gt; 99%:</text>
+  <text x="70" y="1585" fill="#34d399" font-family="'Fira Code', monospace" font-size="20" font-weight="800">R_L ≫ R_th   (Requirement: R_L ≥ 100 · R_th)</text>
+  
+  <text x="50" y="1635" fill="#fbbf24" font-size="19" font-weight="700">Current Source Loading Dual:</text>
+  <text x="70" y="1670" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20" font-weight="800">I_L = I_N · [R_N / (R_N + R_L)] ⟹ Requires R_N ≫ R_L</text>
+  <text x="50" y="1720" fill="#94a3b8" font-size="18">Ideal Voltage Source: R_th = 0 Ω (Zero output impedance, perfect regulation).</text>
+  <text x="50" y="1755" fill="#94a3b8" font-size="18">Ideal Current Source: R_N = ∞ Ω (Infinite output impedance, perfect stiffness).</text>
+</g>
+
+<!-- Column 2: The 3 Canonical Calculation Regimes -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#818cf8"/>
+  <text x="35" y="55" fill="#818cf8" font-size="28" font-weight="900">2. The 3 Canonical Calculation Regimes</text>
+
+  <!-- Case 1 Card -->
+  <rect x="30" y="85" width="840" height="380" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="50" y="125" fill="#34d399" font-size="22" font-weight="900">CASE 1: Independent Sources ONLY (No Dependent Sources)</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">• V_th = V_oc (Open-circuit terminals A-B, solve via standard Nodal/Mesh).</text>
+  <text x="50" y="200" fill="#e2e8f0" font-size="18">• I_N = I_sc (Short-circuit terminals A-B, solve for short-circuit branch current).</text>
+  
+  <text x="50" y="250" fill="#fbbf24" font-size="19" font-weight="800">Evaluating R_th (Fastest Route):</text>
+  <text x="50" y="285" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">1. Deactivate ALL independent sources (V_s → Short, I_s → Open).</text>
+  <text x="50" y="320" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">2. Look into open terminals A-B and collapse network via series-parallel</text>
+  <text x="70" y="350" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">   and Delta-Star (Δ ↔ Y) reductions: R_th = R_eq.</text>
+  <text x="50" y="390" fill="#fbbf24" font-size="19" font-weight="800">Verification Cross-Check:</text>
+  <text x="50" y="425" fill="#34d399" font-family="'Fira Code', monospace" font-size="20" font-weight="800">R_th ≡ V_oc / I_sc   (Must match R_eq exactly!)</text>
+
+  <!-- Case 2 Card -->
+  <rect x="30" y="490" width="840" height="600" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="50" y="535" fill="#38bdf8" font-size="22" font-weight="900">CASE 2: Independent AND Dependent Sources Present</text>
+  <text x="50" y="575" fill="#e2e8f0" font-size="18">• Network contains internal controlled sources (VCVS, VCCS, CCVS, CCCS).</text>
+  <text x="50" y="610" fill="#f43f5e" font-size="18" font-weight="700">DANGER: Cannot use direct series-parallel reduction because dependent sources</text>
+  <text x="50" y="640" fill="#f43f5e" font-size="18" font-weight="700">CANNOT be deactivated!</text>
+  
+  <text x="50" y="690" fill="#fbbf24" font-size="20" font-weight="800">Calculation Method A: The Open/Short Dual Method</text>
+  <text x="50" y="725" fill="#e2e8f0" font-size="18">Step 1: Calculate V_th = V_oc with load removed (all sources active).</text>
+  <text x="50" y="760" fill="#e2e8f0" font-size="18">Step 2: Short-circuit terminals A-B and calculate I_sc (all sources active).</text>
+  <text x="50" y="800" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Step 3: R_th = V_oc / I_sc</text>
+
+  <text x="50" y="855" fill="#fbbf24" font-size="20" font-weight="800">Calculation Method B: The Virtual Test-Source Method</text>
+  <text x="50" y="890" fill="#e2e8f0" font-size="18">Step 1: Calculate V_th = V_oc (all sources active).</text>
+  <text x="50" y="925" fill="#e2e8f0" font-size="18">Step 2: Deactivate ONLY INDEPENDENT sources (V_s → Short, I_s → Open).</text>
+  <text x="50" y="960" fill="#e2e8f0" font-size="18">Step 3: Keep ALL DEPENDENT sources active!</text>
+  <text x="50" y="995" fill="#e2e8f0" font-size="18">Step 4: Connect external Test Source (V_test = 1 V or I_test = 1 A) across A-B.</text>
+  <text x="50" y="1035" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Step 5: R_th = V_test / I_test</text>
+  <text x="50" y="1065" fill="#94a3b8" font-size="17">(Method B is faster when calculating I_sc requires complex supernodes!)</text>
+
+  <!-- Case 3 Card -->
+  <rect x="30" y="1110" width="840" height="700" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="2"/>
+  <text x="50" y="1155" fill="#c084fc" font-size="22" font-weight="900">CASE 3: Dependent Sources ONLY (No Independent Sources)</text>
+  <text x="50" y="1200" fill="#fbbf24" font-size="19" font-weight="800">The Zero-Excitation Dead State:</text>
+  <text x="50" y="1235" fill="#e2e8f0" font-size="18">• With zero independent excitation, circuit is completely unenergized.</text>
+  <text x="50" y="1270" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">V_th = V_oc ≡ 0 V    and    I_N = I_sc ≡ 0 A</text>
+  
+  <text x="50" y="1325" fill="#f43f5e" font-size="19" font-weight="800">DANGER: Formula R_th = V_oc / I_sc = 0 / 0 (Indeterminate Form!)</text>
+  <text x="50" y="1360" fill="#e2e8f0" font-size="18">The open/short method fails completely because both numerator &amp; denominator are 0.</text>
+
+  <text x="50" y="1410" fill="#fbbf24" font-size="20" font-weight="800">Mandatory Solution: Virtual Test Source Method</text>
+  <text x="50" y="1450" fill="#e2e8f0" font-size="18">You MUST connect an external auxiliary excitation across terminals A-B:</text>
+  <text x="70" y="1490" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">Option α: Connect V_dc = 1 V   ⟹ Solve for resulting current I_dc.</text>
+  <text x="90" y="1525" fill="#34d399" font-family="'Fira Code', monospace" font-size="21" font-weight="800">R_th = 1 V / I_dc</text>
+  <text x="70" y="1570" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">Option β: Connect I_dc = 1 A   ⟹ Solve for resulting voltage V_dc.</text>
+  <text x="90" y="1605" fill="#34d399" font-family="'Fira Code', monospace" font-size="21" font-weight="800">R_th = V_dc / 1 A</text>
+
+  <rect x="50" y="1645" width="800" height="140" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+  <text x="70" y="1685" fill="#fbbf24" font-size="18" font-weight="800">Case 3 Equivalent Circuit Architecture:</text>
+  <text x="70" y="1720" fill="#e2e8f0" font-size="18">• Thevenin model consists of a SINGLE RESISTOR R_th (V_th = 0).</text>
+  <text x="70" y="1755" fill="#e2e8f0" font-size="18">• Represents the driving-point input resistance R_in seen by external world.</text>
+</g>
+
+<!-- Column 3: The Virtual Test-Source Method & Circuit Mechanics -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#34d399"/>
+  <text x="35" y="55" fill="#34d399" font-size="28" font-weight="900">3. Virtual Test-Source Architecture</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Virtual Test Source: 1 V vs. 1 A Decision Rules</text>
+  
+  <text x="50" y="170" fill="#34d399" font-size="20" font-weight="700">When to Choose 1 V Test Voltage Source:</text>
+  <text x="50" y="205" fill="#e2e8f0" font-size="18">• When connecting 1 V fixes the terminal node potential immediately (V_A = 1 V).</text>
+  <text x="50" y="240" fill="#e2e8f0" font-size="18">• Ideal for NODAL ANALYSIS: Conductance matrix branch currents are easily written.</text>
+  <text x="50" y="275" fill="#e2e8f0" font-size="18">• If controlling variable is a branch voltage in parallel with output terminals.</text>
+
+  <text x="50" y="325" fill="#c084fc" font-size="20" font-weight="700">When to Choose 1 A Test Current Source:</text>
+  <text x="50" y="360" fill="#e2e8f0" font-size="18">• When connecting 1 A injects an exact known current into the output loop.</text>
+  <text x="50" y="395" fill="#e2e8f0" font-size="18">• Ideal for MESH ANALYSIS: Outer perimeter current is locked directly to 1 A.</text>
+
+  <rect x="30" y="450" width="840" height="580" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#34d399" font-size="22" font-weight="800">Test Source Step-by-Step Solved Problem</text>
+  <text x="50" y="535" fill="#fbbf24" font-size="18">Circuit: 2 Ω resistor in series with terminal, shunt 4 Ω resistor, and CCVS 2Ix:</text>
+  
+  <text x="50" y="575" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">Step 1: Connect V_test = 1 V source across terminals A-B.</text>
+  <text x="50" y="605" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">        Let current entering terminal A be I_test.</text>
+  
+  <text x="50" y="645" fill="#e2e8f0" font-size="18">Step 2: Write KCL at node A (Voltage V_A = 1 V):</text>
+  <text x="70" y="680" fill="#34d399" font-family="'Fira Code', monospace" font-size="19">I_test = (1 V - V_internal) / 2 Ω</text>
+  
+  <text x="50" y="725" fill="#e2e8f0" font-size="18">Step 3: Relate controlling current Ix to node potentials:</text>
+  <text x="70" y="760" fill="#34d399" font-family="'Fira Code', monospace" font-size="19">Ix = V_internal / 4 Ω ⟹ Dependent source voltage = 2Ix = 0.5 V_internal</text>
+
+  <text x="50" y="805" fill="#e2e8f0" font-size="18">Step 4: Solve simultaneous node equations:</text>
+  <text x="70" y="840" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="19">V_internal = 0.4 V ⟹ I_test = (1 - 0.4) / 2 = 0.3 A</text>
+
+  <text x="50" y="885" fill="#e2e8f0" font-size="18">Step 5: Calculate equivalent resistance:</text>
+  <text x="70" y="925" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">R_th = V_test / I_test = 1 V / 0.3 A = 3.33 Ω</text>
+  <text x="50" y="970" fill="#94a3b8" font-size="18">• Notice that dependent source increased effective resistance from 2 Ω to 3.33 Ω!</text>
+  <text x="50" y="1005" fill="#94a3b8" font-size="18">• Series-parallel reduction without test source would have given completely wrong value.</text>
+
+  <rect x="30" y="1050" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="1095" fill="#38bdf8" font-size="22" font-weight="800">Supernode Analysis for Thevenin Evaluation</text>
+  <text x="50" y="1135" fill="#e2e8f0" font-size="18">When a floating voltage source exists inside an active Thevenin network:</text>
+  <text x="50" y="1175" fill="#fbbf24" font-size="19" font-weight="700">1. Enclose floating voltage source in a closed Gaussian boundary (Supernode).</text>
+  <text x="50" y="1210" fill="#e2e8f0" font-size="18">2. Write generalized KCL for all branches puncturing the supernode boundary:</text>
+  <text x="70" y="1245" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">∑ I_leaving = 0</text>
+  <text x="50" y="1290" fill="#fbbf24" font-size="19" font-weight="700">3. Write auxiliary constitutive KVL equation inside supernode:</text>
+  <text x="70" y="1325" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">V_pos - V_neg = V_source</text>
+  <text x="50" y="1370" fill="#e2e8f0" font-size="18">4. Unknown branch current through the floating source cancels out automatically!</text>
+  <text x="50" y="1415" fill="#38bdf8" font-size="18" font-weight="700">Exam Trap: Resistor in parallel with floating source has zero effect on node voltages!</text>
+
+  <rect x="30" y="1490" width="840" height="320" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1535" fill="#fbbf24" font-size="22" font-weight="800">Quick Test-Source Validation Checklist</text>
+  <text x="50" y="1575" fill="#e2e8f0" font-size="18">✓ Did you kill all independent voltage sources (short circuits)?</text>
+  <text x="50" y="1610" fill="#e2e8f0" font-size="18">✓ Did you kill all independent current sources (open circuits)?</text>
+  <text x="50" y="1645" fill="#e2e8f0" font-size="18">✓ Did you leave ALL dependent sources active?</text>
+  <text x="50" y="1680" fill="#e2e8f0" font-size="18">✓ Did you define I_test as ENTERING terminal A (Passive Sign Convention)?</text>
+  <text x="50" y="1720" fill="#34d399" font-size="19" font-weight="800">If I_test leaves terminal A instead, your calculated R_th will have a negative sign error!</text>
+</g>
+
+<!-- Column 4: Negative Thevenin Resistance & Physical Interpretation -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#f43f5e"/>
+  <text x="35" y="55" fill="#f43f5e" font-size="28" font-weight="900">4. Negative Thevenin Resistance Physics</text>
+
+  <rect x="30" y="85" width="840" height="380" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="125" fill="#f43f5e" font-size="22" font-weight="900">Physical Reality: Can R_th be Negative?</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="18">• In purely passive networks (resistors only), R_th &gt; 0 ALWAYS.</text>
+  <text x="50" y="205" fill="#38bdf8" font-size="18">• In networks with DEPENDENT SOURCES, R_th CAN BE NEGATIVE (R_th &lt; 0)!</text>
+  
+  <text x="50" y="255" fill="#fbbf24" font-size="20" font-weight="800">Physical Meaning of R_th &lt; 0:</text>
+  <text x="50" y="290" fill="#e2e8f0" font-size="18">1. Network has internal positive feedback through the controlled source.</text>
+  <text x="50" y="325" fill="#e2e8f0" font-size="18">2. Instead of absorbing power from an external test source, the internal dependent</text>
+  <text x="70" y="355" fill="#e2e8f0" font-size="18">   source actively DELIVERS power BACK into the test source (I_test &lt; 0 for V_test &gt; 0)!</text>
+  <text x="50" y="395" fill="#34d399" font-family="'Fira Code', monospace" font-size="20" font-weight="800">P_absorbed = V_test · I_test &lt; 0 ⟹ Network DELIVERS power!</text>
+  <text x="50" y="430" fill="#94a3b8" font-size="17">Common physical realizations: Op-Amp negative impedance converters (NIC), tunnel diodes.</text>
+
+  <rect x="30" y="490" width="840" height="420" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="535" fill="#fbbf24" font-size="22" font-weight="800">Stability &amp; Load Constraints with R_th &lt; 0</text>
+  <text x="50" y="575" fill="#e2e8f0" font-size="18">When a passive load resistor R_L is connected across terminals with R_th &lt; 0:</text>
+  <text x="70" y="615" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Total Loop Resistance = R_L + R_th = R_L - |R_th|</text>
+  
+  <text x="50" y="665" fill="#fbbf24" font-size="19" font-weight="800">Regimes of Operation:</text>
+  <text x="50" y="700" fill="#34d399" font-size="18" font-weight="700">1. If R_L &gt; |R_th|:</text>
+  <text x="70" y="730" fill="#e2e8f0" font-size="18">   Total resistance positive → System is STABLE, finite load current I_L.</text>
+
+  <text x="50" y="770" fill="#f43f5e" font-size="18" font-weight="700">2. If R_L = |R_th|:</text>
+  <text x="70" y="800" fill="#f43f5e" font-size="18">   Total resistance = 0 Ω → Indeterminate / Infinite current (Oscillation threshold!).</text>
+
+  <text x="50" y="840" fill="#f43f5e" font-size="18" font-weight="700">3. If R_L &lt; |R_th|:</text>
+  <text x="70" y="870" fill="#f43f5e" font-size="18">   Total loop resistance is negative → UNSTABLE (Exponentially runaway currents!).</text>
+
+  <rect x="30" y="930" width="840" height="450" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="975" fill="#c084fc" font-size="22" font-weight="800">Negative R_th Solved Classroom Drill</text>
+  <text x="50" y="1015" fill="#fbbf24" font-size="18">Circuit: Terminals A-B connected across resistor R = 5 Ω with CCVS α·Ix in series:</text>
+  <text x="50" y="1055" fill="#e2e8f0" font-size="18">Let controlling current Ix be the current entering terminal A. Then CCVS = 8·Ix.</text>
+  
+  <text x="50" y="1100" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">Step 1: Connect 1 V test source across A-B. Then I_test = Ix.</text>
+  <text x="50" y="1135" fill="#e2e8f0" font-size="18">Step 2: Write KVL around the test loop:</text>
+  <text x="70" y="1170" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">1 V - I_test · (5 Ω) + 8 · I_test = 0</text>
+  <text x="70" y="1210" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">1 V = I_test · (5 - 8) = I_test · (-3 Ω)</text>
+  <text x="70" y="1255" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="24" font-weight="900">R_th = 1 V / I_test = -3 Ω !</text>
+  
+  <text x="50" y="1305" fill="#fbbf24" font-size="18" font-weight="700">Exam Verification:</text>
+  <text x="50" y="1340" fill="#e2e8f0" font-size="18">The dependent voltage source opposes normal IR drop with gain greater than R,</text>
+  <text x="50" y="1370" fill="#e2e8f0" font-size="18">pumping net charge into the terminal: negative driving-point resistance confirmed!</text>
+
+  <rect x="30" y="1410" width="840" height="400" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="1455" fill="#38bdf8" font-size="22" font-weight="800">Master Comparison Table: Thevenin vs. Norton</text>
+  
+  <text x="50" y="1500" fill="#fbbf24" font-size="18" font-weight="700">Parameter / Metric</text>
+  <text x="350" y="1500" fill="#fbbf24" font-size="18" font-weight="700">Thévenin Equivalent</text>
+  <text x="640" y="1500" fill="#fbbf24" font-size="18" font-weight="700">Norton Equivalent</text>
+  <path d="M 45 1520 L 850 1520" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="1555" fill="#e2e8f0" font-size="17">Canonical Generator</text>
+  <text x="350" y="1555" fill="#38bdf8" font-size="17">Voltage Source V_th</text>
+  <text x="640" y="1555" fill="#34d399" font-size="17">Current Source I_N</text>
+
+  <text x="50" y="1600" fill="#e2e8f0" font-size="17">Internal Impedance</text>
+  <text x="350" y="1600" fill="#38bdf8" font-size="17">In Series (R_th)</text>
+  <text x="640" y="1600" fill="#34d399" font-size="17">In Shunt (R_N = R_th)</text>
+
+  <text x="50" y="1645" fill="#e2e8f0" font-size="17">Primary Measurement</text>
+  <text x="350" y="1645" fill="#38bdf8" font-size="17">V_oc (Load Open)</text>
+  <text x="640" y="1645" fill="#34d399" font-size="17">I_sc (Load Shorted)</text>
+
+  <text x="50" y="1690" fill="#e2e8f0" font-size="17">Load Current I_L</text>
+  <text x="350" y="1690" fill="#e2e8f0" font-size="17">V_th / (R_th + R_L)</text>
+  <text x="640" y="1690" fill="#e2e8f0" font-size="17">I_N · R_N / (R_N + R_L)</text>
+
+  <text x="50" y="1735" fill="#e2e8f0" font-size="17">Preferred Usage</text>
+  <text x="350" y="1735" fill="#34d399" font-size="17">Series load networks</text>
+  <text x="640" y="1735" fill="#34d399" font-size="17">Parallel load branches</text>
+
+  <text x="50" y="1785" fill="#fbbf24" font-size="18" font-weight="800">Source Conversion: V_th = I_N · R_th ⟺ I_N = V_th / R_th</text>
+</g>
+
+  </g>
+</svg>

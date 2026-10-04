@@ -1,0 +1,433 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.4" opacity="0.6" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowEmerald" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="cardShadow" x="-10%" y="-5%" width="120%" height="115%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+    </defs>
+
+    <style>
+        .font-mono { font-family: 'Consolas', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+        .font-sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+    </style>
+
+    <!-- Deep Blueprint Background -->
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Outer Architectural Frame -->
+    <rect x="40" y="40" width="3760" height="2080" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+    <rect x="48" y="48" width="3744" height="2064" fill="none" stroke="#1e293b" stroke-width="1" rx="12" />
+
+    <!-- Corner Alignment Reticles -->
+    <path d="M 40 80 L 80 80 L 80 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 80 L 3760 80 L 3760 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 40 2080 L 80 2080 L 80 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 2080 L 3760 2080 L 3760 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Top Master Header Banner -->
+    <g transform="translate(80, 80)">
+        <rect x="0" y="0" width="3680" height="150" fill="#0b1329" fill-opacity="0.85" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="12" height="150" fill="url(#headerGrad)" rx="4" />
+        
+        <!-- Blueprint Title & Subtitle -->
+        <text x="50" y="62" fill="url(#headerGrad)" font-size="44" font-weight="900" letter-spacing="2px" class="font-sans">CAUCHY-RIEMANN EQUATIONS &amp; COMPLEX ANALYTICITY ENGINE</text>
+        <text x="50" y="112" fill="#94a3b8" font-size="24" font-weight="500" letter-spacing="0.5px" class="font-sans">Complex Differentiability // CR Cartesian &amp; Polar Forms // Sufficiency Pipeline // Analyticity Failure Map</text>
+
+        <!-- Technical Telemetry Badge -->
+        <g transform="translate(3220, 30)">
+            <rect x="0" y="0" width="410" height="90" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <circle cx="30" cy="45" r="8" fill="#10b981" filter="url(#glowEmerald)" />
+            <text x="52" y="38" fill="#e2e8f0" font-size="16" font-weight="700" class="font-mono">GATE 2027 TITANS ENGINE</text>
+            <text x="52" y="65" fill="#38bdf8" font-size="14" font-weight="600" class="font-mono">SPEC: ULTRA-HD 4K BLUEPRINT</text>
+        </g>
+    </g>
+
+    <!-- Canvas Inner Content -->
+    
+    <!-- ==========================================
+         PANEL 1: COMPLEX DIFFERENTIABILITY & LIMITS
+         ========================================== -->
+    <g transform="translate(80, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#cyanGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">01. COMPLEX DIFFERENTIABILITY &amp; 2D PATH INDEPENDENCE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Formal derivative definition // Path approaching &#916;z &#8594; 0 // Contrast with real differentiability</text>
+
+        <!-- Sub-card 1: Complex Derivative Definition -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">DEFINITION OF THE COMPLEX DERIVATIVE</text>
+
+            <text x="24" y="80" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">f'(z&#8320;) = lim&#916;&#763;&#8594;&#8320; [f(z&#8320; + &#916;z) - f(z&#8320;)] / &#916;z</text>
+            <text x="24" y="115" fill="#94a3b8" font-size="16" class="font-sans">• &#916;z = &#916;x + i &#916;y approaches 0 along ANY directional trajectory in the complex 2D plane.</text>
+            <text x="24" y="145" fill="#94a3b8" font-size="16" class="font-sans">• In 1D calculus, limit has only 2 paths (left &amp; right). In &#8450;, infinite 2D directions exist!</text>
+
+            <g transform="translate(20, 170)">
+                <rect x="0" y="0" width="800" height="130" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">THE RIGOROUS 2-PATH DERIVATION OF CR EQUATIONS:</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#38bdf8">Path 1 (Horizontal, &#916;y = 0, &#916;z = &#916;x):</tspan> f'(z) = &#8706;u/&#8706;x + i &#8706;v/&#8706;x</text>
+                <text x="20" y="90" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#c084fc">Path 2 (Vertical, &#916;x = 0, &#916;z = i&#916;y):</tspan> f'(z) = (&#8706;u/&#8706;y + i &#8706;v/&#8706;y)/i = &#8706;v/&#8706;y - i &#8706;u/&#8706;y</text>
+                <text x="20" y="120" fill="#fbbf24" font-size="15" class="font-sans">&#8658; Equating Real &amp; Imaginary parts: &#8706;u/&#8706;x = &#8706;v/&#8706;y  and  &#8706;u/&#8706;y = -&#8706;v/&#8706;x</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Analyticity vs Differentiability -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">ANALYTICITY (HOLOMORPHICITY) DEFINITION</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="115" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">ANALYTIC AT A POINT z&#8320;:</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-sans">f(z) is <tspan fill="#34d399" font-weight="700">analytic at z&#8320;</tspan> iff it is differentiable not only at z&#8320;, but in some entire <tspan fill="#fbbf24" font-weight="700">open neighborhood |z - z&#8320;| &lt; &#948;</tspan> around z&#8320;.</text>
+                <text x="20" y="90" fill="#f43f5e" font-size="14" class="font-sans">&#9888; Differentiability at a single isolated point DOES NOT imply analyticity!</text>
+            </g>
+
+            <g transform="translate(20, 180)">
+                <rect x="0" y="0" width="800" height="120" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#c084fc" font-size="17" font-weight="700" class="font-mono">ENTIRE FUNCTION (INTEGRAL FUNCTION):</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-sans">f(z) is <tspan fill="#34d399" font-weight="700">entire</tspan> if it is analytic everywhere in the finite complex plane &#8450;.</text>
+                <text x="20" y="90" fill="#94a3b8" font-size="15" class="font-sans">• Examples: Polynomials P(z), e&#7618;, sin z, cos z, sinh z, cosh z.</text>
+                <text x="20" y="112" fill="#fbbf24" font-size="14" class="font-mono">&#9733; Entire functions have infinite radius of convergence for Taylor series!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Path Dependence Breakdown Drill -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#f43f5e" font-size="20" font-weight="700" class="font-mono">NON-DIFFERENTIABILITY PARADIGM: f(z) = z&#772; = x - iy</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">LIMIT EVALUATION ALONG RADIAL PATH y = mx</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="16" class="font-mono">lim&#916;&#763;&#8594;&#8320; &#916;z&#772; / &#916;z = lim(&#916;x - i &#916;y) / (&#916;x + i &#916;y)</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="16" class="font-mono">Along path &#916;y = m &#916;x: Limit = (1 - i m) / (1 + i m) = e&#8315;&#178;&#7522;&#7780;</text>
+                <text x="20" y="145" fill="#f43f5e" font-size="16" font-weight="700" class="font-sans">&#8658; Limit depends directly on the approach slope m!</text>
+                <text x="20" y="175" fill="#94a3b8" font-size="15" class="font-sans">• Along real axis (m=0): Limit = +1 | Along imag axis (m=&#8734;): Limit = -1</text>
+                <text x="20" y="210" fill="#fbbf24" font-size="15" class="font-sans">&#9733; Therefore, f(z) = z&#772; is NOWHERE differentiable in the entire complex plane!</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">PARADIGM 2: f(z) = |z|&#178; = x&#178; + y&#178;</text>
+                <text x="20" y="65" fill="#94a3b8" font-size="15" class="font-sans">Checking Cauchy-Riemann equations: u = x&#178; + y&#178;, v = 0</text>
+                <text x="20" y="95" fill="#e2e8f0" font-size="16" class="font-mono">u&#7523; = 2x, u&#7524; = 2y, v&#7523; = 0, v&#7524; = 0</text>
+                <text x="20" y="130" fill="#e2e8f0" font-size="16" class="font-mono">CR requires: 2x = 0  and  2y = 0  &#8658; x = 0, y = 0</text>
+                <text x="20" y="165" fill="#38bdf8" font-size="15" class="font-sans">• CR holds ONLY at the single isolated point z = (0,0).</text>
+                <text x="20" y="195" fill="#f43f5e" font-size="15" font-weight="700" class="font-sans">&#8658; Differentiable at z = 0, but NOWHERE ANALYTIC (no open neighborhood)!</text>
+                <text x="20" y="222" fill="#34d399" font-size="14" class="font-mono">Classic GATE Multiple Choice trap testing difference between diff &amp; analytic!</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 2: CAUCHY-RIEMANN DUAL SYSTEMS
+         ========================================== -->
+    <g transform="translate(1960, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#goldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#fbbf24" font-size="28" font-weight="800" class="font-sans">02. CAUCHY-RIEMANN EQUATIONS DUAL ENGINE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Cartesian and Polar forms // Sufficiency theorem // Rapid derivative reconstruction</text>
+
+        <!-- Sub-card 1: Cartesian CR Engine -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CARTESIAN CR EQUATIONS</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="110" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#34d399" font-size="28" font-weight="900" class="font-mono">&#8706;u/&#8706;x = &#8706;v/&#8706;y   and   &#8706;u/&#8706;y = -&#8706;v/&#8706;x</text>
+                <text x="20" y="85" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">u&#7523; = v&#7524;   and   u&#7524; = -v&#7523;</text>
+            </g>
+
+            <text x="24" y="195" fill="#e2e8f0" font-size="17" class="font-mono"><tspan fill="#38bdf8" font-weight="700">Derivative Formula Arsenal:</tspan></text>
+            <text x="24" y="230" fill="#e2e8f0" font-size="16" class="font-mono">f'(z) = u&#7523; + i v&#7523; = u&#7523; - i u&#7524; = v&#7524; + i v&#7523; = v&#7524; - i u&#7524;</text>
+            <text x="24" y="265" fill="#94a3b8" font-size="15" class="font-sans">• Allows immediate computation of f'(z) without needing the conjugate v(x,y)!</text>
+            <text x="24" y="295" fill="#fbbf24" font-size="15" class="font-mono">• Absolute derivative modulus: |f'(z)|&#178; = u&#7523;&#178; + v&#7523;&#178; = u&#7523;&#178; + u&#7524;&#178; = J(u,v)</text>
+        </g>
+
+        <!-- Sub-card 2: Polar CR Engine -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">POLAR CR EQUATIONS</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="110" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#38bdf8" font-size="28" font-weight="900" class="font-mono">&#8706;u/&#8706;r = (1/r) &#8706;v/&#8706;&#952;   and   &#8706;v/&#8706;r = -(1/r) &#8706;u/&#8706;&#952;</text>
+                <text x="20" y="85" fill="#34d399" font-size="20" font-weight="700" class="font-mono">u&#7525; = (1/r) v&#7780;   and   v&#7525; = -(1/r) u&#7780;</text>
+            </g>
+
+            <text x="24" y="195" fill="#e2e8f0" font-size="17" class="font-mono"><tspan fill="#c084fc" font-weight="700">Polar Derivative Formula:</tspan></text>
+            <text x="24" y="230" fill="#e2e8f0" font-size="16" class="font-mono">f'(z) = e&#8315;&#7522;&#7780; (u&#7525; + i v&#7525;) = (e&#8315;&#7522;&#7780; / r) (v&#7780; - i u&#7780;)</text>
+            <text x="24" y="265" fill="#94a3b8" font-size="15" class="font-sans">• Frequently tested for z&#8319;, ln(z), and root functions in polar form!</text>
+            <text x="24" y="295" fill="#fbbf24" font-size="15" class="font-mono">• Second derivative relations link directly to polar Laplace equation.</text>
+        </g>
+
+        <!-- Sub-card 3: Necessary vs Sufficient Conditions -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">THE CR SUFFICIENCY THEOREM PIPELINE (CAUCHY-RIEMANN THEOREM)</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#f43f5e" font-size="17" font-weight="700" class="font-mono">CONDITION 1 (NECESSARY)</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="16" class="font-sans">The first partial derivatives:</text>
+                <text x="20" y="105" fill="#38bdf8" font-size="18" class="font-mono">u&#7523;, u&#7524;, v&#7523;, v&#7524;</text>
+                <text x="20" y="145" fill="#e2e8f0" font-size="16" class="font-sans">MUST satisfy the CR equations at the point z&#8320;.</text>
+                <text x="20" y="185" fill="#94a3b8" font-size="15" class="font-sans">If CR fails &#8658; NOT differentiable!</text>
+                <text x="20" y="215" fill="#f43f5e" font-size="14" class="font-mono">&#9888; CR alone does NOT guarantee diff!</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">CONDITION 2 (CONTINUITY)</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="16" class="font-sans">The first partial derivatives:</text>
+                <text x="20" y="105" fill="#38bdf8" font-size="18" class="font-mono">u&#7523;, u&#7524;, v&#7523;, v&#7524;</text>
+                <text x="20" y="145" fill="#e2e8f0" font-size="16" class="font-sans">MUST be <tspan fill="#34d399" font-weight="700">continuous</tspan> at the point z&#8320;.</text>
+                <text x="20" y="185" fill="#94a3b8" font-size="15" class="font-sans">Ensures total real differentiability of u, v.</text>
+                <text x="20" y="215" fill="#38bdf8" font-size="14" class="font-mono">&#9733; Crucial for pathological functions!</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#34d399" font-size="17" font-weight="700" class="font-mono">SUFFICIENT VERDICT</text>
+                <text x="20" y="70" fill="#34d399" font-size="18" font-weight="700" class="font-sans">CR Equations SATISFIED</text>
+                <text x="20" y="100" fill="#fbbf24" font-size="18" font-weight="700" class="font-sans">+ Partials CONTINUOUS</text>
+                <text x="20" y="140" fill="#e2e8f0" font-size="18" font-weight="900" class="font-mono">&#8658; f(z) IS DIFFERENTIABLE at z&#8320;!</text>
+                <text x="20" y="175" fill="#94a3b8" font-size="15" class="font-sans">If satisfied in an open disk |z - z&#8320;| &lt; &#948;:</text>
+                <text x="20" y="210" fill="#38bdf8" font-size="16" font-weight="700" class="font-sans">&#8658; f(z) IS ANALYTIC at z&#8320;!</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 3: ANALYTICITY FAILURE MAP & NON-ANALYTIC FUNCTIONS
+         ========================================== -->
+    <g transform="translate(80, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#roseGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#f43f5e" font-size="28" font-weight="800" class="font-sans">03. ANALYTICITY FAILURE MAP &amp; CONJUGATE DEPENDENCE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Wirtinger derivative criterion &#8706;f/&#8706;z&#772; = 0 // Nowhere analytic functions // Pathology catalogue</text>
+
+        <!-- Sub-card 1: Wirtinger Complex Derivative -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">WIRTINGER OPERATOR &amp; ELEGANT CR TEST</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">Define formal complex differential operators:</text>
+            <text x="24" y="110" fill="#38bdf8" font-size="18" class="font-mono">&#8706;/&#8706;z = 1/2 (&#8706;/&#8706;x - i &#8706;/&#8706;y)   and   &#8706;/&#8706;z&#772; = 1/2 (&#8706;/&#8706;x + i &#8706;/&#8706;y)</text>
+
+            <g transform="translate(20, 140)">
+                <rect x="0" y="0" width="800" height="120" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#34d399" font-size="22" font-weight="900" class="font-mono">CR EQUIVALENCE: &#8706;f / &#8706;z&#772; = 0</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="16" class="font-sans">A function f(z) is analytic iff its expression <tspan fill="#f43f5e" font-weight="700">does NOT contain z&#772;</tspan>!</text>
+                <text x="20" y="100" fill="#fbbf24" font-size="15" class="font-sans">&#9733; Any explicit appearance of z&#772;, |z|, Re(z), or Im(z) causes &#8706;f/&#8706;z&#772; &#8800; 0!</text>
+            </g>
+
+            <text x="24" y="295" fill="#38bdf8" font-size="16" font-weight="700" class="font-sans">RAPID 5-SECOND GATE EXAM FILTER:</text>
+            <text x="24" y="325" fill="#94a3b8" font-size="15" class="font-sans">• f(z) = z&#178; + 3z &#8658; No z&#772; &#8658; ANALYTIC EVERYWHERE (ENTIRE)</text>
+            <text x="24" y="355" fill="#94a3b8" font-size="15" class="font-sans">• f(z) = z&#178; + 2z&#772; &#8658; Contains z&#772; &#8658; NOWHERE ANALYTIC</text>
+        </g>
+
+        <!-- Sub-card 2: Catalogue of Nowhere Analytic Functions -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#f43f5e" font-size="20" font-weight="700" class="font-mono">NOWHERE ANALYTIC FUNCTIONS ARSENAL</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="310" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">HALLMARK EXAMPLES TESTED IN GATE:</text>
+                
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#f43f5e">1. f(z) = z&#772; = x - iy:</tspan> u&#7523; = 1, v&#7524; = -1 &#8658; 1 &#8800; -1 everywhere.</text>
+                <text x="20" y="100" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#f43f5e">2. f(z) = Re(z) = x:</tspan> u&#7523; = 1, v&#7524; = 0 &#8658; 1 &#8800; 0 everywhere.</text>
+                <text x="20" y="135" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#f43f5e">3. f(z) = Im(z) = y:</tspan> u&#7524; = 1, -v&#7523; = 0 &#8658; 1 &#8800; 0 everywhere.</text>
+                <text x="20" y="170" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#f43f5e">4. f(z) = |z| = &#8730;(x&#178;+y&#178;):</tspan> Not differentiable at (0,0) or anywhere else.</text>
+                <text x="20" y="205" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#fbbf24">5. f(z) = e&#7528; (e&#773;&#7780;):</tspan> &#8706;f/&#8706;z&#772; &#8800; 0 &#8658; nowhere analytic.</text>
+                <text x="20" y="240" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#fbbf24">6. f(z) = arg(z):</tspan> Discontinuous along negative real axis (branch cut).</text>
+                <text x="20" y="275" fill="#34d399" font-size="14" class="font-sans">&#9733; If f(z) is real-valued in a domain and analytic &#8658; f(z) MUST be a CONSTANT!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Constant Function Theorems -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#c084fc" font-size="20" font-weight="700" class="font-mono">FOUR CLASSICAL CONSTANCY THEOREMS FOR ANALYTIC FUNCTIONS</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="395" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="30" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">CASE 1: f'(z) = 0</text>
+                <text x="16" y="65" fill="#e2e8f0" font-size="14" class="font-sans">If f'(z) = 0 everywhere in connected domain D:</text>
+                <text x="16" y="105" fill="#34d399" font-size="16" font-weight="700" class="font-mono">f(z) = CONSTANT</text>
+                <text x="16" y="145" fill="#94a3b8" font-size="13" class="font-sans">u&#7523; = v&#7523; = 0 and u&#7524; = v&#7524; = 0 implies u = c&#8321;, v = c&#8322;.</text>
+            </g>
+
+            <g transform="translate(445, 60)">
+                <rect x="0" y="0" width="395" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">CASE 2: |f(z)| = CONSTANT</text>
+                <text x="16" y="65" fill="#e2e8f0" font-size="14" class="font-sans">If modulus |f(z)| is constant in domain D:</text>
+                <text x="16" y="105" fill="#34d399" font-size="16" font-weight="700" class="font-mono">f(z) = CONSTANT</text>
+                <text x="16" y="145" fill="#94a3b8" font-size="13" class="font-sans">u&#178; + v&#178; = c&#178;. Differentiating and applying CR forces u&#7523;=v&#7523;=0.</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="395" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">CASE 3: arg(f(z)) = CONST</text>
+                <text x="16" y="65" fill="#e2e8f0" font-size="14" class="font-sans">If argument is constant in domain D:</text>
+                <text x="16" y="105" fill="#34d399" font-size="16" font-weight="700" class="font-mono">f(z) = CONSTANT</text>
+                <text x="16" y="145" fill="#94a3b8" font-size="13" class="font-sans">v/u = tan k = c &#8658; v = c u. CR forces u, v to be constants.</text>
+            </g>
+
+            <g transform="translate(1285, 60)">
+                <rect x="0" y="0" width="395" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="30" fill="#f43f5e" font-size="16" font-weight="700" class="font-mono">CASE 4: f&#772;(z) IS ANALYTIC</text>
+                <text x="16" y="65" fill="#e2e8f0" font-size="14" class="font-sans">If both f(z) and f&#772;(z) are analytic in D:</text>
+                <text x="16" y="105" fill="#34d399" font-size="16" font-weight="700" class="font-mono">f(z) = CONSTANT</text>
+                <text x="16" y="145" fill="#94a3b8" font-size="13" class="font-sans">f&#772; = u - iv satisfies CR iff u&#7523; = -v&#7524; = -u&#7523; &#8658; u&#7523;=0.</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 4: GATE DRILLS & PARAMETER IDENTIFICATION
+         ========================================== -->
+    <g transform="translate(1960, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#cyanGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">04. GATE PARAMETER SOLVER &amp; CLASSROOM DRILL ENGINE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Solving undetermined coefficients (k, a, b) for analyticity // High-frequency exam questions</text>
+
+        <!-- Sub-card 1: Drill 1 - Linear Combinations -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">PREPFUSION DRILL 1: FINDING CONSTANTS a, b</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">Problem: Let f(z) = (x&#178; + a y&#178;) + i (b x y) be analytic. Find a and b.</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="260" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">STEP-BY-STEP CALCULATION:</text>
+                <text x="20" y="60" fill="#94a3b8" font-size="15" class="font-sans">Identify real and imaginary parts: u = x&#178; + a y&#178;,  v = b x y</text>
+                <text x="20" y="90" fill="#e2e8f0" font-size="15" class="font-mono">Compute partials: u&#7523; = 2x,  u&#7524; = 2a y,  v&#7523; = b y,  v&#7524; = b x</text>
+                <text x="20" y="125" fill="#34d399" font-size="16" class="font-mono">1st CR Equation (u&#7523; = v&#7524;): 2x = b x &#8658; b = 2</text>
+                <text x="20" y="160" fill="#34d399" font-size="16" class="font-mono">2nd CR Equation (u&#7524; = -v&#7523;): 2a y = -b y = -2y &#8658; 2a = -2 &#8658; a = -1</text>
+                <text x="20" y="195" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">VERDICT: a = -1,  b = 2</text>
+                <text x="20" y="230" fill="#38bdf8" font-size="14" class="font-sans">Check function: f(z) = (x&#178; - y&#178;) + i(2xy) = (x + iy)&#178; = z&#178; (Pure analytic power!)</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Drill 2 - Higher Degree Drill -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">PREPFUSION DRILL 2: CUBIC POLYNOMIAL ANALYTICITY</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">Problem: u(x,y) = 2x(1 - y) + k(x&#178; - y&#178;). Find condition on k for analyticity.</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="260" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">HARMONIC PREREQUISITE TEST (&#8711;&#178;u = 0):</text>
+                <text x="20" y="60" fill="#94a3b8" font-size="15" class="font-sans">Every real part of an analytic function MUST be harmonic: u&#7523;&#7523; + u&#7524;&#7524; = 0.</text>
+                <text x="20" y="95" fill="#e2e8f0" font-size="15" class="font-mono">u = 2x - 2xy + k x&#178; - k y&#178;</text>
+                <text x="20" y="125" fill="#e2e8f0" font-size="15" class="font-mono">u&#7523; = 2 - 2y + 2k x  &#8658;  u&#7523;&#7523; = 2k</text>
+                <text x="20" y="155" fill="#e2e8f0" font-size="15" class="font-mono">u&#7524; = -2x - 2k y  &#8658;  u&#7524;&#7524; = -2k</text>
+                <text x="20" y="190" fill="#34d399" font-size="16" class="font-mono">Laplacian: u&#7523;&#7523; + u&#7524;&#7524; = 2k + (-2k) = 0  (Holds for ALL k &#8712; &#8477;!)</text>
+                <text x="20" y="225" fill="#fbbf24" font-size="15" class="font-sans">&#9733; For ANY real value of k, u is harmonic and valid real part of an analytic function!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Fast GATE Exam Formula Summary -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">GATE EXAM FAST FORMULA &amp; VERIFICATION CHECKLIST</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">DERIVATIVE FROM REAL PART ONLY</text>
+                <text x="20" y="65" fill="#fbbf24" font-size="18" class="font-mono">f'(z) = u&#7523;(x,y) - i u&#7524;(x,y)</text>
+                <text x="20" y="100" fill="#94a3b8" font-size="14" class="font-sans">No need to calculate v(x,y)! Direct evaluation saves 3 minutes in exam.</text>
+                <text x="20" y="135" fill="#e2e8f0" font-size="15" class="font-mono">Set x = z, y = 0 &#8658; Milne-Thomson</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">DERIVATIVE FROM IMAG PART ONLY</text>
+                <text x="20" y="65" fill="#38bdf8" font-size="18" class="font-mono">f'(z) = v&#7524;(x,y) + i v&#7523;(x,y)</text>
+                <text x="20" y="100" fill="#94a3b8" font-size="14" class="font-sans">Directly substitutes CR relation u&#7523; = v&#7524;, u&#7524; = -v&#7523; into f'(z) = u&#7523; + i v&#7523;.</text>
+                <text x="20" y="135" fill="#e2e8f0" font-size="15" class="font-mono">Set x = z, y = 0 &#8658; Milne-Thomson</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#f43f5e" font-size="16" font-weight="700" class="font-mono">JACOBIAN DETERMINANT &amp; CONFORMALITY</text>
+                <text x="20" y="65" fill="#34d399" font-size="18" class="font-mono">J = |&#8706;(u,v)/&#8706;(x,y)| = u&#7523; v&#7524; - u&#7524; v&#7523; = u&#7523;&#178; + u&#7524;&#178;</text>
+                <text x="20" y="100" fill="#fbbf24" font-size="16" class="font-mono">J = |f'(z)|&#178; &#8805; 0</text>
+                <text x="20" y="135" fill="#94a3b8" font-size="14" class="font-sans">Jacobian is strictly non-negative! Vanishes only at critical points f'(z) = 0.</text>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Bottom Engineering Telemetry Strip -->
+    <g transform="translate(80, 2060)">
+        <line x1="0" y1="0" x2="3680" y2="0" stroke="#1e293b" stroke-width="2" />
+        <text x="10" y="24" fill="#64748b" font-size="16" class="font-mono">COMPLEX ANALYSIS MATHEMATICAL BLUEPRINT // SCALE: 1.0 NATIVE // GATE / ESE / ISRO EXCELLENCE SUITE</text>
+        <text x="3670" y="24" fill="#64748b" font-size="16" text-anchor="end" class="font-mono">PREPFUSION ENGINEERING MATHEMATICS // SYSTEM VERIFIED</text>
+    </g>
+</svg>

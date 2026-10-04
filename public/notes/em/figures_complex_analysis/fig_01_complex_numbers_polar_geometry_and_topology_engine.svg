@@ -1,0 +1,426 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.4" opacity="0.6" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowEmerald" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="cardShadow" x="-10%" y="-5%" width="120%" height="115%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+    </defs>
+
+    <style>
+        .font-mono { font-family: 'Consolas', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+        .font-sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+    </style>
+
+    <!-- Deep Blueprint Background -->
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Outer Architectural Frame -->
+    <rect x="40" y="40" width="3760" height="2080" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+    <rect x="48" y="48" width="3744" height="2064" fill="none" stroke="#1e293b" stroke-width="1" rx="12" />
+
+    <!-- Corner Alignment Reticles -->
+    <path d="M 40 80 L 80 80 L 80 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 80 L 3760 80 L 3760 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 40 2080 L 80 2080 L 80 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 2080 L 3760 2080 L 3760 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Top Master Header Banner -->
+    <g transform="translate(80, 80)">
+        <rect x="0" y="0" width="3680" height="150" fill="#0b1329" fill-opacity="0.85" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="12" height="150" fill="url(#headerGrad)" rx="4" />
+        
+        <!-- Blueprint Title & Subtitle -->
+        <text x="50" y="62" fill="url(#headerGrad)" font-size="44" font-weight="900" letter-spacing="2px" class="font-sans">COMPLEX NUMBERS, POLAR/EULER GEOMETRY &amp; ARGAND DOMAIN TOPOLOGY ENGINE</text>
+        <text x="50" y="112" fill="#94a3b8" font-size="24" font-weight="500" letter-spacing="0.5px" class="font-sans">Cartesian-Polar Duality // Euler Identities // Triangle Inequalities // Roots of Unity Polygons // Domain Topology</text>
+
+        <!-- Technical Telemetry Badge -->
+        <g transform="translate(3220, 30)">
+            <rect x="0" y="0" width="410" height="90" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <circle cx="30" cy="45" r="8" fill="#10b981" filter="url(#glowEmerald)" />
+            <text x="52" y="38" fill="#e2e8f0" font-size="16" font-weight="700" class="font-mono">GATE 2027 TITANS ENGINE</text>
+            <text x="52" y="65" fill="#38bdf8" font-size="14" font-weight="600" class="font-mono">SPEC: ULTRA-HD 4K BLUEPRINT</text>
+        </g>
+    </g>
+
+    <!-- Canvas Inner Content -->
+    
+    <!-- ==========================================
+         PANEL 1: COMPLEX NUMBER REPRESENTATIONS & EULER IDENTITIES
+         ========================================== -->
+    <g transform="translate(80, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#cyanGrad)" rx="3" />
+        
+        <text x="40" y="55" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">01. COMPLEX NUMBER DUALITY &amp; EULER FORMULATION</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Rectangular, Polar, and Exponential representations with conjugate reflection</text>
+
+        <!-- Sub-card 1: Cartesian & Polar Forms -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">ALGEBRAIC REPRESENTATION FORMS</text>
+            
+            <text x="24" y="80" fill="#e2e8f0" font-size="18" class="font-mono"><tspan fill="#38bdf8" font-weight="700">Rectangular (Cartesian):</tspan> z = x + i y = Re(z) + i Im(z)</text>
+            <text x="24" y="115" fill="#94a3b8" font-size="16" class="font-sans">• Real axis: x = Re(z) = (z + z&#772;)/2 | Imaginary axis: y = Im(z) = (z - z&#772;)/(2i)</text>
+            
+            <text x="24" y="160" fill="#e2e8f0" font-size="18" class="font-mono"><tspan fill="#34d399" font-weight="700">Polar / Trigonometric:</tspan> z = r (cos &#952; + i sin &#952;) = r cis &#952;</text>
+            <text x="24" y="195" fill="#94a3b8" font-size="16" class="font-sans">• Modulus (Magnitude): r = |z| = &#8730;(x&#178; + y&#178;) &#8805; 0</text>
+            <text x="24" y="225" fill="#94a3b8" font-size="16" class="font-sans">• Argument (Phase): &#952; = arg(z) = tan&#8315;&#185;(y/x) + 2k&#960; (multivalued)</text>
+
+            <text x="24" y="270" fill="#e2e8f0" font-size="18" class="font-mono"><tspan fill="#c084fc" font-weight="700">Exponential (Euler):</tspan> z = r e&#7522;&#7780; where e&#7522;&#7780; = cos &#952; + i sin &#952;</text>
+            <text x="24" y="300" fill="#94a3b8" font-size="15" class="font-sans">• Compact multiplication: z&#8321; z&#8322; = r&#8321; r&#8322; e&#7522;(&#952;&#8321;+&#952;&#8322;) | Division: z&#8321;/z&#8322; = (r&#8321;/r&#8322;) e&#7522;(&#952;&#8321;-&#952;&#8322;)</text>
+        </g>
+
+        <!-- Sub-card 2: Principal Argument & Conjugate -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">PRINCIPAL ARGUMENT &amp; COMPLEX CONJUGATE</text>
+
+            <text x="24" y="80" fill="#e2e8f0" font-size="18" class="font-mono"><tspan fill="#38bdf8" font-weight="700">Principal Argument Arg(z):</tspan> -&#960; &lt; Arg(z) &#8804; &#960;</text>
+            <text x="24" y="112" fill="#94a3b8" font-size="16" class="font-sans">• Quad I (x&gt;0, y&#8805;0): &#952; = tan&#8315;&#185;(y/x)</text>
+            <text x="24" y="140" fill="#94a3b8" font-size="16" class="font-sans">• Quad II (x&lt;0, y&#8805;0): &#952; = &#960; - tan&#8315;&#185;(|y/x|)</text>
+            <text x="24" y="168" fill="#94a3b8" font-size="16" class="font-sans">• Quad III (x&lt;0, y&lt;0): &#952; = -&#960; + tan&#8315;&#185;(|y/x|)</text>
+            <text x="24" y="196" fill="#94a3b8" font-size="16" class="font-sans">• Quad IV (x&gt;0, y&lt;0): &#952; = -tan&#8315;&#185;(|y/x|)</text>
+
+            <text x="24" y="240" fill="#e2e8f0" font-size="18" class="font-mono"><tspan fill="#f43f5e" font-weight="700">Conjugate Reflection:</tspan> z&#772; = x - i y = r e&#8315;&#7522;&#7780;</text>
+            <text x="24" y="272" fill="#94a3b8" font-size="15" class="font-sans">• Reflection across real axis: |z&#772;| = |z|, Arg(z&#772;) = -Arg(z) (for z &#8713; &#8477;&#8315;)</text>
+            <text x="24" y="300" fill="#94a3b8" font-size="15" class="font-sans">• Core Identity: z &#183; z&#772; = |z|&#178; = x&#178; + y&#178; (always non-negative real)</text>
+        </g>
+
+        <!-- Sub-card 3: Powers of i & Hyperbolic Relations -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">POWERS OF IOTA &amp; CIRCULAR-HYPERBOLIC INTERLINKING FORMULAS</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">POWERS OF IOTA (CYCLICITY = 4)</text>
+                <text x="20" y="75" fill="#e2e8f0" font-size="16" class="font-mono">i&#185; = i = &#8730;(-1) = e&#7522;&#7510;&#7516;&#178;</text>
+                <text x="20" y="110" fill="#e2e8f0" font-size="16" class="font-mono">i&#178; = -1 = e&#7522;&#7510;</text>
+                <text x="20" y="145" fill="#e2e8f0" font-size="16" class="font-mono">i&#179; = -i = e&#8315;&#7522;&#7510;&#7516;&#178;</text>
+                <text x="20" y="180" fill="#e2e8f0" font-size="16" class="font-mono">i&#8308; = +1 = e&#7522;&#8304; = 1</text>
+                <text x="20" y="218" fill="#fbbf24" font-size="15" class="font-sans">&#9733; For any k &#8712; &#8484;: i&#8308;&#7504; = 1, i&#8308;&#7504;&#8314;&#185; = i, i&#8308;&#7504;&#8314;&#178; = -1, i&#8308;&#7504;&#8314;&#179; = -i</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#34d399" font-size="18" font-weight="700" class="font-mono">CIRCULAR FUNCTIONS IN C</text>
+                <text x="20" y="75" fill="#e2e8f0" font-size="16" class="font-mono">cos &#952; = (e&#7522;&#7780; + e&#8315;&#7522;&#7780;) / 2</text>
+                <text x="20" y="110" fill="#e2e8f0" font-size="16" class="font-mono">sin &#952; = (e&#7522;&#7780; - e&#8315;&#7522;&#7780;) / (2i)</text>
+                <text x="20" y="150" fill="#94a3b8" font-size="15" class="font-sans">cos(iz) = cosh(z)</text>
+                <text x="20" y="180" fill="#94a3b8" font-size="15" class="font-sans">sin(iz) = i sinh(z)</text>
+                <text x="20" y="218" fill="#f43f5e" font-size="15" class="font-sans">&#9888; sin z and cos z are NOT bounded in &#8450;!</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#c084fc" font-size="18" font-weight="700" class="font-mono">HYPERBOLIC FUNCTIONS IN C</text>
+                <text x="20" y="75" fill="#e2e8f0" font-size="16" class="font-mono">cosh z = (e&#7618; + e&#8315;&#7618;) / 2</text>
+                <text x="20" y="110" fill="#e2e8f0" font-size="16" class="font-mono">sinh z = (e&#7618; - e&#8315;&#7618;) / 2</text>
+                <text x="20" y="150" fill="#94a3b8" font-size="15" class="font-sans">cosh(iz) = cos(z)</text>
+                <text x="20" y="180" fill="#94a3b8" font-size="15" class="font-sans">sinh(iz) = i sin(z)</text>
+                <text x="20" y="218" fill="#fbbf24" font-size="15" class="font-sans">&#9733; Identity: cosh&#178; z - sinh&#178; z = 1</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 2: VECTOR GEOMETRY & TRIANGLE INEQUALITIES
+         ========================================== -->
+    <g transform="translate(1960, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#goldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#fbbf24" font-size="28" font-weight="800" class="font-sans">02. ARGAND GEOMETRY &amp; TRIANGLE INEQUALITIES</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Parallelogram law of addition // Distance metric // Absolute extrema bounds</text>
+
+        <!-- Sub-card 1: Triangle Inequalities -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">FUNDAMENTAL TRIANGLE INEQUALITIES</text>
+
+            <text x="24" y="80" fill="#e2e8f0" font-size="18" class="font-mono"><tspan fill="#34d399" font-weight="700">Upper Bound (Standard):</tspan> |z&#8321; + z&#8322;| &#8804; |z&#8321;| + |z&#8322;|</text>
+            <text x="24" y="112" fill="#94a3b8" font-size="16" class="font-sans">• Equality holds iff arg(z&#8321;) = arg(z&#8322;) (vectors are collinear &amp; codirectional)</text>
+
+            <text x="24" y="160" fill="#e2e8f0" font-size="18" class="font-mono"><tspan fill="#f43f5e" font-weight="700">Lower Bound (Reverse):</tspan> |z&#8321; - z&#8322;| &#8805; ||z&#8321;| - |z&#8322;||</text>
+            <text x="24" y="192" fill="#94a3b8" font-size="16" class="font-sans">• Equality holds iff arg(z&#8321;) = arg(z&#8322;) (same direction, subtracting)</text>
+
+            <text x="24" y="240" fill="#e2e8f0" font-size="18" class="font-mono"><tspan fill="#fbbf24" font-weight="700">Full Combined Sandwich:</tspan> ||z&#8321;| - |z&#8322;|| &#8804; |z&#8321; &#177; z&#8322;| &#8804; |z&#8321;| + |z&#8322;|</text>
+            <text x="24" y="272" fill="#94a3b8" font-size="15" class="font-sans">• General n-vector bound: |&#8721; z&#7522;| &#8804; &#8721; |z&#7522;|</text>
+            <text x="24" y="300" fill="#38bdf8" font-size="15" class="font-mono">• Distance metric: dist(z&#8321;, z&#8322;) = |z&#8321; - z&#8322;| = &#8730;((x&#8321;-x&#8322;)&#178; + (y&#8321;-y&#8322;)&#178;)</text>
+        </g>
+
+        <!-- Sub-card 2: Extrema Bounds Problem Drill -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">GATE PARADIGM: EXTREMA OF |z + w| ON A CIRCLE</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="17" class="font-mono"><tspan fill="#fbbf24" font-weight="700">Given:</tspan> |z| = R (circle of radius R centered at origin)</text>
+            <text x="24" y="105" fill="#94a3b8" font-size="16" class="font-sans">Find maximum and minimum values of |z + z&#8320;| where z&#8320; is a fixed point.</text>
+
+            <g transform="translate(24, 125)">
+                <rect x="0" y="0" width="790" height="170" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#34d399" font-size="18" font-weight="700" class="font-mono">MAXIMUM VALUE:</text>
+                <text x="220" y="35" fill="#e2e8f0" font-size="18" class="font-mono">|z + z&#8320;|&#7522;&#8336;&#8339; = |z| + |z&#8320;| = R + |z&#8320;|</text>
+                <text x="20" y="65" fill="#94a3b8" font-size="15" class="font-sans">Occurs when z and z&#8320; point in the exact same direction.</text>
+
+                <text x="20" y="105" fill="#f43f5e" font-size="18" font-weight="700" class="font-mono">MINIMUM VALUE:</text>
+                <text x="220" y="105" fill="#e2e8f0" font-size="18" class="font-mono">|z + z&#8320;|&#7522;&#7522;&#8345; = ||z| - |z&#8320;|| = |R - |z&#8320;||</text>
+                <text x="20" y="135" fill="#94a3b8" font-size="15" class="font-sans">Occurs when z and z&#8320; point in opposite directions.</text>
+                <text x="20" y="160" fill="#38bdf8" font-size="14" class="font-mono">&#9733; PrepFusion Drill: If |z| = 2, max |z - 3 - 4i| = 2 + 5 = 7, min = |2 - 5| = 3.</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Parallelogram Law & De Moivre's Theorem -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#c084fc" font-size="20" font-weight="700" class="font-mono">PARALLELOGRAM EQUALITY &amp; DE MOIVRE'S POWER EXPANSION THEOREM</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">PARALLELOGRAM IDENTITY (DIAGONAL LAW)</text>
+                <text x="20" y="75" fill="#e2e8f0" font-size="20" font-weight="700" class="font-mono">|z&#8321; + z&#8322;|&#178; + |z&#8321; - z&#8322;|&#178; = 2 (|z&#8321;|&#178; + |z&#8322;|&#178;)</text>
+                <text x="20" y="115" fill="#94a3b8" font-size="16" class="font-sans">• Sum of squares of diagonal lengths = Sum of squares of all 4 side lengths</text>
+                <text x="20" y="150" fill="#94a3b8" font-size="16" class="font-sans">• Proof: Expand (z&#8321;+z&#8322;)(z&#772;&#8321;+z&#772;&#8322;) + (z&#8321;-z&#8322;)(z&#772;&#8321;-z&#772;&#8322;) = 2(z&#8321;z&#772;&#8321; + z&#8322;z&#772;&#8322;)</text>
+                <text x="20" y="190" fill="#fbbf24" font-size="15" class="font-sans">&#9733; Crucial GATE shortcut for finding unknown diagonal when side lengths &amp; one diagonal are given!</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">DE MOIVRE'S THEOREM (FOR POWERS)</text>
+                <text x="20" y="75" fill="#e2e8f0" font-size="20" font-weight="700" class="font-mono">[r (cos &#952; + i sin &#952;)]&#8319; = r&#8319; (cos n&#952; + i sin n&#952;)</text>
+                <text x="20" y="115" fill="#94a3b8" font-size="16" class="font-sans">• Holds for all integers n &#8712; &#8484; (positive, zero, and negative)</text>
+                <text x="20" y="150" fill="#94a3b8" font-size="16" class="font-sans">• For fractional n = p/q: yields q distinct roots spaced uniformly around circle</text>
+                <text x="20" y="190" fill="#34d399" font-size="15" class="font-sans">&#9733; Euler equivalent: (e&#7522;&#7780;)&#8319; = e&#7522;&#8319;&#7780;. Simplifies polynomial trigonometric expansions.</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 3: ROOTS OF UNITY & REGULAR POLYGON TOPOLOGY
+         ========================================== -->
+    <g transform="translate(80, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#emeraldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#34d399" font-size="28" font-weight="800" class="font-sans">03. N-TH ROOTS OF UNITY &amp; POLYGONAL SYMMETRY</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Roots equation z&#8319; = 1 // Geometric distribution // Fundamental sum and product identities</text>
+
+        <!-- Sub-card 1: Root Formula & Cube Roots of Unity -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">N-TH ROOTS OF UNITY FORMULA</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="17" class="font-mono">z&#8319; = 1 = e&#7522;&#178;&#7504;&#7510; &#8658; <tspan fill="#38bdf8" font-weight="700">&#969;&#8342; = e&#7522;(&#178;&#7504;&#7510;/&#8319;)</tspan>, k = 0, 1, 2, ..., n-1</text>
+            <text x="24" y="105" fill="#94a3b8" font-size="15" class="font-sans">• Vertices of a regular n-gon inscribed inside unit circle |z| = 1.</text>
+            <text x="24" y="130" fill="#94a3b8" font-size="15" class="font-sans">• Angle between consecutive roots: &#916;&#952; = 2&#960; / n.</text>
+
+            <g transform="translate(20, 150)">
+                <rect x="0" y="0" width="800" height="210" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#34d399" font-size="18" font-weight="700" class="font-mono">CUBE ROOTS OF UNITY (n = 3): z&#179; = 1</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="16" class="font-mono">&#969;&#8320; = 1</text>
+                <text x="20" y="95" fill="#e2e8f0" font-size="16" class="font-mono">&#969;&#8321; = &#969; = e&#7522;&#178;&#7510;/&#179; = -1/2 + i &#8730;3/2</text>
+                <text x="20" y="125" fill="#e2e8f0" font-size="16" class="font-mono">&#969;&#8322; = &#969;&#178; = &#969;&#772; = e&#7522;&#8308;&#7510;/&#179; = -1/2 - i &#8730;3/2</text>
+                <text x="20" y="160" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">&#9733; Fundamental Properties: 1 + &#969; + &#969;&#178; = 0  and  &#969;&#179; = 1</text>
+                <text x="20" y="190" fill="#38bdf8" font-size="15" class="font-mono">&#9733; 1 + &#969;&#7506; + &#969;&#178;&#7506; = 3 (if r is multiple of 3) else 0</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Fourth & N-th Roots Identities -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">FOURTH ROOTS &amp; GENERAL ROOT IDENTITIES</text>
+
+            <g transform="translate(20, 55)">
+                <rect x="0" y="0" width="800" height="135" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">FOURTH ROOTS OF UNITY (n = 4): z&#8308; = 1</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="16" class="font-mono">Roots: {1, i, -1, -i} = {e&#7522;&#8304;, e&#7522;&#7510;&#7516;&#178;, e&#7522;&#7510;, e&#7522;&#179;&#7510;&#7516;&#178;}</text>
+                <text x="20" y="90" fill="#94a3b8" font-size="15" class="font-sans">• Vertices of a square centered at origin with edge length &#8730;2</text>
+                <text x="20" y="118" fill="#34d399" font-size="15" class="font-mono">• Sum: 1 + i + (-1) + (-i) = 0 | Product: 1 &#183; i &#183; (-1) &#183; (-i) = -1</text>
+            </g>
+
+            <g transform="translate(20, 205)">
+                <rect x="0" y="0" width="800" height="160" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#c084fc" font-size="17" font-weight="700" class="font-mono">N-TH ROOTS SUM &amp; PRODUCT THEOREMS</text>
+                <text x="20" y="65" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">Sum of all n roots = &#8721;&#7503;&#8332;&#8320; &#969;&#7503; = 0 (for any n &#8805; 2)</text>
+                <text x="20" y="100" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">Product of all n roots = &#8719;&#7503;&#8332;&#8320; &#969;&#7503; = (-1)&#8319;&#8315;&#185;</text>
+                <text x="20" y="135" fill="#94a3b8" font-size="15" class="font-sans">• Geometric proof: Centroid of regular n-gon is exactly at origin (0,0)</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: General Factorization & PrepFusion Drills -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">POLYNOMIAL FACTORIZATION &amp; ROOTS DRILL MATRIX</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="820" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">CYCLOTOMIC POLYNOMIAL SPLITTING</text>
+                <text x="20" y="68" fill="#e2e8f0" font-size="16" class="font-mono">z&#8319; - 1 = (z - 1)(z - &#969;)(z - &#969;&#178;) ... (z - &#969;&#8319;&#8315;&#185;)</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="16" class="font-mono">z&#8319;&#8315;&#185; + z&#8319;&#8315;&#178; + ... + z + 1 = &#8719;&#7503;&#8332;&#185; (z - &#969;&#7503;)</text>
+                <text x="20" y="145" fill="#94a3b8" font-size="15" class="font-sans">Setting z = 1 yields: &#8719;&#7503;&#8332;&#185; (1 - &#969;&#7503;) = n</text>
+                <text x="20" y="180" fill="#fbbf24" font-size="15" class="font-sans">&#9733; For cube roots: (1 - &#969;)(1 - &#969;&#178;) = 1 - (&#969;+&#969;&#178;) + &#969;&#179; = 1 - (-1) + 1 = 3</text>
+                <text x="20" y="210" fill="#34d399" font-size="14" class="font-mono">&#9733; Repeatedly tested in GATE for product evaluations without manual angles!</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="820" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#34d399" font-size="17" font-weight="700" class="font-mono">ARBITRARY CONSTANT ROOTS: z&#8319; = c</text>
+                <text x="20" y="68" fill="#e2e8f0" font-size="16" class="font-mono">Let c = R e&#7522;&#981;. Then: z&#7503; = R&#185;/&#8319; e&#7522;((&#981; + 2k&#960;)/n)</text>
+                <text x="20" y="105" fill="#94a3b8" font-size="15" class="font-sans">• Magnitude of all roots is identical: |z&#7503;| = R&#185;/&#8319; = |c|&#185;/&#8319;</text>
+                <text x="20" y="140" fill="#94a3b8" font-size="15" class="font-sans">• Roots form a regular polygon rotated by phase &#981;/n</text>
+                <text x="20" y="180" fill="#f43f5e" font-size="15" class="font-sans">&#9888; Example: z&#8308; = -16 = 16 e&#7522;&#7510; &#8658; |z| = 2, &#952;&#7503; = (&#960; + 2k&#960;)/4 = &#960;/4, 3&#960;/4, 5&#960;/4, 7&#960;/4</text>
+                <text x="20" y="210" fill="#38bdf8" font-size="14" class="font-mono">Roots: 2(1&#177;i)/&#8730;2, 2(-1&#177;i)/&#8730;2 = &#177;&#8730;2 &#177; i&#8730;2 (all 4 lie on circle radius 2)</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 4: DOMAIN TOPOLOGY & REGION CONNECTEDNESS
+         ========================================== -->
+    <g transform="translate(1960, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#purpleGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#c084fc" font-size="28" font-weight="800" class="font-sans">04. COMPLEX DOMAIN TOPOLOGY &amp; CONNECTEDNESS</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Neighborhoods // Interior &amp; Boundary Points // Simply vs Multiply Connected Domains</text>
+
+        <!-- Sub-card 1: Neighborhoods & Set Definitions -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">SET TOPOLOGY FOUNDATIONS</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="17" class="font-mono"><tspan fill="#38bdf8" font-weight="700">&#948;-Neighborhood (Open Disk):</tspan> N&#948;(z&#8320;) = {z &#8712; &#8450; : |z - z&#8320;| &lt; &#948;}</text>
+            <text x="24" y="110" fill="#e2e8f0" font-size="17" class="font-mono"><tspan fill="#fbbf24" font-weight="700">Deleted Neighborhood:</tspan> 0 &lt; |z - z&#8320;| &lt; &#948; (punctured disk)</text>
+            <text x="24" y="145" fill="#e2e8f0" font-size="17" class="font-mono"><tspan fill="#34d399" font-weight="700">Interior Point:</tspan> &#8707; &#948;&gt;0 such that N&#948;(z&#8320;) &#8834; S</text>
+            <text x="24" y="180" fill="#e2e8f0" font-size="17" class="font-mono"><tspan fill="#f43f5e" font-weight="700">Boundary Point:</tspan> Every N&#948;(z&#8320;) intersects both S and S&#7580;</text>
+            <text x="24" y="215" fill="#e2e8f0" font-size="17" class="font-mono"><tspan fill="#c084fc" font-weight="700">Open Set:</tspan> Every point of S is an interior point</text>
+            <text x="24" y="250" fill="#e2e8f0" font-size="17" class="font-mono"><tspan fill="#94a3b8" font-weight="700">Closed Set:</tspan> Contains all its boundary points (S&#772; = S)</text>
+
+            <g transform="translate(20, 275)">
+                <rect x="0" y="0" width="800" height="85" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">DOMAIN (REGION) DEFINITION:</text>
+                <text x="20" y="60" fill="#94a3b8" font-size="15" class="font-sans">An open set D is a <tspan fill="#38bdf8" font-weight="700">Domain</tspan> if it is connected (any two points can be joined by a polygonal path inside D).</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Simply vs Multiply Connected -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">SIMPLY VS MULTIPLY CONNECTED DOMAINS</text>
+
+            <g transform="translate(20, 55)">
+                <rect x="0" y="0" width="800" height="145" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="18" font-weight="700" class="font-mono">SIMPLY CONNECTED DOMAIN (NO HOLES)</text>
+                <text x="20" y="62" fill="#e2e8f0" font-size="16" class="font-sans">• Every simple closed curve C lying entirely in D can be contracted to a point without leaving D.</text>
+                <text x="20" y="92" fill="#e2e8f0" font-size="16" class="font-sans">• The interior of C contains ONLY points belonging to D.</text>
+                <text x="20" y="125" fill="#38bdf8" font-size="15" class="font-mono">&#9733; Required condition for Cauchy-Goursat theorem: &#8750;&#7580; f(z) dz = 0!</text>
+            </g>
+
+            <g transform="translate(20, 215)">
+                <rect x="0" y="0" width="800" height="145" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#f43f5e" font-size="18" font-weight="700" class="font-mono">MULTIPLY CONNECTED DOMAIN (CONTAINS HOLES)</text>
+                <text x="20" y="62" fill="#e2e8f0" font-size="16" class="font-sans">• Domain has one or more "holes" or excluded singular points.</text>
+                <text x="20" y="92" fill="#e2e8f0" font-size="16" class="font-sans">• An annulus r&#8321; &lt; |z - z&#8320;| &lt; r&#8322; has 1 hole (doubly connected).</text>
+                <text x="20" y="125" fill="#fbbf24" font-size="15" class="font-mono">&#9733; Requires cross-cuts or Laurent series rather than single Taylor expansion!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Standard Geometric Loci Matrix -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">GATE EXAM LOCUS RECOGNITION ARSENAL</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">CIRCLES &amp; DISKS</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="16" class="font-mono">|z - z&#8320;| = R &#8658; Circle center z&#8320;, rad R</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="16" class="font-mono">|z - z&#8320;| &lt; R &#8658; Open disk (interior)</text>
+                <text x="20" y="140" fill="#e2e8f0" font-size="16" class="font-mono">|z - z&#8320;| &gt; R &#8658; Exterior domain</text>
+                <text x="20" y="180" fill="#94a3b8" font-size="15" class="font-sans">Annular Ring: R&#8321; &lt; |z - z&#8320;| &lt; R&#8322;</text>
+                <text x="20" y="210" fill="#34d399" font-size="14" class="font-mono">Foundation for Laurent series domains</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#34d399" font-size="17" font-weight="700" class="font-mono">LINES &amp; BISECTORS</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="16" class="font-mono">|z - z&#8321;| = |z - z&#8322;|</text>
+                <text x="20" y="105" fill="#94a3b8" font-size="15" class="font-sans">&#8658; Perpendicular bisector of segment joining z&#8321; and z&#8322;</text>
+                <text x="20" y="145" fill="#e2e8f0" font-size="16" class="font-mono">Re(z) = c &#8658; Vertical line x = c</text>
+                <text x="20" y="180" fill="#e2e8f0" font-size="16" class="font-mono">Im(z) = c &#8658; Horizontal line y = c</text>
+                <text x="20" y="210" fill="#fbbf24" font-size="14" class="font-mono">Arg(z) = &#952;&#8320; &#8658; Ray emanating from origin</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#c084fc" font-size="17" font-weight="700" class="font-mono">APOLLONIAN CIRCLE LOCUS</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="16" class="font-mono">|z - z&#8321;| / |z - z&#8322;| = k</text>
+                <text x="20" y="105" fill="#38bdf8" font-size="16" class="font-sans">• If k = 1: Straight line (perp bisector)</text>
+                <text x="20" y="140" fill="#fbbf24" font-size="16" class="font-sans">• If k &#8800; 1: True Circle (Circle of Apollonius)</text>
+                <text x="20" y="175" fill="#94a3b8" font-size="15" class="font-sans">• Frequently tested in Bilinear mapping boundary problems in GATE EC &amp; EE!</text>
+                <text x="20" y="210" fill="#34d399" font-size="14" class="font-mono">Center &amp; radius derived via Cartesian expansion</text>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Bottom Engineering Telemetry Strip -->
+    <g transform="translate(80, 2060)">
+        <line x1="0" y1="0" x2="3680" y2="0" stroke="#1e293b" stroke-width="2" />
+        <text x="10" y="24" fill="#64748b" font-size="16" class="font-mono">COMPLEX ANALYSIS MATHEMATICAL BLUEPRINT // SCALE: 1.0 NATIVE // GATE / ESE / ISRO EXCELLENCE SUITE</text>
+        <text x="3670" y="24" fill="#64748b" font-size="16" text-anchor="end" class="font-mono">PREPFUSION ENGINEERING MATHEMATICS // SYSTEM VERIFIED</text>
+    </g>
+</svg>

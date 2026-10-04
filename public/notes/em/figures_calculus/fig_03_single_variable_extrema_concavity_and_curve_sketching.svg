@@ -1,0 +1,359 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="480" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="240" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 03</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">SINGLE-VARIABLE OPTIMIZATION &amp; CURVE SKETCHING ENGINE</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">Critical vs Stationary Points, 1st/2nd/Higher Derivative Tests, Points of Inflection, and Global Extrema Protocol</text>
+  </g>
+
+  <!-- COLUMN 1: CRITICAL POINTS & FIRST DERIVATIVE TEST -->
+  <g transform="translate(120, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. CRITICAL POINTS &amp; FIRST DERIVATIVE TEST</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="230" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#38bdf8" font-size="24" font-weight="700">Critical Points vs Stationary Points Distinction</text>
+      
+      <rect x="30" y="80" width="480" height="120" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="30" y="115" fill="#38bdf8" font-size="20" font-weight="700">Critical Point x₀ ∈ Dom(f)</text>
+      <text x="30" y="150" fill="#cbd5e1" font-size="18">f'(x₀) = 0  OR  f'(x₀) does NOT exist</text>
+      <text x="30" y="180" fill="#94a3b8" font-size="16">Broad superset including corners, cusps &amp; horizontal tangents.</text>
+
+      <rect x="540" y="80" width="480" height="120" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="30" y="115" fill="#fbbf24" font-size="20" font-weight="700">Stationary Point x₀ ∈ Dom(f)</text>
+      <text x="30" y="150" fill="#f8fafc" font-size="18">f'(x₀) = 0 STRICTLY</text>
+      <text x="30" y="180" fill="#94a3b8" font-size="16">Tangent is strictly horizontal (zero slope). Every stat point is critical.</text>
+    </g>
+
+    <!-- First Derivative Test Scheme -->
+    <g transform="translate(40, 370)">
+      <text x="10" y="30" fill="#34d399" font-size="22" font-weight="700">FIRST DERIVATIVE TEST • SIGN TRANSITIONS</text>
+
+      <g transform="translate(0, 50)">
+        <rect x="0" y="0" width="330" height="250" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">Local Maximum</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">f'(x) changes sign from:</text>
+        <text x="25" y="115" fill="#34d399" font-size="28" font-weight="800">(+) ➔ (-)</text>
+        <text x="25" y="150" fill="#cbd5e1" font-size="16">Rising then Falling crest.</text>
+        <path d="M 50 220 Q 165 160 280 220" stroke="#34d399" stroke-width="3" fill="none"/>
+        <circle cx="165" cy="180" r="5" fill="#34d399"/>
+      </g>
+
+      <g transform="translate(360, 50)">
+        <rect x="0" y="0" width="330" height="250" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#38bdf8" font-size="22" font-weight="700">Local Minimum</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">f'(x) changes sign from:</text>
+        <text x="25" y="115" fill="#38bdf8" font-size="28" font-weight="800">(-) ➔ (+)</text>
+        <text x="25" y="150" fill="#cbd5e1" font-size="16">Falling then Rising trough.</text>
+        <path d="M 50 180 Q 165 240 280 180" stroke="#38bdf8" stroke-width="3" fill="none"/>
+        <circle cx="165" cy="220" r="5" fill="#38bdf8"/>
+      </g>
+
+      <g transform="translate(720, 50)">
+        <rect x="0" y="0" width="330" height="250" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">Point of Inflection</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">f'(x) does NOT change sign:</text>
+        <text x="25" y="115" fill="#fbbf24" font-size="26" font-weight="800">(+)➔(+) or (-)➔(-)</text>
+        <text x="25" y="150" fill="#cbd5e1" font-size="16">Monotonic terrace (e.g. x³).</text>
+        <path d="M 50 230 Q 165 200 280 170" stroke="#fbbf24" stroke-width="3" fill="none"/>
+        <circle cx="165" cy="200" r="5" fill="#fbbf24"/>
+      </g>
+    </g>
+
+    <g transform="translate(40, 710)">
+      <rect x="0" y="0" width="1050" height="90" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="30" y="40" fill="#fbbf24" font-size="18" font-weight="700">Fermat's Theorem on Extrema:</text>
+      <text x="30" y="70" fill="#cbd5e1" font-size="17">If f(x) has a local extremum at x = c and f is differentiable at c, then f'(c) MUST EQUAL 0.</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 1 BOTTOM: SECOND & HIGHER DERIVATIVE TESTS -->
+  <g transform="translate(120, 1180)">
+    <rect x="0" y="0" width="1140" height="880" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#fbbf24"/>
+    <text x="45" y="45" fill="#fbbf24" font-size="28" font-weight="700">2. SECOND &amp; HIGHER-ORDER DERIVATIVE TESTS</text>
+
+    <!-- 2nd Derivative Test -->
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="300" rx="16" fill="url(#cardGradAmber)" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#fbbf24" font-size="24" font-weight="700">Second Derivative Test Protocol (When f'(c) = 0)</text>
+
+      <g transform="translate(30, 80)">
+        <rect x="0" y="0" width="310" height="180" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+        <text x="20" y="35" fill="#34d399" font-size="20" font-weight="700">f''(c) &lt; 0 ⟹ MAX</text>
+        <text x="20" y="70" fill="#cbd5e1" font-size="16">• Concave DOWNWARD (∩)</text>
+        <text x="20" y="95" fill="#cbd5e1" font-size="16">• Slope is strictly decreasing</text>
+        <text x="20" y="125" fill="#f8fafc" font-size="18" font-weight="600">Local Maximum at c</text>
+      </g>
+
+      <g transform="translate(365, 80)">
+        <rect x="0" y="0" width="310" height="180" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+        <text x="20" y="35" fill="#38bdf8" font-size="20" font-weight="700">f''(c) &gt; 0 ⟹ MIN</text>
+        <text x="20" y="70" fill="#cbd5e1" font-size="16">• Concave UPWARD (∪)</text>
+        <text x="20" y="95" fill="#cbd5e1" font-size="16">• Slope is strictly increasing</text>
+        <text x="20" y="125" fill="#f8fafc" font-size="18" font-weight="600">Local Minimum at c</text>
+      </g>
+
+      <g transform="translate(700, 80)">
+        <rect x="0" y="0" width="320" height="180" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+        <text x="20" y="35" fill="#f43f5e" font-size="20" font-weight="700">f''(c) = 0 ⟹ FAILS</text>
+        <text x="20" y="70" fill="#cbd5e1" font-size="16">• Test is INCONCLUSIVE</text>
+        <text x="20" y="95" fill="#cbd5e1" font-size="16">• Could be Max, Min or Inflection</text>
+        <text x="20" y="125" fill="#fbbf24" font-size="17" font-weight="700">Use Higher Derivative Test!</text>
+      </g>
+    </g>
+
+    <!-- Higher-Order Derivative Test Engine -->
+    <g transform="translate(40, 440)">
+      <rect x="0" y="0" width="1050" height="390" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#38bdf8" font-size="22" font-weight="700">General Higher-Order Derivative Decision Engine</text>
+      <text x="30" y="85" fill="#cbd5e1" font-size="18">Let f'(c) = f''(c) = ... = f^{(n-1)}(c) = 0, and f^{(n)}(c) ≠ 0 (First non-vanishing derivative):</text>
+
+      <g transform="translate(30, 115)">
+        <rect x="0" y="0" width="480" height="230" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="30" y="45" fill="#fbbf24" font-size="24" font-weight="700">Case A: Order n is ODD</text>
+        <text x="30" y="85" fill="#f8fafc" font-size="20" font-weight="600">x = c is a POINT OF INFLECTION</text>
+        <text x="30" y="125" fill="#cbd5e1" font-size="17">• Neither a local maximum nor minimum!</text>
+        <text x="30" y="155" fill="#cbd5e1" font-size="17">• Canonical Example: f(x) = x³ at x = 0</text>
+        <text x="30" y="185" fill="#94a3b8" font-size="16">  f'(0)=0, f''(0)=0, f'''(0)=6 ≠ 0 (n=3 is odd ⟹ inflection).</text>
+      </g>
+
+      <g transform="translate(540, 115)">
+        <rect x="0" y="0" width="480" height="230" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+        <text x="30" y="45" fill="#34d399" font-size="24" font-weight="700">Case B: Order n is EVEN</text>
+        <text x="30" y="85" fill="#f8fafc" font-size="20" font-weight="600">x = c is a LOCAL EXTREMUM</text>
+        <text x="30" y="125" fill="#34d399" font-size="18">• If f^{(n)}(c) &gt; 0 ⟹ Local MINIMUM (e.g. x⁴)</text>
+        <text x="30" y="155" fill="#f43f5e" font-size="18">• If f^{(n)}(c) &lt; 0 ⟹ Local MAXIMUM (e.g. -x⁴)</text>
+        <text x="30" y="185" fill="#cbd5e1" font-size="16">  Even-order curvature acts identical to 2nd derivative.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: CONCAVITY & CURVE SKETCHING -->
+  <g transform="translate(1300, 310)">
+    <rect x="0" y="0" width="1180" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1180" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">3. CONCAVITY, CONVEXITY &amp; INFLECTION POINTS</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="530" height="320" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">Concave Upward (Convex ∪)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="17">• f''(x) &gt; 0 across interval.</text>
+      <text x="25" y="105" fill="#cbd5e1" font-size="17">• Tangent lines lie BELOW the curve.</text>
+      <text x="25" y="135" fill="#cbd5e1" font-size="17">• First derivative f'(x) is monotonically increasing.</text>
+      <path d="M 80 270 Q 265 310 450 170" stroke="#34d399" stroke-width="3.5" fill="none"/>
+      <!-- Tangent line below -->
+      <line x1="120" y1="290" x2="350" y2="270" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4,4"/>
+      <text x="250" y="250" fill="#fbbf24" font-size="15">Tangent below</text>
+    </g>
+
+    <g transform="translate(610, 110)">
+      <rect x="0" y="0" width="530" height="320" rx="14" fill="#1e293b" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#f43f5e" font-size="22" font-weight="700">Concave Downward (Concave ∩)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="17">• f''(x) &lt; 0 across interval.</text>
+      <text x="25" y="105" fill="#cbd5e1" font-size="17">• Tangent lines lie ABOVE the curve.</text>
+      <text x="25" y="135" fill="#cbd5e1" font-size="17">• First derivative f'(x) is monotonically decreasing.</text>
+      <path d="M 80 270 Q 265 150 450 250" stroke="#f43f5e" stroke-width="3.5" fill="none"/>
+      <!-- Tangent line above -->
+      <line x1="120" y1="180" x2="380" y2="180" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4,4"/>
+      <text x="250" y="170" fill="#fbbf24" font-size="15">Tangent above</text>
+    </g>
+
+    <!-- Point of Inflection Definition Card -->
+    <g transform="translate(40, 460)">
+      <rect x="0" y="0" width="1100" height="340" rx="16" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#fbbf24" font-size="24" font-weight="700">Point of Inflection Criteria</text>
+      <text x="30" y="85" fill="#cbd5e1" font-size="19">A point (c, f(c)) is a Point of Inflection IF AND ONLY IF:</text>
+
+      <g transform="translate(30, 110)">
+        <rect x="0" y="0" width="490" height="100" rx="10" fill="#1e293b" stroke="#334155"/>
+        <text x="25" y="40" fill="#fbbf24" font-size="19" font-weight="700">Condition 1 (Necessary):</text>
+        <text x="25" y="75" fill="#f8fafc" font-size="20">f''(c) = 0  OR  f''(c) is undefined</text>
+      </g>
+
+      <g transform="translate(550, 110)">
+        <rect x="0" y="0" width="490" height="100" rx="10" fill="#1e293b" stroke="#334155"/>
+        <text x="25" y="40" fill="#34d399" font-size="19" font-weight="700">Condition 2 (Sufficient):</text>
+        <text x="25" y="75" fill="#f8fafc" font-size="20">f''(x) CHANGES SIGN across c</text>
+      </g>
+
+      <rect x="30" y="230" width="1010" height="80" rx="10" fill="#7f1d1d" fill-opacity="0.3" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="50" y="278" fill="#fca5a5" font-size="18" font-weight="700">CRITICAL TRAP: f''(c) = 0 is NOT sufficient! For f(x) = x⁴, f''(0) = 0, but f''(x) = 12x² ≥ 0 never changes sign. x = 0 is a MINIMUM, NOT an inflection point!</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2 BOTTOM: GLOBAL EXTREMA & OPTIMIZATION -->
+  <g transform="translate(1300, 1180)">
+    <rect x="0" y="0" width="1180" height="880" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1180" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">4. GLOBAL EXTREMA ON CLOSED INTERVALS [a, b]</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1100" height="330" rx="16" fill="url(#cardGradCyan)" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#38bdf8" font-size="24" font-weight="700">The 4-Step Absolute Extrema Search Protocol</text>
+
+      <g transform="translate(30, 75)">
+        <text x="0" y="25" fill="#f8fafc" font-size="19" font-weight="700">Step 1: Find all critical points in open interval (a, b)</text>
+        <text x="0" y="55" fill="#cbd5e1" font-size="17">Solve f'(x) = 0 and locate points where f'(x) does not exist: c₁, c₂, ..., cₖ ∈ (a, b).</text>
+
+        <text x="0" y="105" fill="#f8fafc" font-size="19" font-weight="700">Step 2: Evaluate f(x) at all interior critical points</text>
+        <text x="0" y="135" fill="#cbd5e1" font-size="17">Calculate values: f(c₁), f(c₂), ..., f(cₖ).</text>
+
+        <text x="0" y="185" fill="#f8fafc" font-size="19" font-weight="700">Step 3: Evaluate f(x) at BOTH boundary endpoints</text>
+        <text x="0" y="215" fill="#fbbf24" font-size="18" font-weight="700">Calculate values: f(a) and f(b). NEVER SKIP BOUNDARIES!</text>
+      </g>
+    </g>
+
+    <!-- Master Extrema Equation Box -->
+    <g transform="translate(40, 470)">
+      <rect x="0" y="0" width="1100" height="150" rx="14" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+      <text x="40" y="50" fill="#34d399" font-size="24" font-weight="800">GLOBAL MAXIMUM = max { f(a), f(b), f(c₁), f(c₂), ... }</text>
+      <text x="40" y="110" fill="#f43f5e" font-size="24" font-weight="800">GLOBAL MINIMUM = min { f(a), f(b), f(c₁), f(c₂), ... }</text>
+    </g>
+
+    <!-- High-Yield Trigonometric Extrema Card -->
+    <g transform="translate(40, 650)">
+      <rect x="0" y="0" width="1100" height="190" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="30" y="40" fill="#fbbf24" font-size="20" font-weight="700">High-Yield Trigonometric Bounds Formula:</text>
+      <text x="30" y="75" fill="#e2e8f0" font-size="22" font-weight="800">For f(x) = A cos x + B sin x :  Range = [-√(A² + B²), +√(A² + B²)]</text>
+      <text x="30" y="115" fill="#cbd5e1" font-size="17">• Maximum occurs at: tan x = B / A (in quadrant matching signs)</text>
+      <text x="30" y="150" fill="#38bdf8" font-size="17">• GATE Trap: If interval is restricted (e.g. [0, π/2]), boundary evaluation is mandatory!</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: COMPLETE CURVE SKETCHING ENGINE -->
+  <g transform="translate(2520, 310)">
+    <rect x="0" y="0" width="1200" height="1750" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1200" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#fbbf24"/>
+    <text x="45" y="45" fill="#fbbf24" font-size="28" font-weight="700">5. 6-STEP COMPLETE CURVE SKETCHING PIPELINE</text>
+
+    <!-- 6 Sequential Steps -->
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1120" height="1580" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+
+      <!-- Step 1 -->
+      <g transform="translate(30, 40)">
+        <rect x="0" y="0" width="1060" height="120" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="25" y="35" fill="#38bdf8" font-size="20" font-weight="700">Step 1: Domain &amp; Intercepts</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">• Domain: Exclude division by zero, negative radicands, log(≤0).</text>
+        <text x="25" y="100" fill="#cbd5e1" font-size="17">• Intercepts: y-intercept = f(0); x-intercepts = roots of f(x) = 0.</text>
+      </g>
+
+      <!-- Step 2 -->
+      <g transform="translate(30, 185)">
+        <rect x="0" y="0" width="1060" height="120" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="25" y="35" fill="#38bdf8" font-size="20" font-weight="700">Step 2: Symmetries &amp; Periodicity</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">• Even f(-x) = f(x) ⟹ Symmetric about y-axis (sketch x ≥ 0 then reflect).</text>
+        <text x="25" y="100" fill="#cbd5e1" font-size="17">• Odd f(-x) = -f(x) ⟹ Symmetric about origin (180° rotation).</text>
+      </g>
+
+      <!-- Step 3 -->
+      <g transform="translate(30, 330)">
+        <rect x="0" y="0" width="1060" height="135" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+        <text x="25" y="35" fill="#fbbf24" font-size="20" font-weight="700">Step 3: Asymptotes Analysis</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">• Vertical: Points x = a where lim_{x➔a} f(x) = ±∞.</text>
+        <text x="25" y="95" fill="#cbd5e1" font-size="17">• Horizontal: Lines y = L where lim_{x➔±∞} f(x) = L.</text>
+        <text x="25" y="120" fill="#cbd5e1" font-size="17">• Slant / Oblique: y = mx + c when degree(Num) = degree(Denom) + 1.</text>
+      </g>
+
+      <!-- Step 4 -->
+      <g transform="translate(30, 490)">
+        <rect x="0" y="0" width="1060" height="135" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+        <text x="25" y="35" fill="#34d399" font-size="20" font-weight="700">Step 4: Monotonicity &amp; Critical Points</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">• Compute f'(x), find all zeros and undefined points.</text>
+        <text x="25" y="95" fill="#cbd5e1" font-size="17">• Construct sign chart for f'(x): intervals of increase (+) and decrease (-).</text>
+        <text x="25" y="120" fill="#cbd5e1" font-size="17">• Classify local extrema via first derivative test.</text>
+      </g>
+
+      <!-- Step 5 -->
+      <g transform="translate(30, 650)">
+        <rect x="0" y="0" width="1060" height="135" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.2"/>
+        <text x="25" y="35" fill="#f43f5e" font-size="20" font-weight="700">Step 5: Concavity &amp; Inflection Points</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">• Compute f''(x), find zeros and sign change points.</text>
+        <text x="25" y="95" fill="#cbd5e1" font-size="17">• Intervals of concave up (f'' &gt; 0) and concave down (f'' &lt; 0).</text>
+        <text x="25" y="120" fill="#cbd5e1" font-size="17">• Mark inflection points where curvature flips.</text>
+      </g>
+
+      <!-- Step 6 (Visual synthesis) -->
+      <g transform="translate(30, 810)">
+        <rect x="0" y="0" width="1060" height="720" rx="12" fill="#111827" stroke="#38bdf8" stroke-width="1.5"/>
+        <text x="25" y="45" fill="#38bdf8" font-size="22" font-weight="700">Step 6: Master Worked Example • f(x) = x³ - 3x</text>
+        <text x="25" y="80" fill="#cbd5e1" font-size="18">• f'(x) = 3x² - 3 = 3(x + 1)(x - 1) ⟹ Critical points: x = -1, +1.</text>
+        <text x="25" y="110" fill="#cbd5e1" font-size="18">• f''(x) = 6x ⟹ Inflection point at x = 0 (f'' flips sign from - to +).</text>
+        <text x="25" y="140" fill="#34d399" font-size="18">• Local Max: (-1, 2) since f''(-1) = -6 &lt; 0. Local Min: (1, -2) since f''(1) = 6 &gt; 0.</text>
+        
+        <!-- Large High-Fidelity Cubic Waveform -->
+        <g transform="translate(530, 420)">
+          <line x1="-420" y1="0" x2="420" y2="0" stroke="#475569" stroke-width="2"/>
+          <line x1="0" y1="-240" x2="0" y2="240" stroke="#475569" stroke-width="2"/>
+          <text x="430" y="5" fill="#94a3b8" font-size="18">x</text>
+          <text x="5" y="-245" fill="#94a3b8" font-size="18">y</text>
+
+          <!-- Cubic Curve -->
+          <path d="M -300 240 C -220 80 -180 -160 -120 -160 C -60 -160 -40 0 0 0 C 40 0 60 160 120 160 C 180 160 220 -80 300 -240" stroke="#38bdf8" stroke-width="4.5" fill="none"/>
+
+          <!-- Max point (-1, 2) -->
+          <circle cx="-120" cy="-160" r="8" fill="#34d399"/>
+          <text x="-120" y="-180" fill="#34d399" font-size="20" font-weight="700" text-anchor="middle">Local Max (-1, 2)</text>
+
+          <!-- Min point (1, -2) -->
+          <circle cx="120" cy="160" r="8" fill="#f43f5e"/>
+          <text x="120" y="195" fill="#f43f5e" font-size="20" font-weight="700" text-anchor="middle">Local Min (1, -2)</text>
+
+          <!-- Inflection Point (0,0) -->
+          <circle cx="0" cy="0" r="7" fill="#fbbf24"/>
+          <text x="20" y="-15" fill="#fbbf24" font-size="18" font-weight="700">Inflection (0, 0)</text>
+
+          <!-- Intercepts -->
+          <circle cx="-208" cy="0" r="5" fill="#94a3b8"/>
+          <text x="-208" y="25" fill="#94a3b8" font-size="16" text-anchor="middle">-√3</text>
+          <circle cx="208" cy="0" r="5" fill="#94a3b8"/>
+          <text x="208" y="25" fill="#94a3b8" font-size="16" text-anchor="middle">+√3</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

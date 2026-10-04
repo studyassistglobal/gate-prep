@@ -1,0 +1,111 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid7" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid7)"/>
+
+  <!-- Title Header -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 05 • FIGURE 5.7</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">Initial Value Theorem (IVT) &amp; Final Value Theorem (FVT) Diagnostic Decision Tree &amp; Exam Safeguards</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- Left Side: Initial Value Theorem (IVT) -->
+  <g transform="translate(80, 190)">
+    <rect width="1080" height="1090" rx="16" fill="url(#panelGrad7)" stroke="#38bdf8" stroke-width="2"/>
+    <rect width="1080" height="60" rx="16" fill="#21262d"/>
+    <text x="540" y="38" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">INITIAL VALUE THEOREM (IVT) PROTOCOL</text>
+
+    <g transform="translate(40, 90)">
+      <rect width="1000" height="95" rx="10" fill="#0d1117" stroke="#38bdf8" stroke-width="2"/>
+      <text x="500" y="42" fill="#8b949e" font-size="16" text-anchor="middle">Mathematical Statement (Calculates value just after t = 0):</text>
+      <text x="500" y="78" fill="#38bdf8" font-size="26" font-weight="800" text-anchor="middle">x(0⁺) = lim_{t → 0⁺} x(t) = lim_{s → ∞} s X(s)</text>
+
+      <!-- Safety Gate 1: Properness -->
+      <rect x="0" y="130" width="1000" height="210" rx="12" fill="#161b22" stroke="#fbbf24" stroke-width="2"/>
+      <text x="30" y="165" fill="#fbbf24" font-size="19" font-weight="800">SAFETY GATE 1: RATIONAL FUNCTION PROPERNESS TEST</text>
+      <text x="30" y="195" fill="#e6edf3" font-size="16">Let X(s) = N(s) / D(s), where degree of N(s) = M, degree of D(s) = N.</text>
+
+      <rect x="30" y="215" width="940" height="105" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+      <text x="50" y="245" fill="#34d399" font-size="16" font-weight="700">Case A: Strictly Proper (M &lt; N) ⇒ IVT is 100% VALID!</text>
+      <text x="70" y="270" fill="#8b949e" font-size="14">No Dirac impulse at t = 0. x(0⁺) = lim_{s→∞} s X(s) directly yields finite value.</text>
+      <text x="50" y="300" fill="#f87171" font-size="16" font-weight="700">Case B: Proper with Equal Degrees (M = N) ⇒ IMPULSE AT ORIGIN!</text>
+
+      <!-- Impulse Resolution -->
+      <rect x="0" y="360" width="1000" height="210" rx="12" fill="#161b22" stroke="#f87171" stroke-width="1.5"/>
+      <text x="30" y="395" fill="#f87171" font-size="19" font-weight="800">CRITICAL TRAP: M = N PRODUCES K δ(t) !</text>
+      <text x="30" y="425" fill="#e6edf3" font-size="15">Perform polynomial long division: X(s) = K + X_proper(s)</text>
+      <text x="30" y="455" fill="#fbbf24" font-size="16">In time domain: x(t) = K δ(t) + x_proper(t)</text>
+      <text x="30" y="485" fill="#8b949e" font-size="15">The limit lim_{s→∞} s X(s) will diverge to ∞ due to s · K !</text>
+      <text x="30" y="515" fill="#34d399" font-size="16" font-weight="700">Correct Value at t = 0⁺:  x(0⁺) = lim_{s → ∞} s [ X(s) - K ]</text>
+      <text x="30" y="545" fill="#8b949e" font-size="13">The impulse exists solely at t = 0; at t = 0⁺ the impulse has already vanished!</text>
+
+      <!-- Worked Drill -->
+      <rect x="0" y="590" width="1000" height="190" rx="12" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="30" y="625" fill="#38bdf8" font-size="18" font-weight="700">WORKED VERIFICATION DRILL:</text>
+      <text x="30" y="655" fill="#fbbf24" font-size="16">X(s) = (2s + 5) / (s + 1)</text>
+      <text x="30" y="685" fill="#e6edf3" font-size="15">Division: X(s) = 2 + 3 / (s + 1)  ⇒  x(t) = 2δ(t) + 3e^{-t}u(t)</text>
+      <text x="30" y="715" fill="#f87171" font-size="15">Blind limit: lim_{s→∞} s · (2s+5)/(s+1) = ∞  (Misleading!)</text>
+      <text x="30" y="745" fill="#34d399" font-size="17" font-weight="700">True value: x(0⁺) = lim_{s→∞} s · [ 3 / (s + 1) ] = 3 = 3e^{-0} (CONFIRMED!)</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Final Value Theorem (FVT) -->
+  <g transform="translate(1200, 190)">
+    <rect width="1120" height="1090" rx="16" fill="url(#panelGrad7)" stroke="#fbbf24" stroke-width="2"/>
+    <rect width="1120" height="60" rx="16" fill="#21262d"/>
+    <text x="560" y="38" fill="#fbbf24" font-size="22" font-weight="700" text-anchor="middle">FINAL VALUE THEOREM (FVT) PROTOCOL &amp; 4 SAFETY GATES</text>
+
+    <g transform="translate(40, 90)">
+      <rect width="1040" height="95" rx="10" fill="#0d1117" stroke="#fbbf24" stroke-width="2"/>
+      <text x="520" y="42" fill="#8b949e" font-size="16" text-anchor="middle">Mathematical Statement (Calculates steady-state value as t → ∞):</text>
+      <text x="520" y="78" fill="#fbbf24" font-size="26" font-weight="800" text-anchor="middle">x(∞) = lim_{t → ∞} x(t) = lim_{s → 0} s X(s)</text>
+
+      <!-- The 4 Strict Safety Gates Flowchart -->
+      <rect x="0" y="130" width="1040" height="540" rx="12" fill="#161b22" stroke="#f87171" stroke-width="2"/>
+      <text x="30" y="165" fill="#f87171" font-size="20" font-weight="800">THE 4 MANDATORY SAFETY GATES FOR FVT VALIDITY:</text>
+
+      <!-- Gate 1 -->
+      <rect x="30" y="185" width="980" height="75" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <text x="50" y="215" fill="#38bdf8" font-size="16" font-weight="700">GATE 1: Causality Requirement</text>
+      <text x="50" y="240" fill="#8b949e" font-size="14">Signal x(t) must be causal (x(t) = 0 for t &lt; 0). FVT cannot be applied to bilateral anti-causal signals.</text>
+
+      <!-- Gate 2 -->
+      <rect x="30" y="270" width="980" height="85" rx="8" fill="#0d1117" stroke="#f87171" stroke-width="1.5"/>
+      <text x="50" y="300" fill="#f87171" font-size="16" font-weight="700">GATE 2: Pole Locations of s X(s) MUST BE IN OPEN LHP (OLHP)</text>
+      <text x="50" y="325" fill="#e6edf3" font-size="14">ALL poles of sX(s) must satisfy Re(s) &lt; 0! If ANY pole of sX(s) has Re(s) &gt; 0 (RHP),</text>
+      <text x="50" y="345" fill="#f87171" font-size="14" font-weight="600">the signal diverges exponentially (e^{at}) and FVT is 100% INVALID!</text>
+
+      <!-- Gate 3 -->
+      <rect x="30" y="365" width="980" height="85" rx="8" fill="#0d1117" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="50" y="395" fill="#fbbf24" font-size="16" font-weight="700">GATE 3: Zero-Pole Multiplicity (Origin Poles)</text>
+      <text x="50" y="420" fill="#e6edf3" font-size="14">A single pole at s = 0 in X(s) is ALLOWED (it cancels with s in sX(s), representing a step u(t)).</text>
+      <text x="50" y="440" fill="#f87171" font-size="14" font-weight="600">Multiple poles at s = 0 (e.g. 1/s², 1/s³) diverge: ramp t u(t) has final value ∞!</text>
+
+      <!-- Gate 4 -->
+      <rect x="30" y="460" width="980" height="95" rx="8" fill="#0d1117" stroke="#f87171" stroke-width="2"/>
+      <text x="50" y="490" fill="#f87171" font-size="17" font-weight="800">GATE 4: PURE IMAGINARY POLES ON jω-AXIS (THE SINE/COSINE TRAP)</text>
+      <text x="50" y="515" fill="#e6edf3" font-size="14">If X(s) has poles at s = ±jω₀ (e.g. sin(ω₀t) ↔ ω₀ / (s² + ω₀²)):</text>
+      <text x="50" y="538" fill="#f87171" font-size="14" font-weight="700">lim_{s→0} s · [ω₀ / (s² + ω₀²)] = 0 (ALGEBRAIC ILLUSION!). Actual sin(ω₀t) oscillates forever: UNDEFINED!</text>
+
+      <!-- Summary Diagnostic Table -->
+      <rect x="0" y="690" width="1040" height="190" rx="12" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+      <text x="30" y="725" fill="#34d399" font-size="18" font-weight="700">GATE RAPID DIAGNOSTIC EXAMPLES:</text>
+      <text x="30" y="755" fill="#e6edf3" font-size="14">1. X₁(s) = 1 / [s(s+1)] → Pole of sX(s) at s = -1 ∈ OLHP → FVT Valid! x(∞) = 1</text>
+      <text x="30" y="780" fill="#e6edf3" font-size="14">2. X₂(s) = 1 / [s²(s+1)] → Pole of sX(s) at s = 0 → Ramp component → x(∞) = ∞</text>
+      <text x="30" y="805" fill="#e6edf3" font-size="14">3. X₃(s) = (s+2) / [(s+3)(s-1)] → Pole at s = +1 ∈ RHP → Diverges → FVT Invalid</text>
+      <text x="30" y="830" fill="#e6edf3" font-size="14">4. X₄(s) = ω₀ / (s² + ω₀²) → Poles at ±jω₀ → Oscillates → Final value is UNDEFINED</text>
+      <text x="30" y="855" fill="#34d399" font-size="14" font-weight="600">5. X₅(s) = (s+2) / [(s+2)² + 3²] → Poles at -2 ± j3 ∈ OLHP → Damped sinusoid → x(∞) = 0</text>
+    </g>
+  </g>
+</svg>

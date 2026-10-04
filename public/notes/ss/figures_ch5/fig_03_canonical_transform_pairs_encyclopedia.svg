@@ -1,0 +1,182 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid3" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid3)"/>
+
+  <!-- Title Header -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 05 • FIGURE 5.3</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">Encyclopedia of Canonical Laplace Transform Pairs, Pole-Zero Constellations &amp; ROC Boundaries</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- 6 Canonical Pair Cards in 2x3 Grid -->
+  
+  <!-- Row 1, Col 1: Dirac Delta -->
+  <g transform="translate(80, 190)">
+    <rect width="710" height="530" rx="14" fill="url(#panelGrad3)" stroke="#30363d" stroke-width="2"/>
+    <rect width="710" height="48" rx="14" fill="#21262d"/>
+    <text x="355" y="32" fill="#38bdf8" font-size="18" font-weight="700" text-anchor="middle">PAIR 1: DIRAC DELTA IMPULSE δ(t)</text>
+    
+    <text x="35" y="80" fill="#e6edf3" font-size="17" font-weight="600">Time Domain: x(t) = δ(t)</text>
+    <text x="35" y="110" fill="#34d399" font-size="22" font-weight="700">X(s) = 1   |   ROC: Entire s-plane</text>
+    
+    <g transform="translate(45, 130)">
+      <rect width="620" height="320" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <rect x="15" y="15" width="590" height="290" fill="#34d399" fill-opacity="0.12"/>
+      <line x1="310" y1="15" x2="310" y2="305" stroke="#38bdf8" stroke-width="1.5"/>
+      <line x1="15" y1="160" x2="605" y2="160" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="590" y="150" fill="#38bdf8" font-size="14">σ</text>
+      <text x="320" y="35" fill="#38bdf8" font-size="14">jω</text>
+      <text x="310" y="140" fill="#34d399" font-size="20" font-weight="800" text-anchor="middle">ROC: -∞ &lt; Re(s) &lt; +∞</text>
+      <text x="310" y="180" fill="#8b949e" font-size="14" text-anchor="middle">Zero poles • Zero finite zeros • Converges everywhere</text>
+    </g>
+    <text x="355" y="495" fill="#8b949e" font-size="14" text-anchor="middle">Delayed impulse: δ(t - t₀) ↔ e^{-s t₀} (ROC: all s)</text>
+  </g>
+
+  <!-- Row 1, Col 2: Unit Step u(t) -->
+  <g transform="translate(845, 190)">
+    <rect width="710" height="530" rx="14" fill="url(#panelGrad3)" stroke="#38bdf8" stroke-width="2"/>
+    <rect width="710" height="48" rx="14" fill="#21262d"/>
+    <text x="355" y="32" fill="#38bdf8" font-size="18" font-weight="700" text-anchor="middle">PAIR 2: CAUSAL UNIT STEP u(t)</text>
+    
+    <text x="35" y="80" fill="#e6edf3" font-size="17" font-weight="600">Time Domain: x(t) = u(t)</text>
+    <text x="35" y="110" fill="#fbbf24" font-size="22" font-weight="700">X(s) = 1 / s   |   ROC: Re(s) &gt; 0</text>
+    
+    <g transform="translate(45, 130)">
+      <rect width="620" height="320" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <rect x="310" y="15" width="295" height="290" fill="#38bdf8" fill-opacity="0.16"/>
+      <line x1="310" y1="15" x2="310" y2="305" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 4"/>
+      <line x1="15" y1="160" x2="605" y2="160" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="590" y="150" fill="#38bdf8" font-size="14">σ</text>
+      <text x="320" y="35" fill="#38bdf8" font-size="14">jω</text>
+      <!-- Pole at origin -->
+      <text x="310" y="168" fill="#f87171" font-size="26" font-weight="900" text-anchor="middle">✕</text>
+      <text x="290" y="185" fill="#f87171" font-size="15" font-weight="700">s=0</text>
+      <text x="460" y="100" fill="#38bdf8" font-size="20" font-weight="700" text-anchor="middle">ROC: Re(s) &gt; 0</text>
+      <text x="460" y="130" fill="#8b949e" font-size="14" text-anchor="middle">Open Right Half Plane (ORHP)</text>
+    </g>
+    <text x="355" y="495" fill="#fbbf24" font-size="14" text-anchor="middle">Note: Pole on jω-axis ⇒ CTFT requires πδ(ω) DC impulse</text>
+  </g>
+
+  <!-- Row 1, Col 3: Causal Real Exponential e^{-at}u(t) -->
+  <g transform="translate(1610, 190)">
+    <rect width="710" height="530" rx="14" fill="url(#panelGrad3)" stroke="#38bdf8" stroke-width="2"/>
+    <rect width="710" height="48" rx="14" fill="#21262d"/>
+    <text x="355" y="32" fill="#38bdf8" font-size="18" font-weight="700" text-anchor="middle">PAIR 3: ONE-SIDED EXPONENTIAL e^{-at}u(t)</text>
+    
+    <text x="35" y="80" fill="#e6edf3" font-size="17" font-weight="600">Time Domain: x(t) = e^{-at} u(t)  (a &gt; 0)</text>
+    <text x="35" y="110" fill="#34d399" font-size="22" font-weight="700">X(s) = 1 / (s + a)   |   ROC: Re(s) &gt; -a</text>
+    
+    <g transform="translate(45, 130)">
+      <rect width="620" height="320" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <rect x="200" y="15" width="405" height="290" fill="#38bdf8" fill-opacity="0.16"/>
+      <line x1="330" y1="15" x2="330" y2="305" stroke="#38bdf8" stroke-width="1.5"/>
+      <line x1="15" y1="160" x2="605" y2="160" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="590" y="150" fill="#38bdf8" font-size="14">σ</text>
+      <text x="340" y="35" fill="#38bdf8" font-size="14">jω</text>
+      <!-- Boundary line -->
+      <line x1="200" y1="15" x2="200" y2="305" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 4"/>
+      <!-- Pole -->
+      <text x="200" y="168" fill="#f87171" font-size="26" font-weight="900" text-anchor="middle">✕</text>
+      <text x="200" y="195" fill="#f87171" font-size="15" font-weight="700" text-anchor="middle">-a</text>
+      <text x="430" y="100" fill="#38bdf8" font-size="20" font-weight="700" text-anchor="middle">ROC: Re(s) &gt; -a</text>
+      <text x="430" y="130" fill="#34d399" font-size="14" font-weight="600" text-anchor="middle">Encloses jω-axis ⇒ CTFT = 1/(a + jω)</text>
+    </g>
+    <text x="355" y="495" fill="#34d399" font-size="14" text-anchor="middle">Anti-causal counterpart: -e^{-at}u(-t) ↔ 1/(s+a), ROC: Re(s) &lt; -a</text>
+  </g>
+
+  <!-- Row 2, Col 1: Repeated Pole t^n e^{-at}u(t) -->
+  <g transform="translate(80, 750)">
+    <rect width="710" height="530" rx="14" fill="url(#panelGrad3)" stroke="#30363d" stroke-width="2"/>
+    <rect width="710" height="48" rx="14" fill="#21262d"/>
+    <text x="355" y="32" fill="#fbbf24" font-size="18" font-weight="700" text-anchor="middle">PAIR 4: REPEATED POLE t^n e^{-at}u(t)</text>
+    
+    <text x="35" y="80" fill="#e6edf3" font-size="17" font-weight="600">Time Domain: x(t) = t^n e^{-at} u(t)</text>
+    <text x="35" y="110" fill="#fbbf24" font-size="22" font-weight="700">X(s) = n! / (s + a)^{n+1}   |   ROC: Re(s) &gt; -a</text>
+    
+    <g transform="translate(45, 130)">
+      <rect width="620" height="320" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <rect x="200" y="15" width="405" height="290" fill="#fbbf24" fill-opacity="0.14"/>
+      <line x1="330" y1="15" x2="330" y2="305" stroke="#38bdf8" stroke-width="1.5"/>
+      <line x1="15" y1="160" x2="605" y2="160" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="590" y="150" fill="#38bdf8" font-size="14">σ</text>
+      <text x="340" y="35" fill="#38bdf8" font-size="14">jω</text>
+      <line x1="200" y1="15" x2="200" y2="305" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="200" y="168" fill="#f87171" font-size="28" font-weight="900" text-anchor="middle">✕</text>
+      <circle cx="200" cy="160" r="14" fill="none" stroke="#f87171" stroke-width="2"/>
+      <text x="200" y="195" fill="#f87171" font-size="15" font-weight="700" text-anchor="middle">-a (order n+1)</text>
+      <text x="430" y="100" fill="#fbbf24" font-size="20" font-weight="700" text-anchor="middle">ROC: Re(s) &gt; -a</text>
+      <text x="430" y="130" fill="#8b949e" font-size="14" text-anchor="middle">Multiple pole of order (n+1) at s = -a</text>
+    </g>
+    <text x="355" y="495" fill="#fbbf24" font-size="14" text-anchor="middle">Unit ramp: t u(t) ↔ 1/s², ROC: Re(s) &gt; 0</text>
+  </g>
+
+  <!-- Row 2, Col 2: Causal Cosine cos(ω₀t)u(t) -->
+  <g transform="translate(845, 750)">
+    <rect width="710" height="530" rx="14" fill="url(#panelGrad3)" stroke="#30363d" stroke-width="2"/>
+    <rect width="710" height="48" rx="14" fill="#21262d"/>
+    <text x="355" y="32" fill="#60a5fa" font-size="18" font-weight="700" text-anchor="middle">PAIR 5: CAUSAL SINUSOIDS cos(ω₀t)u(t)</text>
+    
+    <text x="35" y="80" fill="#e6edf3" font-size="17" font-weight="600">Time Domain: x(t) = cos(ω₀t) u(t)</text>
+    <text x="35" y="110" fill="#60a5fa" font-size="22" font-weight="700">X(s) = s / (s² + ω₀²)   |   ROC: Re(s) &gt; 0</text>
+    
+    <g transform="translate(45, 130)">
+      <rect width="620" height="320" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <rect x="310" y="15" width="295" height="290" fill="#60a5fa" fill-opacity="0.16"/>
+      <line x1="310" y1="15" x2="310" y2="305" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 4"/>
+      <line x1="15" y1="160" x2="605" y2="160" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="590" y="150" fill="#38bdf8" font-size="14">σ</text>
+      <text x="320" y="35" fill="#38bdf8" font-size="14">jω</text>
+      <!-- Conjugate poles -->
+      <text x="310" y="98" fill="#f87171" font-size="26" font-weight="900" text-anchor="middle">✕</text>
+      <text x="270" y="98" fill="#f87171" font-size="14" font-weight="700">+jω₀</text>
+      <text x="310" y="238" fill="#f87171" font-size="26" font-weight="900" text-anchor="middle">✕</text>
+      <text x="270" y="238" fill="#f87171" font-size="14" font-weight="700">-jω₀</text>
+      <!-- Zero at origin -->
+      <circle cx="310" cy="160" r="7" fill="none" stroke="#34d399" stroke-width="2.5"/>
+      <text x="330" y="165" fill="#34d399" font-size="14" font-weight="700">Zero: s=0</text>
+      <text x="460" y="100" fill="#60a5fa" font-size="20" font-weight="700" text-anchor="middle">ROC: Re(s) &gt; 0</text>
+    </g>
+    <text x="355" y="495" fill="#60a5fa" font-size="14" text-anchor="middle">Sine pulse: sin(ω₀t)u(t) ↔ ω₀ / (s² + ω₀²), zero at origin is absent</text>
+  </g>
+
+  <!-- Row 2, Col 3: Damped Cosine e^{-at}cos(ω₀t)u(t) -->
+  <g transform="translate(1610, 750)">
+    <rect width="710" height="530" rx="14" fill="url(#panelGrad3)" stroke="#30363d" stroke-width="2"/>
+    <rect width="710" height="48" rx="14" fill="#21262d"/>
+    <text x="355" y="32" fill="#34d399" font-size="18" font-weight="700" text-anchor="middle">PAIR 6: DAMPED OSCILLATOR e^{-at}cos(ω₀t)u(t)</text>
+    
+    <text x="35" y="80" fill="#e6edf3" font-size="17" font-weight="600">Time Domain: x(t) = e^{-at} cos(ω₀t) u(t)</text>
+    <text x="35" y="110" fill="#34d399" font-size="22" font-weight="700">X(s) = (s + a) / [(s + a)² + ω₀²]   |   ROC: Re(s) &gt; -a</text>
+    
+    <g transform="translate(45, 130)">
+      <rect width="620" height="320" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <rect x="200" y="15" width="405" height="290" fill="#34d399" fill-opacity="0.16"/>
+      <line x1="330" y1="15" x2="330" y2="305" stroke="#38bdf8" stroke-width="1.5"/>
+      <line x1="15" y1="160" x2="605" y2="160" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="590" y="150" fill="#38bdf8" font-size="14">σ</text>
+      <text x="340" y="35" fill="#38bdf8" font-size="14">jω</text>
+      <line x1="200" y1="15" x2="200" y2="305" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 4"/>
+      <!-- Conjugate poles at -a +/- jw0 -->
+      <text x="200" y="98" fill="#f87171" font-size="26" font-weight="900" text-anchor="middle">✕</text>
+      <text x="200" y="238" fill="#f87171" font-size="26" font-weight="900" text-anchor="middle">✕</text>
+      <!-- Zero at -a -->
+      <circle cx="200" cy="160" r="7" fill="none" stroke="#34d399" stroke-width="2.5"/>
+      <text x="180" y="190" fill="#f87171" font-size="14" font-weight="700" text-anchor="end">-a</text>
+      <text x="430" y="100" fill="#34d399" font-size="20" font-weight="700" text-anchor="middle">ROC: Re(s) &gt; -a</text>
+      <text x="430" y="130" fill="#8b949e" font-size="14" text-anchor="middle">Poles shifted into OLHP by σ = -a</text>
+    </g>
+    <text x="355" y="495" fill="#34d399" font-size="14" text-anchor="middle">Damped sine: e^{-at}sin(ω₀t)u(t) ↔ ω₀ / [(s+a)² + ω₀²]</text>
+  </g>
+</svg>

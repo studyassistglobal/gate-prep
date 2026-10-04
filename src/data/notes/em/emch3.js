@@ -49,7 +49,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_vector_calculus/fig_01_vector_algebra_and_3d_analytic_geometry_engine.jpg",
+     "src": "/notes/em/figures_vector_calculus/fig_01_vector_algebra_and_3d_analytic_geometry_engine.svg",
      "alt": "Blueprint 01: Vector Algebra & Analytic Geometry Engine"
     },
     {
@@ -58,7 +58,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_vector_calculus/fig_02_coordinate_systems_and_differential_elements_engine.jpg",
+     "src": "/notes/em/figures_vector_calculus/fig_02_coordinate_systems_and_differential_elements_engine.svg",
      "alt": "Blueprint 02: Coordinate Systems & Differential Elements Engine"
     },
     {
@@ -67,7 +67,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_vector_calculus/fig_03_gradient_directional_derivatives_and_level_surfaces_engine.jpg",
+     "src": "/notes/em/figures_vector_calculus/fig_03_gradient_directional_derivatives_and_level_surfaces_engine.svg",
      "alt": "Blueprint 03: Gradient, Directional Derivatives & Level Surfaces Engine"
     },
     {
@@ -76,7 +76,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_vector_calculus/fig_04_divergence_curl_and_vector_identities_engine.jpg",
+     "src": "/notes/em/figures_vector_calculus/fig_04_divergence_curl_and_vector_identities_engine.svg",
      "alt": "Blueprint 04: Divergence, Curl & Vector Identities Engine"
     },
     {
@@ -85,7 +85,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_vector_calculus/fig_05_line_integrals_conservative_fields_and_potentials_engine.jpg",
+     "src": "/notes/em/figures_vector_calculus/fig_05_line_integrals_conservative_fields_and_potentials_engine.svg",
      "alt": "Blueprint 05: Line Integrals & Conservative Fields Engine"
     },
     {
@@ -94,7 +94,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_vector_calculus/fig_06_greens_and_stokes_theorems_circulation_engine.jpg",
+     "src": "/notes/em/figures_vector_calculus/fig_06_greens_and_stokes_theorems_circulation_engine.svg",
      "alt": "Blueprint 06: Green's & Stokes' Theorems Engine"
     },
     {
@@ -103,7 +103,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_vector_calculus/fig_07_gauss_divergence_theorem_and_flux_engine.jpg",
+     "src": "/notes/em/figures_vector_calculus/fig_07_gauss_divergence_theorem_and_flux_engine.svg",
      "alt": "Blueprint 07: Gauss's Divergence Theorem & Surface Capping Engine"
     }
    ]

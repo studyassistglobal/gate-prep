@@ -1,0 +1,425 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.35" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.8" stroke-opacity="0.5" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="panelShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65" />
+        </filter>
+
+        <marker id="arrowCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+        </marker>
+        <marker id="arrowGold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#fbbf24" />
+        </marker>
+        <marker id="arrowEmerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
+        </marker>
+        <marker id="arrowRose" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#f43f5e" />
+        </marker>
+        <marker id="arrowPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#c084fc" />
+        </marker>
+    </defs>
+
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Top Blueprint Banner -->
+    <rect x="80" y="60" width="3680" height="150" rx="16" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="2" filter="url(#panelShadow)" />
+    <text x="130" y="130" font-family="'Inter', sans-serif" font-weight="900" font-size="46" fill="url(#headerGrad)" letter-spacing="1.5">BLUEPRINT 07: GAUSS'S DIVERGENCE THEOREM, SURFACE CAPPING &amp; VOLUMETRIC FLUX ENGINE</text>
+    <text x="130" y="178" font-family="'Inter', sans-serif" font-weight="600" font-size="24" fill="#94a3b8" letter-spacing="0.5">Closed Surface Outward Flux oiint F . dS • Volumetric Source Integral iiint (div F) dV • Open Capping • GATE 2023 Cone Deep Dive</text>
+
+    <!-- Technical Status Badge -->
+    <rect x="3300" y="90" width="410" height="90" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="3340" cy="135" r="14" fill="#34d399" filter="url(#glowCyan)" />
+    <text x="3375" y="130" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#f8fafc">4K TECHNICAL BLUEPRINT</text>
+    <text x="3375" y="156" font-family="'Fira Code', monospace" font-weight="600" font-size="16" fill="#38bdf8">GATE 2027 • PREPFUSION</text>
+
+    <!-- Content Region -->
+    
+    <!-- Layout: 3 Major Panels -->
+    <!-- PANEL 1: Gauss's Divergence Theorem (Left) -->
+    <g transform="translate(100, 240)">
+        <rect width="1160" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1160" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#38bdf8">1. GAUSS'S DIVERGENCE THEOREM ARCHITECTURE</text>
+
+        <!-- Statement Box -->
+        <g transform="translate(40, 100)">
+            <rect width="1080" height="420" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">THEOREM FORMULATION &amp; SOURCE CONSERVATION</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Converts the total outward flux through closed boundary S into a 3D volume integral:</text>
+
+            <g transform="translate(40, 105)">
+                <rect width="1000" height="110" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+                <text x="40" y="65" font-family="'Fira Code', monospace" font-size="26" fill="#fbbf24" font-weight="700">oiint_S F . dS = iiint_V ( div F ) dV = iiint_V ( grad . F ) dV</text>
+            </g>
+
+            <g transform="translate(40, 240)">
+                <text x="0" y="30" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" font-weight="700">Closed Boundary S:</text>
+                <text x="180" y="30" font-family="'Inter', sans-serif" fill="#cbd5e1">Must completely enclose a 3D solid volume V (Cube, Sphere, Cylinder, Cone).</text>
+
+                <text x="0" y="75" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" font-weight="700">Unit Normal n_cap:</text>
+                <text x="180" y="75" font-family="'Inter', sans-serif" fill="#fbbf24">Must point STRICTLY OUTWARD from enclosed volume V!</text>
+
+                <text x="0" y="120" font-family="'Inter', sans-serif" font-size="18" fill="#f43f5e" font-weight="700">Inward Trap:</text>
+                <text x="180" y="120" font-family="'Fira Code', monospace" font-size="18" fill="#f43f5e">If flux asked is inward, multiply result by -1 !</text>
+            </g>
+        </g>
+
+        <!-- Constant Divergence Shortcut Card -->
+        <g transform="translate(40, 560)">
+            <rect width="1080" height="490" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#fbbf24">THE CONSTANT DIVERGENCE SHORTCUT (10 SECONDS)</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">If the divergence of F evaluates to a constant scalar c throughout volume V:</text>
+
+            <g transform="translate(40, 105)">
+                <rect width="1000" height="120" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+                <text x="30" y="50" font-family="'Fira Code', monospace" font-size="26" fill="#38bdf8">div(F) = c  ==&gt;  oiint_S F . dS = iiint_V c dV = c x iiint_V dV</text>
+                <text x="30" y="95" font-family="'Fira Code', monospace" font-size="32" fill="#34d399" font-weight="700">= c x Volume(V)</text>
+            </g>
+
+            <g transform="translate(40, 250)">
+                <g transform="translate(0, 0)">
+                    <rect width="480" height="200" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#38bdf8" font-weight="700">CASE 1: POSITION VECTOR r</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="18" fill="#f8fafc">F = r = x i + y j + z k</text>
+                    <text x="25" y="105" font-family="'Fira Code', monospace" font-size="20" fill="#fbbf24">div(r) = 1 + 1 + 1 = 3</text>
+                    <text x="25" y="145" font-family="'Fira Code', monospace" font-size="22" fill="#34d399" font-weight="700">Flux = 3 x Volume(V)</text>
+                    <text x="25" y="180" font-family="'Inter', sans-serif" font-size="14" fill="#94a3b8">Over sphere radius R: 3(4/3 pi R^3) = 4pi R^3</text>
+                </g>
+
+                <g transform="translate(520, 0)">
+                    <rect width="480" height="200" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#34d399" font-weight="700">CASE 2: SOLENOIDAL FIELD</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="18" fill="#f8fafc">div(F) = 0  everywhere in V</text>
+                    <text x="25" y="105" font-family="'Fira Code', monospace" font-size="20" fill="#fbbf24">div(F) = 0</text>
+                    <text x="25" y="145" font-family="'Fira Code', monospace" font-size="24" fill="#34d399" font-weight="700">Flux == 0  [ALWAYS!]</text>
+                    <text x="25" y="180" font-family="'Inter', sans-serif" font-size="14" fill="#94a3b8">Zero net outward flux across ANY closed body.</text>
+                </g>
+            </g>
+        </g>
+
+        <!-- Standard Closed Geometry Volumes -->
+        <g transform="translate(40, 1080)">
+            <rect width="1080" height="620" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#34d399">STANDARD VOLUMETRIC CAPACITIES IN GATE</text>
+
+            <g transform="translate(40, 75)">
+                <g transform="translate(0, 0)">
+                    <rect width="480" height="150" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#38bdf8" font-weight="700">SOLID CYLINDER (RADIUS R, HEIGHT H):</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24">V = pi R^2 H</text>
+                    <text x="25" y="120" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Boundary: Curved lateral + 2 circular end caps</text>
+                </g>
+
+                <g transform="translate(520, 0)">
+                    <rect width="480" height="150" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">CONE (BASE RADIUS R, HEIGHT H):</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="24" fill="#34d399">V = 1/3 pi R^2 H</text>
+                    <text x="25" y="120" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Boundary: Conical lateral + 1 base disk cap</text>
+                </g>
+
+                <g transform="translate(0, 170)">
+                    <rect width="480" height="150" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#34d399" font-weight="700">HEMISPHERE (RADIUS R):</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24">V = 2/3 pi R^3</text>
+                    <text x="25" y="120" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Boundary: Curved dome + 1 flat circular base cap</text>
+                </g>
+
+                <g transform="translate(520, 170)">
+                    <rect width="480" height="150" rx="10" fill="#0f172a" stroke="#c084fc" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#c084fc" font-weight="700">PARABOLOID z = x^2 + y^2 &lt;= H:</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="24" fill="#34d399">V = 1/2 pi R^2 H  (R = sqrt(H))</text>
+                    <text x="25" y="120" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Boundary: Parabolic bowl + 1 top circular cap</text>
+                </g>
+            </g>
+
+            <g transform="translate(40, 420)">
+                <rect width="1000" height="160" rx="10" fill="#020617" stroke="#38bdf8" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">TETRAHEDRON BOUNDED BY COORDINATE PLANES &amp; x/a + y/b + z/c = 1:</text>
+                <text x="30" y="85" font-family="'Fira Code', monospace" font-size="26" fill="#fbbf24" font-weight="700">Volume = (1/6) a b c</text>
+                <text x="30" y="125" font-family="'Inter', sans-serif" font-size="16" fill="#34d399">Directly eliminates triple integration over triangular pyramid limits!</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- PANEL 2: Open Surface Capping Technique (Center) -->
+    <g transform="translate(1300, 240)">
+        <rect width="1240" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1240" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#fbbf24">2. THE OPEN SURFACE CAPPING MECHANISM</text>
+
+        <!-- Method Card -->
+        <g transform="translate(40, 100)">
+            <rect width="1160" height="490" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#fbbf24">HOW TO APPLY GAUSS'S THEOREM TO OPEN SURFACES</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Problem: Gauss's Theorem strictly requires a CLOSED surface. What if GATE asks for flux through an OPEN surface S_open?</text>
+
+            <g transform="translate(40, 105)">
+                <rect width="1080" height="140" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">THE MASTER CAPPING FORMULA:</text>
+                <text x="30" y="80" font-family="'Fira Code', monospace" font-size="18" fill="#f8fafc">oiint_(S_total) F . dS = iint_(S_open) F . dS + iint_(S_cap) F . dS = iiint_V (div F) dV</text>
+                <text x="30" y="120" font-family="'Fira Code', monospace" font-size="20" fill="#34d399" font-weight="700">==&gt;  iint_(S_open) F . dS = iiint_V (div F) dV  -  iint_(S_cap) F . dS</text>
+            </g>
+
+            <!-- 3 Step Algorithm -->
+            <g transform="translate(40, 265)">
+                <g transform="translate(0, 0)">
+                    <rect width="340" height="190" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="20" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#38bdf8" font-weight="700">STEP 1: ADD CAP</text>
+                    <text x="20" y="70" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Identify the missing boundary</text>
+                    <text x="20" y="95" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">and add the simplest flat</text>
+                    <text x="20" y="120" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">planar surface S_cap</text>
+                    <text x="20" y="145" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">to close the 3D volume V.</text>
+                </g>
+
+                <g transform="translate(370, 0)">
+                    <rect width="340" height="190" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="20" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" font-weight="700">STEP 2: VOLUME INT</text>
+                    <text x="20" y="70" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Evaluate the 3D volume</text>
+                    <text x="20" y="95" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">integral of div F over V.</text>
+                    <text x="20" y="125" font-family="'Fira Code', monospace" font-size="17" fill="#fbbf24">iiint_V (grad . F) dV</text>
+                    <text x="20" y="155" font-family="'Inter', sans-serif" font-size="14" fill="#34d399">Trivial if div F is constant!</text>
+                </g>
+
+                <g transform="translate(740, 0)">
+                    <rect width="340" height="190" rx="10" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+                    <text x="20" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#f43f5e" font-weight="700">STEP 3: SUBTRACT CAP</text>
+                    <text x="20" y="70" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Evaluate flat cap flux</text>
+                    <text x="20" y="95" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">iint_(S_cap) F . n_cap dS</text>
+                    <text x="20" y="120" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">and SUBTRACT from total!</text>
+                    <text x="20" y="150" font-family="'Fira Code', monospace" font-size="16" fill="#f43f5e">n_cap is outward from V!</text>
+                </g>
+            </g>
+        </g>
+
+        <!-- Visual Capping Diagram -->
+        <g transform="translate(40, 620)">
+            <rect width="1160" height="520" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">VISUAL CAPPING ON HEMISPHERE &amp; PARABOLOID</text>
+
+            <g transform="translate(60, 80)">
+                <!-- Hemisphere Sketch -->
+                <path d="M 80 240 C 80 80, 360 80, 360 240" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" stroke-width="4"/>
+                <ellipse cx="220" cy="240" rx="140" ry="40" fill="rgba(251, 191, 36, 0.2)" stroke="#fbbf24" stroke-width="3"/>
+                
+                <text x="220" y="150" font-family="'Fira Code', monospace" font-size="20" fill="#38bdf8" text-anchor="middle">Curved Dome S_open</text>
+                <text x="220" y="245" font-family="'Fira Code', monospace" font-size="18" fill="#fbbf24" text-anchor="middle">Flat Base Cap S_cap (z = 0)</text>
+
+                <!-- Normal on cap -->
+                <line x1="220" y1="240" x2="220" y2="340" stroke="#f43f5e" stroke-width="4" marker-end="url(#arrowRose)"/>
+                <text x="235" y="320" font-family="'Fira Code', monospace" font-size="18" fill="#f43f5e">n_cap = -k (OUTWARD!)</text>
+
+                <!-- Explanation beside -->
+                <g transform="translate(420, 20)">
+                    <rect width="640" height="280" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                    <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24" font-weight="700">HEMISPHERE FLUX COMPUTATION:</text>
+                    <text x="30" y="85" font-family="'Fira Code', monospace" font-size="18" fill="#f8fafc">iint_(dome) F . dS = iiint_V (div F) dV - iint_(disk) F . (-k) dx dy</text>
+                    
+                    <text x="30" y="135" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">If field F has F_z = 0 at z = 0 (e.g., F = x i + y j + 2z k =&gt; F_z(0)=0):</text>
+                    <text x="30" y="170" font-family="'Fira Code', monospace" font-size="22" fill="#34d399">iint_(disk) F . (-k) dx dy = 0 !</text>
+                    
+                    <g transform="translate(30, 195)">
+                        <rect width="580" height="60" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+                        <text x="25" y="40" font-family="'Fira Code', monospace" font-size="22" fill="#34d399" font-weight="700">Flux through Dome == iiint_V (div F) dV  EXACTLY!</text>
+                    </g>
+                </g>
+            </g>
+
+            <g transform="translate(40, 420)">
+                <rect width="1080" height="75" rx="10" fill="#020617" stroke="#fbbf24" stroke-width="1.5"/>
+                <text x="30" y="45" font-family="'Fira Code', monospace" font-size="20" fill="#fbbf24">Rule of Thumb: Whenever flat base sits at z=0 and F_z(0)=0, Flat Cap Flux vanishes!</text>
+            </g>
+        </g>
+
+        <!-- Master Divergence Checklist -->
+        <g transform="translate(40, 1170)">
+            <rect width="1160" height="530" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#34d399">SURFACE INTEGRAL PROTOCOL FOR GATE</text>
+
+            <g transform="translate(40, 75)">
+                <g transform="translate(0, 0)">
+                    <rect width="1080" height="130" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#34d399" font-weight="700">1. IS THE SURFACE CLOSED?</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">Use Gauss's Divergence Theorem immediately! Evaluate div F.</text>
+                    <text x="25" y="100" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">If div F = 0 =&gt; Answer = 0! If div F = const =&gt; Answer = const x Volume!</text>
+                </g>
+
+                <g transform="translate(0, 145)">
+                    <rect width="1080" height="130" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">2. IS THE SURFACE OPEN WITH A SIMPLE BOUNDARY?</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">Is F already written as a Curl (F = grad x A)? If YES =&gt; Use Stokes' Theorem!</text>
+                    <text x="25" y="100" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">iint_S F . dS = iint_S (grad x A) . dS = oint_C A . dl  (Line integral over boundary loop C)!</text>
+                </g>
+
+                <g transform="translate(0, 290)">
+                    <rect width="1080" height="130" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#38bdf8" font-weight="700">3. IS F NOT A CURL, BUT ENCLOSES AN OPEN CAVITY?</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">Use Surface Capping! Add flat cap, apply Gauss's Theorem, subtract cap flux.</text>
+                    <text x="25" y="100" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">Direct surface integration on curved surfaces is always the SLOWEST route!</text>
+                </g>
+            </g>
+        </g>
+    </g>
+
+    <!-- PANEL 3: GATE 2023 Cone Deep Dive (Right) -->
+    <g transform="translate(2580, 240)">
+        <rect width="1160" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1160" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#c084fc">3. GATE 2023 NAT CONE DEEP DIVE (SLIDE 257)</text>
+
+        <!-- Problem Statement Card -->
+        <g transform="translate(40, 100)">
+            <rect width="1080" height="490" rx="14" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#c084fc">GATE 2023 NAT 1-MARK PROBLEM STATEMENT</text>
+            
+            <g transform="translate(40, 70)">
+                <rect width="1000" height="140" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="35" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">"A vector field B(x, y, z) = x i + y j - 2z k is defined over a conical region</text>
+                <text x="30" y="65" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">having height h = 2, base radius r = 3, as shown. The base of the cone lies</text>
+                <text x="30" y="95" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">in the x-y plane and is centered at the origin. If n denotes unit outward normal</text>
+                <text x="30" y="125" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24">to curved surface S of the cone, the value of iint_S B . n dS equals _______."</text>
+            </g>
+
+            <!-- Cone Sketch -->
+            <g transform="translate(100, 230)">
+                <!-- Axis -->
+                <line x1="300" y1="230" x2="300" y2="20" stroke="#64748b" stroke-width="2" marker-end="url(#arrowCyan)"/>
+                <text x="310" y="25" font-family="'Fira Code', monospace" font-size="18" fill="#38bdf8">z</text>
+
+                <!-- Base in xy plane -->
+                <ellipse cx="300" cy="210" rx="160" ry="40" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" stroke-width="3"/>
+                <text x="300" y="215" font-family="'Fira Code', monospace" font-size="16" fill="#38bdf8" text-anchor="middle">Base Disk S_1 (z = 0, R = 3)</text>
+
+                <!-- Apex at z = h = 2 -->
+                <circle cx="300" cy="40" r="7" fill="#fbbf24"/>
+                <text x="315" y="45" font-family="'Fira Code', monospace" font-size="18" fill="#fbbf24">Apex (0, 0, 2)</text>
+
+                <!-- Conical lateral surface -->
+                <line x1="140" y1="210" x2="300" y2="40" stroke="#fbbf24" stroke-width="4"/>
+                <line x1="460" y1="210" x2="300" y2="40" stroke="#fbbf24" stroke-width="4"/>
+                
+                <text x="180" y="120" font-family="'Fira Code', monospace" font-size="20" fill="#fbbf24">Curved S</text>
+
+                <!-- Normal vectors -->
+                <line x1="300" y1="210" x2="300" y2="290" stroke="#f43f5e" stroke-width="3" marker-end="url(#arrowRose)"/>
+                <text x="315" y="275" font-family="'Fira Code', monospace" font-size="16" fill="#f43f5e">n_base = -k</text>
+
+                <!-- Outward normal on cone -->
+                <line x1="390" y1="120" x2="450" y2="80" stroke="#34d399" stroke-width="3" marker-end="url(#arrowEmerald)"/>
+                <text x="465" y="80" font-family="'Fira Code', monospace" font-size="16" fill="#34d399">n_curved</text>
+            </g>
+        </g>
+
+        <!-- Rigorous Step-by-Step Solution -->
+        <g transform="translate(40, 630)">
+            <rect width="1080" height="660" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">RIGOROUS CHALKBOARD SOLUTION DERIVATION</text>
+
+            <g transform="translate(40, 70)">
+                <rect width="1000" height="450" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                
+                <text x="30" y="40" font-family="'Fira Code', monospace" font-size="20" fill="#38bdf8">Step 1: Test the Divergence of Vector Field B:</text>
+                <text x="60" y="80" font-family="'Fira Code', monospace" font-size="22" fill="#fbbf24">grad . B = d(x)/dx + d(y)/dy + d(-2z)/dz = 1 + 1 - 2 = 0 !</text>
+                <text x="60" y="115" font-family="'Inter', sans-serif" font-size="16" fill="#34d399">The vector field B is STRICTLY SOLENOIDAL everywhere in R^3!</text>
+
+                <text x="30" y="165" font-family="'Fira Code', monospace" font-size="20" fill="#38bdf8">Step 2: Total Closed Surface Flux via Gauss's Theorem:</text>
+                <text x="60" y="205" font-family="'Fira Code', monospace" font-size="22" fill="#f8fafc">oiint_(S_total) B . dS = iiint_V (grad . B) dV = iiint_V (0) dV = 0</text>
+
+                <text x="30" y="255" font-family="'Fira Code', monospace" font-size="20" fill="#38bdf8">Step 3: Partition Closed Surface into Curved S + Flat Base S_1:</text>
+                <text x="60" y="295" font-family="'Fira Code', monospace" font-size="22" fill="#f8fafc">oiint_(S_total) B . dS = iint_(S_curved) B . dS + iint_(S_base) B . dS = 0</text>
+                <text x="60" y="335" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24" font-weight="700">==&gt;  iint_(S_curved) B . dS = - iint_(S_base) B . dS</text>
+
+                <text x="30" y="385" font-family="'Fira Code', monospace" font-size="20" fill="#38bdf8">Step 4: Evaluate Base Disk Flux iint_(S_base) B . dS:</text>
+                <text x="60" y="420" font-family="'Fira Code', monospace" font-size="20" fill="#94a3b8">On the base: z = 0  and  unit outward normal n_cap = -k</text>
+                <text x="60" y="455" font-family="'Fira Code', monospace" font-size="22" fill="#34d399">B . n_cap = (x i + y j - 2z k) . (-k) = +2z</text>
+                <text x="60" y="490" font-family="'Fira Code', monospace" font-size="24" fill="#34d399" font-weight="700">At z = 0:  B . n_cap = 2(0) == 0 !</text>
+            </g>
+
+            <g transform="translate(40, 540)">
+                <rect width="1000" height="90" rx="10" fill="#020617" stroke="#34d399" stroke-width="2"/>
+                <text x="30" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#34d399">FINAL ANSWER:</text>
+                <text x="30" y="70" font-family="'Fira Code', monospace" font-size="32" fill="#34d399" font-weight="700">iint_(S_curved) B . n dS = 0 - 0 = 0  [EXACT INTEGER: 0]</text>
+            </g>
+        </g>
+
+        <!-- Exam Diagnostic Warning -->
+        <g transform="translate(40, 1330)">
+            <rect width="1080" height="370" rx="14" fill="#020617" stroke="#f43f5e" stroke-width="2"/>
+            <text x="40" y="50" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#f43f5e">GATE EXAM PSYCHOLOGICAL TRAP IN THIS PROBLEM:</text>
+            
+            <text x="40" y="100" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">1. Students waste 15 minutes setting up the cone surface equation:</text>
+            <text x="40" y="135" font-family="'Fira Code', monospace" font-size="20" fill="#f43f5e">   z = 2 - (2/3) sqrt(x^2 + y^2)  and computing dS = sqrt(1 + z_x^2 + z_y^2) dx dy</text>
+            
+            <text x="40" y="185" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">2. They attempt nasty polar conversions with r dr dtheta on an inclined frustum!</text>
+            
+            <text x="40" y="235" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" font-weight="700">3. THE TITAN DIAGNOSTIC SAFEGUARD:</text>
+            <text x="40" y="270" font-family="'Fira Code', monospace" font-size="20" fill="#34d399">   Always check div F FIRST! div B = 0 =&gt; Total Flux = 0.</text>
+            <text x="40" y="305" font-family="'Fira Code', monospace" font-size="20" fill="#34d399">   Check base z=0 =&gt; B . (-k) = 2(0) = 0 =&gt; Base flux = 0 =&gt; Curved flux = 0!</text>
+            <text x="40" y="345" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24">Solved in 20 seconds with absolute 100% mathematical certainty!</text>
+        </g>
+    </g>
+    
+
+    <!-- Footer Information Strip -->
+    <rect x="80" y="2040" width="3680" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <text x="120" y="2077" font-family="'Fira Code', monospace" font-size="18" fill="#64748b">ENGINEERING MATHEMATICS • VECTOR CALCULUS TITAN GUIDE • CHALKBOARD AUDIT 65 PAGES / 259 SLIDES</text>
+    <text x="3250" y="2077" font-family="'Fira Code', monospace" font-size="18" fill="#38bdf8">RESOLUTION: 3840 x 2160 (16:9 4K UHD)</text>
+</svg>

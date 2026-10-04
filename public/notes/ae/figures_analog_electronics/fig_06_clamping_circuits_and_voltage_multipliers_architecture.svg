@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#0a0f1d; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" opacity="0.6"/>
+    </pattern>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="3840" height="2160" fill="#0a0f1d"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Outer Blueprint Border -->
+  <rect x="30" y="30" width="3780" height="2100" rx="16" fill="none" stroke="#38bdf8" stroke-width="2.5" opacity="0.8"/>
+  <rect x="42" y="42" width="3756" height="2076" rx="10" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <g transform="translate(60, 60)">
+    <rect x="0" y="0" width="3720" height="120" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+    <rect x="0" y="0" width="12" height="120" rx="6" fill="url(#headerGrad)"/>
+    
+    <!-- Title & Subtitle -->
+    <text x="40" y="52" fill="url(#headerGrad)" font-size="38" font-weight="900" letter-spacing="1.5">CLAMPING CIRCUITS &amp; VOLTAGE MULTIPLIERS ARCHITECTURE</text>
+    <text x="40" y="94" fill="#94a3b8" font-size="22" font-weight="500">Clamping Theorem, DC Restorers, Half/Full Wave Doublers &amp; Cockcroft-Walton Cascade Ladder Physics</text>
+    
+    <!-- Badges -->
+    <rect x="3100" y="32" width="260" height="56" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="3230" y="68" fill="#38bdf8" font-size="20" font-weight="800" text-anchor="middle">GATE 2027 TITAN SUITE</text>
+    <rect x="3400" y="32" width="280" height="56" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="3540" y="68" fill="#fbbf24" font-size="20" font-weight="800" text-anchor="middle">FIGURE 6 • 4K VECTOR</text>
+  </g>
+
+  <!-- Content Canvas -->
+  <g transform="translate(60, 200)">
+    
+<!-- Column 1: Clamping Principles &amp; Fundamental Theorem -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="1200" height="660" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="660" rx="5" fill="#38bdf8"/>
+  <text x="30" y="45" fill="#38bdf8" font-size="26" font-weight="800">1. Clamper Fundamentals &amp; The Clamping Theorem</text>
+  <text x="30" y="85" fill="#e2e8f0" font-size="19">• Definition: A network consisting of a capacitor, a diode, and a resistor that shifts an AC signal to a different DC reference level.</text>
+  <text x="30" y="125" fill="#34d399" font-size="20" font-weight="700">  Crucial Distinction from Clippers: Clampers DO NOT alter waveform shape, frequency, or peak-to-peak amplitude!</text>
+
+  <rect x="40" y="160" width="1120" height="170" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="30" y="40" fill="#fbbf24" font-size="22" font-weight="800">THE FUNDAMENTAL CLAMPING THEOREM</text>
+  <text x="30" y="80" fill="#e2e8f0" font-size="19">In steady-state, for any periodic input waveform, the peak-to-peak output swing strictly equals the input swing:</text>
+  <text x="60" y="130" fill="#38bdf8" font-size="26" font-weight="900">V_o(p-p) = V_i(p-p)</text>
+
+  <text x="30" y="375" fill="#e2e8f0" font-size="19">• Three Essential Components &amp; Roles:</text>
+  <text x="50" y="410" fill="#38bdf8" font-size="19" font-weight="700">1. Capacitor C:</text><text x="210" y="410" fill="#e2e8f0" font-size="18">Stores DC offset voltage; acts as a rechargeable floating DC voltage source.</text>
+  <text x="50" y="445" fill="#34d399" font-size="19" font-weight="700">2. Diode D:</text><text x="210" y="445" fill="#e2e8f0" font-size="18">Fast switch that enables rapid capacitor charging during conduction, and holds charge during non-conduction.</text>
+  <text x="50" y="480" fill="#fbbf24" font-size="19" font-weight="700">3. Resistor R_L:</text><text x="210" y="480" fill="#e2e8f0" font-size="18">Prevents capacitor from holding indefinite charge and allows tracking of input amplitude shifts.</text>
+
+  <text x="30" y="535" fill="#f43f5e" font-size="20" font-weight="700">★ Time Constant Inequality Criterion:</text>
+  <text x="50" y="570" fill="#34d399" font-size="20" font-weight="800">  Charging: τ_charge = R_s · C &lt;&lt; T / 2   (Capacitor must charge fully in first half-cycle!)</text>
+  <text x="50" y="605" fill="#38bdf8" font-size="20" font-weight="800">  Discharging: τ_discharge = R_L · C &gt;&gt; 10 · T   (Capacitor must NOT discharge noticeably during non-conduction!)</text>
+</g>
+
+<!-- Column 2: Positive &amp; Negative Clamper Topologies -->
+<g transform="translate(1240, 0)">
+  <rect x="0" y="0" width="1220" height="660" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="660" rx="5" fill="#34d399"/>
+  <text x="30" y="45" fill="#34d399" font-size="26" font-weight="800">2. Canonical Positive &amp; Negative Clamper Circuits</text>
+
+  <g transform="translate(40, 70)">
+    <rect x="0" y="0" width="550" height="260" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#38bdf8" font-size="19" font-weight="800">A. Negative Clamper (Diode Points Down)</text>
+    <text x="20" y="60" fill="#e2e8f0" font-size="16">• Diode conducts during POSITIVE peak +V_m.</text>
+    <text x="20" y="90" fill="#34d399" font-size="17" font-weight="700">Capacitor Voltage: V_C = +V_m (Left +, Right -)</text>
+    <text x="20" y="120" fill="#e2e8f0" font-size="16">• In steady state (diode OFF):</text>
+    <text x="20" y="150" fill="#38bdf8" font-size="18" font-weight="800">  v_o(t) = v_i(t) - V_C = v_i(t) - V_m</text>
+    <text x="20" y="185" fill="#fbbf24" font-size="16" font-weight="700">Positive peak pushed to 0 V; Negative peak to -2V_m.</text>
+    <text x="20" y="215" fill="#94a3b8" font-size="15">Total swing: 0 - (-2V_m) = 2V_m (Preserved!).</text>
+  </g>
+
+  <g transform="translate(620, 70)">
+    <rect x="0" y="0" width="550" height="260" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#34d399" font-size="19" font-weight="800">B. Positive Clamper (Diode Points Up)</text>
+    <text x="20" y="60" fill="#e2e8f0" font-size="16">• Diode conducts during NEGATIVE peak -V_m.</text>
+    <text x="20" y="90" fill="#34d399" font-size="17" font-weight="700">Capacitor Voltage: V_C = +V_m (Left -, Right +)</text>
+    <text x="20" y="120" fill="#e2e8f0" font-size="16">• In steady state (diode OFF):</text>
+    <text x="20" y="150" fill="#34d399" font-size="18" font-weight="800">  v_o(t) = v_i(t) + V_C = v_i(t) + V_m</text>
+    <text x="20" y="185" fill="#fbbf24" font-size="16" font-weight="700">Negative peak lifted to 0 V; Positive peak to +2V_m.</text>
+    <text x="20" y="215" fill="#94a3b8" font-size="15">Entire waveform sits ABOVE 0 V axis!</text>
+  </g>
+
+  <g transform="translate(40, 350)">
+    <rect x="0" y="0" width="550" height="280" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#fbbf24" font-size="19" font-weight="800">C. Positive Clamper with (+) Bias V_R</text>
+    <text x="20" y="60" fill="#e2e8f0" font-size="16">• Cathode connected to +V_R battery.</text>
+    <text x="20" y="90" fill="#38bdf8" font-size="17" font-weight="700">Capacitor charges to: V_C = V_m + V_R</text>
+    <text x="20" y="125" fill="#34d399" font-size="18" font-weight="800">v_o(t) = v_i(t) + (V_m + V_R)</text>
+    <text x="20" y="160" fill="#e2e8f0" font-size="16">• Negative peak clamped at +V_R level.</text>
+    <text x="20" y="195" fill="#fbbf24" font-size="16" font-weight="700">Positive peak reaches + (2V_m + V_R).</text>
+  </g>
+
+  <g transform="translate(620, 350)">
+    <rect x="0" y="0" width="550" height="280" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#c084fc" font-size="19" font-weight="800">D. Negative Clamper with (-) Bias -V_R</text>
+    <text x="20" y="60" fill="#e2e8f0" font-size="16">• Anode connected to -V_R battery.</text>
+    <text x="20" y="90" fill="#38bdf8" font-size="17" font-weight="700">Capacitor charges to: V_C = V_m + V_R</text>
+    <text x="20" y="125" fill="#c084fc" font-size="18" font-weight="800">v_o(t) = v_i(t) - (V_m + V_R)</text>
+    <text x="20" y="160" fill="#e2e8f0" font-size="16">• Positive peak clamped at -V_R level.</text>
+    <text x="20" y="195" fill="#fbbf24" font-size="16" font-weight="700">Negative peak plunges to - (2V_m + V_R).</text>
+  </g>
+</g>
+
+<!-- Column 3: Voltage Multipliers Hierarchy -->
+<g transform="translate(2500, 0)">
+  <rect x="0" y="0" width="1220" height="660" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="660" rx="5" fill="#fbbf24"/>
+  <text x="30" y="45" fill="#fbbf24" font-size="26" font-weight="800">3. Voltage Doublers &amp; Multipliers Hierarchy</text>
+
+  <g transform="translate(40, 75)">
+    <rect x="0" y="0" width="1140" height="170" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="35" fill="#38bdf8" font-size="20" font-weight="800">A. Half-Wave Voltage Doubler (Cascade Clamper + Peak Rectifier)</text>
+    <text x="30" y="70" fill="#e2e8f0" font-size="18">• Stage 1 (C₁ - D₁): Negative clamper. During (+) half-cycle, D₁ conducts and charges C₁ to V_m.</text>
+    <text x="30" y="105" fill="#e2e8f0" font-size="18">• Stage 2 (D₂ - C₂): Peak rectifier. During (-) half-cycle, voltage across D₁ reaches 2V_m, forward-biasing D₂.</text>
+    <text x="30" y="140" fill="#34d399" font-size="20" font-weight="800">  C₂ charges to DC voltage: V_o = 2 V_m     |     PIV of D₁ and D₂ = 2 V_m</text>
+  </g>
+
+  <g transform="translate(40, 265)">
+    <rect x="0" y="0" width="1140" height="170" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="35" fill="#34d399" font-size="20" font-weight="800">B. Full-Wave Voltage Doubler (Push-Pull Symmetrical Topology)</text>
+    <text x="30" y="70" fill="#e2e8f0" font-size="18">• Positive half-cycle: D₁ conducts and charges top capacitor C₁ to V_m (top +, bottom -).</text>
+    <text x="30" y="105" fill="#e2e8f0" font-size="18">• Negative half-cycle: D₂ conducts and charges bottom capacitor C₂ to V_m (top -, bottom +).</text>
+    <text x="30" y="140" fill="#34d399" font-size="20" font-weight="800">  Output across series pair C₁ + C₂: V_o = V_C1 + V_C2 = 2 V_m     |     PIV = 2 V_m</text>
+  </g>
+
+  <g transform="translate(40, 455)">
+    <rect x="0" y="0" width="1140" height="175" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="35" fill="#c084fc" font-size="20" font-weight="800">C. Cockcroft-Walton Cascade Ladder (Voltage Triplers &amp; Quadruplers)</text>
+    <text x="30" y="70" fill="#e2e8f0" font-size="18">• Adding Stage 3 (C₃ - D₃): Taps off Stage 2 to add another V_m ⇒ Voltage Tripler: V_o = 3 V_m.</text>
+    <text x="30" y="105" fill="#e2e8f0" font-size="18">• Adding Stage 4 (C₄ - D₄): Taps off Stage 3 to add another V_m ⇒ Voltage Quadrupler: V_o = 4 V_m.</text>
+    <text x="30" y="140" fill="#fbbf24" font-size="19" font-weight="800">★ General N-Stage Rule: V_o = N · V_m   |   PIV of every diode in cascade ladder = 2 V_m (except D₁)!</text>
+  </g>
+</g>
+
+<!-- Bottom Full Row: Waveforms &amp; Clamping Dynamics -->
+<g transform="translate(0, 690)">
+  <rect x="0" y="0" width="3720" height="670" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="670" rx="5" fill="#38bdf8"/>
+  <text x="30" y="45" fill="#38bdf8" font-size="28" font-weight="800">4. Clamper Transient-to-Steady-State Physics &amp; Exam Traps</text>
+
+  <g transform="translate(40, 70)">
+    <rect x="0" y="0" width="1780" height="560" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="24" font-weight="800">PHYSICS OF CAPACITOR CHARGE RETENTION &amp; STEADY STATE</text>
+    <text x="30" y="85" fill="#e2e8f0" font-size="19">Why does the clamper output maintain its shifted DC level indefinitely?</text>
+    <text x="50" y="130" fill="#34d399" font-size="20" font-weight="700">1. Forward-Conduction Half-Cycle (Diode ON):</text>
+    <text x="70" y="165" fill="#e2e8f0" font-size="18">The diode behaves as a short circuit (resistance r_f ≈ 0). The loop impedance is just source resistance R_s.</text>
+    <text x="70" y="200" fill="#38bdf8" font-size="19" font-weight="800">τ_charge = (R_s + r_f) · C ≈ microseconds. Capacitor charges to peak voltage almost INSTANTANEOUSLY!</text>
+
+    <text x="50" y="250" fill="#fbbf24" font-size="20" font-weight="700">2. Reverse-Blocking Half-Cycle (Diode OFF):</text>
+    <text x="70" y="285" fill="#e2e8f0" font-size="18">The diode is reverse-biased (resistance R_r → ∞). The capacitor can only discharge through the huge load resistor R_L.</text>
+    <text x="70" y="320" fill="#34d399" font-size="19" font-weight="800">τ_discharge = R_L · C &gt;&gt; 100 × T. Discharge is imperceptible (&lt; 1% drop per cycle).</text>
+
+    <text x="50" y="370" fill="#c084fc" font-size="20" font-weight="700">3. Net Charge Balance Principle:</text>
+    <text x="70" y="405" fill="#e2e8f0" font-size="18">During the tiny fraction of each cycle when the peak occurs, the diode conducts for a brief micro-interval Δt,</text>
+    <text x="70" y="440" fill="#e2e8f0" font-size="18">replenishing the minuscule charge lost to R_L during the rest of the period: ΔQ_charge = ΔQ_discharge.</text>
+    <text x="70" y="480" fill="#fbbf24" font-size="19" font-weight="800">Steady state is firmly established where V_C remains precisely locked at its peak value!</text>
+  </g>
+
+  <g transform="translate(1860, 70)">
+    <rect x="0" y="0" width="1820" height="560" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#f43f5e" font-size="24" font-weight="800">TOP 4 DANGEROUS CLAMPER EXAM TRAPS &amp; SAFEGUARDS</text>
+    
+    <text x="50" y="90" fill="#fbbf24" font-size="20" font-weight="800">Trap 1: Starting Analysis on the Non-Conducting Half-Cycle</text>
+    <text x="70" y="125" fill="#e2e8f0" font-size="18">Fatal Mistake: Trying to calculate output before capacitor has acquired its charge.</text>
+    <text x="70" y="160" fill="#34d399" font-size="18" font-weight="700">Titan Safeguard: ALWAYS locate the half-cycle that forward-biases the diode FIRST, charge capacitor, then evaluate output!</text>
+
+    <text x="50" y="215" fill="#fbbf24" font-size="20" font-weight="800">Trap 2: Forgetting Diode Cut-in Voltage V_γ in Practical Clampers</text>
+    <text x="70" y="250" fill="#e2e8f0" font-size="18">Fatal Mistake: Assuming ideal clamping to 0 V when diode has V_γ = 0.7 V.</text>
+    <text x="70" y="285" fill="#34d399" font-size="18" font-weight="700">Titan Safeguard: For negative clamper, output clamps to +0.7 V, not 0 V! V_C = V_m - 0.7 V.</text>
+
+    <text x="50" y="340" fill="#fbbf24" font-size="20" font-weight="800">Trap 3: Square-Wave Clamper Tilt / Sag with Finite R_L C</text>
+    <text x="70" y="375" fill="#e2e8f0" font-size="18">Fatal Mistake: Expecting a flat horizontal top when R_L C is comparable to period T.</text>
+    <text x="70" y="410" fill="#38bdf8" font-size="18" font-weight="700">Titan Safeguard: Output displays exponential droop (tilt): ΔV_tilt = V_m · [ T_half / (R_L C) ].</text>
+
+    <text x="50" y="465" fill="#fbbf24" font-size="20" font-weight="800">Trap 4: Confusing Diode PIV in Voltage Multipliers</text>
+    <text x="70" y="500" fill="#e2e8f0" font-size="18">Fatal Mistake: Stating PIV = V_m for multiplier diodes.</text>
+    <text x="70" y="535" fill="#f43f5e" font-size="18" font-weight="800">Titan Safeguard: In ALL voltage doublers, triplers, and quadruplers, EVERY diode must withstand PIV = 2 V_m!</text>
+  </g>
+</g>
+
+  </g>
+
+  <!-- Bottom Blueprint Metadata Footer -->
+  <g transform="translate(60, 2070)">
+    <line x1="0" y1="0" x2="3720" y2="0" stroke="#334155" stroke-width="1.5"/>
+    <text x="10" y="32" fill="#64748b" font-size="16" font-weight="600">ANALOG ELECTRONICS MASTER BLUEPRINT ENGINE • VERIFIED ACROSS 422 LECTURE SLIDES • ZERO-OMISSION TITAN SPECIFICATION</text>
+    <text x="3710" y="32" fill="#64748b" font-size="16" font-weight="600" text-anchor="end">PREPFUSION &amp; RAHUL SIR COMPREHENSIVE LECTURE SERIES ARCHITECTURE</text>
+  </g>
+</svg>

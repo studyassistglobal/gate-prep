@@ -1,0 +1,373 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.35" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.8" stroke-opacity="0.5" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="panelShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65" />
+        </filter>
+
+        <marker id="arrowCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+        </marker>
+        <marker id="arrowGold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#fbbf24" />
+        </marker>
+        <marker id="arrowEmerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
+        </marker>
+        <marker id="arrowRose" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#f43f5e" />
+        </marker>
+        <marker id="arrowPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#c084fc" />
+        </marker>
+    </defs>
+
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Top Blueprint Banner -->
+    <rect x="80" y="60" width="3680" height="150" rx="16" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="2" filter="url(#panelShadow)" />
+    <text x="130" y="130" font-family="'Inter', sans-serif" font-weight="900" font-size="46" fill="url(#headerGrad)" letter-spacing="1.5">BLUEPRINT 04: DIVERGENCE, CURL, SOLENOIDAL/IRROTATIONAL FIELDS &amp; NULL IDENTITIES</text>
+    <text x="130" y="178" font-family="'Inter', sans-serif" font-weight="600" font-size="24" fill="#94a3b8" letter-spacing="0.5">Volumetric Flux Outflow (div F) • Circulation Vorticity (curl F) • The Null Pair DC=0 &amp; CG=0 • Helmholtz Potentials</text>
+
+    <!-- Technical Status Badge -->
+    <rect x="3300" y="90" width="410" height="90" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="3340" cy="135" r="14" fill="#34d399" filter="url(#glowCyan)" />
+    <text x="3375" y="130" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#f8fafc">4K TECHNICAL BLUEPRINT</text>
+    <text x="3375" y="156" font-family="'Fira Code', monospace" font-weight="600" font-size="16" fill="#38bdf8">GATE 2027 • PREPFUSION</text>
+
+    <!-- Content Region -->
+    
+    <!-- Layout: 3 Major Panels -->
+    <!-- PANEL 1: Divergence & Solenoidal Fields (Left) -->
+    <g transform="translate(100, 240)">
+        <rect width="1160" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1160" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#38bdf8">1. DIVERGENCE (div F) &amp; SOLENOIDAL FIELDS</text>
+
+        <!-- Definition & Operator -->
+        <g transform="translate(40, 100)">
+            <rect width="1080" height="460" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">MATHEMATICAL DEFINITION &amp; FLUX OUTFLOW</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">The net outward volumetric flux per unit volume at an infinitesimal point:</text>
+
+            <g transform="translate(40, 105)">
+                <rect width="1000" height="100" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+                <text x="30" y="60" font-family="'Fira Code', monospace" font-size="28" fill="#fbbf24" font-weight="700">div(F) = grad . F = dF_x/dx + dF_y/dy + dF_z/dz</text>
+            </g>
+
+            <!-- 3 Physical Regimes -->
+            <g transform="translate(40, 230)">
+                <g transform="translate(0, 0)">
+                    <rect width="320" height="190" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#34d399" font-weight="700">SOURCE REGIME</text>
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="24" fill="#34d399" font-weight="700">div(F) &gt; 0</text>
+                    <text x="25" y="115" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Net flux expands outwards.</text>
+                    <text x="25" y="145" font-family="'Inter', sans-serif" font-size="14" fill="#94a3b8">Positive charge / fluid source.</text>
+                </g>
+
+                <g transform="translate(340, 0)">
+                    <rect width="320" height="190" rx="10" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#f43f5e" font-weight="700">SINK REGIME</text>
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="24" fill="#f43f5e" font-weight="700">div(F) &lt; 0</text>
+                    <text x="25" y="115" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Net flux converges inward.</text>
+                    <text x="25" y="145" font-family="'Inter', sans-serif" font-size="14" fill="#94a3b8">Negative charge / fluid drain.</text>
+                </g>
+
+                <g transform="translate(680, 0)">
+                    <rect width="320" height="190" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" font-weight="700">SOLENOIDAL</text>
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24" font-weight="700">div(F) = 0</text>
+                    <text x="25" y="115" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Zero net flux outflow.</text>
+                    <text x="25" y="145" font-family="'Inter', sans-serif" font-size="14" fill="#34d399">Incompressible Flow!</text>
+                </g>
+            </g>
+        </g>
+
+        <!-- Solenoidal Field Theorem -->
+        <g transform="translate(40, 600)">
+            <rect width="1080" height="540" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#fbbf24">THE SOLENOIDAL (INCOMPRESSIBLE) FIELD THEOREM</text>
+            
+            <g transform="translate(40, 75)">
+                <rect width="1000" height="160" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24" font-weight="700">EQUIVALENCE THEOREM FOR SOLENOIDAL FIELDS:</text>
+                <text x="30" y="85" font-family="'Fira Code', monospace" font-size="26" fill="#f8fafc">F is Solenoidal  &lt;==&gt;  div(F) = grad . F = 0</text>
+                <text x="30" y="125" font-family="'Fira Code', monospace" font-size="24" fill="#34d399">&lt;==&gt;  F can be expressed as Curl of a Vector Potential: F = grad x A</text>
+            </g>
+
+            <g transform="translate(40, 260)">
+                <text x="0" y="30" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">Magnetic Field B (Gauss's Law for Magnetism):</text>
+                <text x="0" y="70" font-family="'Fira Code', monospace" font-size="22" fill="#cbd5e1">grad . B = 0  ==&gt;  B = grad x A  (No Magnetic Monopoles!)</text>
+
+                <text x="0" y="130" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">Closed Surface Flux Invariant:</text>
+                <text x="0" y="170" font-family="'Fira Code', monospace" font-size="22" fill="#34d399">oiint_S F . dS = iiint_V (grad . F) dV = iiint_V (0) dV = 0  (ALWAYS ZERO!)</text>
+
+                <text x="0" y="230" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">Fluid Mechanics Interpretation:</text>
+                <text x="0" y="260" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Fluid enters and exits any arbitrary volume at equal rates; constant density rho.</text>
+            </g>
+        </g>
+
+        <!-- Radial Divergence Formulas -->
+        <g transform="translate(40, 1180)">
+            <rect width="1080" height="520" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#34d399">RADIAL VECTOR DIVERGENCE THEOREMS (SLIDE 126)</text>
+
+            <g transform="translate(40, 70)">
+                <rect width="1000" height="200" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24">1. grad . r = d(x)/dx + d(y)/dy + d(z)/dz = 1 + 1 + 1 = 3</text>
+                <text x="30" y="90" font-family="'Fira Code', monospace" font-size="24" fill="#38bdf8">2. grad . (r_cap) = grad . (r/r) = (1/r) (grad . r) + r . grad(1/r)</text>
+                <text x="70" y="130" font-family="'Fira Code', monospace" font-size="22" fill="#cbd5e1">= (1/r)(3) + r . (-r / r^3) = 3/r - r^2/r^3 = 3/r - 1/r = 2 / r</text>
+                <text x="30" y="175" font-family="'Fira Code', monospace" font-size="24" fill="#34d399" font-weight="700">3. General Law: grad . [ r^n r ] = (n + 3) r^n</text>
+            </g>
+
+            <g transform="translate(40, 295)">
+                <rect width="1000" height="190" rx="10" fill="#020617" stroke="#f43f5e" stroke-width="2"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#f43f5e" font-weight="700">GATE CRITICAL POINT SOURCE CLASSIFICATION:</text>
+                <text x="30" y="85" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24">When is r^n r Solenoidal?  grad . (r^n r) = 0  &lt;==&gt;  n + 3 = 0  &lt;==&gt;  n = -3</text>
+                <text x="30" y="130" font-family="'Fira Code', monospace" font-size="19" fill="#34d399">The Inverse-Square Field F = r / r^3 = r_cap / r^2 is SOLENOIDAL everywhere for r != 0!</text>
+                <text x="30" y="165" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">At r = 0, it features a Dirac Delta singularity: grad . (r / r^3) = 4pi delta^3(r).</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- PANEL 2: Curl & Irrotational Fields (Center) -->
+    <g transform="translate(1300, 240)">
+        <rect width="1240" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1240" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#fbbf24">2. CURL (curl F) &amp; IRROTATIONAL FIELDS</text>
+
+        <!-- Definition & Determinant -->
+        <g transform="translate(40, 100)">
+            <rect width="1160" height="460" rx="14" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#f43f5e">MATHEMATICAL DEFINITION &amp; VORTEX CIRCULATION</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">The net circulation per unit surface area; measures microscopic rotation:</text>
+
+            <g transform="translate(40, 105)">
+                <rect width="1080" height="150" rx="10" fill="#0f172a" stroke="#f43f5e" stroke-width="2"/>
+                <text x="40" y="55" font-family="'Fira Code', monospace" font-size="24" fill="#f8fafc">curl(F) = grad x F = det [  i        j        k     ;</text>
+                <text x="40" y="95" font-family="'Fira Code', monospace" font-size="24" fill="#f8fafc">                          d/dx     d/dy     d/dz    ;</text>
+                <text x="40" y="130" font-family="'Fira Code', monospace" font-size="24" fill="#f8fafc">                          F_x      F_y      F_z     ]</text>
+            </g>
+
+            <g transform="translate(40, 275)">
+                <rect width="1080" height="155" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">CARTESIAN COMPONENT EXPANSION:</text>
+                <text x="30" y="80" font-family="'Fira Code', monospace" font-size="20" fill="#38bdf8">grad x F = (dF_z/dy - dF_y/dz) i + (dF_x/dz - dF_z/dx) j + (dF_y/dx - dF_x/dy) k</text>
+                <text x="30" y="125" font-family="'Inter', sans-serif" font-size="16" fill="#34d399">Paddle Wheel Physical Test: A tiny paddle wheel placed in the fluid spins iff curl F != 0.</text>
+            </g>
+        </g>
+
+        <!-- Irrotational Field Theorem -->
+        <g transform="translate(40, 600)">
+            <rect width="1160" height="540" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#fbbf24">THE IRROTATIONAL (CONSERVATIVE) FIELD THEOREM</text>
+
+            <g transform="translate(40, 75)">
+                <rect width="1080" height="160" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24" font-weight="700">EQUIVALENCE THEOREM FOR IRROTATIONAL FIELDS:</text>
+                <text x="30" y="85" font-family="'Fira Code', monospace" font-size="26" fill="#f8fafc">F is Irrotational  &lt;==&gt;  curl(F) = grad x F = 0</text>
+                <text x="30" y="125" font-family="'Fira Code', monospace" font-size="24" fill="#34d399">&lt;==&gt;  F is Conservative: F can be represented as grad(phi)</text>
+            </g>
+
+            <g transform="translate(40, 260)">
+                <text x="0" y="30" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">Circulation along ANY Closed Loop is Zero:</text>
+                <text x="0" y="70" font-family="'Fira Code', monospace" font-size="22" fill="#34d399">oint_C F . dl = iint_S (grad x F) . dS = iint_S (0) . dS = 0</text>
+
+                <text x="0" y="130" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">Work Done is Strictly Path-Independent:</text>
+                <text x="0" y="170" font-family="'Fira Code', monospace" font-size="22" fill="#fbbf24">int_A^B F . dl = phi(B) - phi(A)  (Independent of route taken!)</text>
+
+                <text x="0" y="230" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">Angular Velocity Bridge (Fluid Dynamics):</text>
+                <text x="0" y="260" font-family="'Fira Code', monospace" font-size="20" fill="#cbd5e1">Vorticity omega = 1/2 (grad x v). Zero curl implies irrotational potential flow.</text>
+            </g>
+        </g>
+
+        <!-- Radial Curl Invariance -->
+        <g transform="translate(40, 1180)">
+            <rect width="1160" height="520" rx="14" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#c084fc">RADIAL VECTOR CURL INVARIANCE: grad x [ f(r) r ] = 0</text>
+
+            <g transform="translate(40, 70)">
+                <rect width="1080" height="230" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">PROOF VIA VECTOR IDENTITY:</text>
+                <text x="30" y="85" font-family="'Fira Code', monospace" font-size="22" fill="#f8fafc">grad x [ f(r) r ] = f(r) (grad x r) + grad[f(r)] x r</text>
+                <text x="30" y="130" font-family="'Fira Code', monospace" font-size="20" fill="#94a3b8">1. grad x r = det [ i j k ; d/dx d/dy d/dz ; x y z ] = 0 i + 0 j + 0 k = 0</text>
+                <text x="30" y="170" font-family="'Fira Code', monospace" font-size="20" fill="#94a3b8">2. grad[f(r)] = [ f'(r)/r ] r  ==&gt;  grad[f(r)] x r = [ f'(r)/r ] (r x r) = 0</text>
+                <text x="30" y="210" font-family="'Fira Code', monospace" font-size="24" fill="#34d399" font-weight="700">Therefore: grad x [ f(r) r ] == 0  IDENTICALLY!</text>
+            </g>
+
+            <g transform="translate(40, 325)">
+                <rect width="1080" height="160" rx="10" fill="#020617" stroke="#34d399" stroke-width="2"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" font-weight="700">CENTRAL FORCE THEOREM:</text>
+                <text x="30" y="85" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24">EVERY CENTRAL FORCE FIELD F = f(r) r_cap IS UNCONDITIONALLY IRROTATIONAL!</text>
+                <text x="30" y="130" font-family="'Inter', sans-serif" font-size="17" fill="#cbd5e1">Gravity F = -G M m / r^2 r_cap and Coulomb F = k q_1 q_2 / r^2 r_cap have zero curl everywhere.</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- PANEL 3: The Null Pair DC=0 & CG=0 (Right) -->
+    <g transform="translate(2580, 240)">
+        <rect width="1160" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1160" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#c084fc">3. THE NULL PAIR: DC = 0 &amp; CG = 0 ENGINE</text>
+
+        <!-- Null Pair Memory Aids -->
+        <g transform="translate(40, 100)">
+            <rect width="1080" height="490" rx="14" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#c084fc">THE TWO SACRED VECTOR CALCULUS NULL IDENTITIES</text>
+
+            <!-- DC = 0 Card -->
+            <g transform="translate(40, 75)">
+                <rect width="1000" height="175" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+                <text x="30" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#38bdf8" font-weight="700">IDENTITY 1: DIVERGENCE OF CURL IS IDENTICALLY ZERO</text>
+                <text x="30" y="85" font-family="'Fira Code', monospace" font-size="34" fill="#fbbf24" font-weight="700">div( curl F ) = grad . ( grad x F ) == 0</text>
+                <text x="30" y="130" font-family="'Inter', sans-serif" font-size="18" fill="#34d399">CHALKBOARD MEMORY AID: DC = 0  ("Delhi Capitals = 0")</text>
+                <text x="30" y="160" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">Physical Meaning: Vortex lines form closed loops; they cannot originate from sources or terminate in sinks.</text>
+            </g>
+
+            <!-- CG = 0 Card -->
+            <g transform="translate(40, 275)">
+                <rect width="1000" height="175" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+                <text x="30" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" font-weight="700">IDENTITY 2: CURL OF GRADIENT IS IDENTICALLY ZERO</text>
+                <text x="30" y="85" font-family="'Fira Code', monospace" font-size="34" fill="#34d399" font-weight="700">curl( grad phi ) = grad x ( grad phi ) == 0</text>
+                <text x="30" y="130" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8">CHALKBOARD MEMORY AID: CG = 0  ("CGPA = 0")</text>
+                <text x="30" y="160" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">Physical Meaning: Gradient fields are purely conservative; traversing any closed loop generates zero circulation.</text>
+            </g>
+        </g>
+
+        <!-- Helmholtz Theorem & Potentials -->
+        <g transform="translate(40, 630)">
+            <rect width="1080" height="480" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">THE HELMHOLTZ DECOMPOSITION THEOREM</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Every sufficiently smooth vector field F in R^3 can be uniquely decomposed into:</text>
+
+            <g transform="translate(40, 105)">
+                <rect width="1000" height="110" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+                <text x="40" y="65" font-family="'Fira Code', monospace" font-size="34" fill="#fbbf24" font-weight="700">F = -grad phi  +  grad x A</text>
+            </g>
+            
+            <g transform="translate(40, 240)">
+                <g transform="translate(0, 0)">
+                    <rect width="480" height="200" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#34d399" font-weight="700">IRROTATIONAL PART: -grad phi</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="18" fill="#f8fafc">curl(-grad phi) = 0  (via CG = 0)</text>
+                    <text x="25" y="110" font-family="'Fira Code', monospace" font-size="18" fill="#94a3b8">div(-grad phi) = -grad^2 phi</text>
+                    <text x="25" y="150" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Governed by Poisson: grad^2 phi = -rho</text>
+                    <text x="25" y="180" font-family="'Inter', sans-serif" font-size="14" fill="#38bdf8">Scalar Potential phi</text>
+                </g>
+
+                <g transform="translate(520, 0)">
+                    <rect width="480" height="200" rx="10" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#f43f5e" font-weight="700">SOLENOIDAL PART: grad x A</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="18" fill="#f8fafc">div(grad x A) = 0  (via DC = 0)</text>
+                    <text x="25" y="110" font-family="'Fira Code', monospace" font-size="18" fill="#94a3b8">curl(grad x A) = grad(div A) - grad^2 A</text>
+                    <text x="25" y="150" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Coulomb Gauge: div A = 0</text>
+                    <text x="25" y="180" font-family="'Inter', sans-serif" font-size="14" fill="#fbbf24">Vector Potential A</text>
+                </g>
+            </g>
+        </g>
+
+        <!-- Solved GATE MSQ Matrix (Slide 138) -->
+        <g transform="translate(40, 1150)">
+            <rect width="1080" height="550" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#34d399">SOLVED GATE MSQ DRILL (SLIDE 138)</text>
+            <text x="40" y="75" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Which of the following fundamental statements are TRUE? (Multiple Select Question):</text>
+
+            <g transform="translate(40, 95)">
+                <g transform="translate(0, 0)">
+                    <rect width="1000" height="85" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <circle cx="40" cy="42" r="14" fill="#34d399"/>
+                    <text x="35" y="48" font-family="'Inter', sans-serif" font-size="18" fill="#0f172a" font-weight="800">A</text>
+                    <text x="75" y="48" font-family="'Inter', sans-serif" font-size="17" fill="#f8fafc">If vector field F is irrotational, then curl(F) = grad x F = 0.</text>
+                    <text x="900" y="48" font-family="'Fira Code', monospace" font-size="16" fill="#34d399" font-weight="700">[TRUE]</text>
+                </g>
+
+                <g transform="translate(0, 100)">
+                    <rect width="1000" height="85" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <circle cx="40" cy="42" r="14" fill="#34d399"/>
+                    <text x="35" y="48" font-family="'Inter', sans-serif" font-size="18" fill="#0f172a" font-weight="800">B</text>
+                    <text x="75" y="48" font-family="'Inter', sans-serif" font-size="17" fill="#f8fafc">If vector field F is irrotational, then F can be represented as grad(phi).</text>
+                    <text x="900" y="48" font-family="'Fira Code', monospace" font-size="16" fill="#34d399" font-weight="700">[TRUE]</text>
+                </g>
+
+                <g transform="translate(0, 200)">
+                    <rect width="1000" height="85" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <circle cx="40" cy="42" r="14" fill="#34d399"/>
+                    <text x="35" y="48" font-family="'Inter', sans-serif" font-size="18" fill="#0f172a" font-weight="800">C</text>
+                    <text x="75" y="48" font-family="'Inter', sans-serif" font-size="17" fill="#f8fafc">If vector field F is solenoidal, then div(F) = grad . F = 0.</text>
+                    <text x="900" y="48" font-family="'Fira Code', monospace" font-size="16" fill="#34d399" font-weight="700">[TRUE]</text>
+                </g>
+
+                <g transform="translate(0, 300)">
+                    <rect width="1000" height="85" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <circle cx="40" cy="42" r="14" fill="#34d399"/>
+                    <text x="35" y="48" font-family="'Inter', sans-serif" font-size="18" fill="#0f172a" font-weight="800">D</text>
+                    <text x="75" y="48" font-family="'Inter', sans-serif" font-size="17" fill="#f8fafc">If vector field F is solenoidal, then F can be represented as grad x A.</text>
+                    <text x="900" y="48" font-family="'Fira Code', monospace" font-size="16" fill="#34d399" font-weight="700">[TRUE]</text>
+                </g>
+            </g>
+            <text x="70" y="525" font-family="'Fira Code', monospace" font-size="20" fill="#fbbf24">GATE RESULT: ALL 4 OPTIONS (A, B, C, D) ARE CORRECT! [100% SCORE]</text>
+        </g>
+    </g>
+    
+
+    <!-- Footer Information Strip -->
+    <rect x="80" y="2040" width="3680" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <text x="120" y="2077" font-family="'Fira Code', monospace" font-size="18" fill="#64748b">ENGINEERING MATHEMATICS • VECTOR CALCULUS TITAN GUIDE • CHALKBOARD AUDIT 65 PAGES / 259 SLIDES</text>
+    <text x="3250" y="2077" font-family="'Fira Code', monospace" font-size="18" fill="#38bdf8">RESOLUTION: 3840 x 2160 (16:9 4K UHD)</text>
+</svg>

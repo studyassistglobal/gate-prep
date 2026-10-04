@@ -1,0 +1,418 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.4" opacity="0.6" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowEmerald" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="cardShadow" x="-10%" y="-5%" width="120%" height="115%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+    </defs>
+
+    <style>
+        .font-mono { font-family: 'Consolas', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+        .font-sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+    </style>
+
+    <!-- Deep Blueprint Background -->
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Outer Architectural Frame -->
+    <rect x="40" y="40" width="3760" height="2080" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+    <rect x="48" y="48" width="3744" height="2064" fill="none" stroke="#1e293b" stroke-width="1" rx="12" />
+
+    <!-- Corner Alignment Reticles -->
+    <path d="M 40 80 L 80 80 L 80 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 80 L 3760 80 L 3760 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 40 2080 L 80 2080 L 80 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 2080 L 3760 2080 L 3760 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Top Master Header Banner -->
+    <g transform="translate(80, 80)">
+        <rect x="0" y="0" width="3680" height="150" fill="#0b1329" fill-opacity="0.85" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="12" height="150" fill="url(#headerGrad)" rx="4" />
+        
+        <!-- Blueprint Title & Subtitle -->
+        <text x="50" y="62" fill="url(#headerGrad)" font-size="44" font-weight="900" letter-spacing="2px" class="font-sans">HARMONIC FUNCTIONS, CONJUGATES &amp; MILNE-THOMSON ENGINE</text>
+        <text x="50" y="112" fill="#94a3b8" font-size="24" font-weight="500" letter-spacing="0.5px" class="font-sans">Laplace 2D Field Equation // Orthogonal Trajectory Networks // Milne-Thomson 30s Reconstruction // Exact Differentials</text>
+
+        <!-- Technical Telemetry Badge -->
+        <g transform="translate(3220, 30)">
+            <rect x="0" y="0" width="410" height="90" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <circle cx="30" cy="45" r="8" fill="#10b981" filter="url(#glowEmerald)" />
+            <text x="52" y="38" fill="#e2e8f0" font-size="16" font-weight="700" class="font-mono">GATE 2027 TITANS ENGINE</text>
+            <text x="52" y="65" fill="#38bdf8" font-size="14" font-weight="600" class="font-mono">SPEC: ULTRA-HD 4K BLUEPRINT</text>
+        </g>
+    </g>
+
+    <!-- Canvas Inner Content -->
+    
+    <!-- ==========================================
+         PANEL 1: HARMONIC FUNCTIONS & LAPLACE ENGINE
+         ========================================== -->
+    <g transform="translate(80, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#cyanGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">01. 2D LAPLACE FIELD EQUATION &amp; HARMONIC CONJUGATES</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Harmonicity condition // Continuous 2nd partials // Conjugate existence theorem</text>
+
+        <!-- Sub-card 1: Harmonic Definition & Derivation -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">DEFINITION OF A HARMONIC FUNCTION</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">A real-valued function &#981;(x,y) is <tspan fill="#34d399" font-weight="700">harmonic</tspan> in domain D iff:</text>
+            <text x="24" y="105" fill="#94a3b8" font-size="15" class="font-sans">1. Its second-order partial derivatives are continuous in D.</text>
+            <text x="24" y="135" fill="#94a3b8" font-size="15" class="font-sans">2. It satisfies Laplace's Equation: &#8711;&#178;&#981; = 0.</text>
+
+            <g transform="translate(20, 160)">
+                <rect x="0" y="0" width="800" height="140" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="40" fill="#38bdf8" font-size="26" font-weight="900" class="font-mono">&#8711;&#178;u = &#8706;&#178;u/&#8706;x&#178; + &#8706;&#178;u/&#8706;y&#178; = 0   (u&#7523;&#7523; + u&#7524;&#7524; = 0)</text>
+                <text x="20" y="80" fill="#34d399" font-size="26" font-weight="900" class="font-mono">&#8711;&#178;v = &#8706;&#178;v/&#8706;x&#178; + &#8706;&#178;v/&#8706;y&#178; = 0   (v&#7523;&#7523; + v&#7524;&#7524; = 0)</text>
+                <text x="20" y="120" fill="#fbbf24" font-size="15" class="font-sans">&#9733; The real part u and imaginary part v of EVERY analytic function are harmonic!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Harmonic Conjugate Rigor -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">HARMONIC CONJUGATE DEFINITION &amp; SENSE</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">If u(x,y) is harmonic in simply connected D, a harmonic function v(x,y) is called</text>
+            <text x="24" y="105" fill="#38bdf8" font-size="17" font-weight="700" class="font-sans">the "harmonic conjugate of u" iff f(z) = u + iv is analytic.</text>
+
+            <g transform="translate(20, 130)">
+                <rect x="0" y="0" width="800" height="170" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#f43f5e" font-size="16" font-weight="700" class="font-mono">&#9888; DANGEROUS ORDER TRAP (NON-SYMMETRIC!):</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-sans">• If v is the harmonic conjugate of u, then <tspan fill="#f43f5e" font-weight="700">u is NOT the conjugate of v</tspan>!</text>
+                <text x="20" y="95" fill="#34d399" font-size="15" class="font-mono">• Instead: The harmonic conjugate of v is <tspan font-weight="700">-u</tspan>!</text>
+                <text x="20" y="125" fill="#94a3b8" font-size="14" class="font-sans">Proof: If f = u + iv is analytic, then -i f = v - iu is analytic, so -u is the imaginary part.</text>
+                <text x="20" y="155" fill="#fbbf24" font-size="14" class="font-mono">&#9733; GATE Trap: "If v is conj of u, is u conj of v?" NO, answer is -u!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Polar Harmonic Formulation -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">POLAR LAPLACE EQUATION &amp; LOGARITHMIC POTENTIALS</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">POLAR LAPLACIAN FORMULA</text>
+                <text x="20" y="80" fill="#e2e8f0" font-size="22" font-weight="700" class="font-mono">&#8706;&#178;&#981;/&#8706;r&#178; + (1/r) &#8706;&#981;/&#8706;r + (1/r&#178;) &#8706;&#178;&#981;/&#8706;&#952;&#178; = 0</text>
+                <text x="20" y="125" fill="#fbbf24" font-size="18" class="font-mono">r&#178; &#981;&#7525;&#7525; + r &#981;&#7525; + &#981;&#7780;&#7780; = 0</text>
+                <text x="20" y="170" fill="#94a3b8" font-size="15" class="font-sans">• Standard radial solution: &#981;(r) = A ln(r) + B</text>
+                <text x="20" y="205" fill="#34d399" font-size="15" class="font-mono">&#9733; u(r,&#952;) = ln r is harmonic for r &gt; 0; its conjugate is v(r,&#952;) = &#952; (since ln z = ln r + i&#952;)</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#c084fc" font-size="18" font-weight="700" class="font-mono">EXACT DIFFERENTIAL CONJUGATE METHOD</text>
+                <text x="20" y="70" fill="#94a3b8" font-size="15" class="font-sans">Since v is an exact differential: dv = (&#8706;v/&#8706;x) dx + (&#8706;v/&#8706;y) dy</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="18" font-weight="700" class="font-mono">dv = (-&#8706;u/&#8706;y) dx + (&#8706;u/&#8706;x) dy = M dx + N dy</text>
+                <text x="20" y="145" fill="#34d399" font-size="16" class="font-mono">Exactness condition: &#8706;M/&#8706;y = -u&#7524;&#7524; = u&#7523;&#7523; = &#8706;N/&#8706;x (guaranteed by &#8711;&#178;u = 0!)</text>
+                <text x="20" y="180" fill="#fbbf24" font-size="15" class="font-mono">v(x,y) = &#8747; M dx (treating y as const) + &#8747; (terms in N free from x) dy + C</text>
+                <text x="20" y="215" fill="#38bdf8" font-size="14" class="font-sans">Standard textbook integration recipe when explicit v(x,y) formula is requested.</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 2: ORTHOGONAL TRAJECTORIES & LEVEL CURVES
+         ========================================== -->
+    <g transform="translate(1960, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#goldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#fbbf24" font-size="28" font-weight="800" class="font-sans">02. ORTHOGONAL TRAJECTORIES &amp; LEVEL CURVE DUALITY</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Geometric orthogonality m&#8321; &#183; m&#8322; = -1 // Equipotentials &amp; Streamlines // Engineering applications</text>
+
+        <!-- Sub-card 1: Orthogonality Proof -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">PROOF OF ORTHOGONALITY OF LEVEL CURVES</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-mono">Let Family 1: u(x,y) = c&#8321;   and   Family 2: v(x,y) = c&#8322;</text>
+            <text x="24" y="110" fill="#94a3b8" font-size="15" class="font-sans">Differentiating Family 1: du = u&#7523; dx + u&#7524; dy = 0 &#8658; <tspan fill="#34d399">m&#8321; = (dy/dx)&#8321; = -u&#7523; / u&#7524;</tspan></text>
+            <text x="24" y="145" fill="#94a3b8" font-size="15" class="font-sans">Differentiating Family 2: dv = v&#7523; dx + v&#7524; dy = 0 &#8658; <tspan fill="#c084fc">m&#8322; = (dy/dx)&#8322; = -v&#7523; / v&#7524;</tspan></text>
+
+            <g transform="translate(20, 170)">
+                <rect x="0" y="0" width="800" height="130" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">PRODUCT OF SLOPES USING CR (v&#7523; = -u&#7524;, v&#7524; = u&#7523;):</text>
+                <text x="20" y="75" fill="#38bdf8" font-size="22" font-weight="900" class="font-mono">m&#8321; &#183; m&#8322; = (-u&#7523; / u&#7524;) &#183; (-v&#7523; / v&#7524;) = (-u&#7523; / u&#7524;) &#183; (u&#7524; / u&#7523;) = -1</text>
+                <text x="20" y="112" fill="#34d399" font-size="15" class="font-sans">&#8658; The curves u(x,y) = c&#8321; and v(x,y) = c&#8322; intersect at 90&#176; at every point where f'(z) &#8800; 0!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Physical Field Interpretations -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">PHYSICAL FIELD CORRESPONDENCE</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="120" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">FLUID DYNAMICS (IRROTATIONAL INCOMPRESSIBLE FLOW)</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-sans">Complex Potential: W(z) = &#934;(x,y) + i &#936;(x,y)</text>
+                <text x="20" y="85" fill="#34d399" font-size="15" class="font-mono">&#934;(x,y) = Velocity Potential (lines &#934; = c&#8321; are equipotential)</text>
+                <text x="20" y="110" fill="#c084fc" font-size="15" class="font-mono">&#936;(x,y) = Stream Function (fluid flows tangent to streamlines &#936; = c&#8322;)</text>
+            </g>
+
+            <g transform="translate(20, 185)">
+                <rect x="0" y="0" width="800" height="120" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">ELECTROSTATICS &amp; HEAT TRANSFER</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-sans">Complex Potential: &#937;(z) = V(x,y) + i U(x,y)</text>
+                <text x="20" y="85" fill="#34d399" font-size="15" class="font-mono">V(x,y) = Equipotential / Isothermal lines (constant temperature)</text>
+                <text x="20" y="110" fill="#f43f5e" font-size="15" class="font-mono">U(x,y) = Electric Flux / Heat Flow lines (orthogonal to equipotentials)</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Worked Drill - Cubic Conjugate -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CLASSROOM DRILL: FINDING HARMONIC CONJUGATE OF u = x&#179; - 3xy&#178;</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">STEP 1: VERIFY HARMONICITY</text>
+                <text x="20" y="68" fill="#e2e8f0" font-size="15" class="font-mono">u&#7523; = 3x&#178; - 3y&#178;  &#8658;  u&#7523;&#7523; = 6x</text>
+                <text x="20" y="100" fill="#e2e8f0" font-size="15" class="font-mono">u&#7524; = -6xy  &#8658;  u&#7524;&#7524; = -6x</text>
+                <text x="20" y="135" fill="#34d399" font-size="16" class="font-mono">u&#7523;&#7523; + u&#7524;&#7524; = 6x + (-6x) = 0 &#8658; SATISFIED (Harmonic)</text>
+                <text x="20" y="170" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">STEP 2: APPLY CAUCHY-RIEMANN</text>
+                <text x="20" y="200" fill="#e2e8f0" font-size="15" class="font-mono">v&#7524; = u&#7523; = 3x&#178; - 3y&#178;   and   v&#7523; = -u&#7524; = 6xy</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#34d399" font-size="17" font-weight="700" class="font-mono">STEP 3: INTEGRATE TO RECOVER v(x,y)</text>
+                <text x="20" y="68" fill="#e2e8f0" font-size="15" class="font-mono">Integrate v&#7524; w.r.t y: v = 3x&#178;y - y&#179; + g(x)</text>
+                <text x="20" y="100" fill="#e2e8f0" font-size="15" class="font-mono">Differentiate w.r.t x: v&#7523; = 6xy + g'(x)</text>
+                <text x="20" y="132" fill="#e2e8f0" font-size="15" class="font-mono">Match with v&#7523; = 6xy &#8658; g'(x) = 0 &#8658; g(x) = C</text>
+                <text x="20" y="170" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">HARMONIC CONJUGATE: v(x,y) = 3x&#178;y - y&#179; + C</text>
+                <text x="20" y="205" fill="#38bdf8" font-size="15" class="font-mono">Reconstructed function: f(z) = (x&#178;-3xy&#178;) + i(3x&#178;y-y&#179;) + iC = z&#179; + iC</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 3: MILNE-THOMSON CONSTRUCTION METHOD
+         ========================================== -->
+    <g transform="translate(80, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#emeraldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#34d399" font-size="28" font-weight="800" class="font-sans">03. MILNE-THOMSON 30-SECOND RECONSTRUCTION ENGINE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Fast algebraic extraction of f(z) directly in terms of z without integrating for v or u</text>
+
+        <!-- Sub-card 1: Case 1 (When u is given) -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CASE 1: REAL PART u(x,y) IS GIVEN</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">Since f'(z) = u&#7523; + i v&#7523; = u&#7523; - i u&#7524;, substitute <tspan fill="#fbbf24" font-weight="700">x = z, y = 0</tspan>:</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="150" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#34d399" font-size="22" font-weight="900" class="font-mono">&#934;&#8321;(z, 0) = u&#7523;(z, 0)   and   &#934;&#8322;(z, 0) = u&#7524;(z, 0)</text>
+                <text x="20" y="80" fill="#fbbf24" font-size="22" font-weight="900" class="font-mono">f'(z) = &#934;&#8321;(z, 0) - i &#934;&#8322;(z, 0)</text>
+                <text x="20" y="125" fill="#38bdf8" font-size="22" font-weight="900" class="font-mono">f(z) = &#8747; [&#934;&#8321;(z, 0) - i &#934;&#8322;(z, 0)] dz + C</text>
+            </g>
+
+            <g transform="translate(20, 260)">
+                <rect x="0" y="0" width="800" height="100" fill="#020617" stroke="#334155" rx="6" />
+                <text x="15" y="28" fill="#fbbf24" font-size="15" font-weight="700" class="font-mono">SPEED DEMONSTRATION ON u = x&#179; - 3xy&#178;:</text>
+                <text x="15" y="55" fill="#e2e8f0" font-size="14" class="font-mono">&#934;&#8321;(x,y) = 3x&#178;-3y&#178; &#8658; &#934;&#8321;(z,0) = 3z&#178; | &#934;&#8322;(x,y) = -6xy &#8658; &#934;&#8322;(z,0) = 0</text>
+                <text x="15" y="82" fill="#34d399" font-size="15" font-weight="700" class="font-mono">f'(z) = 3z&#178; - i(0) = 3z&#178; &#8658; f(z) = &#8747; 3z&#178; dz = z&#179; + C  (SOLVED IN 15 SECONDS!)</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Case 2 (When v is given) -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">CASE 2: IMAGINARY PART v(x,y) IS GIVEN</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">Since f'(z) = v&#7524; + i v&#7523;, substitute <tspan fill="#34d399" font-weight="700">x = z, y = 0</tspan>:</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="150" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#34d399" font-size="22" font-weight="900" class="font-mono">&#936;&#8321;(z, 0) = v&#7524;(z, 0)   and   &#936;&#8322;(z, 0) = v&#7523;(z, 0)</text>
+                <text x="20" y="80" fill="#fbbf24" font-size="22" font-weight="900" class="font-mono">f'(z) = &#936;&#8321;(z, 0) + i &#936;&#8322;(z, 0)</text>
+                <text x="20" y="125" fill="#38bdf8" font-size="22" font-weight="900" class="font-mono">f(z) = &#8747; [&#936;&#8321;(z, 0) + i &#936;&#8322;(z, 0)] dz + C</text>
+            </g>
+
+            <g transform="translate(20, 260)">
+                <rect x="0" y="0" width="800" height="100" fill="#020617" stroke="#334155" rx="6" />
+                <text x="15" y="28" fill="#f43f5e" font-size="15" font-weight="700" class="font-mono">&#9888; CRITICAL SIGN WARNING:</text>
+                <text x="15" y="55" fill="#e2e8f0" font-size="14" class="font-mono">When u is given: MINUS SIGN &#8658; f'(z) = &#934;&#8321;(z,0) - i &#934;&#8322;(z,0)</text>
+                <text x="15" y="82" fill="#34d399" font-size="14" class="font-mono">When v is given: PLUS SIGN  &#8658; f'(z) = &#936;&#8321;(z,0) + i &#936;&#8322;(z,0)  (Common sign slip!)</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Linear Combinations u - v or u + v Given -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#c084fc" font-size="20" font-weight="700" class="font-mono">ADVANCED MILNE-THOMSON: WHEN LINEAR COMBINATIONS (u - v) OR (u + v) ARE GIVEN</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="820" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">TRANSFORMATION ARCHITECTURE</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-mono">Let f(z) = u + iv. Multiply by (1 + i):</text>
+                <text x="20" y="95" fill="#34d399" font-size="16" class="font-mono">F(z) = (1 + i) f(z) = (u - v) + i (u + v) = U + i V</text>
+                <text x="20" y="130" fill="#94a3b8" font-size="15" class="font-sans">Here U = u - v is the real part of the new analytic function F(z)!</text>
+                <text x="20" y="165" fill="#fbbf24" font-size="16" class="font-mono">Apply standard Case 1 Milne-Thomson to U to find F(z).</text>
+                <text x="20" y="200" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">Then recover original function: f(z) = F(z) / (1 + i)</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="820" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">POLAR MILNE-THOMSON ENGINE</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-mono">Given u(r, &#952;): Substitute r = z, &#952; = 0 into polar derivative:</text>
+                <text x="20" y="100" fill="#34d399" font-size="18" font-weight="700" class="font-mono">f'(z) = [u&#7525;(z, 0) - (i/z) u&#7780;(z, 0)]</text>
+                <text x="20" y="140" fill="#94a3b8" font-size="15" class="font-sans">Integrate directly with respect to z: f(z) = &#8747; f'(z) dz + C</text>
+                <text x="20" y="175" fill="#e2e8f0" font-size="14" class="font-mono">Example: u = r&#178; cos 2&#952; &#8658; u&#7525; = 2r cos 2&#952; &#8658; u&#7525;(z,0) = 2z; u&#7780; = 0</text>
+                <text x="20" y="205" fill="#fbbf24" font-size="15" class="font-mono">&#8658; f'(z) = 2z &#8658; f(z) = z&#178; + C (Immediate solution!)</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 4: EXACT DIFFERENTIAL METHOD DRILLS
+         ========================================== -->
+    <g transform="translate(1960, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#cyanGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">04. GATE COMPREHENSIVE HARMONIC DRILL SUITE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Exponential, trigonometric, and rational harmonic conjugates solved to perfection</text>
+
+        <!-- Sub-card 1: Drill - Exponential Form -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">DRILL 1: u(x,y) = e&#7512; cos y</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">Find harmonic conjugate v(x,y) and entire function f(z).</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="260" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">METHOD A: MILNE-THOMSON SHORTCUT</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-mono">u&#7523; = e&#7512; cos y  &#8658;  &#934;&#8321;(z,0) = e&#7618; cos(0) = e&#7618;</text>
+                <text x="20" y="90" fill="#e2e8f0" font-size="15" class="font-mono">u&#7524; = -e&#7512; sin y  &#8658;  &#934;&#8322;(z,0) = -e&#7618; sin(0) = 0</text>
+                <text x="20" y="125" fill="#34d399" font-size="16" class="font-mono">f'(z) = &#934;&#8321;(z,0) - i &#934;&#8322;(z,0) = e&#7618; - 0 = e&#7618;</text>
+                <text x="20" y="160" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">f(z) = &#8747; e&#7618; dz = e&#7618; + C</text>
+                <text x="20" y="195" fill="#94a3b8" font-size="15" class="font-sans">Expanding f(z) = e&#7512;&#8314;&#7522;&#696; = e&#7512; (cos y + i sin y):</text>
+                <text x="20" y="230" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">&#8658; Harmonic Conjugate: v(x,y) = e&#7512; sin y + C</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Drill - Logarithmic / Rational Form -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">DRILL 2: u(x,y) = 1/2 ln(x&#178; + y&#178;)</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">Find harmonic conjugate and singular points.</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="260" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">CR INTEGRATION PIPELINE:</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-mono">u&#7523; = x / (x&#178; + y&#178;)   and   u&#7524; = y / (x&#178; + y&#178;)</text>
+                <text x="20" y="90" fill="#e2e8f0" font-size="15" class="font-mono">v&#7524; = u&#7523; = x / (x&#178; + y&#178;)  &#8658;  v = tan&#8315;&#185;(y/x) + g(x)</text>
+                <text x="20" y="125" fill="#e2e8f0" font-size="15" class="font-mono">v&#7523; = -y / (x&#178; + y&#178;) + g'(x). Since v&#7523; = -u&#7524; = -y/(x&#178;+y&#178;):</text>
+                <text x="20" y="160" fill="#34d399" font-size="16" class="font-mono">g'(x) = 0 &#8658; g(x) = C &#8658; v(x,y) = tan&#8315;&#185;(y/x) + C</text>
+                <text x="20" y="195" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">f(z) = ln|z| + i arg(z) = Ln(z) + C</text>
+                <text x="20" y="230" fill="#f43f5e" font-size="14" class="font-sans">&#9888; Singularity: z = 0 is a branch point! Harmonic conjugate is multivalued!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Diagnostic Decision Summary -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">EXAM DECISION MATRIX: WHICH RECONSTRUCTION METHOD TO USE?</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">USE MILNE-THOMSON IF:</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">• Problem asks for <tspan fill="#34d399" font-weight="700">f(z)</tspan> in terms of z.</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="15" class="font-sans">• Problem asks for <tspan fill="#34d399" font-weight="700">f'(z&#8320;)</tspan> at a specific point.</text>
+                <text x="20" y="140" fill="#94a3b8" font-size="14" class="font-sans">Time required: 15–30 seconds.</text>
+                <text x="20" y="175" fill="#fbbf24" font-size="14" class="font-mono">Never compute v(x,y) first!</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">USE CR INTEGRATION IF:</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">• Problem explicitly asks for <tspan fill="#fbbf24" font-weight="700">v(x,y)</tspan>.</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="15" class="font-sans">• Options list v(x,y) formulas.</text>
+                <text x="20" y="140" fill="#94a3b8" font-size="14" class="font-sans">Integrate v&#7524; = u&#7523; w.r.t y, differentiate w.r.t x to find g'(x).</text>
+                <text x="20" y="175" fill="#38bdf8" font-size="14" class="font-mono">Check options by differentiating!</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">USE OPTION ELIMINATION IF:</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">• Question has 4 choices for v(x,y).</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="15" class="font-sans">• Test CR: Does &#8706;v/&#8706;y = &#8706;u/&#8706;x? If no, eliminate.</text>
+                <text x="20" y="140" fill="#e2e8f0" font-size="15" class="font-sans">• Test: Does &#8706;v/&#8706;x = -&#8706;u/&#8706;y? If no, eliminate.</text>
+                <text x="20" y="175" fill="#fbbf24" font-size="14" class="font-mono">Usually eliminates 3 options in 10s!</text>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Bottom Engineering Telemetry Strip -->
+    <g transform="translate(80, 2060)">
+        <line x1="0" y1="0" x2="3680" y2="0" stroke="#1e293b" stroke-width="2" />
+        <text x="10" y="24" fill="#64748b" font-size="16" class="font-mono">COMPLEX ANALYSIS MATHEMATICAL BLUEPRINT // SCALE: 1.0 NATIVE // GATE / ESE / ISRO EXCELLENCE SUITE</text>
+        <text x="3670" y="24" fill="#64748b" font-size="16" text-anchor="end" class="font-mono">PREPFUSION ENGINEERING MATHEMATICS // SYSTEM VERIFIED</text>
+    </g>
+</svg>

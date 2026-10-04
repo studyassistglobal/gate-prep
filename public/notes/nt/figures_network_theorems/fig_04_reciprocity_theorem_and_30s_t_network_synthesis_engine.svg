@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIG 04: RECIPROCITY THEOREM, DUAL TRANSFER FUNCTIONS &amp; 30-SECOND T-NETWORK SYNTHESIS</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">4 Mandatory Axioms • Transfer Admittance &amp; Impedance Invariance • Superposition + Reciprocity Synthesis • Faculty 30-Sec T-Model Shortcut</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • NETWORK THEOREMS TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Reciprocity Axioms & Conditions -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Reciprocity Axioms &amp; Principles</text>
+
+  <rect x="30" y="85" width="840" height="320" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">The Reciprocity Theorem Principle</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">In any linear, bilateral, time-invariant, passive network with a SINGLE excitation,</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">the ratio of the response at branch 2 to the excitation at branch 1 remains</text>
+  <text x="50" y="225" fill="#e2e8f0" font-size="18">IDENTICAL if the positions of excitation and response are interchanged!</text>
+  
+  <text x="70" y="275" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Transfer Ratio Invariance: [Response / Excitation] ≡ const</text>
+  <text x="50" y="320" fill="#38bdf8" font-size="18">• Interchanging excitation and response produces the EXACT SAME numerical ratio.</text>
+  <text x="50" y="355" fill="#94a3b8" font-size="17">• Crucial: Reference polarities and meter orientations must be strictly preserved.</text>
+
+  <rect x="30" y="430" width="840" height="460" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="475" fill="#f43f5e" font-size="22" font-weight="900">THE 4 MANDATORY CONDITIONS OF RECIPROCITY</text>
+  <text x="50" y="515" fill="#e2e8f0" font-size="18">Reciprocity holds IF AND ONLY IF all 4 conditions are simultaneously satisfied:</text>
+  
+  <text x="50" y="560" fill="#34d399" font-size="19" font-weight="700">1. Linear Elements Only:</text>
+  <text x="70" y="590" fill="#94a3b8" font-size="17">   R, L, C elements must be linear (no diodes, saturation, or clipping).</text>
+
+  <text x="50" y="630" fill="#34d399" font-size="19" font-weight="700">2. Bilateral Elements Only:</text>
+  <text x="70" y="660" fill="#94a3b8" font-size="17">   Impedance must be identical in both directions of current flow.</text>
+
+  <text x="50" y="700" fill="#34d399" font-size="19" font-weight="700">3. Passive Network (Zero Independent Sources):</text>
+  <text x="70" y="730" fill="#94a3b8" font-size="17">   Network must not contain any other internal independent sources or initial energy.</text>
+
+  <text x="50" y="770" fill="#f43f5e" font-size="19" font-weight="900">4. ZERO DEPENDENT SOURCES (The Ultimate Trap!):</text>
+  <text x="70" y="805" fill="#e2e8f0" font-size="17">   Active controlled sources (VCVS, VCCS, CCVS, CCCS), Op-Amps, BJTs, and FETs</text>
+  <text x="70" y="835" fill="#f43f5e" font-size="17">   DESTROY RECIPROCITY! Networks with dependent sources are NON-RECIPROCAL.</text>
+  <text x="70" y="865" fill="#94a3b8" font-size="16">   (Special non-reciprocal microwave elements: Gyrators, Circulators, Isolators).</text>
+
+  <rect x="30" y="910" width="840" height="450" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="955" fill="#38bdf8" font-size="22" font-weight="800">Two-Port Matrix Reciprocity Criteria</text>
+  <text x="50" y="995" fill="#e2e8f0" font-size="18">In 2-port network parameter formulations, reciprocity manifests as symmetry:</text>
+  
+  <text x="50" y="1045" fill="#fbbf24" font-size="19" font-weight="700">Impedance [Z] Parameters:</text>
+  <text x="70" y="1080" fill="#34d399" font-family="'Fira Code', monospace" font-size="21" font-weight="800">Z₁₂ = Z₂₁   (Symmetric Z-Matrix: Z = Zᵀ)</text>
+
+  <text x="50" y="1125" fill="#fbbf24" font-size="19" font-weight="700">Admittance [Y] Parameters:</text>
+  <text x="70" y="1160" fill="#34d399" font-family="'Fira Code', monospace" font-size="21" font-weight="800">Y₁₂ = Y₂₁   (Symmetric Y-Matrix: Y = Yᵀ)</text>
+
+  <text x="50" y="1205" fill="#fbbf24" font-size="19" font-weight="700">Transmission (ABCD) Parameters:</text>
+  <text x="70" y="1240" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="21" font-weight="800">A · D - B · C = 1   (Unit Determinant: det[T] = 1)</text>
+
+  <text x="50" y="1285" fill="#fbbf24" font-size="19" font-weight="700">Hybrid [h] and Inverse Hybrid [g] Parameters:</text>
+  <text x="70" y="1320" fill="#c084fc" font-family="'Fira Code', monospace" font-size="21" font-weight="800">h₁₂ = -h₂₁    and    g₁₂ = -g₂₁   (Anti-Symmetric Off-Diagonals!)</text>
+
+  <rect x="30" y="1380" width="840" height="430" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1425" fill="#34d399" font-size="22" font-weight="800">Energy &amp; Symmetry Foundations</text>
+  <text x="50" y="1465" fill="#e2e8f0" font-size="18">• Reciprocity arises from the fundamental symmetry of Maxwell's wave equations</text>
+  <text x="50" y="1495" fill="#e2e8f0" font-size="18">  and Onsager's reciprocal relations for microscopic thermodynamics.</text>
+  <text x="50" y="1535" fill="#fbbf24" font-size="18" font-weight="700">Quasi-Tellegen Topological Link:</text>
+  <text x="50" y="1570" fill="#e2e8f0" font-size="18">Applying Quasi-Tellegen theorem to two network states N and N' on same graph:</text>
+  <text x="70" y="1605" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">∑ v_k · i_k' = 0   and   ∑ v_k' · i_k = 0</text>
+  <text x="50" y="1645" fill="#e2e8f0" font-size="18">For linear bilateral branches, v_k i_k' = (i_k Z_k) i_k' = i_k' Z_k i_k = v_k' i_k.</text>
+  <text x="50" y="1680" fill="#34d399" font-size="18">Subtracting the two sums leaves only port excitations:</text>
+  <text x="70" y="1715" fill="#34d399" font-family="'Fira Code', monospace" font-size="21" font-weight="800">V₁ I₁' + V₂ I₂' = V₁' I₁ + V₂' I₂ ⟹ Proves Reciprocity!</text>
+  <text x="50" y="1760" fill="#fbbf24" font-size="18" font-weight="700">Topological proof holds for ANY arbitrary planar or non-planar graph!</text>
+</g>
+
+<!-- Column 2: Dual Forms & Transfer Invariance -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#818cf8"/>
+  <text x="35" y="55" fill="#818cf8" font-size="28" font-weight="900">2. Dual Forms of Reciprocity</text>
+
+  <!-- Form 1 Card -->
+  <rect x="30" y="85" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="900">FORM 1: Transfer Admittance Reciprocity (V → I)</text>
+  <text x="50" y="165" fill="#fbbf24" font-size="19" font-weight="700">Voltage Excitation &amp; Short-Circuit Current Response:</text>
+  <text x="50" y="200" fill="#e2e8f0" font-size="18">• State 1: Connect ideal voltage source V₁ at Port 1; short-circuit Port 2</text>
+  <text x="70" y="230" fill="#e2e8f0" font-size="18">  and measure short-circuit current I₂.</text>
+  <text x="50" y="270" fill="#e2e8f0" font-size="18">• State 2: Connect ideal voltage source V₂' at Port 2; short-circuit Port 1</text>
+  <text x="70" y="300" fill="#e2e8f0" font-size="18">  and measure short-circuit current I₁'.</text>
+  
+  <text x="50" y="350" fill="#34d399" font-size="20" font-weight="800">Reciprocal Relation:</text>
+  <text x="70" y="390" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">I₂ / V₁ = I₁' / V₂'   [Unit: Siemens (S = Ω⁻¹)]</text>
+  <text x="50" y="440" fill="#fbbf24" font-size="18" font-weight="700">If source voltages are identical (V₁ = V₂'): Then I₂ = I₁' exactly!</text>
+  <text x="50" y="475" fill="#94a3b8" font-size="17">Ideal Ammeter: Has R_A = 0 Ω, so connecting an ideal ammeter shorts the branch.</text>
+
+  <!-- Form 2 Card -->
+  <rect x="30" y="530" width="840" height="420" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="50" y="570" fill="#34d399" font-size="22" font-weight="900">FORM 2: Transfer Impedance Reciprocity (I → V)</text>
+  <text x="50" y="610" fill="#fbbf24" font-size="19" font-weight="700">Current Excitation &amp; Open-Circuit Voltage Response:</text>
+  <text x="50" y="645" fill="#e2e8f0" font-size="18">• State 1: Inject ideal current source I₁ at Port 1; open-circuit Port 2</text>
+  <text x="70" y="675" fill="#e2e8f0" font-size="18">  and measure open-circuit voltage V₂.</text>
+  <text x="50" y="715" fill="#e2e8f0" font-size="18">• State 2: Inject ideal current source I₂' at Port 2; open-circuit Port 1</text>
+  <text x="70" y="745" fill="#e2e8f0" font-size="18">  and measure open-circuit voltage V₁'.</text>
+  
+  <text x="50" y="795" fill="#38bdf8" font-size="20" font-weight="800">Reciprocal Relation:</text>
+  <text x="70" y="835" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="900">V₂ / I₁ = V₁' / I₂'   [Unit: Ohms (Ω)]</text>
+  <text x="50" y="885" fill="#fbbf24" font-size="18" font-weight="700">If source currents are identical (I₁ = I₂'): Then V₂ = V₁' exactly!</text>
+  <text x="50" y="920" fill="#94a3b8" font-size="17">Ideal Voltmeter: Has R_v = ∞ Ω, so connecting an ideal voltmeter opens the branch.</text>
+
+  <!-- Cross Form Trap Card -->
+  <rect x="30" y="975" width="840" height="420" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="1015" fill="#f43f5e" font-size="22" font-weight="900">THE FATAL CROSS-FORM TRAP: V/V and I/I DO NOT EQUATE!</text>
+  <text x="50" y="1060" fill="#e2e8f0" font-size="18">Students frequently interchange Voltage Excitation with Voltage Response:</text>
+  <text x="70" y="1100" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="22" font-weight="800">V₂ / V₁ ≠ V₁' / V₂'   (Voltage Transfer Ratio FAILS!)</text>
+  <text x="70" y="1140" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="22" font-weight="800">I₂ / I₁ ≠ I₁' / I₂'   (Current Transfer Ratio FAILS!)</text>
+  
+  <text x="50" y="1195" fill="#fbbf24" font-size="19" font-weight="800">Why Dimensionless Ratios Fail:</text>
+  <text x="50" y="1230" fill="#e2e8f0" font-size="18">• Voltage gain V₂/V₁ is dimensionless; it depends on impedance levels at each port.</text>
+  <text x="50" y="1265" fill="#e2e8f0" font-size="18">• A step-up transformer has V₂/V₁ = N₂/N₁ &gt; 1, but backwards V₁'/V₂' = N₁/N₂ &lt; 1!</text>
+  <text x="50" y="1305" fill="#34d399" font-size="18" font-weight="800">GOLDEN RULE: Reciprocity ONLY equates Transfer Admittance (I/V) or</text>
+  <text x="70" y="1335" fill="#34d399" font-size="18" font-weight="800">Transfer Impedance (V/I). Dimensionless transfer gains are NOT invariant!</text>
+
+  <rect x="30" y="1420" width="840" height="390" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1465" fill="#fbbf24" font-size="22" font-weight="800">Meter Sign Conventions &amp; Reference Arrows</text>
+  <text x="50" y="1505" fill="#e2e8f0" font-size="18">When interchanging sources and meters:</text>
+  <text x="50" y="1540" fill="#38bdf8" font-size="18">• The positive terminal of the source in the new position must match the</text>
+  <text x="70" y="1570" fill="#38bdf8" font-size="18">  direction of the arrow of the response current in the original position!</text>
+  <text x="50" y="1610" fill="#e2e8f0" font-size="18">• If current arrow pointed INTO terminal B originally, the voltage source positive</text>
+  <text x="70" y="1640" fill="#e2e8f0" font-size="18">  terminal must face OUT of terminal B when relocated.</text>
+  <text x="50" y="1680" fill="#f43f5e" font-size="18">• Reversing meter leads introduces a fatal -1 sign error into numerical answers.</text>
+  <text x="50" y="1725" fill="#34d399" font-size="18" font-weight="800">Diagnostic Rule: Trace complete traversal loop to verify matching orientations!</text>
+</g>
+
+<!-- Column 3: The Faculty 30-Second T-Network Synthesis Shortcut -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#34d399"/>
+  <text x="35" y="55" fill="#34d399" font-size="28" font-weight="900">3. Faculty 30-Sec T-Network Shortcut</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="50" y="125" fill="#34d399" font-size="22" font-weight="900">THE REVOLUTIONARY T-NETWORK EQUIVALENCE SHORTCUT</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">Conventional Method: Solving combined Reciprocity + Superposition problems</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">takes 10–15 minutes of tedious multi-mesh matrix inversions and phasor algebra.</text>
+  
+  <text x="50" y="240" fill="#fbbf24" font-size="20" font-weight="800">The PrepFusion Faculty Shortcut:</text>
+  <text x="50" y="275" fill="#e2e8f0" font-size="18">ANY linear, passive, reciprocal 2-port black box can be EXACTLY synthesized</text>
+  <text x="50" y="305" fill="#e2e8f0" font-size="18">as a simple 3-resistor T-Network (R_a, R_b, R_c) with IDENTICAL terminal behavior!</text>
+  <text x="50" y="345" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20" font-weight="800">Once R_a, R_b, R_c are found, solve ANY new load in 30 seconds via KVL!</text>
+
+  <rect x="30" y="450" width="840" height="650" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#38bdf8" font-size="22" font-weight="800">Step-by-Step T-Network Synthesis Architecture</text>
+  
+  <text x="50" y="540" fill="#fbbf24" font-size="19" font-weight="700">T-Network Topology:</text>
+  <text x="70" y="575" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">Port 1 (Terminals 1-1') ──[ R_a ]──●──[ R_b ]── Port 2 (Terminals 2-2')</text>
+  <text x="70" y="605" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">                                   │</text>
+  <text x="70" y="635" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">                                [ R_c ]</text>
+  <text x="70" y="665" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">                                   │</text>
+  <text x="70" y="695" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">Common Ground ─────────────────────●───────────────────</text>
+
+  <text x="50" y="745" fill="#fbbf24" font-size="19" font-weight="700">Extracting R_a, R_b, R_c from 2 Experimental Test States:</text>
+  <text x="50" y="785" fill="#e2e8f0" font-size="18">Test Case 1: Connect 10 V at Port 1; Port 2 is shorted with measured I₂ = 2 A.</text>
+  <text x="70" y="820" fill="#34d399" font-family="'Fira Code', monospace" font-size="19">Loop 1 KVL: 10 V = I₁ · (R_a + R_c) - 2 A · R_c</text>
+  <text x="70" y="855" fill="#34d399" font-family="'Fira Code', monospace" font-size="19">Loop 2 KVL: 0 V  = -I₁ · R_c + 2 A · (R_b + R_c)</text>
+
+  <text x="50" y="905" fill="#e2e8f0" font-size="18">Test Case 2: Connect 20 V at Port 2; Port 1 is open with measured V₁ = 5 V.</text>
+  <text x="70" y="940" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">Voltage Divider across R_c: V₁ = 20 V · [ R_c / (R_b + R_c) ] = 5 V</text>
+  <text x="70" y="975" fill="#34d399" font-family="'Fira Code', monospace" font-size="19">⟹ (R_b + R_c) / R_c = 4 ⟹ R_b = 3 R_c</text>
+
+  <text x="50" y="1025" fill="#e2e8f0" font-size="18">Substituting into Case 1 gives exact numerical values in 3 lines:</text>
+  <text x="70" y="1065" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">R_c = 2.5 Ω,   R_b = 7.5 Ω,   R_a = 1.25 Ω</text>
+
+  <rect x="30" y="1130" width="840" height="420" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="1175" fill="#c084fc" font-size="22" font-weight="800">Solving the Target Problem in 10 Seconds</text>
+  <text x="50" y="1215" fill="#fbbf24" font-size="18">Target Question: "If Port 1 is connected to 50 V and Port 2 is connected to a 10 Ω</text>
+  <text x="50" y="1245" fill="#fbbf24" font-size="18">load resistor, find current through the 10 Ω load."</text>
+  
+  <text x="50" y="1295" fill="#e2e8f0" font-size="18">Using our synthesized T-model with R_L = 10 Ω connected at Port 2:</text>
+  <text x="70" y="1335" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">Total resistance seen at Port 1: R_in = R_a + [ R_c ∥ (R_b + R_L) ]</text>
+  <text x="70" y="1370" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">R_in = 1.25 + [ 2.5 ∥ (7.5 + 10) ] = 1.25 + [ 2.5 ∥ 17.5 ] = 3.4375 Ω</text>
+  <text x="70" y="1410" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">Input current: I₁ = 50 V / 3.4375 Ω = 14.545 A</text>
+  <text x="70" y="1450" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">Load Current: I_L = I₁ · [ 2.5 / (2.5 + 17.5) ] = 1.818 A !</text>
+
+  <rect x="30" y="1575" width="840" height="235" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1615" fill="#fbbf24" font-size="20" font-weight="800">Why Every GATE Titan Memorizes This Method:</text>
+  <text x="50" y="1650" fill="#e2e8f0" font-size="18">1. Eliminates abstract two-port reciprocal matrix equations.</text>
+  <text x="50" y="1680" fill="#e2e8f0" font-size="18">2. Visualizes the black-box as a simple 2-mesh resistive circuit.</text>
+  <text x="50" y="1710" fill="#e2e8f0" font-size="18">3. Works equally for any new combination of sources and loads at either port!</text>
+</g>
+
+<!-- Column 4: Multi-Source Reciprocity Problems & Faculty Tips -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#fbbf24"/>
+  <text x="35" y="55" fill="#fbbf24" font-size="28" font-weight="900">4. Multi-Source Reciprocity &amp; Traps</text>
+
+  <rect x="30" y="85" width="840" height="420" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">Combining Reciprocity with Superposition</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">When multiple sources act simultaneously across a reciprocal network:</text>
+  <text x="50" y="200" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">Problem: Sources V₁ at Port 1 and V₂ at Port 2 drive current I_x in branch x.</text>
+  
+  <text x="50" y="250" fill="#34d399" font-size="20" font-weight="800">The 3-Step Solution Flow:</text>
+  <text x="50" y="285" fill="#e2e8f0" font-size="18">1. Use Reciprocity to find transfer admittance of source 1: y_x1 = I_x' / V₁.</text>
+  <text x="50" y="320" fill="#e2e8f0" font-size="18">2. Use Reciprocity to find transfer admittance of source 2: y_x2 = I_x'' / V₂.</text>
+  <text x="50" y="355" fill="#e2e8f0" font-size="18">3. Superpose the two partial currents algebraically:</text>
+  <text x="70" y="395" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">I_x,total = y_x1 · V₁ + y_x2 · V₂</text>
+  <text x="50" y="440" fill="#94a3b8" font-size="18">Guaranteed valid because the network is linear and bilateral!</text>
+
+  <rect x="30" y="530" width="840" height="450" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="570" fill="#38bdf8" font-size="22" font-weight="800">Fast Shunt-Only Synthesis Example</text>
+  <text x="50" y="610" fill="#e2e8f0" font-size="18">A reciprocal network has symmetrical ports. Given experimental data:</text>
+  <text x="50" y="645" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="18">When 10 V is connected at Port 1, short-circuit current at Port 2 is I₂ = 5 A.</text>
+  
+  <text x="50" y="695" fill="#34d399" font-size="19" font-weight="700">Synthesizing as a Single Shunt Resistor R_sh:</text>
+  <text x="50" y="730" fill="#e2e8f0" font-size="18">Transfer admittance: Y₂₁ = I₂ / V₁ = 5 A / 10 V = 0.5 S ⟹ Transfer Z = 2 Ω.</text>
+  <text x="50" y="765" fill="#e2e8f0" font-size="18">If internal series arms R_a = R_b = 0 Ω, then shunt arm R_c = 2 Ω:</text>
+  
+  <text x="50" y="815" fill="#fbbf24" font-size="19" font-weight="700">Target Response:</text>
+  <text x="50" y="850" fill="#e2e8f0" font-size="18">If a 15 V source is connected at Port 2 with a 3 Ω resistor at Port 1:</text>
+  <text x="70" y="885" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">I₁ = 15 V / (3 Ω + R_c) = 15 / (3 + 2) = 3.0 A !</text>
+  <text x="50" y="930" fill="#94a3b8" font-size="18">Solved in 2 lines with 100% mathematical precision.</text>
+
+  <rect x="30" y="1005" width="840" height="420" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1045" fill="#f43f5e" font-size="22" font-weight="800">Common Reciprocity Misconceptions in GATE</text>
+  
+  <text x="50" y="1090" fill="#fbbf24" font-size="18" font-weight="700">Misconception 1: "Reciprocity holds for power transfer."</text>
+  <text x="50" y="1120" fill="#f43f5e" font-size="17">REALITY: Absolutely FALSE! Power transfer is NOT reciprocal: P₁₂ ≠ P₂₁.</text>
+
+  <text x="50" y="1165" fill="#fbbf24" font-size="18" font-weight="700">Misconception 2: "Can apply reciprocity to circuits with op-amps."</text>
+  <text x="50" y="1195" fill="#f43f5e" font-size="17">REALITY: Op-amps have unilateral forward gain A → ∞, non-reciprocal!</text>
+
+  <text x="50" y="1240" fill="#fbbf24" font-size="18" font-weight="700">Misconception 3: "Internal mesh currents remain identical when swapped."</text>
+  <text x="50" y="1270" fill="#f43f5e" font-size="17">REALITY: ONLY the specific transfer port response is invariant. Internal branch</text>
+  <text x="70" y="1295" fill="#f43f5e" font-size="17">voltages and currents completely change when source is moved!</text>
+
+  <rect x="30" y="1450" width="840" height="360" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="1490" fill="#34d399" font-size="22" font-weight="800">Reciprocity Exam Verification Checklist</text>
+  <text x="50" y="1530" fill="#e2e8f0" font-size="18">✓ Are all resistors, inductors, and capacitors linear and bilateral?</text>
+  <text x="50" y="1565" fill="#e2e8f0" font-size="18">✓ Are there ZERO controlled sources (VCVS, VCCS, CCVS, CCCS)?</text>
+  <text x="50" y="1600" fill="#e2e8f0" font-size="18">✓ Are there ZERO independent sources other than the test excitation?</text>
+  <text x="50" y="1635" fill="#e2e8f0" font-size="18">✓ Did you equate Transfer Admittance (I/V) or Transfer Impedance (V/I)?</text>
+  <text x="50" y="1670" fill="#e2e8f0" font-size="18">✓ Did you avoid the dimensionless V/V and I/I transfer gain trap?</text>
+  <text x="50" y="1715" fill="#fbbf24" font-size="18" font-weight="800">If all boxes checked: Solution is guaranteed mathematically flawless!</text>
+</g>
+
+  </g>
+</svg>

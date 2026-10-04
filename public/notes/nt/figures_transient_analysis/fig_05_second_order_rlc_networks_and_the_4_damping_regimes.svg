@@ -1,0 +1,288 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIG 05: SECOND-ORDER RLC NETWORKS &amp; THE 4 DAMPING REGIMES</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Canonical 2nd-Order Engine • Series/Parallel Duality Matrix • Over/Critical/Under/Undamped Profiles • Initial Derivatives</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • TRANSIENT ANALYSIS TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Canonical 2nd-Order Formulation & Roots -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Canonical 2nd-Order Engine</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">Standard Differential Form</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">Every 2-energy-storage-element circuit reduces to the canonical 2nd-order ODE:</text>
+  
+  <text x="70" y="215" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="800">d²x/dt² + 2α · dx/dt + ω₀² · x = f(t)</text>
+  <text x="70" y="260" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">d²x/dt² + 2ζω₀ · dx/dt + ω₀² · x = f(t)</text>
+
+  <text x="50" y="315" fill="#e2e8f0" font-size="18">where:</text>
+  <text x="70" y="350" fill="#94a3b8" font-size="18">• α = Neper Frequency (attenuation factor, rad/s or Np/s)</text>
+  <text x="70" y="380" fill="#94a3b8" font-size="18">• ω₀ = Undamped Natural Angular Frequency (rad/s)</text>
+  <text x="70" y="410" fill="#94a3b8" font-size="18">• ζ = α / ω₀ = Damping Ratio (dimensionless)</text>
+
+  <rect x="30" y="450" width="840" height="510" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#38bdf8" font-size="22" font-weight="800">Characteristic Roots in s-Domain</text>
+  <text x="50" y="535" fill="#e2e8f0" font-size="18">Setting auxiliary equation s² + 2αs + ω₀² = 0 yields the two poles:</text>
+
+  <text x="70" y="585" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">s₁,₂ = -α ± √(α² - ω₀²)</text>
+  <text x="70" y="635" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">s₁,₂ = -ζω₀ ± ω₀ · √(ζ² - 1)</text>
+
+  <text x="50" y="695" fill="#fbbf24" font-size="20" font-weight="800">Root Discriminant Breakdown:</text>
+  <text x="70" y="735" fill="#e2e8f0" font-size="18">1. α² &gt; ω₀² (ζ &gt; 1): Distinct real roots → Overdamped</text>
+  <text x="70" y="775" fill="#e2e8f0" font-size="18">2. α² = ω₀² (ζ = 1): Repeated real roots → Critically Damped</text>
+  <text x="70" y="815" fill="#e2e8f0" font-size="18">3. α² &lt; ω₀² (0 &lt; ζ &lt; 1): Complex conjugate roots → Underdamped</text>
+  <text x="70" y="855" fill="#e2e8f0" font-size="18">4. α = 0 (ζ = 0): Pure imaginary roots ±jω₀ → Undamped</text>
+
+  <text x="50" y="910" fill="#f43f5e" font-size="18" font-weight="700">Stability Criterion: Real part Re(s₁,₂) = -α must be &lt; 0.</text>
+  <text x="50" y="940" fill="#94a3b8" font-size="16">If α &lt; 0 (due to active dependent sources), poles lie in RHP → Unstable blowup!</text>
+
+  <rect x="30" y="985" width="840" height="840" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="1030" fill="#fbbf24" font-size="22" font-weight="800">Damped Oscillation Frequency ω_d</text>
+  <text x="50" y="1070" fill="#e2e8f0" font-size="18">In the underdamped regime, poles form conjugate pair: s₁,₂ = -α ± jω_d</text>
+
+  <text x="70" y="1120" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="800">ω_d = √(ω₀² - α²) = ω₀ · √(1 - ζ²)</text>
+
+  <text x="50" y="1175" fill="#34d399" font-size="20" font-weight="800">Quality Factor Q &amp; Damping Ratio ζ:</text>
+  <text x="70" y="1220" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">Q = ω₀ / (2α) = 1 / (2ζ)  &lt;==&gt;  ζ = 1 / (2Q)</text>
+
+  <text x="50" y="1280" fill="#e2e8f0" font-size="18">• Higher Q → Lower damping ζ → More persistent ringing oscillations.</text>
+  <text x="50" y="1315" fill="#e2e8f0" font-size="18">• Bandwidth BW = 2α = ω₀ / Q.</text>
+  <text x="50" y="1350" fill="#e2e8f0" font-size="18">• At critical damping (ζ = 1): Q = 0.5.</text>
+
+  <text x="50" y="1415" fill="#fbbf24" font-size="20" font-weight="800">Root-Locus Pole Trajectory in s-Plane:</text>
+  <text x="50" y="1455" fill="#e2e8f0" font-size="18">• As R changes from 0 to ∞, poles trace semicircles of radius ω₀!</text>
+  <text x="50" y="1490" fill="#e2e8f0" font-size="18">• Distance of poles from origin is ALWAYS |s| = ω₀!</text>
+  <text x="50" y="1525" fill="#e2e8f0" font-size="18">• Damping angle: cos θ = ζ = α / ω₀.</text>
+</g>
+
+<!-- Column 2: Series RLC vs Parallel RLC Master Duality -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#fbbf24"/>
+  <text x="35" y="55" fill="#fbbf24" font-size="28" font-weight="900">2. Series vs Parallel RLC Duality</text>
+
+  <rect x="30" y="85" width="840" height="780" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Master Parameter Duality Matrix</text>
+  
+  <text x="50" y="170" fill="#fbbf24" font-size="19" font-weight="700">Parameter</text>
+  <text x="310" y="170" fill="#fbbf24" font-size="19" font-weight="700">Series RLC</text>
+  <text x="590" y="170" fill="#fbbf24" font-size="19" font-weight="700">Parallel RLC</text>
+  <path d="M 45 190 L 850 190" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="230" fill="#e2e8f0" font-size="18">State Variable</text>
+  <text x="310" y="230" fill="#34d399" font-size="18">Current i(t)</text>
+  <text x="590" y="230" fill="#34d399" font-size="18">Voltage v(t)</text>
+
+  <text x="50" y="285" fill="#e2e8f0" font-size="18">Natural Freq ω₀</text>
+  <text x="310" y="285" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">1 / √(LC)</text>
+  <text x="590" y="285" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">1 / √(LC)</text>
+
+  <text x="50" y="340" fill="#e2e8f0" font-size="18">Neper Freq α</text>
+  <text x="310" y="340" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="19" font-weight="800">R / (2L)</text>
+  <text x="590" y="340" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="19" font-weight="800">1 / (2RC)</text>
+
+  <text x="50" y="395" fill="#e2e8f0" font-size="18">Damping Ratio ζ</text>
+  <text x="310" y="395" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="18">(R/2) · √(C/L)</text>
+  <text x="590" y="395" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="18">(1/2R) · √(L/C)</text>
+
+  <text x="50" y="450" fill="#e2e8f0" font-size="18">Quality Factor Q</text>
+  <text x="310" y="450" fill="#34d399" font-family="'Fira Code', monospace" font-size="18">(1/R) · √(L/C)</text>
+  <text x="590" y="450" fill="#34d399" font-family="'Fira Code', monospace" font-size="18">R · √(C/L)</text>
+
+  <text x="50" y="505" fill="#e2e8f0" font-size="18">Critical R (ζ=1)</text>
+  <text x="310" y="505" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="18">R_crit = 2√(L/C)</text>
+  <text x="590" y="505" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="18">R_crit = ½√(L/C)</text>
+
+  <text x="50" y="560" fill="#e2e8f0" font-size="18">Overdamped (ζ&gt;1)</text>
+  <text x="310" y="560" fill="#94a3b8" font-size="18">R &gt; 2√(L/C)</text>
+  <text x="590" y="560" fill="#94a3b8" font-size="18">R &lt; ½√(L/C)</text>
+
+  <text x="50" y="615" fill="#e2e8f0" font-size="18">Underdamped (ζ&lt;1)</text>
+  <text x="310" y="615" fill="#94a3b8" font-size="18">R &lt; 2√(L/C)</text>
+  <text x="590" y="615" fill="#94a3b8" font-size="18">R &gt; ½√(L/C)</text>
+
+  <text x="50" y="670" fill="#e2e8f0" font-size="18">Undamped (ζ=0)</text>
+  <text x="310" y="670" fill="#38bdf8" font-size="18">R = 0 (Short)</text>
+  <text x="590" y="670" fill="#38bdf8" font-size="18">R = ∞ (Open)</text>
+
+  <text x="50" y="730" fill="#f43f5e" font-size="20" font-weight="800">THE DUALITY INVERSION EXAM TRAP:</text>
+  <text x="50" y="765" fill="#e2e8f0" font-size="17">• In Series RLC: Increasing R INCREASES damping (α ∝ R).</text>
+  <text x="50" y="795" fill="#e2e8f0" font-size="17">• In Parallel RLC: Increasing R DECREASES damping (α ∝ 1/R)!</text>
+  <text x="50" y="825" fill="#e2e8f0" font-size="17">  Open circuit R = ∞ in Parallel RLC is UNDAMPED (zero dissipation)!</text>
+
+  <rect x="30" y="890" width="840" height="935" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="50" y="935" fill="#fbbf24" font-size="22" font-weight="800">Second-Order Initial State Setup at t = 0⁺</text>
+  <text x="50" y="975" fill="#e2e8f0" font-size="18">To solve 2nd-order ODE x(t) = x_h(t) + x(∞), you need TWO initial conditions:</text>
+  <text x="70" y="1015" fill="#38bdf8" font-size="20" font-weight="700">1. Initial Value: x(0⁺)</text>
+  <text x="70" y="1050" fill="#38bdf8" font-size="20" font-weight="700">2. Initial First Derivative: dx/dt |_{(t=0⁺)}</text>
+
+  <text x="50" y="1105" fill="#34d399" font-size="20" font-weight="800">Series RLC Initial Derivative (Target: i(t)):</text>
+  <text x="50" y="1140" fill="#e2e8f0" font-size="18">KVL at t = 0⁺:  v_L(0⁺) + R · i(0⁺) + v_C(0⁺) = v_s(0⁺)</text>
+  <text x="70" y="1185" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">di/dt |_{(0⁺)} = v_L(0⁺) / L = [v_s(0⁺) - R · i(0⁺) - v_C(0⁺)] / L</text>
+
+  <text x="50" y="1250" fill="#34d399" font-size="20" font-weight="800">Parallel RLC Initial Derivative (Target: v(t)):</text>
+  <text x="50" y="1285" fill="#e2e8f0" font-size="18">KCL at t = 0⁺:  i_C(0⁺) + v(0⁺)/R + i_L(0⁺) = i_s(0⁺)</text>
+  <text x="70" y="1330" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">dv/dt |_{(0⁺)} = i_C(0⁺) / C = [i_s(0⁺) - v(0⁺)/R - i_L(0⁺)] / C</text>
+
+  <text x="50" y="1395" fill="#fbbf24" font-size="20" font-weight="800">Arbitrary Second-Order Variable:</text>
+  <text x="50" y="1430" fill="#e2e8f0" font-size="18">To find capacitor voltage v_C(t) in Series RLC:</text>
+  <text x="70" y="1470" fill="#e2e8f0" font-size="18">• Initial value: v_C(0⁺) = v_C(0⁻) from continuity.</text>
+  <text x="70" y="1505" fill="#e2e8f0" font-size="18">• Initial derivative: dv_C/dt |_{(0⁺)} = i_C(0⁺) / C = i(0⁺) / C!</text>
+  <text x="50" y="1555" fill="#e2e8f0" font-size="18">Use these two boundary values to solve for integration constants A₁, A₂!</text>
+</g>
+
+<!-- Column 3: The 4 Damping Regimes Mathematical Profiles -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#34d399"/>
+  <text x="35" y="55" fill="#34d399" font-size="28" font-weight="900">3. The 4 Damping Solution Forms</text>
+
+  <rect x="30" y="85" width="840" height="380" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Regime 1: Overdamped (ζ &gt; 1, α &gt; ω₀)</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">Roots s₁, s₂ are real, distinct, and negative.</text>
+  
+  <text x="70" y="210" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">x(t) = A₁ · e^{s₁ t} + A₂ · e^{s₂ t} + x(∞)</text>
+
+  <text x="50" y="260" fill="#fbbf24" font-size="19" font-weight="700">Constants A₁, A₂ Evaluation:</text>
+  <text x="70" y="295" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">A₁ + A₂ = x(0⁺) - x(∞)</text>
+  <text x="70" y="330" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">s₁ · A₁ + s₂ · A₂ = dx/dt |_{(0⁺)}</text>
+  <text x="50" y="375" fill="#94a3b8" font-size="17">Waveform: Sluggish non-oscillatory return. Dominated by slower pole (smaller |s|).</text>
+
+  <rect x="30" y="490" width="840" height="400" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="535" fill="#34d399" font-size="22" font-weight="800">Regime 2: Critically Damped (ζ = 1, α = ω₀)</text>
+  <text x="50" y="575" fill="#e2e8f0" font-size="18">Repeated real root: s₁ = s₂ = -α = -ω₀.</text>
+
+  <text x="70" y="620" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">x(t) = (A₁ + A₂ · t) · e^{-α t} + x(∞)</text>
+
+  <text x="50" y="670" fill="#fbbf24" font-size="19" font-weight="700">Constants A₁, A₂ Evaluation:</text>
+  <text x="70" y="705" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">A₁ = x(0⁺) - x(∞)</text>
+  <text x="70" y="740" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">A₂ = dx/dt |_{(0⁺)} + α · A₁</text>
+  <text x="50" y="790" fill="#38bdf8" font-size="18" font-weight="700">Golden Property:</text>
+  <text x="50" y="820" fill="#e2e8f0" font-size="17">FASTEST POSSIBLE RETURN to equilibrium WITHOUT ANY OVERSHOOT!</text>
+  <text x="50" y="850" fill="#94a3b8" font-size="16">Preferred in pointer meters, galvanometer suspensions, and servo systems.</text>
+
+  <rect x="30" y="915" width="840" height="440" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="960" fill="#f43f5e" font-size="22" font-weight="800">Regime 3: Underdamped (0 &lt; ζ &lt; 1, α &lt; ω₀)</text>
+  <text x="50" y="1000" fill="#e2e8f0" font-size="18">Complex conjugate roots: s₁,₂ = -α ± jω_d.</text>
+
+  <text x="70" y="1050" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="21" font-weight="800">x(t) = e^{-α t} · [B₁ · cos(ω_d t) + B₂ · sin(ω_d t)] + x(∞)</text>
+  <text x="70" y="1095" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="21" font-weight="800">     = X_m · e^{-α t} · cos(ω_d t - θ) + x(∞)</text>
+
+  <text x="50" y="1145" fill="#fbbf24" font-size="19" font-weight="700">Constants B₁, B₂ Evaluation:</text>
+  <text x="70" y="1180" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">B₁ = x(0⁺) - x(∞)</text>
+  <text x="70" y="1215" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">B₂ = [ dx/dt |_{(0⁺)} + α · B₁ ] / ω_d</text>
+  <text x="50" y="1265" fill="#e2e8f0" font-size="17">Waveform: Decaying sinusoidal oscillations bounded by exponential envelopes ±e^{-α t}.</text>
+  <text x="50" y="1295" fill="#94a3b8" font-size="16">Peak overshoot % = exp(-π ζ / √(1 - ζ²)) × 100%.</text>
+
+  <rect x="30" y="1380" width="840" height="440" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="1425" fill="#38bdf8" font-size="22" font-weight="800">Regime 4: Undamped (ζ = 0, α = 0, R = 0)</text>
+  <text x="50" y="1465" fill="#e2e8f0" font-size="18">Poles on imaginary axis: s₁,₂ = ±jω₀.</text>
+
+  <text x="70" y="1510" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">x(t) = C₁ · cos(ω₀ t) + C₂ · sin(ω₀ t) + x(∞)</text>
+  <text x="50" y="1560" fill="#e2e8f0" font-size="18">Constants:</text>
+  <text x="70" y="1595" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">C₁ = x(0⁺) - x(∞),   C₂ = (1/ω₀) · dx/dt |_{(0⁺)}</text>
+  <text x="50" y="1645" fill="#34d399" font-size="18" font-weight="700">Physical Meaning:</text>
+  <text x="50" y="1675" fill="#e2e8f0" font-size="17">Zero internal resistance (R=0). Energy oscillates indefinitely back and</text>
+  <text x="50" y="1705" fill="#e2e8f0" font-size="17">forth between capacitor electric field and inductor magnetic field!</text>
+</g>
+
+<!-- Column 4: Step Response Drills & Characteristic Root Analysis -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="930" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">4. Master Drills &amp; Step Solutions</text>
+
+  <rect x="30" y="85" width="870" height="560" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Drill 1: Series RLC Step Response (Critically Damped)</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">Given: V_s = 20 V DC step, R = 20 Ω, L = 1 H, C = 0.01 F (10 mF).</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">Initial states: i(0⁻) = 0 A, v_C(0⁻) = 0 V.</text>
+
+  <text x="50" y="240" fill="#fbbf24" font-size="19" font-weight="700">Step 1: Damping Parameters</text>
+  <text x="70" y="275" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="20">ω₀ = 1 / √(1 · 0.01) = 10 rad/s</text>
+  <text x="70" y="310" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="20">α = R / (2L) = 20 / (2·1) = 10 Np/s</text>
+  <text x="70" y="345" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">α = ω₀ = 10  ==&gt;  ζ = 1.0 (Critically Damped!)</text>
+
+  <text x="50" y="395" fill="#fbbf24" font-size="19" font-weight="700">Step 2: Initial Derivatives &amp; Steady State</text>
+  <text x="70" y="430" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">v_C(0⁺) = 0 V,  v_C(∞) = 20 V</text>
+  <text x="70" y="465" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">dv_C/dt |_{(0⁺)} = i(0⁺) / C = 0 / 0.01 = 0 V/s</text>
+
+  <text x="50" y="515" fill="#fbbf24" font-size="19" font-weight="700">Step 3: Solution Synthesis</text>
+  <text x="70" y="550" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">A₁ = 0 - 20 = -20,   A₂ = 0 + 10(-20) = -200</text>
+  <text x="70" y="595" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">v_C(t) = 20 - (20 + 200 t) · e^{-10 t} · u(t) V</text>
+
+  <rect x="30" y="670" width="870" height="570" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="715" fill="#f43f5e" font-size="22" font-weight="800">Drill 2: Underdamped Parallel RLC Transient</text>
+  <text x="50" y="755" fill="#e2e8f0" font-size="18">Given: Current step I_s = 2 A, R = 50 Ω, L = 0.2 H, C = 20 μF.</text>
+  <text x="50" y="785" fill="#e2e8f0" font-size="18">Initial states: i_L(0⁻) = 0 A, v(0⁻) = 0 V.</text>
+
+  <text x="50" y="830" fill="#38bdf8" font-size="19" font-weight="700">Step 1: Frequency Parameters</text>
+  <text x="70" y="865" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">ω₀ = 1 / √(0.2 · 20×10⁻⁶) = 1 / √(4×10⁻⁶) = 500 rad/s</text>
+  <text x="70" y="900" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">α = 1 / (2RC) = 1 / (2 · 50 · 20×10⁻⁶) = 500 Np/s ... WAIT!</text>
+  <text x="50" y="940" fill="#fbbf24" font-size="17">If R = 100 Ω: α = 1 / (2 · 100 · 20×10⁻⁶) = 250 Np/s &lt; 500 rad/s!</text>
+  <text x="70" y="975" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">ω_d = √(500² - 250²) = √(187500) = 433 rad/s</text>
+
+  <text x="50" y="1025" fill="#38bdf8" font-size="19" font-weight="700">Step 2: Boundary Values for Inductor Current i_L(t)</text>
+  <text x="70" y="1060" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">i_L(0⁺) = 0 A,  i_L(∞) = 2 A,  di_L/dt |_{(0⁺)} = v(0⁺)/L = 0</text>
+  <text x="70" y="1095" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">B₁ = -2,   B₂ = (0 + 250(-2)) / 433 = -1.155</text>
+  <text x="70" y="1145" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">i_L(t) = 2 - e^{-250 t} [2 cos(433 t) + 1.155 sin(433 t)] A</text>
+
+  <rect x="30" y="1265" width="870" height="560" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="1310" fill="#34d399" font-size="22" font-weight="800">Drill 3: Value of R for Critical Damping (GATE PYQ)</text>
+  <text x="50" y="1350" fill="#e2e8f0" font-size="18">Circuit: L = 4 H and C = 1 μF connected in series with resistor R.</text>
+  <text x="50" y="1380" fill="#fbbf24" font-size="19" font-weight="700">Question: What value of R ensures no oscillatory overshoot?</text>
+
+  <text x="50" y="1425" fill="#38bdf8" font-size="19" font-weight="700">Series Critical Condition:</text>
+  <text x="70" y="1460" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">R_crit = 2 · √(L / C) = 2 · √(4 / 10⁻⁶) = 2 · 2000 = 4000 Ω (4 kΩ)</text>
+  <text x="50" y="1510" fill="#e2e8f0" font-size="18">• If R &gt; 4 kΩ: Overdamped (sluggish).</text>
+  <text x="50" y="1540" fill="#e2e8f0" font-size="18">• If R &lt; 4 kΩ: Underdamped (oscillatory ringing!).</text>
+
+  <text x="50" y="1595" fill="#f43f5e" font-size="19" font-weight="800">If the SAME elements are placed in PARALLEL:</text>
+  <text x="70" y="1635" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="22" font-weight="800">R_crit,par = ½ · √(L / C) = ½ · 2000 = 1000 Ω (1 kΩ)</text>
+  <text x="50" y="1685" fill="#e2e8f0" font-size="18">• If R &gt; 1 kΩ: UNDERDAMPED! (Duality inversion trap!)</text>
+  <text x="50" y="1715" fill="#e2e8f0" font-size="18">• If R &lt; 1 kΩ: OVERDAMPED!</text>
+</g>
+
+  </g>
+</svg>

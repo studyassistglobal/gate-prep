@@ -31,37 +31,37 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_01_semiconductor_diode_physics_and_dc_operating_point_engine.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_01_semiconductor_diode_physics_and_dc_operating_point_engine.svg",
      "alt": "Figure 1 \u2014 Semiconductor Diode Physics & DC Operating Point Engine"
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_02_diode_small_signal_ac_and_zener_voltage_regulator_architecture.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_02_diode_small_signal_ac_and_zener_voltage_regulator_architecture.svg",
      "alt": "Figure 2 \u2014 Diode Small-Signal AC & Zener Voltage Regulator Architecture"
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_03_rectifier_topologies_and_performance_metrics_engine.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_03_rectifier_topologies_and_performance_metrics_engine.svg",
      "alt": "Figure 3 \u2014 Rectifier Topologies & Performance Metrics Engine"
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_04_smoothing_filters_and_harmonic_attenuation_engine.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_04_smoothing_filters_and_harmonic_attenuation_engine.svg",
      "alt": "Figure 4 \u2014 Smoothing Filters & Harmonic Attenuation Engine"
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_05_diode_clipping_circuits_and_voltage_transfer_characteristics_engine.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_05_diode_clipping_circuits_and_voltage_transfer_characteristics_engine.svg",
      "alt": "Figure 5 \u2014 Diode Clipping Circuits & Voltage Transfer Characteristics Engine"
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_06_clamping_circuits_and_voltage_multipliers_architecture.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_06_clamping_circuits_and_voltage_multipliers_architecture.svg",
      "alt": "Figure 6 \u2014 Clamping Circuits & Voltage Multipliers Architecture"
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_07_analog_diode_circuits_master_decision_engine_and_gate_pyq_taxonomy.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_07_analog_diode_circuits_master_decision_engine_and_gate_pyq_taxonomy.svg",
      "alt": "Figure 7 \u2014 Analog Diode Circuits Master Decision Engine & GATE PYQ Taxonomy"
     }
    ]
@@ -1227,7 +1227,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_01_semiconductor_diode_physics_and_dc_operating_point_engine.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_01_semiconductor_diode_physics_and_dc_operating_point_engine.svg",
      "alt": "Figure 1: Semiconductor Diode Physics & DC Operating Point Engine"
     }
    ]
@@ -2306,7 +2306,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_02_diode_small_signal_ac_and_zener_voltage_regulator_architecture.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_02_diode_small_signal_ac_and_zener_voltage_regulator_architecture.svg",
      "alt": "Figure 2: Diode Small-Signal AC & Zener Voltage Regulator Architecture"
     }
    ]
@@ -3717,7 +3717,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_03_rectifier_topologies_and_performance_metrics_engine.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_03_rectifier_topologies_and_performance_metrics_engine.svg",
      "alt": "Figure 3: Rectifier Topologies & Performance Metrics Engine"
     }
    ]
@@ -4683,7 +4683,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_04_smoothing_filters_and_harmonic_attenuation_engine.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_04_smoothing_filters_and_harmonic_attenuation_engine.svg",
      "alt": "Figure 4: Smoothing Filters & Harmonic Attenuation Engine"
     }
    ]
@@ -5676,7 +5676,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_05_diode_clipping_circuits_and_voltage_transfer_characteristics_engine.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_05_diode_clipping_circuits_and_voltage_transfer_characteristics_engine.svg",
      "alt": "Figure 5: Diode Clipping Circuits & Voltage Transfer Characteristics Engine"
     }
    ]
@@ -6698,7 +6698,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_06_clamping_circuits_and_voltage_multipliers_architecture.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_06_clamping_circuits_and_voltage_multipliers_architecture.svg",
      "alt": "Figure 6: Clamping Circuits & Voltage Multipliers Architecture"
     }
    ]
@@ -6713,7 +6713,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/ae/figures_analog_electronics/fig_07_analog_diode_circuits_master_decision_engine_and_gate_pyq_taxonomy.jpg",
+     "src": "/notes/ae/figures_analog_electronics/fig_07_analog_diode_circuits_master_decision_engine_and_gate_pyq_taxonomy.svg",
      "alt": "Figure 7: Analog Diode Circuits Master Decision Engine & GATE PYQ Taxonomy"
     },
     {

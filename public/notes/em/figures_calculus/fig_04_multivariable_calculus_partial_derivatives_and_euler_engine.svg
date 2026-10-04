@@ -1,0 +1,296 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="480" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="240" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 04</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">MULTIVARIABLE CALCULUS &amp; EULER'S HOMOGENEOUS THEOREM</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">Level Curves, Two-Path Limit Test, Total Differential df, Chain Rule Tree, Implicit Differentiation &amp; Euler Theorems</text>
+  </g>
+
+  <!-- COLUMN 1: LEVEL CURVES & TWO-PATH LIMIT TEST -->
+  <g transform="translate(120, 310)">
+    <rect x="0" y="0" width="1760" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1760" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. MULTIVARIABLE GEOMETRY &amp; LIMIT EVALUATION</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1680" height="250" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#38bdf8" font-size="24" font-weight="700">Surfaces z = f(x, y) &amp; Level Curves (Contours)</text>
+      <text x="30" y="80" fill="#cbd5e1" font-size="19">Level curve is the 2D projection of surface slice at height z = k: f(x, y) = k</text>
+      
+      <g transform="translate(30, 105)">
+        <rect x="0" y="0" width="790" height="120" rx="10" fill="#1e293b" stroke="#334155"/>
+        <text x="25" y="35" fill="#38bdf8" font-size="20" font-weight="700">Paraboloid z = x² + y²</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">Level curves x² + y² = k are concentric CIRCLES.</text>
+        <text x="25" y="100" fill="#94a3b8" font-size="16">Gradient ∇f = [2x, 2y]ᵀ is perpendicular to level curve!</text>
+      </g>
+
+      <g transform="translate(850, 105)">
+        <rect x="0" y="0" width="790" height="120" rx="10" fill="#1e293b" stroke="#334155"/>
+        <text x="25" y="35" fill="#fbbf24" font-size="20" font-weight="700">Hyperbolic Paraboloid z = x² - y²</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">Level curves x² - y² = k are HYPERBOLAS.</text>
+        <text x="25" y="100" fill="#94a3b8" font-size="16">k = 0 gives pair of intersecting lines y = ±x (saddle!).</text>
+      </g>
+    </g>
+
+    <!-- Two-Path Limit Test -->
+    <g transform="translate(40, 390)">
+      <rect x="0" y="0" width="1680" height="410" rx="16" fill="url(#cardGradRose)" stroke="#f43f5e" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#f43f5e" font-size="24" font-weight="700">The Two-Path Non-Existence Limit Test</text>
+      <text x="30" y="80" fill="#cbd5e1" font-size="18">If f(x, y) approaches different values along two distinct approach paths to (x₀, y₀), the LIMIT DOES NOT EXIST!</text>
+
+      <g transform="translate(30, 105)">
+        <rect x="0" y="0" width="790" height="180" rx="10" fill="#1e293b" stroke="#334155"/>
+        <text x="20" y="35" fill="#fbbf24" font-size="19" font-weight="700">Straight Line Paths: y = mx</text>
+        <text x="20" y="70" fill="#cbd5e1" font-size="16">E.g. lim_{(x,y)➔(0,0)} (xy) / (x² + y²)</text>
+        <text x="20" y="105" fill="#f8fafc" font-size="18">= lim_{x➔0} m x² / [x²(1 + m²)] = m / (1 + m²)</text>
+        <text x="20" y="145" fill="#f43f5e" font-size="20" font-weight="700">DEPENDS ON SLOPE m ⟹ LIMIT DOES NOT EXIST!</text>
+      </g>
+
+      <g transform="translate(850, 105)">
+        <rect x="0" y="0" width="790" height="180" rx="10" fill="#1e293b" stroke="#334155"/>
+        <text x="20" y="35" fill="#f43f5e" font-size="19" font-weight="700">Parabolic Trap Path: y = kx² (Degree Matching)</text>
+        <text x="20" y="70" fill="#cbd5e1" font-size="16">E.g. lim_{(x,y)➔(0,0)} (x²y) / (x⁴ + y²)</text>
+        <text x="20" y="105" fill="#cbd5e1" font-size="16">Along y = mx: limit = 0 for all straight lines!</text>
+        <text x="20" y="145" fill="#f43f5e" font-size="20" font-weight="700">Along y = x²: limit = x⁴/(2x⁴) = 1/2 ≠ 0 ⟹ LIMIT DNE!</text>
+      </g>
+
+      <rect x="30" y="315" width="1610" height="65" rx="8" fill="#1c050d" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="50" y="355" fill="#fca5a5" font-size="18" font-weight="700">EXAM SAFEGUARD: Always balance polynomial degrees! If denominator has x⁴ + y², straight lines give false 0; test y = kx²!</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 1 BOTTOM: TOTAL DIFFERENTIAL & CHAIN RULE -->
+  <g transform="translate(120, 1180)">
+    <rect x="0" y="0" width="1760" height="880" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1760" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#fbbf24"/>
+    <text x="45" y="45" fill="#fbbf24" font-size="28" font-weight="700">2. TOTAL DIFFERENTIAL &amp; MULTIVARIABLE CHAIN RULE</text>
+
+    <!-- Total Differential df -->
+    <g transform="translate(40, 100)">
+      <rect x="0" y="0" width="1680" height="260" rx="16" fill="url(#cardGradDark)" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="30" y="40" fill="#38bdf8" font-size="24" font-weight="700">The Total Differential &amp; Error Propagation</text>
+      
+      <rect x="30" y="65" width="1610" height="70" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+      <text x="50" y="112" fill="#38bdf8" font-size="28" font-weight="800">df = (∂f/∂x) dx + (∂f/∂y) dy + (∂f/∂z) dz</text>
+
+      <g transform="translate(30, 155)">
+        <rect x="0" y="0" width="1610" height="80" rx="8" fill="#1e293b" stroke="#334155"/>
+        <text x="30" y="35" fill="#fbbf24" font-size="20" font-weight="700">Relative / Percentage Error Law:</text>
+        <text x="30" y="65" fill="#f8fafc" font-size="19">Δf / f ≈ (1/f) • (∂f/∂x) Δx + (1/f) • (∂f/∂y) Δy ⟹ Percentage Error = (Δf / f) × 100%</text>
+      </g>
+    </g>
+
+    <!-- Multivariable Chain Rule Tree -->
+    <g transform="translate(40, 390)">
+      <rect x="0" y="0" width="1680" height="450" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="30" y="40" fill="#34d399" font-size="24" font-weight="700">Chain Rule Tree &amp; Implicit Differentiation</text>
+
+      <g transform="translate(30, 70)">
+        <rect x="0" y="0" width="790" height="340" rx="12" fill="#1e293b" stroke="#334155"/>
+        <text x="25" y="35" fill="#38bdf8" font-size="20" font-weight="700">Case 1: One Independent Variable t</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">z = f(x, y) where x = x(t), y = y(t):</text>
+        
+        <rect x="25" y="90" width="740" height="60" rx="8" fill="#0f172a" stroke="#38bdf8"/>
+        <text x="40" y="128" fill="#38bdf8" font-size="22" font-weight="800">dz/dt = (∂f/∂x)(dx/dt) + (∂f/∂y)(dy/dt)</text>
+
+        <text x="25" y="185" fill="#34d399" font-size="20" font-weight="700">Case 2: Two Independent Variables u, v</text>
+        <text x="25" y="215" fill="#cbd5e1" font-size="17">z = f(x, y) where x = x(u, v), y = y(u, v):</text>
+        <text x="25" y="255" fill="#f8fafc" font-size="18">• ∂z/∂u = (∂f/∂x)(∂x/∂u) + (∂f/∂y)(∂y/∂u)</text>
+        <text x="25" y="295" fill="#f8fafc" font-size="18">• ∂z/∂v = (∂f/∂x)(∂x/∂v) + (∂f/∂y)(∂y/∂v)</text>
+      </g>
+
+      <g transform="translate(850, 70)">
+        <rect x="0" y="0" width="790" height="340" rx="12" fill="#1e293b" stroke="#334155"/>
+        <text x="25" y="35" fill="#fbbf24" font-size="20" font-weight="700">Implicit Differentiation via Partial Derivatives</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">Given implicit relation F(x, y) = 0:</text>
+        
+        <rect x="25" y="90" width="740" height="60" rx="8" fill="#0f172a" stroke="#fbbf24"/>
+        <text x="40" y="128" fill="#fbbf24" font-size="24" font-weight="800">dy/dx = - ( ∂F/∂x ) / ( ∂F/∂y )</text>
+
+        <text x="25" y="185" fill="#34d399" font-size="20" font-weight="700">For 3D Implicit Surface F(x, y, z) = 0:</text>
+        <text x="25" y="225" fill="#f8fafc" font-size="19">• ∂z/∂x = - ( ∂F/∂x ) / ( ∂F/∂z )</text>
+        <text x="25" y="265" fill="#f8fafc" font-size="19">• ∂z/∂y = - ( ∂F/∂y ) / ( ∂F/∂z )</text>
+        <text x="25" y="305" fill="#94a3b8" font-size="16">Saves massive algebra compared to implicit product rules!</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: EULER'S HOMOGENEOUS THEOREM -->
+  <g transform="translate(1920, 310)">
+    <rect x="0" y="0" width="1800" height="1750" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1800" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">3. EULER'S THEOREM ON HOMOGENEOUS FUNCTIONS</text>
+
+    <!-- Definition of Homogeneous Function -->
+    <g transform="translate(40, 100)">
+      <rect x="0" y="0" width="1720" height="170" rx="16" fill="url(#cardGradDark)" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="35" y="40" fill="#38bdf8" font-size="24" font-weight="700">Definition: Homogeneous Function of Degree n</text>
+      <text x="35" y="75" fill="#cbd5e1" font-size="19">f(x, y) is homogeneous of degree n if: f(tx, ty) = tⁿ • f(x, y) for all t &gt; 0</text>
+      <text x="35" y="115" fill="#cbd5e1" font-size="19">Alternatively: f(x, y) = xⁿ • g(y/x) = yⁿ • h(x/y)</text>
+      <text x="35" y="150" fill="#94a3b8" font-size="16">Example: f(x, y) = (x³ + y³) / (x + y) has degree n = 3 - 1 = 2.</text>
+    </g>
+
+    <!-- Euler's 1st and 2nd Theorems -->
+    <g transform="translate(40, 290)">
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="840" height="280" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+        <rect x="0" y="0" width="840" height="55" rx="16" fill="#0c2340"/>
+        <text x="30" y="38" fill="#38bdf8" font-size="22" font-weight="800">EULER'S FIRST THEOREM</text>
+        
+        <text x="30" y="95" fill="#cbd5e1" font-size="18">For homogeneous function f(x, y) of degree n:</text>
+        <rect x="30" y="115" width="780" height="75" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.8"/>
+        <text x="50" y="162" fill="#38bdf8" font-size="28" font-weight="800">x (∂f/∂x) + y (∂f/∂y) = n • f(x, y)</text>
+
+        <text x="30" y="225" fill="#cbd5e1" font-size="16">For 3 variables: x f_x + y f_y + z f_z = n • f(x, y, z)</text>
+        <text x="30" y="255" fill="#94a3b8" font-size="15">Gradient relation: x⃗ • ∇f = n • f</text>
+      </g>
+
+      <g transform="translate(880, 0)">
+        <rect x="0" y="0" width="840" height="280" rx="16" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+        <rect x="0" y="0" width="840" height="55" rx="16" fill="#281c06"/>
+        <text x="30" y="38" fill="#fbbf24" font-size="22" font-weight="800">EULER'S SECOND THEOREM</text>
+        
+        <text x="30" y="95" fill="#cbd5e1" font-size="18">Second-order differential operator of degree n:</text>
+        <rect x="30" y="115" width="780" height="75" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.8"/>
+        <text x="45" y="162" fill="#fbbf24" font-size="24" font-weight="800">x² f_xx + 2xy f_xy + y² f_yy = n(n - 1) • f</text>
+
+        <text x="30" y="225" fill="#cbd5e1" font-size="16">Matrix form: [x y] • H_f • [x y]ᵀ = n(n - 1) f</text>
+        <text x="30" y="255" fill="#f43f5e" font-size="16">TRAP: If n = 1, second-order operator vanishes to 0!</text>
+      </g>
+    </g>
+
+    <!-- Composite Euler Theorem (The #1 GATE Exam Trap & Weapon) -->
+    <g transform="translate(40, 595)">
+      <rect x="0" y="0" width="1720" height="520" rx="20" fill="url(#cardGradEmerald)" stroke="#34d399" stroke-width="2"/>
+      <rect x="0" y="0" width="1720" height="70" rx="20" fill="#062817"/>
+      <text x="35" y="45" fill="#34d399" font-size="26" font-weight="800">COMPOSITE EULER THEOREM • THE MOST FAMOUS GATE QUESTION TYPE</text>
+
+      <g transform="translate(35, 95)">
+        <text x="0" y="25" fill="#f8fafc" font-size="21" font-weight="700">Problem Archetype: When u(x, y) is NOT homogeneous, but g(u) = f(x, y) IS homogeneous of degree n!</text>
+        <text x="0" y="58" fill="#cbd5e1" font-size="18">E.g. u = sin⁻¹[(x² + y²)/(x + y)] ⟹ sin(u) = (x² + y²)/(x + y) which is homogeneous of degree n = 2 - 1 = 1.</text>
+
+        <!-- Formulas Grid -->
+        <g transform="translate(0, 85)">
+          <rect x="0" y="0" width="820" height="140" rx="14" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+          <text x="30" y="38" fill="#34d399" font-size="20" font-weight="800">1st-Order Composite Formula:</text>
+          <text x="30" y="95" fill="#34d399" font-size="28" font-weight="800">x u_x + y u_y = n • [ g(u) / g'(u) ]</text>
+        </g>
+
+        <g transform="translate(860, 85)">
+          <rect x="0" y="0" width="820" height="140" rx="14" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+          <text x="30" y="38" fill="#fbbf24" font-size="20" font-weight="800">2nd-Order Composite Formula:</text>
+          <text x="30" y="95" fill="#fbbf24" font-size="24" font-weight="800">x² u_xx + 2xy u_xy + y² u_yy = G(u)[G'(u) - 1]</text>
+          <text x="30" y="125" fill="#cbd5e1" font-size="15">where G(u) = n • [g(u) / g'(u)]</text>
+        </g>
+
+        <!-- Standard Inverse Truncation Lookup Table -->
+        <g transform="translate(0, 250)">
+          <rect x="0" y="0" width="1650" height="140" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+          <text x="30" y="35" fill="#38bdf8" font-size="18" font-weight="700">RAPID EXAM LOOKUP TABLE FOR g(u)/g'(u):</text>
+          <text x="30" y="70" fill="#f8fafc" font-size="18">• u = sin⁻¹(f) ⟹ g/g' = sin u / cos u = tan u</text>
+          <text x="600" y="70" fill="#f8fafc" font-size="18">• u = cos⁻¹(f) ⟹ g/g' = -cot u</text>
+          <text x="1100" y="70" fill="#f8fafc" font-size="18">• u = tan⁻¹(f) ⟹ g/g' = (1/2) sin(2u)</text>
+          <text x="30" y="110" fill="#f8fafc" font-size="18">• u = ln(f) ⟹ g/g' = eᵘ / eᵘ = 1</text>
+          <text x="600" y="110" fill="#f8fafc" font-size="18">• u = sec⁻¹(f) ⟹ g/g' = cot u</text>
+          <text x="1100" y="110" fill="#34d399" font-size="18" font-weight="700">★ Final Result = n × (Table Lookup Value)!</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Comprehensive Worked Drills Card -->
+    <g transform="translate(40, 1140)">
+      <rect x="0" y="0" width="1720" height="550" rx="16" fill="#111827" stroke="#334155"/>
+      <text x="35" y="45" fill="#38bdf8" font-size="22" font-weight="700">TITANS BATCH CRITICAL DRILL ARCHIVE</text>
+
+      <g transform="translate(35, 75)">
+        <rect x="0" y="0" width="510" height="440" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="25" y="35" fill="#38bdf8" font-size="19" font-weight="700">Drill 1: u = sin⁻¹[(x+y)/(√x+√y)]</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="16">• sin u = (x+y)/(√x+√y)</text>
+        <text x="25" y="110" fill="#cbd5e1" font-size="16">• degree n = 1 - 1/2 = 1/2</text>
+        <text x="25" y="145" fill="#cbd5e1" font-size="16">• g(u)/g'(u) = tan u</text>
+        
+        <rect x="20" y="175" width="470" height="75" rx="8" fill="#0f172a" stroke="#34d399"/>
+        <text x="30" y="210" fill="#34d399" font-size="18" font-weight="800">x u_x + y u_y = (1/2) tan u</text>
+        <text x="30" y="235" fill="#94a3b8" font-size="14">Direct 1-step solution!</text>
+
+        <text x="25" y="285" fill="#fbbf24" font-size="17" font-weight="700">2nd-Order Operator:</text>
+        <text x="25" y="320" fill="#cbd5e1" font-size="15">G(u) = (1/2) tan u</text>
+        <text x="25" y="350" fill="#cbd5e1" font-size="15">G'(u) = (1/2) sec² u</text>
+        <text x="25" y="390" fill="#fbbf24" font-size="16" font-weight="800">= (tan u / 2) [ (sec² u)/2 - 1 ]</text>
+      </g>
+
+      <g transform="translate(585, 75)">
+        <rect x="0" y="0" width="510" height="440" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+        <text x="25" y="35" fill="#fbbf24" font-size="19" font-weight="700">Drill 2: u = tan⁻¹[(x³+y³)/(x-y)]</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="16">• tan u = (x³+y³)/(x-y)</text>
+        <text x="25" y="110" fill="#cbd5e1" font-size="16">• degree n = 3 - 1 = 2</text>
+        <text x="25" y="145" fill="#cbd5e1" font-size="16">• g/g' = tan u / sec² u = (1/2) sin 2u</text>
+        
+        <rect x="20" y="175" width="470" height="75" rx="8" fill="#0f172a" stroke="#34d399"/>
+        <text x="30" y="210" fill="#34d399" font-size="18" font-weight="800">x u_x + y u_y = 2 × (1/2) sin 2u</text>
+        <text x="30" y="238" fill="#38bdf8" font-size="20" font-weight="800">= sin 2u</text>
+
+        <text x="25" y="285" fill="#fbbf24" font-size="17" font-weight="700">2nd-Order Operator:</text>
+        <text x="25" y="320" fill="#cbd5e1" font-size="15">G(u) = sin 2u</text>
+        <text x="25" y="350" fill="#cbd5e1" font-size="15">G'(u) = 2 cos 2u</text>
+        <text x="25" y="390" fill="#fbbf24" font-size="16" font-weight="800">= sin 2u ( 2 cos 2u - 1 )</text>
+      </g>
+
+      <g transform="translate(1135, 75)">
+        <rect x="0" y="0" width="550" height="440" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+        <text x="25" y="35" fill="#34d399" font-size="19" font-weight="700">Drill 3: u = ln[(x⁴+y⁴)/(x+y)]</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="16">• eᵘ = (x⁴+y⁴)/(x+y)</text>
+        <text x="25" y="110" fill="#cbd5e1" font-size="16">• degree n = 4 - 1 = 3</text>
+        <text x="25" y="145" fill="#cbd5e1" font-size="16">• g(u)/g'(u) = eᵘ / eᵘ = 1</text>
+        
+        <rect x="20" y="175" width="500" height="75" rx="8" fill="#0f172a" stroke="#34d399"/>
+        <text x="30" y="210" fill="#34d399" font-size="18" font-weight="800">x u_x + y u_y = 3 × 1 = 3</text>
+        <text x="30" y="235" fill="#94a3b8" font-size="14">Result is CONSTANT 3 for all (x,y)!</text>
+
+        <text x="25" y="285" fill="#f43f5e" font-size="17" font-weight="700">2nd-Order Operator:</text>
+        <text x="25" y="320" fill="#cbd5e1" font-size="15">G(u) = 3 (constant)</text>
+        <text x="25" y="350" fill="#cbd5e1" font-size="15">G'(u) = 0</text>
+        <text x="25" y="390" fill="#f43f5e" font-size="18" font-weight="800">= 3 (0 - 1) = -3 (CONSTANT!)</text>
+      </g>
+    </g>
+  </g>
+</svg>

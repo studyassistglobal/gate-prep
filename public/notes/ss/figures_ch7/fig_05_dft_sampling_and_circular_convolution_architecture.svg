@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid5" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" font-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" font-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid5)"/>
+
+  <!-- Header -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 07 • FIGURE 7.5</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">Discrete Fourier Transform (DFT), Twiddle Factor W_N, Circular Convolution &amp; Linear Zero-Padding Architecture</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- Panel 1: Frequency Sampling & Twiddle Factor Geometry -->
+  <rect x="80" y="190" width="720" height="1090" rx="18" fill="url(#panelGrad5)" stroke="#30363d" stroke-width="2"/>
+  <rect x="80" y="190" width="720" height="60" rx="18" fill="#21262d"/>
+  <text x="440" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">1. DFT ENGINE &amp; TWIDDLE FACTOR</text>
+
+  <g transform="translate(110, 270)">
+    <rect x="0" y="10" width="660" height="160" rx="12" fill="#161b22" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="25" y="45" fill="#38bdf8" font-size="19" font-weight="700">DTFT Frequency Sampling Derivation</text>
+    <text x="25" y="75" fill="#e6edf3" font-size="15">Sample continuous DTFT X(eʲᶿ) at N uniformly spaced frequency points:</text>
+    <rect x="25" y="90" width="610" height="60" rx="8" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="330" y="130" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">X[k] = X(eʲᶿ)|_{Ω = 2πk / N} = ∑_{n = 0}^{N - 1} x[n] W_N^{kn}</text>
+
+    <!-- Twiddle Factor Definition -->
+    <rect x="0" y="185" width="660" height="190" rx="12" fill="#0d1117" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="25" y="220" fill="#fbbf24" font-size="19" font-weight="700">The Twiddle Factor W_N</text>
+    <text x="25" y="255" fill="#fbbf24" font-size="24" font-weight="700">W_N = e⁻ʲ(²ᵖⁱ / N) = cos(2π / N) - j sin(2π / N)</text>
+    
+    <text x="25" y="295" fill="#e6edf3" font-size="15">• Periodicity: W_N^{k + N} = W_N^k</text>
+    <text x="25" y="325" fill="#e6edf3" font-size="15">• Half-Period Symmetry: W_N^{k + N/2} = -W_N^k  (Sign inversion!)</text>
+    <text x="25" y="355" fill="#e6edf3" font-size="15">• Index Reduction / Scaling: W_N^{2k} = W_{N/2}^k,   W_N^{kn} = W_{N / m}^{k n / m}</text>
+
+    <!-- N=8 Twiddle Factor Phasor Constellation -->
+    <g transform="translate(20, 395)">
+      <rect x="0" y="0" width="620" height="340" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <text x="310" y="30" fill="#e6edf3" font-size="15" font-weight="600" text-anchor="middle">N = 8 Twiddle Factor Unit Circle Constellation</text>
+      
+      <!-- Circle and axes -->
+      <line x1="160" y1="180" x2="460" y2="180" stroke="#8b949e" stroke-width="1"/>
+      <line x1="310" y1="50" x2="310" y2="310" stroke="#8b949e" stroke-width="1"/>
+      <circle cx="310" cy="180" r="100" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+
+      <!-- 8 points (clockwise for e^{-j2pi/8}) -->
+      <!-- W_8^0 = 1 -->
+      <circle cx="410" cy="180" r="5" fill="#34d399"/>
+      <text x="425" y="185" fill="#34d399" font-size="12" font-weight="700">W₈⁰ = 1</text>
+
+      <!-- W_8^1 = (1-j)/sqrt(2) -->
+      <circle cx="380" cy="251" r="5" fill="#38bdf8"/>
+      <text x="390" y="265" fill="#38bdf8" font-size="12">W₈¹ = 1/√2 - j/√2</text>
+
+      <!-- W_8^2 = -j -->
+      <circle cx="310" cy="280" r="5" fill="#fbbf24"/>
+      <text x="310" y="302" fill="#fbbf24" font-size="12" text-anchor="middle">W₈² = -j</text>
+
+      <!-- W_8^3 = (-1-j)/sqrt(2) -->
+      <circle cx="239" cy="251" r="5" fill="#38bdf8"/>
+      <text x="145" y="265" fill="#38bdf8" font-size="12">W₈³ = -1/√2 - j/√2</text>
+
+      <!-- W_8^4 = -1 -->
+      <circle cx="210" cy="180" r="5" fill="#f87171"/>
+      <text x="150" y="185" fill="#f87171" font-size="12" font-weight="700">W₈⁴ = -1</text>
+
+      <!-- W_8^5 -->
+      <circle cx="239" cy="109" r="5" fill="#38bdf8"/>
+      <text x="145" y="105" fill="#38bdf8" font-size="12">W₈⁵ = -1/√2 + j/√2</text>
+
+      <!-- W_8^6 = j -->
+      <circle cx="310" cy="80" r="5" fill="#fbbf24"/>
+      <text x="310" y="70" fill="#fbbf24" font-size="12" text-anchor="middle">W₈⁶ = +j</text>
+
+      <!-- W_8^7 -->
+      <circle cx="380" cy="109" r="5" fill="#38bdf8"/>
+      <text x="390" y="105" fill="#38bdf8" font-size="12">W₈⁷ = 1/√2 + j/√2</text>
+    </g>
+
+    <!-- IDFT Equation -->
+    <rect x="0" y="755" width="660" height="150" rx="12" fill="#161b22" stroke="#34d399" stroke-width="1.5"/>
+    <text x="25" y="790" fill="#34d399" font-size="18" font-weight="700">Inverse DFT (IDFT) Equation</text>
+    <rect x="25" y="805" width="610" height="55" rx="8" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="330" y="842" fill="#34d399" font-size="22" font-weight="700" text-anchor="middle">x[n] = (1 / N) ∑_{k = 0}^{N - 1} X[k] W_N^{-kn}</text>
+    <text x="25" y="885" fill="#fbbf24" font-size="13" font-weight="600">NOTE: W_N^{-kn} = (W_N^{kn})* (Complex conjugate of forward matrix!)</text>
+
+    <!-- Matrix Formulation -->
+    <rect x="0" y="920" width="660" height="70" rx="10" fill="#0d1117" stroke="#38bdf8" stroke-width="1"/>
+    <text x="25" y="955" fill="#38bdf8" font-size="16" font-weight="700">Matrix Form: X = F_N · x   where F_N is the N×N DFT Matrix</text>
+  </g>
+
+  <!-- Panel 2: Circular Shift & Circular Convolution Engine -->
+  <rect x="830" y="190" width="740" height="1090" rx="18" fill="url(#panelGrad5)" stroke="#30363d" stroke-width="2"/>
+  <rect x="830" y="190" width="740" height="60" rx="18" fill="#21262d"/>
+  <text x="1200" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">2. CIRCULAR CONVOLUTION ARCHITECTURE</text>
+
+  <g transform="translate(860, 270)">
+    <!-- Circular Shift Definition -->
+    <rect x="0" y="10" width="680" height="150" rx="12" fill="#161b22" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="25" y="45" fill="#38bdf8" font-size="19" font-weight="700">Circular Time Shift via Modulo-N Indexing</text>
+    <text x="25" y="75" fill="#e6edf3" font-size="15">Samples shifting past index N-1 wrap around to index 0:</text>
+    <rect x="25" y="90" width="630" height="50" rx="8" fill="#0d1117" stroke="#38bdf8" stroke-width="1"/>
+    <text x="340" y="123" fill="#38bdf8" font-size="20" font-weight="700" text-anchor="middle">x_circ[n] = x[((n - n₀))_N] ⟷ X[k] · W_N^{k n₀}</text>
+
+    <!-- Circular Convolution Theorem -->
+    <rect x="0" y="175" width="680" height="180" rx="12" fill="#161b22" stroke="#34d399" stroke-width="1.5"/>
+    <text x="25" y="210" fill="#34d399" font-size="19" font-weight="700">Circular Convolution Theorem</text>
+    <text x="25" y="240" fill="#e6edf3" font-size="15">Multiplication of two N-point DFTs corresponds to N-point Circular Convolution:</text>
+    <rect x="25" y="255" width="630" height="55" rx="8" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="340" y="292" fill="#34d399" font-size="22" font-weight="700" text-anchor="middle">y[n] = x₁[n] ⊛ x₂[n] = ∑_{m = 0}^{N - 1} x₁[m] x₂[((n - m))_N] ⟷ X₁[k] X₂[k]</text>
+    <text x="25" y="335" fill="#fbbf24" font-size="13" font-weight="600">CRITICAL: Regular multiplication in DFT domain NEVER gives linear convolution automatically!</text>
+
+    <!-- Circulant Matrix Formulation -->
+    <rect x="0" y="370" width="680" height="310" rx="12" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="25" y="405" fill="#38bdf8" font-size="19" font-weight="700">Circulant Matrix Formulation (N = 4 Example)</text>
+    <text x="25" y="435" fill="#e6edf3" font-size="14">Circular convolution written as matrix multiplication y = C · x₁:</text>
+
+    <g transform="translate(30, 455)">
+      <rect x="0" y="0" width="620" height="195" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <text x="20" y="35" fill="#8b949e" font-size="14">⎡ y[0] ⎤      ⎡ x₂[0]   x₂[3]   x₂[2]   x₂[1] ⎤   ⎡ x₁[0] ⎤</text>
+      <text x="20" y="70" fill="#8b949e" font-size="14">⎢ y[1] ⎥      ⎢ x₂[1]   x₂[0]   x₂[3]   x₂[2] ⎥   ⎢ x₁[1] ⎥</text>
+      <text x="20" y="105" fill="#8b949e" font-size="14">⎢ y[2] ⎥  =  ⎢ x₂[2]   x₂[1]   x₂[0]   x₂[3] ⎥ · ⎢ x₁[2] ⎥</text>
+      <text x="20" y="140" fill="#8b949e" font-size="14">⎣ y[3] ⎦      ⎣ x₂[3]   x₂[2]   x₂[1]   x₂[0] ⎦   ⎣ x₁[3] ⎦</text>
+      <text x="20" y="175" fill="#34d399" font-size="13" font-weight="600">Each column is circularly shifted downward by 1 element! (Circulant Matrix)</text>
+    </g>
+
+    <!-- Clock Wheel Diagram of Modulo-N -->
+    <rect x="0" y="695" width="680" height="295" rx="12" fill="#161b22" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="25" y="730" fill="#a78bfa" font-size="18" font-weight="700">The Circular Buffer Clock Model</text>
+    <text x="25" y="760" fill="#e6edf3" font-size="14">• Time indices live on a closed circle with N discrete positions (0 to N-1).</text>
+    <text x="25" y="790" fill="#e6edf3" font-size="14">• Moving forward past N-1 wraps directly back into index 0.</text>
+    <text x="25" y="820" fill="#fbbf24" font-size="14" font-weight="600">• Time reversal x[((-n))_N] flips values across the vertical diameter!</text>
+    <text x="25" y="855" fill="#8b949e" font-size="14">x[((-0))_N] = x[0],   x[((-1))_N] = x[N-1],   x[((-2))_N] = x[N-2] ...</text>
+    <text x="25" y="890" fill="#38bdf8" font-size="14" font-weight="700">Explains why time reversal in DFT gives X[((-k))_N] = X[N - k]!</text>
+  </g>
+
+  <!-- Panel 3: Circular vs Linear Convolution & Zero-Padding -->
+  <rect x="1600" y="190" width="720" height="1090" rx="18" fill="url(#panelGrad5)" stroke="#30363d" stroke-width="2"/>
+  <rect x="1600" y="190" width="720" height="60" rx="18" fill="#21262d"/>
+  <text x="1960" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">3. LINEAR EQUIVALENCE &amp; TIME ALIASING</text>
+
+  <g transform="translate(1630, 270)">
+    <!-- Golden Zero Padding Rule -->
+    <rect x="0" y="10" width="660" height="210" rx="12" fill="#161b22" stroke="#34d399" stroke-width="2"/>
+    <text x="25" y="45" fill="#34d399" font-size="20" font-weight="700">THE GOLDEN ZERO-PADDING CONDITION</text>
+    <text x="25" y="75" fill="#e6edf3" font-size="15">To obtain LINEAR CONVOLUTION using circular convolution / DFT:</text>
+    <rect x="25" y="90" width="610" height="65" rx="8" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="330" y="132" fill="#34d399" font-size="24" font-weight="800" text-anchor="middle">DFT Length L ≥ N₁ + N₂ - 1</text>
+    <text x="25" y="180" fill="#e6edf3" font-size="14">Both sequences MUST be zero-padded to at least length L before taking DFT!</text>
+    <text x="25" y="202" fill="#fbbf24" font-size="13" font-weight="600">Linear convolution produces N₁ + N₂ - 1 points. L must accommodate all points!</text>
+
+    <!-- Time Aliasing Mechanism -->
+    <rect x="0" y="235" width="660" height="210" rx="12" fill="#161b22" stroke="#f87171" stroke-width="1.5"/>
+    <text x="25" y="270" fill="#f87171" font-size="19" font-weight="700">What Happens If L &lt; N₁ + N₂ - 1? (Time Aliasing!)</text>
+    <text x="25" y="300" fill="#e6edf3" font-size="15">Circular convolution wraps the tail points of linear convolution back into the head:</text>
+    <rect x="25" y="315" width="610" height="55" rx="8" fill="#0d1117" stroke="#f87171" stroke-width="1.5"/>
+    <text x="330" y="352" fill="#f87171" font-size="20" font-weight="700" text-anchor="middle">y_circ[n] = ∑_{m = -∞}^{+∞} y_linear[n + m L]   (0 ≤ n ≤ L - 1)</text>
+    <text x="25" y="395" fill="#8b949e" font-size="14">• The excess points beyond L-1 fold into the beginning samples 0, 1, 2...</text>
+    <text x="25" y="420" fill="#fbbf24" font-size="14" font-weight="600">• Number of corrupted/aliased points = (N₁ + N₂ - 1) - L</text>
+
+    <!-- Linear vs Circular Comparison Matrix -->
+    <rect x="0" y="460" width="660" height="300" rx="12" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="25" y="495" fill="#38bdf8" font-size="18" font-weight="700">Linear vs Circular Convolution Matrix</text>
+
+    <g transform="translate(20, 515)">
+      <rect x="0" y="0" width="620" height="225" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <text x="20" y="30" fill="#38bdf8" font-size="14" font-weight="700">FEATURE                LINEAR CONVOLUTION           CIRCULAR CONVOLUTION</text>
+      <line x1="20" y1="42" x2="600" y2="42" stroke="#30363d" stroke-width="1"/>
+      <text x="20" y="70" fill="#e6edf3" font-size="13">Output Length          N₁ + N₂ - 1                  Max(N₁, N₂) or chosen N</text>
+      <text x="20" y="105" fill="#e6edf3" font-size="13">Time Operation         Straight shift (-∞ to +∞)    Modulo-N circular buffer</text>
+      <text x="20" y="140" fill="#e6edf3" font-size="13">Transform Domain       DTFT: X₁(eʲᶿ) X₂(eʲᶿ)        DFT: X₁[k] X₂[k]</text>
+      <text x="20" y="175" fill="#e6edf3" font-size="13">Direct Complexity      O(N₁ · N₂)                   O(N²)</text>
+      <text x="20" y="210" fill="#34d399" font-size="13" font-weight="700">Fast Implementation    Zero-Pad + FFT               Direct FFT Product + IFFT</text>
+    </g>
+
+    <!-- Classic Numerical Drill -->
+    <rect x="0" y="775" width="660" height="215" rx="10" fill="#161b22" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="20" y="805" fill="#fbbf24" font-size="16" font-weight="700">Classic GATE Problem Pattern</text>
+    <text x="20" y="835" fill="#e6edf3" font-size="14">Q: x₁[n] of length 5, x₂[n] of length 4. What is minimum DFT size N so that</text>
+    <text x="20" y="860" fill="#e6edf3" font-size="14">circular convolution equals linear convolution?</text>
+    <text x="20" y="895" fill="#34d399" font-size="17" font-weight="700">Ans: N_min = 5 + 4 - 1 = 8 points!</text>
+    <text x="20" y="925" fill="#8b949e" font-size="13">If 6-point circular convolution is performed, exactly (8 - 6) = 2 points will alias!</text>
+    <text x="20" y="955" fill="#f87171" font-size="13" font-weight="600">y_circ[0] = y_lin[0] + y_lin[6],  y_circ[1] = y_lin[1] + y_lin[7].</text>
+  </g>
+</svg>

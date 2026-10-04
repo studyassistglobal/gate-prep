@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid2)"/>
+
+  <!-- Header -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 07 • FIGURE 7.2</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">DTFT Operational Properties, Real/Imaginary Symmetry Architecture &amp; Parseval's Energy Theorem</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- Panel 1: Operational Properties Matrix -->
+  <rect x="80" y="190" width="760" height="1090" rx="18" fill="url(#panelGrad2)" stroke="#30363d" stroke-width="2"/>
+  <rect x="80" y="190" width="760" height="60" rx="18" fill="#21262d"/>
+  <text x="460" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">1. CORE OPERATIONAL PROPERTIES</text>
+
+  <g transform="translate(110, 270)">
+    <!-- Property Table Rows -->
+    <!-- Row 1: Linearity -->
+    <rect x="0" y="10" width="700" height="85" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="40" fill="#38bdf8" font-size="16" font-weight="700">Linearity</text>
+    <text x="20" y="70" fill="#e6edf3" font-size="17">a x₁[n] + b x₂[n] ⟷ a X₁(eʲᶿ) + b X₂(eʲᶿ)</text>
+
+    <!-- Row 2: Time Shift -->
+    <rect x="0" y="105" width="700" height="95" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="135" fill="#38bdf8" font-size="16" font-weight="700">Time Shifting (Pure Linear Phase Delay)</text>
+    <text x="20" y="165" fill="#e6edf3" font-size="17">x[n - n₀] ⟷ e⁻ʲᶿⁿ⁰ X(eʲᶿ)</text>
+    <text x="20" y="190" fill="#8b949e" font-size="13">|X_shifted(eʲᶿ)| = |X(eʲᶿ)| (Magnitude unaltered), Phase ∠X(eʲᶿ) - Ω n₀</text>
+
+    <!-- Row 3: Frequency Shift / Modulation -->
+    <rect x="0" y="210" width="700" height="95" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="240" fill="#38bdf8" font-size="16" font-weight="700">Frequency Shifting (Modulation)</text>
+    <text x="20" y="270" fill="#e6edf3" font-size="17">eʲᶿ⁰ⁿ x[n] ⟷ X(eʲ⁽ᶿ ⁻ ᶿ⁰⁾)</text>
+    <text x="20" y="295" fill="#8b949e" font-size="13">Multiplication by cos(Ω₀n) shifts spectrum to ±Ω₀ by half amplitude.</text>
+
+    <!-- Row 4: Frequency Differentiation -->
+    <rect x="0" y="315" width="700" height="95" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="345" fill="#38bdf8" font-size="16" font-weight="700">Differentiation in Frequency Domain</text>
+    <text x="20" y="375" fill="#fbbf24" font-size="17" font-weight="700">n x[n] ⟷ j · (d / dΩ) X(eʲᶿ)</text>
+    <text x="20" y="400" fill="#8b949e" font-size="13">Multiplying by n introduces a factor of j and derivative with respect to Ω.</text>
+
+    <!-- Row 5: Time Reversal -->
+    <rect x="0" y="420" width="700" height="85" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="450" fill="#38bdf8" font-size="16" font-weight="700">Time Reversal</text>
+    <text x="20" y="480" fill="#e6edf3" font-size="17">x[-n] ⟷ X(e⁻ʲᶿ)</text>
+
+    <!-- Row 6: Linear Convolution -->
+    <rect x="0" y="515" width="700" height="95" rx="10" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="20" y="545" fill="#34d399" font-size="16" font-weight="700">Convolution in Time (Linear Filtering)</text>
+    <text x="20" y="575" fill="#34d399" font-size="18" font-weight="700">x₁[n] * x₂[n] ⟷ X₁(eʲᶿ) · X₂(eʲᶿ)</text>
+    <text x="20" y="600" fill="#8b949e" font-size="13">Discrete convolution maps to continuous algebraic multiplication!</text>
+
+    <!-- Row 7: Multiplication / Windowing -->
+    <rect x="0" y="620" width="700" height="95" rx="10" fill="#0d1117" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="20" y="650" fill="#a78bfa" font-size="16" font-weight="700">Multiplication in Time (Periodic Frequency Convolution)</text>
+    <text x="20" y="680" fill="#a78bfa" font-size="17" font-weight="700">x₁[n] · x₂[n] ⟷ (1 / 2π) ∫_⟨2π⟩ X₁(eʲᶿ) X₂(eʲ⁽ᶿ⁻ᶿ⁾) dθ</text>
+    <text x="20" y="705" fill="#fbbf24" font-size="13" font-weight="600">WARNING: Must normalize by 1/2π in frequency convolution!</text>
+
+    <!-- Row 8: Accumulation / Summation -->
+    <rect x="0" y="725" width="700" height="95" rx="10" fill="#0d1117" stroke="#f87171" stroke-width="1.5"/>
+    <text x="20" y="755" fill="#f87171" font-size="16" font-weight="700">Accumulation / Discrete Integration</text>
+    <text x="20" y="785" fill="#e6edf3" font-size="16">∑ₘ₌₋∞ⁿ x[m] ⟷ (1 / (1 - e⁻ʲᶿ)) X(eʲᶿ) + π X(eʲ⁰) ∑ₖ δ(Ω - 2πk)</text>
+    <text x="20" y="810" fill="#8b949e" font-size="13">Includes DC impulse train scaled by area/sum X(eʲ⁰) = ∑ x[n].</text>
+
+    <!-- Initial / Final Value Hints -->
+    <rect x="0" y="830" width="700" height="150" rx="10" fill="#161b22" stroke="#38bdf8" stroke-width="1"/>
+    <text x="20" y="860" fill="#38bdf8" font-size="16" font-weight="700">Essential Area &amp; Value Identities</text>
+    <text x="20" y="890" fill="#e6edf3" font-size="15">• DC Value: X(eʲ⁰) = X(1) = ∑ₙ₌₋∞⁺∞ x[n] (Total Sequence Sum)</text>
+    <text x="20" y="920" fill="#e6edf3" font-size="15">• Origin Value: x[0] = (1 / 2π) ∫₋ₚᵢ⁺ᵖⁱ X(eʲᶿ) dΩ (Spectral Area / 2π)</text>
+    <text x="20" y="950" fill="#fbbf24" font-size="14" font-weight="600">• Nyquist Value: X(eʲᵖⁱ) = ∑ₙ₌₋∞⁺∞ (-1)ⁿ x[n] (Alternating Sum)</text>
+  </g>
+
+  <!-- Panel 2: Real & Complex Symmetry Architecture -->
+  <rect x="870" y="190" width="730" height="1090" rx="18" fill="url(#panelGrad2)" stroke="#30363d" stroke-width="2"/>
+  <rect x="870" y="190" width="730" height="60" rx="18" fill="#21262d"/>
+  <text x="1235" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">2. SYMMETRY ARCHITECTURE</text>
+
+  <g transform="translate(900, 270)">
+    <!-- Master Symmetry Decision Box -->
+    <rect x="0" y="10" width="670" height="210" rx="12" fill="#161b22" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="20" y="45" fill="#38bdf8" font-size="19" font-weight="700">General Real Sequence x[n] ∈ ℝ (Conjugate Symmetry)</text>
+    <text x="20" y="80" fill="#e6edf3" font-size="16">If x[n] is purely REAL, its DTFT satisfies Hermitian Symmetry:</text>
+    <rect x="20" y="95" width="630" height="50" rx="8" fill="#0d1117" stroke="#38bdf8" stroke-width="1"/>
+    <text x="335" y="128" fill="#38bdf8" font-size="20" font-weight="700" text-anchor="middle">X(e⁻ʲᶿ) = X*(eʲᶿ)</text>
+    <text x="20" y="170" fill="#34d399" font-size="15" font-weight="600">• Magnitude Spectrum |X(eʲᶿ)| is an EVEN function: |X(e⁻ʲᶿ)| = |X(eʲᶿ)|</text>
+    <text x="20" y="195" fill="#f87171" font-size="15" font-weight="600">• Phase Spectrum ∠X(eʲᶿ) is an ODD function: ∠X(e⁻ʲᶿ) = -∠X(eʲᶿ)</text>
+
+    <!-- 4 Specialized Symmetry Combinations -->
+    <g transform="translate(0, 235)">
+      <!-- Box 1: Real & Even -->
+      <rect x="0" y="0" width="325" height="180" rx="10" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+      <text x="20" y="35" fill="#34d399" font-size="16" font-weight="700">Real &amp; Even x[n]</text>
+      <text x="20" y="65" fill="#8b949e" font-size="14">x[n] ∈ ℝ, x[-n] = x[n]</text>
+      <text x="20" y="105" fill="#34d399" font-size="18" font-weight="700">X(eʲᶿ) is Purely REAL</text>
+      <text x="20" y="130" fill="#34d399" font-size="18" font-weight="700">&amp; EVEN in Ω</text>
+      <text x="20" y="160" fill="#8b949e" font-size="13">Phase is 0 or ±π everywhere.</text>
+
+      <!-- Box 2: Real & Odd -->
+      <rect x="345" y="0" width="325" height="180" rx="10" fill="#0d1117" stroke="#f87171" stroke-width="1.5"/>
+      <text x="365" y="35" fill="#f87171" font-size="16" font-weight="700">Real &amp; Odd x[n]</text>
+      <text x="365" y="65" fill="#8b949e" font-size="14">x[n] ∈ ℝ, x[-n] = -x[n]</text>
+      <text x="365" y="105" fill="#f87171" font-size="18" font-weight="700">X(eʲᶿ) is Purely IMAG</text>
+      <text x="365" y="130" fill="#f87171" font-size="18" font-weight="700">&amp; ODD in Ω</text>
+      <text x="365" y="160" fill="#8b949e" font-size="13">X(eʲ⁰) = 0 strictly (Zero DC).</text>
+    </g>
+
+    <g transform="translate(0, 430)">
+      <!-- Box 3: Imag & Even -->
+      <rect x="0" y="0" width="325" height="180" rx="10" fill="#0d1117" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="20" y="35" fill="#a78bfa" font-size="16" font-weight="700">Imaginary &amp; Even x[n]</text>
+      <text x="20" y="65" fill="#8b949e" font-size="14">x[n] = j y[n], y[-n] = y[n]</text>
+      <text x="20" y="105" fill="#a78bfa" font-size="18" font-weight="700">X(eʲᶿ) is Purely IMAG</text>
+      <text x="20" y="130" fill="#a78bfa" font-size="18" font-weight="700">&amp; EVEN in Ω</text>
+      <text x="20" y="160" fill="#8b949e" font-size="13">No real component in DTFT.</text>
+
+      <!-- Box 4: Imag & Odd -->
+      <rect x="345" y="0" width="325" height="180" rx="10" fill="#0d1117" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="365" y="35" fill="#fbbf24" font-size="16" font-weight="700">Imaginary &amp; Odd x[n]</text>
+      <text x="365" y="65" fill="#8b949e" font-size="14">x[n] = j y[n], y[-n] = -y[n]</text>
+      <text x="365" y="105" fill="#fbbf24" font-size="18" font-weight="700">X(eʲᶿ) is Purely REAL</text>
+      <text x="365" y="130" fill="#fbbf24" font-size="18" font-weight="700">&amp; ODD in Ω</text>
+      <text x="365" y="160" fill="#8b949e" font-size="13">Odd symmetry around Ω = 0.</text>
+    </g>
+
+    <!-- Even/Odd Decomposition Box -->
+    <rect x="0" y="630" width="670" height="230" rx="12" fill="#161b22" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="20" y="665" fill="#60a5fa" font-size="18" font-weight="700">Even/Odd Time Decomposition Rules</text>
+    <text x="20" y="700" fill="#e6edf3" font-size="15">For any real sequence x[n] = x_e[n] + x_o[n]:</text>
+    <text x="20" y="735" fill="#38bdf8" font-size="16">• Even Part: x_e[n] = 0.5(x[n] + x[-n]) ⟷ Re{X(eʲᶿ)}</text>
+    <text x="20" y="770" fill="#f87171" font-size="16">• Odd Part: x_o[n] = 0.5(x[n] - x[-n]) ⟷ j · Im{X(eʲᶿ)}</text>
+    <text x="20" y="805" fill="#8b949e" font-size="14">Re{X(eʲᶿ)} is always EVEN in Ω; Im{X(eʲᶿ)} is always ODD in Ω.</text>
+    <text x="20" y="835" fill="#fbbf24" font-size="14" font-weight="600">GATE SHORTCUT: If sequence is causal real, x_e[n] completely determines x[n]!</text>
+  </g>
+
+  <!-- Panel 3: Parseval's Energy Theorem & Numerical Arsenal -->
+  <rect x="1630" y="190" width="690" height="1090" rx="18" fill="url(#panelGrad2)" stroke="#30363d" stroke-width="2"/>
+  <rect x="1630" y="190" width="690" height="60" rx="18" fill="#21262d"/>
+  <text x="1975" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">3. PARSEVAL'S ENERGY THEOREM &amp; DRILLS</text>
+
+  <g transform="translate(1660, 270)">
+    <!-- Parseval Statement -->
+    <rect x="0" y="10" width="630" height="190" rx="12" fill="#161b22" stroke="#34d399" stroke-width="1.5"/>
+    <text x="20" y="45" fill="#34d399" font-size="19" font-weight="700">Parseval's Energy Conservation Theorem</text>
+    <text x="20" y="75" fill="#e6edf3" font-size="15">Total energy calculated in discrete time equals energy in DTFT:</text>
+    <rect x="20" y="90" width="590" height="65" rx="8" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="315" y="132" fill="#34d399" font-size="22" font-weight="700" text-anchor="middle">E = ∑ₙ₌₋∞⁺∞ |x[n]|² = (1 / 2π) ∫₋ₚᵢ⁺ᵖⁱ |X(eʲᶿ)|² dΩ</text>
+    <text x="20" y="180" fill="#8b949e" font-size="13">Energy Spectral Density (ESD): S_xx(eʲᶿ) = |X(eʲᶿ)|²</text>
+
+    <!-- Generalized Parseval -->
+    <rect x="0" y="215" width="630" height="120" rx="10" fill="#0d1117" stroke="#38bdf8" stroke-width="1"/>
+    <text x="20" y="245" fill="#38bdf8" font-size="17" font-weight="700">Generalized Cross-Correlation Theorem</text>
+    <text x="20" y="280" fill="#e6edf3" font-size="16">∑ₙ₌₋∞⁺∞ x₁[n] x₂*[n] = (1 / 2π) ∫₋ₚᵢ⁺ᵖⁱ X₁(eʲᶿ) X₂*(eʲᶿ) dΩ</text>
+    <text x="20" y="310" fill="#8b949e" font-size="13">Inner product in ℓ² is preserved under DTFT isometrical mapping!</text>
+
+    <!-- High-Yield GATE Evaluation Archetypes -->
+    <rect x="0" y="350" width="630" height="470" rx="12" fill="#161b22" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="20" y="385" fill="#fbbf24" font-size="19" font-weight="700">Classic GATE Integral Solvers via DTFT</text>
+
+    <g transform="translate(20, 405)">
+      <!-- Archetype 1 -->
+      <rect x="0" y="0" width="590" height="110" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+      <text x="15" y="25" fill="#38bdf8" font-size="15" font-weight="700">ARCHETYPE 1: Evaluating ∫₋ₚᵢ⁺ᵖⁱ (1 / |1 - a e⁻ʲᶿ|²) dΩ</text>
+      <text x="15" y="50" fill="#e6edf3" font-size="13">Notice that X(eʲᶿ) = 1/(1 - a e⁻ʲᶿ) corresponds to x[n] = aⁿ u[n].</text>
+      <text x="15" y="75" fill="#e6edf3" font-size="13">By Parseval: Integral = 2π ∑ₙ₌₀⁺∞ (a²)ⁿ = 2π / (1 - a²).</text>
+      <text x="15" y="98" fill="#34d399" font-size="13" font-weight="700">INSTANT ANSWER: ∫₋ₚᵢ⁺ᵖⁱ 1/(1 - 2a cos Ω + a²) dΩ = 2π / (1 - a²)  (|a| &lt; 1)</text>
+
+      <!-- Archetype 2 -->
+      <rect x="0" y="125" width="590" height="110" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+      <text x="15" y="25" fill="#38bdf8" font-size="15" font-weight="700">ARCHETYPE 2: Evaluating Sinc Squared Sum ∑ₙ (sin(Ωc n) / πn)²</text>
+      <text x="15" y="50" fill="#e6edf3" font-size="13">x[n] = sin(Ωc n)/(πn) has DTFT X(eʲᶿ) = 1 for |Ω| ≤ Ωc, 0 elsewhere.</text>
+      <text x="15" y="75" fill="#e6edf3" font-size="13">By Parseval: ∑ |x[n]|² = (1/2π) ∫₋ᶿᶜ⁺ᶿᶜ 1² dΩ = (2Ωc) / 2π = Ωc / π.</text>
+      <text x="15" y="98" fill="#34d399" font-size="13" font-weight="700">INSTANT ANSWER: Energy = Ωc / π  (Notice x[0] = Ωc/π included)</text>
+
+      <!-- Archetype 3 -->
+      <rect x="0" y="250" width="590" height="110" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+      <text x="15" y="25" fill="#f87171" font-size="15" font-weight="700">ARCHETYPE 3: Evaluating Derivative Integral ∫₋ₚᵢ⁺ᵖⁱ |dX/dΩ|² dΩ</text>
+      <text x="15" y="50" fill="#e6edf3" font-size="13">Recall j dX/dΩ ⟷ n x[n].</text>
+      <text x="15" y="75" fill="#e6edf3" font-size="13">By Parseval: (1/2π) ∫ |dX/dΩ|² dΩ = ∑ₙ₌₋∞⁺∞ n² |x[n]|².</text>
+      <text x="15" y="98" fill="#fbbf24" font-size="13" font-weight="700">INSTANT ANSWER: Integral = 2π ∑ₙ n² |x[n]|² (Reduces calculus to series!)</text>
+    </g>
+
+    <!-- Quick Formula Card -->
+    <rect x="0" y="835" width="630" height="145" rx="10" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="20" y="868" fill="#38bdf8" font-size="16" font-weight="700">Master Integration Rule for GATE</text>
+    <text x="20" y="900" fill="#e6edf3" font-size="14">Whenever a complicated continuous integral in Ω from -π to +π appears,</text>
+    <text x="20" y="925" fill="#34d399" font-size="14" font-weight="600">NEVER integrate directly! Identify x[n] and compute 2π ∑ₙ |x[n]|².</text>
+    <text x="20" y="955" fill="#8b949e" font-size="13">Saves 5 to 10 minutes of trigonometric contour integration!</text>
+  </g>
+</svg>

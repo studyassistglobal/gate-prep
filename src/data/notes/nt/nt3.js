@@ -31,7 +31,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_transient_analysis/fig_01_transient_physical_foundations_and_boundary_state_models.jpg",
+     "src": "/notes/nt/figures_transient_analysis/fig_01_transient_physical_foundations_and_boundary_state_models.svg",
      "alt": "Fig 01: Transient Physical Foundations & Boundary State Models"
     },
     {
@@ -44,7 +44,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_transient_analysis/fig_02_first_order_rc_and_rl_transients_and_universal_step_engine.jpg",
+     "src": "/notes/nt/figures_transient_analysis/fig_02_first_order_rc_and_rl_transients_and_universal_step_engine.svg",
      "alt": "Fig 02: First-Order RC & RL Transients & Universal Step Engine"
     },
     {
@@ -57,7 +57,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_transient_analysis/fig_03_higher_derivatives_and_initial_rate_of_change_architecture.jpg",
+     "src": "/notes/nt/figures_transient_analysis/fig_03_higher_derivatives_and_initial_rate_of_change_architecture.svg",
      "alt": "Fig 03: Higher Derivatives & Initial Rate of Change Architecture"
     },
     {
@@ -70,7 +70,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_transient_analysis/fig_04_singularity_functions_impulse_jumps_and_degenerate_loops.jpg",
+     "src": "/notes/nt/figures_transient_analysis/fig_04_singularity_functions_impulse_jumps_and_degenerate_loops.svg",
      "alt": "Fig 04: Singularity Functions, Impulse Jumps & Degenerate Loops"
     },
     {
@@ -83,7 +83,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_transient_analysis/fig_05_second_order_rlc_networks_and_the_4_damping_regimes.jpg",
+     "src": "/notes/nt/figures_transient_analysis/fig_05_second_order_rlc_networks_and_the_4_damping_regimes.svg",
      "alt": "Fig 05: Second-Order RLC Networks & The 4 Damping Regimes"
     },
     {
@@ -96,7 +96,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_transient_analysis/fig_06_pure_lc_resonant_tanks_voltage_doubling_and_diode_switching.jpg",
+     "src": "/notes/nt/figures_transient_analysis/fig_06_pure_lc_resonant_tanks_voltage_doubling_and_diode_switching.svg",
      "alt": "Fig 06: Pure LC Resonant Tanks, Voltage Doubling & Diode Commutation"
     },
     {
@@ -109,7 +109,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_transient_analysis/fig_07_ac_transients_transient_free_switching_and_s_domain_models.jpg",
+     "src": "/notes/nt/figures_transient_analysis/fig_07_ac_transients_transient_free_switching_and_s_domain_models.svg",
      "alt": "Fig 07: AC Transients, Transient-Free Switching & s-Domain Models"
     },
     {

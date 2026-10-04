@@ -1,0 +1,321 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.4" opacity="0.6" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowEmerald" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="cardShadow" x="-10%" y="-5%" width="120%" height="115%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+    </defs>
+
+    <style>
+        .font-mono { font-family: 'Consolas', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+        .font-sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+    </style>
+
+    <!-- Deep Blueprint Background -->
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Outer Architectural Frame -->
+    <rect x="40" y="40" width="3760" height="2080" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+    <rect x="48" y="48" width="3744" height="2064" fill="none" stroke="#1e293b" stroke-width="1" rx="12" />
+
+    <!-- Corner Alignment Reticles -->
+    <path d="M 40 80 L 80 80 L 80 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 80 L 3760 80 L 3760 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 40 2080 L 80 2080 L 80 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 2080 L 3760 2080 L 3760 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Top Master Header Banner -->
+    <g transform="translate(80, 80)">
+        <rect x="0" y="0" width="3680" height="150" fill="#0b1329" fill-opacity="0.85" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="12" height="150" fill="url(#headerGrad)" rx="4" />
+        
+        <!-- Blueprint Title & Subtitle -->
+        <text x="50" y="62" fill="url(#headerGrad)" font-size="44" font-weight="900" letter-spacing="2px" class="font-sans">FIGURE 2: FIRST-ORDER ODE SOLUTION ENGINE &amp; INTEGRATING FACTOR ARCHITECTURE</text>
+        <text x="50" y="112" fill="#94a3b8" font-size="24" font-weight="500" letter-spacing="0.5px" class="font-sans">Variable Separable, Homogeneous, Linear First-Order ODEs &amp; Bernoulli's Non-Linear Transformation Pipeline</text>
+
+        <!-- Technical Telemetry Badge -->
+        <g transform="translate(3220, 30)">
+            <rect x="0" y="0" width="410" height="90" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <circle cx="30" cy="45" r="8" fill="#10b981" filter="url(#glowEmerald)" />
+            <text x="52" y="38" fill="#e2e8f0" font-size="16" font-weight="700" class="font-mono">GATE 2027 TITANS ENGINE</text>
+            <text x="52" y="65" fill="#38bdf8" font-size="14" font-weight="600" class="font-mono">SPEC: ULTRA-HD 4K BLUEPRINT</text>
+        </g>
+    </g>
+
+    <!-- Canvas Inner Content -->
+    
+    <!-- ZONE 1: VARIABLE SEPARABLE & REDUCIBLE FORMS -->
+    <g transform="translate(80, 260)">
+        <rect width="1180" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#cyanGrad)" rx="4" />
+        <text x="36" y="52" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">1. VARIABLE SEPARABLE &amp; REDUCIBLE FORMS</text>
+        <line x1="36" y1="72" x2="1140" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- Pure Separable Form -->
+        <g transform="translate(36, 100)">
+            <rect width="1100" height="220" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CANONICAL SEPARABLE FORM: f(x) dx + g(y) dy = 0</text>
+            <text x="24" y="74" fill="#e2e8f0" font-size="18" class="font-sans">Direct integration yields the solution:</text>
+            <rect x="24" y="95" width="1050" height="60" fill="#1e293b" rx="6" />
+            <text x="44" y="132" fill="#34d399" font-size="20" font-weight="700" class="font-mono">∫ f(x) dx + ∫ g(y) dy = C</text>
+            <text x="24" y="190" fill="#fbbf24" font-size="16" class="font-sans">• Rapid check: Factorize dy/dx = f(x) · g(y). If possible, separate: dy / g(y) = f(x) dx.</text>
+        </g>
+
+        <!-- Reducible to Separable: dy/dx = f(ax + by + c) -->
+        <g transform="translate(36, 350)">
+            <rect width="1100" height="240" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">REDUCIBLE FORM: dy/dx = f(ax + by + c)</text>
+            <text x="24" y="74" fill="#e2e8f0" font-size="18" class="font-sans">Standard substitution technique:</text>
+            
+            <rect x="24" y="95" width="1050" height="120" fill="#1e293b" rx="6" />
+            <text x="44" y="130" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">Let v = ax + by + c ⟹ dv/dx = a + b(dy/dx) ⟹ dy/dx = (1/b)(dv/dx - a)</text>
+            <text x="44" y="165" fill="#34d399" font-size="18" font-weight="700" class="font-mono">⟹ (1/b)(dv/dx - a) = f(v) ⟹ dv / [a + b f(v)] = dx (SEPARABLE!)</text>
+            <text x="44" y="195" fill="#e2e8f0" font-size="16" class="font-sans">Integrate directly in v, then restore v = ax + by + c.</text>
+        </g>
+
+        <!-- Classroom Benchmark -->
+        <g transform="translate(36, 620)">
+            <rect width="1100" height="200" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">EXAM DRILL: dy/dx = (x + y + 1)²</text>
+            <text x="24" y="70" fill="#e2e8f0" font-size="16" class="font-sans">Put v = x + y + 1 ⟹ dv/dx = 1 + dy/dx ⟹ dv/dx - 1 = v²</text>
+            <text x="24" y="105" fill="#38bdf8" font-size="17" font-mono="font-mono">⟹ dv / (v² + 1) = dx ⟹ arctan(v) = x + C</text>
+            <text x="24" y="145" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">VERDICT: arctan(x + y + 1) = x + C (Solves in 20 seconds!)</text>
+        </g>
+    </g>
+
+    <!-- ZONE 2: HOMOGENEOUS FIRST-ORDER EQUATIONS -->
+    <g transform="translate(1300, 260)">
+        <rect width="1220" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#goldGrad)" rx="4" />
+        <text x="36" y="52" fill="#fbbf24" font-size="28" font-weight="800" class="font-sans">2. HOMOGENEOUS ODE TRANSFORMATION</text>
+        <line x1="36" y1="72" x2="1180" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- Definition of Homogeneity -->
+        <g transform="translate(36, 100)">
+            <rect width="1140" height="220" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">HOMOGENEOUS TEST: dy/dx = f(x, y) / g(x, y)</text>
+            <text x="24" y="74" fill="#e2e8f0" font-size="18" class="font-sans">f(x, y) and g(x, y) are homogeneous functions of the SAME degree n:</text>
+            <rect x="24" y="95" width="1090" height="60" fill="#1e293b" rx="6" />
+            <text x="44" y="132" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">f(λx, λy) = λⁿ f(x, y) ⟹ dy/dx = F(y/x)</text>
+            <text x="24" y="190" fill="#34d399" font-size="16" class="font-sans">• Quick test: Sum of powers in each monomial term must be identical.</text>
+        </g>
+
+        <!-- Substitution Engine: y = vx -->
+        <g transform="translate(36, 350)">
+            <rect width="1140" height="270" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">CANONICAL TRANSFORMATION: y = v x</text>
+            <rect x="24" y="65" width="1090" height="175" fill="#1e293b" rx="6" />
+            <text x="44" y="100" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">Differentiate: dy/dx = v + x (dv/dx)</text>
+            <text x="44" y="135" fill="#e2e8f0" font-size="17" class="font-sans">Equate to F(v): v + x (dv/dx) = F(v) ⟹ x (dv/dx) = F(v) - v</text>
+            <text x="44" y="175" fill="#34d399" font-size="19" font-weight="800" class="font-mono">⟹ dv / [F(v) - v] = dx / x (SEPARATED IN v &amp; x!)</text>
+            <text x="44" y="215" fill="#fbbf24" font-size="16" class="font-sans">Integrate both sides and replace v with y/x.</text>
+        </g>
+
+        <!-- Non-Homogeneous Linear Fractional Form -->
+        <g transform="translate(36, 650)">
+            <rect width="1140" height="170" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="35" fill="#c084fc" font-size="18" font-weight="700" class="font-mono">NON-HOMOGENEOUS FRACTION: dy/dx = (a₁x + b₁y + c₁) / (a₂x + b₂y + c₂)</text>
+            <text x="24" y="70" fill="#e2e8f0" font-size="16" class="font-sans">• <tspan fill="#38bdf8" font-weight="700">Case 1 (a₁/a₂ ≠ b₁/b₂):</tspan> Shift origin: x = X + h, y = Y + k to eliminate c₁, c₂.</text>
+            <text x="24" y="100" fill="#f43f5e" font-size="16" class="font-sans">• <tspan fill="#fbbf24" font-weight="700">Case 2 (a₁/a₂ = b₁/b₂ = m):</tspan> Substitute v = a₁x + b₁y (Reduces to separable!).</text>
+            <text x="24" y="130" fill="#34d399" font-size="16" class="font-sans">• <tspan fill="#34d399" font-weight="700">Case 3 (b₁ = -a₂):</tspan> Rearrange into cross-multiplication: ALWAYS EXACT!</text>
+        </g>
+    </g>
+
+    <!-- ZONE 3: FIRST-ORDER LINEAR ODE & INTEGRATING FACTOR -->
+    <g transform="translate(2560, 260)">
+        <rect width="1200" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#emeraldGrad)" rx="4" />
+        <text x="36" y="52" fill="#34d399" font-size="28" font-weight="800" class="font-sans">3. FIRST-ORDER LINEAR PIPELINE (LEIBNIZ)</text>
+        <line x1="36" y1="72" x2="1160" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- Canonical Form -->
+        <g transform="translate(36, 100)">
+            <rect width="1120" height="230" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CANONICAL FORM: dy/dx + P(x) y = Q(x)</text>
+            <text x="24" y="74" fill="#e2e8f0" font-size="18" class="font-sans">Condition: Coefficient of dy/dx must be strictly 1.</text>
+
+            <rect x="24" y="95" width="1070" height="110" fill="#1e293b" rx="6" />
+            <text x="44" y="132" fill="#fbbf24" font-size="20" font-weight="800" class="font-mono">INTEGRATING FACTOR: IF = e^(∫ P(x) dx)</text>
+            <text x="44" y="175" fill="#34d399" font-size="20" font-weight="800" class="font-mono">GENERAL SOLUTION: y · IF = ∫ [Q(x) · IF] dx + C</text>
+        </g>
+
+        <!-- Inverted Form: dx/dy + P(y) x = Q(y) -->
+        <g transform="translate(36, 360)">
+            <rect width="1120" height="230" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">INVERTED FORM: dx/dy + P(y) x = Q(y)</text>
+            <text x="24" y="74" fill="#e2e8f0" font-size="18" class="font-sans">Used when equation is linear in x but non-linear in y:</text>
+
+            <rect x="24" y="95" width="1070" height="110" fill="#1e293b" rx="6" />
+            <text x="44" y="132" fill="#38bdf8" font-size="20" font-weight="800" class="font-mono">INTEGRATING FACTOR: IF = e^(∫ P(y) dy)</text>
+            <text x="44" y="175" fill="#34d399" font-size="20" font-weight="800" class="font-mono">GENERAL SOLUTION: x · IF = ∫ [Q(y) · IF] dy + C</text>
+        </g>
+
+        <!-- Rapid Exponent Rule -->
+        <g transform="translate(36, 620)">
+            <rect width="1120" height="200" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#f43f5e" font-size="20" font-weight="700" class="font-mono">HIGH-SPEED EXPONENT SIMPLIFICATION ARSENAL</text>
+            <text x="24" y="74" fill="#e2e8f0" font-size="17" class="font-sans">• e^(ln f(x)) = f(x)</text>
+            <text x="24" y="108" fill="#e2e8f0" font-size="17" class="font-sans">• e^(k ln f(x)) = e^(ln [f(x)]^k) = [f(x)]^k</text>
+            <text x="24" y="142" fill="#e2e8f0" font-size="17" class="font-sans">• e^(-ln x) = e^(ln x^(-1)) = 1/x (NOT -x! #1 Exam Blunder)</text>
+            <text x="24" y="175" fill="#34d399" font-size="17" font-weight="700" class="font-sans">• e^(2 ln(sec x)) = sec² x</text>
+        </g>
+    </g>
+
+    <!-- ZONE 4: BERNOULLI'S EQUATION PIPELINE -->
+    <g transform="translate(80, 1160)">
+        <rect width="3680" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#purpleGrad)" rx="4" />
+        <text x="36" y="52" fill="#c084fc" font-size="28" font-weight="800" class="font-sans">4. BERNOULLI'S NON-LINEAR TRANSFORMATION ENGINE</text>
+        <line x1="36" y1="72" x2="3640" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- 3 Columns for Bernoulli: Derivation, Algorithm & Complete Solved Drill -->
+        <!-- Col 1: Mathematical Architecture -->
+        <g transform="translate(36, 100)">
+            <rect width="1160" height="710" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#fbbf24" font-size="22" font-weight="700" class="font-mono">A. CANONICAL BERNOULLI EQUATION</text>
+            <text x="24" y="75" fill="#e2e8f0" font-size="18" class="font-sans">Non-linear first order ODE of the form:</text>
+
+            <rect x="24" y="95" width="1110" height="65" fill="#1e293b" rx="6" />
+            <text x="44" y="138" fill="#38bdf8" font-size="22" font-weight="800" class="font-mono">dy/dx + P(x) y = Q(x) yⁿ  (n ≠ 0, 1)</text>
+
+            <text x="24" y="195" fill="#e2e8f0" font-size="17" class="font-sans">• If n = 0 ⟹ dy/dx + P y = Q (Standard linear ODE).</text>
+            <text x="24" y="225" fill="#e2e8f0" font-size="17" class="font-sans">• If n = 1 ⟹ dy/dx + (P - Q) y = 0 (Separable ODE).</text>
+            <text x="24" y="255" fill="#f43f5e" font-size="17" class="font-sans">• If n ≠ 0, 1 ⟹ Non-linear due to yⁿ factor on RHS!</text>
+
+            <text x="24" y="305" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">THE 3-STEP LINEARIZING TRANSFORMATION:</text>
+            
+            <g transform="translate(24, 325)">
+                <rect width="1110" height="85" fill="#1e293b" rx="6" />
+                <text x="30" y="35" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">STEP 1: Divide entire equation by yⁿ:</text>
+                <text x="30" y="65" fill="#e2e8f0" font-size="17" class="font-mono">y^(-n) (dy/dx) + P(x) y^(1-n) = Q(x)</text>
+            </g>
+
+            <g transform="translate(24, 430)">
+                <rect width="1110" height="85" fill="#1e293b" rx="6" />
+                <text x="30" y="35" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">STEP 2: Substitute v = y^(1-n):</text>
+                <text x="30" y="65" fill="#e2e8f0" font-size="17" class="font-mono">dv/dx = (1 - n) y^(-n) (dy/dx) ⟹ y^(-n) (dy/dx) = (1 / (1-n)) dv/dx</text>
+            </g>
+
+            <g transform="translate(24, 535)">
+                <rect width="1110" height="120" fill="#1e293b" rx="6" />
+                <text x="30" y="35" fill="#34d399" font-size="17" font-weight="700" class="font-mono">STEP 3: Resulting Standard Linear ODE in v:</text>
+                <text x="30" y="70" fill="#34d399" font-size="20" font-weight="800" class="font-mono">dv/dx + (1 - n) P(x) v = (1 - n) Q(x)</text>
+                <text x="30" y="102" fill="#e2e8f0" font-size="16" class="font-sans">Now solve via standard IF = e^(∫ (1-n)P dx) and back-substitute v = y^(1-n)!</text>
+            </g>
+        </g>
+
+        <!-- Col 2: Inverted Bernoulli Form -->
+        <g transform="translate(1230, 100)">
+            <rect width="1180" height="710" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="22" font-weight="700" class="font-mono">B. INVERTED BERNOULLI EQUATION (IN x)</text>
+            <text x="24" y="75" fill="#e2e8f0" font-size="18" class="font-sans">When powers of x appear non-linearly:</text>
+
+            <rect x="24" y="95" width="1130" height="65" fill="#1e293b" rx="6" />
+            <text x="44" y="138" fill="#fbbf24" font-size="22" font-weight="800" class="font-mono">dx/dy + P(y) x = Q(y) xⁿ</text>
+
+            <text x="24" y="195" fill="#e2e8f0" font-size="17" class="font-sans">• Divide by xⁿ: x^(-n) (dx/dy) + P(y) x^(1-n) = Q(y).</text>
+            <text x="24" y="230" fill="#e2e8f0" font-size="17" class="font-sans">• Substitute u = x^(1-n) ⟹ du/dy = (1-n) x^(-n) dx/dy.</text>
+
+            <rect x="24" y="260" width="1130" height="75" fill="#1e293b" rx="6" />
+            <text x="44" y="305" fill="#34d399" font-size="20" font-weight="800" class="font-mono">du/dy + (1 - n) P(y) u = (1 - n) Q(y)</text>
+
+            <text x="24" y="375" fill="#c084fc" font-size="20" font-weight="700" class="font-mono">CRITICAL EXAM IDENTIFICATION TRICK:</text>
+            <g transform="translate(24, 395)">
+                <rect width="1130" height="260" fill="#020617" stroke="#1e293b" stroke-width="1" rx="6" />
+                <text x="24" y="35" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">EXAMPLE: (x + 2y³) dy/dx = y</text>
+                <text x="24" y="70" fill="#e2e8f0" font-size="16" class="font-sans">dy/dx = y / (x + 2y³) is heavily non-linear in y. Invert!</text>
+                <text x="24" y="105" fill="#38bdf8" font-size="17" font-mono="font-mono">dx/dy = (x + 2y³) / y = (1/y)x + 2y²</text>
+                <text x="24" y="140" fill="#34d399" font-size="17" font-weight="700" class="font-mono">⟹ dx/dy - (1/y)x = 2y² (LINEAR IN x!)</text>
+                <text x="24" y="175" fill="#e2e8f0" font-size="16" class="font-sans">IF = e^(∫ -1/y dy) = e^(-ln y) = 1/y</text>
+                <text x="24" y="210" fill="#34d399" font-size="18" font-weight="700" class="font-mono">⟹ x(1/y) = ∫ 2y²(1/y) dy = ∫ 2y dy = y² + C ⟹ x = y³ + C y</text>
+            </g>
+        </g>
+
+        <!-- Col 3: Master Classroom Drill & Verification -->
+        <g transform="translate(2450, 100)">
+            <rect width="1190" height="710" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#34d399" font-size="22" font-weight="700" class="font-mono">C. STEP-BY-STEP BERNOULLI DRILL</text>
+            
+            <g transform="translate(24, 70)">
+                <rect width="1140" height="600" fill="#1e293b" rx="6" />
+                <text x="30" y="40" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">PROBLEM: dy/dx + (1/x) y = x² y⁶</text>
+                <text x="30" y="75" fill="#e2e8f0" font-size="16" class="font-sans">1. Identify: P(x) = 1/x, Q(x) = x², n = 6.</text>
+                <text x="30" y="110" fill="#e2e8f0" font-size="16" class="font-sans">2. Divide by y⁶: y^(-6) y' + (1/x) y^(-5) = x²</text>
+                <text x="30" y="145" fill="#e2e8f0" font-size="16" class="font-sans">3. Substitute v = y^(1-6) = y^(-5):</text>
+                <text x="50" y="180" fill="#38bdf8" font-size="16" class="font-mono">dv/dx = -5 y^(-6) (dy/dx) ⟹ y^(-6) y' = -1/5 (dv/dx)</text>
+                <text x="30" y="220" fill="#e2e8f0" font-size="16" class="font-sans">4. Standard linear ODE in v:</text>
+                <text x="50" y="255" fill="#34d399" font-size="18" font-weight="700" class="font-mono">-1/5 dv/dx + (1/x) v = x² ⟹ dv/dx - (5/x) v = -5 x²</text>
+                <text x="30" y="295" fill="#e2e8f0" font-size="16" class="font-sans">5. Integrating Factor:</text>
+                <text x="50" y="330" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">IF = e^(∫ -5/x dx) = e^(-5 ln x) = x^(-5) = 1/x⁵</text>
+                <text x="30" y="370" fill="#e2e8f0" font-size="16" class="font-sans">6. General solution in v:</text>
+                <text x="50" y="405" fill="#38bdf8" font-size="17" class="font-mono">v · x^(-5) = ∫ (-5 x²) · x^(-5) dx = -5 ∫ x^(-3) dx</text>
+                <text x="50" y="440" fill="#38bdf8" font-size="17" class="font-mono">v · x^(-5) = -5 (x^(-2) / -2) + C = (5/2) x^(-2) + C</text>
+                <text x="30" y="480" fill="#e2e8f0" font-size="16" class="font-sans">7. Multiply by x⁵ and back-substitute v = y^(-5):</text>
+                <text x="50" y="520" fill="#34d399" font-size="20" font-weight="800" class="font-mono">y^(-5) = (5/2) x³ + C x⁵ ⟹ 1 / y⁵ = (5/2) x³ + C x⁵</text>
+                <text x="30" y="565" fill="#fbbf24" font-size="17" font-weight="700" class="font-sans">VERDICT: Solved flawlessly in 7 systematic steps.</text>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Bottom Engineering Telemetry Strip -->
+    <g transform="translate(80, 2060)">
+        <line x1="0" y1="0" x2="3680" y2="0" stroke="#1e293b" stroke-width="2" />
+        <text x="10" y="24" fill="#64748b" font-size="16" class="font-mono">DIFFERENTIAL EQUATIONS MATHEMATICAL BLUEPRINT // SCALE: 1.0 NATIVE // GATE / ESE / ISRO EXCELLENCE SUITE</text>
+        <text x="3670" y="24" fill="#64748b" font-size="16" text-anchor="end" class="font-mono">PREPFUSION ENGINEERING MATHEMATICS // SYSTEM VERIFIED</text>
+    </g>
+</svg>

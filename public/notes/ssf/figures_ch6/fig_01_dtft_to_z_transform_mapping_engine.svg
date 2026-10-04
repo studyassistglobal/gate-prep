@@ -1,0 +1,258 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="gradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="gradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid)"/>
+
+  <!-- Title Header Block -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 06 • FIGURE 6.1</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">The Theoretical Bridge: DTFT Convergence Barrier, Convergence Factor (r⁻ⁿ), and the Conformal Mapping z = eˢᵀˢ</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- Panel 1: DTFT Limitation & Convergence Factor -->
+  <rect x="80" y="190" width="690" height="1090" rx="18" fill="url(#panelGrad)" stroke="#30363d" stroke-width="2"/>
+  <rect x="80" y="190" width="690" height="60" rx="18" fill="#21262d"/>
+  <text x="425" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">1. THE DTFT CONVERGENCE BARRIER</text>
+  
+  <g transform="translate(110, 270)">
+    <text x="0" y="30" fill="#e6edf3" font-size="18" font-weight="600">Continuous-Frequency DTFT Equation:</text>
+    <rect x="0" y="45" width="630" height="75" rx="10" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="315" y="92" fill="#38bdf8" font-size="24" font-weight="700" text-anchor="middle">X(eʲᶿ) = ∑ₙ₌₋∞⁺∞ x[n] e⁻ʲᶿⁿ</text>
+    
+    <text x="0" y="160" fill="#f87171" font-size="16" font-weight="600">Convergence Criterion: Absolute Summability</text>
+    <rect x="0" y="175" width="630" height="65" rx="8" fill="#0d1117" stroke="#f87171" stroke-width="1.5"/>
+    <text x="315" y="215" fill="#f87171" font-size="20" font-weight="600" text-anchor="middle">∑ₙ₌₋∞⁺∞ |x[n]| &lt; ∞  (Strictly Required!)</text>
+
+    <text x="0" y="275" fill="#8b949e" font-size="16">Fails for unstable/growing sequences: aⁿ u[n] with |a| ≥ 1, ramp n u[n]!</text>
+
+    <!-- The Solution: Attenuation Factor r⁻ⁿ -->
+    <rect x="0" y="310" width="630" height="230" rx="12" fill="#161b22" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="25" y="345" fill="#fbbf24" font-size="19" font-weight="700">The Mathematical Cure: Real Damping r⁻ⁿ</text>
+    <text x="25" y="375" fill="#e6edf3" font-size="15">Multiply x[n] by exponential weight r⁻ⁿ (where r = |z| &gt; 0):</text>
+    <text x="25" y="415" fill="#38bdf8" font-size="20" font-weight="700">x_damped[n] = x[n] · r⁻ⁿ</text>
+    <text x="25" y="450" fill="#e6edf3" font-size="15">Take DTFT of the damped sequence:</text>
+    <text x="315" y="490" fill="#34d399" font-size="21" font-weight="700" text-anchor="middle">X_damped(eʲᶿ) = ∑ₙ₌₋∞⁺∞ (x[n] r⁻ⁿ) e⁻ʲᶿⁿ</text>
+    <text x="315" y="525" fill="#fbbf24" font-size="20" font-weight="700" text-anchor="middle">= ∑ₙ₌₋∞⁺∞ x[n] (r eʲᶿ)⁻ⁿ</text>
+
+    <!-- Definition of z -->
+    <rect x="0" y="565" width="630" height="135" rx="12" fill="#0d1117" stroke="#38bdf8" stroke-width="2"/>
+    <text x="25" y="600" fill="#38bdf8" font-size="19" font-weight="700">Bilateral Z-Transform Analysis Equation</text>
+    <text x="25" y="630" fill="#8b949e" font-size="15">Define complex frequency variable z = r eʲᶿ = |z| eʲ∠ᶻ:</text>
+    <text x="315" y="675" fill="#38bdf8" font-size="26" font-weight="800" text-anchor="middle">X(z) = ∑ₙ₌₋∞⁺∞ x[n] z⁻ⁿ</text>
+
+    <!-- Synthesis contour integral -->
+    <rect x="0" y="725" width="630" height="120" rx="12" fill="#161b22" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="25" y="758" fill="#a78bfa" font-size="18" font-weight="700">Synthesis Equation (Inverse Z-Transform):</text>
+    <text x="315" y="805" fill="#e6edf3" font-size="22" font-weight="600" text-anchor="middle">x[n] = (1 / 2πj) ∮_C X(z) zⁿ⁻¹ dz</text>
+    <text x="25" y="835" fill="#8b949e" font-size="14">Contour C is a counterclockwise closed path inside ROC enclosing origin.</text>
+
+    <!-- DTFT relationship -->
+    <rect x="0" y="865" width="630" height="125" rx="10" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="25" y="895" fill="#34d399" font-size="17" font-weight="700">DTFT as Special Case of Z-Transform:</text>
+    <text x="315" y="935" fill="#34d399" font-size="22" font-weight="700" text-anchor="middle">X(eʲᶿ) = X(z)|_{z = eʲᶿ}  (i.e., r = |z| = 1)</text>
+    <text x="25" y="970" fill="#fbbf24" font-size="14" font-weight="600">CONDITION: Unit Circle |z| = 1 MUST lie strictly inside ROC!</text>
+  </g>
+
+  <!-- Panel 2: Conformal Mapping s-plane to z-plane -->
+  <rect x="800" y="190" width="790" height="1090" rx="18" fill="url(#panelGrad)" stroke="#30363d" stroke-width="2"/>
+  <rect x="800" y="190" width="790" height="60" rx="18" fill="#21262d"/>
+  <text x="1195" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">2. CONFORMAL MAPPING: s-PLANE ⟶ z-PLANE (z = eˢᵀˢ)</text>
+
+  <g transform="translate(830, 270)">
+    <text x="0" y="25" fill="#e6edf3" font-size="17" font-weight="600">Impulse Invariant / Discrete Sampling Transformation:</text>
+    <rect x="0" y="40" width="730" height="60" rx="8" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="365" y="78" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">z = eˢᵀˢ = e^{(σ + jω)T_s} = e^{σ T_s} · e^{j ω T_s} = r · e^{j Ω}</text>
+
+    <!-- s-plane schematic -->
+    <g transform="translate(30, 130)">
+      <text x="140" y="0" fill="#60a5fa" font-size="18" font-weight="700" text-anchor="middle">s-PLANE (Continuous)</text>
+      <!-- s-plane box -->
+      <rect x="0" y="15" width="280" height="280" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <!-- LHP shaded -->
+      <rect x="2" y="17" width="138" height="276" fill="#34d399" fill-opacity="0.15"/>
+      <!-- RHP shaded -->
+      <rect x="140" y="17" width="138" height="276" fill="#f87171" fill-opacity="0.1"/>
+      <!-- axes -->
+      <line x1="140" y1="20" x2="140" y2="290" stroke="#38bdf8" stroke-width="2.5"/> <!-- jω axis -->
+      <line x1="10" y1="155" x2="270" y2="155" stroke="#8b949e" stroke-width="1.5"/> <!-- σ axis -->
+      <!-- labels -->
+      <text x="150" y="40" fill="#38bdf8" font-size="14" font-weight="700">jω (Imag)</text>
+      <text x="250" y="145" fill="#8b949e" font-size="14">σ</text>
+      <text x="60" y="80" fill="#34d399" font-size="13" font-weight="700">LHP (σ &lt; 0)</text>
+      <text x="210" y="80" fill="#f87171" font-size="13" font-weight="700">RHP (σ &gt; 0)</text>
+      <text x="145" y="175" fill="#fbbf24" font-size="12">σ=0</text>
+      <!-- primary strip lines -->
+      <line x1="10" y1="75" x2="270" y2="75" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <line x1="10" y1="235" x2="270" y2="235" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="210" y="70" fill="#fbbf24" font-size="12">+jω_s/2</text>
+      <text x="210" y="230" fill="#fbbf24" font-size="12">-jω_s/2</text>
+    </g>
+
+    <!-- Mapping arrow -->
+    <g transform="translate(330, 240)">
+      <path d="M 0 30 L 60 30" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrow)"/>
+      <polygon points="65,30 50,22 50,38" fill="#fbbf24"/>
+      <text x="35" y="15" fill="#fbbf24" font-size="16" font-weight="700" text-anchor="middle">z = eˢᵀˢ</text>
+    </g>
+
+    <!-- z-plane schematic -->
+    <g transform="translate(420, 130)">
+      <text x="140" y="0" fill="#38bdf8" font-size="18" font-weight="700" text-anchor="middle">z-PLANE (Discrete)</text>
+      <!-- z-plane box -->
+      <rect x="0" y="15" width="280" height="280" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <!-- axes -->
+      <line x1="140" y1="20" x2="140" y2="290" stroke="#8b949e" stroke-width="1.5"/>
+      <line x1="10" y1="155" x2="270" y2="155" stroke="#8b949e" stroke-width="1.5"/>
+      <!-- Unit circle interior shaded -->
+      <circle cx="140" cy="155" r="85" fill="#34d399" fill-opacity="0.18"/>
+      <!-- Unit circle -->
+      <circle cx="140" cy="155" r="85" fill="none" stroke="#38bdf8" stroke-width="3"/>
+      <!-- labels -->
+      <text x="145" y="40" fill="#8b949e" font-size="14">Im(z)</text>
+      <text x="250" y="145" fill="#8b949e" font-size="14">Re(z)</text>
+      <text x="140" y="130" fill="#34d399" font-size="13" font-weight="700" text-anchor="middle">|z| &lt; 1 (Interior)</text>
+      <text x="140" y="175" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">|z| = 1 (Unit Circle)</text>
+      <text x="210" y="260" fill="#f87171" font-size="13" font-weight="700">|z| &gt; 1 (Exterior)</text>
+      <text x="225" y="172" fill="#fbbf24" font-size="12">1</text>
+      <text x="50" y="172" fill="#fbbf24" font-size="12">-1</text>
+    </g>
+
+    <!-- Fundamental Mapping Rules Table -->
+    <rect x="0" y="435" width="730" height="280" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="25" y="468" fill="#fbbf24" font-size="18" font-weight="700">THE CONFORMAL MAPPING INVARIANTS</text>
+
+    <g transform="translate(25, 490)">
+      <!-- Row 1 -->
+      <rect x="0" y="0" width="680" height="42" rx="6" fill="#0d1117" stroke="#34d399" stroke-width="1"/>
+      <text x="20" y="27" fill="#34d399" font-size="15" font-weight="700">σ &lt; 0 (Open Left-Half Plane)</text>
+      <text x="320" y="27" fill="#e6edf3" font-size="15">⟶  |z| = e^{σ T_s} &lt; 1</text>
+      <text x="510" y="27" fill="#34d399" font-size="15" font-weight="600">INTERIOR of Unit Circle</text>
+
+      <!-- Row 2 -->
+      <rect x="0" y="52" width="680" height="42" rx="6" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="20" y="79" fill="#38bdf8" font-size="15" font-weight="700">σ = 0 (jω-Axis: Frequency Axis)</text>
+      <text x="320" y="79" fill="#e6edf3" font-size="15">⟶  |z| = e^{0} = 1</text>
+      <text x="510" y="79" fill="#38bdf8" font-size="15" font-weight="700">THE UNIT CIRCLE (|z|=1)</text>
+
+      <!-- Row 3 -->
+      <rect x="0" y="104" width="680" height="42" rx="6" fill="#0d1117" stroke="#f87171" stroke-width="1"/>
+      <text x="20" y="131" fill="#f87171" font-size="15" font-weight="700">σ &gt; 0 (Open Right-Half Plane)</text>
+      <text x="320" y="131" fill="#e6edf3" font-size="15">⟶  |z| = e^{σ T_s} &gt; 1</text>
+      <text x="510" y="131" fill="#f87171" font-size="15" font-weight="600">EXTERIOR of Unit Circle</text>
+
+      <!-- Row 4 -->
+      <rect x="0" y="156" width="680" height="42" rx="6" fill="#0d1117" stroke="#a78bfa" stroke-width="1"/>
+      <text x="20" y="183" fill="#a78bfa" font-size="15" font-weight="700">Primary Strip: -ω_s/2 ≤ ω &lt; ω_s/2</text>
+      <text x="320" y="183" fill="#e6edf3" font-size="15">⟶  -π ≤ Ω &lt; π</text>
+      <text x="510" y="183" fill="#a78bfa" font-size="15" font-weight="600">One Complete Revolution</text>
+    </g>
+
+    <!-- Key GATE Insight Box -->
+    <rect x="0" y="735" width="730" height="250" rx="12" fill="#0d1117" stroke="#fbbf24" stroke-width="2"/>
+    <text x="25" y="770" fill="#fbbf24" font-size="18" font-weight="700">GATE CRITICAL INSIGHT: MANY-TO-ONE MAPPING &amp; ALIASING</text>
+    <text x="25" y="805" fill="#e6edf3" font-size="15">The mapping z = eˢᵀˢ is NOT one-to-one! It is infinitely many-to-one:</text>
+    <text x="45" y="835" fill="#38bdf8" font-size="15" font-weight="600">• Points s_k = σ + j(ω + k ω_s) in s-plane ALL map to the exact same z-plane point!</text>
+    <text x="45" y="865" fill="#e6edf3" font-size="15">• Every horizontal strip of height ω_s = 2π/T_s wraps completely around the z-plane.</text>
+    <text x="45" y="895" fill="#34d399" font-size="15" font-weight="600">• Moving up the jω-axis in s-plane wraps around the unit circle infinitely many times.</text>
+    <text x="45" y="925" fill="#f87171" font-size="15" font-weight="600">• This cyclic periodicity is why DTFT X(eʲᶿ) is always periodic with period 2π!</text>
+    <text x="45" y="955" fill="#fbbf24" font-size="15" font-weight="700">• Continuous stability (Re(s)&lt;0) maps directly to Discrete stability (|p|&lt;1)!</text>
+  </g>
+
+  <!-- Panel 3: Geometry of the z-Plane & Discrete Frequency -->
+  <rect x="1610" y="190" width="710" height="1090" rx="18" fill="url(#panelGrad)" stroke="#30363d" stroke-width="2"/>
+  <rect x="1610" y="190" width="710" height="60" rx="18" fill="#21262d"/>
+  <text x="1965" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">3. DISCRETE FREQUENCY Ω ON THE UNIT CIRCLE</text>
+
+  <g transform="translate(1640, 270)">
+    <!-- Big Unit Circle Diagram -->
+    <g transform="translate(170, 160)">
+      <circle cx="160" cy="160" r="140" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+      <!-- Unit circle glowing -->
+      <circle cx="160" cy="160" r="140" fill="none" stroke="#38bdf8" stroke-width="3.5" filter="url(#glowCyan)"/>
+      <circle cx="160" cy="160" r="140" fill="none" stroke="#38bdf8" stroke-width="3"/>
+      <!-- axes -->
+      <line x1="160" y1="0" x2="160" y2="320" stroke="#8b949e" stroke-width="1.5"/>
+      <line x1="0" y1="160" x2="320" y2="160" stroke="#8b949e" stroke-width="1.5"/>
+      <!-- Origin -->
+      <circle cx="160" cy="160" r="4" fill="#fbbf24"/>
+      <text x="145" y="180" fill="#8b949e" font-size="14">0</text>
+      <!-- Key frequency markers -->
+      <!-- z = 1 (Ω = 0, DC) -->
+      <circle cx="300" cy="160" r="6" fill="#34d399"/>
+      <text x="315" y="165" fill="#34d399" font-size="16" font-weight="700">z = +1 (Ω = 0, DC)</text>
+
+      <!-- z = j (Ω = π/2) -->
+      <circle cx="160" cy="20" r="6" fill="#fbbf24"/>
+      <text x="160" y="-5" fill="#fbbf24" font-size="16" font-weight="700" text-anchor="middle">z = +j (Ω = +π/2)</text>
+
+      <!-- z = -1 (Ω = π, Nyquist / Highest Freq) -->
+      <circle cx="20" cy="160" r="6" fill="#f87171"/>
+      <text x="-15" y="165" fill="#f87171" font-size="16" font-weight="700" text-anchor="end">z = -1 (Ω = ±π, Nyquist)</text>
+
+      <!-- z = -j (Ω = -π/2) -->
+      <circle cx="160" cy="300" r="6" fill="#fbbf24"/>
+      <text x="160" y="335" fill="#fbbf24" font-size="16" font-weight="700" text-anchor="middle">z = -j (Ω = -π/2)</text>
+
+      <!-- Direction of increasing frequency -->
+      <path d="M 285 100 A 130 130 0 0 0 190 35" fill="none" stroke="#34d399" stroke-width="3" stroke-dasharray="6,4"/>
+      <polygon points="182,35 195,30 195,45" fill="#34d399"/>
+      <text x="260" y="55" fill="#34d399" font-size="14" font-weight="700">+Ω (CCW)</text>
+    </g>
+
+    <!-- Key Frequency Landmarks Table -->
+    <rect x="0" y="540" width="650" height="240" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="25" y="575" fill="#38bdf8" font-size="18" font-weight="700">DISCRETE FREQUENCY LANDMARKS</text>
+
+    <g transform="translate(25, 595)">
+      <rect x="0" y="0" width="600" height="38" rx="6" fill="#0d1117" stroke="#34d399" stroke-width="1"/>
+      <text x="15" y="25" fill="#34d399" font-size="15" font-weight="700">Ω = 0 rad/sample</text>
+      <text x="200" y="25" fill="#e6edf3" font-size="15">z = e^{j 0} = +1</text>
+      <text x="400" y="25" fill="#34d399" font-size="15" font-weight="600">DC / Low Frequency</text>
+
+      <rect x="0" y="46" width="600" height="38" rx="6" fill="#0d1117" stroke="#fbbf24" stroke-width="1"/>
+      <text x="15" y="71" fill="#fbbf24" font-size="15" font-weight="700">Ω = π/2 rad/sample</text>
+      <text x="200" y="71" fill="#e6edf3" font-size="15">z = e^{j π/2} = +j</text>
+      <text x="400" y="71" fill="#fbbf24" font-size="15" font-weight="600">Quarter Nyquist (f_s/4)</text>
+
+      <rect x="0" y="92" width="600" height="38" rx="6" fill="#0d1117" stroke="#f87171" stroke-width="1"/>
+      <text x="15" y="117" fill="#f87171" font-size="15" font-weight="700">Ω = ±π rad/sample</text>
+      <text x="200" y="117" fill="#e6edf3" font-size="15">z = e^{j π} = -1</text>
+      <text x="400" y="117" fill="#f87171" font-size="15" font-weight="700">MAX Frequency (Nyquist)</text>
+
+      <rect x="0" y="138" width="600" height="38" rx="6" fill="#0d1117" stroke="#a78bfa" stroke-width="1"/>
+      <text x="15" y="163" fill="#a78bfa" font-size="15" font-weight="700">Ω = 2πk rad/sample</text>
+      <text x="200" y="163" fill="#e6edf3" font-size="15">z = e^{j 2πk} = +1</text>
+      <text x="400" y="163" fill="#a78bfa" font-size="15" font-weight="600">Periodic Wrap-Around</text>
+    </g>
+
+    <!-- Synthesis Summary Box -->
+    <rect x="0" y="805" width="650" height="180" rx="12" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="25" y="840" fill="#38bdf8" font-size="18" font-weight="700">FOUNDATIONAL FORMULA SUMMARY</text>
+    <text x="25" y="875" fill="#e6edf3" font-size="15">Analysis Equation:    <tspan fill="#38bdf8" font-weight="700">X(z) = ∑_{n=-∞}^{∞} x[n] z^{-n}</tspan></text>
+    <text x="25" y="910" fill="#e6edf3" font-size="15">Synthesis Equation: <tspan fill="#fbbf24" font-weight="700">x[n] = (1/2πj) ∮_C X(z) z^{n-1} dz</tspan></text>
+    <text x="25" y="945" fill="#e6edf3" font-size="15">Evaluation on Circle: <tspan fill="#34d399" font-weight="700">X(e^{jΩ}) = X(z)|_{z=e^{jΩ}}   iff  |z|=1 ⊆ ROC</tspan></text>
+  </g>
+</svg>

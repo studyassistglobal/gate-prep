@@ -35,7 +35,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch5/fig_01_fourier_to_laplace_bridge.jpg",
+     "src": "/notes/ss/figures_ch5/fig_01_fourier_to_laplace_bridge.svg",
      "alt": "Figure 01: Continuous-Time Fourier-to-Laplace Convergence Bridge"
     },
     {
@@ -2467,7 +2467,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch5/fig_02_roc_anatomy_and_properties_matrix.jpg",
+     "src": "/notes/ss/figures_ch5/fig_02_roc_anatomy_and_properties_matrix.svg",
      "alt": "Figure 02: Region of Convergence (ROC) Anatomy and Properties Matrix"
     },
     {
@@ -4781,7 +4781,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch5/fig_03_canonical_transform_pairs_encyclopedia.jpg",
+     "src": "/notes/ss/figures_ch5/fig_03_canonical_transform_pairs_encyclopedia.svg",
      "alt": "Figure 03: Canonical Transform Pairs Encyclopedia"
     },
     {
@@ -5671,7 +5671,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch5/fig_04_transform_properties_and_roc_algebra.jpg",
+     "src": "/notes/ss/figures_ch5/fig_04_transform_properties_and_roc_algebra.svg",
      "alt": "Figure 04: Transform Properties and ROC Algebra Engine"
     },
     {
@@ -10681,7 +10681,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch5/fig_05_lti_causality_stability_decision_engine.jpg",
+     "src": "/notes/ss/figures_ch5/fig_05_lti_causality_stability_decision_engine.svg",
      "alt": "Figure 05: LTI Causality and Stability Decision Engine"
     },
     {
@@ -13336,7 +13336,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch5/fig_06_unilateral_laplace_and_zir_zsr_architecture.jpg",
+     "src": "/notes/ss/figures_ch5/fig_06_unilateral_laplace_and_zir_zsr_architecture.svg",
      "alt": "Figure 06: Unilateral Laplace Transform & ZIR/ZSR Architecture"
     },
     {
@@ -13436,7 +13436,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch5/fig_07_ivt_fvt_diagnostic_safeguards_engine.jpg",
+     "src": "/notes/ss/figures_ch5/fig_07_ivt_fvt_diagnostic_safeguards_engine.svg",
      "alt": "Figure 07: IVT and FVT Diagnostic Safeguards Engine"
     },
     {

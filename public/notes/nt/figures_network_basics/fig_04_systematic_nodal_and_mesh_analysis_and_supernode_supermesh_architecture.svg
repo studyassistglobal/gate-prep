@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIGURE 4: SYSTEMATIC NODAL &amp; MESH ANALYSIS AND SUPERNODE / SUPERMESH ARCHITECTURE</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Equilibrium Matrix Formulations, Inspection Rules, Constraint Surface Equations &amp; Computational Complexity</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • PREPFUSION TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Systematic Nodal Analysis -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Systematic Nodal Analysis Matrix</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Equilibrium Matrix Formulation: [Y] [V] = [I]</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• For network with n nodes, choose 1 Reference (Datum ∇ = 0 V).</text>
+  <text x="50" y="210" fill="#e2e8f0" font-size="19">• Number of Independent Node Equations: N = n - 1.</text>
+  <text x="70" y="255" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22" font-weight="800">[Y_bus] · [V_node] = [I_inj]</text>
+  <text x="50" y="300" fill="#94a3b8" font-size="18">• Applicable to planar AND non-planar networks equally!</text>
+  <text x="50" y="340" fill="#94a3b8" font-size="18">• Node voltages are true single-valued scalar potentials relative to ground.</text>
+  <text x="50" y="380" fill="#34d399" font-size="18">• Branch voltage: V_ab = V_a - V_b (positive at terminal a).</text>
+
+  <rect x="30" y="450" width="840" height="490" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#38bdf8" font-size="22" font-weight="800">Inspection Rules for Passive Networks</text>
+  <text x="50" y="540" fill="#e2e8f0" font-size="19">Valid ONLY for circuits with independent current sources and resistors:</text>
+  
+  <text x="50" y="590" fill="#fbbf24" font-size="20" font-weight="700">1. Diagonal Terms (Self-Admittance Y_ii &gt; 0):</text>
+  <text x="70" y="630" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">Y_ii = ∑ Conductances connected directly to node i</text>
+  <text x="70" y="665" fill="#94a3b8" font-size="18">Always strictly positive; dominates the row (diagonally dominant).</text>
+
+  <text x="50" y="715" fill="#fbbf24" font-size="20" font-weight="700">2. Off-Diagonal Terms (Mutual Admittance Y_ij ≤ 0):</text>
+  <text x="70" y="755" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="22">Y_ij = - ∑ Conductances connected between node i and j</text>
+  <text x="70" y="790" fill="#94a3b8" font-size="18">Always negative (or zero if no direct branch exists).</text>
+  <text x="70" y="825" fill="#38bdf8" font-size="18">Symmetry: Y_ij = Y_ji (Guaranteed for bilateral reciprocal networks).</text>
+
+  <text x="50" y="875" fill="#fbbf24" font-size="20" font-weight="700">3. Current Injection Vector I_i:</text>
+  <text x="70" y="915" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">I_i = ∑ (Currents ENTERING node i) - ∑ (Currents LEAVING)</text>
+
+  <rect x="30" y="965" width="840" height="430" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1010" fill="#f43f5e" font-size="22" font-weight="800">★ When Inspection Rules Break Down</text>
+  <text x="50" y="1055" fill="#e2e8f0" font-size="19">• Inspection rules CANNOT be directly written if:</text>
+  <text x="70" y="1095" fill="#fbbf24" font-size="18">1. Dependent Sources are present: Destroys matrix symmetry (Y_ij ≠ Y_ji)!</text>
+  <text x="70" y="1135" fill="#fbbf24" font-size="18">2. Floating Voltage Sources are present: Zero branch resistance implies</text>
+  <text x="90" y="1170" fill="#f43f5e" font-size="18">admittance G = 1/0 → ∞ (Singular matrix!). Must use Supernode.</text>
+  <text x="70" y="1210" fill="#fbbf24" font-size="18">3. Mutual Inductive Coupling: Introduces non-diagonal coupling.</text>
+  <text x="50" y="1260" fill="#34d399" font-size="19" font-weight="700">Remedy for Dependent Sources:</text>
+  <text x="70" y="1295" fill="#e2e8f0" font-size="18">Express controlling variable in terms of node voltages, substitute into</text>
+  <text x="70" y="1330" fill="#e2e8f0" font-size="18">nodal KCL equations, and bring coefficients to LHS into the [Y] matrix.</text>
+  <text x="50" y="1370" fill="#38bdf8" font-size="18">Result: [Y] matrix becomes non-symmetric, but fully solvable!</text>
+
+  <rect x="30" y="1420" width="840" height="390" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1465" fill="#34d399" font-size="22" font-weight="800">Cramer's Rule Formulation for Nodal Matrix</text>
+  <text x="50" y="1510" fill="#e2e8f0" font-size="19">• For a 2-node system: [ [Y₁₁, Y₁₂], [Y₂₁, Y₂₂] ] · [V₁, V₂]^T = [I₁, I₂]^T</text>
+  <text x="70" y="1555" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">Δ = Y₁₁ Y₂₂ - Y₁₂ Y₂₁</text>
+  <text x="70" y="1600" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">V₁ = (I₁ Y₂₂ - I₂ Y₁₂) / Δ   |   V₂ = (Y₁₁ I₂ - Y₂₁ I₁) / Δ</text>
+  <text x="50" y="1650" fill="#94a3b8" font-size="18">• Driving-point input admittance at node 1: Y_in,1 = Δ / Δ₁₁.</text>
+  <text x="50" y="1690" fill="#94a3b8" font-size="18">• Transfer admittance between node 1 and 2: Y_21 = Δ / Δ₁₂.</text>
+  <text x="50" y="1730" fill="#34d399" font-size="18">• Always simplify resistors in parallel before assembling the matrix.</text>
+</g>
+
+<!-- Column 2: Supernode Analysis Architecture -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#34d399"/>
+  <text x="35" y="55" fill="#34d399" font-size="28" font-weight="900">2. Supernode Analysis Architecture</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#34d399" font-size="22" font-weight="800">The Supernode Physical Mechanism</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• A Supernode is formed by enclosing a voltage source (independent or</text>
+  <text x="70" y="205" fill="#e2e8f0" font-size="19">dependent) connected between two non-reference nodes inside a boundary.</text>
+  <text x="50" y="250" fill="#f43f5e" font-size="19">• Why needed? The current through an ideal voltage source is UNKNOWN</text>
+  <text x="70" y="285" fill="#f43f5e" font-size="19">and CANNOT be expressed as (V_A - V_B)/R because R = 0 Ω!</text>
+  <text x="50" y="330" fill="#38bdf8" font-size="19">• Solution: Treat both nodes plus the voltage source as ONE generalized node.</text>
+  <text x="50" y="370" fill="#fbbf24" font-size="18">• Note: If voltage source is connected to Datum (Ground), NO supernode needed!</text>
+  <text x="70" y="405" fill="#34d399" font-size="18">The non-reference node voltage is immediately known: V_node = ± V_s!</text>
+
+  <rect x="30" y="450" width="840" height="490" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#34d399" font-size="22" font-weight="800">The Rigorous 2-Step Supernode Algorithm</text>
+  
+  <text x="50" y="540" fill="#38bdf8" font-size="20" font-weight="800">Step 1: Generalized KCL on Supernode Surface</text>
+  <text x="50" y="575" fill="#e2e8f0" font-size="18">• Apply KCL to the closed Gaussian boundary enclosing nodes A and B:</text>
+  <text x="70" y="615" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">∑ I_leaving(Node A) + ∑ I_leaving(Node B) = 0</text>
+  <text x="50" y="655" fill="#94a3b8" font-size="18">• The unknown internal current through the voltage source cancels out completely!</text>
+
+  <text x="50" y="705" fill="#fbbf24" font-size="20" font-weight="800">Step 2: Constitutive Constraint Equation (KVL Inside)</text>
+  <text x="50" y="740" fill="#e2e8f0" font-size="18">• Write the internal potential relationship across the voltage source terminals:</text>
+  <text x="70" y="780" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="24" font-weight="800">V_pos - V_neg = V_source</text>
+  <text x="50" y="825" fill="#e2e8f0" font-size="18">• If source is dependent: V_pos - V_neg = μ v_x (or r_m i_x).</text>
+  <text x="50" y="865" fill="#38bdf8" font-size="18">• Express controlling variable (v_x or i_x) in terms of node voltages.</text>
+  <text x="50" y="905" fill="#34d399" font-size="18">• Combine Step 1 and Step 2 to obtain the exact required independent equations!</text>
+
+  <rect x="30" y="965" width="840" height="430" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1010" fill="#f43f5e" font-size="22" font-weight="800">Exam Trap Drill: Dependent Supernode</text>
+  <text x="50" y="1055" fill="#e2e8f0" font-size="18">Circuit: Node 1 connected to 20V source to ground. Node 2 and Node 3</text>
+  <text x="50" y="1090" fill="#e2e8f0" font-size="18">connected by dependent voltage source 2 V_x with (+) at node 3.</text>
+  <text x="50" y="1125" fill="#94a3b8" font-size="17">Resistors: 2 Ω between node 1 and 2, 4 Ω from node 2 to ground, 8 Ω from node 3 to ground. V_x is across 2 Ω (V₁ - V₂).</text>
+
+  <text x="50" y="1175" fill="#38bdf8" font-size="20" font-weight="700">Constraint Equation (Inside Supernode 2-3):</text>
+  <text x="70" y="1215" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">V₃ - V₂ = 2 V_x = 2 (V₁ - V₂) = 2 (20 - V₂) = 40 - 2 V₂</text>
+  <text x="70" y="1255" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">V₃ + V₂ = 40  ⇒  V₃ = 40 - V₂</text>
+
+  <text x="50" y="1305" fill="#38bdf8" font-size="20" font-weight="700">Supernode KCL Equation:</text>
+  <text x="70" y="1345" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">(V₂ - 20)/2 + V₂/4 + V₃/8 = 0</text>
+  <text x="50" y="1385" fill="#94a3b8" font-size="17">Multiply by 8: 4(V₂ - 20) + 2 V₂ + V₃ = 0 ⇒ 6 V₂ - 80 + (40 - V₂) = 0 ⇒ 5 V₂ = 40 ⇒ V₂ = 8 V, V₃ = 32 V!</text>
+
+  <rect x="30" y="1420" width="840" height="390" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="50" y="1465" fill="#fbbf24" font-size="22" font-weight="800">Supernode Properties &amp; Dimension Counts</text>
+  <text x="50" y="1510" fill="#e2e8f0" font-size="19">• If network has n nodes and k independent/dependent voltage sources:</text>
+  <text x="70" y="1550" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">KCL Equations Required = (n - 1) - k</text>
+  <text x="70" y="1590" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">Constraint Equations Required = k</text>
+  <text x="70" y="1635" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">Total Simultaneous Equations = n - 1</text>
+  <text x="50" y="1680" fill="#94a3b8" font-size="18">• Any resistor connected in parallel with the voltage source inside the supernode</text>
+  <text x="70" y="1715" fill="#94a3b8" font-size="18">is REDUNDANT for finding other node voltages (voltage is already fixed by source!).</text>
+  <text x="50" y="1755" fill="#f43f5e" font-size="18">★ However, it DOES consume internal power from the voltage source!</text>
+</g>
+
+<!-- Column 3: Systematic Mesh Analysis -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#fbbf24"/>
+  <text x="35" y="55" fill="#fbbf24" font-size="28" font-weight="900">3. Systematic Mesh Analysis Matrix</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">Planar Restriction &amp; Equilibrium Matrix</text>
+  <text x="50" y="170" fill="#f43f5e" font-size="19">• FUNDAMENTAL RESTRICTION: Mesh analysis is strictly valid ONLY</text>
+  <text x="70" y="205" fill="#f43f5e" font-size="19">for PLANAR networks! (Cannot define "window-pane" meshes on crossings!).</text>
+  <text x="50" y="250" fill="#e2e8f0" font-size="19">• For non-planar networks, general loop analysis or nodal analysis is REQUIRED.</text>
+  <text x="50" y="295" fill="#38bdf8" font-size="19">• Number of Independent Meshes: M = b - n + 1 (Euler-Poincaré nullity).</text>
+  <text x="70" y="340" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">[Z_mesh] · [I_mesh] = [V_source]</text>
+  <text x="50" y="385" fill="#94a3b8" font-size="18">• Mesh currents I₁, I₂, ... are fictitious circulating loop currents.</text>
+
+  <rect x="30" y="450" width="840" height="490" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#fbbf24" font-size="22" font-weight="800">Inspection Rules for Planar Passive Networks</text>
+  <text x="50" y="540" fill="#e2e8f0" font-size="19">Valid ONLY for circuits with clockwise mesh currents and voltage sources:</text>
+
+  <text x="50" y="590" fill="#38bdf8" font-size="20" font-weight="700">1. Diagonal Terms (Self-Impedance Z_ii &gt; 0):</text>
+  <text x="70" y="630" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">Z_ii = ∑ Resistances around the perimeter of mesh i</text>
+  <text x="70" y="665" fill="#94a3b8" font-size="18">Always strictly positive; represents total resistance in loop i.</text>
+
+  <text x="50" y="715" fill="#38bdf8" font-size="20" font-weight="700">2. Off-Diagonal Terms (Mutual Impedance Z_ij ≤ 0):</text>
+  <text x="70" y="755" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="22">Z_ij = - ∑ Resistances shared between mesh i and mesh j</text>
+  <text x="70" y="790" fill="#94a3b8" font-size="18">Always negative when all mesh currents are chosen CLOCKWISE.</text>
+  <text x="70" y="825" fill="#38bdf8" font-size="18">Symmetry: Z_ij = Z_ji (Valid for reciprocal networks without dependent sources).</text>
+
+  <text x="50" y="875" fill="#38bdf8" font-size="20" font-weight="700">3. Driving Source Voltage Vector V_i:</text>
+  <text x="70" y="915" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">V_i = ∑ (Clockwise Voltage RISES) - ∑ (Clockwise Voltage DROPS)</text>
+
+  <rect x="30" y="965" width="840" height="430" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1010" fill="#f43f5e" font-size="22" font-weight="800">★ When Mesh Inspection Rules Break Down</text>
+  <text x="50" y="1055" fill="#e2e8f0" font-size="19">• Inspection rules CANNOT be directly written if:</text>
+  <text x="70" y="1095" fill="#fbbf24" font-size="18">1. Current Sources are present: Voltage across an ideal current source is</text>
+  <text x="90" y="1130" fill="#f43f5e" font-size="18">UNKNOWN! Cannot write KVL through that branch. Must use Supermesh.</text>
+  <text x="70" y="1170" fill="#fbbf24" font-size="18">2. Dependent Sources are present: Destroys matrix symmetry (Z_ij ≠ Z_ji).</text>
+  <text x="70" y="1210" fill="#fbbf24" font-size="18">3. Arbitrary Direction Selection: If some meshes are clockwise and others</text>
+  <text x="90" y="1245" fill="#e2e8f0" font-size="18">counter-clockwise, mutual signs flip to positive (+Z_ij).</text>
+  <text x="50" y="1295" fill="#34d399" font-size="19" font-weight="700">Remedy for Current Sources on Perimeter:</text>
+  <text x="70" y="1330" fill="#e2e8f0" font-size="18">If an ideal current source is on the boundary of only ONE mesh, that</text>
+  <text x="70" y="1365" fill="#38bdf8" font-size="18">mesh current is TRIVIALLY FIXED: I_mesh = ± I_source! Reduces unknowns by 1.</text>
+
+  <rect x="30" y="1420" width="840" height="390" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1465" fill="#38bdf8" font-size="22" font-weight="800">Branch Currents from Mesh Currents</text>
+  <text x="50" y="1510" fill="#e2e8f0" font-size="19">• Boundary Branch (Only belongs to mesh 1): i_branch = I₁.</text>
+  <text x="50" y="1555" fill="#e2e8f0" font-size="19">• Shared Branch between Mesh 1 and Mesh 2:</text>
+  <text x="70" y="1600" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">i_downward = I₁ - I₂   |   i_upward = I₂ - I₁</text>
+  <text x="50" y="1650" fill="#94a3b8" font-size="18">• Branch Power: P_branch = (I₁ - I₂)² · R_shared.</text>
+  <text x="50" y="1690" fill="#f43f5e" font-size="18">★ DANGER: P ≠ I₁² R - I₂² R! Never square currents separately!</text>
+  <text x="50" y="1730" fill="#34d399" font-size="18">• Mesh method is optimal when circuit contains many series current sources.</text>
+</g>
+
+<!-- Column 4: Supermesh Analysis & Method Selection -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="930" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">4. Supermesh Analysis &amp; Decision Matrix</text>
+
+  <rect x="30" y="85" width="870" height="360" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#c084fc" font-size="22" font-weight="800">The Supermesh Physical Mechanism</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="18">• A Supermesh is created when a current source (independent or dependent)</text>
+  <text x="70" y="205" fill="#e2e8f0" font-size="18">is shared between two adjacent meshes.</text>
+  <text x="50" y="245" fill="#f43f5e" font-size="18">• The voltage drop across the current source is unknown. To eliminate it,</text>
+  <text x="70" y="280" fill="#f43f5e" font-size="18">temporarily OPEN-CIRCUIT the current source branch!</text>
+  <text x="50" y="325" fill="#38bdf8" font-size="18">• The resulting enlarged combined loop formed by merging the two meshes is the Supermesh.</text>
+  <text x="50" y="365" fill="#34d399" font-size="18">• Note: The mesh currents I₁ and I₂ STILL RETAIN their independent identity!</text>
+  <text x="70" y="400" fill="#94a3b8" font-size="17">Do NOT combine mesh currents into a single current!</text>
+
+  <rect x="30" y="470" width="870" height="490" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="510" fill="#38bdf8" font-size="22" font-weight="800">The Rigorous 2-Step Supermesh Algorithm</text>
+
+  <text x="50" y="555" fill="#fbbf24" font-size="20" font-weight="800">Step 1: Outer KVL Around Supermesh Perimeter</text>
+  <text x="50" y="590" fill="#e2e8f0" font-size="18">• Traverse the outer boundary of the combined supermesh in clockwise direction:</text>
+  <text x="70" y="630" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">∑ V_drops(Mesh 1 perimeter) + ∑ V_drops(Mesh 2 perimeter) = 0</text>
+  <text x="50" y="670" fill="#94a3b8" font-size="18">• Bypasses the shared current source branch completely.</text>
+
+  <text x="50" y="720" fill="#fbbf24" font-size="20" font-weight="800">Step 2: Constitutive Constraint Equation</text>
+  <text x="50" y="755" fill="#e2e8f0" font-size="18">• Relate the two mesh currents directly to the shared current source:</text>
+  <text x="70" y="795" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="24" font-weight="800">I_mesh(aligned) - I_mesh(opposing) = I_source</text>
+  <text x="50" y="840" fill="#e2e8f0" font-size="18">• If source is dependent: I_mesh(aligned) - I_mesh(opposing) = β i_x (or g_m v_x).</text>
+  <text x="50" y="880" fill="#38bdf8" font-size="18">• Substitute controlling variable i_x / v_x in terms of mesh currents.</text>
+  <text x="50" y="920" fill="#34d399" font-size="18">• Together, Step 1 and Step 2 provide the exact required independent equations!</text>
+
+  <rect x="30" y="985" width="870" height="520" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="50" y="1030" fill="#34d399" font-size="24" font-weight="900">MASTER DECISION MATRIX: Nodal vs. Mesh Analysis</text>
+  <text x="50" y="1075" fill="#e2e8f0" font-size="18">When faced with a complex circuit in GATE, evaluate these 5 criteria:</text>
+
+  <path d="M 45 1105 L 880 1105" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1135" fill="#fbbf24" font-size="18" font-weight="700">Circuit Attribute</text>
+  <text x="360" y="1135" fill="#38bdf8" font-size="18" font-weight="700">Prefer Nodal Analysis</text>
+  <text x="640" y="1135" fill="#38bdf8" font-size="18" font-weight="700">Prefer Mesh Analysis</text>
+  <path d="M 45 1150 L 880 1150" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="1185" fill="#e2e8f0" font-size="17">Number of Unknowns</text>
+  <text x="360" y="1185" fill="#34d399" font-size="17">n - 1 &lt; b - n + 1</text>
+  <text x="640" y="1185" fill="#34d399" font-size="17">b - n + 1 &lt; n - 1</text>
+
+  <text x="50" y="1230" fill="#e2e8f0" font-size="17">Graph Topology</text>
+  <text x="360" y="1230" fill="#34d399" font-size="17">Non-Planar circuits (MANDATORY!)</text>
+  <text x="640" y="1230" fill="#f43f5e" font-size="17">Planar ONLY (Crossing invalid)</text>
+
+  <text x="50" y="1275" fill="#e2e8f0" font-size="17">Source Distribution</text>
+  <text x="360" y="1275" fill="#34d399" font-size="17">Many voltage sources to ground</text>
+  <text x="640" y="1275" fill="#34d399" font-size="17">Many current sources on perimeter</text>
+
+  <text x="50" y="1320" fill="#e2e8f0" font-size="17">Branch Connectivity</text>
+  <text x="360" y="1320" fill="#34d399" font-size="17">Parallel branches / Common bus</text>
+  <text x="640" y="1320" fill="#34d399" font-size="17">Series cascade loops</text>
+
+  <text x="50" y="1365" fill="#e2e8f0" font-size="17">Required Variable</text>
+  <text x="360" y="1320" fill="#34d399" font-size="17">Node voltages, op-amp inputs</text>
+  <text x="640" y="1365" fill="#34d399" font-size="17">Branch currents, inductor currents</text>
+
+  <text x="50" y="1420" fill="#fbbf24" font-size="18" font-weight="700">★ Golden Rule: If (n - 1) == (b - n + 1), check source types!</text>
+  <text x="50" y="1455" fill="#94a3b8" font-size="17">Voltage sources with a ground node favor Nodal (instant answers!).</text>
+  <text x="50" y="1485" fill="#94a3b8" font-size="17">Perimeter current sources favor Mesh (instant known mesh currents!).</text>
+
+  <rect x="30" y="1525" width="870" height="285" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1565" fill="#f43f5e" font-size="20" font-weight="800">★ The 3 Most Dangerous Supermesh Traps</text>
+  <text x="50" y="1605" fill="#e2e8f0" font-size="17">1. Dropping the Shared Resistor: Resistors in series with the current source</text>
+  <text x="70" y="1635" fill="#e2e8f0" font-size="17">are removed in KVL, but DO dissipate power! Do not forget them in power calculations!</text>
+  <text x="50" y="1675" fill="#e2e8f0" font-size="17">2. Mesh Current Disappearance: In the supermesh KVL, use I₁ for mesh 1 resistors</text>
+  <text x="70" y="1705" fill="#e2e8f0" font-size="17">and I₂ for mesh 2 resistors! Do NOT write a single combined current!</text>
+  <text x="50" y="1745" fill="#e2e8f0" font-size="17">3. Sign of Constraint: Make sure aligned mesh is (+), opposing is (-)!</text>
+  <text x="70" y="1775" fill="#34d399" font-size="17">Check: Does the arrow point in direction of I_aligned? YES!</text>
+</g>
+
+  </g>
+</svg>

@@ -33,7 +33,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch7/fig_01_dtft_foundations_and_spectrum_periodicity.jpg",
+     "src": "/notes/ss/figures_ch7/fig_01_dtft_foundations_and_spectrum_periodicity.svg",
      "alt": "Figure 7.1: DTFT Foundations and Spectrum Periodicity"
     },
     {
@@ -2207,7 +2207,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch7/fig_02_dtft_symmetry_and_operational_properties.jpg",
+     "src": "/notes/ss/figures_ch7/fig_02_dtft_symmetry_and_operational_properties.svg",
      "alt": "Figure 7.2: DTFT Symmetry and Operational Properties"
     },
     {
@@ -4407,7 +4407,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch7/fig_03_canonical_dtft_pairs_encyclopedia.jpg",
+     "src": "/notes/ss/figures_ch7/fig_03_canonical_dtft_pairs_encyclopedia.svg",
      "alt": "Figure 7.3: Canonical DTFT Pairs Encyclopedia"
     },
     {
@@ -7340,7 +7340,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch7/fig_04_dtfs_discrete_periodic_harmonics_engine.jpg",
+     "src": "/notes/ss/figures_ch7/fig_04_dtfs_discrete_periodic_harmonics_engine.svg",
      "alt": "Figure 7.4: DTFS Discrete Periodic Harmonics Engine"
     },
     {
@@ -9860,7 +9860,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch7/fig_05_dft_sampling_and_circular_convolution_architecture.jpg",
+     "src": "/notes/ss/figures_ch7/fig_05_dft_sampling_and_circular_convolution_architecture.svg",
      "alt": "Figure 7.5: DFT Sampling and Circular Convolution Architecture"
     },
     {
@@ -17469,7 +17469,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch7/fig_06_fft_radix2_dit_dif_butterfly_engine.jpg",
+     "src": "/notes/ss/figures_ch7/fig_06_fft_radix2_dit_dif_butterfly_engine.svg",
      "alt": "Figure 7.6: FFT Radix-2 DIT/DIF Butterfly Engine"
     },
     {
@@ -20040,7 +20040,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch7/fig_07_four_fourier_domains_grand_duality_matrix.jpg",
+     "src": "/notes/ss/figures_ch7/fig_07_four_fourier_domains_grand_duality_matrix.svg",
      "alt": "Figure 7.7: Four Fourier Domains Grand Duality Matrix"
     },
     {

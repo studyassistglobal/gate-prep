@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid3" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid3)"/>
+
+  <!-- Header -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 07 • FIGURE 7.3</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">Canonical DTFT Transform Pairs Encyclopedia &amp; Discrete LTI Filter Architectures</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- Panel 1: Elementary & Exponential Sequences -->
+  <rect x="80" y="190" width="720" height="1090" rx="18" fill="url(#panelGrad3)" stroke="#30363d" stroke-width="2"/>
+  <rect x="80" y="190" width="720" height="60" rx="18" fill="#21262d"/>
+  <text x="440" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">1. CANONICAL TRANSFORM PAIRS</text>
+
+  <g transform="translate(110, 270)">
+    <!-- Pair 1: Unit Impulse -->
+    <rect x="0" y="10" width="660" height="85" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="40" fill="#38bdf8" font-size="16" font-weight="700">Unit Impulse Sequence</text>
+    <text x="20" y="72" fill="#e6edf3" font-size="20" font-weight="700">δ[n] ⟷ 1</text>
+    <text x="350" y="72" fill="#8b949e" font-size="14">All frequencies present with equal weight 1</text>
+
+    <!-- Pair 2: Shifted Impulse -->
+    <rect x="0" y="105" width="660" height="85" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="135" fill="#38bdf8" font-size="16" font-weight="700">Shifted Impulse Sequence</text>
+    <text x="20" y="167" fill="#e6edf3" font-size="20" font-weight="700">δ[n - n₀] ⟷ e⁻ʲᶿⁿ⁰</text>
+    <text x="350" y="167" fill="#8b949e" font-size="14">Unit magnitude, linear phase -Ω n₀</text>
+
+    <!-- Pair 3: DC Constant 1 -->
+    <rect x="0" y="200" width="660" height="95" rx="10" fill="#0d1117" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="20" y="230" fill="#fbbf24" font-size="16" font-weight="700">Constant DC Sequence x[n] = 1 (All n)</text>
+    <text x="20" y="262" fill="#fbbf24" font-size="19" font-weight="700">1 ⟷ ∑ₖ₌₋∞⁺∞ 2π δ(Ω - 2πk)</text>
+    <text x="20" y="285" fill="#8b949e" font-size="13">Impulse train in frequency spaced by 2π (concentrated at DC harmonics)</text>
+
+    <!-- Pair 4: Complex Exponential -->
+    <rect x="0" y="305" width="660" height="95" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="335" fill="#38bdf8" font-size="16" font-weight="700">Complex Exponential eʲᶿ⁰ⁿ</text>
+    <text x="20" y="367" fill="#e6edf3" font-size="19" font-weight="700">eʲᶿ⁰ⁿ ⟷ ∑ₖ₌₋∞⁺∞ 2π δ(Ω - Ω₀ - 2πk)</text>
+    <text x="20" y="390" fill="#8b949e" font-size="13">Single discrete tone shifted to Ω = Ω₀ mod 2π</text>
+
+    <!-- Pair 5: Real Sinusoids -->
+    <rect x="0" y="410" width="660" height="115" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="438" fill="#38bdf8" font-size="16" font-weight="700">Cos and Sin Sinusoids</text>
+    <text x="20" y="468" fill="#34d399" font-size="17" font-weight="700">cos(Ω₀n) ⟷ ∑ₖ π [δ(Ω - Ω₀ - 2πk) + δ(Ω + Ω₀ - 2πk)]</text>
+    <text x="20" y="500" fill="#f87171" font-size="17" font-weight="700">sin(Ω₀n) ⟷ ∑ₖ -jπ [δ(Ω - Ω₀ - 2πk) - δ(Ω + Ω₀ - 2πk)]</text>
+    <text x="20" y="520" fill="#8b949e" font-size="12">Even real impulses for cos; Odd imaginary impulses for sin</text>
+
+    <!-- Pair 6: Causal Exponential aⁿ u[n] -->
+    <rect x="0" y="535" width="660" height="115" rx="10" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="20" y="565" fill="#34d399" font-size="16" font-weight="700">Causal Exponential aⁿ u[n] (|a| &lt; 1)</text>
+    <text x="20" y="598" fill="#34d399" font-size="21" font-weight="700">aⁿ u[n] ⟷ 1 / (1 - a e⁻ʲᶿ)</text>
+    <text x="20" y="625" fill="#e6edf3" font-size="14">Magnitude: |X(eʲᶿ)| = 1 / √(1 - 2a cos Ω + a²)</text>
+    <text x="20" y="643" fill="#fbbf24" font-size="12" font-weight="600">Note: If |a| ≥ 1, DTFT DOES NOT EXIST (fails absolute summability!)</text>
+
+    <!-- Pair 7: Anti-Causal Exponential -->
+    <rect x="0" y="660" width="660" height="95" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="690" fill="#38bdf8" font-size="16" font-weight="700">Anti-Causal Exponential -aⁿ u[-n - 1] (|a| &gt; 1)</text>
+    <text x="20" y="722" fill="#e6edf3" font-size="20" font-weight="700">-aⁿ u[-n - 1] ⟷ 1 / (1 - a e⁻ʲᶿ)</text>
+    <text x="20" y="747" fill="#8b949e" font-size="13">Only converges if |a| &gt; 1 so that unit circle lies in ROC |z| &lt; |a|!</text>
+
+    <!-- Pair 8: Unit Step Sequence -->
+    <rect x="0" y="765" width="660" height="105" rx="10" fill="#0d1117" stroke="#f87171" stroke-width="1.5"/>
+    <text x="20" y="795" fill="#f87171" font-size="16" font-weight="700">Unit Step Sequence u[n]</text>
+    <text x="20" y="828" fill="#f87171" font-size="20" font-weight="700">u[n] ⟷ 1 / (1 - e⁻ʲᶿ) + ∑ₖ₌₋∞⁺∞ π δ(Ω - 2πk)</text>
+    <text x="20" y="855" fill="#fbbf24" font-size="13" font-weight="600">The π δ(Ω) term comes from the average DC offset of 1/2 in u[n]!</text>
+
+    <!-- Pair 9: Ramp multiplied exponential -->
+    <rect x="0" y="880" width="660" height="100" rx="10" fill="#0d1117" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="20" y="910" fill="#a78bfa" font-size="16" font-weight="700">Linear Ramp Exponential (n + 1) aⁿ u[n] (|a| &lt; 1)</text>
+    <text x="20" y="942" fill="#a78bfa" font-size="20" font-weight="700">(n + 1) aⁿ u[n] ⟷ 1 / (1 - a e⁻ʲᶿ)²</text>
+    <text x="20" y="968" fill="#8b949e" font-size="13">Derived via frequency differentiation j d/dΩ applied to 1/(1 - a e⁻ʲᶿ)</text>
+  </g>
+
+  <!-- Panel 2: Rectangular Window vs Discrete Sinc Duality -->
+  <rect x="830" y="190" width="740" height="1090" rx="18" fill="url(#panelGrad3)" stroke="#30363d" stroke-width="2"/>
+  <rect x="830" y="190" width="740" height="60" rx="18" fill="#21262d"/>
+  <text x="1200" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">2. RECTANGULAR PULSE &amp; SINC DUALITY</text>
+
+  <g transform="translate(860, 270)">
+    <!-- Symmetric Rectangular Pulse -->
+    <rect x="0" y="10" width="680" height="440" rx="12" fill="#161b22" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="25" y="45" fill="#38bdf8" font-size="19" font-weight="700">Symmetric Rectangular Pulse p_N[n]</text>
+    <text x="25" y="75" fill="#e6edf3" font-size="15">Definition: x[n] = 1 for -N ≤ n ≤ N (Total length 2N + 1 points), 0 elsewhere</text>
+    
+    <rect x="25" y="90" width="630" height="65" rx="8" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="340" y="132" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">X(eʲᶿ) = sin(Ω (2N + 1) / 2) / sin(Ω / 2)</text>
+    
+    <text x="25" y="180" fill="#8b949e" font-size="14">• Discrete Dirichlet Sinc Kernel (Periodic Sinc / asinc function)</text>
+    <text x="25" y="205" fill="#34d399" font-size="14" font-weight="600">• Peak value at DC (Ω = 0): X(eʲ⁰) = 2N + 1 (L'Hopital rule)</text>
+    <text x="25" y="230" fill="#fbbf24" font-size="14" font-weight="600">• First Null Frequencies: Ω_null = ± 2π / (2N + 1)</text>
+    <text x="25" y="255" fill="#8b949e" font-size="14">• Main-lobe width: ΔΩ = 4π / (2N + 1) [radians]</text>
+
+    <!-- Dirichlet Kernel Plot -->
+    <g transform="translate(25, 275)">
+      <rect x="0" y="0" width="630" height="150" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+      <line x1="20" y1="120" x2="610" y2="120" stroke="#8b949e" stroke-width="1.5"/>
+      <line x1="315" y1="20" x2="315" y2="135" stroke="#8b949e" stroke-width="1" stroke-dasharray="3"/>
+      
+      <!-- Main lobe -->
+      <path d="M 230 120 C 260 120, 280 30, 315 30 C 350 30, 370 120, 400 120" fill="none" stroke="#38bdf8" stroke-width="3"/>
+      <!-- Side lobes -->
+      <path d="M 400 120 C 420 120, 435 140, 455 140 C 475 140, 485 120, 500 120" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+      <path d="M 130 120 C 145 120, 155 140, 175 140 C 195 140, 210 120, 230 120" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+
+      <text x="315" y="25" fill="#38bdf8" font-size="12" font-weight="700" text-anchor="middle">Peak = 2N+1</text>
+      <text x="400" y="115" fill="#fbbf24" font-size="11">2π/(2N+1)</text>
+      <text x="230" y="115" fill="#fbbf24" font-size="11" text-anchor="end">-2π/(2N+1)</text>
+    </g>
+
+    <!-- Discrete Sinc Sequence Dual -->
+    <rect x="0" y="470" width="680" height="510" rx="12" fill="#161b22" stroke="#34d399" stroke-width="1.5"/>
+    <text x="25" y="505" fill="#34d399" font-size="19" font-weight="700">Dual: Discrete Sinc Sequence ⟷ Ideal LPF Gate</text>
+    <text x="25" y="535" fill="#e6edf3" font-size="15">Definition: h_LP[n] = sin(Ωc n) / (π n)  for n ≠ 0, with h_LP[0] = Ωc / π</text>
+    
+    <rect x="25" y="550" width="630" height="65" rx="8" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="340" y="592" fill="#34d399" font-size="22" font-weight="700" text-anchor="middle">H_LP(eʲᶿ) = 1 for |Ω| ≤ Ωc, 0 for Ωc &lt; |Ω| ≤ π</text>
+    
+    <text x="25" y="640" fill="#8b949e" font-size="14">• Ideal Brick-Wall Low-Pass Filter in continuous frequency [-π, π]</text>
+    <text x="25" y="665" fill="#f87171" font-size="14" font-weight="600">• Non-causal (extends from n = -∞ to +∞) and Unstable (non-summable!)</text>
+    <text x="25" y="690" fill="#fbbf24" font-size="14" font-weight="600">• Energy of impulse response: E = ∑ |h_LP[n]|² = Ωc / π</text>
+
+    <!-- Filter Brick-Wall Graphic -->
+    <g transform="translate(25, 715)">
+      <rect x="0" y="0" width="630" height="150" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+      <line x1="20" y1="120" x2="610" y2="120" stroke="#8b949e" stroke-width="1.5"/>
+      <line x1="315" y1="20" x2="315" y2="135" stroke="#8b949e" stroke-width="1" stroke-dasharray="3"/>
+
+      <!-- Ideal Gate -->
+      <polyline points="100,120 220,120 220,40 410,40 410,120 530,120" fill="none" stroke="#34d399" stroke-width="3"/>
+      <rect x="220" y="40" width="190" height="80" fill="#34d399" fill-opacity="0.1"/>
+
+      <text x="315" y="32" fill="#34d399" font-size="13" font-weight="700" text-anchor="middle">Passband Gain = 1</text>
+      <text x="220" y="135" fill="#fbbf24" font-size="12" text-anchor="middle">-Ωc</text>
+      <text x="410" y="135" fill="#fbbf24" font-size="12" text-anchor="middle">+Ωc</text>
+      <text x="100" y="135" fill="#8b949e" font-size="12" text-anchor="middle">-π</text>
+      <text x="530" y="135" fill="#8b949e" font-size="12" text-anchor="middle">+π</text>
+    </g>
+
+    <text x="25" y="900" fill="#e6edf3" font-size="14" font-weight="600">DUALITY RULE: Box in Time ⟷ Dirichlet in Freq</text>
+    <text x="25" y="925" fill="#e6edf3" font-size="14" font-weight="600">Sinc in Time ⟷ Box in Freq (Both periodic with 2π in freq!)</text>
+  </g>
+
+  <!-- Panel 3: Discrete LTI Frequency Response & Group Delay -->
+  <rect x="1600" y="190" width="720" height="1090" rx="18" fill="url(#panelGrad3)" stroke="#30363d" stroke-width="2"/>
+  <rect x="1600" y="190" width="720" height="60" rx="18" fill="#21262d"/>
+  <text x="1960" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">3. LTI FREQUENCY RESPONSE &amp; DELAYS</text>
+
+  <g transform="translate(1630, 270)">
+    <!-- Frequency Response Definition -->
+    <rect x="0" y="10" width="660" height="180" rx="12" fill="#161b22" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="20" y="45" fill="#38bdf8" font-size="19" font-weight="700">Discrete LTI Frequency Response H(eʲᶿ)</text>
+    <text x="20" y="75" fill="#e6edf3" font-size="15">For input x[n] = eʲᶿⁿ, the output is y[n] = H(eʲᶿ) eʲᶿⁿ:</text>
+    <rect x="20" y="90" width="620" height="55" rx="8" fill="#0d1117" stroke="#38bdf8" stroke-width="1"/>
+    <text x="330" y="127" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">H(eʲᶿ) = ∑ₙ₌₋∞⁺∞ h[n] e⁻ʲᶿⁿ = |H(eʲᶿ)| eʲ∠ᴴ⁽ᵉʲᶿ⁾</text>
+    <text x="20" y="170" fill="#8b949e" font-size="13">Eigenfunction property: Complex exponentials pass through with gain H(eʲᶿ)!</text>
+
+    <!-- Phase Delay vs Group Delay -->
+    <rect x="0" y="205" width="660" height="240" rx="12" fill="#161b22" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="20" y="240" fill="#fbbf24" font-size="19" font-weight="700">Phase Delay vs Group Delay Architecture</text>
+    
+    <g transform="translate(20, 260)">
+      <rect x="0" y="0" width="295" height="110" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+      <text x="147" y="25" fill="#fbbf24" font-size="16" font-weight="700" text-anchor="middle">Phase Delay τ_p(Ω)</text>
+      <text x="147" y="60" fill="#fbbf24" font-size="20" font-weight="700" text-anchor="middle">τ_p(Ω) = - ∠H(eʲᶿ) / Ω</text>
+      <text x="15" y="90" fill="#8b949e" font-size="12">Delay experienced by individual carrier</text>
+
+      <rect x="325" y="0" width="295" height="110" rx="8" fill="#0d1117" stroke="#f87171" stroke-width="1"/>
+      <text x="472" y="25" fill="#f87171" font-size="16" font-weight="700" text-anchor="middle">Group Delay τ_g(Ω)</text>
+      <text x="472" y="60" fill="#f87171" font-size="20" font-weight="700" text-anchor="middle">τ_g(Ω) = - d[∠H(eʲᶿ)] / dΩ</text>
+      <text x="340" y="90" fill="#8b949e" font-size="12">Delay experienced by the signal envelope</text>
+    </g>
+
+    <text x="20" y="395" fill="#34d399" font-size="14" font-weight="700">LINEAR PHASE CONDITION:</text>
+    <text x="20" y="420" fill="#e6edf3" font-size="14">If ∠H(eʲᶿ) = -α Ω ⟹ τ_p(Ω) = τ_g(Ω) = α (Constant Delay, ZERO Phase Distortion!)</text>
+
+    <!-- 4 Filter Transformations -->
+    <rect x="0" y="460" width="660" height="520" rx="12" fill="#161b22" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="20" y="495" fill="#a78bfa" font-size="19" font-weight="700">Filter Transformations via Spectral Flipping</text>
+    
+    <g transform="translate(20, 515)">
+      <!-- LPF to HPF -->
+      <rect x="0" y="0" width="620" height="100" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+      <text x="15" y="25" fill="#38bdf8" font-size="15" font-weight="700">1. LPF ⟶ High-Pass Filter (HPF)</text>
+      <text x="15" y="55" fill="#34d399" font-size="17" font-weight="700">h_HP[n] = (-1)ⁿ h_LP[n] = eʲᵖⁱⁿ h_LP[n]</text>
+      <text x="15" y="80" fill="#8b949e" font-size="13">H_HP(eʲᶿ) = H_LP(eʲ⁽ᶿ⁻ᵖⁱ⁾) (Shifts DC passband to Ω = ±π!)</text>
+
+      <!-- Complementary Filter -->
+      <rect x="0" y="115" width="620" height="100" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+      <text x="15" y="25" fill="#38bdf8" font-size="15" font-weight="700">2. Complementary Filter Subtraction</text>
+      <text x="15" y="55" fill="#fbbf24" font-size="17" font-weight="700">h_HP[n] = δ[n] - h_LP[n]</text>
+      <text x="15" y="80" fill="#8b949e" font-size="13">H_HP(eʲᶿ) = 1 - H_LP(eʲᶿ) (Preserves phase linearity!)</text>
+
+      <!-- Bandpass Filter -->
+      <rect x="0" y="230" width="620" height="100" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+      <text x="15" y="25" fill="#38bdf8" font-size="15" font-weight="700">3. Band-Pass Filter (BPF) via Modulation</text>
+      <text x="15" y="55" fill="#a78bfa" font-size="17" font-weight="700">h_BP[n] = 2 h_LP[n] cos(Ω₀n)</text>
+      <text x="15" y="80" fill="#8b949e" font-size="13">Centers a lowpass prototype of bandwidth 2W around carrier ±Ω₀.</text>
+
+      <!-- Difference Equation to H(e^jΩ) -->
+      <rect x="0" y="345" width="620" height="110" rx="8" fill="#0d1117" stroke="#f87171" stroke-width="1"/>
+      <text x="15" y="25" fill="#f87171" font-size="15" font-weight="700">4. Rational Difference Equation Frequency Response</text>
+      <text x="15" y="55" fill="#f87171" font-size="16" font-weight="700">∑ₖ aₖ y[n - k] = ∑ₘ bₘ x[n - m] ⟹ H(eʲᶿ) = (∑ bₘ e⁻ʲᶿᵐ) / (∑ aₖ e⁻ʲᶿᵏ)</text>
+      <text x="15" y="85" fill="#8b949e" font-size="13">Direct evaluation on unit circle of rational system function H(z)|_{z=eʲᶿ}.</text>
+    </g>
+  </g>
+</svg>

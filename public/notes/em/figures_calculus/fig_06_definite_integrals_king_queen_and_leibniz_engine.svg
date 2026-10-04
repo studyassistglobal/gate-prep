@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="480" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="240" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 06</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">DEFINITE INTEGRALS, SYMMETRY PROPERTIES &amp; LEIBNIZ RULE</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">King's Property, Queen's Property, Wallis Formula, Leibniz Differentiation Under Integral Sign &amp; Beta-Gamma Functions</text>
+  </g>
+
+  <!-- COLUMN 1: DEFINITE INTEGRAL SYMMETRY ENGINE (KING & QUEEN) -->
+  <g transform="translate(120, 310)">
+    <rect x="0" y="0" width="1760" height="1750" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1760" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. KING'S &amp; QUEEN'S TRANSFORMATION ENGINES</text>
+
+    <!-- King's Property Card -->
+    <g transform="translate(40, 105)">
+      <rect x="0" y="0" width="1680" height="430" rx="16" fill="url(#cardGradEmerald)" stroke="#34d399" stroke-width="2"/>
+      <rect x="0" y="0" width="1680" height="60" rx="16" fill="#062817"/>
+      <text x="35" y="40" fill="#34d399" font-size="24" font-weight="800">THE KING'S PROPERTY (Master Reflector Formula)</text>
+
+      <rect x="35" y="80" width="1610" height="80" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+      <text x="50" y="132" fill="#34d399" font-size="32" font-weight="800">∫_{a}^{b} f(x) dx = ∫_{a}^{b} f(a + b - x) dx   (Special Case a=0: ∫_{0}^{a} f(x) dx = ∫_{0}^{a} f(a - x) dx)</text>
+
+      <g transform="translate(35, 180)">
+        <text x="0" y="25" fill="#f8fafc" font-size="20" font-weight="700">The 2I Master Weapon Execution Strategy:</text>
+        <text x="0" y="60" fill="#cbd5e1" font-size="18">1. Set I = ∫_{a}^{b} f(x) dx.  2. Apply King's property: I = ∫_{a}^{b} f(a + b - x) dx.  3. Add equations:</text>
+        
+        <rect x="0" y="80" width="1610" height="65" rx="8" fill="#1e293b" stroke="#38bdf8"/>
+        <text x="30" y="122" fill="#38bdf8" font-size="22" font-weight="800">2I = ∫_{a}^{b} [ f(x) + f(a + b - x) ] dx ⟹ I = (1/2) ∫_{a}^{b} [ f(x) + f(a + b - x) ] dx</text>
+
+        <text x="0" y="175" fill="#fbbf24" font-size="18" font-weight="700">Classic Result: If f(x) + f(a + b - x) = 1 identically ⟹ I = (b - a) / 2!</text>
+        <text x="0" y="210" fill="#cbd5e1" font-size="17">Example: ∫_{0}^{π/2} (sinⁿ x) / (sinⁿ x + cosⁿ x) dx = (π/2 - 0) / 2 = π/4 for ANY power n (even n = 2027!).</text>
+      </g>
+    </g>
+
+    <!-- Queen's Property & Parity -->
+    <g transform="translate(40, 565)">
+      <rect x="0" y="0" width="1680" height="420" rx="16" fill="url(#cardGradDark)" stroke="#fbbf24" stroke-width="2"/>
+      <rect x="0" y="0" width="1680" height="60" rx="16" fill="#281c06"/>
+      <text x="35" y="40" fill="#fbbf24" font-size="24" font-weight="800">THE QUEEN'S PROPERTY (Interval Halving Engine)</text>
+
+      <rect x="35" y="80" width="1610" height="80" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+      <text x="50" y="132" fill="#fbbf24" font-size="30" font-weight="800">∫_{0}^{2a} f(x) dx = 2 ∫_{0}^{a} f(x) dx  if f(2a - x) = f(x);   AND = 0  if f(2a - x) = -f(x)</text>
+
+      <g transform="translate(35, 180)">
+        <text x="0" y="25" fill="#f8fafc" font-size="20" font-weight="700">General Decomposition Identity:</text>
+        <text x="0" y="60" fill="#cbd5e1" font-size="18">∫_{0}^{2a} f(x) dx = ∫_{0}^{a} f(x) dx + ∫_{0}^{a} f(2a - x) dx</text>
+        
+        <g transform="translate(0, 85)">
+          <rect x="0" y="0" width="790" height="130" rx="10" fill="#1e293b" stroke="#34d399"/>
+          <text x="25" y="35" fill="#34d399" font-size="20" font-weight="700">Symmetric Case: f(2a - x) = f(x)</text>
+          <text x="25" y="70" fill="#cbd5e1" font-size="17">• The two half-integrals are identical.</text>
+          <text x="25" y="105" fill="#34d399" font-size="22" font-weight="800">∫_{0}^{2a} f(x) dx = 2 ∫_{0}^{a} f(x) dx</text>
+        </g>
+
+        <g transform="translate(820, 85)">
+          <rect x="0" y="0" width="790" height="130" rx="10" fill="#1e293b" stroke="#f43f5e"/>
+          <text x="25" y="35" fill="#f43f5e" font-size="20" font-weight="700">Anti-Symmetric Case: f(2a - x) = -f(x)</text>
+          <text x="25" y="70" fill="#cbd5e1" font-size="17">• The two half-integrals cancel out exactly.</text>
+          <text x="25" y="105" fill="#f43f5e" font-size="22" font-weight="800">∫_{0}^{2a} f(x) dx = 0 (Instant Kill!)</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Wallis' Reduction Formula -->
+    <g transform="translate(40, 1015)">
+      <rect x="0" y="0" width="1680" height="690" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+      <text x="35" y="45" fill="#38bdf8" font-size="24" font-weight="700">Wallis' Reduction Formulas &amp; Parity Engine</text>
+      
+      <rect x="35" y="75" width="1610" height="75" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+      <text x="50" y="122" fill="#38bdf8" font-size="26" font-weight="800">∫_{0}^{π/2} sinᵐ x cosⁿ x dx = [ (m - 1)(m - 3)... × (n - 1)(n - 3)... ] / [ (m + n)(m + n - 2)... ] × K</text>
+
+      <g transform="translate(35, 175)">
+        <rect x="0" y="0" width="1610" height="100" rx="10" fill="#1e293b" stroke="#fbbf24"/>
+        <text x="30" y="35" fill="#fbbf24" font-size="20" font-weight="800">PARITY MULTIPLIER K RULE:</text>
+        <text x="30" y="70" fill="#f8fafc" font-size="20">• K = π / 2  if BOTH m and n are EVEN positive integers;   • K = 1  OTHERWISE (if either m or n is odd)!</text>
+      </g>
+
+      <g transform="translate(35, 300)">
+        <text x="0" y="25" fill="#f8fafc" font-size="20" font-weight="700">Worked Wallis Drills:</text>
+
+        <g transform="translate(0, 45)">
+          <rect x="0" y="0" width="510" height="310" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+          <text x="20" y="35" fill="#38bdf8" font-size="19" font-weight="700">Drill A: ∫_{0}^{π/2} sin⁶ x dx</text>
+          <text x="20" y="70" fill="#cbd5e1" font-size="16">• m = 6 (even), n = 0 (even)</text>
+          <text x="20" y="105" fill="#cbd5e1" font-size="16">• Numerator: (5)(3)(1)</text>
+          <text x="20" y="140" fill="#cbd5e1" font-size="16">• Denominator: (6)(4)(2)</text>
+          <text x="20" y="175" fill="#fbbf24" font-size="18" font-weight="700">• Both even ⟹ K = π/2</text>
+          <rect x="15" y="200" width="480" height="85" rx="8" fill="#0f172a" stroke="#34d399"/>
+          <text x="30" y="250" fill="#34d399" font-size="24" font-weight="800">= (15/48) × (π/2) = 5π / 32</text>
+        </g>
+
+        <g transform="translate(550, 45)">
+          <rect x="0" y="0" width="510" height="310" rx="10" fill="#1e293b" stroke="#fbbf24"/>
+          <text x="20" y="35" fill="#fbbf24" font-size="19" font-weight="700">Drill B: ∫_{0}^{π/2} sin⁵ x dx</text>
+          <text x="20" y="70" fill="#cbd5e1" font-size="16">• m = 5 (odd), n = 0</text>
+          <text x="20" y="105" fill="#cbd5e1" font-size="16">• Numerator: (4)(2)</text>
+          <text x="20" y="140" fill="#cbd5e1" font-size="16">• Denominator: (5)(3)(1)</text>
+          <text x="20" y="175" fill="#34d399" font-size="18" font-weight="700">• m is odd ⟹ K = 1</text>
+          <rect x="15" y="200" width="480" height="85" rx="8" fill="#0f172a" stroke="#34d399"/>
+          <text x="30" y="250" fill="#34d399" font-size="24" font-weight="800">= (8/15) × 1 = 8 / 15</text>
+        </g>
+
+        <g transform="translate(1100, 45)">
+          <rect x="0" y="0" width="510" height="310" rx="10" fill="#1e293b" stroke="#34d399"/>
+          <text x="20" y="35" fill="#34d399" font-size="19" font-weight="700">Drill C: ∫_{0}^{π/2} sin⁴ x cos² x dx</text>
+          <text x="20" y="70" fill="#cbd5e1" font-size="16">• m = 4, n = 2 (BOTH EVEN!)</text>
+          <text x="20" y="105" fill="#cbd5e1" font-size="16">• Num: (3)(1) × (1) = 3</text>
+          <text x="20" y="140" fill="#cbd5e1" font-size="16">• Den: (6)(4)(2) = 48</text>
+          <text x="20" y="175" fill="#fbbf24" font-size="18" font-weight="700">• Both even ⟹ K = π/2</text>
+          <rect x="15" y="200" width="480" height="85" rx="8" fill="#0f172a" stroke="#34d399"/>
+          <text x="30" y="250" fill="#34d399" font-size="24" font-weight="800">= (3/48) × (π/2) = π / 32</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: LEIBNIZ RULE & BETA/GAMMA FUNCTIONS -->
+  <g transform="translate(1920, 310)">
+    <rect x="0" y="0" width="1800" height="1750" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1800" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">2. LEIBNIZ RULE &amp; SPECIAL FUNCTIONS ENGINE</text>
+
+    <!-- Leibniz Differentiation Under Integral Sign -->
+    <g transform="translate(40, 105)">
+      <rect x="0" y="0" width="1720" height="490" rx="16" fill="url(#cardGradEmerald)" stroke="#34d399" stroke-width="2"/>
+      <rect x="0" y="0" width="1720" height="60" rx="16" fill="#062817"/>
+      <text x="35" y="40" fill="#34d399" font-size="24" font-weight="800">LEIBNIZ RULE OF DIFFERENTIATION UNDER THE INTEGRAL SIGN</text>
+
+      <rect x="35" y="80" width="1650" height="95" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+      <text x="50" y="125" fill="#34d399" font-size="26" font-weight="800">(d/dx) ∫_{ϕ(x)}^{ψ(x)} f(x, t) dt = f(x, ψ(x)) • ψ'(x) - f(x, ϕ(x)) • ϕ'(x)</text>
+      <text x="650" y="160" fill="#fbbf24" font-size="24" font-weight="800">+ ∫_{ϕ(x)}^{ψ(x)} [ ∂f/∂x (x, t) ] dt</text>
+
+      <g transform="translate(35, 195)">
+        <text x="0" y="25" fill="#f8fafc" font-size="20" font-weight="700">Special Cases in Competitive Exams:</text>
+
+        <g transform="translate(0, 45)">
+          <rect x="0" y="0" width="800" height="120" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+          <text x="25" y="35" fill="#38bdf8" font-size="20" font-weight="700">Case A: Pure Variable Upper Limit ϕ=a, ψ=x</text>
+          <text x="25" y="70" fill="#cbd5e1" font-size="17">(d/dx) ∫_{a}^{x} f(t) dt = f(x) • (1) - 0 = f(x)</text>
+          <text x="25" y="100" fill="#34d399" font-size="16">(Fundamental Theorem of Calculus Part 1)</text>
+        </g>
+
+        <g transform="translate(850, 45)">
+          <rect x="0" y="0" width="800" height="120" rx="10" fill="#1e293b" stroke="#fbbf24"/>
+          <text x="25" y="35" fill="#fbbf24" font-size="20" font-weight="700">Case B: Pure Constant Limits [a, b]</text>
+          <text x="25" y="70" fill="#cbd5e1" font-size="17">(d/dx) ∫_{a}^{b} f(x, t) dt = ∫_{a}^{b} [ ∂f/∂x (x, t) ] dt</text>
+          <text x="25" y="100" fill="#fbbf24" font-size="16">(Derivative moves directly inside as partial!)</text>
+        </g>
+
+        <g transform="translate(0, 185)">
+          <rect x="0" y="0" width="1650" height="85" rx="10" fill="#1c050d" stroke="#f43f5e"/>
+          <text x="25" y="35" fill="#f43f5e" font-size="20" font-weight="800">★ GATE EXAM WEAPON: Evaluating Indeterminate 0/0 Limits of Integrals</text>
+          <text x="25" y="65" fill="#cbd5e1" font-size="17">lim_{x➔0} [ ∫_{0}^{x²} cos(t²) dt ] / x² ⟹ [0/0 form]. Apply L'Hôpital + Leibniz: lim = [cos(x⁴) • 2x] / [2x] = cos(0) = 1!</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Beta & Gamma Functions -->
+    <g transform="translate(40, 625)">
+      <rect x="0" y="0" width="1720" height="520" rx="16" fill="url(#cardGradDark)" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="0" y="0" width="1720" height="60" rx="16" fill="#0f172a"/>
+      <text x="35" y="40" fill="#38bdf8" font-size="24" font-weight="800">GAMMA &amp; BETA SPECIAL FUNCTIONS COMPENDIUM</text>
+
+      <g transform="translate(35, 80)">
+        <!-- Gamma Function -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="800" height="240" rx="12" fill="#1e293b" stroke="#38bdf8"/>
+          <text x="25" y="35" fill="#38bdf8" font-size="22" font-weight="800">Gamma Function Γ(n)</text>
+          <text x="25" y="70" fill="#cbd5e1" font-size="17">Γ(n) = ∫_{0}^{∞} xⁿ⁻¹ e⁻ˣ dx   (for n &gt; 0)</text>
+          <text x="25" y="105" fill="#f8fafc" font-size="18">• Recurrence: Γ(n + 1) = n Γ(n)</text>
+          <text x="25" y="140" fill="#f8fafc" font-size="18">• Factorial Link: Γ(n + 1) = n!  (for n ∈ ℕ)</text>
+          <text x="25" y="175" fill="#34d399" font-size="20" font-weight="800">• Half-Integer: Γ(1/2) = √π, Γ(3/2) = (1/2)√π</text>
+          <text x="25" y="210" fill="#fbbf24" font-size="16">• Reflection: Γ(n) Γ(1 - n) = π / sin(nπ)</text>
+        </g>
+
+        <!-- Beta Function -->
+        <g transform="translate(850, 0)">
+          <rect x="0" y="0" width="800" height="240" rx="12" fill="#1e293b" stroke="#fbbf24"/>
+          <text x="25" y="35" fill="#fbbf24" font-size="22" font-weight="800">Beta Function B(m, n)</text>
+          <text x="25" y="70" fill="#cbd5e1" font-size="17">B(m, n) = ∫_{0}^{1} xᵐ⁻¹ (1 - x)ⁿ⁻¹ dx</text>
+          <text x="25" y="105" fill="#38bdf8" font-size="18">• Trigonometric Form: 2 ∫_{0}^{π/2} sin²ᵐ⁻¹ θ cos²ⁿ⁻¹ θ dθ</text>
+          <text x="25" y="140" fill="#34d399" font-size="20" font-weight="800">• Fundamental Link: B(m, n) = [ Γ(m) Γ(n) ] / Γ(m + n)</text>
+          <text x="25" y="175" fill="#cbd5e1" font-size="17">• Symmetry: B(m, n) = B(n, m)</text>
+          <text x="25" y="210" fill="#f8fafc" font-size="16">• Infinite Form: ∫_{0}^{∞} [ yᵐ⁻¹ / (1 + y)ᵐ⁺ⁿ ] dy</text>
+        </g>
+
+        <!-- Gaussian Integral Card -->
+        <g transform="translate(0, 260)">
+          <rect x="0" y="0" width="1650" height="150" rx="12" fill="#0f172a" stroke="#34d399" stroke-width="1.8"/>
+          <text x="30" y="35" fill="#34d399" font-size="22" font-weight="800">THE GAUSSIAN INTEGRAL &amp; EXTENSIONS</text>
+          <text x="30" y="75" fill="#38bdf8" font-size="26" font-weight="800">∫_{-∞}^{∞} e^{-x²} dx = √π    ⟹    ∫_{0}^{∞} e^{-x²} dx = (√π) / 2</text>
+          <text x="30" y="115" fill="#cbd5e1" font-size="18">Generalized Form: ∫_{0}^{∞} x²ⁿ e^{-a x²} dx = [ Γ(n + 1/2) ] / [ 2 a^{n + 1/2} ]   (Essential for Signal Processing &amp; Communications!)</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Applications: Arc Length & Surface Area -->
+    <g transform="translate(40, 1175)">
+      <rect x="0" y="0" width="1720" height="525" rx="16" fill="#111827" stroke="#334155"/>
+      <text x="35" y="45" fill="#38bdf8" font-size="22" font-weight="700">APPLICATIONS: ARC LENGTH &amp; SURFACE AREA OF REVOLUTION</text>
+
+      <g transform="translate(35, 75)">
+        <rect x="0" y="0" width="800" height="420" rx="12" fill="#1e293b" stroke="#38bdf8"/>
+        <text x="25" y="35" fill="#38bdf8" font-size="20" font-weight="700">Arc Length of Plane Curves s</text>
+        <text x="25" y="75" fill="#f8fafc" font-size="18">• Cartesian (y = f(x)):</text>
+        <text x="45" y="110" fill="#38bdf8" font-size="22" font-weight="800">s = ∫_{a}^{b} √( 1 + (dy/dx)² ) dx</text>
+
+        <text x="25" y="160" fill="#f8fafc" font-size="18">• Parametric (x = x(t), y = y(t)):</text>
+        <text x="45" y="195" fill="#fbbf24" font-size="22" font-weight="800">s = ∫_{t₁}^{t₂} √( (dx/dt)² + (dy/dt)² ) dt</text>
+
+        <text x="25" y="245" fill="#f8fafc" font-size="18">• Polar (r = f(θ)):</text>
+        <text x="45" y="280" fill="#34d399" font-size="22" font-weight="800">s = ∫_{θ₁}^{θ₂} √( r² + (dr/dθ)² ) dθ</text>
+
+        <rect x="25" y="320" width="750" height="80" rx="8" fill="#0f172a" stroke="#fbbf24"/>
+        <text x="20" y="355" fill="#fbbf24" font-size="18" font-weight="700">Astroid Arc Length (x = a cos³ t, y = a sin³ t):</text>
+        <text x="20" y="385" fill="#34d399" font-size="20" font-weight="800">Total Perimeter = 6a (Frequently tested in GATE!)</text>
+      </g>
+
+      <g transform="translate(870, 75)">
+        <rect x="0" y="0" width="800" height="420" rx="12" fill="#1e293b" stroke="#34d399"/>
+        <text x="25" y="35" fill="#34d399" font-size="20" font-weight="700">Solids of Revolution: Volume &amp; Surface Area</text>
+        
+        <text x="25" y="75" fill="#f8fafc" font-size="18">• Volume about x-axis (Disk Method):</text>
+        <text x="45" y="110" fill="#34d399" font-size="22" font-weight="800">V = π ∫_{a}^{b} [ y(x) ]² dx</text>
+
+        <text x="25" y="160" fill="#f8fafc" font-size="18">• Volume about y-axis (Cylindrical Shell Method):</text>
+        <text x="45" y="195" fill="#38bdf8" font-size="22" font-weight="800">V = 2π ∫_{a}^{b} x • y(x) dx</text>
+
+        <text x="25" y="245" fill="#f8fafc" font-size="18">• Surface Area of Revolution about x-axis:</text>
+        <text x="45" y="280" fill="#fbbf24" font-size="22" font-weight="800">S = 2π ∫_{a}^{b} y • √( 1 + (y')² ) dx</text>
+
+        <rect x="25" y="320" width="750" height="80" rx="8" fill="#0f172a" stroke="#38bdf8"/>
+        <text x="20" y="355" fill="#38bdf8" font-size="18" font-weight="700">Sphere Volume &amp; Area Check (y = √(R² - x²)):</text>
+        <text x="20" y="385" fill="#34d399" font-size="20" font-weight="800">V = (4/3) π R³,  S = 4 π R²</text>
+      </g>
+    </g>
+  </g>
+</svg>

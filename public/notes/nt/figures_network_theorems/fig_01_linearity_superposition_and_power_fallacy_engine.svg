@@ -1,0 +1,296 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIG 01: LINEARITY AXIOMS, SUPERPOSITION THEOREM &amp; POWER NON-SUPERPOSITION ENGINE</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Homogeneity &amp; Additivity Criteria • Source Deactivation Rules • Dependent Source Invariance • Multi-Source Power Bounds &amp; Frequency Orthogonality</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • NETWORK THEOREMS TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Linearity Axioms & Verification Engine -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Linearity Axioms &amp; Principles</text>
+  
+  <rect x="30" y="85" width="840" height="230" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">The Two Fundamental Axioms of Linearity</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="19">• A system f(x) is linear if and only if it satisfies both:</text>
+  <text x="70" y="205" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">1. Homogeneity:  f(k · x) = k · f(x)      (Scaling)</text>
+  <text x="70" y="245" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">2. Additivity:   f(x₁ + x₂) = f(x₁) + f(x₂) (Superposition)</text>
+  <text x="50" y="285" fill="#94a3b8" font-size="18">• Combined Master Criterion: f(a · x₁ + b · x₂) = a · f(x₁) + b · f(x₂)</text>
+
+  <text x="35" y="360" fill="#34d399" font-size="24" font-weight="800">Strict Circuit Taxonomy:</text>
+  <text x="35" y="405" fill="#e2e8f0" font-size="19">✓ Linear Elements: Resistors (V=IR), Inductors (v=L di/dt), Capacitors (i=C dv/dt)</text>
+  <text x="35" y="445" fill="#e2e8f0" font-size="19">✓ Linear Sources: All 4 linear dependent sources (VCVS, VCCS, CCVS, CCCS)</text>
+  <text x="35" y="485" fill="#f43f5e" font-size="19">✗ Non-Linear Elements: Diodes (Shockley exponential), Transistors (large signal),</text>
+  <text x="35" y="515" fill="#f43f5e" font-size="19">   Varactors, saturable inductors, squaring elements, and non-linear loads</text>
+
+  <rect x="30" y="560" width="840" height="320" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="605" fill="#38bdf8" font-size="22" font-weight="800">The Affine Function Trap: y = mx + c (c ≠ 0)</text>
+  <text x="50" y="645" fill="#e2e8f0" font-size="18">• Graphically: A straight line not passing through origin (0, 0).</text>
+  <text x="50" y="685" fill="#f43f5e" font-size="18">• Testing Homogeneity: f(kx) = m(kx) + c ≠ k(mx + c) = k·f(x)!</text>
+  <text x="50" y="725" fill="#f43f5e" font-size="18">• Testing Additivity: f(x₁+x₂) = m(x₁+x₂) + c ≠ (mx₁+c) + (mx₂+c) = mx₁+mx₂+2c!</text>
+  <text x="50" y="775" fill="#fbbf24" font-size="19" font-weight="700">Exam Golden Rule: y = mx + c is an AFFINE SYSTEM, NOT LINEAR!</text>
+  <text x="50" y="815" fill="#94a3b8" font-size="18">• Only incremental response Δy = m Δx is linear. Circuit with independent internal</text>
+  <text x="50" y="845" fill="#94a3b8" font-size="18">  sources exhibits affine response V_out = m · V_in + V_th (c = V_th ≠ 0).</text>
+
+  <rect x="30" y="910" width="840" height="380" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="955" fill="#34d399" font-size="22" font-weight="800">Homogeneity Method for Ladder Networks</text>
+  <text x="50" y="995" fill="#e2e8f0" font-size="18">When finding input-output transfer ratio in passive resistor ladders:</text>
+  <text x="50" y="1035" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">1. Assume load output current I_out = 1 A (or V_out = 1 V).</text>
+  <text x="50" y="1075" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">2. Work backwards across the ladder calculating all node voltages &amp; currents.</text>
+  <text x="50" y="1115" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">3. Arrive at input source excitation: V_in,assumed = V_calc.</text>
+  <text x="50" y="1155" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">4. Scale factor k = V_in,actual / V_in,assumed.</text>
+  <text x="50" y="1195" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">5. True response: I_out,actual = k · 1 A.</text>
+  <text x="50" y="1245" fill="#fbbf24" font-size="18" font-weight="700">Benefit: Solves complex 5-loop ladders in 45 seconds without simultaneous equations!</text>
+
+  <rect x="30" y="1320" width="840" height="490" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1365" fill="#f43f5e" font-size="22" font-weight="800">Critical Boundaries: When Linearity Fails</text>
+  <text x="50" y="1410" fill="#e2e8f0" font-size="18">1. Power Response: P = I²R or V²/R is quadratic (Degree 2) → Superposition FAILS.</text>
+  <text x="50" y="1455" fill="#e2e8f0" font-size="18">2. Semiconductor Diodes: i = I_s(e^{v/ηV_T} - 1) is non-linear.</text>
+  <text x="50" y="1500" fill="#e2e8f0" font-size="18">3. Magnetic Saturation: B-H hysteresis curve non-linearity.</text>
+  <text x="50" y="1545" fill="#e2e8f0" font-size="18">4. Time-Varying Systems: R(t), L(t), C(t) require parametric analysis.</text>
+  <text x="50" y="1590" fill="#e2e8f0" font-size="18">5. Circuits with Initial Stored Energy: Inductor i_L(0⁻) ≠ 0 or Capacitor v_C(0⁻) ≠ 0</text>
+  <text x="70" y="1625" fill="#94a3b8" font-size="18">must be converted to equivalent independent sources before applying linearity!</text>
+  <path d="M 50 1660 L 850 1660" stroke="#334155" stroke-width="1"/>
+  <text x="50" y="1705" fill="#38bdf8" font-size="20" font-weight="800">Core Takeaway for GATE 2027:</text>
+  <text x="50" y="1745" fill="#fbbf24" font-size="18">Linearity guarantees uniqueness and scalability of solutions for voltages and currents.</text>
+</g>
+
+<!-- Column 2: Source Deactivation Mechanics & Dependent Source Invariance -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#818cf8"/>
+  <text x="35" y="55" fill="#818cf8" font-size="28" font-weight="900">2. Source Deactivation (Killing) Mechanics</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Deactivation Axioms for Independent Sources</text>
+  
+  <text x="50" y="170" fill="#34d399" font-size="20" font-weight="700">Ideal Independent Voltage Source (V_s):</text>
+  <text x="50" y="205" fill="#e2e8f0" font-size="18">• Deactivated by setting terminal potential difference to zero: V_s = 0 V.</text>
+  <text x="50" y="240" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20" font-weight="800">→ REPLACE WITH SHORT CIRCUIT (Zero Resistance: R_in = 0 Ω)</text>
+
+  <text x="50" y="290" fill="#34d399" font-size="20" font-weight="700">Ideal Independent Current Source (I_s):</text>
+  <text x="50" y="325" fill="#e2e8f0" font-size="18">• Deactivated by setting branch throughput current to zero: I_s = 0 A.</text>
+  <text x="50" y="360" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20" font-weight="800">→ REPLACE WITH OPEN CIRCUIT (Infinite Resistance: R_in = ∞ Ω)</text>
+  <text x="50" y="400" fill="#94a3b8" font-size="17">Practical sources: Retain internal series resistor R_se or shunt resistor R_sh!</text>
+
+  <rect x="30" y="450" width="840" height="420" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="495" fill="#f43f5e" font-size="22" font-weight="900">THE TITAN LAW: NEVER KILL A DEPENDENT SOURCE!</text>
+  <text x="50" y="540" fill="#e2e8f0" font-size="18">Controlled sources (VCVS, VCCS, CCVS, CCCS) are NOT independent excitations.</text>
+  <text x="50" y="575" fill="#e2e8f0" font-size="18">They represent internal coupling elements controlled by circuit variables (Vx, Ix).</text>
+  
+  <text x="50" y="625" fill="#fbbf24" font-size="19" font-weight="800">Why Killing Controlled Sources Causes Fatal Errors:</text>
+  <text x="50" y="665" fill="#94a3b8" font-size="18">1. Deactivating a dependent source changes the fundamental topology of the circuit.</text>
+  <text x="50" y="700" fill="#94a3b8" font-size="18">2. It severs the physical feedback loop between control branch and active element.</text>
+  <text x="50" y="735" fill="#94a3b8" font-size="18">3. It yields completely erroneous Thevenin resistance R_th and Superposition results.</text>
+  
+  <rect x="50" y="765" width="800" height="85" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1"/>
+  <text x="70" y="800" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="19" font-weight="800">RULE: Dependent sources remain FULLY ACTIVE in EVERY sub-circuit!</text>
+  <text x="70" y="830" fill="#38bdf8" font-size="17">In each sub-problem, their control variables take NEW local values (Vx', Vx'').</text>
+
+  <rect x="30" y="900" width="840" height="450" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="945" fill="#38bdf8" font-size="22" font-weight="800">Source Transformation Equivalence &amp; Boundaries</text>
+  <text x="50" y="990" fill="#e2e8f0" font-size="18">Thévenin branch (V_s in series with R_s) ↔ Norton branch (I_s in parallel with R_s):</text>
+  <text x="70" y="1030" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">V_s = I_s · R_s    ⟺    I_s = V_s / R_s    (R_series = R_parallel = R_s)</text>
+  
+  <text x="50" y="1080" fill="#fbbf24" font-size="19" font-weight="800">The 3 Fatal Traps of Source Transformation:</text>
+  <text x="50" y="1120" fill="#e2e8f0" font-size="18">1. Never absorb or transform a branch that contains the CONTROLLING VARIABLE (Vx, Ix)!</text>
+  <text x="70" y="1150" fill="#94a3b8" font-size="17">   If the controlling branch is merged, the control variable is lost forever.</text>
+  <text x="50" y="1190" fill="#e2e8f0" font-size="18">2. Never transform a branch where the target response is to be measured!</text>
+  <text x="50" y="1230" fill="#e2e8f0" font-size="18">3. Internal power dissipation is NOT conserved across source transformations:</text>
+  <text x="70" y="1265" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="18">P_int(Thévenin) = (I_L)² · R_s  ≠  P_int(Norton) = (I_s - I_L)² · R_s</text>
+  <text x="70" y="1300" fill="#34d399" font-size="17">Transformation guarantees external terminal equivalence ONLY, not internal power!</text>
+
+  <rect x="30" y="1370" width="840" height="440" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1415" fill="#34d399" font-size="22" font-weight="800">Redundant Elements Axioms</text>
+  <text x="50" y="1460" fill="#fbbf24" font-size="19" font-weight="700">1. Resistor in Parallel with Ideal Voltage Source:</text>
+  <text x="50" y="1495" fill="#e2e8f0" font-size="18">• Terminal voltage is rigidly clamped to V_s regardless of R_p.</text>
+  <text x="50" y="1530" fill="#94a3b8" font-size="18">• R_p can be REMOVED (opened) when calculating voltages/currents in rest of network.</text>
+  <text x="50" y="1565" fill="#94a3b8" font-size="18">• (Caution: R_p draws power V_s²/R_p directly from source; affects total source power).</text>
+
+  <text x="50" y="1620" fill="#fbbf24" font-size="19" font-weight="700">2. Resistor in Series with Ideal Current Source:</text>
+  <text x="50" y="1655" fill="#e2e8f0" font-size="18">• Branch current is rigidly fixed to I_s regardless of R_s.</text>
+  <text x="50" y="1690" fill="#94a3b8" font-size="18">• R_s can be SHORTED when calculating voltages/currents in rest of network.</text>
+  <text x="50" y="1725" fill="#94a3b8" font-size="18">• (Caution: R_s drops voltage I_s·R_s; alters total voltage across the current source).</text>
+  <text x="50" y="1775" fill="#38bdf8" font-size="18" font-weight="700">Exam Shortcut: Eliminating redundant branches simplifies nodes by 50%!</text>
+</g>
+
+<!-- Column 3: Superposition Theorem & Multi-Source Synthesis Algorithm -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">3. Superposition Theorem Algorithm</text>
+
+  <rect x="30" y="85" width="840" height="280" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Formal Statement &amp; Mathematical Formulation</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">In any linear, bilateral, time-invariant electric network containing N independent sources,</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">the response (branch voltage or current) equals the algebraic sum of the individual</text>
+  <text x="50" y="225" fill="#e2e8f0" font-size="18">responses produced by each independent source acting alone.</text>
+  
+  <text x="70" y="275" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">y_total = ∑_{k=1}^N y_k = y₁ + y₂ + ... + y_N</text>
+  <text x="50" y="325" fill="#fbbf24" font-size="18" font-weight="700">Linear Matrix Form: y = [a₁ a₂ ... a_N] · [S₁ S₂ ... S_N]ᵀ</text>
+  <text x="50" y="350" fill="#94a3b8" font-size="17">where a_k are constant transfer coefficients determined purely by network resistances.</text>
+
+  <rect x="30" y="390" width="840" height="520" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="435" fill="#c084fc" font-size="22" font-weight="800">The 4-Step Standard Superposition Algorithm</text>
+  
+  <text x="50" y="480" fill="#38bdf8" font-size="20" font-weight="700">Step 1: Identify all Independent Sources (S₁, S₂, ..., S_N)</text>
+  <text x="50" y="515" fill="#e2e8f0" font-size="18">• Number of sub-circuits equals total number of independent sources N.</text>
+
+  <text x="50" y="565" fill="#38bdf8" font-size="20" font-weight="700">Step 2: Isolate Source S_k (Sub-Circuit k)</text>
+  <text x="50" y="600" fill="#e2e8f0" font-size="18">• Keep source S_k active.</text>
+  <text x="50" y="635" fill="#e2e8f0" font-size="18">• Deactivate all other independent voltage sources (short circuit).</text>
+  <text x="50" y="670" fill="#e2e8f0" font-size="18">• Deactivate all other independent current sources (open circuit).</text>
+  <text x="50" y="705" fill="#f43f5e" font-size="18">• Keep ALL dependent sources intact and active!</text>
+
+  <text x="50" y="755" fill="#38bdf8" font-size="20" font-weight="700">Step 3: Solve Sub-Circuit k for Target Response y_k</text>
+  <text x="50" y="790" fill="#e2e8f0" font-size="18">• Write KCL/KVL to determine y_k with strict regard to reference polarity.</text>
+
+  <text x="50" y="840" fill="#38bdf8" font-size="20" font-weight="700">Step 4: Algebraic Superposition</text>
+  <text x="50" y="875" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">y_net = y₁ + y₂ + ... + y_N   (respecting +/- signs!)</text>
+
+  <rect x="30" y="930" width="840" height="420" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="975" fill="#34d399" font-size="22" font-weight="800">Solving Dependent Source Circuits via Superposition</text>
+  <text x="50" y="1015" fill="#e2e8f0" font-size="18">Consider circuit with 50 V source, 2 A source, and 3Ix dependent source:</text>
+  <text x="50" y="1055" fill="#fbbf24" font-size="19" font-weight="700">Sub-circuit 1 (50 V active, 2 A open):</text>
+  <text x="70" y="1090" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">Controlling current: Ix' = 50 / (R₁ + R₂ + 3) = 2.5 A</text>
+  <text x="70" y="1120" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">Target voltage:      V₁ = Ix' · R_L = 20 V</text>
+
+  <text x="50" y="1170" fill="#fbbf24" font-size="19" font-weight="700">Sub-circuit 2 (2 A active, 50 V short):</text>
+  <text x="70" y="1205" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">Controlling current: Ix'' = -1.2 A (due to 2 A injection)</text>
+  <text x="70" y="1235" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">Target voltage:      V₂ = Ix'' · R_L = -9.6 V</text>
+
+  <text x="50" y="1285" fill="#fbbf24" font-size="19" font-weight="700">Net Response:</text>
+  <text x="70" y="1320" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">V_total = V₁ + V₂ = 20 V + (-9.6 V) = +10.4 V</text>
+
+  <rect x="30" y="1370" width="840" height="440" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1415" fill="#fbbf24" font-size="22" font-weight="800">Efficiency Audit: When NOT to Use Superposition</text>
+  <text x="50" y="1460" fill="#e2e8f0" font-size="18">• If a circuit has 4 independent sources, Superposition requires solving 4 sub-circuits!</text>
+  <text x="50" y="1495" fill="#e2e8f0" font-size="18">• Systematic Nodal Analysis requires only 1 matrix solution: [Y][V] = [I].</text>
+  <text x="50" y="1535" fill="#f43f5e" font-size="19" font-weight="800">GATE Decision Rule:</text>
+  <text x="50" y="1570" fill="#e2e8f0" font-size="18">1. If independent sources N ≥ 3 → PREFER NODAL ANALYSIS (Saves 60% exam time!).</text>
+  <text x="50" y="1610" fill="#e2e8f0" font-size="18">2. Use Superposition when:</text>
+  <text x="70" y="1645" fill="#94a3b8" font-size="17">   - Question asks for contribution of a specific source alone.</text>
+  <text x="70" y="1680" fill="#94a3b8" font-size="17">   - Network contains orthogonal frequencies (DC + AC, or ω₁ ≠ ω₂).</text>
+  <text x="70" y="1715" fill="#94a3b8" font-size="17">   - Deactivating one source causes circuit to collapse into simple series-parallel.</text>
+  <text x="50" y="1765" fill="#38bdf8" font-size="18" font-weight="700">Strategic insight wins top ranks: match tool to problem topology!</text>
+</g>
+
+<!-- Column 4: The Power Non-Superposition Law & Orthogonal Regimes -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#f43f5e"/>
+  <text x="35" y="55" fill="#f43f5e" font-size="28" font-weight="900">4. Power Non-Superposition &amp; Orthogonality</text>
+
+  <rect x="30" y="85" width="840" height="360" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="125" fill="#f43f5e" font-size="22" font-weight="900">THE FATAL FALLACY: P_total ≠ P₁ + P₂</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="18">Power is a quadratic function of current or voltage: P = i² · R.</text>
+  <text x="50" y="205" fill="#e2e8f0" font-size="18">Because squaring is non-linear ((a + b)² = a² + b² + 2ab ≠ a² + b²):</text>
+  
+  <text x="70" y="255" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22" font-weight="800">P_total = (i₁ ± i₂)² · R = i₁²R + i₂²R ± 2 i₁ i₂ R</text>
+  <text x="70" y="300" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">P_total = P₁ + P₂ ± 2√(P₁ · P₂)   (Cross-Product Term!)</text>
+
+  <text x="50" y="355" fill="#94a3b8" font-size="18">The cross-product term ±2√(P₁P₂) represents non-linear interaction.</text>
+  <text x="50" y="390" fill="#94a3b8" font-size="18">Power adds algebraically IF AND ONLY IF the cross-product integrates to zero!</text>
+
+  <rect x="30" y="470" width="840" height="420" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="515" fill="#fbbf24" font-size="22" font-weight="800">Multi-Source DC Power Bounds Matrix</text>
+  <text x="50" y="555" fill="#e2e8f0" font-size="18">When source polarities or current directions in resistor R are unconstrained:</text>
+  
+  <rect x="50" y="585" width="800" height="90" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+  <text x="70" y="625" fill="#34d399" font-size="20" font-weight="800">Maximum Possible Power (Constructive Addition):</text>
+  <text x="70" y="655" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">P_max = (√P₁ + √P₂)²   [General: P_max = (∑ √P_k)²]</text>
+
+  <rect x="50" y="695" width="800" height="90" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1"/>
+  <text x="70" y="735" fill="#f43f5e" font-size="20" font-weight="800">Minimum Possible Power (Destructive Cancellation):</text>
+  <text x="70" y="765" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">P_min = (√P₁ - √P₂)²   [General: P_min = |∑ ±√P_k|_min²]</text>
+
+  <text x="50" y="815" fill="#fbbf24" font-size="18" font-weight="700">Classroom Drill: P₁ = 18 W alone, P₂ = 8 W alone in same resistor R:</text>
+  <text x="50" y="850" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="18">P_max = (√18 + √8)² = (3√2 + 2√2)² = (5√2)² = 50 W</text>
+  <text x="50" y="875" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="18">P_min = (√18 - √8)² = (3√2 - 2√2)² = (√2)²  = 2 W</text>
+
+  <rect x="30" y="910" width="840" height="450" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="955" fill="#38bdf8" font-size="22" font-weight="800">The Orthogonal Frequency Exception</text>
+  <text x="50" y="995" fill="#e2e8f0" font-size="18">When can we legally add powers? WHEN SOURCES ARE MUTUALLY ORTHOGONAL!</text>
+  <text x="50" y="1035" fill="#94a3b8" font-size="18">Orthogonality condition over common fundamental period T:</text>
+  <text x="70" y="1075" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">⟨i₁, i₂⟩ = (1/T) ∫₀ᵀ i₁(t) · i₂(t) dt ≡ 0</text>
+  
+  <text x="50" y="1125" fill="#fbbf24" font-size="19" font-weight="800">Orthogonal Excitation Regimes where P_avg = ∑ P_k:</text>
+  <text x="50" y="1165" fill="#e2e8f0" font-size="18">1. DC Source + AC Source: ∫₀ᵀ I_dc · I_m cos(ωt + θ) dt = 0</text>
+  <text x="70" y="1195" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">P_total = P_dc + P_ac = (I_dc)²R + (I_rms)²R</text>
+  <text x="50" y="1235" fill="#e2e8f0" font-size="18">2. Distinct Harmonic Frequencies: ω₁ ≠ ω₂</text>
+  <text x="70" y="1265" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">P_avg = ∑_{k=1}^M (I_k,rms)² · R</text>
+  <text x="50" y="1305" fill="#f43f5e" font-size="18" font-weight="700">DANGER: If ω₁ = ω₂, orthogonality FAILS due to cross phase cos(θ₁ - θ₂)!</text>
+
+  <rect x="30" y="1380" width="840" height="430" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="1425" fill="#34d399" font-size="22" font-weight="800">Master Summary: Linearity &amp; Superposition Rules</text>
+  
+  <text x="50" y="1470" fill="#fbbf24" font-size="18" font-weight="700">Concept / Operation</text>
+  <text x="380" y="1470" fill="#fbbf24" font-size="18" font-weight="700">Voltages &amp; Currents</text>
+  <text x="640" y="1470" font-weight="700" fill="#fbbf24" font-size="18">Power Absorption</text>
+  <path d="M 45 1490 L 850 1490" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="1525" fill="#e2e8f0" font-size="17">Superposition Valid?</text>
+  <text x="380" y="1525" fill="#34d399" font-size="17" font-weight="700">ALWAYS (Linear Ntwk)</text>
+  <text x="640" y="1525" fill="#f43f5e" font-size="17" font-weight="700">NO (Unless Orthogonal)</text>
+
+  <text x="50" y="1570" fill="#e2e8f0" font-size="17">Homogeneity Valid?</text>
+  <text x="380" y="1570" fill="#34d399" font-size="17" font-weight="700">v(kx) = k·v(x)</text>
+  <text x="640" y="1570" fill="#f43f5e" font-size="17" font-weight="700">P(kx) = k²·P(x)</text>
+
+  <text x="50" y="1615" fill="#e2e8f0" font-size="17">Dependent Sources</text>
+  <text x="380" y="1615" fill="#38bdf8" font-size="17">Keep Active Always</text>
+  <text x="640" y="1615" fill="#38bdf8" font-size="17">Keep Active Always</text>
+
+  <text x="50" y="1660" fill="#e2e8f0" font-size="17">DC + AC Combined</text>
+  <text x="380" y="1660" fill="#34d399" font-size="17">v(t) = V_dc + v_ac(t)</text>
+  <text x="640" y="1660" fill="#34d399" font-size="17">P_avg = P_dc + P_ac</text>
+
+  <text x="50" y="1705" fill="#e2e8f0" font-size="17">Identical Frequencies</text>
+  <text x="380" y="1705" fill="#34d399" font-size="17">Phasor Superposition</text>
+  <text x="640" y="1705" fill="#f43f5e" font-size="17">Includes Cross Term!</text>
+
+  <text x="50" y="1760" fill="#38bdf8" font-size="18" font-weight="800">Formula Sheet Core: P_tot = P₁ + P₂ ± 2√(P₁P₂) cos(θ₁ - θ₂)</text>
+</g>
+
+  </g>
+</svg>

@@ -338,6 +338,7 @@ CHAPTERS = [
         "subject": "Network Theory",
         "md": os.path.join(SRC_ROOT, "Network Theory", "Basics_of_Network_Formula_and_Revision_Sheet.md"),
         "figures_src": None,
+        "figures_ref": os.path.join(SRC_ROOT, "Network Theory", "figures_network_basics"),
         "figures_dst": None,
         "fig_prefix": "figures_network_basics/",
         "web_prefix": "/notes/nt/figures_network_basics/",
@@ -368,6 +369,7 @@ CHAPTERS = [
         "subject": "Network Theory",
         "md": os.path.join(SRC_ROOT, "Network Theory", "Transient_Analysis_Formula_and_Revision_Sheet.md"),
         "figures_src": None,
+        "figures_ref": os.path.join(SRC_ROOT, "Network Theory", "figures_transient_analysis"),
         "figures_dst": None,
         "fig_prefix": "figures_transient_analysis/",
         "web_prefix": "/notes/nt/figures_transient_analysis/",
@@ -457,6 +459,7 @@ CHAPTERS = [
         "subject": "Analog Electronics",
         "md": os.path.join(SRC_ROOT, "analog electronics", "Analog_Electronics_Diode_Circuits_and_Rectifiers_Formula_and_Revision_Sheet.md"),
         "figures_src": None,
+        "figures_ref": os.path.join(SRC_ROOT, "analog electronics", "figures_analog_electronics"),
         "figures_dst": None,
         "fig_prefix": "figures_analog_electronics/",
         "web_prefix": "/notes/ae/figures_analog_electronics/",
@@ -654,10 +657,18 @@ def clean_title(title):
 
 
 def rewrite_img_src(src, ch):
-    if src.startswith(ch["fig_prefix"]):
-        return ch["web_prefix"] + src[len(ch["fig_prefix"]):]
+    """Map a source image reference onto the deployed figures URL. When a
+    vector `.svg` twin exists for a raster reference it is preferred — the
+    blueprints stay crisp at any zoom and are ~25x smaller than the JPGs."""
     if src.startswith("http"):
         return src
+    twins = ch.get("_fig_files")
+    if twins and re.search(r"\.(jpe?g|png)$", src, re.I):
+        svg = re.sub(r"\.(jpe?g|png)$", ".svg", src, flags=re.I)
+        if os.path.basename(svg) in twins:
+            src = svg
+    if ch["fig_prefix"] and src.startswith(ch["fig_prefix"]):
+        return ch["web_prefix"] + src[len(ch["fig_prefix"]):]
     return ch["web_prefix"] + os.path.basename(src)
 
 
@@ -672,12 +683,6 @@ STRUCT_START = re.compile(r"^\s*(?:#{1,6}\s|>|[-*]\s|\d+[.)]\s|```|~~~|\$\$|\||<
 FIG_LINK = re.compile(r"\[([^\]]*)\]\(([^()\s]+?\.(?:jpg|jpeg|png|svg))\)", re.I)
 SEP_ROW = re.compile(r"^\s*\|?[\s:|-]+\|?\s*$")
 LIST_ITEM = re.compile(r"^\s*(?:[-*+]|\d+[.)])\s+(.*)$")
-
-
-def _fig_url(url):
-    # the vector .svg blueprints ship as their rasterized 4K .jpg twins (the
-    # figures copy only carries raster formats)
-    return re.sub(r"\.svg$", ".jpg", url, flags=re.I)
 
 
 def fig_block(caption, url, scope=""):
@@ -715,7 +720,7 @@ def gallery_table_to_figures(group):
         if not title:
             title = re.sub(r"\*+", "", m.group(1)).strip()
         caption = f"Fig {num} — {title}" if num else title
-        res.extend(fig_block(caption, _fig_url(m.group(2)), " ".join(scope)))
+        res.extend(fig_block(caption, m.group(2), " ".join(scope)))
     return res
 
 
@@ -724,7 +729,7 @@ def list_item_to_figure(body):
     pre = re.sub(r"\*+", "", body[: m.start()]).strip().rstrip(":").strip()
     title = re.sub(r"\*+", "", m.group(1)).strip()
     caption = " — ".join(p for p in (pre, title) if p) or title or "Figure"
-    return fig_block(caption, _fig_url(m.group(2)))
+    return fig_block(caption, m.group(2))
 
 
 def convert_fig_links(raw):
@@ -756,8 +761,7 @@ def convert_fig_links(raw):
                 continue
         fm = FIG_LINK.search(line)
         if fm and re.fullmatch(r"\s*\[([^\]]*)\]\([^)]+\)\s*", line):
-            out.extend(fig_block(re.sub(r"\*+", "", fm.group(1)).strip(),
-                                 _fig_url(fm.group(2))))
+            out.extend(fig_block(re.sub(r"\*+", "", fm.group(1)).strip(), fm.group(2)))
             i += 1
             continue
         out.append(line)
@@ -1126,6 +1130,11 @@ def parse_blocks(lines, ch):
 
 
 def build_chapter(ch):
+    # file inventory of the chapter's figure folder (or the folder referenced
+    # by sheet chapters via figures_ref) — drives the .svg-twin preference in
+    # rewrite_img_src
+    figdir = ch.get("figures_src") or ch.get("figures_ref")
+    ch["_fig_files"] = set(os.listdir(figdir)) if figdir and os.path.isdir(figdir) else set()
     raw = open(ch["md"], encoding="utf-8").read().replace("\r\n", "\n")
     # per-chapter source typo repairs (sources stay read-only; exact matches)
     for bad, good in REPAIRS.get(ch["id"], []):
@@ -1255,7 +1264,7 @@ def main():
             os.makedirs(dst, exist_ok=True)
             copied = 0
             for f in os.listdir(ch["figures_src"]):
-                if f.lower().endswith((".png", ".jpg", ".jpeg")):
+                if f.lower().endswith((".png", ".jpg", ".jpeg", ".svg")):
                     shutil.copy2(os.path.join(ch["figures_src"], f), os.path.join(dst, f))
                     copied += 1
             print(f"  figures: copied {copied} images -> public/{ch['figures_dst']}")

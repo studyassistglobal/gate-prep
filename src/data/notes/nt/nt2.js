@@ -31,7 +31,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_theorems/fig_01_linearity_superposition_and_power_fallacy_engine.jpg",
+     "src": "/notes/nt/figures_network_theorems/fig_01_linearity_superposition_and_power_fallacy_engine.svg",
      "alt": "Fig 01: Linearity, Superposition & Power Fallacy Engine"
     },
     {
@@ -44,7 +44,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_theorems/fig_02_thevenin_and_norton_3_cases_and_test_source_architecture.jpg",
+     "src": "/notes/nt/figures_network_theorems/fig_02_thevenin_and_norton_3_cases_and_test_source_architecture.svg",
      "alt": "Fig 02: Th\u00e9venin & Norton 3 Cases & Test Source Architecture"
     },
     {
@@ -57,7 +57,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_theorems/fig_03_mptt_dc_and_7_case_ac_conjugate_matching_matrix.jpg",
+     "src": "/notes/nt/figures_network_theorems/fig_03_mptt_dc_and_7_case_ac_conjugate_matching_matrix.svg",
      "alt": "Fig 03: Maximum Power Transfer Theorem (DC & 7-Case AC Matrix)"
     },
     {
@@ -70,7 +70,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_theorems/fig_04_reciprocity_theorem_and_30s_t_network_synthesis_engine.jpg",
+     "src": "/notes/nt/figures_network_theorems/fig_04_reciprocity_theorem_and_30s_t_network_synthesis_engine.svg",
      "alt": "Fig 04: Reciprocity Theorem & 30-Second T-Network Synthesis Engine"
     },
     {
@@ -83,7 +83,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_theorems/fig_05_millman_dual_millman_and_star_delta_reduction_architecture.jpg",
+     "src": "/notes/nt/figures_network_theorems/fig_05_millman_dual_millman_and_star_delta_reduction_architecture.svg",
      "alt": "Fig 05: Millman's Theorem, Dual Millman & Reductions"
     },
     {
@@ -96,7 +96,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_theorems/fig_06_substitution_compensation_and_tellegen_sensitivity_engine.jpg",
+     "src": "/notes/nt/figures_network_theorems/fig_06_substitution_compensation_and_tellegen_sensitivity_engine.svg",
      "alt": "Fig 06: Substitution, Compensation & Tellegen Sensitivity Engine"
     },
     {
@@ -109,7 +109,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_theorems/fig_07_two_port_black_box_synthesis_and_exam_decision_tree.jpg",
+     "src": "/notes/nt/figures_network_theorems/fig_07_two_port_black_box_synthesis_and_exam_decision_tree.svg",
      "alt": "Fig 07: 2-Port Black Box Terminal Synthesis & Exam Decision Tree"
     },
     {

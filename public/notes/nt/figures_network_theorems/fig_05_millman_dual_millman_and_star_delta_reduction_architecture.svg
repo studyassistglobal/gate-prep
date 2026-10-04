@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIG 05: MILLMAN'S THEOREM, DUAL MILLMAN &amp; MULTI-BRANCH REDUCTION ARCHITECTURE</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Parallel Voltage Sources • Series Current Sources • Unbalanced Neutral Shift • Multi-Phase Star-Delta Generator Equivalences</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • NETWORK THEOREMS TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Classical Millman's Theorem (Parallel Voltage Sources) -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Classical Millman's Theorem</text>
+
+  <rect x="30" y="85" width="840" height="290" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">Statement: Parallel Voltage Source Branches</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">When N parallel branches each consisting of an ideal voltage source V_k in series</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">with internal resistance R_k (conductance G_k = 1/R_k) are connected across two</text>
+  <text x="50" y="225" fill="#e2e8f0" font-size="18">common bus terminals A-B, the entire bank can be reduced to a single equivalent</text>
+  <text x="50" y="255" fill="#e2e8f0" font-size="18">Thévenin generator (V_M in series with R_M):</text>
+  
+  <text x="70" y="305" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">V_M = (∑_{k=1}^N V_k · G_k) / (∑_{k=1}^N G_k)</text>
+  <text x="70" y="345" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">R_M = 1 / (∑_{k=1}^N G_k)</text>
+
+  <rect x="30" y="400" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="445" fill="#38bdf8" font-size="22" font-weight="800">Rigorous Nodal Derivation</text>
+  <text x="50" y="485" fill="#e2e8f0" font-size="18">Choose common terminal B as datum reference (V_B = 0 V). Let V_A = V_M.</text>
+  <text x="50" y="520" fill="#e2e8f0" font-size="18">Applying KCL at node A (sum of currents leaving node A equals zero):</text>
+  <text x="70" y="560" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">∑_{k=1}^N (V_M - V_k) / R_k = 0</text>
+  <text x="70" y="605" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">∑_{k=1}^N (V_M - V_k) · G_k = 0</text>
+  <text x="70" y="650" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">V_M · (∑_{k=1}^N G_k) - ∑_{k=1}^N (V_k · G_k) = 0</text>
+  
+  <text x="70" y="700" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">V_M = [ V₁G₁ + V₂G₂ + ... + V_NG_N ] / [ G₁ + G₂ + ... + G_N ]</text>
+  <text x="50" y="750" fill="#94a3b8" font-size="18">• Equivalent resistance: Deactivating all sources leaves G_k in parallel:</text>
+  <text x="70" y="785" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">G_M = G₁ + G₂ + ... + G_N ⟹ R_M = 1 / G_M   (Q.E.D.)</text>
+
+  <rect x="30" y="845" width="840" height="460" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="890" fill="#fbbf24" font-size="22" font-weight="800">Source Polarity &amp; Pure Resistor Branches</text>
+  
+  <text x="50" y="935" fill="#34d399" font-size="19" font-weight="700">1. Polarity Sign Rule:</text>
+  <text x="50" y="970" fill="#e2e8f0" font-size="18">• If positive terminal of V_k faces node A: V_k is POSITIVE (+V_k).</text>
+  <text x="50" y="1005" fill="#e2e8f0" font-size="18">• If negative terminal faces node A: V_k is NEGATIVE (-V_k).</text>
+  <text x="70" y="1040" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="20">V_M = (V₁G₁ - V₂G₂ + V₃G₃) / (G₁ + G₂ + G₃)</text>
+
+  <text x="50" y="1090" fill="#34d399" font-size="19" font-weight="700">2. Branch with Resistor Only (Zero Voltage Source):</text>
+  <text x="50" y="1125" fill="#e2e8f0" font-size="18">• For a branch with only resistor R_p: treat as V_p = 0 V!</text>
+  <text x="50" y="1160" fill="#e2e8f0" font-size="18">• The term V_p · G_p = 0 in numerator, BUT G_p MUST BE INCLUDED in denominator!</text>
+  <text x="70" y="1200" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">Denominator = G₁ + G₂ + ... + G_p  (Includes pure resistors!)</text>
+  <text x="50" y="1245" fill="#f43f5e" font-size="18" font-weight="700">Exam Trap: Forgetting G_p in denominator gives 100% wrong voltage!</text>
+
+  <rect x="30" y="1330" width="840" height="480" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1375" fill="#34d399" font-size="22" font-weight="800">3-Branch Millman Solved Example</text>
+  <text x="50" y="1415" fill="#e2e8f0" font-size="18">Parallel branches: Branch 1 (10 V, 2 Ω), Branch 2 (-20 V, 4 Ω), Branch 3 (5 Ω only):</text>
+  <text x="70" y="1455" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">G₁ = 1/2 = 0.5 S,   G₂ = 1/4 = 0.25 S,   G₃ = 1/5 = 0.2 S</text>
+  <text x="70" y="1490" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="18">∑ G = 0.5 + 0.25 + 0.2 = 0.95 S</text>
+  <text x="70" y="1530" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="18">∑ V·G = (+10)·(0.5) + (-20)·(0.25) + (0)·(0.2) = 5 - 5 + 0 = 0 V</text>
+  
+  <text x="70" y="1580" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">V_M = 0 V / 0.95 S = 0.0 V !</text>
+  <text x="70" y="1620" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">R_M = 1 / 0.95 = 1.053 Ω</text>
+  <text x="50" y="1670" fill="#94a3b8" font-size="18">• Millman solved this 3-loop active bridge in 20 seconds!</text>
+  <text x="50" y="1705" fill="#94a3b8" font-size="18">• Connecting any external load R_L across A-B results in load current I_L = 0 A.</text>
+  <text x="50" y="1750" fill="#38bdf8" font-size="18" font-weight="700">Immediate inspection power: V₁G₁ balances V₂G₂!</text>
+</g>
+
+<!-- Column 2: Dual Millman's Theorem (Series Current Sources) -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#818cf8"/>
+  <text x="35" y="55" fill="#818cf8" font-size="28" font-weight="900">2. Dual Millman's Theorem</text>
+
+  <rect x="30" y="85" width="840" height="320" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="2"/>
+  <text x="50" y="125" fill="#818cf8" font-size="22" font-weight="900">Dual Statement: Series Current Source Loops</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">When N loops each consisting of an ideal current source I_k in parallel with</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">internal resistance R_k are connected in series across terminals A-B, the entire</text>
+  <text x="50" y="225" fill="#e2e8f0" font-size="18">chain collapses to a single Norton generator (I_M in parallel with R_M):</text>
+  
+  <text x="70" y="275" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">I_M = (∑_{k=1}^N I_k · R_k) / (∑_{k=1}^N R_k)</text>
+  <text x="70" y="315" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">R_M = ∑_{k=1}^N R_k   [G_M = 1 / ∑ R_k]</text>
+
+  <rect x="30" y="430" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="475" fill="#38bdf8" font-size="22" font-weight="800">Duality Transformation Mechanics</text>
+  <text x="50" y="515" fill="#e2e8f0" font-size="18">Dual Millman is derived by applying Thévenin-Norton source transformation to each</text>
+  <text x="50" y="545" fill="#e2e8f0" font-size="18">parallel Norton cell, placing them in series, then converting back:</text>
+  
+  <text x="50" y="595" fill="#fbbf24" font-size="19" font-weight="700">1. Convert each cell to Thévenin:</text>
+  <text x="70" y="630" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">V_k = I_k · R_k   (in series with R_k)</text>
+
+  <text x="50" y="675" fill="#fbbf24" font-size="19" font-weight="700">2. Sum Series Voltage Sources &amp; Resistances:</text>
+  <text x="70" y="710" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">V_total = ∑ (I_k · R_k)    and    R_total = ∑ R_k</text>
+
+  <text x="50" y="755" fill="#fbbf24" font-size="19" font-weight="700">3. Convert Series Equivalent back to Norton:</text>
+  <text x="70" y="795" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">I_M = V_total / R_total = [ ∑ I_k R_k ] / [ ∑ R_k ]   (Q.E.D.)</text>
+
+  <rect x="30" y="875" width="840" height="450" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="920" fill="#c084fc" font-size="22" font-weight="800">Current Source Branches in Classical Millman</text>
+  <text x="50" y="960" fill="#fbbf24" font-size="19" font-weight="800">What if a Classical Millman circuit contains an IDEAL CURRENT SOURCE branch?</text>
+  <text x="50" y="1000" fill="#e2e8f0" font-size="18">• An ideal current source I_s entering node A has internal resistance R = ∞ Ω.</text>
+  <text x="50" y="1035" fill="#e2e8f0" font-size="18">• Conductance G_s = 1/∞ = 0 S!</text>
+  
+  <text x="50" y="1085" fill="#34d399" font-size="20" font-weight="800">Modified Classical Millman Equation:</text>
+  <text x="70" y="1125" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">V_M = [ ∑ (V_k · G_k) + I_s,entering ] / [ ∑ G_k ]</text>
+  
+  <text x="50" y="1175" fill="#e2e8f0" font-size="18">• The current source I_s is added DIRECTLY to the numerator (since I = V·G)!</text>
+  <text x="50" y="1210" fill="#e2e8f0" font-size="18">• In the denominator, it adds 0 S (conductance is zero).</text>
+  <text x="50" y="1250" fill="#fbbf24" font-size="18" font-weight="700">Exam Super-Shortcut: Eliminates need for source transformation before Millman!</text>
+
+  <rect x="30" y="1350" width="840" height="460" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1395" fill="#34d399" font-size="22" font-weight="800">Millman vs. Nodal Analysis Complexity</text>
+  <text x="50" y="1440" fill="#fbbf24" font-size="18" font-weight="700">Topology Type</text>
+  <text x="360" y="1440" fill="#fbbf24" font-size="18" font-weight="700">Millman's Theorem</text>
+  <text x="640" y="1440" fill="#fbbf24" font-size="18" font-weight="700">Nodal Analysis</text>
+  <path d="M 45 1460 L 850 1460" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="1495" fill="#e2e8f0" font-size="17">Parallel Bus (2-Nodes)</text>
+  <text x="360" y="1495" fill="#34d399" font-size="17" font-weight="700">Instant 1-Line Solution</text>
+  <text x="640" y="1495" fill="#94a3b8" font-size="17">1 Node Equation</text>
+
+  <text x="50" y="1540" fill="#e2e8f0" font-size="17">Dependent Sources</text>
+  <text x="360" y="1540" fill="#f43f5e" font-size="17" font-weight="700">FAILS (Not applicable)</text>
+  <text x="640" y="1540" fill="#34d399" font-size="17" font-weight="700">Fully Supported (MNA)</text>
+
+  <text x="50" y="1585" fill="#e2e8f0" font-size="17">Multi-Node Ladder</text>
+  <text x="360" y="1585" fill="#94a3b8" font-size="17">Requires successive steps</text>
+  <text x="640" y="1585" fill="#34d399" font-size="17" font-weight="700">Matrix [Y][V] = [I]</text>
+
+  <text x="50" y="1630" fill="#e2e8f0" font-size="17">AC Complex Admittances</text>
+  <text x="360" y="1630" fill="#34d399" font-size="17" font-weight="700">V_M = ∑(V_k Y_k) / ∑ Y_k</text>
+  <text x="640" y="1630" fill="#34d399" font-size="17" font-weight="700">Admittance matrix</text>
+
+  <text x="50" y="1685" fill="#38bdf8" font-size="18" font-weight="800">Rule of Thumb: For 2-terminal parallel branches with independent sources,</text>
+  <text x="50" y="1720" fill="#fbbf24" font-size="18" font-weight="800">Millman is 3× faster than writing full nodal KCL!</text>
+</g>
+
+<!-- Column 3: Unbalanced 3-Phase Systems & Neutral Displacement -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">3. 3-Phase Neutral Displacement</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">The Neutral Shift Principle in Star-Star Networks</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">In a 3-phase 3-wire star-connected system without neutral wire, an unbalanced load</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">(Y_a ≠ Y_b ≠ Y_c) causes the load neutral n' to shift away from source neutral n.</text>
+  
+  <text x="50" y="245" fill="#fbbf24" font-size="20" font-weight="800">Millman's Neutral Displacement Formula:</text>
+  <text x="70" y="285" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">V_{n'n} = [ V_{an} · Y_a + V_{bn} · Y_b + V_{cn} · Y_c ] / [ Y_a + Y_b + Y_c ]</text>
+  <text x="50" y="335" fill="#e2e8f0" font-size="18">• V_{n'n} is the displacement voltage between star neutral points.</text>
+  <text x="50" y="370" fill="#94a3b8" font-size="17">• If load is balanced (Y_a = Y_b = Y_c = Y): V_{n'n} = Y·(V_{an}+V_{bn}+V_{cn})/(3Y) = 0 V!</text>
+
+  <rect x="30" y="450" width="840" height="420" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#c084fc" font-size="22" font-weight="800">Actual Phase Voltages Across Unbalanced Load Arms</text>
+  <text x="50" y="535" fill="#e2e8f0" font-size="18">Once neutral displacement V_{n'n} is calculated via Millman's formula:</text>
+  
+  <text x="50" y="580" fill="#fbbf24" font-size="19" font-weight="700">Load Arm Phase Voltages:</text>
+  <text x="70" y="615" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">V_{an'} = V_{an} - V_{n'n}</text>
+  <text x="70" y="655" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">V_{bn'} = V_{bn} - V_{n'n}</text>
+  <text x="70" y="695" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">V_{cn'} = V_{cn} - V_{n'n}</text>
+
+  <text x="50" y="745" fill="#fbbf24" font-size="19" font-weight="700">Load Phase Currents:</text>
+  <text x="70" y="780" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">I_a = V_{an'} · Y_a = (V_{an} - V_{n'n}) · Y_a</text>
+  <text x="70" y="815" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">I_b = V_{bn'} · Y_b = (V_{bn} - V_{n'n}) · Y_b</text>
+  <text x="70" y="850" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">I_c = V_{cn'} · Y_c = (V_{cn} - V_{n'n}) · Y_c</text>
+
+  <rect x="30" y="895" width="840" height="460" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="940" fill="#34d399" font-size="22" font-weight="800">4-Wire System with Finite Neutral Impedance Z_n</text>
+  <text x="50" y="980" fill="#e2e8f0" font-size="18">If a physical neutral conductor connects neutrals n and n' with impedance Z_n:</text>
+  <text x="50" y="1015" fill="#e2e8f0" font-size="18">• Treat neutral conductor as a 4th branch with source V_n = 0 V and admittance Y_n = 1/Z_n!</text>
+  
+  <text x="50" y="1065" fill="#fbbf24" font-size="20" font-weight="800">Generalized 4th-Wire Millman Equation:</text>
+  <text x="70" y="1105" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">V_{n'n} = [ V_{an}Y_a + V_{bn}Y_b + V_{cn}Y_c ] / [ Y_a + Y_b + Y_c + Y_n ]</text>
+  
+  <text x="50" y="1155" fill="#e2e8f0" font-size="18">• Solid Neutral Wire (Z_n = 0 ⟹ Y_n → ∞): V_{n'n} = 0 V (Zero neutral shift!).</text>
+  <text x="50" y="1190" fill="#e2e8f0" font-size="18">• Broken Neutral Wire (Open Circuit ⟹ Y_n = 0): Maximum dangerous neutral shift!</text>
+  <text x="50" y="1225" fill="#f43f5e" font-size="18" font-weight="700">Power System Hazard: Broken neutral over-voltages blow single-phase appliances!</text>
+
+  <rect x="30" y="1380" width="840" height="430" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1425" fill="#fbbf24" font-size="22" font-weight="800">3-Phase Classroom Numerical Drill</text>
+  <text x="50" y="1465" fill="#e2e8f0" font-size="18">Balanced supply: V_{an} = 100∠0° V, V_{bn} = 100∠-120° V, V_{cn} = 100∠+120° V.</text>
+  <text x="50" y="1500" fill="#e2e8f0" font-size="18">Unbalanced loads: Phase a has R = 10 Ω (Y_a = 0.1 S); Phases b &amp; c are open (Y_b=Y_c=0):</text>
+  
+  <text x="70" y="1545" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">V_{n'n} = [ 100∠0° · 0.1 + 0 + 0 ] / [ 0.1 + 0 + 0 ] = 100∠0° V !</text>
+  <text x="50" y="1590" fill="#e2e8f0" font-size="18">Phase a load voltage:</text>
+  <text x="70" y="1625" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">V_{an'} = V_{an} - V_{n'n} = 100∠0° - 100∠0° = 0 V !</text>
+  <text x="50" y="1670" fill="#94a3b8" font-size="18">• Load neutral floats completely up to Phase a voltage!</text>
+  <text x="50" y="1705" fill="#94a3b8" font-size="18">• Voltage between phase b and load neutral: V_{bn'} = 100∠-120° - 100∠0° = 173.2 V (Line-to-Line)!</text>
+  <text x="50" y="1750" fill="#38bdf8" font-size="18" font-weight="700">Millman provides instantaneous physical visualization of floating star points!</text>
+</g>
+
+<!-- Column 4: Star-Delta & Topological Equivalence Reductions -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#fbbf24"/>
+  <text x="35" y="55" fill="#fbbf24" font-size="28" font-weight="900">4. Reductions &amp; Equivalences</text>
+
+  <rect x="30" y="85" width="840" height="380" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">Delta-Star (Δ ↔ Y) Conversion Formulas</text>
+  
+  <text x="50" y="170" fill="#38bdf8" font-size="20" font-weight="700">Delta to Star (Δ → Y) Conversion:</text>
+  <text x="70" y="205" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">R_a = (R_{ab} · R_{ca}) / (R_{ab} + R_{bc} + R_{ca})</text>
+  <text x="50" y="245" fill="#34d399" font-size="18" font-weight="700">Mnemonic: Product of Adjacent Delta Sides / Perimeter Sum of all 3 Sides</text>
+
+  <text x="50" y="295" fill="#38bdf8" font-size="20" font-weight="700">Star to Delta (Y → Δ) Conversion:</text>
+  <text x="70" y="330" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">R_{ab} = R_a + R_b + (R_a · R_b) / R_c</text>
+  <text x="50" y="370" fill="#34d399" font-size="18" font-weight="700">Mnemonic: Sum of Pairwise Products / Opposite Star Arm Resistance</text>
+
+  <text x="50" y="420" fill="#fbbf24" font-size="18" font-weight="800">Symmetrical Case (Equal Resistors R): R_Y = R_Δ / 3   and   R_Δ = 3 · R_Y</text>
+
+  <rect x="30" y="490" width="840" height="380" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="535" fill="#f43f5e" font-size="22" font-weight="900">THE CAPACITOR Δ ↔ Y INVERSION TRAP</text>
+  <text x="50" y="575" fill="#f43f5e" font-size="18">The #1 formula memory error in competitive exams!</text>
+  <text x="50" y="610" fill="#e2e8f0" font-size="18">Because impedance is INVERSE to capacitance (Z_C = 1 / sC):</text>
+  
+  <rect x="50" y="640" width="800" height="120" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="70" y="680" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">For Capacitors:  C_Y = 3 · C_Δ    (MULTIPLY by 3!)</text>
+  <text x="70" y="725" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="900">                 C_Δ = C_Y / 3    (DIVIDE by 3!)</text>
+
+  <text x="50" y="790" fill="#fbbf24" font-size="18" font-weight="800">Memory Contrast Matrix:</text>
+  <text x="50" y="825" fill="#e2e8f0" font-size="18">• Resistors &amp; Inductors: R_Y = R_Δ / 3   and   L_Y = L_Δ / 3</text>
+  <text x="50" y="855" fill="#f43f5e" font-size="18" font-weight="700">• Capacitors (Inverted):  C_Y = 3 · C_Δ  (Capacitance in Star is LARGER!)</text>
+
+  <rect x="30" y="895" width="840" height="450" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="940" fill="#38bdf8" font-size="22" font-weight="800">Source Shift Theorems (Blakesley's Theorems)</text>
+  <text x="50" y="980" fill="#fbbf24" font-size="19" font-weight="700">1. Voltage Source Shift Through a Node:</text>
+  <text x="50" y="1015" fill="#e2e8f0" font-size="18">• A voltage source V_s connected in one branch connected to a node can be</text>
+  <text x="70" y="1045" fill="#e2e8f0" font-size="18">  shifted through the node by placing identical voltage sources V_s in series</text>
+  <text x="70" y="1075" fill="#e2e8f0" font-size="18">  with ALL OTHER branches connected to that node (pointing away from node)!</text>
+  
+  <text x="50" y="1125" fill="#fbbf24" font-size="19" font-weight="700">2. Current Source Shift Around a Loop:</text>
+  <text x="50" y="1160" fill="#e2e8f0" font-size="18">• A current source I_s bridging two distant nodes can be shifted through</text>
+  <text x="70" y="1190" fill="#e2e8f0" font-size="18">  intermediate nodes by creating a loop of identical current sources I_s!</text>
+  <text x="50" y="1235" fill="#34d399" font-size="18" font-weight="800">Benefit: Eliminates floating sources without creating supernodes or supermeshes!</text>
+
+  <rect x="30" y="1370" width="840" height="440" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1415" fill="#fbbf24" font-size="22" font-weight="800">Master Reduction Decision Tree</text>
+  
+  <text x="50" y="1460" fill="#34d399" font-size="18" font-weight="700">Can branches be combined in series or parallel directly?</text>
+  <text x="70" y="1490" fill="#e2e8f0" font-size="18">YES ⟹ Apply standard R_eq = R₁ + R₂ or R₁ ∥ R₂.</text>
+  
+  <text x="50" y="1535" fill="#34d399" font-size="18" font-weight="700">Are multiple voltage sources in parallel sharing 2 common buses?</text>
+  <text x="70" y="1565" fill="#38bdf8" font-size="18" font-weight="700">YES ⟹ Use Millman's Theorem: V_M = ∑(V_k G_k) / ∑ G_k.</text>
+  
+  <text x="50" y="1610" fill="#34d399" font-size="18" font-weight="700">Is network a closed bridge or triangular mesh?</text>
+  <text x="70" y="1640" fill="#fbbf24" font-size="18" font-weight="700">YES ⟹ Apply Delta-Star (Δ ↔ Y) transformation.</text>
+
+  <text x="50" y="1685" fill="#34d399" font-size="18" font-weight="700">Are sources floating across non-reference nodes?</text>
+  <text x="70" y="1715" fill="#c084fc" font-size="18" font-weight="700">YES ⟹ Apply Source Shift or Supernode/Supermesh method.</text>
+  <text x="50" y="1765" fill="#34d399" font-size="18" font-weight="900">Systematic reduction eliminates 80% of equation solving time!</text>
+</g>
+
+  </g>
+</svg>

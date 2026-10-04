@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIG 03: MAXIMUM POWER TRANSFER THEOREM: DC PROOF, VARIABLE ELEMENT TRAP &amp; 7-CASE AC MATRIX</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Calculus Derivations • Operating Point Shortcut • Active Loads • 50% Efficiency Limit • Complete 7-Case AC Complex Conjugate Matching</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • NETWORK THEOREMS TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: DC Resistive MPTT Derivation & Calculus Proof -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. DC MPTT Derivation &amp; Efficiency</text>
+
+  <rect x="30" y="85" width="840" height="280" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">The Maximum Power Transfer Statement (DC)</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">In a linear DC active network, a VARIABLE load resistance R_L connected across</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">the terminals will absorb MAXIMUM power from the source IF AND ONLY IF</text>
+  <text x="50" y="225" fill="#e2e8f0" font-size="18">the load resistance equals the Thévenin resistance of the driving network:</text>
+  
+  <text x="70" y="275" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">R_L = R_th   (Optimum Power Condition)</text>
+  <text x="50" y="325" fill="#38bdf8" font-size="18" font-weight="700">Crucial Constraint: Network parameters (V_th, R_th) must be FIXED!</text>
+
+  <rect x="30" y="380" width="840" height="490" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="425" fill="#38bdf8" font-size="22" font-weight="800">Rigorous Calculus Proof via First Derivative</text>
+  <text x="50" y="465" fill="#e2e8f0" font-size="18">Load current: I_L = V_th / (R_th + R_L). Power dissipated in load R_L:</text>
+  <text x="70" y="505" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22" font-weight="800">P_L(R_L) = I_L² · R_L = V_th² · [R_L / (R_th + R_L)²]</text>
+  
+  <text x="50" y="555" fill="#e2e8f0" font-size="18">Differentiating P_L with respect to variable load R_L and setting to zero:</text>
+  <text x="70" y="595" fill="#34d399" font-family="'Fira Code', monospace" font-size="19">dP_L / dR_L = V_th² · [ (R_th + R_L)² - 2 R_L(R_th + R_L) ] / (R_th + R_L)⁴ = 0</text>
+  <text x="70" y="635" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">(R_th + R_L) · [ (R_th + R_L) - 2 R_L ] = 0</text>
+  <text x="70" y="675" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">R_th - R_L = 0  ⟹  R_L = R_th   (Q.E.D.)</text>
+
+  <text x="50" y="725" fill="#fbbf24" font-size="19" font-weight="700">Maximum Power Delivered to Load:</text>
+  <text x="70" y="765" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">P_max = V_th² · R_th / (2 R_th)² = V_th² / (4 R_th)</text>
+  <text x="50" y="810" fill="#94a3b8" font-size="18">In terms of Norton short-circuit current: P_max = (1/4) · I_sc² · R_th.</text>
+  <text x="50" y="845" fill="#94a3b8" font-size="18">Terminal voltage at max power: V_L = V_th / 2. Terminal current: I_L = I_sc / 2.</text>
+
+  <rect x="30" y="890" width="840" height="420" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="935" fill="#f43f5e" font-size="22" font-weight="800">Efficiency &amp; The 50% Power System Barrier</text>
+  <text x="50" y="975" fill="#e2e8f0" font-size="18">Total power generated by source at maximum power transfer condition:</text>
+  <text x="70" y="1015" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">P_gen = V_th · I_L = V_th · [V_th / (2 R_th)] = V_th² / (2 R_th) = 2 · P_max</text>
+  
+  <text x="50" y="1065" fill="#fbbf24" font-size="19" font-weight="700">Efficiency Calculation at Maximum Power:</text>
+  <text x="70" y="1105" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="24" font-weight="900">η = (P_L / P_gen) · 100% = [P_max / (2 P_max)] · 100% = 50.0% !</text>
+  <text x="50" y="1155" fill="#e2e8f0" font-size="18">• Exactly HALF the generated power is WASTED as heat inside the source (R_th)!</text>
+  
+  <text x="50" y="1205" fill="#fbbf24" font-size="19" font-weight="800">Engineering Philosophy Distinction:</text>
+  <text x="50" y="1240" fill="#34d399" font-size="18">✓ Communication / RF / Sensors: Maximize signal transfer (MPTT applied, η = 50% OK).</text>
+  <text x="50" y="1275" fill="#f43f5e" font-size="18">✗ Power Systems / Grid Transmission: NEVER operate at MPTT! (Operating at 50% efficiency</text>
+  <text x="70" y="1300" fill="#f43f5e" font-size="17">would melt generators and double fuel costs; power grids operate at R_L ≫ R_th, η &gt; 95%).</text>
+
+  <rect x="30" y="1330" width="840" height="480" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1375" fill="#34d399" font-size="22" font-weight="800">Classroom Drill: Power vs. Load Curve Shape</text>
+  <text x="50" y="1415" fill="#e2e8f0" font-size="18">Behavior of P_L as R_L varies from 0 to ∞:</text>
+  <text x="50" y="1455" fill="#38bdf8" font-size="18">• At R_L = 0 Ω (Short Circuit):  V_L = 0 V  ⟹  P_L = 0 W,  η = 0%</text>
+  <text x="50" y="1495" fill="#34d399" font-size="18" font-weight="700">• At R_L = R_th (Peak Optimum):  P_L = P_max = V_th² / 4R_th,  η = 50%</text>
+  <text x="50" y="1535" fill="#38bdf8" font-size="18">• At R_L = ∞ Ω (Open Circuit):   I_L = 0 A  ⟹  P_L = 0 W,  η = 100%</text>
+  
+  <text x="50" y="1590" fill="#fbbf24" font-size="19" font-weight="800">Symmetry of Sub-Optimal Operating Points:</text>
+  <text x="50" y="1630" fill="#e2e8f0" font-size="18">For any target power P &lt; P_max, there exist EXACTLY TWO distinct load values</text>
+  <text x="50" y="1665" fill="#e2e8f0" font-size="18">R_L1 &lt; R_th and R_L2 &gt; R_th that absorb the same power P!</text>
+  <text x="70" y="1705" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Geometric Mean Invariant: R_L1 · R_L2 = R_th²</text>
+  <text x="50" y="1750" fill="#94a3b8" font-size="18">Example: If R_th = 10 Ω and R_L1 = 5 Ω gives 10 W, then R_L2 = 100/5 = 20 Ω gives 10 W!</text>
+</g>
+
+<!-- Column 2: The Master Exam Trap: Variable Internal Resistor vs. Variable Load -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#f43f5e"/>
+  <text x="35" y="55" fill="#f43f5e" font-size="28" font-weight="900">2. THE MASTER TRAP: Variable Internal R</text>
+
+  <rect x="30" y="85" width="840" height="380" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="125" fill="#f43f5e" font-size="22" font-weight="900">THE #1 DEADLIEST TRAP IN NETWORK THEORY</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="18">GATE Question: "Find the value of resistor R to transfer maximum power to a FIXED</text>
+  <text x="50" y="200" fill="#e2e8f0" font-size="18">load resistor R_fixed = 10 Ω."</text>
+  
+  <text x="50" y="250" fill="#fbbf24" font-size="20" font-weight="800">The Fatal Student Error (90% of Candidates Fail!):</text>
+  <text x="50" y="285" fill="#f43f5e" font-size="18">Blindly applying MPTT and setting R = 10 Ω !</text>
+  
+  <text x="50" y="335" fill="#34d399" font-size="20" font-weight="800">Mathematical Reality &amp; Calculus Truth:</text>
+  <text x="50" y="370" fill="#e2e8f0" font-size="18">MPTT applies IF AND ONLY IF the LOAD is variable and the SOURCE is fixed!</text>
+  <text x="50" y="405" fill="#38bdf8" font-size="18">When the LOAD IS FIXED and the INTERNAL RESISTOR IS VARIABLE, MPTT DOES NOT APPLY!</text>
+
+  <rect x="30" y="490" width="840" height="640" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="535" fill="#fbbf24" font-size="22" font-weight="800">The 3 Canonical Scenarios of the Variable Trap</text>
+  
+  <text x="50" y="580" fill="#38bdf8" font-size="20" font-weight="800">Scenario 1: Variable Resistor R in SERIES with Source (V_s, R, R_load fixed):</text>
+  <text x="70" y="615" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="18">P_load(R) = I² · R_load = [ V_s / (R + R_load) ]² · R_load</text>
+  <text x="70" y="650" fill="#e2e8f0" font-size="18">To maximize P_load, we must minimize denominator (R + R_load):</text>
+  <text x="90" y="690" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">Optimum: R = 0 Ω  (Short Circuit!)   [P_max = V_s² / R_load, η = 100%]</text>
+
+  <text x="50" y="745" fill="#38bdf8" font-size="20" font-weight="800">Scenario 2: Variable Resistor R in PARALLEL / SHUNT with Source:</text>
+  <text x="70" y="780" fill="#e2e8f0" font-size="18">Resistor R shunts away current from the load branch.</text>
+  <text x="70" y="815" fill="#e2e8f0" font-size="18">To maximize power reaching the load, R must divert ZERO current:</text>
+  <text x="90" y="855" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">Optimum: R = ∞ Ω  (Open Circuit!)</text>
+
+  <text x="50" y="910" fill="#38bdf8" font-size="20" font-weight="800">Scenario 3: Variable Resistor R IS THE LOAD ITSELF (Standard MPTT):</text>
+  <text x="70" y="945" fill="#e2e8f0" font-size="18">Here the target power is dissipated inside variable element R itself:</text>
+  <text x="70" y="980" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="18">P(R) = [ V_th / (R_th + R) ]² · R</text>
+  <text x="90" y="1020" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">Optimum: R = R_th   (MPTT Strictly Valid!)</text>
+  <text x="70" y="1065" fill="#94a3b8" font-size="17">Notice the stark difference: R = 0 Ω vs R = ∞ Ω vs R = R_th!</text>
+
+  <rect x="30" y="1150" width="840" height="380" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="1195" fill="#34d399" font-size="22" font-weight="800">Active Load Matching (Resistor in Series with Source E)</text>
+  <text x="50" y="1235" fill="#e2e8f0" font-size="18">What if the load branch contains an active voltage source: Load = R_L + E_L?</text>
+  <text x="50" y="1275" fill="#f43f5e" font-size="18">DANGER: Do NOT set R_L = R_th blindly! Load is not a pure passive resistor.</text>
+  
+  <text x="50" y="1325" fill="#fbbf24" font-size="19" font-weight="800">The Operating Point Principle (Faculty Method):</text>
+  <text x="50" y="1360" fill="#e2e8f0" font-size="18">To maximize power absorbed by the ENTIRE active load branch:</text>
+  <text x="70" y="1395" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="21" font-weight="800">V_terminal = V_th / 2    and    I_terminal = V_th / (2 R_th)</text>
+  <text x="50" y="1440" fill="#e2e8f0" font-size="18">Match the load terminal equation V_L(I_L) to the operating point directly:</text>
+  <text x="70" y="1475" fill="#34d399" font-family="'Fira Code', monospace" font-size="21" font-weight="800">E_L + I_terminal · R_L = V_th / 2 ⟹ Solve for R_L !</text>
+
+  <rect x="30" y="1550" width="840" height="260" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1595" fill="#fbbf24" font-size="22" font-weight="800">Exam Diagnostic Decision Matrix</text>
+  <text x="50" y="1635" fill="#e2e8f0" font-size="18">Q1: Which element is variable? ⟹ If load → MPTT. If internal → Calculus/Limits.</text>
+  <text x="50" y="1670" fill="#e2e8f0" font-size="18">Q2: Where is power measured? ⟹ In variable element? Or fixed element?</text>
+  <text x="50" y="1705" fill="#e2e8f0" font-size="18">Q3: Is the load purely passive? ⟹ If active source present → Operating point!</text>
+  <text x="50" y="1745" fill="#38bdf8" font-size="18" font-weight="800">Follow this 3-question diagnostic to avoid all negative marks in GATE!</text>
+</g>
+
+<!-- Column 3: AC Power Foundations & Reactance Cancellation -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">3. AC Circuits &amp; Reactance Tuning</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">AC Power Definitions &amp; The Active Power Law</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">In AC sinusoidal steady-state (phasor domain), source has Thevenin impedance:</text>
+  <text x="70" y="200" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Z_th = R_th + j X_th    (R_th &gt; 0, X_th can be inductive + or capacitive -)</text>
+  <text x="50" y="240" fill="#e2e8f0" font-size="18">Load impedance: Z_L = R_L + j X_L.</text>
+  
+  <text x="50" y="285" fill="#fbbf24" font-size="19" font-weight="800">CRITICAL LAW: AC Load Power is ALWAYS Active (Real) Power:</text>
+  <text x="70" y="325" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">P_L = |I_L|² · R_L   (in Watts [W])</text>
+  <text x="50" y="365" fill="#94a3b8" font-size="18">• Pure reactances (L, C) have zero average power dissipation: P_reactance ≡ 0 W!</text>
+  <text x="50" y="395" fill="#94a3b8" font-size="18">• DANGER: Never calculate P_L = |I_L|² · |Z_L|! (That gives Apparent Power S in VA).</text>
+
+  <rect x="30" y="450" width="840" height="460" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#c084fc" font-size="22" font-weight="800">The Universal AC Load Current &amp; Power Equation</text>
+  <text x="50" y="535" fill="#e2e8f0" font-size="18">Total loop impedance: Z_total = (R_th + R_L) + j(X_th + X_L).</text>
+  <text x="50" y="570" fill="#e2e8f0" font-size="18">Magnitude of load current phasor:</text>
+  <text x="70" y="610" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">|I_L| = |V_th| / √[ (R_th + R_L)² + (X_th + X_L)² ]</text>
+  
+  <text x="50" y="660" fill="#fbbf24" font-size="19" font-weight="700">Average Active Power Delivered to Load:</text>
+  <text x="70" y="700" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">P_L(R_L, X_L) = |V_th|² · R_L / [ (R_th + R_L)² + (X_th + X_L)² ]</text>
+
+  <text x="50" y="755" fill="#fbbf24" font-size="19" font-weight="800">The Reactance Cancellation Principle:</text>
+  <text x="50" y="790" fill="#e2e8f0" font-size="18">• In the denominator, (X_th + X_L)² is a squared term (≥ 0).</text>
+  <text x="50" y="825" fill="#e2e8f0" font-size="18">• If X_L is independently adjustable, we can minimize denominator by setting:</text>
+  <text x="70" y="865" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">X_th + X_L = 0  ⟹  X_L = -X_th   (Series Resonance!)</text>
+
+  <rect x="30" y="930" width="840" height="450" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="975" fill="#38bdf8" font-size="22" font-weight="800">Peak vs. RMS Source Specification Trap</text>
+  <text x="50" y="1015" fill="#f43f5e" font-size="19" font-weight="800">THE EXAM DISASTER: Confusing Peak (V_m) with RMS (V_rms)</text>
+  <text x="50" y="1055" fill="#e2e8f0" font-size="18">If the source is given as a time-domain waveform: v_s(t) = V_m cos(ωt + ϕ):</text>
+  <text x="70" y="1095" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="21" font-weight="800">RMS Voltage: V_rms = V_m / √2</text>
+  
+  <text x="50" y="1145" fill="#fbbf24" font-size="19" font-weight="700">Maximum Power Formulas Compared:</text>
+  <text x="70" y="1185" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Using RMS Voltage:  P_max = |V_th,rms|² / (4 R_th)</text>
+  <text x="70" y="1230" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Using Peak Voltage: P_max = V_m² / (8 R_th)   (Factor of 8!)</text>
+  <text x="50" y="1280" fill="#94a3b8" font-size="18">• In GATE NAT questions, using V_m² / 4R_th instead of V_m² / 8R_th loses 2 marks!</text>
+  <text x="50" y="1310" fill="#94a3b8" font-size="18">• ALWAYS check if source amplitude is specified as Peak or RMS!</text>
+
+  <rect x="30" y="1400" width="840" height="410" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1445" fill="#34d399" font-size="22" font-weight="800">Tuning Components for Reactance Cancellation</text>
+  <text x="50" y="1485" fill="#e2e8f0" font-size="18">To achieve X_L = -X_th in practice at frequency ω (rad/s):</text>
+  
+  <text x="50" y="1530" fill="#fbbf24" font-size="18" font-weight="700">1. Source is Inductive (X_th = +ω L_th &gt; 0):</text>
+  <text x="70" y="1565" fill="#38bdf8" font-size="18">Load must be CAPACITIVE: X_L = -1 / (ω C) = -ω L_th</text>
+  <text x="90" y="1605" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">C_optimum = 1 / (ω² · L_th)</text>
+
+  <text x="50" y="1655" fill="#fbbf24" font-size="18" font-weight="700">2. Source is Capacitive (X_th = -1 / (ω C_th) &lt; 0):</text>
+  <text x="70" y="1690" fill="#38bdf8" font-size="18">Load must be INDUCTIVE: X_L = +ω L = +1 / (ω C_th)</text>
+  <text x="90" y="1730" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">L_optimum = 1 / (ω² · C_th)</text>
+  <text x="50" y="1775" fill="#94a3b8" font-size="17">At this resonance point, power factor = 1.0 (Unity), circuit behaves purely resistively!</text>
+</g>
+
+<!-- Column 4: The Complete 7-Case AC Load Impedance Matching Matrix -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">4. The Master 7-Case AC MPTT Matrix</text>
+
+  <rect x="30" y="85" width="840" height="320" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="50" y="125" fill="#34d399" font-size="22" font-weight="900">CASE 1: Both R_L and X_L Independently Variable</text>
+  <text x="50" y="165" fill="#fbbf24" font-size="20" font-weight="800">Complex Conjugate Matching Condition:</text>
+  <text x="70" y="205" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="900">Z_L = Z_th* = R_th - j X_th</text>
+  <text x="70" y="245" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">(R_L = R_th   and   X_L = -X_th)</text>
+  
+  <text x="50" y="295" fill="#34d399" font-size="20" font-weight="800">Maximum Active Power Delivered:</text>
+  <text x="70" y="335" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">P_max = |V_th|² / (4 R_th)</text>
+  <text x="50" y="375" fill="#94a3b8" font-size="17">The gold standard: Both resonance and resistance matching achieved simultaneously!</text>
+
+  <rect x="30" y="425" width="840" height="340" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="465" fill="#38bdf8" font-size="22" font-weight="900">CASE 2: R_L Variable, but X_L is FIXED / CONSTANT</text>
+  <text x="50" y="505" fill="#e2e8f0" font-size="18">Here reactance cannot be tuned to zero. Differentiating P_L with respect to R_L:</text>
+  <text x="70" y="545" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22" font-weight="800">R_L = √[ R_th² + (X_th + X_L)² ]</text>
+  
+  <text x="50" y="595" fill="#f43f5e" font-size="19" font-weight="800">SPECIAL SUB-CASE 2A: Purely Resistive Load (X_L = 0 Ω):</text>
+  <text x="70" y="635" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">R_L = |Z_th| = √(R_th² + X_th²)</text>
+  <text x="50" y="680" fill="#fbbf24" font-size="18" font-weight="700">DANGER: NEVER set R_L = R_th when X_th ≠ 0 and load is pure resistor!</text>
+  <text x="70" y="715" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="19">P_max = |V_th|² · |Z_th| / [ (R_th + |Z_th|)² + X_th² ]</text>
+
+  <rect x="30" y="785" width="840" height="250" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="825" fill="#c084fc" font-size="22" font-weight="900">CASE 3: X_L Variable, but R_L is FIXED / CONSTANT</text>
+  <text x="50" y="865" fill="#e2e8f0" font-size="18">Since R_L is fixed, power is maximized purely by minimizing loop impedance:</text>
+  <text x="70" y="905" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">X_L = -X_th   (Cancel source reactance!)</text>
+  <text x="70" y="950" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">P_max = |V_th|² · R_L / (R_th + R_L)²</text>
+  <text x="50" y="995" fill="#94a3b8" font-size="17">(If R_L happens to equal R_th, this collapses to Case 1: P_max = |V_th|²/4R_th).</text>
+
+  <rect x="30" y="1055" width="840" height="260" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="1095" fill="#fbbf24" font-size="22" font-weight="900">CASE 4: Fixed Load Angle θ_L, Variable Magnitude |Z_L|</text>
+  <text x="50" y="1135" fill="#e2e8f0" font-size="18">Load power factor cos θ_L is constant (Z_L = |Z_L| ∠θ_L), but magnitude can vary:</text>
+  <text x="70" y="1175" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">|Z_L| = |Z_th| = √(R_th² + X_th²)</text>
+  <text x="50" y="1225" fill="#e2e8f0" font-size="18">• Magnitude of load impedance must equal magnitude of source impedance!</text>
+  <text x="50" y="1265" fill="#94a3b8" font-size="17">Generalizes Case 2A (where θ_L = 0°) to any arbitrary fixed load phase angle.</text>
+
+  <rect x="30" y="1335" width="840" height="475" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="1375" fill="#38bdf8" font-size="22" font-weight="900">CASES 5, 6 &amp; 7: Tuned Elements &amp; Constant Current</text>
+  
+  <text x="50" y="1415" fill="#34d399" font-size="19" font-weight="700">CASE 5: Tuning Capacitor C to Maximize Load Power:</text>
+  <text x="70" y="1450" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="21" font-weight="800">ω L_th = 1 / (ω C) ⟹ C = 1 / (ω² · L_th)</text>
+
+  <text x="50" y="1495" fill="#34d399" font-size="19" font-weight="700">CASE 6: Tuning Frequency ω for Fixed L &amp; C:</text>
+  <text x="70" y="1530" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="21" font-weight="800">ω_res = 1 / √(L · C)   (Resonance Frequency)</text>
+
+  <text x="50" y="1575" fill="#34d399" font-size="19" font-weight="700">CASE 7: Constant Current Load I_o:</text>
+  <text x="50" y="1610" fill="#e2e8f0" font-size="18">• Load draws fixed current I_o regardless of terminal voltage.</text>
+  <text x="50" y="1645" fill="#e2e8f0" font-size="18">• Power absorbed: P_L = V_terminal · I_o = (V_th - I_o · R_th) · I_o.</text>
+  <text x="50" y="1680" fill="#e2e8f0" font-size="18">• Maximize by making R_th as small as possible (ideally R_th = 0 Ω)!</text>
+
+  <path d="M 50 1715 L 850 1715" stroke="#334155" stroke-width="1"/>
+  <text x="50" y="1750" fill="#fbbf24" font-size="19" font-weight="800">Master Mnemonic for AC MPTT:</text>
+  <text x="50" y="1780" fill="#e2e8f0" font-size="18">"Tune reactances to CANCEL (-X_th); match resistances to EQUAL (R_th)!"</text>
+</g>
+
+  </g>
+</svg>

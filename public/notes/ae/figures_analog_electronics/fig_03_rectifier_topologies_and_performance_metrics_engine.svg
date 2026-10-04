@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#0a0f1d; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" opacity="0.6"/>
+    </pattern>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="3840" height="2160" fill="#0a0f1d"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Outer Blueprint Border -->
+  <rect x="30" y="30" width="3780" height="2100" rx="16" fill="none" stroke="#38bdf8" stroke-width="2.5" opacity="0.8"/>
+  <rect x="42" y="42" width="3756" height="2076" rx="10" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <g transform="translate(60, 60)">
+    <rect x="0" y="0" width="3720" height="120" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+    <rect x="0" y="0" width="12" height="120" rx="6" fill="url(#headerGrad)"/>
+    
+    <!-- Title & Subtitle -->
+    <text x="40" y="52" fill="url(#headerGrad)" font-size="38" font-weight="900" letter-spacing="1.5">RECTIFIER TOPOLOGIES &amp; PERFORMANCE METRICS ENGINE</text>
+    <text x="40" y="94" fill="#94a3b8" font-size="22" font-weight="500">Half-Wave, Center-Tapped &amp; Bridge Derivations, Fourier Harmonic Series &amp; 12-Parameter Master Matrix</text>
+    
+    <!-- Badges -->
+    <rect x="3100" y="32" width="260" height="56" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="3230" y="68" fill="#38bdf8" font-size="20" font-weight="800" text-anchor="middle">GATE 2027 TITAN SUITE</text>
+    <rect x="3400" y="32" width="280" height="56" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="3540" y="68" fill="#fbbf24" font-size="20" font-weight="800" text-anchor="middle">FIGURE 3 • 4K VECTOR</text>
+  </g>
+
+  <!-- Content Canvas -->
+  <g transform="translate(60, 200)">
+    
+<!-- Column 1: Half-Wave Rectifier -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="890" height="660" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="660" rx="5" fill="#38bdf8"/>
+  <text x="30" y="45" fill="#38bdf8" font-size="26" font-weight="800">1. Half-Wave Rectifier (HWR) Engine</text>
+  <text x="30" y="85" fill="#e2e8f0" font-size="19">• Topology: Single diode in series with secondary winding and load R_L.</text>
+  <text x="30" y="120" fill="#94a3b8" font-size="18">Input: v_i(t) = V_m sin(ω t)   |   Diode conducts for 0 ≤ ω t ≤ π; OFF for π ≤ ω t ≤ 2π.</text>
+  
+  <text x="30" y="165" fill="#34d399" font-size="20" font-weight="700">A. DC / Average Output Values:</text>
+  <text x="50" y="200" fill="#38bdf8" font-size="22" font-weight="800">  V_dc = V_m / π ≈ 0.318 V_m      I_dc = I_m / π</text>
+  
+  <text x="30" y="245" fill="#34d399" font-size="20" font-weight="700">B. RMS Output Values:</text>
+  <text x="50" y="280" fill="#38bdf8" font-size="22" font-weight="800">  V_rms = V_m / 2 = 0.500 V_m     I_rms = I_m / 2</text>
+  
+  <text x="30" y="325" fill="#fbbf24" font-size="20" font-weight="700">C. Key Performance Metrics:</text>
+  <text x="50" y="360" fill="#e2e8f0" font-size="18">• Form Factor: FF = V_rms / V_dc = (V_m/2) / (V_m/π) = π/2 ≈ 1.57</text>
+  <text x="50" y="395" fill="#e2e8f0" font-size="18">• Crest (Peak) Factor: CF = V_m / V_rms = V_m / (V_m/2) = 2.00</text>
+  <text x="50" y="430" fill="#f43f5e" font-size="20" font-weight="800">• Ripple Factor: r = √(FF² - 1) = √(1.57² - 1) ≈ 1.21  (AC ripple exceeds DC!)</text>
+  <text x="50" y="470" fill="#34d399" font-size="20" font-weight="800">• Max Efficiency: η_max = P_dc / P_ac = (4/π²) · [R_L / (R_L + r_f)] ≈ 40.6%</text>
+  <text x="50" y="510" fill="#c084fc" font-size="20" font-weight="800">• Peak Inverse Voltage: PIV = V_m  (Occurs at negative peak v_i = -V_m)</text>
+  <text x="50" y="550" fill="#fbbf24" font-size="20" font-weight="800">• Transformer Utilization Factor: TUF = P_dc / S_rating ≈ 0.287</text>
+  <text x="50" y="590" fill="#e2e8f0" font-size="18">• Output Ripple Frequency: f_r = f_in  (50 Hz in → 50 Hz ripple out)</text>
+  <text x="30" y="635" fill="#f43f5e" font-size="17" font-weight="700">★ Major Drawback: Massive DC core saturation flux in transformer due to unidirectional current!</text>
+</g>
+
+<!-- Column 2: Full-Wave Center-Tapped Rectifier -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="890" height="660" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="660" rx="5" fill="#34d399"/>
+  <text x="30" y="45" fill="#34d399" font-size="26" font-weight="800">2. Full-Wave Center-Tapped (FWR-CT) Engine</text>
+  <text x="30" y="85" fill="#e2e8f0" font-size="19">• Topology: Two diodes with center-tapped secondary winding; D₁ conducts on (+), D₂ on (-).</text>
+  <text x="30" y="120" fill="#94a3b8" font-size="18">Secondary Voltages: v₁ = V_m sin(ω t) w.r.t center-tap, v₂ = -V_m sin(ω t).</text>
+
+  <text x="30" y="165" fill="#38bdf8" font-size="20" font-weight="700">A. DC / Average Output Values:</text>
+  <text x="50" y="200" fill="#34d399" font-size="22" font-weight="800">  V_dc = 2 V_m / π ≈ 0.636 V_m    I_dc = 2 I_m / π</text>
+
+  <text x="30" y="245" fill="#38bdf8" font-size="20" font-weight="700">B. RMS Output Values:</text>
+  <text x="50" y="280" fill="#34d399" font-size="22" font-weight="800">  V_rms = V_m / √2 ≈ 0.707 V_m    I_rms = I_m / √2</text>
+
+  <text x="30" y="325" fill="#fbbf24" font-size="20" font-weight="700">C. Key Performance Metrics:</text>
+  <text x="50" y="360" fill="#e2e8f0" font-size="18">• Form Factor: FF = V_rms / V_dc = (V_m/√2) / (2V_m/π) = π / (2√2) ≈ 1.11</text>
+  <text x="50" y="395" fill="#e2e8f0" font-size="18">• Crest Factor: CF = V_m / V_rms = V_m / (V_m/√2) = √2 ≈ 1.414</text>
+  <text x="50" y="430" fill="#34d399" font-size="20" font-weight="800">• Ripple Factor: r = √(1.11² - 1) ≈ 0.482  (48.2% ripple vs 121% in HWR!)</text>
+  <text x="50" y="470" fill="#34d399" font-size="20" font-weight="800">• Max Efficiency: η_max = (8/π²) · [R_L / (R_L + r_f)] ≈ 81.2% (DOUBLED!)</text>
+  <text x="50" y="510" fill="#f43f5e" font-size="20" font-weight="800">• Peak Inverse Voltage: PIV = 2 V_m  (Critical high-voltage stress!)</text>
+  <text x="50" y="550" fill="#fbbf24" font-size="20" font-weight="800">• Transformer Utilization Factor: TUF = 0.693  (Average of pri 0.812 &amp; sec 0.573)</text>
+  <text x="50" y="590" fill="#e2e8f0" font-size="18">• Output Ripple Frequency: f_r = 2 f_in  (100 Hz ripple for 50 Hz supply)</text>
+  <text x="30" y="635" fill="#f43f5e" font-size="17" font-weight="700">★ Critical PIV Trap: When D₁ conducts (+V_m), cathode of D₂ is at +V_m, anode at -V_m ⇒ PIV = 2V_m!</text>
+</g>
+
+<!-- Column 3: Full-Wave Bridge Rectifier -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="890" height="660" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="660" rx="5" fill="#fbbf24"/>
+  <text x="30" y="45" fill="#fbbf24" font-size="26" font-weight="800">3. Full-Wave Bridge Rectifier (FWR-Bridge) Engine</text>
+  <text x="30" y="85" fill="#e2e8f0" font-size="19">• Topology: 4 diodes in bridge loop; diagonal pairs conduct simultaneously (D₁,D₂ on (+); D₃,D₄ on (-)).</text>
+  <text x="30" y="120" fill="#94a3b8" font-size="18">No center-tapped transformer needed! Standard single secondary winding.</text>
+
+  <text x="30" y="165" fill="#38bdf8" font-size="20" font-weight="700">A. DC &amp; RMS Output Values:</text>
+  <text x="50" y="200" fill="#fbbf24" font-size="22" font-weight="800">  V_dc = 2 V_m / π ≈ 0.636 V_m    V_rms = V_m / √2 ≈ 0.707 V_m</text>
+  <text x="50" y="235" fill="#94a3b8" font-size="17">(Accounting for 2 practical diode drops: V_dc = 2(V_m - 2V_γ)/π)</text>
+
+  <text x="30" y="275" fill="#34d399" font-size="20" font-weight="700">B. Key Performance Metrics:</text>
+  <text x="50" y="310" fill="#e2e8f0" font-size="18">• Form Factor: FF = 1.11   |   Crest Factor: CF = 1.414</text>
+  <text x="50" y="345" fill="#34d399" font-size="20" font-weight="800">• Ripple Factor: r = 0.482 (Identical to center-tapped)</text>
+  <text x="50" y="385" fill="#34d399" font-size="20" font-weight="800">• Max Efficiency: η_max = 81.2% (Identical to center-tapped)</text>
+  <text x="50" y="425" fill="#38bdf8" font-size="22" font-weight="800">• Peak Inverse Voltage: PIV = V_m  (HALF of center-tapped PIV!)</text>
+  <text x="50" y="465" fill="#34d399" font-size="22" font-weight="800">• Transformer Utilization Factor: TUF = 0.812  (HIGHEST among all topologies!)</text>
+  <text x="50" y="505" fill="#e2e8f0" font-size="18">• Output Ripple Frequency: f_r = 2 f_in</text>
+  <text x="50" y="540" fill="#e2e8f0" font-size="18">• Core Saturation: ZERO DC flux saturation (bipolar symmetric current in transformer).</text>
+  <text x="30" y="590" fill="#38bdf8" font-size="18" font-weight="700">★ Superiority: Bridge rectifier requires CHEAPER transformer with 1/2 PIV rating and highest TUF (81.2%).</text>
+  <text x="30" y="625" fill="#f43f5e" font-size="17" font-weight="700">★ Trade-Off: 2 diode drops in series (2V_γ ≈ 1.4 V) lowers output in low-voltage supplies (&lt; 5 V).</text>
+</g>
+
+<!-- Column 4: Fourier Harmonic Spectrum -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="930" height="660" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="660" rx="5" fill="#c084fc"/>
+  <text x="30" y="45" fill="#c084fc" font-size="26" font-weight="800">4. Fourier Harmonic Series Engine</text>
+  
+  <text x="30" y="90" fill="#38bdf8" font-size="22" font-weight="800">A. HWR Fourier Expansion:</text>
+  <text x="50" y="130" fill="#34d399" font-size="20" font-weight="700">v_o(t) = (V_m/π) + (V_m/2)sin(ωt) - (2V_m/π) ∑ [cos(2nωt) / (4n² - 1)]</text>
+  <text x="50" y="165" fill="#94a3b8" font-size="17">• Contains strong fundamental frequency harmonic (ω) at amplitude V_m/2!</text>
+
+  <text x="30" y="215" fill="#fbbf24" font-size="22" font-weight="800">B. FWR (CT &amp; Bridge) Fourier Expansion:</text>
+  <text x="50" y="255" fill="#34d399" font-size="20" font-weight="700">v_o(t) = (2V_m/π) - (4V_m/π) ∑_(n=1)^∞ [cos(2nωt) / (4n² - 1)]</text>
+  <text x="50" y="295" fill="#e2e8f0" font-size="18">Expanded First 3 Terms:</text>
+  <text x="70" y="335" fill="#fbbf24" font-size="20" font-weight="800">v_o(t) = (2V_m/π) - (4V_m / 3π)cos(2ωt) - (4V_m / 15π)cos(4ωt) - ...</text>
+  <text x="50" y="380" fill="#38bdf8" font-size="18">• Fundamental frequency (ω) is COMPLETELY CANCELLED!</text>
+  <text x="50" y="415" fill="#38bdf8" font-size="18">• Dominant AC Ripple Harmonic: Second harmonic (2ω = 2π f_in) with peak amplitude V_2m = 4V_m / (3π).</text>
+  <text x="50" y="455" fill="#e2e8f0" font-size="18">• Fourth harmonic (4ω) amplitude is only 4V_m / (15π) — 5× smaller!</text>
+
+  <text x="30" y="515" fill="#c084fc" font-size="20" font-weight="800">★ Foundation of Filter Design:</text>
+  <text x="30" y="555" fill="#e2e8f0" font-size="18">Every filter (C, L, LC, π) is designed mathematically to attenuate this dominant 2nd harmonic (2ω = 100 Hz)</text>
+  <text x="30" y="590" fill="#e2e8f0" font-size="18">while passing the DC component (0 Hz) with near-zero loss!</text>
+</g>
+
+<!-- Bottom Full Row: Master 12-Parameter Comparison Matrix -->
+<g transform="translate(0, 690)">
+  <rect x="0" y="0" width="3720" height="670" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="670" rx="5" fill="#38bdf8"/>
+  <text x="30" y="45" fill="#38bdf8" font-size="28" font-weight="800">5. Master Rectifier Performance Comparison Matrix (12 Canonical Parameters)</text>
+
+  <!-- Table Header -->
+  <rect x="40" y="70" width="3640" height="55" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="70" y="105" fill="#38bdf8" font-size="20" font-weight="800">#</text>
+  <text x="120" y="105" fill="#38bdf8" font-size="20" font-weight="800">PERFORMANCE PARAMETER</text>
+  <text x="700" y="105" fill="#38bdf8" font-size="20" font-weight="800">HALF-WAVE RECTIFIER (HWR)</text>
+  <text x="1500" y="105" fill="#38bdf8" font-size="20" font-weight="800">FULL-WAVE CENTER-TAPPED (FWR-CT)</text>
+  <text x="2450" y="105" fill="#38bdf8" font-size="20" font-weight="800">FULL-WAVE BRIDGE RECTIFIER</text>
+  <text x="3300" y="105" fill="#38bdf8" font-size="20" font-weight="800">GOLDEN RATIO / REMARK</text>
+
+  <!-- Rows 1 to 11 -->
+  <g transform="translate(40, 130)" font-size="18" fill="#e2e8f0">
+    <!-- Row 1 -->
+    <text x="30" y="35" fill="#94a3b8">01</text><text x="80" y="35" font-weight="700">Number of Diodes</text>
+    <text x="660" y="35" fill="#fbbf24">1 Diode</text><text x="1460" y="35" fill="#34d399">2 Diodes</text><text x="2410" y="35" fill="#38bdf8">4 Diodes</text>
+    <text x="3260" y="35" fill="#94a3b8">Bridge requires 4 diodes</text>
+    <line x1="0" y1="50" x2="3640" y2="50" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Row 2 -->
+    <text x="30" y="85" fill="#94a3b8">02</text><text x="80" y="85" font-weight="700">DC Average Voltage (V_dc)</text>
+    <text x="660" y="85" fill="#fbbf24">V_m / π  (0.318 V_m)</text><text x="1460" y="85" fill="#34d399">2 V_m / π  (0.636 V_m)</text><text x="2410" y="85" fill="#38bdf8">2 V_m / π  (0.636 V_m)</text>
+    <text x="3260" y="85" fill="#34d399">FWR gives 2× higher V_dc</text>
+    <line x1="0" y1="100" x2="3640" y2="100" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Row 3 -->
+    <text x="30" y="135" fill="#94a3b8">03</text><text x="80" y="135" font-weight="700">RMS Output Voltage (V_rms)</text>
+    <text x="660" y="135" fill="#fbbf24">V_m / 2  (0.500 V_m)</text><text x="1460" y="135" fill="#34d399">V_m / √2  (0.707 V_m)</text><text x="2410" y="135" fill="#38bdf8">V_m / √2  (0.707 V_m)</text>
+    <text x="3260" y="135" fill="#34d399">V_rms(FWR) = √2 · V_rms(HWR)</text>
+    <line x1="0" y1="150" x2="3640" y2="150" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Row 4 -->
+    <text x="30" y="185" fill="#94a3b8">04</text><text x="80" y="185" font-weight="700">Form Factor (FF = V_rms / V_dc)</text>
+    <text x="660" y="185" fill="#f43f5e">π / 2 ≈ 1.57</text><text x="1460" y="185" fill="#34d399">π / (2√2) ≈ 1.11</text><text x="2410" y="185" fill="#38bdf8">π / (2√2) ≈ 1.11</text>
+    <text x="3260" y="185" fill="#94a3b8">Closer to 1.0 = purer DC</text>
+    <line x1="0" y1="200" x2="3640" y2="200" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Row 5 -->
+    <text x="30" y="235" fill="#94a3b8">05</text><text x="80" y="235" font-weight="700">Crest Factor (CF = V_m / V_rms)</text>
+    <text x="660" y="235" fill="#fbbf24">2.00</text><text x="1460" y="235" fill="#34d399">√2 ≈ 1.414</text><text x="2410" y="235" fill="#38bdf8">√2 ≈ 1.414</text>
+    <text x="3260" y="235" fill="#94a3b8">Peak to RMS ratio</text>
+    <line x1="0" y1="250" x2="3640" y2="250" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Row 6 -->
+    <text x="30" y="285" fill="#94a3b8">06</text><text x="80" y="285" font-weight="700">Ripple Factor (r = √(FF² - 1))</text>
+    <text x="660" y="285" fill="#f43f5e" font-weight="800">1.21  (121%)</text><text x="1460" y="285" fill="#34d399" font-weight="800">0.482  (48.2%)</text><text x="2410" y="285" fill="#38bdf8" font-weight="800">0.482  (48.2%)</text>
+    <text x="3260" y="285" fill="#34d399">FWR reduces ripple by 2.5×!</text>
+    <line x1="0" y1="300" x2="3640" y2="300" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Row 7 -->
+    <text x="30" y="335" fill="#94a3b8">07</text><text x="80" y="335" font-weight="700">Maximum Efficiency (η_max)</text>
+    <text x="660" y="335" fill="#f43f5e">40.6%</text><text x="1460" y="335" fill="#34d399">81.2%</text><text x="2410" y="335" fill="#38bdf8">81.2%</text>
+    <text x="3260" y="335" fill="#34d399">η_max(FWR) = 2 · η_max(HWR)</text>
+    <line x1="0" y1="350" x2="3640" y2="350" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Row 8 -->
+    <text x="30" y="385" fill="#94a3b8">08</text><text x="80" y="385" font-weight="700">Peak Inverse Voltage (PIV)</text>
+    <text x="660" y="385" fill="#fbbf24">V_m</text><text x="1460" y="385" fill="#f43f5e" font-weight="800">2 V_m</text><text x="2410" y="385" fill="#34d399" font-weight="800">V_m</text>
+    <text x="3260" y="385" fill="#fbbf24">Bridge PIV is HALF of CT!</text>
+    <line x1="0" y1="400" x2="3640" y2="400" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Row 9 -->
+    <text x="30" y="435" fill="#94a3b8">09</text><text x="80" y="435" font-weight="700">Transformer Utilization (TUF)</text>
+    <text x="660" y="435" fill="#f43f5e">0.287</text><text x="1460" y="435" fill="#fbbf24">0.693</text><text x="2410" y="435" fill="#34d399" font-weight="800">0.812</text>
+    <text x="3260" y="435" fill="#34d399">Bridge achieves highest TUF</text>
+    <line x1="0" y1="450" x2="3640" y2="450" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Row 10 -->
+    <text x="30" y="485" fill="#94a3b8">10</text><text x="80" y="485" font-weight="700">Output Ripple Frequency (f_r)</text>
+    <text x="660" y="485" fill="#fbbf24">f_in</text><text x="1460" y="485" fill="#34d399">2 f_in</text><text x="2410" y="485" fill="#38bdf8">2 f_in</text>
+    <text x="3260" y="485" fill="#94a3b8">Double frequency easier to filter</text>
+    <line x1="0" y1="500" x2="3640" y2="500" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Row 11 -->
+    <text x="30" y="535" fill="#94a3b8">11</text><text x="80" y="535" font-weight="700">Diode Conduction Angle (θ_c)</text>
+    <text x="660" y="535" fill="#fbbf24">180° (π radians)</text><text x="1460" y="535" fill="#34d399">180° per diode</text><text x="2410" y="535" fill="#38bdf8">180° per diode pair</text>
+    <text x="3260" y="535" fill="#94a3b8">Unfiltered conduction interval</text>
+  </g>
+</g>
+
+  </g>
+
+  <!-- Bottom Blueprint Metadata Footer -->
+  <g transform="translate(60, 2070)">
+    <line x1="0" y1="0" x2="3720" y2="0" stroke="#334155" stroke-width="1.5"/>
+    <text x="10" y="32" fill="#64748b" font-size="16" font-weight="600">ANALOG ELECTRONICS MASTER BLUEPRINT ENGINE • VERIFIED ACROSS 422 LECTURE SLIDES • ZERO-OMISSION TITAN SPECIFICATION</text>
+    <text x="3710" y="32" fill="#64748b" font-size="16" font-weight="600" text-anchor="end">PREPFUSION &amp; RAHUL SIR COMPREHENSIVE LECTURE SERIES ARCHITECTURE</text>
+  </g>
+</svg>

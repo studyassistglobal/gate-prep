@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIGURE 6: HIGH-ORDER NETWORK SYMMETRIES &amp; POLYHEDRAL CUBES ARCHITECTURE</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Folding Symmetries, Equipotential Partitions, Perpendicular Current Inversion, and 3D Cube Invariants</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • PREPFUSION TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Folding (Equipotential) Symmetry -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Folding (Equipotential) Symmetry</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Symmetry Axis Definition &amp; Axiom</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• Axis of Symmetry: A geometric line passing THROUGH both terminals A and B</text>
+  <text x="70" y="205" fill="#e2e8f0" font-size="19">(or dividing the network into identical upper and lower mirror halves).</text>
+  <text x="50" y="250" fill="#fbbf24" font-size="19">• Equipotential Theorem: Any pair of nodes that mirror each other across</text>
+  <text x="70" y="285" fill="#fbbf24" font-size="19">the symmetry axis MUST HAVE IDENTICAL ELECTRIC POTENTIALS:</text>
+  <text x="70" y="335" fill="#34d399" font-family="'Fira Code', monospace" font-size="26" font-weight="900">V_k = V_k'   (Equipotential Mirror Pairs)</text>
+  <text x="50" y="385" fill="#94a3b8" font-size="18">• Potential difference: V_k - V_k' = 0 V  ⇒  ZERO current flows between them!</text>
+
+  <rect x="30" y="450" width="840" height="460" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#38bdf8" font-size="22" font-weight="800">The Two Operational Transformations</text>
+  
+  <text x="50" y="540" fill="#34d399" font-size="20" font-weight="800">Transformation A: Open-Circuit Cut (Snipping Branches)</text>
+  <text x="50" y="575" fill="#e2e8f0" font-size="18">• Any resistor connected between mirror nodes k and k' carries i = 0 A.</text>
+  <text x="70" y="615" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">I_cross = (V_k - V_k') / R = 0 / R = 0 A</text>
+  <text x="50" y="655" fill="#fbbf24" font-size="18">★ Operational Rule: Physically REMOVE (snip / delete) all cross-branches!</text>
+  <text x="70" y="690" fill="#94a3b8" font-size="17">Instantly decouples the circuit into simple series and parallel branches.</text>
+
+  <text x="50" y="740" fill="#38bdf8" font-size="20" font-weight="800">Transformation B: Short-Circuit Fold (Collapsing Halves)</text>
+  <text x="50" y="775" fill="#e2e8f0" font-size="18">• Since V_k = V_k', connecting them with an ideal short circuit changes NOTHING!</text>
+  <text x="50" y="815" fill="#e2e8f0" font-size="18">• Fold the top half of the network directly onto the bottom half:</text>
+  <text x="70" y="855" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">Every branch R folds into parallel with mirror R: R_fold = R ∥ R = R / 2</text>
+  <text x="50" y="895" fill="#34d399" font-size="18">★ Halves the number of nodes and reduces all resistor values by 2!</text>
+
+  <rect x="30" y="935" width="840" height="450" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="980" fill="#fbbf24" font-size="22" font-weight="800">Worked Exam Drill: Symmetrical Bridge-Ladder</text>
+  <text x="50" y="1025" fill="#e2e8f0" font-size="18">Circuit: Terminals A and B on horizontal centerline. Top half has nodes C, D.</text>
+  <text x="50" y="1060" fill="#e2e8f0" font-size="18">Bottom half has mirror nodes C', D'. Resistors R on all outer branches,</text>
+  <text x="50" y="1095" fill="#94a3b8" font-size="17">and bridge cross-resistors R connecting C-C' and D-D'.</text>
+
+  <text x="50" y="1145" fill="#38bdf8" font-size="20" font-weight="700">Method 1 (Open-Circuit Snipping):</text>
+  <text x="70" y="1185" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">V_C = V_C'  and  V_D = V_D'  ⇒  Snip branches C-C' and D-D'!</text>
+  <text x="70" y="1225" fill="#e2e8f0" font-size="18">Top path: R + R + R = 3R in series.</text>
+  <text x="70" y="1260" fill="#e2e8f0" font-size="18">Bottom path: R + R + R = 3R in series.</text>
+  <text x="70" y="1300" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">R_eq = (3R) ∥ (3R) = 1.5 R = (3/2) R !</text>
+  <text x="50" y="1345" fill="#34d399" font-size="18">Solved in exactly 15 seconds without writing a single nodal equation!</text>
+
+  <rect x="30" y="1410" width="840" height="400" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1455" fill="#f43f5e" font-size="22" font-weight="800">★ Critical Symmetry Checklist</text>
+  <text x="50" y="1500" fill="#e2e8f0" font-size="18">Before applying folding symmetry, verify all 3 conditions:</text>
+  <text x="70" y="1540" fill="#fbbf24" font-size="18">1. Geometric symmetry: Layout is identical above and below axis.</text>
+  <text x="70" y="1580" fill="#fbbf24" font-size="18">2. Component value equality: Resistors must have identical Ohmic values!</text>
+  <text x="70" y="1620" fill="#fbbf24" font-size="18">3. Terminal symmetry: Input terminal A and output terminal B both lie</text>
+  <text x="90" y="1655" fill="#e2e8f0" font-size="17">on the axis (or mirror each other across a second orthogonal axis).</text>
+  <text x="50" y="1705" fill="#f43f5e" font-size="18">★ If even one resistor has a different value, equipotentiality is VOID!</text>
+</g>
+
+<!-- Column 2: Perpendicular Axis Symmetry -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#34d399"/>
+  <text x="35" y="55" fill="#34d399" font-size="28" font-weight="900">2. Perpendicular (Anti-) Symmetry</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#34d399" font-size="22" font-weight="800">Perpendicular Axis Definition &amp; Inversion</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• Axis of Perpendicular Symmetry: A line PERPENDICULAR to the AB terminal axis,</text>
+  <text x="70" y="205" fill="#e2e8f0" font-size="19">bisecting the network into identical left and right halves.</text>
+  <text x="50" y="250" fill="#fbbf24" font-size="19">• Antisymmetric Potential Distribution: If current +I enters A and leaves B,</text>
+  <text x="70" y="285" fill="#fbbf24" font-size="19">the potentials satisfy an odd (antisymmetric) inversion relative to midpoint M:</text>
+  <text x="70" y="335" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="800">V(x) - V_M = - [ V(-x) - V_M ]</text>
+  <text x="50" y="380" fill="#94a3b8" font-size="18">• Potential of all nodes lying strictly ON the perpendicular axis is V_M = V_AB / 2.</text>
+
+  <rect x="30" y="450" width="840" height="460" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#34d399" font-size="22" font-weight="800">Current-Splitting &amp; Node Disconnection Rules</text>
+  
+  <text x="50" y="540" fill="#38bdf8" font-size="20" font-weight="800">Rule 1: Symmetrical Current Reflection</text>
+  <text x="50" y="575" fill="#e2e8f0" font-size="18">• Current entering any left node equals the current leaving its mirror right node:</text>
+  <text x="70" y="615" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">I_in(Left Branch) = I_out(Mirror Right Branch)</text>
+  <text x="50" y="655" fill="#94a3b8" font-size="18">• Current does NOT cross between paths that have different symmetry branches!</text>
+
+  <text x="50" y="705" fill="#fbbf24" font-size="20" font-weight="800">Rule 2: Junction Disconnection (Splitting Central Nodes)</text>
+  <text x="50" y="740" fill="#e2e8f0" font-size="18">• A complex central node lying on the perpendicular axis can be</text>
+  <text x="70" y="775" fill="#e2e8f0" font-size="18">PHYSICALLY SPLIT into two independent, disconnected junctions!</text>
+  <text x="50" y="820" fill="#38bdf8" font-size="18">• Why valid? Because horizontal upper currents flow straight through to</text>
+  <text x="70" y="855" fill="#38bdf8" font-size="18">upper right branches, and diagonal currents flow straight to diagonal branches.</text>
+  <text x="50" y="895" fill="#34d399" font-size="18">★ No net current exchanges between the upper and lower branch sets at the node!</text>
+
+  <rect x="30" y="935" width="840" height="450" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="980" fill="#fbbf24" font-size="22" font-weight="800">Worked Exam Drill: Double-Delta Bridge Network</text>
+  <text x="50" y="1025" fill="#e2e8f0" font-size="18">Circuit: Terminals A (left) and B (right). Central node O connects top resistor,</text>
+  <text x="50" y="1060" fill="#e2e8f0" font-size="18">bottom resistor, and horizontal diagonal branches, all of value R.</text>
+
+  <text x="50" y="1110" fill="#38bdf8" font-size="20" font-weight="700">Application of Perpendicular Symmetry:</text>
+  <text x="70" y="1150" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">Vertical axis passes through central node O.</text>
+  <text x="70" y="1190" fill="#e2e8f0" font-size="18">• Split node O into O_top and O_bottom (lift the wire off the junction!).</text>
+  <text x="70" y="1230" fill="#e2e8f0" font-size="18">• Upper path: Two resistors R in series = 2R.</text>
+  <text x="70" y="1265" fill="#e2e8f0" font-size="18">• Middle diagonal path: Two resistors in series = 2R.</text>
+  <text x="70" y="1300" fill="#e2e8f0" font-size="18">• Bottom path: Two resistors in series = 2R.</text>
+  <text x="70" y="1340" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">R_eq = (2R) ∥ (2R) ∥ (2R) = 2R / 3 !</text>
+
+  <rect x="30" y="1410" width="840" height="400" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1455" fill="#34d399" font-size="22" font-weight="800">Superposition of Symmetrical &amp; Antisymmetrical Modes</text>
+  <text x="50" y="1500" fill="#e2e8f0" font-size="19">• Bartlett's Bisection Theorem: For ANY symmetric 2-port network:</text>
+  <text x="70" y="1540" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">Z_in = √ ( Z_oc · Z_sc )</text>
+  <text x="50" y="1585" fill="#e2e8f0" font-size="18">• Even Mode (Common Mode): Apply +V/2 to both ports. Central axis is OPEN.</text>
+  <text x="70" y="1620" fill="#94a3b8" font-size="17">Yields open-circuit half-section impedance Z_oc.</text>
+  <text x="50" y="1660" fill="#e2e8f0" font-size="18">• Odd Mode (Differential Mode): Apply +V/2 and -V/2. Central axis is SHORTED.</text>
+  <text x="70" y="1695" fill="#94a3b8" font-size="17">Yields short-circuit half-section impedance Z_sc.</text>
+  <text x="50" y="1740" fill="#34d399" font-size="18">• Used heavily in microwave transmission line and lattice filter analysis.</text>
+</g>
+
+<!-- Column 3: 3D Resistor Cube Complete Analytics -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#fbbf24"/>
+  <text x="35" y="55" fill="#fbbf24" font-size="28" font-weight="900">3. 3D Resistor Cube Analytics</text>
+
+  <rect x="30" y="85" width="840" height="230" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">The 3D Cube Structure (12 Identical Resistors R)</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="19">• 8 Vertices (Nodes): A, B, C, D (bottom face) and E, F, G, H (top face).</text>
+  <text x="50" y="200" fill="#e2e8f0" font-size="19">• 12 Edges: Each edge contains an identical linear resistor of resistance R.</text>
+  <text x="50" y="235" fill="#38bdf8" font-size="19">• Three fundamental equivalent resistance measurement configurations:</text>
+  <text x="70" y="270" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">1. Body Diagonal (A to G)   |   2. Face Diagonal (A to C)   |   3. Single Edge (A to B)</text>
+
+  <!-- Card 1: Body Diagonal -->
+  <rect x="30" y="335" width="840" height="460" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="375" fill="#34d399" font-size="22" font-weight="800">Configuration 1: Body Diagonal (Opposite Vertices A to G)</text>
+  <text x="50" y="415" fill="#e2e8f0" font-size="18">• Inject current I at vertex A, extract current I at opposite vertex G.</text>
+  <text x="50" y="450" fill="#fbbf24" font-size="18" font-weight="700">Step-by-Step Current Distribution by 3-Fold Symmetry:</text>
+  <text x="70" y="485" fill="#e2e8f0" font-size="18">1. Node A branches into 3 edges (AB, AD, AE) ⇒ each carries I / 3.</text>
+  <text x="70" y="520" fill="#e2e8f0" font-size="18">2. Each of the 3 nodes splits into 2 edges ⇒ 6 middle edges, each carries I / 6.</text>
+  <text x="70" y="555" fill="#e2e8f0" font-size="18">3. 6 middle edges recombine into 3 edges meeting at node G ⇒ each carries I / 3.</text>
+
+  <text x="50" y="605" fill="#38bdf8" font-size="20" font-weight="700">Total Voltage Drop V_AG along any path from A to G:</text>
+  <text x="70" y="645" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">V_AG = (I/3) R + (I/6) R + (I/3) R = I · R · ( 1/3 + 1/6 + 1/3 )</text>
+  <text x="70" y="690" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">V_AG = I · R · ( 2/6 + 1/6 + 2/6 ) = I · R · ( 5/6 )</text>
+  <text x="70" y="740" fill="#34d399" font-family="'Fira Code', monospace" font-size="26" font-weight="900">R_eq(Body Diagonal) = ( 5 / 6 ) · R   [0.8333 R]</text>
+
+  <!-- Card 2: Face Diagonal -->
+  <rect x="30" y="815" width="840" height="460" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="855" fill="#38bdf8" font-size="22" font-weight="800">Configuration 2: Face Diagonal (Same Face Corners A to C)</text>
+  <text x="50" y="895" fill="#e2e8f0" font-size="18">• Connect terminals across face diagonal AC on the bottom face ABCD.</text>
+  <text x="50" y="930" fill="#fbbf24" font-size="18" font-weight="700">Symmetry Plane Analysis:</text>
+  <text x="70" y="965" fill="#e2e8f0" font-size="18">• The vertical plane passing through vertices B, D, F, H bisects the circuit.</text>
+  <text x="70" y="1000" fill="#e2e8f0" font-size="18">• By perpendicular symmetry across BD diagonal:</text>
+  <text x="90" y="1035" fill="#94a3b8" font-size="17">Nodes B and D are equipotential! V_B = V_D.</text>
+  <text x="90" y="1070" fill="#94a3b8" font-size="17">Similarly for top nodes: V_F = V_H.</text>
+  <text x="70" y="1110" fill="#e2e8f0" font-size="18">• Collapsing equipotential node pairs converts 3D cube into a planar network:</text>
+  <text x="70" y="1150" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">R_eq = (R/2) + [ (R) ∥ (R/2 + R/4) ] ...</text>
+  <text x="70" y="1200" fill="#34d399" font-family="'Fira Code', monospace" font-size="26" font-weight="900">R_eq(Face Diagonal) = ( 3 / 4 ) · R   [0.7500 R]</text>
+
+  <!-- Card 3: Single Edge -->
+  <rect x="30" y="1295" width="840" height="520" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1335" fill="#f43f5e" font-size="22" font-weight="800">Configuration 3: Single Edge (Adjacent Corners A to B)</text>
+  <text x="50" y="1375" fill="#e2e8f0" font-size="18">• Connect terminals across single edge AB.</text>
+  <text x="50" y="1410" fill="#fbbf24" font-size="18" font-weight="700">Superposition Method Derivation:</text>
+  <text x="70" y="1445" fill="#e2e8f0" font-size="18">1. Inject current +I at node A (leaving at infinity):</text>
+  <text x="90" y="1480" fill="#94a3b8" font-size="17">By 3-fold symmetry at vertex A, edge AB carries I_AB,1 = + I / 3.</text>
+  <text x="70" y="1515" fill="#e2e8f0" font-size="18">2. Extract current -I at node B (entering from infinity):</text>
+  <text x="90" y="1550" fill="#94a3b8" font-size="17">By 3-fold symmetry at vertex B, edge AB carries I_AB,2 = + I / 3.</text>
+  <text x="70" y="1585" fill="#f43f5e" font-size="18">★ Total current in edge AB if independent: I_AB = I/3 + I/3 = 2I/3?</text>
+  <text x="90" y="1620" fill="#94a3b8" font-size="17">Accounting for complete 12-edge boundary constraints yields net current I_AB = 7I / 12!</text>
+
+  <text x="70" y="1670" fill="#34d399" font-family="'Fira Code', monospace" font-size="26" font-weight="900">R_eq(Single Edge) = ( 7 / 12 ) · R   [0.5833 R]</text>
+  <text x="50" y="1725" fill="#fbbf24" font-size="19" font-weight="800">★ High-Yield GATE Memory Mnemonic (Ascending Order):</text>
+  <text x="70" y="1765" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">R_Edge (7/12 R = 0.583R) &lt; R_Face (3/4 R = 0.75R) &lt; R_Body (5/6 R = 0.833R)</text>
+</g>
+
+<!-- Column 4: Polyhedral Networks & Infinite Grids -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="930" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">4. Polyhedral Networks &amp; Infinite Grids</text>
+
+  <rect x="30" y="85" width="870" height="420" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#c084fc" font-size="22" font-weight="800">Master Polyhedral Resistance Table (All Edges R)</text>
+  
+  <path d="M 45 155 L 880 155" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="185" fill="#fbbf24" font-size="18" font-weight="700">Polyhedron Geometry</text>
+  <text x="350" y="185" fill="#fbbf24" font-size="18" font-weight="700">Vertices / Edges</text>
+  <text x="640" y="185" fill="#38bdf8" font-size="18" font-weight="700">Equivalent Resistance R_eq</text>
+  <path d="M 45 200 L 880 200" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="235" fill="#e2e8f0" font-size="18">Regular Tetrahedron</text>
+  <text x="350" y="235" fill="#94a3b8" font-size="18">V = 4, E = 6</text>
+  <text x="640" y="235" fill="#34d399" font-family="'Fira Code', monospace" font-size="18">Any 2 Vertices: R / 2</text>
+
+  <text x="50" y="280" fill="#e2e8f0" font-size="18">Regular Octahedron</text>
+  <text x="350" y="280" fill="#94a3b8" font-size="18">V = 6, E = 12</text>
+  <text x="640" y="280" fill="#34d399" font-family="'Fira Code', monospace" font-size="18">Opposite: R / 2 | Adj: 5/12 R</text>
+
+  <text x="50" y="325" fill="#e2e8f0" font-size="18">Cube (Hexahedron)</text>
+  <text x="350" y="325" fill="#94a3b8" font-size="18">V = 8, E = 12</text>
+  <text x="640" y="325" fill="#34d399" font-family="'Fira Code', monospace" font-size="18">Edge: 7/12 R | Face: 3/4 R | Body: 5/6 R</text>
+
+  <text x="50" y="370" fill="#e2e8f0" font-size="18">Regular Icosahedron</text>
+  <text x="350" y="370" fill="#94a3b8" font-size="18">V = 12, E = 30</text>
+  <text x="640" y="370" fill="#34d399" font-family="'Fira Code', monospace" font-size="18">Opposite: R / 2 | Adj: 11/30 R</text>
+
+  <text x="50" y="415" fill="#e2e8f0" font-size="18">Regular Dodecahedron</text>
+  <text x="350" y="415" fill="#94a3b8" font-size="18">V = 20, E = 30</text>
+  <text x="640" y="370" fill="#34d399" font-family="'Fira Code', monospace" font-size="18">Opposite: 7/6 R | Adj: 19/30 R</text>
+
+  <rect x="30" y="525" width="870" height="450" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="570" fill="#38bdf8" font-size="22" font-weight="800">Infinite 2D Square Grid (All Resistors R)</text>
+  <text x="50" y="615" fill="#e2e8f0" font-size="19">• Grid extends to infinity in all 4 directions on a 2D plane.</text>
+  
+  <text x="50" y="665" fill="#fbbf24" font-size="20" font-weight="700">Resistance Between Immediately Adjacent Nodes A and B:</text>
+  <text x="70" y="705" fill="#e2e8f0" font-size="18">1. Inject current I at node A (leaving at infinity):</text>
+  <text x="90" y="740" fill="#94a3b8" font-size="17">By 4-fold rotational symmetry, current splits equally into 4 branches.</text>
+  <text x="90" y="775" fill="#38bdf8" font-size="18">Current through branch AB: I_AB,1 = I / 4.</text>
+
+  <text x="70" y="815" fill="#e2e8f0" font-size="18">2. Extract current I at node B (entering from infinity):</text>
+  <text x="90" y="850" fill="#94a3b8" font-size="17">By 4-fold symmetry, current enters node B equally from all 4 branches.</text>
+  <text x="90" y="885" fill="#38bdf8" font-size="18">Current through branch AB: I_AB,2 = I / 4.</text>
+
+  <text x="50" y="930" fill="#34d399" font-size="20" font-weight="800">3. Total Current by Superposition:</text>
+  <text x="70" y="965" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">I_AB = I/4 + I/4 = I / 2  ⇒  V_AB = (I/2) · R</text>
+  <text x="70" y="1010" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="26" font-weight="900">R_eq(Infinite Grid Adjacent) = R / 2  [0.5 R] !</text>
+
+  <rect x="30" y="1050" width="870" height="420" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="1095" fill="#34d399" font-size="22" font-weight="800">Infinite Semi-Infinite Ladder Networks</text>
+  <text x="50" y="1140" fill="#e2e8f0" font-size="19">• Periodic cascaded cell with series branch R₁ and shunt branch R₂:</text>
+  <text x="50" y="1180" fill="#e2e8f0" font-size="19">• Self-Similarity Principle: Adding one more identical cell to an infinite</text>
+  <text x="70" y="1215" fill="#e2e8f0" font-size="19">ladder does not change the total driving-point resistance R_eq!</text>
+
+  <text x="70" y="1265" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="24" font-weight="800">R_eq = R₁ + ( R₂ ∥ R_eq ) = R₁ + [ (R₂ · R_eq) / (R₂ + R_eq) ]</text>
+
+  <text x="50" y="1315" fill="#38bdf8" font-size="20" font-weight="700">Characteristic Quadratic Equation:</text>
+  <text x="70" y="1355" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">R_eq² - R₁ R_eq - R₁ R₂ = 0</text>
+  <text x="50" y="1400" fill="#e2e8f0" font-size="18">• Taking the strictly positive physical root (resistance cannot be negative!):</text>
+  <text x="70" y="1440" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">R_eq = [ R₁ + √( R₁² + 4 R₁ R₂ ) ] / 2</text>
+
+  <rect x="30" y="1490" width="870" height="320" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="50" y="1530" fill="#fbbf24" font-size="22" font-weight="800">Symmetrical Ladder Special Case: R₁ = R₂ = R</text>
+  <text x="50" y="1575" fill="#e2e8f0" font-size="18">• Quadratic simplifies to: R_eq² - R R_eq - R² = 0</text>
+  <text x="70" y="1615" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="900">R_eq = R · [ (1 + √5) / 2 ] = φ · R ≈ 1.61803 · R</text>
+  <text x="50" y="1660" fill="#34d399" font-size="18">• Exactly the Golden Ratio φ multiplied by R!</text>
+  <text x="50" y="1695" fill="#94a3b8" font-size="17">• Truncation error: 4 ladder cells achieve &gt; 99.5% accuracy of infinite limit.</text>
+  <text x="50" y="1730" fill="#f43f5e" font-size="17">★ Input impedance of R-2R DAC ladder network: Exactly R at every digital bit tap!</text>
+</g>
+
+  </g>
+</svg>

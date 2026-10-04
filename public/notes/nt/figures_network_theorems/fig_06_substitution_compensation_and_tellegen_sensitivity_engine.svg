@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIG 06: SUBSTITUTION, COMPENSATION &amp; TELLEGEN SENSITIVITY ENGINE</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Branch Replacement Equivalence • Impedance Perturbation ΔZ • Virtual Compensation Source Vc = I·ΔZ • Network Sensitivity Analysis</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • NETWORK THEOREMS TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Substitution Theorem -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Substitution Theorem</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">Formal Statement &amp; Physical Principle</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">If the voltage across and current through any branch k of an arbitrary electric</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">network are known to be v_k(t) and i_k(t), then that branch can be REPLACED</text>
+  <text x="50" y="225" fill="#e2e8f0" font-size="18">(substituted) by any combination of elements that maintains identical terminal</text>
+  <text x="50" y="255" fill="#e2e8f0" font-size="18">voltage or current, without altering voltages and currents in ANY OTHER branch!</text>
+  
+  <text x="50" y="305" fill="#34d399" font-family="'Fira Code', monospace" font-size="20" font-weight="800">1. Replace with Ideal Voltage Source:  v_source(t) = v_k(t)</text>
+  <text x="50" y="340" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20" font-weight="800">2. Replace with Ideal Current Source:  i_source(t) = i_k(t)</text>
+  <text x="50" y="375" fill="#c084fc" font-family="'Fira Code', monospace" font-size="20" font-weight="800">3. Replace with Equivalent Resistor:   R_eq = v_k / i_k</text>
+
+  <rect x="30" y="450" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#38bdf8" font-size="22" font-weight="800">Universality: Valid for Non-Linear Networks!</text>
+  <text x="50" y="535" fill="#fbbf24" font-size="19" font-weight="800">Does Substitution Require Linearity?</text>
+  <text x="70" y="570" fill="#34d399" font-size="22" font-weight="900">NO! Substitution applies to LINEAR AND NON-LINEAR networks alike!</text>
+  
+  <text x="50" y="620" fill="#e2e8f0" font-size="18">• Branch k can contain non-linear diodes, transistors, or time-varying elements.</text>
+  <text x="50" y="655" fill="#e2e8f0" font-size="18">• As long as operating point (V_k, I_k) is established, replacing it with an</text>
+  <text x="70" y="685" fill="#e2e8f0" font-size="18">  independent source of value V_k or I_k preserves all remaining circuit state.</text>
+  
+  <text x="50" y="735" fill="#fbbf24" font-size="19" font-weight="700">The Unique Solution Condition:</text>
+  <text x="50" y="770" fill="#e2e8f0" font-size="18">• Substitution is valid IF AND ONLY IF the network possesses a UNIQUE solution.</text>
+  <text x="50" y="805" fill="#f43f5e" font-size="18">• Substitution fails if replacing the branch creates an all-voltage-source loop</text>
+  <text x="70" y="835" fill="#f43f5e" font-size="18">  with conflicting potentials or an all-current-source cutset with KCL violation!</text>
+
+  <rect x="30" y="895" width="840" height="480" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="940" fill="#34d399" font-size="22" font-weight="800">Substitution Solved Classroom Drill</text>
+  <text x="50" y="980" fill="#e2e8f0" font-size="18">A bridge circuit with non-linear tunnel diode has measured terminal voltage</text>
+  <text x="50" y="1015" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">V_D = 0.7 V and current I_D = 15 mA.</text>
+  
+  <text x="50" y="1065" fill="#fbbf24" font-size="19" font-weight="700">Analysis via Substitution:</text>
+  <text x="50" y="1100" fill="#e2e8f0" font-size="18">1. Remove the complex exponential diode model entirely from the schematic.</text>
+  <text x="50" y="1135" fill="#e2e8f0" font-size="18">2. Substitute an ideal DC voltage source of 0.7 V in its place.</text>
+  <text x="50" y="1170" fill="#e2e8f0" font-size="18">3. Now the ENTIRE network becomes completely linear!</text>
+  <text x="50" y="1205" fill="#e2e8f0" font-size="18">4. Use Nodal Analysis or Superposition to solve all other branch currents in seconds.</text>
+  
+  <text x="50" y="1255" fill="#34d399" font-size="18" font-weight="800">Alternative Verification:</text>
+  <text x="50" y="1290" fill="#e2e8f0" font-size="18">Replace diode with equivalent static resistance R_D = 0.7 V / 15 mA = 46.67 Ω.</text>
+  <text x="50" y="1325" fill="#fbbf24" font-size="18" font-weight="700">Yields identically matching voltages and currents across all external resistors!</text>
+
+  <rect x="30" y="1400" width="840" height="410" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1445" fill="#f43f5e" font-size="22" font-weight="800">Crucial Limitations of Substitution</text>
+  <text x="50" y="1490" fill="#e2e8f0" font-size="18">1. External Circuit Invariance ONLY:</text>
+  <text x="70" y="1520" fill="#94a3b8" font-size="17">   Substitution preserves voltages/currents outside the substituted branch.</text>
+  <text x="70" y="1550" fill="#94a3b8" font-size="17">   Internal microscopic physics and internal dynamics are NOT duplicated.</text>
+  <text x="50" y="1595" fill="#e2e8f0" font-size="18">2. Power Equivalence Limitation:</text>
+  <text x="70" y="1625" fill="#94a3b8" font-size="17">   Instantaneous power absorbed by substituted source v_k · i_k equals original</text>
+  <text x="70" y="1655" fill="#94a3b8" font-size="17">   power, but small-signal dynamic resistance dv/di is NOT preserved!</text>
+  <text x="50" y="1705" fill="#fbbf24" font-size="18" font-weight="800">Cannot use substituted circuit to evaluate AC small-signal variations!</text>
+</g>
+
+<!-- Column 2: Compensation Theorem & Impedance Perturbation -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#818cf8"/>
+  <text x="35" y="55" fill="#818cf8" font-size="28" font-weight="900">2. Compensation Theorem</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="2"/>
+  <text x="50" y="125" fill="#818cf8" font-size="22" font-weight="900">The Impedance Perturbation Principle</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">In a linear time-invariant active network, if the resistance of branch k carries an</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">initial current I and its resistance is changed by an increment ΔR (from R to R + ΔR),</text>
+  <text x="50" y="225" fill="#e2e8f0" font-size="18">the resulting CHANGE IN CURRENT (ΔI) in all other branches of the network</text>
+  <text x="50" y="255" fill="#e2e8f0" font-size="18">equals the current produced by an opposing virtual COMPENSATION SOURCE V_c</text>
+  <text x="50" y="285" fill="#e2e8f0" font-size="18">inserted in series with the modified branch, with all original independent sources killed:</text>
+  
+  <text x="70" y="335" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="24" font-weight="900">V_c = I · ΔR   (Opposing original current I!)</text>
+  <text x="70" y="380" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">ΔI_branch = Response due to V_c alone</text>
+
+  <rect x="30" y="450" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#38bdf8" font-size="22" font-weight="800">Mathematical Derivation via Substitution &amp; Superposition</text>
+  <text x="50" y="535" fill="#e2e8f0" font-size="18">1. Original branch voltage: V = I · R.</text>
+  <text x="50" y="570" fill="#e2e8f0" font-size="18">2. Modified branch resistance: R' = R + ΔR. New current: I' = I + ΔI.</text>
+  <text x="50" y="605" fill="#e2e8f0" font-size="18">3. New branch voltage:</text>
+  <text x="70" y="640" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">V' = I' · (R + ΔR) = I' · R + I' · ΔR</text>
+  <text x="50" y="685" fill="#e2e8f0" font-size="18">4. By Substitution, replace term (I' · ΔR) with an opposing voltage source:</text>
+  <text x="70" y="720" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">V_c = I' · ΔR ≈ I · ΔR   (for small perturbations ΔR ≪ R)</text>
+  <text x="50" y="765" fill="#e2e8f0" font-size="18">5. By Superposition, the change in currents ΔI across the network is driven</text>
+  <text x="70" y="795" fill="#e2e8f0" font-size="18">   SOLEY by compensation source V_c acting in the dead network (R_th network)!</text>
+  <text x="70" y="835" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">ΔI_k = -V_c / (R_th + R + ΔR) = -I · ΔR / (R_th + R + ΔR)</text>
+
+  <rect x="30" y="895" width="840" height="450" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="940" fill="#fbbf24" font-size="22" font-weight="800">Compensation Solved Classroom Drill</text>
+  <text x="50" y="980" fill="#e2e8f0" font-size="18">A 5 Ω resistor carries an initial current of I = 4 A in a network where Thévenin</text>
+  <text x="50" y="1015" fill="#e2e8f0" font-size="18">resistance facing the resistor terminals is R_th = 15 Ω.</text>
+  <text x="50" y="1050" fill="#fbbf24" font-size="18">If the 5 Ω resistor increases by ΔR = +1 Ω (to 6 Ω), find the new branch current I'.</text>
+  
+  <text x="50" y="1100" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">Step 1: Compensation source magnitude:</text>
+  <text x="70" y="1135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">V_c = I · ΔR = 4 A · 1 Ω = 4 V (opposing)</text>
+  
+  <text x="50" y="1180" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">Step 2: Change in branch current:</text>
+  <text x="70" y="1215" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">ΔI = -V_c / (R_th + R_new) = -4 V / (15 + 6) = -4 / 21 = -0.1905 A</text>
+
+  <text x="50" y="1265" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">Step 3: New actual branch current:</text>
+  <text x="70" y="1305" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">I' = I + ΔI = 4.0 - 0.1905 = 3.8095 A !</text>
+  <text x="50" y="1350" fill="#fbbf24" font-size="18" font-weight="700">Solved in 45 seconds without re-solving the entire multi-loop circuit!</text>
+
+  <rect x="30" y="1370" width="840" height="440" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1415" fill="#34d399" font-size="22" font-weight="800">Primary Applications in Electrical Engineering</text>
+  <text x="50" y="1460" fill="#fbbf24" font-size="18" font-weight="700">1. Bridge Sensitivity &amp; Strain Gauges:</text>
+  <text x="50" y="1495" fill="#e2e8f0" font-size="18">• Calculating output voltage deflection ΔV when a strain gauge undergoes</text>
+  <text x="70" y="1525" fill="#e2e8f0" font-size="18">  minute fractional resistance changes (ΔR/R ≈ 10⁻³).</text>
+  
+  <text x="50" y="1575" fill="#fbbf24" font-size="18" font-weight="700">2. Ammeter Insertion Error Analysis:</text>
+  <text x="50" y="1610" fill="#e2e8f0" font-size="18">• Inserting an ammeter of internal resistance R_A adds ΔR = R_A to branch.</text>
+  <text x="50" y="1645" fill="#e2e8f0" font-size="18">• Current reduction: ΔI = -I · R_A / (R_th + R_A).</text>
+
+  <text x="50" y="1695" fill="#fbbf24" font-size="18" font-weight="700">3. Power Grid Fault Analysis &amp; Line Outages:</text>
+  <text x="50" y="1730" fill="#e2e8f0" font-size="18">• Modeling tripping of a transmission line (ΔR → ∞) as an injected current.</text>
+</g>
+
+<!-- Column 3: Network Sensitivity Formulation -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">3. Network Sensitivity Formulation</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Differential Sensitivity vs. Incremental Perturbation</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">As parameter change approaches the infinitesimal limit (ΔR → 0):</text>
+  
+  <text x="70" y="215" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">dI / dR = lim_{ΔR → 0} (ΔI / ΔR) = -I / (R_th + R)</text>
+  
+  <text x="50" y="265" fill="#fbbf24" font-size="20" font-weight="800">Normalized Sensitivity (Bode's Sensitivity Index):</text>
+  <text x="70" y="305" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">S_R^I = (dI / I) / (dR / R) = (R / I) · (dI / dR)</text>
+  <text x="70" y="345" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">S_R^I = -R / (R_th + R)</text>
+  <text x="50" y="390" fill="#94a3b8" font-size="18">• Dimensionless index quantifying percentage change in response per 1% change in R.</text>
+
+  <rect x="30" y="450" width="840" height="420" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#c084fc" font-size="22" font-weight="800">Wheatstone Bridge Deflection Sensitivity</text>
+  <text x="50" y="535" fill="#e2e8f0" font-size="18">For an initially balanced Wheatstone bridge with equal arms R driven by V_s:</text>
+  <text x="50" y="570" fill="#e2e8f0" font-size="18">When arm 1 changes by small strain ΔR (R₁ = R + ΔR):</text>
+  
+  <text x="70" y="615" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="21" font-weight="800">V_th(unbalanced) = V_s · [ (R + ΔR)/(2R + ΔR) - R/2R ]</text>
+  <text x="70" y="655" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">V_th ≈ V_s · (ΔR / 4R)   [For ΔR ≪ R]</text>
+
+  <text x="50" y="705" fill="#fbbf24" font-size="19" font-weight="800">Bridge Sensitivity Metric:</text>
+  <text x="70" y="740" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">S_B = V_out / (ΔR / R) = V_s / 4   (Volts per unit strain)</text>
+  <text x="50" y="790" fill="#94a3b8" font-size="18">• Thévenin resistance of the bridge: R_th = (R ∥ R) + (R ∥ R) = R/2 + R/2 = R.</text>
+  <text x="50" y="825" fill="#94a3b8" font-size="18">• Galvanometer current: I_g = V_th / (R_th + R_g) = (V_s · ΔR / 4R) / (R + R_g).</text>
+
+  <rect x="30" y="895" width="840" height="450" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="940" fill="#34d399" font-size="22" font-weight="800">Full-Bridge Strain Sensitivity Enhancement</text>
+  <text x="50" y="980" fill="#e2e8f0" font-size="18">Comparing Bridge Configurations for Strain Sensing:</text>
+  
+  <text x="50" y="1025" fill="#38bdf8" font-size="19" font-weight="700">1. Quarter Bridge (1 active arm):</text>
+  <text x="70" y="1055" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="19">V_out = (V_s / 4) · (ΔR / R)   ⟹ Sensitivity = 1× (Baseline)</text>
+
+  <text x="50" y="1100" fill="#38bdf8" font-size="19" font-weight="700">2. Half Bridge (2 active push-pull arms +ΔR, -ΔR):</text>
+  <text x="70" y="1130" fill="#34d399" font-family="'Fira Code', monospace" font-size="19">V_out = (V_s / 2) · (ΔR / R)   ⟹ Sensitivity = 2× (Doubled!)</text>
+
+  <text x="50" y="1175" fill="#38bdf8" font-size="19" font-weight="700">3. Full Bridge (4 active push-pull arms):</text>
+  <text x="70" y="1205" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">V_out = V_s · (ΔR / R)   ⟹ Sensitivity = 4× (Quadrupled!)</text>
+  <text x="50" y="1255" fill="#fbbf24" font-size="18" font-weight="700">Full Bridge Benefits: 4× sensitivity + automatic temperature cancellation!</text>
+  <text x="50" y="1290" fill="#94a3b8" font-size="17">Thermal drift affects all 4 arms equally (+ΔR_T), canceling completely at detector.</text>
+
+  <rect x="30" y="1370" width="840" height="440" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1415" fill="#34d399" font-size="22" font-weight="800">Matrix Formulation of Network Sensitivities</text>
+  <text x="50" y="1455" fill="#e2e8f0" font-size="18">In systematic Nodal Analysis: [Y][V] = [I].</text>
+  <text x="50" y="1490" fill="#e2e8f0" font-size="18">Differentiating with respect to parameter p:</text>
+  <text x="70" y="1525" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">(d[Y]/dp) · [V] + [Y] · (d[V]/dp) = 0</text>
+  <text x="70" y="1565" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">d[V]/dp = -[Y]⁻¹ · (d[Y]/dp) · [V]   (Adjoint Sensitivity!)</text>
+  <text x="50" y="1615" fill="#e2e8f0" font-size="18">• Requires inverting admittance matrix [Y] only ONCE!</text>
+  <text x="50" y="1650" fill="#e2e8f0" font-size="18">• Sensitivities to all N circuit components calculated via simple vector products.</text>
+  <text x="50" y="1695" fill="#fbbf24" font-size="18" font-weight="800">Form basis of modern CAD / SPICE circuit optimization engines!</text>
+</g>
+
+<!-- Column 4: Quasi-Tellegen Sensitivity & Conservation Principles -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#f43f5e"/>
+  <text x="35" y="55" fill="#f43f5e" font-size="28" font-weight="900">4. Tellegen &amp; Adjoint Sensitivity</text>
+
+  <rect x="30" y="85" width="840" height="380" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="125" fill="#f43f5e" font-size="22" font-weight="900">Tellegen's Theorem &amp; Quasi-Tellegen Form</text>
+  <text x="50" y="170" fill="#fbbf24" font-size="19" font-weight="700">1. Tellegen's Theorem (Single Network N):</text>
+  <text x="70" y="210" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">∑_{k=1}^b v_k(t) · i_k(t) ≡ 0</text>
+  <text x="50" y="255" fill="#e2e8f0" font-size="18">• Power conservation holds topologically regardless of linearity or components!</text>
+
+  <text x="50" y="300" fill="#fbbf24" font-size="19" font-weight="700">2. Quasi-Tellegen Theorem (Two Distinct Networks N and N'):</text>
+  <text x="50" y="335" fill="#e2e8f0" font-size="18">If N and N' share the IDENTICAL TOPOLOGICAL GRAPH but have different elements:</text>
+  <text x="70" y="375" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="900">∑_{k=1}^b v_k · i_k' ≡ 0   and   ∑_{k=1}^b v_k' · i_k ≡ 0</text>
+  <text x="50" y="420" fill="#94a3b8" font-size="18">• Cross-products of voltages from N with currents from N' sum identically to zero!</text>
+
+  <rect x="30" y="490" width="840" height="420" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="535" fill="#fbbf24" font-size="22" font-weight="800">The Adjoint Network Sensitivity Method</text>
+  <text x="50" y="575" fill="#e2e8f0" font-size="18">Director &amp; Rohrer's Adjoint Method: Choose N' as the topologically ADJOINT network</text>
+  <text x="50" y="605" fill="#e2e8f0" font-size="18">where all non-reciprocal elements are transposed:</text>
+  
+  <text x="50" y="655" fill="#34d399" font-size="19" font-weight="700">Sensitivity Calculation Equation:</text>
+  <text x="70" y="695" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">ΔV_out = -∑_{elements} [ v_k · Δi_k' - i_k · Δv_k' ]</text>
+  
+  <text x="50" y="745" fill="#e2e8f0" font-size="18">• For a perturbed resistor R_k: Δv_k = ΔR_k · i_k.</text>
+  <text x="70" y="780" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="21" font-weight="800">Sensitivity: ∂V_out / ∂R_k = -i_k · i_k'</text>
+  <text x="50" y="825" fill="#fbbf24" font-size="18" font-weight="700">Incredible Efficiency: A SINGLE adjoint simulation gives sensitivities</text>
+  <text x="50" y="855" fill="#fbbf24" font-size="18" font-weight="700">of output voltage to ALL 10,000 components in an integrated circuit!</text>
+
+  <rect x="30" y="930" width="840" height="450" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="975" fill="#c084fc" font-size="22" font-weight="800">Proof of Reciprocity via Quasi-Tellegen</text>
+  <text x="50" y="1015" fill="#e2e8f0" font-size="18">Subtracting the two Quasi-Tellegen identities:</text>
+  <text x="70" y="1055" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">∑_{k=1}^b (v_k · i_k' - v_k' · i_k) ≡ 0</text>
+  
+  <text x="50" y="1105" fill="#e2e8f0" font-size="18">Separate branches into Port Branches (P) and Internal Resistor Branches (R):</text>
+  <text x="70" y="1145" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">∑_P (v_P i_P' - v_P' i_P) + ∑_R (v_R i_R' - v_R' i_R) = 0</text>
+
+  <text x="50" y="1195" fill="#e2e8f0" font-size="18">For linear bilateral internal resistors: v_R = R · i_R and v_R' = R · i_R'.</text>
+  <text x="70" y="1230" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">v_R · i_R' - v_R' · i_R = (R i_R) i_R' - (R i_R') i_R ≡ 0 !</text>
+  
+  <text x="50" y="1275" fill="#e2e8f0" font-size="18">All internal terms vanish identically! Leaving only the two ports:</text>
+  <text x="70" y="1315" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">V₁ I₁' + V₂ I₂' = V₁' I₁ + V₂' I₂   (Q.E.D.)</text>
+
+  <rect x="30" y="1410" width="840" height="400" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="1455" fill="#34d399" font-size="22" font-weight="800">Master Summary: Advanced Theorems Comparison</text>
+  
+  <text x="50" y="1500" fill="#fbbf24" font-size="18" font-weight="700">Theorem Name</text>
+  <text x="350" y="1500" fill="#fbbf24" font-size="18" font-weight="700">Core Equation / Rule</text>
+  <text x="640" y="1500" fill="#fbbf24" font-size="18" font-weight="700">Linearity Req.?</text>
+  <path d="M 45 1520 L 850 1520" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="1555" fill="#e2e8f0" font-size="17">Substitution</text>
+  <text x="350" y="1555" fill="#38bdf8" font-size="17">v_s = v_k  or  i_s = i_k</text>
+  <text x="640" y="1555" fill="#34d399" font-size="17" font-weight="700">NO (Non-linear OK)</text>
+
+  <text x="50" y="1600" fill="#e2e8f0" font-size="17">Compensation</text>
+  <text x="350" y="1600" fill="#38bdf8" font-size="17">V_c = I · ΔR</text>
+  <text x="640" y="1600" fill="#f43f5e" font-size="17" font-weight="700">YES (Linear Only)</text>
+
+  <text x="50" y="1645" fill="#e2e8f0" font-size="17">Tellegen's</text>
+  <text x="350" y="1645" fill="#38bdf8" font-size="17">∑ v_k · i_k ≡ 0</text>
+  <text x="640" y="1645" fill="#34d399" font-size="17" font-weight="700">NO (Universal)</text>
+
+  <text x="50" y="1690" fill="#e2e8f0" font-size="17">Reciprocity</text>
+  <text x="350" y="1690" fill="#38bdf8" font-size="17">I₂/V₁ = I₁'/V₂'</text>
+  <text x="640" y="1690" fill="#f43f5e" font-size="17" font-weight="700">YES + Bilateral + Passive</text>
+
+  <text x="50" y="1745" fill="#38bdf8" font-size="18" font-weight="800">Topological conservation theorems govern all electric networks!</text>
+</g>
+
+  </g>
+</svg>

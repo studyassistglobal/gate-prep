@@ -43,7 +43,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_calculus/fig_01_functions_limits_and_continuity_foundations.jpg",
+     "src": "/notes/em/figures_calculus/fig_01_functions_limits_and_continuity_foundations.svg",
      "alt": "Blueprint 01: Functions, Modulus Symmetries, Elementary Curves & Limit Foundations"
     },
     {
@@ -5011,7 +5011,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_calculus/fig_02_differentiability_and_mean_value_theorems_engine.jpg",
+     "src": "/notes/em/figures_calculus/fig_02_differentiability_and_mean_value_theorems_engine.svg",
      "alt": "Blueprint 02: Differentiability Diagnostics, Corner Cusps & Mean Value Theorems Engine"
     },
     {
@@ -12524,7 +12524,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_calculus/fig_03_single_variable_extrema_concavity_and_curve_sketching.jpg",
+     "src": "/notes/em/figures_calculus/fig_03_single_variable_extrema_concavity_and_curve_sketching.svg",
      "alt": "Blueprint 03: Optimization, Higher Derivative Tests & Global Extrema Framework"
     },
     {
@@ -21378,7 +21378,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_calculus/fig_04_multivariable_calculus_partial_derivatives_and_euler_engine.jpg",
+     "src": "/notes/em/figures_calculus/fig_04_multivariable_calculus_partial_derivatives_and_euler_engine.svg",
      "alt": "Blueprint 04: Multivariable Calculus, Level Curves, Two-Path Limits & Euler's Homogeneous Theorems"
     },
     {
@@ -21393,7 +21393,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_calculus/fig_05_2d_extrema_saddle_points_and_optimization_engine.jpg",
+     "src": "/notes/em/figures_calculus/fig_05_2d_extrema_saddle_points_and_optimization_engine.svg",
      "alt": "Blueprint 05: Two-Variable Extrema, Saddle Points, Hessian Matrix & Constrained Optimization"
     },
     {
@@ -25823,7 +25823,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_calculus/fig_06_definite_integrals_king_queen_and_leibniz_engine.jpg",
+     "src": "/notes/em/figures_calculus/fig_06_definite_integrals_king_queen_and_leibniz_engine.svg",
      "alt": "Blueprint 06: Definite Integrals, Symmetry Properties, Wallis Formulas & Leibniz Differentiation"
     },
     {
@@ -36227,7 +36227,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_calculus/fig_07_multiple_integrals_change_of_order_and_jacobians_engine.jpg",
+     "src": "/notes/em/figures_calculus/fig_07_multiple_integrals_change_of_order_and_jacobians_engine.svg",
      "alt": "Blueprint 07: Multiple Integrals, Change of Order Algorithm, Polar Coordinates & Jacobians"
     },
     {

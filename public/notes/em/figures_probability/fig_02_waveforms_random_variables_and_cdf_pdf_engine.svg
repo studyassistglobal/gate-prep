@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#220d35" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#150722" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <!-- HEADER -->
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="520" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="260" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 02</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">WAVEFORMS, RANDOM VARIABLES &amp; CDF/PDF ENGINE</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">Singular Waveforms (u, r, Π, δ), Discrete vs Continuous vs Mixed RVs, Cumulative Distribution Functions &amp; Probability Density Functions</text>
+  </g>
+
+  <!-- COLUMN 1: SINGULARITY WAVEFORMS & DERIVATIVES -->
+  <g transform="translate(120, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. SINGULARITY WAVEFORMS &amp; JUMP CALCULUS</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="180" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#38bdf8" font-size="22" font-weight="700">Test Waveforms: Step, Ramp &amp; Dirac Delta</text>
+      <text x="25" y="80" fill="#cbd5e1" font-size="18">• Unit Step: u(x) = 1 (x &gt; 0), 0 (x &lt; 0). Jump of +1 at origin.</text>
+      <text x="25" y="115" fill="#cbd5e1" font-size="18">• Unit Ramp: r(x) = x · u(x) = ∫₋∞ˣ u(t) dt. Slope m=1 for x &gt; 0.</text>
+      <text x="25" y="150" fill="#f8fafc" font-size="18">• Dirac Delta: δ(x) = d/dx u(x). Infinite spike at x=0, Total area ∫₋∞^∞ δ(x) dx = 1.</text>
+    </g>
+
+    <g transform="translate(40, 310)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">Derivative of Discontinuous Waveforms</text>
+      <text x="25" y="80" fill="#f8fafc" font-size="18">Universal Jump Rule: A jump discontinuity of height Δy at x = x₀ differentiates to:</text>
+      <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="700">d/dx [ Waveform ] = (Continuous Slopes) + ∑ (Δyᵢ) · δ(x - xᵢ)</text>
+      <text x="25" y="165" fill="#cbd5e1" font-size="18">• Jump of -4 at x = -2 ⟹ -4 δ(x + 2) in derivative.</text>
+      <text x="25" y="200" fill="#cbd5e1" font-size="18">• Sifting Property: ∫₋∞^∞ f(x) · δ(x - x₀) dx = f(x₀). Localized extraction!</text>
+    </g>
+
+    <g transform="translate(40, 560)">
+      <rect x="0" y="0" width="1050" height="240" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">Integral Waveform Reconstruction</text>
+      <text x="25" y="80" fill="#f8fafc" font-size="18">f(x) = f(x₀) + ∫_{x₀}^x g(u) du   (where g(u) = df/du)</text>
+      <text x="25" y="115" fill="#cbd5e1" font-size="18">• Integrating a rectangular pulse ⟹ Triangular or Trapezoidal ramp.</text>
+      <text x="25" y="150" fill="#cbd5e1" font-size="18">• Integrating a triangular pulse ⟹ S-shaped parabolic sigmoidal curve.</text>
+      <text x="25" y="185" fill="#f43f5e" font-size="17">EXAM TRAP: Always initialize with baseline constant f(x₀) before integrating!</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: CUMULATIVE DISTRIBUTION FUNCTION (CDF) -->
+  <g transform="translate(1300, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#60a5fa"/>
+    <text x="45" y="45" fill="#60a5fa" font-size="28" font-weight="700">2. CUMULATIVE DISTRIBUTION FUNCTION (CDF) TOPOLOGY</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#60a5fa" font-size="22" font-weight="700">Formal Definition &amp; Axiomatic Properties</text>
+      <text x="25" y="80" fill="#38bdf8" font-size="20" font-weight="700">F_X(x) = P(X ≤ x),   for -∞ &lt; x &lt; ∞</text>
+      <text x="25" y="120" fill="#f8fafc" font-size="18">1. Bounded Range: 0 ≤ F_X(x) ≤ 1. Limits: F_X(-∞) = 0, F_X(+∞) = 1.</text>
+      <text x="25" y="155" fill="#f8fafc" font-size="18">2. Monotonically Non-Decreasing: x₁ &lt; x₂ ⟹ F_X(x₁) ≤ F_X(x₂).</text>
+      <text x="25" y="190" fill="#34d399" font-size="18">3. Right-Continuous Everywhere: lim_{h→0⁺} F_X(x + h) = F_X(x⁺) = F_X(x).</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#c084fc" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#c084fc" font-size="22" font-weight="700">Point Probability Equals CDF Jump Height</text>
+      <text x="50" y="90" fill="#c084fc" font-size="22" font-weight="700">P(X = x₀) = F_X(x₀) - F_X(x₀⁻) = F_X(x₀⁺) - F_X(x₀⁻)</text>
+      <text x="25" y="140" fill="#cbd5e1" font-size="18">• Discrete RV: CDF is a pure staircase. Jumps = probabilities pᵢ.</text>
+      <text x="25" y="175" fill="#38bdf8" font-size="18">• Continuous RV: CDF is strictly continuous everywhere (no jumps!).</text>
+      <text x="25" y="210" fill="#fbbf24" font-size="18">⟹ P(X = x₀) ≡ 0 for every single exact point in a Continuous RV!</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1050" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#fbbf24" font-size="22" font-weight="700">Conditional Probability over Continuous CDFs</text>
+      <text x="25" y="75" fill="#f8fafc" font-size="18">Given F_Y(y) = (1 - e⁻ʸ) u(y). Compute P(Y &lt; 2 | Y &gt; -1):</text>
+      <text x="25" y="115" fill="#38bdf8" font-size="18">P(Y &lt; 2 | Y &gt; -1) = [ F_Y(2⁻) - F_Y(-1) ] / [ 1 - F_Y(-1) ]</text>
+      <text x="25" y="155" fill="#34d399" font-size="18">Since -1 &lt; 0 ⟹ F_Y(-1) = 0. Ratio = F_Y(2) / 1 = 1 - e⁻² ≈ 0.8647.</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: PROBABILITY DENSITY FUNCTION (PDF) -->
+  <g transform="translate(2480, 310)">
+    <rect x="0" y="0" width="1240" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1240" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">3. PROBABILITY DENSITY FUNCTION &amp; MIXED RVs</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1150" height="210" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">PDF Definition &amp; Fundamental Properties</text>
+      <text x="25" y="80" fill="#38bdf8" font-size="20" font-weight="700">f_X(x) = d/dx F_X(x)   ⟺   F_X(x) = ∫₋∞ˣ f_X(t) dt</text>
+      <text x="25" y="120" fill="#f8fafc" font-size="18">1. Non-negativity: f_X(x) ≥ 0 everywhere. (Density CAN exceed 1!)</text>
+      <text x="25" y="155" fill="#f8fafc" font-size="18">2. Normalization: ∫₋∞^∞ f_X(x) dx = 1. Total area under curve is unity.</text>
+      <text x="25" y="190" fill="#cbd5e1" font-size="17">3. Discrete PMF in PDF: Represented via impulse train: f_X(x) = ∑ pᵢ δ(x - xᵢ).</text>
+    </g>
+
+    <g transform="translate(40, 340)">
+      <rect x="0" y="0" width="1150" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">Two-Sided Exponential (Laplace) Distribution</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">f_X(x) = a · e^{-b|x|},  -∞ &lt; x &lt; ∞. Area = 2 ∫₀^∞ a e^{-bx} dx = 2a / b = 1 ⟹ b = 2a.</text>
+      <text x="25" y="115" fill="#f8fafc" font-size="18">Piecewise CDF Construction:</text>
+      <text x="50" y="150" fill="#38bdf8" font-size="18">x ≤ 0: F_X(x) = (a/b) e^{bx} = (1/2) e^{bx}</text>
+      <text x="50" y="185" fill="#38bdf8" font-size="18">x &gt; 0: F_X(x) = 1 - (1/2) e^{-bx}</text>
+      <text x="25" y="215" fill="#34d399" font-size="16">Unit Step Form: F_X(x) = (1/2) e^{bx} u(-x) + [1 - (1/2) e^{-bx}] u(x).</text>
+    </g>
+
+    <g transform="translate(40, 590)">
+      <rect x="0" y="0" width="1150" height="210" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#f43f5e" font-size="22" font-weight="700">Mixed Random Variables (Hybrid Discrete-Continuous)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">• Possesses BOTH smooth continuous curve regions AND discrete point masses.</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">f_X(x) = g(x) + ∑ pᵢ δ(x - xᵢ)   (where ∫ g(x) dx + ∑ pᵢ = 1)</text>
+      <text x="25" y="145" fill="#fbbf24" font-size="17">At impulse locations xᵢ: P(X = xᵢ) = pᵢ &gt; 0 (finite point probability!).</text>
+      <text x="25" y="180" fill="#94a3b8" font-size="16">Occurs in rectifiers, limiters, saturators, and threshold sensors in engineering.</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM FULL-WIDTH: MASTER INTERVAL PROBABILITY TRANSLATION MATRIX -->
+  <g transform="translate(120, 1180)">
+    <rect x="0" y="0" width="3600" height="900" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="3600" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">4. MASTER INTERVAL PROBABILITY MATRIX: DISCRETE vs CONTINUOUS vs CDF JUMPS</text>
+
+    <!-- Table of Interval Formulas -->
+    <g transform="translate(50, 110)">
+      <rect x="0" y="0" width="1700" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1700" height="55" rx="16" fill="#0284c7" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#38bdf8" font-size="22" font-weight="700">CDF INTERVAL PROBABILITY CALCULUS (GENERAL &amp; DISCRETE)</text>
+
+      <g transform="translate(30, 80)">
+        <rect x="0" y="0" width="1640" height="110" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <text x="25" y="38" fill="#fbbf24" font-size="20" font-weight="700">Half-Open (a, b]: P(a &lt; X ≤ b) = F_X(b) - F_X(a)</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">Universal definition formula. Directly includes upper boundary b, excludes lower boundary a.</text>
+      </g>
+
+      <g transform="translate(30, 210)">
+        <rect x="0" y="0" width="1640" height="110" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <text x="25" y="38" fill="#38bdf8" font-size="20" font-weight="700">Strictly Open (a, b): P(a &lt; X &lt; b) = F_X(b⁻) - F_X(a) = F_X(b) - F_X(a) - P(X = b)</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">Must evaluate left limit at upper boundary b to exclude discrete jump at b!</text>
+      </g>
+
+      <g transform="translate(30, 340)">
+        <rect x="0" y="0" width="1640" height="110" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <text x="25" y="38" fill="#34d399" font-size="20" font-weight="700">Half-Open [a, b): P(a ≤ X &lt; b) = F_X(b⁻) - F_X(a⁻) = F_X(b) - F_X(a) - P(X = b) + P(X = a)</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">Must include jump at a and exclude jump at b.</text>
+      </g>
+
+      <g transform="translate(30, 470)">
+        <rect x="0" y="0" width="1640" height="110" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <text x="25" y="38" fill="#c084fc" font-size="20" font-weight="700">Closed [a, b]: P(a ≤ X ≤ b) = F_X(b) - F_X(a⁻) = F_X(b) - F_X(a) + P(X = a)</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">Includes point probabilities at BOTH boundaries a and b.</text>
+      </g>
+
+      <g transform="translate(30, 600)">
+        <rect x="0" y="0" width="1640" height="90" rx="10" fill="#0f172a" stroke="#f43f5e" stroke-width="1"/>
+        <text x="25" y="38" fill="#f43f5e" font-size="20" font-weight="700">Symmetric Interval: P(|X| ≤ a) = F_X(a) - F_X(-a⁻)  [For zero-mean continuous: 2 F_X(a) - 1]</text>
+        <text x="25" y="70" fill="#94a3b8" font-size="16">Tail Area: P(|X| &gt; a) = 1 - P(|X| ≤ a) = 2 [1 - F_X(a)].</text>
+      </g>
+    </g>
+
+    <!-- Continuous RV Collapse & Diagnostic Traps -->
+    <g transform="translate(1800, 110)">
+      <rect x="0" y="0" width="1750" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1750" height="55" rx="16" fill="#059669" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#34d399" font-size="22" font-weight="700">CONTINUOUS RV SIMPLIFICATION &amp; EXAM TRAPS CHECKLIST</text>
+
+      <g transform="translate(30, 80)">
+        <rect x="0" y="0" width="1690" height="150" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.2"/>
+        <text x="25" y="38" fill="#34d399" font-size="22" font-weight="700">The Continuous RV Boundary Collapse Principle</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="18">For any Continuous Random Variable, since P(X = x₀) ≡ 0 for every individual point:</text>
+        <text x="50" y="115" fill="#38bdf8" font-size="22" font-weight="700">P(a &lt; X &lt; b) = P(a ≤ X &lt; b) = P(a &lt; X ≤ b) = P(a ≤ X ≤ b) = F_X(b) - F_X(a) = ∫_a^b f_X(x) dx</text>
+      </g>
+
+      <g transform="translate(30, 250)">
+        <rect x="0" y="0" width="1690" height="440" rx="10" fill="#0f172a" stroke="#d97706" stroke-width="1.2"/>
+        <text x="25" y="38" fill="#fbbf24" font-size="22" font-weight="700">Examiner Traps &amp; Common Mathematical Misconceptions</text>
+        <text x="25" y="75" fill="#f8fafc" font-size="18">1. Trap: "f_X(x) cannot exceed 1."</text>
+        <text x="50" y="105" fill="#94a3b8" font-size="16">FALSE! Probability density can be arbitrarily large (e.g. height 10 on [0, 0.1]). Total AREA must equal 1, not peak height.</text>
+        <text x="25" y="145" fill="#f8fafc" font-size="18">2. Trap: "P(X = 35) = 0 means the event is impossible."</text>
+        <text x="50" y="175" fill="#94a3b8" font-size="16">FALSE! In a continuous uncountable continuum, every single realization has zero probability measure despite being possible.</text>
+        <text x="25" y="215" fill="#f8fafc" font-size="18">3. Trap: Confusing left-continuity with right-continuity.</text>
+        <text x="50" y="245" fill="#94a3b8" font-size="16">CDF is strictly RIGHT-continuous: F_X(x) = F_X(x⁺). At jump x₀, F_X(x₀) equals the upper level, NOT the lower level!</text>
+        <text x="25" y="285" fill="#f8fafc" font-size="18">4. Trap: Forgetting impulse contributions when integrating mixed RV PDFs.</text>
+        <text x="50" y="315" fill="#94a3b8" font-size="16">If an interval contains an impulse pᵢ δ(x - xᵢ), its point mass pᵢ MUST be added to the integral!</text>
+        <text x="25" y="355" fill="#f8fafc" font-size="18">5. Trap: Integrating outside valid support.</text>
+        <text x="50" y="385" fill="#94a3b8" font-size="16">Always sketch the non-zero region first. Evaluating outside support yields spurious results or zero division.</text>
+        <text x="50" y="420" fill="#34d399" font-size="17" font-weight="700">Golden Rule: In discrete problems, boundary inequalities strictly matter; in continuous, boundaries don't alter probabilities.</text>
+      </g>
+    </g>
+  </g>
+</svg>

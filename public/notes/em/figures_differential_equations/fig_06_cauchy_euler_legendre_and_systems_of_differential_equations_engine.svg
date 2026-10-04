@@ -1,0 +1,314 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.4" opacity="0.6" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowEmerald" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="cardShadow" x="-10%" y="-5%" width="120%" height="115%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+    </defs>
+
+    <style>
+        .font-mono { font-family: 'Consolas', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+        .font-sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+    </style>
+
+    <!-- Deep Blueprint Background -->
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Outer Architectural Frame -->
+    <rect x="40" y="40" width="3760" height="2080" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+    <rect x="48" y="48" width="3744" height="2064" fill="none" stroke="#1e293b" stroke-width="1" rx="12" />
+
+    <!-- Corner Alignment Reticles -->
+    <path d="M 40 80 L 80 80 L 80 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 80 L 3760 80 L 3760 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 40 2080 L 80 2080 L 80 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 2080 L 3760 2080 L 3760 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Top Master Header Banner -->
+    <g transform="translate(80, 80)">
+        <rect x="0" y="0" width="3680" height="150" fill="#0b1329" fill-opacity="0.85" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="12" height="150" fill="url(#headerGrad)" rx="4" />
+        
+        <!-- Blueprint Title & Subtitle -->
+        <text x="50" y="62" fill="url(#headerGrad)" font-size="44" font-weight="900" letter-spacing="2px" class="font-sans">FIGURE 6: CAUCHY-EULER, LEGENDRE &amp; SYSTEMS OF DIFFERENTIAL EQUATIONS ENGINE</text>
+        <text x="50" y="112" fill="#94a3b8" font-size="24" font-weight="500" letter-spacing="0.5px" class="font-sans">Equidimensional Operator Reduction, θ = d/dz Transformation &amp; Coupled Linear First-Order Systems</text>
+
+        <!-- Technical Telemetry Badge -->
+        <g transform="translate(3220, 30)">
+            <rect x="0" y="0" width="410" height="90" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <circle cx="30" cy="45" r="8" fill="#10b981" filter="url(#glowEmerald)" />
+            <text x="52" y="38" fill="#e2e8f0" font-size="16" font-weight="700" class="font-mono">GATE 2027 TITANS ENGINE</text>
+            <text x="52" y="65" fill="#38bdf8" font-size="14" font-weight="600" class="font-mono">SPEC: ULTRA-HD 4K BLUEPRINT</text>
+        </g>
+    </g>
+
+    <!-- Canvas Inner Content -->
+    
+    <!-- ZONE 1: CAUCHY-EULER EQUIDIMENSIONAL ODE ARCHITECTURE -->
+    <g transform="translate(80, 260)">
+        <rect width="1180" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#cyanGrad)" rx="4" />
+        <text x="36" y="52" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">1. CAUCHY-EULER EQUIDIMENSIONAL EQUATIONS</text>
+        <line x1="36" y1="72" x2="1140" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- Definition -->
+        <g transform="translate(36, 100)">
+            <rect width="1100" height="230" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">EQUIDIMENSIONAL STRUCTURE (VARIABLE COEFFICIENTS)</text>
+            <rect x="24" y="60" width="1050" height="60" fill="#1e293b" rx="6" />
+            <text x="44" y="98" fill="#fbbf24" font-size="20" font-weight="800" class="font-mono">a₀ xⁿ (dⁿy/dxⁿ) + a₁ xⁿ⁻¹ (dⁿ⁻¹y/dxⁿ⁻¹) + ... + aₙ y = X(x)</text>
+
+            <text x="24" y="155" fill="#e2e8f0" font-size="17" class="font-sans">Signature feature: Power of x in the coefficient matches the order of the derivative!</text>
+            <text x="24" y="190" fill="#34d399" font-size="16" class="font-sans">Standard linear constant coefficient methods CANNOT be directly applied due to variable x terms.</text>
+        </g>
+
+        <!-- The Canonical Transformation: x = e^z -->
+        <g transform="translate(36, 360)">
+            <rect width="1100" height="300" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">CANONICAL TRANSFORMATION: x = e^z  ⟺  z = ln x</text>
+            <text x="24" y="68" fill="#e2e8f0" font-size="16" class="font-sans">Define operator θ = d/dz. Applying the chain rule yields:</text>
+
+            <g transform="translate(24, 85)">
+                <rect width="1050" height="185" fill="#1e293b" rx="6" />
+                <text x="30" y="40" fill="#38bdf8" font-size="20" font-weight="800" class="font-mono">• x (dy/dx) = θ y</text>
+                <text x="30" y="80" fill="#fbbf24" font-size="20" font-weight="800" class="font-mono">• x² (d²y/dx²) = θ(θ - 1) y</text>
+                <text x="30" y="120" fill="#34d399" font-size="20" font-weight="800" class="font-mono">• x³ (d³y/dx³) = θ(θ - 1)(θ - 2) y</text>
+                <text x="30" y="160" fill="#c084fc" font-size="19" font-weight="800" class="font-mono">• xⁿ (dⁿy/dxⁿ) = θ(θ - 1)(θ - 2)...(θ - n + 1) y</text>
+            </g>
+        </g>
+
+        <!-- Resulting Constant Coefficient ODE -->
+        <g transform="translate(36, 685)">
+            <rect width="1100" height="155" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="32" fill="#34d399" font-size="18" font-weight="700" class="font-mono">RESULT: CONSTANT COEFFICIENT LINEAR ODE IN z</text>
+            <text x="24" y="65" fill="#e2e8f0" font-size="16" class="font-sans">Solves via standard CF + PI in terms of z, then substitute z = ln x back into the solution!</text>
+            <text x="24" y="100" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">Roots m ⟹ e^(mz) = (e^z)ᵐ = xᵐ  |  z e^(mz) = xᵐ ln x</text>
+        </g>
+    </g>
+
+    <!-- ZONE 2: LEGENDRE LINEAR EQUATIONS & OPERATOR EXTENSION -->
+    <g transform="translate(1300, 260)">
+        <rect width="1220" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#goldGrad)" rx="4" />
+        <text x="36" y="52" fill="#fbbf24" font-size="28" font-weight="800" class="font-sans">2. LEGENDRE LINEAR EQUATIONS</text>
+        <line x1="36" y1="72" x2="1180" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- Legendre Equation Structure -->
+        <g transform="translate(36, 100)">
+            <rect width="1140" height="230" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CANONICAL FORM: (ax + b)ⁿ (dⁿy/dxⁿ)</text>
+            <rect x="24" y="60" width="1090" height="60" fill="#1e293b" rx="6" />
+            <text x="44" y="98" fill="#fbbf24" font-size="19" font-weight="800" class="font-mono">a₀ (ax + b)ⁿ y⁽ⁿ⁾ + a₁ (ax + b)ⁿ⁻¹ y⁽ⁿ⁻¹⁾ + ... + aₙ y = X(x)</text>
+
+            <text x="24" y="155" fill="#e2e8f0" font-size="17" class="font-sans">Generalization of Cauchy-Euler where the base is a linear binomial (ax + b).</text>
+            <text x="24" y="190" fill="#34d399" font-size="16" class="font-sans">Transformation: Put ax + b = e^z ⟺ z = ln(ax + b).</text>
+        </g>
+
+        <!-- Legendre Operator Replacement Rules -->
+        <g transform="translate(36, 360)">
+            <rect width="1140" height="300" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">OPERATOR REPLACEMENT (WITH CHAIN RULE FACTOR a)</text>
+            <text x="24" y="68" fill="#e2e8f0" font-size="16" class="font-sans">Define θ = d/dz. Due to d(ax + b)/dx = a, each derivative picks up a factor of a:</text>
+
+            <g transform="translate(24, 85)">
+                <rect width="1090" height="185" fill="#1e293b" rx="6" />
+                <text x="30" y="40" fill="#38bdf8" font-size="20" font-weight="800" class="font-mono">• (ax + b) (dy/dx) = a θ y</text>
+                <text x="30" y="80" fill="#fbbf24" font-size="20" font-weight="800" class="font-mono">• (ax + b)² (d²y/dx²) = a² θ(θ - 1) y</text>
+                <text x="30" y="120" fill="#34d399" font-size="20" font-weight="800" class="font-mono">• (ax + b)³ (d³y/dx³) = a³ θ(θ - 1)(θ - 2) y</text>
+                <text x="30" y="160" fill="#f43f5e" font-size="17" font-weight="700" class="font-sans">⚠️ TOP TRAP: Forgetting the factor aⁿ! (If 2x + 1 appears, a = 2, so a² = 4 multiplies θ(θ-1)).</text>
+            </g>
+        </g>
+
+        <!-- Benchmark Drill -->
+        <g transform="translate(36, 685)">
+            <rect width="1140" height="155" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="32" fill="#34d399" font-size="18" font-weight="700" class="font-mono">QUICK VERIFICATION DRILL</text>
+            <text x="24" y="65" fill="#e2e8f0" font-size="16" class="font-sans">(2x + 3)² y'' - 2(2x + 3) y' - 12 y = 0 ⟹ [4 θ(θ-1) - 2(2)θ - 12] y = 0</text>
+            <text x="24" y="95" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">⟹ 4(θ² - 2θ - 3) y = 0 ⟹ θ = 3, -1 ⟹ y = c₁ (2x + 3)³ + c₂ (2x + 3)⁻¹</text>
+        </g>
+    </g>
+
+    <!-- ZONE 3: SYSTEMS OF FIRST-ORDER DIFFERENTIAL EQUATIONS -->
+    <g transform="translate(2560, 260)">
+        <rect width="1200" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#emeraldGrad)" rx="4" />
+        <text x="36" y="52" fill="#34d399" font-size="28" font-weight="800" class="font-sans">3. SYSTEMS OF DIFFERENTIAL EQUATIONS</text>
+        <line x1="36" y1="72" x2="1160" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- 2x2 Coupled System -->
+        <g transform="translate(36, 100)">
+            <rect width="1120" height="340" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">COUPLED 2x2 LINEAR FIRST-ORDER SYSTEM</text>
+            <text x="24" y="68" fill="#e2e8f0" font-size="16" class="font-sans">Two dependent variables x(t) and y(t) with independent parameter t:</text>
+
+            <rect x="24" y="85" width="1070" height="90" fill="#1e293b" rx="6" />
+            <text x="44" y="120" fill="#fbbf24" font-size="20" font-weight="800" class="font-mono">dx/dt = a₁₁ x + a₁₂ y + f₁(t)</text>
+            <text x="44" y="155" fill="#fbbf24" font-size="20" font-weight="800" class="font-mono">dy/dt = a₂₁ x + a₂₂ y + f₂(t)</text>
+
+            <text x="24" y="210" fill="#34d399" font-size="18" font-weight="700" class="font-mono">MATRIX STATE-SPACE FORMULATION:</text>
+            <text x="44" y="245" fill="#34d399" font-size="22" font-weight="900" class="font-mono">X'(t) = A X(t)   where A = [ a₁₁  a₁₂ ; a₂₁  a₂₂ ]</text>
+            <text x="24" y="295" fill="#e2e8f0" font-size="16" class="font-sans">Eigenvalues λ of system matrix A govern system dynamics (Nodes, Saddles, Spirals, Centers)!</text>
+        </g>
+
+        <!-- Elimination Method Pipeline -->
+        <g transform="translate(36, 470)">
+            <rect width="1120" height="360" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">THE OPERATOR ELIMINATION WORKFLOW</text>
+            <text x="24" y="68" fill="#e2e8f0" font-size="16" class="font-sans">Rewrite in differential operator D = d/dt form:</text>
+
+            <g transform="translate(24, 85)">
+                <rect width="1070" height="240" fill="#020617" stroke="#1e293b" stroke-width="1" rx="6" />
+                <text x="30" y="35" fill="#38bdf8" font-size="17" font-mono="font-mono">(D - a₁₁) x - a₁₂ y = f₁(t)</text>
+                <text x="30" y="65" fill="#38bdf8" font-size="17" font-mono="font-mono">-a₂₁ x + (D - a₂₂) y = f₂(t)</text>
+                
+                <text x="30" y="110" fill="#fbbf24" font-size="17" font-weight="700" class="font-sans">Apply Cramer's Rule / Determinant Elimination:</text>
+                <text x="30" y="145" fill="#34d399" font-size="19" font-weight="800" class="font-mono">| (D - a₁₁)   -a₁₂ | x = | f₁   -a₁₂ |</text>
+                <text x="30" y="175" fill="#34d399" font-size="19" font-weight="800" class="font-mono">|   -a₂₁    (D - a₂₂) |   | f₂  (D - a₂₂) |</text>
+                <text x="30" y="215" fill="#c084fc" font-size="17" font-weight="700" class="font-mono">⟹ [ D² - Tr(A) D + Det(A) ] x = F(t) (Standard 2nd-order ODE!)</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ZONE 4: SOLVED BENCHMARK CAUCHY-EULER DRILL -->
+    <g transform="translate(80, 1160)">
+        <rect width="3680" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#roseGrad)" rx="4" />
+        <text x="36" y="52" fill="#f43f5e" font-size="28" font-weight="800" class="font-sans">4. BENCHMARK CAUCHY-EULER DRILL: x² y'' - 3x y' + 4y = x² ln x (HIGH-YIELD GATE PATTERN)</text>
+        <line x1="36" y1="72" x2="3640" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- 3 Columns inside bottom container -->
+        <g transform="translate(36, 100)">
+            <rect width="1160" height="710" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#fbbf24" font-size="22" font-weight="700" class="font-mono">STEP 1: TRANSFORM TO OPERATOR θ</text>
+            
+            <g transform="translate(24, 70)">
+                <rect width="1110" height="600" fill="#1e293b" rx="6" />
+                <text x="30" y="40" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">Put x = e^z ⟺ z = ln x, θ = d/dz</text>
+                <text x="30" y="75" fill="#e2e8f0" font-size="16" class="font-mono">• x² y'' = θ(θ - 1) y</text>
+                <text x="30" y="110" fill="#e2e8f0" font-size="16" class="font-mono">• x y' = θ y</text>
+                <text x="30" y="145" fill="#e2e8f0" font-size="16" class="font-mono">• RHS = (e^z)² · z = z e^(2z)</text>
+
+                <text x="30" y="200" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">Substitute into ODE:</text>
+                <text x="30" y="235" fill="#e2e8f0" font-size="17" class="font-mono">[ θ(θ - 1) - 3θ + 4 ] y = z e^(2z)</text>
+                <text x="30" y="270" fill="#34d399" font-size="22" font-weight="900" class="font-mono">(θ² - 4θ + 4) y = z e^(2z)</text>
+                <text x="30" y="315" fill="#38bdf8" font-size="20" font-weight="800" class="font-mono">(θ - 2)² y = z e^(2z)</text>
+
+                <text x="30" y="375" fill="#c084fc" font-size="18" font-weight="700" class="font-mono">Auxiliary Equation:</text>
+                <text x="30" y="410" fill="#e2e8f0" font-size="17" class="font-mono">(m - 2)² = 0 ⟹ m = 2, 2 (Repeated roots!)</text>
+
+                <text x="30" y="465" fill="#34d399" font-size="20" font-weight="800" class="font-mono">Complementary Function in z:</text>
+                <text x="30" y="505" fill="#34d399" font-size="22" font-weight="900" class="font-mono">y_c = (c₁ + c₂ z) e^(2z)</text>
+            </g>
+        </g>
+
+        <g transform="translate(1230, 100)">
+            <rect width="1180" height="710" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="22" font-weight="700" class="font-mono">STEP 2: PARTICULAR INTEGRAL IN z</text>
+
+            <g transform="translate(24, 70)">
+                <rect width="1130" height="600" fill="#1e293b" rx="6" />
+                <text x="30" y="40" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">Evaluate PI using Exponential Shift:</text>
+                <text x="30" y="80" fill="#e2e8f0" font-size="17" class="font-mono">PI = [ 1 / (θ - 2)² ] ( e^(2z) · z )</text>
+
+                <text x="30" y="130" fill="#38bdf8" font-size="18" font-weight="700" class="font-sans">Shift e^(2z) out, replace θ with (θ + 2):</text>
+                <text x="50" y="170" fill="#e2e8f0" font-size="18" class="font-mono">PI = e^(2z) · [ 1 / ( (θ + 2) - 2 )² ] z</text>
+                <text x="50" y="215" fill="#34d399" font-size="22" font-weight="900" class="font-mono">PI = e^(2z) · [ 1 / θ² ] z</text>
+
+                <text x="30" y="275" fill="#fbbf24" font-size="18" font-weight="700" class="font-sans">Evaluate [1/θ²] z (Integrate z twice w.r.t. z):</text>
+                <text x="50" y="315" fill="#e2e8f0" font-size="17" class="font-mono">• First integral: (1/θ) z = ∫ z dz = z² / 2</text>
+                <text x="50" y="355" fill="#e2e8f0" font-size="17" class="font-mono">• Second integral: (1/θ) (z²/2) = ∫ (z²/2) dz = z³ / 6</text>
+
+                <text x="30" y="420" fill="#38bdf8" font-size="20" font-weight="800" class="font-mono">Particular Integral Result:</text>
+                <text x="50" y="465" fill="#34d399" font-size="24" font-weight="900" class="font-mono">y_p = e^(2z) · (z³ / 6)</text>
+                
+                <text x="30" y="530" fill="#c084fc" font-size="17" font-weight="700" class="font-sans">Remarkable Elegance: No complex integration needed!</text>
+            </g>
+        </g>
+
+        <g transform="translate(2450, 100)">
+            <rect width="1190" height="710" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#34d399" font-size="22" font-weight="700" class="font-mono">STEP 3: RESTORE VARIABLE x</text>
+
+            <g transform="translate(24, 70)">
+                <rect width="1140" height="600" fill="#1e293b" rx="6" />
+                <text x="30" y="40" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">Substitute e^(2z) = x² and z = ln x:</text>
+                
+                <text x="30" y="90" fill="#e2e8f0" font-size="17" class="font-sans">1. Transform Complementary Function:</text>
+                <text x="50" y="125" fill="#38bdf8" font-size="20" font-mono="font-mono">y_c = (c₁ + c₂ ln x) · x²</text>
+
+                <text x="30" y="180" fill="#e2e8f0" font-size="17" class="font-sans">2. Transform Particular Integral:</text>
+                <text x="50" y="215" fill="#38bdf8" font-size="20" font-mono="font-mono">y_p = x² · ( (ln x)³ / 6 )</text>
+
+                <text x="30" y="280" fill="#34d399" font-size="20" font-weight="800" class="font-mono">FINAL GENERAL SOLUTION IN x:</text>
+                <rect x="30" y="300" width="1080" height="95" fill="#020617" stroke="#38bdf8" stroke-width="2" rx="6" />
+                <text x="50" y="355" fill="#34d399" font-size="22" font-weight="900" class="font-mono">y = x² [ c₁ + c₂ ln x + 1/6 (ln x)³ ]</text>
+
+                <text x="30" y="435" fill="#fbbf24" font-size="18" font-weight="700" class="font-sans">Key GATE Takeaway:</text>
+                <text x="30" y="470" fill="#e2e8f0" font-size="16" class="font-sans">Whenever repeated roots occur in Cauchy-Euler, the additional independent solutions pick up factors of (ln x), NEVER x!</text>
+                <text x="30" y="505" fill="#34d399" font-size="16" font-weight="700" class="font-mono">Standard ODE: (c₁ + c₂ x) e^(mx)  ⟷  Cauchy-Euler: (c₁ + c₂ ln x) xᵐ</text>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Bottom Engineering Telemetry Strip -->
+    <g transform="translate(80, 2060)">
+        <line x1="0" y1="0" x2="3680" y2="0" stroke="#1e293b" stroke-width="2" />
+        <text x="10" y="24" fill="#64748b" font-size="16" class="font-mono">DIFFERENTIAL EQUATIONS MATHEMATICAL BLUEPRINT // SCALE: 1.0 NATIVE // GATE / ESE / ISRO EXCELLENCE SUITE</text>
+        <text x="3670" y="24" fill="#64748b" font-size="16" text-anchor="end" class="font-mono">PREPFUSION ENGINEERING MATHEMATICS // SYSTEM VERIFIED</text>
+    </g>
+</svg>

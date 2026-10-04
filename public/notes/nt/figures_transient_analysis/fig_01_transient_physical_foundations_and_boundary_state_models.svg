@@ -1,0 +1,341 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIG 01: TRANSIENT PHYSICAL FOUNDATIONS, ENERGY CONTINUITY &amp; BOUNDARY STATE MODELS</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Energy Storage Axioms • Mechanical Inertia Analogy • Finite Power Barrier • The 3 Canonical Temporal Boundary Regimes (t = 0⁻, 0⁺, ∞)</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • TRANSIENT ANALYSIS TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Physical Foundations & Energy Storage -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Physical Cause of Transients</text>
+
+  <rect x="30" y="85" width="840" height="260" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">The Physical Origin: Stored Field Energy</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">• Transients represent the time-dependent transitional response of voltages</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">  and currents between two equilibrium steady states following a switching event.</text>
+  <text x="50" y="235" fill="#34d399" font-size="19" font-weight="700">Root Cause: Memory elements store energy in electromagnetic fields:</text>
+  <text x="70" y="275" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Inductor (Magnetic Field):   E_L = ½ L · [i_L(t)]²</text>
+  <text x="70" y="315" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Capacitor (Electric Field):   E_C = ½ C · [v_C(t)]²</text>
+
+  <rect x="30" y="365" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="410" fill="#38bdf8" font-size="22" font-weight="800">The Mechanical Analogy of Transients</text>
+  <text x="50" y="450" fill="#e2e8f0" font-size="18">Electrical networks map directly to classical Newtonian mechanical systems:</text>
+  
+  <text x="50" y="495" fill="#fbbf24" font-size="19" font-weight="700">Electrical Quantity</text>
+  <text x="420" y="495" fill="#fbbf24" font-size="19" font-weight="700">Mechanical Equivalent</text>
+  <path d="M 45 515 L 850 515" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="550" fill="#e2e8f0" font-size="18">Inductance L (Henrys)</text>
+  <text x="420" y="550" fill="#34d399" font-size="18" font-weight="700">Inertial Mass M (Kilograms)</text>
+
+  <text x="50" y="595" fill="#e2e8f0" font-size="18">Inductor Current i_L</text>
+  <text x="420" y="595" fill="#34d399" font-size="18" font-weight="700">Velocity v (m/s)</text>
+
+  <text x="50" y="640" fill="#e2e8f0" font-size="18">Capacitance C (Farads)</text>
+  <text x="420" y="640" fill="#38bdf8" font-size="18" font-weight="700">Spring Compliance 1/K (m/N)</text>
+
+  <text x="50" y="685" fill="#e2e8f0" font-size="18">Capacitor Voltage v_C</text>
+  <text x="420" y="685" fill="#38bdf8" font-size="18" font-weight="700">Spring Displacement x (meters)</text>
+
+  <text x="50" y="730" fill="#e2e8f0" font-size="18">Resistance R (Ohms)</text>
+  <text x="420" y="730" fill="#f43f5e" font-size="18" font-weight="700">Viscous Friction Damping B</text>
+
+  <text x="50" y="765" fill="#94a3b8" font-size="17">• Just as physical mass cannot jump velocity instantaneously without infinite force,</text>
+  <text x="50" y="785" fill="#94a3b8" font-size="17">  inductor current cannot jump instantaneously without infinite voltage!</text>
+
+  <rect x="30" y="805" width="840" height="380" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="850" fill="#34d399" font-size="22" font-weight="800">Zero-Order Pure Resistive Circuits</text>
+  <text x="50" y="890" fill="#e2e8f0" font-size="18">• Purely resistive networks contain NO memory elements (zero L, zero C).</text>
+  <text x="50" y="925" fill="#e2e8f0" font-size="18">• Stored energy is identically zero at all times: E(t) ≡ 0 J.</text>
+  <text x="50" y="965" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Transient Duration = ZERO   (Δt_transient ≡ 0 s)</text>
+  <text x="50" y="1010" fill="#e2e8f0" font-size="18">• When switch operates, voltages and currents step INSTANTANEOUSLY between</text>
+  <text x="50" y="1040" fill="#e2e8f0" font-size="18">  the two DC levels without any exponential settling curve.</text>
+  <text x="50" y="1080" fill="#38bdf8" font-size="18" font-weight="700">Governed by pure algebraic Ohm's law: v(t) = i(t) · R.</text>
+  <text x="50" y="1115" fill="#94a3b8" font-size="17">Transients exist IF AND ONLY IF at least one dynamic storage element (L or C) is present!</text>
+  <text x="50" y="1150" fill="#94a3b8" font-size="17">(Or during electromagnetic wave propagation along distributed transmission lines).</text>
+
+  <rect x="30" y="1205" width="840" height="610" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1250" fill="#fbbf24" font-size="22" font-weight="800">General Response Decomposition Principle</text>
+  <text x="50" y="1290" fill="#e2e8f0" font-size="18">In any linear time-invariant dynamic network, complete response x(t) decomposes</text>
+  <text x="50" y="1320" fill="#e2e8f0" font-size="18">naturally along two dual mathematical perspectives:</text>
+  
+  <text x="50" y="1370" fill="#38bdf8" font-size="20" font-weight="700">Perspective 1: Differential Equations (ODE View)</text>
+  <text x="70" y="1405" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">x(t) = x_natural(t) + x_forced(t)</text>
+  <text x="70" y="1440" fill="#e2e8f0" font-size="17">• x_natural(t): Complementary Function (CF), decays to 0 as t → ∞ (Transient).</text>
+  <text x="70" y="1470" fill="#e2e8f0" font-size="17">• x_forced(t):  Particular Integral (PI), driven by independent source (Steady State).</text>
+
+  <text x="50" y="1520" fill="#38bdf8" font-size="20" font-weight="700">Perspective 2: Energy &amp; Excitation States (System View)</text>
+  <text x="70" y="1555" fill="#c084fc" font-family="'Fira Code', monospace" font-size="22" font-weight="800">x(t) = x_ZIR(t) + x_ZSR(t)</text>
+  <text x="70" y="1590" fill="#e2e8f0" font-size="17">• Zero-Input Response (ZIR): Response due SOLELY to initial stored energy</text>
+  <text x="90" y="1615" fill="#94a3b8" font-size="16">  (i_L(0⁻), v_C(0⁻)) with all independent external sources set to zero.</text>
+  <text x="70" y="1650" fill="#e2e8f0" font-size="17">• Zero-State Response (ZSR): Response due SOLELY to external input excitation</text>
+  <text x="90" y="1675" fill="#94a3b8" font-size="16">  assuming unenergized initial state (i_L(0⁻) = 0, v_C(0⁻) = 0).</text>
+  
+  <text x="50" y="1725" fill="#fbbf24" font-size="18" font-weight="800">Exam Equivalence Note:</text>
+  <text x="50" y="1755" fill="#e2e8f0" font-size="17">x_ZIR ≠ x_natural in general! ZIR contains natural terms, but ZSR contains</text>
+  <text x="50" y="1785" fill="#e2e8f0" font-size="17">BOTH forced steady-state AND transient natural components!</text>
+</g>
+
+<!-- Column 2: The Finite Power Barrier & Continuity Axioms -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#818cf8"/>
+  <text x="35" y="55" fill="#818cf8" font-size="28" font-weight="900">2. Finite Power &amp; Continuity Axioms</text>
+
+  <rect x="30" y="85" width="840" height="380" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="125" fill="#f43f5e" font-size="22" font-weight="900">THE FINITE POWER BARRIER THEOREM</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">Why cannot capacitor voltage or inductor current jump discontinuously?</text>
+  <text x="50" y="200" fill="#e2e8f0" font-size="18">Power is the rate of energy transfer: P(t) = dE/dt.</text>
+  <text x="50" y="235" fill="#e2e8f0" font-size="18">Suppose stored energy changes by a finite step ΔE ≠ 0 in time Δt → 0:</text>
+  
+  <text x="70" y="285" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="24" font-weight="900">P(t) = lim_{Δt → 0} (ΔE / Δt) = ΔE / 0 ⟶ ∞  (Infinite Power!)</text>
+
+  <text x="50" y="335" fill="#fbbf24" font-size="19" font-weight="800">Physical Reality in Real Circuits:</text>
+  <text x="50" y="370" fill="#e2e8f0" font-size="18">• Practical sources (batteries, generators) possess FINITE voltage and FINITE current.</text>
+  <text x="50" y="405" fill="#e2e8f0" font-size="18">• Infinite power is physically impossible in ordinary circuits.</text>
+  <text x="50" y="440" fill="#34d399" font-size="18" font-weight="800">Therefore, stored energy MUST BE A CONTINUOUS FUNCTION OF TIME!</text>
+
+  <rect x="30" y="485" width="840" height="490" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="50" y="530" fill="#34d399" font-size="22" font-weight="900">The State Continuity Invariants at t = 0</text>
+  <text x="50" y="570" fill="#e2e8f0" font-size="18">Under all finite excitations (steps, ramps, sinusoids):</text>
+  
+  <rect x="50" y="605" width="800" height="95" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="70" y="645" fill="#38bdf8" font-size="20" font-weight="800">1. Inductor Current Continuity Axiom:</text>
+  <text x="70" y="680" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">i_L(0⁺) = i_L(0⁻)   [Flux Linkage λ(0⁺) = λ(0⁻)]</text>
+
+  <rect x="50" y="720" width="800" height="95" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="70" y="760" fill="#c084fc" font-size="20" font-weight="800">2. Capacitor Voltage Continuity Axiom:</text>
+  <text x="70" y="795" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">v_C(0⁺) = v_C(0⁻)   [Charge Q(0⁺) = Q(0⁻)]</text>
+
+  <text x="50" y="850" fill="#fbbf24" font-size="19" font-weight="800">Calculus Proof by Contradiction:</text>
+  <text x="50" y="885" fill="#e2e8f0" font-size="17">• v_L(t) = L · di_L/dt. If i_L stepped discontinuously, di/dt = δ(t) ⟹ v_L → ∞!</text>
+  <text x="50" y="915" fill="#e2e8f0" font-size="17">• i_C(t) = C · dv_C/dt. If v_C stepped discontinuously, dv/dt = δ(t) ⟹ i_C → ∞!</text>
+  <text x="50" y="955" fill="#34d399" font-size="18" font-weight="800">Finite terminal voltages and currents GUARANTEE state continuity!</text>
+
+  <rect x="30" y="995" width="840" height="420" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1040" fill="#f43f5e" font-size="22" font-weight="800">THE NON-STATE VARIABLE JUMP TRAP</text>
+  <text x="50" y="1080" fill="#f43f5e" font-size="19" font-weight="700">DANGER: Only i_L and v_C are guaranteed to be continuous!</text>
+  <text x="50" y="1115" fill="#e2e8f0" font-size="18">The following quantities CAN AND DO JUMP discontinuously at t = 0⁺:</text>
+  
+  <text x="70" y="1160" fill="#fbbf24" font-size="18">1. Inductor Voltage:      v_L(0⁺) CAN JUMP!   v_L(0⁺) ≠ v_L(0⁻) in general.</text>
+  <text x="70" y="1200" fill="#fbbf24" font-size="18">2. Capacitor Current:      i_C(0⁺) CAN JUMP!   i_C(0⁺) ≠ i_C(0⁻) in general.</text>
+  <text x="70" y="1240" fill="#fbbf24" font-size="18">3. Resistor Voltages:      v_R(0⁺) CAN JUMP!   (Resistor has zero memory).</text>
+  <text x="70" y="1280" fill="#fbbf24" font-size="18">4. Resistor Currents:      i_R(0⁺) CAN JUMP!   (Follows algebraic KVL/KCL).</text>
+  <text x="70" y="1320" fill="#fbbf24" font-size="18">5. State Derivatives:      di_L/dt(0⁺) and dv_C/dt(0⁺) CAN JUMP!</text>
+  
+  <text x="50" y="1380" fill="#38bdf8" font-size="18" font-weight="800">Exam Rule: Never assume v_L(0⁺) = v_L(0⁻) or i_C(0⁺) = i_C(0⁻)!</text>
+
+  <rect x="30" y="1435" width="840" height="380" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1480" fill="#fbbf24" font-size="22" font-weight="800">The Discontinuous Temporal Axis Convention</text>
+  
+  <text x="50" y="1525" fill="#38bdf8" font-size="19" font-weight="700">t = 0⁻  (The Prior Equilibrium Instant):</text>
+  <text x="50" y="1555" fill="#e2e8f0" font-size="18">• Infinitesimal instant immediately BEFORE the switch moves.</text>
+  <text x="50" y="1585" fill="#94a3b8" font-size="17">• Circuit is in prior DC steady state. All transients from past events have settled.</text>
+
+  <text x="50" y="1630" fill="#38bdf8" font-size="19" font-weight="700">t = 0   (The Instant of Physical Switching):</text>
+  <text x="50" y="1660" fill="#e2e8f0" font-size="18">• Mathematical point of topological discontinuity. Switch opens or closes.</text>
+
+  <text x="50" y="1705" fill="#38bdf8" font-size="19" font-weight="700">t = 0⁺  (The Immediate Post-Switching Instant):</text>
+  <text x="50" y="1735" fill="#e2e8f0" font-size="18">• Infinitesimal instant immediately AFTER the switch establishes new topology.</text>
+  <text x="50" y="1765" fill="#34d399" font-size="18" font-weight="800">Dynamic elements carry their frozen continuity states: i_L(0⁺)=i_L(0⁻), v_C(0⁺)=v_C(0⁻).</text>
+</g>
+
+<!-- Column 3: The 3 Canonical Boundary Equivalent Models -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">3. Boundary Equivalent Models</text>
+
+  <!-- Table Card -->
+  <rect x="30" y="85" width="840" height="420" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="130" fill="#c084fc" font-size="22" font-weight="900">MASTER BOUNDARY EQUIVALENT MODELS MATRIX</text>
+  
+  <text x="50" y="175" fill="#fbbf24" font-size="18" font-weight="700">Temporal Instant</text>
+  <text x="340" y="175" fill="#fbbf24" font-size="18" font-weight="700">Inductor (L)</text>
+  <text x="620" y="175" fill="#fbbf24" font-size="18" font-weight="700">Capacitor (C)</text>
+  <path d="M 45 195 L 850 195" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="240" fill="#e2e8f0" font-size="18">t = 0⁻ (Prior DC SS)</text>
+  <text x="340" y="240" fill="#34d399" font-size="18" font-weight="700">SHORT CIRCUIT (v_L=0)</text>
+  <text x="620" y="240" fill="#38bdf8" font-size="18" font-weight="700">OPEN CIRCUIT (i_C=0)</text>
+
+  <text x="50" y="300" fill="#e2e8f0" font-size="18">t = 0⁺ (Energized)</text>
+  <text x="340" y="300" fill="#34d399" font-size="18" font-weight="700">Current Source i_L(0⁻)</text>
+  <text x="620" y="300" fill="#38bdf8" font-size="18" font-weight="700">Voltage Source v_C(0⁻)</text>
+
+  <text x="50" y="360" fill="#e2e8f0" font-size="18">t = 0⁺ (Unenergized)</text>
+  <text x="340" y="360" fill="#f43f5e" font-size="18" font-weight="700">OPEN CIRCUIT (I_0=0)</text>
+  <text x="620" y="360" fill="#f43f5e" font-size="18" font-weight="700">SHORT CIRCUIT (V_0=0)</text>
+
+  <text x="50" y="420" fill="#e2e8f0" font-size="18">t = ∞ (Final DC SS)</text>
+  <text x="340" y="420" fill="#34d399" font-size="18" font-weight="700">SHORT CIRCUIT (v_L=0)</text>
+  <text x="620" y="420" fill="#38bdf8" font-size="18" font-weight="700">OPEN CIRCUIT (i_C=0)</text>
+
+  <text x="50" y="475" fill="#fbbf24" font-size="17" font-weight="800">Duality Note: L and C swap behaviors between initial instant and steady state!</text>
+
+  <!-- t = 0- Card -->
+  <rect x="30" y="525" width="840" height="380" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="570" fill="#34d399" font-size="22" font-weight="800">State 1: Evaluating Initial Conditions at t = 0⁻</text>
+  <text x="50" y="610" fill="#e2e8f0" font-size="18">If circuit has been connected to DC sources for a very long time before t = 0:</text>
+  <text x="50" y="645" fill="#e2e8f0" font-size="18">• All transients have decayed to zero; time derivatives vanish: d/dt ≡ 0.</text>
+  <text x="50" y="685" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">Inductor:  v_L = L · di/dt = L · 0 = 0 V   ⟹  SHORT CIRCUIT</text>
+  <text x="50" y="725" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">Capacitor: i_C = C · dv/dt = C · 0 = 0 A   ⟹  OPEN CIRCUIT</text>
+  
+  <text x="50" y="775" fill="#fbbf24" font-size="19" font-weight="800">Action Protocol:</text>
+  <text x="50" y="810" fill="#e2e8f0" font-size="18">1. Draw equivalent circuit at t = 0⁻ with all L shorted and all C opened.</text>
+  <text x="50" y="845" fill="#e2e8f0" font-size="18">2. Solve purely resistive DC circuit for inductor currents i_L(0⁻) and capacitor</text>
+  <text x="70" y="875" fill="#e2e8f0" font-size="18">   voltages v_C(0⁻) with correct signs and arrow orientations!</text>
+
+  <!-- t = 0+ Card -->
+  <rect x="30" y="925" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="970" fill="#38bdf8" font-size="22" font-weight="800">State 2: The Instantaneous Model at t = 0⁺</text>
+  <text x="50" y="1010" fill="#e2e8f0" font-size="18">Immediately after switch changes state, dynamic elements act as DC sources:</text>
+  
+  <text x="50" y="1060" fill="#34d399" font-size="20" font-weight="700">1. Inductor Equivalent at t = 0⁺:</text>
+  <text x="70" y="1095" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">Replace with an Independent Current Source of value I₀ = i_L(0⁻).</text>
+  <text x="70" y="1130" fill="#94a3b8" font-size="17">(Arrow oriented in the original current direction; if i_L(0⁻) = 0, acts as OPEN circuit!).</text>
+
+  <text x="50" y="1180" fill="#34d399" font-size="20" font-weight="700">2. Capacitor Equivalent at t = 0⁺:</text>
+  <text x="70" y="1215" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">Replace with an Independent Voltage Source of value V₀ = v_C(0⁻).</text>
+  <text x="70" y="1250" fill="#94a3b8" font-size="17">(Polarity matching v_C(0⁻); if v_C(0⁻) = 0, acts as SHORT circuit!).</text>
+  
+  <text x="50" y="1305" fill="#fbbf24" font-size="18" font-weight="800">Exam Super-Shortcut:</text>
+  <text x="50" y="1335" fill="#e2e8f0" font-size="18">At t = 0⁺, the entire dynamic circuit becomes PURELY RESISTIVE with DC sources!</text>
+
+  <!-- t = infinity Card -->
+  <rect x="30" y="1365" width="840" height="450" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1410" fill="#fbbf24" font-size="22" font-weight="800">State 3: The Final DC Steady State at t = ∞</text>
+  <text x="50" y="1450" fill="#e2e8f0" font-size="18">After new switch configuration has remained unchanged for t ≫ 5τ:</text>
+  <text x="50" y="1485" fill="#e2e8f0" font-size="18">• All transient currents and voltages have fully extinguished.</text>
+  <text x="50" y="1520" fill="#34d399" font-size="18" font-weight="700">• Inductor once again becomes a SHORT CIRCUIT (v_L(∞) = 0 V).</text>
+  <text x="50" y="1555" fill="#38bdf8" font-size="18" font-weight="700">• Capacitor once again becomes an OPEN CIRCUIT (i_C(∞) = 0 A).</text>
+
+  <text x="50" y="1605" fill="#fbbf24" font-size="19" font-weight="800">Action Protocol:</text>
+  <text x="50" y="1640" fill="#e2e8f0" font-size="18">1. Draw equivalent circuit under the NEW switch topology at t = ∞.</text>
+  <text x="50" y="1675" fill="#e2e8f0" font-size="18">2. Replace L with short circuit and C with open circuit.</text>
+  <text x="50" y="1710" fill="#e2e8f0" font-size="18">3. Solve standard DC network for final target values x(∞) = i_L(∞) or v_C(∞).</text>
+  <text x="50" y="1760" fill="#38bdf8" font-size="18" font-weight="800">With x(0⁺) and x(∞) known, solution is 66% complete in 60 seconds!</text>
+</g>
+
+<!-- Column 4: High-Frequency vs Steady-State & Laplace Equivalence -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#fbbf24"/>
+  <text x="35" y="55" fill="#fbbf24" font-size="28" font-weight="900">4. Frequency Limits &amp; s-Domain</text>
+
+  <rect x="30" y="85" width="840" height="380" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">Laplace Impedance Frequency Duality Limits</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">The switching boundary instants correspond to extreme frequency limits in s-domain:</text>
+  
+  <text x="50" y="210" fill="#38bdf8" font-size="20" font-weight="700">1. High-Frequency Limit: s → ∞  ⟺  Initial Instant t → 0⁺</text>
+  <text x="70" y="245" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">Z_L(s) = s · L ⟶ ∞ Ω  (Inductor behaves as OPEN CIRCUIT)</text>
+  <text x="70" y="280" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">Z_C(s) = 1 / (s · C) ⟶ 0 Ω  (Capacitor behaves as SHORT CIRCUIT)</text>
+  <text x="50" y="320" fill="#94a3b8" font-size="17">(Valid for initially uncharged elements with zero initial stored energy!).</text>
+
+  <text x="50" y="365" fill="#38bdf8" font-size="20" font-weight="700">2. Low-Frequency / DC Limit: s → 0  ⟺  Final Steady-State t → ∞</text>
+  <text x="70" y="400" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">Z_L(s) = s · L ⟶ 0 Ω  (Inductor behaves as SHORT CIRCUIT)</text>
+  <text x="70" y="435" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">Z_C(s) = 1 / (s · C) ⟶ ∞ Ω  (Capacitor behaves as OPEN CIRCUIT)</text>
+
+  <rect x="30" y="485" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="530" fill="#38bdf8" font-size="22" font-weight="800">Initial &amp; Final Value Theorems in s-Domain</text>
+  <text x="50" y="570" fill="#e2e8f0" font-size="18">Extracting boundary states directly from the Laplace transform X(s):</text>
+  
+  <rect x="50" y="605" width="800" height="95" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="70" y="645" fill="#34d399" font-size="20" font-weight="800">Initial Value Theorem (IVT):</text>
+  <text x="70" y="680" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">x(0⁺) = lim_{s → ∞} [ s · X(s) ]</text>
+
+  <rect x="50" y="720" width="800" height="95" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="70" y="760" fill="#f43f5e" font-size="20" font-weight="800">Final Value Theorem (FVT):</text>
+  <text x="70" y="795" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="900">x(∞) = lim_{s → 0} [ s · X(s) ]</text>
+
+  <text x="50" y="845" fill="#f43f5e" font-size="19" font-weight="800">CRITICAL FVT STABILITY CONSTRAINT:</text>
+  <text x="50" y="875" fill="#e2e8f0" font-size="17">FVT is valid IF AND ONLY IF all poles of [s · X(s)] lie strictly in the open</text>
+  <text x="50" y="900" fill="#f43f5e" font-size="17">LEFT HALF of the s-plane! (If poles exist on jω axis, e.g. LC tanks, FVT FAILS!).</text>
+
+  <rect x="30" y="925" width="840" height="480" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="970" fill="#c084fc" font-size="22" font-weight="800">Laplace Transform Operational Toolkit</text>
+  <text x="50" y="1010" fill="#fbbf24" font-size="18" font-weight="700">Time Domain f(t)</text>
+  <text x="450" y="1010" fill="#fbbf24" font-size="18" font-weight="700">s-Domain F(s)</text>
+  <path d="M 45 1030 L 850 1030" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="1065" fill="#e2e8f0" font-size="18">Dirac Delta δ(t)</text>
+  <text x="450" y="1065" fill="#38bdf8" font-size="18" font-weight="700">1</text>
+
+  <text x="50" y="1110" fill="#e2e8f0" font-size="18">Unit Step u(t)</text>
+  <text x="450" y="1110" fill="#38bdf8" font-size="18" font-weight="700">1 / s</text>
+
+  <text x="50" y="1155" fill="#e2e8f0" font-size="18">Unit Ramp r(t) = t · u(t)</text>
+  <text x="450" y="1155" fill="#38bdf8" font-size="18" font-weight="700">1 / s²</text>
+
+  <text x="50" y="1200" fill="#e2e8f0" font-size="18">Decaying Exponential e^{-at}</text>
+  <text x="450" y="1200" fill="#38bdf8" font-size="18" font-weight="700">1 / (s + a)</text>
+
+  <text x="50" y="1245" fill="#e2e8f0" font-size="18">Cosine cos(ωt)</text>
+  <text x="450" y="1245" fill="#38bdf8" font-size="18" font-weight="700">s / (s² + ω²)</text>
+
+  <text x="50" y="1290" fill="#e2e8f0" font-size="18">Sine sin(ωt)</text>
+  <text x="450" y="1290" fill="#38bdf8" font-size="18" font-weight="700">ω / (s² + ω²)</text>
+
+  <text x="50" y="1335" fill="#e2e8f0" font-size="18">Derivative df/dt</text>
+  <text x="450" y="1335" fill="#34d399" font-size="18" font-weight="700">s · F(s) - f(0⁻)</text>
+
+  <text x="50" y="1380" fill="#e2e8f0" font-size="18">Integral ∫₀ᵗ f(τ) dτ</text>
+  <text x="450" y="1380" fill="#34d399" font-size="18" font-weight="700">F(s) / s</text>
+
+  <rect x="30" y="1425" width="840" height="390" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="1470" fill="#34d399" font-size="22" font-weight="800">Summary: The 3-Step Boundary Algorithm</text>
+  <text x="50" y="1515" fill="#fbbf24" font-size="19" font-weight="700">Step 1 (t = 0⁻):</text>
+  <text x="50" y="1545" fill="#e2e8f0" font-size="18">De-energize dynamic derivatives; solve prior DC resistive circuit for i_L(0⁻) and v_C(0⁻).</text>
+
+  <text x="50" y="1595" fill="#fbbf24" font-size="19" font-weight="700">Step 2 (t = 0⁺):</text>
+  <text x="50" y="1625" fill="#e2e8f0" font-size="18">Apply continuity: i_L(0⁺)=i_L(0⁻), v_C(0⁺)=v_C(0⁻). Replace L with I₀ source, C with V₀ source.</text>
+
+  <text x="50" y="1675" fill="#fbbf24" font-size="19" font-weight="700">Step 3 (t = ∞):</text>
+  <text x="50" y="1705" fill="#e2e8f0" font-size="18">Under final switch topology, set L → short, C → open. Solve new DC resistive circuit.</text>
+  <path d="M 50 1745 L 850 1745" stroke="#334155" stroke-width="1"/>
+  <text x="50" y="1785" fill="#38bdf8" font-size="18" font-weight="800">Mastering these 3 boundary states solves 80% of all GATE transient questions!</text>
+</g>
+
+  </g>
+</svg>

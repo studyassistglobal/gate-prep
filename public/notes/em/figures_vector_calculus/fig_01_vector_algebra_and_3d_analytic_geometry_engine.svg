@@ -1,0 +1,430 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.35" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.8" stroke-opacity="0.5" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="panelShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65" />
+        </filter>
+
+        <marker id="arrowCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+        </marker>
+        <marker id="arrowGold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#fbbf24" />
+        </marker>
+        <marker id="arrowEmerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
+        </marker>
+        <marker id="arrowRose" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#f43f5e" />
+        </marker>
+        <marker id="arrowPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#c084fc" />
+        </marker>
+    </defs>
+
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Top Blueprint Banner -->
+    <rect x="80" y="60" width="3680" height="150" rx="16" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="2" filter="url(#panelShadow)" />
+    <text x="130" y="130" font-family="'Inter', sans-serif" font-weight="900" font-size="46" fill="url(#headerGrad)" letter-spacing="1.5">BLUEPRINT 01: VECTOR ALGEBRA, 3D COORDINATE TOPOLOGY &amp; ANALYTIC GEOMETRY ENGINE</text>
+    <text x="130" y="178" font-family="'Inter', sans-serif" font-weight="600" font-size="24" fill="#94a3b8" letter-spacing="0.5">Physical Quantity Taxonomy • Vector Bases &amp; Projections • Triple Products • 3D Planes &amp; Distance Metrics</text>
+
+    <!-- Technical Status Badge -->
+    <rect x="3300" y="90" width="410" height="90" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="3340" cy="135" r="14" fill="#34d399" filter="url(#glowCyan)" />
+    <text x="3375" y="130" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#f8fafc">4K TECHNICAL BLUEPRINT</text>
+    <text x="3375" y="156" font-family="'Fira Code', monospace" font-weight="600" font-size="16" fill="#38bdf8">GATE 2027 • PREPFUSION</text>
+
+    <!-- Content Region -->
+    
+    <!-- Layout: 3 Major Panels -->
+    <!-- PANEL 1: Physical Quantities & 3D Frame (Left) -->
+    <g transform="translate(100, 240)">
+        <rect width="1160" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1160" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#38bdf8">1. PHYSICAL QUANTITIES &amp; 3D VECTOR FRAME</text>
+        
+        <!-- Table: Scalar vs Vector vs Tensor -->
+        <g transform="translate(40, 100)">
+            <rect width="1080" height="280" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+            <path d="M 0 60 L 1080 60 M 360 0 L 360 280 M 720 0 L 720 280" stroke="#334155" stroke-width="1.5"/>
+            <text x="180" y="40" font-family="'Inter', sans-serif" font-weight="700" font-size="22" fill="#94a3b8" text-anchor="middle">PHYSICAL PROPERTY</text>
+            <text x="540" y="40" font-family="'Inter', sans-serif" font-weight="700" font-size="22" fill="#38bdf8" text-anchor="middle">SCALAR</text>
+            <text x="900" y="40" font-family="'Inter', sans-serif" font-weight="700" font-size="22" fill="#fbbf24" text-anchor="middle">VECTOR / TENSOR</text>
+
+            <text x="40" y="105" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">Magnitude</text>
+            <text x="540" y="105" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" text-anchor="middle">YES (Pure Real Number)</text>
+            <text x="900" y="105" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" text-anchor="middle">YES (|A| &gt; 0)</text>
+
+            <text x="40" y="155" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">Direction</text>
+            <text x="540" y="155" font-family="'Inter', sans-serif" font-size="18" fill="#f43f5e" text-anchor="middle">NO (Direction-free)</text>
+            <text x="900" y="155" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" text-anchor="middle">YES (Unit vector a_A)</text>
+
+            <text x="40" y="205" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">Addition Law</text>
+            <text x="540" y="205" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1" text-anchor="middle">Algebraic Sum (+, -)</text>
+            <text x="900" y="205" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24" text-anchor="middle">Parallelogram / Triangle</text>
+
+            <text x="40" y="255" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">GATE Examples</text>
+            <text x="540" y="255" font-family="'Inter', sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">Energy, Work, Electric Potential</text>
+            <text x="900" y="255" font-family="'Inter', sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">Force, Current Density (J), Stress</text>
+        </g>
+
+        <!-- 3D Vector Frame Visual -->
+        <g transform="translate(60, 420)">
+            <rect width="1040" height="520" rx="14" fill="#020617" stroke="#1e293b" stroke-width="1.5"/>
+            <!-- 3D Axes -->
+            <line x1="400" y1="360" x2="850" y2="360" stroke="#64748b" stroke-width="2" marker-end="url(#arrowCyan)"/>
+            <line x1="400" y1="360" x2="400" y2="60" stroke="#64748b" stroke-width="2" marker-end="url(#arrowCyan)"/>
+            <line x1="400" y1="360" x2="160" y2="480" stroke="#64748b" stroke-width="2" marker-end="url(#arrowCyan)"/>
+            
+            <text x="870" y="365" font-family="'Fira Code', monospace" font-size="22" fill="#38bdf8">Y (j)</text>
+            <text x="400" y="45" font-family="'Fira Code', monospace" font-size="22" fill="#38bdf8">Z (k)</text>
+            <text x="130" y="505" font-family="'Fira Code', monospace" font-size="22" fill="#38bdf8">X (i)</text>
+
+            <!-- Vector r -->
+            <line x1="400" y1="360" x2="680" y2="180" stroke="#fbbf24" stroke-width="5" marker-end="url(#arrowGold)"/>
+            <circle cx="680" cy="180" r="8" fill="#fbbf24"/>
+            <text x="700" y="170" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24" font-weight="700">P(x, y, z)</text>
+            <text x="500" y="250" font-family="'Fira Code', monospace" font-size="26" fill="#fbbf24">r = x i + y j + z k</text>
+
+            <!-- Projections / Box wires -->
+            <line x1="400" y1="360" x2="520" y2="420" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <line x1="520" y1="420" x2="800" y2="420" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <line x1="680" y1="360" x2="800" y2="420" stroke="#475569" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <line x1="800" y1="420" x2="680" y2="180" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 4"/>
+            
+            <!-- Unit vector formula card -->
+            <rect x="50" y="40" width="300" height="120" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="70" y="75" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">UNIT VECTOR FORMULA</text>
+            <text x="70" y="115" font-family="'Fira Code', monospace" font-size="24" fill="#38bdf8" font-weight="700">a_A = A / |A|</text>
+            <text x="70" y="145" font-family="'Fira Code', monospace" font-size="16" fill="#34d399">|a_A| = 1  (Pure Direction)</text>
+        </g>
+
+        <!-- Orthogonal Basis Transformation -->
+        <g transform="translate(40, 980)">
+            <rect width="1080" height="720" rx="14" fill="#1e293b" stroke="#60a5fa" stroke-width="1.5"/>
+            <text x="40" y="50" font-family="'Inter', sans-serif" font-weight="800" font-size="24" fill="#60a5fa">ORTHOGONAL BASIS ROTATION &amp; TRANSFORMATION</text>
+            
+            <text x="40" y="95" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">Transformation from standard basis (i, j, k) to rotated orthonormal basis (l, m, n):</text>
+            
+            <g transform="translate(40, 120)">
+                <rect width="1000" height="140" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="45" font-family="'Fira Code', monospace" font-size="22" fill="#38bdf8">l = (i + j) / sqrt(2)  |  m = (-i + j) / sqrt(2)  |  n = k</text>
+                <text x="30" y="95" font-family="'Fira Code', monospace" font-size="20" fill="#34d399">Verification: l.m = (-1+1)/2 = 0,  m.n = 0,  l.n = 0  =&gt;  MUTUALLY ORTHOGONAL!</text>
+            </g>
+
+            <text x="40" y="300" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#fbbf24">Vector Decomposition in New Basis (Slide 018 Drill):</text>
+            <text x="40" y="335" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">Given A = 3i + 4j + 7k. Express A = A_x l + A_y m + A_z n:</text>
+
+            <g transform="translate(40, 360)">
+                <!-- l card -->
+                <g transform="translate(0, 0)">
+                    <rect width="310" height="150" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="40" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">l-Component:</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="22" fill="#38bdf8">A_x = A . l</text>
+                    <text x="25" y="120" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24" font-weight="700">= 7 / sqrt(2)</text>
+                </g>
+
+                <!-- m card -->
+                <g transform="translate(345, 0)">
+                    <rect width="310" height="150" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="40" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">m-Component:</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="22" fill="#38bdf8">A_y = A . m</text>
+                    <text x="25" y="120" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24" font-weight="700">= 1 / sqrt(2)</text>
+                </g>
+
+                <!-- n card -->
+                <g transform="translate(690, 0)">
+                    <rect width="310" height="150" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="40" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">n-Component:</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="22" fill="#38bdf8">A_z = A . n</text>
+                    <text x="25" y="120" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24" font-weight="700">= 7</text>
+                </g>
+            </g>
+
+            <g transform="translate(40, 540)">
+                <rect width="1000" height="130" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+                <text x="30" y="45" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24" font-weight="700">INVARIANCE OF VECTOR MAGNITUDE UNDER ROTATION:</text>
+                <text x="30" y="90" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">|A|^2 = (3^2 + 4^2 + 7^2) = 74 = (7/sqrt(2))^2 + (1/sqrt(2))^2 + 7^2 = 24.5 + 0.5 + 49 = 74 [Q.E.D.]</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- PANEL 2: Dot Product, Cross Product & Projections (Center) -->
+    <g transform="translate(1300, 240)">
+        <rect width="1240" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1240" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#fbbf24">2. DOT PRODUCT, CROSS PRODUCT &amp; PROJECTIONS</text>
+
+        <!-- Dot Product Card -->
+        <g transform="translate(40, 100)">
+            <rect width="1160" height="340" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">THE SCALAR (DOT) PRODUCT</text>
+            <text x="40" y="85" font-family="'Fira Code', monospace" font-size="24" fill="#f8fafc">A . B = |A| |B| cos(theta) = A_x B_x + A_y B_y + A_z B_z</text>
+            
+            <path d="M 40 110 L 1120 110" stroke="#334155" stroke-width="1.5"/>
+            
+            <!-- 3 Cases: theta = 0, 90, 180 -->
+            <g transform="translate(40, 130)">
+                <!-- parallel -->
+                <g transform="translate(0, 0)">
+                    <rect width="350" height="170" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#34d399" font-weight="700">PARALLEL (theta = 0)</text>
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">A . B = + |A| |B|</text>
+                    <text x="25" y="110" font-family="'Fira Code', monospace" font-size="18" fill="#94a3b8">i.i = j.j = k.k = 1</text>
+                    <text x="25" y="145" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Maximum Alignment</text>
+                </g>
+
+                <!-- orthogonal -->
+                <g transform="translate(385, 0)">
+                    <rect width="350" height="170" rx="10" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#f43f5e" font-weight="700">ORTHOGONAL (theta = 90)</text>
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">A . B = 0</text>
+                    <text x="25" y="110" font-family="'Fira Code', monospace" font-size="18" fill="#94a3b8">i.j = j.k = k.i = 0</text>
+                    <text x="25" y="145" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Perpendicularity Test</text>
+                </g>
+
+                <!-- anti-parallel -->
+                <g transform="translate(770, 0)">
+                    <rect width="350" height="170" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" font-weight="700">ANTI-PARALLEL (theta = 180)</text>
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">A . B = - |A| |B|</text>
+                    <text x="25" y="110" font-family="'Fira Code', monospace" font-size="18" fill="#94a3b8">A . (-A) = -|A|^2</text>
+                    <text x="25" y="145" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Complete Opposition</text>
+                </g>
+            </g>
+        </g>
+
+        <!-- Projection Geometry -->
+        <g transform="translate(40, 480)">
+            <rect width="1160" height="520" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#fbbf24">PROJECTION DYNAMICS: SCALAR VS VECTOR PROJECTION</text>
+            
+            <!-- Graphic -->
+            <g transform="translate(50, 80)">
+                <line x1="100" y1="280" x2="600" y2="280" stroke="#64748b" stroke-width="4" marker-end="url(#arrowCyan)"/>
+                <line x1="100" y1="280" x2="450" y2="100" stroke="#fbbf24" stroke-width="5" marker-end="url(#arrowGold)"/>
+                <line x1="450" y1="100" x2="450" y2="280" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="6 4"/>
+                
+                <circle cx="100" cy="280" r="8" fill="#38bdf8"/>
+                <text x="70" y="320" font-family="'Fira Code', monospace" font-size="22" fill="#cbd5e1">O</text>
+                <text x="620" y="285" font-family="'Fira Code', monospace" font-size="24" fill="#38bdf8">B</text>
+                <text x="440" y="80" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24">A</text>
+
+                <!-- Angle arc -->
+                <path d="M 170 280 A 70 70 0 0 0 155 250" fill="none" stroke="#34d399" stroke-width="3"/>
+                <text x="180" y="260" font-family="'Fira Code', monospace" font-size="20" fill="#34d399">theta</text>
+
+                <!-- Projected segment -->
+                <line x1="100" y1="295" x2="450" y2="295" stroke="#34d399" stroke-width="6"/>
+                <text x="220" y="335" font-family="'Fira Code', monospace" font-size="22" fill="#34d399" font-weight="700">|A| cos(theta)</text>
+            </g>
+
+            <!-- Formula Boxes -->
+            <g transform="translate(700, 100)">
+                <g transform="translate(0, 0)">
+                    <rect width="420" height="170" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#38bdf8" font-weight="700">SCALAR PROJECTION (OF A ON B):</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="26" fill="#fbbf24" font-weight="700">proj_B(A) = A . b_cap</text>
+                    <text x="25" y="125" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">= (A . B) / |B| = |A| cos(theta)</text>
+                    <text x="25" y="155" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">Output: Pure Scalar Magnitude</text>
+                </g>
+
+                <g transform="translate(0, 200)">
+                    <rect width="420" height="170" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" font-weight="700">VECTOR PROJECTION (OF A ON B):</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="26" fill="#38bdf8" font-weight="700">Proj_B(A) = (A . b_cap) b_cap</text>
+                    <text x="25" y="125" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">= [(A . B) / |B|^2] B</text>
+                    <text x="25" y="155" font-family="'Inter', sans-serif" font-size="15" fill="#34d399">Output: Directed Vector parallel to B</text>
+                </g>
+            </g>
+        </g>
+
+        <!-- Cross Product & Area Engine -->
+        <g transform="translate(40, 1040)">
+            <rect width="1160" height="660" rx="14" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#f43f5e">THE VECTOR (CROSS) PRODUCT &amp; GEOMETRIC AREAS</text>
+            
+            <g transform="translate(40, 70)">
+                <rect width="1080" height="150" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Fira Code', monospace" font-size="24" fill="#f8fafc">A x B = |A| |B| sin(theta) n_cap = det [ i  j  k ; A_x A_y A_z ; B_x B_y B_z ]</text>
+                <text x="30" y="85" font-family="'Fira Code', monospace" font-size="20" fill="#f43f5e">ANTI-COMMUTATIVE: B x A = -(A x B)  |  A x A = 0  |  i x j = k,  j x k = i,  k x i = j</text>
+                <text x="30" y="125" font-family="'Inter', sans-serif" font-size="17" fill="#34d399">Right-Hand Rule: Thumb points along n_cap perpendicular to both A and B.</text>
+            </g>
+
+            <!-- Geometric Area Applications -->
+            <g transform="translate(40, 250)">
+                <!-- Parallelogram -->
+                <g transform="translate(0, 0)">
+                    <rect width="520" height="370" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">AREA OF PARALLELOGRAM</text>
+                    <text x="30" y="80" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24" font-weight="700">Area = |A x B|</text>
+                    
+                    <!-- Parallelogram diagram -->
+                    <line x1="50" y1="300" x2="300" y2="300" stroke="#38bdf8" stroke-width="3"/>
+                    <line x1="50" y1="300" x2="180" y2="180" stroke="#fbbf24" stroke-width="3"/>
+                    <line x1="180" y1="180" x2="430" y2="180" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4"/>
+                    <line x1="300" y1="300" x2="430" y2="180" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 4"/>
+                    <text x="180" y="330" font-family="'Fira Code', monospace" font-size="18" fill="#38bdf8">B</text>
+                    <text x="90" y="230" font-family="'Fira Code', monospace" font-size="18" fill="#fbbf24">A</text>
+                    <text x="220" y="250" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Base x Height</text>
+                </g>
+
+                <!-- Triangle -->
+                <g transform="translate(560, 0)">
+                    <rect width="520" height="370" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" font-weight="700">AREA OF TRIANGLE</text>
+                    <text x="30" y="80" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24" font-weight="700">Area = 1/2 |A x B|</text>
+                    
+                    <!-- Triangle diagram -->
+                    <line x1="50" y1="300" x2="350" y2="300" stroke="#38bdf8" stroke-width="3"/>
+                    <line x1="50" y1="300" x2="200" y2="180" stroke="#fbbf24" stroke-width="3"/>
+                    <line x1="200" y1="180" x2="350" y2="300" stroke="#f43f5e" stroke-width="3"/>
+                    <text x="200" y="330" font-family="'Fira Code', monospace" font-size="18" fill="#38bdf8">B</text>
+                    <text x="100" y="230" font-family="'Fira Code', monospace" font-size="18" fill="#fbbf24">A</text>
+                    <text x="290" y="230" font-family="'Fira Code', monospace" font-size="18" fill="#f43f5e">B - A</text>
+                    <text x="140" y="250" font-family="'Inter', sans-serif" font-size="16" fill="#34d399">Half Parallelogram</text>
+                </g>
+            </g>
+        </g>
+    </g>
+
+    <!-- PANEL 3: Triple Products & 3D Analytic Geometry (Right) -->
+    <g transform="translate(2580, 240)">
+        <rect width="1160" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1160" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#c084fc">3. TRIPLE PRODUCTS &amp; 3D ANALYTIC GEOMETRY</text>
+
+        <!-- Scalar Triple Product Box -->
+        <g transform="translate(40, 100)">
+            <rect width="1080" height="340" rx="14" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#c084fc">SCALAR TRIPLE PRODUCT (BOX PRODUCT)</text>
+            <text x="40" y="85" font-family="'Fira Code', monospace" font-size="24" fill="#f8fafc">[A B C] = A . (B x C) = det [ A_x A_y A_z ; B_x B_y B_z ; C_x C_y C_z ]</text>
+            
+            <g transform="translate(40, 115)">
+                <rect width="1000" height="200" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">CORE GEOMETRIC THEOREMS:</text>
+                <text x="30" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#34d399">1. Volume of Parallelepiped = | [A B C] | = | A . (B x C) |</text>
+                <text x="30" y="115" font-family="'Fira Code', monospace" font-size="20" fill="#34d399">2. Volume of Tetrahedron = 1/6 | [A B C] |</text>
+                <text x="30" y="155" font-family="'Fira Code', monospace" font-size="20" fill="#f43f5e">3. Coplanarity Test: Three vectors A, B, C are COPLANAR iff [A B C] = 0</text>
+                <text x="30" y="185" font-family="'Fira Code', monospace" font-size="18" fill="#94a3b8">Cyclic Permutation Invariance: [A B C] = [B C A] = [C A B] = -[B A C]</text>
+            </g>
+        </g>
+
+        <!-- Vector Triple Product Box -->
+        <g transform="translate(40, 480)">
+            <rect width="1080" height="260" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">VECTOR TRIPLE PRODUCT (THE BAC-CAB IDENTITY)</text>
+            
+            <g transform="translate(40, 70)">
+                <rect width="1000" height="90" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+                <text x="30" y="55" font-family="'Fira Code', monospace" font-size="28" fill="#fbbf24" font-weight="700">A x (B x C) = (A . C) B - (A . B) C   [B-A-C minus C-A-B]</text>
+            </g>
+            
+            <text x="40" y="200" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">Critical Non-Associativity Trap:</text>
+            <text x="40" y="235" font-family="'Fira Code', monospace" font-size="20" fill="#f43f5e">(A x B) x C != A x (B x C)  in general!  (A x B) x C = (A . C) B - (B . C) A</text>
+        </g>
+
+        <!-- 3D Plane Equation & Distance Metric -->
+        <g transform="translate(40, 780)">
+            <rect width="1080" height="920" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#fbbf24">3D PLANE GEOMETRY &amp; PERPENDICULAR DISTANCE FORMULA</text>
+
+            <g transform="translate(40, 75)">
+                <rect width="1000" height="150" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">GENERAL EQUATION OF PLANE IN 3D SPACE:</text>
+                <text x="30" y="85" font-family="'Fira Code', monospace" font-size="26" fill="#f8fafc">a x + b y + c z = d   &lt;==&gt;   N . (r - r_0) = 0</text>
+                <text x="30" y="125" font-family="'Fira Code', monospace" font-size="20" fill="#fbbf24">Normal Vector to Plane: N = a i + b j + c k  |  Unit Normal: n_cap = N / |N|</text>
+            </g>
+
+            <!-- Distance Formula Box -->
+            <g transform="translate(40, 250)">
+                <rect width="1000" height="230" rx="12" fill="#020617" stroke="#fbbf24" stroke-width="2"/>
+                <text x="30" y="45" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24" font-weight="700">PERPENDICULAR DISTANCE OF POINT P(x_0, y_0, z_0) TO PLANE:</text>
+                <text x="30" y="110" font-family="'Fira Code', monospace" font-size="34" fill="#34d399" font-weight="700">dist = | a x_0 + b y_0 + c z_0 - d | / sqrt( a^2 + b^2 + c^2 )</text>
+                
+                <text x="30" y="165" font-family="'Inter', sans-serif" font-size="18" fill="#cbd5e1">Distance from Coordinate Origin O(0, 0, 0):</text>
+                <text x="30" y="205" font-family="'Fira Code', monospace" font-size="26" fill="#38bdf8">dist_origin = | d | / sqrt( a^2 + b^2 + c^2 )</text>
+            </g>
+
+            <!-- Solved GATE Drill (Slide 039) -->
+            <g transform="translate(40, 510)">
+                <rect width="1000" height="370" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">GATE COMPETITIVE EXAM DRILL (SLIDE 039):</text>
+                <text x="30" y="80" font-family="'Inter', sans-serif" font-size="18" fill="#f8fafc">Find perpendicular distance of P(2, -1, 3) from the plane 2x + y - z = 1.</text>
+                
+                <text x="30" y="130" font-family="'Fira Code', monospace" font-size="20" fill="#94a3b8">Step 1: Write plane in standard form: 2x + y - z - 1 = 0</text>
+                <text x="30" y="170" font-family="'Fira Code', monospace" font-size="20" fill="#94a3b8">Step 2: Identify coefficients: a = 2, b = 1, c = -1, d = 1</text>
+                <text x="30" y="210" font-family="'Fira Code', monospace" font-size="20" fill="#94a3b8">Step 3: Evaluate numerator: | 2(2) + 1(-1) + (-1)(3) - 1 | = | 4 - 1 - 3 - 1 | = |-1| = 1</text>
+                <text x="30" y="250" font-family="'Fira Code', monospace" font-size="20" fill="#94a3b8">Step 4: Evaluate denominator: sqrt( 2^2 + 1^2 + (-1)^2 ) = sqrt( 4 + 1 + 1 ) = sqrt(6)</text>
+                
+                <g transform="translate(30, 280)">
+                    <rect width="940" height="70" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+                    <text x="30" y="45" font-family="'Fira Code', monospace" font-size="26" fill="#34d399" font-weight="700">FINAL ANSWER: dist = 1 / sqrt(6)  [EXACT CHALKBOARD MATCH]</text>
+                </g>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Footer Information Strip -->
+    <rect x="80" y="2040" width="3680" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <text x="120" y="2077" font-family="'Fira Code', monospace" font-size="18" fill="#64748b">ENGINEERING MATHEMATICS • VECTOR CALCULUS TITAN GUIDE • CHALKBOARD AUDIT 65 PAGES / 259 SLIDES</text>
+    <text x="3250" y="2077" font-family="'Fira Code', monospace" font-size="18" fill="#38bdf8">RESOLUTION: 3840 x 2160 (16:9 4K UHD)</text>
+</svg>

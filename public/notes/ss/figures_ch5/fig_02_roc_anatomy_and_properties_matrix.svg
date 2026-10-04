@@ -1,0 +1,189 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid2)"/>
+
+  <!-- Title Header -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 05 • FIGURE 5.2</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">Anatomy of the Region of Convergence (ROC) &amp; The 8 Golden Structural Laws of the s-Plane</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- 4 Visual ROC Archetypes Grid -->
+  <!-- Archetype 1: Right-Sided (Causal) -->
+  <g transform="translate(80, 190)">
+    <rect width="530" height="530" rx="14" fill="url(#panelGrad2)" stroke="#38bdf8" stroke-width="2"/>
+    <rect width="530" height="50" rx="14" fill="#21262d"/>
+    <text x="265" y="32" fill="#38bdf8" font-size="19" font-weight="700" text-anchor="middle">TYPE 1: RIGHT-SIDED (CAUSAL-TYPE)</text>
+    
+    <text x="30" y="85" fill="#e6edf3" font-size="16" font-weight="600">x(t) = e^{-at} u(t)  (a &gt; 0)</text>
+    <text x="30" y="112" fill="#fbbf24" font-size="16" font-weight="700">X(s) = 1 / (s + a)   |   Pole: s = -a</text>
+    
+    <!-- s-plane plot -->
+    <g transform="translate(35, 130)">
+      <rect width="460" height="320" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <!-- Shaded ROC -->
+      <rect x="170" y="15" width="275" height="290" fill="#38bdf8" fill-opacity="0.18"/>
+      <!-- Axes -->
+      <line x1="260" y1="15" x2="260" y2="305" stroke="#38bdf8" stroke-width="1.5"/> <!-- jw -->
+      <line x1="15" y1="160" x2="445" y2="160" stroke="#38bdf8" stroke-width="1.5"/> <!-- sigma -->
+      <text x="430" y="150" fill="#38bdf8" font-size="14">σ</text>
+      <text x="270" y="35" fill="#38bdf8" font-size="14">jω</text>
+      <!-- Boundary line -->
+      <line x1="170" y1="15" x2="170" y2="305" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <!-- Pole -->
+      <text x="160" y="168" fill="#f87171" font-size="26" font-weight="900" text-anchor="middle">✕</text>
+      <text x="160" y="195" fill="#f87171" font-size="16" font-weight="700" text-anchor="middle">-a</text>
+      <!-- ROC Label -->
+      <text x="320" y="90" fill="#38bdf8" font-size="18" font-weight="700">ROC: Re(s) &gt; -a</text>
+      <text x="320" y="115" fill="#8b949e" font-size="13">Right of rightmost pole</text>
+    </g>
+    <text x="265" y="495" fill="#34d399" font-size="15" font-weight="600" text-anchor="middle">Rule 4: Right-sided signal ⇒ ROC is Re(s) &gt; σ_max</text>
+  </g>
+
+  <!-- Archetype 2: Left-Sided (Anti-Causal) -->
+  <g transform="translate(650, 190)">
+    <rect width="530" height="530" rx="14" fill="url(#panelGrad2)" stroke="#f87171" stroke-width="2"/>
+    <rect width="530" height="50" rx="14" fill="#21262d"/>
+    <text x="265" y="32" fill="#f87171" font-size="19" font-weight="700" text-anchor="middle">TYPE 2: LEFT-SIDED (ANTI-CAUSAL)</text>
+    
+    <text x="30" y="85" fill="#e6edf3" font-size="16" font-weight="600">x(t) = -e^{-at} u(-t)  (a &gt; 0)</text>
+    <text x="30" y="112" fill="#fbbf24" font-size="16" font-weight="700">X(s) = 1 / (s + a)   |   Pole: s = -a</text>
+    
+    <g transform="translate(35, 130)">
+      <rect width="460" height="320" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <!-- Shaded ROC -->
+      <rect x="15" y="15" width="155" height="290" fill="#f87171" fill-opacity="0.18"/>
+      <!-- Axes -->
+      <line x1="260" y1="15" x2="260" y2="305" stroke="#38bdf8" stroke-width="1.5"/>
+      <line x1="15" y1="160" x2="445" y2="160" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="430" y="150" fill="#38bdf8" font-size="14">σ</text>
+      <text x="270" y="35" fill="#38bdf8" font-size="14">jω</text>
+      <!-- Boundary line -->
+      <line x1="170" y1="15" x2="170" y2="305" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <!-- Pole -->
+      <text x="160" y="168" fill="#f87171" font-size="26" font-weight="900" text-anchor="middle">✕</text>
+      <text x="160" y="195" fill="#f87171" font-size="16" font-weight="700" text-anchor="middle">-a</text>
+      <!-- ROC Label -->
+      <text x="90" y="90" fill="#f87171" font-size="18" font-weight="700" text-anchor="middle">ROC: Re(s) &lt; -a</text>
+      <text x="90" y="115" fill="#8b949e" font-size="13" text-anchor="middle">Left of leftmost pole</text>
+    </g>
+    <text x="265" y="495" fill="#f87171" font-size="15" font-weight="600" text-anchor="middle">Rule 5: Left-sided signal ⇒ ROC is Re(s) &lt; σ_min</text>
+  </g>
+
+  <!-- Archetype 3: Two-Sided (Bilateral Strip) -->
+  <g transform="translate(1220, 190)">
+    <rect width="530" height="530" rx="14" fill="url(#panelGrad2)" stroke="#fbbf24" stroke-width="2"/>
+    <rect width="530" height="50" rx="14" fill="#21262d"/>
+    <text x="265" y="32" fill="#fbbf24" font-size="19" font-weight="700" text-anchor="middle">TYPE 3: TWO-SIDED SIGNAL (STRIP)</text>
+    
+    <text x="30" y="85" fill="#e6edf3" font-size="16" font-weight="600">x(t) = e^{-a|t|} = e^{-at}u(t) + e^{at}u(-t)</text>
+    <text x="30" y="112" fill="#fbbf24" font-size="16" font-weight="700">X(s) = 2a / (a² - s²)   |   Poles: s = ±a</text>
+    
+    <g transform="translate(35, 130)">
+      <rect width="460" height="320" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <!-- Shaded ROC strip -->
+      <rect x="150" y="15" width="160" height="290" fill="#fbbf24" fill-opacity="0.18"/>
+      <!-- Axes -->
+      <line x1="230" y1="15" x2="230" y2="305" stroke="#38bdf8" stroke-width="1.5"/>
+      <line x1="15" y1="160" x2="445" y2="160" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="430" y="150" fill="#38bdf8" font-size="14">σ</text>
+      <text x="240" y="35" fill="#38bdf8" font-size="14">jω</text>
+      <!-- Boundary lines -->
+      <line x1="150" y1="15" x2="150" y2="305" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <line x1="310" y1="15" x2="310" y2="305" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <!-- Poles -->
+      <text x="140" y="168" fill="#f87171" font-size="26" font-weight="900" text-anchor="middle">✕</text>
+      <text x="140" y="195" fill="#f87171" font-size="16" font-weight="700" text-anchor="middle">-a</text>
+      <text x="300" y="168" fill="#f87171" font-size="26" font-weight="900" text-anchor="middle">✕</text>
+      <text x="300" y="195" fill="#f87171" font-size="16" font-weight="700" text-anchor="middle">+a</text>
+      <!-- ROC Label -->
+      <text x="230" y="90" fill="#fbbf24" font-size="17" font-weight="700" text-anchor="middle">ROC: -a &lt; Re(s) &lt; a</text>
+      <text x="230" y="115" fill="#8b949e" font-size="13" text-anchor="middle">Encloses jω-axis ⇒ CTFT Exists!</text>
+    </g>
+    <text x="265" y="495" fill="#fbbf24" font-size="15" font-weight="600" text-anchor="middle">Rule 6: Two-sided signal ⇒ ROC is a vertical strip</text>
+  </g>
+
+  <!-- Archetype 4: Finite Duration -->
+  <g transform="translate(1790, 190)">
+    <rect width="530" height="530" rx="14" fill="url(#panelGrad2)" stroke="#34d399" stroke-width="2"/>
+    <rect width="530" height="50" rx="14" fill="#21262d"/>
+    <text x="265" y="32" fill="#34d399" font-size="19" font-weight="700" text-anchor="middle">TYPE 4: FINITE DURATION PULSE</text>
+    
+    <text x="30" y="85" fill="#e6edf3" font-size="16" font-weight="600">x(t) = rect(t/T)   (Zero outside [-T/2, T/2])</text>
+    <text x="30" y="112" fill="#fbbf24" font-size="16" font-weight="700">X(s) = (e^{sT/2} - e^{-sT/2}) / s   |   No Finite Poles</text>
+    
+    <g transform="translate(35, 130)">
+      <rect width="460" height="320" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <!-- Shaded ROC: ENTIRE PLANE -->
+      <rect x="15" y="15" width="430" height="290" fill="#34d399" fill-opacity="0.18"/>
+      <!-- Axes -->
+      <line x1="230" y1="15" x2="230" y2="305" stroke="#38bdf8" stroke-width="1.5"/>
+      <line x1="15" y1="160" x2="445" y2="160" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="430" y="150" fill="#38bdf8" font-size="14">σ</text>
+      <text x="240" y="35" fill="#38bdf8" font-size="14">jω</text>
+      <!-- ROC Label -->
+      <text x="230" y="90" fill="#34d399" font-size="20" font-weight="800" text-anchor="middle">ROC: ENTIRE s-PLANE</text>
+      <text x="230" y="120" fill="#8b949e" font-size="14" text-anchor="middle">Except possibly s = ∞ or s = -∞</text>
+      <text x="230" y="220" fill="#e6edf3" font-size="14" text-anchor="middle">Continuous everywhere • Zero finite poles</text>
+    </g>
+    <text x="265" y="495" fill="#34d399" font-size="15" font-weight="600" text-anchor="middle">Rule 3: Finite duration + L¹ ⇒ ROC is entire s-plane</text>
+  </g>
+
+  <!-- Bottom Panel: The 8 Golden ROC Rules Table -->
+  <g transform="translate(80, 750)">
+    <rect width="2240" height="530" rx="16" fill="url(#panelGrad2)" stroke="#30363d" stroke-width="2"/>
+    <rect width="2240" height="55" rx="16" fill="#21262d"/>
+    <text x="1120" y="38" fill="#fbbf24" font-size="22" font-weight="700" text-anchor="middle">THE 8 GOLDEN RULES OF THE REGION OF CONVERGENCE (ROC) COMPENDIUM</text>
+
+    <!-- Table content -->
+    <g transform="translate(40, 75)">
+      <!-- Row 1 & 2 -->
+      <rect x="0" y="0" width="1050" height="95" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="25" y="32" fill="#38bdf8" font-size="18" font-weight="700">RULE 1: Vertical Parallel Strips</text>
+      <text x="25" y="60" fill="#e6edf3" font-size="15">The ROC consists of vertical strips parallel to the jω-axis in the complex s-plane. Convergence depends solely on the real damping part σ = Re(s), completely independent of the imaginary frequency ω.</text>
+
+      <rect x="1110" y="0" width="1050" height="95" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="1135" y="32" fill="#f87171" font-size="18" font-weight="700">RULE 2: Strict Pole Exclusion</text>
+      <text x="1135" y="60" fill="#e6edf3" font-size="15">The ROC cannot contain ANY poles! By definition, poles are points where X(s) → ∞ (divergence). The ROC is strictly open and bounded by poles, but never encloses them.</text>
+
+      <!-- Row 3 & 4 -->
+      <rect x="0" y="110" width="1050" height="95" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="25" y="142" fill="#34d399" font-size="18" font-weight="700">RULE 3: Finite Duration Signals</text>
+      <text x="25" y="170" fill="#e6edf3" font-size="15">If x(t) is of finite duration and absolutely integrable (L¹), the ROC is the entire s-plane. If x(t) contains impulses at t &gt; 0, s = ∞ is excluded. If at t &lt; 0, s = -∞ is excluded.</text>
+
+      <rect x="1110" y="110" width="1050" height="95" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="1135" y="142" fill="#38bdf8" font-size="18" font-weight="700">RULE 4: Right-Sided (Causal-Type) Signals</text>
+      <text x="1135" y="170" fill="#e6edf3" font-size="15">If x(t) is right-sided [x(t) = 0 for t &lt; t₁], the ROC extends strictly to the right of the rightmost pole: Re(s) &gt; σ_max. If causal [x(t)=0, t&lt;0], X(s) is analytic at s = ∞.</text>
+
+      <!-- Row 5 & 6 -->
+      <rect x="0" y="220" width="1050" height="95" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="25" y="252" fill="#fbbf24" font-size="18" font-weight="700">RULE 5: Left-Sided (Anti-Causal) Signals</text>
+      <text x="25" y="280" fill="#e6edf3" font-size="15">If x(t) is left-sided [x(t) = 0 for t &gt; t₂], the ROC extends strictly to the left of the leftmost pole: Re(s) &lt; σ_min. Anti-causal signals cannot converge for Re(s) &gt; 0.</text>
+
+      <rect x="1110" y="220" width="1050" height="95" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="1135" y="252" fill="#60a5fa" font-size="18" font-weight="700">RULE 6: Two-Sided Signals</text>
+      <text x="1135" y="280" fill="#e6edf3" font-size="15">If x(t) is infinite in both positive and negative time, the ROC is a vertical strip bounded by two adjacent poles: σ₁ &lt; Re(s) &lt; σ₂. If poles cross, the ROC is empty (no transform).</text>
+
+      <!-- Row 7 & 8 -->
+      <rect x="0" y="330" width="1050" height="95" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="25" y="362" fill="#34d399" font-size="18" font-weight="700">RULE 7: Fourier Transform Existence Test</text>
+      <text x="25" y="390" fill="#e6edf3" font-size="15">The Continuous-Time Fourier Transform X(jω) exists IF AND ONLY IF the ROC of X(s) strictly encloses the imaginary axis (Re(s) = 0). Then X(jω) = X(s)|_{s=jω}.</text>
+
+      <rect x="1110" y="330" width="1050" height="95" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="1135" y="362" fill="#f87171" font-size="18" font-weight="700">RULE 8: Linear Combinations &amp; Pole-Zero Cancellation</text>
+      <text x="1135" y="390" fill="#e6edf3" font-size="15">For x(t) = a x₁(t) + b x₂(t), the ROC satisfies ROC ⊇ ROC₁ ∩ ROC₂. If linear combination causes a pole to cancel with a zero, the ROC expands to encompass the former pole!</text>
+    </g>
+  </g>
+</svg>

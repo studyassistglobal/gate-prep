@@ -1,0 +1,177 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid6" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid6)"/>
+
+  <!-- Title Header Block -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 06 • FIGURE 6.6</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">Inverse Z-Transform (IZT) Architecture: The 4 Inversion Engines, PFE Workflow via X(z)/z, and Long Division</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- 3 Major Method Panels -->
+
+  <!-- Panel 1: Partial Fraction Expansion (PFE) Method -->
+  <rect x="80" y="190" width="760" height="1090" rx="18" fill="url(#panelGrad6)" stroke="#30363d" stroke-width="2"/>
+  <rect x="80" y="190" width="760" height="60" rx="18" fill="#21262d"/>
+  <text x="460" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">METHOD 1: PARTIAL FRACTION EXPANSION</text>
+
+  <g transform="translate(110, 270)">
+    <text x="0" y="25" fill="#fbbf24" font-size="18" font-weight="700">The Golden Rule: Expand X(z)/z (NOT X(z) directly!)</text>
+    <text x="0" y="55" fill="#e6edf3" font-size="15">Why? Because canonical pairs require a numerator of 'z':</text>
+    <text x="350" y="90" fill="#34d399" font-size="19" font-weight="700" text-anchor="middle">z / (z - p) ⟷ pⁿ u[n]   (or -pⁿ u[-n-1])</text>
+
+    <!-- Workflow Steps -->
+    <!-- Step 1 -->
+    <rect x="0" y="115" width="700" height="100" rx="10" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="25" y="145" fill="#38bdf8" font-size="17" font-weight="700">STEP 1: Divide X(z) by z to form X(z)/z</text>
+    <text x="25" y="172" fill="#e6edf3" font-size="15">Convert all negative powers z⁻¹ to positive powers of z.</text>
+    <text x="25" y="195" fill="#8b949e" font-size="14">Ensure degree of numerator in z is strictly less than denominator.</text>
+
+    <!-- Step 2 -->
+    <rect x="0" y="230" width="700" height="120" rx="10" fill="#0d1117" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="25" y="260" fill="#fbbf24" font-size="17" font-weight="700">STEP 2: Decompose X(z)/z into Simple Fractions</text>
+    <text x="25" y="290" fill="#fbbf24" font-size="18" font-weight="700">X(z) / z = A₁ / (z - p₁) + A₂ / (z - p₂) + ... + A_N / (z - p_N)</text>
+    <text x="25" y="325" fill="#e6edf3" font-size="14">Residues: A_k = [(z - p_k) · X(z) / z]_{z = p_k} (Heaviside Cover-up Method).</text>
+
+    <!-- Step 3 -->
+    <rect x="0" y="365" width="700" height="105" rx="10" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="25" y="395" fill="#34d399" font-size="17" font-weight="700">STEP 3: Multiply back by z</text>
+    <text x="25" y="428" fill="#34d399" font-size="18" font-weight="700">X(z) = A₁ · [ z / (z - p₁) ] + A₂ · [ z / (z - p₂) ] + ...</text>
+    <text x="25" y="455" fill="#8b949e" font-size="14">Every term is now in the exact standard canonical discrete form!</text>
+
+    <!-- Step 4 -->
+    <rect x="0" y="485" width="700" height="230" rx="10" fill="#161b22" stroke="#f87171" stroke-width="2"/>
+    <text x="25" y="515" fill="#f87171" font-size="18" font-weight="700">STEP 4: Match Term by Term with Given ROC</text>
+    <text x="25" y="545" fill="#e6edf3" font-size="15">Compare the given ROC boundary to each individual pole radius |p_k|:</text>
+    
+    <rect x="25" y="560" width="650" height="65" rx="6" fill="#0d1117" stroke="#38bdf8" stroke-width="1"/>
+    <text x="40" y="587" fill="#38bdf8" font-size="15" font-weight="700">If ROC is OUTSIDE pole (|z| &gt; |p_k|):</text>
+    <text x="40" y="612" fill="#34d399" font-size="15" font-weight="600">⟶ CAUSAL / RIGHT-SIDED TERM:  A_k (p_k)ⁿ u[n]</text>
+
+    <rect x="25" y="635" width="650" height="65" rx="6" fill="#0d1117" stroke="#f87171" stroke-width="1"/>
+    <text x="40" y="662" fill="#f87171" font-size="15" font-weight="700">If ROC is INSIDE pole (|z| &lt; |p_k|):</text>
+    <text x="40" y="687" fill="#f87171" font-size="15" font-weight="600">⟶ ANTI-CAUSAL / LEFT-SIDED TERM:  -A_k (p_k)ⁿ u[-n-1]</text>
+
+    <!-- Repeated Poles Formula -->
+    <rect x="0" y="730" width="700" height="240" rx="10" fill="#0d1117" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="25" y="760" fill="#a78bfa" font-size="17" font-weight="700">SPECIAL CASE: REPEATED POLES OF ORDER M</text>
+    <text x="25" y="790" fill="#e6edf3" font-size="14">If pole p has multiplicity 2: X(z)/z = ... + B₁/(z-p) + B₂/(z-p)²</text>
+    <text x="25" y="820" fill="#fbbf24" font-size="16" font-weight="700">Multiply back by z: X(z) contains  B₂ · [ z / (z - p)² ]</text>
+    <text x="25" y="855" fill="#34d399" font-size="16" font-weight="700">Invert using Identity:  z / (z - p)² ⟷ (1/p) · n pⁿ u[n]</text>
+    <text x="25" y="890" fill="#e6edf3" font-size="14">Alternatively:  z² / (z - p)² ⟷ (n + 1) pⁿ u[n].</text>
+    <text x="25" y="920" fill="#f87171" font-size="14" font-weight="600">Do NOT confuse continuous t e^{at} with discrete n aⁿ⁻¹ or (n+1)aⁿ!</text>
+  </g>
+
+  <!-- Panel 2: Power Series / Long Division Method -->
+  <rect x="870" y="190" width="740" height="1090" rx="18" fill="url(#panelGrad6)" stroke="#30363d" stroke-width="2"/>
+  <rect x="870" y="190" width="740" height="60" rx="18" fill="#21262d"/>
+  <text x="1240" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">METHOD 2: POWER SERIES / LONG DIVISION</text>
+
+  <g transform="translate(900, 270)">
+    <text x="0" y="25" fill="#fbbf24" font-size="18" font-weight="700">Definition: Expand X(z) directly as ∑ x[n] z⁻ⁿ</text>
+    <text x="0" y="55" fill="#e6edf3" font-size="15">The coefficients of the resulting Laurent series are the values x[n]!</text>
+
+    <!-- Case A: Causal Long Division -->
+    <rect x="0" y="90" width="680" height="380" rx="12" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="25" y="125" fill="#38bdf8" font-size="18" font-weight="700">CASE A: CAUSAL SEQUENCE (ROC: |z| &gt; |p_max|)</text>
+    <text x="25" y="155" fill="#e6edf3" font-size="14">Must obtain series in <tspan fill="#38bdf8" font-weight="700">DESCENDING POWERS OF z (z⁻¹, z⁻², ...)</tspan>:</text>
+    <text x="25" y="185" fill="#fbbf24" font-size="14" font-weight="600">Rule: Arrange numerator &amp; denominator in descending powers of z!</text>
+
+    <g transform="translate(30, 210)">
+      <rect x="0" y="0" width="620" height="120" rx="8" fill="#161b22" stroke="#38bdf8" stroke-width="1"/>
+      <text x="20" y="30" fill="#8b949e" font-size="14">Example: X(z) = 1 / (1 - a z⁻¹)</text>
+      <text x="20" y="60" fill="#34d399" font-size="16" font-weight="700">Quotient: 1 + a z⁻¹ + a² z⁻² + a³ z⁻³ + ...</text>
+      <text x="20" y="90" fill="#e6edf3" font-size="14">x[0] = 1,  x[1] = a,  x[2] = a²,  x[3] = a³, ...</text>
+      <text x="20" y="110" fill="#38bdf8" font-size="14" font-weight="700">⟶  x[n] = aⁿ u[n]</text>
+    </g>
+    <text x="25" y="360" fill="#34d399" font-size="14" font-weight="600">Ideal for finding first few samples x[0], x[1], x[2] quickly in GATE!</text>
+    <text x="25" y="380" fill="#8b949e" font-size="13">No need to factor complex high-order polynomial denominators.</text>
+
+    <!-- Case B: Anti-Causal Long Division -->
+    <rect x="0" y="490" width="680" height="380" rx="12" fill="#0d1117" stroke="#f87171" stroke-width="1.5"/>
+    <text x="25" y="525" fill="#f87171" font-size="18" font-weight="700">CASE B: ANTI-CAUSAL SEQUENCE (ROC: |z| &lt; |p_min|)</text>
+    <text x="25" y="555" fill="#e6edf3" font-size="14">Must obtain series in <tspan fill="#f87171" font-weight="700">ASCENDING POWERS OF z (z¹, z², ...)</tspan>:</text>
+    <text x="25" y="585" fill="#fbbf24" font-size="14" font-weight="600">Rule: Arrange numerator &amp; denominator in ascending powers of z!</text>
+
+    <g transform="translate(30, 610)">
+      <rect x="0" y="0" width="620" height="135" rx="8" fill="#161b22" stroke="#f87171" stroke-width="1"/>
+      <text x="20" y="30" fill="#8b949e" font-size="14">Example: X(z) = 1 / (1 - a z⁻¹) = z / (z - a) = -z / (a - z)</text>
+      <text x="20" y="65" fill="#f87171" font-size="16" font-weight="700">Quotient: -(1/a) z - (1/a²) z² - (1/a³) z³ - ...</text>
+      <text x="20" y="95" fill="#e6edf3" font-size="14">x[-1] = -1/a,  x[-2] = -1/a²,  x[-3] = -1/a³, ...</text>
+      <text x="20" y="120" fill="#f87171" font-size="14" font-weight="700">⟶  x[n] = -aⁿ u[-n-1]</text>
+    </g>
+    <text x="25" y="780" fill="#f87171" font-size="14" font-weight="600">FATAL GATE TRAP: Dividing in wrong order yields non-convergent series!</text>
+    <text x="25" y="805" fill="#8b949e" font-size="13">Always check whether ROC demands negative or positive powers of z.</text>
+
+    <!-- Power series expansion of log / exp -->
+    <rect x="0" y="890" width="680" height="150" rx="10" fill="#161b22" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="25" y="920" fill="#fbbf24" font-size="16" font-weight="700">POWER SERIES OF TRANSCENDENTAL FUNCTIONS:</text>
+    <text x="25" y="950" fill="#e6edf3" font-size="14">X(z) = ln(1 + a z⁻¹) = a z⁻¹ - (a²/2)z⁻² + (a³/3)z⁻³ - ... (|z| &gt; |a|)</text>
+    <text x="25" y="980" fill="#34d399" font-size="15" font-weight="700">⟶  x[n] = [ -(-a)ⁿ / n ] · u[n-1]   (Causal sequence!)</text>
+    <text x="25" y="1010" fill="#fbbf24" font-size="13">X(z) = e^{a z⁻¹} = ∑_{n=0}^{∞} (aⁿ / n!) z⁻ⁿ ⟶ x[n] = (aⁿ / n!) u[n].</text>
+  </g>
+
+  <!-- Panel 3: Contour Integration / Residue Theorem -->
+  <rect x="1640" y="190" width="680" height="1090" rx="18" fill="url(#panelGrad6)" stroke="#30363d" stroke-width="2"/>
+  <rect x="1640" y="190" width="680" height="60" rx="18" fill="#21262d"/>
+  <text x="1980" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">METHOD 3: CAUCHY RESIDUE THEOREM</text>
+
+  <g transform="translate(1670, 270)">
+    <rect x="0" y="0" width="620" height="100" rx="10" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#38bdf8" font-size="17" font-weight="700">The Cauchy Contour Integral Formula:</text>
+    <text x="310" y="72" fill="#38bdf8" font-size="22" font-weight="800" text-anchor="middle">x[n] = (1 / 2πj) ∮_C X(z) · zⁿ⁻¹ dz</text>
+
+    <!-- Residue evaluation -->
+    <rect x="0" y="120" width="620" height="110" rx="10" fill="#161b22" stroke="#34d399" stroke-width="1.5"/>
+    <text x="20" y="152" fill="#34d399" font-size="17" font-weight="700">By Cauchy's Residue Theorem:</text>
+    <text x="310" y="190" fill="#34d399" font-size="21" font-weight="700" text-anchor="middle">x[n] = ∑ Residues of [ X(z) · zⁿ⁻¹ ]</text>
+    <text x="20" y="218" fill="#8b949e" font-size="13">Evaluated at all poles enclosed INSIDE the counterclockwise contour C in ROC.</text>
+
+    <!-- The Fatal Trap: n ≥ 0 vs n < 0 -->
+    <rect x="0" y="250" width="620" height="340" rx="12" fill="#0d1117" stroke="#f87171" stroke-width="2"/>
+    <text x="20" y="285" fill="#f87171" font-size="18" font-weight="800">THE DANGEROUS MULTIPLE ORIGIN POLE TRAP</text>
+    <text x="20" y="315" fill="#e6edf3" font-size="14">Look carefully at the integrand multiplier: <tspan fill="#fbbf24" font-weight="700">zⁿ⁻¹</tspan> !</text>
+
+    <g transform="translate(20, 335)">
+      <rect x="0" y="0" width="580" height="100" rx="8" fill="#161b22" stroke="#34d399" stroke-width="1"/>
+      <text x="15" y="28" fill="#34d399" font-size="15" font-weight="700">Case 1: For n ≥ 1 (or n ≥ 0 if X(z) has zero at origin):</text>
+      <text x="15" y="55" fill="#e6edf3" font-size="14">zⁿ⁻¹ has non-negative powers of z ⟶ <tspan fill="#34d399" font-weight="700">NO pole at z = 0!</tspan></text>
+      <text x="15" y="80" fill="#8b949e" font-size="13">Simply sum residues at the system poles enclosed by contour C.</text>
+
+      <rect x="0" y="115" width="580" height="115" rx="8" fill="#161b22" stroke="#f87171" stroke-width="1.5"/>
+      <text x="15" y="142" fill="#f87171" font-size="15" font-weight="700">Case 2: For n &lt; 0 (e.g. n = -1, -2, ...):</text>
+      <text x="15" y="170" fill="#f87171" font-size="15" font-weight="700">zⁿ⁻¹ introduces a POLE OF ORDER |n|+1 AT THE ORIGIN z = 0!</text>
+      <text x="15" y="195" fill="#e6edf3" font-size="13">You MUST calculate residue at z = 0 or use poles OUTSIDE contour C!</text>
+      <text x="15" y="215" fill="#fbbf24" font-size="12">Alternative: x[n] = - ∑ Residues at poles OUTSIDE contour C.</text>
+    </g>
+
+    <!-- Inspection Method Summary -->
+    <rect x="0" y="615" width="620" height="210" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="20" y="648" fill="#38bdf8" font-size="17" font-weight="700">METHOD 4: INSPECTION &amp; PAIR RECOGNITION</text>
+    <text x="20" y="680" fill="#e6edf3" font-size="14">The fastest method for GATE! Memorize standard forms:</text>
+    <text x="20" y="710" fill="#34d399" font-size="15" font-weight="600">• 1 / (1 - a z⁻¹) with |z| &gt; |a| ⟶ aⁿ u[n]</text>
+    <text x="20" y="740" fill="#f87171" font-size="15" font-weight="600">• 1 / (1 - a z⁻¹) with |z| &lt; |a| ⟶ -aⁿ u[-n-1]</text>
+    <text x="20" y="770" fill="#38bdf8" font-size="15" font-weight="600">• a z⁻¹ / (1 - a z⁻¹)² with |z| &gt; |a| ⟶ n aⁿ u[n]</text>
+    <text x="20" y="800" fill="#fbbf24" font-size="15" font-weight="600">• [1 - cos(Ω₀)z⁻¹] / [1 - 2cos(Ω₀)z⁻¹ + z⁻²] ⟶ cos(Ω₀ n) u[n]</text>
+
+    <!-- Comparative Speed Table -->
+    <rect x="0" y="845" width="620" height="195" rx="10" fill="#0d1117" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="20" y="875" fill="#fbbf24" font-size="16" font-weight="700">WHICH METHOD TO CHOOSE IN GATE EXAM?</text>
+    <text x="20" y="905" fill="#e6edf3" font-size="14">1. General closed-form x[n]: ⟶ <tspan fill="#34d399" font-weight="700">PFE via X(z)/z</tspan></text>
+    <text x="20" y="935" fill="#e6edf3" font-size="14">2. First 2-3 samples (e.g. x[0], x[1]): ⟶ <tspan fill="#38bdf8" font-weight="700">Long Division</tspan></text>
+    <text x="20" y="965" fill="#e6edf3" font-size="14">3. Logarithmic / Exponential X(z): ⟶ <tspan fill="#fbbf24" font-weight="700">Power Series</tspan></text>
+    <text x="20" y="995" fill="#e6edf3" font-size="14">4. Contour Integral: ⟶ <tspan fill="#f87171" font-weight="700">Theoretical proofs only</tspan></text>
+  </g>
+</svg>

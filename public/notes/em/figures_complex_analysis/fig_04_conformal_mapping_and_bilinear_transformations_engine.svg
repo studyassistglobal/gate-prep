@@ -1,0 +1,443 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.4" opacity="0.6" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowEmerald" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="cardShadow" x="-10%" y="-5%" width="120%" height="115%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+    </defs>
+
+    <style>
+        .font-mono { font-family: 'Consolas', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+        .font-sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+    </style>
+
+    <!-- Deep Blueprint Background -->
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Outer Architectural Frame -->
+    <rect x="40" y="40" width="3760" height="2080" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+    <rect x="48" y="48" width="3744" height="2064" fill="none" stroke="#1e293b" stroke-width="1" rx="12" />
+
+    <!-- Corner Alignment Reticles -->
+    <path d="M 40 80 L 80 80 L 80 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 80 L 3760 80 L 3760 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 40 2080 L 80 2080 L 80 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 2080 L 3760 2080 L 3760 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Top Master Header Banner -->
+    <g transform="translate(80, 80)">
+        <rect x="0" y="0" width="3680" height="150" fill="#0b1329" fill-opacity="0.85" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="12" height="150" fill="url(#headerGrad)" rx="4" />
+        
+        <!-- Blueprint Title & Subtitle -->
+        <text x="50" y="62" fill="url(#headerGrad)" font-size="44" font-weight="900" letter-spacing="2px" class="font-sans">CONFORMAL MAPPING &amp; BILINEAR TRANSFORMATIONS ARCHITECTURE</text>
+        <text x="50" y="112" fill="#94a3b8" font-size="24" font-weight="500" letter-spacing="0.5px" class="font-sans">Angle Preservation Condition // Elementary Mappings // Möbius Engine // Cross-Ratio Invariance // Fixed Points</text>
+
+        <!-- Technical Telemetry Badge -->
+        <g transform="translate(3220, 30)">
+            <rect x="0" y="0" width="410" height="90" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <circle cx="30" cy="45" r="8" fill="#10b981" filter="url(#glowEmerald)" />
+            <text x="52" y="38" fill="#e2e8f0" font-size="16" font-weight="700" class="font-mono">GATE 2027 TITANS ENGINE</text>
+            <text x="52" y="65" fill="#38bdf8" font-size="14" font-weight="600" class="font-mono">SPEC: ULTRA-HD 4K BLUEPRINT</text>
+        </g>
+    </g>
+
+    <!-- Canvas Inner Content -->
+    
+    <!-- ==========================================
+         PANEL 1: CONFORMAL MAPPING ESSENTIALS
+         ========================================== -->
+    <g transform="translate(80, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#cyanGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">01. CONFORMALITY THEOREM &amp; LOCAL GEOMETRY</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Isogonal property // Preservation of angle magnitude and orientation // Critical points</text>
+
+        <!-- Sub-card 1: Conformal Theorem -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">THE CONFORMALITY THEOREM</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">A mapping w = f(z) is <tspan fill="#34d399" font-weight="700">conformal</tspan> at point z&#8320; iff:</text>
+            <text x="24" y="105" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">1. f(z) is analytic at z&#8320;</text>
+            <text x="24" y="135" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">2. f'(z&#8320;) &#8800; 0   (Non-zero derivative!)</text>
+
+            <g transform="translate(20, 160)">
+                <rect x="0" y="0" width="800" height="140" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#34d399" font-size="16" font-weight="700" class="font-mono">GEOMETRIC IMPLICATIONS:</text>
+                <text x="20" y="62" fill="#e2e8f0" font-size="15" class="font-sans">• Angle magnitude between any two intersecting curves is strictly preserved.</text>
+                <text x="20" y="90" fill="#e2e8f0" font-size="15" class="font-sans">• Sense of rotation (clockwise / counterclockwise) is strictly preserved.</text>
+                <text x="20" y="120" fill="#38bdf8" font-size="15" class="font-mono">• Local linear scale magnification factor = |f'(z&#8320;)| | Rotation angle = arg(f'(z&#8320;))</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Critical Points & Isogonality -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#f43f5e" font-size="20" font-weight="700" class="font-mono">CRITICAL POINTS &amp; ISOGONAL MAPPING</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">A point z&#8320; where <tspan fill="#f43f5e" font-weight="700">f'(z&#8320;) = 0</tspan> is called a <tspan fill="#fbbf24" font-weight="700">Critical Point</tspan>.</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="205" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">AT A CRITICAL POINT:</text>
+                <text x="20" y="60" fill="#f43f5e" font-size="15" class="font-sans">• Conformality FAILS (Jacobian J = |f'|&#178; = 0).</text>
+                <text x="20" y="90" fill="#e2e8f0" font-size="15" class="font-sans">• If f'(z&#8320;) = ... = f&#8319;&#8315;&#185;(z&#8320;) = 0 and f&#8319;(z&#8320;) &#8800; 0, angles are multiplied by factor n!</text>
+                <text x="20" y="125" fill="#38bdf8" font-size="15" class="font-mono">Example: w = z&#178; &#8658; w' = 2z = 0 at z = 0. Angle at origin is DOUBLED!</text>
+                <text x="20" y="160" fill="#c084fc" font-size="16" font-weight="700" class="font-mono">ISOGONAL MAPPING DEFINITION:</text>
+                <text x="20" y="190" fill="#94a3b8" font-size="14" class="font-sans">Preserves magnitude of angles, but reverses sense of rotation (e.g. w = z&#772;).</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Elementary Mappings Gallery -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">STANDARD ELEMENTARY CONFORMAL MAPPINGS GALLERY</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="395" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="30" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">TRANSLATION: w = z + c</text>
+                <text x="16" y="65" fill="#e2e8f0" font-size="14" class="font-sans">c = a + i b</text>
+                <text x="16" y="95" fill="#94a3b8" font-size="14" class="font-sans">u = x + a, v = y + b</text>
+                <text x="16" y="130" fill="#34d399" font-size="15" class="font-sans">Pure rigid shift</text>
+                <text x="16" y="160" fill="#94a3b8" font-size="13" class="font-sans">Preserves size, shape, and orientation of all curves.</text>
+            </g>
+
+            <g transform="translate(445, 60)">
+                <rect x="0" y="0" width="395" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">ROTATION &amp; DILATION: w = cz</text>
+                <text x="16" y="65" fill="#e2e8f0" font-size="14" class="font-sans">c = R e&#7522;&#945;</text>
+                <text x="16" y="95" fill="#94a3b8" font-size="14" class="font-sans">|w| = R |z|, arg(w) = &#952; + &#945;</text>
+                <text x="16" y="130" fill="#fbbf24" font-size="15" class="font-sans">Magnified by R</text>
+                <text x="16" y="160" fill="#94a3b8" font-size="13" class="font-sans">Rotated by counterclockwise angle &#945;.</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="395" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">INVERSION: w = 1 / z</text>
+                <text x="16" y="65" fill="#e2e8f0" font-size="14" class="font-sans">|w| = 1/|z|, arg(w) = -&#952;</text>
+                <text x="16" y="95" fill="#94a3b8" font-size="14" class="font-sans">u = x/(x&#178;+y&#178;), v = -y/(x&#178;+y&#178;)</text>
+                <text x="16" y="130" fill="#c084fc" font-size="15" class="font-sans">Inverts circles &amp; lines</text>
+                <text x="16" y="160" fill="#94a3b8" font-size="13" class="font-sans">Maps circle through origin to straight line not through origin!</text>
+            </g>
+
+            <g transform="translate(1285, 60)">
+                <rect x="0" y="0" width="395" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="30" fill="#c084fc" font-size="16" font-weight="700" class="font-mono">EXPONENTIAL: w = e&#7618;</text>
+                <text x="16" y="65" fill="#e2e8f0" font-size="14" class="font-sans">w = e&#7512; e&#7522;&#696;</text>
+                <text x="16" y="95" fill="#94a3b8" font-size="14" class="font-sans">|w| = e&#7512;, arg(w) = y</text>
+                <text x="16" y="130" fill="#38bdf8" font-size="15" class="font-sans">Strip to Plane mapping</text>
+                <text x="16" y="160" fill="#94a3b8" font-size="13" class="font-sans">Horizontal strip 0 &lt; y &lt; &#960; maps to upper half plane v &gt; 0.</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 2: BILINEAR (MÖBIUS) ENGINE
+         ========================================== -->
+    <g transform="translate(1960, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#goldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#fbbf24" font-size="28" font-weight="800" class="font-sans">02. BILINEAR / M&#214;BIUS TRANSFORMATION ENGINE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Fractional linear mapping // Non-degeneracy condition // Inverse &amp; matrix group duality</text>
+
+        <!-- Sub-card 1: Definition & Determinant Condition -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">DEFINITION &amp; NON-SINGULARITY CONDITION</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="95" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#38bdf8" font-size="26" font-weight="900" class="font-mono">w = (a z + b) / (c z + d)</text>
+                <text x="20" y="80" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">Condition: a d - b c &#8800; 0   (Determinant &#916; &#8800; 0)</text>
+            </g>
+
+            <text x="24" y="175" fill="#f43f5e" font-size="16" font-weight="700" class="font-sans">&#9888; WHAT HAPPENS IF ad - bc = 0?</text>
+            <text x="24" y="205" fill="#e2e8f0" font-size="15" class="font-mono">w = (a/c) (c z + b c/a) / (c z + d) = a/c = CONSTANT</text>
+            <text x="24" y="235" fill="#94a3b8" font-size="15" class="font-sans">The entire complex plane collapses to a single point! Mapping becomes degenerate.</text>
+            <text x="24" y="270" fill="#34d399" font-size="16" class="font-mono"><tspan fill="#fbbf24">Derivative:</tspan> dw/dz = (ad - bc) / (cz + d)&#178;</text>
+            <text x="24" y="300" fill="#94a3b8" font-size="14" class="font-sans">Conformal everywhere except at the pole z = -d/c (where w = &#8734;).</text>
+        </g>
+
+        <!-- Sub-card 2: Inverse & Matrix Group Representation -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">INVERSE MAPPING &amp; 2x2 MATRIX ISOMORPHISM</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="110" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#34d399" font-size="18" font-weight="700" class="font-mono">INVERSE TRANSFORMATION:</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="22" font-weight="900" class="font-mono">z = (-d w + b) / (c w - a)</text>
+                <text x="20" y="100" fill="#94a3b8" font-size="14" class="font-sans">Obtained by solving cwz + dw = az + b for z.</text>
+            </g>
+
+            <g transform="translate(20, 175)">
+                <rect x="0" y="0" width="800" height="125" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#c084fc" font-size="17" font-weight="700" class="font-mono">MATRIX REPRESENTATION [T]:</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="16" class="font-mono">[T] = [[a, b], [c, d]] with det([T]) = ad - bc &#8800; 0</text>
+                <text x="20" y="90" fill="#fbbf24" font-size="15" class="font-sans">• Composition of two transformations: [T&#8322; &#8728; T&#8321;] = [T&#8322;] &#183; [T&#8321;] (Matrix product!)</text>
+                <text x="20" y="115" fill="#38bdf8" font-size="14" class="font-mono">&#9733; Möbius group is isomorphic to Projective General Linear Group PGL(2, C)!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Circle Preserving Property & 4 Elementary Steps -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CIRCULAR PRESERVATION PROPERTY &amp; 4-STEP CANONICAL DECOMPOSITION</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#34d399" font-size="17" font-weight="700" class="font-mono">GENERALIZED CIRCLE PRESERVATION THEOREM</text>
+                <text x="20" y="68" fill="#e2e8f0" font-size="16" class="font-sans">A Bilinear transformation maps <tspan fill="#fbbf24" font-weight="700">circles and straight lines</tspan> into circles and straight lines!</text>
+                <text x="20" y="105" fill="#94a3b8" font-size="15" class="font-sans">• A straight line is simply a generalized circle passing through the point at infinity (&#8734;).</text>
+                <text x="20" y="140" fill="#e2e8f0" font-size="15" class="font-mono">Circle passing through pole z = -d/c &#8658; Maps to a STRAIGHT LINE in w-plane.</text>
+                <text x="20" y="175" fill="#e2e8f0" font-size="15" class="font-mono">Circle NOT passing through pole &#8658; Maps to a TRUE CIRCLE in w-plane.</text>
+                <text x="20" y="210" fill="#38bdf8" font-size="14" class="font-mono">&#9733; Core basis for boundary condition problems in electromagnetic waveguide design!</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#c084fc" font-size="17" font-weight="700" class="font-mono">4-STEP ELEMENTARY DECOMPOSITION (FOR c &#8800; 0)</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-mono">w = (a/c) + [(bc - ad)/c] / (cz + d)</text>
+                <text x="20" y="100" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#38bdf8">1. Translation &amp; Dilation:</tspan> z&#8321; = cz + d</text>
+                <text x="20" y="130" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#fbbf24">2. Inversion:</tspan> z&#8322; = 1 / z&#8321;</text>
+                <text x="20" y="160" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#34d399">3. Dilation &amp; Rotation:</tspan> z&#8323; = [(bc - ad)/c] z&#8322;</text>
+                <text x="20" y="190" fill="#e2e8f0" font-size="15" class="font-mono"><tspan fill="#f43f5e">4. Translation:</tspan> w = z&#8323; + (a/c)</text>
+                <text x="20" y="222" fill="#94a3b8" font-size="13" class="font-sans">Proves that EVERY Möbius map is built from translations, rotations, and inversions!</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 3: CROSS-RATIO INVARIANCE ENGINE
+         ========================================== -->
+    <g transform="translate(80, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#emeraldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#34d399" font-size="28" font-weight="800" class="font-sans">03. CROSS-RATIO INVARIANCE &amp; 3-POINT DETERMINATION</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Preservation of projective cross-ratio // Unique construction from 3 point correspondences</text>
+
+        <!-- Sub-card 1: Cross Ratio Formula -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">CROSS-RATIO PRESERVATION THEOREM</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">The cross-ratio of four distinct points is <tspan fill="#34d399" font-weight="700">invariant</tspan> under any Bilinear map:</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="145" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#38bdf8" font-size="24" font-weight="900" class="font-mono">(w - w&#8321;)(w&#8322; - w&#8323;)         (z - z&#8321;)(z&#8322; - z&#8323;)</text>
+                <text x="20" y="80" fill="#fbbf24" font-size="24" font-weight="900" class="font-mono">-------------------   =   -------------------</text>
+                <text x="20" y="115" fill="#34d399" font-size="24" font-weight="900" class="font-mono">(w - w&#8323;)(w&#8322; - w&#8321;)         (z - z&#8323;)(z&#8322; - z&#8321;)</text>
+            </g>
+
+            <g transform="translate(20, 255)">
+                <rect x="0" y="0" width="800" height="105" fill="#020617" stroke="#334155" rx="6" />
+                <text x="15" y="28" fill="#fbbf24" font-size="15" font-weight="700" class="font-mono">MNEMONIC RULE (1-2-3-1 PATTERN):</text>
+                <text x="15" y="55" fill="#e2e8f0" font-size="14" class="font-mono">Numerator has indices: (w - 1) and (2 - 3)</text>
+                <text x="15" y="82" fill="#38bdf8" font-size="14" class="font-mono">Denominator has indices: (w - 3) and (2 - 1)</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Point at Infinity Shortcut -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">POINT AT INFINITY (&#8734;) TRICK</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">If one of the points is &#8734;, factor it out and take limit &#8594; &#8734;:</text>
+            <text x="24" y="105" fill="#fbbf24" font-size="15" class="font-mono">The ratio containing that point simplifies to 1!</text>
+
+            <g transform="translate(20, 120)">
+                <rect x="0" y="0" width="800" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">CASE 1: If z&#8321; = &#8734;:</text>
+                <text x="20" y="55" fill="#e2e8f0" font-size="14" class="font-mono">lim&#7565;&#8321;&#8594;&#8734; (z - z&#8321;) / (z&#8322; - z&#8321;) = 1 &#8658; Right side becomes: (z&#8322; - z&#8323;) / (z - z&#8323;)</text>
+
+                <text x="20" y="90" fill="#34d399" font-size="16" font-weight="700" class="font-mono">CASE 2: If z&#8322; = &#8734;:</text>
+                <text x="20" y="115" fill="#e2e8f0" font-size="14" class="font-mono">lim&#7565;&#8322;&#8594;&#8734; (z&#8322; - z&#8323;) / (z&#8322; - z&#8321;) = 1 &#8658; Right side becomes: (z - z&#8321;) / (z - z&#8323;)</text>
+
+                <text x="20" y="150" fill="#34d399" font-size="16" font-weight="700" class="font-mono">CASE 3: If z&#8323; = &#8734;:</text>
+                <text x="20" y="175" fill="#e2e8f0" font-size="14" class="font-mono">lim&#7565;&#8323;&#8594;&#8734; (z&#8322; - z&#8323;) / (z - z&#8323;) = 1 &#8658; Right side becomes: (z - z&#8321;) / (z&#8322; - z&#8321;)</text>
+                <text x="20" y="210" fill="#fbbf24" font-size="14" class="font-mono">&#9733; Massive exam time saver: Eliminate terms involving &#8734; immediately!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Worked 3-Point Mapping Problem -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">PREPFUSION WORKED DRILL: MAP z = {1, i, -1} &#8594; w = {0, 1, &#8734;}</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="820" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">STEP 1: SETUP CROSS-RATIO WITH w&#8323; = &#8734;</text>
+                <text x="20" y="60" fill="#94a3b8" font-size="15" class="font-sans">Left hand side (since w&#8323; = &#8734;, omit terms with w&#8323;):</text>
+                <text x="20" y="90" fill="#34d399" font-size="18" class="font-mono">LHS = (w - w&#8321;) / (w&#8322; - w&#8321;) = (w - 0) / (1 - 0) = w</text>
+                <text x="20" y="125" fill="#94a3b8" font-size="15" class="font-sans">Right hand side with z&#8321; = 1, z&#8322; = i, z&#8323; = -1:</text>
+                <text x="20" y="155" fill="#e2e8f0" font-size="16" class="font-mono">RHS = [(z - 1)(i - (-1))] / [(z - (-1))(i - 1)]</text>
+                <text x="20" y="185" fill="#e2e8f0" font-size="16" class="font-mono">RHS = [(z - 1)(1 + i)] / [(z + 1)(i - 1)]</text>
+                <text x="20" y="215" fill="#fbbf24" font-size="14" class="font-mono">Simplify (1 + i)/(i - 1) = -i</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="820" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">STEP 2: SOLVE EXPLICITLY FOR w</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="18" class="font-mono">w = -i (z - 1) / (z + 1) = (-i z + i) / (z + 1)</text>
+                <text x="20" y="105" fill="#fbbf24" font-size="20" font-weight="900" class="font-mono">w = -i (z - 1) / (z + 1)</text>
+                <text x="20" y="145" fill="#94a3b8" font-size="15" class="font-sans">Verification: When z = 1 &#8658; w = 0 (Matches!)</text>
+                <text x="20" y="175" fill="#94a3b8" font-size="15" class="font-sans">When z = i &#8658; w = -i(i - 1)/(i + 1) = 1 (Matches!)</text>
+                <text x="20" y="205" fill="#38bdf8" font-size="14" class="font-mono">When z = -1 &#8658; denominator is 0 &#8658; w = &#8734; (Matches! 100% verified!)</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 4: FIXED POINTS & SPECIAL MAPPINGS
+         ========================================== -->
+    <g transform="translate(1960, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#purpleGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#c084fc" font-size="28" font-weight="800" class="font-sans">04. FIXED POINTS &amp; HALF-PLANE TO DISK CANONICAL MAPPINGS</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Invariant points // Quadratic roots equation // Upper half plane to unit circle map</text>
+
+        <!-- Sub-card 1: Fixed / Invariant Points -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">FIXED (INVARIANT) POINTS EQUATION</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">A point z is called a <tspan fill="#fbbf24" font-weight="700">Fixed Point</tspan> if it maps to itself: <tspan fill="#34d399" font-weight="700">w = f(z) = z</tspan>.</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="150" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">z = (a z + b) / (c z + d)</text>
+                <text x="20" y="75" fill="#fbbf24" font-size="22" font-weight="900" class="font-mono">c z&#178; + (d - a) z - b = 0</text>
+                <text x="20" y="115" fill="#e2e8f0" font-size="16" class="font-sans">• A quadratic in z &#8658; has at most <tspan fill="#34d399" font-weight="700">2 fixed points</tspan> (unless identity map w = z)!</text>
+            </g>
+
+            <g transform="translate(20, 260)">
+                <rect x="0" y="0" width="800" height="100" fill="#020617" stroke="#334155" rx="6" />
+                <text x="15" y="28" fill="#c084fc" font-size="15" font-weight="700" class="font-mono">CLASSIFICATION OF M&#214;BIUS MAPS BY FIXED POINTS:</text>
+                <text x="15" y="55" fill="#e2e8f0" font-size="14" class="font-mono">• 1 Fixed point (repeated root) &#8658; Parabolic transformation</text>
+                <text x="15" y="82" fill="#38bdf8" font-size="14" class="font-mono">• 2 Fixed points &#8658; Elliptic, Hyperbolic, or Loxodromic transformation</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Half Plane to Unit Disk -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">UPPER HALF-PLANE TO UNIT DISK MAPPING</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">Standard conformal mapping of Upper Half-Plane Im(z) &gt; 0 into Unit Disk |w| &lt; 1:</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="150" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="40" fill="#34d399" font-size="24" font-weight="900" class="font-mono">w = e&#7522;&#955; (z - z&#8320;) / (z - z&#772;&#8320;)</text>
+                <text x="20" y="80" fill="#fbbf24" font-size="17" class="font-mono">where Im(z&#8320;) &gt; 0 and &#955; &#8712; &#8477; is a real phase angle.</text>
+                <text x="20" y="115" fill="#e2e8f0" font-size="15" class="font-sans">• Point z = z&#8320; maps to origin w = 0 (center of disk).</text>
+                <text x="20" y="138" fill="#94a3b8" font-size="14" class="font-sans">• Real axis Im(z) = 0 maps to boundary circle |w| = 1.</text>
+            </g>
+
+            <g transform="translate(20, 260)">
+                <rect x="0" y="0" width="800" height="100" fill="#020617" stroke="#334155" rx="6" />
+                <text x="15" y="28" fill="#38bdf8" font-size="15" font-weight="700" class="font-mono">PROFOUND BOUNDARY PROPERTY:</text>
+                <text x="15" y="55" fill="#e2e8f0" font-size="14" class="font-mono">For any real point z = x: |x - z&#8320;| = |x - z&#772;&#8320;| (symmetric distance!)</text>
+                <text x="15" y="82" fill="#34d399" font-size="14" class="font-mono">Therefore |w| = |e&#7522;&#955;| &#183; 1 = 1 &#8658; boundary maps strictly to circle boundary!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: GATE Quick Problem Checklist -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">GATE EXAM BILINEAR TRAPS &amp; VERIFICATION CHECKLIST</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#f43f5e" font-size="16" font-weight="700" class="font-mono">TRAP 1: AD - BC = 0</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">Always check determinant before doing calculations.</text>
+                <text x="20" y="105" fill="#94a3b8" font-size="14" class="font-sans">If ad - bc = 0, mapping is NOT bilinear and NOT conformal anywhere!</text>
+                <text x="20" y="145" fill="#fbbf24" font-size="14" class="font-mono">GATE question often sneaks this into option D!</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">TRAP 2: ORDER OF POINTS</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">In cross-ratio formula, the correspondence z&#8321;&#8594;w&#8321;, z&#8322;&#8594;w&#8322;, z&#8323;&#8594;w&#8323; must be maintained strictly.</text>
+                <text x="20" y="115" fill="#94a3b8" font-size="14" class="font-sans">Swapping w&#8321; and w&#8322; gives wrong inverted transformation!</text>
+                <text x="20" y="150" fill="#38bdf8" font-size="14" class="font-mono">Label z&#8321;, z&#8322;, z&#8323; and w&#8321;, w&#8322;, w&#8323; explicitly.</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">SPEED SHORTCUT: OPTION TEST</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">Rather than deriving cross-ratio:</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="15" class="font-sans">Plug in z&#8321; into each option to see if it gives w&#8321;.</text>
+                <text x="20" y="140" fill="#94a3b8" font-size="14" class="font-sans">Plug in z&#8322; to see if it gives w&#8322;.</text>
+                <text x="20" y="175" fill="#fbbf24" font-size="14" class="font-mono">Solves MCQ in 15 seconds without algebra errors!</text>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Bottom Engineering Telemetry Strip -->
+    <g transform="translate(80, 2060)">
+        <line x1="0" y1="0" x2="3680" y2="0" stroke="#1e293b" stroke-width="2" />
+        <text x="10" y="24" fill="#64748b" font-size="16" class="font-mono">COMPLEX ANALYSIS MATHEMATICAL BLUEPRINT // SCALE: 1.0 NATIVE // GATE / ESE / ISRO EXCELLENCE SUITE</text>
+        <text x="3670" y="24" fill="#64748b" font-size="16" text-anchor="end" class="font-mono">PREPFUSION ENGINEERING MATHEMATICS // SYSTEM VERIFIED</text>
+    </g>
+</svg>

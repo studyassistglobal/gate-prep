@@ -49,7 +49,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_complex_analysis/fig_01_complex_numbers_polar_geometry_and_topology_engine.jpg",
+     "src": "/notes/em/figures_complex_analysis/fig_01_complex_numbers_polar_geometry_and_topology_engine.svg",
      "alt": "Blueprint 01: Complex Numbers & Argand Topology"
     },
     {
@@ -58,7 +58,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_complex_analysis/fig_02_cauchy_riemann_equations_and_analyticity_engine.jpg",
+     "src": "/notes/em/figures_complex_analysis/fig_02_cauchy_riemann_equations_and_analyticity_engine.svg",
      "alt": "Blueprint 02: Cauchy-Riemann & Analyticity Engine"
     },
     {
@@ -67,7 +67,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_complex_analysis/fig_03_harmonic_functions_and_milne_thomson_engine.jpg",
+     "src": "/notes/em/figures_complex_analysis/fig_03_harmonic_functions_and_milne_thomson_engine.svg",
      "alt": "Blueprint 03: Harmonic Functions & Milne-Thomson Engine"
     },
     {
@@ -76,7 +76,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_complex_analysis/fig_04_conformal_mapping_and_bilinear_transformations_engine.jpg",
+     "src": "/notes/em/figures_complex_analysis/fig_04_conformal_mapping_and_bilinear_transformations_engine.svg",
      "alt": "Blueprint 04: Conformal Mapping & Bilinear Architecture"
     },
     {
@@ -85,7 +85,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_complex_analysis/fig_05_complex_line_integrals_and_cauchy_theorems_engine.jpg",
+     "src": "/notes/em/figures_complex_analysis/fig_05_complex_line_integrals_and_cauchy_theorems_engine.svg",
      "alt": "Blueprint 05: Complex Line Integrals & Cauchy Theorems Engine"
     },
     {
@@ -94,7 +94,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_complex_analysis/fig_06_singularities_taylor_and_laurent_series_engine.jpg",
+     "src": "/notes/em/figures_complex_analysis/fig_06_singularities_taylor_and_laurent_series_engine.svg",
      "alt": "Blueprint 06: Singularities Taxonomy & Laurent Series Engine"
     },
     {
@@ -103,7 +103,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_complex_analysis/fig_07_cauchy_residue_theorem_and_real_integrals_engine.jpg",
+     "src": "/notes/em/figures_complex_analysis/fig_07_cauchy_residue_theorem_and_real_integrals_engine.svg",
      "alt": "Blueprint 07: Cauchy Residue Theorem & Real Integrals Engine"
     }
    ]

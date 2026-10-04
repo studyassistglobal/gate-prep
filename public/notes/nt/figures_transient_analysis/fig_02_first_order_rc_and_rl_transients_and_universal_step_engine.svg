@@ -1,0 +1,310 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIG 02: FIRST-ORDER RC &amp; RL TRANSIENTS, MASTER STEP RESPONSE &amp; MULTI-INTERVAL SWITCHING</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Differential Equation Formulation • The Universal Master Step Formula • Time Constant Evaluation with Controlled Sources • 5τ Settling Criteria</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • TRANSIENT ANALYSIS TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: First-Order ODE Formulation & Time Constants -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. First-Order ODE Formulation</text>
+
+  <rect x="30" y="85" width="840" height="320" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">The Standard First-Order Differential Equation</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">Any circuit containing exactly ONE effective energy storage element (or multiple</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">elements of same type that reduce to a single equivalent) is described by:</text>
+  
+  <text x="70" y="245" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">dx(t)/dt + (1/τ) · x(t) = K</text>
+  <text x="50" y="295" fill="#e2e8f0" font-size="18">• x(t) is any branch voltage or current in the network.</text>
+  <text x="50" y="325" fill="#e2e8f0" font-size="18">• τ is the characteristic Time Constant of the circuit.</text>
+  <text x="50" y="355" fill="#fbbf24" font-size="18" font-weight="700">• K is the forcing excitation constant: K = x(∞) / τ.</text>
+
+  <rect x="30" y="425" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="470" fill="#38bdf8" font-size="22" font-weight="800">Time Constant (τ) Definitions &amp; Physics</text>
+  <text x="50" y="510" fill="#e2e8f0" font-size="18">The time constant τ measures the temporal inertia / sluggishness of the response:</text>
+  
+  <rect x="50" y="545" width="800" height="110" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="70" y="585" fill="#38bdf8" font-size="20" font-weight="800">RC Circuit Time Constant:</text>
+  <text x="70" y="625" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">τ = R_th · C   [Ohms × Farads = Seconds (s)]</text>
+
+  <rect x="50" y="675" width="800" height="110" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="70" y="715" fill="#c084fc" font-size="20" font-weight="800">RL Circuit Time Constant:</text>
+  <text x="70" y="755" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">τ = L / R_th   [Henrys / Ohms = Seconds (s)]</text>
+
+  <text x="50" y="815" fill="#fbbf24" font-size="18" font-weight="800">Duality Contrast: Increasing resistance R_th INCREASES τ in RC, but DECREASES τ in RL!</text>
+
+  <rect x="30" y="865" width="840" height="480" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="910" fill="#34d399" font-size="22" font-weight="800">Evaluating R_th Seen by Dynamic Element</text>
+  <text x="50" y="950" fill="#e2e8f0" font-size="18">R_th is the Thévenin equivalent resistance looking into the network from the</text>
+  <text x="50" y="980" fill="#e2e8f0" font-size="18">terminals of the energy storage element for t &gt; 0:</text>
+  
+  <text x="50" y="1030" fill="#fbbf24" font-size="19" font-weight="700">Protocol for Independent Sources Only:</text>
+  <text x="50" y="1065" fill="#e2e8f0" font-size="18">1. Temporarily remove the capacitor C or inductor L from the circuit.</text>
+  <text x="50" y="1100" fill="#e2e8f0" font-size="18">2. Deactivate all independent sources (V_s → Short, I_s → Open).</text>
+  <text x="50" y="1135" fill="#e2e8f0" font-size="18">3. Look into the exposed terminals and calculate R_eq via series-parallel combinations.</text>
+
+  <text x="50" y="1185" fill="#fbbf24" font-size="19" font-weight="700">Protocol with Dependent Sources Present:</text>
+  <text x="50" y="1220" fill="#f43f5e" font-size="18">Series-parallel reduction FAILS! Keep controlled sources active, apply test source:</text>
+  <text x="70" y="1260" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">R_th = V_test / I_test   (1 V or 1 A external test source)</text>
+  <text x="50" y="1305" fill="#94a3b8" font-size="17">• If circuit has dependent sources, τ can be significantly modified or become negative!</text>
+
+  <rect x="30" y="1365" width="840" height="440" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1410" fill="#fbbf24" font-size="22" font-weight="800">Geometrical Interpretation of Time Constant</text>
+  <text x="50" y="1450" fill="#e2e8f0" font-size="18">Consider discharging curve x(t) = x(0) · e^{-t/τ}:</text>
+  <text x="50" y="1485" fill="#e2e8f0" font-size="18">Initial rate of decay at t = 0:</text>
+  <text x="70" y="1525" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">dx/dt |_{t=0} = -x(0) / τ</text>
+  
+  <text x="50" y="1575" fill="#34d399" font-size="20" font-weight="800">Tangent Line Property:</text>
+  <text x="50" y="1610" fill="#e2e8f0" font-size="18">The tangent line drawn to the transient response curve at t = 0 intersects the</text>
+  <text x="50" y="1640" fill="#e2e8f0" font-size="18">final horizontal steady-state asymptote at EXACTLY t = τ!</text>
+  
+  <text x="50" y="1690" fill="#fbbf24" font-size="18" font-weight="700">Physical Interpretation:</text>
+  <text x="50" y="1720" fill="#e2e8f0" font-size="18">If the initial rate of decay were maintained constant without exponential slowing,</text>
+  <text x="50" y="1750" fill="#e2e8f0" font-size="18">the response would reach its final steady-state value in exactly ONE time constant τ!</text>
+</g>
+
+<!-- Column 2: The Universal Master Step Response Formula -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#818cf8"/>
+  <text x="35" y="55" fill="#818cf8" font-size="28" font-weight="900">2. The Universal Master Step Formula</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="50" y="125" fill="#34d399" font-size="22" font-weight="900">THE TITAN MASTER STEP RESPONSE FORMULA</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">In ANY first-order dynamic network with DC sources and switching at t = 0,</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">EVERY branch voltage and branch current x(t) obeys the universal formula:</text>
+  
+  <rect x="50" y="235" width="800" height="110" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+  <text x="70" y="295" fill="#34d399" font-family="'Fira Code', monospace" font-size="28" font-weight="900">x(t) = x(∞) + [x(0⁺) - x(∞)] · e^{-t / τ}   (for t ≥ 0)</text>
+
+  <text x="50" y="380" fill="#fbbf24" font-size="18" font-weight="800">Alternative Transient + Steady-State Form:</text>
+  <text x="70" y="410" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">x(t) = x(0⁺) · e^{-t/τ}  +  x(∞) · [1 - e^{-t/τ}]</text>
+
+  <rect x="30" y="445" width="840" height="520" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="490" fill="#38bdf8" font-size="22" font-weight="800">The 3-Pillar Solution Architecture</text>
+  <text x="50" y="530" fill="#e2e8f0" font-size="18">To solve ANY first-order problem in 90 seconds, determine only 3 parameters:</text>
+  
+  <text x="50" y="580" fill="#34d399" font-size="20" font-weight="800">Pillar 1: Initial Post-Switching Value x(0⁺)</text>
+  <text x="70" y="615" fill="#e2e8f0" font-size="18">• Determine i_L(0⁻) and v_C(0⁻) from DC steady state before switching (t = 0⁻).</text>
+  <text x="70" y="650" fill="#e2e8f0" font-size="18">• At t = 0⁺, replace L with current source i_L(0⁻) and C with voltage source v_C(0⁻).</text>
+  <text x="70" y="685" fill="#e2e8f0" font-size="18">• Solve static resistive circuit for target quantity x(0⁺).</text>
+
+  <text x="50" y="735" fill="#38bdf8" font-size="20" font-weight="800">Pillar 2: Final Steady-State Value x(∞)</text>
+  <text x="70" y="770" fill="#e2e8f0" font-size="18">• For t ≫ 5τ under new switch topology, replace L with SHORT and C with OPEN.</text>
+  <text x="70" y="805" fill="#e2e8f0" font-size="18">• Solve static DC resistive circuit for target quantity x(∞).</text>
+
+  <text x="50" y="855" fill="#c084fc" font-size="20" font-weight="800">Pillar 3: Circuit Time Constant τ</text>
+  <text x="70" y="890" fill="#e2e8f0" font-size="18">• For t &gt; 0, look into terminals of storage element with independent sources killed.</text>
+  <text x="70" y="925" fill="#e2e8f0" font-size="18">• Calculate R_th ⟹ τ = R_th · C (for RC) or τ = L / R_th (for RL).</text>
+
+  <rect x="30" y="985" width="840" height="440" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="1030" fill="#fbbf24" font-size="22" font-weight="800">Canonical Series RC Circuit Step-by-Step</text>
+  <text x="50" y="1070" fill="#e2e8f0" font-size="18">Uncharged capacitor C in series with R connected to DC voltage V_s at t = 0:</text>
+  
+  <text x="50" y="1115" fill="#38bdf8" font-size="19" font-weight="700">1. Capacitor Voltage v_C(t):</text>
+  <text x="70" y="1150" fill="#e2e8f0" font-size="18">v_C(0⁺) = 0 V,   v_C(∞) = V_s,   τ = RC</text>
+  <text x="70" y="1185" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">v_C(t) = V_s · [1 - e^{-t/RC}]</text>
+
+  <text x="50" y="1235" fill="#38bdf8" font-size="19" font-weight="700">2. Loop Charging Current i(t):</text>
+  <text x="70" y="1270" fill="#e2e8f0" font-size="18">i(0⁺) = (V_s - 0)/R = V_s/R,   i(∞) = 0 A (capacitor opens!)</text>
+  <text x="70" y="1305" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">i(t) = (V_s / R) · e^{-t/RC}</text>
+
+  <text x="50" y="1355" fill="#38bdf8" font-size="19" font-weight="700">3. Resistor Voltage v_R(t):</text>
+  <text x="70" y="1390" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">v_R(t) = i(t) · R = V_s · e^{-t/RC}   (Notice: v_R(0⁺) = V_s jumps!)</text>
+
+  <rect x="30" y="1445" width="840" height="370" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1490" fill="#34d399" font-size="22" font-weight="800">Canonical Series RL Circuit Step-by-Step</text>
+  <text x="50" y="1530" fill="#e2e8f0" font-size="18">Unenergized inductor L in series with R connected to DC voltage V_s at t = 0:</text>
+  
+  <text x="50" y="1575" fill="#38bdf8" font-size="19" font-weight="700">1. Inductor Current i_L(t):</text>
+  <text x="70" y="1610" fill="#e2e8f0" font-size="18">i_L(0⁺) = 0 A,   i_L(∞) = V_s/R,   τ = L/R</text>
+  <text x="70" y="1645" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">i_L(t) = (V_s / R) · [1 - e^{-t / (L/R)}]</text>
+
+  <text x="50" y="1695" fill="#38bdf8" font-size="19" font-weight="700">2. Inductor Voltage v_L(t):</text>
+  <text x="70" y="1730" fill="#e2e8f0" font-size="18">v_L(0⁺) = V_s - i(0⁺)R = V_s,   v_L(∞) = 0 V (inductor shorts!)</text>
+  <text x="70" y="1765" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">v_L(t) = V_s · e^{-t / (L/R)}   (Notice: v_L(0⁺) = V_s jumps!)</text>
+</g>
+
+<!-- Column 3: Multi-Interval Switching & Time-Varying Circuits -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">3. Multi-Interval &amp; Dynamic Circuits</text>
+
+  <rect x="30" y="85" width="840" height="480" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#c084fc" font-size="22" font-weight="800">Sequential Multi-Interval Switching Analysis</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="18">When a second switching event occurs at t = t₁ &gt; 0 (e.g. switch closes at t = 0</text>
+  <text x="50" y="195" fill="#e2e8f0" font-size="18">and opens at t = t₁):</text>
+  
+  <text x="50" y="240" fill="#fbbf24" font-size="19" font-weight="700">Interval 1 (0 ≤ t &lt; t₁):</text>
+  <text x="70" y="275" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">x₁(t) = x(∞₁) + [x(0⁺) - x(∞₁)] · e^{-t / τ₁}</text>
+  <text x="50" y="315" fill="#e2e8f0" font-size="18">• Evaluate value of state variable at the boundary: x(t₁⁻) = x₁(t₁).</text>
+
+  <text x="50" y="360" fill="#fbbf24" font-size="19" font-weight="700">Boundary Continuity Handshake:</text>
+  <text x="70" y="395" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">v_C(t₁⁺) = v_C(t₁⁻)    and    i_L(t₁⁺) = i_L(t₁⁻)</text>
+
+  <text x="50" y="445" fill="#fbbf24" font-size="19" font-weight="700">Interval 2 (t ≥ t₁) — Origin Shift Formula:</text>
+  <text x="70" y="480" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="900">x₂(t) = x(∞₂) + [x(t₁⁺) - x(∞₂)] · e^{-(t - t₁) / τ₂}</text>
+  <text x="50" y="525" fill="#94a3b8" font-size="17">• τ₂ and x(∞₂) are computed using the NEW circuit topology for t &gt; t₁!</text>
+
+  <rect x="30" y="585" width="840" height="480" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="630" fill="#38bdf8" font-size="22" font-weight="800">Time-Varying Resistor R(t) in Series RC Circuit</text>
+  <text x="50" y="670" fill="#e2e8f0" font-size="18">If resistance varies with time: R(t) = R₀ · (1 + αt) or R(t) = k·t:</text>
+  <text x="50" y="705" fill="#f43f5e" font-size="18">DANGER: Formula x(t) = x(∞) + [x(0) - x(∞)]e^{-t/τ} FAILS because τ is not constant!</text>
+  
+  <text x="50" y="755" fill="#fbbf24" font-size="19" font-weight="800">Analytical Solution via Integrating Factor:</text>
+  <text x="50" y="790" fill="#e2e8f0" font-size="18">Differential equation: R(t) · C · dv_C/dt + v_C(t) = V_s</text>
+  <text x="70" y="830" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">dv_C/dt + [ 1 / (R(t)·C) ] · v_C(t) = V_s / (R(t)·C)</text>
+  
+  <text x="50" y="880" fill="#34d399" font-size="19" font-weight="700">Integrating Factor:</text>
+  <text x="70" y="915" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">I.F. = exp( ∫ [1 / (R(t)·C)] dt )</text>
+  <text x="50" y="965" fill="#e2e8f0" font-size="18">General solution: v_C(t) = (1 / I.F.) · [ ∫ (V_s / R(t)C) · I.F. dt + K ].</text>
+  <text x="50" y="1005" fill="#fbbf24" font-size="18" font-weight="700">Constant K determined from initial condition v_C(0⁺) = v_C(0⁻)!</text>
+
+  <rect x="30" y="1085" width="840" height="420" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="1130" fill="#34d399" font-size="22" font-weight="800">Active First-Order Circuits (With Dependent Sources)</text>
+  <text x="50" y="1170" fill="#e2e8f0" font-size="18">Consider an Op-Amp or transistor circuit with controlled source and 1 capacitor:</text>
+  
+  <text x="50" y="1215" fill="#fbbf24" font-size="19" font-weight="700">Step 1: Calculate Thevenin Resistance R_th Seen by C:</text>
+  <text x="50" y="1250" fill="#e2e8f0" font-size="18">• Connect V_test = 1 V across capacitor terminals (with independent sources killed).</text>
+  <text x="50" y="1285" fill="#e2e8f0" font-size="18">• Solve for I_test entering positive terminal: R_th = 1 V / I_test.</text>
+
+  <text x="50" y="1335" fill="#fbbf24" font-size="19" font-weight="700">Step 2: Time Constant:</text>
+  <text x="70" y="1370" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">τ = R_th · C   (May be much smaller or larger than physical resistors!)</text>
+  <text x="50" y="1415" fill="#f43f5e" font-size="18" font-weight="700">Negative Feedback: Reduces effective R_th, dramatically accelerating circuit!</text>
+
+  <rect x="30" y="1525" width="840" height="310" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1570" fill="#fbbf24" font-size="22" font-weight="800">Pulse Excitation Response (Duration T &lt; 5τ)</text>
+  <text x="50" y="1610" fill="#e2e8f0" font-size="18">• When driven by a rectangular pulse of width T, capacitor NEVER reaches V_s.</text>
+  <text x="50" y="1645" fill="#38bdf8" font-size="18">• Peak voltage achieved at end of pulse: V_peak = V_s · [1 - e^{-T/τ}].</text>
+  <text x="50" y="1685" fill="#e2e8f0" font-size="18">• For t &gt; T, discharges from V_peak: v_C(t) = V_peak · e^{-(t - T)/τ}.</text>
+  <text x="50" y="1735" fill="#34d399" font-size="18" font-weight="800">If T ≪ τ: Exponential approximates a pure linear ramp: v_C(t) ≈ V_s · (t/τ)!</text>
+</g>
+
+<!-- Column 4: Settling Time Benchmarks & Percentage Completion Table -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#fbbf24"/>
+  <text x="35" y="55" fill="#fbbf24" font-size="28" font-weight="900">4. Settling Benchmarks &amp; Speeds</text>
+
+  <!-- Table Card -->
+  <rect x="30" y="85" width="840" height="580" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="130" fill="#fbbf24" font-size="22" font-weight="900">SETTLING DYNAMICS &amp; PERCENTAGE COMPLETION MATRIX</text>
+  
+  <text x="50" y="175" fill="#38bdf8" font-size="18" font-weight="700">Time Elapsed (t)</text>
+  <text x="280" y="175" fill="#38bdf8" font-size="18" font-weight="700">Decay Factor e^{-t/τ}</text>
+  <text x="550" y="175" fill="#38bdf8" font-size="18" font-weight="700">Rise Completion [1-e^{-t/τ}]</text>
+  <path d="M 45 195 L 850 195" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="240" fill="#e2e8f0" font-size="18">t = 0.693 τ (ln 2)</text>
+  <text x="280" y="240" fill="#e2e8f0" font-size="18">0.5000 (50.0%)</text>
+  <text x="550" y="240" fill="#34d399" font-size="18" font-weight="700">50.0%  (Half-Life / Median)</text>
+
+  <text x="50" y="295" fill="#e2e8f0" font-size="18">t = 1.0 τ</text>
+  <text x="280" y="295" fill="#e2e8f0" font-size="18">0.3679 (36.8%)</text>
+  <text x="550" y="295" fill="#34d399" font-size="18" font-weight="700">63.2%  (Standard 1τ Metric)</text>
+
+  <text x="50" y="350" fill="#e2e8f0" font-size="18">t = 2.0 τ</text>
+  <text x="280" y="350" fill="#e2e8f0" font-size="18">0.1353 (13.5%)</text>
+  <text x="550" y="350" fill="#38bdf8" font-size="18" font-weight="700">86.5%</text>
+
+  <text x="50" y="405" fill="#e2e8f0" font-size="18">t = 2.197 τ (ln 9)</text>
+  <text x="280" y="405" fill="#e2e8f0" font-size="18">0.1000 (10.0%)</text>
+  <text x="550" y="405" fill="#38bdf8" font-size="18" font-weight="700">90.0%  (Rise Time 10%–90%)</text>
+
+  <text x="50" y="460" fill="#e2e8f0" font-size="18">t = 3.0 τ</text>
+  <text x="280" y="460" fill="#e2e8f0" font-size="18">0.0498 (5.0%)</text>
+  <text x="550" y="460" fill="#38bdf8" font-size="18" font-weight="700">95.0%  (5% Error Band)</text>
+
+  <text x="50" y="515" fill="#e2e8f0" font-size="18">t = 4.0 τ</text>
+  <text x="280" y="515" fill="#e2e8f0" font-size="18">0.0183 (1.8%)</text>
+  <text x="550" y="515" fill="#c084fc" font-size="18" font-weight="700">98.2%  (2% Error Band)</text>
+
+  <text x="50" y="570" fill="#e2e8f0" font-size="18">t = 4.605 τ (ln 100)</text>
+  <text x="280" y="570" fill="#e2e8f0" font-size="18">0.0100 (1.0%)</text>
+  <text x="550" y="570" fill="#c084fc" font-size="18" font-weight="700">99.0%  (1% Error Band)</text>
+
+  <text x="50" y="625" fill="#e2e8f0" font-size="18">t = 5.0 τ</text>
+  <text x="280" y="625" fill="#e2e8f0" font-size="18">0.0067 (0.7%)</text>
+  <text x="550" y="625" fill="#34d399" font-size="18" font-weight="900">99.3%  (Engineering SS!)</text>
+
+  <rect x="30" y="685" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="730" fill="#38bdf8" font-size="22" font-weight="800">Key Timing Metrics for GATE</text>
+  
+  <text x="50" y="775" fill="#34d399" font-size="20" font-weight="700">1. Standard 10% to 90% Rise Time (t_r):</text>
+  <text x="70" y="810" fill="#e2e8f0" font-size="18">Time required for response to rise from 10% to 90% of final value:</text>
+  <text x="70" y="845" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">t₁₀% = τ · ln(1 / 0.90) = 0.105 τ</text>
+  <text x="70" y="880" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">t₉₀% = τ · ln(1 / 0.10) = 2.303 τ</text>
+  <text x="70" y="920" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">t_r = t₉₀% - t₁₀% = τ · ln(9) ≈ 2.197 τ ≈ 2.2 τ</text>
+
+  <text x="50" y="975" fill="#34d399" font-size="20" font-weight="700">2. Settling Time (t_s):</text>
+  <text x="70" y="1010" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">2% Tolerance Band: t_s = 4 τ</text>
+  <text x="70" y="1045" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">1% Tolerance Band: t_s = 4.6 τ ≈ 5 τ</text>
+  <text x="50" y="1085" fill="#94a3b8" font-size="17">In electrical power engineering, circuits are assumed in full DC steady state after 5τ.</text>
+
+  <rect x="30" y="1125" width="840" height="420" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1170" fill="#f43f5e" font-size="22" font-weight="800">Energy Dissipation during Charging</text>
+  <text x="50" y="1210" fill="#e2e8f0" font-size="18">Consider charging an initially uncharged capacitor C from DC voltage source V_s:</text>
+  
+  <text x="50" y="1255" fill="#fbbf24" font-size="18">1. Total Energy Delivered by Voltage Source:</text>
+  <text x="70" y="1290" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">E_source = ∫₀^∞ V_s · i(t) dt = V_s · Q_total = C · V_s²</text>
+
+  <text x="50" y="1335" fill="#fbbf24" font-size="18">2. Final Energy Stored in Capacitor:</text>
+  <text x="70" y="1370" fill="#34d399" font-family="'Fira Code', monospace" font-size="20">E_cap = ½ C · V_s²</text>
+
+  <text x="50" y="1415" fill="#fbbf24" font-size="18">3. Energy Dissipated as Heat in Resistor R:</text>
+  <text x="70" y="1450" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="22" font-weight="900">E_resistor = E_source - E_cap = ½ C · V_s²   (Exactly 50% !)</text>
+  <text x="50" y="1495" fill="#34d399" font-size="18" font-weight="800">Remarkable Invariant: Dissipation is INDEPENDENT of resistance R!</text>
+  <text x="50" y="1525" fill="#94a3b8" font-size="17">(Whether R = 1 mΩ or R = 1 MΩ, exactly half the source energy is lost as heat!).</text>
+
+  <rect x="30" y="1565" width="840" height="270" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1610" fill="#fbbf24" font-size="20" font-weight="800">First-Order Golden Commandments</text>
+  <text x="50" y="1645" fill="#e2e8f0" font-size="18">1. Always find state variables i_L(0⁺) and v_C(0⁺) FIRST.</text>
+  <text x="50" y="1680" fill="#e2e8f0" font-size="18">2. Determine R_th seen by storage element AFTER switching (for t &gt; 0).</text>
+  <text x="50" y="1715" fill="#e2e8f0" font-size="18">3. Plug into x(t) = x(∞) + [x(0⁺) - x(∞)]e^{-t/τ}.</text>
+  <text x="50" y="1755" fill="#34d399" font-size="18" font-weight="800">Never integrate differential equations from scratch when Master Formula applies!</text>
+</g>
+
+  </g>
+</svg>

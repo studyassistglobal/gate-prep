@@ -1,0 +1,204 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="gradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="gradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid)"/>
+
+  <!-- Title Header Block -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 05 • FIGURE 5.1</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">The Theoretical Bridge: From Continuous-Time Fourier Transform (CTFT) to Bilateral Laplace Transform via Convergence Factor</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- Panel 1: CTFT Limitation -->
+  <rect x="80" y="190" width="690" height="1090" rx="18" fill="url(#panelGrad)" stroke="#30363d" stroke-width="2"/>
+  <rect x="80" y="190" width="690" height="60" rx="18" fill="#21262d"/>
+  <text x="425" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">1. THE CTFT CONVERGENCE BARRIER</text>
+  
+  <text x="120" y="295" fill="#e6edf3" font-size="18" font-weight="600">Continuous-Time Fourier Transform (CTFT):</text>
+  <rect x="120" y="315" width="610" height="70" rx="10" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="425" y="360" fill="#38bdf8" font-size="24" font-weight="700" text-anchor="middle">X(ω) = ∫_{-∞}^{∞} x(t) e^{-jω t} dt</text>
+
+  <text x="120" y="425" fill="#f87171" font-size="18" font-weight="600">The Dirichlet L¹ Absolute Integrability Bottleneck:</text>
+  <rect x="120" y="445" width="610" height="60" rx="10" fill="#21262d" stroke="#f87171" stroke-width="1.5"/>
+  <text x="425" y="482" fill="#f87171" font-size="20" font-weight="700" text-anchor="middle">Condition: ∫_{-∞}^{∞} |x(t)| dt &lt; ∞</text>
+
+  <text x="120" y="545" fill="#e6edf3" font-size="18">Fatal Failure for Vital Engineering Signals:</text>
+  
+  <!-- Failure examples cards -->
+  <rect x="120" y="570" width="610" height="90" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="150" cy="615" r="16" fill="#f87171" fill-opacity="0.2" stroke="#f87171" stroke-width="2"/>
+  <text x="150" y="622" fill="#f87171" font-size="18" font-weight="700" text-anchor="middle">✕</text>
+  <text x="185" y="605" fill="#fbbf24" font-size="19" font-weight="600">x(t) = e^{2t} u(t)  (Growing Exponential)</text>
+  <text x="185" y="635" fill="#8b949e" font-size="16">∫₀^∞ e^{2t} dt = ∞  → CTFT Diverges to Infinity!</text>
+
+  <rect x="120" y="680" width="610" height="90" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="150" cy="725" r="16" fill="#f87171" fill-opacity="0.2" stroke="#f87171" stroke-width="2"/>
+  <text x="150" y="732" fill="#f87171" font-size="18" font-weight="700" text-anchor="middle">✕</text>
+  <text x="185" y="715" fill="#fbbf24" font-size="19" font-weight="600">x(t) = t u(t)  (Unit Ramp Signal)</text>
+  <text x="185" y="745" fill="#8b949e" font-size="16">∫₀^∞ t dt = ∞  → Area is Infinite!</text>
+
+  <rect x="120" y="790" width="610" height="90" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="150" cy="835" r="16" fill="#f87171" fill-opacity="0.2" stroke="#f87171" stroke-width="2"/>
+  <text x="150" y="842" fill="#f87171" font-size="18" font-weight="700" text-anchor="middle">✕</text>
+  <text x="185" y="825" fill="#fbbf24" font-size="19" font-weight="600">x(t) = u(t)  (Unit Step Function)</text>
+  <text x="185" y="855" fill="#8b949e" font-size="16">Marginal boundary: Requires generalized Dirac impulses.</text>
+
+  <!-- Pedagogical Callout -->
+  <rect x="120" y="910" width="610" height="330" rx="12" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="150" y="945" fill="#38bdf8" font-size="18" font-weight="700">THE DAMPING FACTOR STRATEGY:</text>
+  <text x="150" y="985" fill="#e6edf3" font-size="16" line-height="1.5">Multiply non-integrable signal x(t) by an exponential</text>
+  <text x="150" y="1015" fill="#e6edf3" font-size="16">convergence factor e^{-σ t} to force decay:</text>
+  <rect x="150" y="1035" width="550" height="60" rx="8" fill="#161b22" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="425" y="1072" fill="#fbbf24" font-size="20" font-weight="700" text-anchor="middle">y(t) = x(t) · e^{-σ t}  → Absolute Integrability!</text>
+  <text x="150" y="1135" fill="#8b949e" font-size="15">For x(t) = e^{2t}u(t): y(t) = e^{(2-σ)t}u(t)</text>
+  <text x="150" y="1165" fill="#34d399" font-size="16" font-weight="600">Converges IF AND ONLY IF  2 - σ &lt; 0  ⇒  σ &gt; 2 !</text>
+  <text x="150" y="1205" fill="#8b949e" font-size="14">This allowable range of σ forms the Region of Convergence (ROC).</text>
+
+  <!-- Panel 2: The Laplace Transform Genesis -->
+  <rect x="855" y="190" width="690" height="1090" rx="18" fill="url(#panelGrad)" stroke="#30363d" stroke-width="2"/>
+  <rect x="855" y="190" width="690" height="60" rx="18" fill="#21262d"/>
+  <text x="1200" y="230" fill="#fbbf24" font-size="22" font-weight="700" text-anchor="middle">2. COMPLEX FREQUENCY &amp; THE s-PLANE</text>
+
+  <text x="895" y="295" fill="#e6edf3" font-size="18" font-weight="600">Applying CTFT to the Damped Signal y(t):</text>
+  <rect x="895" y="315" width="610" height="100" rx="10" fill="#0d1117" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="1200" y="355" fill="#e6edf3" font-size="19" text-anchor="middle">F{ x(t) e^{-σ t} } = ∫_{-∞}^{∞} [x(t) e^{-σ t}] e^{-jω t} dt</text>
+  <text x="1200" y="395" fill="#fbbf24" font-size="22" font-weight="700" text-anchor="middle">= ∫_{-∞}^{∞} x(t) e^{-(σ + jω)t} dt</text>
+
+  <!-- Definition of s -->
+  <rect x="895" y="445" width="610" height="90" rx="10" fill="#161b22" stroke="#38bdf8" stroke-width="2"/>
+  <text x="930" y="485" fill="#38bdf8" font-size="20" font-weight="700">Define Complex Frequency Variable s:</text>
+  <text x="1200" y="518" fill="#38bdf8" font-size="26" font-weight="800" text-anchor="middle" filter="url(#glowCyan)">s = σ + jω</text>
+
+  <!-- Analysis Integral -->
+  <text x="895" y="575" fill="#34d399" font-size="18" font-weight="700">Bilateral (Two-Sided) Laplace Transform Analysis:</text>
+  <rect x="895" y="595" width="610" height="85" rx="10" fill="#0d1117" stroke="#34d399" stroke-width="2"/>
+  <text x="1200" y="648" fill="#34d399" font-size="26" font-weight="800" text-anchor="middle">X(s) = L{ x(t) } = ∫_{-∞}^{∞} x(t) e^{-st} dt</text>
+
+  <!-- Geometry of s-plane -->
+  <text x="895" y="720" fill="#e6edf3" font-size="18" font-weight="600">Geometry of the Complex s-Plane (Cartesian Grid):</text>
+  
+  <g transform="translate(970, 750)">
+    <!-- s-plane frame -->
+    <rect x="0" y="0" width="460" height="340" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    
+    <!-- Grid -->
+    <line x1="230" y1="20" x2="230" y2="320" stroke="#38bdf8" stroke-width="2.5"/> <!-- jw axis -->
+    <line x1="20" y1="170" x2="440" y2="170" stroke="#38bdf8" stroke-width="2.5"/> <!-- sigma axis -->
+
+    <!-- Arrows -->
+    <polygon points="230,10 224,24 236,24" fill="#38bdf8"/>
+    <polygon points="450,170 436,164 436,176" fill="#38bdf8"/>
+
+    <!-- Axis Labels -->
+    <text x="440" y="155" fill="#38bdf8" font-size="17" font-weight="700">σ (Re)</text>
+    <text x="245" y="30" fill="#38bdf8" font-size="17" font-weight="700">jω (Im)</text>
+    <text x="215" y="190" fill="#8b949e" font-size="14">0</text>
+
+    <!-- Point s = sigma + jw -->
+    <circle cx="330" cy="90" r="7" fill="#fbbf24" stroke="#ffffff" stroke-width="2"/>
+    <line x1="330" y1="170" x2="330" y2="90" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <line x1="230" y1="90" x2="330" y2="90" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="345" y="85" fill="#fbbf24" font-size="18" font-weight="700">s = σ + jω</text>
+    <text x="330" y="195" fill="#fbbf24" font-size="15" text-anchor="middle">σ</text>
+    <text x="205" y="95" fill="#fbbf24" font-size="15" text-anchor="middle">jω</text>
+
+    <!-- Halves -->
+    <rect x="20" y="20" width="200" height="300" fill="#60a5fa" fill-opacity="0.08"/>
+    <text x="120" y="60" fill="#60a5fa" font-size="15" font-weight="600" text-anchor="middle">Left Half Plane (LHP)</text>
+    <text x="120" y="80" fill="#8b949e" font-size="13" text-anchor="middle">σ &lt; 0 (Decaying)</text>
+
+    <rect x="240" y="20" width="190" height="300" fill="#f87171" fill-opacity="0.08"/>
+    <text x="340" y="280" fill="#f87171" font-size="15" font-weight="600" text-anchor="middle">Right Half Plane (RHP)</text>
+    <text x="340" y="300" fill="#8b949e" font-size="13" text-anchor="middle">σ &gt; 0 (Growing)</text>
+  </g>
+
+  <!-- Bottom bridge statement -->
+  <rect x="895" y="1120" width="610" height="120" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="920" y="1155" fill="#fbbf24" font-size="18" font-weight="700">THE SPECIAL CASE: σ = 0</text>
+  <text x="920" y="1185" fill="#e6edf3" font-size="16">When s = 0 + jω = jω, Bilateral Laplace Transform collapses into CTFT:</text>
+  <text x="1200" y="1222" fill="#38bdf8" font-size="20" font-weight="700" text-anchor="middle">X(s)|_{s = jω} = X(jω) = X(ω)  [Provided jω-axis ∈ ROC!]</text>
+
+  <!-- Panel 3: Inversion & The Bromwich Integral -->
+  <rect x="1630" y="190" width="690" height="1090" rx="18" fill="url(#panelGrad)" stroke="#30363d" stroke-width="2"/>
+  <rect x="1630" y="190" width="690" height="60" rx="18" fill="#21262d"/>
+  <text x="1975" y="230" fill="#34d399" font-size="22" font-weight="700" text-anchor="middle">3. THE INVERSE BROMWICH INTEGRAL</text>
+
+  <text x="1670" y="295" fill="#e6edf3" font-size="18" font-weight="600">Derivation via Inverse Fourier Transform:</text>
+  <text x="1670" y="325" fill="#8b949e" font-size="16">Since y(t) = x(t) e^{-σ t} = F^{-1}{ X(σ + jω) }:</text>
+  
+  <rect x="1670" y="345" width="610" height="85" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <text x="1975" y="380" fill="#e6edf3" font-size="17" text-anchor="middle">x(t) e^{-σ t} = (1 / 2π) ∫_{-∞}^{∞} X(σ + jω) e^{jω t} dω</text>
+  <text x="1975" y="415" fill="#38bdf8" font-size="18" font-weight="600" text-anchor="middle">⇒ x(t) = (1 / 2π) ∫_{-∞}^{∞} X(σ + jω) e^{(σ + jω)t} dω</text>
+
+  <text x="1670" y="465" fill="#fbbf24" font-size="18" font-weight="700">Change of Variables: s = σ + jω  ⇒  ds = j dω  ⇒  dω = ds / j</text>
+  
+  <!-- Synthesis formula box -->
+  <rect x="1670" y="485" width="610" height="95" rx="10" fill="#0d1117" stroke="#34d399" stroke-width="2.5"/>
+  <text x="1975" y="525" fill="#8b949e" font-size="16" text-anchor="middle">The Formal Inverse Laplace Transform (Bromwich Contour Integral):</text>
+  <text x="1975" y="563" fill="#34d399" font-size="24" font-weight="800" text-anchor="middle">x(t) = (1 / 2πj) ∫_{σ - j∞}^{σ + j∞} X(s) e^{st} ds</text>
+
+  <!-- Bromwich Contour Diagram -->
+  <g transform="translate(1745, 615)">
+    <rect x="0" y="0" width="460" height="340" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    
+    <!-- Shaded ROC strip -->
+    <rect x="180" y="20" width="160" height="300" fill="#38bdf8" fill-opacity="0.12"/>
+    <text x="260" y="45" fill="#38bdf8" font-size="14" font-weight="700" text-anchor="middle">ROC STRIP</text>
+
+    <!-- Axes -->
+    <line x1="130" y1="20" x2="130" y2="320" stroke="#38bdf8" stroke-width="1.5"/>
+    <line x1="20" y1="170" x2="440" y2="170" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="430" y="160" fill="#38bdf8" font-size="14">σ</text>
+    <text x="140" y="35" fill="#38bdf8" font-size="14">jω</text>
+
+    <!-- Poles outside contour -->
+    <text x="90" y="120" fill="#f87171" font-size="22" font-weight="900">✕</text>
+    <text x="90" y="230" fill="#f87171" font-size="22" font-weight="900">✕</text>
+    <text x="370" y="150" fill="#f87171" font-size="22" font-weight="900">✕</text>
+
+    <!-- Bromwich Line -->
+    <line x1="260" y1="20" x2="260" y2="320" stroke="#34d399" stroke-width="3"/>
+    <polygon points="260,60 254,75 266,75" fill="#34d399"/>
+    <polygon points="260,200 254,215 266,215" fill="#34d399"/>
+
+    <circle cx="260" cy="170" r="5" fill="#34d399"/>
+    <text x="275" y="195" fill="#34d399" font-size="16" font-weight="700">σ = σ₀</text>
+    <text x="275" y="35" fill="#34d399" font-size="15" font-weight="600">σ₀ + j∞</text>
+    <text x="275" y="315" fill="#34d399" font-size="15" font-weight="600">σ₀ - j∞</text>
+
+    <text x="260" y="335" fill="#8b949e" font-size="12" text-anchor="middle">Vertical Path entirely inside the ROC</text>
+  </g>
+
+  <!-- Practical Inversion Note -->
+  <rect x="1670" y="985" width="610" height="255" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="1700" y="1025" fill="#fbbf24" font-size="18" font-weight="700">PRACTICAL ENGINEERING INVERSION:</text>
+  <text x="1700" y="1060" fill="#e6edf3" font-size="16">In GATE, contour integration is avoided. We use:</text>
+  <text x="1730" y="1095" fill="#38bdf8" font-size="16" font-weight="600">1. Partial Fraction Expansion (PFE)</text>
+  <text x="1730" y="1125" fill="#38bdf8" font-size="16" font-weight="600">2. Canonical Transform Pair Inspection</text>
+  <text x="1730" y="1155" fill="#38bdf8" font-size="16" font-weight="600">3. ROC Direction Mapping:</text>
+  <text x="1760" y="1185" fill="#34d399" font-size="15">Right of pole (Re(s) &gt; p) ⇒ Causal e^{pt}u(t)</text>
+  <text x="1760" y="1215" fill="#f87171" font-size="15">Left of pole (Re(s) &lt; p) ⇒ Anti-causal -e^{pt}u(-t)</text>
+</svg>

@@ -98,7 +98,9 @@ function NoteBlock({ block }) {
     case 'img':
       return (
         <figure className="gp-figure">
-          <img src={block.src} alt={block.alt || 'Figure'} loading="lazy" />
+          <a className="gp-figure-link" href={block.src} target="_blank" rel="noopener noreferrer" title="Open full-size figure">
+            <img src={block.src} alt={block.alt || 'Figure'} loading="lazy" />
+          </a>
           {block.alt && <figcaption>{block.alt}</figcaption>}
         </figure>
       );

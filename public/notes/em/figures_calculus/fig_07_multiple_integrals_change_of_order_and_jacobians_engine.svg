@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="480" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="240" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 07</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">MULTIPLE INTEGRALS, CHANGE OF ORDER &amp; JACOBIANS</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">Fubini's Theorem, Change of Order of Integration, Polar Coordinate Transformations, Cardioids &amp; Jacobian Transformations</text>
+  </g>
+
+  <!-- COLUMN 1: CHANGE OF ORDER OF INTEGRATION -->
+  <g transform="translate(120, 310)">
+    <rect x="0" y="0" width="1760" height="1750" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1760" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. CHANGE OF ORDER OF INTEGRATION (GATE WEAPON #1)</text>
+
+    <!-- Fubini's Theorem & Strip Types -->
+    <g transform="translate(40, 105)">
+      <rect x="0" y="0" width="1680" height="360" rx="16" fill="url(#cardGradDark)" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="35" y="40" fill="#38bdf8" font-size="24" font-weight="700">Fubini's Theorem &amp; Integration Strip Classification</text>
+      
+      <g transform="translate(35, 70)">
+        <rect x="0" y="0" width="790" height="260" rx="12" fill="#1e293b" stroke="#38bdf8"/>
+        <text x="25" y="35" fill="#38bdf8" font-size="20" font-weight="700">Type I: Vertical Strips (dy dx)</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">• Inner limits are functions of x: g₁(x) ≤ y ≤ g₂(x)</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">• Outer limits are constants: a ≤ x ≤ b</text>
+        <rect x="20" y="130" width="750" height="60" rx="8" fill="#0f172a" stroke="#38bdf8"/>
+        <text x="40" y="168" fill="#38bdf8" font-size="22" font-weight="800">∬_R f(x, y) dA = ∫_{a}^{b} [ ∫_{g₁(x)}^{g₂(x)} f(x, y) dy ] dx</text>
+        <text x="25" y="225" fill="#94a3b8" font-size="16">Strip moves parallel to y-axis from bottom curve to top curve.</text>
+      </g>
+
+      <g transform="translate(850, 70)">
+        <rect x="0" y="0" width="790" height="260" rx="12" fill="#1e293b" stroke="#fbbf24"/>
+        <text x="25" y="35" fill="#fbbf24" font-size="20" font-weight="700">Type II: Horizontal Strips (dx dy)</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">• Inner limits are functions of y: h₁(y) ≤ x ≤ h₂(y)</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">• Outer limits are constants: c ≤ y ≤ d</text>
+        <rect x="20" y="130" width="750" height="60" rx="8" fill="#0f172a" stroke="#fbbf24"/>
+        <text x="40" y="168" fill="#fbbf24" font-size="22" font-weight="800">∬_R f(x, y) dA = ∫_{c}^{d} [ ∫_{h₁(y)}^{h₂(y)} f(x, y) dx ] dy</text>
+        <text x="25" y="225" fill="#94a3b8" font-size="16">Strip moves parallel to x-axis from left curve to right curve.</text>
+      </g>
+    </g>
+
+    <!-- The 4-Step Execution Algorithm -->
+    <g transform="translate(40, 495)">
+      <rect x="0" y="0" width="1680" height="260" rx="16" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+      <text x="35" y="40" fill="#34d399" font-size="24" font-weight="800">THE 4-STEP ALGORITHM TO CHANGE ORDER OF INTEGRATION</text>
+
+      <g transform="translate(35, 75)">
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="380" height="150" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+          <text x="20" y="30" fill="#38bdf8" font-size="18" font-weight="800">STEP 1: Extract Bounds</text>
+          <text x="20" y="65" fill="#cbd5e1" font-size="15">Read inner variable curves and outer constant bounds from original integral.</text>
+        </g>
+        <g transform="translate(410, 0)">
+          <rect x="0" y="0" width="380" height="150" rx="10" fill="#1e293b" stroke="#fbbf24"/>
+          <text x="20" y="30" fill="#fbbf24" font-size="18" font-weight="800">STEP 2: Sketch &amp; Shade</text>
+          <text x="20" y="65" fill="#cbd5e1" font-size="15">Plot boundary curves on xy-plane. Accurately shade the exact integration domain R.</text>
+        </g>
+        <g transform="translate(820, 0)">
+          <rect x="0" y="0" width="380" height="150" rx="10" fill="#1e293b" stroke="#34d399"/>
+          <text x="20" y="30" fill="#34d399" font-size="18" font-weight="800">STEP 3: Switch Strip</text>
+          <text x="20" y="65" fill="#cbd5e1" font-size="15">If original was dy dx (vertical), draw a HORIZONTAL strip (dx dy). Check entry &amp; exit!</text>
+        </g>
+        <g transform="translate(1230, 0)">
+          <rect x="0" y="0" width="380" height="150" rx="10" fill="#1e293b" stroke="#f43f5e"/>
+          <text x="20" y="30" fill="#f43f5e" font-size="18" font-weight="800">STEP 4: Integrate</text>
+          <text x="20" y="65" fill="#cbd5e1" font-size="15">Write new iterated integral and evaluate. The impossible kernel now integrates trivially!</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Master Worked Breakthrough Drills -->
+    <g transform="translate(40, 785)">
+      <rect x="0" y="0" width="1680" height="920" rx="16" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+      <text x="35" y="45" fill="#f8fafc" font-size="24" font-weight="800">UNINTEGRABLE KERNEL BREAKTHROUGHS • TITANS ARCHIVE</text>
+
+      <!-- Drill 1: e^{x^2} -->
+      <g transform="translate(35, 80)">
+        <rect x="0" y="0" width="1610" height="380" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+        <text x="30" y="40" fill="#38bdf8" font-size="22" font-weight="800">Drill 1: Evaluate I = ∫_{0}^{1} ∫_{y}^{1} e^{x²} dx dy</text>
+        <text x="30" y="75" fill="#f43f5e" font-size="18" font-weight="700">FATAL PROBLEM: ∫ e^{x²} dx has NO ELEMENTARY ANTIDERIVATIVE! Direct integration is 100% IMPOSSIBLE!</text>
+
+        <g transform="translate(30, 100)">
+          <text x="0" y="25" fill="#cbd5e1" font-size="17">• Original Bounds: Horizontal strips: inner x from y to 1; outer y from 0 to 1.</text>
+          <text x="0" y="60" fill="#cbd5e1" font-size="17">• Domain R is the triangle bounded by x = y, x = 1, and y = 0.</text>
+          <text x="0" y="95" fill="#34d399" font-size="18" font-weight="700">• Switch to Vertical Strips (dy dx): y runs from 0 to x; x runs from 0 to 1.</text>
+
+          <rect x="0" y="120" width="1550" height="75" rx="8" fill="#1e293b" stroke="#34d399"/>
+          <text x="30" y="165" fill="#34d399" font-size="24" font-weight="800">I = ∫_{0}^{1} [ ∫_{0}^{x} e^{x²} dy ] dx = ∫_{0}^{1} e^{x²} [ y ]_{0}^{x} dx = ∫_{0}^{1} x • e^{x²} dx</text>
+
+          <text x="0" y="230" fill="#fbbf24" font-size="20" font-weight="800">Now substitute u = x², du = 2x dx: I = (1/2) ∫_{0}^{1} eᵘ du = (1/2) [ e¹ - e⁰ ] = (e - 1) / 2 !</text>
+        </g>
+      </g>
+
+      <!-- Drill 2: (sin y) / y -->
+      <g transform="translate(35, 490)">
+        <rect x="0" y="0" width="1610" height="390" rx="14" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+        <text x="30" y="40" fill="#fbbf24" font-size="22" font-weight="800">Drill 2: Evaluate I = ∫_{0}^{π} ∫_{x}^{π} (sin y / y) dy dx</text>
+        <text x="30" y="75" fill="#f43f5e" font-size="18" font-weight="700">FATAL PROBLEM: ∫ (sin y / y) dy is the non-elementary Sine Integral Si(y)!</text>
+
+        <g transform="translate(30, 100)">
+          <text x="0" y="25" fill="#cbd5e1" font-size="17">• Original Bounds: Vertical strips: y goes from x to π; outer x goes from 0 to π.</text>
+          <text x="0" y="60" fill="#cbd5e1" font-size="17">• Domain R is triangle under y = π and above y = x.</text>
+          <text x="0" y="95" fill="#34d399" font-size="18" font-weight="700">• Switch to Horizontal Strips (dx dy): x goes from 0 to y; outer y goes from 0 to π.</text>
+
+          <rect x="0" y="120" width="1550" height="75" rx="8" fill="#1e293b" stroke="#34d399"/>
+          <text x="30" y="165" fill="#34d399" font-size="24" font-weight="800">I = ∫_{0}^{π} [ ∫_{0}^{y} (sin y / y) dx ] dy = ∫_{0}^{π} (sin y / y) [ x ]_{0}^{y} dy = ∫_{0}^{π} (sin y / y) • y dy</text>
+
+          <text x="0" y="230" fill="#34d399" font-size="22" font-weight="800">The stubborn denominator y cancels completely: I = ∫_{0}^{π} sin y dy = [ -cos y ]_{0}^{π} = -(-1) - (-1) = 2 !</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: POLAR COORDINATES & JACOBIANS -->
+  <g transform="translate(1920, 310)">
+    <rect x="0" y="0" width="1800" height="1750" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1800" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">2. POLAR INTEGRALS, CARDIOIDS &amp; JACOBIAN MAPPINGS</text>
+
+    <!-- Polar Coordinate Transformation -->
+    <g transform="translate(40, 105)">
+      <rect x="0" y="0" width="1720" height="420" rx="16" fill="url(#cardGradDark)" stroke="#38bdf8" stroke-width="1.8"/>
+      <text x="35" y="40" fill="#38bdf8" font-size="24" font-weight="700">Polar Coordinate Double Integrals &amp; Area Element</text>
+      
+      <rect x="35" y="70" width="1650" height="80" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+      <text x="50" y="122" fill="#38bdf8" font-size="28" font-weight="800">x = r cos θ,  y = r sin θ   ⟹   x² + y² = r²   AND   dA = dx dy = r • dr dθ</text>
+
+      <g transform="translate(35, 175)">
+        <text x="0" y="25" fill="#f8fafc" font-size="20" font-weight="700">Classic Gaussian Integral Proof via Polar Coordinates:</text>
+        <text x="0" y="60" fill="#cbd5e1" font-size="18">I = ∫_{-∞}^{∞} e^{-x²} dx ⟹ I² = [ ∫_{-∞}^{∞} e^{-x²} dx ] [ ∫_{-∞}^{∞} e^{-y²} dy ] = ∬_{ℝ²} e^{-(x² + y²)} dx dy</text>
+        
+        <rect x="0" y="85" width="1650" height="65" rx="8" fill="#1e293b" stroke="#34d399"/>
+        <text x="30" y="128" fill="#34d399" font-size="22" font-weight="800">I² = ∫_{0}^{2π} ∫_{0}^{∞} e^{-r²} • r dr dθ = (2π) • [ -e^{-r²} / 2 ]_{0}^{∞} = (2π) • (1/2) = π ⟹ I = √π</text>
+
+        <text x="0" y="185" fill="#fbbf24" font-size="18" font-weight="700">Polar transformation turns the impossible 1D integral into an elementary 2D polar problem!</text>
+      </g>
+    </g>
+
+    <!-- Polar Curves: Cardioids & Rose Petals -->
+    <g transform="translate(40, 560)">
+      <rect x="0" y="0" width="1720" height="420" rx="16" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+      <text x="35" y="40" fill="#fbbf24" font-size="24" font-weight="700">Polar Curves Compendium: Cardioids &amp; Rose Curves</text>
+
+      <g transform="translate(35, 70)">
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="800" height="310" rx="12" fill="#1e293b" stroke="#fbbf24"/>
+          <text x="25" y="35" fill="#fbbf24" font-size="22" font-weight="800">Cardioids r = a (1 ± cos θ)</text>
+          <text x="25" y="70" fill="#cbd5e1" font-size="17">• Heart-shaped closed curve with cusp at origin.</text>
+          <text x="25" y="105" fill="#cbd5e1" font-size="17">• Area Formula: A = (1/2) ∫_{0}^{2π} r² dθ = (a²/2) ∫_{0}^{2π} (1 + cos θ)² dθ</text>
+          
+          <rect x="20" y="130" width="760" height="70" rx="8" fill="#0f172a" stroke="#34d399"/>
+          <text x="35" y="175" fill="#34d399" font-size="26" font-weight="800">TOTAL AREA OF CARDIOID = (3/2) π a²</text>
+
+          <text x="25" y="235" fill="#38bdf8" font-size="18" font-weight="700">Arc Length of Cardioid: s = 8a (Always memorize!)</text>
+          <text x="25" y="270" fill="#94a3b8" font-size="16">Symmetry shortcut: Integrate θ from 0 to π and double result.</text>
+        </g>
+
+        <g transform="translate(850, 0)">
+          <rect x="0" y="0" width="800" height="310" rx="12" fill="#1e293b" stroke="#38bdf8"/>
+          <text x="25" y="35" fill="#38bdf8" font-size="22" font-weight="800">Rose Curves r = a cos(nθ), r = a sin(nθ)</text>
+          <text x="25" y="70" fill="#cbd5e1" font-size="17">• Petal Count Rule:</text>
+          <text x="45" y="100" fill="#f8fafc" font-size="17">If n is ODD ⟹ Exactly n petals;</text>
+          <text x="45" y="130" fill="#f8fafc" font-size="17">If n is EVEN ⟹ Exactly 2n petals!</text>
+
+          <rect x="20" y="150" width="760" height="70" rx="8" fill="#0f172a" stroke="#fbbf24"/>
+          <text x="35" y="195" fill="#fbbf24" font-size="24" font-weight="800">Area of Single Petal = π a² / (4n)</text>
+
+          <text x="25" y="255" fill="#34d399" font-size="18" font-weight="700">Total Area of all petals: (1/2) π a² (if n is odd), (1/2) π a² (if n is even).</text>
+          <text x="25" y="290" fill="#94a3b8" font-size="16">E.g. r = a cos(2θ) has 4 petals; single petal area = πa²/8.</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Jacobians of Transformation -->
+    <g transform="translate(40, 1015)">
+      <rect x="0" y="0" width="1720" height="690" rx="16" fill="url(#cardGradEmerald)" stroke="#34d399" stroke-width="2"/>
+      <rect x="0" y="0" width="1720" height="60" rx="16" fill="#062817"/>
+      <text x="35" y="40" fill="#34d399" font-size="24" font-weight="800">TRANSFORMATION OF VARIABLES &amp; 2D/3D JACOBIANS</text>
+
+      <g transform="translate(35, 80)">
+        <rect x="0" y="0" width="1650" height="150" rx="12" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+        <text x="30" y="38" fill="#34d399" font-size="22" font-weight="800">Definition: Jacobian Determinant J</text>
+        <text x="30" y="85" fill="#f8fafc" font-size="28" font-weight="800">J = ∂(x, y) / ∂(u, v) = | ∂x/∂u   ∂x/∂v  ;  ∂y/∂u   ∂y/∂v | = (x_u y_v - x_v y_u)</text>
+        <text x="30" y="125" fill="#cbd5e1" font-size="18">Transformation Rule: ∬_R f(x, y) dx dy = ∬_{R'} f(x(u,v), y(u,v)) • | J | du dv</text>
+      </g>
+
+      <g transform="translate(35, 255)">
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="800" height="160" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+          <text x="20" y="35" fill="#38bdf8" font-size="20" font-weight="700">Reciprocal Jacobian Property</text>
+          <text x="20" y="70" fill="#cbd5e1" font-size="17">If calculating (x, y) in terms of (u, v) is hard, use inverses:</text>
+          <text x="20" y="110" fill="#fbbf24" font-size="22" font-weight="800">[ ∂(x, y)/∂(u, v) ] • [ ∂(u, v)/∂(x, y) ] = 1</text>
+          <text x="20" y="145" fill="#34d399" font-size="16">⟹ J = 1 / J'  (Extreme time saver!)</text>
+        </g>
+
+        <g transform="translate(850, 0)">
+          <rect x="0" y="0" width="800" height="160" rx="10" fill="#1e293b" stroke="#fbbf24"/>
+          <text x="20" y="35" fill="#fbbf24" font-size="20" font-weight="700">Elliptic Coordinate Transformation</text>
+          <text x="20" y="70" fill="#cbd5e1" font-size="17">For domain x²/a² + y²/b² ≤ 1: Let x = a r cos θ, y = b r sin θ</text>
+          <text x="20" y="110" fill="#34d399" font-size="22" font-weight="800">J = a • b • r   ⟹   dA = a b r dr dθ</text>
+          <text x="20" y="145" fill="#f8fafc" font-size="16">Total Area of Ellipse = ∫_{0}^{2π} ∫_{0}^{1} a b r dr dθ = π a b</text>
+        </g>
+
+        <!-- Master Skewed Region Drill -->
+        <g transform="translate(0, 185)">
+          <rect x="0" y="0" width="1650" height="175" rx="12" fill="#0f172a" stroke="#38bdf8"/>
+          <text x="25" y="35" fill="#38bdf8" font-size="20" font-weight="700">Drill: Integrate ∬_R (x + y)² dx dy over parallelogram bounded by x + y = 0, x + y = 2, x - y = 0, x - y = 3</text>
+          <text x="25" y="70" fill="#cbd5e1" font-size="17">• Define u = x + y (bounds: 0 ≤ u ≤ 2) and v = x - y (bounds: 0 ≤ v ≤ 3).</text>
+          <text x="25" y="105" fill="#cbd5e1" font-size="17">• Compute J' = ∂(u, v)/∂(x, y) = | 1  1 ; 1  -1 | = -2 ⟹ | J | = 1 / | -2 | = 1/2.</text>
+          <text x="25" y="145" fill="#34d399" font-size="22" font-weight="800">∬_R u² |J| du dv = (1/2) ∫_{0}^{3} dv ∫_{0}^{2} u² du = (1/2) × (3) × [ 8/3 ] = 4 !  (Solved in 45 seconds!)</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

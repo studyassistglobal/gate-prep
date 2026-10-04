@@ -1,0 +1,161 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid4)"/>
+
+  <!-- Title Header -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 05 • FIGURE 5.4</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">Operational Properties Architecture &amp; The Algebra of Region of Convergence (ROC) Intersections</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- 8 Operational Properties Cards Grid -->
+  <!-- Card 1: Linearity & Pole-Zero Cancellation -->
+  <g transform="translate(80, 190)">
+    <rect width="530" height="260" rx="12" fill="url(#panelGrad4)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="19" font-weight="700">1. LINEARITY &amp; POLE-ZERO CANCEL</text>
+    <text x="30" y="75" fill="#e6edf3" font-size="16">a x₁(t) + b x₂(t) ↔ a X₁(s) + b X₂(s)</text>
+    <rect x="30" y="95" width="470" height="60" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="265" y="132" fill="#34d399" font-size="18" font-weight="700" text-anchor="middle">ROC ⊇ (ROC₁ ∩ ROC₂)</text>
+    <text x="30" y="185" fill="#fbbf24" font-size="14" font-weight="600">★ Critical Exam Trap:</text>
+    <text x="30" y="210" fill="#8b949e" font-size="14">If a pole cancels with a zero created by linear</text>
+    <text x="30" y="232" fill="#8b949e" font-size="14">combination, the ROC expands beyond the intersection!</text>
+  </g>
+
+  <!-- Card 2: Time Shifting -->
+  <g transform="translate(650, 190)">
+    <rect width="530" height="260" rx="12" fill="url(#panelGrad4)" stroke="#30363d" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="19" font-weight="700">2. TIME-SHIFTING PROPERTY</text>
+    <text x="30" y="75" fill="#e6edf3" font-size="16">x(t - t₀) ↔ e^{-s t₀} X(s)</text>
+    <rect x="30" y="95" width="470" height="60" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="265" y="132" fill="#38bdf8" font-size="18" font-weight="700" text-anchor="middle">ROC = ROC_x  (INVARIANT)</text>
+    <text x="30" y="185" fill="#8b949e" font-size="14">Shifting in time introduces exponential phase factor e^{-st₀}.</text>
+    <text x="30" y="210" fill="#8b949e" font-size="14">No finite poles are added or removed.</text>
+    <text x="30" y="232" fill="#fbbf24" font-size="14">Only s = ∞ or s = -∞ may be added/deleted.</text>
+  </g>
+
+  <!-- Card 3: Frequency Shifting / Modulation -->
+  <g transform="translate(1220, 190)">
+    <rect width="530" height="260" rx="12" fill="url(#panelGrad4)" stroke="#30363d" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="19" font-weight="700">3. FREQUENCY SHIFTING (s-DOMAIN)</text>
+    <text x="30" y="75" fill="#e6edf3" font-size="16">e^{s₀ t} x(t) ↔ X(s - s₀)   [s₀ = σ₀ + jω₀]</text>
+    <rect x="30" y="95" width="470" height="60" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="265" y="132" fill="#fbbf24" font-size="18" font-weight="700" text-anchor="middle">ROC_new = ROC_x + Re(s₀)</text>
+    <text x="30" y="185" fill="#8b949e" font-size="14">All poles and boundary strips shift horizontally by σ₀.</text>
+    <text x="30" y="210" fill="#34d399" font-size="14">Pure sinusoidal modulation: e^{jω₀t}x(t) ↔ X(s - jω₀)</text>
+    <text x="30" y="232" fill="#8b949e" font-size="14">shifts vertically along jω-axis; ROC is UNCHANGED!</text>
+  </g>
+
+  <!-- Card 4: Time Scaling -->
+  <g transform="translate(1790, 190)">
+    <rect width="530" height="260" rx="12" fill="url(#panelGrad4)" stroke="#30363d" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="19" font-weight="700">4. TIME-SCALING PROPERTY</text>
+    <text x="30" y="75" fill="#e6edf3" font-size="16">x(at) ↔ (1 / |a|) X(s / a)</text>
+    <rect x="30" y="95" width="470" height="60" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="265" y="132" fill="#60a5fa" font-size="18" font-weight="700" text-anchor="middle">ROC_new = a · ROC_x</text>
+    <text x="30" y="185" fill="#8b949e" font-size="14">If a &gt; 0: ROC boundaries scale directly by factor a.</text>
+    <text x="30" y="210" fill="#f87171" font-size="14" font-weight="600">If a &lt; 0: Time Reversal Occurs!</text>
+    <text x="30" y="232" fill="#8b949e" font-size="14">x(-t) ↔ X(-s) with ROC reflected across jω-axis: -ROC_x.</text>
+  </g>
+
+  <!-- Card 5: Differentiation in Time -->
+  <g transform="translate(80, 480)">
+    <rect width="530" height="260" rx="12" fill="url(#panelGrad4)" stroke="#30363d" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="19" font-weight="700">5. DIFFERENTIATION IN TIME</text>
+    <text x="30" y="75" fill="#e6edf3" font-size="16">dx(t) / dt ↔ s X(s)</text>
+    <rect x="30" y="95" width="470" height="60" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="265" y="132" fill="#38bdf8" font-size="18" font-weight="700" text-anchor="middle">ROC ⊇ ROC_x</text>
+    <text x="30" y="185" fill="#8b949e" font-size="14">Multiplication by s adds a zero at the origin s = 0.</text>
+    <text x="30" y="210" fill="#fbbf24" font-size="14">If X(s) had a pole at s = 0 (e.g. u(t) ↔ 1/s),</text>
+    <text x="30" y="232" fill="#34d399" font-size="14">s · (1/s) = 1 (ROC expands to entire s-plane!)</text>
+  </g>
+
+  <!-- Card 6: Differentiation in s-Domain -->
+  <g transform="translate(650, 480)">
+    <rect width="530" height="260" rx="12" fill="url(#panelGrad4)" stroke="#30363d" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="19" font-weight="700">6. DIFFERENTIATION IN s-DOMAIN</text>
+    <text x="30" y="75" fill="#e6edf3" font-size="16">-t x(t) ↔ dX(s) / ds   |   tⁿ x(t) ↔ (-1)ⁿ dⁿX/dsⁿ</text>
+    <rect x="30" y="95" width="470" height="60" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="265" y="132" fill="#34d399" font-size="18" font-weight="700" text-anchor="middle">ROC = ROC_x  (STRICTLY UNCHANGED)</text>
+    <text x="30" y="185" fill="#8b949e" font-size="14">Multiplication by t in time increases the order of existing</text>
+    <text x="30" y="210" fill="#8b949e" font-size="14">poles, but NEVER creates new pole locations.</text>
+    <text x="30" y="232" fill="#fbbf24" font-size="14">Example: t e^{-at}u(t) ↔ 1 / (s + a)² (ROC: Re(s) &gt; -a)</text>
+  </g>
+
+  <!-- Card 7: Integration in Time -->
+  <g transform="translate(1220, 480)">
+    <rect width="530" height="260" rx="12" fill="url(#panelGrad4)" stroke="#30363d" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="19" font-weight="700">7. INTEGRATION IN TIME</text>
+    <text x="30" y="75" fill="#e6edf3" font-size="16">∫_{-∞}^{t} x(τ) dτ ↔ X(s) / s</text>
+    <rect x="30" y="95" width="470" height="60" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="265" y="132" fill="#f87171" font-size="18" font-weight="700" text-anchor="middle">ROC ⊇ ROC_x ∩ { Re(s) &gt; 0 }</text>
+    <text x="30" y="185" fill="#8b949e" font-size="14">Integration introduces a pole at s = 0 (step response).</text>
+    <text x="30" y="210" fill="#fbbf24" font-size="14">If X(0) = 0 (zero net DC area), the pole at s = 0 cancels</text>
+    <text x="30" y="232" fill="#34d399" font-size="14">and the ROC remains simply ROC_x.</text>
+  </g>
+
+  <!-- Card 8: Convolution in Time -->
+  <g transform="translate(1790, 480)">
+    <rect width="530" height="260" rx="12" fill="url(#panelGrad4)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="19" font-weight="700">8. CONVOLUTION IN TIME</text>
+    <text x="30" y="75" fill="#e6edf3" font-size="16">x₁(t) * x₂(t) ↔ X₁(s) · X₂(s)</text>
+    <rect x="30" y="95" width="470" height="60" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="265" y="132" fill="#34d399" font-size="18" font-weight="700" text-anchor="middle">ROC ⊇ (ROC₁ ∩ ROC₂)</text>
+    <text x="30" y="185" fill="#8b949e" font-size="14">Time-domain convolution converts to algebraic multiplication!</text>
+    <text x="30" y="210" fill="#fbbf24" font-size="14">The bedrock of LTI system transfer function analysis:</text>
+    <text x="30" y="232" fill="#38bdf8" font-size="15" font-weight="700">Y(s) = X(s) · H(s)</text>
+  </g>
+
+  <!-- Bottom Visual Case Study: Pole-Zero Cancellation Widening ROC -->
+  <g transform="translate(80, 770)">
+    <rect width="2240" height="510" rx="16" fill="url(#panelGrad4)" stroke="#38bdf8" stroke-width="2"/>
+    <rect width="2240" height="50" rx="16" fill="#21262d"/>
+    <text x="1120" y="34" fill="#fbbf24" font-size="20" font-weight="700" text-anchor="middle">CASE STUDY: POLE-ZERO CANCELLATION &amp; THE ILLUSION OF INSTABILITY</text>
+
+    <!-- Content 2 Columns -->
+    <g transform="translate(50, 70)">
+      <rect width="1020" height="400" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <text x="30" y="40" fill="#38bdf8" font-size="20" font-weight="700">Input and System Definition:</text>
+      <text x="30" y="75" fill="#e6edf3" font-size="16">Input: x(t) = e^{2t} u(t)  (Unstable Growing Exponential)</text>
+      <text x="50" y="105" fill="#fbbf24" font-size="17" font-weight="600">X(s) = 1 / (s - 2),   ROC: Re(s) &gt; 2</text>
+      
+      <text x="30" y="150" fill="#e6edf3" font-size="16">System Impulse Response: h(t) = e^{-3t}u(t) - e^{2t}u(t)</text>
+      <text x="50" y="180" fill="#fbbf24" font-size="17" font-weight="600">H(s) = 1/(s+3) - 1/(s-2) = -5 / [(s+3)(s-2)],   ROC: Re(s) &gt; 2</text>
+      
+      <text x="30" y="225" fill="#e6edf3" font-size="16">Expected Intersection: ROC_x ∩ ROC_h = { Re(s) &gt; 2 }</text>
+      <text x="30" y="255" fill="#f87171" font-size="16" font-weight="700">Does the output y(t) have a pole at s = 2?</text>
+
+      <rect x="30" y="280" width="960" height="95" rx="10" fill="#161b22" stroke="#f87171" stroke-width="1.5"/>
+      <text x="50" y="315" fill="#f87171" font-size="17" font-weight="700">COMMON TRAP: Stating y(t) is unstable with pole at s = 2!</text>
+      <text x="50" y="345" fill="#8b949e" font-size="15">Students mechanically compute intersection Re(s) &gt; 2 without checking algebraic pole-zero cancellation.</text>
+    </g>
+
+    <g transform="translate(1120, 70)">
+      <rect width="1070" height="400" rx="12" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+      <text x="30" y="40" fill="#34d399" font-size="20" font-weight="700">Exact Algebraic &amp; ROC Resolution:</text>
+      <text x="30" y="75" fill="#e6edf3" font-size="16">Output Laplace Transform Product:</text>
+      <text x="50" y="110" fill="#38bdf8" font-size="20" font-weight="700">Y(s) = X(s) · H(s) = [ 1 / (s - 2) ] · [ -5 / ((s + 3)(s - 2)) ]</text>
+      
+      <text x="30" y="155" fill="#e6edf3" font-size="16">Now consider the inverse cancellation: what if H(s) has a zero at s = 2?</text>
+      <text x="50" y="185" fill="#fbbf24" font-size="18" font-weight="600">If H(s) = (s - 2) / (s + 3),   ROC: Re(s) &gt; -3</text>
+      
+      <text x="30" y="225" fill="#34d399" font-size="18" font-weight="700">Then: Y(s) = [ 1 / (s - 2) ] · [ (s - 2) / (s + 3) ] = 1 / (s + 3)</text>
+      
+      <rect x="30" y="250" width="1010" height="125" rx="10" fill="#161b22" stroke="#34d399" stroke-width="2"/>
+      <text x="50" y="285" fill="#34d399" font-size="18" font-weight="800">POLE-ZERO CANCELLATION EXPANDS THE ROC TO: Re(s) &gt; -3 !</text>
+      <text x="50" y="315" fill="#e6edf3" font-size="15">The unstable mode e^{2t} is completely absorbed by the zero at s = 2.</text>
+      <text x="50" y="345" fill="#fbbf24" font-size="16" font-weight="700">Output y(t) = e^{-3t} u(t) is completely STABLE, despite unstable input!</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,486 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.35" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.8" stroke-opacity="0.5" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="panelShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65" />
+        </filter>
+
+        <marker id="arrowCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+        </marker>
+        <marker id="arrowGold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#fbbf24" />
+        </marker>
+        <marker id="arrowEmerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
+        </marker>
+        <marker id="arrowRose" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#f43f5e" />
+        </marker>
+        <marker id="arrowPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#c084fc" />
+        </marker>
+    </defs>
+
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Top Blueprint Banner -->
+    <rect x="80" y="60" width="3680" height="150" rx="16" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="2" filter="url(#panelShadow)" />
+    <text x="130" y="130" font-family="'Inter', sans-serif" font-weight="900" font-size="46" fill="url(#headerGrad)" letter-spacing="1.5">BLUEPRINT 02: COORDINATE SYSTEMS, METRIC COEFFICIENTS &amp; DIFFERENTIAL ELEMENTS ENGINE</text>
+    <text x="130" y="178" font-family="'Inter', sans-serif" font-weight="600" font-size="24" fill="#94a3b8" letter-spacing="0.5">Domain Topology (Arc/Circle/Disc/Sphere) • Cartesian, Cylindrical &amp; Spherical Curvilinear Frames • dl, dS, dV Metrics</text>
+
+    <!-- Technical Status Badge -->
+    <rect x="3300" y="90" width="410" height="90" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="3340" cy="135" r="14" fill="#34d399" filter="url(#glowCyan)" />
+    <text x="3375" y="130" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#f8fafc">4K TECHNICAL BLUEPRINT</text>
+    <text x="3375" y="156" font-family="'Fira Code', monospace" font-weight="600" font-size="16" fill="#38bdf8">GATE 2027 • PREPFUSION</text>
+
+    <!-- Content Region -->
+    
+    <!-- Layout: 3 Major Panels -->
+    <!-- PANEL 1: Domain Topology Taxonomy (Left) -->
+    <g transform="translate(100, 240)">
+        <rect width="1160" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1160" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#38bdf8">1. DOMAIN TOPOLOGY: LINES, SURFACES &amp; VOLUMES</text>
+
+        <!-- 4-Way Comparison Graphic from Slide 059 -->
+        <g transform="translate(40, 100)">
+            <rect width="1080" height="720" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">THE 4-STAGE GEOMETRIC PROGRESSION (SLIDE 059)</text>
+
+            <!-- 4 Cards -->
+            <g transform="translate(40, 80)">
+                <!-- Arc -->
+                <g transform="translate(0, 0)">
+                    <rect width="230" height="380" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+                    <text x="115" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#94a3b8" font-weight="700" text-anchor="middle">ARC</text>
+                    <text x="115" y="70" font-family="'Fira Code', monospace" font-size="15" fill="#64748b" text-anchor="middle">(Open Line)</text>
+                    <path d="M 40 260 A 80 80 0 0 1 190 260" fill="none" stroke="#38bdf8" stroke-width="5"/>
+                    <circle cx="40" cy="260" r="6" fill="#fbbf24"/>
+                    <circle cx="190" cy="260" r="6" fill="#fbbf24"/>
+                    <text x="30" y="295" font-family="'Fira Code', monospace" font-size="16" fill="#fbbf24">A</text>
+                    <text x="190" y="295" font-family="'Fira Code', monospace" font-size="16" fill="#fbbf24">B</text>
+                    <text x="115" y="340" font-family="'Inter', sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Non-zero boundary endpts</text>
+                    <text x="115" y="365" font-family="'Fira Code', monospace" font-size="14" fill="#38bdf8" text-anchor="middle">int_C F . dl</text>
+                </g>
+
+                <!-- Circle -->
+                <g transform="translate(260, 0)">
+                    <rect width="230" height="380" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="115" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700" text-anchor="middle">CIRCLE</text>
+                    <text x="115" y="70" font-family="'Fira Code', monospace" font-size="15" fill="#38bdf8" text-anchor="middle">(Closed Line)</text>
+                    <circle cx="115" cy="220" r="70" fill="none" stroke="#38bdf8" stroke-width="5"/>
+                    <path d="M 115 150 L 100 145 M 115 150 L 105 160" stroke="#fbbf24" stroke-width="4"/>
+                    <text x="115" y="340" font-family="'Inter', sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Encloses open surface</text>
+                    <text x="115" y="365" font-family="'Fira Code', monospace" font-size="14" fill="#fbbf24" text-anchor="middle">oint_C F . dl</text>
+                </g>
+
+                <!-- Disc -->
+                <g transform="translate(520, 0)">
+                    <rect width="230" height="380" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="115" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24" font-weight="700" text-anchor="middle">DISC</text>
+                    <text x="115" y="70" font-family="'Fira Code', monospace" font-size="15" fill="#fbbf24" text-anchor="middle">(Open Surface)</text>
+                    <ellipse cx="115" cy="220" rx="75" ry="50" fill="rgba(251, 191, 36, 0.2)" stroke="#fbbf24" stroke-width="4"/>
+                    <text x="115" y="225" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" text-anchor="middle">Material Sheet</text>
+                    <text x="115" y="340" font-family="'Inter', sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Boundary is circle C</text>
+                    <text x="115" y="365" font-family="'Fira Code', monospace" font-size="14" fill="#34d399" text-anchor="middle">iint_S F . dS</text>
+                </g>
+
+                <!-- Sphere -->
+                <g transform="translate(780, 0)">
+                    <rect width="230" height="380" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="115" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" font-weight="700" text-anchor="middle">SPHERE</text>
+                    <text x="115" y="70" font-family="'Fira Code', monospace" font-size="15" fill="#34d399" text-anchor="middle">(Closed Surface)</text>
+                    <circle cx="115" cy="220" r="70" fill="rgba(52, 211, 153, 0.15)" stroke="#34d399" stroke-width="4"/>
+                    <ellipse cx="115" cy="220" rx="70" ry="25" fill="none" stroke="#34d399" stroke-width="2" stroke-dasharray="5 3"/>
+                    <text x="115" y="340" font-family="'Inter', sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Encloses 3D Volume</text>
+                    <text x="115" y="365" font-family="'Fira Code', monospace" font-size="14" fill="#c084fc" text-anchor="middle">oiint_S F . dS</text>
+                </g>
+            </g>
+
+            <!-- Core Rule Summary -->
+            <g transform="translate(40, 480)">
+                <rect width="1000" height="200" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">FUNDAMENTAL TOPOLOGICAL INTEGRAL BRIDGES:</text>
+                <text x="30" y="80" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">1. Open Line =&gt; Regular Line Integral int_C F . dl</text>
+                <text x="30" y="120" font-family="'Fira Code', monospace" font-size="20" fill="#fbbf24">2. Closed Line (oint_C) &lt;==[ Stokes' / Green's ]==&gt; Open Surface (iint_S)</text>
+                <text x="30" y="160" font-family="'Fira Code', monospace" font-size="20" fill="#34d399">3. Closed Surface (oiint_S) &lt;==[ Gauss's Divergence ]==&gt; Enclosed Volume (iiint_V)</text>
+            </g>
+        </g>
+
+        <!-- Scalar vs Vector Field Card -->
+        <g transform="translate(40, 860)">
+            <rect width="1080" height="840" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+            <text x="40" y="50" font-family="'Inter', sans-serif" font-weight="800" font-size="24" fill="#fbbf24">SCALAR FIELD VS VECTOR FIELD (POINT FUNCTIONS)</text>
+            
+            <g transform="translate(40, 80)">
+                <!-- Scalar Field Card -->
+                <g transform="translate(0, 0)">
+                    <rect width="480" height="340" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">SCALAR FIELD: phi(x, y, z)</text>
+                    <text x="30" y="75" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Assigns only a single scalar magnitude to each spatial point.</text>
+                    <text x="30" y="125" font-family="'Fira Code', monospace" font-size="22" fill="#fbbf24">T(x,y,z) = x + y z</text>
+                    <text x="30" y="170" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">T(1,1,1) = 1 + 1(1) = 2 deg C</text>
+                    <text x="30" y="210" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">T(2,1,2) = 2 + 1(2) = 4 deg C</text>
+                    <text x="30" y="250" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">T(-3,2,-3) = -3 + 2(-3) = -9 deg C</text>
+                    <text x="30" y="300" font-family="'Inter', sans-serif" font-size="16" fill="#34d399">Isothermal Surfaces: phi(x, y, z) = C</text>
+                </g>
+
+                <!-- Vector Field Card -->
+                <g transform="translate(520, 0)">
+                    <rect width="480" height="340" rx="10" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+                    <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#f43f5e" font-weight="700">VECTOR FIELD: F(x, y, z)</text>
+                    <text x="30" y="75" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Assigns both magnitude and direction to each point in space.</text>
+                    <text x="30" y="125" font-family="'Fira Code', monospace" font-size="20" fill="#fbbf24">A = (x+y)i + (y+zx)j + (3z^2+xy)k</text>
+                    <text x="30" y="170" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">A(1,1,1) = 2i + 2j + 4k</text>
+                    <text x="30" y="210" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">|A(1,1,1)| = sqrt(4 + 4 + 16) = sqrt(24)</text>
+                    <text x="30" y="250" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">Direction: (2i + 2j + 4k) / sqrt(24)</text>
+                    <text x="30" y="300" font-family="'Inter', sans-serif" font-size="16" fill="#38bdf8">Visualized as 3D Quiver / Flux Lines</text>
+                </g>
+            </g>
+
+            <!-- 2D Force Field Example (Slide 078) -->
+            <g transform="translate(40, 460)">
+                <rect width="1000" height="340" rx="10" fill="#020617" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">CHALKBOARD FORCE FIELD VISUALIZATION (SLIDE 078): F = x j [Newtons]</text>
+                
+                <g transform="translate(50, 70)">
+                    <line x1="50" y1="120" x2="850" y2="120" stroke="#64748b" stroke-width="2"/>
+                    <line x1="450" y1="20" x2="450" y2="220" stroke="#64748b" stroke-width="2"/>
+                    <text x="860" y="125" font-family="'Fira Code', monospace" font-size="18" fill="#64748b">x</text>
+                    <text x="450" y="15" font-family="'Fira Code', monospace" font-size="18" fill="#64748b">y</text>
+
+                    <!-- Vectors along x -->
+                    <line x1="550" y1="120" x2="550" y2="60" stroke="#38bdf8" stroke-width="4" marker-end="url(#arrowCyan)"/>
+                    <text x="560" y="80" font-family="'Fira Code', monospace" font-size="16" fill="#38bdf8">1j (at x=1)</text>
+
+                    <line x1="680" y1="120" x2="680" y2="20" stroke="#38bdf8" stroke-width="5" marker-end="url(#arrowCyan)"/>
+                    <text x="690" y="50" font-family="'Fira Code', monospace" font-size="16" fill="#38bdf8">2j (at x=2)</text>
+
+                    <line x1="350" y1="120" x2="350" y2="180" stroke="#f43f5e" stroke-width="4" marker-end="url(#arrowRose)"/>
+                    <text x="360" y="160" font-family="'Fira Code', monospace" font-size="16" fill="#f43f5e">-1j (at x=-1)</text>
+
+                    <line x1="220" y1="120" x2="220" y2="220" stroke="#f43f5e" stroke-width="5" marker-end="url(#arrowRose)"/>
+                    <text x="230" y="200" font-family="'Fira Code', monospace" font-size="16" fill="#f43f5e">-2j (at x=-2)</text>
+                </g>
+                <text x="50" y="315" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24">Insight: Force direction flips from +y to -y across x=0; magnitude grows linearly with |x|.</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- PANEL 2: Curvilinear Coordinate Systems (Center) -->
+    <g transform="translate(1300, 240)">
+        <rect width="1240" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1240" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#fbbf24">2. THE CURVILINEAR COORDINATE TRIAD</text>
+
+        <!-- Cartesian (x, y, z) -->
+        <g transform="translate(40, 100)">
+            <rect width="1160" height="490" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">1. CARTESIAN SYSTEM (x, y, z)</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Metric Coefficients: h_x = 1, h_y = 1, h_z = 1  (Constant Flat Metric)</text>
+
+            <g transform="translate(40, 110)">
+                <!-- dl -->
+                <g transform="translate(0, 0)">
+                    <rect width="360" height="200" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#38bdf8" font-weight="700">DIFFERENTIAL LENGTH dl:</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="24" fill="#f8fafc">dl = dx i + dy j + dz k</text>
+                    <text x="25" y="130" font-family="'Fira Code', monospace" font-size="18" fill="#94a3b8">|dl|^2 = dx^2 + dy^2 + dz^2</text>
+                    <text x="25" y="170" font-family="'Inter', sans-serif" font-size="15" fill="#34d399">Invariance under translation</text>
+                </g>
+
+                <!-- dS -->
+                <g transform="translate(385, 0)">
+                    <rect width="360" height="200" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" font-weight="700">DIFFERENTIAL SURFACES dS:</text>
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">dS_x = dy dz i</text>
+                    <text x="25" y="115" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">dS_y = dx dz j</text>
+                    <text x="25" y="155" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">dS_z = dx dy k</text>
+                </g>
+
+                <!-- dV -->
+                <g transform="translate(770, 0)">
+                    <rect width="360" height="200" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#34d399" font-weight="700">DIFFERENTIAL VOLUME dV:</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="28" fill="#34d399" font-weight="700">dV = dx dy dz</text>
+                    <text x="25" y="135" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">Jacobian J = 1</text>
+                    <text x="25" y="170" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Rectangular Brick element</text>
+                </g>
+            </g>
+
+            <g transform="translate(40, 330)">
+                <rect width="1080" height="130" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="45" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">DEL OPERATOR IN CARTESIAN:</text>
+                <text x="30" y="90" font-family="'Fira Code', monospace" font-size="22" fill="#38bdf8">grad(phi) = (dphi/dx)i + (dphi/dy)j + (dphi/dz)k  |  div(F) = dF_x/dx + dF_y/dy + dF_z/dz</text>
+            </g>
+        </g>
+
+        <!-- Cylindrical (r, theta, z) -->
+        <g transform="translate(40, 620)">
+            <rect width="1160" height="520" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#fbbf24">2. CYLINDRICAL SYSTEM (r, theta, z)</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Metric Coefficients: h_r = 1, h_theta = r, h_z = 1  |  Transformation: x = r cos(theta), y = r sin(theta), z = z</text>
+
+            <g transform="translate(40, 110)">
+                <!-- dl -->
+                <g transform="translate(0, 0)">
+                    <rect width="360" height="210" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#38bdf8" font-weight="700">DIFFERENTIAL LENGTH dl:</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="22" fill="#f8fafc">dl = dr a_r + r dtheta a_theta + dz a_z</text>
+                    <text x="25" y="130" font-family="'Fira Code', monospace" font-size="18" fill="#94a3b8">|dl|^2 = dr^2 + r^2 dtheta^2 + dz^2</text>
+                    <text x="25" y="175" font-family="'Inter', sans-serif" font-size="15" fill="#34d399">Arc length = r dtheta</text>
+                </g>
+
+                <!-- dS -->
+                <g transform="translate(385, 0)">
+                    <rect width="360" height="210" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" font-weight="700">DIFFERENTIAL SURFACES dS:</text>
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">dS_r = r dtheta dz a_r</text>
+                    <text x="25" y="115" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">dS_theta = dr dz a_theta</text>
+                    <text x="25" y="155" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">dS_z = r dr dtheta a_z</text>
+                </g>
+
+                <!-- dV -->
+                <g transform="translate(770, 0)">
+                    <rect width="360" height="210" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#34d399" font-weight="700">DIFFERENTIAL VOLUME dV:</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="28" fill="#34d399" font-weight="700">dV = r dr dtheta dz</text>
+                    <text x="25" y="135" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">Jacobian J = r</text>
+                    <text x="25" y="175" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Cylinder wedge element</text>
+                </g>
+            </g>
+
+            <g transform="translate(40, 345)">
+                <rect width="1080" height="145" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">DEL OPERATOR IN CYLINDRICAL:</text>
+                <text x="30" y="80" font-family="'Fira Code', monospace" font-size="22" fill="#38bdf8">grad(phi) = (dphi/dr) a_r + (1/r)(dphi/dtheta) a_theta + (dphi/dz) a_z</text>
+                <text x="30" y="115" font-family="'Fira Code', monospace" font-size="20" fill="#cbd5e1">div(F) = (1/r) d(r F_r)/dr + (1/r) dF_theta/dtheta + dF_z/dz</text>
+            </g>
+        </g>
+
+        <!-- Spherical (r, theta, phi) -->
+        <g transform="translate(40, 1170)">
+            <rect width="1160" height="530" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#34d399">3. SPHERICAL SYSTEM (r, theta, phi)</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Metric Coefficients: h_r = 1, h_theta = r, h_phi = r sin(theta)  |  x = r sin(theta)cos(phi), y = r sin(theta)sin(phi), z = r cos(theta)</text>
+
+            <g transform="translate(40, 110)">
+                <!-- dl -->
+                <g transform="translate(0, 0)">
+                    <rect width="360" height="210" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#38bdf8" font-weight="700">DIFFERENTIAL LENGTH dl:</text>
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">dl = dr a_r + r dtheta a_theta</text>
+                    <text x="25" y="110" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">     + r sin(theta) dphi a_phi</text>
+                    <text x="25" y="150" font-family="'Fira Code', monospace" font-size="16" fill="#94a3b8">|dl|^2 = dr^2 + r^2 dth^2 + r^2 s^2 dph^2</text>
+                    <text x="25" y="185" font-family="'Inter', sans-serif" font-size="15" fill="#34d399">Full 3D curvilinear metric</text>
+                </g>
+
+                <!-- dS -->
+                <g transform="translate(385, 0)">
+                    <rect width="360" height="210" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" font-weight="700">DIFFERENTIAL SURFACES dS:</text>
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="19" fill="#f8fafc">dS_r = r^2 sin(th) dth dphi a_r</text>
+                    <text x="25" y="115" font-family="'Fira Code', monospace" font-size="19" fill="#f8fafc">dS_th = r sin(th) dr dphi a_th</text>
+                    <text x="25" y="155" font-family="'Fira Code', monospace" font-size="19" fill="#f8fafc">dS_phi = r dr dtheta a_phi</text>
+                </g>
+
+                <!-- dV -->
+                <g transform="translate(770, 0)">
+                    <rect width="360" height="210" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#34d399" font-weight="700">DIFFERENTIAL VOLUME dV:</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="26" fill="#34d399" font-weight="700">dV = r^2 sin(th) dr dth dph</text>
+                    <text x="25" y="135" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">Jacobian J = r^2 sin(theta)</text>
+                    <text x="25" y="175" font-family="'Inter', sans-serif" font-size="15" fill="#cbd5e1">Spherical Shell volume</text>
+                </g>
+            </g>
+
+            <g transform="translate(40, 345)">
+                <rect width="1080" height="155" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="17" fill="#34d399" font-weight="700">DEL OPERATOR IN SPHERICAL:</text>
+                <text x="30" y="80" font-family="'Fira Code', monospace" font-size="22" fill="#38bdf8">grad(phi) = (dphi/dr) a_r + (1/r)(dphi/dtheta) a_theta + (1/(r sin th))(dphi/dphi) a_phi</text>
+                <text x="30" y="120" font-family="'Fira Code', monospace" font-size="19" fill="#cbd5e1">div(F) = (1/r^2) d(r^2 F_r)/dr + (1/(r sin th)) d(sin th F_th)/dth + (1/(r sin th)) dF_ph/dph</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- PANEL 3: Unified Metric Architecture & Integration (Right) -->
+    <g transform="translate(2580, 240)">
+        <rect width="1160" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1160" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#c084fc">3. THE GENERAL ORTHOGONAL METRIC (u1, u2, u3)</text>
+
+        <!-- General Curvilinear Formulation -->
+        <g transform="translate(40, 100)">
+            <rect width="1080" height="420" rx="14" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#c084fc">THE GENERAL SCALE FACTOR THEOREM</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Any orthogonal curvilinear system is completely specified by scale factors h_1, h_2, h_3:</text>
+            
+            <g transform="translate(40, 105)">
+                <rect width="1000" height="120" rx="10" fill="#0f172a" stroke="#c084fc" stroke-width="2"/>
+                <text x="30" y="50" font-family="'Fira Code', monospace" font-size="26" fill="#fbbf24" font-weight="700">dl^2 = h_1^2 du_1^2 + h_2^2 du_2^2 + h_3^2 du_3^2</text>
+                <text x="30" y="95" font-family="'Fira Code', monospace" font-size="24" fill="#34d399">dV = h_1 h_2 h_3 du_1 du_2 du_3</text>
+            </g>
+
+            <g transform="translate(40, 250)">
+                <!-- Cartesian -->
+                <g transform="translate(0, 0)">
+                    <rect width="310" height="140" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#38bdf8" font-weight="700">CARTESIAN:</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">h_1 = 1</text>
+                    <text x="25" y="100" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">h_2 = 1, h_3 = 1</text>
+                    <text x="25" y="130" font-family="'Fira Code', monospace" font-size="16" fill="#34d399">dV = dx dy dz</text>
+                </g>
+
+                <!-- Cylindrical -->
+                <g transform="translate(345, 0)">
+                    <rect width="310" height="140" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" font-weight="700">CYLINDRICAL:</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">h_1 = 1</text>
+                    <text x="25" y="100" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">h_2 = r, h_3 = 1</text>
+                    <text x="25" y="130" font-family="'Fira Code', monospace" font-size="16" fill="#34d399">dV = r dr dth dz</text>
+                </g>
+
+                <!-- Spherical -->
+                <g transform="translate(690, 0)">
+                    <rect width="310" height="140" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#34d399" font-weight="700">SPHERICAL:</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">h_1 = 1</text>
+                    <text x="25" y="100" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">h_2 = r, h_3 = r sin th</text>
+                    <text x="25" y="130" font-family="'Fira Code', monospace" font-size="16" fill="#34d399">dV = r^2 sin th dr dth dph</text>
+                </g>
+            </g>
+        </g>
+
+        <!-- Master Integration Limits Architecture -->
+        <g transform="translate(40, 560)">
+            <rect width="1080" height="520" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">CANONICAL VOLUME &amp; SURFACE INTEGRAL EVALUATIONS</text>
+
+            <g transform="translate(40, 75)">
+                <!-- Cylinder Volume -->
+                <g transform="translate(0, 0)">
+                    <rect width="480" height="200" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#38bdf8" font-weight="700">CYLINDER OF RADIUS R, HEIGHT H:</text>
+                    <text x="30" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#fbbf24">V = int_0^H int_0^2pi int_0^R r dr dtheta dz</text>
+                    <text x="30" y="115" font-family="'Fira Code', monospace" font-size="22" fill="#34d399">= [R^2 / 2] (2pi) (H) = pi R^2 H</text>
+                    <text x="30" y="155" font-family="'Fira Code', monospace" font-size="18" fill="#94a3b8">Curved Area = int_0^H int_0^2pi R dtheta dz = 2pi R H</text>
+                    <text x="30" y="185" font-family="'Inter', sans-serif" font-size="14" fill="#cbd5e1">Base Caps: 2 x (pi R^2)</text>
+                </g>
+
+                <!-- Sphere Volume -->
+                <g transform="translate(520, 0)">
+                    <rect width="480" height="200" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#34d399" font-weight="700">SOLID SPHERE OF RADIUS R:</text>
+                    <text x="30" y="75" font-family="'Fira Code', monospace" font-size="19" fill="#fbbf24">V = int_0^R r^2 dr int_0^pi sin th dth int_0^2pi dph</text>
+                    <text x="30" y="115" font-family="'Fira Code', monospace" font-size="22" fill="#34d399">= [R^3 / 3] (2) (2pi) = 4/3 pi R^3</text>
+                    <text x="30" y="155" font-family="'Fira Code', monospace" font-size="18" fill="#94a3b8">Surface Area = R^2 int_0^pi sin th dth int_0^2pi dph</text>
+                    <text x="30" y="185" font-family="'Fira Code', monospace" font-size="20" fill="#38bdf8">= R^2 (2) (2pi) = 4pi R^2</text>
+                </g>
+            </g>
+
+            <g transform="translate(40, 300)">
+                <rect width="1000" height="190" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24" font-weight="700">GATE CRITICAL EXAM TRAP: SPHERICAL ANGLE BOUNDS</text>
+                <text x="30" y="80" font-family="'Fira Code', monospace" font-size="20" fill="#f43f5e">theta (Polar Angle / Colatitude): MUST run from 0 to pi (180 deg)!</text>
+                <text x="30" y="120" font-family="'Fira Code', monospace" font-size="20" fill="#f43f5e">phi (Azimuthal Angle): Runs from 0 to 2pi (360 deg)!</text>
+                <text x="30" y="160" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Trap: Integrating theta from 0 to 2pi double-counts the entire sphere (yielding 8/3 pi R^3)!</text>
+            </g>
+        </g>
+
+        <!-- Master Diagnostic Checklist -->
+        <g transform="translate(40, 1120)">
+            <rect width="1080" height="580" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#34d399">COORDINATE SELECTION DECISION MATRIX FOR GATE</text>
+
+            <g transform="translate(40, 75)">
+                <!-- Cartesian card -->
+                <g transform="translate(0, 0)">
+                    <rect width="1000" height="140" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="18" fill="#38bdf8" font-weight="700">CARTESIAN (x, y, z):</text>
+                    <text x="30" y="70" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Best for: Cubes, rectangular parallelopipeds, planes ax+by+cz=d, straight lines, polynomials x^a y^b z^c.</text>
+                    <text x="30" y="105" font-family="'Fira Code', monospace" font-size="17" fill="#34d399">Standard Choice: Default coordinate representation for all vector identities.</text>
+                </g>
+
+                <!-- Cylindrical card -->
+                <g transform="translate(0, 160)">
+                    <rect width="1000" height="140" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24" font-weight="700">CYLINDRICAL (r, theta, z):</text>
+                    <text x="30" y="70" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Best for: Circular cylinders x^2+y^2 &lt;= R^2, cones z = c sqrt(x^2+y^2), paraboloids z = x^2+y^2, wires.</text>
+                    <text x="30" y="105" font-family="'Fira Code', monospace" font-size="17" fill="#34d399">Advantage: Replaces dx dy with r dr dtheta, trivializing circular disk cross-sections.</text>
+                </g>
+
+                <!-- Spherical card -->
+                <g transform="translate(0, 320)">
+                    <rect width="1000" height="140" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" font-weight="700">SPHERICAL (r, theta, phi):</text>
+                    <text x="30" y="70" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Best for: Solid spheres x^2+y^2+z^2 &lt;= R^2, spherical shells, central gravity/electrostatic fields 1/r^2.</text>
+                    <text x="30" y="105" font-family="'Fira Code', monospace" font-size="17" fill="#34d399">Advantage: Angular integrations decouple completely into (2) x (2pi) = 4pi steradians.</text>
+                </g>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Footer Information Strip -->
+    <rect x="80" y="2040" width="3680" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <text x="120" y="2077" font-family="'Fira Code', monospace" font-size="18" fill="#64748b">ENGINEERING MATHEMATICS • VECTOR CALCULUS TITAN GUIDE • CHALKBOARD AUDIT 65 PAGES / 259 SLIDES</text>
+    <text x="3250" y="2077" font-family="'Fira Code', monospace" font-size="18" fill="#38bdf8">RESOLUTION: 3840 x 2160 (16:9 4K UHD)</text>
+</svg>

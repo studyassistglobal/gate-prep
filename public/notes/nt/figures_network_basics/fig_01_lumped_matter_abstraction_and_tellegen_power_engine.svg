@@ -1,0 +1,302 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIGURE 1: LUMPED-MATTER ABSTRACTION &amp; TELLEGEN POWER CONSERVATION ENGINE</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Physical Foundations, Maxwell to LMA Collapse, Passive Sign Convention, Tellegen Invariance &amp; Non-Superposition</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • PREPFUSION TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Lumped-Matter Abstraction (LMA) -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Lumped-Matter Abstraction (LMA)</text>
+  
+  <rect x="30" y="85" width="840" height="230" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">The Physical Wavelength Collapse Criterion</text>
+  <text x="50" y="165" fill="#e2e8f0" font-size="19">• Maxwell's field equations collapse to circuit theory when:</text>
+  <text x="70" y="205" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="800">λ = c / f ≫ d   (d = max circuit dimension)</text>
+  <text x="50" y="245" fill="#94a3b8" font-size="18">• Speed of light c ≈ 3 × 10⁸ m/s; propagation delay Δt → 0.</text>
+  <text x="50" y="280" fill="#94a3b8" font-size="18">• Voltages and currents become pure time functions: v(t), i(t).</text>
+
+  <text x="35" y="360" fill="#34d399" font-size="24" font-weight="800">Core LMA Axiomatic Postulates:</text>
+  <text x="35" y="405" fill="#e2e8f0" font-size="19">1. Electric and magnetic fields are strictly confined within elements.</text>
+  <text x="35" y="445" fill="#e2e8f0" font-size="19">2. Total charge accumulation on any closed lumped element is zero.</text>
+  <text x="35" y="485" fill="#e2e8f0" font-size="19">3. Magnetic flux linkage ∂B/∂t outside elements is negligible.</text>
+  <text x="35" y="525" fill="#e2e8f0" font-size="19">4. KCL and KVL hold identically at every instant of time.</text>
+
+  <rect x="30" y="570" width="840" height="340" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="615" fill="#38bdf8" font-size="22" font-weight="800">Comparison: Field Theory vs. Circuit Theory</text>
+  <text x="50" y="660" fill="#fbbf24" font-size="19" font-weight="700">Metric / Attribute</text>
+  <text x="340" y="660" fill="#fbbf24" font-size="19" font-weight="700">Maxwell Field Theory</text>
+  <text x="620" y="660" fill="#fbbf24" font-size="19" font-weight="700">Lumped Circuit Theory</text>
+  
+  <path d="M 45 680 L 850 680" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="715" fill="#e2e8f0" font-size="18">Primary Variables</text>
+  <text x="340" y="715" fill="#94a3b8" font-size="18">E(r,t), B(r,t), J(r,t)</text>
+  <text x="620" y="715" fill="#38bdf8" font-size="18">v(t), i(t), q(t), λ(t)</text>
+
+  <text x="50" y="760" fill="#e2e8f0" font-size="18">Spatial Coordinates</text>
+  <text x="340" y="760" fill="#94a3b8" font-size="18">Explicit (x, y, z, t)</text>
+  <text x="620" y="760" fill="#34d399" font-size="18">Zero (Collapsed)</text>
+
+  <text x="50" y="805" fill="#e2e8f0" font-size="18">Governing Laws</text>
+  <text x="340" y="805" fill="#94a3b8" font-size="18">∇·D=ρ, ∇×E=-∂B/∂t</text>
+  <text x="620" y="805" fill="#38bdf8" font-size="18">KCL, KVL, Ohm's Law</text>
+
+  <text x="50" y="850" fill="#e2e8f0" font-size="18">Mathematical Model</text>
+  <text x="340" y="850" fill="#94a3b8" font-size="18">Vector Partial Diff Eq</text>
+  <text x="620" y="850" fill="#34d399" font-size="18">Scalar Algebraic / ODE</text>
+
+  <rect x="30" y="940" width="840" height="420" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="985" fill="#f43f5e" font-size="22" font-weight="800">★ Critical Boundary Breakdown Conditions</text>
+  <text x="50" y="1030" fill="#e2e8f0" font-size="19">• Transmission Lines: When length l ≥ 0.01 λ, wave propagation</text>
+  <text x="70" y="1065" fill="#e2e8f0" font-size="19">and reflection cannot be neglected → distributed parameters!</text>
+  <text x="50" y="1115" fill="#e2e8f0" font-size="19">• High-Frequency Antennas: Radiative loss occurs when fields</text>
+  <text x="70" y="1150" fill="#e2e8f0" font-size="19">are unconfined → circuit abstraction fails completely.</text>
+  <text x="50" y="1200" fill="#e2e8f0" font-size="19">• Changing Magnetic Flux: If ∂B/∂t passes through circuit loop,</text>
+  <text x="70" y="1235" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="20" font-weight="700">∮ E·dl = -dΦ/dt ≠ 0 ⇒ KVL FAILS! ⚠</text>
+  <text x="70" y="1275" fill="#94a3b8" font-size="18">(Potential difference becomes path-dependent!).</text>
+
+  <rect x="30" y="1390" width="840" height="420" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1435" fill="#34d399" font-size="22" font-weight="800">Electric Charge &amp; Quantization Kinetics</text>
+  <text x="50" y="1480" fill="#e2e8f0" font-size="19">• Elementary Charge: e = 1.602176 × 10⁻¹⁹ C (negative for e⁻).</text>
+  <text x="50" y="1520" fill="#e2e8f0" font-size="19">• Quantization: Q = ± n·e   where n ∈ {1, 2, 3, ...}.</text>
+  <text x="50" y="1560" fill="#e2e8f0" font-size="19">• Number of electrons in 1 Coulomb: n = 1/e ≈ 6.242 × 10¹⁸.</text>
+  <text x="50" y="1605" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Conservation of Charge: ∑ q_system = CONSTANT</text>
+  <text x="50" y="1650" fill="#94a3b8" font-size="18">• Charge can neither be created nor destroyed, only transferred.</text>
+  <text x="50" y="1690" fill="#fbbf24" font-size="19">• Current definition: i(t) = dq(t)/dt   (1 Ampere = 1 Coulomb/sec).</text>
+  <text x="50" y="1730" fill="#e2e8f0" font-size="19">• Charge integral: q(t) = q(t₀) + ∫ i(τ) dτ from t₀ to t.</text>
+  <text x="50" y="1770" fill="#34d399" font-size="18">Open-circuit boundary: i_open = 0 A  (no charge passage possible).</text>
+</g>
+
+<!-- Column 2: Electric Current, Potential & Energy -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#34d399"/>
+  <text x="35" y="55" fill="#34d399" font-size="28" font-weight="900">2. Current, Voltage &amp; Energy Dynamics</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Electric Potential Difference (Voltage)</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• Work done per unit charge moving between points A and B:</text>
+  <text x="70" y="210" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="24" font-weight="800">v = dw / dq   (1 Volt = 1 Joule / Coulomb)</text>
+  <text x="50" y="255" fill="#e2e8f0" font-size="19">• Relative Potential: V_AB = V_A - V_B = -V_BA.</text>
+  <text x="50" y="295" fill="#e2e8f0" font-size="19">• Potential Rise: Moving from (-) to (+) terminal (gain in energy).</text>
+  <text x="50" y="335" fill="#e2e8f0" font-size="19">• Potential Drop: Moving from (+) to (-) terminal (loss of energy).</text>
+  <text x="50" y="375" fill="#34d399" font-size="19">• Short-circuit boundary: v_short = 0 V  (zero potential difference).</text>
+
+  <rect x="30" y="450" width="840" height="380" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1"/>
+  <text x="50" y="495" fill="#34d399" font-size="22" font-weight="800">Electric Power &amp; Instantaneous Rate of Energy</text>
+  <text x="50" y="540" fill="#e2e8f0" font-size="19">• Power is the time rate of expanding or absorbing energy:</text>
+  <text x="70" y="580" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="800">p(t) = dw/dt = (dw/dq) · (dq/dt) = v(t) · i(t)</text>
+  <text x="50" y="625" fill="#94a3b8" font-size="18">• Units: 1 Watt = 1 Joule/sec = 1 V·A.</text>
+  
+  <text x="50" y="675" fill="#fbbf24" font-size="20" font-weight="700">Accumulated Energy:</text>
+  <text x="70" y="715" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="700">w(t) = ∫ p(τ) dτ from t₀ to t = ∫ v(τ) i(τ) dτ</text>
+  <text x="50" y="760" fill="#e2e8f0" font-size="19">• Commercial energy unit: 1 kWh = 3.6 × 10⁶ Joules = 3.6 MJ.</text>
+  <text x="50" y="800" fill="#e2e8f0" font-size="19">• Average Power: P_avg = (1/T) ∫ p(t) dt over one complete period T.</text>
+
+  <rect x="30" y="855" width="840" height="520" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="900" fill="#fbbf24" font-size="22" font-weight="800">DC vs. AC vs. Impulse Waveform Taxonomy</text>
+  <text x="50" y="945" fill="#38bdf8" font-size="19" font-weight="700">Waveform Type</text>
+  <text x="320" y="945" fill="#38bdf8" font-size="19" font-weight="700">Mathematical Expression</text>
+  <text x="640" y="945" fill="#38bdf8" font-size="19" font-weight="700">Average / RMS</text>
+  <path d="M 45 965 L 850 965" stroke="#475569" stroke-width="1"/>
+
+  <text x="50" y="1005" fill="#e2e8f0" font-size="18">Constant DC</text>
+  <text x="320" y="1005" fill="#94a3b8" font-size="18">i(t) = I_DC (Constant)</text>
+  <text x="640" y="1005" fill="#34d399" font-size="18">I_avg = I_rms = I_DC</text>
+
+  <text x="50" y="1055" fill="#e2e8f0" font-size="18">Sinusoidal AC</text>
+  <text x="320" y="1055" fill="#94a3b8" font-size="18">i(t) = I_m sin(ωt + θ)</text>
+  <text x="640" y="1055" fill="#34d399" font-size="18">I_avg = 0, I_rms = I_m/√2</text>
+
+  <text x="50" y="1105" fill="#e2e8f0" font-size="18">Half-Sine Pulse</text>
+  <text x="320" y="1105" fill="#94a3b8" font-size="18">I_m sin(ωt) for [0, π]</text>
+  <text x="640" y="1105" fill="#34d399" font-size="18">I_avg = I_m/π, I_rms=I_m/2</text>
+
+  <text x="50" y="1155" fill="#e2e8f0" font-size="18">Full-Sine Rect</text>
+  <text x="320" y="1155" fill="#94a3b8" font-size="18">|I_m sin(ωt)|</text>
+  <text x="640" y="1155" fill="#34d399" font-size="18">2I_m/π, I_rms=I_m/√2</text>
+
+  <text x="50" y="1205" fill="#e2e8f0" font-size="18">Triangular Wave</text>
+  <text x="320" y="1205" fill="#94a3b8" font-size="18">Linear ramp peak I_m</text>
+  <text x="640" y="1205" fill="#34d399" font-size="18">I_avg=I_m/2, I_rms=I_m/√3</text>
+
+  <text x="50" y="1255" fill="#e2e8f0" font-size="18">Dirac Delta δ(t)</text>
+  <text x="320" y="1255" fill="#94a3b8" font-size="18">q(t) jump at t=0</text>
+  <text x="640" y="1255" fill="#f43f5e" font-size="18">Area = 1 C (Impulse!)</text>
+
+  <text x="50" y="1310" fill="#fbbf24" font-size="17" font-weight="700">★ Crest Factor CF = I_peak / I_rms   |   Form Factor FF = I_rms / I_avg</text>
+
+  <rect x="30" y="1400" width="840" height="410" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+  <text x="50" y="1445" fill="#38bdf8" font-size="22" font-weight="800">Ideal vs. Practical Independent Sources</text>
+  <text x="50" y="1490" fill="#e2e8f0" font-size="19">• Ideal Voltage Source: Maintains v(t) = V_s REGARDLESS of load current.</text>
+  <text x="70" y="1525" fill="#34d399" font-family="'Fira Code', monospace" font-size="20" font-weight="700">Internal Resistance R_s = 0 Ω (Ideal Short)</text>
+  <text x="50" y="1570" fill="#e2e8f0" font-size="19">• Practical Voltage Source: Terminal voltage drops with load current:</text>
+  <text x="70" y="1605" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20" font-weight="700">V_L = V_s - I_L · R_s   (R_s in SERIES)</text>
+  <text x="50" y="1650" fill="#e2e8f0" font-size="19">• Ideal Current Source: Supplies i(t) = I_s REGARDLESS of load voltage.</text>
+  <text x="70" y="1685" fill="#34d399" font-family="'Fira Code', monospace" font-size="20" font-weight="700">Internal Resistance R_s = ∞ Ω (Ideal Open)</text>
+  <text x="50" y="1730" fill="#e2e8f0" font-size="19">• Practical Current Source: Delivered current decreases with load voltage:</text>
+  <text x="70" y="1765" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20" font-weight="700">I_L = I_s - V_L / R_s   (R_s in PARALLEL)</text>
+</g>
+
+<!-- Column 3: Passive Sign Convention (PSC) -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#fbbf24"/>
+  <text x="35" y="55" fill="#fbbf24" font-size="28" font-weight="900">3. Passive Sign Convention (PSC)</text>
+
+  <rect x="30" y="85" width="840" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">The Universal PSC Operational Definition</text>
+  
+  <text x="50" y="170" fill="#34d399" font-size="20" font-weight="800">Case A: Absorbing Power (Load / Passive Mode)</text>
+  <text x="50" y="205" fill="#e2e8f0" font-size="18">• Reference current enters the POSITIVE reference terminal:</text>
+  <text x="70" y="245" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">P_absorbed = + v(t) · i(t)</text>
+  <text x="50" y="285" fill="#94a3b8" font-size="18">• If P_abs &gt; 0: Element truly consumes / dissipates energy.</text>
+  <text x="50" y="320" fill="#94a3b8" font-size="18">• If P_abs &lt; 0: Element is actually DELIVERING energy!</text>
+
+  <text x="50" y="365" fill="#fbbf24" font-size="20" font-weight="800">Case B: Delivering Power (Source / Active Mode)</text>
+  <text x="50" y="400" fill="#e2e8f0" font-size="18">• Reference current leaves the POSITIVE reference terminal:</text>
+  <text x="70" y="440" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="24" font-weight="800">P_delivered = + v(t) · i_out(t) = - v(t) · i_in(t)</text>
+  <text x="50" y="480" fill="#38bdf8" font-size="18" font-weight="700">Fundamental Identity: P_absorbed ≡ - P_delivered</text>
+
+  <rect x="30" y="530" width="840" height="520" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="575" fill="#34d399" font-size="22" font-weight="800">The 4 Possible Polarity-Current Combinations</text>
+
+  <rect x="50" y="605" width="380" height="195" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+  <text x="70" y="635" fill="#34d399" font-size="18" font-weight="800">1. Current Enters (+) Terminal</text>
+  <text x="70" y="665" fill="#e2e8f0" font-size="17">v &gt; 0, i &gt; 0  ⇒  P = (+v)(+i) &gt; 0</text>
+  <text x="70" y="700" fill="#38bdf8" font-size="18" font-weight="700">★ ABSORBING POWER</text>
+  <text x="70" y="735" fill="#94a3b8" font-size="16">• Resistor heating, charging battery,</text>
+  <text x="70" y="765" fill="#94a3b8" font-size="16">  charging capacitor, inductor flux.</text>
+
+  <rect x="470" y="605" width="380" height="195" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+  <text x="490" y="635" fill="#fbbf24" font-size="18" font-weight="800">2. Current Leaves (+) Terminal</text>
+  <text x="490" y="665" fill="#e2e8f0" font-size="17">v &gt; 0, i_out &gt; 0  ⇒  P_del = v·i &gt; 0</text>
+  <text x="490" y="700" fill="#fbbf24" font-size="18" font-weight="700">★ DELIVERING POWER</text>
+  <text x="490" y="735" fill="#94a3b8" font-size="16">• Active generator, discharging</text>
+  <text x="490" y="765" fill="#94a3b8" font-size="16">  battery, primary source.</text>
+
+  <rect x="50" y="825" width="380" height="195" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1"/>
+  <text x="70" y="855" fill="#f43f5e" font-size="18" font-weight="800">3. Current Enters (-) Terminal</text>
+  <text x="70" y="885" fill="#e2e8f0" font-size="17">Same as leaving (+)!</text>
+  <text x="70" y="920" fill="#fbbf24" font-size="18" font-weight="700">★ DELIVERING POWER</text>
+  <text x="70" y="955" fill="#94a3b8" font-size="16">P_abs = (-v)(+i) &lt; 0</text>
+  <text x="70" y="990" fill="#94a3b8" font-size="16">Source pumping energy into circuit.</text>
+
+  <rect x="470" y="825" width="380" height="195" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+  <text x="490" y="855" fill="#c084fc" font-size="18" font-weight="800">4. Opposing Negative Supply</text>
+  <text x="490" y="885" fill="#e2e8f0" font-size="17">Current pushed into higher voltage</text>
+  <text x="490" y="920" fill="#34d399" font-size="18" font-weight="700">★ ABSORBING POWER</text>
+  <text x="490" y="955" fill="#94a3b8" font-size="16">P_abs &gt; 0: Secondary battery on</text>
+  <text x="490" y="990" fill="#94a3b8" font-size="16">recharge from stronger main supply!</text>
+
+  <rect x="30" y="1080" width="840" height="730" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1125" fill="#f43f5e" font-size="22" font-weight="800">Exam Trap Drill: Power In Dependent Branches</text>
+  <text x="50" y="1165" fill="#e2e8f0" font-size="18">Circuit: 10 V source in series with 2 Ω resistor and dependent source 2 I_x.</text>
+  <text x="50" y="1200" fill="#94a3b8" font-size="17">I_x is current flowing through the loop from source to dependent source.</text>
+
+  <text x="50" y="1245" fill="#38bdf8" font-size="20" font-weight="700">Step 1: Apply KVL around loop:</text>
+  <text x="70" y="1285" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">10 - 2 I_x - 2 I_x = 0 ⇒ 4 I_x = 10 ⇒ I_x = 2.5 A</text>
+
+  <text x="50" y="1335" fill="#38bdf8" font-size="20" font-weight="700">Step 2: Voltage across dependent source:</text>
+  <text x="70" y="1375" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">V_dep = 2 I_x = 2 (2.5 A) = 5.0 V</text>
+
+  <text x="50" y="1425" fill="#38bdf8" font-size="20" font-weight="700">Step 3: Check Current Direction w.r.t Dependent Source:</text>
+  <text x="70" y="1460" fill="#e2e8f0" font-size="18">• Current I_x = 2.5 A enters the POSITIVE terminal of dependent source!</text>
+  <text x="70" y="1500" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">P_dep(absorbed) = + (5.0 V) · (2.5 A) = + 12.5 W</text>
+
+  <text x="50" y="1550" fill="#38bdf8" font-size="20" font-weight="700">Step 4: Tellegen Power Balance Check:</text>
+  <text x="70" y="1590" fill="#e2e8f0" font-size="18">• 10 V Source: P_del = (10 V) · (2.5 A) = 25.0 W delivered.</text>
+  <text x="70" y="1630" fill="#e2e8f0" font-size="18">• 2 Ω Resistor: P_abs = I_x² · R = (2.5)² · 2 = 12.5 W absorbed.</text>
+  <text x="70" y="1670" fill="#e2e8f0" font-size="18">• Dependent Source: P_abs = 12.5 W absorbed.</text>
+  <text x="70" y="1720" fill="#34d399" font-family="'Fira Code', monospace" font-size="22" font-weight="800">∑ P_del (25 W) ≡ ∑ P_abs (12.5 + 12.5 = 25 W)  [BALANCED!]</text>
+  <text x="50" y="1770" fill="#f43f5e" font-size="17" font-weight="800">★ Fatal Error: Dependent sources are NOT always active generators; they can absorb power!</text>
+</g>
+
+<!-- Column 4: Tellegen's Theorem & Power Superposition -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="930" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">4. Tellegen's Law &amp; Power Superposition</text>
+
+  <rect x="30" y="85" width="870" height="340" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#c084fc" font-size="22" font-weight="800">Tellegen's Theorem: The Topological Invariant</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• For ANY lumped network with b branches satisfying KCL and KVL:</text>
+  <text x="70" y="215" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="26" font-weight="900">∑_(k=1)^b v_k(t) · i_k(t) ≡ 0</text>
+  <text x="50" y="260" fill="#34d399" font-size="20" font-weight="700">∑ P_absorbed = 0  ⟺  ∑ P_delivered = ∑ P_absorbed</text>
+  <text x="50" y="305" fill="#94a3b8" font-size="18">• Mathematical Origin: Orthogonality of KCL cutset space and KVL loop space:</text>
+  <text x="70" y="340" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">v_b^T · i_b = (B_f^T · v_l)^T · i_b = v_l^T · (B_f · i_b) = v_l^T · 0 = 0</text>
+  <text x="50" y="380" fill="#e2e8f0" font-size="18">Independent of element nature! Valid for linear, non-linear, time-varying, active.</text>
+
+  <rect x="30" y="450" width="870" height="420" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+  <text x="50" y="495" fill="#38bdf8" font-size="22" font-weight="800">Quasi-Tellegen's Theorem (Two Topologies)</text>
+  <text x="50" y="540" fill="#e2e8f0" font-size="19">• If two networks N and N' have identical graph topology but</text>
+  <text x="70" y="575" fill="#e2e8f0" font-size="19">different element values, source excitations, or operating frequencies:</text>
+  <text x="70" y="625" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="24" font-weight="800">∑_(k=1)^b v_k · i_k' = 0   and   ∑_(k=1)^b v_k' · i_k = 0</text>
+  <text x="50" y="675" fill="#34d399" font-size="19" font-weight="700">Applications in Advanced Circuit Analysis:</text>
+  <text x="70" y="715" fill="#94a3b8" font-size="18">1. Proof of Reciprocity Theorem in passive bilateral networks.</text>
+  <text x="70" y="755" fill="#94a3b8" font-size="18">2. Adjoint Network sensitivity calculations in analog CAD simulators.</text>
+  <text x="70" y="795" fill="#94a3b8" font-size="18">3. Bounds on impedance and driving-point functions.</text>
+  <text x="70" y="835" fill="#94a3b8" font-size="18">4. Inter-reciprocity between dual filter architectures.</text>
+
+  <rect x="30" y="895" width="870" height="490" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="940" fill="#f43f5e" font-size="24" font-weight="900">★ DANGER: Power Superposition is STRICTLY FORBIDDEN!</text>
+  <text x="50" y="985" fill="#e2e8f0" font-size="19">• Superposition applies ONLY to linear functions (L[ax + by] = aL[x] + bL[y]).</text>
+  <text x="50" y="1025" fill="#e2e8f0" font-size="19">• Electric power is quadratic: P = i²R = v²/R (strictly non-linear!).</text>
+  
+  <text x="70" y="1075" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="24" font-weight="900">P_total ≠ P₁ + P₂   (FATAL GATE ERROR!)</text>
+
+  <text x="50" y="1125" fill="#38bdf8" font-size="20" font-weight="700">The Correct Mathematical Formulation:</text>
+  <text x="70" y="1165" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">i_total = i₁ ± i₂ ⇒ P_total = (i₁ ± i₂)² R</text>
+  <text x="70" y="1205" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="22">P_total = i₁²R + i₂²R ± 2 i₁ i₂ R = P₁ + P₂ ± 2 √(P₁ P₂)</text>
+
+  <text x="50" y="1255" fill="#34d399" font-size="20" font-weight="800">Extreme Bounds on Combined Power:</text>
+  <text x="70" y="1295" fill="#34d399" font-size="19">• Maximum Power: P_max = (√P₁ + √P₂)²   (currents in-phase / aiding)</text>
+  <text x="70" y="1335" fill="#f43f5e" font-size="19">• Minimum Power: P_min = (√P₁ - √P₂)²   (currents out-of-phase / opposing)</text>
+  <text x="50" y="1370" fill="#94a3b8" font-size="17">Example: P₁ = 9 W, P₂ = 4 W ⇒ P_max = (3+2)² = 25 W; P_min = (3-2)² = 1 W!</text>
+
+  <rect x="30" y="1410" width="870" height="400" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1455" fill="#fbbf24" font-size="22" font-weight="800">The ONLY Exception: Orthogonal Harmonic Signals</text>
+  <text x="50" y="1500" fill="#e2e8f0" font-size="19">• If sources operate at DIFFERENT harmonic frequencies or DC + AC:</text>
+  <text x="70" y="1540" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">i(t) = I_DC + I_m1 sin(ω₁ t) + I_m2 sin(ω₂ t)</text>
+  <text x="50" y="1585" fill="#e2e8f0" font-size="19">• The cross-product terms vanish over fundamental period T:</text>
+  <text x="70" y="1625" fill="#94a3b8" font-family="'Fira Code', monospace" font-size="20">∫ sin(ω₁ t) · sin(ω₂ t) dt = 0   (for ω₁ ≠ ω₂)</text>
+  <text x="50" y="1670" fill="#34d399" font-size="19">• In that orthogonal regime, average power DOES add up:</text>
+  <text x="70" y="1710" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">P_avg = P_DC + P_AC1 + P_AC2 = [I_DC² + I_rms1² + I_rms2²] R</text>
+  <text x="50" y="1755" fill="#fbbf24" font-size="18" font-weight="700">★ Golden Rule: Power superposition is valid IF AND ONLY IF frequencies are distinct!</text>
+</g>
+
+  </g>
+</svg>

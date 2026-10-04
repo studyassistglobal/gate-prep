@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#0a0f1d; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" opacity="0.6"/>
+    </pattern>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="3840" height="2160" fill="#0a0f1d"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Outer Blueprint Border -->
+  <rect x="30" y="30" width="3780" height="2100" rx="16" fill="none" stroke="#38bdf8" stroke-width="2.5" opacity="0.8"/>
+  <rect x="42" y="42" width="3756" height="2076" rx="10" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <g transform="translate(60, 60)">
+    <rect x="0" y="0" width="3720" height="120" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+    <rect x="0" y="0" width="12" height="120" rx="6" fill="url(#headerGrad)"/>
+    
+    <!-- Title & Subtitle -->
+    <text x="40" y="52" fill="url(#headerGrad)" font-size="38" font-weight="900" letter-spacing="1.5">DIODE SMALL-SIGNAL AC &amp; ZENER VOLTAGE REGULATOR ARCHITECTURE</text>
+    <text x="40" y="94" fill="#94a3b8" font-size="22" font-weight="500">Dynamic AC Resistance, Zener vs Avalanche Physics, Shunt Regulator Engine &amp; Precise R_s Sizing Bounds</text>
+    
+    <!-- Badges -->
+    <rect x="3100" y="32" width="260" height="56" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="3230" y="68" fill="#38bdf8" font-size="20" font-weight="800" text-anchor="middle">GATE 2027 TITAN SUITE</text>
+    <rect x="3400" y="32" width="280" height="56" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="3540" y="68" fill="#fbbf24" font-size="20" font-weight="800" text-anchor="middle">FIGURE 2 • 4K VECTOR</text>
+  </g>
+
+  <!-- Content Canvas -->
+  <g transform="translate(60, 200)">
+    
+<!-- Column 1: Small Signal Model -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="1200" height="660" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="660" rx="5" fill="#38bdf8"/>
+  <text x="30" y="45" fill="#38bdf8" font-size="26" font-weight="800">1. Small-Signal AC Principle &amp; Dynamic Resistance (r_d)</text>
+  <text x="30" y="85" fill="#e2e8f0" font-size="19">• Principle of Small Signal: Superimpose a tiny time-varying AC signal v_d(t) onto DC operating point (V_DQ, I_DQ).</text>
+  <text x="30" y="125" fill="#34d399" font-size="20" font-weight="700">  Total Voltage: v_D(t) = V_DQ + v_d(t)     Total Current: i_D(t) = I_DQ + i_d(t)</text>
+  <text x="30" y="170" fill="#e2e8f0" font-size="19">• Dynamic (AC) Resistance Derivation:</text>
+  <text x="50" y="210" fill="#38bdf8" font-size="24" font-weight="800">  r_d = dV_D / dI_D |_(Q) = η · V_T / I_DQ ≈ 26 mV / I_DQ  (for η = 1 at 300 K)</text>
+  <text x="30" y="260" fill="#e2e8f0" font-size="19">• DC Static Resistance vs AC Dynamic Resistance:</text>
+  <text x="50" y="295" fill="#fbbf24" font-size="19" font-weight="700">  R_DC = V_DQ / I_DQ   vs   r_d = η V_T / I_DQ   ⇒   r_d &lt;&lt; R_DC in forward bias!</text>
+  <text x="30" y="340" fill="#e2e8f0" font-size="19">• Small-Signal AC Equivalent Circuit:</text>
+  <text x="50" y="375" fill="#e2e8f0" font-size="19">- DC independent voltage sources → Short circuit (0 V).</text>
+  <text x="50" y="410" fill="#e2e8f0" font-size="19">- DC independent current sources → Open circuit (0 A).</text>
+  <text x="50" y="445" fill="#e2e8f0" font-size="19">- Coupling and bypass capacitors (large C) → Short circuit for AC: X_C = 1/(ω C) ≈ 0.</text>
+  <text x="50" y="480" fill="#e2e8f0" font-size="19">- Diode replaced strictly by dynamic incremental resistance r_d.</text>
+  <text x="30" y="530" fill="#f43f5e" font-size="18" font-weight="700">★ Small-Signal Validity Criterion: v_d &lt;&lt; η V_T ≈ 5 mV (peak-to-peak must not cause distortion).</text>
+  <text x="30" y="575" fill="#c084fc" font-size="18" font-weight="700">★ Attenuator Application: Diode r_d controlled via DC current I_DQ creates variable gain AC attenuator.</text>
+</g>
+
+<g transform="translate(0, 690)">
+  <rect x="0" y="0" width="1200" height="670" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="670" rx="5" fill="#34d399"/>
+  <text x="30" y="45" fill="#34d399" font-size="26" font-weight="800">2. Zener Diode Physics &amp; Breakdown Mechanisms</text>
+  <text x="30" y="85" fill="#e2e8f0" font-size="19">• Definition: Heavily doped PN junction engineered to operate safely in the reverse breakdown region.</text>
+  <text x="30" y="130" fill="#fbbf24" font-size="22" font-weight="800">Comparison of Breakdown Regimes:</text>
+  
+  <rect x="40" y="150" width="1120" height="240" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="185" fill="#38bdf8" font-size="20" font-weight="800">PARAMETER</text>
+  <text x="340" y="185" fill="#38bdf8" font-size="20" font-weight="800">ZENER BREAKDOWN</text>
+  <text x="740" y="185" fill="#38bdf8" font-size="20" font-weight="800">AVALANCHE BREAKDOWN</text>
+  <line x1="40" y1="200" x2="1160" y2="200" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="230" fill="#e2e8f0" font-size="18">Doping Level</text><text x="340" y="230" fill="#34d399" font-size="18">Heavily Doped (1 in 10³)</text><text x="740" y="230" fill="#fbbf24" font-size="18">Lightly Doped (1 in 10⁸)</text>
+  <text x="60" y="265" fill="#e2e8f0" font-size="18">Breakdown Voltage</text><text x="340" y="265" fill="#34d399" font-size="18">V_Z &lt; 6 V (Typically 2V - 6V)</text><text x="740" y="265" fill="#fbbf24" font-size="18">V_Z &gt; 6 V (Typically &gt; 8V)</text>
+  <text x="60" y="300" fill="#e2e8f0" font-size="18">Physical Mechanism</text><text x="340" y="300" fill="#34d399" font-size="18">Quantum Tunneling / Field Emission</text><text x="740" y="300" fill="#fbbf24" font-size="18">Impact Ionization / Carrier Multiplication</text>
+  <text x="60" y="335" fill="#e2e8f0" font-size="18">Depletion Width (W)</text><text x="340" y="335" fill="#34d399" font-size="18">Ultra-Narrow (&lt; 10 nm)</text><text x="740" y="335" fill="#fbbf24" font-size="18">Relatively Wide</text>
+  <text x="60" y="370" fill="#e2e8f0" font-size="18">Temp Coefficient (TC)</text><text x="340" y="370" fill="#f43f5e" font-size="18" font-weight="800">NEGATIVE (V_Z decreases as T rises)</text><text x="740" y="370" fill="#34d399" font-size="18" font-weight="800">POSITIVE (V_Z increases as T rises)</text>
+
+  <text x="30" y="420" fill="#e2e8f0" font-size="19">• Zero-TC Reference: At V_Z ≈ 5.6 V, Zener &amp; Avalanche mechanisms balance out, giving near ZERO temperature coefficient!</text>
+  <text x="30" y="465" fill="#38bdf8" font-size="22" font-weight="800">Zener Operating States in Circuit Analysis:</text>
+  <text x="50" y="500" fill="#e2e8f0" font-size="19">1. Forward Bias: Acts as a normal forward-biased diode with V_D = 0.7 V.</text>
+  <text x="50" y="535" fill="#e2e8f0" font-size="19">2. Reverse Bias below breakdown (0 &lt; V_R &lt; V_Z): Acts as open-circuit (I_Z ≈ 0).</text>
+  <text x="50" y="570" fill="#34d399" font-size="19">3. Reverse Breakdown (V_R ≥ V_Z): Clamps voltage at V_Z (Ideal battery V_Z or V_Z + I_Z · r_z).</text>
+  <text x="30" y="620" fill="#fbbf24" font-size="18" font-weight="700">★ Vital Condition: For regulation, Zener current MUST satisfy:  I_Z,min ≤ I_Z ≤ I_Z,max (where I_Z,max = P_Z,max / V_Z).</text>
+</g>
+
+<!-- Column 2 &amp; 3: Zener Voltage Regulator Analysis Engine -->
+<g transform="translate(1240, 0)">
+  <rect x="0" y="0" width="2480" height="1360" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1360" rx="5" fill="#fbbf24"/>
+  <text x="30" y="45" fill="#fbbf24" font-size="28" font-weight="800">3. Zener Shunt Voltage Regulator Design &amp; Boundary Analysis Engine</text>
+
+  <!-- Circuit Diagram Block -->
+  <g transform="translate(40, 70)">
+    <rect x="0" y="0" width="700" height="340" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="22" font-weight="800">Zener Shunt Regulator Topology</text>
+    
+    <!-- Schematic lines -->
+    <line x1="60" y1="120" x2="200" y2="120" stroke="#38bdf8" stroke-width="3"/>
+    <!-- Rs resistor -->
+    <rect x="200" y="105" width="100" height="30" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <text x="250" y="127" fill="#fbbf24" font-size="18" text-anchor="middle">R_s</text>
+    <line x1="300" y1="120" x2="480" y2="120" stroke="#38bdf8" stroke-width="3"/>
+    <!-- Zener branch -->
+    <line x1="380" y1="120" x2="380" y2="170" stroke="#38bdf8" stroke-width="3"/>
+    <!-- Zener symbol -->
+    <polygon points="360,210 400,210 380,175" fill="#0f172a" stroke="#34d399" stroke-width="3"/>
+    <line x1="360" y1="175" x2="400" y2="175" stroke="#34d399" stroke-width="3"/>
+    <line x1="360" y1="175" x2="350" y2="165" stroke="#34d399" stroke-width="3"/>
+    <line x1="400" y1="175" x2="410" y2="185" stroke="#34d399" stroke-width="3"/>
+    <line x1="380" y1="210" x2="380" y2="280" stroke="#38bdf8" stroke-width="3"/>
+    <!-- Load branch -->
+    <line x1="480" y1="120" x2="580" y2="120" stroke="#38bdf8" stroke-width="3"/>
+    <line x1="580" y1="120" x2="580" y2="160" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="565" y="160" width="30" height="80" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <text x="615" y="205" fill="#fbbf24" font-size="18">R_L</text>
+    <line x1="580" y1="240" x2="580" y2="280" stroke="#38bdf8" stroke-width="3"/>
+    <!-- Ground line -->
+    <line x1="60" y1="280" x2="580" y2="280" stroke="#64748b" stroke-width="3"/>
+    <text x="30" y="125" fill="#38bdf8" font-size="20" font-weight="700">V_in</text>
+    <text x="640" y="125" fill="#34d399" font-size="20" font-weight="700">V_o = V_Z</text>
+    <text x="240" y="90" fill="#e2e8f0" font-size="17">I_s</text>
+    <text x="410" y="240" fill="#34d399" font-size="17">I_Z</text>
+    <text x="610" y="150" fill="#fbbf24" font-size="17">I_L</text>
+    <text x="150" y="320" fill="#94a3b8" font-size="16">KCL: I_s = I_Z + I_L   where I_s = (V_in - V_Z) / R_s</text>
+  </g>
+
+  <!-- Step-by-Step Regulator Verification Test -->
+  <g transform="translate(780, 70)">
+    <rect x="0" y="0" width="1650" height="340" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#c084fc" font-size="22" font-weight="800">Open-Circuit Thevenin Test for Zener Breakdown</text>
+    <text x="30" y="80" fill="#e2e8f0" font-size="19">1. Temporarily REMOVE the Zener diode from the circuit and calculate open-circuit voltage V_Th across its terminals:</text>
+    <text x="60" y="125" fill="#38bdf8" font-size="24" font-weight="800">V_Th = V_in · [ R_L / (R_s + R_L) ]</text>
+    <text x="30" y="175" fill="#e2e8f0" font-size="19">2. Decision Diagnostic:</text>
+    <text x="60" y="215" fill="#34d399" font-size="20" font-weight="700">✓ If V_Th ≥ V_Z: ZENER IS IN BREAKDOWN! Output is regulated: V_o = V_Z. Proceed with normal regulation equations.</text>
+    <text x="60" y="255" fill="#f43f5e" font-size="20" font-weight="700">✗ If V_Th &lt; V_Z: ZENER IS OFF (I_Z = 0)! Regulator FAILS! Output drops to unregulated value: V_o = V_Th &lt; V_Z.</text>
+    <text x="30" y="305" fill="#fbbf24" font-size="19" font-weight="700">★ Critical Condition for Breakdown: R_L ≥ (R_s · V_Z) / (V_in - V_Z)   (Establishes absolute minimum R_L,min)</text>
+  </g>
+
+  <!-- Line Regulation Section -->
+  <g transform="translate(40, 440)">
+    <rect x="0" y="0" width="1180" height="420" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#38bdf8" font-size="24" font-weight="800">CASE 1: LINE REGULATION (Variable V_in, Constant R_L)</text>
+    <text x="30" y="80" fill="#e2e8f0" font-size="19">• Condition: Input voltage fluctuates: V_in,min ≤ V_in ≤ V_in,max. Load resistance R_L is fixed.</text>
+    <text x="30" y="115" fill="#94a3b8" font-size="18">Constant Load Current: I_L = V_Z / R_L = constant.</text>
+    
+    <text x="30" y="160" fill="#34d399" font-size="20" font-weight="700">A. Minimum Input Voltage (V_in,min) Condition:</text>
+    <text x="50" y="195" fill="#e2e8f0" font-size="18">To maintain breakdown, Zener current must not drop below minimum knee current I_Z,min (typically 1 mA - 5 mA):</text>
+    <text x="70" y="235" fill="#38bdf8" font-size="22" font-weight="800">I_s,min = I_Z,min + I_L   ⇒   V_in,min = V_Z + (I_Z,min + I_L) · R_s</text>
+
+    <text x="30" y="280" fill="#f43f5e" font-size="20" font-weight="700">B. Maximum Input Voltage (V_in,max) Condition:</text>
+    <text x="50" y="315" fill="#e2e8f0" font-size="18">Zener current must not exceed maximum thermal limit I_Z,max = P_Z,max / V_Z to prevent destruction:</text>
+    <text x="70" y="355" fill="#f43f5e" font-size="22" font-weight="800">I_s,max = I_Z,max + I_L   ⇒   V_in,max = V_Z + (I_Z,max + I_L) · R_s</text>
+    <text x="30" y="400" fill="#fbbf24" font-size="18" font-weight="700">★ Safe Input Voltage Window:  V_in,min ≤ V_in ≤ V_in,max</text>
+  </g>
+
+  <!-- Load Regulation Section -->
+  <g transform="translate(1250, 440)">
+    <rect x="0" y="0" width="1180" height="420" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#34d399" font-size="24" font-weight="800">CASE 2: LOAD REGULATION (Constant V_in, Variable R_L)</text>
+    <text x="30" y="80" fill="#e2e8f0" font-size="19">• Condition: Input voltage V_in is fixed. Load varies: R_L,min ≤ R_L ≤ R_L,max (or 0 ≤ I_L ≤ I_L,max).</text>
+    <text x="30" y="115" fill="#94a3b8" font-size="18">Constant Total Source Current: I_s = (V_in - V_Z) / R_s = constant = I_Z + I_L.</text>
+
+    <text x="30" y="160" fill="#38bdf8" font-size="20" font-weight="700">A. Minimum Load Resistance (R_L,min) / Maximum Load Current (I_L,max):</text>
+    <text x="50" y="195" fill="#e2e8f0" font-size="18">Occurs when load draws maximum current, starving Zener to minimum knee current I_Z,min:</text>
+    <text x="70" y="235" fill="#38bdf8" font-size="22" font-weight="800">I_L,max = I_s - I_Z,min   ⇒   R_L,min = V_Z / I_L,max = V_Z / (I_s - I_Z,min)</text>
+
+    <text x="30" y="280" fill="#fbbf24" font-size="20" font-weight="700">B. Maximum Load Resistance (R_L,max) / Minimum Load Current (I_L,min):</text>
+    <text x="50" y="315" fill="#e2e8f0" font-size="18">Occurs when load is detached (no load, R_L = ∞, I_L = 0) or draws minimum current; Zener absorbs peak current:</text>
+    <text x="70" y="355" fill="#fbbf24" font-size="22" font-weight="800">I_Z,peak = I_s - I_L,min ≤ I_Z,max   (If R_L = ∞, must ensure I_s ≤ I_Z,max)</text>
+    <text x="30" y="400" fill="#f43f5e" font-size="18" font-weight="700">★ Open-Circuit Load Trap: If load is disconnected, ALL source current flows through Zener: I_Z = I_s!</text>
+  </g>
+
+  <!-- Master Range Sizing of Series Resistor Rs -->
+  <g transform="translate(40, 890)">
+    <rect x="0" y="0" width="2390" height="430" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#c084fc" font-size="24" font-weight="800">CASE 3: COMBINED REGULATION — SIZING OF SERIES RESISTOR (R_s)</text>
+    <text x="30" y="80" fill="#e2e8f0" font-size="19">When BOTH input voltage varies (V_in,min to V_in,max) AND load varies (I_L,min to I_L,max), R_s must satisfy dual inequalities:</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1120" height="180" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="30" y="40" fill="#38bdf8" font-size="22" font-weight="800">UPPER BOUND: Maximum Allowable R_s (R_s,max)</text>
+      <text x="30" y="75" fill="#e2e8f0" font-size="18">Evaluated at WORST-CASE STARVATION: Lowest input voltage V_in,min AND Highest load current I_L,max:</text>
+      <text x="60" y="125" fill="#34d399" font-size="24" font-weight="800">R_s,max = (V_in,min - V_Z) / (I_Z,min + I_L,max)</text>
+      <text x="30" y="160" fill="#94a3b8" font-size="16">If R_s &gt; R_s,max, Zener falls out of breakdown and regulation fails at low supply.</text>
+    </g>
+
+    <g transform="translate(1200, 110)">
+      <rect x="0" y="0" width="1120" height="180" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+      <text x="30" y="40" fill="#f43f5e" font-size="22" font-weight="800">LOWER BOUND: Minimum Allowable R_s (R_s,min)</text>
+      <text x="30" y="75" fill="#e2e8f0" font-size="18">Evaluated at WORST-CASE OVERHEATING: Highest input voltage V_in,max AND Lowest load current I_L,min:</text>
+      <text x="60" y="125" fill="#f43f5e" font-size="24" font-weight="800">R_s,min = (V_in,max - V_Z) / (I_Z,max + I_L,min)</text>
+      <text x="30" y="160" fill="#94a3b8" font-size="16">If R_s &lt; R_s,min, Zener current exceeds I_Z,max and burns out thermally at high supply.</text>
+    </g>
+
+    <text x="40" y="335" fill="#fbbf24" font-size="22" font-weight="800">★ GOLDEN DESIGN WINDOW:  R_s,min ≤ R_s ≤ R_s,max</text>
+    <text x="40" y="375" fill="#e2e8f0" font-size="19">If calculations yield R_s,min &gt; R_s,max, NO single passive resistor can regulate the circuit across specified input/load extremes;</text>
+    <text x="40" y="405" fill="#38bdf8" font-size="19" font-weight="700">either a higher power-rated Zener diode (larger I_Z,max) or active feedback regulation must be employed.</text>
+  </g>
+</g>
+
+  </g>
+
+  <!-- Bottom Blueprint Metadata Footer -->
+  <g transform="translate(60, 2070)">
+    <line x1="0" y1="0" x2="3720" y2="0" stroke="#334155" stroke-width="1.5"/>
+    <text x="10" y="32" fill="#64748b" font-size="16" font-weight="600">ANALOG ELECTRONICS MASTER BLUEPRINT ENGINE • VERIFIED ACROSS 422 LECTURE SLIDES • ZERO-OMISSION TITAN SPECIFICATION</text>
+    <text x="3710" y="32" fill="#64748b" font-size="16" font-weight="600" text-anchor="end">PREPFUSION &amp; RAHUL SIR COMPREHENSIVE LECTURE SERIES ARCHITECTURE</text>
+  </g>
+</svg>

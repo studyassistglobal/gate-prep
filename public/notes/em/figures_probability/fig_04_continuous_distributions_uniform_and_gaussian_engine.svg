@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#220d35" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#150722" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <!-- HEADER -->
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="520" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="260" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 04</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">CONTINUOUS DISTRIBUTIONS: UNIFORM &amp; GAUSSIAN BELL ENGINE</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">Uniform Distribution U[a,b], Gaussian Distribution N(μ,σ²), Q-Function &amp; Error Functions (erf, erfc), and Piecewise Limiter Mixed RVs</text>
+  </g>
+
+  <!-- COLUMN 1: UNIFORM DISTRIBUTION U[a, b] -->
+  <g transform="translate(120, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. UNIFORM DISTRIBUTION U[a, b] CALCULUS</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#38bdf8" font-size="22" font-weight="700">PDF &amp; CDF Master Formulations</text>
+      <text x="25" y="80" fill="#f8fafc" font-size="18">f_X(x) = 1 / (b - a),   for a ≤ x ≤ b  (0 elsewhere)</text>
+      <text x="25" y="120" fill="#cbd5e1" font-size="18">CDF F_X(x): 0 (x &lt; a);  (x - a)/(b - a)  (a ≤ x ≤ b);  1 (x &gt; b). (Linear ramp).</text>
+      <text x="25" y="160" fill="#fbbf24" font-size="18">• Mean (Center of Mass): E[X] = (a + b) / 2.</text>
+      <text x="25" y="195" fill="#34d399" font-size="18">• Mean Square Value: E[X²] = (a² + b² + ab) / 3.</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">Variance &amp; Symmetric Distribution</text>
+      <text x="50" y="90" fill="#fbbf24" font-size="24" font-weight="800">Var(X) = σ_X² = (b - a)² / 12   ⟹   σ_X = (b - a) / √12</text>
+      <text x="25" y="140" fill="#f8fafc" font-size="18">Symmetric Uniform: X ~ U[-α, α] (Centered at origin, base width 2α):</text>
+      <text x="50" y="175" fill="#38bdf8" font-size="20" font-weight="700">E[X] = 0,   Var(X) = (2α)² / 12 = α² / 3,   E[X²] = α² / 3</text>
+      <text x="25" y="210" fill="#94a3b8" font-size="16">Drill: U[-2, 3] ⟹ Base = 5 ⟹ Mean = 0.5, Var = 25/12, MSV = 28/12.</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1050" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#c084fc" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#c084fc" font-size="22" font-weight="700">Linear Scaling of Uniform RV</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">If X ~ U[a, b] and Y = cX + d:</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">Y remains STRICTLY Uniform over [ca + d, cb + d] (for c &gt; 0).</text>
+      <text x="25" y="150" fill="#38bdf8" font-size="18">f_Y(y) = 1 / [c(b - a)]. Shape is strictly invariant under affine mappings.</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: GAUSSIAN BELL CURVE & PROPERTIES -->
+  <g transform="translate(1300, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#60a5fa"/>
+    <text x="45" y="45" fill="#60a5fa" font-size="28" font-weight="700">2. GAUSSIAN / NORMAL DISTRIBUTION N(μ, σ²)</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#60a5fa" font-size="22" font-weight="700">Probability Density Function &amp; Geometry</text>
+      <text x="50" y="85" fill="#38bdf8" font-size="22" font-weight="700">f_X(x) = [ 1 / (√(2π) σ) ] · exp( - (x - μ)² / (2σ²) ),   -∞ &lt; x &lt; ∞</text>
+      <text x="25" y="130" fill="#f8fafc" font-size="18">• Symmetric bell curve about mean x = μ. Peak height = 1 / (√(2π) σ).</text>
+      <text x="25" y="165" fill="#fbbf24" font-size="18">• Inflection Points: Exactly at x = μ ± σ (second derivative changes sign!).</text>
+      <text x="25" y="200" fill="#34d399" font-size="18">• Half-Areas: ∫_{μ}^∞ f(x) dx = ∫_{-∞}^μ f(x) dx = 1/2 = 0.50.</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">Standard Normal Z &amp; Linear Transforms</text>
+      <text x="25" y="80" fill="#f8fafc" font-size="18">Standard Normal Variable: Z = (X - μ) / σ ~ N(0, 1).</text>
+      <text x="50" y="120" fill="#34d399" font-size="20" font-weight="700">f_Z(z) = (1 / √(2π)) · exp( - z² / 2 )</text>
+      <text x="25" y="160" fill="#c084fc" font-size="18">MASTER THEOREM: If X ~ N(μ_X, σ_X²) and Y = aX + b:</text>
+      <text x="50" y="195" fill="#c084fc" font-size="20" font-weight="700">Y is strictly Gaussian: Y ~ N(a μ_X + b,  a² σ_X²)</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1050" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#f43f5e" font-size="22" font-weight="700">Gaussian Integral Kernels (Pre-requisites)</text>
+      <text x="25" y="75" fill="#f8fafc" font-size="18">∫₋∞^∞ exp(-x²) dx = √π,   ∫₀^∞ exp(-x²) dx = √π / 2</text>
+      <text x="25" y="115" fill="#38bdf8" font-size="18">∫₋∞^∞ exp(-x² / 2) dx = √(2π),   ∫₋∞^∞ exp(-a x²) dx = √(π / a)</text>
+      <text x="25" y="150" fill="#94a3b8" font-size="16">Scaling: ∫₋∞^∞ f(t/a) dt = a ∫₋∞^∞ f(α) dα.</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: Q-FUNCTION & GATE 2023 PIECEWISE LIMITER -->
+  <g transform="translate(2480, 310)">
+    <rect x="0" y="0" width="1240" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1240" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">3. Q-FUNCTION &amp; PIECEWISE LIMITER MIXED RV</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1150" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">The Gaussian Q-Function &amp; Error Functions</text>
+      <text x="50" y="85" fill="#38bdf8" font-size="22" font-weight="700">Q(x) = (1 / √(2π)) · ∫_x^∞ exp( - t² / 2 ) dt   (Standard Normal Tail Area)</text>
+      <text x="25" y="125" fill="#f8fafc" font-size="18">• Key Values: Q(-∞) = 1,  Q(0) = 1/2 = 0.5,  Q(+∞) = 0.</text>
+      <text x="25" y="160" fill="#fbbf24" font-size="18">• Fundamental Symmetry: Q(x) + Q(-x) = 1  ⟹  Q(-x) = 1 - Q(x).</text>
+      <text x="25" y="195" fill="#34d399" font-size="17">• Bridge: Q(x) = (1/2) erfc(x / √2) = (1/2) [1 - erf(x / √2)]. erfc(x) = 2 Q(√2 x).</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1150" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#c084fc" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#c084fc" font-size="22" font-weight="700">Probabilities via Q-Function &amp; Empirical Rule</text>
+      <text x="25" y="80" fill="#f8fafc" font-size="18">• P(X &gt; a) = Q( (a - μ) / σ )</text>
+      <text x="25" y="115" fill="#f8fafc" font-size="18">• P(X ≤ a) = 1 - Q( (a - μ) / σ ) = Q( (μ - a) / σ )</text>
+      <text x="25" y="150" fill="#38bdf8" font-size="18">• P(a &lt; X ≤ b) = Q( (a - μ) / σ ) - Q( (b - μ) / σ )</text>
+      <text x="25" y="190" fill="#34d399" font-size="18">The 68-95-99.7 Empirical Rule: P(|X - μ| &lt; kσ) = 1 - 2 Q(k):</text>
+      <text x="50" y="215" fill="#94a3b8" font-size="16">k=1: 68.26% | k=2: 95.44% | k=3: 99.74% of total population.</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1150" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#f43f5e" font-size="22" font-weight="700">GATE 2023 EC/EE Piecewise Limiter Mixed RV</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">X ~ N(0, 1) passes through non-linear limiter Y = h(X):</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">Flat zone |X| &lt; 1 (Y=0) ⟹ Impulse b δ(y), where b = Q(-1) - Q(1) = 1 - 2Q(1).</text>
+      <text x="25" y="145" fill="#f43f5e" font-size="18">Saturation at ±1 ⟹ Impulses a δ(y+1) + c δ(y-1), where a = c = Q(2).</text>
+      <text x="25" y="175" fill="#fbbf24" font-size="16">Output PDF: f_Y(y) = a δ(y+1) + b δ(y) + c δ(y-1) + g(y) (Mixed Continuous-Discrete!).</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM FULL-WIDTH: GAUSSIAN INTEGRAL KERNELS & PROBABILITY CALCULATION WORKFLOW -->
+  <g transform="translate(120, 1180)">
+    <rect x="0" y="0" width="3600" height="900" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="3600" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">4. GAUSSIAN &amp; UNIFORM SOLVER PIPELINE: OPTION CONVERSIONS &amp; STEP-BY-STEP RECIPES</text>
+
+    <!-- 3 Flow Panels -->
+    <g transform="translate(50, 110)">
+      <rect x="0" y="0" width="1120" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1120" height="55" rx="16" fill="#0284c7" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#38bdf8" font-size="22" font-weight="700">PHASE 1: UNIFORM DISTRIBUTION RAPID SOLVER</text>
+      <text x="30" y="95" fill="#f8fafc" font-size="18">1. Given X ~ U[a, b]. Identify support width W = b - a.</text>
+      <text x="30" y="140" fill="#cbd5e1" font-size="17">2. Height of PDF: H = 1 / W = 1 / (b - a).</text>
+      <text x="30" y="180" fill="#cbd5e1" font-size="17">3. Mean = (a + b) / 2 (Midpoint of interval).</text>
+      <text x="30" y="220" fill="#cbd5e1" font-size="17">4. Variance = W² / 12 = (b - a)² / 12.</text>
+      <text x="30" y="260" fill="#cbd5e1" font-size="17">5. Standard Deviation = W / √12 = (b - a) / (2√3).</text>
+      <text x="30" y="310" fill="#fbbf24" font-size="18" font-weight="700">Interval Probability in 5 Seconds:</text>
+      <text x="60" y="350" fill="#38bdf8" font-size="20" font-weight="700">P(x₁ ≤ X ≤ x₂) = (x₂ - x₁) / (b - a)   (for [x₁, x₂] ⊆ [a, b])</text>
+      <text x="30" y="410" fill="#f8fafc" font-size="18">6. Sum of Two Independent Uniform RVs:</text>
+      <text x="60" y="445" fill="#cbd5e1" font-size="17">X ~ U[-a, a] + Y ~ U[-a, a] ⟹ Triangular PDF on [-2a, 2a].</text>
+      <text x="60" y="480" fill="#cbd5e1" font-size="17">X ~ U[-a, a] + Y ~ U[-b, b] (a ≠ b) ⟹ Trapezoidal PDF.</text>
+      <text x="30" y="550" fill="#f43f5e" font-size="18" font-weight="700">EXAM TRAP: Var(X) depends ONLY on width (b - a), NOT on position!</text>
+      <text x="60" y="585" fill="#94a3b8" font-size="16">U[100, 104] has identical variance to U[0, 4]: Var = 4² / 12 = 16/12 = 4/3.</text>
+    </g>
+
+    <g transform="translate(1220, 110)">
+      <rect x="0" y="0" width="1120" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#60a5fa" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1120" height="55" rx="16" fill="#2563eb" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#60a5fa" font-size="22" font-weight="700">PHASE 2: GAUSSIAN Q-FUNCTION STANDARDIZATION</text>
+      <text x="30" y="95" fill="#f8fafc" font-size="18">Step 1: Standardize argument to Z-score:</text>
+      <text x="60" y="135" fill="#38bdf8" font-size="22" font-weight="700">z = (x - μ) / σ</text>
+      <text x="30" y="185" fill="#f8fafc" font-size="18">Step 2: Map to Tail Probability:</text>
+      <text x="60" y="220" fill="#cbd5e1" font-size="17">Right Tail: P(X &gt; x) = Q(z)</text>
+      <text x="60" y="255" fill="#cbd5e1" font-size="17">Left Tail: P(X &lt; x) = 1 - Q(z) = Q(-z)</text>
+      <text x="60" y="290" fill="#cbd5e1" font-size="17">Between: P(x₁ &lt; X &lt; x₂) = Q(z₁) - Q(z₂)</text>
+      <text x="30" y="350" fill="#fbbf24" font-size="18" font-weight="700">Step 3: Handle Negative Z-Scores via Symmetry:</text>
+      <text x="60" y="390" fill="#34d399" font-size="20" font-weight="700">Q(-z) = 1 - Q(z)   (NEVER leave negative arguments!)</text>
+      <text x="30" y="450" fill="#c084fc" font-size="18" font-weight="700">Option Elimination Shortcut (When tables are absent):</text>
+      <text x="60" y="485" fill="#cbd5e1" font-size="17">Since Q(x) is strictly decreasing with Q(0) = 0.5:</text>
+      <text x="60" y="520" fill="#f8fafc" font-size="17">• If z &gt; 0 ⟹ Q(z) &lt; 0.50 (Instantly eliminate options &gt; 0.5!)</text>
+      <text x="60" y="555" fill="#f8fafc" font-size="17">• If z &lt; 0 ⟹ Q(z) &gt; 0.50 (Instantly eliminate options &lt; 0.5!)</text>
+      <text x="30" y="630" fill="#34d399" font-size="18" font-weight="700">Linear Gaussian Stability: aX + bY is strictly Gaussian if X, Y jointly Gaussian.</text>
+    </g>
+
+    <g transform="translate(2390, 110)">
+      <rect x="0" y="0" width="1150" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1150" height="55" rx="16" fill="#059669" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#34d399" font-size="22" font-weight="700">PHASE 3: ERROR FUNCTION BRIDGE &amp; OPTION CONVERSIONS</text>
+      <text x="30" y="95" fill="#f8fafc" font-size="18">Error Function Definitions:</text>
+      <text x="60" y="135" fill="#38bdf8" font-size="20" font-weight="700">erf(x) = (2 / √π) · ∫₀ˣ exp(-t²) dt</text>
+      <text x="60" y="175" fill="#38bdf8" font-size="20" font-weight="700">erfc(x) = 1 - erf(x) = (2 / √π) · ∫_x^∞ exp(-t²) dt</text>
+      <text x="30" y="235" fill="#fbbf24" font-size="18" font-weight="700">The Universal Conversion Dictionary:</text>
+      <text x="60" y="275" fill="#34d399" font-size="20" font-weight="700">Q(x) = (1/2) erfc(x / √2) = (1/2) [ 1 - erf(x / √2) ]</text>
+      <text x="60" y="315" fill="#34d399" font-size="20" font-weight="700">erfc(x) = 2 Q(√2 x)</text>
+      <text x="60" y="355" fill="#34d399" font-size="20" font-weight="700">erf(x) = 1 - 2 Q(√2 x)</text>
+      <text x="30" y="420" fill="#c084fc" font-size="18" font-weight="700">Alternative Definition P(x) = ∫₀ˣ exp(-t²) dt:</text>
+      <text x="60" y="460" fill="#f8fafc" font-size="18">If examiner defines P(x) without (2/√π) constant:</text>
+      <text x="60" y="500" fill="#c084fc" font-size="20" font-weight="700">Q(x) = 1/2 - (1 / √π) P(x / √2)</text>
+      <text x="30" y="570" fill="#f43f5e" font-size="18" font-weight="700">GATE EC PYQ Drill: Express Q(0.4) in terms of P(x):</text>
+      <text x="60" y="610" fill="#f8fafc" font-size="18">x = 0.4 ⟹ x / √2 = 0.4 / 1.414 = 0.283</text>
+      <text x="60" y="645" fill="#38bdf8" font-size="18" font-weight="700">Q(0.4) = 1/2 - (1 / √π) P(0.283)   (Instant match with Option A!)</text>
+    </g>
+  </g>
+</svg>

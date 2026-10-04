@@ -19,7 +19,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_basics/fig_01_lumped_matter_abstraction_and_tellegen_power_engine.jpg",
+     "src": "/notes/nt/figures_network_basics/fig_01_lumped_matter_abstraction_and_tellegen_power_engine.svg",
      "alt": "Fig 01 \u2014 Lumped-Matter Abstraction & Tellegen Power Conservation Engine"
     },
     {
@@ -28,7 +28,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_basics/fig_02_canonical_rlc_elements_and_dependent_sources_architecture.jpg",
+     "src": "/notes/nt/figures_network_basics/fig_02_canonical_rlc_elements_and_dependent_sources_architecture.svg",
      "alt": "Fig 02 \u2014 Canonical RLC Elements & Controlled Sources Architecture"
     },
     {
@@ -37,7 +37,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_basics/fig_03_graph_theory_topological_matrices_and_tellegen_proof_engine.jpg",
+     "src": "/notes/nt/figures_network_basics/fig_03_graph_theory_topological_matrices_and_tellegen_proof_engine.svg",
      "alt": "Fig 03 \u2014 Graph Theory, Topological Matrices & Tellegen Proof Engine"
     },
     {
@@ -46,7 +46,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_basics/fig_04_systematic_nodal_and_mesh_analysis_and_supernode_supermesh_architecture.jpg",
+     "src": "/notes/nt/figures_network_basics/fig_04_systematic_nodal_and_mesh_analysis_and_supernode_supermesh_architecture.svg",
      "alt": "Fig 04 \u2014 Systematic Nodal / Mesh & Supernode / Supermesh Architecture"
     },
     {
@@ -55,7 +55,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_basics/fig_05_network_reduction_and_equivalence_transformations_engine.jpg",
+     "src": "/notes/nt/figures_network_basics/fig_05_network_reduction_and_equivalence_transformations_engine.svg",
      "alt": "Fig 05 \u2014 Network Reduction & Equivalence Transformations Engine"
     },
     {
@@ -64,7 +64,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_basics/fig_06_high_order_network_symmetries_and_polyhedral_cubes_architecture.jpg",
+     "src": "/notes/nt/figures_network_basics/fig_06_high_order_network_symmetries_and_polyhedral_cubes_architecture.svg",
      "alt": "Fig 06 \u2014 High-Order Network Symmetries & Polyhedral Cubes Architecture"
     },
     {
@@ -73,7 +73,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/nt/figures_network_basics/fig_07_incandescent_bulb_networks_and_instrument_loading_decision_engine.jpg",
+     "src": "/notes/nt/figures_network_basics/fig_07_incandescent_bulb_networks_and_instrument_loading_decision_engine.svg",
      "alt": "Fig 07 \u2014 Incandescent Bulb Networks & Instrument Loading Decision Engine"
     },
     {

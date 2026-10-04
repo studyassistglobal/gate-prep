@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#220d35" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#150722" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <!-- HEADER -->
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="520" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="260" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 06</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">DISCRETE MODELS &amp; LIFETIME DISTRIBUTIONS ENGINE</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">Binomial B(n,p), Poisson P(λ), Poisson Limit Theorem, Exponential Distribution &amp; Memoryless Lifetime Systems</text>
+  </g>
+
+  <!-- COLUMN 1: BINOMIAL DISTRIBUTION B(n, p) -->
+  <g transform="translate(120, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. BINOMIAL DISTRIBUTION B(n, p)</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#38bdf8" font-size="22" font-weight="700">Bernoulli Trials &amp; PMF Formulation</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">n independent trials, constant success prob p, failure prob q = 1 - p:</text>
+      <text x="50" y="125" fill="#38bdf8" font-size="24" font-weight="800">P(X = r) = ⁿCᵣ · pʳ · qⁿ⁻ʳ,   for r = 0, 1, 2, ..., n</text>
+      <text x="25" y="170" fill="#f8fafc" font-size="18">Combinatorial Factor ⁿCᵣ: Accounts for all distinguishable sequences with r successes.</text>
+      <text x="25" y="205" fill="#34d399" font-size="17">Total Probability: ∑_{r=0}^n ⁿCᵣ pʳ qⁿ⁻ʳ = (p + q)ⁿ = 1ⁿ = 1.000.</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">Axiomatic Moments &amp; The Golden Signature</text>
+      <text x="25" y="80" fill="#f8fafc" font-size="18">• Mean: E[X] = μ = n p</text>
+      <text x="25" y="115" fill="#f8fafc" font-size="18">• Variance: Var(X) = σ² = n p q   ⟹   Standard Deviation σ = √(n p q)</text>
+      <text x="25" y="160" fill="#fbbf24" font-size="22" font-weight="800">THE BINOMIAL SIGNATURE: Mean &gt; Variance ALWAYS</text>
+      <text x="25" y="200" fill="#cbd5e1" font-size="17">Proof: Since 0 &lt; q &lt; 1 ⟹ Var(X) = n p q &lt; n p = Mean. Strict inequality!</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1050" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#c084fc" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#c084fc" font-size="22" font-weight="700">Inverse Parameter Recovery Drill</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">Given Mean = 4.8, S.D. = 1.386 (Variance ≈ 1.92):</text>
+      <text x="50" y="115" fill="#f8fafc" font-size="18">q = Var / Mean = 1.92 / 4.8 = 0.4 ⟹ p = 1 - 0.4 = 0.6 ⟹ n = 4.8 / 0.6 = 8.</text>
+      <text x="25" y="155" fill="#34d399" font-size="18" font-weight="700">Distribution is B(8, 0.6). Parameter recovered in 3 lines!</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: POISSON DISTRIBUTION P(λ) -->
+  <g transform="translate(1300, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#60a5fa"/>
+    <text x="45" y="45" fill="#60a5fa" font-size="28" font-weight="700">2. POISSON DISTRIBUTION P(λ) &amp; LIMIT THEOREM</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#60a5fa" font-size="22" font-weight="700">The Law of Rare Events PMF</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">Discrete count of rare events in a fixed time/space interval:</text>
+      <text x="50" y="125" fill="#38bdf8" font-size="24" font-weight="800">P(X = r) = [ e^{-λ} · λʳ ] / r!,   for r = 0, 1, 2, ...</text>
+      <text x="25" y="170" fill="#f8fafc" font-size="18">Normalization: ∑_{r=0}^∞ (e^{-λ} λʳ / r!) = e^{-λ} ∑ (λʳ / r!) = e^{-λ} e^λ = 1.</text>
+      <text x="25" y="205" fill="#34d399" font-size="17">• Parameter λ &gt; 0 represents average rate / intensity.</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">Axiomatic Moments &amp; The Poisson Signature</text>
+      <text x="25" y="80" fill="#f8fafc" font-size="18">• Mean: E[X] = μ = λ</text>
+      <text x="25" y="115" fill="#f8fafc" font-size="18">• Variance: Var(X) = σ² = λ   ⟹   Standard Deviation σ = √λ</text>
+      <text x="25" y="160" fill="#34d399" font-size="22" font-weight="800">THE POISSON SIGNATURE: Mean = Variance = λ</text>
+      <text x="25" y="200" fill="#cbd5e1" font-size="17">Unique identifier: If problem states "Mean equals Variance", distribution is POISSON!</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1050" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#fbbf24" font-size="22" font-weight="700">Poisson Limit Theorem (Binomial Approximation)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">As n → ∞ and p → 0 such that λ = np remains constant:</text>
+      <text x="50" y="115" fill="#f8fafc" font-size="18">lim_{n→∞} ⁿCᵣ pʳ qⁿ⁻ʳ = (e^{-λ} λʳ) / r!</text>
+      <text x="25" y="150" fill="#38bdf8" font-size="17">Benchmark (20 chips, p=1/400): Binomial=0.04768, Poisson=0.04756 (Error &lt; 0.25%!).</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: EXPONENTIAL DISTRIBUTION & MEMORYLESS LIFETIME -->
+  <g transform="translate(2480, 310)">
+    <rect x="0" y="0" width="1240" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1240" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">3. EXPONENTIAL DISTRIBUTION &amp; MEMORYLESS LIFETIME</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1150" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">Continuous Inter-Arrival Time Formulation</text>
+      <text x="50" y="85" fill="#38bdf8" font-size="22" font-weight="700">f_X(x) = α · e^{-α x},   for x ≥ 0   (α = event rate)</text>
+      <text x="25" y="125" fill="#f8fafc" font-size="18">• Cumulative Distribution Function: F_X(x) = 1 - e^{-α x},  for x ≥ 0.</text>
+      <text x="50" y="165" fill="#fbbf24" font-size="20" font-weight="700">P(x₁ ≤ X ≤ x₂) = e^{-α x₁} - e^{-α x₂}   (Instant tail subtraction!)</text>
+      <text x="25" y="200" fill="#cbd5e1" font-size="17">• Mean = 1 / α (average waiting time),  Var(X) = 1 / α² ⟹ σ = 1 / α (Mean = S.D.!).</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1150" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#c084fc" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#c084fc" font-size="22" font-weight="700">The Memoryless Property (Markovian Signature)</text>
+      <text x="50" y="90" fill="#c084fc" font-size="22" font-weight="800">P(X &gt; s + t | X &gt; s) = P(X &gt; t)</text>
+      <text x="25" y="140" fill="#cbd5e1" font-size="18">Proof via Conditional Probability:</text>
+      <text x="50" y="175" fill="#f8fafc" font-size="18">P(X &gt; s + t | X &gt; s) = P(X &gt; s + t) / P(X &gt; s) = e^{-α(s+t)} / e^{-α s} = e^{-α t} = P(X &gt; t).</text>
+      <text x="25" y="210" fill="#34d399" font-size="16">Physical Meaning: Component does NOT age! Past survival time s provides zero wear information.</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1150" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#f43f5e" font-size="22" font-weight="700">Poisson-Exponential Bridge (Counting vs Waiting)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">• Poisson answers: "HOW MANY events occur in fixed duration T?" (Discrete count).</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">• Exponential answers: "HOW LONG until the NEXT event occurs?" (Continuous time).</text>
+      <text x="25" y="145" fill="#38bdf8" font-size="18">Rate Scaling Rule: In duration Δt, Poisson parameter is λ = α · Δt.</text>
+      <text x="25" y="175" fill="#fbbf24" font-size="16">Airport landings: 8/hour ⟹ in 15 min, λ = (8/60) × 15 = 2. Never use λ=8!</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM FULL-WIDTH: PARAMETRIC COMPARISON MATRIX & REAL-WORLD QUEUING -->
+  <g transform="translate(120, 1180)">
+    <rect x="0" y="0" width="3600" height="900" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="3600" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">4. MASTER DISTRIBUTION ARCHITECTURE: BINOMIAL vs POISSON vs EXPONENTIAL</text>
+
+    <!-- Master Comparative Table -->
+    <g transform="translate(50, 110)">
+      <rect x="0" y="0" width="1700" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1700" height="55" rx="16" fill="#0284c7" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#38bdf8" font-size="22" font-weight="700">COMPARATIVE MATHEMATICAL BLUEPRINT</text>
+
+      <g transform="translate(30, 80)">
+        <rect x="0" y="0" width="1640" height="610" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <text x="25" y="40" fill="#fbbf24" font-size="18" font-weight="700">Distribution Feature</text>
+        <text x="380" y="40" fill="#fbbf24" font-size="18" font-weight="700">Binomial B(n, p)</text>
+        <text x="800" y="40" fill="#fbbf24" font-size="18" font-weight="700">Poisson P(λ)</text>
+        <text x="1220" y="40" fill="#fbbf24" font-size="18" font-weight="700">Exponential Exp(α)</text>
+
+        <line x1="25" y1="55" x2="1615" y2="55" stroke="#334155" stroke-width="1.5"/>
+
+        <text x="25" y="95" fill="#f8fafc" font-size="17">Random Variable Type</text>
+        <text x="380" y="95" fill="#cbd5e1" font-size="17">Discrete (r ∈ {0, 1, ..., n})</text>
+        <text x="800" y="95" fill="#cbd5e1" font-size="17">Discrete (r ∈ {0, 1, 2, ...})</text>
+        <text x="1220" y="95" fill="#cbd5e1" font-size="17">Continuous (x ∈ [0, ∞))</text>
+
+        <text x="25" y="155" fill="#f8fafc" font-size="17">PMF / PDF Formula</text>
+        <text x="380" y="155" fill="#38bdf8" font-size="17">ⁿCᵣ pʳ qⁿ⁻ʳ</text>
+        <text x="800" y="155" fill="#38bdf8" font-size="17">(e^{-λ} λʳ) / r!</text>
+        <text x="1220" y="155" fill="#38bdf8" font-size="17">α e^{-α x} u(x)</text>
+
+        <text x="25" y="215" fill="#f8fafc" font-size="17">Mean E[X]</text>
+        <text x="380" y="215" fill="#34d399" font-size="17">n p</text>
+        <text x="800" y="215" fill="#34d399" font-size="17">λ</text>
+        <text x="1220" y="215" fill="#34d399" font-size="17">1 / α</text>
+
+        <text x="25" y="275" fill="#f8fafc" font-size="17">Variance Var(X)</text>
+        <text x="380" y="275" fill="#34d399" font-size="17">n p q</text>
+        <text x="800" y="275" fill="#34d399" font-size="17">λ</text>
+        <text x="1220" y="275" fill="#34d399" font-size="17">1 / α²</text>
+
+        <text x="25" y="335" fill="#f8fafc" font-size="17">Mean vs Variance Relation</text>
+        <text x="380" y="335" fill="#fbbf24" font-size="17">Mean &gt; Variance (ALWAYS)</text>
+        <text x="800" y="335" fill="#fbbf24" font-size="17">Mean = Variance (ALWAYS)</text>
+        <text x="1220" y="335" fill="#fbbf24" font-size="17">Mean = S.D. = 1/α</text>
+
+        <text x="25" y="395" fill="#f8fafc" font-size="17">Parameters</text>
+        <text x="380" y="395" fill="#cbd5e1" font-size="17">Two: n (trials), p (prob)</text>
+        <text x="800" y="395" fill="#cbd5e1" font-size="17">One: λ &gt; 0 (rate)</text>
+        <text x="1220" y="395" fill="#cbd5e1" font-size="17">One: α &gt; 0 (rate)</text>
+
+        <text x="25" y="455" fill="#f8fafc" font-size="17">Cumulative Function (CDF)</text>
+        <text x="380" y="455" fill="#cbd5e1" font-size="17">∑_{k=0}^r ⁿCₖ pᵏ qⁿ⁻ᵏ</text>
+        <text x="800" y="455" fill="#cbd5e1" font-size="17">∑_{k=0}^r (e^{-λ} λᵏ)/k!</text>
+        <text x="1220" y="455" fill="#cbd5e1" font-size="17">1 - e^{-α x}</text>
+
+        <text x="25" y="515" fill="#f8fafc" font-size="17">Mode</text>
+        <text x="380" y="515" fill="#cbd5e1" font-size="17">⌊(n+1)p⌋</text>
+        <text x="800" y="515" fill="#cbd5e1" font-size="17">⌊λ⌋ (if non-int) or λ-1, λ</text>
+        <text x="1220" y="515" fill="#cbd5e1" font-size="17">x = 0 (Monotonic decay)</text>
+
+        <text x="25" y="575" fill="#f43f5e" font-size="17" font-weight="700">Special Property</text>
+        <text x="380" y="575" fill="#f43f5e" font-size="16">Bernoulli sum</text>
+        <text x="800" y="575" fill="#f43f5e" font-size="16">Additive: P(λ₁) + P(λ₂) = P(λ₁+λ₂)</text>
+        <text x="1220" y="575" fill="#f43f5e" font-size="16">Memoryless: P(X&gt;s+t|X&gt;s)=P(X&gt;t)</text>
+      </g>
+    </g>
+
+    <!-- Queuing Systems & Fleet Operations -->
+    <g transform="translate(1800, 110)">
+      <rect x="0" y="0" width="1750" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1750" height="55" rx="16" fill="#059669" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#34d399" font-size="22" font-weight="700">REAL-WORLD QUEUING &amp; CAPACITY DENIAL CALCULATIONS</text>
+
+      <g transform="translate(30, 80)">
+        <rect x="0" y="0" width="1690" height="180" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.2"/>
+        <text x="25" y="38" fill="#34d399" font-size="22" font-weight="700">Supermarket Billing Counter / Customer Care Waiting</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="18">Arrival rate = 24 customers / hour ⟹ α = 24/60 = 0.4 / min. Average inter-arrival time E[X] = 1/α = 2.5 min.</text>
+        <text x="25" y="110" fill="#f8fafc" font-size="18">P(Inter-arrival duration between 2 and 5 min) = ∫₂⁵ 0.4 e^{-0.4 x} dx = e^{-0.4(2)} - e^{-0.4(5)} = e^{-0.8} - e^{-2.0}</text>
+        <text x="50" y="150" fill="#38bdf8" font-size="20" font-weight="700">= 0.44933 - 0.13534 = 0.31399 ≈ 31.40%</text>
+      </g>
+
+      <g transform="translate(30, 280)">
+        <rect x="0" y="0" width="1690" height="410" rx="10" fill="#0f172a" stroke="#d97706" stroke-width="1.2"/>
+        <text x="25" y="38" fill="#fbbf24" font-size="22" font-weight="700">3-Bicycle Rental Fleet Model (Slides 443–445)</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="18">Fleet capacity c = 3 bicycles. Daily demand X ~ Poisson(λ = 2). 365 operating days / year.</text>
+        <text x="25" y="115" fill="#f8fafc" font-size="18">Case A: Days with ZERO bicycle rentals (X = 0):</text>
+        <text x="50" y="150" fill="#38bdf8" font-size="18">P(X = 0) = e⁻² ≈ 0.135335 ⟹ Annual days = 365 × 0.135335 = 49.39 ≈ 49.4 days.</text>
+        <text x="25" y="195" fill="#f8fafc" font-size="18">Case B: Days where Demand EXCEEDS Fleet Capacity (Service Denial X &gt; 3):</text>
+        <text x="50" y="230" fill="#f43f5e" font-size="18">P(X &gt; 3) = 1 - P(X ≤ 3) = 1 - e⁻² [ 1 + 2 + 2²/2! + 2³/3! ] = 1 - e⁻² [ 1 + 2 + 2 + 8/6 ]</text>
+        <text x="50" y="265" fill="#f43f5e" font-size="20" font-weight="700">= 1 - e⁻² [ 19 / 3 ] = 1 - (0.135335 × 6.3333) = 1 - 0.85712 = 0.14288</text>
+        <text x="50" y="305" fill="#34d399" font-size="20" font-weight="700">Annual Denial Days = 365 × 0.14288 = 52.14 ≈ 52 days / year!</text>
+        <text x="25" y="355" fill="#fbbf24" font-size="17">Examiner Trap: P(X &gt; 3) excludes 3! Demand = 3 is fully served by the 3 bicycles.</text>
+        <text x="25" y="385" fill="#94a3b8" font-size="16">Complementary approach 1 - ∑_{k=0}^3 evaluates 4 terms instead of infinite tail!</text>
+      </g>
+    </g>
+  </g>
+</svg>

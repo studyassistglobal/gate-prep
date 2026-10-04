@@ -1,0 +1,331 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.4" opacity="0.6" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowEmerald" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="cardShadow" x="-10%" y="-5%" width="120%" height="115%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+    </defs>
+
+    <style>
+        .font-mono { font-family: 'Consolas', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+        .font-sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+    </style>
+
+    <!-- Deep Blueprint Background -->
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Outer Architectural Frame -->
+    <rect x="40" y="40" width="3760" height="2080" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+    <rect x="48" y="48" width="3744" height="2064" fill="none" stroke="#1e293b" stroke-width="1" rx="12" />
+
+    <!-- Corner Alignment Reticles -->
+    <path d="M 40 80 L 80 80 L 80 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 80 L 3760 80 L 3760 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 40 2080 L 80 2080 L 80 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 2080 L 3760 2080 L 3760 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Top Master Header Banner -->
+    <g transform="translate(80, 80)">
+        <rect x="0" y="0" width="3680" height="150" fill="#0b1329" fill-opacity="0.85" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="12" height="150" fill="url(#headerGrad)" rx="4" />
+        
+        <!-- Blueprint Title & Subtitle -->
+        <text x="50" y="62" fill="url(#headerGrad)" font-size="44" font-weight="900" letter-spacing="2px" class="font-sans">FIGURE 5: PARTICULAR INTEGRAL OPERATOR CALCULUS &amp; VARIATION OF PARAMETERS ENGINE</text>
+        <text x="50" y="112" fill="#94a3b8" font-size="24" font-weight="500" letter-spacing="0.5px" class="font-sans">Inverse Operator 1/f(D), The 5 Canonical Shortcut Rules, Failure Differentiation &amp; Wronskian Variation of Parameters</text>
+
+        <!-- Technical Telemetry Badge -->
+        <g transform="translate(3220, 30)">
+            <rect x="0" y="0" width="410" height="90" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <circle cx="30" cy="45" r="8" fill="#10b981" filter="url(#glowEmerald)" />
+            <text x="52" y="38" fill="#e2e8f0" font-size="16" font-weight="700" class="font-mono">GATE 2027 TITANS ENGINE</text>
+            <text x="52" y="65" fill="#38bdf8" font-size="14" font-weight="600" class="font-mono">SPEC: ULTRA-HD 4K BLUEPRINT</text>
+        </g>
+    </g>
+
+    <!-- Canvas Inner Content -->
+    
+    <!-- ZONE 1: INVERSE OPERATOR & SHORTCUT CASES 1, 2, 3 -->
+    <g transform="translate(80, 260)">
+        <rect width="1180" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#cyanGrad)" rx="4" />
+        <text x="36" y="52" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">1. OPERATOR SHORTCUTS: e^(ax), sin(ax)/cos(ax), xᵐ</text>
+        <line x1="36" y1="72" x2="1140" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- Inverse Operator Definition -->
+        <g transform="translate(36, 95)">
+            <rect width="1100" height="150" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="32" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">INVERSE OPERATOR DEFINITION: y_p = [ 1 / f(D) ] X(x)</text>
+            <text x="24" y="62" fill="#e2e8f0" font-size="16" class="font-sans">Definition: [1/f(D)] X is that function y_p which when operated upon by f(D) gives X.</text>
+            <rect x="24" y="75" width="1050" height="55" fill="#1e293b" rx="6" />
+            <text x="44" y="110" fill="#34d399" font-size="19" font-weight="900" class="font-mono">f(D) [ (1 / f(D)) X ] = X(x)</text>
+        </g>
+
+        <!-- Case 1: e^(ax) -->
+        <g transform="translate(36, 265)">
+            <rect width="1100" height="180" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="32" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">CASE 1: X = e^(ax) ⟹ REPLACE D BY a</text>
+            <rect x="24" y="45" width="1050" height="55" fill="#1e293b" rx="6" />
+            <text x="44" y="80" fill="#38bdf8" font-size="19" font-weight="800" class="font-mono">PI = [ 1 / f(D) ] e^(ax) = [ 1 / f(a) ] e^(ax)   (if f(a) ≠ 0)</text>
+            
+            <text x="24" y="125" fill="#f43f5e" font-size="16" font-weight="700" class="font-sans">FAILURE CASE (f(a) = 0): Multiply by x and differentiate denominator!</text>
+            <text x="24" y="155" fill="#34d399" font-size="17" font-weight="800" class="font-mono">PI = x · [ 1 / f'(a) ] e^(ax).  If f'(a) = 0 ⟹ PI = x² · [ 1 / f''(a) ] e^(ax).</text>
+        </g>
+
+        <!-- Case 2: sin(ax) or cos(ax) -->
+        <g transform="translate(36, 465)">
+            <rect width="1100" height="200" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="32" fill="#34d399" font-size="18" font-weight="700" class="font-mono">CASE 2: X = sin(ax) OR cos(ax) ⟹ REPLACE D² BY -a²</text>
+            <rect x="24" y="45" width="1050" height="55" fill="#1e293b" rx="6" />
+            <text x="44" y="80" fill="#fbbf24" font-size="18" font-weight="800" class="font-mono">PI = [ 1 / φ(D²) ] sin(ax) = [ 1 / φ(-a²) ] sin(ax)   (if φ(-a²) ≠ 0)</text>
+            
+            <text x="24" y="125" fill="#f43f5e" font-size="15" font-weight="700" class="font-sans">⚠️ FATAL TRAP: Replace D² by -(a²), NOT (-a)² = +a²! (Never replace odd powers D directly).</text>
+            <text x="24" y="155" fill="#e2e8f0" font-size="15" class="font-sans">If denominator becomes linear (aD + b), rationalize by multiplying numerator &amp; denominator by (aD - b).</text>
+            <text x="24" y="185" fill="#34d399" font-size="16" font-weight="800" class="font-mono">FAILURE CASE (φ(-a²) = 0): PI = x · [ 1 / φ'(D²) ] sin(ax) ⟹ [ 1/(D²+a²) ] sin(ax) = -(x/2a) cos(ax).</text>
+        </g>
+
+        <!-- Case 3: x^m (Polynomial) -->
+        <g transform="translate(36, 685)">
+            <rect width="1100" height="155" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="32" fill="#c084fc" font-size="18" font-weight="700" class="font-mono">CASE 3: X = xᵐ ⟹ EXPAND [f(D)]⁻¹ IN ASCENDING POWERS OF D</text>
+            <text x="24" y="60" fill="#e2e8f0" font-size="15" class="font-sans">Factor lowest power of D out to form [1 ± φ(D)]⁻¹, expand binomially up to order m:</text>
+            <text x="24" y="90" fill="#38bdf8" font-size="16" class="font-mono">(1 - D)⁻¹ = 1 + D + D² + D³ + ...  |  (1 + D)⁻¹ = 1 - D + D² - D³ + ...</text>
+            <text x="24" y="120" fill="#fbbf24" font-size="16" class="font-mono">(1 - D)⁻² = 1 + 2D + 3D² + ...     |  (1 + D)⁻² = 1 - 2D + 3D² - ...</text>
+        </g>
+    </g>
+
+    <!-- ZONE 2: ADVANCED OPERATOR SHIFT: e^(ax) V & x V -->
+    <g transform="translate(1300, 260)">
+        <rect width="1220" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#goldGrad)" rx="4" />
+        <text x="36" y="52" fill="#fbbf24" font-size="28" font-weight="800" class="font-sans">2. EXPONENTIAL SHIFT &amp; x · V OPERATOR RULES</text>
+        <line x1="36" y1="72" x2="1180" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- Case 4: e^(ax) V(x) -->
+        <g transform="translate(36, 100)">
+            <rect width="1140" height="340" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CASE 4: EXPONENTIAL SHIFT RULE: X = e^(ax) V(x)</text>
+            <text x="24" y="70" fill="#e2e8f0" font-size="17" class="font-sans">Exponential shifts to the front; D is replaced by (D + a):</text>
+
+            <rect x="24" y="90" width="1090" height="80" fill="#1e293b" rx="6" />
+            <text x="44" y="140" fill="#34d399" font-size="24" font-weight="900" class="font-mono">[ 1 / f(D) ] ( e^(ax) V(x) ) = e^(ax) · [ 1 / f(D + a) ] V(x)</text>
+
+            <text x="24" y="205" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">CLASSROOM BENCHMARK DRILL:</text>
+            <g transform="translate(24, 220)">
+                <rect width="1090" height="100" fill="#020617" stroke="#1e293b" stroke-width="1" rx="6" />
+                <text x="20" y="30" fill="#e2e8f0" font-size="15" class="font-mono">Evaluate PI for (D² - 2D + 1) y = x e^(3x):</text>
+                <text x="20" y="58" fill="#38bdf8" font-size="16" class="font-mono">PI = [ 1 / (D - 1)² ] ( e^(3x) · x ) = e^(3x) · [ 1 / ( (D + 3) - 1 )² ] x = e^(3x) [ 1 / (D + 2)² ] x</text>
+                <text x="20" y="85" fill="#34d399" font-size="16" font-weight="700" class="font-mono">= (1/4) e^(3x) [ 1 + D/2 ]⁻² x = (1/4) e^(3x) (1 - D) x = (1/4) e^(3x) (x - 1)</text>
+            </g>
+        </g>
+
+        <!-- Case 5: x V(x) -->
+        <g transform="translate(36, 470)">
+            <rect width="1140" height="360" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#c084fc" font-size="20" font-weight="700" class="font-mono">CASE 5: MULTIPLICATION BY x RULE: X = x V(x)</text>
+            <text x="24" y="70" fill="#e2e8f0" font-size="17" class="font-sans">Fast algebraic operator formula:</text>
+
+            <rect x="24" y="90" width="1090" height="80" fill="#1e293b" rx="6" />
+            <text x="44" y="140" fill="#fbbf24" font-size="22" font-weight="900" class="font-mono">[ 1 / f(D) ] ( x · V ) = x · [ 1 / f(D) ] V - [ f'(D) / (f(D))² ] V</text>
+
+            <text x="24" y="205" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">CLASSROOM BENCHMARK DRILL:</text>
+            <g transform="translate(24, 220)">
+                <rect width="1090" height="120" fill="#020617" stroke="#1e293b" stroke-width="1" rx="6" />
+                <text x="20" y="30" fill="#e2e8f0" font-size="15" class="font-mono">Evaluate PI for (D² + 4) y = x sin(2x):</text>
+                <text x="20" y="58" fill="#e2e8f0" font-size="15" class="font-sans">Notice: Standard formula yields x [1/(D²+4)] sin 2x - [2D/(D²+4)²] sin 2x.</text>
+                <text x="20" y="85" fill="#38bdf8" font-size="15" class="font-mono">First term has failure: [1/(D²+4)] sin 2x = -(x/4) cos 2x ⟹ x(-x/4 cos 2x) = -(x²/4) cos 2x</text>
+                <text x="20" y="108" fill="#34d399" font-size="16" font-weight="700" class="font-mono">Second term: [2D / (D²+4)²] sin 2x = -(x/8) sin 2x ⟹ Solves completely without integration!</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ZONE 3: METHOD OF VARIATION OF PARAMETERS (MVP) -->
+    <g transform="translate(2560, 260)">
+        <rect width="1200" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#emeraldGrad)" rx="4" />
+        <text x="36" y="52" fill="#34d399" font-size="28" font-weight="800" class="font-sans">3. VARIATION OF PARAMETERS (MVP) ENGINE</text>
+        <line x1="36" y1="72" x2="1160" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- MVP Architecture -->
+        <g transform="translate(36, 100)">
+            <rect width="1120" height="340" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CANONICAL MVP FORMULATION: y'' + P(x) y' + Q(x) y = X(x)</text>
+            <text x="24" y="68" fill="#e2e8f0" font-size="16" class="font-sans">Let CF = c₁ y₁(x) + c₂ y₂(x). Replace constants c₁, c₂ by variable functions u(x), v(x):</text>
+
+            <rect x="24" y="85" width="1070" height="60" fill="#1e293b" rx="6" />
+            <text x="44" y="122" fill="#34d399" font-size="20" font-weight="800" class="font-mono">y_p(x) = u(x) y₁(x) + v(x) y₂(x)</text>
+
+            <text x="24" y="175" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">THE INTEGRAL EVALUATION ARSENAL:</text>
+            <g transform="translate(24, 190)">
+                <rect width="1070" height="120" fill="#1e293b" rx="6" />
+                <text x="30" y="45" fill="#38bdf8" font-size="22" font-weight="900" class="font-mono">u(x) = - ∫ [ (y₂ · X) / W(y₁, y₂) ] dx</text>
+                <text x="30" y="95" fill="#fbbf24" font-size="22" font-weight="900" class="font-mono">v(x) = + ∫ [ (y₁ · X) / W(y₁, y₂) ] dx</text>
+            </g>
+        </g>
+
+        <!-- The Universal Power of MVP -->
+        <g transform="translate(36, 470)">
+            <rect width="1120" height="360" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#f43f5e" font-size="20" font-weight="700" class="font-mono">WHY MVP IS INDISPENSABLE IN GATE</text>
+            <text x="24" y="68" fill="#e2e8f0" font-size="16" class="font-sans">Standard operator shortcuts FAIL whenever RHS X(x) is not e^(ax), sin ax, cos ax, or xᵐ!</text>
+
+            <g transform="translate(24, 85)">
+                <rect width="1070" height="240" fill="#020617" stroke="#1e293b" stroke-width="1" rx="6" />
+                <text x="20" y="35" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">MVP handles functions where 1/f(D) shortcuts CANNOT be applied:</text>
+                <text x="20" y="70" fill="#34d399" font-size="16" class="font-sans">• <tspan font-weight="700">X = tan x, sec x, csc x, cot x</tspan></text>
+                <text x="20" y="105" fill="#34d399" font-size="16" class="font-sans">• <tspan font-weight="700">X = ln x, 1/x, 1/(1 + e^x)</tspan></text>
+                
+                <line x1="20" y1="125" x2="1050" y2="125" stroke="#1e293b" stroke-width="1" />
+                <text x="20" y="155" fill="#f43f5e" font-size="16" font-weight="700" class="font-sans">⚠️ TOP GATE TRAP: LEADING COEFFICIENT MUST BE 1!</text>
+                <text x="20" y="185" fill="#e2e8f0" font-size="15" class="font-sans">If equation is a₀ y'' + a₁ y' + a₂ y = X, you MUST divide entire equation by a₀ first!</text>
+                <text x="20" y="215" fill="#fbbf24" font-size="16" font-mono="font-mono">Failure to divide by a₀ leads to wrong Particular Integral by factor 1/a₀!</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ZONE 4: BENCHMARK MVP EXAM PROBLEM -->
+    <g transform="translate(80, 1160)">
+        <rect width="3680" height="860" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect width="8" height="860" fill="url(#roseGrad)" rx="4" />
+        <text x="36" y="52" fill="#f43f5e" font-size="28" font-weight="800" class="font-sans">4. COMPLETE STEP-BY-STEP MVP DRILL: y'' + y = sec x (CLASSIC GATE QUESTION)</text>
+        <line x1="36" y1="72" x2="3640" y2="72" stroke="#1e293b" stroke-width="1.5" />
+
+        <!-- 3 Columns inside bottom container -->
+        <g transform="translate(36, 100)">
+            <rect width="1160" height="710" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#fbbf24" font-size="22" font-weight="700" class="font-mono">STEP 1: COMPLEMENTARY FUNCTION</text>
+            
+            <g transform="translate(24, 70)">
+                <rect width="1110" height="600" fill="#1e293b" rx="6" />
+                <text x="30" y="40" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">Equation: y'' + y = sec x</text>
+                <text x="30" y="75" fill="#e2e8f0" font-size="16" class="font-sans">1. Homogeneous equation: y'' + y = 0 ⟹ (D² + 1) y = 0</text>
+                <text x="30" y="110" fill="#e2e8f0" font-size="16" class="font-sans">2. Auxiliary equation: m² + 1 = 0 ⟹ m = ±i</text>
+                
+                <text x="30" y="160" fill="#34d399" font-size="20" font-weight="800" class="font-mono">y_c = c₁ cos x + c₂ sin x</text>
+
+                <text x="30" y="210" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">3. Identify basis solutions:</text>
+                <text x="50" y="245" fill="#38bdf8" font-size="18" class="font-mono">• y₁(x) = cos x</text>
+                <text x="50" y="280" fill="#38bdf8" font-size="18" class="font-mono">• y₂(x) = sin x</text>
+
+                <text x="30" y="340" fill="#c084fc" font-size="18" font-weight="700" class="font-mono">4. Compute Wronskian W(y₁, y₂):</text>
+                <text x="50" y="380" fill="#e2e8f0" font-size="17" class="font-mono">W = y₁ y₂' - y₂ y₁'</text>
+                <text x="50" y="415" fill="#e2e8f0" font-size="17" class="font-mono">W = (cos x)(cos x) - (sin x)(-sin x)</text>
+                <text x="50" y="450" fill="#e2e8f0" font-size="17" class="font-mono">W = cos² x + sin² x = 1</text>
+                
+                <text x="50" y="500" fill="#34d399" font-size="22" font-weight="900" class="font-mono">W(cos x, sin x) ≡ 1</text>
+            </g>
+        </g>
+
+        <!-- Col 2: Integrals for u and v -->
+        <g transform="translate(1230, 100)">
+            <rect width="1180" height="710" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#38bdf8" font-size="22" font-weight="700" class="font-mono">STEP 2: EVALUATE u(x) &amp; v(x)</text>
+
+            <g transform="translate(24, 70)">
+                <rect width="1130" height="600" fill="#1e293b" rx="6" />
+                <text x="30" y="40" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">X(x) = sec x.  W = 1.</text>
+
+                <text x="30" y="85" fill="#38bdf8" font-size="19" font-weight="800" class="font-mono">Evaluation of u(x):</text>
+                <text x="50" y="120" fill="#e2e8f0" font-size="17" class="font-mono">u(x) = - ∫ [ (y₂ · X) / W ] dx</text>
+                <text x="50" y="155" fill="#e2e8f0" font-size="17" class="font-mono">u(x) = - ∫ (sin x · sec x) / 1 dx</text>
+                <text x="50" y="190" fill="#e2e8f0" font-size="17" class="font-mono">u(x) = - ∫ (sin x / cos x) dx = - ∫ tan x dx</text>
+                <text x="50" y="225" fill="#34d399" font-size="20" font-weight="800" class="font-mono">u(x) = - [ - ln|cos x| ] = ln|cos x|</text>
+
+                <line x1="30" y1="260" x2="1100" y2="260" stroke="#334155" stroke-width="1" />
+
+                <text x="30" y="300" fill="#fbbf24" font-size="19" font-weight="800" class="font-mono">Evaluation of v(x):</text>
+                <text x="50" y="335" fill="#e2e8f0" font-size="17" class="font-mono">v(x) = + ∫ [ (y₁ · X) / W ] dx</text>
+                <text x="50" y="370" fill="#e2e8f0" font-size="17" class="font-mono">v(x) = + ∫ (cos x · sec x) / 1 dx</text>
+                <text x="50" y="405" fill="#e2e8f0" font-size="17" class="font-mono">v(x) = ∫ 1 dx</text>
+                <text x="50" y="440" fill="#34d399" font-size="20" font-weight="800" class="font-mono">v(x) = x</text>
+
+                <text x="30" y="510" fill="#c084fc" font-size="17" font-weight="700" class="font-sans">Note: No arbitrary constants added to u and v (they belong to CF!).</text>
+            </g>
+        </g>
+
+        <!-- Col 3: Assemble PI and General Solution -->
+        <g transform="translate(2450, 100)">
+            <rect width="1190" height="710" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <text x="24" y="38" fill="#34d399" font-size="22" font-weight="700" class="font-mono">STEP 3: ASSEMBLE GENERAL SOLUTION</text>
+
+            <g transform="translate(24, 70)">
+                <rect width="1140" height="600" fill="#1e293b" rx="6" />
+                <text x="30" y="40" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">1. Particular Integral y_p:</text>
+                <text x="50" y="75" fill="#e2e8f0" font-size="17" class="font-mono">y_p = u(x) y₁(x) + v(x) y₂(x)</text>
+                <text x="50" y="115" fill="#38bdf8" font-size="20" font-weight="800" class="font-mono">y_p = (ln|cos x|) cos x + x sin x</text>
+
+                <text x="30" y="175" fill="#34d399" font-size="20" font-weight="800" class="font-mono">2. Full General Solution y = CF + PI:</text>
+                <rect x="30" y="195" width="1080" height="90" fill="#020617" stroke="#38bdf8" stroke-width="2" rx="6" />
+                <text x="50" y="250" fill="#34d399" font-size="24" font-weight="900" class="font-mono">y = c₁ cos x + c₂ sin x + cos x · ln|cos x| + x sin x</text>
+
+                <text x="30" y="335" fill="#fbbf24" font-size="18" font-weight="700" class="font-sans">Direct Inspection Verification:</text>
+                <text x="30" y="370" fill="#e2e8f0" font-size="15" class="font-sans">y' = -c₁ sin x + c₂ cos x - sin x ln|cos x| - sin x + sin x + x cos x</text>
+                <text x="30" y="405" fill="#e2e8f0" font-size="15" class="font-sans">y'' = -c₁ cos x - c₂ sin x - cos x ln|cos x| + tan x sin x + cos x - x sin x</text>
+                <text x="30" y="440" fill="#34d399" font-size="16" class="font-mono">⟹ y'' + y = tan x sin x + cos x = (sin² x + cos² x) / cos x = 1 / cos x = sec x  ✓</text>
+                
+                <text x="30" y="500" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">ACCURACY: 100% Mathematically verified.</text>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Bottom Engineering Telemetry Strip -->
+    <g transform="translate(80, 2060)">
+        <line x1="0" y1="0" x2="3680" y2="0" stroke="#1e293b" stroke-width="2" />
+        <text x="10" y="24" fill="#64748b" font-size="16" class="font-mono">DIFFERENTIAL EQUATIONS MATHEMATICAL BLUEPRINT // SCALE: 1.0 NATIVE // GATE / ESE / ISRO EXCELLENCE SUITE</text>
+        <text x="3670" y="24" fill="#64748b" font-size="16" text-anchor="end" class="font-mono">PREPFUSION ENGINEERING MATHEMATICS // SYSTEM VERIFIED</text>
+    </g>
+</svg>

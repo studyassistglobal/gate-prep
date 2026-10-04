@@ -49,7 +49,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_differential_equations/fig_01_differential_equations_foundations_order_degree_and_linearity_engine.jpg",
+     "src": "/notes/em/figures_differential_equations/fig_01_differential_equations_foundations_order_degree_and_linearity_engine.svg",
      "alt": "Blueprint 01: Differential Equations Foundations & Linearity"
     },
     {
@@ -58,7 +58,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_differential_equations/fig_02_first_order_ode_solution_engine_and_integrating_factor_architecture.jpg",
+     "src": "/notes/em/figures_differential_equations/fig_02_first_order_ode_solution_engine_and_integrating_factor_architecture.svg",
      "alt": "Blueprint 02: First-Order ODE Solution Engine"
     },
     {
@@ -67,7 +67,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_differential_equations/fig_03_exact_differential_equations_and_integrating_factors_taxonomy_engine.jpg",
+     "src": "/notes/em/figures_differential_equations/fig_03_exact_differential_equations_and_integrating_factors_taxonomy_engine.svg",
      "alt": "Blueprint 03: Exact Differential Equations & IF Engine"
     },
     {
@@ -76,7 +76,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_differential_equations/fig_04_higher_order_linear_odes_and_complementary_function_architecture.jpg",
+     "src": "/notes/em/figures_differential_equations/fig_04_higher_order_linear_odes_and_complementary_function_architecture.svg",
      "alt": "Blueprint 04: Higher-Order Linear ODEs & CF Engine"
     },
     {
@@ -85,7 +85,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_differential_equations/fig_05_particular_integral_operator_calculus_and_variation_of_parameters_engine.jpg",
+     "src": "/notes/em/figures_differential_equations/fig_05_particular_integral_operator_calculus_and_variation_of_parameters_engine.svg",
      "alt": "Blueprint 05: Particular Integral & MVP Engine"
     },
     {
@@ -94,7 +94,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_differential_equations/fig_06_cauchy_euler_legendre_and_systems_of_differential_equations_engine.jpg",
+     "src": "/notes/em/figures_differential_equations/fig_06_cauchy_euler_legendre_and_systems_of_differential_equations_engine.svg",
      "alt": "Blueprint 06: Cauchy-Euler & Systems Engine"
     },
     {
@@ -103,7 +103,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_differential_equations/fig_07_initial_boundary_value_problems_and_pde_separation_of_variables_engine.jpg",
+     "src": "/notes/em/figures_differential_equations/fig_07_initial_boundary_value_problems_and_pde_separation_of_variables_engine.svg",
      "alt": "Blueprint 07: IVP/BVP & PDE Triad Engine"
     }
    ]

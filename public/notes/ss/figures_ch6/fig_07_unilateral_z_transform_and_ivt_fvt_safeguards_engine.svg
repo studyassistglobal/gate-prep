@@ -1,0 +1,150 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid7" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid7)"/>
+
+  <!-- Title Header Block -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 06 • FIGURE 6.7</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">Unilateral Z-Transform, Difference Equations with Initial Conditions, and the 4 Fatal Traps of IVT &amp; FVT</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- Left: Unilateral Z-Transform & Difference Equations -->
+  <rect x="80" y="190" width="1080" height="1090" rx="18" fill="url(#panelGrad7)" stroke="#30363d" stroke-width="2"/>
+  <rect x="80" y="190" width="1080" height="60" rx="18" fill="#21262d"/>
+  <text x="620" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">1. UNILATERAL Z-TRANSFORM &amp; INITIAL CONDITION ALGEBRA</text>
+
+  <g transform="translate(110, 270)">
+    <text x="0" y="25" fill="#fbbf24" font-size="18" font-weight="700">Definition: One-Sided Z-Transform</text>
+    <rect x="0" y="40" width="1020" height="70" rx="8" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="510" y="82" fill="#38bdf8" font-size="24" font-weight="700" text-anchor="middle">X⁺(z) = Z⁺{ x[n] } = ∑_{n=0}^{∞} x[n] z⁻ⁿ</text>
+
+    <!-- Time Shifting with Initial Conditions -->
+    <rect x="0" y="130" width="1020" height="320" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="25" y="165" fill="#fbbf24" font-size="18" font-weight="700">UNILATERAL TIME-SHIFTING PROPERTIES (VITAL FOR DIFFERENCE EQUATIONS)</text>
+
+    <g transform="translate(25, 185)">
+      <!-- Delay by 1 -->
+      <rect x="0" y="0" width="970" height="48" rx="6" fill="#0d1117" stroke="#34d399" stroke-width="1"/>
+      <text x="20" y="32" fill="#34d399" font-size="16" font-weight="700">Z⁺{ x[n - 1] } = z⁻¹ X⁺(z) + x[-1]</text>
+      <text x="550" y="32" fill="#8b949e" font-size="14">Initial condition at n = -1 enters as constant</text>
+
+      <!-- Delay by 2 -->
+      <rect x="0" y="58" width="970" height="48" rx="6" fill="#0d1117" stroke="#34d399" stroke-width="1"/>
+      <text x="20" y="90" fill="#34d399" font-size="16" font-weight="700">Z⁺{ x[n - 2] } = z⁻² X⁺(z) + z⁻¹ x[-1] + x[-2]</text>
+      <text x="550" y="90" fill="#8b949e" font-size="14">Initial conditions at n = -1 and n = -2</text>
+
+      <!-- General Delay -->
+      <rect x="0" y="116" width="970" height="48" rx="6" fill="#0d1117" stroke="#38bdf8" stroke-width="1"/>
+      <text x="20" y="148" fill="#38bdf8" font-size="16" font-weight="700">Z⁺{ x[n - m] } = z⁻ᵐ X⁺(z) + ∑_{k=1}^{m} x[-k] z^{-(m-k)}</text>
+      <text x="650" y="148" fill="#fbbf24" font-size="14" font-weight="600">General Delay Theorem</text>
+
+      <!-- Advance by 1 -->
+      <rect x="0" y="174" width="970" height="48" rx="6" fill="#0d1117" stroke="#f87171" stroke-width="1"/>
+      <text x="20" y="206" fill="#f87171" font-size="16" font-weight="700">Z⁺{ x[n + 1] } = z X⁺(z) - z x[0]</text>
+      <text x="550" y="206" fill="#8b949e" font-size="14">Advance property subtracts future value</text>
+
+      <!-- Advance by 2 -->
+      <rect x="0" y="232" width="970" height="48" rx="6" fill="#0d1117" stroke="#f87171" stroke-width="1"/>
+      <text x="20" y="264" fill="#f87171" font-size="16" font-weight="700">Z⁺{ x[n + 2] } = z² X⁺(z) - z² x[0] - z x[1]</text>
+      <text x="550" y="264" fill="#8b949e" font-size="14">Advance of 2 samples</text>
+    </g>
+
+    <!-- Response Decomposition: ZIR vs ZSR -->
+    <rect x="0" y="470" width="1020" height="260" rx="12" fill="#0d1117" stroke="#fbbf24" stroke-width="2"/>
+    <text x="25" y="505" fill="#fbbf24" font-size="18" font-weight="700">TOTAL RESPONSE DECOMPOSITION: ZIR + ZSR</text>
+    <text x="25" y="535" fill="#e6edf3" font-size="15">Linear Constant-Coefficient Difference Equation (LCCDE): y[n] - a y[n-1] = x[n] with y[-1] ≠ 0:</text>
+
+    <g transform="translate(25, 555)">
+      <rect x="0" y="0" width="470" height="150" rx="8" fill="#161b22" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="20" y="30" fill="#38bdf8" font-size="16" font-weight="700">ZERO-INPUT RESPONSE (ZIR)</text>
+      <text x="20" y="55" fill="#8b949e" font-size="13">Input is zero (x[n] = 0), driven purely by ICs:</text>
+      <text x="20" y="90" fill="#38bdf8" font-size="18" font-weight="700">Y_ZIR(z) = [ a y[-1] ] / (1 - a z⁻¹)</text>
+      <text x="20" y="125" fill="#34d399" font-size="15" font-weight="600">y_zir[n] = a y[-1] · aⁿ u[n] = y[-1] aⁿ⁺¹ u[n]</text>
+
+      <rect x="500" y="0" width="470" height="150" rx="8" fill="#161b22" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700">ZERO-STATE RESPONSE (ZSR)</text>
+      <text x="20" y="55" fill="#8b949e" font-size="13">ICs are zero (y[-1] = 0), driven purely by input:</text>
+      <text x="20" y="90" fill="#fbbf24" font-size="18" font-weight="700">Y_ZSR(z) = X(z) / (1 - a z⁻¹) = H(z) · X(z)</text>
+      <text x="20" y="125" fill="#34d399" font-size="15" font-weight="600">y_zsr[n] = x[n] * h[n]</text>
+    </g>
+
+    <!-- Natural vs Forced Response Summary -->
+    <rect x="0" y="750" width="1020" height="230" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="25" y="785" fill="#34d399" font-size="18" font-weight="700">ALTERNATIVE DECOMPOSITION: NATURAL vs FORCED RESPONSE</text>
+    <text x="25" y="818" fill="#e6edf3" font-size="15">• <tspan fill="#38bdf8" font-weight="700">Natural Response (Homogeneous):</tspan> Terms associated with the POLES OF THE SYSTEM H(z).</text>
+    <text x="25" y="848" fill="#fbbf24" font-weight="700" font-size="15">• Forced Response (Particular): <tspan fill="#e6edf3" font-weight="400">Terms associated with the POLES OF THE INPUT X(z).</tspan></text>
+    <text x="25" y="880" fill="#f87171" font-size="15" font-weight="600">WARNING: ZIR ≠ Natural Response, and ZSR ≠ Forced Response!</text>
+    <text x="25" y="910" fill="#8b949e" font-size="14">ZSR contains BOTH natural modes and forced modes (since Y_ZSR(z) has system poles and input poles)!</text>
+    <text x="25" y="940" fill="#34d399" font-size="14" font-weight="600">Total Response is IDENTICAL in both decompositions: y[n] = y_zir[n] + y_zsr[n] = y_nat[n] + y_forced[n].</text>
+  </g>
+
+  <!-- Right: The 4 Fatal Traps of IVT & FVT -->
+  <rect x="1190" y="190" width="1130" height="1090" rx="18" fill="url(#panelGrad7)" stroke="#30363d" stroke-width="2"/>
+  <rect x="1190" y="190" width="1130" height="60" rx="18" fill="#21262d"/>
+  <text x="1755" y="230" fill="#f87171" font-size="22" font-weight="700" text-anchor="middle">2. INITIAL &amp; FINAL VALUE THEOREMS: THE 4 FATAL GATE TRAPS</text>
+
+  <g transform="translate(1220, 270)">
+    <!-- IVT Definition -->
+    <rect x="0" y="0" width="1070" height="150" rx="12" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="25" y="35" fill="#38bdf8" font-size="19" font-weight="700">A. INITIAL VALUE THEOREM (IVT)</text>
+    <text x="25" y="65" fill="#e6edf3" font-size="15">Statement: If x[n] is a CAUSAL sequence (x[n] = 0 for n &lt; 0), then:</text>
+    <text x="535" y="105" fill="#38bdf8" font-size="24" font-weight="800" text-anchor="middle">x[0] = lim_{z ⟶ ∞} X(z)</text>
+    <text x="25" y="135" fill="#f87171" font-size="13" font-weight="600">CONDITION: X(z) must be strictly proper or proper in z. If deg(Num) &gt; deg(Den), x[0] ⟶ ∞ (fails!).</text>
+
+    <!-- FVT Definition -->
+    <rect x="0" y="170" width="1070" height="150" rx="12" fill="#0d1117" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="25" y="205" fill="#fbbf24" font-size="19" font-weight="700">B. FINAL VALUE THEOREM (FVT)</text>
+    <text x="25" y="235" fill="#e6edf3" font-size="15">Statement: If the limit exists, the steady-state final value is:</text>
+    <text x="535" y="275" fill="#fbbf24" font-size="24" font-weight="800" text-anchor="middle">x[∞] = lim_{n ⟶ ∞} x[n] = lim_{z ⟶ 1} (1 - z⁻¹) · X(z) = lim_{z ⟶ 1} (z - 1) · X(z)</text>
+    <text x="25" y="305" fill="#f87171" font-size="13" font-weight="700">GATE RED ALERT: The formula ALONE DOES NOT PROVE the limit exists! You MUST verify the 4 gates!</text>
+
+    <!-- The 4 Fatal Traps of FVT -->
+    <text x="0" y="350" fill="#f87171" font-size="18" font-weight="800">THE 4 IRONCLAD GATES FOR FVT VALIDITY:</text>
+
+    <!-- Gate 1: Causality -->
+    <rect x="0" y="365" width="1070" height="90" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="25" y="395" fill="#38bdf8" font-size="16" font-weight="700">GATE 1: Signal Must Be Strictly Causal</text>
+    <text x="25" y="420" fill="#e6edf3" font-size="14">x[n] = 0 for all n &lt; 0. For anti-causal or two-sided signals, FVT is 100% meaningless.</text>
+    <text x="25" y="442" fill="#8b949e" font-size="13">Check: ROC must be of the form |z| &gt; r_max.</text>
+
+    <!-- Gate 2: Poles outside unit circle -->
+    <rect x="0" y="470" width="1070" height="90" rx="8" fill="#161b22" stroke="#f87171" stroke-width="1.5"/>
+    <text x="25" y="500" fill="#f87171" font-size="16" font-weight="700">GATE 2: Pole Locations of (z - 1)X(z) MUST BE STRICTLY INSIDE UNIT CIRCLE (|p| &lt; 1)</text>
+    <text x="25" y="525" fill="#e6edf3" font-size="14">All poles of (z-1)X(z) must have magnitude |p| &lt; 1! If ANY pole has |p| &gt; 1 (e.g. 2ⁿ u[n]),</text>
+    <text x="25" y="548" fill="#f87171" font-size="13" font-weight="600">the sequence diverges exponentially to ∞ and FVT formula is COMPLETELY INVALID!</text>
+
+    <!-- Gate 3: Multiplicity of pole at z = 1 -->
+    <rect x="0" y="575" width="1070" height="90" rx="8" fill="#161b22" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="25" y="605" fill="#fbbf24" font-size="16" font-weight="700">GATE 3: Pole at z = 1 Can Have Multiplicity AT MOST 1 (Simple Pole)</text>
+    <text x="25" y="630" fill="#e6edf3" font-size="14">A simple pole at z = 1 represents a constant DC step u[n] ⟶ x[∞] = constant (VALID).</text>
+    <text x="25" y="652" fill="#f87171" font-size="13" font-weight="600">Multiple poles at z = 1 (e.g. z/(z-1)² = n u[n]) represent a ramp: x[∞] = ∞ (Diverges)!</text>
+
+    <!-- Gate 4: Poles on unit circle at z != 1 -->
+    <rect x="0" y="680" width="1070" height="120" rx="8" fill="#0d1117" stroke="#f87171" stroke-width="2"/>
+    <text x="25" y="712" fill="#f87171" font-size="17" font-weight="800">GATE 4: POLES ON UNIT CIRCLE AT z ≠ 1 (THE SINE / COSINE / (-1)ⁿ TRAP)</text>
+    <text x="25" y="738" fill="#e6edf3" font-size="14">If X(z) has poles at z = -1 (i.e. (-1)ⁿ) or z = e^{±j Ω₀} (i.e. cos(Ω₀ n), sin(Ω₀ n)):</text>
+    <text x="25" y="765" fill="#fbbf24" font-size="15" font-weight="700">Algebraic Illusion: lim_{z ⟶ 1} (z - 1) · [ z / (z + 1) ] = 0 · (1/2) = 0 !</text>
+    <text x="25" y="788" fill="#f87171" font-size="14" font-weight="800">ACTUAL REALITY: x[n] = (-1)ⁿ oscillates between +1 and -1 forever! LIMIT DOES NOT EXIST!</text>
+
+    <!-- Diagnostic Rapid Verification Matrix -->
+    <rect x="0" y="820" width="1070" height="170" rx="10" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="25" y="852" fill="#34d399" font-size="17" font-weight="700">GATE RAPID DIAGNOSTIC EXAMPLES:</text>
+    <text x="25" y="880" fill="#e6edf3" font-size="14">1. X₁(z) = z / [(z - 1)(z - 0.5)] ⟶ Pole of (z-1)X at z = 0.5 ∈ Inside ⟶ FVT Valid! x[∞] = 1/(1-0.5) = 2</text>
+    <text x="25" y="905" fill="#e6edf3" font-size="14">2. X₂(z) = z / (z - 1)² ⟶ Pole of (z-1)X at z = 1 ⟶ Ramp n u[n] ⟶ x[∞] = ∞ (Diverges)</text>
+    <text x="25" y="930" fill="#e6edf3" font-size="14">3. X₃(z) = z / (z - 2) ⟶ Pole at z = 2 outside unit circle ⟶ 2ⁿ u[n] diverges ⟶ FVT Invalid</text>
+    <text x="25" y="955" fill="#f87171" font-size="14" font-weight="700">4. X₄(z) = z / (z + 1) ⟶ Pole at z = -1 on unit circle ⟶ (-1)ⁿ oscillates ⟶ Final value UNDEFINED!</text>
+    <text x="25" y="978" fill="#34d399" font-size="14" font-weight="600">5. X₅(z) = z / (z - 0.5) ⟶ Poles of (z-1)X at 0.5 inside ⟶ Decays to zero ⟶ x[∞] = 0 (Valid)</text>
+  </g>
+</svg>

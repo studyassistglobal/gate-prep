@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIGURE 7: INCANDESCENT BULBS &amp; INSTRUMENT LOADING DECISION ENGINE</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Rated vs Operating Power, Series/Parallel Brightness &amp; Fuse Hierarchy, Voltmeter/Ammeter Extension &amp; Loading Errors</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • PREPFUSION TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Incandescent Bulb Characteristics -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Incandescent Bulb Rated Physics</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Printed Rating Specifications (V_R, P_R)</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• Every bulb is manufactured with a nominal design rating: (V_rated, P_rated).</text>
+  <text x="70" y="205" fill="#94a3b8" font-size="18">Example: 220 V, 100 W bulb.</text>
+  <text x="50" y="250" fill="#fbbf24" font-size="20" font-weight="700">Inherent Filament Hot Resistance R:</text>
+  <text x="70" y="290" fill="#34d399" font-family="'Fira Code', monospace" font-size="26" font-weight="900">R = ( V_rated )² / P_rated</text>
+  <text x="50" y="340" fill="#f43f5e" font-size="18" font-weight="800">★ FUNDAMENTAL INVERSE SCALING LAW:</text>
+  <text x="70" y="375" fill="#f43f5e" font-size="18">Higher rated wattage ⟹ LOWER filament resistance! (R ∝ 1 / P_rated).</text>
+
+  <rect x="30" y="450" width="840" height="440" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#38bdf8" font-size="22" font-weight="800">Rated Current vs. Actual Operating Quantities</text>
+  <text x="50" y="540" fill="#34d399" font-size="20" font-weight="700">1. Rated Nominal Current I_rated:</text>
+  <text x="70" y="580" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">I_rated = P_rated / V_rated = V_rated / R</text>
+  <text x="50" y="625" fill="#94a3b8" font-size="18">Maximum safe continuous current before filament melts / fuses!</text>
+
+  <text x="50" y="675" fill="#fbbf24" font-size="20" font-weight="700">2. Actual Operating Power P_actual (Brightness Driver):</text>
+  <text x="70" y="715" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="24" font-weight="800">P_actual = I_actual² · R = ( V_actual )² / R</text>
+  <text x="50" y="765" fill="#f43f5e" font-size="18" font-weight="800">★ GOLDEN RULE FOR BULB BRIGHTNESS:</text>
+  <text x="70" y="800" fill="#e2e8f0" font-size="18">The brightness of a bulb is SOLELY DETERMINED by the ACTUAL power</text>
+  <text x="70" y="835" fill="#e2e8f0" font-size="18">dissipated P_actual under real circuit conditions, NOT the printed label!</text>
+
+  <rect x="30" y="915" width="840" height="440" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="50" y="960" fill="#fbbf24" font-size="22" font-weight="800">Tungsten Filament Non-Linearity &amp; Cold Inrush</text>
+  <text x="50" y="1005" fill="#e2e8f0" font-size="19">• Tungsten has a strong Positive Temperature Coefficient (PTC):</text>
+  <text x="70" y="1045" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">R_hot ≈ 10 to 12 × R_cold   (at T_hot ≈ 2500 K)</text>
+  <text x="50" y="1095" fill="#f43f5e" font-size="19" font-weight="700">Cold Inrush Current Transient:</text>
+  <text x="70" y="1135" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="22">I_inrush = V_supply / R_cold ≈ 10 × I_rated !</text>
+  <text x="50" y="1180" fill="#94a3b8" font-size="18">• Why bulbs almost ALWAYS blow at the moment of turning ON!</text>
+  <text x="50" y="1215" fill="#94a3b8" font-size="18">• Thermal time constant τ_thermal ≈ 50 - 100 ms as filament heats up.</text>
+  <text x="50" y="1255" fill="#34d399" font-size="18">• In standard GATE problems (unless stated otherwise), treat R as constant.</text>
+
+  <rect x="30" y="1380" width="840" height="430" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1425" fill="#38bdf8" font-size="22" font-weight="800">Worked Resistance Hierarchy Example</text>
+  <text x="50" y="1470" fill="#e2e8f0" font-size="18">Consider three bulbs rated at 220 V: 100 W (B₁), 60 W (B₂), 40 W (B₃):</text>
+  <text x="70" y="1510" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">R₁ = 220² / 100 = 48400 / 100 = 484 Ω</text>
+  <text x="70" y="1550" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">R₂ = 220² / 60  = 48400 / 60  = 806.7 Ω</text>
+  <text x="70" y="1590" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">R₃ = 220² / 40  = 48400 / 40  = 1210 Ω</text>
+  <text x="50" y="1640" fill="#34d399" font-size="19" font-weight="700">Resistance Order: R_40W (1210 Ω) &gt; R_60W (806 Ω) &gt; R_100W (484 Ω)</text>
+  <text x="50" y="1680" fill="#94a3b8" font-size="18">The bulb with lowest wattage has the largest internal resistance!</text>
+  <text x="50" y="1720" fill="#f43f5e" font-size="18">Remember this order: it completely inverts in series connections!</text>
+</g>
+
+<!-- Column 2: Series vs Parallel Bulb Topologies & Fuse Risks -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#34d399"/>
+  <text x="35" y="55" fill="#34d399" font-size="28" font-weight="900">2. Series / Parallel Bulbs &amp; Fuse Hazards</text>
+
+  <rect x="30" y="85" width="840" height="380" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Case A: Parallel Connection Across Rated Supply V_R</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• All bulbs share the SAME supply voltage: V_actual = V_rated.</text>
+  <text x="50" y="210" fill="#34d399" font-size="20" font-weight="700">Actual Power Dissipated:</text>
+  <text x="70" y="250" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">P_actual = V_R² / R = P_rated   (Operates at full rating!)</text>
+  <text x="50" y="300" fill="#fbbf24" font-size="19" font-weight="800">★ Brightness Ranking in Parallel:</text>
+  <text x="70" y="340" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">100 W &gt; 60 W &gt; 40 W   (Higher Rated Bulb Glows Brighter!)</text>
+  <text x="50" y="390" fill="#94a3b8" font-size="18">• Total power consumed: P_total = P₁ + P₂ + P₃ = 100 + 60 + 40 = 200 W.</text>
+  <text x="50" y="425" fill="#34d399" font-size="18">• If one bulb burns out, the remaining bulbs continue glowing unchanged.</text>
+
+  <rect x="30" y="490" width="840" height="420" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="530" fill="#fbbf24" font-size="22" font-weight="800">Case B: Series Connection Across Rated Supply V_R</text>
+  <text x="50" y="575" fill="#e2e8f0" font-size="19">• All bulbs share the SAME series current: I = V_R / (R₁ + R₂ + R₃).</text>
+  <text x="50" y="615" fill="#fbbf24" font-size="20" font-weight="700">Actual Power Dissipated: P_actual = I² · R ∝ R</text>
+  <text x="50" y="660" fill="#f43f5e" font-size="19" font-weight="900">★ Brightness Ranking in Series:</text>
+  <text x="70" y="700" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">40 W &gt; 60 W &gt; 100 W   (LOWER Rated Bulb Glows Brighter!)</text>
+  
+  <text x="50" y="750" fill="#e2e8f0" font-size="18">Why? Because R_40W (1210 Ω) &gt; R_60W (806 Ω) &gt; R_100W (484 Ω)!</text>
+  <text x="50" y="785" fill="#e2e8f0" font-size="18">Since current is identical, the bulb with LARGEST resistance drops the</text>
+  <text x="70" y="820" fill="#e2e8f0" font-size="18">highest voltage and dissipates the maximum power!</text>
+  <text x="50" y="865" fill="#94a3b8" font-size="17">• Total power consumed in series: P_total = 1 / (1/P₁ + 1/P₂ + 1/P₃) ≪ P_parallel.</text>
+
+  <rect x="30" y="935" width="840" height="490" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2"/>
+  <text x="50" y="980" fill="#f43f5e" font-size="24" font-weight="900">★ Case C: Excess Supply Voltage &amp; Fusing Threshold</text>
+  <text x="50" y="1025" fill="#e2e8f0" font-size="19">• What happens if two bulbs are connected in series across an EXCESS</text>
+  <text x="70" y="1060" fill="#e2e8f0" font-size="19">voltage supply V_supply &gt; V_rated (e.g. 440 V across two 220 V bulbs)?</text>
+  
+  <text x="50" y="1110" fill="#fbbf24" font-size="20" font-weight="700">Voltage Division Across Bulbs B₁ (100W) and B₂ (40W):</text>
+  <text x="70" y="1150" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">V_40W = 440 V · [ R_40W / (R_40W + R_100W) ]</text>
+  <text x="70" y="1190" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="20">V_40W = 440 · [ 1210 / (1210 + 484) ] = 440 · (1210 / 1694) ≈ 314.3 V !</text>
+  <text x="70" y="1235" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="22" font-weight="900">V_40W (314.3 V) ≫ V_rated (220 V)  ⇒  40 W BULB FUSES FIRST!</text>
+
+  <text x="50" y="1285" fill="#34d399" font-size="20" font-weight="700">Immediate Post-Fuse System State:</text>
+  <text x="70" y="1320" fill="#e2e8f0" font-size="18">• Once the 40 W bulb fuses, its filament breaks (Open Circuit, i = 0 A).</text>
+  <text x="70" y="1355" fill="#e2e8f0" font-size="18">• The 100 W bulb is saved from burning out, but immediately TURNS OFF!</text>
+  <text x="70" y="1390" fill="#fbbf24" font-size="18">• Terminal voltage across the burnt 40 W bulb rises to full 440 V!</text>
+
+  <rect x="30" y="1450" width="840" height="360" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+  <text x="50" y="1495" fill="#38bdf8" font-size="22" font-weight="800">Master Fuse Identification Rule</text>
+  <text x="50" y="1540" fill="#e2e8f0" font-size="19">When arbitrary rated bulbs are connected in series across high voltage:</text>
+  <text x="70" y="1580" fill="#fbbf24" font-size="18">1. Calculate rated current for each: I_R,k = P_R,k / V_R,k.</text>
+  <text x="70" y="1620" fill="#f43f5e" font-size="18">2. The bulb with the LOWEST rated current I_R will fuse first!</text>
+  <text x="70" y="1660" fill="#34d399" font-size="18">3. For identical voltage ratings: Bulb with LOWEST wattage fuses first!</text>
+  <text x="50" y="1710" fill="#38bdf8" font-size="18">• Maximum safe supply voltage without fusing any bulb:</text>
+  <text x="70" y="1750" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">V_max = min(I_R,k) · ( R₁ + R₂ + ... + R_n )</text>
+</g>
+
+<!-- Column 3: Measuring Instrument Extension -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#fbbf24"/>
+  <text x="35" y="55" fill="#fbbf24" font-size="28" font-weight="900">3. Meter Range Extension Analytics</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">Basic PMMC Meter Movement</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• Permanent Magnet Moving Coil (PMMC): Deflection θ ∝ I_m (pure DC average!).</text>
+  <text x="50" y="210" fill="#e2e8f0" font-size="19">• Meter Parameters: Internal coil resistance R_m, Full-Scale Current I_fsd.</text>
+  <text x="70" y="250" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">Full-Scale Voltage Drop V_m = I_fsd · R_m</text>
+  <text x="50" y="295" fill="#94a3b8" font-size="18">• Typical values: I_fsd = 50 μA to 1 mA; R_m = 50 Ω to 2000 Ω.</text>
+  <text x="50" y="335" fill="#34d399" font-size="18">• To measure larger currents or voltages, external resistors must be added.</text>
+  <text x="50" y="375" fill="#f43f5e" font-size="18">★ Ideal Ammeter: R_A = 0 Ω  |  Ideal Voltmeter: R_V = ∞ Ω.</text>
+
+  <rect x="30" y="450" width="840" height="440" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#38bdf8" font-size="22" font-weight="800">Ammeter Extension: Shunt Resistor R_sh</text>
+  <text x="50" y="540" fill="#e2e8f0" font-size="19">• Connect a small resistance R_sh in PARALLEL with meter movement.</text>
+  <text x="50" y="580" fill="#fbbf24" font-size="20" font-weight="700">Multiplying Power m = I / I_fsd:</text>
+  <text x="70" y="620" fill="#e2e8f0" font-size="18">Total current I splits into I_fsd through coil and (I - I_fsd) through shunt:</text>
+  <text x="70" y="660" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">I_fsd · R_m = ( I - I_fsd ) · R_sh</text>
+
+  <text x="70" y="710" fill="#34d399" font-family="'Fira Code', monospace" font-size="26" font-weight="900">R_sh = R_m / ( m - 1 )   [m = I / I_fsd]</text>
+
+  <text x="50" y="765" fill="#94a3b8" font-size="18">• Material: Manganin (near-zero temperature coefficient α ≈ 0).</text>
+  <text x="50" y="800" fill="#94a3b8" font-size="18">• Swamping Resistor: Small copper/manganin series resistor with meter coil</text>
+  <text x="70" y="835" fill="#94a3b8" font-size="18">to minimize temperature-induced measurement errors.</text>
+  <text x="50" y="870" fill="#38bdf8" font-size="18">• Aryton / Universal Multi-Range Shunt eliminates switch contact resistance.</text>
+
+  <rect x="30" y="915" width="840" height="440" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="960" fill="#34d399" font-size="22" font-weight="800">Voltmeter Extension: Series Multiplier R_se</text>
+  <text x="50" y="1005" fill="#e2e8f0" font-size="19">• Connect a large resistance R_se in SERIES with meter movement.</text>
+  <text x="50" y="1045" fill="#fbbf24" font-size="20" font-weight="700">Voltage Multiplying Power m = V / V_m:</text>
+  <text x="70" y="1085" fill="#e2e8f0" font-size="18">Total voltage V divides across R_se and meter coil R_m:</text>
+  <text x="70" y="1125" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">V = I_fsd · ( R_m + R_se )</text>
+
+  <text x="70" y="1175" fill="#34d399" font-family="'Fira Code', monospace" font-size="26" font-weight="900">R_se = R_m · ( m - 1 )   [m = V / V_m]</text>
+
+  <text x="50" y="1230" fill="#94a3b8" font-size="18">• Notice the beautiful mathematical duality between shunt and series multiplier:</text>
+  <text x="70" y="1265" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">Ammeter: R_sh = R_m / (m - 1)  ⟷  Voltmeter: R_se = R_m · (m - 1)</text>
+  <text x="50" y="1305" fill="#e2e8f0" font-size="18">• Material: Constantan or Manganin wire non-inductively wound.</text>
+
+  <rect x="30" y="1380" width="840" height="430" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="50" y="1425" fill="#fbbf24" font-size="22" font-weight="800">Voltmeter Sensitivity S (Ohms-per-Volt)</text>
+  <text x="50" y="1470" fill="#e2e8f0" font-size="19">• Figures of Merit: Reciprocal of full-scale deflection current:</text>
+  <text x="70" y="1510" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="26" font-weight="900">S = 1 / I_fsd   [Units: Ω / V]</text>
+  <text x="50" y="1560" fill="#34d399" font-size="19" font-weight="700">Internal Voltmeter Resistance on Range V_range:</text>
+  <text x="70" y="1600" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">R_v = S · V_range</text>
+  <text x="50" y="1650" fill="#94a3b8" font-size="18">• Example: If S = 20,000 Ω/V on 10 V range ⇒ R_v = 20,000 × 10 = 200 kΩ.</text>
+  <text x="50" y="1685" fill="#94a3b8" font-size="18">On 50 V range ⇒ R_v = 20,000 × 50 = 1 MΩ.</text>
+  <text x="50" y="1725" fill="#fbbf24" font-size="18">★ HIGHER sensitivity ⟹ HIGHER internal resistance ⟹ LOWER loading error!</text>
+</g>
+
+<!-- Column 4: Loading Errors & Master Exam Decision Engine -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="930" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">4. Loading Errors &amp; Master Decision Tree</text>
+
+  <rect x="30" y="85" width="870" height="420" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#f43f5e" font-size="22" font-weight="800">Voltmeter Loading Effect Analytics</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• When voltmeter with finite R_v is connected across load resistor R_L:</text>
+  <text x="70" y="205" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">Effective Resistance = R_L ∥ R_v = (R_L · R_v) / (R_L + R_v) &lt; R_L</text>
+  <text x="50" y="250" fill="#e2e8f0" font-size="18">• True open-circuit voltage: V_true = V_th · [ R_L / (R_th + R_L) ]</text>
+  <text x="50" y="290" fill="#e2e8f0" font-size="18">• Measured loaded voltage: V_meas = V_th · [ (R_L ∥ R_v) / (R_th + R_L ∥ R_v) ] &lt; V_true</text>
+
+  <text x="50" y="340" fill="#f43f5e" font-size="20" font-weight="800">Percentage Voltmeter Loading Error ε_v:</text>
+  <text x="70" y="380" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="24" font-weight="900">ε_v = [ (V_meas - V_true) / V_true ] × 100 % &lt; 0</text>
+  <text x="50" y="425" fill="#34d399" font-size="18">• To keep loading error &lt; 1%: Ensure R_v ≥ 100 × ( R_th ∥ R_L )!</text>
+
+  <rect x="30" y="530" width="870" height="360" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="570" fill="#38bdf8" font-size="22" font-weight="800">Ammeter Insertion Loading Effect Analytics</text>
+  <text x="50" y="615" fill="#e2e8f0" font-size="19">• Ammeter with internal resistance R_A inserted into loop with R_total:</text>
+  <text x="70" y="655" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">I_true = V_th / R_total   |   I_meas = V_th / ( R_total + R_A )</text>
+
+  <text x="50" y="705" fill="#f43f5e" font-size="20" font-weight="800">Percentage Ammeter Insertion Error ε_A:</text>
+  <text x="70" y="745" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="24" font-weight="900">ε_A = [ - R_A / ( R_total + R_A ) ] × 100 % &lt; 0</text>
+  <text x="50" y="795" fill="#34d399" font-size="18">• Always under-reads current because insertion adds unwanted series impedance.</text>
+  <text x="50" y="830" fill="#34d399" font-size="18">• To keep error &lt; 1%: Ensure R_A ≤ 0.01 × R_total!</text>
+
+  <rect x="30" y="915" width="870" height="900" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="50" y="960" fill="#34d399" font-size="26" font-weight="900">★ MASTER EXAM 4-TRACK RAPID DECISION ENGINE</text>
+  <text x="50" y="1005" fill="#e2e8f0" font-size="18">When you encounter ANY Network Analysis problem in GATE 2027:</text>
+
+  <!-- Flowchart Track A -->
+  <rect x="50" y="1035" width="830" height="175" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+  <text x="70" y="1065" fill="#38bdf8" font-size="18" font-weight="800">TRACK A: Power, Energy &amp; Conservation (Tellegen / PSC)</text>
+  <text x="70" y="1095" fill="#e2e8f0" font-size="16">1. Identify reference current direction w.r.t positive terminal.</text>
+  <text x="70" y="1125" fill="#e2e8f0" font-size="16">2. Current enters (+) ⇒ P_abs = +v·i. Current leaves (+) ⇒ P_del = +v·i.</text>
+  <text x="70" y="1155" fill="#34d399" font-size="16">3. Multi-source power: Never sum power directly! Calculate i_total first: P = (i₁ ± i₂)² R.</text>
+  <text x="70" y="1185" fill="#fbbf24" font-size="16">4. Check Tellegen power balance: ∑ P_del ≡ ∑ P_abs across all elements.</text>
+
+  <!-- Flowchart Track B -->
+  <rect x="50" y="1225" width="830" height="175" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+  <text x="70" y="1255" fill="#34d399" font-size="18" font-weight="800">TRACK B: Systematic Circuit Formulation (Nodal vs Mesh)</text>
+  <text x="70" y="1285" fill="#e2e8f0" font-size="16">1. Count nodes n and branches b. Compare (n - 1) vs (b - n + 1).</text>
+  <text x="70" y="1315" fill="#e2e8f0" font-size="16">2. Non-planar graph? Nodal analysis is MANDATORY (Mesh impossible!).</text>
+  <text x="70" y="1345" fill="#e2e8f0" font-size="16">3. Floating voltage source? Form Supernode (outer KCL + inner KVL constraint).</text>
+  <text x="70" y="1375" fill="#fbbf24" font-size="16">4. Shared current source? Form Supermesh (outer KVL + inner current constraint).</text>
+
+  <!-- Flowchart Track C -->
+  <rect x="50" y="1415" width="830" height="175" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+  <text x="70" y="1445" fill="#fbbf24" font-size="18" font-weight="800">TRACK C: Reductions &amp; High-Order Symmetry</text>
+  <text x="70" y="1475" fill="#e2e8f0" font-size="16">1. Look for Wheatstone bridge: Test R₁ R₄ == R₂ R₃. If equal, snip detector!</text>
+  <text x="70" y="1505" fill="#e2e8f0" font-size="16">2. Test Folding symmetry: Mirror nodes have equal V ⇒ snip cross-branches or fold.</text>
+  <text x="70" y="1535" fill="#e2e8f0" font-size="16">3. Test Perpendicular symmetry: Current splits evenly ⇒ lift and split central nodes.</text>
+  <text x="70" y="1565" fill="#38bdf8" font-size="16">4. 3D Cube: Recall Edge (7/12 R) &lt; Face (3/4 R) &lt; Body Diagonal (5/6 R).</text>
+
+  <!-- Flowchart Track D -->
+  <rect x="50" y="1605" width="830" height="185" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+  <text x="70" y="1635" fill="#c084fc" font-size="18" font-weight="800">TRACK D: Bulbs &amp; Measuring Instrument Loading</text>
+  <text x="70" y="1665" fill="#e2e8f0" font-size="16">1. Bulbs: Find R = V_R² / P_R. In parallel, higher W glows brighter.</text>
+  <text x="70" y="1695" fill="#e2e8f0" font-size="16">2. Bulbs in series: LOWER W glows brighter! Under high voltage, lowest W fuses first!</text>
+  <text x="70" y="1725" fill="#e2e8f0" font-size="16">3. Ammeter shunt: R_sh = R_m / (m - 1). Voltmeter series: R_se = R_m · (m - 1).</text>
+  <text x="70" y="1755" fill="#34d399" font-size="16">4. Loading error: Always negative. S = 1/I_fsd; higher sensitivity minimizes error.</text>
+</g>
+
+  </g>
+</svg>

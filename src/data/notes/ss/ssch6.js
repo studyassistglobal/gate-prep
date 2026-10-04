@@ -33,7 +33,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch6/fig_01_dtft_to_z_transform_mapping_engine.jpg",
+     "src": "/notes/ss/figures_ch6/fig_01_dtft_to_z_transform_mapping_engine.svg",
      "alt": "Figure 6.1: DTFT to Z-Transform Mapping Engine"
     },
     {
@@ -3173,7 +3173,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch6/fig_02_z_plane_roc_anatomy_and_properties_matrix.jpg",
+     "src": "/notes/ss/figures_ch6/fig_02_z_plane_roc_anatomy_and_properties_matrix.svg",
      "alt": "Figure 6.2: ROC Anatomy and Properties Matrix"
     },
     {
@@ -5751,7 +5751,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch6/fig_04_z_domain_operational_properties_and_roc_algebra.jpg",
+     "src": "/notes/ss/figures_ch6/fig_04_z_domain_operational_properties_and_roc_algebra.svg",
      "alt": "Figure 6.4: Operational Properties and ROC Algebra"
     },
     {
@@ -9635,7 +9635,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch6/fig_03_canonical_z_transform_pairs_encyclopedia.jpg",
+     "src": "/notes/ss/figures_ch6/fig_03_canonical_z_transform_pairs_encyclopedia.svg",
      "alt": "Figure 6.3: Canonical Transform Pairs Encyclopedia"
     },
     {
@@ -12277,7 +12277,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch6/fig_05_discrete_lti_causality_stability_decision_engine.jpg",
+     "src": "/notes/ss/figures_ch6/fig_05_discrete_lti_causality_stability_decision_engine.svg",
      "alt": "Figure 6.5: LTI Causality and Stability Decision Engine"
     },
     {
@@ -16531,7 +16531,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch6/fig_06_inverse_z_transform_pfe_and_power_series_engine.jpg",
+     "src": "/notes/ss/figures_ch6/fig_06_inverse_z_transform_pfe_and_power_series_engine.svg",
      "alt": "Figure 6.6: Inverse Z-Transform Engines"
     },
     {
@@ -21199,7 +21199,7 @@ export default {
    "blocks": [
     {
      "t": "img",
-     "src": "/notes/ss/figures_ch6/fig_07_unilateral_z_transform_and_ivt_fvt_safeguards_engine.jpg",
+     "src": "/notes/ss/figures_ch6/fig_07_unilateral_z_transform_and_ivt_fvt_safeguards_engine.svg",
      "alt": "Figure 6.7: Unilateral Z-Transform and Diagnostic Safeguards"
     },
     {

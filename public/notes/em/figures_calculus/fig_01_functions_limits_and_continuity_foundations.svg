@@ -1,0 +1,430 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="480" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="240" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 01</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">FUNCTIONS, LIMITS &amp; CONTINUITY • ARCHITECTURAL TAXONOMY</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">Mappings, Special Functions ([x], {x}, sgn), 7 Indeterminate Forms, Sandwich Theorem, and Discontinuity Profiles</text>
+  </g>
+
+  <!-- COLUMN 1: FUNCTION MAPPINGS & SPECIAL FUNCTIONS -->
+  <g transform="translate(120, 310)">
+    <!-- Card 1A: Function Mappings -->
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. FUNCTION MAPPING TAXONOMY &amp; TESTS</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="510" height="150" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#38bdf8" font-size="22" font-weight="700">One-to-One (Injective)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">f(x₁) = f(x₂) ⟹ x₁ = x₂ strictly.</text>
+      <text x="25" y="110" fill="#94a3b8" font-size="17">Horizontal Line Test: Max 1 intersection.</text>
+      <circle cx="450" cy="75" r="30" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="450" y="82" fill="#38bdf8" font-size="18" font-weight="700" text-anchor="middle">1 ➔ 1</text>
+    </g>
+
+    <g transform="translate(580, 110)">
+      <rect x="0" y="0" width="510" height="150" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">Many-to-One (Non-Injective)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">∃ x₁ ≠ x₂ such that f(x₁) = f(x₂).</text>
+      <text x="25" y="110" fill="#94a3b8" font-size="17">E.g. f(x) = x², f(x) = sin x. Fails H-test.</text>
+      <circle cx="450" cy="75" r="30" fill="#78350f" fill-opacity="0.3" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="450" y="82" fill="#fbbf24" font-size="18" font-weight="700" text-anchor="middle">M ➔ 1</text>
+    </g>
+
+    <g transform="translate(40, 290)">
+      <rect x="0" y="0" width="510" height="150" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">Onto (Surjective)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">Range(f) = Codomain(f) completely.</text>
+      <text x="25" y="110" fill="#94a3b8" font-size="17">Every y ∈ Codomain has pre-image x.</text>
+      <circle cx="450" cy="75" r="30" fill="#064e3b" fill-opacity="0.3" stroke="#34d399" stroke-width="1.5"/>
+      <text x="450" y="82" fill="#34d399" font-size="18" font-weight="700" text-anchor="middle">R = C</text>
+    </g>
+
+    <g transform="translate(580, 290)">
+      <rect x="0" y="0" width="510" height="150" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#f43f5e" font-size="22" font-weight="700">Into (Non-Surjective)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">Range(f) ⊂ Codomain(f) strictly.</text>
+      <text x="25" y="110" fill="#94a3b8" font-size="17">∃ y ∈ Codomain with no pre-image.</text>
+      <circle cx="450" cy="75" r="30" fill="#881337" fill-opacity="0.3" stroke="#f43f5e" stroke-width="1.5"/>
+      <text x="450" y="82" fill="#f43f5e" font-size="18" font-weight="700" text-anchor="middle">R ⊂ C</text>
+    </g>
+
+    <g transform="translate(40, 470)">
+      <rect x="0" y="0" width="1050" height="330" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#38bdf8" font-size="22" font-weight="700">Bijective Function Theorem &amp; Invertibility</text>
+      <text x="30" y="85" fill="#e2e8f0" font-size="19">A function f: A ➔ B is strictly Invertible (f⁻¹ exists) IF AND ONLY IF f is BIJECTIVE (Both Injective &amp; Surjective).</text>
+      
+      <rect x="30" y="115" width="480" height="185" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="50" y="150" fill="#fbbf24" font-size="19" font-weight="700">Vertical Line Test (Function Validity)</text>
+      <text x="50" y="185" fill="#cbd5e1" font-size="17">• Every vertical line x = c must intersect</text>
+      <text x="50" y="215" fill="#cbd5e1" font-size="17">  graph in AT MOST ONE point.</text>
+      <text x="50" y="250" fill="#f43f5e" font-size="17">  Circle x² + y² = r² fails (2 intersections).</text>
+
+      <rect x="540" y="115" width="480" height="185" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="560" y="150" fill="#34d399" font-size="19" font-weight="700">Horizontal Line Test (One-to-One)</text>
+      <text x="560" y="185" fill="#cbd5e1" font-size="17">• Every horizontal line y = k must intersect</text>
+      <text x="560" y="215" fill="#cbd5e1" font-size="17">  graph in AT MOST ONE point.</text>
+      <text x="560" y="250" fill="#34d399" font-size="17">  Strictly monotonic f(x) always passes.</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 1 BOTTOM: SPECIAL ELEMENTARY FUNCTIONS -->
+  <g transform="translate(120, 1180)">
+    <rect x="0" y="0" width="1140" height="880" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#fbbf24"/>
+    <text x="45" y="45" fill="#fbbf24" font-size="28" font-weight="700">2. SPECIAL ELEMENTARY FUNCTIONS CATALOG</text>
+
+    <!-- Function 1: Modulus |x| -->
+    <g transform="translate(40, 105)">
+      <rect x="0" y="0" width="510" height="350" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#38bdf8" font-size="22" font-weight="700">Modulus Function: f(x) = |x|</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="17">• Definition: |x| = +x (x ≥ 0), -x (x &lt; 0)</text>
+      <text x="25" y="105" fill="#cbd5e1" font-size="17">• Domain: ℝ, Range: [0, ∞)</text>
+      <text x="25" y="135" fill="#cbd5e1" font-size="17">• Even symmetry: |-x| = |x| (symmetric about y-axis)</text>
+      <text x="25" y="165" fill="#f43f5e" font-size="17">• Continuous everywhere; NON-DIFF at x = 0 (corner!)</text>
+      <path d="M 50 310 L 255 310 L 460 310" stroke="#475569" stroke-width="1.5"/>
+      <path d="M 255 340 L 255 190" stroke="#475569" stroke-width="1.5"/>
+      <path d="M 100 200 L 255 310 L 410 200" stroke="#38bdf8" stroke-width="3" fill="none"/>
+      <circle cx="255" cy="310" r="5" fill="#f43f5e"/>
+      <text x="270" y="335" fill="#f43f5e" font-size="15" font-weight="700">Corner (0,0)</text>
+    </g>
+
+    <!-- Function 2: Greatest Integer [x] -->
+    <g transform="translate(580, 105)">
+      <rect x="0" y="0" width="510" height="350" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">Greatest Integer (Floor): f(x) = [x]</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="17">• [x] = largest integer ≤ x (e.g. [2.7]=2, [-1.3]=-2)</text>
+      <text x="25" y="105" fill="#cbd5e1" font-size="17">• Identity: [x] + [-x] = 0 (x ∈ ℤ), -1 (x ∉ ℤ)</text>
+      <text x="25" y="135" fill="#cbd5e1" font-size="17">• Discontinuous at ALL integer points (Jump = 1)</text>
+      <text x="25" y="165" fill="#f43f5e" font-size="17">• Non-differentiable at all x ∈ ℤ</text>
+      <!-- Staircase mini graph -->
+      <path d="M 50 310 L 460 310" stroke="#475569" stroke-width="1.5"/>
+      <path d="M 255 340 L 255 190" stroke="#475569" stroke-width="1.5"/>
+      <line x1="120" y1="280" x2="180" y2="280" stroke="#fbbf24" stroke-width="3"/>
+      <line x1="180" y1="250" x2="240" y2="250" stroke="#fbbf24" stroke-width="3"/>
+      <line x1="240" y1="220" x2="300" y2="220" stroke="#fbbf24" stroke-width="3"/>
+      <line x1="300" y1="190" x2="360" y2="190" stroke="#fbbf24" stroke-width="3"/>
+      <circle cx="180" cy="280" r="4" fill="#090d16" stroke="#fbbf24" stroke-width="2"/>
+      <circle cx="240" cy="250" r="4" fill="#090d16" stroke="#fbbf24" stroke-width="2"/>
+      <circle cx="300" cy="220" r="4" fill="#090d16" stroke="#fbbf24" stroke-width="2"/>
+    </g>
+
+    <!-- Function 3: Fractional Part {x} -->
+    <g transform="translate(40, 490)">
+      <rect x="0" y="0" width="510" height="350" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">Fractional Part Function: f(x) = {x}</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="17">• Definition: {x} = x - [x], Range = [0, 1)</text>
+      <text x="25" y="105" fill="#cbd5e1" font-size="17">• Periodic: {x + 1} = {x} (Fundamental Period T = 1)</text>
+      <text x="25" y="135" fill="#cbd5e1" font-size="17">• Saw-tooth waveform; Discontinuous at x ∈ ℤ</text>
+      <text x="25" y="165" fill="#34d399" font-size="17">• {x} + {-x} = 0 (x ∈ ℤ), 1 (x ∉ ℤ)</text>
+      <!-- Sawtooth mini graph -->
+      <path d="M 50 310 L 460 310" stroke="#475569" stroke-width="1.5"/>
+      <path d="M 255 340 L 255 190" stroke="#475569" stroke-width="1.5"/>
+      <line x1="80" y1="310" x2="160" y2="230" stroke="#34d399" stroke-width="3"/>
+      <line x1="160" y1="310" x2="240" y2="230" stroke="#34d399" stroke-width="3"/>
+      <line x1="240" y1="310" x2="320" y2="230" stroke="#34d399" stroke-width="3"/>
+      <line x1="320" y1="310" x2="400" y2="230" stroke="#34d399" stroke-width="3"/>
+      <circle cx="160" cy="230" r="4" fill="#090d16" stroke="#34d399" stroke-width="2"/>
+      <circle cx="240" cy="230" r="4" fill="#090d16" stroke="#34d399" stroke-width="2"/>
+      <circle cx="320" cy="230" r="4" fill="#090d16" stroke="#34d399" stroke-width="2"/>
+      <circle cx="400" cy="230" r="4" fill="#090d16" stroke="#34d399" stroke-width="2"/>
+    </g>
+
+    <!-- Function 4: Signum sgn(x) -->
+    <g transform="translate(580, 490)">
+      <rect x="0" y="0" width="510" height="350" rx="14" fill="#1e293b" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#f43f5e" font-size="22" font-weight="700">Signum Function: f(x) = sgn(x)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="17">• Definition: +1 (x &gt; 0), 0 (x = 0), -1 (x &lt; 0)</text>
+      <text x="25" y="105" fill="#cbd5e1" font-size="17">• Algebraic: sgn(x) = x / |x| = |x| / x for x ≠ 0</text>
+      <text x="25" y="135" fill="#cbd5e1" font-size="17">• Odd function: sgn(-x) = -sgn(x)</text>
+      <text x="25" y="165" fill="#f43f5e" font-size="17">• Jump discontinuity at x = 0 (Jump = 1 - (-1) = 2)</text>
+      <!-- Signum mini graph -->
+      <path d="M 50 310 L 460 310" stroke="#475569" stroke-width="1.5"/>
+      <path d="M 255 340 L 255 190" stroke="#475569" stroke-width="1.5"/>
+      <line x1="255" y1="230" x2="420" y2="230" stroke="#f43f5e" stroke-width="3"/>
+      <line x1="90" y1="310" x2="255" y2="310" stroke="#475569" stroke-width="1.5"/>
+      <line x1="90" y1="350" x2="255" y2="350" stroke="#f43f5e" stroke-width="3"/>
+      <circle cx="255" cy="310" r="5" fill="#f43f5e"/>
+      <circle cx="255" cy="230" r="4" fill="#090d16" stroke="#f43f5e" stroke-width="2"/>
+      <circle cx="255" cy="350" r="4" fill="#090d16" stroke="#f43f5e" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: LIMITS & INDETERMINATE FORMS -->
+  <g transform="translate(1300, 310)">
+    <rect x="0" y="0" width="1180" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1180" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">3. LIMIT EXISTENCE &amp; 7 INDETERMINATE FORMS</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1100" height="230" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#38bdf8" font-size="24" font-weight="700">The Golden Criterion of Limit Existence</text>
+      <text x="30" y="85" fill="#e2e8f0" font-size="19">lim_{x➔a} f(x) = L exists IF AND ONLY IF:</text>
+      <rect x="30" y="110" width="490" height="95" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="50" y="150" fill="#38bdf8" font-size="22" font-weight="700">Left-Hand Limit (LHL)</text>
+      <text x="50" y="185" fill="#cbd5e1" font-size="18">L₁ = lim_{h➔0⁺} f(a - h)</text>
+
+      <text x="545" y="165" fill="#f8fafc" font-size="32" font-weight="800">==</text>
+
+      <rect x="600" y="110" width="470" height="95" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="620" y="150" fill="#34d399" font-size="22" font-weight="700">Right-Hand Limit (RHL)</text>
+      <text x="620" y="185" fill="#cbd5e1" font-size="18">L₂ = lim_{h➔0⁺} f(a + h)</text>
+    </g>
+
+    <g transform="translate(40, 370)">
+      <text x="10" y="30" fill="#fbbf24" font-size="22" font-weight="700">THE 7 CANONICAL INDETERMINATE FORMS</text>
+      
+      <!-- 4 Algebraic Forms -->
+      <g transform="translate(0, 50)">
+        <rect x="0" y="0" width="250" height="120" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="125" y="50" fill="#38bdf8" font-size="32" font-weight="800" text-anchor="middle">0 / 0</text>
+        <text x="125" y="90" fill="#cbd5e1" font-size="16" text-anchor="middle">L'Hôpital / Expansion</text>
+      </g>
+      <g transform="translate(280, 50)">
+        <rect x="0" y="0" width="250" height="120" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="125" y="50" fill="#38bdf8" font-size="32" font-weight="800" text-anchor="middle">∞ / ∞</text>
+        <text x="125" y="90" fill="#cbd5e1" font-size="16" text-anchor="middle">L'Hôpital / Highest Power</text>
+      </g>
+      <g transform="translate(560, 50)">
+        <rect x="0" y="0" width="250" height="120" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+        <text x="125" y="50" fill="#fbbf24" font-size="32" font-weight="800" text-anchor="middle">0 • ∞</text>
+        <text x="125" y="90" fill="#cbd5e1" font-size="16" text-anchor="middle">Rewrite as 0/(1/∞)</text>
+      </g>
+      <g transform="translate(840, 50)">
+        <rect x="0" y="0" width="260" height="120" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+        <text x="130" y="50" fill="#fbbf24" font-size="32" font-weight="800" text-anchor="middle">∞ - ∞</text>
+        <text x="130" y="90" fill="#cbd5e1" font-size="16" text-anchor="middle">Rationalize / Common Denom</text>
+      </g>
+
+      <!-- 3 Exponential Forms -->
+      <g transform="translate(0, 200)">
+        <rect x="0" y="0" width="340" height="140" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+        <text x="170" y="55" fill="#34d399" font-size="36" font-weight="800" text-anchor="middle">1^∞</text>
+        <text x="170" y="95" fill="#cbd5e1" font-size="17" text-anchor="middle">Euler Base Shortcut</text>
+        <text x="170" y="120" fill="#34d399" font-size="15" font-weight="700" text-anchor="middle">exp[lim g(x)(f(x) - 1)]</text>
+      </g>
+      <g transform="translate(380, 200)">
+        <rect x="0" y="0" width="340" height="140" rx="12" fill="#1e293b" stroke="#f43f5e" stroke-width="1.2"/>
+        <text x="170" y="55" fill="#f43f5e" font-size="36" font-weight="800" text-anchor="middle">0⁰</text>
+        <text x="170" y="95" fill="#cbd5e1" font-size="17" text-anchor="middle">Take Natural Log: y = f^g</text>
+        <text x="170" y="120" fill="#f43f5e" font-size="15" font-weight="700" text-anchor="middle">ln y = g • ln f (0 • -∞)</text>
+      </g>
+      <g transform="translate(760, 200)">
+        <rect x="0" y="0" width="340" height="140" rx="12" fill="#1e293b" stroke="#f43f5e" stroke-width="1.2"/>
+        <text x="170" y="55" fill="#f43f5e" font-size="36" font-weight="800" text-anchor="middle">∞⁰</text>
+        <text x="170" y="95" fill="#cbd5e1" font-size="17" text-anchor="middle">Take Natural Log: y = f^g</text>
+        <text x="170" y="120" fill="#f43f5e" font-size="15" font-weight="700" text-anchor="middle">ln y = g • ln f (0 • ∞)</text>
+      </g>
+    </g>
+
+    <g transform="translate(40, 740)">
+      <rect x="0" y="0" width="1100" height="70" rx="10" fill="#7f1d1d" fill-opacity="0.3" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="42" fill="#fca5a5" font-size="18" font-weight="600">WARNING: 0/∞ = 0, ∞/0 = ∞, 0^∞ = 0, ∞^∞ = ∞ are DETERMINATE forms! Do NOT apply L'Hôpital to determinate forms!</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2 BOTTOM: L'HOPITAL & 1^INF SHORTCUT -->
+  <g transform="translate(1300, 1180)">
+    <rect x="0" y="0" width="1180" height="880" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1180" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">4. EVALUATION ENGINES: L'HÔPITAL &amp; 1^∞</text>
+
+    <!-- L'Hopital Engine -->
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1100" height="340" rx="16" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#34d399" font-size="24" font-weight="700">L'Hôpital's Rule Protocol</text>
+      <text x="30" y="85" fill="#cbd5e1" font-size="19">If lim f(x)/g(x) produces 0/0 or ∞/∞, then:</text>
+      <rect x="30" y="105" width="550" height="90" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="50" y="160" fill="#38bdf8" font-size="28" font-weight="700">lim [f(x) / g(x)] = lim [f'(x) / g'(x)]</text>
+      
+      <g transform="translate(620, 105)">
+        <text x="0" y="25" fill="#fbbf24" font-size="18" font-weight="700">• Differentiate numerator &amp; denom SEPARATELY!</text>
+        <text x="0" y="55" fill="#f43f5e" font-size="18" font-weight="700">• NEVER use Quotient Rule (f/g)'!</text>
+        <text x="0" y="85" fill="#cbd5e1" font-size="18">• Verify 0/0 or ∞/∞ before EVERY repeated step.</text>
+      </g>
+
+      <rect x="30" y="220" width="1040" height="95" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="50" y="255" fill="#38bdf8" font-size="19" font-weight="700">Standard Maclaurin Truncation Shortcuts (Faster than L'Hôpital):</text>
+      <text x="50" y="290" fill="#e2e8f0" font-size="17">sin x ≈ x - x³/6 | cos x ≈ 1 - x²/2 | eˣ ≈ 1 + x + x²/2 | ln(1+x) ≈ x - x²/2 | tan x ≈ x + x³/3</text>
+    </g>
+
+    <!-- 1^Inf Shortcut -->
+    <g transform="translate(40, 490)">
+      <rect x="0" y="0" width="1100" height="340" rx="16" fill="url(#cardGradCyan)" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#38bdf8" font-size="24" font-weight="700">The Golden 1^∞ Master Shortcut</text>
+      <text x="30" y="85" fill="#cbd5e1" font-size="19">When limit has form [1]^∞ with base f(x) ➔ 1 and exponent g(x) ➔ ∞:</text>
+      <rect x="30" y="105" width="1040" height="100" rx="10" fill="#0c2338" stroke="#38bdf8" stroke-width="2"/>
+      <text x="50" y="165" fill="#38bdf8" font-size="34" font-weight="800">lim [f(x)]^{g(x)} = exp{ lim [g(x) • (f(x) - 1)] }</text>
+      
+      <g transform="translate(30, 230)">
+        <rect x="0" y="0" width="500" height="85" rx="8" fill="#1e293b" stroke="#334155"/>
+        <text x="20" y="35" fill="#fbbf24" font-size="18" font-weight="700">Classic Example 1:</text>
+        <text x="20" y="65" fill="#cbd5e1" font-size="18">lim_{x➔0} (1 + ax)^{b/x} = e^{ab}</text>
+      </g>
+      <g transform="translate(540, 230)">
+        <rect x="0" y="0" width="530" height="85" rx="8" fill="#1e293b" stroke="#334155"/>
+        <text x="20" y="35" fill="#34d399" font-size="18" font-weight="700">Classic Example 2:</text>
+        <text x="20" y="65" fill="#cbd5e1" font-size="18">lim_{x➔∞} (1 + k/x)^x = e^k</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: SANDWICH THEOREM & CONTINUITY TAXONOMY -->
+  <g transform="translate(2520, 310)">
+    <!-- Squeeze Theorem Card -->
+    <rect x="0" y="0" width="1200" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1200" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#fbbf24"/>
+    <text x="45" y="45" fill="#fbbf24" font-size="28" font-weight="700">5. SQUEEZE (SANDWICH) THEOREM ENGINE</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1120" height="230" rx="14" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="30" y="45" fill="#fbbf24" font-size="24" font-weight="700">Formal Sandwich Theorem Statement</text>
+      <text x="30" y="85" fill="#cbd5e1" font-size="19">If g(x) ≤ f(x) ≤ h(x) in a deleted neighborhood of c, and:</text>
+      <rect x="30" y="110" width="1060" height="90" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="50" y="165" fill="#fbbf24" font-size="28" font-weight="700">lim_{x➔c} g(x) = lim_{x➔c} h(x) = L  ⟹  lim_{x➔c} f(x) = L</text>
+    </g>
+
+    <g transform="translate(40, 370)">
+      <text x="10" y="30" fill="#38bdf8" font-size="22" font-weight="700">CANONICAL GATE EXAM SQUEEZE APPLICATIONS</text>
+
+      <g transform="translate(0, 50)">
+        <rect x="0" y="0" width="540" height="170" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#38bdf8" font-size="20" font-weight="700">1. Greatest Integer Limit</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">Evaluate: lim_{x➔∞} [x] / x</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">Bounds: (x - 1)/x &lt; [x]/x ≤ 1</text>
+        <text x="25" y="140" fill="#34d399" font-size="20" font-weight="700">⟹ lim_{x➔∞} [x] / x = 1</text>
+      </g>
+
+      <g transform="translate(580, 50)">
+        <rect x="0" y="0" width="540" height="170" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#34d399" font-size="20" font-weight="700">2. Fractional Part Limit</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">Evaluate: lim_{x➔∞} {x} / x</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">Bounds: 0 ≤ {x}/x &lt; 1/x (since 0 ≤ {x} &lt; 1)</text>
+        <text x="25" y="140" fill="#34d399" font-size="20" font-weight="700">⟹ lim_{x➔∞} {x} / x = 0</text>
+      </g>
+
+      <g transform="translate(0, 240)">
+        <rect x="0" y="0" width="540" height="170" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#fbbf24" font-size="20" font-weight="700">3. Sinusoid at Infinity</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">Evaluate: lim_{x➔∞} (sin x) / x</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">Bounds: -1/x ≤ (sin x)/x ≤ +1/x</text>
+        <text x="25" y="140" fill="#34d399" font-size="20" font-weight="700">⟹ lim_{x➔∞} (sin x) / x = 0</text>
+      </g>
+
+      <g transform="translate(580, 240)">
+        <rect x="0" y="0" width="540" height="170" rx="12" fill="#1e293b" stroke="#f43f5e" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#f43f5e" font-size="20" font-weight="700">4. Oscillating Damped at Origin</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">Evaluate: lim_{x➔0} x • sin(1/x)</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">Bounds: -|x| ≤ x • sin(1/x) ≤ +|x|</text>
+        <text x="25" y="140" fill="#34d399" font-size="20" font-weight="700">⟹ lim_{x➔0} x • sin(1/x) = 0</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- COLUMN 3 BOTTOM: CONTINUITY & DISCONTINUITY TAXONOMY -->
+  <g transform="translate(2520, 1180)">
+    <rect x="0" y="0" width="1200" height="880" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1200" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#f43f5e"/>
+    <text x="45" y="45" fill="#f43f5e" font-size="28" font-weight="700">6. CONTINUITY &amp; DISCONTINUITY TAXONOMY</text>
+
+    <g transform="translate(40, 105)">
+      <!-- 4 Discontinuity Classes -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="540" height="350" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#38bdf8" font-size="22" font-weight="700">1. Removable Discontinuity (Hole)</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">• lim_{x➔a} f(x) exists and is finite.</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">• But f(a) is undefined OR lim f(x) ≠ f(a).</text>
+        <text x="25" y="135" fill="#34d399" font-size="17">• Fixable by redefining f(a) = lim f(x).</text>
+        <text x="25" y="165" fill="#94a3b8" font-size="17">• E.g. f(x) = (x² - 4)/(x - 2) at x = 2.</text>
+        <!-- Mini hole drawing -->
+        <line x1="80" y1="300" x2="440" y2="220" stroke="#38bdf8" stroke-width="3"/>
+        <circle cx="260" cy="260" r="7" fill="#090d16" stroke="#38bdf8" stroke-width="3"/>
+        <circle cx="260" cy="210" r="5" fill="#fbbf24"/>
+        <text x="280" y="215" fill="#fbbf24" font-size="15" font-weight="700">f(a) point</text>
+      </g>
+
+      <g transform="translate(580, 0)">
+        <rect x="0" y="0" width="540" height="350" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">2. Jump Discontinuity (First Kind)</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">• Both LHL and RHL exist as finite numbers.</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">• But LHL ≠ RHL strictly.</text>
+        <text x="25" y="135" fill="#fbbf24" font-size="17">• Jump Magnitude = |RHL - LHL| &gt; 0.</text>
+        <text x="25" y="165" fill="#94a3b8" font-size="17">• E.g. f(x) = sgn(x), f(x) = [x].</text>
+        <!-- Mini jump drawing -->
+        <line x1="80" y1="300" x2="250" y2="300" stroke="#fbbf24" stroke-width="3"/>
+        <circle cx="250" cy="300" r="5" fill="#fbbf24"/>
+        <line x1="250" y1="220" x2="440" y2="220" stroke="#fbbf24" stroke-width="3"/>
+        <circle cx="250" cy="220" r="5" fill="#090d16" stroke="#fbbf24" stroke-width="2"/>
+        <line x1="250" y1="225" x2="250" y2="295" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4,4"/>
+        <text x="265" y="265" fill="#f43f5e" font-size="15" font-weight="700">Jump</text>
+      </g>
+
+      <g transform="translate(0, 380)">
+        <rect x="0" y="0" width="540" height="350" rx="14" fill="#1e293b" stroke="#f43f5e" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#f43f5e" font-size="22" font-weight="700">3. Essential / Infinite (Second Kind)</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">• At least one of LHL or RHL is ±∞</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">• Curve blows up to vertical asymptote.</text>
+        <text x="25" y="135" fill="#f43f5e" font-size="17">• Cannot be made continuous by any value.</text>
+        <text x="25" y="165" fill="#94a3b8" font-size="17">• E.g. f(x) = 1/x at x = 0, f(x) = tan x at π/2.</text>
+        <!-- Mini asymptote drawing -->
+        <line x1="250" y1="200" x2="250" y2="330" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="6,6"/>
+        <path d="M 120 310 Q 230 300 240 210" stroke="#38bdf8" stroke-width="2.5" fill="none"/>
+        <path d="M 260 320 Q 270 230 380 220" stroke="#38bdf8" stroke-width="2.5" fill="none"/>
+      </g>
+
+      <g transform="translate(580, 380)">
+        <rect x="0" y="0" width="540" height="350" rx="14" fill="#1e293b" stroke="#a855f7" stroke-width="1.2"/>
+        <text x="25" y="40" fill="#a855f7" font-size="22" font-weight="700">4. Oscillating Discontinuity</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="17">• Function oscillates infinitely near x = a.</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">• Neither LHL nor RHL approaches any limit.</text>
+        <text x="25" y="135" fill="#a855f7" font-size="17">• E.g. f(x) = sin(1/x) as x ➔ 0.</text>
+        <text x="25" y="165" fill="#cbd5e1" font-size="17">• Contrast: x • sin(1/x) IS continuous at 0!</text>
+        <!-- Mini oscillation drawing -->
+        <path d="M 80 260 Q 140 210 180 310 T 220 220 T 240 290 T 250 240 T 255 260" stroke="#a855f7" stroke-width="2" fill="none"/>
+        <path d="M 255 260 Q 260 280 270 230 T 290 300 T 330 210 T 420 260" stroke="#a855f7" stroke-width="2" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

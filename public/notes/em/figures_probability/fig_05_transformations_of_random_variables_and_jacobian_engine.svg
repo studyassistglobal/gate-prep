@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#220d35" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#150722" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <!-- HEADER -->
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="520" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="260" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 05</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">TRANSFORMATIONS OF RANDOM VARIABLES &amp; JACOBIAN ENGINE</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">CDF Technique, Monotonic Derivative Rule, Multi-Root Non-Monotonic Summation, Arc-Sine Distribution &amp; Order Statistics</text>
+  </g>
+
+  <!-- COLUMN 1: CDF TECHNIQUE & STRICTLY MONOTONIC JACOBIAN -->
+  <g transform="translate(120, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. THE CDF METHOD &amp; MONOTONIC JACOBIAN THEOREM</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#38bdf8" font-size="22" font-weight="700">The 4-Step First-Principles CDF Technique</text>
+      <text x="25" y="75" fill="#f8fafc" font-size="18">Step 1: Write target CDF: F_Y(y) = P(Y ≤ y) = P(g(X) ≤ y).</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">Step 2: Invert the inequality to express event in terms of X: {X ∈ R_y}.</text>
+      <text x="25" y="145" fill="#f8fafc" font-size="18">Step 3: Integrate input density: F_Y(y) = ∫_{R_y} f_X(x) dx.</text>
+      <text x="25" y="180" fill="#38bdf8" font-size="18" font-weight="700">Step 4: Differentiate with respect to y: f_Y(y) = d/dy F_Y(y).</text>
+      <text x="25" y="210" fill="#34d399" font-size="16">Universal tool: Works for monotonic, non-monotonic, discrete, and piecewise functions!</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">Strictly Monotonic Derivative / Jacobian Formula</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">If y = g(x) is strictly increasing or decreasing, then x = g⁻¹(y) is unique:</text>
+      <text x="50" y="125" fill="#fbbf24" font-size="24" font-weight="800">f_Y(y) = f_X(x) · | dx / dy |   evaluated at x = g⁻¹(y)</text>
+      <text x="25" y="170" fill="#f8fafc" font-size="18">Absolute value |dx/dy| ensures density remains strictly non-negative!</text>
+      <text x="25" y="205" fill="#94a3b8" font-size="16">Example: Y = aX + b ⟹ dx/dy = 1/a ⟹ f_Y(y) = (1/|a|) f_X((y - b)/a).</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1050" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#34d399" font-size="22" font-weight="700">Reciprocal Transformation: Y = 1 / X</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">X ~ U[0, 2] ⟹ dx/dy = -1/y² ⟹ |dx/dy| = 1/y².</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">Support: x ∈ [0, 2] ⟹ y ∈ [1/2, ∞). Output PDF:</text>
+      <text x="50" y="145" fill="#34d399" font-size="20" font-weight="700">f_Y(y) = (1/2) · (1/y²) = 1 / (2y²),   for y ≥ 1/2</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: MULTI-ROOT & THE ARC-SINE LAW -->
+  <g transform="translate(1300, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#60a5fa"/>
+    <text x="45" y="45" fill="#60a5fa" font-size="28" font-weight="700">2. MULTI-ROOT SUMMATION &amp; THE ARC-SINE LAW</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#60a5fa" font-size="22" font-weight="700">Non-Monotonic Transformations (Multi-Root Rule)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">If equation y = g(x) has multiple distinct real roots x₁, x₂, ..., x_k:</text>
+      <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="700">f_Y(y) = ∑ᵢ₌₁^k f_X(xᵢ) · | dxᵢ / dy |</text>
+      <text x="25" y="170" fill="#f8fafc" font-size="18">Dual Root Parabolic Case: Y = X² for X ~ U[-1, 1]:</text>
+      <text x="50" y="200" fill="#fbbf24" font-size="18">Roots x = ±√y ⟹ |dx/dy| = 1/(2√y) ⟹ f_Y(y) = 2 · (1/2) · (1/(2√y)) = 1 / (2√y),  0 &lt; y &lt; 1.</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#c084fc" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#c084fc" font-size="22" font-weight="700">Trigonometric Transform &amp; The Arc-Sine Law</text>
+      <text x="25" y="75" fill="#f8fafc" font-size="18">X ~ U[-π, π] or U[0, π],  Transformation Y = cos X:</text>
+      <text x="50" y="120" fill="#c084fc" font-size="22" font-weight="800">f_Y(y) = 1 / ( π √(1 - y²) ),   for -1 &lt; y &lt; 1</text>
+      <text x="25" y="165" fill="#cbd5e1" font-size="18">• Bathtub U-Shaped Distribution: Peaks diverge to infinity at y = ±1!</text>
+      <text x="25" y="195" fill="#34d399" font-size="17">• Total area is strictly 1: ∫₋₁¹ [1/(π√(1-y²))] dy = (1/π) [sin⁻¹(y)]₋₁¹ = 1.000.</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1050" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#f43f5e" font-size="22" font-weight="700">Law of the Unconscious Statistician (LOTUS)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">Calculate expected value E[g(X)] WITHOUT deriving output density f_Y(y)!</text>
+      <text x="50" y="115" fill="#34d399" font-size="20" font-weight="700">E[g(X)] = ∫₋∞^∞ g(x) · f_X(x) dx ≡ ∫₋∞^∞ y · f_Y(y) dy</text>
+      <text x="25" y="155" fill="#94a3b8" font-size="16">Saves 10 minutes in exams by avoiding inverse Jacobian differentiation!</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: ORDER STATISTICS & 3D GEOMETRY -->
+  <g transform="translate(2480, 310)">
+    <rect x="0" y="0" width="1240" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1240" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">3. ORDER STATISTICS &amp; 3D PROBABILITY GEOMETRY</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1150" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">Order Statistics &amp; Extremes of i.i.d. Continuous RVs</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">Let X₁, X₂, ..., X_n be independent, identically distributed continuous RVs:</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">• Tie probability is zero: P(Xᵢ = Xⱼ) = 0 for i ≠ j.</text>
+      <text x="50" y="150" fill="#38bdf8" font-size="20" font-weight="700">P(X_k is largest) = P(X_k is smallest) = 1 / n</text>
+      <text x="25" y="190" fill="#fbbf24" font-size="18">Probability of any strict permutation ordering: P(X₁ &gt; X₂ &gt; ... &gt; X_n) = 1 / n!.</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1150" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">Algebra of Max and Min Operations</text>
+      <text x="25" y="75" fill="#f8fafc" font-size="18">• CDF of Maximum: F_{max}(z) = P(max(X, Y) ≤ z) = P(X ≤ z) · P(Y ≤ z) = F_X(z) F_Y(z).</text>
+      <text x="25" y="110" fill="#38bdf8" font-size="18">• Tail of Maximum: P(max(X, Y) &gt; z) = 1 - P(X ≤ z) P(Y ≤ z).</text>
+      <text x="25" y="145" fill="#f8fafc" font-size="18">• Tail of Minimum: P(min(X, Y) &gt; z) = P(X &gt; z) · P(Y &gt; z) = [1 - F_X(z)][1 - F_Y(z)].</text>
+      <text x="25" y="180" fill="#34d399" font-size="18">• CDF of Minimum: F_{min}(z) = 1 - [1 - F_X(z)][1 - F_Y(z)].</text>
+      <text x="25" y="210" fill="#f43f5e" font-size="16">CRITICAL TRAP: max and min CANNOT be factored independently in joint events!</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1150" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#c084fc" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#c084fc" font-size="22" font-weight="700">3D Unit Cube Geometry (GATE 2014 Benchmark)</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">X₁, X₂, X₃ i.i.d. U[0, 1]. Joint PDF = 1 on [0, 1]³ (Unit Cube, Total Vol = 1):</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">• P(X₁ + X₂ ≤ X₃) = Tetrahedron Vol = (1/3)(1/2)(1) = 1/6 ≈ 0.1667.</text>
+      <text x="25" y="145" fill="#38bdf8" font-size="18">• P(X₁ + X₂ + X₃ ≤ 1) = Corner Simplex Vol = (1/6)(1)(1)(1) = 1/6.</text>
+      <text x="25" y="175" fill="#34d399" font-size="16">• P(X₁ + X₂ + X₃ ≤ 2) = 1 - Corner Vol = 1 - 1/6 = 5/6 ≈ 0.8333.</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM FULL-WIDTH: GRAPHICAL CONVOLUTION & TRANSFORMATION DECISION TREE -->
+  <g transform="translate(120, 1180)">
+    <rect x="0" y="0" width="3600" height="900" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="3600" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">4. GRAPHICAL CONVOLUTION ENGINE &amp; CANONICAL TRANSFORMS REFERENCE MATRIX</text>
+
+    <!-- Table & Trapezoid Engine -->
+    <g transform="translate(50, 110)">
+      <rect x="0" y="0" width="1700" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1700" height="55" rx="16" fill="#0284c7" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#38bdf8" font-size="22" font-weight="700">GRAPHICAL CONVOLUTION RULES FOR SUMS OF INDEPENDENT RVs</text>
+
+      <g transform="translate(30, 80)">
+        <rect x="0" y="0" width="1640" height="150" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="1.2"/>
+        <text x="25" y="38" fill="#38bdf8" font-size="22" font-weight="700">Convolution of Two Independent Rectangular Pulses</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="18">Let X ~ U[-a, a] (width W₁=2a, height H₁) and Y ~ U[-b, b] (width W₂=2b, height H₂) with b ≥ a:</text>
+        <text x="50" y="115" fill="#f8fafc" font-size="18">The sum Z = X + Y produces a SYMMETRIC TRAPEZOID: Base = W₁ + W₂, Flat Top = W₂ - W₁.</text>
+      </g>
+
+      <g transform="translate(30, 250)">
+        <rect x="0" y="0" width="1640" height="440" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <text x="25" y="38" fill="#fbbf24" font-size="20" font-weight="700">Trapezoid Geometric Dimension Rules:</text>
+        <text x="25" y="75" fill="#f8fafc" font-size="18">• Total Base Width: W_{total} = W₁ + W₂ = 2(a + b). Spans from -(a+b) to +(a+b).</text>
+        <text x="25" y="115" fill="#f8fafc" font-size="18">• Flat Top Width: W_{top} = |W₂ - W₁| = 2(b - a). (If a = b, collapses to TRIANGLE!).</text>
+        <text x="25" y="155" fill="#34d399" font-size="18">• Peak Amplitude: H_{peak} = H₁ · H₂ · W_{min} = [1/(2a)] [1/(2b)] (2a) = 1 / (2b).</text>
+        <text x="25" y="195" fill="#cbd5e1" font-size="17">• Rising Ramp: Slope m = + H₁ · H₂ = 1 / (4ab). Rises from -(a+b) to -(b-a).</text>
+        <text x="25" y="235" fill="#cbd5e1" font-size="17">• Falling Ramp: Slope m = - H₁ · H₂ = - 1 / (4ab). Falls from +(b-a) to +(a+b).</text>
+        <text x="25" y="285" fill="#38bdf8" font-size="18" font-weight="700">Instant Tail Probability Evaluation:</text>
+        <text x="50" y="325" fill="#38bdf8" font-size="18">Tail probability P(Z ≥ z) is the area of a right triangle at the edge!</text>
+        <text x="50" y="360" fill="#f8fafc" font-size="18">P(Z ≥ z) = (1/2) · [ (a + b) - z ] · [ Slope · ((a + b) - z) ] = (1/2) m · [ (a + b) - z ]².</text>
+        <text x="50" y="405" fill="#34d399" font-size="17" font-weight="700">Solves complex 2D convolution integrals in 2 lines without calculus!</text>
+      </g>
+    </g>
+
+    <!-- Master Transformations Reference Matrix -->
+    <g transform="translate(1800, 110)">
+      <rect x="0" y="0" width="1750" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1750" height="55" rx="16" fill="#059669" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#34d399" font-size="22" font-weight="700">MASTER CANONICAL TRANSFORMATIONS REFERENCE TABLE</text>
+
+      <g transform="translate(30, 80)">
+        <rect x="0" y="0" width="1690" height="610" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <text x="25" y="40" fill="#fbbf24" font-size="18" font-weight="700">Transformation Y = g(X)</text>
+        <text x="450" y="40" fill="#fbbf24" font-size="18" font-weight="700">Input X Distribution</text>
+        <text x="850" y="40" fill="#fbbf24" font-size="18" font-weight="700">Output PDF f_Y(y)</text>
+        <text x="1350" y="40" fill="#fbbf24" font-size="18" font-weight="700">Key Feature / Roots</text>
+
+        <line x1="25" y1="55" x2="1665" y2="55" stroke="#334155" stroke-width="1.5"/>
+
+        <text x="25" y="95" fill="#f8fafc" font-size="17">Affine: Y = aX + b</text>
+        <text x="450" y="95" fill="#cbd5e1" font-size="17">Any continuous f_X(x)</text>
+        <text x="850" y="95" fill="#38bdf8" font-size="17">(1/|a|) f_X((y - b)/a)</text>
+        <text x="1350" y="95" fill="#94a3b8" font-size="16">Single root. Preserves Gaussian/Uniform.</text>
+
+        <text x="25" y="155" fill="#f8fafc" font-size="17">Square: Y = X²</text>
+        <text x="450" y="155" fill="#cbd5e1" font-size="17">X ~ U[-1, 1]</text>
+        <text x="850" y="155" fill="#38bdf8" font-size="17">1 / (2 √y),  0 &lt; y &lt; 1</text>
+        <text x="1350" y="155" fill="#94a3b8" font-size="16">Dual roots x = ±√y. Singularity at y=0.</text>
+
+        <text x="25" y="215" fill="#f8fafc" font-size="17">Square of Gaussian: Y = X²</text>
+        <text x="450" y="215" fill="#cbd5e1" font-size="17">X ~ N(0, 1)</text>
+        <text x="850" y="215" fill="#38bdf8" font-size="17">(1/√(2π y)) e^{-y/2},  y &gt; 0</text>
+        <text x="1350" y="215" fill="#94a3b8" font-size="16">Chi-Square χ₁² with 1 degree of freedom.</text>
+
+        <text x="25" y="275" fill="#f8fafc" font-size="17">Reciprocal: Y = 1/X</text>
+        <text x="450" y="275" fill="#cbd5e1" font-size="17">X ~ U[0, 2]</text>
+        <text x="850" y="275" fill="#38bdf8" font-size="17">1 / (2 y²),  y ≥ 1/2</text>
+        <text x="1350" y="275" fill="#94a3b8" font-size="16">Single root x = 1/y. Heavy power-law tail.</text>
+
+        <text x="25" y="335" fill="#f8fafc" font-size="17">Trigonometric: Y = cos X</text>
+        <text x="450" y="335" fill="#cbd5e1" font-size="17">X ~ U[-π, π]</text>
+        <text x="850" y="335" fill="#38bdf8" font-size="17">1 / (π √(1 - y²)),  |y| &lt; 1</text>
+        <text x="1350" y="335" fill="#94a3b8" font-size="16">The Arc-Sine Law. U-shaped density.</text>
+
+        <text x="25" y="395" fill="#f8fafc" font-size="17">Logarithmic: Y = ln(X+1)</text>
+        <text x="450" y="395" fill="#cbd5e1" font-size="17">X ~ Exp(2)</text>
+        <text x="850" y="395" fill="#38bdf8" font-size="17">2 eʸ e^{-2(eʸ - 1)},  y &gt; 0</text>
+        <text x="1350" y="395" fill="#94a3b8" font-size="16">Single root x = eʸ - 1.</text>
+
+        <text x="25" y="455" fill="#f8fafc" font-size="17">Exponential: Y = eˣ</text>
+        <text x="450" y="455" fill="#cbd5e1" font-size="17">X ~ N(μ, σ²)</text>
+        <text x="850" y="455" fill="#38bdf8" font-size="17">Log-Normal Distribution</text>
+        <text x="1350" y="455" fill="#94a3b8" font-size="16">Asymmetric long right tail.</text>
+
+        <text x="25" y="515" fill="#f8fafc" font-size="17">Limiter: Y = 0 (|X|&lt;1), Y=X-1</text>
+        <text x="450" y="515" fill="#cbd5e1" font-size="17">X ~ N(0, 1)</text>
+        <text x="850" y="515" fill="#38bdf8" font-size="17">b δ(y) + continuous lobes</text>
+        <text x="1350" y="515" fill="#f43f5e" font-size="16">MIXED RV! Impulse b = Q(-1)-Q(1).</text>
+
+        <text x="25" y="575" fill="#34d399" font-size="17" font-weight="700">Golden Rule: Flat regions in transfer characteristic y = g(x) ALWAYS concentrate probability into Dirac impulses δ(y)!</text>
+      </g>
+    </g>
+  </g>
+</svg>

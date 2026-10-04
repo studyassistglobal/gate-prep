@@ -1,0 +1,395 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.35" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.8" stroke-opacity="0.5" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="panelShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65" />
+        </filter>
+
+        <marker id="arrowCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+        </marker>
+        <marker id="arrowGold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#fbbf24" />
+        </marker>
+        <marker id="arrowEmerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
+        </marker>
+        <marker id="arrowRose" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#f43f5e" />
+        </marker>
+        <marker id="arrowPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#c084fc" />
+        </marker>
+    </defs>
+
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Top Blueprint Banner -->
+    <rect x="80" y="60" width="3680" height="150" rx="16" fill="#0f172a" fill-opacity="0.85" stroke="#334155" stroke-width="2" filter="url(#panelShadow)" />
+    <text x="130" y="130" font-family="'Inter', sans-serif" font-weight="900" font-size="46" fill="url(#headerGrad)" letter-spacing="1.5">BLUEPRINT 05: VECTOR LINE INTEGRALS, CONSERVATIVE FIELDS &amp; POTENTIALS ENGINE</text>
+    <text x="130" y="178" font-family="'Inter', sans-serif" font-weight="600" font-size="24" fill="#94a3b8" letter-spacing="0.5">Circulation &amp; Work int_C F . dl • Parameterized Paths • Exact Differentials dphi • Path Independence Quad</text>
+
+    <!-- Technical Status Badge -->
+    <rect x="3300" y="90" width="410" height="90" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="3340" cy="135" r="14" fill="#34d399" filter="url(#glowCyan)" />
+    <text x="3375" y="130" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#f8fafc">4K TECHNICAL BLUEPRINT</text>
+    <text x="3375" y="156" font-family="'Fira Code', monospace" font-weight="600" font-size="16" fill="#38bdf8">GATE 2027 • PREPFUSION</text>
+
+    <!-- Content Region -->
+    
+    <!-- Layout: 3 Major Panels -->
+    <!-- PANEL 1: Line Integral Formulation (Left) -->
+    <g transform="translate(100, 240)">
+        <rect width="1160" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1160" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#38bdf8">1. LINE INTEGRALS &amp; PATH PARAMETERIZATION</text>
+
+        <!-- Definition Box -->
+        <g transform="translate(40, 100)">
+            <rect width="1080" height="380" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">MATHEMATICAL FORMULATION OF LINE INTEGRAL</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8">Evaluation of work done W or tangential circulation along space curve C from P to Q:</text>
+
+            <g transform="translate(40, 105)">
+                <rect width="1000" height="110" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+                <text x="40" y="65" font-family="'Fira Code', monospace" font-size="30" fill="#fbbf24" font-weight="700">W = int_C F . dl = int_C ( F_x dx + F_y dy + F_z dz )</text>
+            </g>
+
+            <g transform="translate(40, 240)">
+                <text x="0" y="30" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" font-weight="700">Scalar Form:</text>
+                <text x="140" y="30" font-family="'Fira Code', monospace" font-size="20" fill="#cbd5e1">int_C |F| cos(theta) ds  (Tangential component projection)</text>
+
+                <text x="0" y="75" font-family="'Inter', sans-serif" font-size="18" fill="#34d399" font-weight="700">Parameter t:</text>
+                <text x="140" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#cbd5e1">int_t1^t2 [ F_x(t) x'(t) + F_y(t) y'(t) + F_z(t) z'(t) ] dt</text>
+
+                <text x="0" y="120" font-family="'Inter', sans-serif" font-size="18" fill="#f43f5e" font-weight="700">Reversal Law:</text>
+                <text x="140" y="120" font-family="'Fira Code', monospace" font-size="20" fill="#f43f5e">int_(-C) F . dl = - int_C F . dl  (Path orientation sensitive!)</text>
+            </g>
+        </g>
+
+        <!-- Standard Path Parameterizations -->
+        <g transform="translate(40, 520)">
+            <rect width="1080" height="680" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#fbbf24">CANONICAL PATH PARAMETERIZATION RECIPES</text>
+
+            <g transform="translate(40, 75)">
+                <!-- Straight Line -->
+                <g transform="translate(0, 0)">
+                    <rect width="1000" height="175" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#38bdf8" font-weight="700">1. STRAIGHT LINE SEGMENT FROM P(x_1, y_1, z_1) TO Q(x_2, y_2, z_2):</text>
+                    <text x="30" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">r(t) = P + t (Q - P) = (1 - t) P + t Q,  where t in [0, 1]</text>
+                    <text x="30" y="115" font-family="'Fira Code', monospace" font-size="18" fill="#fbbf24">x = x_1 + t (x_2 - x_1),  y = y_1 + t (y_2 - y_1),  z = z_1 + t (z_2 - z_1)</text>
+                    <text x="30" y="150" font-family="'Fira Code', monospace" font-size="18" fill="#34d399">dx = (x_2 - x_1) dt,  dy = (y_2 - y_1) dt,  dz = (z_2 - z_1) dt</text>
+                </g>
+
+                <!-- Parabolic Path -->
+                <g transform="translate(0, 195)">
+                    <rect width="1000" height="175" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">2. PARABOLIC ARC y = k x^2 (GATE 2020 NAT DRILL):</text>
+                    <text x="30" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">Set x = t,  y = k t^2  ==&gt;  dx = dt,  dy = 2 k t dt</text>
+                    <text x="30" y="115" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">Integral from x_1 to x_2:  int_x1^x2 [ F_x(t, k t^2) + F_y(t, k t^2) (2 k t) ] dt</text>
+                    <text x="30" y="150" font-family="'Fira Code', monospace" font-size="18" fill="#34d399">Trivial polynomial integration; eliminates transcendental variables.</text>
+                </g>
+
+                <!-- Circular / Elliptic Arc -->
+                <g transform="translate(0, 390)">
+                    <rect width="1000" height="195" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#34d399" font-weight="700">3. CIRCULAR ARC x^2 + y^2 = R^2 IN X-Y PLANE:</text>
+                    <text x="30" y="75" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">x = R cos(theta),  y = R sin(theta)  ==&gt;  dx = -R sin(th) dth,  dy = R cos(th) dth</text>
+                    <text x="30" y="115" font-family="'Fira Code', monospace" font-size="18" fill="#fbbf24">Counterclockwise loop: theta in [0, 2pi]  |  Clockwise loop: theta in [2pi, 0]</text>
+                    <text x="30" y="155" font-family="'Fira Code', monospace" font-size="18" fill="#c084fc">Differential displacement: dl = R dtheta a_theta</text>
+                </g>
+            </g>
+        </g>
+
+        <!-- GATE 2020 NAT Parabola Drill (Slide 238) -->
+        <g transform="translate(40, 1240)">
+            <rect width="1080" height="460" rx="14" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#34d399">SOLVED GATE 2020 NAT DRILL (SLIDE 238)</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="17" fill="#cbd5e1">Vector field F = a_x y - a_y x. Find int_C F . dl along y = x^2 from (-1, 1) to (2, 4):</text>
+
+            <g transform="translate(40, 105)">
+                <rect width="1000" height="310" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="40" font-family="'Fira Code', monospace" font-size="19" fill="#94a3b8">Step 1: F . dl = (y i - x j) . (dx i + dy j) = y dx - x dy</text>
+                <text x="30" y="80" font-family="'Fira Code', monospace" font-size="19" fill="#94a3b8">Step 2: Parameterize along y = x^2: x = t, y = t^2 =&gt; dx = dt, dy = 2t dt</text>
+                <text x="30" y="120" font-family="'Fira Code', monospace" font-size="19" fill="#94a3b8">Step 3: Substitute: y dx - x dy = (t^2)(dt) - (t)(2t dt) = t^2 dt - 2t^2 dt = -t^2 dt</text>
+                <text x="30" y="160" font-family="'Fira Code', monospace" font-size="19" fill="#94a3b8">Step 4: Limits on t (= x): from t = -1 to t = 2</text>
+                <text x="30" y="200" font-family="'Fira Code', monospace" font-size="22" fill="#fbbf24">W = int_-1^2 (-t^2) dt = - [ t^3 / 3 ]_-1^2 = - [ 8/3 - (-1/3) ] = - [ 9/3 ] = -3</text>
+                
+                <g transform="translate(30, 235)">
+                    <rect width="940" height="60" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+                    <text x="30" y="40" font-family="'Fira Code', monospace" font-size="26" fill="#34d399" font-weight="700">GATE ANSWER: -3  (Confirmed Chalkboard Match!)</text>
+                </g>
+            </g>
+        </g>
+    </g>
+
+    <!-- PANEL 2: Conservative Fields & Path Independence (Center) -->
+    <g transform="translate(1300, 240)">
+        <rect width="1240" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1240" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#fbbf24">2. CONSERVATIVE FIELDS &amp; THE EQUIVALENCE QUAD</text>
+
+        <!-- Equivalence Quad Card -->
+        <g transform="translate(40, 100)">
+            <rect width="1160" height="540" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#fbbf24">THE 4 EQUIVALENT DEFINITIONS OF A CONSERVATIVE FIELD</text>
+            
+            <g transform="translate(40, 75)">
+                <g transform="translate(0, 0)">
+                    <rect width="520" height="190" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#38bdf8" font-weight="700">1. DIFFERENTIAL CRITERION</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="26" fill="#fbbf24" font-weight="700">curl(F) = grad x F = 0</text>
+                    <text x="25" y="125" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">dF_z/dy = dF_y/dz</text>
+                    <text x="25" y="155" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">dF_x/dz = dF_z/dx,  dF_y/dx = dF_x/dy</text>
+                </g>
+
+                <g transform="translate(560, 0)">
+                    <rect width="520" height="190" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#34d399" font-weight="700">2. SCALAR POTENTIAL CRITERION</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="26" fill="#34d399" font-weight="700">F = grad(phi)</text>
+                    <text x="25" y="125" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">F_x = dphi/dx,  F_y = dphi/dy</text>
+                    <text x="25" y="155" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">F_z = dphi/dz  (Scalar Potential phi)</text>
+                </g>
+
+                <g transform="translate(0, 210)">
+                    <rect width="520" height="190" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#fbbf24" font-weight="700">3. CLOSED LOOP CRITERION</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="26" fill="#fbbf24" font-weight="700">oint_C F . dl = 0</text>
+                    <text x="25" y="125" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Net circulation along ANY closed</text>
+                    <text x="25" y="155" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">curve in simply connected domain is zero.</text>
+                </g>
+
+                <g transform="translate(560, 210)">
+                    <rect width="520" height="190" rx="10" fill="#0f172a" stroke="#c084fc" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="16" fill="#c084fc" font-weight="700">4. PATH INDEPENDENCE CRITERION</text>
+                    <text x="25" y="80" font-family="'Fira Code', monospace" font-size="24" fill="#c084fc" font-weight="700">int_A^B F . dl = phi(B) - phi(A)</text>
+                    <text x="25" y="125" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Work depends ONLY on endpoints A &amp; B;</text>
+                    <text x="25" y="155" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">independent of the chosen trajectory C.</text>
+                </g>
+            </g>
+
+            <text x="40" y="505" font-family="'Inter', sans-serif" font-size="16" fill="#34d399">The Fundamental Theorem for Line Integrals: Direct analog of Calculus FTC 1 int_a^b f'(x) dx = f(b) - f(a)!</text>
+        </g>
+
+        <!-- Solved Semicircle Path Independence Drill (Slide 218) -->
+        <g transform="translate(40, 680)">
+            <rect width="1160" height="1020" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#34d399">SOLVED CHALKBOARD MASTER DRILL: PATH INDEPENDENCE (SLIDE 218)</text>
+            <text x="40" y="80" font-family="'Inter', sans-serif" font-size="18" fill="#f8fafc">Evaluate int_P1^P2 (y dx + x dy) from P_1(x_1, y_1) to P_2(x_2, y_2) along a semicircle path:</text>
+
+            <!-- Visual path sketch -->
+            <g transform="translate(60, 100)">
+                <rect width="1040" height="260" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                
+                <!-- Semicircle vs Straight line -->
+                <line x1="160" y1="200" x2="160" y2="40" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6 4"/>
+                <path d="M 160 200 A 80 80 0 0 1 160 40" fill="none" stroke="#fbbf24" stroke-width="5"/>
+                
+                <circle cx="160" cy="200" r="8" fill="#38bdf8"/>
+                <circle cx="160" cy="40" r="8" fill="#34d399"/>
+                <text x="30" y="210" font-family="'Fira Code', monospace" font-size="18" fill="#38bdf8">P_1(x_1, y_1)</text>
+                <text x="30" y="45" font-family="'Fira Code', monospace" font-size="18" fill="#34d399">P_2(x_2, y_2)</text>
+                <text x="250" y="125" font-family="'Fira Code', monospace" font-size="18" fill="#fbbf24">Semicircular Path C_1</text>
+                <text x="70" y="125" font-family="'Fira Code', monospace" font-size="15" fill="#38bdf8">Straight Path C_2</text>
+
+                <!-- Explanation text beside diagram -->
+                <text x="520" y="60" font-family="'Inter', sans-serif" font-size="18" fill="#fbbf24" font-weight="700">THE CONSERVATIVE INSIGHT:</text>
+                <text x="520" y="95" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">Vector Field: F = y i + x j</text>
+                <text x="520" y="130" font-family="'Fira Code', monospace" font-size="18" fill="#34d399">curl(F) = (d(x)/dx - d(y)/dy) k = (1 - 1) k = 0</text>
+                <text x="520" y="165" font-family="'Fira Code', monospace" font-size="18" fill="#34d399">=&gt; F is 100% CONSERVATIVE!</text>
+                <text x="520" y="200" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">The semicircular geometry is a DISTRACTOR; work is path-free!</text>
+            </g>
+
+            <!-- Dual Method Evaluation -->
+            <g transform="translate(60, 390)">
+                <g transform="translate(0, 0)">
+                    <rect width="500" height="420" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#38bdf8" font-weight="700">METHOD 1: EXACT DIFFERENTIAL (10 SECONDS)</text>
+                    
+                    <text x="25" y="80" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Recognize that:</text>
+                    <text x="25" y="120" font-family="'Fira Code', monospace" font-size="24" fill="#fbbf24" font-weight="700">y dx + x dy = d( x y )</text>
+                    
+                    <text x="25" y="170" font-family="'Inter', sans-serif" font-size="16" fill="#cbd5e1">Scalar potential: phi(x, y) = x y</text>
+                    <text x="25" y="210" font-family="'Fira Code', monospace" font-size="20" fill="#f8fafc">int_P1^P2 (y dx + x dy) = int_P1^P2 d(xy)</text>
+                    <text x="25" y="250" font-family="'Fira Code', monospace" font-size="22" fill="#34d399">= [ x y ]_(x_1, y_1)^(x_2, y_2)</text>
+                    
+                    <g transform="translate(25, 290)">
+                        <rect width="450" height="100" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+                        <text x="30" y="60" font-family="'Fira Code', monospace" font-size="30" fill="#34d399" font-weight="700">= x_2 y_2 - x_1 y_1  [DONE]</text>
+                    </g>
+                </g>
+
+                <g transform="translate(540, 0)">
+                    <rect width="500" height="420" rx="10" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#94a3b8" font-weight="700">METHOD 2: DIRECT PARAMETERIZATION (BRUTE)</text>
+                    
+                    <text x="25" y="75" font-family="'Fira Code', monospace" font-size="16" fill="#cbd5e1">x = t (x_2 - x_1) + x_1 =&gt; dx = (x_2 - x_1) dt</text>
+                    <text x="25" y="110" font-family="'Fira Code', monospace" font-size="16" fill="#cbd5e1">y = t (y_2 - y_1) + y_1 =&gt; dy = (y_2 - y_1) dt</text>
+                    <text x="25" y="150" font-family="'Fira Code', monospace" font-size="15" fill="#94a3b8">Integrate from t = 0 to 1:</text>
+                    <text x="25" y="185" font-family="'Fira Code', monospace" font-size="15" fill="#94a3b8">int_0^1 [ (t dy_0 + y_1) dx_0 + (t dx_0 + x_1) dy_0 ] dt</text>
+                    <text x="25" y="225" font-family="'Fira Code', monospace" font-size="15" fill="#94a3b8">= 2 dx_0 dy_0 [ t^2 / 2 ]_0^1 + (y_1 dx_0 + x_1 dy_0)</text>
+                    <text x="25" y="265" font-family="'Fira Code', monospace" font-size="15" fill="#94a3b8">= dx_0 dy_0 + y_1(x_2 - x_1) + x_1(y_2 - y_1)</text>
+                    <text x="25" y="305" font-family="'Fira Code', monospace" font-size="15" fill="#94a3b8">= (x_2-x_1)(y_2-y_1) + x_2 y_1 - x_1 y_1 + x_1 y_2 - x_1 y_1</text>
+                    
+                    <g transform="translate(25, 335)">
+                        <rect width="450" height="65" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+                        <text x="30" y="42" font-family="'Fira Code', monospace" font-size="22" fill="#34d399">= x_2 y_2 - x_1 y_1  (Identical!)</text>
+                    </g>
+                </g>
+            </g>
+
+            <text x="60" y="850" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24">Exam Takeaway: Always test curl F = 0 FIRST. If curl = 0, find potential phi and subtract endpoints in seconds!</text>
+        </g>
+    </g>
+
+    <!-- PANEL 3: Potential Recovery & Closed Loops (Right) -->
+    <g transform="translate(2580, 240)">
+        <rect width="1160" height="1760" rx="18" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="2"/>
+        <rect width="1160" height="70" rx="18" fill="#1e293b"/>
+        <text x="40" y="46" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#c084fc">3. POTENTIAL RECOVERY &amp; CLOSED LOOP DYNAMICS</text>
+
+        <!-- Scalar Potential Extraction Algorithm -->
+        <g transform="translate(40, 100)">
+            <rect width="1080" height="520" rx="14" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#c084fc">STEP-BY-STEP SCALAR POTENTIAL RECOVERY</text>
+
+            <g transform="translate(40, 75)">
+                <g transform="translate(0, 0)">
+                    <rect width="1000" height="120" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#38bdf8" font-weight="700">STEP 1: PARTIAL INTEGRATION W.R.T. x</text>
+                    <text x="30" y="75" font-family="'Fira Code', monospace" font-size="22" fill="#f8fafc">phi(x, y, z) = int F_x dx + g(y, z)</text>
+                    <text x="30" y="105" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">Here g(y, z) serves as the arbitrary integration function independent of x.</text>
+                </g>
+
+                <g transform="translate(0, 140)">
+                    <rect width="1000" height="120" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">STEP 2: DIFFERENTIATE W.R.T. y &amp; MATCH F_y</text>
+                    <text x="30" y="75" font-family="'Fira Code', monospace" font-size="22" fill="#f8fafc">dphi/dy = d/dy [ int F_x dx ] + dg/dy == F_y</text>
+                    <text x="30" y="105" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">Isolates dg/dy and solves for g(y, z) = int [ ... ] dy + h(z).</text>
+                </g>
+
+                <g transform="translate(0, 280)">
+                    <rect width="1000" height="120" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="30" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#34d399" font-weight="700">STEP 3: DIFFERENTIATE W.R.T. z &amp; MATCH F_z</text>
+                    <text x="30" y="75" font-family="'Fira Code', monospace" font-size="22" fill="#f8fafc">dphi/dz == F_z  ==&gt;  dh/dz == const  ==&gt;  phi(x, y, z) IS COMPLETE!</text>
+                    <text x="30" y="105" font-family="'Inter', sans-serif" font-size="15" fill="#34d399">Guaranteed single unique scalar function up to an additive constant C.</text>
+                </g>
+            </g>
+        </g>
+
+        <!-- Closed Loop Line Integrals -->
+        <g transform="translate(40, 660)">
+            <rect width="1080" height="520" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#38bdf8">CLOSED LOOP LINE INTEGRALS: oint_C F . dl</text>
+
+            <g transform="translate(40, 75)">
+                <rect width="1000" height="180" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                <text x="30" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">THE CLOSED CONTOUR WORK THEOREM:</text>
+                <text x="30" y="75" font-family="'Fira Code', monospace" font-size="22" fill="#f8fafc">Case 1: F is Conservative (curl F = 0)  ==&gt;  oint_C F . dl == 0</text>
+                <text x="30" y="115" font-family="'Fira Code', monospace" font-size="22" fill="#f43f5e">Case 2: F is Non-Conservative (curl F != 0)  ==&gt;  oint_C F . dl != 0</text>
+                <text x="30" y="155" font-family="'Inter', sans-serif" font-size="16" fill="#34d399">Conversion to Surface Integral via Stokes': oint_C F . dl = iint_S (grad x F) . dS</text>
+            </g>
+
+            <g transform="translate(40, 280)">
+                <rect width="1000" height="200" rx="10" fill="#020617" stroke="#f43f5e" stroke-width="2"/>
+                <text x="30" y="40" font-family="'Inter', sans-serif" font-size="18" fill="#f43f5e" font-weight="700">GATE CRITICAL PITFALL: NON-SIMPLE CONNECTED DOMAINS</text>
+                <text x="30" y="80" font-family="'Fira Code', monospace" font-size="20" fill="#fbbf24">Consider F = (-y i + x j) / (x^2 + y^2) in R^2 \ {(0,0)}:</text>
+                <text x="30" y="120" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">1. curl(F) = 0 everywhere EXCEPT at the origin (0, 0)!</text>
+                <text x="30" y="155" font-family="'Fira Code', monospace" font-size="20" fill="#f43f5e">2. Along any loop encircling origin: oint_C F . dl = 2pi != 0 !</text>
+                <text x="30" y="185" font-family="'Inter', sans-serif" font-size="15" fill="#94a3b8">Stokes' Theorem requires domain to be simply connected without punctured singularities.</text>
+            </g>
+        </g>
+
+        <!-- Master Diagnostic Checklist -->
+        <g transform="translate(40, 1220)">
+            <rect width="1080" height="480" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+            <text x="40" y="45" font-family="'Inter', sans-serif" font-weight="800" font-size="22" fill="#34d399">LINE INTEGRAL DECISION PROTOCOL FOR GATE</text>
+
+            <g transform="translate(40, 75)">
+                <g transform="translate(0, 0)">
+                    <rect width="1000" height="110" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#34d399" font-weight="700">CHECK 1: IS THE PATH A CLOSED LOOP?</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">If YES =&gt; Immediately use Green's Theorem (2D) or Stokes' Theorem (3D)!</text>
+                    <text x="25" y="95" font-family="'Inter', sans-serif" font-size="14" fill="#94a3b8">Avoid evaluating line segments individually.</text>
+                </g>
+
+                <g transform="translate(0, 125)">
+                    <rect width="1000" height="110" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#fbbf24" font-weight="700">CHECK 2: IS THE VECTOR FIELD CONSERVATIVE?</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">Test grad x F = 0. If zero =&gt; Integrate exact differential dphi; work = phi(B) - phi(A)!</text>
+                    <text x="25" y="95" font-family="'Inter', sans-serif" font-size="14" fill="#94a3b8">Bypasses complex paths (parabolas, spirals, semicircles).</text>
+                </g>
+
+                <g transform="translate(0, 250)">
+                    <rect width="1000" height="110" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+                    <text x="25" y="35" font-family="'Inter', sans-serif" font-size="17" fill="#38bdf8" font-weight="700">CHECK 3: NON-CONSERVATIVE &amp; OPEN PATH?</text>
+                    <text x="25" y="70" font-family="'Fira Code', monospace" font-size="18" fill="#cbd5e1">Parameterize path explicitly r(t), substitute x(t), y(t), z(t) and dt, then integrate.</text>
+                    <text x="25" y="95" font-family="'Inter', sans-serif" font-size="14" fill="#94a3b8">Or close the loop with a simple straight line and apply Green's Theorem!</text>
+                </g>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Footer Information Strip -->
+    <rect x="80" y="2040" width="3680" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <text x="120" y="2077" font-family="'Fira Code', monospace" font-size="18" fill="#64748b">ENGINEERING MATHEMATICS • VECTOR CALCULUS TITAN GUIDE • CHALKBOARD AUDIT 65 PAGES / 259 SLIDES</text>
+    <text x="3250" y="2077" font-family="'Fira Code', monospace" font-size="18" fill="#38bdf8">RESOLUTION: 3840 x 2160 (16:9 4K UHD)</text>
+</svg>

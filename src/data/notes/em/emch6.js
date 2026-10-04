@@ -52,7 +52,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_probability/fig_01_probability_foundations_and_bayesian_inference_engine.jpg",
+     "src": "/notes/em/figures_probability/fig_01_probability_foundations_and_bayesian_inference_engine.svg",
      "alt": "Blueprint 01: Probability Foundations & Bayesian Inference Engine"
     },
     {
@@ -61,7 +61,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_probability/fig_02_waveforms_random_variables_and_cdf_pdf_engine.jpg",
+     "src": "/notes/em/figures_probability/fig_02_waveforms_random_variables_and_cdf_pdf_engine.svg",
      "alt": "Blueprint 02: Waveforms, Random Variables & CDF/PDF Engine"
     },
     {
@@ -70,7 +70,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_probability/fig_03_2d_joint_random_variables_and_covariance_engine.jpg",
+     "src": "/notes/em/figures_probability/fig_03_2d_joint_random_variables_and_covariance_engine.svg",
      "alt": "Blueprint 03: 2D Joint Random Variables, Covariance & Correlation Engine"
     },
     {
@@ -79,7 +79,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_probability/fig_04_continuous_distributions_uniform_and_gaussian_engine.jpg",
+     "src": "/notes/em/figures_probability/fig_04_continuous_distributions_uniform_and_gaussian_engine.svg",
      "alt": "Blueprint 04: Continuous Distributions: Uniform & Gaussian Bell Engine"
     },
     {
@@ -88,7 +88,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_probability/fig_05_transformations_of_random_variables_and_jacobian_engine.jpg",
+     "src": "/notes/em/figures_probability/fig_05_transformations_of_random_variables_and_jacobian_engine.svg",
      "alt": "Blueprint 05: Transformations of Random Variables & Jacobian Engine"
     },
     {
@@ -97,7 +97,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_probability/fig_06_discrete_models_binomial_poisson_and_exponential_engine.jpg",
+     "src": "/notes/em/figures_probability/fig_06_discrete_models_binomial_poisson_and_exponential_engine.svg",
      "alt": "Blueprint 06: Discrete Models & Lifetime Distributions Engine"
     },
     {
@@ -106,7 +106,7 @@ export default {
     },
     {
      "t": "img",
-     "src": "/notes/em/figures_probability/fig_07_descriptive_statistics_and_linear_regression_engine.jpg",
+     "src": "/notes/em/figures_probability/fig_07_descriptive_statistics_and_linear_regression_engine.svg",
      "alt": "Blueprint 07: Descriptive Statistics & Linear Regression Analysis Engine"
     }
    ]
@@ -117,7 +117,7 @@ export default {
    "blocks": [
     {
      "t": "p",
-     "text": "**Associated 4K Blueprint Schematic:**\n![Module 1: Foundations of Probability, Random Experiments & Kolmogorov Axioms (Slides 001\u2013060)](/notes/em/figures_probability/fig_01_probability_foundations_and_bayesian_inference_engine.jpg)"
+     "text": "**Associated 4K Blueprint Schematic:**\n![Module 1: Foundations of Probability, Random Experiments & Kolmogorov Axioms (Slides 001\u2013060)](/notes/em/figures_probability/fig_01_probability_foundations_and_bayesian_inference_engine.svg)"
     },
     {
      "t": "h2",
@@ -6185,7 +6185,7 @@ export default {
    "blocks": [
     {
      "t": "p",
-     "text": "**Associated 4K Blueprint Schematic:**\n![Module 2: Advanced Combinatorics, Total Probability & Bayes' Theorem (Slides 061\u2013140)](/notes/em/figures_probability/fig_01_probability_foundations_and_bayesian_inference_engine.jpg)"
+     "text": "**Associated 4K Blueprint Schematic:**\n![Module 2: Advanced Combinatorics, Total Probability & Bayes' Theorem (Slides 061\u2013140)](/notes/em/figures_probability/fig_01_probability_foundations_and_bayesian_inference_engine.svg)"
     },
     {
      "t": "h2",
@@ -13256,7 +13256,7 @@ export default {
    "blocks": [
     {
      "t": "p",
-     "text": "**Associated 4K Blueprint Schematic:**\n![Module 3: Mathematical Waveforms, Random Variables & CDF/PDF Engine (Slides 141\u2013220)](/notes/em/figures_probability/fig_02_waveforms_random_variables_and_cdf_pdf_engine.jpg)"
+     "text": "**Associated 4K Blueprint Schematic:**\n![Module 3: Mathematical Waveforms, Random Variables & CDF/PDF Engine (Slides 141\u2013220)](/notes/em/figures_probability/fig_02_waveforms_random_variables_and_cdf_pdf_engine.svg)"
     },
     {
      "t": "h2",
@@ -18114,7 +18114,7 @@ export default {
    "blocks": [
     {
      "t": "p",
-     "text": "**Associated 4K Blueprint Schematic:**\n![Module 4: Two-Dimensional Random Variables, Joint Distributions & Covariance (Slides 221\u2013300)](/notes/em/figures_probability/fig_03_2d_joint_random_variables_and_covariance_engine.jpg)"
+     "text": "**Associated 4K Blueprint Schematic:**\n![Module 4: Two-Dimensional Random Variables, Joint Distributions & Covariance (Slides 221\u2013300)](/notes/em/figures_probability/fig_03_2d_joint_random_variables_and_covariance_engine.svg)"
     },
     {
      "t": "h2",
@@ -23000,7 +23000,7 @@ export default {
    "blocks": [
     {
      "t": "p",
-     "text": "**Associated 4K Blueprint Schematic:**\n![Module 5: Continuous Distributions: Uniform & Gaussian Bell Engine (Slides 301\u2013360)](/notes/em/figures_probability/fig_04_continuous_distributions_uniform_and_gaussian_engine.jpg)"
+     "text": "**Associated 4K Blueprint Schematic:**\n![Module 5: Continuous Distributions: Uniform & Gaussian Bell Engine (Slides 301\u2013360)](/notes/em/figures_probability/fig_04_continuous_distributions_uniform_and_gaussian_engine.svg)"
     },
     {
      "t": "h2",
@@ -27234,7 +27234,7 @@ export default {
    "blocks": [
     {
      "t": "p",
-     "text": "**Associated 4K Blueprint Schematic:**\n![Module 6: Transformations of Random Variables, Jacobian & Convolution (Slides 361\u2013408)](/notes/em/figures_probability/fig_05_transformations_of_random_variables_and_jacobian_engine.jpg)"
+     "text": "**Associated 4K Blueprint Schematic:**\n![Module 6: Transformations of Random Variables, Jacobian & Convolution (Slides 361\u2013408)](/notes/em/figures_probability/fig_05_transformations_of_random_variables_and_jacobian_engine.svg)"
     },
     {
      "t": "h2",
@@ -31051,7 +31051,7 @@ export default {
    "blocks": [
     {
      "t": "p",
-     "text": "**Associated 4K Blueprint Schematic:**\n![Module 7: Discrete Counting Models & Lifetime Distributions: Binomial, Poisson & Exponential (Slides 409\u2013444)](/notes/em/figures_probability/fig_06_discrete_models_binomial_poisson_and_exponential_engine.jpg)"
+     "text": "**Associated 4K Blueprint Schematic:**\n![Module 7: Discrete Counting Models & Lifetime Distributions: Binomial, Poisson & Exponential (Slides 409\u2013444)](/notes/em/figures_probability/fig_06_discrete_models_binomial_poisson_and_exponential_engine.svg)"
     },
     {
      "t": "h2",
@@ -34539,7 +34539,7 @@ export default {
    "blocks": [
     {
      "t": "p",
-     "text": "**Associated 4K Blueprint Schematic:**\n![Module 8: Descriptive Statistics, Skewness & OLS Linear Regression Analysis (Slides 445\u2013485)](/notes/em/figures_probability/fig_07_descriptive_statistics_and_linear_regression_engine.jpg)"
+     "text": "**Associated 4K Blueprint Schematic:**\n![Module 8: Descriptive Statistics, Skewness & OLS Linear Regression Analysis (Slides 445\u2013485)](/notes/em/figures_probability/fig_07_descriptive_statistics_and_linear_regression_engine.svg)"
     },
     {
      "t": "h2",

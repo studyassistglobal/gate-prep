@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#220d35" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#150722" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <!-- HEADER -->
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="520" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="260" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 07</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">DESCRIPTIVE STATISTICS &amp; LINEAR REGRESSION ANALYSIS ENGINE</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">Measures of Central Tendency, Skewness Dynamics, Karl Pearson Empirical Law, Dual OLS Regression Lines &amp; GATE 2023 EE Problem</text>
+  </g>
+
+  <!-- COLUMN 1: CENTRAL TENDENCY & SKEWNESS -->
+  <g transform="translate(120, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. CENTRAL TENDENCY &amp; SKEWNESS ASYMMETRY</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#38bdf8" font-size="22" font-weight="700">Measures of Central Tendency: Definitions</text>
+      <text x="25" y="75" fill="#f8fafc" font-size="18">• Arithmetic Mean (x̄): ∑ xᵢ / n  (Balance point of dataset, highly sensitive to outliers!).</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">• Mode: Most frequently occurring value (Peak of frequency curve / probability density).</text>
+      <text x="25" y="145" fill="#f8fafc" font-size="18">• Median: Positional middle value of sorted array (splits data into equal 50% halves):</text>
+      <text x="50" y="180" fill="#38bdf8" font-size="18">n is odd: Median = x_{((n+1)/2)} | n is even: Median = (x_{(n/2)} + x_{(n/2 + 1)}) / 2.</text>
+      <text x="25" y="210" fill="#34d399" font-size="16">Drill: {-2, 1, 2, 2, 2, 3, 4, 7, 7} (n=9) ⟹ Mean = 2.89, Mode = 2, Median = 2.</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#fbbf24" font-size="22" font-weight="700">Skewness &amp; Geometric Asymmetry Profiles</text>
+      <text x="25" y="75" fill="#34d399" font-size="18">1. Symmetric (Gaussian): Mean = Median = Mode (Zero skewness).</text>
+      <text x="25" y="110" fill="#fbbf24" font-size="18">2. Positively Skewed (Right-Skewed): Tail pulls to the RIGHT:</text>
+      <text x="50" y="140" fill="#fbbf24" font-size="20" font-weight="700">Mean &gt; Median &gt; Mode   (Tough exam model: bulk score low, few score high)</text>
+      <text x="25" y="175" fill="#f43f5e" font-size="18">3. Negatively Skewed (Left-Skewed): Tail pulls to the LEFT:</text>
+      <text x="50" y="205" fill="#f43f5e" font-size="20" font-weight="700">Mean &lt; Median &lt; Mode   (Easy exam model: bulk score high, few score low)</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1050" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#c084fc" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#c084fc" font-size="22" font-weight="700">Karl Pearson Empirical Law for Moderately Skewed Data</text>
+      <text x="50" y="85" fill="#c084fc" font-size="24" font-weight="800">Mode = 3 Median - 2 Mean   ⟺   Mean - Mode = 3 (Mean - Median)</text>
+      <text x="25" y="130" fill="#f8fafc" font-size="18">Worked GATE Drill: Mean = 60, Mean exceeds Mode by 10 (Mode = 50). Find Median:</text>
+      <text x="50" y="165" fill="#34d399" font-size="18" font-weight="700">50 = 3 Median - 2(60) ⟹ 3 Median = 170 ⟹ Median = 170 / 3 = 56.67 (Ans).</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: PEARSON CORRELATION COEFFICIENT -->
+  <g transform="translate(1300, 310)">
+    <rect x="0" y="0" width="1140" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1140" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#60a5fa"/>
+    <text x="45" y="45" fill="#60a5fa" font-size="28" font-weight="700">2. PEARSON CORRELATION COEFFICIENT &amp; GEOMETRY</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#60a5fa" font-size="22" font-weight="700">Definition &amp; Bivariate Association Spectrum</text>
+      <text x="50" y="85" fill="#38bdf8" font-size="22" font-weight="700">r = Cov(X, Y) / [ σ_X · σ_Y ] = C_{xy} / (σ_x σ_y),   Bounded: -1 ≤ r ≤ +1</text>
+      <text x="25" y="130" fill="#cbd5e1" font-size="18">• r = +1: Perfect Positive Linear (Points fall exactly on positive-slope line).</text>
+      <text x="25" y="165" fill="#cbd5e1" font-size="18">• r = -1: Perfect Negative Linear (Points fall exactly on negative-slope line).</text>
+      <text x="25" y="200" fill="#34d399" font-size="18">• r = 0: Zero Linear Correlation (Uncorrelated; no linear trend).</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1050" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">Affine Transformation Theorem</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">For any linear mapping Y = aX + b:</text>
+      <text x="50" y="115" fill="#34d399" font-size="22" font-weight="700">r = a / |a| = sgn(a)</text>
+      <text x="25" y="155" fill="#f8fafc" font-size="18">Proof: Cov(X, aX+b) = a Var(X),  σ_Y = |a| σ_X ⟹ r = [a σ_X²] / [σ_X |a| σ_X] = a / |a|.</text>
+      <text x="25" y="195" fill="#fbbf24" font-size="17">• Y = 2X + 3 ⟹ r = +1.  • Y = -3X + 2 ⟹ r = -1. Shift b has ZERO effect!</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1050" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#f43f5e" font-size="22" font-weight="700">GATE Degenerate Variance Drill</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">X, Y exponential with E[X] = E[Y] = 0.5 ⟹ σ_X² = σ_Y² = 0.25.</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">Given Var(X + Y) = 0: σ_X² + σ_Y² + 2 C_{XY} = 0 ⟹ 2 C_{XY} = -0.5 ⟹ C_{XY} = -0.25.</text>
+      <text x="25" y="150" fill="#f43f5e" font-size="20" font-weight="800">r = C_{XY} / (σ_X σ_Y) = -0.25 / (0.5 × 0.5) = -1.00 (Perfect Negative!).</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: DUAL LINEAR REGRESSION LINES -->
+  <g transform="translate(2480, 310)">
+    <rect x="0" y="0" width="1240" height="840" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1240" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">3. DUAL OLS REGRESSION LINES &amp; CORE THEOREMS</text>
+
+    <g transform="translate(40, 110)">
+      <rect x="0" y="0" width="1150" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#34d399" font-size="22" font-weight="700">The Two Regression Lines (Centroid Form)</text>
+      <text x="25" y="80" fill="#38bdf8" font-size="20" font-weight="700">1. Line of Regression of y on x: (y - ȳ) = b_{yx} (x - x̄)</text>
+      <text x="50" y="115" fill="#f8fafc" font-size="18">Regression Coefficient: b_{yx} = r · (σ_y / σ_x) = Cov(x, y) / σ_x²   (Predicts y given x)</text>
+      <text x="25" y="155" fill="#fbbf24" font-size="20" font-weight="700">2. Line of Regression of x on y: (x - x̄) = b_{xy} (y - ȳ)</text>
+      <text x="50" y="190" fill="#f8fafc" font-size="18">Regression Coefficient: b_{xy} = r · (σ_x / σ_y) = Cov(x, y) / σ_y²   (Predicts x given y)</text>
+    </g>
+
+    <g transform="translate(40, 360)">
+      <rect x="0" y="0" width="1150" height="230" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#c084fc" stroke-width="1.2"/>
+      <text x="25" y="40" fill="#c084fc" font-size="22" font-weight="700">The Four Golden Regression Theorems</text>
+      <text x="25" y="75" fill="#34d399" font-size="18">Theorem 1 (Product Rule): b_{yx} · b_{xy} = [r(σ_y/σ_x)] [r(σ_x/σ_y)] = r² ≤ 1</text>
+      <text x="50" y="105" fill="#fbbf24" font-size="18">⟹ r = ± √(b_{yx} · b_{xy}). (r shares the SAME sign as b_{yx} and b_{xy}!).</text>
+      <text x="25" y="145" fill="#34d399" font-size="18">Theorem 2 (Centroid Concurrence): BOTH lines intersect at mean point (x̄, ȳ).</text>
+      <text x="25" y="180" fill="#34d399" font-size="18">Theorem 3 (Angle Between Lines): tan θ = |(1 - r²) / r| · [ σ_x σ_y / (σ_x² + σ_y²) ].</text>
+      <text x="50" y="210" fill="#cbd5e1" font-size="16">r = ±1 ⟹ lines coincident (θ = 0°);  r = 0 ⟹ lines perpendicular (θ = 90°).</text>
+    </g>
+
+    <g transform="translate(40, 610)">
+      <rect x="0" y="0" width="1150" height="190" rx="12" fill="#1e293b" fill-opacity="0.5" stroke="#f43f5e" stroke-width="1.2"/>
+      <text x="25" y="38" fill="#f43f5e" font-size="22" font-weight="700">Regression Line Disambiguation Test</text>
+      <text x="25" y="75" fill="#cbd5e1" font-size="18">Given 2x - 9y + 6 = 0 and x - 2y + 1 = 0. Which is y on x?</text>
+      <text x="25" y="110" fill="#f8fafc" font-size="18">Hypothesis 1: b_{xy} = 4.5, b_{yx} = 0.5 ⟹ r² = 2.25 &gt; 1 (REJECTED!).</text>
+      <text x="25" y="150" fill="#34d399" font-size="18" font-weight="700">Hypothesis 2: b_{yx} = 2/9, b_{xy} = 2 ⟹ r² = 4/9 ≤ 1 (VALID!) ⟹ r = +2/3.</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM FULL-WIDTH: GATE 2023 EE PROBLEM & NORMAL EQUATIONS SOLVER -->
+  <g transform="translate(120, 1180)">
+    <rect x="0" y="0" width="3600" height="900" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="3600" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">4. GATE 2023 EE LEAST SQUARES BEST-FIT STRAIGHT LINE &amp; NORMAL EQUATIONS ENGINE</text>
+
+    <!-- Normal Equations Derivation -->
+    <g transform="translate(50, 110)">
+      <rect x="0" y="0" width="1700" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#38bdf8" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1700" height="55" rx="16" fill="#0284c7" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#38bdf8" font-size="22" font-weight="700">ORDINARY LEAST SQUARES (OLS) NORMAL EQUATIONS DERIVATION</text>
+
+      <g transform="translate(30, 80)">
+        <rect x="0" y="0" width="1640" height="230" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="1.2"/>
+        <text x="25" y="38" fill="#38bdf8" font-size="22" font-weight="700">Minimization of Sum of Squared Vertical Residuals S(m, c)</text>
+        <text x="25" y="75" fill="#cbd5e1" font-size="18">Model: y = m x + c. Residual for point (xᵢ, yᵢ): eᵢ = yᵢ - (m xᵢ + c). Error sum S = ∑ (yᵢ - m xᵢ - c)².</text>
+        <text x="25" y="115" fill="#f8fafc" font-size="18">Setting partial derivatives to zero: ∂S/∂c = 0  and  ∂S/∂m = 0 yields the NORMAL EQUATIONS:</text>
+        <text x="50" y="160" fill="#38bdf8" font-size="22" font-weight="700">Equation 1: ∑ y = m ∑ x + n c</text>
+        <text x="50" y="195" fill="#38bdf8" font-size="22" font-weight="700">Equation 2: ∑ x y = m ∑ x² + c ∑ x</text>
+      </g>
+
+      <g transform="translate(30, 330)">
+        <rect x="0" y="0" width="1640" height="360" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <text x="25" y="38" fill="#fbbf24" font-size="20" font-weight="700">Direct Closed-Form Slope and Intercept Formulas:</text>
+        <text x="50" y="80" fill="#fbbf24" font-size="22" font-weight="800">m = [ n ∑ xy - (∑ x)(∑ y) ] / [ n ∑ x² - (∑ x)² ] = Cov(x, y) / Var(x)</text>
+        <text x="50" y="125" fill="#f8fafc" font-size="20" font-weight="700">c = ȳ - m x̄ = [ (∑ y)(∑ x²) - (∑ x)(∑ xy) ] / [ n ∑ x² - (∑ x)² ]</text>
+        <text x="25" y="175" fill="#cbd5e1" font-size="18">• Normal Equations for Regression of x on y: Model x = b_{xy} y + c_{xy}:</text>
+        <text x="50" y="210" fill="#34d399" font-size="18">Equation 1: ∑ x = b_{xy} ∑ y + n c_{xy}</text>
+        <text x="50" y="240" fill="#34d399" font-size="18">Equation 2: ∑ xy = b_{xy} ∑ y² + c_{xy} ∑ y</text>
+        <text x="50" y="280" fill="#34d399" font-size="20" font-weight="700">b_{xy} = [ n ∑ xy - (∑ x)(∑ y) ] / [ n ∑ y² - (∑ y)² ] = Cov(x, y) / Var(y)</text>
+        <text x="25" y="330" fill="#f43f5e" font-size="17" font-weight="700">Critical Check: If x̄ = 0, slope simplifies instantly to m = ∑ xy / ∑ x²!</text>
+      </g>
+    </g>
+
+    <!-- GATE 2023 EE Dual Residual Analysis -->
+    <g transform="translate(1800, 110)">
+      <rect x="0" y="0" width="1750" height="730" rx="16" fill="#1e293b" fill-opacity="0.5" stroke="#34d399" stroke-width="1.5"/>
+      <rect x="0" y="0" width="1750" height="55" rx="16" fill="#059669" fill-opacity="0.25"/>
+      <text x="30" y="36" fill="#34d399" font-size="22" font-weight="700">GATE 2023 EE EXAM PROBLEM: DUAL RESIDUAL RESOLUTION</text>
+
+      <g transform="translate(30, 80)">
+        <rect x="0" y="0" width="1690" height="610" rx="10" fill="#0f172a" stroke="#059669" stroke-width="1.2"/>
+        <text x="25" y="38" fill="#fbbf24" font-size="20" font-weight="700">Problem Statement (GATE 2023 EE | Slides 482–485):</text>
+        <text x="25" y="70" fill="#f8fafc" font-size="18">Three points in the xy-plane: P₁(-1, 0.8),  P₂(0, 2.2),  P₃(1, 2.8). Number of points n = 3.</text>
+        <text x="25" y="105" fill="#f8fafc" font-size="18">Task: Find the slope of the best-fit straight line in the least squares sense.</text>
+
+        <line x1="25" y1="125" x2="1665" y2="125" stroke="#334155" stroke-width="1.5"/>
+
+        <text x="25" y="160" fill="#38bdf8" font-size="20" font-weight="700">Interpretation A: Vertical Residual Minimization (Regression of y on x):</text>
+        <text x="50" y="195" fill="#cbd5e1" font-size="17">∑ x = -1 + 0 + 1 = 0 ⟹ x̄ = 0!   ∑ y = 0.8 + 2.2 + 2.8 = 5.8 ⟹ ȳ = 5.8 / 3 ≈ 1.9333.</text>
+        <text x="50" y="230" fill="#cbd5e1" font-size="17">∑ x² = (-1)² + 0² + 1² = 2.   ∑ xy = (-1)(0.8) + (0)(2.2) + (1)(2.8) = -0.8 + 2.8 = 2.0.</text>
+        <text x="50" y="265" fill="#38bdf8" font-size="20" font-weight="700">Slope m = [ ∑ xy - x̄ ∑ y ] / ∑ x² = 2.0 / 2 = 1.000</text>
+        <text x="50" y="300" fill="#cbd5e1" font-size="16">Intercept c = ȳ - m x̄ = 1.9333 - 1.0(0) = 1.9333. Equation: y = 1.00 x + 1.9333.</text>
+
+        <line x1="25" y1="320" x2="1665" y2="320" stroke="#334155" stroke-width="1.5"/>
+
+        <text x="25" y="355" fill="#c084fc" font-size="20" font-weight="700">Interpretation B: Horizontal Residual Minimization (Regression of x on y):</text>
+        <text x="50" y="390" fill="#cbd5e1" font-size="17">∑ y² = (0.8)² + (2.2)² + (2.8)² = 0.64 + 4.84 + 7.84 = 13.32.</text>
+        <text x="50" y="425" fill="#cbd5e1" font-size="17">b_{xy} = dx/dy = [ 3(2.0) - (0)(5.8) ] / [ 3(13.32) - (5.8)² ] = 6.0 / [ 39.96 - 33.64 ] = 6.0 / 6.32 ≈ 0.952.</text>
+        <text x="50" y="460" fill="#c084fc" font-size="20" font-weight="700">Geometric Slope dy/dx = 1 / b_{xy} = 1 / 0.952 = 1.050</text>
+
+        <line x1="25" y1="485" x2="1665" y2="485" stroke="#334155" stroke-width="1.5"/>
+
+        <text x="25" y="525" fill="#34d399" font-size="20" font-weight="700">Official GATE 2023 Answer Key Verification:</text>
+        <text x="50" y="560" fill="#34d399" font-size="20" font-weight="800">Accepted Range: [ 0.95  to  1.05 ]</text>
+        <text x="50" y="590" fill="#f8fafc" font-size="16">Both standard vertical OLS (slope = 1.00) AND inverse horizontal OLS (slope = 1.05) were awarded FULL MARKS!</text>
+      </g>
+    </g>
+  </g>
+</svg>

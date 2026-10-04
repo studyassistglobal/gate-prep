@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160" style="background:#090d16; font-family:'Segoe UI', system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+    <linearGradient id="cardGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2338" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#081b2c" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281c06" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1b1203" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#031b0e" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="cardGradRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0814" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#1c050d" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#gridPattern)"/>
+  <rect x="50" y="50" width="3740" height="2060" rx="24" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <rect x="65" y="65" width="3710" height="2030" rx="18" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="16, 8" stroke-opacity="0.4"/>
+
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="480" height="42" rx="21" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="240" y="27" fill="#38bdf8" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">GATE 2027 TITANS BATCH • BLUEPRINT 05</text>
+    <text x="0" y="110" fill="#f8fafc" font-size="52" font-weight="800" letter-spacing="1">MULTIVARIABLE EXTREMA, SADDLE POINTS &amp; LAGRANGE MULTIPLIERS</text>
+    <text x="0" y="160" fill="#94a3b8" font-size="24" font-weight="400">Critical Points ∇f = 0, Hessian Matrix Discriminant Δ = rt - s², Saddle Geometry, Quadratic Forms &amp; Constrained Optimization</text>
+  </g>
+
+  <!-- COLUMN 1: HESSIAN DISCRIMINANT & CLASSIFICATION MATRIX -->
+  <g transform="translate(120, 310)">
+    <rect x="0" y="0" width="1760" height="1750" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1760" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#38bdf8"/>
+    <text x="45" y="45" fill="#38bdf8" font-size="28" font-weight="700">1. TWO-VARIABLE EXTREMA &amp; HESSIAN DISCRIMINANT ENGINE</text>
+
+    <!-- Critical Points Definition -->
+    <g transform="translate(40, 105)">
+      <rect x="0" y="0" width="1680" height="200" rx="16" fill="url(#cardGradDark)" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="35" y="40" fill="#38bdf8" font-size="24" font-weight="700">First-Order Necessary Condition (Stationary Points)</text>
+      <text x="35" y="75" fill="#cbd5e1" font-size="19">A point (x₀, y₀) is a stationary point iff the gradient vanishes simultaneously:</text>
+      
+      <rect x="35" y="95" width="1610" height="70" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+      <text x="50" y="142" fill="#38bdf8" font-size="28" font-weight="800">∇f(x₀, y₀) = [ ∂f/∂x, ∂f/∂y ]ᵀ = [ 0, 0 ]ᵀ ⟹ f_x = 0  AND  f_y = 0</text>
+    </g>
+
+    <!-- Hessian Matrix & Discriminant Δ -->
+    <g transform="translate(40, 335)">
+      <rect x="0" y="0" width="1680" height="420" rx="16" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+      <text x="35" y="40" fill="#fbbf24" font-size="24" font-weight="700">Second-Order Hessian Matrix &amp; Discriminant Δ = rt - s²</text>
+      <text x="35" y="75" fill="#cbd5e1" font-size="19">Evaluate second partial derivatives at candidate stationary point (x₀, y₀):</text>
+
+      <g transform="translate(35, 100)">
+        <rect x="0" y="0" width="510" height="120" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+        <text x="30" y="40" fill="#38bdf8" font-size="22" font-weight="800">r = f_xx = ∂²f / ∂x²</text>
+        <text x="30" y="80" fill="#cbd5e1" font-size="16">Curvature along x-axis</text>
+      </g>
+
+      <g transform="translate(585, 100)">
+        <rect x="0" y="0" width="510" height="120" rx="10" fill="#1e293b" stroke="#fbbf24"/>
+        <text x="30" y="40" fill="#fbbf24" font-size="22" font-weight="800">s = f_xy = ∂²f / ∂x∂y</text>
+        <text x="30" y="80" fill="#cbd5e1" font-size="16">Cross-partial twist / tilt</text>
+      </g>
+
+      <g transform="translate(1135, 100)">
+        <rect x="0" y="0" width="510" height="120" rx="10" fill="#1e293b" stroke="#34d399"/>
+        <text x="30" y="40" fill="#34d399" font-size="22" font-weight="800">t = f_yy = ∂²f / ∂y²</text>
+        <text x="30" y="80" fill="#cbd5e1" font-size="16">Curvature along y-axis</text>
+      </g>
+
+      <g transform="translate(35, 245)">
+        <rect x="0" y="0" width="1610" height="145" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="1.8"/>
+        <text x="30" y="40" fill="#fbbf24" font-size="22" font-weight="800">HESSIAN DISCRIMINANT DEFINITION:</text>
+        <text x="30" y="90" fill="#f8fafc" font-size="32" font-weight="800">Δ = det( H_f ) = | r   s ; s   t | = r • t - s² = λ₁ • λ₂</text>
+        <text x="30" y="125" fill="#94a3b8" font-size="16">where λ₁, λ₂ are eigenvalues of the symmetric 2×2 Hessian matrix H_f</text>
+      </g>
+    </g>
+
+    <!-- 4-Branch Classification Matrix -->
+    <g transform="translate(40, 785)">
+      <rect x="0" y="0" width="1680" height="920" rx="16" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+      <text x="35" y="45" fill="#f8fafc" font-size="26" font-weight="800">THE 4-BRANCH CRITICAL CLASSIFICATION MATRIX</text>
+
+      <!-- Case 1: Local Minimum -->
+      <g transform="translate(35, 75)">
+        <rect x="0" y="0" width="1610" height="180" rx="14" fill="#062817" stroke="#34d399" stroke-width="2"/>
+        <text x="30" y="38" fill="#34d399" font-size="22" font-weight="800">CASE 1: Δ &gt; 0  AND  r &gt; 0 ⟹ LOCAL MINIMUM (STRICT CUP)</text>
+        <text x="30" y="75" fill="#cbd5e1" font-size="18">• Since Δ = rt - s² &gt; 0 and r &gt; 0 ⟹ t MUST also be &gt; 0 (both principal curvatures positive).</text>
+        <text x="30" y="110" fill="#cbd5e1" font-size="18">• Hessian H_f is POSITIVE DEFINITE (both eigenvalues λ₁, λ₂ &gt; 0).</text>
+        <text x="30" y="150" fill="#34d399" font-size="20" font-weight="800">Surface curves UPWARDS in every direction: Cup-shaped bowl. f(x₀, y₀) is a relative minimum.</text>
+      </g>
+
+      <!-- Case 2: Local Maximum -->
+      <g transform="translate(35, 280)">
+        <rect x="0" y="0" width="1610" height="180" rx="14" fill="#1c050d" stroke="#f43f5e" stroke-width="2"/>
+        <text x="30" y="38" fill="#f43f5e" font-size="22" font-weight="800">CASE 2: Δ &gt; 0  AND  r &lt; 0 ⟹ LOCAL MAXIMUM (STRICT CAP)</text>
+        <text x="30" y="75" fill="#cbd5e1" font-size="18">• Since Δ = rt - s² &gt; 0 and r &lt; 0 ⟹ t MUST also be &lt; 0 (both principal curvatures negative).</text>
+        <text x="30" y="110" fill="#cbd5e1" font-size="18">• Hessian H_f is NEGATIVE DEFINITE (both eigenvalues λ₁, λ₂ &lt; 0).</text>
+        <text x="30" y="150" fill="#f43f5e" font-size="20" font-weight="800">Surface curves DOWNWARDS in every direction: Cap-shaped dome. f(x₀, y₀) is a relative maximum.</text>
+      </g>
+
+      <!-- Case 3: Saddle Point -->
+      <g transform="translate(35, 485)">
+        <rect x="0" y="0" width="1610" height="200" rx="14" fill="#281c06" stroke="#fbbf24" stroke-width="2"/>
+        <text x="30" y="38" fill="#fbbf24" font-size="22" font-weight="800">CASE 3: Δ &lt; 0 ⟹ SADDLE POINT (COL / MOUNTAIN PASS)</text>
+        <text x="30" y="75" fill="#cbd5e1" font-size="18">• Product of eigenvalues λ₁ λ₂ &lt; 0 ⟹ Eigenvalues have OPPOSITE SIGNS (one &gt; 0, one &lt; 0).</text>
+        <text x="30" y="110" fill="#cbd5e1" font-size="18">• Hessian H_f is INDEFINITE. Minimum along one direction, maximum along another direction!</text>
+        <text x="30" y="150" fill="#fbbf24" font-size="20" font-weight="800">NEITHER A LOCAL MAXIMUM NOR MINIMUM! Stationary point is a Saddle Point.</text>
+        <text x="30" y="180" fill="#94a3b8" font-size="16">Prototype: z = x² - y² at (0, 0): r = +2, t = -2, s = 0 ⟹ Δ = -4 &lt; 0.</text>
+      </g>
+
+      <!-- Case 4: Inconclusive -->
+      <g transform="translate(35, 710)">
+        <rect x="0" y="0" width="1610" height="180" rx="14" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+        <text x="30" y="38" fill="#94a3b8" font-size="22" font-weight="800">CASE 4: Δ = 0 ⟹ TEST FAILS / INCONCLUSIVE</text>
+        <text x="30" y="75" fill="#cbd5e1" font-size="18">• At least one eigenvalue is ZERO (Hessian is singular / semi-definite).</text>
+        <text x="30" y="110" fill="#cbd5e1" font-size="18">• Requires higher-order Taylor expansion or direct directional inspection along curves y = mxⁿ.</text>
+        <text x="30" y="150" fill="#e2e8f0" font-size="18">Classic Example: f(x, y) = x⁴ + y⁴ has Δ = 0 at (0, 0), but direct analysis reveals global minimum at 0.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: LAGRANGE MULTIPLIERS & GEOMETRIC OPTIMIZATION -->
+  <g transform="translate(1920, 310)">
+    <rect x="0" y="0" width="1800" height="1750" rx="20" fill="url(#cardGradDark)" stroke="#1e293b" stroke-width="2"/>
+    <rect x="0" y="0" width="1800" height="75" rx="20" fill="#0f172a"/>
+    <rect x="25" y="22" width="8" height="32" rx="4" fill="#34d399"/>
+    <text x="45" y="45" fill="#34d399" font-size="28" font-weight="700">2. CONSTRAINED OPTIMIZATION &amp; LAGRANGE MULTIPLIERS</text>
+
+    <!-- Lagrange Multiplier Engine -->
+    <g transform="translate(40, 105)">
+      <rect x="0" y="0" width="1720" height="420" rx="16" fill="url(#cardGradDark)" stroke="#34d399" stroke-width="2"/>
+      <text x="35" y="40" fill="#34d399" font-size="24" font-weight="700">Method of Lagrange Multipliers</text>
+      <text x="35" y="75" fill="#cbd5e1" font-size="19">To optimize objective function f(x, y, z) subject to equality constraint g(x, y, z) = k:</text>
+
+      <rect x="35" y="100" width="1650" height="75" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+      <text x="50" y="148" fill="#34d399" font-size="30" font-weight="800">∇f(x, y, z) = λ • ∇g(x, y, z)   AND   g(x, y, z) = k</text>
+
+      <g transform="translate(35, 200)">
+        <rect x="0" y="0" width="1650" height="195" rx="12" fill="#1e293b" stroke="#334155"/>
+        <text x="30" y="35" fill="#fbbf24" font-size="20" font-weight="700">GEOMETRIC TANGENCY INTERPRETATION:</text>
+        <text x="30" y="70" fill="#f8fafc" font-size="18">• At the constrained optimum, level curve of f(x, y) is TANGENT to constraint curve g(x, y) = k.</text>
+        <text x="30" y="105" fill="#f8fafc" font-size="18">• Their normal vectors (gradients) must be PARALLEL: ∇f ∥ ∇g ⟹ ∇f = λ ∇g.</text>
+        <text x="30" y="140" fill="#38bdf8" font-size="18">• The scalar λ is called the Lagrange Multiplier (represents shadow price / marginal sensitivity df/dk).</text>
+        <text x="30" y="175" fill="#94a3b8" font-size="16">For multiple constraints g₁ = k₁, g₂ = k₂: ∇f = λ₁ ∇g₁ + λ₂ ∇g₂.</text>
+      </g>
+    </g>
+
+    <!-- Matrix Optimization & Quadratic Forms -->
+    <g transform="translate(40, 560)">
+      <rect x="0" y="0" width="1720" height="380" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+      <text x="35" y="40" fill="#38bdf8" font-size="24" font-weight="700">Matrix Calculus &amp; Quadratic Form Optimization</text>
+      <text x="35" y="75" fill="#cbd5e1" font-size="19">Quadratic objective f(x⃗) = (1/2) x⃗ᵀ A x⃗ - b⃗ᵀ x⃗ + c where A is symmetric positive definite:</text>
+
+      <rect x="35" y="95" width="1650" height="70" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+      <text x="50" y="142" fill="#38bdf8" font-size="26" font-weight="800">Gradient: ∇f(x⃗) = A x⃗ - b⃗ = 0⃗ ⟹ Optimum x⃗* = A⁻¹ b⃗</text>
+
+      <g transform="translate(35, 185)">
+        <rect x="0" y="0" width="1650" height="170" rx="10" fill="#1e293b" stroke="#334155"/>
+        <text x="25" y="35" fill="#fbbf24" font-size="19" font-weight="700">Sylvester's Criterion &amp; Convexity Guarantee:</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">• Hessian ∇²f(x⃗) = A is constant everywhere.</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">• If A is Positive Definite (all leading principal minors &gt; 0), f(x⃗) is strictly CONVEX ⟹ Unique Global Minimum!</text>
+        <text x="25" y="140" fill="#34d399" font-size="18" font-weight="700">Global Minimum Value: f(x⃗*) = c - (1/2) b⃗ᵀ A⁻¹ b⃗</text>
+      </g>
+    </g>
+
+    <!-- Titans Worked Optimization Drills -->
+    <g transform="translate(40, 970)">
+      <rect x="0" y="0" width="1720" height="730" rx="16" fill="#111827" stroke="#334155"/>
+      <text x="35" y="45" fill="#38bdf8" font-size="22" font-weight="700">TITANS BATCH CRITICAL EXTREMA DRILL ARCHIVE</text>
+
+      <g transform="translate(35, 75)">
+        <rect x="0" y="0" width="800" height="620" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+        <text x="25" y="35" fill="#38bdf8" font-size="20" font-weight="700">Drill 1: f(x, y) = x³ + y³ - 3xy</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">• f_x = 3x² - 3y = 0 ⟹ y = x²</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">• f_y = 3y² - 3x = 0 ⟹ x = y² = x⁴ ⟹ x(x³ - 1) = 0</text>
+        <text x="25" y="140" fill="#f8fafc" font-size="18" font-weight="700">Stationary Points: P₁(0, 0) and P₂(1, 1)</text>
+
+        <g transform="translate(25, 165)">
+          <rect x="0" y="0" width="750" height="90" rx="8" fill="#0f172a" stroke="#38bdf8"/>
+          <text x="20" y="30" fill="#38bdf8" font-size="17">Hessian Derivatives: r = 6x, t = 6y, s = -3</text>
+          <text x="20" y="65" fill="#fbbf24" font-size="18" font-weight="700">Discriminant: Δ = rt - s² = (6x)(6y) - 9 = 36xy - 9</text>
+        </g>
+
+        <g transform="translate(25, 275)">
+          <rect x="0" y="0" width="750" height="145" rx="8" fill="#281c06" stroke="#fbbf24"/>
+          <text x="20" y="30" fill="#fbbf24" font-size="18" font-weight="700">At P₁(0, 0):</text>
+          <text x="20" y="65" fill="#cbd5e1" font-size="17">• r = 0, t = 0, s = -3 ⟹ Δ = 0 - 9 = -9 &lt; 0</text>
+          <text x="20" y="105" fill="#f43f5e" font-size="20" font-weight="800">⟹ (0, 0) is a SADDLE POINT!</text>
+          <text x="20" y="135" fill="#94a3b8" font-size="15">f(0, 0) = 0</text>
+        </g>
+
+        <g transform="translate(25, 440)">
+          <rect x="0" y="0" width="750" height="150" rx="8" fill="#062817" stroke="#34d399"/>
+          <text x="20" y="30" fill="#34d399" font-size="18" font-weight="700">At P₂(1, 1):</text>
+          <text x="20" y="65" fill="#cbd5e1" font-size="17">• r = 6 &gt; 0, t = 6 &gt; 0, s = -3 ⟹ Δ = 36 - 9 = 27 &gt; 0</text>
+          <text x="20" y="105" fill="#34d399" font-size="20" font-weight="800">⟹ (1, 1) is a STRICT LOCAL MINIMUM!</text>
+          <text x="20" y="135" fill="#38bdf8" font-size="16" font-weight="700">Local Minimum Value: f(1, 1) = 1 + 1 - 3 = -1</text>
+        </g>
+      </g>
+
+      <g transform="translate(870, 75)">
+        <rect x="0" y="0" width="800" height="620" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+        <text x="25" y="35" fill="#fbbf24" font-size="20" font-weight="700">Drill 2: Shortest Distance from (0, 0) to Line 2x + y = 5</text>
+        <text x="25" y="70" fill="#cbd5e1" font-size="17">• Minimize f(x, y) = x² + y² subject to g(x, y) = 2x + y - 5 = 0</text>
+        <text x="25" y="105" fill="#cbd5e1" font-size="17">• Lagrange condition: ∇f = λ ∇g ⟹ [2x, 2y]ᵀ = λ [2, 1]ᵀ</text>
+        
+        <g transform="translate(25, 130)">
+          <rect x="0" y="0" width="750" height="100" rx="8" fill="#0f172a" stroke="#38bdf8"/>
+          <text x="20" y="35" fill="#38bdf8" font-size="18">• 2x = 2λ ⟹ x = λ</text>
+          <text x="20" y="70" fill="#38bdf8" font-size="18">• 2y = λ ⟹ y = λ/2 ⟹ x = 2y</text>
+        </g>
+
+        <g transform="translate(25, 250)">
+          <rect x="0" y="0" width="750" height="160" rx="8" fill="#062817" stroke="#34d399"/>
+          <text x="20" y="30" fill="#34d399" font-size="18" font-weight="700">Substitute into Constraint:</text>
+          <text x="20" y="65" fill="#cbd5e1" font-size="17">2(2y) + y = 5 ⟹ 5y = 5 ⟹ y = 1 ⟹ x = 2</text>
+          <text x="20" y="105" fill="#34d399" font-size="22" font-weight="800">Nearest Point: (x*, y*) = (2, 1)</text>
+          <text x="20" y="140" fill="#fbbf24" font-size="18" font-weight="700">Minimum Distance: d = √(2² + 1²) = √5</text>
+        </g>
+
+        <g transform="translate(25, 430)">
+          <rect x="0" y="0" width="750" height="160" rx="8" fill="#1e293b" stroke="#64748b"/>
+          <text x="20" y="30" fill="#94a3b8" font-size="18" font-weight="700">Geometric Sanity Check via Perpendicular Formula:</text>
+          <text x="20" y="65" fill="#cbd5e1" font-size="17">d = |ax₀ + by₀ + c| / √(a² + b²)</text>
+          <text x="20" y="105" fill="#f8fafc" font-size="20" font-weight="700">d = |2(0) + 1(0) - 5| / √(2² + 1²) = 5 / √5 = √5</text>
+          <text x="20" y="140" fill="#34d399" font-size="16" font-weight="700">Exact match! Calculus perfectly validates analytical geometry.</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,199 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid5" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid5)"/>
+
+  <!-- Title Header -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 05 • FIGURE 5.5</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">LTI System Characterization: Causality &amp; BIBO Stability Decision Matrix in the Complex s-Plane</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- Central Master Architecture: The 4 Quadrants -->
+  
+  <!-- Quadrant 1: Causal & Stable (TOP-LEFT / GOLDEN ZONE) -->
+  <g transform="translate(80, 190)">
+    <rect width="1100" height="520" rx="16" fill="url(#panelGrad5)" stroke="#34d399" stroke-width="2.5"/>
+    <rect width="1100" height="55" rx="16" fill="#21262d"/>
+    <text x="550" y="38" fill="#34d399" font-size="22" font-weight="800" text-anchor="middle">QUADRANT 1: CAUSAL &amp; BIBO STABLE (THE GOLDEN DESIRABLE ZONE)</text>
+
+    <g transform="translate(40, 80)">
+      <!-- Left text -->
+      <rect width="480" height="400" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <text x="25" y="40" fill="#34d399" font-size="18" font-weight="700">1. Causality Criterion:</text>
+      <text x="25" y="70" fill="#e6edf3" font-size="15">h(t) = 0 for t &lt; 0 ⇒ ROC is Re(s) &gt; σ_max</text>
+      <text x="25" y="95" fill="#8b949e" font-size="14">(ROC is to the right of the rightmost pole)</text>
+
+      <text x="25" y="140" fill="#34d399" font-size="18" font-weight="700">2. BIBO Stability Criterion:</text>
+      <text x="25" y="170" fill="#e6edf3" font-size="15">∫ |h(t)| dt &lt; ∞ ⇒ ROC MUST enclose jω-axis</text>
+      <text x="25" y="195" fill="#8b949e" font-size="14">(Re(s) = 0 must be inside the ROC)</text>
+
+      <rect x="25" y="230" width="430" height="145" rx="10" fill="#161b22" stroke="#34d399" stroke-width="2"/>
+      <text x="240" y="265" fill="#fbbf24" font-size="18" font-weight="800" text-anchor="middle">THE GOLDEN INTERSECTION THEOREM:</text>
+      <text x="240" y="295" fill="#34d399" font-size="19" font-weight="800" text-anchor="middle">ALL POLES MUST LIE IN THE</text>
+      <text x="240" y="325" fill="#34d399" font-size="20" font-weight="800" text-anchor="middle">OPEN LEFT HALF PLANE (OLHP)!</text>
+      <text x="240" y="355" fill="#8b949e" font-size="13" text-anchor="middle">Re(p_k) &lt; 0 for every pole k</text>
+    </g>
+
+    <!-- Right s-plane diagram -->
+    <g transform="translate(560, 80)">
+      <rect width="500" height="400" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <!-- Shaded ROC includes jw axis -->
+      <rect x="180" y="20" width="300" height="360" fill="#34d399" fill-opacity="0.18"/>
+      <!-- Axes -->
+      <line x1="280" y1="20" x2="280" y2="380" stroke="#38bdf8" stroke-width="2"/> <!-- jw -->
+      <line x1="20" y1="200" x2="480" y2="200" stroke="#38bdf8" stroke-width="2"/> <!-- sigma -->
+      <text x="465" y="190" fill="#38bdf8" font-size="15">σ</text>
+      <text x="290" y="45" fill="#38bdf8" font-size="15">jω</text>
+      <!-- Boundary line -->
+      <line x1="180" y1="20" x2="180" y2="380" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <!-- All poles in OLHP -->
+      <text x="180" y="208" fill="#f87171" font-size="28" font-weight="900" text-anchor="middle">✕</text>
+      <text x="180" y="235" fill="#f87171" font-size="15" font-weight="700" text-anchor="middle">-1</text>
+      <text x="100" y="138" fill="#f87171" font-size="28" font-weight="900" text-anchor="middle">✕</text>
+      <text x="100" y="278" fill="#f87171" font-size="28" font-weight="900" text-anchor="middle">✕</text>
+      <text x="100" y="165" fill="#f87171" font-size="14" font-weight="700" text-anchor="middle">-3±j2</text>
+      
+      <text x="360" y="80" fill="#34d399" font-size="18" font-weight="700">ROC: Re(s) &gt; -1</text>
+      <text x="360" y="110" fill="#fbbf24" font-size="14">Encloses jω-axis!</text>
+      <text x="360" y="320" fill="#34d399" font-size="15" font-weight="600">H(s) = 1 / (s + 1)</text>
+      <text x="360" y="345" fill="#8b949e" font-size="13">h(t) = e^{-t} u(t)</text>
+    </g>
+  </g>
+
+  <!-- Quadrant 2: Causal & Unstable -->
+  <g transform="translate(1220, 190)">
+    <rect width="1100" height="520" rx="16" fill="url(#panelGrad5)" stroke="#f87171" stroke-width="2.5"/>
+    <rect width="1100" height="55" rx="16" fill="#21262d"/>
+    <text x="550" y="38" fill="#f87171" font-size="22" font-weight="800" text-anchor="middle">QUADRANT 2: CAUSAL &amp; UNSTABLE (FATAL GATE TRAP)</text>
+
+    <g transform="translate(40, 80)">
+      <rect width="480" height="400" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <text x="25" y="40" fill="#38bdf8" font-size="18" font-weight="700">1. Causality Check:</text>
+      <text x="25" y="70" fill="#e6edf3" font-size="15">ROC is Re(s) &gt; σ_max  ⇒  CAUSAL</text>
+
+      <text x="25" y="120" fill="#f87171" font-size="18" font-weight="700">2. Stability Failure:</text>
+      <text x="25" y="150" fill="#e6edf3" font-size="15">A pole exists in the Right Half Plane (RHP)</text>
+      <text x="25" y="175" fill="#e6edf3" font-size="15">or on the imaginary axis (integrator)!</text>
+      <text x="25" y="205" fill="#f87171" font-size="16" font-weight="700">ROC does NOT enclose the jω-axis!</text>
+
+      <rect x="25" y="240" width="430" height="135" rx="10" fill="#161b22" stroke="#f87171" stroke-width="2"/>
+      <text x="25" y="275" fill="#fbbf24" font-size="16" font-weight="700">Example: H(s) = 1 / (s - 2), Re(s) &gt; 2</text>
+      <text x="25" y="305" fill="#f87171" font-size="15">h(t) = e^{2t} u(t)  (Grows without bound!)</text>
+      <text x="25" y="335" fill="#8b949e" font-size="14">Bounded input yields infinite output ⇒ UNSTABLE</text>
+      <text x="25" y="358" fill="#f87171" font-size="13">Marginal: 1/s (integrator) is NOT BIBO stable!</text>
+    </g>
+
+    <g transform="translate(560, 80)">
+      <rect width="500" height="400" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <!-- Shaded ROC right of RHP pole -->
+      <rect x="340" y="20" width="140" height="360" fill="#f87171" fill-opacity="0.18"/>
+      <line x1="220" y1="20" x2="220" y2="380" stroke="#38bdf8" stroke-width="2"/>
+      <line x1="20" y1="200" x2="480" y2="200" stroke="#38bdf8" stroke-width="2"/>
+      <text x="465" y="190" fill="#38bdf8" font-size="15">σ</text>
+      <text x="230" y="45" fill="#38bdf8" font-size="15">jω</text>
+      <line x1="340" y1="20" x2="340" y2="380" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <!-- Pole in RHP -->
+      <text x="340" y="208" fill="#f87171" font-size="28" font-weight="900" text-anchor="middle">✕</text>
+      <text x="340" y="235" fill="#f87171" font-size="16" font-weight="700" text-anchor="middle">+2</text>
+      <text x="410" y="100" fill="#f87171" font-size="17" font-weight="700" text-anchor="middle">Re(s) &gt; +2</text>
+      <text x="120" y="100" fill="#f87171" font-size="15" font-weight="600" text-anchor="middle">jω-AXIS EXCLUDED</text>
+      <text x="120" y="125" fill="#8b949e" font-size="13" text-anchor="middle">σ = 0 is NOT in ROC</text>
+    </g>
+  </g>
+
+  <!-- Quadrant 3: Non-Causal & Stable -->
+  <g transform="translate(80, 750)">
+    <rect width="1100" height="520" rx="16" fill="url(#panelGrad5)" stroke="#60a5fa" stroke-width="2"/>
+    <rect width="1100" height="55" rx="16" fill="#21262d"/>
+    <text x="550" y="38" fill="#60a5fa" font-size="22" font-weight="800" text-anchor="middle">QUADRANT 3: NON-CAUSAL &amp; BIBO STABLE (STRIP ENCLOSING jω)</text>
+
+    <g transform="translate(40, 80)">
+      <rect width="480" height="400" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <text x="25" y="40" fill="#60a5fa" font-size="18" font-weight="700">1. Stability Verified:</text>
+      <text x="25" y="70" fill="#e6edf3" font-size="15">The ROC vertical strip encloses the jω-axis</text>
+      <text x="25" y="95" fill="#34d399" font-size="15" font-weight="600">Re(s) = 0 is inside ⇒ BIBO STABLE!</text>
+
+      <text x="25" y="140" fill="#fbbf24" font-size="18" font-weight="700">2. Causality Failure:</text>
+      <text x="25" y="170" fill="#e6edf3" font-size="15">ROC is bounded on the right by a pole.</text>
+      <text x="25" y="195" fill="#8b949e" font-size="14">Signal has anti-causal components: h(t) ≠ 0 for t &lt; 0.</text>
+
+      <rect x="25" y="240" width="430" height="135" rx="10" fill="#161b22" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="25" y="275" fill="#fbbf24" font-size="16" font-weight="700">Example: H(s) = 1 / [(s + 2)(s - 3)]</text>
+      <text x="25" y="305" fill="#60a5fa" font-size="15">Stable ROC: -2 &lt; Re(s) &lt; 3 (Includes jω!)</text>
+      <text x="25" y="335" fill="#e6edf3" font-size="14">h(t) = -(1/5)e^{-2t}u(t) - (1/5)e^{3t}u(-t)</text>
+      <text x="25" y="358" fill="#34d399" font-size="13">Decays in both directions ⇒ Absolutely Integrable!</text>
+    </g>
+
+    <g transform="translate(560, 80)">
+      <rect width="500" height="400" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <!-- Shaded strip enclosing jw -->
+      <rect x="140" y="20" width="220" height="360" fill="#60a5fa" fill-opacity="0.18"/>
+      <line x1="220" y1="20" x2="220" y2="380" stroke="#38bdf8" stroke-width="2"/>
+      <line x1="20" y1="200" x2="480" y2="200" stroke="#38bdf8" stroke-width="2"/>
+      <text x="465" y="190" fill="#38bdf8" font-size="15">σ</text>
+      <text x="230" y="45" fill="#38bdf8" font-size="15">jω</text>
+      <!-- Boundary lines -->
+      <line x1="140" y1="20" x2="140" y2="380" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <line x1="360" y1="20" x2="360" y2="380" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <text x="140" y="208" fill="#f87171" font-size="28" font-weight="900" text-anchor="middle">✕</text>
+      <text x="140" y="235" fill="#f87171" font-size="15" font-weight="700" text-anchor="middle">-2</text>
+      <text x="360" y="208" fill="#f87171" font-size="28" font-weight="900" text-anchor="middle">✕</text>
+      <text x="360" y="235" fill="#f87171" font-size="15" font-weight="700" text-anchor="middle">+3</text>
+      <text x="250" y="100" fill="#60a5fa" font-size="18" font-weight="700" text-anchor="middle">ROC: -2 &lt; Re(s) &lt; 3</text>
+      <text x="250" y="130" fill="#34d399" font-size="14" font-weight="600" text-anchor="middle">Encloses jω-axis ⇒ STABLE</text>
+    </g>
+  </g>
+
+  <!-- Quadrant 4: Non-Causal & Unstable -->
+  <g transform="translate(1220, 750)">
+    <rect width="1100" height="520" rx="16" fill="url(#panelGrad5)" stroke="#30363d" stroke-width="2"/>
+    <rect width="1100" height="55" rx="16" fill="#21262d"/>
+    <text x="550" y="38" fill="#8b949e" font-size="22" font-weight="800" text-anchor="middle">QUADRANT 4: NON-CAUSAL &amp; UNSTABLE (DOUBLE FAILURE)</text>
+
+    <g transform="translate(40, 80)">
+      <rect width="480" height="400" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <text x="25" y="40" fill="#f87171" font-size="18" font-weight="700">1. Causality Failure:</text>
+      <text x="25" y="70" fill="#e6edf3" font-size="15">ROC is left-sided (Re(s) &lt; σ_min) or bounded</text>
+      <text x="25" y="95" fill="#8b949e" font-size="14">⇒ Anti-causal components present.</text>
+
+      <text x="25" y="140" fill="#f87171" font-size="18" font-weight="700">2. Stability Failure:</text>
+      <text x="25" y="170" fill="#e6edf3" font-size="15">ROC strip does NOT include the jω-axis.</text>
+      <text x="25" y="195" fill="#8b949e" font-size="14">⇒ Impulse response diverges in time.</text>
+
+      <rect x="25" y="240" width="430" height="135" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="25" y="275" fill="#fbbf24" font-size="16" font-weight="700">Example: H(s) = 1 / [(s + 2)(s - 3)]</text>
+      <text x="25" y="305" fill="#f87171" font-size="15">Anti-causal ROC: Re(s) &lt; -2</text>
+      <text x="25" y="335" fill="#8b949e" font-size="14">h(t) = +(1/5)e^{-2t}u(-t) - (1/5)e^{3t}u(-t)</text>
+      <text x="25" y="358" fill="#f87171" font-size="13">e^{-2t}u(-t) grows toward t = -∞ ⇒ UNSTABLE</text>
+    </g>
+
+    <g transform="translate(560, 80)">
+      <rect width="500" height="400" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+      <!-- Shaded left half plane left of -2 -->
+      <rect x="20" y="20" width="120" height="360" fill="#f87171" fill-opacity="0.14"/>
+      <line x1="220" y1="20" x2="220" y2="380" stroke="#38bdf8" stroke-width="2"/>
+      <line x1="20" y1="200" x2="480" y2="200" stroke="#38bdf8" stroke-width="2"/>
+      <text x="465" y="190" fill="#38bdf8" font-size="15">σ</text>
+      <text x="230" y="45" fill="#38bdf8" font-size="15">jω</text>
+      <line x1="140" y1="20" x2="140" y2="380" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <text x="140" y="208" fill="#f87171" font-size="28" font-weight="900" text-anchor="middle">✕</text>
+      <text x="140" y="235" fill="#f87171" font-size="15" font-weight="700" text-anchor="middle">-2</text>
+      <text x="360" y="208" fill="#f87171" font-size="28" font-weight="900" text-anchor="middle">✕</text>
+      <text x="360" y="235" fill="#f87171" font-size="15" font-weight="700" text-anchor="middle">+3</text>
+      <text x="80" y="100" fill="#f87171" font-size="17" font-weight="700" text-anchor="middle">Re(s) &lt; -2</text>
+      <text x="320" y="100" fill="#8b949e" font-size="15" font-weight="600" text-anchor="middle">Neither Causal nor Stable</text>
+    </g>
+  </g>
+</svg>

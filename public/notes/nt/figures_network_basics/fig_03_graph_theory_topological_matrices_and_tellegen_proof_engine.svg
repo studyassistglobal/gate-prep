@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="3840" height="2160" fill="url(#bgGrad)"/>
+  <rect width="3840" height="2160" fill="url(#grid)"/>
+
+  <!-- Master Header -->
+  <rect x="60" y="50" width="3720" height="150" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+  <rect x="60" y="50" width="16" height="150" rx="8" fill="url(#accentGrad)"/>
+  
+  <text x="110" y="115" fill="#38bdf8" font-family="'Inter', -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="0.5">FIGURE 3: GRAPH THEORY, TOPOLOGICAL MATRICES &amp; TELLEGEN PROOF ENGINE</text>
+  <text x="110" y="165" fill="#94a3b8" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="500">Oriented Graphs, Trees &amp; Co-Trees, Incidence, Fundamental Cut-Set, Fundamental Tie-Set &amp; Dual Matrix Orthogonalities</text>
+  <text x="3740" y="135" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22" font-weight="700" text-anchor="end">GATE 2027 • PREPFUSION TITANS 4K</text>
+
+  <!-- Main Blueprint Content -->
+  <g transform="translate(60, 240)" font-family="'Inter', -apple-system, sans-serif">
+    
+<!-- Column 1: Oriented Graph & Tree Fundamentals -->
+<g transform="translate(0, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#38bdf8"/>
+  <text x="35" y="55" fill="#38bdf8" font-size="28" font-weight="900">1. Oriented Graph &amp; Tree Topology</text>
+
+  <rect x="30" y="85" width="840" height="340" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="125" fill="#38bdf8" font-size="22" font-weight="800">Graph Abstraction &amp; Elements</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• Linear Graph G = (V, E) replaces electrical components with lines</text>
+  <text x="70" y="205" fill="#e2e8f0" font-size="19">connecting junctions (nodes n, branches b).</text>
+  <text x="50" y="250" fill="#fbbf24" font-size="19">• Oriented Graph: Every branch has an assigned arrow indicating reference current direction.</text>
+  <text x="50" y="295" fill="#e2e8f0" font-size="19">• Connected Graph: Path exists between every pair of nodes (k = 1 subgraphs).</text>
+  <text x="50" y="340" fill="#34d399" font-size="19">• Planar Graph: Can be drawn on a 2D plane without any crossing branches.</text>
+  <text x="50" y="380" fill="#94a3b8" font-size="18">• Non-Planar: Cannot be drawn without crossings (Mesh analysis FAILS!).</text>
+
+  <rect x="30" y="450" width="840" height="500" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="495" fill="#34d399" font-size="22" font-weight="800">Tree &amp; Co-Tree Mathematical Definition</text>
+  <text x="50" y="540" fill="#e2e8f0" font-size="19">• A Tree (T) is a connected subgraph of G that:</text>
+  <text x="70" y="575" fill="#fbbf24" font-size="19">1. Contains ALL n nodes of the original graph.</text>
+  <text x="70" y="610" fill="#fbbf24" font-size="19">2. Contains NO closed loops (acyclic graph).</text>
+
+  <text x="50" y="660" fill="#38bdf8" font-size="20" font-weight="700">Fundamental Dimension Invariants:</text>
+  <text x="70" y="700" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">Tree Branches (Twigs) = n - 1</text>
+  <text x="70" y="740" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">Co-Tree Branches (Links / Chords) l = b - (n - 1) = b - n + 1</text>
+
+  <text x="50" y="795" fill="#e2e8f0" font-size="19">• Co-Tree (T*): The set of all links remaining when twigs are removed.</text>
+  <text x="50" y="835" fill="#94a3b8" font-size="18">• Twig properties: Every twig connects 2 nodes. Removing any 1 twig splits tree into 2 subtrees!</text>
+  <text x="50" y="875" fill="#94a3b8" font-size="18">• Link properties: Adding any 1 link to a tree forms EXACTLY ONE closed fundamental loop!</text>
+  <text x="50" y="915" fill="#34d399" font-size="18">• Rank of Graph: r = n - 1. Nullity of Graph: μ = b - n + 1.</text>
+
+  <rect x="30" y="975" width="840" height="420" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="50" y="1020" fill="#fbbf24" font-size="22" font-weight="800">Enumeration of Trees: Cayley &amp; Binet-Cauchy</text>
+  <text x="50" y="1065" fill="#e2e8f0" font-size="19">• Complete Graph K_n (every pair of nodes connected by an edge):</text>
+  <text x="70" y="1105" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="800">Total Trees T(K_n) = n^(n - 2)</text>
+  <text x="70" y="1145" fill="#94a3b8" font-size="18">For n = 3: 3¹ = 3 trees | For n = 4: 4² = 16 trees | For n = 5: 5³ = 125 trees!</text>
+
+  <text x="50" y="1195" fill="#34d399" font-size="20" font-weight="700">General Graph Matrix Tree Theorem (Laplacian / Admittance):</text>
+  <text x="70" y="1235" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">Total Trees N_T = det( A · A^T )</text>
+  <text x="50" y="1280" fill="#e2e8f0" font-size="18">where A is the Reduced Incidence Matrix of size (n-1) × b!</text>
+  <text x="50" y="1320" fill="#94a3b8" font-size="18">• Every non-singular submatrix of A of order (n-1) corresponds to a unique valid tree.</text>
+  <text x="50" y="1360" fill="#f43f5e" font-size="18">★ Determinant of any tree submatrix in A is always either +1 or -1 (unimodular!).</text>
+
+  <rect x="30" y="1420" width="840" height="390" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1465" fill="#f43f5e" font-size="22" font-weight="800">GATE Exam Quick-Check Tree Rules</text>
+  <text x="50" y="1510" fill="#e2e8f0" font-size="19">To test whether a given set of branches forms a valid Tree:</text>
+  <text x="70" y="1550" fill="#fbbf24" font-size="18">1. Count test: Must contain EXACTLY n - 1 branches. (If ≠ n-1, REJECT!).</text>
+  <text x="70" y="1590" fill="#fbbf24" font-size="18">2. Acyclic test: Must NOT contain any closed loop. (If loop exists, REJECT!).</text>
+  <text x="70" y="1630" fill="#fbbf24" font-size="18">3. Connectivity test: Must connect ALL n nodes together.</text>
+  <text x="50" y="1680" fill="#34d399" font-size="18">Example: For n=4, b=6 (Bridge circuit), n-1 = 3 twigs.</text>
+  <text x="50" y="1720" fill="#34d399" font-size="18">Total combinations C(6, 3) = 20. Closed triangles = 4.</text>
+  <text x="50" y="1760" fill="#38bdf8" font-size="18">Valid trees = 20 - 4 = 16 trees! det(A A^T) = 16.</text>
+</g>
+
+<!-- Column 2: Incidence Matrix (Aa and A) & KCL -->
+<g transform="translate(930, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#34d399"/>
+  <text x="35" y="55" fill="#34d399" font-size="28" font-weight="900">2. Incidence Matrix &amp; KCL Formulation</text>
+
+  <rect x="30" y="85" width="840" height="420" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#34d399" font-size="22" font-weight="800">Complete Incidence Matrix A_a [Order n × b]</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• Describes connection between nodes and branches:</text>
+  <text x="70" y="215" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">a_ij = +1   if branch j leaves node i</text>
+  <text x="70" y="255" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">a_ij = -1   if branch j enters node i</text>
+  <text x="70" y="295" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">a_ij =  0   if branch j is not connected to node i</text>
+
+  <text x="50" y="350" fill="#38bdf8" font-size="20" font-weight="800">Fundamental Structural Properties of A_a:</text>
+  <text x="70" y="390" fill="#e2e8f0" font-size="18">1. Each column has exactly ONE +1 and ONE -1 (since each branch connects 2 nodes).</text>
+  <text x="70" y="425" fill="#e2e8f0" font-size="18">2. Sum of elements in ANY column is ZERO: ∑_i a_ij = 0.</text>
+  <text x="70" y="460" fill="#f43f5e" font-size="18">3. Rows of A_a are linearly dependent! Rank(A_a) = n - 1 &lt; n.</text>
+
+  <rect x="30" y="530" width="840" height="430" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="575" fill="#38bdf8" font-size="22" font-weight="800">Reduced Incidence Matrix A [Order (n-1) × b]</text>
+  <text x="50" y="620" fill="#e2e8f0" font-size="19">• Obtained by deleting ANY ONE row (the reference/datum node):</text>
+  <text x="70" y="660" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="800">Rank(A) = n - 1   (Full Row Rank!)</text>
+  <text x="50" y="705" fill="#e2e8f0" font-size="19">• Partitioning A into Twigs (A_t) and Links (A_l):</text>
+  <text x="70" y="745" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">A = [ A_t  |  A_l ]</text>
+  <text x="50" y="790" fill="#94a3b8" font-size="18">where A_t is a non-singular square matrix of size (n-1) × (n-1), det(A_t) = ±1.</text>
+
+  <text x="50" y="840" fill="#34d399" font-size="20" font-weight="700">Matrix Form of Kirchhoff's Current Law (KCL):</text>
+  <text x="70" y="880" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">A · i_b = 0   [where i_b = (b × 1) branch currents]</text>
+  <text x="50" y="925" fill="#e2e8f0" font-size="18">Represents n - 1 linearly independent KCL equations!</text>
+
+  <rect x="30" y="985" width="840" height="430" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="50" y="1030" fill="#fbbf24" font-size="22" font-weight="800">Branch Voltages in Terms of Node Voltages</text>
+  <text x="50" y="1075" fill="#e2e8f0" font-size="19">• Let v_n be the (n-1) × 1 vector of node-to-datum potentials.</text>
+  <text x="50" y="1115" fill="#e2e8f0" font-size="19">• The b × 1 branch voltage vector v_b is given by the TRANSPOSE of A:</text>
+  <text x="70" y="1160" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="26" font-weight="900">v_b = A^T · v_n</text>
+  
+  <text x="50" y="1215" fill="#34d399" font-size="20" font-weight="700">Component Expansion for Branch k from Node i to j:</text>
+  <text x="70" y="1255" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">v_b,k = v_n,i - v_n,j</text>
+  <text x="50" y="1300" fill="#e2e8f0" font-size="18">• If terminal j is the datum node (v_n,j = 0): v_b,k = v_n,i.</text>
+  <text x="50" y="1340" fill="#94a3b8" font-size="18">• Guarantees that KVL is satisfied automatically across every loop!</text>
+  <text x="50" y="1380" fill="#38bdf8" font-size="18">• Fundamental relation connecting node analysis directly to branch analysis.</text>
+
+  <rect x="30" y="1440" width="840" height="370" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1485" fill="#38bdf8" font-size="22" font-weight="800">Systematic Node Admittance Matrix Formulation</text>
+  <text x="50" y="1530" fill="#e2e8f0" font-size="19">• Branch Constitutive Law: i_b = Y_b · v_b - I_s</text>
+  <text x="50" y="1570" fill="#e2e8f0" font-size="19">• Multiplying by Reduced Incidence Matrix A:</text>
+  <text x="70" y="1610" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">A · i_b = A · Y_b · (A^T · v_n) - A · I_s = 0</text>
+  <text x="70" y="1660" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">( A · Y_b · A^T ) · v_n = A · I_s</text>
+  <text x="50" y="1710" fill="#e2e8f0" font-size="19">• Node Admittance Matrix: Y_node = A · Y_b · A^T (symmetric &amp; positive definite!).</text>
+  <text x="50" y="1750" fill="#94a3b8" font-size="18">• Source Injection Vector: I_node = A · I_s (net currents entering nodes).</text>
+</g>
+
+<!-- Column 3: Fundamental Tie-Set Matrix (Bf) & KVL -->
+<g transform="translate(1860, 0)">
+  <rect x="0" y="0" width="900" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#fbbf24"/>
+  <text x="35" y="55" fill="#fbbf24" font-size="28" font-weight="900">3. Fundamental Tie-Set Matrix &amp; KVL</text>
+
+  <rect x="30" y="85" width="840" height="420" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#fbbf24" font-size="22" font-weight="800">Fundamental Loop (f-loop / Tie-Set) Concept</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• For a given tree T, adding ONE link forms exactly ONE closed path (f-loop).</text>
+  <text x="50" y="210" fill="#e2e8f0" font-size="19">• An f-loop contains EXACTLY ONE link and one or more twigs.</text>
+  <text x="50" y="250" fill="#38bdf8" font-size="19">• Number of Fundamental Tie-Sets: l = b - n + 1.</text>
+  <text x="50" y="290" fill="#e2e8f0" font-size="19">• The orientation of the f-loop is chosen IDENTICAL to the orientation of its defining link!</text>
+  
+  <text x="50" y="340" fill="#34d399" font-size="20" font-weight="700">Tie-Set Matrix Definition B_f [Order (b-n+1) × b]:</text>
+  <text x="70" y="380" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">b_ij = +1   if branch j direction aligns with loop i</text>
+  <text x="70" y="415" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">b_ij = -1   if branch j direction opposes loop i</text>
+  <text x="70" y="450" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="20">b_ij =  0   if branch j is not present in loop i</text>
+
+  <rect x="30" y="530" width="840" height="430" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="575" fill="#38bdf8" font-size="22" font-weight="800">Canonical Partitioning of B_f</text>
+  <text x="50" y="620" fill="#e2e8f0" font-size="19">• Order branches such that Twigs are listed first, Links second:</text>
+  <text x="70" y="665" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="26" font-weight="900">B_f = [ B_t  |  I_l ]</text>
+  <text x="50" y="715" fill="#e2e8f0" font-size="18">• I_l is an IDENTITY matrix of order l × l = (b-n+1) × (b-n+1).</text>
+  <text x="50" y="750" fill="#e2e8f0" font-size="18">• B_t is a submatrix of order (b-n+1) × (n-1) containing twig entries.</text>
+  <text x="50" y="790" fill="#34d399" font-size="19" font-weight="700">Rank of Fundamental Tie-Set Matrix:</text>
+  <text x="70" y="830" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">Rank(B_f) = b - n + 1   (Full Row Rank!)</text>
+  <text x="50" y="875" fill="#94a3b8" font-size="18">• Proves all l fundamental loop equations are mutually linearly independent!</text>
+
+  <rect x="30" y="985" width="840" height="430" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1"/>
+  <text x="50" y="1030" fill="#34d399" font-size="22" font-weight="800">Matrix Form of Kirchhoff's Voltage Law (KVL)</text>
+  <text x="50" y="1075" fill="#e2e8f0" font-size="19">• Along any closed fundamental loop, algebraic sum of branch voltages is ZERO:</text>
+  <text x="70" y="1120" fill="#34d399" font-family="'Fira Code', monospace" font-size="26" font-weight="900">B_f · v_b = 0</text>
+  <text x="50" y="1170" fill="#e2e8f0" font-size="18">• Expanding by partitions [ B_t | I_l ] · [ v_t ; v_l ] = 0:</text>
+  <text x="70" y="1210" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">B_t · v_t + v_l = 0  ⇒  v_l = - B_t · v_t</text>
+  <text x="50" y="1255" fill="#38bdf8" font-size="18">• Link voltages are COMPLETELY DETERMINED by twig voltages!</text>
+
+  <text x="50" y="1305" fill="#fbbf24" font-size="20" font-weight="700">Branch Currents from Loop Currents:</text>
+  <text x="70" y="1345" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="800">i_b = B_f^T · i_l</text>
+  <text x="50" y="1390" fill="#94a3b8" font-size="18">where i_l is the (b-n+1) × 1 vector of fundamental link currents.</text>
+
+  <rect x="30" y="1440" width="840" height="370" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="50" y="1485" fill="#38bdf8" font-size="22" font-weight="800">Systematic Mesh Impedance Matrix Formulation</text>
+  <text x="50" y="1530" fill="#e2e8f0" font-size="19">• Branch Constitutive Law: v_b = Z_b · i_b - V_s</text>
+  <text x="50" y="1570" fill="#e2e8f0" font-size="19">• Multiplying by Fundamental Tie-Set Matrix B_f:</text>
+  <text x="70" y="1610" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22">B_f · v_b = B_f · Z_b · (B_f^T · i_l) - B_f · V_s = 0</text>
+  <text x="70" y="1660" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="900">( B_f · Z_b · B_f^T ) · i_l = B_f · V_s</text>
+  <text x="50" y="1710" fill="#e2e8f0" font-size="19">• Mesh Impedance Matrix: Z_mesh = B_f · Z_b · B_f^T (symmetric &amp; positive definite!).</text>
+  <text x="50" y="1750" fill="#94a3b8" font-size="18">• Source Voltage Vector: V_mesh = B_f · V_s (net clockwise loop driving voltages).</text>
+</g>
+
+<!-- Column 4: Fundamental Cut-Set Matrix (Qf) & Orthogonality Proofs -->
+<g transform="translate(2790, 0)">
+  <rect x="0" y="0" width="930" height="1860" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#cardGlow)"/>
+  <rect x="0" y="0" width="10" height="1860" rx="5" fill="#c084fc"/>
+  <text x="35" y="55" fill="#c084fc" font-size="28" font-weight="900">4. Cut-Set Matrix &amp; Grand Orthogonality</text>
+
+  <rect x="30" y="85" width="870" height="420" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="50" y="125" fill="#c084fc" font-size="22" font-weight="800">Fundamental Cut-Set (f-cutset) Concept</text>
+  <text x="50" y="170" fill="#e2e8f0" font-size="19">• A Cut-Set is a minimal set of branches whose removal divides graph into 2 parts.</text>
+  <text x="50" y="210" fill="#e2e8f0" font-size="19">• An f-cutset contains EXACTLY ONE twig and one or more links.</text>
+  <text x="50" y="250" fill="#38bdf8" font-size="19">• Number of Fundamental Cut-Sets: n - 1 (equal to number of twigs!).</text>
+  <text x="50" y="290" fill="#e2e8f0" font-size="19">• The orientation of an f-cutset is chosen IDENTICAL to the defining twig!</text>
+
+  <text x="50" y="340" fill="#34d399" font-size="20" font-weight="700">Canonical Partitioning of Q_f [Order (n-1) × b]:</text>
+  <text x="70" y="385" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="26" font-weight="900">Q_f = [ I_t  |  Q_l ]</text>
+  <text x="50" y="430" fill="#e2e8f0" font-size="18">• I_t is an IDENTITY matrix of order (n-1) × (n-1) representing the twigs.</text>
+  <text x="50" y="465" fill="#e2e8f0" font-size="18">• Q_l is an (n-1) × (b-n+1) matrix representing link incidence in cutsets.</text>
+
+  <rect x="30" y="530" width="870" height="410" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="50" y="575" fill="#38bdf8" font-size="22" font-weight="800">The Grand Matrix Orthogonality Theorems</text>
+  
+  <text x="50" y="620" fill="#fbbf24" font-size="20" font-weight="700">Theorem 1: Incidence &amp; Tie-Set Orthogonality:</text>
+  <text x="70" y="660" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">A · B_f^T ≡ 0   ⟺   B_f · A^T ≡ 0</text>
+  <text x="50" y="700" fill="#94a3b8" font-size="18">Every loop enters and leaves any cut surface equal number of times!</text>
+
+  <text x="50" y="745" fill="#fbbf24" font-size="20" font-weight="700">Theorem 2: Cut-Set &amp; Tie-Set Orthogonality:</text>
+  <text x="70" y="785" fill="#34d399" font-family="'Fira Code', monospace" font-size="24" font-weight="800">Q_f · B_f^T ≡ 0   ⟺   B_f · Q_f^T ≡ 0</text>
+  <text x="50" y="830" fill="#94a3b8" font-size="18">Proof via Matrix Multiplication:</text>
+  <text x="70" y="865" fill="#e2e8f0" font-family="'Fira Code', monospace" font-size="20">[ I_t | Q_l ] · [ B_t^T ; I_l ] = B_t^T + Q_l ≡ 0</text>
+  <text x="70" y="905" fill="#fbbf24" font-family="'Fira Code', monospace" font-size="22" font-weight="800">Q_l = - B_t^T   ⟺   B_t = - Q_l^T</text>
+
+  <rect x="30" y="960" width="870" height="450" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="50" y="1005" fill="#34d399" font-size="24" font-weight="900">Topological Proof of Tellegen's Law</text>
+  <text x="50" y="1050" fill="#e2e8f0" font-size="19">• Total network power absorbed across all b branches:</text>
+  <text x="70" y="1090" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="24" font-weight="800">P = v_b^T · i_b = ∑_(k=1)^b v_k · i_k</text>
+
+  <text x="50" y="1140" fill="#fbbf24" font-size="20" font-weight="700">Proof 1 (Via Node Potentials &amp; KCL):</text>
+  <text x="70" y="1175" fill="#e2e8f0" font-size="18">Substitute branch voltages v_b = A^T · v_n:</text>
+  <text x="70" y="1215" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">P = ( A^T · v_n )^T · i_b = v_n^T · ( A · i_b )</text>
+  <text x="70" y="1255" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">Since KCL states A · i_b = 0 ⇒ P = v_n^T · 0 ≡ 0 !</text>
+
+  <text x="50" y="1300" fill="#fbbf24" font-size="20" font-weight="700">Proof 2 (Via Loop Currents &amp; KVL):</text>
+  <text x="70" y="1335" fill="#e2e8f0" font-size="18">Substitute branch currents i_b = B_f^T · i_l:</text>
+  <text x="70" y="1375" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="22">P = v_b^T · ( B_f^T · i_l ) = ( B_f · v_b )^T · i_l</text>
+  <text x="70" y="1415" fill="#34d399" font-family="'Fira Code', monospace" font-size="22">Since KVL states B_f · v_b = 0 ⇒ P = 0^T · i_l ≡ 0 !</text>
+
+  <rect x="30" y="1430" width="870" height="380" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="50" y="1475" fill="#f43f5e" font-size="22" font-weight="800">Master Graph Theory Invariants Summary</text>
+  <text x="50" y="1520" fill="#e2e8f0" font-size="18">• Twigs = n - 1 | Links l = b - n + 1 | Branches b = Twigs + Links.</text>
+  <text x="50" y="1560" fill="#e2e8f0" font-size="18">• Rank of Complete Incidence Matrix: Rank(A_a) = n - 1.</text>
+  <text x="50" y="1600" fill="#e2e8f0" font-size="18">• Rank of Reduced Incidence Matrix: Rank(A) = n - 1.</text>
+  <text x="50" y="1640" fill="#e2e8f0" font-size="18">• Rank of Tie-Set Matrix: Rank(B_f) = b - n + 1.</text>
+  <text x="50" y="1680" fill="#e2e8f0" font-size="18">• Rank of Cut-Set Matrix: Rank(Q_f) = n - 1.</text>
+  <text x="50" y="1720" fill="#38bdf8" font-size="18">• Trees in Complete Graph K_n: T = n^(n - 2).</text>
+  <text x="50" y="1760" fill="#34d399" font-size="18">• Trees in General Graph: T = det(A A^T) = det(Q_f Q_f^T).</text>
+</g>
+
+  </g>
+</svg>

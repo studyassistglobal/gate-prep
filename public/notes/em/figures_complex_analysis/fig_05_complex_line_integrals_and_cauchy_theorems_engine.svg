@@ -1,0 +1,432 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.4" opacity="0.6" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowEmerald" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="cardShadow" x="-10%" y="-5%" width="120%" height="115%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+    </defs>
+
+    <style>
+        .font-mono { font-family: 'Consolas', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+        .font-sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+    </style>
+
+    <!-- Deep Blueprint Background -->
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Outer Architectural Frame -->
+    <rect x="40" y="40" width="3760" height="2080" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+    <rect x="48" y="48" width="3744" height="2064" fill="none" stroke="#1e293b" stroke-width="1" rx="12" />
+
+    <!-- Corner Alignment Reticles -->
+    <path d="M 40 80 L 80 80 L 80 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 80 L 3760 80 L 3760 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 40 2080 L 80 2080 L 80 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 2080 L 3760 2080 L 3760 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Top Master Header Banner -->
+    <g transform="translate(80, 80)">
+        <rect x="0" y="0" width="3680" height="150" fill="#0b1329" fill-opacity="0.85" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="12" height="150" fill="url(#headerGrad)" rx="4" />
+        
+        <!-- Blueprint Title & Subtitle -->
+        <text x="50" y="62" fill="url(#headerGrad)" font-size="44" font-weight="900" letter-spacing="2px" class="font-sans">COMPLEX LINE INTEGRALS &amp; CAUCHY'S INTEGRAL THEOREMS ENGINE</text>
+        <text x="50" y="112" fill="#94a3b8" font-size="24" font-weight="500" letter-spacing="0.5px" class="font-sans">Parametric Line Integrals // Cauchy-Goursat Principle // Cauchy's Integral Formula &amp; Higher Derivatives // Multi-Pole Splitting</text>
+
+        <!-- Technical Telemetry Badge -->
+        <g transform="translate(3220, 30)">
+            <rect x="0" y="0" width="410" height="90" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <circle cx="30" cy="45" r="8" fill="#10b981" filter="url(#glowEmerald)" />
+            <text x="52" y="38" fill="#e2e8f0" font-size="16" font-weight="700" class="font-mono">GATE 2027 TITANS ENGINE</text>
+            <text x="52" y="65" fill="#38bdf8" font-size="14" font-weight="600" class="font-mono">SPEC: ULTRA-HD 4K BLUEPRINT</text>
+        </g>
+    </g>
+
+    <!-- Canvas Inner Content -->
+    
+    <!-- ==========================================
+         PANEL 1: COMPLEX LINE INTEGRALS & PARAMETRIZATION
+         ========================================== -->
+    <g transform="translate(80, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#cyanGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">01. COMPLEX CONTOUR INTEGRATION &amp; CANONICAL CIRCLE INTEGRAL</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Parametric definition // Real Riemann decomposition // The fundamental winding integral</text>
+
+        <!-- Sub-card 1: Complex Line Integral Definition -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">PARAMETRIC CONTOUR INTEGRAL FORMULATION</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">Let C be a smooth curve parametrized by z(t) = x(t) + i y(t) for t &#8712; [a, b]:</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="105" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#38bdf8" font-size="24" font-weight="900" class="font-mono">&#8747;&#7580; f(z) dz = &#8747;&#7522;&#7495; f(z(t)) z'(t) dt</text>
+                <text x="20" y="85" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">&#8747;&#7580; (u + iv)(dx + i dy) = &#8747;&#7580; (u dx - v dy) + i &#8747;&#7580; (v dx + u dy)</text>
+            </g>
+
+            <text x="24" y="235" fill="#34d399" font-size="16" font-weight="700" class="font-sans">CORE INTEGRATION PROPERTIES:</text>
+            <text x="24" y="265" fill="#94a3b8" font-size="15" class="font-sans">• Linearity: &#8747; [&#945; f(z) + &#946; g(z)] dz = &#945; &#8747; f(z) dz + &#946; &#8747; g(z) dz</text>
+            <text x="24" y="295" fill="#94a3b8" font-size="15" class="font-sans">• Orientation Reversal: &#8747;&#8331;&#7580; f(z) dz = - &#8747;&#7580; f(z) dz</text>
+        </g>
+
+        <!-- Sub-card 2: Canonical Circle Integral -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">THE FUNDAMENTAL CIRCLE WINDING THEOREM</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">Integrate (z - z&#8320;)&#8319; along circle C: |z - z&#8320;| = R (counterclockwise, z = z&#8320; + R e&#7522;&#7780;):</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="150" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#38bdf8" font-size="26" font-weight="900" class="font-mono">&#8750;&#7580; (z - z&#8320;)&#8319; dz =</text>
+                <text x="260" y="45" fill="#34d399" font-size="28" font-weight="900" class="font-mono">2&#960; i     (if n = -1)</text>
+                <text x="260" y="85" fill="#f43f5e" font-size="28" font-weight="900" class="font-mono">0        (if n &#8800; -1, n &#8712; &#8484;)</text>
+                <text x="20" y="125" fill="#fbbf24" font-size="16" class="font-sans">Proof: &#8747;&#8320;&#178;&#7510; R&#8319; e&#7522;&#8319;&#7780; (i R e&#7522;&#7780; d&#952;) = i R&#8319;&#8314;&#185; &#8747;&#8320;&#178;&#7510; e&#7522;(&#8319;&#8314;&#185;)&#7780; d&#952; = 2&#960;i if n=-1 else 0!</text>
+            </g>
+
+            <text x="24" y="280" fill="#38bdf8" font-size="15" font-weight="700" class="font-mono">&#9733; The single most vital result in all of complex contour integration!</text>
+            <text x="24" y="305" fill="#94a3b8" font-size="14" class="font-sans">Serves as the foundation for both Cauchy's Integral Formula and Laurent series residues.</text>
+        </g>
+
+        <!-- Sub-card 3: ML-Inequality (Darboux Inequality) -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">ML-INEQUALITY (CONTOUR INTEGRATION BOUNDING ENGINE)</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">THE ML-ESTIMATION THEOREM</text>
+                <text x="20" y="80" fill="#fbbf24" font-size="26" font-weight="900" class="font-mono">|&#8747;&#7580; f(z) dz| &#8804; M &#183; L</text>
+                <text x="20" y="125" fill="#e2e8f0" font-size="16" class="font-sans">• <tspan fill="#34d399" font-weight="700">L</tspan> = Total arc length of curve C = &#8747;&#7580; |dz|</text>
+                <text x="20" y="160" fill="#e2e8f0" font-size="16" class="font-sans">• <tspan fill="#f43f5e" font-weight="700">M</tspan> = Maximum value of |f(z)| on C: M = max&#7565;&#8712;&#7580; |f(z)|</text>
+                <text x="20" y="200" fill="#94a3b8" font-size="15" class="font-sans">&#9733; Indispensable for proving vanishing of semicircular arcs at infinity (R &#8594; &#8734;)!</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="820" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#c084fc" font-size="18" font-weight="700" class="font-mono">GATE EXAM ESTIMATION APPLICATION</text>
+                <text x="20" y="70" fill="#94a3b8" font-size="15" class="font-sans">Estimate |&#8747;&#7580; (e&#7618; / (z&#178; + 1)) dz| along semicircle C: |z| = R, Im(z) &#8805; 0:</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="15" class="font-mono">Length: L = &#960; R</text>
+                <text x="20" y="135" fill="#e2e8f0" font-size="15" class="font-mono">Denominator bound: |z&#178; + 1| &#8805; |z|&#178; - 1 = R&#178; - 1</text>
+                <text x="20" y="165" fill="#e2e8f0" font-size="15" class="font-mono">Numerator bound: |e&#7618;| = e&#7512; &#8804; e&#8319; (or e&#8304; = 1 if Im(z)&#8805;0)</text>
+                <text x="20" y="200" fill="#34d399" font-size="16" class="font-mono">Bound: |&#8747;| &#8804; &#960;R / (R&#178; - 1) &#8594; 0 as R &#8594; &#8734;  (Proves arc integral vanishes!)</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 2: CAUCHY-GOURSAT & CONTOUR DEFORMATION
+         ========================================== -->
+    <g transform="translate(1960, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#goldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#fbbf24" font-size="28" font-weight="800" class="font-sans">02. CAUCHY-GOURSAT THEOREM &amp; CONTOUR DEFORMATION</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Zero loop integral in simply connected domains // Deformation of contours // Cross-cut theory</text>
+
+        <!-- Sub-card 1: Cauchy-Goursat Theorem -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CAUCHY-GOURSAT THEOREM</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="95" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#34d399" font-size="28" font-weight="900" class="font-mono">&#8750;&#7580; f(z) dz = 0</text>
+                <text x="20" y="80" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">Condition: f(z) is analytic at ALL points on and inside simple closed contour C</text>
+            </g>
+
+            <text x="24" y="175" fill="#e2e8f0" font-size="16" class="font-sans">PROOF VIA GREEN'S THEOREM IN THE PLANE:</text>
+            <text x="24" y="205" fill="#e2e8f0" font-size="15" class="font-mono">&#8750;&#7580; (u dx - v dy) + i &#8750;&#7580; (v dx + u dy) = &#8748;&#7569; (-v&#7523; - u&#7524;) dA + i &#8748;&#7569; (u&#7523; - v&#7524;) dA</text>
+            <text x="24" y="240" fill="#34d399" font-size="15" class="font-sans">By Cauchy-Riemann: u&#7523; - v&#7524; = 0  and  -v&#7523; - u&#7524; = 0!</text>
+            <text x="24" y="275" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">&#8658; Both area integrals vanish identically &#8658; &#8750;&#7580; f(z) dz = 0!</text>
+            <text x="24" y="305" fill="#94a3b8" font-size="14" class="font-sans">Goursat's landmark contribution was proving this without assuming continuity of f'(z)!</text>
+        </g>
+
+        <!-- Sub-card 2: Principle of Deformation -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">PRINCIPLE OF CONTOUR DEFORMATION</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="110" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="35" fill="#38bdf8" font-size="18" font-weight="700" class="font-mono">HOMOTOPY / DEFORMATION THEOREM:</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="22" font-weight="900" class="font-mono">&#8750;&#7580;&#8321; f(z) dz = &#8750;&#7580;&#8322; f(z) dz</text>
+                <text x="20" y="100" fill="#fbbf24" font-size="15" class="font-sans">Provided f(z) is analytic in the region bounded between C&#8321; and C&#8322;!</text>
+            </g>
+
+            <g transform="translate(20, 175)">
+                <rect x="0" y="0" width="800" height="125" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#c084fc" font-size="17" font-weight="700" class="font-mono">MULTI-CONNECTED CROSS-CUT FORMULA:</text>
+                <text x="20" y="60" fill="#34d399" font-size="18" font-weight="700" class="font-mono">&#8750;&#7580; f(z) dz = &#8750;&#7580;&#8321; f(z) dz + &#8750;&#7580;&#8322; f(z) dz + ... + &#8750;&#7580;&#8345; f(z) dz</text>
+                <text x="20" y="90" fill="#94a3b8" font-size="15" class="font-sans">Surrounding each isolated singularity with tiny circular sub-contours C&#7522;.</text>
+                <text x="20" y="115" fill="#fbbf24" font-size="14" class="font-mono">&#9733; Enables replacing complicated contours (squares, ellipses) with simple circles!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Worked Examples from PrepFusion Slides -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">PREPFUSION CLASSROOM DRILLS: INSTANT CAUCHY-GOURSAT ZERO TESTS</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">DRILL 1: &#8750;&#7580; e&#7618; dz ALONG |z| = 2</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">f(z) = e&#7618; is an entire function (analytic everywhere in &#8450;).</text>
+                <text x="20" y="105" fill="#94a3b8" font-size="14" class="font-sans">No singularities exist anywhere in the complex plane.</text>
+                <text x="20" y="145" fill="#34d399" font-size="22" font-weight="900" class="font-mono">INTEGRAL = 0</text>
+                <text x="20" y="185" fill="#fbbf24" font-size="14" class="font-mono">Solved by inspection in 2 seconds!</text>
+                <text x="20" y="215" fill="#94a3b8" font-size="13" class="font-sans">Same for &#8750; sin z dz, &#8750; cos z dz, &#8750; z&#179; dz.</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">DRILL 2: &#8750;&#7580; 1/(z - 5) dz ALONG |z| = 2</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">Singularity of f(z) = 1/(z - 5) is at z = 5.</text>
+                <text x="20" y="105" fill="#94a3b8" font-size="14" class="font-sans">Contour is circle |z| = 2 (radius 2 centered at origin).</text>
+                <text x="20" y="135" fill="#e2e8f0" font-size="15" class="font-sans">Point z = 5 lies strictly <tspan fill="#f43f5e" font-weight="700">OUTSIDE</tspan> contour!</text>
+                <text x="20" y="170" fill="#34d399" font-size="22" font-weight="900" class="font-mono">INTEGRAL = 0</text>
+                <text x="20" y="205" fill="#fbbf24" font-size="14" class="font-mono">f(z) is analytic ON and INSIDE |z| = 2!</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#34d399" font-size="17" font-weight="700" class="font-mono">DRILL 3: &#8750;&#7580; (z&#178; + 3)/(z&#178; - 9) dz, |z| = 1</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">Singularities at z&#178; - 9 = 0 &#8658; z = +3 and z = -3.</text>
+                <text x="20" y="105" fill="#94a3b8" font-size="14" class="font-sans">Contour is circle |z| = 1.</text>
+                <text x="20" y="135" fill="#e2e8f0" font-size="15" class="font-sans">Both singularities lie strictly <tspan fill="#f43f5e" font-weight="700">OUTSIDE</tspan> contour!</text>
+                <text x="20" y="170" fill="#34d399" font-size="22" font-weight="900" class="font-mono">INTEGRAL = 0</text>
+                <text x="20" y="205" fill="#fbbf24" font-size="14" class="font-mono">By Cauchy-Goursat theorem!</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 3: CAUCHY'S INTEGRAL FORMULAS
+         ========================================== -->
+    <g transform="translate(80, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#emeraldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#34d399" font-size="28" font-weight="800" class="font-sans">03. CAUCHY'S INTEGRAL FORMULA &amp; N-TH DERIVATIVE ENGINE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Value at interior point from boundary data // Higher derivative generalization // Powerful shortcuts</text>
+
+        <!-- Sub-card 1: Cauchy's Integral Formula -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">CAUCHY'S INTEGRAL FORMULA (SIMPLE POLE AT z&#8320;)</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">If f(z) is analytic on and inside simple closed contour C, and z&#8320; is <tspan fill="#34d399" font-weight="700">INSIDE</tspan> C:</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="135" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#38bdf8" font-size="26" font-weight="900" class="font-mono">f(z&#8320;) = (1 / 2&#960;i) &#8750;&#7580; [f(z) / (z - z&#8320;)] dz</text>
+                <text x="20" y="90" fill="#fbbf24" font-size="26" font-weight="900" class="font-mono">&#8750;&#7580; [f(z) / (z - z&#8320;)] dz = 2&#960;i &#183; f(z&#8320;)</text>
+                <text x="20" y="120" fill="#34d399" font-size="15" class="font-sans">&#9733; The integral is simply 2&#960;i multiplied by the numerator evaluated at the singular point!</text>
+            </g>
+
+            <g transform="translate(20, 245)">
+                <rect x="0" y="0" width="800" height="115" fill="#020617" stroke="#334155" rx="6" />
+                <text x="15" y="28" fill="#38bdf8" font-size="15" font-weight="700" class="font-mono">SPEED EXAMPLE: &#8750;&#7580; (e&#7618; / (z - 1)) dz along |z| = 2</text>
+                <text x="15" y="55" fill="#e2e8f0" font-size="14" class="font-mono">z&#8320; = 1 lies strictly inside |z| = 2. Numerator f(z) = e&#7618; is analytic.</text>
+                <text x="15" y="82" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">Answer = 2&#960;i &#183; f(1) = 2&#960;i &#183; e&#185; = 2&#960;e i  (Solved in 5 seconds!)</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Cauchy's Derivative Formula -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">CAUCHY'S DERIVATIVE FORMULA (POLE OF ORDER n+1)</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">For repeated poles of order (n + 1) in the denominator:</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="135" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#38bdf8" font-size="24" font-weight="900" class="font-mono">f&#8319;(z&#8320;) = (n! / 2&#960;i) &#8750;&#7580; [f(z) / (z - z&#8320;)&#8319;&#8314;&#185;] dz</text>
+                <text x="20" y="90" fill="#fbbf24" font-size="24" font-weight="900" class="font-mono">&#8750;&#7580; [f(z) / (z - z&#8320;)&#8319;&#8314;&#185;] dz = (2&#960;i / n!) &#183; f&#8319;(z&#8320;)</text>
+                <text x="20" y="120" fill="#f43f5e" font-size="15" class="font-sans">&#9888; Never forget to divide by n! (factorial) when calculating the integral!</text>
+            </g>
+
+            <g transform="translate(20, 245)">
+                <rect x="0" y="0" width="800" height="115" fill="#020617" stroke="#334155" rx="6" />
+                <text x="15" y="28" fill="#34d399" font-size="15" font-weight="700" class="font-mono">SPEED DRILL: &#8750;&#7580; (e&#178;&#7618; / (z + 1)&#179;) dz along |z| = 3</text>
+                <text x="15" y="55" fill="#e2e8f0" font-size="14" class="font-mono">z&#8320; = -1 inside |z|=3. Order n + 1 = 3 &#8658; n = 2. f(z) = e&#178;&#7618; &#8658; f''(z) = 4e&#178;&#7618;</text>
+                <text x="15" y="82" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">Answer = (2&#960;i / 2!) &#183; 4e&#178;(⁻&#185;) = &#960;i &#183; 4e⁻&#178; = 4&#960;e⁻&#178; i</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: General Consequences -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#c084fc" font-size="20" font-weight="700" class="font-mono">DEEP THEORETICAL CONSEQUENCES OF CAUCHY'S INTEGRAL FORMULAS</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">INFINITE DIFFERENTIABILITY</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-sans">If f(z) is analytic, it possesses derivatives of <tspan fill="#34d399" font-weight="700">ALL orders</tspan>!</text>
+                <text x="20" y="100" fill="#94a3b8" font-size="14" class="font-sans">Remarkable contrast to real variables (where f'(x) being differentiable doesn't imply f''(x) exists!).</text>
+                <text x="20" y="145" fill="#fbbf24" font-size="15" class="font-mono">&#9733; Once analytic, always smooth!</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">LIOUVILLE'S THEOREM</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-sans">Every <tspan fill="#34d399" font-weight="700">bounded entire</tspan> function in &#8450; MUST be constant!</text>
+                <text x="20" y="100" fill="#94a3b8" font-size="14" class="font-sans">If |f(z)| &#8804; M for all z &#8712; &#8450;, then f'(z) = 0 everywhere.</text>
+                <text x="20" y="145" fill="#38bdf8" font-size="15" class="font-mono">&#9733; Immediate proof that sin z, cos z, e&#7618; cannot be bounded in &#8450;!</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">MAXIMUM MODULUS PRINCIPLE</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-sans">If f(z) is analytic in bounded domain D, |f(z)| achieves its maximum on the <tspan fill="#f43f5e" font-weight="700">BOUNDARY</tspan> of D.</text>
+                <text x="20" y="105" fill="#94a3b8" font-size="14" class="font-sans">Cannot have a local maximum in the interior unless f(z) is constant.</text>
+                <text x="20" y="145" fill="#fbbf24" font-size="15" class="font-mono">&#9733; Crucial for stability in control theory!</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 4: MULTI-POLE CONTOUR WORKED DRILLS
+         ========================================== -->
+    <g transform="translate(1960, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#cyanGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">04. MULTI-POLE SPLITTING &amp; PARTIAL FRACTION ENGINE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Evaluating integrals with multiple singularities via partial fractions vs Cauchy formulas</text>
+
+        <!-- Sub-card 1: Drill - Multiple Poles Inside Contour -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">DRILL 1: &#8750;&#7580; [1 / (z&#178; + 4)] dz ALONG |z - i| = 2</text>
+
+            <text x="24" y="70" fill="#e2e8f0" font-size="15" class="font-sans">Singularities at z&#178; + 4 = 0 &#8658; z = 2i and z = -2i.</text>
+            <text x="24" y="95" fill="#94a3b8" font-size="15" class="font-sans">Check contour |z - i| = 2 (center = i, radius = 2):</text>
+
+            <g transform="translate(20, 110)">
+                <rect x="0" y="0" width="800" height="245" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">CONTOUR INTERIOR AUDIT:</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-mono">• For z = 2i: |2i - i| = |i| = 1 &lt; 2  &#8658; <tspan fill="#34d399" font-weight="700">INSIDE contour</tspan></text>
+                <text x="20" y="90" fill="#e2e8f0" font-size="15" class="font-mono">• For z = -2i: |-2i - i| = |-3i| = 3 &gt; 2 &#8658; <tspan fill="#f43f5e" font-weight="700">OUTSIDE contour</tspan></text>
+                <text x="20" y="125" fill="#38bdf8" font-size="16" font-weight="700" class="font-sans">REWRITE INTEGRAND IN CAUCHY FORM:</text>
+                <text x="20" y="155" fill="#fbbf24" font-size="18" class="font-mono">1 / [(z - 2i)(z + 2i)] = [ 1 / (z + 2i) ] / (z - 2i) = f(z) / (z - 2i)</text>
+                <text x="20" y="185" fill="#94a3b8" font-size="15" class="font-sans">where f(z) = 1 / (z + 2i) is analytic inside C!</text>
+                <text x="20" y="220" fill="#34d399" font-size="20" font-weight="900" class="font-mono">Answer = 2&#960;i &#183; f(2i) = 2&#960;i &#183; [1 / (2i + 2i)] = 2&#960;i / 4i = &#960; / 2</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Drill - Both Poles Inside Contour -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">DRILL 2: &#8750;&#7580; [1 / (z&#178; + 4)] dz ALONG |z| = 3</text>
+
+            <text x="24" y="70" fill="#e2e8f0" font-size="15" class="font-sans">Both singularities z = +2i and z = -2i lie <tspan fill="#34d399" font-weight="700">INSIDE</tspan> |z| = 3.</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="260" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">METHOD: PARTIAL FRACTIONS SPLITTING</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-mono">1 / (z&#178; + 4) = (1 / 4i) [ 1/(z - 2i) - 1/(z + 2i) ]</text>
+                <text x="20" y="95" fill="#38bdf8" font-size="15" class="font-mono">&#8750;&#7580; = (1 / 4i) &#8750;&#7580; [1/(z - 2i)] dz - (1 / 4i) &#8750;&#7580; [1/(z + 2i)] dz</text>
+                <text x="20" y="130" fill="#e2e8f0" font-size="15" class="font-sans">By Cauchy's theorem on each simple pole:</text>
+                <text x="20" y="160" fill="#34d399" font-size="16" class="font-mono">&#8750;&#7580; [1/(z - 2i)] dz = 2&#960;i   and   &#8750;&#7580; [1/(z + 2i)] dz = 2&#960;i</text>
+                <text x="20" y="195" fill="#fbbf24" font-size="18" font-weight="900" class="font-mono">&#8750;&#7580; = (1 / 4i) [2&#960;i - 2&#960;i] = 0 !</text>
+                <text x="20" y="235" fill="#38bdf8" font-size="14" class="font-sans">&#9733; Residues at 2i and -2i are 1/(4i) and -1/(4i); their sum is 0 &#8658; Integral = 0!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: General Evaluation Protocol -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">THE 3-STEP CANONICAL AUDIT FOR ANY CONTOUR INTEGRAL &#8750; [P(z)/Q(z)] dz</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">STEP 1: LOCATE ALL ROOTS OF Q(z)=0</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">Find every singularity z&#8321;, z&#8322;, ..., z&#8345;.</text>
+                <text x="20" y="105" fill="#94a3b8" font-size="14" class="font-sans">Factor denominator completely.</text>
+                <text x="20" y="140" fill="#fbbf24" font-size="14" class="font-mono">Determine pole orders (powers).</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">STEP 2: FILTER BY CONTOUR REGION</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">Calculate distance |z&#7522; - center|.</text>
+                <text x="20" y="105" fill="#34d399" font-size="14" class="font-sans">If distance &lt; radius &#8658; KEEP (INSIDE)</text>
+                <text x="20" y="140" fill="#f43f5e" font-size="14" class="font-sans">If distance &gt; radius &#8658; DISCARD (OUTSIDE)</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">STEP 3: EVALUATE &amp; SUM</text>
+                <text x="20" y="70" fill="#e2e8f0" font-size="15" class="font-sans">Apply Cauchy formula or Residue theorem:</text>
+                <text x="20" y="105" fill="#fbbf24" font-size="18" class="font-mono">Integral = 2&#960;i &#183; &#8721; (Residues inside C)</text>
+                <text x="20" y="145" fill="#94a3b8" font-size="14" class="font-sans">Poles outside contribute EXACTLY ZERO!</text>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Bottom Engineering Telemetry Strip -->
+    <g transform="translate(80, 2060)">
+        <line x1="0" y1="0" x2="3680" y2="0" stroke="#1e293b" stroke-width="2" />
+        <text x="10" y="24" fill="#64748b" font-size="16" class="font-mono">COMPLEX ANALYSIS MATHEMATICAL BLUEPRINT // SCALE: 1.0 NATIVE // GATE / ESE / ISRO EXCELLENCE SUITE</text>
+        <text x="3670" y="24" fill="#64748b" font-size="16" text-anchor="end" class="font-mono">PREPFUSION ENGINEERING MATHEMATICS // SYSTEM VERIFIED</text>
+    </g>
+</svg>

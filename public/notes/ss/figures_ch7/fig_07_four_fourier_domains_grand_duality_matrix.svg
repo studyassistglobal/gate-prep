@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1350" width="2400" height="1350" style="background:#0d1117; font-family:'Inter', system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid7" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="1" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="panelGrad7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" font-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0d1117" font-opacity="0.98"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1350" fill="#0d1117"/>
+  <rect width="2400" height="1350" fill="url(#grid7)"/>
+
+  <!-- Header -->
+  <rect x="80" y="50" width="2240" height="110" rx="16" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <text x="120" y="105" fill="#38bdf8" font-size="34" font-weight="700" letter-spacing="1.5">SIGNALS &amp; SYSTEMS • CHAPTER 07 • FIGURE 7.7</text>
+  <text x="120" y="142" fill="#8b949e" font-size="20">The Four Fourier Representations Grand Duality Matrix &amp; Block Filtering (Overlap-Add / Overlap-Save)</text>
+  <rect x="2020" y="75" width="260" height="58" rx="10" fill="#21262d" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="2150" y="112" fill="#fbbf24" font-size="20" font-weight="600" text-anchor="middle">PREPFUSION TITANS</text>
+
+  <!-- Panel 1: The Four Fourier Representations Grand Quad Matrix -->
+  <rect x="80" y="190" width="840" height="1090" rx="18" fill="url(#panelGrad7)" stroke="#30363d" stroke-width="2"/>
+  <rect x="80" y="190" width="840" height="60" rx="18" fill="#21262d"/>
+  <text x="500" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">1. THE FOUR FOURIER REPRESENTATIONS GRAND MATRIX</text>
+
+  <g transform="translate(110, 270)">
+    <!-- 2x2 Grid of Domains -->
+    <!-- Top-Left: CTFS -->
+    <rect x="0" y="10" width="380" height="230" rx="12" fill="#0d1117" stroke="#38bdf8" stroke-width="2"/>
+    <text x="20" y="45" fill="#38bdf8" font-size="18" font-weight="700">CTFS (Continuous Fourier Series)</text>
+    <text x="20" y="75" fill="#fbbf24" font-size="15" font-weight="600">TIME: Continuous &amp; PERIODIC</text>
+    <text x="20" y="100" fill="#34d399" font-size="15" font-weight="600">FREQ: Discrete &amp; APERIODIC</text>
+    <text x="20" y="135" fill="#e6edf3" font-size="14">x(t) = ∑ₖ cₖ eʲᵏʷ⁰ᵗ</text>
+    <text x="20" y="165" fill="#e6edf3" font-size="14">cₖ = (1/T) ∫_T x(t) e⁻ʲᵏʷ⁰ᵗ dt</text>
+    <text x="20" y="200" fill="#8b949e" font-size="13">Harmonics k ∈ ℤ from -∞ to +∞</text>
+
+    <!-- Top-Right: CTFT -->
+    <rect x="400" y="10" width="380" height="230" rx="12" fill="#0d1117" stroke="#60a5fa" stroke-width="2"/>
+    <text x="420" y="45" fill="#60a5fa" font-size="18" font-weight="700">CTFT (Continuous Fourier Transform)</text>
+    <text x="420" y="75" fill="#f87171" font-size="15" font-weight="600">TIME: Continuous &amp; APERIODIC</text>
+    <text x="420" y="100" fill="#f87171" font-size="15" font-weight="600">FREQ: Continuous &amp; APERIODIC</text>
+    <text x="420" y="135" fill="#e6edf3" font-size="14">x(t) = (1/2π) ∫ X(jω) eʲʷᵗ dω</text>
+    <text x="420" y="165" fill="#e6edf3" font-size="14">X(jω) = ∫ x(t) e⁻ʲʷᵗ dt</text>
+    <text x="420" y="200" fill="#8b949e" font-size="13">Continuous spectrum across all ω ∈ ℝ</text>
+
+    <!-- Bottom-Left: DTFS / DFT -->
+    <rect x="0" y="260" width="380" height="230" rx="12" fill="#0d1117" stroke="#34d399" stroke-width="2"/>
+    <text x="20" y="295" fill="#34d399" font-size="18" font-weight="700">DFT / DTFS (Discrete &amp; Periodic)</text>
+    <text x="20" y="325" fill="#fbbf24" font-size="15" font-weight="600">TIME: Discrete &amp; PERIODIC</text>
+    <text x="20" y="350" fill="#fbbf24" font-size="15" font-weight="600">FREQ: Discrete &amp; PERIODIC</text>
+    <text x="20" y="385" fill="#e6edf3" font-size="14">x[n] = (1/N) ∑ₖ X[k] W_N^{-kn}</text>
+    <text x="20" y="415" fill="#e6edf3" font-size="14">X[k] = ∑ₙ x[n] W_N^{kn}</text>
+    <text x="20" y="450" fill="#34d399" font-size="13" font-weight="700">Computable on digital hardware!</text>
+
+    <!-- Bottom-Right: DTFT -->
+    <rect x="400" y="260" width="380" height="230" rx="12" fill="#0d1117" stroke="#a78bfa" stroke-width="2"/>
+    <text x="420" y="295" fill="#a78bfa" font-size="18" font-weight="700">DTFT (Discrete-Time FT)</text>
+    <text x="420" y="325" fill="#34d399" font-size="15" font-weight="600">TIME: Discrete &amp; APERIODIC</text>
+    <text x="420" y="350" fill="#fbbf24" font-size="15" font-weight="600">FREQ: Continuous &amp; PERIODIC (2π)</text>
+    <text x="420" y="385" fill="#e6edf3" font-size="14">x[n] = (1/2π) ∫ X(eʲᶿ) eʲᶿⁿ dΩ</text>
+    <text x="420" y="415" fill="#e6edf3" font-size="14">X(eʲᶿ) = ∑ₙ x[n] e⁻ʲᶿⁿ</text>
+    <text x="420" y="450" fill="#8b949e" font-size="13">Fundamental baseband [-π, π]</text>
+
+    <!-- The 2 Golden Laws of Transform Duality -->
+    <rect x="0" y="510" width="780" height="230" rx="12" fill="#161b22" stroke="#fbbf24" stroke-width="2"/>
+    <text x="25" y="545" fill="#fbbf24" font-size="20" font-weight="800">THE TWO GOLDEN LAWS OF FOURIER DUALITY</text>
+
+    <rect x="25" y="565" width="730" height="65" rx="8" fill="#0d1117" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="390" y="605" fill="#38bdf8" font-size="20" font-weight="700" text-anchor="middle">LAW 1: Discreteness in Domain A ⟷ Periodicity in Domain B</text>
+
+    <rect x="25" y="645" width="730" height="65" rx="8" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="390" y="685" fill="#34d399" font-size="20" font-weight="700" text-anchor="middle">LAW 2: Sampling in Domain A ⟷ Periodic Replication in Domain B</text>
+
+    <!-- Memory Guide Box -->
+    <rect x="0" y="760" width="780" height="220" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+    <text x="25" y="795" fill="#e6edf3" font-size="17" font-weight="700">Duality Operational Mnemonics</text>
+    <text x="25" y="825" fill="#8b949e" font-size="14">• Sample in Time with period T_s ⟹ CTFT replicates every ω_s = 2π / T_s (produces DTFT)!</text>
+    <text x="25" y="855" fill="#8b949e" font-size="14">• Sample in Freq with spacing 2π/N ⟹ Discrete time sequence replicates every N (produces DFT)!</text>
+    <text x="25" y="885" fill="#fbbf24" font-size="14" font-weight="600">• Time aliasing occurs iff frequency sampling rate N &lt; sequence duration L.</text>
+    <text x="25" y="915" fill="#f87171" font-size="14" font-weight="600">• Frequency aliasing occurs iff time sampling rate f_s &lt; 2 f_max (Nyquist criterion).</text>
+  </g>
+
+  <!-- Panel 2: Fast Block Convolution (Overlap-Add vs Overlap-Save) -->
+  <rect x="940" y="190" width="710" height="1090" rx="18" fill="url(#panelGrad7)" stroke="#30363d" stroke-width="2"/>
+  <rect x="940" y="190" width="710" height="60" rx="18" fill="#21262d"/>
+  <text x="1295" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">2. FAST BLOCK CONVOLUTION: OLA vs OLS</text>
+
+  <g transform="translate(970, 270)">
+    <!-- Motivation -->
+    <rect x="0" y="10" width="650" height="135" rx="12" fill="#161b22" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="25" y="45" fill="#38bdf8" font-size="18" font-weight="700">Filtering Long/Infinite Sequences via FFT</text>
+    <text x="25" y="75" fill="#e6edf3" font-size="14">FIR Filter h[n] has length M. Input x[n] is very long (or infinite stream).</text>
+    <text x="25" y="105" fill="#34d399" font-size="14" font-weight="600">Direct FFT on whole sequence is impossible! Partition into blocks of size L.</text>
+
+    <!-- Method 1: Overlap-Add (OLA) -->
+    <rect x="0" y="160" width="650" height="390" rx="12" fill="#0d1117" stroke="#34d399" stroke-width="1.5"/>
+    <text x="25" y="195" fill="#34d399" font-size="19" font-weight="700">Method 1: Overlap-Add (OLA)</text>
+    <text x="25" y="225" fill="#e6edf3" font-size="14">1. Non-overlapping input blocks of length L: x_r[n]</text>
+    <text x="25" y="250" fill="#e6edf3" font-size="14">2. Zero-pad each block with (M - 1) zeros to FFT size N = L + M - 1</text>
+    <text x="25" y="275" fill="#e6edf3" font-size="14">3. Compute N-point DFT: Y_r[k] = X_r[k] · H[k]</text>
+    <text x="25" y="300" fill="#e6edf3" font-size="14">4. Take N-point IDFT to get block output y_r[n] of length L + M - 1</text>
+    <text x="25" y="335" fill="#34d399" font-size="16" font-weight="700">5. OVERLAP AND ADD:</text>
+    <text x="25" y="365" fill="#8b949e" font-size="13">The last (M - 1) samples of block r overlap with the first (M - 1) samples of block r+1.</text>
+    <text x="25" y="390" fill="#38bdf8" font-size="14" font-weight="600">Add overlapping segments together to reconstruct continuous output y[n]!</text>
+
+    <!-- Method 2: Overlap-Save (OLS) -->
+    <rect x="0" y="565" width="650" height="410" rx="12" fill="#161b22" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="25" y="600" fill="#fbbf24" font-size="19" font-weight="700">Method 2: Overlap-Save (OLS)</text>
+    <text x="25" y="630" fill="#e6edf3" font-size="14">1. Overlapping input blocks: Include (M - 1) samples from previous block!</text>
+    <text x="25" y="655" fill="#e6edf3" font-size="14">   Block length N = L + M - 1 (New samples = L, Old samples = M - 1)</text>
+    <text x="25" y="680" fill="#e6edf3" font-size="14">2. Compute N-point circular convolution via DFT: Y_r[k] = X_r[k] · H[k]</text>
+    <text x="25" y="705" fill="#e6edf3" font-size="14">3. Take N-point IDFT to get y_r[n] (Contains time aliasing!)</text>
+    <text x="25" y="740" fill="#f87171" font-size="16" font-weight="700">4. DISCARD AND SAVE:</text>
+    <text x="25" y="770" fill="#f87171" font-size="14" font-weight="600">DISCARD the first (M - 1) aliased/corrupted samples!</text>
+    <text x="25" y="798" fill="#34d399" font-size="14" font-weight="700">SAVE the remaining L samples as valid linear convolution output.</text>
+    <text x="25" y="825" fill="#8b949e" font-size="13">No additions required during reconstruction; just direct concatenation!</text>
+    <text x="25" y="855" fill="#fbbf24" font-size="13" font-weight="600">GATE MCQ Trap: "Which method requires zero addition during assembly?"</text>
+    <text x="25" y="880" fill="#38bdf8" font-size="13" font-weight="700">Answer: Overlap-Save (OLS) performs zero time-domain additions!</text>
+  </g>
+
+  <!-- Panel 3: Spectral Windows, Hilbert Transform & Master Summary -->
+  <rect x="1670" y="190" width="650" height="1090" rx="18" fill="url(#panelGrad7)" stroke="#30363d" stroke-width="2"/>
+  <rect x="1670" y="190" width="650" height="60" rx="18" fill="#21262d"/>
+  <text x="1995" y="230" fill="#38bdf8" font-size="22" font-weight="700" text-anchor="middle">3. WINDOWS, HILBERT &amp; PYQS</text>
+
+  <g transform="translate(1700, 270)">
+    <!-- Discrete Hilbert Transform -->
+    <rect x="0" y="10" width="590" height="230" rx="12" fill="#161b22" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="20" y="45" fill="#a78bfa" font-size="18" font-weight="700">Discrete-Time Hilbert Transform</text>
+    <text x="20" y="75" fill="#e6edf3" font-size="14">Frequency Response: Ideal 90° Phase Shifter</text>
+    <rect x="20" y="90" width="550" height="50" rx="8" fill="#0d1117" stroke="#a78bfa" stroke-width="1"/>
+    <text x="295" y="123" fill="#a78bfa" font-size="20" font-weight="700" text-anchor="middle">H_d(eʲᶿ) = -j · sgn(Ω)   for -π &lt; Ω &lt; π</text>
+    
+    <text x="20" y="165" fill="#34d399" font-size="14" font-weight="600">Impulse Response: h_d[n] = (1 / πn) [1 - (-1)ⁿ]  for n ≠ 0</text>
+    <text x="20" y="190" fill="#8b949e" font-size="13">• Zero for even n: h_d[2m] = 0; Non-zero only for odd n: h_d[odd] = 2/(πn)</text>
+    <text x="20" y="215" fill="#fbbf24" font-size="13" font-weight="600">• Purely imaginary and odd frequency response ⟹ Real and odd impulse response!</text>
+
+    <!-- Spectral Windows & Trade-offs -->
+    <rect x="0" y="255" width="590" height="380" rx="12" fill="#0d1117" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="20" y="290" fill="#fbbf24" font-size="18" font-weight="700">Spectral Windowing Properties &amp; Trade-offs</text>
+
+    <g transform="translate(15, 305)">
+      <rect x="0" y="0" width="560" height="310" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <text x="15" y="30" fill="#38bdf8" font-size="13" font-weight="700">WINDOW TYPE      MAIN-LOBE WIDTH    PEAK SIDE-LOBE    SIDE-LOBE ROLLOFF</text>
+      <line x1="15" y1="40" x2="545" y2="40" stroke="#30363d" stroke-width="1"/>
+      <text x="15" y="70" fill="#e6edf3" font-size="13">Rectangular      4π / N             -13 dB            -6 dB / octave</text>
+      <text x="15" y="110" fill="#e6edf3" font-size="13">Bartlett (Tri)   8π / N             -27 dB            -12 dB / octave</text>
+      <text x="15" y="150" fill="#e6edf3" font-size="13">Hanning          8π / N             -32 dB            -18 dB / octave</text>
+      <text x="15" y="190" fill="#34d399" font-size="13" font-weight="700">Hamming          8π / N             -43 dB            -6 dB / octave</text>
+      <text x="15" y="230" fill="#fbbf24" font-size="13" font-weight="700">Blackman         12π / N            -58 dB            -18 dB / octave</text>
+      <line x1="15" y1="245" x2="545" y2="245" stroke="#30363d" stroke-width="1"/>
+      <text x="15" y="275" fill="#f87171" font-size="12" font-weight="600">Trade-off: Wider main-lobe ⟹ Lower frequency resolution, but</text>
+      <text x="15" y="295" fill="#34d399" font-size="12" font-weight="600">lower side-lobe level ⟹ Drastically reduced spectral leakage!</text>
+    </g>
+
+    <!-- Master Synthesis Checklist -->
+    <rect x="0" y="650" width="590" height="325" rx="12" fill="#161b22" stroke="#34d399" stroke-width="1.5"/>
+    <text x="20" y="685" fill="#34d399" font-size="18" font-weight="700">Master Chapter 07 Synthesis Checklist</text>
+    
+    <text x="20" y="720" fill="#e6edf3" font-size="14">✔ DTFT: Always 2π-periodic; exists iff unit circle is in ROC.</text>
+    <text x="20" y="755" fill="#e6edf3" font-size="14">✔ DTFS: Exactly N orthogonal harmonics; a_(k+N) = a_k.</text>
+    <text x="20" y="790" fill="#e6edf3" font-size="14">✔ DFT: Samples DTFT at Ω_k = 2πk/N; circular time shift.</text>
+    <text x="20" y="825" fill="#fbbf24" font-size="14" font-weight="600">✔ Circular Conv: Equals linear conv iff L ≥ N₁ + N₂ - 1.</text>
+    <text x="20" y="860" fill="#38bdf8" font-size="14" font-weight="600">✔ Radix-2 FFT: Reduces N² mults to (N/2) log₂ N.</text>
+    <text x="20" y="895" fill="#a78bfa" font-size="14" font-weight="600">✔ OLA vs OLS: OLA overlaps tails; OLS discards aliased heads.</text>
+    <text x="20" y="930" fill="#34d399" font-size="14" font-weight="700">✔ Hilbert: -j sgn(Ω) introduces exact 90° quadrature phase shift.</text>
+  </g>
+</svg>

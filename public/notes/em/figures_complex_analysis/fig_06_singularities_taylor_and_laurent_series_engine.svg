@@ -1,0 +1,443 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+    <defs>
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+            <stop offset="0%" stop-color="#0f172a" />
+            <stop offset="100%" stop-color="#020617" />
+        </radialGradient>
+        <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#c084fc" />
+        </linearGradient>
+        <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="100%" stop-color="#2563eb" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#d97706" />
+        </linearGradient>
+        <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f43f5e" />
+            <stop offset="100%" stop-color="#e11d48" />
+        </linearGradient>
+        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c084fc" />
+            <stop offset="100%" stop-color="#9333ea" />
+        </linearGradient>
+
+        <pattern id="gridMinor" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4" />
+        </pattern>
+        <pattern id="gridMajor" width="200" height="200" patternUnits="userSpaceOnUse">
+            <rect width="200" height="200" fill="url(#gridMinor)" />
+            <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#334155" stroke-width="1.4" opacity="0.6" />
+        </pattern>
+
+        <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glowEmerald" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="cardShadow" x="-10%" y="-5%" width="120%" height="115%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+    </defs>
+
+    <style>
+        .font-mono { font-family: 'Consolas', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+        .font-sans { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+    </style>
+
+    <!-- Deep Blueprint Background -->
+    <rect width="3840" height="2160" fill="url(#bgGrad)" />
+    <rect width="3840" height="2160" fill="url(#gridMajor)" />
+
+    <!-- Outer Architectural Frame -->
+    <rect x="40" y="40" width="3760" height="2080" fill="none" stroke="#334155" stroke-width="2" rx="16" />
+    <rect x="48" y="48" width="3744" height="2064" fill="none" stroke="#1e293b" stroke-width="1" rx="12" />
+
+    <!-- Corner Alignment Reticles -->
+    <path d="M 40 80 L 80 80 L 80 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 80 L 3760 80 L 3760 40" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 40 2080 L 80 2080 L 80 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 3800 2080 L 3760 2080 L 3760 2120" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Top Master Header Banner -->
+    <g transform="translate(80, 80)">
+        <rect x="0" y="0" width="3680" height="150" fill="#0b1329" fill-opacity="0.85" stroke="#1e293b" stroke-width="2" rx="12" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="12" height="150" fill="url(#headerGrad)" rx="4" />
+        
+        <!-- Blueprint Title & Subtitle -->
+        <text x="50" y="62" fill="url(#headerGrad)" font-size="44" font-weight="900" letter-spacing="2px" class="font-sans">SINGULARITIES TAXONOMY &amp; LAURENT SERIES ARCHITECTURE</text>
+        <text x="50" y="112" fill="#94a3b8" font-size="24" font-weight="500" letter-spacing="0.5px" class="font-sans">Singularity Classification Tree // Removable vs Poles vs Essential // Taylor Disks // Multi-Annular Expansions</text>
+
+        <!-- Technical Telemetry Badge -->
+        <g transform="translate(3220, 30)">
+            <rect x="0" y="0" width="410" height="90" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="8" />
+            <circle cx="30" cy="45" r="8" fill="#10b981" filter="url(#glowEmerald)" />
+            <text x="52" y="38" fill="#e2e8f0" font-size="16" font-weight="700" class="font-mono">GATE 2027 TITANS ENGINE</text>
+            <text x="52" y="65" fill="#38bdf8" font-size="14" font-weight="600" class="font-mono">SPEC: ULTRA-HD 4K BLUEPRINT</text>
+        </g>
+    </g>
+
+    <!-- Canvas Inner Content -->
+    
+    <!-- ==========================================
+         PANEL 1: SINGULARITIES CLASSIFICATION TAXONOMY
+         ========================================== -->
+    <g transform="translate(80, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#cyanGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">01. SINGULARITY TAXONOMY &amp; DECISION TREE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Isolated vs non-isolated // Removable // Pole of order m // Essential singularities // Branch points</text>
+
+        <!-- Sub-card 1: Isolated vs Non-Isolated -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">ISOLATED VS NON-ISOLATED SINGULARITY</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="110" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="17" font-weight="700" class="font-mono">ISOLATED SINGULARITY:</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-sans">A point z&#8320; where f(z) fails to be analytic, but &#8707; a punctured disk 0 &lt; |z - z&#8320;| &lt; R in which f(z) is <tspan fill="#34d399" font-weight="700">analytic everywhere</tspan>.</text>
+                <text x="20" y="90" fill="#fbbf24" font-size="14" class="font-mono">&#9733; Can be expanded in a Laurent series!</text>
+            </g>
+
+            <g transform="translate(20, 175)">
+                <rect x="0" y="0" width="800" height="120" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#f43f5e" font-size="17" font-weight="700" class="font-mono">NON-ISOLATED SINGULARITY:</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-sans">Singularities accumulate! Every neighborhood of z&#8320; contains infinitely many other singularities.</text>
+                <text x="20" y="90" fill="#38bdf8" font-size="14" class="font-mono">Example: f(z) = 1 / sin(&#960;/z). Poles at z = 1/n accumulate at z = 0 (non-isolated!).</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: The Three Types of Isolated Singularities -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">THE 3 ISOLATED SINGULARITY CLASSES</text>
+
+            <g transform="translate(20, 45)">
+                <rect x="0" y="0" width="800" height="75" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="25" fill="#34d399" font-size="16" font-weight="700" class="font-mono">1. REMOVABLE SINGULARITY:</text>
+                <text x="16" y="52" fill="#e2e8f0" font-size="14" class="font-sans">lim&#7565;&#8594;&#7565;&#8320; f(z) exists and is finite. Principal part of Laurent series = 0 (NO negative powers!).</text>
+            </g>
+
+            <g transform="translate(20, 130)">
+                <rect x="0" y="0" width="800" height="85" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="25" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">2. POLE OF ORDER m:</text>
+                <text x="16" y="52" fill="#e2e8f0" font-size="14" class="font-sans">lim&#7565;&#8594;&#7565;&#8320; (z - z&#8320;)&#7504; f(z) = c &#8800; 0. Principal part has FINITE negative powers terminating at 1/(z-z&#8320;)&#7504;.</text>
+                <text x="16" y="75" fill="#38bdf8" font-size="13" class="font-mono">Simple pole if m = 1 | Double pole if m = 2</text>
+            </g>
+
+            <g transform="translate(20, 225)">
+                <rect x="0" y="0" width="800" height="75" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="16" y="25" fill="#f43f5e" font-size="16" font-weight="700" class="font-mono">3. ESSENTIAL SINGULARITY:</text>
+                <text x="16" y="52" fill="#e2e8f0" font-size="14" class="font-sans">lim&#7565;&#8594;&#7565;&#8320; f(z) does not exist (not even &#8734;). Principal part has INFINITELY many negative powers!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Hallmark Classroom Examples -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">PREPFUSION HALLMARK EXAMPLES FOR EACH CLASS</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#34d399" font-size="17" font-weight="700" class="font-mono">REMOVABLE: f(z) = (sin z) / z</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-mono">At z = 0: lim&#7565;&#8594;&#8320; (sin z)/z = 1 (finite!)</text>
+                <text x="20" y="100" fill="#e2e8f0" font-size="15" class="font-mono">Laurent Series: (1/z) [z - z&#179;/6 + z&#8309;/120 - ...]</text>
+                <text x="20" y="135" fill="#fbbf24" font-size="16" class="font-mono">= 1 - z&#178;/6 + z&#8308;/120 - ...</text>
+                <text x="20" y="170" fill="#38bdf8" font-size="15" class="font-sans">Zero negative powers &#8658; REMOVABLE!</text>
+                <text x="20" y="205" fill="#94a3b8" font-size="14" class="font-mono">Residue at z = 0 is EXACTLY ZERO!</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">POLE: f(z) = (cos z) / z&#179;</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-mono">At z = 0: cos(0) = 1 &#8800; 0</text>
+                <text x="20" y="100" fill="#e2e8f0" font-size="15" class="font-mono">Laurent Series: (1/z&#179;) [1 - z&#178;/2 + z&#8308;/24 - ...]</text>
+                <text x="20" y="135" fill="#fbbf24" font-size="16" class="font-mono">= 1/z&#179; - (1/2)(1/z) + z/24 - ...</text>
+                <text x="20" y="170" fill="#38bdf8" font-size="15" class="font-sans">Highest negative power is 1/z&#179; &#8658; POLE ORDER 3!</text>
+                <text x="20" y="205" fill="#34d399" font-size="14" class="font-mono">Residue = coeff of 1/z = -1/2!</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#f43f5e" font-size="17" font-weight="700" class="font-mono">ESSENTIAL: f(z) = e&#185;&#7516;&#7618;</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-mono">At z = 0: lim does not exist!</text>
+                <text x="20" y="100" fill="#e2e8f0" font-size="15" class="font-mono">Laurent Series: 1 + 1/z + 1/(2! z&#178;) + 1/(3! z&#179;) + ...</text>
+                <text x="20" y="135" fill="#f43f5e" font-size="15" class="font-sans">Infinitely many negative powers of z!</text>
+                <text x="20" y="170" fill="#fbbf24" font-size="15" class="font-sans">&#8658; ESSENTIAL SINGULARITY at z = 0!</text>
+                <text x="20" y="205" fill="#34d399" font-size="14" class="font-mono">Residue = coeff of 1/z = 1! Same for sin(1/z).</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 2: TAYLOR SERIES ENGINE
+         ========================================== -->
+    <g transform="translate(1960, 260)">
+        <rect x="0" y="0" width="1800" height="840" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="840" fill="url(#goldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#fbbf24" font-size="28" font-weight="800" class="font-sans">02. TAYLOR SERIES &amp; RADIUS OF CONVERGENCE</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Analytic disk expansions // Radius determined by distance to nearest singularity // Maclaurin suite</text>
+
+        <!-- Sub-card 1: Taylor Theorem -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">TAYLOR EXPANSION THEOREM</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">If f(z) is analytic throughout open disk |z - z&#8320;| &lt; R:</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="110" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#34d399" font-size="26" font-weight="900" class="font-mono">f(z) = &#8721;&#8319;&#8332;&#8320;&#7509; a&#8319; (z - z&#8320;)&#8319;</text>
+                <text x="20" y="85" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">where  a&#8319; = f&#8319;(z&#8320;) / n! = (1 / 2&#960;i) &#8750;&#7580; [f(w) / (w - z&#8320;)&#8319;&#8314;&#185;] dw</text>
+            </g>
+
+            <text x="24" y="235" fill="#38bdf8" font-size="16" font-weight="700" class="font-sans">THE RADIUS OF CONVERGENCE RULE:</text>
+            <text x="24" y="265" fill="#e2e8f0" font-size="16" class="font-mono">R = Distance from expansion center z&#8320; to NEAREST SINGULARITY of f(z)!</text>
+            <text x="24" y="295" fill="#94a3b8" font-size="15" class="font-sans">Taylor series has NO negative powers (all powers of (z - z&#8320;) are &#8805; 0).</text>
+        </g>
+
+        <!-- Sub-card 2: Standard Maclaurin Expansions -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">MACLAURIN EXPANSIONS (CENTER z&#8320; = 0)</text>
+
+            <g transform="translate(20, 50)">
+                <rect x="0" y="0" width="800" height="245" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="15" class="font-mono">e&#7618; = 1 + z + z&#178;/2! + z&#179;/3! + ...  (|z| &lt; &#8734;, Entire)</text>
+                <text x="20" y="65" fill="#38bdf8" font-size="15" class="font-mono">cos z = 1 - z&#178;/2! + z&#8308;/4! - ...  (|z| &lt; &#8734;, Entire)</text>
+                <text x="20" y="100" fill="#38bdf8" font-size="15" class="font-mono">sin z = z - z&#179;/3! + z&#8309;/5! - ...  (|z| &lt; &#8734;, Entire)</text>
+                <text x="20" y="135" fill="#34d399" font-size="15" class="font-mono">1 / (1 - z) = 1 + z + z&#178; + z&#179; + ...  (|z| &lt; 1, Singular at z = 1)</text>
+                <text x="20" y="170" fill="#34d399" font-size="15" class="font-mono">1 / (1 + z) = 1 - z + z&#178; - z&#179; + ...  (|z| &lt; 1, Singular at z = -1)</text>
+                <text x="20" y="205" fill="#c084fc" font-size="15" class="font-mono">ln(1 + z) = z - z&#178;/2 + z&#179;/3 - ...  (|z| &lt; 1, Branch cut at z = -1)</text>
+                <text x="20" y="235" fill="#fbbf24" font-size="14" class="font-sans">&#9733; The geometric series 1/(1-z) is the foundational engine for Laurent series!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Radius of Convergence Drills -->
+        <g transform="translate(40, 470)">
+            <rect x="0" y="0" width="1710" height="330" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">GATE EXAM DRILLS: FINDING RADIUS OF CONVERGENCE IN 10 SECONDS</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#38bdf8" font-size="17" font-weight="700" class="font-mono">DRILL 1: f(z) = 1/(z&#178; + 9) ABOUT z&#8320; = 0</text>
+                <text x="20" y="68" fill="#e2e8f0" font-size="15" class="font-sans">Singularities at z&#178; + 9 = 0 &#8658; z = &#177;3i.</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="15" class="font-mono">Distance from center z&#8320; = 0 to 3i:</text>
+                <text x="20" y="140" fill="#34d399" font-size="22" font-weight="900" class="font-mono">R = |3i - 0| = 3</text>
+                <text x="20" y="180" fill="#fbbf24" font-size="15" class="font-mono">Series: (1/9) &#8721; (-1)&#8319; (z/3)&#178;&#8319;</text>
+                <text x="20" y="210" fill="#94a3b8" font-size="13" class="font-sans">Converges strictly for |z| &lt; 3.</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#fbbf24" font-size="17" font-weight="700" class="font-mono">DRILL 2: f(z) = 1/(z&#178; + 9) ABOUT z&#8320; = 1</text>
+                <text x="20" y="68" fill="#e2e8f0" font-size="15" class="font-sans">Singularities at z = 3i and z = -3i.</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="15" class="font-mono">Distance from center z&#8320; = 1 to 3i:</text>
+                <text x="20" y="140" fill="#34d399" font-size="22" font-weight="900" class="font-mono">R = |3i - 1| = &#8730;(1&#178; + 3&#178;) = &#8730;10</text>
+                <text x="20" y="180" fill="#fbbf24" font-size="15" class="font-mono">R = &#8730;10 &#8776; 3.162</text>
+                <text x="20" y="210" fill="#38bdf8" font-size="13" class="font-sans">No need to calculate series coefficients!</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#34d399" font-size="17" font-weight="700" class="font-mono">DRILL 3: f(z) = (z+1)/(z-2)(z-5), z&#8320; = 3i</text>
+                <text x="20" y="68" fill="#e2e8f0" font-size="15" class="font-sans">Singularities at z = 2 and z = 5.</text>
+                <text x="20" y="105" fill="#e2e8f0" font-size="15" class="font-mono">dist(3i, 2) = |2 - 3i| = &#8730;(4 + 9) = &#8730;13</text>
+                <text x="20" y="135" fill="#e2e8f0" font-size="15" class="font-mono">dist(3i, 5) = |5 - 3i| = &#8730;(25 + 9) = &#8730;34</text>
+                <text x="20" y="170" fill="#34d399" font-size="22" font-weight="900" class="font-mono">R = min(&#8730;13, &#8730;34) = &#8730;13</text>
+                <text x="20" y="205" fill="#fbbf24" font-size="14" class="font-mono">GATE answer: R = &#8730;13 ! Solved in 10s!</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 3: LAURENT SERIES ARCHITECTURE
+         ========================================== -->
+    <g transform="translate(80, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#emeraldGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#34d399" font-size="28" font-weight="800" class="font-sans">03. LAURENT SERIES IN ANNULAR DOMAINS</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Expansion in multiply connected rings // Analytic Part vs Principal Part // Residue b&#8321; extraction</text>
+
+        <!-- Sub-card 1: Laurent Theorem Formulation -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">LAURENT THEOREM (ANNULAR RING R&#8321; &lt; |z - z&#8320;| &lt; R&#8322;)</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">If f(z) is analytic in an open annulus R&#8321; &lt; |z - z&#8320;| &lt; R&#8322;:</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="150" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="45" fill="#38bdf8" font-size="24" font-weight="900" class="font-mono">f(z) = &#8721;&#8319;&#8332;&#8320;&#7509; a&#8319; (z - z&#8320;)&#8319; + &#8721;&#8319;&#8332;&#185;&#7509; b&#8319; / (z - z&#8320;)&#8319;</text>
+                <text x="20" y="85" fill="#34d399" font-size="18" class="font-mono">f(z) = [Analytic Part (Regular)] + [Principal Part]</text>
+                <text x="20" y="125" fill="#fbbf24" font-size="18" font-weight="700" class="font-mono">b&#8319; = (1 / 2&#960;i) &#8750;&#7580; f(w) (w - z&#8320;)&#8319;&#8315;&#185; dw</text>
+            </g>
+
+            <g transform="translate(20, 260)">
+                <rect x="0" y="0" width="800" height="100" fill="#020617" stroke="#334155" rx="6" />
+                <text x="15" y="30" fill="#34d399" font-size="17" font-weight="900" class="font-mono">RESIDUE DEFINITION: Res(f, z&#8320;) = b&#8321;</text>
+                <text x="15" y="60" fill="#e2e8f0" font-size="15" class="font-mono">The coefficient b&#8321; of 1/(z - z&#8320;) in the Laurent series is the RESIDUE!</text>
+                <text x="15" y="85" fill="#fbbf24" font-size="14" class="font-sans">&#9733; Since &#8750; (z-z&#8320;)&#8319; dz = 0 for all n &#8800; -1, only b&#8321; survives contour integration!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Annular Region Expansion Rules -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#38bdf8" font-size="20" font-weight="700" class="font-mono">EXPANSION ENGINE IN DIFFERENT RINGS</text>
+
+            <text x="24" y="70" fill="#e2e8f0" font-size="15" class="font-sans">Always factor out the dominant variable so the ratio has magnitude &lt; 1:</text>
+
+            <g transform="translate(20, 95)">
+                <rect x="0" y="0" width="800" height="260" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">CASE 1: If |z| &lt; a  (Inside circle):</text>
+                <text x="20" y="60" fill="#e2e8f0" font-size="15" class="font-mono">1 / (z - a) = (-1/a) [1 / (1 - z/a)] = (-1/a) &#8721; (z/a)&#8319;</text>
+                <text x="20" y="90" fill="#94a3b8" font-size="14" class="font-sans">Only positive powers of z appear (Taylor series).</text>
+
+                <text x="20" y="130" fill="#f43f5e" font-size="16" font-weight="700" class="font-mono">CASE 2: If |z| &gt; a  (Outside circle):</text>
+                <text x="20" y="160" fill="#e2e8f0" font-size="15" class="font-mono">1 / (z - a) = (1/z) [1 / (1 - a/z)] = (1/z) &#8721; (a/z)&#8319; = &#8721; a&#8319; / z&#8319;&#8314;&#185;</text>
+                <text x="20" y="190" fill="#94a3b8" font-size="14" class="font-sans">Only negative powers of z appear (Principal part).</text>
+                <text x="20" y="225" fill="#fbbf24" font-size="15" class="font-mono">&#9733; The golden rule: Divide by the LARGER quantity so ratio &lt; 1!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: General Master Case Study -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">THE CANONICAL GATE DRILL: EXPAND f(z) = 1 / [(z - 1)(z - 2)]</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="820" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">PARTIAL FRACTION DECOMPOSITION</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="18" class="font-mono">f(z) = 1/(z - 2) - 1/(z - 1)</text>
+                <text x="20" y="105" fill="#fbbf24" font-size="16" class="font-mono">Region A: |z| &lt; 1 (Disk)</text>
+                <text x="20" y="135" fill="#e2e8f0" font-size="15" class="font-mono">f(z) = (-1/2) &#8721; (z/2)&#8319; + &#8721; z&#8319; = &#8721; (1 - 1/2&#8319;&#8314;&#185;) z&#8319; (Taylor series)</text>
+                <text x="20" y="175" fill="#34d399" font-size="16" class="font-mono">Region B: 1 &lt; |z| &lt; 2 (Annulus)</text>
+                <text x="20" y="205" fill="#e2e8f0" font-size="15" class="font-mono">f(z) = - &#8721; z&#8319; / 2&#8319;&#8314;&#185; - &#8721; 1 / z&#8319;&#8314;&#185; (Both pos &amp; neg powers!)</text>
+            </g>
+
+            <g transform="translate(865, 60)">
+                <rect x="0" y="0" width="820" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">OUTER REGION &amp; PUNCTURED DISK</text>
+                <text x="20" y="65" fill="#fbbf24" font-size="16" class="font-mono">Region C: |z| &gt; 2 (Exterior)</text>
+                <text x="20" y="95" fill="#e2e8f0" font-size="15" class="font-mono">f(z) = &#8721; 2&#8319; / z&#8319;&#8314;&#185; - &#8721; 1 / z&#8319;&#8314;&#185; = &#8721; (2&#8319; - 1) / z&#8319;&#8314;&#185; (All negative powers)</text>
+                <text x="20" y="135" fill="#c084fc" font-size="16" class="font-mono">Region D: 0 &lt; |z - 1| &lt; 1 (About pole z = 1)</text>
+                <text x="20" y="165" fill="#e2e8f0" font-size="15" class="font-mono">Let u = z - 1 &#8658; f(z) = -1/u - 1/(1 - u) = -1/(z - 1) - &#8721; (z - 1)&#8319;</text>
+                <text x="20" y="200" fill="#38bdf8" font-size="15" class="font-mono">Principal part has exactly 1 term: -1/(z - 1) &#8658; Residue = -1!</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL 4: GATE TRAPS & RESIDUE EXTRACTION
+         ========================================== -->
+    <g transform="translate(1960, 1140)">
+        <rect x="0" y="0" width="1800" height="880" fill="#0b1329" fill-opacity="0.9" stroke="#1e293b" stroke-width="2" rx="14" filter="url(#cardShadow)" />
+        <rect x="0" y="0" width="10" height="880" fill="url(#cyanGrad)" rx="3" />
+
+        <text x="40" y="55" fill="#38bdf8" font-size="28" font-weight="800" class="font-sans">04. GATE LAURENT TRAPS &amp; COEFFICIENT EXTRACTION</text>
+        <text x="40" y="90" fill="#94a3b8" font-size="18" class="font-sans">Differentiating between annular rings // Finding b&#8321; vs b&#8322; // High-frequency exam traps</text>
+
+        <!-- Sub-card 1: Trap 1 - Wrong Region Expansion -->
+        <g transform="translate(40, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#f43f5e" font-size="20" font-weight="700" class="font-mono">TRAP 1: USING THE WRONG ANNULAR EXPANSION</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">A function does NOT have a unique Laurent series! It has a <tspan fill="#fbbf24" font-weight="700">different series in every annulus</tspan>.</text>
+
+            <g transform="translate(20, 100)">
+                <rect x="0" y="0" width="800" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">WHY BLIND EXPANSION FAILS IN GATE:</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-sans">If question specifies: "Find coefficient of 1/z&#178; for 1 &lt; |z| &lt; 2":</text>
+                <text x="20" y="95" fill="#f43f5e" font-size="15" class="font-sans">Expanding as 1/(1 - z) instead of (1/z)/(1 - 1/z) gives a DIVERGENT series!</text>
+                <text x="20" y="130" fill="#34d399" font-size="16" class="font-mono">For 1 &lt; |z| &lt; 2:</text>
+                <text x="20" y="160" fill="#e2e8f0" font-size="15" class="font-mono">• 1 &lt; |z| &#8658; |1/z| &lt; 1 &#8658; expand in powers of 1/z</text>
+                <text x="20" y="190" fill="#e2e8f0" font-size="15" class="font-mono">• |z| &lt; 2 &#8658; |z/2| &lt; 1 &#8658; expand in powers of z/2</text>
+                <text x="20" y="222" fill="#38bdf8" font-size="14" class="font-sans">&#9733; Check convergence |ratio| &lt; 1 for EVERY piece of the expansion!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 2: Trap 2 - Essential Singularity Residue -->
+        <g transform="translate(910, 120)">
+            <rect x="0" y="0" width="840" height="380" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#fbbf24" font-size="20" font-weight="700" class="font-mono">TRAP 2: ESSENTIAL SINGULARITY RESIDUE</text>
+
+            <text x="24" y="75" fill="#e2e8f0" font-size="16" class="font-sans">For essential singularities, differentiation formulas CANNOT be used!</text>
+
+            <g transform="translate(20, 100)">
+                <rect x="0" y="0" width="800" height="240" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="32" fill="#38bdf8" font-size="16" font-weight="700" class="font-mono">ONLY METHOD: DIRECT SERIES EXPANSION</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-sans">Problem: Find residue of f(z) = z&#179; cos(1/z) at z = 0.</text>
+                <text x="20" y="95" fill="#e2e8f0" font-size="15" class="font-mono">cos(1/z) = 1 - 1/(2! z&#178;) + 1/(4! z&#8308;) - 1/(6! z&#8310;) + ...</text>
+                <text x="20" y="130" fill="#e2e8f0" font-size="15" class="font-mono">Multiply by z&#179;:</text>
+                <text x="20" y="160" fill="#34d399" font-size="16" class="font-mono">f(z) = z&#179; - z/2 + 1/(24 z) - 1/(720 z&#179;) + ...</text>
+                <text x="20" y="195" fill="#fbbf24" font-size="18" font-weight="900" class="font-mono">Residue = Coefficient of 1/z = 1 / 24</text>
+                <text x="20" y="225" fill="#38bdf8" font-size="14" class="font-mono">Solved by pure series expansion in 15 seconds without limits!</text>
+            </g>
+        </g>
+
+        <!-- Sub-card 3: Flash Summary Matrix -->
+        <g transform="translate(40, 520)">
+            <rect x="0" y="0" width="1710" height="320" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="10" />
+            <text x="24" y="38" fill="#34d399" font-size="20" font-weight="700" class="font-mono">SINGULARITY &amp; LAURENT SERIES REVISION CHEAT MATRIX</text>
+
+            <g transform="translate(24, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#34d399" font-size="16" font-weight="700" class="font-mono">REMOVABLE SINGULARITY</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-sans">Principal Part: ZERO terms</text>
+                <text x="20" y="95" fill="#38bdf8" font-size="15" class="font-mono">Residue b&#8321; = 0 ALWAYS</text>
+                <text x="20" y="130" fill="#94a3b8" font-size="14" class="font-sans">Limit as z &#8594; z&#8320; is FINITE.</text>
+                <text x="20" y="165" fill="#fbbf24" font-size="14" class="font-mono">Example: (e&#7618; - 1)/z at z=0</text>
+            </g>
+
+            <g transform="translate(580, 60)">
+                <rect x="0" y="0" width="530" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#fbbf24" font-size="16" font-weight="700" class="font-mono">POLE OF ORDER m</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-sans">Principal Part: FINITE (m terms)</text>
+                <text x="20" y="95" fill="#38bdf8" font-size="15" class="font-mono">Residue b&#8321; can be non-zero</text>
+                <text x="20" y="130" fill="#94a3b8" font-size="14" class="font-sans">Limit as z &#8594; z&#8320; is &#8734;.</text>
+                <text x="20" y="165" fill="#fbbf24" font-size="14" class="font-mono">Use differentiation formula!</text>
+            </g>
+
+            <g transform="translate(1135, 60)">
+                <rect x="0" y="0" width="550" height="235" fill="#1e293b" fill-opacity="0.6" stroke="#334155" rx="8" />
+                <text x="20" y="30" fill="#f43f5e" font-size="16" font-weight="700" class="font-mono">ESSENTIAL SINGULARITY</text>
+                <text x="20" y="65" fill="#e2e8f0" font-size="15" class="font-sans">Principal Part: INFINITE terms</text>
+                <text x="20" y="95" fill="#38bdf8" font-size="15" class="font-mono">Residue b&#8321; from series expansion</text>
+                <text x="20" y="130" fill="#94a3b8" font-size="14" class="font-sans">Limit does NOT exist!</text>
+                <text x="20" y="165" fill="#fbbf24" font-size="14" class="font-mono">Picard: Assumes all values in &#8450;!</text>
+            </g>
+        </g>
+    </g>
+    
+
+    <!-- Bottom Engineering Telemetry Strip -->
+    <g transform="translate(80, 2060)">
+        <line x1="0" y1="0" x2="3680" y2="0" stroke="#1e293b" stroke-width="2" />
+        <text x="10" y="24" fill="#64748b" font-size="16" class="font-mono">COMPLEX ANALYSIS MATHEMATICAL BLUEPRINT // SCALE: 1.0 NATIVE // GATE / ESE / ISRO EXCELLENCE SUITE</text>
+        <text x="3670" y="24" fill="#64748b" font-size="16" text-anchor="end" class="font-mono">PREPFUSION ENGINEERING MATHEMATICS // SYSTEM VERIFIED</text>
+    </g>
+</svg>
