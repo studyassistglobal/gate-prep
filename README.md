@@ -14,7 +14,7 @@ Live: **https://gate-prep.pages.dev** (project `gate-prep` on Cloudflare Pages)
 - **NT Formula Sheets** — per-chapter Formula & Revision Sheets (decision trees, 25-trap tables, flash-formula matrices)
 - **Engineering Mathematics** — Ch 1–6: Linear Algebra · Calculus · Vector Calculus · Complex Analysis · Differential Equations · Probability & Statistics
 - **Electronic Devices & Circuits** — Ch 1: the full EDC master guide + its formula sheet
-- **Analog Electronics** — Ch 1: Diode Circuits, Rectifiers & Filters (master guide + formula sheet, blueprint figures)
+- **Analog Electronics** — Ch 1: Diode Circuits & Wave Shaping · Ch 2: Rectifiers & Filters (master guide + formula sheet; Ch 2 uses the LaTeX/TikZ circuit schematics, click any figure for full size)
 - Every subject also ships a **Formula & Revision Sheet** — open the dedicated **Formula Sheets** tab (or the header link) for quick revision
 - 500+ sections / 76,000+ content blocks rendered from the Master Guide markdown sources, with KaTeX math, figures, alert callouts and collapsible worked solutions
 - Reading progress per section (localStorage, no account), course/section search, light & dark theme

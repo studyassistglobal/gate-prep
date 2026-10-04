@@ -439,14 +439,70 @@ CHAPTERS = [
         "file": "ae1",
         "notes_sub": "ae",
         "num": 1,
-        "title": "Diode Circuits, Rectifiers & Filters",
+        "title": "Diode Circuits & Wave Shaping",
         "subject": "Analog Electronics",
         "section_split": "module",
+        "module_filter": ["module-1", "module-2", "module-5", "module-6", "module-7"],
+        "drop_img_alts": ["Rectifier Topologies", "Smoothing Filters"],
         "md": os.path.join(SRC_ROOT, "analog electronics", "Analog_Electronics_Diode_Circuits_and_Rectifiers_Master_Guide.md"),
         "figures_src": os.path.join(SRC_ROOT, "analog electronics", "figures_analog_electronics"),
         "figures_dst": "notes/ae/figures_analog_electronics",
         "fig_prefix": "figures_analog_electronics/",
         "web_prefix": "/notes/ae/figures_analog_electronics/",
+    },
+    {
+        "id": "ae-ch2",
+        "unwrap": True,
+        "file": "ae2",
+        "notes_sub": "ae",
+        "num": 2,
+        "title": "Rectifiers & Filters",
+        "subject": "Analog Electronics",
+        "section_split": "module",
+        "module_filter": ["module-3", "module-4"],
+        "skip_about": True,
+        "drop_img_alts": ["Rectifier Topologies", "Smoothing Filters"],
+        "latex_figs": [
+            {"after": "1. Executive Overview & Circuit Architecture",
+             "src": "/notes/ae/figures_latex/tex_dc_power_supply_block_diagram.svg",
+             "cap": "Regulated Linear DC Power Supply — Architectural Block Diagram with Stage Waveforms"},
+            {"after": "2. Diode Switching Models in Rectifier Circuits",
+             "src": "/notes/ae/figures_latex/tex_pwl_diode_model.svg",
+             "cap": "Piecewise-Linear (PWL) Large-Signal Equivalent Circuit Model of a Practical Diode"},
+            {"after": "3. Half-Wave Rectifier (HWR)",
+             "src": "/notes/ae/figures_latex/tex_hwr_circuit_schematic.svg",
+             "cap": "Half-Wave Rectifier (HWR) Circuit Schematic with Terminal Polarities"},
+            {"after": "4. Full-Wave Center-Tapped Rectifier (FWR-CT)", "before": True,
+             "src": "/notes/ae/figures_latex/tex_hwr_waveforms.svg",
+             "cap": "HWR — Synchronized Input Voltage, Rectified Output and Diode Voltage Waveforms"},
+            {"after": "4. Full-Wave Center-Tapped Rectifier (FWR-CT)",
+             "src": "/notes/ae/figures_latex/tex_fwr_ct_circuit_schematic.svg",
+             "cap": "Center-Tapped Full-Wave Rectifier Circuit Schematic"},
+            {"after": "5. Full-Wave Bridge Rectifier (FWR-Bridge)",
+             "src": "/notes/ae/figures_latex/tex_graetz_bridge_schematic.svg",
+             "cap": "Full-Wave Bridge Rectifier (Graetz Diamond) Schematic"},
+            {"after": "7. Classroom Drills & Official GATE PYQs (Fully Solved)", "before": True,
+             "src": "/notes/ae/figures_latex/tex_fwr_waveforms_piv.svg",
+             "cap": "Full-Wave Rectified Output Voltage and PIV Comparison (FWR-CT vs Bridge)"},
+            {"after": "2. Fundamental Filter Topologies & Classification",
+             "src": "/notes/ae/figures_latex/tex_filter_topologies.svg",
+             "cap": "Passive Filter Topologies: Series L, Choke-Input LC and π-Section CLC"},
+            {"after": "3. Shunt Capacitor Filter",
+             "src": "/notes/ae/figures_latex/tex_c_filter_ripple_surge.svg",
+             "cap": "Capacitor Filter — Exponential/Triangular Ripple Waveform and Diode Surge Current"},
+            {"after": "7. The Master Filter Performance Taxonomy Matrix",
+             "src": "/notes/ae/figures_latex/tex_ripple_factor_vs_load.svg",
+             "cap": "Ripple Factor vs Load Current Across Filter Topologies"},
+            {"at": "end",
+             "src": "/notes/ae/figures_latex/tex_rectifier_filter_decision_tree.svg",
+             "cap": "60-Second Rectifier & Filter Exam Decision Tree"},
+        ],
+        "md": os.path.join(SRC_ROOT, "analog electronics", "Analog_Electronics_Diode_Circuits_and_Rectifiers_Master_Guide.md"),
+        "figures_src": None,
+        "figures_ref": os.path.join(SRC_ROOT, "analog electronics", "figures_analog_electronics"),
+        "figures_dst": None,
+        "fig_prefix": "figures_analog_electronics/",
+        "web_prefix": "/notes/ae/",
     },
     {
         "id": "aef-ch1",
@@ -1223,6 +1279,44 @@ def build_chapter(ch):
         if not body:
             continue
         sections.append({"id": sid, "title": title, "blocks": body})
+
+    # chapter splitting of one shared source: keep only the listed module
+    # section-id prefixes (ae-ch1 "Diode Circuits" vs ae-ch2 "Rectifiers &
+    # Filters" both parse the same Master Guide)
+    if ch.get("module_filter"):
+        keep = tuple(ch["module_filter"])
+        sections = [s for s in sections
+                    if (s["id"] != "about" or not ch.get("skip_about"))
+                    and (s["id"] == "about" or s["id"].startswith(keep))]
+
+    # retire superseded blueprint posters (e.g. the rectifier/filter posters
+    # replaced by the compiled LaTeX schematics)
+    if ch.get("drop_img_alts"):
+        drops = ch["drop_img_alts"]
+        for s in sections:
+            s["blocks"] = [b for b in s["blocks"]
+                           if b["t"] != "img"
+                           or not any(d in (b.get("alt") or "") for d in drops)]
+
+    # inject compiled LaTeX figures (circuitikz schematics from the .tex
+    # master) after/before a block whose text contains the anchor
+    for rule in ch.get("latex_figs", []):
+        blk = {"t": "img", "src": rule["src"], "alt": rule["cap"]}
+        placed = False
+        if rule.get("at") == "end" and sections:
+            sections[-1]["blocks"].append(blk)
+            placed = True
+        else:
+            for s in sections:
+                for bi, b in enumerate(s["blocks"]):
+                    if rule["after"].lower() in (b.get("text") or "").lower():
+                        s["blocks"].insert(bi if rule.get("before") else bi + 1, blk)
+                        placed = True
+                        break
+                if placed:
+                    break
+        if not placed:
+            print(f"  WARNING: latex figure not placed: {rule['src']}")
 
     module = {
         "id": ch["id"],

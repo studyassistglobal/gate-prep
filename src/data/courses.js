@@ -130,7 +130,8 @@ export const COURSE = {
       icon: 'tune',
       accent: 'chem',
       chapters: [
-        { id: 'ae-ch1', num: 1, title: 'Diode Circuits, Rectifiers & Filters', status: 'live', file: 'ae1' },
+        { id: 'ae-ch1', num: 1, title: 'Diode Circuits & Wave Shaping', status: 'live', file: 'ae1' },
+        { id: 'ae-ch2', num: 2, title: 'Rectifiers & Filters', status: 'live', file: 'ae2' },
       ],
     },
     {

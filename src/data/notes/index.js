@@ -1614,7 +1614,7 @@ export const NOTES_INDEX = {
  },
  "ae-ch1": {
   "num": 1,
-  "title": "Diode Circuits, Rectifiers & Filters",
+  "title": "Diode Circuits & Wave Shaping",
   "subject": "Analog Electronics",
   "sections": [
    {
@@ -1630,14 +1630,6 @@ export const NOTES_INDEX = {
     "title": "Module 2: Small-Signal AC Diode Analysis & Zener Diode Voltage Regulators"
    },
    {
-    "id": "module-3-rectifier-topologies-fourier-analysis-12-parameter-performance-matrix",
-    "title": "Module 3: Rectifier Topologies, Fourier Analysis & 12-Parameter Performance Matrix"
-   },
-   {
-    "id": "module-4-smoothing-filters-harmonic-attenuation-engine",
-    "title": "Module 4: Smoothing Filters & Harmonic Attenuation Engine"
-   },
-   {
     "id": "module-5-diode-clipping-circuits-combinational-slicers-vtc-engine",
     "title": "Module 5: Diode Clipping Circuits, Combinational Slicers & VTC Engine"
    },
@@ -1648,6 +1640,21 @@ export const NOTES_INDEX = {
    {
     "id": "module-7-master-decision-engine-traps-exam-taxonomy",
     "title": "Module 7: Master Decision Engine, Traps & Exam Taxonomy"
+   }
+  ]
+ },
+ "ae-ch2": {
+  "num": 2,
+  "title": "Rectifiers & Filters",
+  "subject": "Analog Electronics",
+  "sections": [
+   {
+    "id": "module-3-rectifier-topologies-fourier-analysis-12-parameter-performance-matrix",
+    "title": "Module 3: Rectifier Topologies, Fourier Analysis & 12-Parameter Performance Matrix"
+   },
+   {
+    "id": "module-4-smoothing-filters-harmonic-attenuation-engine",
+    "title": "Module 4: Smoothing Filters & Harmonic Attenuation Engine"
    }
   ]
  },
